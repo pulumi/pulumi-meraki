@@ -19,77 +19,34 @@ import (
 	"fmt"
 	"path/filepath"
 	"strings"
-	"unicode"
 
-	"github.com/ettle/strcase"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/tokens"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/resource"
-	shim "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfshim"
-	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
-	"github.com/cisco-open/terraform-provider-meraki/meraki"
-	pf "github.com/pulumi/pulumi-terraform-bridge/pf/tfbridge"
 	"github.com/pulumi/pulumi-meraki/provider/pkg/version"
+	pf "github.com/pulumi/pulumi-terraform-bridge/pf/tfbridge"
+	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
+	tks "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge/tokens"
+	shim "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfshim"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/resource"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/tokens"
+	"terraform-provider-meraki/meraki"
 )
 
 //go:embed cmd/pulumi-resource-meraki/bridge-metadata.json
 var bridgeMetadata []byte
 
-// all of the token components used below.
 const (
-	// This variable controls the default name of the package in the package
-	mainMod = "index" // the meraki module
+	mainPkg = "meraki"
+
+	mainMod = "index"
 )
 
-var module_overrides = map[string]string{}
-
-var name_overrides = map[string]string{}
-
-func convertName(tfname string) (module string, name string) {
-	tfNameItems := strings.Split(tfname, "_")
-	contract.Assertf(len(tfNameItems) >= 2, "Invalid snake case name %s", tfname)
-	contract.Assertf(tfNameItems[0] == "meraki", "Invalid snake case name %s. Does not start with meraki", tfname)
-	if len(tfNameItems) == 2 {
-		module = mainMod
-		name = tfNameItems[1]
-	} else {
-		module = strings.Join(tfNameItems[1:len(tfNameItems)-1], "/")
-		name = tfNameItems[len(tfNameItems)-1]
-
-		if v, ok := module_overrides[module]; ok {
-			module = v
-		}
-	}
-	contract.Assertf(!unicode.IsDigit(rune(module[0])), "Pulumi namespace must not start with a digit: %s", name)
-	name = strcase.ToPascal(name)
-	if v, ok := name_overrides[name]; ok {
-		name = v
-	}
-	contract.Assertf(!unicode.IsDigit(rune(name[0])), "Pulumi name must not start with a digit: %s", name)
-	return
+func makeDataSource(mod string, res string) tokens.ModuleMember {
+	mod = strings.ToLower(mod)
+	return tfbridge.MakeDataSource(mainPkg, mod, res)
 }
 
-func makeDataSource(ds string) tokens.ModuleMember {
-	mod, name := convertName(ds)
-	return tfbridge.MakeDataSource("meraki", mod, "get"+name)
-}
-
-func makeResource(res string) tokens.Type {
-	mod, name := convertName(res)
-	return tfbridge.MakeResource("meraki", mod, name)
-}
-
-func moduleComputeStrategy() tfbridge.Strategy {
-	return tfbridge.Strategy{
-		Resource: func(tfToken string, elem *tfbridge.ResourceInfo) error {
-			elem.Tok = makeResource(tfToken)
-			return nil
-		},
-		DataSource: func(tfToken string, elem *tfbridge.DataSourceInfo) error {
-			elem.Tok = makeDataSource(tfToken)
-			return nil
-		},
-	}
+func makeResource(mod string, res string) tokens.Type {
+	mod = strings.ToLower(mod)
+	return tfbridge.MakeResource(mainPkg, mod, res)
 }
 
 // preConfigureCallback is called before the providerConfigure function of the underlying provider.
@@ -103,7 +60,7 @@ func preConfigureCallback(vars resource.PropertyMap, c shim.ResourceConfig) erro
 // Provider returns additional overlaid schema and metadata associated with the provider..
 func Provider() tfbridge.ProviderInfo {
 	// Instantiate the Terraform provider
-	p := pf.ShimProvider(meraki.NewProvider())
+	p := pf.ShimProvider(meraki.Provider())
 
 	// Create a Pulumi provider mapping
 	prov := tfbridge.ProviderInfo{
@@ -131,7 +88,7 @@ func Provider() tfbridge.ProviderInfo {
 		// category/cloud tag helps with categorizing the package in the Pulumi Registry.
 		// For all available categories, see `Keywords` in
 		// https://www.pulumi.com/docs/guides/pulumi-packages/schema/#package.
-		Keywords:   []string{
+		Keywords: []string{
 			"pulumi",
 			"meraki",
 			"category/network",
@@ -141,11 +98,12 @@ func Provider() tfbridge.ProviderInfo {
 		Repository: "https://github.com/pulumi/pulumi-meraki",
 		// The GitHub Org for the provider - defaults to `terraform-providers`. Note that this
 		// should match the TF provider module's require directive, not any replace directives.
-		Version:   version.Version,
-		GitHubOrg: "cisco-open",
-		MetadataInfo: tfbridge.NewProviderMetadata(bridgeMetadata),
+		Version:           version.Version,
+		GitHubOrg:         "cisco-open",
+		MetadataInfo:      tfbridge.NewProviderMetadata(bridgeMetadata),
 		TFProviderVersion: "0.2.0",
-		Config:    map[string]*tfbridge.SchemaInfo{
+		UpstreamRepoPath:  "./upstream",
+		Config:            map[string]*tfbridge.SchemaInfo{
 			// Add any required configuration here, or remove the example below if
 			// no additional points are required.
 			// "region": {
@@ -161,7 +119,7 @@ func Provider() tfbridge.ProviderInfo {
 			//
 			// "aws_iam_role": {
 			//   Tok: makeResource(mainMod, "aws_iam_role"),
-		  // },
+			// },
 		},
 		DataSources: map[string]*tfbridge.DataSourceInfo{
 			// Map each data source in the Terraform provider to a Pulumi function.
@@ -215,7 +173,12 @@ func Provider() tfbridge.ProviderInfo {
 		},
 	}
 
-	prov.MustComputeTokens(moduleComputeStrategy())
+	prov.MustComputeTokens(tks.KnownModules("meraki_", mainMod, []string{
+		"administered_",
+		"devices_",
+		"networks_",
+		"organizations_",
+	}, tks.MakeStandard(mainPkg)))
 	prov.SetAutonaming(255, "-")
 
 	return prov

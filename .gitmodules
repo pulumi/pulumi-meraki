@@ -1,0 +1,4 @@
+[submodule "upstream"]
+	path = upstream
+	url = https://github.com/cisco-open/terraform-provider-meraki.git
+  ignore = dirty
