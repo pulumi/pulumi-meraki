@@ -16,19 +16,21 @@ package provider
 
 import (
 	"context"
-	_ "embed"
 	"fmt"
 	"path/filepath"
 	"strings"
 
-	"github.com/pulumi/pulumi-meraki/provider/pkg/version"
+	_ "embed"
+
+	"terraform-provider-meraki/meraki"
+
 	pf "github.com/pulumi/pulumi-terraform-bridge/pf/tfbridge"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
 	tks "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge/tokens"
-	shim "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfshim"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/resource"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/tokens"
-	"terraform-provider-meraki/meraki"
+
+	"github.com/pulumi/pulumi-meraki/provider/pkg/version"
 )
 
 //go:embed cmd/pulumi-resource-meraki/bridge-metadata.json
@@ -39,11 +41,6 @@ const (
 
 	mainMod = "index"
 )
-
-func makeDataSource(mod string, res string) tokens.ModuleMember {
-	mod = strings.ToLower(mod)
-	return tfbridge.MakeDataSource(mainPkg, mod, res)
-}
 
 func makeResource(mod string, res string) tokens.Type {
 	mod = strings.ToLower(mod)
@@ -82,14 +79,6 @@ func computeIDField(field resource.PropertyKey) computeIDFunc {
 }
 func delegateIDField(field resource.PropertyKey) computeIDFunc {
 	return tfbridge.DelegateIDField(field, "meraki", "https://github.com/pulumi/pulumi-meraki")
-}
-
-// preConfigureCallback is called before the providerConfigure function of the underlying provider.
-// It should validate that the provider can be configured, and provide actionable errors in the case
-// it cannot be. Configuration variables can be read from `vars` using the `stringValue` function -
-// for example `stringValue(vars, "accessKey")`.
-func preConfigureCallback(vars resource.PropertyMap, c shim.ResourceConfig) error {
-	return nil
 }
 
 // Provider returns additional overlaid schema and metadata associated with the provider..
@@ -138,17 +127,7 @@ func Provider() tfbridge.ProviderInfo {
 		MetadataInfo:      tfbridge.NewProviderMetadata(bridgeMetadata),
 		TFProviderVersion: "0.2.0",
 		UpstreamRepoPath:  "./upstream",
-		Config:            map[string]*tfbridge.SchemaInfo{
-			// Add any required configuration here, or remove the example below if
-			// no additional points are required.
-			// "region": {
-			// 	Type: tfbridge.MakeType("region", "Region"),
-			// 	Default: &tfbridge.DefaultInfo{
-			// 		EnvVars: []string{"AWS_REGION", "AWS_DEFAULT_REGION"},
-			// 	},
-			// },
-		},
-		PreConfigureCallback: preConfigureCallback,
+		//nolint:lll
 		Resources: map[string]*tfbridge.ResourceInfo{
 
 			"meraki_administered_licensing_subscription_subscriptions_bind":               {ComputeID: computeIDField("subscription_id")},

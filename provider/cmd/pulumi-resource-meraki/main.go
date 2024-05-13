@@ -18,9 +18,11 @@ package main
 
 import (
 	"context"
+
 	_ "embed"
 
 	"github.com/pulumi/pulumi-terraform-bridge/pf/tfbridge"
+
 	meraki "github.com/pulumi/pulumi-meraki/provider"
 )
 
@@ -28,6 +30,6 @@ import (
 var pulumiSchema []byte
 
 func main() {
-	meta := tfbridge.ProviderMetadata{PackageSchema: pulumiSchema}
-	tfbridge.Main(context.Background(), "meraki", meraki.Provider(), meta)
+	tfbridge.Main(context.Background(), "meraki", meraki.Provider(),
+		tfbridge.ProviderMetadata{PackageSchema: pulumiSchema})
 }

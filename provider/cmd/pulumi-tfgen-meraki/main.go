@@ -15,8 +15,9 @@
 package main
 
 import (
-	meraki "github.com/pulumi/pulumi-meraki/provider"
 	"github.com/pulumi/pulumi-terraform-bridge/pf/tfgen"
+
+	meraki "github.com/pulumi/pulumi-meraki/provider"
 )
 
 func main() {
