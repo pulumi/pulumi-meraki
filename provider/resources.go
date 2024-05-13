@@ -20,7 +20,7 @@ import (
 	"path"
 	"strings"
 
-	_ "embed"
+	_ "embed" // Allow embedding provider metadata
 
 	"terraform-provider-meraki/meraki"
 
