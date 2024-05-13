@@ -7798,6 +7798,9 @@
             "meraki_administered_licensing_subscription_subscriptions_bind": [
                 "subscription_id"
             ],
+            "meraki_devices": [
+                "serial"
+            ],
             "meraki_devices_appliance_radio_settings": [
                 "serial"
             ],
@@ -8117,6 +8120,9 @@
                 "network_id"
             ],
             "meraki_networks_switch_routing_multicast": [
+                "network_id"
+            ],
+            "meraki_networks_switch_routing_multicast_rendezvous_points": [
                 "network_id"
             ],
             "meraki_networks_switch_routing_ospf": [

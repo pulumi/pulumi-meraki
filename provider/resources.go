@@ -58,11 +58,17 @@ func delegateIDProperty(field resource.PropertyPath) computeIDFunc {
 	return tfbridge.DelegateIDProperty(field, "meraki", "https://github.com/pulumi/pulumi-meraki")
 }
 
+// applyResourceIDs (when passed to tfbridge.MustTraverseProperties) sets ComputeID as
+// appropriate.
+//
+// Unlike other TF providers, meraki doesn't have a consistent ID name ("id"), instead
+// each module (as distinguished by prefix) has it's own consistent ID name.
 func applyResourceIDs(info tfbridge.PropertyVisitInfo) (tfbridge.PropertyVisitResult, error) {
 	path := info.SchemaPath()
 
+	// If the property is not on a resource at the top level, or if ComputeID is
+	// already set, do nothing.
 	res, ok := info.Root.(tfbridge.VisitResourceRoot)
-
 	if !ok || len(path) > 1 || (res.Info != nil && res.Info.ComputeID != nil) {
 		return tfbridge.PropertyVisitResult{HasEffect: false}, nil
 	}
@@ -72,37 +78,39 @@ func applyResourceIDs(info tfbridge.PropertyVisitInfo) (tfbridge.PropertyVisitRe
 		return tfbridge.PropertyVisitResult{HasEffect: false}, nil
 	}
 
-	// On each resource, we check for 1 of the 4 known ID properties.
-	//
-	// If a resource has just one, we set that as the ID. If a resource has more then
-	// 1, we error and allow an operator to pick which one.
-	const (
-		subID  = "subscription_id"
-		serial = "serial"
-		netID  = "network_id"
-		orgID  = "organization_id"
-	)
-
 	field := path[0].(walk.GetAttrStep).Name
-	switch field {
-	case subID, serial, netID, orgID:
-		for _, otherID := range []string{subID, serial, netID, orgID} {
-			if otherID == field {
-				continue
-			}
-
-			if _, ok := res.Schema.Schema().GetOk(otherID); ok {
-				msg := "%s: Ambiguous ID fields: both %s and %s found, please resolve by manually setting ComputeID"
-				return tfbridge.PropertyVisitResult{}, fmt.Errorf(msg, res.TfToken, field, otherID)
-			}
-		}
-
+	setField := func() (tfbridge.PropertyVisitResult, error) {
 		res.Info.ComputeID = delegateIDField(resource.PropertyKey(field))
 		return tfbridge.PropertyVisitResult{HasEffect: true}, nil
-
-	default:
-		return tfbridge.PropertyVisitResult{HasEffect: false}, nil
 	}
+
+	// The actual mapping between ID property name and the module prefix they are used
+	// in. Each case looks like, given $ID_NAME and $MODULE:
+	//
+	//	case "$ID_NAME":
+	//		if strings.HasPrefix(res.TfToken, "meraki_$MODULE") {
+	//			return setField()
+	//		}
+	//
+	switch field {
+	case "subscription_id":
+		if strings.HasPrefix(res.TfToken, "meraki_administered_licensing_subscription") {
+			return setField()
+		}
+	case "serial":
+		if strings.HasPrefix(res.TfToken, "meraki_devices") {
+			return setField()
+		}
+	case "network_id":
+		if strings.HasPrefix(res.TfToken, "meraki_networks") {
+			return setField()
+		}
+	case "organization_id":
+		if strings.HasPrefix(res.TfToken, "meraki_organizations") {
+			return setField()
+		}
+	}
+	return tfbridge.PropertyVisitResult{HasEffect: false}, nil
 }
 
 // Provider returns additional overlaid schema and metadata associated with the provider..
@@ -163,15 +171,8 @@ func Provider() tfbridge.ProviderInfo {
 				}),
 			},
 
-			"meraki_devices": {
-				Tok:       makeResource("devices", "base"),
-				ComputeID: delegateIDField("serial"), // Ambiguous ID (also network_id)
-			},
-			"meraki_networks": {Tok: makeResource("networks", "base")},
-			"meraki_networks_switch_routing_multicast_rendezvous_points": {
-				ComputeID: delegateIDField("network_id"), // Ambiguous ID (also serial)
-			},
-
+			"meraki_devices":       {Tok: makeResource("devices", "base")},
+			"meraki_networks":      {Tok: makeResource("networks", "base")},
 			"meraki_organizations": {Tok: makeResource("organizations", "base")},
 		},
 		JavaScript: &tfbridge.JavaScriptInfo{
