@@ -31,7 +31,7 @@ export class Provider extends pulumi.ProviderResource {
      */
     public readonly merakiBaseUrl!: pulumi.Output<string | undefined>;
     /**
-     * Cisco Meraki meraki_dashboard_api_key to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment
+     * Cisco Meraki merakiDashboardApiKey to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment
      * variable.
      */
     public readonly merakiDashboardApiKey!: pulumi.Output<string | undefined>;
@@ -74,7 +74,7 @@ export interface ProviderArgs {
      */
     merakiBaseUrl?: pulumi.Input<string>;
     /**
-     * Cisco Meraki meraki_dashboard_api_key to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment
+     * Cisco Meraki merakiDashboardApiKey to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment
      * variable.
      */
     merakiDashboardApiKey?: pulumi.Input<string>;
