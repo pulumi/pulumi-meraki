@@ -17,7 +17,7 @@ package provider
 import (
 	"context"
 	"fmt"
-	"path/filepath"
+	"path"
 	"strings"
 
 	_ "embed"
@@ -367,10 +367,6 @@ func Provider() tfbridge.ProviderInfo {
 				"@types/node": "^10.0.0", // so we can access strongly typed node definitions.
 				"@types/mime": "^2.0.0",
 			},
-			// See the documentation for tfbridge.OverlayInfo for how to lay out this
-			// section, or refer to the AWS provider. Delete this section if there are
-			// no overlay files.
-			//Overlay: &tfbridge.OverlayInfo{},
 		},
 		Python: &tfbridge.PythonInfo{
 			PackageName: "pulumi_meraki",
@@ -383,7 +379,7 @@ func Provider() tfbridge.ProviderInfo {
 			PyProject: struct{ Enabled bool }{true},
 		},
 		Golang: &tfbridge.GolangInfo{
-			ImportBasePath: filepath.Join(
+			ImportBasePath: path.Join(
 				fmt.Sprintf("github.com/pulumi/pulumi-%[1]s/sdk/", "meraki"),
 				tfbridge.GetModuleMajorVersion(version.Version),
 				"go",
@@ -410,6 +406,7 @@ func Provider() tfbridge.ProviderInfo {
 		"organizations_",
 	}, tks.MakeStandard(mainPkg)))
 	prov.SetAutonaming(255, "-")
+	prov.MustApplyAutoAliases()
 
 	return prov
 }
