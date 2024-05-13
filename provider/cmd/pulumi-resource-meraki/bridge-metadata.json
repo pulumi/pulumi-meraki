@@ -7792,5 +7792,525 @@
             }
         }
     },
-    "auto-settings": {}
+    "auto-settings": {},
+    "ids": {
+        "resources": {
+            "meraki_administered_licensing_subscription_subscriptions_bind": [
+                "subscription_id"
+            ],
+            "meraki_devices_appliance_radio_settings": [
+                "serial"
+            ],
+            "meraki_devices_appliance_uplinks_settings": [
+                "serial"
+            ],
+            "meraki_devices_appliance_vmx_authentication_token": [
+                "serial"
+            ],
+            "meraki_devices_blink_leds": [
+                "serial"
+            ],
+            "meraki_devices_camera_custom_analytics": [
+                "serial"
+            ],
+            "meraki_devices_camera_generate_snapshot": [
+                "serial"
+            ],
+            "meraki_devices_camera_quality_and_retention": [
+                "serial"
+            ],
+            "meraki_devices_camera_sense": [
+                "serial"
+            ],
+            "meraki_devices_camera_video_settings": [
+                "serial"
+            ],
+            "meraki_devices_camera_wireless_profiles": [
+                "serial"
+            ],
+            "meraki_devices_cellular_gateway_lan": [
+                "serial"
+            ],
+            "meraki_devices_cellular_gateway_port_forwarding_rules": [
+                "serial"
+            ],
+            "meraki_devices_cellular_sims": [
+                "serial"
+            ],
+            "meraki_devices_live_tools_arp_table": [
+                "serial"
+            ],
+            "meraki_devices_live_tools_ping": [
+                "serial"
+            ],
+            "meraki_devices_live_tools_ping_device": [
+                "serial"
+            ],
+            "meraki_devices_live_tools_throughput_test": [
+                "serial"
+            ],
+            "meraki_devices_live_tools_wake_on_lan": [
+                "serial"
+            ],
+            "meraki_devices_management_interface": [
+                "serial"
+            ],
+            "meraki_devices_sensor_relationships": [
+                "serial"
+            ],
+            "meraki_devices_switch_ports": [
+                "serial"
+            ],
+            "meraki_devices_switch_ports_cycle": [
+                "serial"
+            ],
+            "meraki_devices_switch_routing_interfaces": [
+                "serial"
+            ],
+            "meraki_devices_switch_routing_interfaces_dhcp": [
+                "serial"
+            ],
+            "meraki_devices_switch_routing_static_routes": [
+                "serial"
+            ],
+            "meraki_devices_switch_warm_spare": [
+                "serial"
+            ],
+            "meraki_devices_wireless_alternate_management_interface_ipv6": [
+                "serial"
+            ],
+            "meraki_devices_wireless_bluetooth_settings": [
+                "serial"
+            ],
+            "meraki_devices_wireless_radio_settings": [
+                "serial"
+            ],
+            "meraki_networks_alerts_settings": [
+                "network_id"
+            ],
+            "meraki_networks_appliance_connectivity_monitoring_destinations": [
+                "network_id"
+            ],
+            "meraki_networks_appliance_content_filtering": [
+                "network_id"
+            ],
+            "meraki_networks_appliance_firewall_cellular_firewall_rules": [
+                "network_id"
+            ],
+            "meraki_networks_appliance_firewall_firewalled_services": [
+                "network_id"
+            ],
+            "meraki_networks_appliance_firewall_inbound_firewall_rules": [
+                "network_id"
+            ],
+            "meraki_networks_appliance_firewall_l3_firewall_rules": [
+                "network_id"
+            ],
+            "meraki_networks_appliance_firewall_l7_firewall_rules": [
+                "network_id"
+            ],
+            "meraki_networks_appliance_firewall_one_to_many_nat_rules": [
+                "network_id"
+            ],
+            "meraki_networks_appliance_firewall_one_to_one_nat_rules": [
+                "network_id"
+            ],
+            "meraki_networks_appliance_firewall_port_forwarding_rules": [
+                "network_id"
+            ],
+            "meraki_networks_appliance_firewall_settings": [
+                "network_id"
+            ],
+            "meraki_networks_appliance_ports": [
+                "network_id"
+            ],
+            "meraki_networks_appliance_prefixes_delegated_statics": [
+                "network_id"
+            ],
+            "meraki_networks_appliance_security_intrusion": [
+                "network_id"
+            ],
+            "meraki_networks_appliance_security_malware": [
+                "network_id"
+            ],
+            "meraki_networks_appliance_settings": [
+                "network_id"
+            ],
+            "meraki_networks_appliance_single_lan": [
+                "network_id"
+            ],
+            "meraki_networks_appliance_ssids": [
+                "network_id"
+            ],
+            "meraki_networks_appliance_traffic_shaping": [
+                "network_id"
+            ],
+            "meraki_networks_appliance_traffic_shaping_custom_performance_classes": [
+                "network_id"
+            ],
+            "meraki_networks_appliance_traffic_shaping_rules": [
+                "network_id"
+            ],
+            "meraki_networks_appliance_traffic_shaping_uplink_bandwidth": [
+                "network_id"
+            ],
+            "meraki_networks_appliance_traffic_shaping_uplink_selection": [
+                "network_id"
+            ],
+            "meraki_networks_appliance_traffic_shaping_vpn_exclusions": [
+                "network_id"
+            ],
+            "meraki_networks_appliance_vlans_settings": [
+                "network_id"
+            ],
+            "meraki_networks_appliance_vpn_bgp": [
+                "network_id"
+            ],
+            "meraki_networks_appliance_vpn_site_to_site_vpn": [
+                "network_id"
+            ],
+            "meraki_networks_appliance_warm_spare": [
+                "network_id"
+            ],
+            "meraki_networks_appliance_warm_spare_swap": [
+                "network_id"
+            ],
+            "meraki_networks_bind": [
+                "network_id"
+            ],
+            "meraki_networks_cellular_gateway_connectivity_monitoring_destinations": [
+                "network_id"
+            ],
+            "meraki_networks_cellular_gateway_dhcp": [
+                "network_id"
+            ],
+            "meraki_networks_cellular_gateway_subnet_pool": [
+                "network_id"
+            ],
+            "meraki_networks_cellular_gateway_uplink": [
+                "network_id"
+            ],
+            "meraki_networks_clients_policy": [
+                "network_id"
+            ],
+            "meraki_networks_clients_provision": [
+                "network_id"
+            ],
+            "meraki_networks_clients_splash_authorization_status": [
+                "network_id"
+            ],
+            "meraki_networks_devices_claim": [
+                "network_id"
+            ],
+            "meraki_networks_devices_claim_vmx": [
+                "network_id"
+            ],
+            "meraki_networks_devices_remove": [
+                "network_id"
+            ],
+            "meraki_networks_firmware_upgrades": [
+                "network_id"
+            ],
+            "meraki_networks_firmware_upgrades_rollbacks": [
+                "network_id"
+            ],
+            "meraki_networks_firmware_upgrades_staged_events": [
+                "network_id"
+            ],
+            "meraki_networks_firmware_upgrades_staged_events_defer": [
+                "network_id"
+            ],
+            "meraki_networks_firmware_upgrades_staged_events_rollbacks": [
+                "network_id"
+            ],
+            "meraki_networks_firmware_upgrades_staged_groups": [
+                "network_id"
+            ],
+            "meraki_networks_firmware_upgrades_staged_stages": [
+                "network_id"
+            ],
+            "meraki_networks_floor_plans": [
+                "network_id"
+            ],
+            "meraki_networks_group_policies": [
+                "network_id"
+            ],
+            "meraki_networks_mqtt_brokers": [
+                "network_id"
+            ],
+            "meraki_networks_netflow": [
+                "network_id"
+            ],
+            "meraki_networks_pii_requests_delete": [
+                "network_id"
+            ],
+            "meraki_networks_sensor_mqtt_brokers": [
+                "network_id"
+            ],
+            "meraki_networks_settings": [
+                "network_id"
+            ],
+            "meraki_networks_sm_devices_checkin": [
+                "network_id"
+            ],
+            "meraki_networks_sm_devices_fields": [
+                "network_id"
+            ],
+            "meraki_networks_sm_devices_install_apps": [
+                "network_id"
+            ],
+            "meraki_networks_sm_devices_lock": [
+                "network_id"
+            ],
+            "meraki_networks_sm_devices_modify_tags": [
+                "network_id"
+            ],
+            "meraki_networks_sm_devices_move": [
+                "network_id"
+            ],
+            "meraki_networks_sm_devices_reboot": [
+                "network_id"
+            ],
+            "meraki_networks_sm_devices_refresh_details": [
+                "network_id"
+            ],
+            "meraki_networks_sm_devices_shutdown": [
+                "network_id"
+            ],
+            "meraki_networks_sm_devices_unenroll": [
+                "network_id"
+            ],
+            "meraki_networks_sm_devices_uninstall_apps": [
+                "network_id"
+            ],
+            "meraki_networks_sm_devices_wipe": [
+                "network_id"
+            ],
+            "meraki_networks_sm_user_access_devices_delete": [
+                "network_id"
+            ],
+            "meraki_networks_snmp": [
+                "network_id"
+            ],
+            "meraki_networks_split": [
+                "network_id"
+            ],
+            "meraki_networks_switch_access_control_lists": [
+                "network_id"
+            ],
+            "meraki_networks_switch_access_policies": [
+                "network_id"
+            ],
+            "meraki_networks_switch_alternate_management_interface": [
+                "network_id"
+            ],
+            "meraki_networks_switch_dhcp_server_policy": [
+                "network_id"
+            ],
+            "meraki_networks_switch_dhcp_server_policy_arp_inspection_trusted_servers": [
+                "network_id"
+            ],
+            "meraki_networks_switch_dscp_to_cos_mappings": [
+                "network_id"
+            ],
+            "meraki_networks_switch_mtu": [
+                "network_id"
+            ],
+            "meraki_networks_switch_routing_multicast": [
+                "network_id"
+            ],
+            "meraki_networks_switch_routing_ospf": [
+                "network_id"
+            ],
+            "meraki_networks_switch_settings": [
+                "network_id"
+            ],
+            "meraki_networks_switch_stacks_add": [
+                "network_id"
+            ],
+            "meraki_networks_switch_stacks_remove": [
+                "network_id"
+            ],
+            "meraki_networks_switch_stacks_routing_interfaces": [
+                "network_id"
+            ],
+            "meraki_networks_switch_stacks_routing_interfaces_dhcp": [
+                "network_id"
+            ],
+            "meraki_networks_switch_stacks_routing_static_routes": [
+                "network_id"
+            ],
+            "meraki_networks_switch_storm_control": [
+                "network_id"
+            ],
+            "meraki_networks_switch_stp": [
+                "network_id"
+            ],
+            "meraki_networks_syslog_servers": [
+                "network_id"
+            ],
+            "meraki_networks_traffic_analysis": [
+                "network_id"
+            ],
+            "meraki_networks_unbind": [
+                "network_id"
+            ],
+            "meraki_networks_vlan_profiles": [
+                "network_id"
+            ],
+            "meraki_networks_vlan_profiles_assignments_reassign": [
+                "network_id"
+            ],
+            "meraki_networks_webhooks_payload_templates": [
+                "network_id"
+            ],
+            "meraki_networks_wireless_alternate_management_interface": [
+                "network_id"
+            ],
+            "meraki_networks_wireless_billing": [
+                "network_id"
+            ],
+            "meraki_networks_wireless_bluetooth_settings": [
+                "network_id"
+            ],
+            "meraki_networks_wireless_ethernet_ports_profiles": [
+                "network_id"
+            ],
+            "meraki_networks_wireless_ethernet_ports_profiles_assign": [
+                "network_id"
+            ],
+            "meraki_networks_wireless_ethernet_ports_profiles_set_default": [
+                "network_id"
+            ],
+            "meraki_networks_wireless_settings": [
+                "network_id"
+            ],
+            "meraki_networks_wireless_ssids": [
+                "network_id"
+            ],
+            "meraki_networks_wireless_ssids_bonjour_forwarding": [
+                "network_id"
+            ],
+            "meraki_networks_wireless_ssids_device_type_group_policies": [
+                "network_id"
+            ],
+            "meraki_networks_wireless_ssids_eap_override": [
+                "network_id"
+            ],
+            "meraki_networks_wireless_ssids_firewall_l3_firewall_rules": [
+                "network_id"
+            ],
+            "meraki_networks_wireless_ssids_firewall_l7_firewall_rules": [
+                "network_id"
+            ],
+            "meraki_networks_wireless_ssids_hotspot20": [
+                "network_id"
+            ],
+            "meraki_networks_wireless_ssids_schedules": [
+                "network_id"
+            ],
+            "meraki_networks_wireless_ssids_splash_settings": [
+                "network_id"
+            ],
+            "meraki_networks_wireless_ssids_traffic_shaping_rules": [
+                "network_id"
+            ],
+            "meraki_networks_wireless_ssids_vpn": [
+                "network_id"
+            ],
+            "meraki_organizations_adaptive_policy_acls": [
+                "organization_id"
+            ],
+            "meraki_organizations_adaptive_policy_settings": [
+                "organization_id"
+            ],
+            "meraki_organizations_appliance_security_intrusion": [
+                "organization_id"
+            ],
+            "meraki_organizations_appliance_vpn_third_party_vpnpeers": [
+                "organization_id"
+            ],
+            "meraki_organizations_appliance_vpn_vpn_firewall_rules": [
+                "organization_id"
+            ],
+            "meraki_organizations_branding_policies": [
+                "organization_id"
+            ],
+            "meraki_organizations_branding_policies_priorities": [
+                "organization_id"
+            ],
+            "meraki_organizations_camera_custom_analytics_artifacts": [
+                "organization_id"
+            ],
+            "meraki_organizations_camera_roles": [
+                "organization_id"
+            ],
+            "meraki_organizations_claim": [
+                "organization_id"
+            ],
+            "meraki_organizations_clone": [
+                "organization_id"
+            ],
+            "meraki_organizations_config_templates_switch_profiles_ports": [
+                "organization_id"
+            ],
+            "meraki_organizations_inventory_claim": [
+                "organization_id"
+            ],
+            "meraki_organizations_inventory_onboarding_cloud_monitoring_export_events": [
+                "organization_id"
+            ],
+            "meraki_organizations_inventory_onboarding_cloud_monitoring_imports": [
+                "organization_id"
+            ],
+            "meraki_organizations_inventory_onboarding_cloud_monitoring_prepare": [
+                "organization_id"
+            ],
+            "meraki_organizations_inventory_release": [
+                "organization_id"
+            ],
+            "meraki_organizations_licenses_assign_seats": [
+                "organization_id"
+            ],
+            "meraki_organizations_licenses_move": [
+                "organization_id"
+            ],
+            "meraki_organizations_licenses_move_seats": [
+                "organization_id"
+            ],
+            "meraki_organizations_licenses_renew_seats": [
+                "organization_id"
+            ],
+            "meraki_organizations_licensing_coterm_licenses_move": [
+                "organization_id"
+            ],
+            "meraki_organizations_login_security": [
+                "organization_id"
+            ],
+            "meraki_organizations_networks_combine": [
+                "organization_id"
+            ],
+            "meraki_organizations_saml": [
+                "organization_id"
+            ],
+            "meraki_organizations_saml_idps": [
+                "organization_id"
+            ],
+            "meraki_organizations_sm_admins_roles": [
+                "organization_id"
+            ],
+            "meraki_organizations_sm_sentry_policies_assignments": [
+                "organization_id"
+            ],
+            "meraki_organizations_snmp": [
+                "organization_id"
+            ],
+            "meraki_organizations_switch_devices_clone": [
+                "organization_id"
+            ],
+            "meraki_organizations_users": [
+                "organization_id"
+            ]
+        }
+    }
 }
