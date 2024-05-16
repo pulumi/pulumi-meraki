@@ -186,9 +186,11 @@ func Provider() tfbridge.ProviderInfo {
 				"@types/node": "^10.0.0", // so we can access strongly typed node definitions.
 				"@types/mime": "^2.0.0",
 			},
+			RespectSchemaVersion: true,
 		},
 		Python: &tfbridge.PythonInfo{
-			PackageName: "pulumi_meraki",
+			RespectSchemaVersion: true,
+			PackageName:          "pulumi_meraki",
 
 			// List any Python dependencies and their version ranges
 			Requires: map[string]string{
@@ -205,9 +207,11 @@ func Provider() tfbridge.ProviderInfo {
 				"meraki",
 			),
 			GenerateResourceContainerTypes: true,
+			RespectSchemaVersion:           true,
 		},
 		CSharp: &tfbridge.CSharpInfo{
-			RootNamespace: "Pulumi",
+			RespectSchemaVersion: true,
+			RootNamespace:        "Pulumi",
 
 			PackageReferences: map[string]string{
 				"Pulumi": "3.*",

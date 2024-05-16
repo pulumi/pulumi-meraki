@@ -1,6 +1,6 @@
 {
     "name": "@pulumi/meraki",
-    "version": "${VERSION}",
+    "version": "0.0.0-alpha.0+dev",
     "description": "A Pulumi package for creating and managing Meraki resources. Based on terraform-provider-meraki: version v0.2.0",
     "keywords": [
         "pulumi",
@@ -24,6 +24,7 @@
     "pulumi": {
         "resource": true,
         "name": "meraki",
+        "version": "0.0.0-alpha.0+dev",
         "server": "github://api.github.com/pulumi/pulumi-meraki"
     }
 }
