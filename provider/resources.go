@@ -130,12 +130,9 @@ func Provider() tfbridge.ProviderInfo {
 		// would like to be shown in the Pulumi Registry if this package is published
 		// there.
 		Publisher: "pulumi",
-		// LogoURL is optional but useful to help identify your package in the Pulumi Registry
-		// if this package is published there.
-		//
-		// You may host a logo on a domain you control or add an SVG logo for your package
-		// in your repository and use the raw content URL for that file as your logo URL.
-		LogoURL: "https://raw.githubusercontent.com/pulumi/pulumi-meraki/main/docs/meraki.png",
+		// LogoURL points to the assets/meraki.png file on the assets branch of
+		// this repo.
+		LogoURL: "https://raw.githubusercontent.com/pulumi/pulumi-meraki/assets/assets/meraki.png",
 		// PluginDownloadURL is an optional URL used to download the Provider
 		// for use in Pulumi programs
 		// e.g https://github.com/org/pulumi-provider-name/releases/
