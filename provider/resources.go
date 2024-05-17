@@ -80,7 +80,9 @@ func applyResourceIDs(info tfbridge.PropertyVisitInfo) (tfbridge.PropertyVisitRe
 
 	field := path[0].(walk.GetAttrStep).Name
 	setField := func() (tfbridge.PropertyVisitResult, error) {
-		res.Info.ComputeID = delegateIDField(resource.PropertyKey(field))
+		res.Info.ComputeID = delegateIDField(resource.PropertyKey(
+			tfbridge.TerraformToPulumiNameV2(field,
+				info.EnclosingSchemaMap(), info.EnclosingSchemaInfoMap())))
 		return tfbridge.PropertyVisitResult{HasEffect: true}, nil
 	}
 
@@ -159,12 +161,12 @@ func Provider() tfbridge.ProviderInfo {
 		Resources: map[string]*tfbridge.ResourceInfo{
 			"meraki_administered_licensing_subscription_subscriptions_claim": {
 				ComputeID: delegateIDProperty(resource.PropertyPath{
-					"item", "subscription_id",
+					"item", "subscriptionId",
 				}),
 			},
 			"meraki_administered_licensing_subscription_subscriptions_claim_key_validate": {
 				ComputeID: delegateIDProperty(resource.PropertyPath{
-					"item", "subscription_id",
+					"item", "subscriptionId",
 				}),
 			},
 
