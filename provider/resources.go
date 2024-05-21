@@ -19,9 +19,10 @@ import (
 	"fmt"
 	"path"
 	"strings"
-	"terraform-provider-meraki/meraki"
 
 	_ "embed" // Allow embedding provider metadata
+
+	"terraform-provider-meraki/meraki"
 
 	pf "github.com/pulumi/pulumi-terraform-bridge/pf/tfbridge"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
