@@ -73,7 +73,8 @@ func applyResourceIDs(info tfbridge.PropertyVisitInfo) (tfbridge.PropertyVisitRe
 		return tfbridge.PropertyVisitResult{HasEffect: false}, nil
 	}
 
-	// If the resource already has an ID property, just use that.
+	// If the resource already has an ID property and it is likely to be present in
+	// the state, use that.
 	if id, ok := res.Schema.Schema().GetOk("id"); ok && id.Computed() && !id.Optional() {
 		return tfbridge.PropertyVisitResult{HasEffect: false}, nil
 	}
