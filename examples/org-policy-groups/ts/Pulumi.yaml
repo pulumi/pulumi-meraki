@@ -1,0 +1,8 @@
+name: meraki-org-policy-groups-ts
+description: Deploy a AdaptivePolicyGroups resource into an organization.
+runtime: nodejs
+
+plugins:
+  providers:
+    - name: "meraki"
+      path: "../../../bin"

@@ -7843,6 +7843,9 @@
             "meraki_devices_live_tools_arp_table": [
                 "serial"
             ],
+            "meraki_devices_live_tools_cable": [
+                "serial"
+            ],
             "meraki_devices_live_tools_ping": [
                 "serial"
             ],
@@ -7963,6 +7966,9 @@
             "meraki_networks_appliance_traffic_shaping_vpn_exclusions": [
                 "network_id"
             ],
+            "meraki_networks_appliance_vlans": [
+                "network_id"
+            ],
             "meraki_networks_appliance_vlans_settings": [
                 "network_id"
             ],
@@ -8045,6 +8051,9 @@
                 "network_id"
             ],
             "meraki_networks_pii_requests_delete": [
+                "network_id"
+            ],
+            "meraki_networks_sensor_alerts_profiles": [
                 "network_id"
             ],
             "meraki_networks_sensor_mqtt_brokers": [
@@ -8225,6 +8234,12 @@
                 "network_id"
             ],
             "meraki_organizations_adaptive_policy_acls": [
+                "organization_id"
+            ],
+            "meraki_organizations_adaptive_policy_groups": [
+                "organization_id"
+            ],
+            "meraki_organizations_adaptive_policy_policies": [
                 "organization_id"
             ],
             "meraki_organizations_adaptive_policy_settings": [

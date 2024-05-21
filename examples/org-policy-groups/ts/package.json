@@ -1,0 +1,10 @@
+{
+  "name": "meraki-org-policy-groups",
+  "version": "0.1.0",
+  "dependencies": {
+    "@pulumi/pulumi": "^3.0.0",
+    "@pulumi/meraki": "latest"
+  },
+  "target": "es2017",
+  "module": "esnext"
+}
