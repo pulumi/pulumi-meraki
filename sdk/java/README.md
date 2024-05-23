@@ -1,1 +1,1 @@
-A Pulumi package for creating and managing Meraki resources
+A Pulumi package for creating and managing Cisco Meraki resources

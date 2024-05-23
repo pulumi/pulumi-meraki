@@ -4,7 +4,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>pulumi</Authors>
     <Company>pulumi</Company>
-    <Description>A Pulumi package for creating and managing Meraki resources</Description>
+    <Description>A Pulumi package for creating and managing Cisco Meraki resources</Description>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/pulumi/pulumi-meraki</PackageProjectUrl>
     <RepositoryUrl>https://github.com/pulumi/pulumi-meraki</RepositoryUrl>

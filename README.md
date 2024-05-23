@@ -1,6 +1,6 @@
-# Meraki Resource Provider
+# Cisco Meraki Resource Provider
 
-The Meraki Resource Provider lets you manage [meraki](https://www.pulumi.com/registry/packages/meraki/) resources.
+The Cisco Meraki Resource Provider lets you manage [meraki](https://www.pulumi.com/registry/packages/meraki/) resources.
 
 ## Installing
 
