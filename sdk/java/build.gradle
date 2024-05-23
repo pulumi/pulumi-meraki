@@ -92,7 +92,7 @@ publishing {
                 inceptionYear = ""
                 name = ""
                 packaging = "jar"
-                description = "A Pulumi package for creating and managing Meraki resources"
+                description = "A Pulumi package for creating and managing Cisco Meraki resources"
 
                 url = "https://github.com/pulumi/pulumi-meraki"
 

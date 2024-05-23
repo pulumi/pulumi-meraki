@@ -1,6 +1,6 @@
 [project]
   name = "pulumi_meraki"
-  description = "A Pulumi package for creating and managing Meraki resources"
+  description = "A Pulumi package for creating and managing Cisco Meraki resources"
   dependencies = ["parver>=0.2.1", "pulumi>=3.0.0,<4.0.0", "semver>=2.8.1"]
   keywords = ["pulumi", "meraki", "category/network"]
   readme = "README.md"
