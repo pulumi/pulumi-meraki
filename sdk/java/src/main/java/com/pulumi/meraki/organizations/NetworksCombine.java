@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,21 +45,22 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new NetworksCombine(&#34;example&#34;, NetworksCombineArgs.builder()        
- *             .organizationId(&#34;string&#34;)
+ *         var example = new NetworksCombine("example", NetworksCombineArgs.builder()
+ *             .organizationId("string")
  *             .parameters(NetworksCombineParametersArgs.builder()
- *                 .enrollment_string(&#34;my-enrollment-string&#34;)
- *                 .name(&#34;Long Island Office&#34;)
+ *                 .enrollment_string("my-enrollment-string")
+ *                 .name("Long Island Office")
  *                 .network_ids(                
- *                     &#34;N_1234&#34;,
- *                     &#34;N_5678&#34;)
+ *                     "N_1234",
+ *                     "N_5678")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiOrganizationsNetworksCombineExample&#34;, example);
+ *         ctx.export("merakiOrganizationsNetworksCombineExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

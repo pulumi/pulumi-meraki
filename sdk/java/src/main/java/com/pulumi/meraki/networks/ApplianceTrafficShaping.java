@@ -18,7 +18,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -40,18 +41,19 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ApplianceTrafficShaping(&#34;example&#34;, ApplianceTrafficShapingArgs.builder()        
+ *         var example = new ApplianceTrafficShaping("example", ApplianceTrafficShapingArgs.builder()
  *             .globalBandwidthLimits(ApplianceTrafficShapingGlobalBandwidthLimitsArgs.builder()
  *                 .limit_down(5120)
  *                 .limit_up(2048)
  *                 .build())
- *             .networkId(&#34;string&#34;)
+ *             .networkId("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksApplianceTrafficShapingExample&#34;, example);
+ *         ctx.export("merakiNetworksApplianceTrafficShapingExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

@@ -19,7 +19,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -41,23 +42,24 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new AdaptivePolicyAcls(&#34;example&#34;, AdaptivePolicyAclsArgs.builder()        
- *             .description(&#34;Blocks sensitive web traffic&#34;)
- *             .ipVersion(&#34;ipv6&#34;)
- *             .name(&#34;Block sensitive web traffic&#34;)
- *             .organizationId(&#34;string&#34;)
+ *         var example = new AdaptivePolicyAcls("example", AdaptivePolicyAclsArgs.builder()
+ *             .description("Blocks sensitive web traffic")
+ *             .ipVersion("ipv6")
+ *             .name("Block sensitive web traffic")
+ *             .organizationId("string")
  *             .rules(AdaptivePolicyAclsRuleArgs.builder()
- *                 .dst_port(&#34;22-30&#34;)
- *                 .policy(&#34;deny&#34;)
- *                 .protocol(&#34;tcp&#34;)
- *                 .src_port(&#34;1,33&#34;)
+ *                 .dst_port("22-30")
+ *                 .policy("deny")
+ *                 .protocol("tcp")
+ *                 .src_port("1,33")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiOrganizationsAdaptivePolicyAclsExample&#34;, example);
+ *         ctx.export("merakiOrganizationsAdaptivePolicyAclsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

@@ -46,16 +46,16 @@ export class WirelessSsids extends pulumi.CustomResource {
     /**
      * The current setting for Active Directory. Only valid if splashPage is 'Password-protected with Active Directory'
      */
-    public readonly activeDirectory!: pulumi.Output<outputs.networks.WirelessSsidsActiveDirectory>;
+    public readonly activeDirectory!: pulumi.Output<outputs.networks.WirelessSsidsActiveDirectory | undefined>;
     public /*out*/ readonly adminSplashUrl!: pulumi.Output<string>;
     /**
      * Boolean indicating whether or not adult content will be blocked
      */
-    public readonly adultContentFilteringEnabled!: pulumi.Output<boolean>;
+    public readonly adultContentFilteringEnabled!: pulumi.Output<boolean | undefined>;
     /**
      * The list of tags and VLAN IDs used for VLAN tagging. This param is only valid when the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
      */
-    public readonly apTagsAndVlanIds!: pulumi.Output<outputs.networks.WirelessSsidsApTagsAndVlanId[]>;
+    public readonly apTagsAndVlanIds!: pulumi.Output<outputs.networks.WirelessSsidsApTagsAndVlanId[] | undefined>;
     /**
      * The association control method for the SSID
      */
@@ -63,7 +63,7 @@ export class WirelessSsids extends pulumi.CustomResource {
     /**
      * List of tags for this SSID. If availableOnAllAps is false, then the SSID is only broadcast by APs with tags matching any of the tags in this list
      */
-    public readonly availabilityTags!: pulumi.Output<string[]>;
+    public readonly availabilityTags!: pulumi.Output<string[] | undefined>;
     /**
      * Whether all APs broadcast the SSID or if it's restricted to APs matching any availability tags
      */
@@ -75,7 +75,7 @@ export class WirelessSsids extends pulumi.CustomResource {
     /**
      * The concentrator to use when the ipAssignmentMode is 'Layer 3 roaming with a concentrator' or 'VPN'.
      */
-    public readonly concentratorNetworkId!: pulumi.Output<string>;
+    public readonly concentratorNetworkId!: pulumi.Output<string | undefined>;
     /**
      * The default VLAN ID used for 'all other APs'. This param is only valid when the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
      */
@@ -83,19 +83,19 @@ export class WirelessSsids extends pulumi.CustomResource {
     /**
      * Disassociate clients when 'VPN' concentrator failover occurs in order to trigger clients to re-associate and generate new DHCP requests. This param is only valid if ipAssignmentMode is 'VPN'.
      */
-    public readonly disassociateClientsOnVpnFailover!: pulumi.Output<boolean>;
+    public readonly disassociateClientsOnVpnFailover!: pulumi.Output<boolean | undefined>;
     /**
      * DNS servers rewrite settings
      */
-    public readonly dnsRewrite!: pulumi.Output<outputs.networks.WirelessSsidsDnsRewrite>;
+    public readonly dnsRewrite!: pulumi.Output<outputs.networks.WirelessSsidsDnsRewrite | undefined>;
     /**
      * The current setting for 802.11r
      */
-    public readonly dot11r!: pulumi.Output<outputs.networks.WirelessSsidsDot11r>;
+    public readonly dot11r!: pulumi.Output<outputs.networks.WirelessSsidsDot11r | undefined>;
     /**
      * The current setting for Protected Management Frames (802.11w).
      */
-    public readonly dot11w!: pulumi.Output<outputs.networks.WirelessSsidsDot11w>;
+    public readonly dot11w!: pulumi.Output<outputs.networks.WirelessSsidsDot11w | undefined>;
     /**
      * Whether or not the SSID is enabled
      */
@@ -107,11 +107,11 @@ export class WirelessSsids extends pulumi.CustomResource {
     /**
      * Whether or not an SSID is accessible by 'enterprise' administrators ('access disabled' or 'access enabled')
      */
-    public readonly enterpriseAdminAccess!: pulumi.Output<string>;
+    public readonly enterpriseAdminAccess!: pulumi.Output<string | undefined>;
     /**
      * Ethernet over GRE settings
      */
-    public readonly gre!: pulumi.Output<outputs.networks.WirelessSsidsGre>;
+    public readonly gre!: pulumi.Output<outputs.networks.WirelessSsidsGre | undefined>;
     /**
      * The client IP assignment mode
      */
@@ -119,11 +119,11 @@ export class WirelessSsids extends pulumi.CustomResource {
     /**
      * Boolean indicating whether Layer 2 LAN isolation should be enabled or disabled. Only configurable when ipAssignmentMode is 'Bridge mode'.
      */
-    public readonly lanIsolationEnabled!: pulumi.Output<boolean>;
+    public readonly lanIsolationEnabled!: pulumi.Output<boolean | undefined>;
     /**
      * The current setting for LDAP. Only valid if splashPage is 'Password-protected with LDAP'.
      */
-    public readonly ldap!: pulumi.Output<outputs.networks.WirelessSsidsLdap>;
+    public readonly ldap!: pulumi.Output<outputs.networks.WirelessSsidsLdap | undefined>;
     /**
      * Extended local auth flag for Enterprise NAC
      */
@@ -131,7 +131,7 @@ export class WirelessSsids extends pulumi.CustomResource {
     /**
      * The current setting for Local Authentication, a built-in RADIUS server on the access point. Only valid if authMode is '8021x-localradius'.
      */
-    public readonly localRadius!: pulumi.Output<outputs.networks.WirelessSsidsLocalRadius>;
+    public readonly localRadius!: pulumi.Output<outputs.networks.WirelessSsidsLocalRadius | undefined>;
     /**
      * Whether clients connecting to this SSID must use the IP address assigned by the DHCP server
      */
@@ -147,7 +147,7 @@ export class WirelessSsids extends pulumi.CustomResource {
     /**
      * Named VLAN settings.
      */
-    public readonly namedVlans!: pulumi.Output<outputs.networks.WirelessSsidsNamedVlans>;
+    public readonly namedVlans!: pulumi.Output<outputs.networks.WirelessSsidsNamedVlans | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -159,7 +159,7 @@ export class WirelessSsids extends pulumi.CustomResource {
     /**
      * The OAuth settings of this SSID. Only valid if splashPage is 'Google OAuth'.
      */
-    public readonly oauth!: pulumi.Output<outputs.networks.WirelessSsidsOauth>;
+    public readonly oauth!: pulumi.Output<outputs.networks.WirelessSsidsOauth | undefined>;
     /**
      * The download bandwidth limit in Kbps. (0 represents no limit.)
      */
@@ -183,11 +183,11 @@ export class WirelessSsids extends pulumi.CustomResource {
     /**
      * Whether or not RADIUS accounting is enabled
      */
-    public readonly radiusAccountingEnabled!: pulumi.Output<boolean>;
+    public readonly radiusAccountingEnabled!: pulumi.Output<boolean | undefined>;
     /**
      * The interval (in seconds) in which accounting information is updated and sent to the RADIUS accounting server.
      */
-    public readonly radiusAccountingInterimInterval!: pulumi.Output<number>;
+    public readonly radiusAccountingInterimInterval!: pulumi.Output<number | undefined>;
     /**
      * List of RADIUS accounting 802.1X servers to be used for authentication
      */
@@ -199,15 +199,15 @@ export class WirelessSsids extends pulumi.CustomResource {
     /**
      * The template of the NAS identifier to be used for RADIUS authentication (ex. $NODE*MAC$:$VAP*NUM$).
      */
-    public readonly radiusAuthenticationNasId!: pulumi.Output<string>;
+    public readonly radiusAuthenticationNasId!: pulumi.Output<string | undefined>;
     /**
      * The template of the called station identifier to be used for RADIUS (ex. $NODE*MAC$:$VAP*NUM$).
      */
-    public readonly radiusCalledStationId!: pulumi.Output<string>;
+    public readonly radiusCalledStationId!: pulumi.Output<string | undefined>;
     /**
      * If true, Meraki devices will act as a RADIUS Dynamic Authorization Server and will respond to RADIUS Change-of-Authorization and Disconnect messages sent by the RADIUS server.
      */
-    public readonly radiusCoaEnabled!: pulumi.Output<boolean>;
+    public readonly radiusCoaEnabled!: pulumi.Output<boolean | undefined>;
     /**
      * Whether RADIUS authentication is enabled
      */
@@ -219,15 +219,15 @@ export class WirelessSsids extends pulumi.CustomResource {
     /**
      * Whether or not higher priority RADIUS servers should be retried after 60 seconds.
      */
-    public readonly radiusFallbackEnabled!: pulumi.Output<boolean>;
+    public readonly radiusFallbackEnabled!: pulumi.Output<boolean | undefined>;
     /**
      * Whether or not RADIUS Guest VLAN is enabled. This param is only valid if the authMode is 'open-with-radius' and addressing mode is not set to 'isolated' or 'nat' mode
      */
-    public readonly radiusGuestVlanEnabled!: pulumi.Output<boolean>;
+    public readonly radiusGuestVlanEnabled!: pulumi.Output<boolean | undefined>;
     /**
      * VLAN ID of the RADIUS Guest VLAN. This param is only valid if the authMode is 'open-with-radius' and addressing mode is not set to 'isolated' or 'nat' mode
      */
-    public readonly radiusGuestVlanId!: pulumi.Output<number>;
+    public readonly radiusGuestVlanId!: pulumi.Output<number | undefined>;
     /**
      * Policy which determines which RADIUS server will be contacted first in an authentication attempt, and the ordering of any necessary retry attempts
      */
@@ -235,19 +235,19 @@ export class WirelessSsids extends pulumi.CustomResource {
     /**
      * If true, the RADIUS response can override VLAN tag. This is not valid when ipAssignmentMode is 'NAT mode'.
      */
-    public readonly radiusOverride!: pulumi.Output<boolean>;
+    public readonly radiusOverride!: pulumi.Output<boolean | undefined>;
     /**
      * If true, Meraki devices will proxy RADIUS messages through the Meraki cloud to the configured RADIUS auth and accounting servers.
      */
-    public readonly radiusProxyEnabled!: pulumi.Output<boolean>;
+    public readonly radiusProxyEnabled!: pulumi.Output<boolean | undefined>;
     /**
      * The maximum number of transmit attempts after which a RADIUS server is failed over (must be between 1-5).
      */
-    public readonly radiusServerAttemptsLimit!: pulumi.Output<number>;
+    public readonly radiusServerAttemptsLimit!: pulumi.Output<number | undefined>;
     /**
      * The amount of time for which a RADIUS client waits for a reply from the RADIUS server (must be between 1-10 seconds).
      */
-    public readonly radiusServerTimeout!: pulumi.Output<number>;
+    public readonly radiusServerTimeout!: pulumi.Output<number | undefined>;
     /**
      * The RADIUS 802.1X servers to be used for authentication. This param is only valid if the authMode is 'open-with-radius', '8021x-radius' or 'ipsk-with-radius'
      */
@@ -259,15 +259,15 @@ export class WirelessSsids extends pulumi.CustomResource {
     /**
      * If true, Meraki devices will periodically send Access-Request messages to configured RADIUS servers using identity 'meraki*8021x*test' to ensure that the RADIUS servers are reachable.
      */
-    public readonly radiusTestingEnabled!: pulumi.Output<boolean>;
+    public readonly radiusTestingEnabled!: pulumi.Output<boolean | undefined>;
     /**
      * The secondary concentrator to use when the ipAssignmentMode is 'VPN'. If configured, the APs will switch to using this concentrator if the primary concentrator is unreachable. This param is optional. ('disabled' represents no secondary concentrator.)
      */
-    public readonly secondaryConcentratorNetworkId!: pulumi.Output<string>;
+    public readonly secondaryConcentratorNetworkId!: pulumi.Output<string | undefined>;
     /**
      * The SpeedBurst setting for this SSID'
      */
-    public readonly speedBurst!: pulumi.Output<outputs.networks.WirelessSsidsSpeedBurst>;
+    public readonly speedBurst!: pulumi.Output<outputs.networks.WirelessSsidsSpeedBurst | undefined>;
     /**
      * Array of valid sponsor email domains for sponsored guest splash type.
      */
@@ -287,7 +287,7 @@ export class WirelessSsids extends pulumi.CustomResource {
     /**
      * Whether or not traffic should be directed to use specific VLANs. This param is only valid if the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
      */
-    public readonly useVlanTagging!: pulumi.Output<boolean>;
+    public readonly useVlanTagging!: pulumi.Output<boolean | undefined>;
     /**
      * Whether the SSID is advertised or hidden by the AP
      */
@@ -295,15 +295,15 @@ export class WirelessSsids extends pulumi.CustomResource {
     /**
      * The VLAN ID used for VLAN tagging. This param is only valid when the ipAssignmentMode is 'Layer 3 roaming with a concentrator' or 'VPN'
      */
-    public readonly vlanId!: pulumi.Output<number>;
+    public readonly vlanId!: pulumi.Output<number | undefined>;
     /**
      * Allow users to access a configurable list of IP ranges prior to sign-on
      */
-    public readonly walledGardenEnabled!: pulumi.Output<boolean>;
+    public readonly walledGardenEnabled!: pulumi.Output<boolean | undefined>;
     /**
      * Domain names and IP address ranges available in Walled Garden mode
      */
-    public readonly walledGardenRanges!: pulumi.Output<string[]>;
+    public readonly walledGardenRanges!: pulumi.Output<string[] | undefined>;
     /**
      * The types of WPA encryption
      */

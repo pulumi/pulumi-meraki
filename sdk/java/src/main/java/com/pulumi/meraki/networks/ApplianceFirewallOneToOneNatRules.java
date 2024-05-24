@@ -19,7 +19,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -41,21 +42,22 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ApplianceFirewallOneToOneNatRules(&#34;example&#34;, ApplianceFirewallOneToOneNatRulesArgs.builder()        
- *             .networkId(&#34;string&#34;)
+ *         var example = new ApplianceFirewallOneToOneNatRules("example", ApplianceFirewallOneToOneNatRulesArgs.builder()
+ *             .networkId("string")
  *             .rules(ApplianceFirewallOneToOneNatRulesRuleArgs.builder()
  *                 .allowed_inbound(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
- *                 .lan_ip(&#34;192.168.128.22&#34;)
- *                 .name(&#34;Service behind NAT&#34;)
- *                 .public_ip(&#34;146.12.3.33&#34;)
- *                 .uplink(&#34;internet1&#34;)
+ *                 .lan_ip("192.168.128.22")
+ *                 .name("Service behind NAT")
+ *                 .public_ip("146.12.3.33")
+ *                 .uplink("internet1")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksApplianceFirewallOneToOneNatRulesExample&#34;, example);
+ *         ctx.export("merakiNetworksApplianceFirewallOneToOneNatRulesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

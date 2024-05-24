@@ -19,7 +19,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -41,20 +42,21 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new Snmp(&#34;example&#34;, SnmpArgs.builder()        
- *             .access(&#34;users&#34;)
- *             .communityString(&#34;sample&#34;)
- *             .networkId(&#34;string&#34;)
+ *         var example = new Snmp("example", SnmpArgs.builder()
+ *             .access("users")
+ *             .communityString("sample")
+ *             .networkId("string")
  *             .users(SnmpUserArgs.builder()
- *                 .passphrase(&#34;hunter2&#34;)
- *                 .username(&#34;AzureDiamond&#34;)
+ *                 .passphrase("hunter2")
+ *                 .username("AzureDiamond")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksSnmpExample&#34;, example);
+ *         ctx.export("merakiNetworksSnmpExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

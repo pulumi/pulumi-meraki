@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -43,7 +44,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ApplianceVpnBgp(&#34;example&#34;, ApplianceVpnBgpArgs.builder()        
+ *         var example = new ApplianceVpnBgp("example", ApplianceVpnBgpArgs.builder()
  *             .asNumber(64515)
  *             .enabled(true)
  *             .ibgpHoldTimer(120)
@@ -51,17 +52,18 @@ import javax.annotation.Nullable;
  *                 .allow_transit(true)
  *                 .ebgp_hold_timer(180)
  *                 .ebgp_multihop(2)
- *                 .ip(&#34;10.10.10.22&#34;)
+ *                 .ip("10.10.10.22")
  *                 .receive_limit(120)
  *                 .remote_as_number(64343)
  *                 .build())
- *             .networkId(&#34;string&#34;)
+ *             .networkId("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksApplianceVpnBgpExample&#34;, example);
+ *         ctx.export("merakiNetworksApplianceVpnBgpExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

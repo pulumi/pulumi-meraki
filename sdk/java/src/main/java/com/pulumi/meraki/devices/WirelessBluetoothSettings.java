@@ -18,7 +18,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -39,17 +40,18 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new WirelessBluetoothSettings(&#34;example&#34;, WirelessBluetoothSettingsArgs.builder()        
+ *         var example = new WirelessBluetoothSettings("example", WirelessBluetoothSettingsArgs.builder()
  *             .major(13)
  *             .minor(125)
- *             .serial(&#34;string&#34;)
- *             .uuid(&#34;00000000-0000-0000-000-000000000000&#34;)
+ *             .serial("string")
+ *             .uuid("00000000-0000-0000-000-000000000000")
  *             .build());
  * 
- *         ctx.export(&#34;merakiDevicesWirelessBluetoothSettingsExample&#34;, example);
+ *         ctx.export("merakiDevicesWirelessBluetoothSettingsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

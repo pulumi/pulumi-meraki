@@ -405,7 +405,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -427,13 +428,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getAdaptivePolicyOverview(GetAdaptivePolicyOverviewArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsAdaptivePolicyOverviewExample&#34;, example.applyValue(getAdaptivePolicyOverviewResult -&gt; getAdaptivePolicyOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsAdaptivePolicyOverviewExample", example.applyValue(getAdaptivePolicyOverviewResult -> getAdaptivePolicyOverviewResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -444,7 +446,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -466,13 +469,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getAdaptivePolicyOverview(GetAdaptivePolicyOverviewArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsAdaptivePolicyOverviewExample&#34;, example.applyValue(getAdaptivePolicyOverviewResult -&gt; getAdaptivePolicyOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsAdaptivePolicyOverviewExample", example.applyValue(getAdaptivePolicyOverviewResult -> getAdaptivePolicyOverviewResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -483,7 +487,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -505,13 +510,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getAdaptivePolicyOverview(GetAdaptivePolicyOverviewArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsAdaptivePolicyOverviewExample&#34;, example.applyValue(getAdaptivePolicyOverviewResult -&gt; getAdaptivePolicyOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsAdaptivePolicyOverviewExample", example.applyValue(getAdaptivePolicyOverviewResult -> getAdaptivePolicyOverviewResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -522,7 +528,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -544,13 +551,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getAdaptivePolicyOverview(GetAdaptivePolicyOverviewArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsAdaptivePolicyOverviewExample&#34;, example.applyValue(getAdaptivePolicyOverviewResult -&gt; getAdaptivePolicyOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsAdaptivePolicyOverviewExample", example.applyValue(getAdaptivePolicyOverviewResult -> getAdaptivePolicyOverviewResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -603,7 +611,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -625,13 +634,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getAdaptivePolicySettings(GetAdaptivePolicySettingsArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsAdaptivePolicySettingsExample&#34;, example.applyValue(getAdaptivePolicySettingsResult -&gt; getAdaptivePolicySettingsResult.item()));
+     *         ctx.export("merakiOrganizationsAdaptivePolicySettingsExample", example.applyValue(getAdaptivePolicySettingsResult -> getAdaptivePolicySettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -642,7 +652,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -664,13 +675,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getAdaptivePolicySettings(GetAdaptivePolicySettingsArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsAdaptivePolicySettingsExample&#34;, example.applyValue(getAdaptivePolicySettingsResult -&gt; getAdaptivePolicySettingsResult.item()));
+     *         ctx.export("merakiOrganizationsAdaptivePolicySettingsExample", example.applyValue(getAdaptivePolicySettingsResult -> getAdaptivePolicySettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -681,7 +693,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -703,13 +716,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getAdaptivePolicySettings(GetAdaptivePolicySettingsArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsAdaptivePolicySettingsExample&#34;, example.applyValue(getAdaptivePolicySettingsResult -&gt; getAdaptivePolicySettingsResult.item()));
+     *         ctx.export("merakiOrganizationsAdaptivePolicySettingsExample", example.applyValue(getAdaptivePolicySettingsResult -> getAdaptivePolicySettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -720,7 +734,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -742,13 +757,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getAdaptivePolicySettings(GetAdaptivePolicySettingsArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsAdaptivePolicySettingsExample&#34;, example.applyValue(getAdaptivePolicySettingsResult -&gt; getAdaptivePolicySettingsResult.item()));
+     *         ctx.export("merakiOrganizationsAdaptivePolicySettingsExample", example.applyValue(getAdaptivePolicySettingsResult -> getAdaptivePolicySettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -759,7 +775,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -781,13 +798,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getAdmins(GetAdminsArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsAdminsExample&#34;, example.applyValue(getAdminsResult -&gt; getAdminsResult.items()));
+     *         ctx.export("merakiOrganizationsAdminsExample", example.applyValue(getAdminsResult -> getAdminsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -798,7 +816,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -820,13 +839,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getAdmins(GetAdminsArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsAdminsExample&#34;, example.applyValue(getAdminsResult -&gt; getAdminsResult.items()));
+     *         ctx.export("merakiOrganizationsAdminsExample", example.applyValue(getAdminsResult -> getAdminsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -837,7 +857,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -859,13 +880,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getAdmins(GetAdminsArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsAdminsExample&#34;, example.applyValue(getAdminsResult -&gt; getAdminsResult.items()));
+     *         ctx.export("merakiOrganizationsAdminsExample", example.applyValue(getAdminsResult -> getAdminsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -876,7 +898,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -898,13 +921,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getAdmins(GetAdminsArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsAdminsExample&#34;, example.applyValue(getAdminsResult -&gt; getAdminsResult.items()));
+     *         ctx.export("merakiOrganizationsAdminsExample", example.applyValue(getAdminsResult -> getAdminsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -915,7 +939,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -937,13 +962,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getAlertsProfiles(GetAlertsProfilesArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsAlertsProfilesExample&#34;, example.applyValue(getAlertsProfilesResult -&gt; getAlertsProfilesResult.items()));
+     *         ctx.export("merakiOrganizationsAlertsProfilesExample", example.applyValue(getAlertsProfilesResult -> getAlertsProfilesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -954,7 +980,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -976,13 +1003,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getAlertsProfiles(GetAlertsProfilesArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsAlertsProfilesExample&#34;, example.applyValue(getAlertsProfilesResult -&gt; getAlertsProfilesResult.items()));
+     *         ctx.export("merakiOrganizationsAlertsProfilesExample", example.applyValue(getAlertsProfilesResult -> getAlertsProfilesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -993,7 +1021,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1015,13 +1044,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getAlertsProfiles(GetAlertsProfilesArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsAlertsProfilesExample&#34;, example.applyValue(getAlertsProfilesResult -&gt; getAlertsProfilesResult.items()));
+     *         ctx.export("merakiOrganizationsAlertsProfilesExample", example.applyValue(getAlertsProfilesResult -> getAlertsProfilesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1032,7 +1062,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1054,13 +1085,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getAlertsProfiles(GetAlertsProfilesArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsAlertsProfilesExample&#34;, example.applyValue(getAlertsProfilesResult -&gt; getAlertsProfilesResult.items()));
+     *         ctx.export("merakiOrganizationsAlertsProfilesExample", example.applyValue(getAlertsProfilesResult -> getAlertsProfilesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1071,7 +1103,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1093,27 +1126,28 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApiRequests(GetApiRequestsArgs.builder()
-     *             .adminId(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .method(&#34;string&#34;)
-     *             .operationIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
-     *             .path(&#34;string&#34;)
+     *             .adminId("string")
+     *             .endingBefore("string")
+     *             .method("string")
+     *             .operationIds("string")
+     *             .organizationId("string")
+     *             .path("string")
      *             .perPage(1)
      *             .responseCode(1)
-     *             .sourceIp(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .sourceIp("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
-     *             .userAgent(&#34;string&#34;)
+     *             .userAgent("string")
      *             .version(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApiRequestsExample&#34;, example.applyValue(getApiRequestsResult -&gt; getApiRequestsResult.items()));
+     *         ctx.export("merakiOrganizationsApiRequestsExample", example.applyValue(getApiRequestsResult -> getApiRequestsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1124,7 +1158,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1146,27 +1181,28 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApiRequests(GetApiRequestsArgs.builder()
-     *             .adminId(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .method(&#34;string&#34;)
-     *             .operationIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
-     *             .path(&#34;string&#34;)
+     *             .adminId("string")
+     *             .endingBefore("string")
+     *             .method("string")
+     *             .operationIds("string")
+     *             .organizationId("string")
+     *             .path("string")
      *             .perPage(1)
      *             .responseCode(1)
-     *             .sourceIp(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .sourceIp("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
-     *             .userAgent(&#34;string&#34;)
+     *             .userAgent("string")
      *             .version(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApiRequestsExample&#34;, example.applyValue(getApiRequestsResult -&gt; getApiRequestsResult.items()));
+     *         ctx.export("merakiOrganizationsApiRequestsExample", example.applyValue(getApiRequestsResult -> getApiRequestsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1177,7 +1213,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1199,27 +1236,28 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApiRequests(GetApiRequestsArgs.builder()
-     *             .adminId(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .method(&#34;string&#34;)
-     *             .operationIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
-     *             .path(&#34;string&#34;)
+     *             .adminId("string")
+     *             .endingBefore("string")
+     *             .method("string")
+     *             .operationIds("string")
+     *             .organizationId("string")
+     *             .path("string")
      *             .perPage(1)
      *             .responseCode(1)
-     *             .sourceIp(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .sourceIp("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
-     *             .userAgent(&#34;string&#34;)
+     *             .userAgent("string")
      *             .version(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApiRequestsExample&#34;, example.applyValue(getApiRequestsResult -&gt; getApiRequestsResult.items()));
+     *         ctx.export("merakiOrganizationsApiRequestsExample", example.applyValue(getApiRequestsResult -> getApiRequestsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1230,7 +1268,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1252,27 +1291,28 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApiRequests(GetApiRequestsArgs.builder()
-     *             .adminId(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .method(&#34;string&#34;)
-     *             .operationIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
-     *             .path(&#34;string&#34;)
+     *             .adminId("string")
+     *             .endingBefore("string")
+     *             .method("string")
+     *             .operationIds("string")
+     *             .organizationId("string")
+     *             .path("string")
      *             .perPage(1)
      *             .responseCode(1)
-     *             .sourceIp(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .sourceIp("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
-     *             .userAgent(&#34;string&#34;)
+     *             .userAgent("string")
      *             .version(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApiRequestsExample&#34;, example.applyValue(getApiRequestsResult -&gt; getApiRequestsResult.items()));
+     *         ctx.export("merakiOrganizationsApiRequestsExample", example.applyValue(getApiRequestsResult -> getApiRequestsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1283,7 +1323,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1305,16 +1346,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApiRequestsOverview(GetApiRequestsOverviewArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApiRequestsOverviewExample&#34;, example.applyValue(getApiRequestsOverviewResult -&gt; getApiRequestsOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsApiRequestsOverviewExample", example.applyValue(getApiRequestsOverviewResult -> getApiRequestsOverviewResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1325,7 +1367,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1347,16 +1390,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApiRequestsOverview(GetApiRequestsOverviewArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApiRequestsOverviewExample&#34;, example.applyValue(getApiRequestsOverviewResult -&gt; getApiRequestsOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsApiRequestsOverviewExample", example.applyValue(getApiRequestsOverviewResult -> getApiRequestsOverviewResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1367,7 +1411,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1389,16 +1434,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApiRequestsOverview(GetApiRequestsOverviewArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApiRequestsOverviewExample&#34;, example.applyValue(getApiRequestsOverviewResult -&gt; getApiRequestsOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsApiRequestsOverviewExample", example.applyValue(getApiRequestsOverviewResult -> getApiRequestsOverviewResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1409,7 +1455,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1431,16 +1478,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApiRequestsOverview(GetApiRequestsOverviewArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApiRequestsOverviewExample&#34;, example.applyValue(getApiRequestsOverviewResult -&gt; getApiRequestsOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsApiRequestsOverviewExample", example.applyValue(getApiRequestsOverviewResult -> getApiRequestsOverviewResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1451,7 +1499,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1473,22 +1522,23 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApiRequestsOverviewResponseCodesByInterval(GetApiRequestsOverviewResponseCodesByIntervalArgs.builder()
-     *             .adminIds(&#34;string&#34;)
+     *             .adminIds("string")
      *             .interval(1)
-     *             .operationIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
-     *             .sourceIps(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .operationIds("string")
+     *             .organizationId("string")
+     *             .sourceIps("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
-     *             .userAgent(&#34;string&#34;)
+     *             .userAgent("string")
      *             .version(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApiRequestsOverviewResponseCodesByIntervalExample&#34;, example.applyValue(getApiRequestsOverviewResponseCodesByIntervalResult -&gt; getApiRequestsOverviewResponseCodesByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsApiRequestsOverviewResponseCodesByIntervalExample", example.applyValue(getApiRequestsOverviewResponseCodesByIntervalResult -> getApiRequestsOverviewResponseCodesByIntervalResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1499,7 +1549,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1521,22 +1572,23 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApiRequestsOverviewResponseCodesByInterval(GetApiRequestsOverviewResponseCodesByIntervalArgs.builder()
-     *             .adminIds(&#34;string&#34;)
+     *             .adminIds("string")
      *             .interval(1)
-     *             .operationIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
-     *             .sourceIps(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .operationIds("string")
+     *             .organizationId("string")
+     *             .sourceIps("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
-     *             .userAgent(&#34;string&#34;)
+     *             .userAgent("string")
      *             .version(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApiRequestsOverviewResponseCodesByIntervalExample&#34;, example.applyValue(getApiRequestsOverviewResponseCodesByIntervalResult -&gt; getApiRequestsOverviewResponseCodesByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsApiRequestsOverviewResponseCodesByIntervalExample", example.applyValue(getApiRequestsOverviewResponseCodesByIntervalResult -> getApiRequestsOverviewResponseCodesByIntervalResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1547,7 +1599,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1569,22 +1622,23 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApiRequestsOverviewResponseCodesByInterval(GetApiRequestsOverviewResponseCodesByIntervalArgs.builder()
-     *             .adminIds(&#34;string&#34;)
+     *             .adminIds("string")
      *             .interval(1)
-     *             .operationIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
-     *             .sourceIps(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .operationIds("string")
+     *             .organizationId("string")
+     *             .sourceIps("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
-     *             .userAgent(&#34;string&#34;)
+     *             .userAgent("string")
      *             .version(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApiRequestsOverviewResponseCodesByIntervalExample&#34;, example.applyValue(getApiRequestsOverviewResponseCodesByIntervalResult -&gt; getApiRequestsOverviewResponseCodesByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsApiRequestsOverviewResponseCodesByIntervalExample", example.applyValue(getApiRequestsOverviewResponseCodesByIntervalResult -> getApiRequestsOverviewResponseCodesByIntervalResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1595,7 +1649,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1617,22 +1672,23 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApiRequestsOverviewResponseCodesByInterval(GetApiRequestsOverviewResponseCodesByIntervalArgs.builder()
-     *             .adminIds(&#34;string&#34;)
+     *             .adminIds("string")
      *             .interval(1)
-     *             .operationIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
-     *             .sourceIps(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .operationIds("string")
+     *             .organizationId("string")
+     *             .sourceIps("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
-     *             .userAgent(&#34;string&#34;)
+     *             .userAgent("string")
      *             .version(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApiRequestsOverviewResponseCodesByIntervalExample&#34;, example.applyValue(getApiRequestsOverviewResponseCodesByIntervalResult -&gt; getApiRequestsOverviewResponseCodesByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsApiRequestsOverviewResponseCodesByIntervalExample", example.applyValue(getApiRequestsOverviewResponseCodesByIntervalResult -> getApiRequestsOverviewResponseCodesByIntervalResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1643,7 +1699,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1665,13 +1722,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApplianceSecurityIntrusion(GetApplianceSecurityIntrusionArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApplianceSecurityIntrusionExample&#34;, example.applyValue(getApplianceSecurityIntrusionResult -&gt; getApplianceSecurityIntrusionResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceSecurityIntrusionExample", example.applyValue(getApplianceSecurityIntrusionResult -> getApplianceSecurityIntrusionResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1682,7 +1740,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1704,13 +1763,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApplianceSecurityIntrusion(GetApplianceSecurityIntrusionArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApplianceSecurityIntrusionExample&#34;, example.applyValue(getApplianceSecurityIntrusionResult -&gt; getApplianceSecurityIntrusionResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceSecurityIntrusionExample", example.applyValue(getApplianceSecurityIntrusionResult -> getApplianceSecurityIntrusionResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1721,7 +1781,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1743,13 +1804,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApplianceSecurityIntrusion(GetApplianceSecurityIntrusionArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApplianceSecurityIntrusionExample&#34;, example.applyValue(getApplianceSecurityIntrusionResult -&gt; getApplianceSecurityIntrusionResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceSecurityIntrusionExample", example.applyValue(getApplianceSecurityIntrusionResult -> getApplianceSecurityIntrusionResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1760,7 +1822,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1782,13 +1845,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApplianceSecurityIntrusion(GetApplianceSecurityIntrusionArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApplianceSecurityIntrusionExample&#34;, example.applyValue(getApplianceSecurityIntrusionResult -&gt; getApplianceSecurityIntrusionResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceSecurityIntrusionExample", example.applyValue(getApplianceSecurityIntrusionResult -> getApplianceSecurityIntrusionResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1799,7 +1863,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1821,17 +1886,18 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApplianceTrafficShapingVpnExclusionsByNetwork(GetApplianceTrafficShapingVpnExclusionsByNetworkArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApplianceTrafficShapingVpnExclusionsByNetworkExample&#34;, example.applyValue(getApplianceTrafficShapingVpnExclusionsByNetworkResult -&gt; getApplianceTrafficShapingVpnExclusionsByNetworkResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceTrafficShapingVpnExclusionsByNetworkExample", example.applyValue(getApplianceTrafficShapingVpnExclusionsByNetworkResult -> getApplianceTrafficShapingVpnExclusionsByNetworkResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1842,7 +1908,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1864,17 +1931,18 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApplianceTrafficShapingVpnExclusionsByNetwork(GetApplianceTrafficShapingVpnExclusionsByNetworkArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApplianceTrafficShapingVpnExclusionsByNetworkExample&#34;, example.applyValue(getApplianceTrafficShapingVpnExclusionsByNetworkResult -&gt; getApplianceTrafficShapingVpnExclusionsByNetworkResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceTrafficShapingVpnExclusionsByNetworkExample", example.applyValue(getApplianceTrafficShapingVpnExclusionsByNetworkResult -> getApplianceTrafficShapingVpnExclusionsByNetworkResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1885,7 +1953,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1907,17 +1976,18 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApplianceTrafficShapingVpnExclusionsByNetwork(GetApplianceTrafficShapingVpnExclusionsByNetworkArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApplianceTrafficShapingVpnExclusionsByNetworkExample&#34;, example.applyValue(getApplianceTrafficShapingVpnExclusionsByNetworkResult -&gt; getApplianceTrafficShapingVpnExclusionsByNetworkResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceTrafficShapingVpnExclusionsByNetworkExample", example.applyValue(getApplianceTrafficShapingVpnExclusionsByNetworkResult -> getApplianceTrafficShapingVpnExclusionsByNetworkResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1928,7 +1998,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1950,17 +2021,18 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApplianceTrafficShapingVpnExclusionsByNetwork(GetApplianceTrafficShapingVpnExclusionsByNetworkArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApplianceTrafficShapingVpnExclusionsByNetworkExample&#34;, example.applyValue(getApplianceTrafficShapingVpnExclusionsByNetworkResult -&gt; getApplianceTrafficShapingVpnExclusionsByNetworkResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceTrafficShapingVpnExclusionsByNetworkExample", example.applyValue(getApplianceTrafficShapingVpnExclusionsByNetworkResult -> getApplianceTrafficShapingVpnExclusionsByNetworkResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1971,7 +2043,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1993,13 +2066,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApplianceUplinksStatusesOverview(GetApplianceUplinksStatusesOverviewArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApplianceUplinksStatusesOverviewExample&#34;, example.applyValue(getApplianceUplinksStatusesOverviewResult -&gt; getApplianceUplinksStatusesOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceUplinksStatusesOverviewExample", example.applyValue(getApplianceUplinksStatusesOverviewResult -> getApplianceUplinksStatusesOverviewResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2010,7 +2084,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2032,13 +2107,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApplianceUplinksStatusesOverview(GetApplianceUplinksStatusesOverviewArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApplianceUplinksStatusesOverviewExample&#34;, example.applyValue(getApplianceUplinksStatusesOverviewResult -&gt; getApplianceUplinksStatusesOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceUplinksStatusesOverviewExample", example.applyValue(getApplianceUplinksStatusesOverviewResult -> getApplianceUplinksStatusesOverviewResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2049,7 +2125,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2071,13 +2148,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApplianceUplinksStatusesOverview(GetApplianceUplinksStatusesOverviewArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApplianceUplinksStatusesOverviewExample&#34;, example.applyValue(getApplianceUplinksStatusesOverviewResult -&gt; getApplianceUplinksStatusesOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceUplinksStatusesOverviewExample", example.applyValue(getApplianceUplinksStatusesOverviewResult -> getApplianceUplinksStatusesOverviewResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2088,7 +2166,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2110,13 +2189,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApplianceUplinksStatusesOverview(GetApplianceUplinksStatusesOverviewArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApplianceUplinksStatusesOverviewExample&#34;, example.applyValue(getApplianceUplinksStatusesOverviewResult -&gt; getApplianceUplinksStatusesOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceUplinksStatusesOverviewExample", example.applyValue(getApplianceUplinksStatusesOverviewResult -> getApplianceUplinksStatusesOverviewResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2127,7 +2207,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2149,16 +2230,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApplianceUplinksUsageByNetwork(GetApplianceUplinksUsageByNetworkArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApplianceUplinksUsageByNetworkExample&#34;, example.applyValue(getApplianceUplinksUsageByNetworkResult -&gt; getApplianceUplinksUsageByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsApplianceUplinksUsageByNetworkExample", example.applyValue(getApplianceUplinksUsageByNetworkResult -> getApplianceUplinksUsageByNetworkResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2169,7 +2251,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2191,16 +2274,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApplianceUplinksUsageByNetwork(GetApplianceUplinksUsageByNetworkArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApplianceUplinksUsageByNetworkExample&#34;, example.applyValue(getApplianceUplinksUsageByNetworkResult -&gt; getApplianceUplinksUsageByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsApplianceUplinksUsageByNetworkExample", example.applyValue(getApplianceUplinksUsageByNetworkResult -> getApplianceUplinksUsageByNetworkResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2211,7 +2295,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2233,16 +2318,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApplianceUplinksUsageByNetwork(GetApplianceUplinksUsageByNetworkArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApplianceUplinksUsageByNetworkExample&#34;, example.applyValue(getApplianceUplinksUsageByNetworkResult -&gt; getApplianceUplinksUsageByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsApplianceUplinksUsageByNetworkExample", example.applyValue(getApplianceUplinksUsageByNetworkResult -> getApplianceUplinksUsageByNetworkResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2253,7 +2339,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2275,16 +2362,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApplianceUplinksUsageByNetwork(GetApplianceUplinksUsageByNetworkArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApplianceUplinksUsageByNetworkExample&#34;, example.applyValue(getApplianceUplinksUsageByNetworkResult -&gt; getApplianceUplinksUsageByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsApplianceUplinksUsageByNetworkExample", example.applyValue(getApplianceUplinksUsageByNetworkResult -> getApplianceUplinksUsageByNetworkResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2295,7 +2383,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2317,13 +2406,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApplianceVpnThirdPartyVpnpeers(GetApplianceVpnThirdPartyVpnpeersArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApplianceVpnThirdPartyVpnpeersExample&#34;, example.applyValue(getApplianceVpnThirdPartyVpnpeersResult -&gt; getApplianceVpnThirdPartyVpnpeersResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceVpnThirdPartyVpnpeersExample", example.applyValue(getApplianceVpnThirdPartyVpnpeersResult -> getApplianceVpnThirdPartyVpnpeersResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2334,7 +2424,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2356,13 +2447,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApplianceVpnThirdPartyVpnpeers(GetApplianceVpnThirdPartyVpnpeersArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApplianceVpnThirdPartyVpnpeersExample&#34;, example.applyValue(getApplianceVpnThirdPartyVpnpeersResult -&gt; getApplianceVpnThirdPartyVpnpeersResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceVpnThirdPartyVpnpeersExample", example.applyValue(getApplianceVpnThirdPartyVpnpeersResult -> getApplianceVpnThirdPartyVpnpeersResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2373,7 +2465,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2395,13 +2488,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApplianceVpnThirdPartyVpnpeers(GetApplianceVpnThirdPartyVpnpeersArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApplianceVpnThirdPartyVpnpeersExample&#34;, example.applyValue(getApplianceVpnThirdPartyVpnpeersResult -&gt; getApplianceVpnThirdPartyVpnpeersResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceVpnThirdPartyVpnpeersExample", example.applyValue(getApplianceVpnThirdPartyVpnpeersResult -> getApplianceVpnThirdPartyVpnpeersResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2412,7 +2506,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2434,13 +2529,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApplianceVpnThirdPartyVpnpeers(GetApplianceVpnThirdPartyVpnpeersArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApplianceVpnThirdPartyVpnpeersExample&#34;, example.applyValue(getApplianceVpnThirdPartyVpnpeersResult -&gt; getApplianceVpnThirdPartyVpnpeersResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceVpnThirdPartyVpnpeersExample", example.applyValue(getApplianceVpnThirdPartyVpnpeersResult -> getApplianceVpnThirdPartyVpnpeersResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2451,7 +2547,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2473,13 +2570,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApplianceVpnVpnFirewallRules(GetApplianceVpnVpnFirewallRulesArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApplianceVpnVpnFirewallRulesExample&#34;, example.applyValue(getApplianceVpnVpnFirewallRulesResult -&gt; getApplianceVpnVpnFirewallRulesResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceVpnVpnFirewallRulesExample", example.applyValue(getApplianceVpnVpnFirewallRulesResult -> getApplianceVpnVpnFirewallRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2490,7 +2588,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2512,13 +2611,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApplianceVpnVpnFirewallRules(GetApplianceVpnVpnFirewallRulesArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApplianceVpnVpnFirewallRulesExample&#34;, example.applyValue(getApplianceVpnVpnFirewallRulesResult -&gt; getApplianceVpnVpnFirewallRulesResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceVpnVpnFirewallRulesExample", example.applyValue(getApplianceVpnVpnFirewallRulesResult -> getApplianceVpnVpnFirewallRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2529,7 +2629,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2551,13 +2652,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApplianceVpnVpnFirewallRules(GetApplianceVpnVpnFirewallRulesArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApplianceVpnVpnFirewallRulesExample&#34;, example.applyValue(getApplianceVpnVpnFirewallRulesResult -&gt; getApplianceVpnVpnFirewallRulesResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceVpnVpnFirewallRulesExample", example.applyValue(getApplianceVpnVpnFirewallRulesResult -> getApplianceVpnVpnFirewallRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2568,7 +2670,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2590,13 +2693,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getApplianceVpnVpnFirewallRules(GetApplianceVpnVpnFirewallRulesArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsApplianceVpnVpnFirewallRulesExample&#34;, example.applyValue(getApplianceVpnVpnFirewallRulesResult -&gt; getApplianceVpnVpnFirewallRulesResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceVpnVpnFirewallRulesExample", example.applyValue(getApplianceVpnVpnFirewallRulesResult -> getApplianceVpnVpnFirewallRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2649,7 +2753,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2671,13 +2776,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getBrandingPoliciesPriorities(GetBrandingPoliciesPrioritiesArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsBrandingPoliciesPrioritiesExample&#34;, example.applyValue(getBrandingPoliciesPrioritiesResult -&gt; getBrandingPoliciesPrioritiesResult.item()));
+     *         ctx.export("merakiOrganizationsBrandingPoliciesPrioritiesExample", example.applyValue(getBrandingPoliciesPrioritiesResult -> getBrandingPoliciesPrioritiesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2688,7 +2794,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2710,13 +2817,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getBrandingPoliciesPriorities(GetBrandingPoliciesPrioritiesArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsBrandingPoliciesPrioritiesExample&#34;, example.applyValue(getBrandingPoliciesPrioritiesResult -&gt; getBrandingPoliciesPrioritiesResult.item()));
+     *         ctx.export("merakiOrganizationsBrandingPoliciesPrioritiesExample", example.applyValue(getBrandingPoliciesPrioritiesResult -> getBrandingPoliciesPrioritiesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2727,7 +2835,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2749,13 +2858,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getBrandingPoliciesPriorities(GetBrandingPoliciesPrioritiesArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsBrandingPoliciesPrioritiesExample&#34;, example.applyValue(getBrandingPoliciesPrioritiesResult -&gt; getBrandingPoliciesPrioritiesResult.item()));
+     *         ctx.export("merakiOrganizationsBrandingPoliciesPrioritiesExample", example.applyValue(getBrandingPoliciesPrioritiesResult -> getBrandingPoliciesPrioritiesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2766,7 +2876,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2788,13 +2899,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getBrandingPoliciesPriorities(GetBrandingPoliciesPrioritiesArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsBrandingPoliciesPrioritiesExample&#34;, example.applyValue(getBrandingPoliciesPrioritiesResult -&gt; getBrandingPoliciesPrioritiesResult.item()));
+     *         ctx.export("merakiOrganizationsBrandingPoliciesPrioritiesExample", example.applyValue(getBrandingPoliciesPrioritiesResult -> getBrandingPoliciesPrioritiesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2805,7 +2917,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2827,14 +2940,15 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getCameraBoundariesAreasByDevice(GetCameraBoundariesAreasByDeviceArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .serials("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsCameraBoundariesAreasByDeviceExample&#34;, example.applyValue(getCameraBoundariesAreasByDeviceResult -&gt; getCameraBoundariesAreasByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsCameraBoundariesAreasByDeviceExample", example.applyValue(getCameraBoundariesAreasByDeviceResult -> getCameraBoundariesAreasByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2845,7 +2959,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2867,14 +2982,15 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getCameraBoundariesAreasByDevice(GetCameraBoundariesAreasByDeviceArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .serials("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsCameraBoundariesAreasByDeviceExample&#34;, example.applyValue(getCameraBoundariesAreasByDeviceResult -&gt; getCameraBoundariesAreasByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsCameraBoundariesAreasByDeviceExample", example.applyValue(getCameraBoundariesAreasByDeviceResult -> getCameraBoundariesAreasByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2885,7 +3001,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2907,14 +3024,15 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getCameraBoundariesAreasByDevice(GetCameraBoundariesAreasByDeviceArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .serials("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsCameraBoundariesAreasByDeviceExample&#34;, example.applyValue(getCameraBoundariesAreasByDeviceResult -&gt; getCameraBoundariesAreasByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsCameraBoundariesAreasByDeviceExample", example.applyValue(getCameraBoundariesAreasByDeviceResult -> getCameraBoundariesAreasByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2925,7 +3043,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2947,14 +3066,15 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getCameraBoundariesAreasByDevice(GetCameraBoundariesAreasByDeviceArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .serials("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsCameraBoundariesAreasByDeviceExample&#34;, example.applyValue(getCameraBoundariesAreasByDeviceResult -&gt; getCameraBoundariesAreasByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsCameraBoundariesAreasByDeviceExample", example.applyValue(getCameraBoundariesAreasByDeviceResult -> getCameraBoundariesAreasByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2965,7 +3085,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2987,14 +3108,15 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getCameraBoundariesLinesByDevice(GetCameraBoundariesLinesByDeviceArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .serials("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsCameraBoundariesLinesByDeviceExample&#34;, example.applyValue(getCameraBoundariesLinesByDeviceResult -&gt; getCameraBoundariesLinesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsCameraBoundariesLinesByDeviceExample", example.applyValue(getCameraBoundariesLinesByDeviceResult -> getCameraBoundariesLinesByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3005,7 +3127,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3027,14 +3150,15 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getCameraBoundariesLinesByDevice(GetCameraBoundariesLinesByDeviceArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .serials("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsCameraBoundariesLinesByDeviceExample&#34;, example.applyValue(getCameraBoundariesLinesByDeviceResult -&gt; getCameraBoundariesLinesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsCameraBoundariesLinesByDeviceExample", example.applyValue(getCameraBoundariesLinesByDeviceResult -> getCameraBoundariesLinesByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3045,7 +3169,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3067,14 +3192,15 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getCameraBoundariesLinesByDevice(GetCameraBoundariesLinesByDeviceArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .serials("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsCameraBoundariesLinesByDeviceExample&#34;, example.applyValue(getCameraBoundariesLinesByDeviceResult -&gt; getCameraBoundariesLinesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsCameraBoundariesLinesByDeviceExample", example.applyValue(getCameraBoundariesLinesByDeviceResult -> getCameraBoundariesLinesByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3085,7 +3211,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3107,14 +3234,15 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getCameraBoundariesLinesByDevice(GetCameraBoundariesLinesByDeviceArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .serials("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsCameraBoundariesLinesByDeviceExample&#34;, example.applyValue(getCameraBoundariesLinesByDeviceResult -&gt; getCameraBoundariesLinesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsCameraBoundariesLinesByDeviceExample", example.applyValue(getCameraBoundariesLinesByDeviceResult -> getCameraBoundariesLinesByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3167,7 +3295,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3189,18 +3318,19 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getCameraDetectionsHistoryByBoundaryByInterval(GetCameraDetectionsHistoryByBoundaryByIntervalArgs.builder()
-     *             .boundaryIds(&#34;string&#34;)
-     *             .boundaryTypes(&#34;string&#34;)
+     *             .boundaryIds("string")
+     *             .boundaryTypes("string")
      *             .duration(1)
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .ranges(&#34;string&#34;)
+     *             .ranges("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsCameraDetectionsHistoryByBoundaryByIntervalExample&#34;, example.applyValue(getCameraDetectionsHistoryByBoundaryByIntervalResult -&gt; getCameraDetectionsHistoryByBoundaryByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsCameraDetectionsHistoryByBoundaryByIntervalExample", example.applyValue(getCameraDetectionsHistoryByBoundaryByIntervalResult -> getCameraDetectionsHistoryByBoundaryByIntervalResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3211,7 +3341,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3233,18 +3364,19 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getCameraDetectionsHistoryByBoundaryByInterval(GetCameraDetectionsHistoryByBoundaryByIntervalArgs.builder()
-     *             .boundaryIds(&#34;string&#34;)
-     *             .boundaryTypes(&#34;string&#34;)
+     *             .boundaryIds("string")
+     *             .boundaryTypes("string")
      *             .duration(1)
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .ranges(&#34;string&#34;)
+     *             .ranges("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsCameraDetectionsHistoryByBoundaryByIntervalExample&#34;, example.applyValue(getCameraDetectionsHistoryByBoundaryByIntervalResult -&gt; getCameraDetectionsHistoryByBoundaryByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsCameraDetectionsHistoryByBoundaryByIntervalExample", example.applyValue(getCameraDetectionsHistoryByBoundaryByIntervalResult -> getCameraDetectionsHistoryByBoundaryByIntervalResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3255,7 +3387,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3277,18 +3410,19 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getCameraDetectionsHistoryByBoundaryByInterval(GetCameraDetectionsHistoryByBoundaryByIntervalArgs.builder()
-     *             .boundaryIds(&#34;string&#34;)
-     *             .boundaryTypes(&#34;string&#34;)
+     *             .boundaryIds("string")
+     *             .boundaryTypes("string")
      *             .duration(1)
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .ranges(&#34;string&#34;)
+     *             .ranges("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsCameraDetectionsHistoryByBoundaryByIntervalExample&#34;, example.applyValue(getCameraDetectionsHistoryByBoundaryByIntervalResult -&gt; getCameraDetectionsHistoryByBoundaryByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsCameraDetectionsHistoryByBoundaryByIntervalExample", example.applyValue(getCameraDetectionsHistoryByBoundaryByIntervalResult -> getCameraDetectionsHistoryByBoundaryByIntervalResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3299,7 +3433,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3321,18 +3456,19 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getCameraDetectionsHistoryByBoundaryByInterval(GetCameraDetectionsHistoryByBoundaryByIntervalArgs.builder()
-     *             .boundaryIds(&#34;string&#34;)
-     *             .boundaryTypes(&#34;string&#34;)
+     *             .boundaryIds("string")
+     *             .boundaryTypes("string")
      *             .duration(1)
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .ranges(&#34;string&#34;)
+     *             .ranges("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsCameraDetectionsHistoryByBoundaryByIntervalExample&#34;, example.applyValue(getCameraDetectionsHistoryByBoundaryByIntervalResult -&gt; getCameraDetectionsHistoryByBoundaryByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsCameraDetectionsHistoryByBoundaryByIntervalExample", example.applyValue(getCameraDetectionsHistoryByBoundaryByIntervalResult -> getCameraDetectionsHistoryByBoundaryByIntervalResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3343,7 +3479,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3365,14 +3502,15 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getCameraPermissions(GetCameraPermissionsArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .permissionScopeId(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .permissionScopeId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsCameraPermissionsExample&#34;, example.applyValue(getCameraPermissionsResult -&gt; getCameraPermissionsResult.item()));
+     *         ctx.export("merakiOrganizationsCameraPermissionsExample", example.applyValue(getCameraPermissionsResult -> getCameraPermissionsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3383,7 +3521,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3405,14 +3544,15 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getCameraPermissions(GetCameraPermissionsArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .permissionScopeId(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .permissionScopeId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsCameraPermissionsExample&#34;, example.applyValue(getCameraPermissionsResult -&gt; getCameraPermissionsResult.item()));
+     *         ctx.export("merakiOrganizationsCameraPermissionsExample", example.applyValue(getCameraPermissionsResult -> getCameraPermissionsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3423,7 +3563,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3445,14 +3586,15 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getCameraPermissions(GetCameraPermissionsArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .permissionScopeId(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .permissionScopeId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsCameraPermissionsExample&#34;, example.applyValue(getCameraPermissionsResult -&gt; getCameraPermissionsResult.item()));
+     *         ctx.export("merakiOrganizationsCameraPermissionsExample", example.applyValue(getCameraPermissionsResult -> getCameraPermissionsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3463,7 +3605,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3485,14 +3628,15 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getCameraPermissions(GetCameraPermissionsArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .permissionScopeId(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .permissionScopeId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsCameraPermissionsExample&#34;, example.applyValue(getCameraPermissionsResult -&gt; getCameraPermissionsResult.item()));
+     *         ctx.export("merakiOrganizationsCameraPermissionsExample", example.applyValue(getCameraPermissionsResult -> getCameraPermissionsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3545,7 +3689,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3567,19 +3712,20 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getCellularGatewayUplinkStatuses(GetCellularGatewayUplinkStatusesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .iccids(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .iccids("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsCellularGatewayUplinkStatusesExample&#34;, example.applyValue(getCellularGatewayUplinkStatusesResult -&gt; getCellularGatewayUplinkStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsCellularGatewayUplinkStatusesExample", example.applyValue(getCellularGatewayUplinkStatusesResult -> getCellularGatewayUplinkStatusesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3590,7 +3736,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3612,19 +3759,20 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getCellularGatewayUplinkStatuses(GetCellularGatewayUplinkStatusesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .iccids(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .iccids("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsCellularGatewayUplinkStatusesExample&#34;, example.applyValue(getCellularGatewayUplinkStatusesResult -&gt; getCellularGatewayUplinkStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsCellularGatewayUplinkStatusesExample", example.applyValue(getCellularGatewayUplinkStatusesResult -> getCellularGatewayUplinkStatusesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3635,7 +3783,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3657,19 +3806,20 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getCellularGatewayUplinkStatuses(GetCellularGatewayUplinkStatusesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .iccids(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .iccids("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsCellularGatewayUplinkStatusesExample&#34;, example.applyValue(getCellularGatewayUplinkStatusesResult -&gt; getCellularGatewayUplinkStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsCellularGatewayUplinkStatusesExample", example.applyValue(getCellularGatewayUplinkStatusesResult -> getCellularGatewayUplinkStatusesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3680,7 +3830,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3702,19 +3853,20 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getCellularGatewayUplinkStatuses(GetCellularGatewayUplinkStatusesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .iccids(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .iccids("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsCellularGatewayUplinkStatusesExample&#34;, example.applyValue(getCellularGatewayUplinkStatusesResult -&gt; getCellularGatewayUplinkStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsCellularGatewayUplinkStatusesExample", example.applyValue(getCellularGatewayUplinkStatusesResult -> getCellularGatewayUplinkStatusesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3725,7 +3877,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3747,16 +3900,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getClientsBandwidthUsageHistory(GetClientsBandwidthUsageHistoryArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsClientsBandwidthUsageHistoryExample&#34;, example.applyValue(getClientsBandwidthUsageHistoryResult -&gt; getClientsBandwidthUsageHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsClientsBandwidthUsageHistoryExample", example.applyValue(getClientsBandwidthUsageHistoryResult -> getClientsBandwidthUsageHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3767,7 +3921,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3789,16 +3944,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getClientsBandwidthUsageHistory(GetClientsBandwidthUsageHistoryArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsClientsBandwidthUsageHistoryExample&#34;, example.applyValue(getClientsBandwidthUsageHistoryResult -&gt; getClientsBandwidthUsageHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsClientsBandwidthUsageHistoryExample", example.applyValue(getClientsBandwidthUsageHistoryResult -> getClientsBandwidthUsageHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3809,7 +3965,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3831,16 +3988,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getClientsBandwidthUsageHistory(GetClientsBandwidthUsageHistoryArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsClientsBandwidthUsageHistoryExample&#34;, example.applyValue(getClientsBandwidthUsageHistoryResult -&gt; getClientsBandwidthUsageHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsClientsBandwidthUsageHistoryExample", example.applyValue(getClientsBandwidthUsageHistoryResult -> getClientsBandwidthUsageHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3851,7 +4009,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3873,16 +4032,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getClientsBandwidthUsageHistory(GetClientsBandwidthUsageHistoryArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsClientsBandwidthUsageHistoryExample&#34;, example.applyValue(getClientsBandwidthUsageHistoryResult -&gt; getClientsBandwidthUsageHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsClientsBandwidthUsageHistoryExample", example.applyValue(getClientsBandwidthUsageHistoryResult -> getClientsBandwidthUsageHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3893,7 +4053,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3915,16 +4076,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getClientsOverview(GetClientsOverviewArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsClientsOverviewExample&#34;, example.applyValue(getClientsOverviewResult -&gt; getClientsOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsClientsOverviewExample", example.applyValue(getClientsOverviewResult -> getClientsOverviewResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3935,7 +4097,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3957,16 +4120,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getClientsOverview(GetClientsOverviewArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsClientsOverviewExample&#34;, example.applyValue(getClientsOverviewResult -&gt; getClientsOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsClientsOverviewExample", example.applyValue(getClientsOverviewResult -> getClientsOverviewResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3977,7 +4141,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3999,16 +4164,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getClientsOverview(GetClientsOverviewArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsClientsOverviewExample&#34;, example.applyValue(getClientsOverviewResult -&gt; getClientsOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsClientsOverviewExample", example.applyValue(getClientsOverviewResult -> getClientsOverviewResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4019,7 +4185,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4041,16 +4208,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getClientsOverview(GetClientsOverviewArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsClientsOverviewExample&#34;, example.applyValue(getClientsOverviewResult -&gt; getClientsOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsClientsOverviewExample", example.applyValue(getClientsOverviewResult -> getClientsOverviewResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4061,7 +4229,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4083,17 +4252,18 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getClientsSearch(GetClientsSearchArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .mac(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .mac("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsClientsSearchExample&#34;, example.applyValue(getClientsSearchResult -&gt; getClientsSearchResult.item()));
+     *         ctx.export("merakiOrganizationsClientsSearchExample", example.applyValue(getClientsSearchResult -> getClientsSearchResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4104,7 +4274,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4126,17 +4297,18 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getClientsSearch(GetClientsSearchArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .mac(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .mac("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsClientsSearchExample&#34;, example.applyValue(getClientsSearchResult -&gt; getClientsSearchResult.item()));
+     *         ctx.export("merakiOrganizationsClientsSearchExample", example.applyValue(getClientsSearchResult -> getClientsSearchResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4147,7 +4319,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4169,17 +4342,18 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getClientsSearch(GetClientsSearchArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .mac(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .mac("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsClientsSearchExample&#34;, example.applyValue(getClientsSearchResult -&gt; getClientsSearchResult.item()));
+     *         ctx.export("merakiOrganizationsClientsSearchExample", example.applyValue(getClientsSearchResult -> getClientsSearchResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4190,7 +4364,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4212,17 +4387,18 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getClientsSearch(GetClientsSearchArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .mac(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .mac("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsClientsSearchExample&#34;, example.applyValue(getClientsSearchResult -&gt; getClientsSearchResult.item()));
+     *         ctx.export("merakiOrganizationsClientsSearchExample", example.applyValue(getClientsSearchResult -> getClientsSearchResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4275,7 +4451,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4297,14 +4474,15 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getConfigTemplatesSwitchProfiles(GetConfigTemplatesSwitchProfilesArgs.builder()
-     *             .configTemplateId(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .configTemplateId("string")
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsConfigTemplatesSwitchProfilesExample&#34;, example.applyValue(getConfigTemplatesSwitchProfilesResult -&gt; getConfigTemplatesSwitchProfilesResult.items()));
+     *         ctx.export("merakiOrganizationsConfigTemplatesSwitchProfilesExample", example.applyValue(getConfigTemplatesSwitchProfilesResult -> getConfigTemplatesSwitchProfilesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4315,7 +4493,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4337,14 +4516,15 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getConfigTemplatesSwitchProfiles(GetConfigTemplatesSwitchProfilesArgs.builder()
-     *             .configTemplateId(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .configTemplateId("string")
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsConfigTemplatesSwitchProfilesExample&#34;, example.applyValue(getConfigTemplatesSwitchProfilesResult -&gt; getConfigTemplatesSwitchProfilesResult.items()));
+     *         ctx.export("merakiOrganizationsConfigTemplatesSwitchProfilesExample", example.applyValue(getConfigTemplatesSwitchProfilesResult -> getConfigTemplatesSwitchProfilesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4355,7 +4535,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4377,14 +4558,15 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getConfigTemplatesSwitchProfiles(GetConfigTemplatesSwitchProfilesArgs.builder()
-     *             .configTemplateId(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .configTemplateId("string")
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsConfigTemplatesSwitchProfilesExample&#34;, example.applyValue(getConfigTemplatesSwitchProfilesResult -&gt; getConfigTemplatesSwitchProfilesResult.items()));
+     *         ctx.export("merakiOrganizationsConfigTemplatesSwitchProfilesExample", example.applyValue(getConfigTemplatesSwitchProfilesResult -> getConfigTemplatesSwitchProfilesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4395,7 +4577,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4417,14 +4600,15 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getConfigTemplatesSwitchProfiles(GetConfigTemplatesSwitchProfilesArgs.builder()
-     *             .configTemplateId(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .configTemplateId("string")
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsConfigTemplatesSwitchProfilesExample&#34;, example.applyValue(getConfigTemplatesSwitchProfilesResult -&gt; getConfigTemplatesSwitchProfilesResult.items()));
+     *         ctx.export("merakiOrganizationsConfigTemplatesSwitchProfilesExample", example.applyValue(getConfigTemplatesSwitchProfilesResult -> getConfigTemplatesSwitchProfilesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4477,7 +4661,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4499,30 +4684,31 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevices(GetDevicesArgs.builder()
-     *             .configurationUpdatedAfter(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .mac(&#34;string&#34;)
-     *             .macs(&#34;string&#34;)
-     *             .model(&#34;string&#34;)
-     *             .models(&#34;string&#34;)
-     *             .name(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .configurationUpdatedAfter("string")
+     *             .endingBefore("string")
+     *             .mac("string")
+     *             .macs("string")
+     *             .model("string")
+     *             .models("string")
+     *             .name("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .sensorAlertProfileIds(&#34;string&#34;)
-     *             .sensorMetrics(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .tags(&#34;string&#34;)
-     *             .tagsFilterType(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .sensorAlertProfileIds("string")
+     *             .sensorMetrics("string")
+     *             .serial("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .tags("string")
+     *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesExample&#34;, example.applyValue(getDevicesResult -&gt; getDevicesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesExample", example.applyValue(getDevicesResult -> getDevicesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4533,7 +4719,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4555,30 +4742,31 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevices(GetDevicesArgs.builder()
-     *             .configurationUpdatedAfter(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .mac(&#34;string&#34;)
-     *             .macs(&#34;string&#34;)
-     *             .model(&#34;string&#34;)
-     *             .models(&#34;string&#34;)
-     *             .name(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .configurationUpdatedAfter("string")
+     *             .endingBefore("string")
+     *             .mac("string")
+     *             .macs("string")
+     *             .model("string")
+     *             .models("string")
+     *             .name("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .sensorAlertProfileIds(&#34;string&#34;)
-     *             .sensorMetrics(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .tags(&#34;string&#34;)
-     *             .tagsFilterType(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .sensorAlertProfileIds("string")
+     *             .sensorMetrics("string")
+     *             .serial("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .tags("string")
+     *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesExample&#34;, example.applyValue(getDevicesResult -&gt; getDevicesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesExample", example.applyValue(getDevicesResult -> getDevicesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4589,7 +4777,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4611,30 +4800,31 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevices(GetDevicesArgs.builder()
-     *             .configurationUpdatedAfter(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .mac(&#34;string&#34;)
-     *             .macs(&#34;string&#34;)
-     *             .model(&#34;string&#34;)
-     *             .models(&#34;string&#34;)
-     *             .name(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .configurationUpdatedAfter("string")
+     *             .endingBefore("string")
+     *             .mac("string")
+     *             .macs("string")
+     *             .model("string")
+     *             .models("string")
+     *             .name("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .sensorAlertProfileIds(&#34;string&#34;)
-     *             .sensorMetrics(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .tags(&#34;string&#34;)
-     *             .tagsFilterType(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .sensorAlertProfileIds("string")
+     *             .sensorMetrics("string")
+     *             .serial("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .tags("string")
+     *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesExample&#34;, example.applyValue(getDevicesResult -&gt; getDevicesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesExample", example.applyValue(getDevicesResult -> getDevicesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4645,7 +4835,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4667,30 +4858,31 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevices(GetDevicesArgs.builder()
-     *             .configurationUpdatedAfter(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .mac(&#34;string&#34;)
-     *             .macs(&#34;string&#34;)
-     *             .model(&#34;string&#34;)
-     *             .models(&#34;string&#34;)
-     *             .name(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .configurationUpdatedAfter("string")
+     *             .endingBefore("string")
+     *             .mac("string")
+     *             .macs("string")
+     *             .model("string")
+     *             .models("string")
+     *             .name("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .sensorAlertProfileIds(&#34;string&#34;)
-     *             .sensorMetrics(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .tags(&#34;string&#34;)
-     *             .tagsFilterType(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .sensorAlertProfileIds("string")
+     *             .sensorMetrics("string")
+     *             .serial("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .tags("string")
+     *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesExample&#34;, example.applyValue(getDevicesResult -&gt; getDevicesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesExample", example.applyValue(getDevicesResult -> getDevicesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4701,7 +4893,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4723,21 +4916,22 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesAvailabilities(GetDevicesAvailabilitiesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .tags(&#34;string&#34;)
-     *             .tagsFilterType(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .tags("string")
+     *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesAvailabilitiesExample&#34;, example.applyValue(getDevicesAvailabilitiesResult -&gt; getDevicesAvailabilitiesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesAvailabilitiesExample", example.applyValue(getDevicesAvailabilitiesResult -> getDevicesAvailabilitiesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4748,7 +4942,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4770,21 +4965,22 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesAvailabilities(GetDevicesAvailabilitiesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .tags(&#34;string&#34;)
-     *             .tagsFilterType(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .tags("string")
+     *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesAvailabilitiesExample&#34;, example.applyValue(getDevicesAvailabilitiesResult -&gt; getDevicesAvailabilitiesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesAvailabilitiesExample", example.applyValue(getDevicesAvailabilitiesResult -> getDevicesAvailabilitiesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4795,7 +4991,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4817,21 +5014,22 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesAvailabilities(GetDevicesAvailabilitiesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .tags(&#34;string&#34;)
-     *             .tagsFilterType(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .tags("string")
+     *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesAvailabilitiesExample&#34;, example.applyValue(getDevicesAvailabilitiesResult -&gt; getDevicesAvailabilitiesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesAvailabilitiesExample", example.applyValue(getDevicesAvailabilitiesResult -> getDevicesAvailabilitiesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4842,7 +5040,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4864,21 +5063,22 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesAvailabilities(GetDevicesAvailabilitiesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .tags(&#34;string&#34;)
-     *             .tagsFilterType(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .tags("string")
+     *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesAvailabilitiesExample&#34;, example.applyValue(getDevicesAvailabilitiesResult -&gt; getDevicesAvailabilitiesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesAvailabilitiesExample", example.applyValue(getDevicesAvailabilitiesResult -> getDevicesAvailabilitiesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4889,7 +5089,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4911,23 +5112,24 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesAvailabilitiesChangeHistory(GetDevicesAvailabilitiesChangeHistoryArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .statuses(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .statuses("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesAvailabilitiesChangeHistoryExample&#34;, example.applyValue(getDevicesAvailabilitiesChangeHistoryResult -&gt; getDevicesAvailabilitiesChangeHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesAvailabilitiesChangeHistoryExample", example.applyValue(getDevicesAvailabilitiesChangeHistoryResult -> getDevicesAvailabilitiesChangeHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4938,7 +5140,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4960,23 +5163,24 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesAvailabilitiesChangeHistory(GetDevicesAvailabilitiesChangeHistoryArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .statuses(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .statuses("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesAvailabilitiesChangeHistoryExample&#34;, example.applyValue(getDevicesAvailabilitiesChangeHistoryResult -&gt; getDevicesAvailabilitiesChangeHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesAvailabilitiesChangeHistoryExample", example.applyValue(getDevicesAvailabilitiesChangeHistoryResult -> getDevicesAvailabilitiesChangeHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4987,7 +5191,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5009,23 +5214,24 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesAvailabilitiesChangeHistory(GetDevicesAvailabilitiesChangeHistoryArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .statuses(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .statuses("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesAvailabilitiesChangeHistoryExample&#34;, example.applyValue(getDevicesAvailabilitiesChangeHistoryResult -&gt; getDevicesAvailabilitiesChangeHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesAvailabilitiesChangeHistoryExample", example.applyValue(getDevicesAvailabilitiesChangeHistoryResult -> getDevicesAvailabilitiesChangeHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5036,7 +5242,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5058,23 +5265,24 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesAvailabilitiesChangeHistory(GetDevicesAvailabilitiesChangeHistoryArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .statuses(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .statuses("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesAvailabilitiesChangeHistoryExample&#34;, example.applyValue(getDevicesAvailabilitiesChangeHistoryResult -&gt; getDevicesAvailabilitiesChangeHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesAvailabilitiesChangeHistoryExample", example.applyValue(getDevicesAvailabilitiesChangeHistoryResult -> getDevicesAvailabilitiesChangeHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5085,7 +5293,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5107,22 +5316,23 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesBootsHistory(GetDevicesBootsHistoryArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
+     *             .endingBefore("string")
      *             .mostRecentPerDevice(false)
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .sortOrder(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .serials("string")
+     *             .sortOrder("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesBootsHistoryExample&#34;, example.applyValue(getDevicesBootsHistoryResult -&gt; getDevicesBootsHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesBootsHistoryExample", example.applyValue(getDevicesBootsHistoryResult -> getDevicesBootsHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5133,7 +5343,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5155,22 +5366,23 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesBootsHistory(GetDevicesBootsHistoryArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
+     *             .endingBefore("string")
      *             .mostRecentPerDevice(false)
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .sortOrder(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .serials("string")
+     *             .sortOrder("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesBootsHistoryExample&#34;, example.applyValue(getDevicesBootsHistoryResult -&gt; getDevicesBootsHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesBootsHistoryExample", example.applyValue(getDevicesBootsHistoryResult -> getDevicesBootsHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5181,7 +5393,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5203,22 +5416,23 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesBootsHistory(GetDevicesBootsHistoryArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
+     *             .endingBefore("string")
      *             .mostRecentPerDevice(false)
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .sortOrder(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .serials("string")
+     *             .sortOrder("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesBootsHistoryExample&#34;, example.applyValue(getDevicesBootsHistoryResult -&gt; getDevicesBootsHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesBootsHistoryExample", example.applyValue(getDevicesBootsHistoryResult -> getDevicesBootsHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5229,7 +5443,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5251,22 +5466,23 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesBootsHistory(GetDevicesBootsHistoryArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
+     *             .endingBefore("string")
      *             .mostRecentPerDevice(false)
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .sortOrder(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .serials("string")
+     *             .sortOrder("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesBootsHistoryExample&#34;, example.applyValue(getDevicesBootsHistoryResult -&gt; getDevicesBootsHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesBootsHistoryExample", example.applyValue(getDevicesBootsHistoryResult -> getDevicesBootsHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5277,7 +5493,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5299,21 +5516,22 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesPowerModulesStatusesByDevice(GetDevicesPowerModulesStatusesByDeviceArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .tags(&#34;string&#34;)
-     *             .tagsFilterType(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .tags("string")
+     *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesPowerModulesStatusesByDeviceExample&#34;, example.applyValue(getDevicesPowerModulesStatusesByDeviceResult -&gt; getDevicesPowerModulesStatusesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesPowerModulesStatusesByDeviceExample", example.applyValue(getDevicesPowerModulesStatusesByDeviceResult -> getDevicesPowerModulesStatusesByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5324,7 +5542,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5346,21 +5565,22 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesPowerModulesStatusesByDevice(GetDevicesPowerModulesStatusesByDeviceArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .tags(&#34;string&#34;)
-     *             .tagsFilterType(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .tags("string")
+     *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesPowerModulesStatusesByDeviceExample&#34;, example.applyValue(getDevicesPowerModulesStatusesByDeviceResult -&gt; getDevicesPowerModulesStatusesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesPowerModulesStatusesByDeviceExample", example.applyValue(getDevicesPowerModulesStatusesByDeviceResult -> getDevicesPowerModulesStatusesByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5371,7 +5591,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5393,21 +5614,22 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesPowerModulesStatusesByDevice(GetDevicesPowerModulesStatusesByDeviceArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .tags(&#34;string&#34;)
-     *             .tagsFilterType(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .tags("string")
+     *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesPowerModulesStatusesByDeviceExample&#34;, example.applyValue(getDevicesPowerModulesStatusesByDeviceResult -&gt; getDevicesPowerModulesStatusesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesPowerModulesStatusesByDeviceExample", example.applyValue(getDevicesPowerModulesStatusesByDeviceResult -> getDevicesPowerModulesStatusesByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5418,7 +5640,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5440,21 +5663,22 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesPowerModulesStatusesByDevice(GetDevicesPowerModulesStatusesByDeviceArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .tags(&#34;string&#34;)
-     *             .tagsFilterType(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .tags("string")
+     *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesPowerModulesStatusesByDeviceExample&#34;, example.applyValue(getDevicesPowerModulesStatusesByDeviceResult -&gt; getDevicesPowerModulesStatusesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesPowerModulesStatusesByDeviceExample", example.applyValue(getDevicesPowerModulesStatusesByDeviceResult -> getDevicesPowerModulesStatusesByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5465,7 +5689,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5487,22 +5712,23 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesProvisioningStatuses(GetDevicesProvisioningStatusesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .status(&#34;string&#34;)
-     *             .tags(&#34;string&#34;)
-     *             .tagsFilterType(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .status("string")
+     *             .tags("string")
+     *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesProvisioningStatusesExample&#34;, example.applyValue(getDevicesProvisioningStatusesResult -&gt; getDevicesProvisioningStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesProvisioningStatusesExample", example.applyValue(getDevicesProvisioningStatusesResult -> getDevicesProvisioningStatusesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5513,7 +5739,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5535,22 +5762,23 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesProvisioningStatuses(GetDevicesProvisioningStatusesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .status(&#34;string&#34;)
-     *             .tags(&#34;string&#34;)
-     *             .tagsFilterType(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .status("string")
+     *             .tags("string")
+     *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesProvisioningStatusesExample&#34;, example.applyValue(getDevicesProvisioningStatusesResult -&gt; getDevicesProvisioningStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesProvisioningStatusesExample", example.applyValue(getDevicesProvisioningStatusesResult -> getDevicesProvisioningStatusesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5561,7 +5789,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5583,22 +5812,23 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesProvisioningStatuses(GetDevicesProvisioningStatusesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .status(&#34;string&#34;)
-     *             .tags(&#34;string&#34;)
-     *             .tagsFilterType(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .status("string")
+     *             .tags("string")
+     *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesProvisioningStatusesExample&#34;, example.applyValue(getDevicesProvisioningStatusesResult -&gt; getDevicesProvisioningStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesProvisioningStatusesExample", example.applyValue(getDevicesProvisioningStatusesResult -> getDevicesProvisioningStatusesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5609,7 +5839,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5631,22 +5862,23 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesProvisioningStatuses(GetDevicesProvisioningStatusesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .status(&#34;string&#34;)
-     *             .tags(&#34;string&#34;)
-     *             .tagsFilterType(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .status("string")
+     *             .tags("string")
+     *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesProvisioningStatusesExample&#34;, example.applyValue(getDevicesProvisioningStatusesResult -&gt; getDevicesProvisioningStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesProvisioningStatusesExample", example.applyValue(getDevicesProvisioningStatusesResult -> getDevicesProvisioningStatusesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5657,7 +5889,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5679,23 +5912,24 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesStatuses(GetDevicesStatusesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .models(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .models("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .statuses(&#34;string&#34;)
-     *             .tags(&#34;string&#34;)
-     *             .tagsFilterType(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .statuses("string")
+     *             .tags("string")
+     *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesStatusesExample&#34;, example.applyValue(getDevicesStatusesResult -&gt; getDevicesStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesStatusesExample", example.applyValue(getDevicesStatusesResult -> getDevicesStatusesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5706,7 +5940,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5728,23 +5963,24 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesStatuses(GetDevicesStatusesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .models(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .models("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .statuses(&#34;string&#34;)
-     *             .tags(&#34;string&#34;)
-     *             .tagsFilterType(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .statuses("string")
+     *             .tags("string")
+     *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesStatusesExample&#34;, example.applyValue(getDevicesStatusesResult -&gt; getDevicesStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesStatusesExample", example.applyValue(getDevicesStatusesResult -> getDevicesStatusesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5755,7 +5991,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5777,23 +6014,24 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesStatuses(GetDevicesStatusesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .models(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .models("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .statuses(&#34;string&#34;)
-     *             .tags(&#34;string&#34;)
-     *             .tagsFilterType(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .statuses("string")
+     *             .tags("string")
+     *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesStatusesExample&#34;, example.applyValue(getDevicesStatusesResult -&gt; getDevicesStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesStatusesExample", example.applyValue(getDevicesStatusesResult -> getDevicesStatusesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5804,7 +6042,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5826,23 +6065,24 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesStatuses(GetDevicesStatusesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .models(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .models("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .statuses(&#34;string&#34;)
-     *             .tags(&#34;string&#34;)
-     *             .tagsFilterType(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .statuses("string")
+     *             .tags("string")
+     *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesStatusesExample&#34;, example.applyValue(getDevicesStatusesResult -&gt; getDevicesStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesStatusesExample", example.applyValue(getDevicesStatusesResult -> getDevicesStatusesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5853,7 +6093,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5875,15 +6116,16 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesStatusesOverview(GetDevicesStatusesOverviewArgs.builder()
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
-     *             .productTypes(&#34;string&#34;)
+     *             .networkIds("string")
+     *             .organizationId("string")
+     *             .productTypes("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesStatusesOverviewExample&#34;, example.applyValue(getDevicesStatusesOverviewResult -&gt; getDevicesStatusesOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsDevicesStatusesOverviewExample", example.applyValue(getDevicesStatusesOverviewResult -> getDevicesStatusesOverviewResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5894,7 +6136,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5916,15 +6159,16 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesStatusesOverview(GetDevicesStatusesOverviewArgs.builder()
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
-     *             .productTypes(&#34;string&#34;)
+     *             .networkIds("string")
+     *             .organizationId("string")
+     *             .productTypes("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesStatusesOverviewExample&#34;, example.applyValue(getDevicesStatusesOverviewResult -&gt; getDevicesStatusesOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsDevicesStatusesOverviewExample", example.applyValue(getDevicesStatusesOverviewResult -> getDevicesStatusesOverviewResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5935,7 +6179,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5957,15 +6202,16 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesStatusesOverview(GetDevicesStatusesOverviewArgs.builder()
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
-     *             .productTypes(&#34;string&#34;)
+     *             .networkIds("string")
+     *             .organizationId("string")
+     *             .productTypes("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesStatusesOverviewExample&#34;, example.applyValue(getDevicesStatusesOverviewResult -&gt; getDevicesStatusesOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsDevicesStatusesOverviewExample", example.applyValue(getDevicesStatusesOverviewResult -> getDevicesStatusesOverviewResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5976,7 +6222,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5998,15 +6245,16 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesStatusesOverview(GetDevicesStatusesOverviewArgs.builder()
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
-     *             .productTypes(&#34;string&#34;)
+     *             .networkIds("string")
+     *             .organizationId("string")
+     *             .productTypes("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesStatusesOverviewExample&#34;, example.applyValue(getDevicesStatusesOverviewResult -&gt; getDevicesStatusesOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsDevicesStatusesOverviewExample", example.applyValue(getDevicesStatusesOverviewResult -> getDevicesStatusesOverviewResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6017,7 +6265,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6039,21 +6288,22 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesUplinksAddressesByDevice(GetDevicesUplinksAddressesByDeviceArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .tags(&#34;string&#34;)
-     *             .tagsFilterType(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .tags("string")
+     *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesUplinksAddressesByDeviceExample&#34;, example.applyValue(getDevicesUplinksAddressesByDeviceResult -&gt; getDevicesUplinksAddressesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesUplinksAddressesByDeviceExample", example.applyValue(getDevicesUplinksAddressesByDeviceResult -> getDevicesUplinksAddressesByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6064,7 +6314,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6086,21 +6337,22 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesUplinksAddressesByDevice(GetDevicesUplinksAddressesByDeviceArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .tags(&#34;string&#34;)
-     *             .tagsFilterType(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .tags("string")
+     *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesUplinksAddressesByDeviceExample&#34;, example.applyValue(getDevicesUplinksAddressesByDeviceResult -&gt; getDevicesUplinksAddressesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesUplinksAddressesByDeviceExample", example.applyValue(getDevicesUplinksAddressesByDeviceResult -> getDevicesUplinksAddressesByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6111,7 +6363,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6133,21 +6386,22 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesUplinksAddressesByDevice(GetDevicesUplinksAddressesByDeviceArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .tags(&#34;string&#34;)
-     *             .tagsFilterType(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .tags("string")
+     *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesUplinksAddressesByDeviceExample&#34;, example.applyValue(getDevicesUplinksAddressesByDeviceResult -&gt; getDevicesUplinksAddressesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesUplinksAddressesByDeviceExample", example.applyValue(getDevicesUplinksAddressesByDeviceResult -> getDevicesUplinksAddressesByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6158,7 +6412,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6180,21 +6435,22 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesUplinksAddressesByDevice(GetDevicesUplinksAddressesByDeviceArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .tags(&#34;string&#34;)
-     *             .tagsFilterType(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .tags("string")
+     *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesUplinksAddressesByDeviceExample&#34;, example.applyValue(getDevicesUplinksAddressesByDeviceResult -&gt; getDevicesUplinksAddressesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesUplinksAddressesByDeviceExample", example.applyValue(getDevicesUplinksAddressesByDeviceResult -> getDevicesUplinksAddressesByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6205,7 +6461,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6227,18 +6484,19 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesUplinksLossAndLatency(GetDevicesUplinksLossAndLatencyArgs.builder()
-     *             .ip(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .ip("string")
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
-     *             .uplink(&#34;string&#34;)
+     *             .uplink("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesUplinksLossAndLatencyExample&#34;, example.applyValue(getDevicesUplinksLossAndLatencyResult -&gt; getDevicesUplinksLossAndLatencyResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesUplinksLossAndLatencyExample", example.applyValue(getDevicesUplinksLossAndLatencyResult -> getDevicesUplinksLossAndLatencyResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6249,7 +6507,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6271,18 +6530,19 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesUplinksLossAndLatency(GetDevicesUplinksLossAndLatencyArgs.builder()
-     *             .ip(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .ip("string")
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
-     *             .uplink(&#34;string&#34;)
+     *             .uplink("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesUplinksLossAndLatencyExample&#34;, example.applyValue(getDevicesUplinksLossAndLatencyResult -&gt; getDevicesUplinksLossAndLatencyResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesUplinksLossAndLatencyExample", example.applyValue(getDevicesUplinksLossAndLatencyResult -> getDevicesUplinksLossAndLatencyResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6293,7 +6553,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6315,18 +6576,19 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesUplinksLossAndLatency(GetDevicesUplinksLossAndLatencyArgs.builder()
-     *             .ip(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .ip("string")
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
-     *             .uplink(&#34;string&#34;)
+     *             .uplink("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesUplinksLossAndLatencyExample&#34;, example.applyValue(getDevicesUplinksLossAndLatencyResult -&gt; getDevicesUplinksLossAndLatencyResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesUplinksLossAndLatencyExample", example.applyValue(getDevicesUplinksLossAndLatencyResult -> getDevicesUplinksLossAndLatencyResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6337,7 +6599,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6359,18 +6622,19 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getDevicesUplinksLossAndLatency(GetDevicesUplinksLossAndLatencyArgs.builder()
-     *             .ip(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .ip("string")
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
-     *             .uplink(&#34;string&#34;)
+     *             .uplink("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsDevicesUplinksLossAndLatencyExample&#34;, example.applyValue(getDevicesUplinksLossAndLatencyResult -&gt; getDevicesUplinksLossAndLatencyResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesUplinksLossAndLatencyExample", example.applyValue(getDevicesUplinksLossAndLatencyResult -> getDevicesUplinksLossAndLatencyResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6381,7 +6645,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6403,13 +6668,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getEarlyAccessFeatures(GetEarlyAccessFeaturesArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsEarlyAccessFeaturesExample&#34;, example.applyValue(getEarlyAccessFeaturesResult -&gt; getEarlyAccessFeaturesResult.items()));
+     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesExample", example.applyValue(getEarlyAccessFeaturesResult -> getEarlyAccessFeaturesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6420,7 +6686,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6442,13 +6709,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getEarlyAccessFeatures(GetEarlyAccessFeaturesArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsEarlyAccessFeaturesExample&#34;, example.applyValue(getEarlyAccessFeaturesResult -&gt; getEarlyAccessFeaturesResult.items()));
+     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesExample", example.applyValue(getEarlyAccessFeaturesResult -> getEarlyAccessFeaturesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6459,7 +6727,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6481,13 +6750,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getEarlyAccessFeatures(GetEarlyAccessFeaturesArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsEarlyAccessFeaturesExample&#34;, example.applyValue(getEarlyAccessFeaturesResult -&gt; getEarlyAccessFeaturesResult.items()));
+     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesExample", example.applyValue(getEarlyAccessFeaturesResult -> getEarlyAccessFeaturesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6498,7 +6768,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6520,13 +6791,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getEarlyAccessFeatures(GetEarlyAccessFeaturesArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsEarlyAccessFeaturesExample&#34;, example.applyValue(getEarlyAccessFeaturesResult -&gt; getEarlyAccessFeaturesResult.items()));
+     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesExample", example.applyValue(getEarlyAccessFeaturesResult -> getEarlyAccessFeaturesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6537,7 +6809,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6559,13 +6832,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getEarlyAccessFeaturesOptIns(GetEarlyAccessFeaturesOptInsArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsEarlyAccessFeaturesOptInsExample&#34;, example.applyValue(getEarlyAccessFeaturesOptInsResult -&gt; getEarlyAccessFeaturesOptInsResult.item()));
+     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesOptInsExample", example.applyValue(getEarlyAccessFeaturesOptInsResult -> getEarlyAccessFeaturesOptInsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6576,7 +6850,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6598,13 +6873,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getEarlyAccessFeaturesOptIns(GetEarlyAccessFeaturesOptInsArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsEarlyAccessFeaturesOptInsExample&#34;, example.applyValue(getEarlyAccessFeaturesOptInsResult -&gt; getEarlyAccessFeaturesOptInsResult.item()));
+     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesOptInsExample", example.applyValue(getEarlyAccessFeaturesOptInsResult -> getEarlyAccessFeaturesOptInsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6615,7 +6891,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6637,13 +6914,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getEarlyAccessFeaturesOptIns(GetEarlyAccessFeaturesOptInsArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsEarlyAccessFeaturesOptInsExample&#34;, example.applyValue(getEarlyAccessFeaturesOptInsResult -&gt; getEarlyAccessFeaturesOptInsResult.item()));
+     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesOptInsExample", example.applyValue(getEarlyAccessFeaturesOptInsResult -> getEarlyAccessFeaturesOptInsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6654,7 +6932,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6676,13 +6955,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getEarlyAccessFeaturesOptIns(GetEarlyAccessFeaturesOptInsArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsEarlyAccessFeaturesOptInsExample&#34;, example.applyValue(getEarlyAccessFeaturesOptInsResult -&gt; getEarlyAccessFeaturesOptInsResult.item()));
+     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesOptInsExample", example.applyValue(getEarlyAccessFeaturesOptInsResult -> getEarlyAccessFeaturesOptInsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6693,7 +6973,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6715,13 +6996,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getEarlyAccessFeaturesOptIns(GetEarlyAccessFeaturesOptInsArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsEarlyAccessFeaturesOptInsExample&#34;, example.applyValue(getEarlyAccessFeaturesOptInsResult -&gt; getEarlyAccessFeaturesOptInsResult.item()));
+     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesOptInsExample", example.applyValue(getEarlyAccessFeaturesOptInsResult -> getEarlyAccessFeaturesOptInsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6732,7 +7014,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6754,13 +7037,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getEarlyAccessFeaturesOptIns(GetEarlyAccessFeaturesOptInsArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsEarlyAccessFeaturesOptInsExample&#34;, example.applyValue(getEarlyAccessFeaturesOptInsResult -&gt; getEarlyAccessFeaturesOptInsResult.item()));
+     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesOptInsExample", example.applyValue(getEarlyAccessFeaturesOptInsResult -> getEarlyAccessFeaturesOptInsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6771,7 +7055,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6793,18 +7078,19 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getFirmwareUpgrades(GetFirmwareUpgradesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .statuses(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .startingAfter("string")
+     *             .statuses("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsFirmwareUpgradesExample&#34;, example.applyValue(getFirmwareUpgradesResult -&gt; getFirmwareUpgradesResult.items()));
+     *         ctx.export("merakiOrganizationsFirmwareUpgradesExample", example.applyValue(getFirmwareUpgradesResult -> getFirmwareUpgradesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6815,7 +7101,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6837,18 +7124,19 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getFirmwareUpgrades(GetFirmwareUpgradesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .statuses(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .startingAfter("string")
+     *             .statuses("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsFirmwareUpgradesExample&#34;, example.applyValue(getFirmwareUpgradesResult -&gt; getFirmwareUpgradesResult.items()));
+     *         ctx.export("merakiOrganizationsFirmwareUpgradesExample", example.applyValue(getFirmwareUpgradesResult -> getFirmwareUpgradesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6859,7 +7147,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6881,18 +7170,19 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getFirmwareUpgrades(GetFirmwareUpgradesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .statuses(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .startingAfter("string")
+     *             .statuses("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsFirmwareUpgradesExample&#34;, example.applyValue(getFirmwareUpgradesResult -&gt; getFirmwareUpgradesResult.items()));
+     *         ctx.export("merakiOrganizationsFirmwareUpgradesExample", example.applyValue(getFirmwareUpgradesResult -> getFirmwareUpgradesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6903,7 +7193,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6925,18 +7216,19 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getFirmwareUpgrades(GetFirmwareUpgradesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .statuses(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .startingAfter("string")
+     *             .statuses("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsFirmwareUpgradesExample&#34;, example.applyValue(getFirmwareUpgradesResult -&gt; getFirmwareUpgradesResult.items()));
+     *         ctx.export("merakiOrganizationsFirmwareUpgradesExample", example.applyValue(getFirmwareUpgradesResult -> getFirmwareUpgradesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6947,7 +7239,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6969,21 +7262,22 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getFirmwareUpgradesByDevice(GetFirmwareUpgradesByDeviceArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .firmwareUpgradeBatchIds(&#34;string&#34;)
-     *             .macs(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .firmwareUpgradeBatchIds("string")
+     *             .macs("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .upgradestatuses(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .upgradestatuses("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsFirmwareUpgradesByDeviceExample&#34;, example.applyValue(getFirmwareUpgradesByDeviceResult -&gt; getFirmwareUpgradesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsFirmwareUpgradesByDeviceExample", example.applyValue(getFirmwareUpgradesByDeviceResult -> getFirmwareUpgradesByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6994,7 +7288,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7016,21 +7311,22 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getFirmwareUpgradesByDevice(GetFirmwareUpgradesByDeviceArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .firmwareUpgradeBatchIds(&#34;string&#34;)
-     *             .macs(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .firmwareUpgradeBatchIds("string")
+     *             .macs("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .upgradestatuses(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .upgradestatuses("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsFirmwareUpgradesByDeviceExample&#34;, example.applyValue(getFirmwareUpgradesByDeviceResult -&gt; getFirmwareUpgradesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsFirmwareUpgradesByDeviceExample", example.applyValue(getFirmwareUpgradesByDeviceResult -> getFirmwareUpgradesByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7041,7 +7337,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7063,21 +7360,22 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getFirmwareUpgradesByDevice(GetFirmwareUpgradesByDeviceArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .firmwareUpgradeBatchIds(&#34;string&#34;)
-     *             .macs(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .firmwareUpgradeBatchIds("string")
+     *             .macs("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .upgradestatuses(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .upgradestatuses("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsFirmwareUpgradesByDeviceExample&#34;, example.applyValue(getFirmwareUpgradesByDeviceResult -&gt; getFirmwareUpgradesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsFirmwareUpgradesByDeviceExample", example.applyValue(getFirmwareUpgradesByDeviceResult -> getFirmwareUpgradesByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7088,7 +7386,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7110,21 +7409,22 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getFirmwareUpgradesByDevice(GetFirmwareUpgradesByDeviceArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .firmwareUpgradeBatchIds(&#34;string&#34;)
-     *             .macs(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .firmwareUpgradeBatchIds("string")
+     *             .macs("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .upgradestatuses(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .upgradestatuses("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsFirmwareUpgradesByDeviceExample&#34;, example.applyValue(getFirmwareUpgradesByDeviceResult -&gt; getFirmwareUpgradesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsFirmwareUpgradesByDeviceExample", example.applyValue(getFirmwareUpgradesByDeviceResult -> getFirmwareUpgradesByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7135,7 +7435,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7157,13 +7458,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getInsightApplications(GetInsightApplicationsArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsInsightApplicationsExample&#34;, example.applyValue(getInsightApplicationsResult -&gt; getInsightApplicationsResult.items()));
+     *         ctx.export("merakiOrganizationsInsightApplicationsExample", example.applyValue(getInsightApplicationsResult -> getInsightApplicationsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7174,7 +7476,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7196,13 +7499,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getInsightApplications(GetInsightApplicationsArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsInsightApplicationsExample&#34;, example.applyValue(getInsightApplicationsResult -&gt; getInsightApplicationsResult.items()));
+     *         ctx.export("merakiOrganizationsInsightApplicationsExample", example.applyValue(getInsightApplicationsResult -> getInsightApplicationsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7213,7 +7517,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7235,13 +7540,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getInsightApplications(GetInsightApplicationsArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsInsightApplicationsExample&#34;, example.applyValue(getInsightApplicationsResult -&gt; getInsightApplicationsResult.items()));
+     *         ctx.export("merakiOrganizationsInsightApplicationsExample", example.applyValue(getInsightApplicationsResult -> getInsightApplicationsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7252,7 +7558,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7274,13 +7581,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getInsightApplications(GetInsightApplicationsArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsInsightApplicationsExample&#34;, example.applyValue(getInsightApplicationsResult -&gt; getInsightApplicationsResult.items()));
+     *         ctx.export("merakiOrganizationsInsightApplicationsExample", example.applyValue(getInsightApplicationsResult -> getInsightApplicationsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7375,7 +7683,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7397,14 +7706,15 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getInventoryOnboardingCloudMonitoringImports(GetInventoryOnboardingCloudMonitoringImportsArgs.builder()
-     *             .importIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .importIds("string")
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsInventoryOnboardingCloudMonitoringImportsExample&#34;, example.applyValue(getInventoryOnboardingCloudMonitoringImportsResult -&gt; getInventoryOnboardingCloudMonitoringImportsResult.items()));
+     *         ctx.export("merakiOrganizationsInventoryOnboardingCloudMonitoringImportsExample", example.applyValue(getInventoryOnboardingCloudMonitoringImportsResult -> getInventoryOnboardingCloudMonitoringImportsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7415,7 +7725,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7437,14 +7748,15 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getInventoryOnboardingCloudMonitoringImports(GetInventoryOnboardingCloudMonitoringImportsArgs.builder()
-     *             .importIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .importIds("string")
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsInventoryOnboardingCloudMonitoringImportsExample&#34;, example.applyValue(getInventoryOnboardingCloudMonitoringImportsResult -&gt; getInventoryOnboardingCloudMonitoringImportsResult.items()));
+     *         ctx.export("merakiOrganizationsInventoryOnboardingCloudMonitoringImportsExample", example.applyValue(getInventoryOnboardingCloudMonitoringImportsResult -> getInventoryOnboardingCloudMonitoringImportsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7455,7 +7767,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7477,14 +7790,15 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getInventoryOnboardingCloudMonitoringImports(GetInventoryOnboardingCloudMonitoringImportsArgs.builder()
-     *             .importIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .importIds("string")
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsInventoryOnboardingCloudMonitoringImportsExample&#34;, example.applyValue(getInventoryOnboardingCloudMonitoringImportsResult -&gt; getInventoryOnboardingCloudMonitoringImportsResult.items()));
+     *         ctx.export("merakiOrganizationsInventoryOnboardingCloudMonitoringImportsExample", example.applyValue(getInventoryOnboardingCloudMonitoringImportsResult -> getInventoryOnboardingCloudMonitoringImportsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7495,7 +7809,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7517,14 +7832,15 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getInventoryOnboardingCloudMonitoringImports(GetInventoryOnboardingCloudMonitoringImportsArgs.builder()
-     *             .importIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .importIds("string")
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsInventoryOnboardingCloudMonitoringImportsExample&#34;, example.applyValue(getInventoryOnboardingCloudMonitoringImportsResult -&gt; getInventoryOnboardingCloudMonitoringImportsResult.items()));
+     *         ctx.export("merakiOrganizationsInventoryOnboardingCloudMonitoringImportsExample", example.applyValue(getInventoryOnboardingCloudMonitoringImportsResult -> getInventoryOnboardingCloudMonitoringImportsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7535,7 +7851,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7557,18 +7874,19 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getInventoryOnboardingCloudMonitoringNetworks(GetInventoryOnboardingCloudMonitoringNetworksArgs.builder()
-     *             .deviceType(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .deviceType("string")
+     *             .endingBefore("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .search(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
+     *             .search("string")
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsInventoryOnboardingCloudMonitoringNetworksExample&#34;, example.applyValue(getInventoryOnboardingCloudMonitoringNetworksResult -&gt; getInventoryOnboardingCloudMonitoringNetworksResult.items()));
+     *         ctx.export("merakiOrganizationsInventoryOnboardingCloudMonitoringNetworksExample", example.applyValue(getInventoryOnboardingCloudMonitoringNetworksResult -> getInventoryOnboardingCloudMonitoringNetworksResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7579,7 +7897,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7601,18 +7920,19 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getInventoryOnboardingCloudMonitoringNetworks(GetInventoryOnboardingCloudMonitoringNetworksArgs.builder()
-     *             .deviceType(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .deviceType("string")
+     *             .endingBefore("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .search(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
+     *             .search("string")
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsInventoryOnboardingCloudMonitoringNetworksExample&#34;, example.applyValue(getInventoryOnboardingCloudMonitoringNetworksResult -&gt; getInventoryOnboardingCloudMonitoringNetworksResult.items()));
+     *         ctx.export("merakiOrganizationsInventoryOnboardingCloudMonitoringNetworksExample", example.applyValue(getInventoryOnboardingCloudMonitoringNetworksResult -> getInventoryOnboardingCloudMonitoringNetworksResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7623,7 +7943,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7645,18 +7966,19 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getInventoryOnboardingCloudMonitoringNetworks(GetInventoryOnboardingCloudMonitoringNetworksArgs.builder()
-     *             .deviceType(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .deviceType("string")
+     *             .endingBefore("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .search(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
+     *             .search("string")
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsInventoryOnboardingCloudMonitoringNetworksExample&#34;, example.applyValue(getInventoryOnboardingCloudMonitoringNetworksResult -&gt; getInventoryOnboardingCloudMonitoringNetworksResult.items()));
+     *         ctx.export("merakiOrganizationsInventoryOnboardingCloudMonitoringNetworksExample", example.applyValue(getInventoryOnboardingCloudMonitoringNetworksResult -> getInventoryOnboardingCloudMonitoringNetworksResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7667,7 +7989,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7689,18 +8012,19 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getInventoryOnboardingCloudMonitoringNetworks(GetInventoryOnboardingCloudMonitoringNetworksArgs.builder()
-     *             .deviceType(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .deviceType("string")
+     *             .endingBefore("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .search(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
+     *             .search("string")
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsInventoryOnboardingCloudMonitoringNetworksExample&#34;, example.applyValue(getInventoryOnboardingCloudMonitoringNetworksResult -&gt; getInventoryOnboardingCloudMonitoringNetworksResult.items()));
+     *         ctx.export("merakiOrganizationsInventoryOnboardingCloudMonitoringNetworksExample", example.applyValue(getInventoryOnboardingCloudMonitoringNetworksResult -> getInventoryOnboardingCloudMonitoringNetworksResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7711,7 +8035,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7733,14 +8058,15 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getLicenses(GetLicensesArgs.builder()
-     *             .licenseId(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .licenseId("string")
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsLicensesExample&#34;, example.applyValue(getLicensesResult -&gt; getLicensesResult.item()));
+     *         ctx.export("merakiOrganizationsLicensesExample", example.applyValue(getLicensesResult -> getLicensesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7751,7 +8077,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7773,14 +8100,15 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getLicenses(GetLicensesArgs.builder()
-     *             .licenseId(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .licenseId("string")
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsLicensesExample&#34;, example.applyValue(getLicensesResult -&gt; getLicensesResult.item()));
+     *         ctx.export("merakiOrganizationsLicensesExample", example.applyValue(getLicensesResult -> getLicensesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7791,7 +8119,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7813,14 +8142,15 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getLicenses(GetLicensesArgs.builder()
-     *             .licenseId(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .licenseId("string")
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsLicensesExample&#34;, example.applyValue(getLicensesResult -&gt; getLicensesResult.item()));
+     *         ctx.export("merakiOrganizationsLicensesExample", example.applyValue(getLicensesResult -> getLicensesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7831,7 +8161,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7853,14 +8184,15 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getLicenses(GetLicensesArgs.builder()
-     *             .licenseId(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .licenseId("string")
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsLicensesExample&#34;, example.applyValue(getLicensesResult -&gt; getLicensesResult.item()));
+     *         ctx.export("merakiOrganizationsLicensesExample", example.applyValue(getLicensesResult -> getLicensesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7871,7 +8203,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7893,13 +8226,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getLicensesOverview(GetLicensesOverviewArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsLicensesOverviewExample&#34;, example.applyValue(getLicensesOverviewResult -&gt; getLicensesOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsLicensesOverviewExample", example.applyValue(getLicensesOverviewResult -> getLicensesOverviewResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7910,7 +8244,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7932,13 +8267,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getLicensesOverview(GetLicensesOverviewArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsLicensesOverviewExample&#34;, example.applyValue(getLicensesOverviewResult -&gt; getLicensesOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsLicensesOverviewExample", example.applyValue(getLicensesOverviewResult -> getLicensesOverviewResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7949,7 +8285,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7971,13 +8308,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getLicensesOverview(GetLicensesOverviewArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsLicensesOverviewExample&#34;, example.applyValue(getLicensesOverviewResult -&gt; getLicensesOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsLicensesOverviewExample", example.applyValue(getLicensesOverviewResult -> getLicensesOverviewResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7988,7 +8326,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8010,13 +8349,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getLicensesOverview(GetLicensesOverviewArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsLicensesOverviewExample&#34;, example.applyValue(getLicensesOverviewResult -&gt; getLicensesOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsLicensesOverviewExample", example.applyValue(getLicensesOverviewResult -> getLicensesOverviewResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8027,7 +8367,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8049,18 +8390,19 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getLicensingCotermLicenses(GetLicensingCotermLicensesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
+     *             .endingBefore("string")
      *             .expired(false)
      *             .invalidated(false)
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsLicensingCotermLicensesExample&#34;, example.applyValue(getLicensingCotermLicensesResult -&gt; getLicensingCotermLicensesResult.items()));
+     *         ctx.export("merakiOrganizationsLicensingCotermLicensesExample", example.applyValue(getLicensingCotermLicensesResult -> getLicensingCotermLicensesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8071,7 +8413,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8093,18 +8436,19 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getLicensingCotermLicenses(GetLicensingCotermLicensesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
+     *             .endingBefore("string")
      *             .expired(false)
      *             .invalidated(false)
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsLicensingCotermLicensesExample&#34;, example.applyValue(getLicensingCotermLicensesResult -&gt; getLicensingCotermLicensesResult.items()));
+     *         ctx.export("merakiOrganizationsLicensingCotermLicensesExample", example.applyValue(getLicensingCotermLicensesResult -> getLicensingCotermLicensesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8115,7 +8459,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8137,18 +8482,19 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getLicensingCotermLicenses(GetLicensingCotermLicensesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
+     *             .endingBefore("string")
      *             .expired(false)
      *             .invalidated(false)
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsLicensingCotermLicensesExample&#34;, example.applyValue(getLicensingCotermLicensesResult -&gt; getLicensingCotermLicensesResult.items()));
+     *         ctx.export("merakiOrganizationsLicensingCotermLicensesExample", example.applyValue(getLicensingCotermLicensesResult -> getLicensingCotermLicensesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8159,7 +8505,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8181,18 +8528,19 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getLicensingCotermLicenses(GetLicensingCotermLicensesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
+     *             .endingBefore("string")
      *             .expired(false)
      *             .invalidated(false)
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsLicensingCotermLicensesExample&#34;, example.applyValue(getLicensingCotermLicensesResult -&gt; getLicensingCotermLicensesResult.items()));
+     *         ctx.export("merakiOrganizationsLicensingCotermLicensesExample", example.applyValue(getLicensingCotermLicensesResult -> getLicensingCotermLicensesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8203,7 +8551,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8225,13 +8574,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getLoginSecurity(GetLoginSecurityArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsLoginSecurityExample&#34;, example.applyValue(getLoginSecurityResult -&gt; getLoginSecurityResult.item()));
+     *         ctx.export("merakiOrganizationsLoginSecurityExample", example.applyValue(getLoginSecurityResult -> getLoginSecurityResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8242,7 +8592,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8264,13 +8615,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getLoginSecurity(GetLoginSecurityArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsLoginSecurityExample&#34;, example.applyValue(getLoginSecurityResult -&gt; getLoginSecurityResult.item()));
+     *         ctx.export("merakiOrganizationsLoginSecurityExample", example.applyValue(getLoginSecurityResult -> getLoginSecurityResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8281,7 +8633,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8303,13 +8656,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getLoginSecurity(GetLoginSecurityArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsLoginSecurityExample&#34;, example.applyValue(getLoginSecurityResult -&gt; getLoginSecurityResult.item()));
+     *         ctx.export("merakiOrganizationsLoginSecurityExample", example.applyValue(getLoginSecurityResult -> getLoginSecurityResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8320,7 +8674,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8342,13 +8697,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getLoginSecurity(GetLoginSecurityArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsLoginSecurityExample&#34;, example.applyValue(getLoginSecurityResult -&gt; getLoginSecurityResult.item()));
+     *         ctx.export("merakiOrganizationsLoginSecurityExample", example.applyValue(getLoginSecurityResult -> getLoginSecurityResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8359,7 +8715,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8381,14 +8738,15 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getOpenapiSpec(GetOpenapiSpecArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .version(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsOpenapiSpecExample&#34;, example.applyValue(getOpenapiSpecResult -&gt; getOpenapiSpecResult.item()));
+     *         ctx.export("merakiOrganizationsOpenapiSpecExample", example.applyValue(getOpenapiSpecResult -> getOpenapiSpecResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8399,7 +8757,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8421,14 +8780,15 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getOpenapiSpec(GetOpenapiSpecArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .version(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsOpenapiSpecExample&#34;, example.applyValue(getOpenapiSpecResult -&gt; getOpenapiSpecResult.item()));
+     *         ctx.export("merakiOrganizationsOpenapiSpecExample", example.applyValue(getOpenapiSpecResult -> getOpenapiSpecResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8439,7 +8799,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8461,14 +8822,15 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getOpenapiSpec(GetOpenapiSpecArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .version(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsOpenapiSpecExample&#34;, example.applyValue(getOpenapiSpecResult -&gt; getOpenapiSpecResult.item()));
+     *         ctx.export("merakiOrganizationsOpenapiSpecExample", example.applyValue(getOpenapiSpecResult -> getOpenapiSpecResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8479,7 +8841,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8501,14 +8864,15 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getOpenapiSpec(GetOpenapiSpecArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .version(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsOpenapiSpecExample&#34;, example.applyValue(getOpenapiSpecResult -&gt; getOpenapiSpecResult.item()));
+     *         ctx.export("merakiOrganizationsOpenapiSpecExample", example.applyValue(getOpenapiSpecResult -> getOpenapiSpecResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8519,7 +8883,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8541,16 +8906,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getPolicyObjects(GetPolicyObjectsArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsPolicyObjectsExample&#34;, example.applyValue(getPolicyObjectsResult -&gt; getPolicyObjectsResult.item()));
+     *         ctx.export("merakiOrganizationsPolicyObjectsExample", example.applyValue(getPolicyObjectsResult -> getPolicyObjectsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8561,7 +8927,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8583,16 +8950,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getPolicyObjects(GetPolicyObjectsArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsPolicyObjectsExample&#34;, example.applyValue(getPolicyObjectsResult -&gt; getPolicyObjectsResult.item()));
+     *         ctx.export("merakiOrganizationsPolicyObjectsExample", example.applyValue(getPolicyObjectsResult -> getPolicyObjectsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8603,7 +8971,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8625,16 +8994,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getPolicyObjects(GetPolicyObjectsArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsPolicyObjectsExample&#34;, example.applyValue(getPolicyObjectsResult -&gt; getPolicyObjectsResult.item()));
+     *         ctx.export("merakiOrganizationsPolicyObjectsExample", example.applyValue(getPolicyObjectsResult -> getPolicyObjectsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8645,7 +9015,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8667,16 +9038,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getPolicyObjects(GetPolicyObjectsArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsPolicyObjectsExample&#34;, example.applyValue(getPolicyObjectsResult -&gt; getPolicyObjectsResult.item()));
+     *         ctx.export("merakiOrganizationsPolicyObjectsExample", example.applyValue(getPolicyObjectsResult -> getPolicyObjectsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8687,7 +9059,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8709,16 +9082,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getPolicyObjects(GetPolicyObjectsArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsPolicyObjectsExample&#34;, example.applyValue(getPolicyObjectsResult -&gt; getPolicyObjectsResult.item()));
+     *         ctx.export("merakiOrganizationsPolicyObjectsExample", example.applyValue(getPolicyObjectsResult -> getPolicyObjectsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8729,7 +9103,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8751,16 +9126,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getPolicyObjects(GetPolicyObjectsArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsPolicyObjectsExample&#34;, example.applyValue(getPolicyObjectsResult -&gt; getPolicyObjectsResult.item()));
+     *         ctx.export("merakiOrganizationsPolicyObjectsExample", example.applyValue(getPolicyObjectsResult -> getPolicyObjectsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8771,7 +9147,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8793,16 +9170,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getPolicyObjectsGroups(GetPolicyObjectsGroupsArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsPolicyObjectsGroupsExample&#34;, example.applyValue(getPolicyObjectsGroupsResult -&gt; getPolicyObjectsGroupsResult.item()));
+     *         ctx.export("merakiOrganizationsPolicyObjectsGroupsExample", example.applyValue(getPolicyObjectsGroupsResult -> getPolicyObjectsGroupsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8813,7 +9191,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8835,16 +9214,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getPolicyObjectsGroups(GetPolicyObjectsGroupsArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsPolicyObjectsGroupsExample&#34;, example.applyValue(getPolicyObjectsGroupsResult -&gt; getPolicyObjectsGroupsResult.item()));
+     *         ctx.export("merakiOrganizationsPolicyObjectsGroupsExample", example.applyValue(getPolicyObjectsGroupsResult -> getPolicyObjectsGroupsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8855,7 +9235,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8877,16 +9258,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getPolicyObjectsGroups(GetPolicyObjectsGroupsArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsPolicyObjectsGroupsExample&#34;, example.applyValue(getPolicyObjectsGroupsResult -&gt; getPolicyObjectsGroupsResult.item()));
+     *         ctx.export("merakiOrganizationsPolicyObjectsGroupsExample", example.applyValue(getPolicyObjectsGroupsResult -> getPolicyObjectsGroupsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8897,7 +9279,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8919,16 +9302,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getPolicyObjectsGroups(GetPolicyObjectsGroupsArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsPolicyObjectsGroupsExample&#34;, example.applyValue(getPolicyObjectsGroupsResult -&gt; getPolicyObjectsGroupsResult.item()));
+     *         ctx.export("merakiOrganizationsPolicyObjectsGroupsExample", example.applyValue(getPolicyObjectsGroupsResult -> getPolicyObjectsGroupsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8939,7 +9323,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8961,16 +9346,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getPolicyObjectsGroups(GetPolicyObjectsGroupsArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsPolicyObjectsGroupsExample&#34;, example.applyValue(getPolicyObjectsGroupsResult -&gt; getPolicyObjectsGroupsResult.item()));
+     *         ctx.export("merakiOrganizationsPolicyObjectsGroupsExample", example.applyValue(getPolicyObjectsGroupsResult -> getPolicyObjectsGroupsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8981,7 +9367,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9003,16 +9390,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getPolicyObjectsGroups(GetPolicyObjectsGroupsArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsPolicyObjectsGroupsExample&#34;, example.applyValue(getPolicyObjectsGroupsResult -&gt; getPolicyObjectsGroupsResult.item()));
+     *         ctx.export("merakiOrganizationsPolicyObjectsGroupsExample", example.applyValue(getPolicyObjectsGroupsResult -> getPolicyObjectsGroupsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9023,7 +9411,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9045,13 +9434,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSaml(GetSamlArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSamlExample&#34;, example.applyValue(getSamlResult -&gt; getSamlResult.item()));
+     *         ctx.export("merakiOrganizationsSamlExample", example.applyValue(getSamlResult -> getSamlResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9062,7 +9452,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9084,13 +9475,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSaml(GetSamlArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSamlExample&#34;, example.applyValue(getSamlResult -&gt; getSamlResult.item()));
+     *         ctx.export("merakiOrganizationsSamlExample", example.applyValue(getSamlResult -> getSamlResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9101,7 +9493,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9123,13 +9516,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSaml(GetSamlArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSamlExample&#34;, example.applyValue(getSamlResult -&gt; getSamlResult.item()));
+     *         ctx.export("merakiOrganizationsSamlExample", example.applyValue(getSamlResult -> getSamlResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9140,7 +9534,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9162,13 +9557,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSaml(GetSamlArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSamlExample&#34;, example.applyValue(getSamlResult -&gt; getSamlResult.item()));
+     *         ctx.export("merakiOrganizationsSamlExample", example.applyValue(getSamlResult -> getSamlResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9263,7 +9659,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9285,22 +9682,23 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSensorReadingsHistory(GetSensorReadingsHistoryArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .metrics(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .metrics("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSensorReadingsHistoryExample&#34;, example.applyValue(getSensorReadingsHistoryResult -&gt; getSensorReadingsHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsSensorReadingsHistoryExample", example.applyValue(getSensorReadingsHistoryResult -> getSensorReadingsHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9311,7 +9709,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9333,22 +9732,23 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSensorReadingsHistory(GetSensorReadingsHistoryArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .metrics(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .metrics("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSensorReadingsHistoryExample&#34;, example.applyValue(getSensorReadingsHistoryResult -&gt; getSensorReadingsHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsSensorReadingsHistoryExample", example.applyValue(getSensorReadingsHistoryResult -> getSensorReadingsHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9359,7 +9759,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9381,22 +9782,23 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSensorReadingsHistory(GetSensorReadingsHistoryArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .metrics(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .metrics("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSensorReadingsHistoryExample&#34;, example.applyValue(getSensorReadingsHistoryResult -&gt; getSensorReadingsHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsSensorReadingsHistoryExample", example.applyValue(getSensorReadingsHistoryResult -> getSensorReadingsHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9407,7 +9809,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9429,22 +9832,23 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSensorReadingsHistory(GetSensorReadingsHistoryArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .metrics(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .metrics("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSensorReadingsHistoryExample&#34;, example.applyValue(getSensorReadingsHistoryResult -&gt; getSensorReadingsHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsSensorReadingsHistoryExample", example.applyValue(getSensorReadingsHistoryResult -> getSensorReadingsHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9455,7 +9859,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9477,19 +9882,20 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSensorReadingsLatest(GetSensorReadingsLatestArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .metrics(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .metrics("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSensorReadingsLatestExample&#34;, example.applyValue(getSensorReadingsLatestResult -&gt; getSensorReadingsLatestResult.items()));
+     *         ctx.export("merakiOrganizationsSensorReadingsLatestExample", example.applyValue(getSensorReadingsLatestResult -> getSensorReadingsLatestResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9500,7 +9906,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9522,19 +9929,20 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSensorReadingsLatest(GetSensorReadingsLatestArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .metrics(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .metrics("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSensorReadingsLatestExample&#34;, example.applyValue(getSensorReadingsLatestResult -&gt; getSensorReadingsLatestResult.items()));
+     *         ctx.export("merakiOrganizationsSensorReadingsLatestExample", example.applyValue(getSensorReadingsLatestResult -> getSensorReadingsLatestResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9545,7 +9953,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9567,19 +9976,20 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSensorReadingsLatest(GetSensorReadingsLatestArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .metrics(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .metrics("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSensorReadingsLatestExample&#34;, example.applyValue(getSensorReadingsLatestResult -&gt; getSensorReadingsLatestResult.items()));
+     *         ctx.export("merakiOrganizationsSensorReadingsLatestExample", example.applyValue(getSensorReadingsLatestResult -> getSensorReadingsLatestResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9590,7 +10000,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9612,19 +10023,20 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSensorReadingsLatest(GetSensorReadingsLatestArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .metrics(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .metrics("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSensorReadingsLatestExample&#34;, example.applyValue(getSensorReadingsLatestResult -&gt; getSensorReadingsLatestResult.items()));
+     *         ctx.export("merakiOrganizationsSensorReadingsLatestExample", example.applyValue(getSensorReadingsLatestResult -> getSensorReadingsLatestResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9635,7 +10047,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9657,16 +10070,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSmAdminsRoles(GetSmAdminsRolesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSmAdminsRolesExample&#34;, example.applyValue(getSmAdminsRolesResult -&gt; getSmAdminsRolesResult.item()));
+     *         ctx.export("merakiOrganizationsSmAdminsRolesExample", example.applyValue(getSmAdminsRolesResult -> getSmAdminsRolesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9677,7 +10091,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9699,16 +10114,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSmAdminsRoles(GetSmAdminsRolesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSmAdminsRolesExample&#34;, example.applyValue(getSmAdminsRolesResult -&gt; getSmAdminsRolesResult.item()));
+     *         ctx.export("merakiOrganizationsSmAdminsRolesExample", example.applyValue(getSmAdminsRolesResult -> getSmAdminsRolesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9719,7 +10135,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9741,16 +10158,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSmAdminsRoles(GetSmAdminsRolesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSmAdminsRolesExample&#34;, example.applyValue(getSmAdminsRolesResult -&gt; getSmAdminsRolesResult.item()));
+     *         ctx.export("merakiOrganizationsSmAdminsRolesExample", example.applyValue(getSmAdminsRolesResult -> getSmAdminsRolesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9761,7 +10179,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9783,16 +10202,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSmAdminsRoles(GetSmAdminsRolesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSmAdminsRolesExample&#34;, example.applyValue(getSmAdminsRolesResult -&gt; getSmAdminsRolesResult.item()));
+     *         ctx.export("merakiOrganizationsSmAdminsRolesExample", example.applyValue(getSmAdminsRolesResult -> getSmAdminsRolesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9803,7 +10223,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9825,16 +10246,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSmAdminsRoles(GetSmAdminsRolesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSmAdminsRolesExample&#34;, example.applyValue(getSmAdminsRolesResult -&gt; getSmAdminsRolesResult.item()));
+     *         ctx.export("merakiOrganizationsSmAdminsRolesExample", example.applyValue(getSmAdminsRolesResult -> getSmAdminsRolesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9845,7 +10267,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9867,16 +10290,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSmAdminsRoles(GetSmAdminsRolesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSmAdminsRolesExample&#34;, example.applyValue(getSmAdminsRolesResult -&gt; getSmAdminsRolesResult.item()));
+     *         ctx.export("merakiOrganizationsSmAdminsRolesExample", example.applyValue(getSmAdminsRolesResult -> getSmAdminsRolesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9887,7 +10311,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9909,13 +10334,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSmApnsCert(GetSmApnsCertArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSmApnsCertExample&#34;, example.applyValue(getSmApnsCertResult -&gt; getSmApnsCertResult.item()));
+     *         ctx.export("merakiOrganizationsSmApnsCertExample", example.applyValue(getSmApnsCertResult -> getSmApnsCertResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9926,7 +10352,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9948,13 +10375,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSmApnsCert(GetSmApnsCertArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSmApnsCertExample&#34;, example.applyValue(getSmApnsCertResult -&gt; getSmApnsCertResult.item()));
+     *         ctx.export("merakiOrganizationsSmApnsCertExample", example.applyValue(getSmApnsCertResult -> getSmApnsCertResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9965,7 +10393,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9987,13 +10416,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSmApnsCert(GetSmApnsCertArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSmApnsCertExample&#34;, example.applyValue(getSmApnsCertResult -&gt; getSmApnsCertResult.item()));
+     *         ctx.export("merakiOrganizationsSmApnsCertExample", example.applyValue(getSmApnsCertResult -> getSmApnsCertResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10004,7 +10434,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10026,13 +10457,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSmApnsCert(GetSmApnsCertArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSmApnsCertExample&#34;, example.applyValue(getSmApnsCertResult -&gt; getSmApnsCertResult.item()));
+     *         ctx.export("merakiOrganizationsSmApnsCertExample", example.applyValue(getSmApnsCertResult -> getSmApnsCertResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10043,7 +10475,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10065,17 +10498,18 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSmSentryPoliciesAssignmentsByNetwork(GetSmSentryPoliciesAssignmentsByNetworkArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSmSentryPoliciesAssignmentsByNetworkExample&#34;, example.applyValue(getSmSentryPoliciesAssignmentsByNetworkResult -&gt; getSmSentryPoliciesAssignmentsByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsSmSentryPoliciesAssignmentsByNetworkExample", example.applyValue(getSmSentryPoliciesAssignmentsByNetworkResult -> getSmSentryPoliciesAssignmentsByNetworkResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10086,7 +10520,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10108,17 +10543,18 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSmSentryPoliciesAssignmentsByNetwork(GetSmSentryPoliciesAssignmentsByNetworkArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSmSentryPoliciesAssignmentsByNetworkExample&#34;, example.applyValue(getSmSentryPoliciesAssignmentsByNetworkResult -&gt; getSmSentryPoliciesAssignmentsByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsSmSentryPoliciesAssignmentsByNetworkExample", example.applyValue(getSmSentryPoliciesAssignmentsByNetworkResult -> getSmSentryPoliciesAssignmentsByNetworkResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10129,7 +10565,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10151,17 +10588,18 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSmSentryPoliciesAssignmentsByNetwork(GetSmSentryPoliciesAssignmentsByNetworkArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSmSentryPoliciesAssignmentsByNetworkExample&#34;, example.applyValue(getSmSentryPoliciesAssignmentsByNetworkResult -&gt; getSmSentryPoliciesAssignmentsByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsSmSentryPoliciesAssignmentsByNetworkExample", example.applyValue(getSmSentryPoliciesAssignmentsByNetworkResult -> getSmSentryPoliciesAssignmentsByNetworkResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10172,7 +10610,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10194,17 +10633,18 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSmSentryPoliciesAssignmentsByNetwork(GetSmSentryPoliciesAssignmentsByNetworkArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSmSentryPoliciesAssignmentsByNetworkExample&#34;, example.applyValue(getSmSentryPoliciesAssignmentsByNetworkResult -&gt; getSmSentryPoliciesAssignmentsByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsSmSentryPoliciesAssignmentsByNetworkExample", example.applyValue(getSmSentryPoliciesAssignmentsByNetworkResult -> getSmSentryPoliciesAssignmentsByNetworkResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10257,7 +10697,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10279,13 +10720,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSnmp(GetSnmpArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSnmpExample&#34;, example.applyValue(getSnmpResult -&gt; getSnmpResult.item()));
+     *         ctx.export("merakiOrganizationsSnmpExample", example.applyValue(getSnmpResult -> getSnmpResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10296,7 +10738,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10318,13 +10761,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSnmp(GetSnmpArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSnmpExample&#34;, example.applyValue(getSnmpResult -&gt; getSnmpResult.item()));
+     *         ctx.export("merakiOrganizationsSnmpExample", example.applyValue(getSnmpResult -> getSnmpResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10335,7 +10779,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10357,13 +10802,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSnmp(GetSnmpArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSnmpExample&#34;, example.applyValue(getSnmpResult -&gt; getSnmpResult.item()));
+     *         ctx.export("merakiOrganizationsSnmpExample", example.applyValue(getSnmpResult -> getSnmpResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10374,7 +10820,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10396,13 +10843,14 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSnmp(GetSnmpArgs.builder()
-     *             .organizationId(&#34;string&#34;)
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSnmpExample&#34;, example.applyValue(getSnmpResult -&gt; getSnmpResult.item()));
+     *         ctx.export("merakiOrganizationsSnmpExample", example.applyValue(getSnmpResult -> getSnmpResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10413,7 +10861,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10435,16 +10884,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSummaryTopAppliancesByUtilization(GetSummaryTopAppliancesByUtilizationArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSummaryTopAppliancesByUtilizationExample&#34;, example.applyValue(getSummaryTopAppliancesByUtilizationResult -&gt; getSummaryTopAppliancesByUtilizationResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopAppliancesByUtilizationExample", example.applyValue(getSummaryTopAppliancesByUtilizationResult -> getSummaryTopAppliancesByUtilizationResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10455,7 +10905,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10477,16 +10928,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSummaryTopAppliancesByUtilization(GetSummaryTopAppliancesByUtilizationArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSummaryTopAppliancesByUtilizationExample&#34;, example.applyValue(getSummaryTopAppliancesByUtilizationResult -&gt; getSummaryTopAppliancesByUtilizationResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopAppliancesByUtilizationExample", example.applyValue(getSummaryTopAppliancesByUtilizationResult -> getSummaryTopAppliancesByUtilizationResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10497,7 +10949,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10519,16 +10972,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSummaryTopAppliancesByUtilization(GetSummaryTopAppliancesByUtilizationArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSummaryTopAppliancesByUtilizationExample&#34;, example.applyValue(getSummaryTopAppliancesByUtilizationResult -&gt; getSummaryTopAppliancesByUtilizationResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopAppliancesByUtilizationExample", example.applyValue(getSummaryTopAppliancesByUtilizationResult -> getSummaryTopAppliancesByUtilizationResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10539,7 +10993,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10561,16 +11016,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSummaryTopAppliancesByUtilization(GetSummaryTopAppliancesByUtilizationArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSummaryTopAppliancesByUtilizationExample&#34;, example.applyValue(getSummaryTopAppliancesByUtilizationResult -&gt; getSummaryTopAppliancesByUtilizationResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopAppliancesByUtilizationExample", example.applyValue(getSummaryTopAppliancesByUtilizationResult -> getSummaryTopAppliancesByUtilizationResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10581,7 +11037,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10603,16 +11060,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSummaryTopClientsByUsage(GetSummaryTopClientsByUsageArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSummaryTopClientsByUsageExample&#34;, example.applyValue(getSummaryTopClientsByUsageResult -&gt; getSummaryTopClientsByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopClientsByUsageExample", example.applyValue(getSummaryTopClientsByUsageResult -> getSummaryTopClientsByUsageResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10623,7 +11081,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10645,16 +11104,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSummaryTopClientsByUsage(GetSummaryTopClientsByUsageArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSummaryTopClientsByUsageExample&#34;, example.applyValue(getSummaryTopClientsByUsageResult -&gt; getSummaryTopClientsByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopClientsByUsageExample", example.applyValue(getSummaryTopClientsByUsageResult -> getSummaryTopClientsByUsageResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10665,7 +11125,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10687,16 +11148,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSummaryTopClientsByUsage(GetSummaryTopClientsByUsageArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSummaryTopClientsByUsageExample&#34;, example.applyValue(getSummaryTopClientsByUsageResult -&gt; getSummaryTopClientsByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopClientsByUsageExample", example.applyValue(getSummaryTopClientsByUsageResult -> getSummaryTopClientsByUsageResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10707,7 +11169,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10729,16 +11192,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSummaryTopClientsByUsage(GetSummaryTopClientsByUsageArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSummaryTopClientsByUsageExample&#34;, example.applyValue(getSummaryTopClientsByUsageResult -&gt; getSummaryTopClientsByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopClientsByUsageExample", example.applyValue(getSummaryTopClientsByUsageResult -> getSummaryTopClientsByUsageResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10749,7 +11213,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10771,16 +11236,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSummaryTopClientsManufacturersByUsage(GetSummaryTopClientsManufacturersByUsageArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSummaryTopClientsManufacturersByUsageExample&#34;, example.applyValue(getSummaryTopClientsManufacturersByUsageResult -&gt; getSummaryTopClientsManufacturersByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopClientsManufacturersByUsageExample", example.applyValue(getSummaryTopClientsManufacturersByUsageResult -> getSummaryTopClientsManufacturersByUsageResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10791,7 +11257,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10813,16 +11280,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSummaryTopClientsManufacturersByUsage(GetSummaryTopClientsManufacturersByUsageArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSummaryTopClientsManufacturersByUsageExample&#34;, example.applyValue(getSummaryTopClientsManufacturersByUsageResult -&gt; getSummaryTopClientsManufacturersByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopClientsManufacturersByUsageExample", example.applyValue(getSummaryTopClientsManufacturersByUsageResult -> getSummaryTopClientsManufacturersByUsageResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10833,7 +11301,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10855,16 +11324,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSummaryTopClientsManufacturersByUsage(GetSummaryTopClientsManufacturersByUsageArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSummaryTopClientsManufacturersByUsageExample&#34;, example.applyValue(getSummaryTopClientsManufacturersByUsageResult -&gt; getSummaryTopClientsManufacturersByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopClientsManufacturersByUsageExample", example.applyValue(getSummaryTopClientsManufacturersByUsageResult -> getSummaryTopClientsManufacturersByUsageResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10875,7 +11345,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10897,16 +11368,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSummaryTopClientsManufacturersByUsage(GetSummaryTopClientsManufacturersByUsageArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSummaryTopClientsManufacturersByUsageExample&#34;, example.applyValue(getSummaryTopClientsManufacturersByUsageResult -&gt; getSummaryTopClientsManufacturersByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopClientsManufacturersByUsageExample", example.applyValue(getSummaryTopClientsManufacturersByUsageResult -> getSummaryTopClientsManufacturersByUsageResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10917,7 +11389,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10939,16 +11412,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSummaryTopDevicesByUsage(GetSummaryTopDevicesByUsageArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSummaryTopDevicesByUsageExample&#34;, example.applyValue(getSummaryTopDevicesByUsageResult -&gt; getSummaryTopDevicesByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopDevicesByUsageExample", example.applyValue(getSummaryTopDevicesByUsageResult -> getSummaryTopDevicesByUsageResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10959,7 +11433,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10981,16 +11456,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSummaryTopDevicesByUsage(GetSummaryTopDevicesByUsageArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSummaryTopDevicesByUsageExample&#34;, example.applyValue(getSummaryTopDevicesByUsageResult -&gt; getSummaryTopDevicesByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopDevicesByUsageExample", example.applyValue(getSummaryTopDevicesByUsageResult -> getSummaryTopDevicesByUsageResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11001,7 +11477,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11023,16 +11500,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSummaryTopDevicesByUsage(GetSummaryTopDevicesByUsageArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSummaryTopDevicesByUsageExample&#34;, example.applyValue(getSummaryTopDevicesByUsageResult -&gt; getSummaryTopDevicesByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopDevicesByUsageExample", example.applyValue(getSummaryTopDevicesByUsageResult -> getSummaryTopDevicesByUsageResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11043,7 +11521,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11065,16 +11544,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSummaryTopDevicesByUsage(GetSummaryTopDevicesByUsageArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSummaryTopDevicesByUsageExample&#34;, example.applyValue(getSummaryTopDevicesByUsageResult -&gt; getSummaryTopDevicesByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopDevicesByUsageExample", example.applyValue(getSummaryTopDevicesByUsageResult -> getSummaryTopDevicesByUsageResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11085,7 +11565,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11107,16 +11588,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSummaryTopDevicesModelsByUsage(GetSummaryTopDevicesModelsByUsageArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSummaryTopDevicesModelsByUsageExample&#34;, example.applyValue(getSummaryTopDevicesModelsByUsageResult -&gt; getSummaryTopDevicesModelsByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopDevicesModelsByUsageExample", example.applyValue(getSummaryTopDevicesModelsByUsageResult -> getSummaryTopDevicesModelsByUsageResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11127,7 +11609,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11149,16 +11632,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSummaryTopDevicesModelsByUsage(GetSummaryTopDevicesModelsByUsageArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSummaryTopDevicesModelsByUsageExample&#34;, example.applyValue(getSummaryTopDevicesModelsByUsageResult -&gt; getSummaryTopDevicesModelsByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopDevicesModelsByUsageExample", example.applyValue(getSummaryTopDevicesModelsByUsageResult -> getSummaryTopDevicesModelsByUsageResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11169,7 +11653,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11191,16 +11676,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSummaryTopDevicesModelsByUsage(GetSummaryTopDevicesModelsByUsageArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSummaryTopDevicesModelsByUsageExample&#34;, example.applyValue(getSummaryTopDevicesModelsByUsageResult -&gt; getSummaryTopDevicesModelsByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopDevicesModelsByUsageExample", example.applyValue(getSummaryTopDevicesModelsByUsageResult -> getSummaryTopDevicesModelsByUsageResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11211,7 +11697,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11233,16 +11720,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSummaryTopDevicesModelsByUsage(GetSummaryTopDevicesModelsByUsageArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSummaryTopDevicesModelsByUsageExample&#34;, example.applyValue(getSummaryTopDevicesModelsByUsageResult -&gt; getSummaryTopDevicesModelsByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopDevicesModelsByUsageExample", example.applyValue(getSummaryTopDevicesModelsByUsageResult -> getSummaryTopDevicesModelsByUsageResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11253,7 +11741,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11275,16 +11764,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSummaryTopNetworksByStatus(GetSummaryTopNetworksByStatusArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSummaryTopNetworksByStatusExample&#34;, example.applyValue(getSummaryTopNetworksByStatusResult -&gt; getSummaryTopNetworksByStatusResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopNetworksByStatusExample", example.applyValue(getSummaryTopNetworksByStatusResult -> getSummaryTopNetworksByStatusResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11295,7 +11785,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11317,16 +11808,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSummaryTopNetworksByStatus(GetSummaryTopNetworksByStatusArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSummaryTopNetworksByStatusExample&#34;, example.applyValue(getSummaryTopNetworksByStatusResult -&gt; getSummaryTopNetworksByStatusResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopNetworksByStatusExample", example.applyValue(getSummaryTopNetworksByStatusResult -> getSummaryTopNetworksByStatusResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11337,7 +11829,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11359,16 +11852,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSummaryTopNetworksByStatus(GetSummaryTopNetworksByStatusArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSummaryTopNetworksByStatusExample&#34;, example.applyValue(getSummaryTopNetworksByStatusResult -&gt; getSummaryTopNetworksByStatusResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopNetworksByStatusExample", example.applyValue(getSummaryTopNetworksByStatusResult -> getSummaryTopNetworksByStatusResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11379,7 +11873,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11401,16 +11896,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSummaryTopNetworksByStatus(GetSummaryTopNetworksByStatusArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSummaryTopNetworksByStatusExample&#34;, example.applyValue(getSummaryTopNetworksByStatusResult -&gt; getSummaryTopNetworksByStatusResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopNetworksByStatusExample", example.applyValue(getSummaryTopNetworksByStatusResult -> getSummaryTopNetworksByStatusResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11421,7 +11917,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11443,16 +11940,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSummaryTopSsidsByUsage(GetSummaryTopSsidsByUsageArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSummaryTopSsidsByUsageExample&#34;, example.applyValue(getSummaryTopSsidsByUsageResult -&gt; getSummaryTopSsidsByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopSsidsByUsageExample", example.applyValue(getSummaryTopSsidsByUsageResult -> getSummaryTopSsidsByUsageResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11463,7 +11961,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11485,16 +11984,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSummaryTopSsidsByUsage(GetSummaryTopSsidsByUsageArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSummaryTopSsidsByUsageExample&#34;, example.applyValue(getSummaryTopSsidsByUsageResult -&gt; getSummaryTopSsidsByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopSsidsByUsageExample", example.applyValue(getSummaryTopSsidsByUsageResult -> getSummaryTopSsidsByUsageResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11505,7 +12005,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11527,16 +12028,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSummaryTopSsidsByUsage(GetSummaryTopSsidsByUsageArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSummaryTopSsidsByUsageExample&#34;, example.applyValue(getSummaryTopSsidsByUsageResult -&gt; getSummaryTopSsidsByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopSsidsByUsageExample", example.applyValue(getSummaryTopSsidsByUsageResult -> getSummaryTopSsidsByUsageResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11547,7 +12049,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11569,16 +12072,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSummaryTopSsidsByUsage(GetSummaryTopSsidsByUsageArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSummaryTopSsidsByUsageExample&#34;, example.applyValue(getSummaryTopSsidsByUsageResult -&gt; getSummaryTopSsidsByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopSsidsByUsageExample", example.applyValue(getSummaryTopSsidsByUsageResult -> getSummaryTopSsidsByUsageResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11589,7 +12093,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11611,16 +12116,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSummaryTopSwitchesByEnergyUsage(GetSummaryTopSwitchesByEnergyUsageArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSummaryTopSwitchesByEnergyUsageExample&#34;, example.applyValue(getSummaryTopSwitchesByEnergyUsageResult -&gt; getSummaryTopSwitchesByEnergyUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopSwitchesByEnergyUsageExample", example.applyValue(getSummaryTopSwitchesByEnergyUsageResult -> getSummaryTopSwitchesByEnergyUsageResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11631,7 +12137,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11653,16 +12160,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSummaryTopSwitchesByEnergyUsage(GetSummaryTopSwitchesByEnergyUsageArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSummaryTopSwitchesByEnergyUsageExample&#34;, example.applyValue(getSummaryTopSwitchesByEnergyUsageResult -&gt; getSummaryTopSwitchesByEnergyUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopSwitchesByEnergyUsageExample", example.applyValue(getSummaryTopSwitchesByEnergyUsageResult -> getSummaryTopSwitchesByEnergyUsageResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11673,7 +12181,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11695,16 +12204,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSummaryTopSwitchesByEnergyUsage(GetSummaryTopSwitchesByEnergyUsageArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSummaryTopSwitchesByEnergyUsageExample&#34;, example.applyValue(getSummaryTopSwitchesByEnergyUsageResult -&gt; getSummaryTopSwitchesByEnergyUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopSwitchesByEnergyUsageExample", example.applyValue(getSummaryTopSwitchesByEnergyUsageResult -> getSummaryTopSwitchesByEnergyUsageResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11715,7 +12225,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11737,16 +12248,17 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSummaryTopSwitchesByEnergyUsage(GetSummaryTopSwitchesByEnergyUsageArgs.builder()
-     *             .organizationId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSummaryTopSwitchesByEnergyUsageExample&#34;, example.applyValue(getSummaryTopSwitchesByEnergyUsageResult -&gt; getSummaryTopSwitchesByEnergyUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopSwitchesByEnergyUsageExample", example.applyValue(getSummaryTopSwitchesByEnergyUsageResult -> getSummaryTopSwitchesByEnergyUsageResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11757,7 +12269,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11779,24 +12292,25 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSwitchPortsBySwitch(GetSwitchPortsBySwitchArgs.builder()
-     *             .configurationUpdatedAfter(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .mac(&#34;string&#34;)
-     *             .macs(&#34;string&#34;)
-     *             .name(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .configurationUpdatedAfter("string")
+     *             .endingBefore("string")
+     *             .mac("string")
+     *             .macs("string")
+     *             .name("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .portProfileIds(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
+     *             .portProfileIds("string")
+     *             .serial("string")
+     *             .serials("string")
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSwitchPortsBySwitchExample&#34;, example.applyValue(getSwitchPortsBySwitchResult -&gt; getSwitchPortsBySwitchResult.items()));
+     *         ctx.export("merakiOrganizationsSwitchPortsBySwitchExample", example.applyValue(getSwitchPortsBySwitchResult -> getSwitchPortsBySwitchResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11807,7 +12321,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11829,24 +12344,25 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSwitchPortsBySwitch(GetSwitchPortsBySwitchArgs.builder()
-     *             .configurationUpdatedAfter(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .mac(&#34;string&#34;)
-     *             .macs(&#34;string&#34;)
-     *             .name(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .configurationUpdatedAfter("string")
+     *             .endingBefore("string")
+     *             .mac("string")
+     *             .macs("string")
+     *             .name("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .portProfileIds(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
+     *             .portProfileIds("string")
+     *             .serial("string")
+     *             .serials("string")
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSwitchPortsBySwitchExample&#34;, example.applyValue(getSwitchPortsBySwitchResult -&gt; getSwitchPortsBySwitchResult.items()));
+     *         ctx.export("merakiOrganizationsSwitchPortsBySwitchExample", example.applyValue(getSwitchPortsBySwitchResult -> getSwitchPortsBySwitchResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11857,7 +12373,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11879,24 +12396,25 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSwitchPortsBySwitch(GetSwitchPortsBySwitchArgs.builder()
-     *             .configurationUpdatedAfter(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .mac(&#34;string&#34;)
-     *             .macs(&#34;string&#34;)
-     *             .name(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .configurationUpdatedAfter("string")
+     *             .endingBefore("string")
+     *             .mac("string")
+     *             .macs("string")
+     *             .name("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .portProfileIds(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
+     *             .portProfileIds("string")
+     *             .serial("string")
+     *             .serials("string")
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSwitchPortsBySwitchExample&#34;, example.applyValue(getSwitchPortsBySwitchResult -&gt; getSwitchPortsBySwitchResult.items()));
+     *         ctx.export("merakiOrganizationsSwitchPortsBySwitchExample", example.applyValue(getSwitchPortsBySwitchResult -> getSwitchPortsBySwitchResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11907,7 +12425,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11929,24 +12448,25 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getSwitchPortsBySwitch(GetSwitchPortsBySwitchArgs.builder()
-     *             .configurationUpdatedAfter(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .mac(&#34;string&#34;)
-     *             .macs(&#34;string&#34;)
-     *             .name(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .configurationUpdatedAfter("string")
+     *             .endingBefore("string")
+     *             .mac("string")
+     *             .macs("string")
+     *             .name("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .portProfileIds(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
+     *             .portProfileIds("string")
+     *             .serial("string")
+     *             .serials("string")
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsSwitchPortsBySwitchExample&#34;, example.applyValue(getSwitchPortsBySwitchResult -&gt; getSwitchPortsBySwitchResult.items()));
+     *         ctx.export("merakiOrganizationsSwitchPortsBySwitchExample", example.applyValue(getSwitchPortsBySwitchResult -> getSwitchPortsBySwitchResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11957,7 +12477,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11979,19 +12500,20 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getUplinksStatuses(GetUplinksStatusesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .iccids(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .iccids("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsUplinksStatusesExample&#34;, example.applyValue(getUplinksStatusesResult -&gt; getUplinksStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsUplinksStatusesExample", example.applyValue(getUplinksStatusesResult -> getUplinksStatusesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12002,7 +12524,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12024,19 +12547,20 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getUplinksStatuses(GetUplinksStatusesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .iccids(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .iccids("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsUplinksStatusesExample&#34;, example.applyValue(getUplinksStatusesResult -&gt; getUplinksStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsUplinksStatusesExample", example.applyValue(getUplinksStatusesResult -> getUplinksStatusesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12047,7 +12571,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12069,19 +12594,20 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getUplinksStatuses(GetUplinksStatusesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .iccids(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .iccids("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsUplinksStatusesExample&#34;, example.applyValue(getUplinksStatusesResult -&gt; getUplinksStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsUplinksStatusesExample", example.applyValue(getUplinksStatusesResult -> getUplinksStatusesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12092,7 +12618,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12114,19 +12641,20 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getUplinksStatuses(GetUplinksStatusesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .iccids(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .iccids("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsUplinksStatusesExample&#34;, example.applyValue(getUplinksStatusesResult -&gt; getUplinksStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsUplinksStatusesExample", example.applyValue(getUplinksStatusesResult -> getUplinksStatusesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12137,7 +12665,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12159,14 +12688,15 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWebhooksCallbacksStatuses(GetWebhooksCallbacksStatusesArgs.builder()
-     *             .callbackId(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .callbackId("string")
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWebhooksCallbacksStatusesExample&#34;, example.applyValue(getWebhooksCallbacksStatusesResult -&gt; getWebhooksCallbacksStatusesResult.item()));
+     *         ctx.export("merakiOrganizationsWebhooksCallbacksStatusesExample", example.applyValue(getWebhooksCallbacksStatusesResult -> getWebhooksCallbacksStatusesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12177,7 +12707,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12199,14 +12730,15 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWebhooksCallbacksStatuses(GetWebhooksCallbacksStatusesArgs.builder()
-     *             .callbackId(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .callbackId("string")
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWebhooksCallbacksStatusesExample&#34;, example.applyValue(getWebhooksCallbacksStatusesResult -&gt; getWebhooksCallbacksStatusesResult.item()));
+     *         ctx.export("merakiOrganizationsWebhooksCallbacksStatusesExample", example.applyValue(getWebhooksCallbacksStatusesResult -> getWebhooksCallbacksStatusesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12217,7 +12749,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12239,14 +12772,15 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWebhooksCallbacksStatuses(GetWebhooksCallbacksStatusesArgs.builder()
-     *             .callbackId(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .callbackId("string")
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWebhooksCallbacksStatusesExample&#34;, example.applyValue(getWebhooksCallbacksStatusesResult -&gt; getWebhooksCallbacksStatusesResult.item()));
+     *         ctx.export("merakiOrganizationsWebhooksCallbacksStatusesExample", example.applyValue(getWebhooksCallbacksStatusesResult -> getWebhooksCallbacksStatusesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12257,7 +12791,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12279,14 +12814,15 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWebhooksCallbacksStatuses(GetWebhooksCallbacksStatusesArgs.builder()
-     *             .callbackId(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .callbackId("string")
+     *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWebhooksCallbacksStatusesExample&#34;, example.applyValue(getWebhooksCallbacksStatusesResult -&gt; getWebhooksCallbacksStatusesResult.item()));
+     *         ctx.export("merakiOrganizationsWebhooksCallbacksStatusesExample", example.applyValue(getWebhooksCallbacksStatusesResult -> getWebhooksCallbacksStatusesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12297,7 +12833,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12319,20 +12856,21 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWebhooksLogs(GetWebhooksLogsArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
-     *             .url(&#34;string&#34;)
+     *             .url("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWebhooksLogsExample&#34;, example.applyValue(getWebhooksLogsResult -&gt; getWebhooksLogsResult.items()));
+     *         ctx.export("merakiOrganizationsWebhooksLogsExample", example.applyValue(getWebhooksLogsResult -> getWebhooksLogsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12343,7 +12881,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12365,20 +12904,21 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWebhooksLogs(GetWebhooksLogsArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
-     *             .url(&#34;string&#34;)
+     *             .url("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWebhooksLogsExample&#34;, example.applyValue(getWebhooksLogsResult -&gt; getWebhooksLogsResult.items()));
+     *         ctx.export("merakiOrganizationsWebhooksLogsExample", example.applyValue(getWebhooksLogsResult -> getWebhooksLogsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12389,7 +12929,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12411,20 +12952,21 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWebhooksLogs(GetWebhooksLogsArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
-     *             .url(&#34;string&#34;)
+     *             .url("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWebhooksLogsExample&#34;, example.applyValue(getWebhooksLogsResult -&gt; getWebhooksLogsResult.items()));
+     *         ctx.export("merakiOrganizationsWebhooksLogsExample", example.applyValue(getWebhooksLogsResult -> getWebhooksLogsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12435,7 +12977,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12457,20 +13000,21 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWebhooksLogs(GetWebhooksLogsArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
-     *             .url(&#34;string&#34;)
+     *             .url("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWebhooksLogsExample&#34;, example.applyValue(getWebhooksLogsResult -&gt; getWebhooksLogsResult.items()));
+     *         ctx.export("merakiOrganizationsWebhooksLogsExample", example.applyValue(getWebhooksLogsResult -> getWebhooksLogsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12481,7 +13025,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12503,22 +13048,23 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWirelessDevicesChannelUtilizationByDevice(GetWirelessDevicesChannelUtilizationByDeviceArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
+     *             .endingBefore("string")
      *             .interval(1)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWirelessDevicesChannelUtilizationByDeviceExample&#34;, example.applyValue(getWirelessDevicesChannelUtilizationByDeviceResult -&gt; getWirelessDevicesChannelUtilizationByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByDeviceExample", example.applyValue(getWirelessDevicesChannelUtilizationByDeviceResult -> getWirelessDevicesChannelUtilizationByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12529,7 +13075,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12551,22 +13098,23 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWirelessDevicesChannelUtilizationByDevice(GetWirelessDevicesChannelUtilizationByDeviceArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
+     *             .endingBefore("string")
      *             .interval(1)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWirelessDevicesChannelUtilizationByDeviceExample&#34;, example.applyValue(getWirelessDevicesChannelUtilizationByDeviceResult -&gt; getWirelessDevicesChannelUtilizationByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByDeviceExample", example.applyValue(getWirelessDevicesChannelUtilizationByDeviceResult -> getWirelessDevicesChannelUtilizationByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12577,7 +13125,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12599,22 +13148,23 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWirelessDevicesChannelUtilizationByDevice(GetWirelessDevicesChannelUtilizationByDeviceArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
+     *             .endingBefore("string")
      *             .interval(1)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWirelessDevicesChannelUtilizationByDeviceExample&#34;, example.applyValue(getWirelessDevicesChannelUtilizationByDeviceResult -&gt; getWirelessDevicesChannelUtilizationByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByDeviceExample", example.applyValue(getWirelessDevicesChannelUtilizationByDeviceResult -> getWirelessDevicesChannelUtilizationByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12625,7 +13175,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12647,22 +13198,23 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWirelessDevicesChannelUtilizationByDevice(GetWirelessDevicesChannelUtilizationByDeviceArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
+     *             .endingBefore("string")
      *             .interval(1)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWirelessDevicesChannelUtilizationByDeviceExample&#34;, example.applyValue(getWirelessDevicesChannelUtilizationByDeviceResult -&gt; getWirelessDevicesChannelUtilizationByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByDeviceExample", example.applyValue(getWirelessDevicesChannelUtilizationByDeviceResult -> getWirelessDevicesChannelUtilizationByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12673,7 +13225,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12695,22 +13248,23 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWirelessDevicesChannelUtilizationByNetwork(GetWirelessDevicesChannelUtilizationByNetworkArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
+     *             .endingBefore("string")
      *             .interval(1)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWirelessDevicesChannelUtilizationByNetworkExample&#34;, example.applyValue(getWirelessDevicesChannelUtilizationByNetworkResult -&gt; getWirelessDevicesChannelUtilizationByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByNetworkExample", example.applyValue(getWirelessDevicesChannelUtilizationByNetworkResult -> getWirelessDevicesChannelUtilizationByNetworkResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12721,7 +13275,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12743,22 +13298,23 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWirelessDevicesChannelUtilizationByNetwork(GetWirelessDevicesChannelUtilizationByNetworkArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
+     *             .endingBefore("string")
      *             .interval(1)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWirelessDevicesChannelUtilizationByNetworkExample&#34;, example.applyValue(getWirelessDevicesChannelUtilizationByNetworkResult -&gt; getWirelessDevicesChannelUtilizationByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByNetworkExample", example.applyValue(getWirelessDevicesChannelUtilizationByNetworkResult -> getWirelessDevicesChannelUtilizationByNetworkResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12769,7 +13325,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12791,22 +13348,23 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWirelessDevicesChannelUtilizationByNetwork(GetWirelessDevicesChannelUtilizationByNetworkArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
+     *             .endingBefore("string")
      *             .interval(1)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWirelessDevicesChannelUtilizationByNetworkExample&#34;, example.applyValue(getWirelessDevicesChannelUtilizationByNetworkResult -&gt; getWirelessDevicesChannelUtilizationByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByNetworkExample", example.applyValue(getWirelessDevicesChannelUtilizationByNetworkResult -> getWirelessDevicesChannelUtilizationByNetworkResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12817,7 +13375,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12839,22 +13398,23 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWirelessDevicesChannelUtilizationByNetwork(GetWirelessDevicesChannelUtilizationByNetworkArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
+     *             .endingBefore("string")
      *             .interval(1)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWirelessDevicesChannelUtilizationByNetworkExample&#34;, example.applyValue(getWirelessDevicesChannelUtilizationByNetworkResult -&gt; getWirelessDevicesChannelUtilizationByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByNetworkExample", example.applyValue(getWirelessDevicesChannelUtilizationByNetworkResult -> getWirelessDevicesChannelUtilizationByNetworkResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12865,7 +13425,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12887,22 +13448,23 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWirelessDevicesChannelUtilizationHistoryByDeviceByInterval(GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
+     *             .endingBefore("string")
      *             .interval(1)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalExample&#34;, example.applyValue(getWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult -&gt; getWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalExample", example.applyValue(getWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult -> getWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12913,7 +13475,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12935,22 +13498,23 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWirelessDevicesChannelUtilizationHistoryByDeviceByInterval(GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
+     *             .endingBefore("string")
      *             .interval(1)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalExample&#34;, example.applyValue(getWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult -&gt; getWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalExample", example.applyValue(getWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult -> getWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12961,7 +13525,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12983,22 +13548,23 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWirelessDevicesChannelUtilizationHistoryByDeviceByInterval(GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
+     *             .endingBefore("string")
      *             .interval(1)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalExample&#34;, example.applyValue(getWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult -&gt; getWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalExample", example.applyValue(getWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult -> getWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13009,7 +13575,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13031,22 +13598,23 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWirelessDevicesChannelUtilizationHistoryByDeviceByInterval(GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
+     *             .endingBefore("string")
      *             .interval(1)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalExample&#34;, example.applyValue(getWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult -&gt; getWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalExample", example.applyValue(getWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult -> getWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13057,7 +13625,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13079,22 +13648,23 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWirelessDevicesChannelUtilizationHistoryByNetworkByInterval(GetWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
+     *             .endingBefore("string")
      *             .interval(1)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalExample&#34;, example.applyValue(getWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalResult -&gt; getWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalExample", example.applyValue(getWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalResult -> getWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13105,7 +13675,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13127,22 +13698,23 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWirelessDevicesChannelUtilizationHistoryByNetworkByInterval(GetWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
+     *             .endingBefore("string")
      *             .interval(1)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalExample&#34;, example.applyValue(getWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalResult -&gt; getWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalExample", example.applyValue(getWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalResult -> getWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13153,7 +13725,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13175,22 +13748,23 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWirelessDevicesChannelUtilizationHistoryByNetworkByInterval(GetWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
+     *             .endingBefore("string")
      *             .interval(1)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalExample&#34;, example.applyValue(getWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalResult -&gt; getWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalExample", example.applyValue(getWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalResult -> getWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13201,7 +13775,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13223,22 +13798,23 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWirelessDevicesChannelUtilizationHistoryByNetworkByInterval(GetWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
+     *             .endingBefore("string")
      *             .interval(1)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalExample&#34;, example.applyValue(getWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalResult -&gt; getWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalExample", example.applyValue(getWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalResult -> getWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13249,7 +13825,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13271,17 +13848,18 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWirelessDevicesEthernetStatuses(GetWirelessDevicesEthernetStatusesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWirelessDevicesEthernetStatusesExample&#34;, example.applyValue(getWirelessDevicesEthernetStatusesResult -&gt; getWirelessDevicesEthernetStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesEthernetStatusesExample", example.applyValue(getWirelessDevicesEthernetStatusesResult -> getWirelessDevicesEthernetStatusesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13292,7 +13870,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13314,17 +13893,18 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWirelessDevicesEthernetStatuses(GetWirelessDevicesEthernetStatusesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWirelessDevicesEthernetStatusesExample&#34;, example.applyValue(getWirelessDevicesEthernetStatusesResult -&gt; getWirelessDevicesEthernetStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesEthernetStatusesExample", example.applyValue(getWirelessDevicesEthernetStatusesResult -> getWirelessDevicesEthernetStatusesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13335,7 +13915,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13357,17 +13938,18 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWirelessDevicesEthernetStatuses(GetWirelessDevicesEthernetStatusesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWirelessDevicesEthernetStatusesExample&#34;, example.applyValue(getWirelessDevicesEthernetStatusesResult -&gt; getWirelessDevicesEthernetStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesEthernetStatusesExample", example.applyValue(getWirelessDevicesEthernetStatusesResult -> getWirelessDevicesEthernetStatusesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13378,7 +13960,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13400,17 +13983,18 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWirelessDevicesEthernetStatuses(GetWirelessDevicesEthernetStatusesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWirelessDevicesEthernetStatusesExample&#34;, example.applyValue(getWirelessDevicesEthernetStatusesResult -&gt; getWirelessDevicesEthernetStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesEthernetStatusesExample", example.applyValue(getWirelessDevicesEthernetStatusesResult -> getWirelessDevicesEthernetStatusesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13421,7 +14005,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13443,23 +14028,24 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWirelessDevicesPacketLossByClient(GetWirelessDevicesPacketLossByClientArgs.builder()
-     *             .bands(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .macs(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .bands("string")
+     *             .endingBefore("string")
+     *             .macs("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .ssids(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .ssids("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWirelessDevicesPacketLossByClientExample&#34;, example.applyValue(getWirelessDevicesPacketLossByClientResult -&gt; getWirelessDevicesPacketLossByClientResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByClientExample", example.applyValue(getWirelessDevicesPacketLossByClientResult -> getWirelessDevicesPacketLossByClientResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13470,7 +14056,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13492,23 +14079,24 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWirelessDevicesPacketLossByClient(GetWirelessDevicesPacketLossByClientArgs.builder()
-     *             .bands(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .macs(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .bands("string")
+     *             .endingBefore("string")
+     *             .macs("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .ssids(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .ssids("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWirelessDevicesPacketLossByClientExample&#34;, example.applyValue(getWirelessDevicesPacketLossByClientResult -&gt; getWirelessDevicesPacketLossByClientResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByClientExample", example.applyValue(getWirelessDevicesPacketLossByClientResult -> getWirelessDevicesPacketLossByClientResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13519,7 +14107,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13541,23 +14130,24 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWirelessDevicesPacketLossByClient(GetWirelessDevicesPacketLossByClientArgs.builder()
-     *             .bands(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .macs(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .bands("string")
+     *             .endingBefore("string")
+     *             .macs("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .ssids(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .ssids("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWirelessDevicesPacketLossByClientExample&#34;, example.applyValue(getWirelessDevicesPacketLossByClientResult -&gt; getWirelessDevicesPacketLossByClientResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByClientExample", example.applyValue(getWirelessDevicesPacketLossByClientResult -> getWirelessDevicesPacketLossByClientResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13568,7 +14158,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13590,23 +14181,24 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWirelessDevicesPacketLossByClient(GetWirelessDevicesPacketLossByClientArgs.builder()
-     *             .bands(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .macs(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .bands("string")
+     *             .endingBefore("string")
+     *             .macs("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .ssids(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .ssids("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWirelessDevicesPacketLossByClientExample&#34;, example.applyValue(getWirelessDevicesPacketLossByClientResult -&gt; getWirelessDevicesPacketLossByClientResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByClientExample", example.applyValue(getWirelessDevicesPacketLossByClientResult -> getWirelessDevicesPacketLossByClientResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13617,7 +14209,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13639,23 +14232,24 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWirelessDevicesPacketLossByDevice(GetWirelessDevicesPacketLossByDeviceArgs.builder()
-     *             .bands(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .bands("string")
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .ssids(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .serials("string")
+     *             .ssids("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWirelessDevicesPacketLossByDeviceExample&#34;, example.applyValue(getWirelessDevicesPacketLossByDeviceResult -&gt; getWirelessDevicesPacketLossByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByDeviceExample", example.applyValue(getWirelessDevicesPacketLossByDeviceResult -> getWirelessDevicesPacketLossByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13666,7 +14260,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13688,23 +14283,24 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWirelessDevicesPacketLossByDevice(GetWirelessDevicesPacketLossByDeviceArgs.builder()
-     *             .bands(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .bands("string")
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .ssids(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .serials("string")
+     *             .ssids("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWirelessDevicesPacketLossByDeviceExample&#34;, example.applyValue(getWirelessDevicesPacketLossByDeviceResult -&gt; getWirelessDevicesPacketLossByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByDeviceExample", example.applyValue(getWirelessDevicesPacketLossByDeviceResult -> getWirelessDevicesPacketLossByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13715,7 +14311,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13737,23 +14334,24 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWirelessDevicesPacketLossByDevice(GetWirelessDevicesPacketLossByDeviceArgs.builder()
-     *             .bands(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .bands("string")
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .ssids(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .serials("string")
+     *             .ssids("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWirelessDevicesPacketLossByDeviceExample&#34;, example.applyValue(getWirelessDevicesPacketLossByDeviceResult -&gt; getWirelessDevicesPacketLossByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByDeviceExample", example.applyValue(getWirelessDevicesPacketLossByDeviceResult -> getWirelessDevicesPacketLossByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13764,7 +14362,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13786,23 +14385,24 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWirelessDevicesPacketLossByDevice(GetWirelessDevicesPacketLossByDeviceArgs.builder()
-     *             .bands(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .bands("string")
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .ssids(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .serials("string")
+     *             .ssids("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWirelessDevicesPacketLossByDeviceExample&#34;, example.applyValue(getWirelessDevicesPacketLossByDeviceResult -&gt; getWirelessDevicesPacketLossByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByDeviceExample", example.applyValue(getWirelessDevicesPacketLossByDeviceResult -> getWirelessDevicesPacketLossByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13813,7 +14413,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13835,23 +14436,24 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWirelessDevicesPacketLossByNetwork(GetWirelessDevicesPacketLossByNetworkArgs.builder()
-     *             .bands(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .bands("string")
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .ssids(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .serials("string")
+     *             .ssids("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWirelessDevicesPacketLossByNetworkExample&#34;, example.applyValue(getWirelessDevicesPacketLossByNetworkResult -&gt; getWirelessDevicesPacketLossByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByNetworkExample", example.applyValue(getWirelessDevicesPacketLossByNetworkResult -> getWirelessDevicesPacketLossByNetworkResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13862,7 +14464,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13884,23 +14487,24 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWirelessDevicesPacketLossByNetwork(GetWirelessDevicesPacketLossByNetworkArgs.builder()
-     *             .bands(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .bands("string")
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .ssids(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .serials("string")
+     *             .ssids("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWirelessDevicesPacketLossByNetworkExample&#34;, example.applyValue(getWirelessDevicesPacketLossByNetworkResult -&gt; getWirelessDevicesPacketLossByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByNetworkExample", example.applyValue(getWirelessDevicesPacketLossByNetworkResult -> getWirelessDevicesPacketLossByNetworkResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13911,7 +14515,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13933,23 +14538,24 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWirelessDevicesPacketLossByNetwork(GetWirelessDevicesPacketLossByNetworkArgs.builder()
-     *             .bands(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .bands("string")
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .ssids(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .serials("string")
+     *             .ssids("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWirelessDevicesPacketLossByNetworkExample&#34;, example.applyValue(getWirelessDevicesPacketLossByNetworkResult -&gt; getWirelessDevicesPacketLossByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByNetworkExample", example.applyValue(getWirelessDevicesPacketLossByNetworkResult -> getWirelessDevicesPacketLossByNetworkResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13960,7 +14566,8 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13982,23 +14589,24 @@ public final class OrganizationsFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = OrganizationsFunctions.getWirelessDevicesPacketLossByNetwork(GetWirelessDevicesPacketLossByNetworkArgs.builder()
-     *             .bands(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkIds(&#34;string&#34;)
-     *             .organizationId(&#34;string&#34;)
+     *             .bands("string")
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
      *             .perPage(1)
-     *             .serials(&#34;string&#34;)
-     *             .ssids(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .serials("string")
+     *             .ssids("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiOrganizationsWirelessDevicesPacketLossByNetworkExample&#34;, example.applyValue(getWirelessDevicesPacketLossByNetworkResult -&gt; getWirelessDevicesPacketLossByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByNetworkExample", example.applyValue(getWirelessDevicesPacketLossByNetworkResult -> getWirelessDevicesPacketLossByNetworkResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */

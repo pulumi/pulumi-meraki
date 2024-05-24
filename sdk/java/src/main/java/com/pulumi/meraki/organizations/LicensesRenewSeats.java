@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,18 +45,19 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new LicensesRenewSeats(&#34;example&#34;, LicensesRenewSeatsArgs.builder()        
- *             .organizationId(&#34;string&#34;)
+ *         var example = new LicensesRenewSeats("example", LicensesRenewSeatsArgs.builder()
+ *             .organizationId("string")
  *             .parameters(LicensesRenewSeatsParametersArgs.builder()
- *                 .license_id_to_renew(&#34;123&#34;)
- *                 .unused_license_id(&#34;1234&#34;)
+ *                 .license_id_to_renew("123")
+ *                 .unused_license_id("1234")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiOrganizationsLicensesRenewSeatsExample&#34;, example);
+ *         ctx.export("merakiOrganizationsLicensesRenewSeatsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

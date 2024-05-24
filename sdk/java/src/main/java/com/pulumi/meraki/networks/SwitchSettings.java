@@ -23,7 +23,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -47,14 +48,14 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SwitchSettings(&#34;example&#34;, SwitchSettingsArgs.builder()        
+ *         var example = new SwitchSettings("example", SwitchSettingsArgs.builder()
  *             .macBlocklist(SwitchSettingsMacBlocklistArgs.builder()
  *                 .enabled(false)
  *                 .build())
- *             .networkId(&#34;string&#34;)
+ *             .networkId("string")
  *             .powerExceptions(SwitchSettingsPowerExceptionArgs.builder()
- *                 .power_type(&#34;string&#34;)
- *                 .serial(&#34;string&#34;)
+ *                 .power_type("string")
+ *                 .serial("string")
  *                 .build())
  *             .uplinkClientSampling(SwitchSettingsUplinkClientSamplingArgs.builder()
  *                 .enabled(false)
@@ -63,10 +64,11 @@ import javax.annotation.Nullable;
  *             .vlan(1)
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksSwitchSettingsExample&#34;, example);
+ *         ctx.export("merakiNetworksSwitchSettingsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

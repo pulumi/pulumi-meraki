@@ -20,7 +20,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -42,24 +43,25 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ApplianceTrafficShapingRules(&#34;example&#34;, ApplianceTrafficShapingRulesArgs.builder()        
+ *         var example = new ApplianceTrafficShapingRules("example", ApplianceTrafficShapingRulesArgs.builder()
  *             .defaultRulesEnabled(true)
- *             .networkId(&#34;string&#34;)
+ *             .networkId("string")
  *             .rules(ApplianceTrafficShapingRulesRuleArgs.builder()
  *                 .definitions(ApplianceTrafficShapingRulesRuleDefinitionArgs.builder()
- *                     .type(&#34;host&#34;)
- *                     .value(&#34;google.com&#34;)
+ *                     .type("host")
+ *                     .value("google.com")
  *                     .build())
  *                 .dscp_tag_value(1)
  *                 .per_client_bandwidth_limits(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
- *                 .priority(&#34;normal&#34;)
+ *                 .priority("normal")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksApplianceTrafficShapingRulesExample&#34;, example);
+ *         ctx.export("merakiNetworksApplianceTrafficShapingRulesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

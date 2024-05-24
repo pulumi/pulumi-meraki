@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,22 +45,23 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new Claim(&#34;example&#34;, ClaimArgs.builder()        
- *             .organizationId(&#34;string&#34;)
+ *         var example = new Claim("example", ClaimArgs.builder()
+ *             .organizationId("string")
  *             .parameters(ClaimParametersArgs.builder()
  *                 .licenses(ClaimParametersLicenseArgs.builder()
- *                     .key(&#34;Z2XXXXXXXXXX&#34;)
- *                     .mode(&#34;addDevices&#34;)
+ *                     .key("Z2XXXXXXXXXX")
+ *                     .mode("addDevices")
  *                     .build())
- *                 .orders(&#34;4CXXXXXXX&#34;)
- *                 .serials(&#34;Q234-ABCD-5678&#34;)
+ *                 .orders("4CXXXXXXX")
+ *                 .serials("Q234-ABCD-5678")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiOrganizationsClaimExample&#34;, example);
+ *         ctx.export("merakiOrganizationsClaimExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

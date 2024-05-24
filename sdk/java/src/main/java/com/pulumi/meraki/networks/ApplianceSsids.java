@@ -24,7 +24,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -48,8 +49,8 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ApplianceSsids(&#34;example&#34;, ApplianceSsidsArgs.builder()        
- *             .authMode(&#34;8021x-radius&#34;)
+ *         var example = new ApplianceSsids("example", ApplianceSsidsArgs.builder()
+ *             .authMode("8021x-radius")
  *             .defaultVlanId(1)
  *             .dhcpEnforcedDeauthentication(ApplianceSsidsDhcpEnforcedDeauthenticationArgs.builder()
  *                 .enabled(true)
@@ -59,24 +60,25 @@ import javax.annotation.Nullable;
  *                 .required(true)
  *                 .build())
  *             .enabled(true)
- *             .encryptionMode(&#34;wpa&#34;)
- *             .name(&#34;My SSID&#34;)
- *             .networkId(&#34;string&#34;)
- *             .number(&#34;string&#34;)
- *             .psk(&#34;psk&#34;)
+ *             .encryptionMode("wpa")
+ *             .name("My SSID")
+ *             .networkId("string")
+ *             .number("string")
+ *             .psk("psk")
  *             .radiusServers(ApplianceSsidsRadiusServerArgs.builder()
- *                 .host(&#34;0.0.0.0&#34;)
+ *                 .host("0.0.0.0")
  *                 .port(1000)
- *                 .secret(&#34;secret&#34;)
+ *                 .secret("secret")
  *                 .build())
  *             .visible(true)
- *             .wpaEncryptionMode(&#34;WPA2 only&#34;)
+ *             .wpaEncryptionMode("WPA2 only")
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksApplianceSsidsExample&#34;, example);
+ *         ctx.export("merakiNetworksApplianceSsidsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

@@ -20,7 +20,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -43,19 +44,20 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new FirmwareUpgradesStagedStages(&#34;example&#34;, FirmwareUpgradesStagedStagesArgs.builder()        
+ *         var example = new FirmwareUpgradesStagedStages("example", FirmwareUpgradesStagedStagesArgs.builder()
  *             .jsons(FirmwareUpgradesStagedStagesJsonArgs.builder()
  *                 .group(FirmwareUpgradesStagedStagesJsonGroupArgs.builder()
- *                     .id(&#34;1234&#34;)
+ *                     .id("1234")
  *                     .build())
  *                 .build())
- *             .networkId(&#34;string&#34;)
+ *             .networkId("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksFirmwareUpgradesStagedStagesExample&#34;, example);
+ *         ctx.export("merakiNetworksFirmwareUpgradesStagedStagesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

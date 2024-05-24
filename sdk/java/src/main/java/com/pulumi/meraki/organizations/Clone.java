@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,17 +45,18 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new Clone(&#34;example&#34;, CloneArgs.builder()        
- *             .organizationId(&#34;string&#34;)
+ *         var example = new Clone("example", CloneArgs.builder()
+ *             .organizationId("string")
  *             .parameters(CloneParametersArgs.builder()
- *                 .name(&#34;My organization&#34;)
+ *                 .name("My organization")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiOrganizationsCloneExample&#34;, example);
+ *         ctx.export("merakiOrganizationsCloneExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

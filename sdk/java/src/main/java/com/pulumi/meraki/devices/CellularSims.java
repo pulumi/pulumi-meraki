@@ -20,7 +20,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -41,14 +42,15 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CellularSims(&#34;example&#34;, CellularSimsArgs.builder()        
- *             .serial(&#34;string&#34;)
+ *         var example = new CellularSims("example", CellularSimsArgs.builder()
+ *             .serial("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiDevicesCellularSimsExample&#34;, example);
+ *         ctx.export("merakiDevicesCellularSimsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

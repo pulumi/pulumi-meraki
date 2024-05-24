@@ -18,7 +18,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -39,16 +40,17 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SwitchWarmSpare(&#34;example&#34;, SwitchWarmSpareArgs.builder()        
+ *         var example = new SwitchWarmSpare("example", SwitchWarmSpareArgs.builder()
  *             .enabled(true)
- *             .serial(&#34;string&#34;)
- *             .spareSerial(&#34;Q234-ABCD-0002&#34;)
+ *             .serial("string")
+ *             .spareSerial("Q234-ABCD-0002")
  *             .build());
  * 
- *         ctx.export(&#34;merakiDevicesSwitchWarmSpareExample&#34;, example);
+ *         ctx.export("merakiDevicesSwitchWarmSpareExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

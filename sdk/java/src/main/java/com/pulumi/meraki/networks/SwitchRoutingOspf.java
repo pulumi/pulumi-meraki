@@ -23,7 +23,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -47,11 +48,11 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SwitchRoutingOspf(&#34;example&#34;, SwitchRoutingOspfArgs.builder()        
+ *         var example = new SwitchRoutingOspf("example", SwitchRoutingOspfArgs.builder()
  *             .areas(SwitchRoutingOspfAreaArgs.builder()
- *                 .area_id(&#34;1284392014819&#34;)
- *                 .area_name(&#34;Backbone&#34;)
- *                 .area_type(&#34;normal&#34;)
+ *                 .area_id("1284392014819")
+ *                 .area_name("Backbone")
+ *                 .area_type("normal")
  *                 .build())
  *             .deadTimerInSeconds(40)
  *             .enabled(true)
@@ -59,14 +60,14 @@ import javax.annotation.Nullable;
  *             .md5AuthenticationEnabled(true)
  *             .md5AuthenticationKey(SwitchRoutingOspfMd5AuthenticationKeyArgs.builder()
  *                 .id(1234)
- *                 .passphrase(&#34;abc1234&#34;)
+ *                 .passphrase("abc1234")
  *                 .build())
- *             .networkId(&#34;string&#34;)
+ *             .networkId("string")
  *             .v3(SwitchRoutingOspfV3Args.builder()
  *                 .areas(SwitchRoutingOspfV3AreaArgs.builder()
- *                     .areaId(&#34;1284392014819&#34;)
- *                     .areaName(&#34;V3 Backbone&#34;)
- *                     .areaType(&#34;normal&#34;)
+ *                     .areaId("1284392014819")
+ *                     .areaName("V3 Backbone")
+ *                     .areaType("normal")
  *                     .build())
  *                 .dead_timer_in_seconds(40)
  *                 .enabled(true)
@@ -74,10 +75,11 @@ import javax.annotation.Nullable;
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksSwitchRoutingOspfExample&#34;, example);
+ *         ctx.export("merakiNetworksSwitchRoutingOspfExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

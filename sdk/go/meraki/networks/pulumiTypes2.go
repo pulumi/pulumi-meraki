@@ -13,6 +13,200 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
+type GetWirelessRfProfilesItemPerSsidSettingsStatus1Bands struct {
+	// List of enabled bands. Can include ["2.4", "5", "6", "disabled"
+	Enableds []string `pulumi:"enableds"`
+}
+
+// GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsInput is an input type that accepts GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsArgs and GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput values.
+// You can construct a concrete instance of `GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsInput` via:
+//
+//	GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsArgs{...}
+type GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsInput interface {
+	pulumi.Input
+
+	ToGetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput() GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput
+	ToGetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutputWithContext(context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput
+}
+
+type GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsArgs struct {
+	// List of enabled bands. Can include ["2.4", "5", "6", "disabled"
+	Enableds pulumi.StringArrayInput `pulumi:"enableds"`
+}
+
+func (GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus1Bands)(nil)).Elem()
+}
+
+func (i GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsArgs) ToGetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput() GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput {
+	return i.ToGetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutputWithContext(context.Background())
+}
+
+func (i GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsArgs) ToGetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput)
+}
+
+type GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput struct{ *pulumi.OutputState }
+
+func (GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus1Bands)(nil)).Elem()
+}
+
+func (o GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput) ToGetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput() GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput {
+	return o
+}
+
+func (o GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput) ToGetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput {
+	return o
+}
+
+// List of enabled bands. Can include ["2.4", "5", "6", "disabled"
+func (o GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput) Enableds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus1Bands) []string { return v.Enableds }).(pulumi.StringArrayOutput)
+}
+
+type GetWirelessRfProfilesItemPerSsidSettingsStatus2 struct {
+	// Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
+	BandOperationMode string `pulumi:"bandOperationMode"`
+	// Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
+	BandSteeringEnabled bool `pulumi:"bandSteeringEnabled"`
+	// Settings related to all bands
+	Bands GetWirelessRfProfilesItemPerSsidSettingsStatus2Bands `pulumi:"bands"`
+	// Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
+	MinBitrate int `pulumi:"minBitrate"`
+	// Name of SSID
+	Name string `pulumi:"name"`
+}
+
+// GetWirelessRfProfilesItemPerSsidSettingsStatus2Input is an input type that accepts GetWirelessRfProfilesItemPerSsidSettingsStatus2Args and GetWirelessRfProfilesItemPerSsidSettingsStatus2Output values.
+// You can construct a concrete instance of `GetWirelessRfProfilesItemPerSsidSettingsStatus2Input` via:
+//
+//	GetWirelessRfProfilesItemPerSsidSettingsStatus2Args{...}
+type GetWirelessRfProfilesItemPerSsidSettingsStatus2Input interface {
+	pulumi.Input
+
+	ToGetWirelessRfProfilesItemPerSsidSettingsStatus2Output() GetWirelessRfProfilesItemPerSsidSettingsStatus2Output
+	ToGetWirelessRfProfilesItemPerSsidSettingsStatus2OutputWithContext(context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus2Output
+}
+
+type GetWirelessRfProfilesItemPerSsidSettingsStatus2Args struct {
+	// Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
+	BandOperationMode pulumi.StringInput `pulumi:"bandOperationMode"`
+	// Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
+	BandSteeringEnabled pulumi.BoolInput `pulumi:"bandSteeringEnabled"`
+	// Settings related to all bands
+	Bands GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsInput `pulumi:"bands"`
+	// Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
+	MinBitrate pulumi.IntInput `pulumi:"minBitrate"`
+	// Name of SSID
+	Name pulumi.StringInput `pulumi:"name"`
+}
+
+func (GetWirelessRfProfilesItemPerSsidSettingsStatus2Args) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus2)(nil)).Elem()
+}
+
+func (i GetWirelessRfProfilesItemPerSsidSettingsStatus2Args) ToGetWirelessRfProfilesItemPerSsidSettingsStatus2Output() GetWirelessRfProfilesItemPerSsidSettingsStatus2Output {
+	return i.ToGetWirelessRfProfilesItemPerSsidSettingsStatus2OutputWithContext(context.Background())
+}
+
+func (i GetWirelessRfProfilesItemPerSsidSettingsStatus2Args) ToGetWirelessRfProfilesItemPerSsidSettingsStatus2OutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus2Output {
+	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessRfProfilesItemPerSsidSettingsStatus2Output)
+}
+
+type GetWirelessRfProfilesItemPerSsidSettingsStatus2Output struct{ *pulumi.OutputState }
+
+func (GetWirelessRfProfilesItemPerSsidSettingsStatus2Output) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus2)(nil)).Elem()
+}
+
+func (o GetWirelessRfProfilesItemPerSsidSettingsStatus2Output) ToGetWirelessRfProfilesItemPerSsidSettingsStatus2Output() GetWirelessRfProfilesItemPerSsidSettingsStatus2Output {
+	return o
+}
+
+func (o GetWirelessRfProfilesItemPerSsidSettingsStatus2Output) ToGetWirelessRfProfilesItemPerSsidSettingsStatus2OutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus2Output {
+	return o
+}
+
+// Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
+func (o GetWirelessRfProfilesItemPerSsidSettingsStatus2Output) BandOperationMode() pulumi.StringOutput {
+	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus2) string { return v.BandOperationMode }).(pulumi.StringOutput)
+}
+
+// Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
+func (o GetWirelessRfProfilesItemPerSsidSettingsStatus2Output) BandSteeringEnabled() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus2) bool { return v.BandSteeringEnabled }).(pulumi.BoolOutput)
+}
+
+// Settings related to all bands
+func (o GetWirelessRfProfilesItemPerSsidSettingsStatus2Output) Bands() GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput {
+	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus2) GetWirelessRfProfilesItemPerSsidSettingsStatus2Bands {
+		return v.Bands
+	}).(GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput)
+}
+
+// Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
+func (o GetWirelessRfProfilesItemPerSsidSettingsStatus2Output) MinBitrate() pulumi.IntOutput {
+	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus2) int { return v.MinBitrate }).(pulumi.IntOutput)
+}
+
+// Name of SSID
+func (o GetWirelessRfProfilesItemPerSsidSettingsStatus2Output) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus2) string { return v.Name }).(pulumi.StringOutput)
+}
+
+type GetWirelessRfProfilesItemPerSsidSettingsStatus2Bands struct {
+	// List of enabled bands. Can include ["2.4", "5", "6", "disabled"
+	Enableds []string `pulumi:"enableds"`
+}
+
+// GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsInput is an input type that accepts GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsArgs and GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput values.
+// You can construct a concrete instance of `GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsInput` via:
+//
+//	GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsArgs{...}
+type GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsInput interface {
+	pulumi.Input
+
+	ToGetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput() GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput
+	ToGetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutputWithContext(context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput
+}
+
+type GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsArgs struct {
+	// List of enabled bands. Can include ["2.4", "5", "6", "disabled"
+	Enableds pulumi.StringArrayInput `pulumi:"enableds"`
+}
+
+func (GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus2Bands)(nil)).Elem()
+}
+
+func (i GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsArgs) ToGetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput() GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput {
+	return i.ToGetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutputWithContext(context.Background())
+}
+
+func (i GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsArgs) ToGetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput)
+}
+
+type GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput struct{ *pulumi.OutputState }
+
+func (GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus2Bands)(nil)).Elem()
+}
+
+func (o GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput) ToGetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput() GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput {
+	return o
+}
+
+func (o GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput) ToGetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput {
+	return o
+}
+
+// List of enabled bands. Can include ["2.4", "5", "6", "disabled"
+func (o GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput) Enableds() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus2Bands) []string { return v.Enableds }).(pulumi.StringArrayOutput)
+}
+
 type GetWirelessRfProfilesItemPerSsidSettingsStatus3 struct {
 	// Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
 	BandOperationMode string `pulumi:"bandOperationMode"`
@@ -5883,6 +6077,9 @@ func (o GetWirelessUsageHistoryItemArrayOutput) Index(i pulumi.IntInput) GetWire
 }
 
 func init() {
+	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsInput)(nil)).Elem(), GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus2Input)(nil)).Elem(), GetWirelessRfProfilesItemPerSsidSettingsStatus2Args{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsInput)(nil)).Elem(), GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus3Input)(nil)).Elem(), GetWirelessRfProfilesItemPerSsidSettingsStatus3Args{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus3BandsInput)(nil)).Elem(), GetWirelessRfProfilesItemPerSsidSettingsStatus3BandsArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus4Input)(nil)).Elem(), GetWirelessRfProfilesItemPerSsidSettingsStatus4Args{})
@@ -5968,6 +6165,9 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessSsidsVpnItemSplitTunnelRuleArrayInput)(nil)).Elem(), GetWirelessSsidsVpnItemSplitTunnelRuleArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessUsageHistoryItemInput)(nil)).Elem(), GetWirelessUsageHistoryItemArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessUsageHistoryItemArrayInput)(nil)).Elem(), GetWirelessUsageHistoryItemArray{})
+	pulumi.RegisterOutputType(GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput{})
+	pulumi.RegisterOutputType(GetWirelessRfProfilesItemPerSsidSettingsStatus2Output{})
+	pulumi.RegisterOutputType(GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput{})
 	pulumi.RegisterOutputType(GetWirelessRfProfilesItemPerSsidSettingsStatus3Output{})
 	pulumi.RegisterOutputType(GetWirelessRfProfilesItemPerSsidSettingsStatus3BandsOutput{})
 	pulumi.RegisterOutputType(GetWirelessRfProfilesItemPerSsidSettingsStatus4Output{})

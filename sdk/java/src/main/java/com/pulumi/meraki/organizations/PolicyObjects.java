@@ -18,7 +18,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -39,22 +40,23 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new PolicyObjects(&#34;example&#34;, PolicyObjectsArgs.builder()        
- *             .category(&#34;network&#34;)
- *             .cidr(&#34;10.0.0.0/24&#34;)
- *             .fqdn(&#34;example.com&#34;)
- *             .groupIds(&#34;8&#34;)
- *             .ip(&#34;1.2.3.4&#34;)
- *             .mask(&#34;255.255.0.0&#34;)
- *             .name(&#34;Web Servers - Datacenter 10&#34;)
- *             .organizationId(&#34;string&#34;)
- *             .type(&#34;cidr&#34;)
+ *         var example = new PolicyObjects("example", PolicyObjectsArgs.builder()
+ *             .category("network")
+ *             .cidr("10.0.0.0/24")
+ *             .fqdn("example.com")
+ *             .groupIds("8")
+ *             .ip("1.2.3.4")
+ *             .mask("255.255.0.0")
+ *             .name("Web Servers - Datacenter 10")
+ *             .organizationId("string")
+ *             .type("cidr")
  *             .build());
  * 
- *         ctx.export(&#34;merakiOrganizationsPolicyObjectsExample&#34;, example);
+ *         ctx.export("merakiOrganizationsPolicyObjectsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

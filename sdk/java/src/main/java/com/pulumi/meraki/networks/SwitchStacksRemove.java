@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,18 +45,19 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SwitchStacksRemove(&#34;example&#34;, SwitchStacksRemoveArgs.builder()        
- *             .networkId(&#34;string&#34;)
- *             .switchStackId(&#34;string&#34;)
+ *         var example = new SwitchStacksRemove("example", SwitchStacksRemoveArgs.builder()
+ *             .networkId("string")
+ *             .switchStackId("string")
  *             .parameters(SwitchStacksRemoveParametersArgs.builder()
- *                 .serial(&#34;QBZY-XWVU-TSRQ&#34;)
+ *                 .serial("QBZY-XWVU-TSRQ")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksSwitchStacksRemoveExample&#34;, example);
+ *         ctx.export("merakiNetworksSwitchStacksRemoveExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

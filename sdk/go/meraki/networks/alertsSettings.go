@@ -28,6 +28,8 @@ type AlertsSettings struct {
 	AlertsResponses AlertsSettingsAlertsResponseArrayOutput `pulumi:"alertsResponses"`
 	// The network-wide destinations for all alerts on the network.
 	DefaultDestinations AlertsSettingsDefaultDestinationsOutput `pulumi:"defaultDestinations"`
+	// muting
+	Muting AlertsSettingsMutingOutput `pulumi:"muting"`
 	// networkId path parameter. Network ID
 	NetworkId pulumi.StringOutput `pulumi:"networkId"`
 }
@@ -71,6 +73,8 @@ type alertsSettingsState struct {
 	AlertsResponses []AlertsSettingsAlertsResponse `pulumi:"alertsResponses"`
 	// The network-wide destinations for all alerts on the network.
 	DefaultDestinations *AlertsSettingsDefaultDestinations `pulumi:"defaultDestinations"`
+	// muting
+	Muting *AlertsSettingsMuting `pulumi:"muting"`
 	// networkId path parameter. Network ID
 	NetworkId *string `pulumi:"networkId"`
 }
@@ -82,6 +86,8 @@ type AlertsSettingsState struct {
 	AlertsResponses AlertsSettingsAlertsResponseArrayInput
 	// The network-wide destinations for all alerts on the network.
 	DefaultDestinations AlertsSettingsDefaultDestinationsPtrInput
+	// muting
+	Muting AlertsSettingsMutingPtrInput
 	// networkId path parameter. Network ID
 	NetworkId pulumi.StringPtrInput
 }
@@ -95,6 +101,8 @@ type alertsSettingsArgs struct {
 	Alerts []AlertsSettingsAlert `pulumi:"alerts"`
 	// The network-wide destinations for all alerts on the network.
 	DefaultDestinations *AlertsSettingsDefaultDestinations `pulumi:"defaultDestinations"`
+	// muting
+	Muting *AlertsSettingsMuting `pulumi:"muting"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
 }
@@ -105,6 +113,8 @@ type AlertsSettingsArgs struct {
 	Alerts AlertsSettingsAlertArrayInput
 	// The network-wide destinations for all alerts on the network.
 	DefaultDestinations AlertsSettingsDefaultDestinationsPtrInput
+	// muting
+	Muting AlertsSettingsMutingPtrInput
 	// networkId path parameter. Network ID
 	NetworkId pulumi.StringInput
 }
@@ -209,6 +219,11 @@ func (o AlertsSettingsOutput) AlertsResponses() AlertsSettingsAlertsResponseArra
 // The network-wide destinations for all alerts on the network.
 func (o AlertsSettingsOutput) DefaultDestinations() AlertsSettingsDefaultDestinationsOutput {
 	return o.ApplyT(func(v *AlertsSettings) AlertsSettingsDefaultDestinationsOutput { return v.DefaultDestinations }).(AlertsSettingsDefaultDestinationsOutput)
+}
+
+// muting
+func (o AlertsSettingsOutput) Muting() AlertsSettingsMutingOutput {
+	return o.ApplyT(func(v *AlertsSettings) AlertsSettingsMutingOutput { return v.Muting }).(AlertsSettingsMutingOutput)
 }
 
 // networkId path parameter. Network ID

@@ -18,7 +18,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -39,21 +40,22 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SwitchQosRulesOrder(&#34;example&#34;, SwitchQosRulesOrderArgs.builder()        
+ *         var example = new SwitchQosRulesOrder("example", SwitchQosRulesOrderArgs.builder()
  *             .dscp(1)
  *             .dstPort(3000)
- *             .dstPortRange(&#34;3000-3100&#34;)
- *             .networkId(&#34;string&#34;)
- *             .protocol(&#34;TCP&#34;)
+ *             .dstPortRange("3000-3100")
+ *             .networkId("string")
+ *             .protocol("TCP")
  *             .srcPort(2000)
- *             .srcPortRange(&#34;70-80&#34;)
+ *             .srcPortRange("70-80")
  *             .vlan(100)
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksSwitchQosRulesOrderExample&#34;, example);
+ *         ctx.export("merakiNetworksSwitchQosRulesOrderExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

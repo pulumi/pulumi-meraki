@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -45,36 +46,37 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SwitchRoutingInterfaces(&#34;example&#34;, SwitchRoutingInterfacesArgs.builder()        
- *             .defaultGateway(&#34;192.168.1.1&#34;)
- *             .interfaceIp(&#34;192.168.1.2&#34;)
+ *         var example = new SwitchRoutingInterfaces("example", SwitchRoutingInterfacesArgs.builder()
+ *             .defaultGateway("192.168.1.1")
+ *             .interfaceIp("192.168.1.2")
  *             .ipv6(SwitchRoutingInterfacesIpv6Args.builder()
- *                 .address(&#34;1:2:3:4::1&#34;)
- *                 .assignment_mode(&#34;static&#34;)
- *                 .gateway(&#34;1:2:3:4::2&#34;)
- *                 .prefix(&#34;1:2:3:4::/48&#34;)
+ *                 .address("1:2:3:4::1")
+ *                 .assignment_mode("static")
+ *                 .gateway("1:2:3:4::2")
+ *                 .prefix("1:2:3:4::/48")
  *                 .build())
- *             .multicastRouting(&#34;disabled&#34;)
- *             .name(&#34;L3 interface&#34;)
+ *             .multicastRouting("disabled")
+ *             .name("L3 interface")
  *             .ospfSettings(SwitchRoutingInterfacesOspfSettingsArgs.builder()
- *                 .area(&#34;0&#34;)
+ *                 .area("0")
  *                 .cost(1)
  *                 .is_passive_enabled(true)
  *                 .build())
  *             .ospfV3(SwitchRoutingInterfacesOspfV3Args.builder()
- *                 .area(&#34;1&#34;)
+ *                 .area("1")
  *                 .cost(2)
  *                 .is_passive_enabled(true)
  *                 .build())
- *             .serial(&#34;string&#34;)
- *             .subnet(&#34;192.168.1.0/24&#34;)
+ *             .serial("string")
+ *             .subnet("192.168.1.0/24")
  *             .vlanId(100)
  *             .build());
  * 
- *         ctx.export(&#34;merakiDevicesSwitchRoutingInterfacesExample&#34;, example);
+ *         ctx.export("merakiDevicesSwitchRoutingInterfacesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

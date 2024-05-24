@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -43,20 +44,21 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new InventoryOnboardingCloudMonitoringExportEvents(&#34;example&#34;, InventoryOnboardingCloudMonitoringExportEventsArgs.builder()        
- *             .organizationId(&#34;string&#34;)
+ *         var example = new InventoryOnboardingCloudMonitoringExportEvents("example", InventoryOnboardingCloudMonitoringExportEventsArgs.builder()
+ *             .organizationId("string")
  *             .parameters(InventoryOnboardingCloudMonitoringExportEventsParametersArgs.builder()
- *                 .log_event(&#34;download&#34;)
- *                 .request(&#34;r=cb&#34;)
- *                 .target_os(&#34;mac&#34;)
+ *                 .log_event("download")
+ *                 .request("r=cb")
+ *                 .target_os("mac")
  *                 .timestamp(1526087474)
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiOrganizationsInventoryOnboardingCloudMonitoringExportEventsExample&#34;, example);
+ *         ctx.export("merakiOrganizationsInventoryOnboardingCloudMonitoringExportEventsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

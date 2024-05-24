@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -46,38 +47,39 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SwitchRoutingInterfacesDhcp(&#34;example&#34;, SwitchRoutingInterfacesDhcpArgs.builder()        
- *             .bootFileName(&#34;home_boot_file&#34;)
- *             .bootNextServer(&#34;1.2.3.4&#34;)
+ *         var example = new SwitchRoutingInterfacesDhcp("example", SwitchRoutingInterfacesDhcpArgs.builder()
+ *             .bootFileName("home_boot_file")
+ *             .bootNextServer("1.2.3.4")
  *             .bootOptionsEnabled(true)
- *             .dhcpLeaseTime(&#34;1 day&#34;)
- *             .dhcpMode(&#34;dhcpServer&#34;)
+ *             .dhcpLeaseTime("1 day")
+ *             .dhcpMode("dhcpServer")
  *             .dhcpOptions(SwitchRoutingInterfacesDhcpDhcpOptionArgs.builder()
- *                 .code(&#34;5&#34;)
- *                 .type(&#34;text&#34;)
- *                 .value(&#34;five&#34;)
+ *                 .code("5")
+ *                 .type("text")
+ *                 .value("five")
  *                 .build())
- *             .dhcpRelayServerIps(&#34;1.2.3.4&#34;)
- *             .dnsCustomNameservers(&#34;8.8.8.8, 8.8.4.4&#34;)
- *             .dnsNameserversOption(&#34;custom&#34;)
+ *             .dhcpRelayServerIps("1.2.3.4")
+ *             .dnsCustomNameservers("8.8.8.8, 8.8.4.4")
+ *             .dnsNameserversOption("custom")
  *             .fixedIpAssignments(SwitchRoutingInterfacesDhcpFixedIpAssignmentArgs.builder()
- *                 .ip(&#34;192.168.1.12&#34;)
- *                 .mac(&#34;22:33:44:55:66:77&#34;)
- *                 .name(&#34;Cisco Meraki valued client&#34;)
+ *                 .ip("192.168.1.12")
+ *                 .mac("22:33:44:55:66:77")
+ *                 .name("Cisco Meraki valued client")
  *                 .build())
- *             .interfaceId(&#34;string&#34;)
+ *             .interfaceId("string")
  *             .reservedIpRanges(SwitchRoutingInterfacesDhcpReservedIpRangeArgs.builder()
- *                 .comment(&#34;A reserved IP range&#34;)
- *                 .end(&#34;192.168.1.10&#34;)
- *                 .start(&#34;192.168.1.1&#34;)
+ *                 .comment("A reserved IP range")
+ *                 .end("192.168.1.10")
+ *                 .start("192.168.1.1")
  *                 .build())
- *             .serial(&#34;string&#34;)
+ *             .serial("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiDevicesSwitchRoutingInterfacesDhcpExample&#34;, example);
+ *         ctx.export("merakiDevicesSwitchRoutingInterfacesDhcpExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

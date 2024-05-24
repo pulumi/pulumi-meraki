@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -45,29 +46,30 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new AdaptivePolicyPolicies(&#34;example&#34;, AdaptivePolicyPoliciesArgs.builder()        
+ *         var example = new AdaptivePolicyPolicies("example", AdaptivePolicyPoliciesArgs.builder()
  *             .acls(AdaptivePolicyPoliciesAclArgs.builder()
- *                 .id(&#34;444&#34;)
- *                 .name(&#34;Block web&#34;)
+ *                 .id("444")
+ *                 .name("Block web")
  *                 .build())
  *             .destinationGroup(AdaptivePolicyPoliciesDestinationGroupArgs.builder()
- *                 .id(&#34;333&#34;)
- *                 .name(&#34;IoT Servers&#34;)
+ *                 .id("333")
+ *                 .name("IoT Servers")
  *                 .sgt(51)
  *                 .build())
- *             .lastEntryRule(&#34;allow&#34;)
- *             .organizationId(&#34;string&#34;)
+ *             .lastEntryRule("allow")
+ *             .organizationId("string")
  *             .sourceGroup(AdaptivePolicyPoliciesSourceGroupArgs.builder()
- *                 .id(&#34;222&#34;)
- *                 .name(&#34;IoT Devices&#34;)
+ *                 .id("222")
+ *                 .name("IoT Devices")
  *                 .sgt(50)
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiOrganizationsAdaptivePolicyPoliciesExample&#34;, example);
+ *         ctx.export("merakiOrganizationsAdaptivePolicyPoliciesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

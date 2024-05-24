@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -43,22 +44,23 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new WirelessSsidsSchedules(&#34;example&#34;, WirelessSsidsSchedulesArgs.builder()        
+ *         var example = new WirelessSsidsSchedules("example", WirelessSsidsSchedulesArgs.builder()
  *             .enabled(true)
- *             .networkId(&#34;string&#34;)
- *             .number(&#34;string&#34;)
+ *             .networkId("string")
+ *             .number("string")
  *             .ranges(WirelessSsidsSchedulesRangeArgs.builder()
- *                 .end_day(&#34;Tuesday&#34;)
- *                 .end_time(&#34;05:00&#34;)
- *                 .start_day(&#34;Tuesday&#34;)
- *                 .start_time(&#34;01:00&#34;)
+ *                 .end_day("Tuesday")
+ *                 .end_time("05:00")
+ *                 .start_day("Tuesday")
+ *                 .start_time("01:00")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksWirelessSsidsSchedulesExample&#34;, example);
+ *         ctx.export("merakiNetworksWirelessSsidsSchedulesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

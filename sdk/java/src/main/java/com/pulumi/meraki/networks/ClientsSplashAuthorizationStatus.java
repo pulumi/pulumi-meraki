@@ -18,7 +18,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -40,19 +41,20 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ClientsSplashAuthorizationStatus(&#34;example&#34;, ClientsSplashAuthorizationStatusArgs.builder()        
- *             .clientId(&#34;string&#34;)
- *             .networkId(&#34;string&#34;)
+ *         var example = new ClientsSplashAuthorizationStatus("example", ClientsSplashAuthorizationStatusArgs.builder()
+ *             .clientId("string")
+ *             .networkId("string")
  *             .ssids(ClientsSplashAuthorizationStatusSsidsArgs.builder()
  *                 .status_0(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .status_2(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksClientsSplashAuthorizationStatusExample&#34;, example);
+ *         ctx.export("merakiNetworksClientsSplashAuthorizationStatusExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

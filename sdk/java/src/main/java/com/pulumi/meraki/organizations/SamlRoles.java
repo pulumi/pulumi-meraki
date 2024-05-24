@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -45,24 +46,25 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SamlRoles(&#34;example&#34;, SamlRolesArgs.builder()        
+ *         var example = new SamlRoles("example", SamlRolesArgs.builder()
  *             .networks(SamlRolesNetworkArgs.builder()
- *                 .access(&#34;full&#34;)
- *                 .id(&#34;N_24329156&#34;)
+ *                 .access("full")
+ *                 .id("N_24329156")
  *                 .build())
- *             .orgAccess(&#34;none&#34;)
- *             .organizationId(&#34;string&#34;)
- *             .role(&#34;myrole&#34;)
+ *             .orgAccess("none")
+ *             .organizationId("string")
+ *             .role("myrole")
  *             .tags(SamlRolesTagArgs.builder()
- *                 .access(&#34;read-only&#34;)
- *                 .tag(&#34;west&#34;)
+ *                 .access("read-only")
+ *                 .tag("west")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiOrganizationsSamlRolesExample&#34;, example);
+ *         ctx.export("merakiOrganizationsSamlRolesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

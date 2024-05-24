@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -43,20 +44,21 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CameraWirelessProfiles(&#34;example&#34;, CameraWirelessProfilesArgs.builder()        
- *             .name(&#34;wireless profile A&#34;)
- *             .networkId(&#34;string&#34;)
+ *         var example = new CameraWirelessProfiles("example", CameraWirelessProfilesArgs.builder()
+ *             .name("wireless profile A")
+ *             .networkId("string")
  *             .ssid(CameraWirelessProfilesSsidArgs.builder()
- *                 .auth_mode(&#34;8021x-radius&#34;)
- *                 .encryption_mode(&#34;wpa-eap&#34;)
- *                 .name(&#34;ssid test&#34;)
+ *                 .auth_mode("8021x-radius")
+ *                 .encryption_mode("wpa-eap")
+ *                 .name("ssid test")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksCameraWirelessProfilesExample&#34;, example);
+ *         ctx.export("merakiNetworksCameraWirelessProfilesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

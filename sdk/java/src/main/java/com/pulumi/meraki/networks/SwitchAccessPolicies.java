@@ -25,7 +25,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -50,17 +51,17 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SwitchAccessPolicies(&#34;example&#34;, SwitchAccessPoliciesArgs.builder()        
- *             .accessPolicyType(&#34;Hybrid authentication&#34;)
+ *         var example = new SwitchAccessPolicies("example", SwitchAccessPoliciesArgs.builder()
+ *             .accessPolicyType("Hybrid authentication")
  *             .dot1x(SwitchAccessPoliciesDot1xArgs.builder()
- *                 .control_direction(&#34;inbound&#34;)
+ *                 .control_direction("inbound")
  *                 .build())
  *             .guestPortBouncing(false)
  *             .guestVlanId(100)
- *             .hostMode(&#34;Single-Host&#34;)
+ *             .hostMode("Single-Host")
  *             .increaseAccessSpeed(false)
- *             .name(&#34;Access policy #1&#34;)
- *             .networkId(&#34;string&#34;)
+ *             .name("Access policy #1")
+ *             .networkId("string")
  *             .radius(SwitchAccessPoliciesRadiusArgs.builder()
  *                 .critical_auth(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .failed_auth_vlan_id(100)
@@ -68,27 +69,28 @@ import javax.annotation.Nullable;
  *                 .build())
  *             .radiusAccountingEnabled(true)
  *             .radiusAccountingServers(SwitchAccessPoliciesRadiusAccountingServerArgs.builder()
- *                 .host(&#34;1.2.3.4&#34;)
+ *                 .host("1.2.3.4")
  *                 .port(22)
- *                 .secret(&#34;secret&#34;)
+ *                 .secret("secret")
  *                 .build())
  *             .radiusCoaSupportEnabled(false)
- *             .radiusGroupAttribute(&#34;11&#34;)
+ *             .radiusGroupAttribute("11")
  *             .radiusServers(SwitchAccessPoliciesRadiusServerArgs.builder()
- *                 .host(&#34;1.2.3.4&#34;)
+ *                 .host("1.2.3.4")
  *                 .port(22)
- *                 .secret(&#34;secret&#34;)
+ *                 .secret("secret")
  *                 .build())
  *             .radiusTestingEnabled(false)
  *             .urlRedirectWalledGardenEnabled(true)
- *             .urlRedirectWalledGardenRanges(&#34;192.168.1.0/24&#34;)
+ *             .urlRedirectWalledGardenRanges("192.168.1.0/24")
  *             .voiceVlanClients(true)
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksSwitchAccessPoliciesExample&#34;, example);
+ *         ctx.export("merakiNetworksSwitchAccessPoliciesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

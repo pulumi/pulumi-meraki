@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,33 +45,34 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new AlertsProfiles(&#34;example&#34;, AlertsProfilesArgs.builder()        
+ *         var example = new AlertsProfiles("example", AlertsProfilesArgs.builder()
  *             .alertCondition(AlertsProfilesAlertConditionArgs.builder()
  *                 .bit_rate_bps(10000)
  *                 .duration(60)
- *                 .interface_(&#34;wan1&#34;)
+ *                 .interface_("wan1")
  *                 .jitter_ms(100)
  *                 .latency_ms(100)
  *                 .loss_ratio(0.1)
  *                 .mos(3.5)
  *                 .window(600)
  *                 .build())
- *             .description(&#34;WAN 1 high utilization&#34;)
+ *             .description("WAN 1 high utilization")
  *             .networkTags(            
- *                 &#34;tag1&#34;,
- *                 &#34;tag2&#34;)
- *             .organizationId(&#34;string&#34;)
+ *                 "tag1",
+ *                 "tag2")
+ *             .organizationId("string")
  *             .recipients(AlertsProfilesRecipientsArgs.builder()
- *                 .emails(&#34;admin@example.org&#34;)
- *                 .http_server_ids(&#34;aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vcGF0aA==&#34;)
+ *                 .emails("admin{@literal @}example.org")
+ *                 .http_server_ids("aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vcGF0aA==")
  *                 .build())
- *             .type(&#34;wanUtilization&#34;)
+ *             .type("wanUtilization")
  *             .build());
  * 
- *         ctx.export(&#34;merakiOrganizationsAlertsProfilesExample&#34;, example);
+ *         ctx.export("merakiOrganizationsAlertsProfilesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

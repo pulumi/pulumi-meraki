@@ -26,7 +26,8 @@ public final class AdministeredFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -48,10 +49,11 @@ public final class AdministeredFunctions {
      *     public static void stack(Context ctx) {
      *         final var example = AdministeredFunctions.getIdentitiesMe();
      * 
-     *         ctx.export(&#34;merakiAdministeredIdentitiesMeExample&#34;, example.applyValue(getIdentitiesMeResult -&gt; getIdentitiesMeResult.item()));
+     *         ctx.export("merakiAdministeredIdentitiesMeExample", example.applyValue(getIdentitiesMeResult -> getIdentitiesMeResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -62,7 +64,8 @@ public final class AdministeredFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -84,10 +87,11 @@ public final class AdministeredFunctions {
      *     public static void stack(Context ctx) {
      *         final var example = AdministeredFunctions.getIdentitiesMe();
      * 
-     *         ctx.export(&#34;merakiAdministeredIdentitiesMeExample&#34;, example.applyValue(getIdentitiesMeResult -&gt; getIdentitiesMeResult.item()));
+     *         ctx.export("merakiAdministeredIdentitiesMeExample", example.applyValue(getIdentitiesMeResult -> getIdentitiesMeResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -98,7 +102,8 @@ public final class AdministeredFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -120,10 +125,11 @@ public final class AdministeredFunctions {
      *     public static void stack(Context ctx) {
      *         final var example = AdministeredFunctions.getIdentitiesMe();
      * 
-     *         ctx.export(&#34;merakiAdministeredIdentitiesMeExample&#34;, example.applyValue(getIdentitiesMeResult -&gt; getIdentitiesMeResult.item()));
+     *         ctx.export("merakiAdministeredIdentitiesMeExample", example.applyValue(getIdentitiesMeResult -> getIdentitiesMeResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -134,7 +140,8 @@ public final class AdministeredFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -156,10 +163,11 @@ public final class AdministeredFunctions {
      *     public static void stack(Context ctx) {
      *         final var example = AdministeredFunctions.getIdentitiesMe();
      * 
-     *         ctx.export(&#34;merakiAdministeredIdentitiesMeExample&#34;, example.applyValue(getIdentitiesMeResult -&gt; getIdentitiesMeResult.item()));
+     *         ctx.export("merakiAdministeredIdentitiesMeExample", example.applyValue(getIdentitiesMeResult -> getIdentitiesMeResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -170,7 +178,8 @@ public final class AdministeredFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -192,10 +201,11 @@ public final class AdministeredFunctions {
      *     public static void stack(Context ctx) {
      *         final var example = AdministeredFunctions.getIdentitiesMe();
      * 
-     *         ctx.export(&#34;merakiAdministeredIdentitiesMeExample&#34;, example.applyValue(getIdentitiesMeResult -&gt; getIdentitiesMeResult.item()));
+     *         ctx.export("merakiAdministeredIdentitiesMeExample", example.applyValue(getIdentitiesMeResult -> getIdentitiesMeResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -206,7 +216,8 @@ public final class AdministeredFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -228,10 +239,11 @@ public final class AdministeredFunctions {
      *     public static void stack(Context ctx) {
      *         final var example = AdministeredFunctions.getIdentitiesMe();
      * 
-     *         ctx.export(&#34;merakiAdministeredIdentitiesMeExample&#34;, example.applyValue(getIdentitiesMeResult -&gt; getIdentitiesMeResult.item()));
+     *         ctx.export("merakiAdministeredIdentitiesMeExample", example.applyValue(getIdentitiesMeResult -> getIdentitiesMeResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -242,7 +254,8 @@ public final class AdministeredFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -264,13 +277,14 @@ public final class AdministeredFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = AdministeredFunctions.getLicensingSubscriptionEntitlements(GetLicensingSubscriptionEntitlementsArgs.builder()
-     *             .skuses(&#34;string&#34;)
+     *             .skuses("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiAdministeredLicensingSubscriptionEntitlementsExample&#34;, example.applyValue(getLicensingSubscriptionEntitlementsResult -&gt; getLicensingSubscriptionEntitlementsResult.item()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionEntitlementsExample", example.applyValue(getLicensingSubscriptionEntitlementsResult -> getLicensingSubscriptionEntitlementsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -281,7 +295,8 @@ public final class AdministeredFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -303,13 +318,14 @@ public final class AdministeredFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = AdministeredFunctions.getLicensingSubscriptionEntitlements(GetLicensingSubscriptionEntitlementsArgs.builder()
-     *             .skuses(&#34;string&#34;)
+     *             .skuses("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiAdministeredLicensingSubscriptionEntitlementsExample&#34;, example.applyValue(getLicensingSubscriptionEntitlementsResult -&gt; getLicensingSubscriptionEntitlementsResult.item()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionEntitlementsExample", example.applyValue(getLicensingSubscriptionEntitlementsResult -> getLicensingSubscriptionEntitlementsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -320,7 +336,8 @@ public final class AdministeredFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -342,13 +359,14 @@ public final class AdministeredFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = AdministeredFunctions.getLicensingSubscriptionEntitlements(GetLicensingSubscriptionEntitlementsArgs.builder()
-     *             .skuses(&#34;string&#34;)
+     *             .skuses("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiAdministeredLicensingSubscriptionEntitlementsExample&#34;, example.applyValue(getLicensingSubscriptionEntitlementsResult -&gt; getLicensingSubscriptionEntitlementsResult.item()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionEntitlementsExample", example.applyValue(getLicensingSubscriptionEntitlementsResult -> getLicensingSubscriptionEntitlementsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -359,7 +377,8 @@ public final class AdministeredFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -381,13 +400,14 @@ public final class AdministeredFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = AdministeredFunctions.getLicensingSubscriptionEntitlements(GetLicensingSubscriptionEntitlementsArgs.builder()
-     *             .skuses(&#34;string&#34;)
+     *             .skuses("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiAdministeredLicensingSubscriptionEntitlementsExample&#34;, example.applyValue(getLicensingSubscriptionEntitlementsResult -&gt; getLicensingSubscriptionEntitlementsResult.item()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionEntitlementsExample", example.applyValue(getLicensingSubscriptionEntitlementsResult -> getLicensingSubscriptionEntitlementsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -398,7 +418,8 @@ public final class AdministeredFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -420,13 +441,14 @@ public final class AdministeredFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = AdministeredFunctions.getLicensingSubscriptionEntitlements(GetLicensingSubscriptionEntitlementsArgs.builder()
-     *             .skuses(&#34;string&#34;)
+     *             .skuses("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiAdministeredLicensingSubscriptionEntitlementsExample&#34;, example.applyValue(getLicensingSubscriptionEntitlementsResult -&gt; getLicensingSubscriptionEntitlementsResult.item()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionEntitlementsExample", example.applyValue(getLicensingSubscriptionEntitlementsResult -> getLicensingSubscriptionEntitlementsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -437,7 +459,8 @@ public final class AdministeredFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -459,13 +482,14 @@ public final class AdministeredFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = AdministeredFunctions.getLicensingSubscriptionEntitlements(GetLicensingSubscriptionEntitlementsArgs.builder()
-     *             .skuses(&#34;string&#34;)
+     *             .skuses("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiAdministeredLicensingSubscriptionEntitlementsExample&#34;, example.applyValue(getLicensingSubscriptionEntitlementsResult -&gt; getLicensingSubscriptionEntitlementsResult.item()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionEntitlementsExample", example.applyValue(getLicensingSubscriptionEntitlementsResult -> getLicensingSubscriptionEntitlementsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -476,7 +500,8 @@ public final class AdministeredFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -498,21 +523,22 @@ public final class AdministeredFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = AdministeredFunctions.getLicensingSubscriptionSubscriptions(GetLicensingSubscriptionSubscriptionsArgs.builder()
-     *             .endDate(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationIds(&#34;string&#34;)
+     *             .endDate("string")
+     *             .endingBefore("string")
+     *             .organizationIds("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .startDate(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .statuses(&#34;string&#34;)
-     *             .subscriptionIds(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .startDate("string")
+     *             .startingAfter("string")
+     *             .statuses("string")
+     *             .subscriptionIds("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiAdministeredLicensingSubscriptionSubscriptionsExample&#34;, example.applyValue(getLicensingSubscriptionSubscriptionsResult -&gt; getLicensingSubscriptionSubscriptionsResult.items()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsExample", example.applyValue(getLicensingSubscriptionSubscriptionsResult -> getLicensingSubscriptionSubscriptionsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -523,7 +549,8 @@ public final class AdministeredFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -545,21 +572,22 @@ public final class AdministeredFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = AdministeredFunctions.getLicensingSubscriptionSubscriptions(GetLicensingSubscriptionSubscriptionsArgs.builder()
-     *             .endDate(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationIds(&#34;string&#34;)
+     *             .endDate("string")
+     *             .endingBefore("string")
+     *             .organizationIds("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .startDate(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .statuses(&#34;string&#34;)
-     *             .subscriptionIds(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .startDate("string")
+     *             .startingAfter("string")
+     *             .statuses("string")
+     *             .subscriptionIds("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiAdministeredLicensingSubscriptionSubscriptionsExample&#34;, example.applyValue(getLicensingSubscriptionSubscriptionsResult -&gt; getLicensingSubscriptionSubscriptionsResult.items()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsExample", example.applyValue(getLicensingSubscriptionSubscriptionsResult -> getLicensingSubscriptionSubscriptionsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -570,7 +598,8 @@ public final class AdministeredFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -592,21 +621,22 @@ public final class AdministeredFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = AdministeredFunctions.getLicensingSubscriptionSubscriptions(GetLicensingSubscriptionSubscriptionsArgs.builder()
-     *             .endDate(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationIds(&#34;string&#34;)
+     *             .endDate("string")
+     *             .endingBefore("string")
+     *             .organizationIds("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .startDate(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .statuses(&#34;string&#34;)
-     *             .subscriptionIds(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .startDate("string")
+     *             .startingAfter("string")
+     *             .statuses("string")
+     *             .subscriptionIds("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiAdministeredLicensingSubscriptionSubscriptionsExample&#34;, example.applyValue(getLicensingSubscriptionSubscriptionsResult -&gt; getLicensingSubscriptionSubscriptionsResult.items()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsExample", example.applyValue(getLicensingSubscriptionSubscriptionsResult -> getLicensingSubscriptionSubscriptionsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -617,7 +647,8 @@ public final class AdministeredFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -639,21 +670,22 @@ public final class AdministeredFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = AdministeredFunctions.getLicensingSubscriptionSubscriptions(GetLicensingSubscriptionSubscriptionsArgs.builder()
-     *             .endDate(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationIds(&#34;string&#34;)
+     *             .endDate("string")
+     *             .endingBefore("string")
+     *             .organizationIds("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .startDate(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .statuses(&#34;string&#34;)
-     *             .subscriptionIds(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .startDate("string")
+     *             .startingAfter("string")
+     *             .statuses("string")
+     *             .subscriptionIds("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiAdministeredLicensingSubscriptionSubscriptionsExample&#34;, example.applyValue(getLicensingSubscriptionSubscriptionsResult -&gt; getLicensingSubscriptionSubscriptionsResult.items()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsExample", example.applyValue(getLicensingSubscriptionSubscriptionsResult -> getLicensingSubscriptionSubscriptionsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -664,7 +696,8 @@ public final class AdministeredFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -686,21 +719,22 @@ public final class AdministeredFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = AdministeredFunctions.getLicensingSubscriptionSubscriptions(GetLicensingSubscriptionSubscriptionsArgs.builder()
-     *             .endDate(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationIds(&#34;string&#34;)
+     *             .endDate("string")
+     *             .endingBefore("string")
+     *             .organizationIds("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .startDate(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .statuses(&#34;string&#34;)
-     *             .subscriptionIds(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .startDate("string")
+     *             .startingAfter("string")
+     *             .statuses("string")
+     *             .subscriptionIds("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiAdministeredLicensingSubscriptionSubscriptionsExample&#34;, example.applyValue(getLicensingSubscriptionSubscriptionsResult -&gt; getLicensingSubscriptionSubscriptionsResult.items()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsExample", example.applyValue(getLicensingSubscriptionSubscriptionsResult -> getLicensingSubscriptionSubscriptionsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -711,7 +745,8 @@ public final class AdministeredFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -733,21 +768,22 @@ public final class AdministeredFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = AdministeredFunctions.getLicensingSubscriptionSubscriptions(GetLicensingSubscriptionSubscriptionsArgs.builder()
-     *             .endDate(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .organizationIds(&#34;string&#34;)
+     *             .endDate("string")
+     *             .endingBefore("string")
+     *             .organizationIds("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .startDate(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .statuses(&#34;string&#34;)
-     *             .subscriptionIds(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .startDate("string")
+     *             .startingAfter("string")
+     *             .statuses("string")
+     *             .subscriptionIds("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiAdministeredLicensingSubscriptionSubscriptionsExample&#34;, example.applyValue(getLicensingSubscriptionSubscriptionsResult -&gt; getLicensingSubscriptionSubscriptionsResult.items()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsExample", example.applyValue(getLicensingSubscriptionSubscriptionsResult -> getLicensingSubscriptionSubscriptionsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -758,7 +794,8 @@ public final class AdministeredFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -780,14 +817,15 @@ public final class AdministeredFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = AdministeredFunctions.getLicensingSubscriptionSubscriptionsComplianceStatuses(GetLicensingSubscriptionSubscriptionsComplianceStatusesArgs.builder()
-     *             .organizationIds(&#34;string&#34;)
-     *             .subscriptionIds(&#34;string&#34;)
+     *             .organizationIds("string")
+     *             .subscriptionIds("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiAdministeredLicensingSubscriptionSubscriptionsComplianceStatusesExample&#34;, example.applyValue(getLicensingSubscriptionSubscriptionsComplianceStatusesResult -&gt; getLicensingSubscriptionSubscriptionsComplianceStatusesResult.items()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsComplianceStatusesExample", example.applyValue(getLicensingSubscriptionSubscriptionsComplianceStatusesResult -> getLicensingSubscriptionSubscriptionsComplianceStatusesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -798,7 +836,8 @@ public final class AdministeredFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -820,14 +859,15 @@ public final class AdministeredFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = AdministeredFunctions.getLicensingSubscriptionSubscriptionsComplianceStatuses(GetLicensingSubscriptionSubscriptionsComplianceStatusesArgs.builder()
-     *             .organizationIds(&#34;string&#34;)
-     *             .subscriptionIds(&#34;string&#34;)
+     *             .organizationIds("string")
+     *             .subscriptionIds("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiAdministeredLicensingSubscriptionSubscriptionsComplianceStatusesExample&#34;, example.applyValue(getLicensingSubscriptionSubscriptionsComplianceStatusesResult -&gt; getLicensingSubscriptionSubscriptionsComplianceStatusesResult.items()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsComplianceStatusesExample", example.applyValue(getLicensingSubscriptionSubscriptionsComplianceStatusesResult -> getLicensingSubscriptionSubscriptionsComplianceStatusesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -838,7 +878,8 @@ public final class AdministeredFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -860,14 +901,15 @@ public final class AdministeredFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = AdministeredFunctions.getLicensingSubscriptionSubscriptionsComplianceStatuses(GetLicensingSubscriptionSubscriptionsComplianceStatusesArgs.builder()
-     *             .organizationIds(&#34;string&#34;)
-     *             .subscriptionIds(&#34;string&#34;)
+     *             .organizationIds("string")
+     *             .subscriptionIds("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiAdministeredLicensingSubscriptionSubscriptionsComplianceStatusesExample&#34;, example.applyValue(getLicensingSubscriptionSubscriptionsComplianceStatusesResult -&gt; getLicensingSubscriptionSubscriptionsComplianceStatusesResult.items()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsComplianceStatusesExample", example.applyValue(getLicensingSubscriptionSubscriptionsComplianceStatusesResult -> getLicensingSubscriptionSubscriptionsComplianceStatusesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -878,7 +920,8 @@ public final class AdministeredFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -900,14 +943,15 @@ public final class AdministeredFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = AdministeredFunctions.getLicensingSubscriptionSubscriptionsComplianceStatuses(GetLicensingSubscriptionSubscriptionsComplianceStatusesArgs.builder()
-     *             .organizationIds(&#34;string&#34;)
-     *             .subscriptionIds(&#34;string&#34;)
+     *             .organizationIds("string")
+     *             .subscriptionIds("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiAdministeredLicensingSubscriptionSubscriptionsComplianceStatusesExample&#34;, example.applyValue(getLicensingSubscriptionSubscriptionsComplianceStatusesResult -&gt; getLicensingSubscriptionSubscriptionsComplianceStatusesResult.items()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsComplianceStatusesExample", example.applyValue(getLicensingSubscriptionSubscriptionsComplianceStatusesResult -> getLicensingSubscriptionSubscriptionsComplianceStatusesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -918,7 +962,8 @@ public final class AdministeredFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -940,14 +985,15 @@ public final class AdministeredFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = AdministeredFunctions.getLicensingSubscriptionSubscriptionsComplianceStatuses(GetLicensingSubscriptionSubscriptionsComplianceStatusesArgs.builder()
-     *             .organizationIds(&#34;string&#34;)
-     *             .subscriptionIds(&#34;string&#34;)
+     *             .organizationIds("string")
+     *             .subscriptionIds("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiAdministeredLicensingSubscriptionSubscriptionsComplianceStatusesExample&#34;, example.applyValue(getLicensingSubscriptionSubscriptionsComplianceStatusesResult -&gt; getLicensingSubscriptionSubscriptionsComplianceStatusesResult.items()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsComplianceStatusesExample", example.applyValue(getLicensingSubscriptionSubscriptionsComplianceStatusesResult -> getLicensingSubscriptionSubscriptionsComplianceStatusesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -958,7 +1004,8 @@ public final class AdministeredFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -980,14 +1027,15 @@ public final class AdministeredFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = AdministeredFunctions.getLicensingSubscriptionSubscriptionsComplianceStatuses(GetLicensingSubscriptionSubscriptionsComplianceStatusesArgs.builder()
-     *             .organizationIds(&#34;string&#34;)
-     *             .subscriptionIds(&#34;string&#34;)
+     *             .organizationIds("string")
+     *             .subscriptionIds("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiAdministeredLicensingSubscriptionSubscriptionsComplianceStatusesExample&#34;, example.applyValue(getLicensingSubscriptionSubscriptionsComplianceStatusesResult -&gt; getLicensingSubscriptionSubscriptionsComplianceStatusesResult.items()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsComplianceStatusesExample", example.applyValue(getLicensingSubscriptionSubscriptionsComplianceStatusesResult -> getLicensingSubscriptionSubscriptionsComplianceStatusesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */

@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -43,20 +44,21 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ApplianceTrafficShapingCustomPerformanceClasses(&#34;example&#34;, ApplianceTrafficShapingCustomPerformanceClassesArgs.builder()        
- *             .networkId(&#34;string&#34;)
+ *         var example = new ApplianceTrafficShapingCustomPerformanceClasses("example", ApplianceTrafficShapingCustomPerformanceClassesArgs.builder()
+ *             .networkId("string")
  *             .parameters(ApplianceTrafficShapingCustomPerformanceClassesParametersArgs.builder()
  *                 .max_jitter(100)
  *                 .max_latency(100)
  *                 .max_loss_percentage(5)
- *                 .name(&#34;myCustomPerformanceClass&#34;)
+ *                 .name("myCustomPerformanceClass")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksApplianceTrafficShapingCustomPerformanceClassesExample&#34;, example);
+ *         ctx.export("merakiNetworksApplianceTrafficShapingCustomPerformanceClassesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

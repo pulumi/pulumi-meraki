@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,24 +45,25 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new WirelessSsidsBonjourForwarding(&#34;example&#34;, WirelessSsidsBonjourForwardingArgs.builder()        
+ *         var example = new WirelessSsidsBonjourForwarding("example", WirelessSsidsBonjourForwardingArgs.builder()
  *             .enabled(true)
  *             .exception(WirelessSsidsBonjourForwardingExceptionArgs.builder()
  *                 .enabled(true)
  *                 .build())
- *             .networkId(&#34;string&#34;)
- *             .number(&#34;string&#34;)
+ *             .networkId("string")
+ *             .number("string")
  *             .rules(WirelessSsidsBonjourForwardingRuleArgs.builder()
- *                 .description(&#34;A simple bonjour rule&#34;)
- *                 .services(&#34;All Services&#34;)
- *                 .vlan_id(&#34;1&#34;)
+ *                 .description("A simple bonjour rule")
+ *                 .services("All Services")
+ *                 .vlan_id("1")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksWirelessSsidsBonjourForwardingExample&#34;, example);
+ *         ctx.export("merakiNetworksWirelessSsidsBonjourForwardingExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

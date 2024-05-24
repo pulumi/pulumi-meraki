@@ -18,7 +18,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -39,17 +40,18 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ApplianceFirewallFirewalledServices(&#34;example&#34;, ApplianceFirewallFirewalledServicesArgs.builder()        
- *             .access(&#34;restricted&#34;)
- *             .allowedIps(&#34;123.123.123.1&#34;)
- *             .networkId(&#34;string&#34;)
- *             .service(&#34;string&#34;)
+ *         var example = new ApplianceFirewallFirewalledServices("example", ApplianceFirewallFirewalledServicesArgs.builder()
+ *             .access("restricted")
+ *             .allowedIps("123.123.123.1")
+ *             .networkId("string")
+ *             .service("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksApplianceFirewallFirewalledServicesExample&#34;, example);
+ *         ctx.export("merakiNetworksApplianceFirewallFirewalledServicesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

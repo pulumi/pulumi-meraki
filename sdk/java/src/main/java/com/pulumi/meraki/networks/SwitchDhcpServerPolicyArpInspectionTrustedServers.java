@@ -19,7 +19,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -41,19 +42,20 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SwitchDhcpServerPolicyArpInspectionTrustedServers(&#34;example&#34;, SwitchDhcpServerPolicyArpInspectionTrustedServersArgs.builder()        
+ *         var example = new SwitchDhcpServerPolicyArpInspectionTrustedServers("example", SwitchDhcpServerPolicyArpInspectionTrustedServersArgs.builder()
  *             .ipv4(SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args.builder()
- *                 .address(&#34;1.2.3.4&#34;)
+ *                 .address("1.2.3.4")
  *                 .build())
- *             .mac(&#34;00:11:22:33:44:55&#34;)
- *             .networkId(&#34;string&#34;)
+ *             .mac("00:11:22:33:44:55")
+ *             .networkId("string")
  *             .vlan(100)
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksSwitchDhcpServerPolicyArpInspectionTrustedServersExample&#34;, example);
+ *         ctx.export("merakiNetworksSwitchDhcpServerPolicyArpInspectionTrustedServersExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

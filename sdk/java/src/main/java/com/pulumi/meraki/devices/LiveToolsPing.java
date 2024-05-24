@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -47,28 +48,29 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new LiveToolsPing(&#34;example&#34;, LiveToolsPingArgs.builder()        
- *             .serial(&#34;string&#34;)
+ *         var example = new LiveToolsPing("example", LiveToolsPingArgs.builder()
+ *             .serial("string")
  *             .parameters(LiveToolsPingParametersArgs.builder()
  *                 .callback(LiveToolsPingParametersCallbackArgs.builder()
  *                     .httpServer(LiveToolsPingParametersCallbackHttpServerArgs.builder()
- *                         .id(&#34;aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M=&#34;)
+ *                         .id("aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M=")
  *                         .build())
  *                     .payloadTemplate(LiveToolsPingParametersCallbackPayloadTemplateArgs.builder()
- *                         .id(&#34;wpt_2100&#34;)
+ *                         .id("wpt_2100")
  *                         .build())
- *                     .sharedSecret(&#34;secret&#34;)
- *                     .url(&#34;https://webhook.site/28efa24e-f830-4d9f-a12b-fbb9e5035031&#34;)
+ *                     .sharedSecret("secret")
+ *                     .url("https://webhook.site/28efa24e-f830-4d9f-a12b-fbb9e5035031")
  *                     .build())
  *                 .count(2)
- *                 .target(&#34;75.75.75.75&#34;)
+ *                 .target("75.75.75.75")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiDevicesLiveToolsPingExample&#34;, example);
+ *         ctx.export("merakiDevicesLiveToolsPingExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

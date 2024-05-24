@@ -18,7 +18,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -47,52 +48,53 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SwitchPortSchedules(&#34;example&#34;, SwitchPortSchedulesArgs.builder()        
- *             .name(&#34;Weekdays schedule&#34;)
- *             .networkId(&#34;string&#34;)
+ *         var example = new SwitchPortSchedules("example", SwitchPortSchedulesArgs.builder()
+ *             .name("Weekdays schedule")
+ *             .networkId("string")
  *             .portSchedule(SwitchPortSchedulesPortScheduleArgs.builder()
  *                 .friday(SwitchPortSchedulesPortScheduleFridayArgs.builder()
  *                     .active(true)
- *                     .from(&#34;9:00&#34;)
- *                     .to(&#34;17:00&#34;)
+ *                     .from("9:00")
+ *                     .to("17:00")
  *                     .build())
  *                 .monday(SwitchPortSchedulesPortScheduleMondayArgs.builder()
  *                     .active(true)
- *                     .from(&#34;9:00&#34;)
- *                     .to(&#34;17:00&#34;)
+ *                     .from("9:00")
+ *                     .to("17:00")
  *                     .build())
  *                 .saturday(SwitchPortSchedulesPortScheduleSaturdayArgs.builder()
  *                     .active(false)
- *                     .from(&#34;0:00&#34;)
- *                     .to(&#34;24:00&#34;)
+ *                     .from("0:00")
+ *                     .to("24:00")
  *                     .build())
  *                 .sunday(SwitchPortSchedulesPortScheduleSundayArgs.builder()
  *                     .active(false)
- *                     .from(&#34;0:00&#34;)
- *                     .to(&#34;24:00&#34;)
+ *                     .from("0:00")
+ *                     .to("24:00")
  *                     .build())
  *                 .thursday(SwitchPortSchedulesPortScheduleThursdayArgs.builder()
  *                     .active(true)
- *                     .from(&#34;9:00&#34;)
- *                     .to(&#34;17:00&#34;)
+ *                     .from("9:00")
+ *                     .to("17:00")
  *                     .build())
  *                 .tuesday(SwitchPortSchedulesPortScheduleTuesdayArgs.builder()
  *                     .active(true)
- *                     .from(&#34;9:00&#34;)
- *                     .to(&#34;17:00&#34;)
+ *                     .from("9:00")
+ *                     .to("17:00")
  *                     .build())
  *                 .wednesday(SwitchPortSchedulesPortScheduleWednesdayArgs.builder()
  *                     .active(true)
- *                     .from(&#34;9:00&#34;)
- *                     .to(&#34;17:00&#34;)
+ *                     .from("9:00")
+ *                     .to("17:00")
  *                     .build())
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksSwitchPortSchedulesExample&#34;, example);
+ *         ctx.export("merakiNetworksSwitchPortSchedulesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

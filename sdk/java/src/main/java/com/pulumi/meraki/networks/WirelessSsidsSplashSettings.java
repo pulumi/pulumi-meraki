@@ -26,7 +26,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -56,63 +57,64 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new WirelessSsidsSplashSettings(&#34;example&#34;, WirelessSsidsSplashSettingsArgs.builder()        
+ *         var example = new WirelessSsidsSplashSettings("example", WirelessSsidsSplashSettingsArgs.builder()
  *             .allowSimultaneousLogins(false)
  *             .billing(WirelessSsidsSplashSettingsBillingArgs.builder()
  *                 .free_access(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .prepaid_access_fast_login_enabled(true)
- *                 .reply_to_email_address(&#34;user@email.com&#34;)
+ *                 .reply_to_email_address("user{@literal @}email.com")
  *                 .build())
  *             .blockAllTrafficBeforeSignOn(false)
- *             .controllerDisconnectionBehavior(&#34;default&#34;)
+ *             .controllerDisconnectionBehavior("default")
  *             .guestSponsorship(WirelessSsidsSplashSettingsGuestSponsorshipArgs.builder()
  *                 .duration_in_minutes(30)
  *                 .guest_can_request_timeframe(false)
  *                 .build())
- *             .networkId(&#34;string&#34;)
- *             .number(&#34;string&#34;)
- *             .redirectUrl(&#34;https://example.com&#34;)
+ *             .networkId("string")
+ *             .number("string")
+ *             .redirectUrl("https://example.com")
  *             .sentryEnrollment(WirelessSsidsSplashSettingsSentryEnrollmentArgs.builder()
- *                 .enforced_systems(&#34;iOS&#34;)
- *                 .strength(&#34;focused&#34;)
+ *                 .enforced_systems("iOS")
+ *                 .strength("focused")
  *                 .systems_manager_network(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .build())
  *             .splashImage(WirelessSsidsSplashSettingsSplashImageArgs.builder()
- *                 .extension(&#34;jpg&#34;)
+ *                 .extension("jpg")
  *                 .image(WirelessSsidsSplashSettingsSplashImageImageArgs.builder()
- *                     .contents(&#34;Q2lzY28gTWVyYWtp&#34;)
- *                     .format(&#34;jpg&#34;)
+ *                     .contents("Q2lzY28gTWVyYWtp")
+ *                     .format("jpg")
  *                     .build())
- *                 .md5(&#34;542cccac8d7dedee0f185311d154d194&#34;)
+ *                 .md5("542cccac8d7dedee0f185311d154d194")
  *                 .build())
  *             .splashLogo(WirelessSsidsSplashSettingsSplashLogoArgs.builder()
- *                 .extension(&#34;jpg&#34;)
+ *                 .extension("jpg")
  *                 .image(WirelessSsidsSplashSettingsSplashLogoImageArgs.builder()
- *                     .contents(&#34;Q2lzY28gTWVyYWtp&#34;)
- *                     .format(&#34;jpg&#34;)
+ *                     .contents("Q2lzY28gTWVyYWtp")
+ *                     .format("jpg")
  *                     .build())
- *                 .md5(&#34;abcd1234&#34;)
+ *                 .md5("abcd1234")
  *                 .build())
  *             .splashPrepaidFront(WirelessSsidsSplashSettingsSplashPrepaidFrontArgs.builder()
- *                 .extension(&#34;jpg&#34;)
+ *                 .extension("jpg")
  *                 .image(WirelessSsidsSplashSettingsSplashPrepaidFrontImageArgs.builder()
- *                     .contents(&#34;Q2lzY28gTWVyYWtp&#34;)
- *                     .format(&#34;jpg&#34;)
+ *                     .contents("Q2lzY28gTWVyYWtp")
+ *                     .format("jpg")
  *                     .build())
- *                 .md5(&#34;542cccac8d7dedee0f185311d154d194&#34;)
+ *                 .md5("542cccac8d7dedee0f185311d154d194")
  *                 .build())
  *             .splashTimeout(1440)
- *             .splashUrl(&#34;https://www.custom_splash_url.com&#34;)
- *             .themeId(&#34;c3ddcb4f16785ee747ab5ffc10867d6c8ea704be&#34;)
+ *             .splashUrl("https://www.custom_splash_url.com")
+ *             .themeId("c3ddcb4f16785ee747ab5ffc10867d6c8ea704be")
  *             .useRedirectUrl(true)
  *             .useSplashUrl(true)
- *             .welcomeMessage(&#34;Welcome!&#34;)
+ *             .welcomeMessage("Welcome!")
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksWirelessSsidsSplashSettingsExample&#34;, example);
+ *         ctx.export("merakiNetworksWirelessSsidsSplashSettingsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

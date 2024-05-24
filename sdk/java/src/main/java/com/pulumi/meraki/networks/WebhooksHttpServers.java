@@ -19,7 +19,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -41,21 +42,22 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new WebhooksHttpServers(&#34;example&#34;, WebhooksHttpServersArgs.builder()        
- *             .name(&#34;Example Webhook Server&#34;)
- *             .networkId(&#34;string&#34;)
+ *         var example = new WebhooksHttpServers("example", WebhooksHttpServersArgs.builder()
+ *             .name("Example Webhook Server")
+ *             .networkId("string")
  *             .payloadTemplate(WebhooksHttpServersPayloadTemplateArgs.builder()
- *                 .name(&#34;Meraki (included)&#34;)
- *                 .payload_template_id(&#34;wpt_00001&#34;)
+ *                 .name("Meraki (included)")
+ *                 .payload_template_id("wpt_00001")
  *                 .build())
- *             .sharedSecret(&#34;shhh&#34;)
- *             .url(&#34;https://example.com&#34;)
+ *             .sharedSecret("shhh")
+ *             .url("https://example.com")
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksWebhooksHttpServersExample&#34;, example);
+ *         ctx.export("merakiNetworksWebhooksHttpServersExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

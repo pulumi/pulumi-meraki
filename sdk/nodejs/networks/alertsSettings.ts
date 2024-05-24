@@ -56,6 +56,10 @@ export class AlertsSettings extends pulumi.CustomResource {
      */
     public readonly defaultDestinations!: pulumi.Output<outputs.networks.AlertsSettingsDefaultDestinations>;
     /**
+     * muting
+     */
+    public readonly muting!: pulumi.Output<outputs.networks.AlertsSettingsMuting>;
+    /**
      * networkId path parameter. Network ID
      */
     public readonly networkId!: pulumi.Output<string>;
@@ -76,6 +80,7 @@ export class AlertsSettings extends pulumi.CustomResource {
             resourceInputs["alerts"] = state ? state.alerts : undefined;
             resourceInputs["alertsResponses"] = state ? state.alertsResponses : undefined;
             resourceInputs["defaultDestinations"] = state ? state.defaultDestinations : undefined;
+            resourceInputs["muting"] = state ? state.muting : undefined;
             resourceInputs["networkId"] = state ? state.networkId : undefined;
         } else {
             const args = argsOrState as AlertsSettingsArgs | undefined;
@@ -84,6 +89,7 @@ export class AlertsSettings extends pulumi.CustomResource {
             }
             resourceInputs["alerts"] = args ? args.alerts : undefined;
             resourceInputs["defaultDestinations"] = args ? args.defaultDestinations : undefined;
+            resourceInputs["muting"] = args ? args.muting : undefined;
             resourceInputs["networkId"] = args ? args.networkId : undefined;
             resourceInputs["alertsResponses"] = undefined /*out*/;
         }
@@ -109,6 +115,10 @@ export interface AlertsSettingsState {
      */
     defaultDestinations?: pulumi.Input<inputs.networks.AlertsSettingsDefaultDestinations>;
     /**
+     * muting
+     */
+    muting?: pulumi.Input<inputs.networks.AlertsSettingsMuting>;
+    /**
      * networkId path parameter. Network ID
      */
     networkId?: pulumi.Input<string>;
@@ -126,6 +136,10 @@ export interface AlertsSettingsArgs {
      * The network-wide destinations for all alerts on the network.
      */
     defaultDestinations?: pulumi.Input<inputs.networks.AlertsSettingsDefaultDestinations>;
+    /**
+     * muting
+     */
+    muting?: pulumi.Input<inputs.networks.AlertsSettingsMuting>;
     /**
      * networkId path parameter. Network ID
      */

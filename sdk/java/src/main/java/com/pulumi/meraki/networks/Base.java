@@ -19,7 +19,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -40,24 +41,25 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new Base(&#34;example&#34;, BaseArgs.builder()        
- *             .name(&#34;Main Office&#34;)
- *             .notes(&#34;Additional description of the network&#34;)
- *             .organizationId(&#34;string&#34;)
+ *         var example = new Base("example", BaseArgs.builder()
+ *             .name("Main Office")
+ *             .notes("Additional description of the network")
+ *             .organizationId("string")
  *             .productTypes(            
- *                 &#34;appliance&#34;,
- *                 &#34;switch&#34;,
- *                 &#34;wireless&#34;)
+ *                 "appliance",
+ *                 "switch",
+ *                 "wireless")
  *             .tags(            
- *                 &#34;tag1&#34;,
- *                 &#34;tag2&#34;)
- *             .timeZone(&#34;America/Los_Angeles&#34;)
+ *                 "tag1",
+ *                 "tag2")
+ *             .timeZone("America/Los_Angeles")
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksExample&#34;, example);
+ *         ctx.export("merakiNetworksExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

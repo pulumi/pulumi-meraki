@@ -20,7 +20,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -42,20 +43,21 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CameraCustomAnalytics(&#34;example&#34;, CameraCustomAnalyticsArgs.builder()        
- *             .artifactId(&#34;1&#34;)
+ *         var example = new CameraCustomAnalytics("example", CameraCustomAnalyticsArgs.builder()
+ *             .artifactId("1")
  *             .enabled(true)
  *             .parameters(CameraCustomAnalyticsParameterArgs.builder()
- *                 .name(&#34;detection_threshold&#34;)
- *                 .value(&#34;0.5&#34;)
+ *                 .name("detection_threshold")
+ *                 .value("0.5")
  *                 .build())
- *             .serial(&#34;string&#34;)
+ *             .serial("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiDevicesCameraCustomAnalyticsExample&#34;, example);
+ *         ctx.export("merakiDevicesCameraCustomAnalyticsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

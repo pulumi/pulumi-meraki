@@ -23,10 +23,10 @@ type WirelessSsids struct {
 	pulumi.CustomResourceState
 
 	// The current setting for Active Directory. Only valid if splashPage is 'Password-protected with Active Directory'
-	ActiveDirectory WirelessSsidsActiveDirectoryOutput `pulumi:"activeDirectory"`
-	AdminSplashUrl  pulumi.StringOutput                `pulumi:"adminSplashUrl"`
+	ActiveDirectory WirelessSsidsActiveDirectoryPtrOutput `pulumi:"activeDirectory"`
+	AdminSplashUrl  pulumi.StringOutput                   `pulumi:"adminSplashUrl"`
 	// Boolean indicating whether or not adult content will be blocked
-	AdultContentFilteringEnabled pulumi.BoolOutput `pulumi:"adultContentFilteringEnabled"`
+	AdultContentFilteringEnabled pulumi.BoolPtrOutput `pulumi:"adultContentFilteringEnabled"`
 	// The list of tags and VLAN IDs used for VLAN tagging. This param is only valid when the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
 	ApTagsAndVlanIds WirelessSsidsApTagsAndVlanIdArrayOutput `pulumi:"apTagsAndVlanIds"`
 	// The association control method for the SSID
@@ -38,35 +38,35 @@ type WirelessSsids struct {
 	// The client-serving radio frequencies of this SSID in the default indoor RF profile
 	BandSelection pulumi.StringOutput `pulumi:"bandSelection"`
 	// The concentrator to use when the ipAssignmentMode is 'Layer 3 roaming with a concentrator' or 'VPN'.
-	ConcentratorNetworkId pulumi.StringOutput `pulumi:"concentratorNetworkId"`
+	ConcentratorNetworkId pulumi.StringPtrOutput `pulumi:"concentratorNetworkId"`
 	// The default VLAN ID used for 'all other APs'. This param is only valid when the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
 	DefaultVlanId pulumi.IntOutput `pulumi:"defaultVlanId"`
 	// Disassociate clients when 'VPN' concentrator failover occurs in order to trigger clients to re-associate and generate new DHCP requests. This param is only valid if ipAssignmentMode is 'VPN'.
-	DisassociateClientsOnVpnFailover pulumi.BoolOutput `pulumi:"disassociateClientsOnVpnFailover"`
+	DisassociateClientsOnVpnFailover pulumi.BoolPtrOutput `pulumi:"disassociateClientsOnVpnFailover"`
 	// DNS servers rewrite settings
-	DnsRewrite WirelessSsidsDnsRewriteOutput `pulumi:"dnsRewrite"`
+	DnsRewrite WirelessSsidsDnsRewritePtrOutput `pulumi:"dnsRewrite"`
 	// The current setting for 802.11r
-	Dot11r WirelessSsidsDot11rOutput `pulumi:"dot11r"`
+	Dot11r WirelessSsidsDot11rPtrOutput `pulumi:"dot11r"`
 	// The current setting for Protected Management Frames (802.11w).
-	Dot11w WirelessSsidsDot11wOutput `pulumi:"dot11w"`
+	Dot11w WirelessSsidsDot11wPtrOutput `pulumi:"dot11w"`
 	// Whether or not the SSID is enabled
 	Enabled pulumi.BoolOutput `pulumi:"enabled"`
 	// The psk encryption mode for the SSID
 	EncryptionMode pulumi.StringOutput `pulumi:"encryptionMode"`
 	// Whether or not an SSID is accessible by 'enterprise' administrators ('access disabled' or 'access enabled')
-	EnterpriseAdminAccess pulumi.StringOutput `pulumi:"enterpriseAdminAccess"`
+	EnterpriseAdminAccess pulumi.StringPtrOutput `pulumi:"enterpriseAdminAccess"`
 	// Ethernet over GRE settings
-	Gre WirelessSsidsGreOutput `pulumi:"gre"`
+	Gre WirelessSsidsGrePtrOutput `pulumi:"gre"`
 	// The client IP assignment mode
 	IpAssignmentMode pulumi.StringOutput `pulumi:"ipAssignmentMode"`
 	// Boolean indicating whether Layer 2 LAN isolation should be enabled or disabled. Only configurable when ipAssignmentMode is 'Bridge mode'.
-	LanIsolationEnabled pulumi.BoolOutput `pulumi:"lanIsolationEnabled"`
+	LanIsolationEnabled pulumi.BoolPtrOutput `pulumi:"lanIsolationEnabled"`
 	// The current setting for LDAP. Only valid if splashPage is 'Password-protected with LDAP'.
-	Ldap WirelessSsidsLdapOutput `pulumi:"ldap"`
+	Ldap WirelessSsidsLdapPtrOutput `pulumi:"ldap"`
 	// Extended local auth flag for Enterprise NAC
 	LocalAuth pulumi.BoolOutput `pulumi:"localAuth"`
 	// The current setting for Local Authentication, a built-in RADIUS server on the access point. Only valid if authMode is '8021x-localradius'.
-	LocalRadius WirelessSsidsLocalRadiusOutput `pulumi:"localRadius"`
+	LocalRadius WirelessSsidsLocalRadiusPtrOutput `pulumi:"localRadius"`
 	// Whether clients connecting to this SSID must use the IP address assigned by the DHCP server
 	MandatoryDhcpEnabled pulumi.BoolOutput `pulumi:"mandatoryDhcpEnabled"`
 	// The minimum bitrate in Mbps of this SSID in the default indoor RF profile
@@ -74,13 +74,13 @@ type WirelessSsids struct {
 	// The name of the SSID
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Named VLAN settings.
-	NamedVlans WirelessSsidsNamedVlansOutput `pulumi:"namedVlans"`
+	NamedVlans WirelessSsidsNamedVlansPtrOutput `pulumi:"namedVlans"`
 	// networkId path parameter. Network ID
 	NetworkId pulumi.StringOutput `pulumi:"networkId"`
 	// Unique identifier of the SSID
 	Number pulumi.IntOutput `pulumi:"number"`
 	// The OAuth settings of this SSID. Only valid if splashPage is 'Google OAuth'.
-	Oauth WirelessSsidsOauthOutput `pulumi:"oauth"`
+	Oauth WirelessSsidsOauthPtrOutput `pulumi:"oauth"`
 	// The download bandwidth limit in Kbps. (0 represents no limit.)
 	PerClientBandwidthLimitDown pulumi.IntOutput `pulumi:"perClientBandwidthLimitDown"`
 	// The upload bandwidth limit in Kbps. (0 represents no limit.)
@@ -92,49 +92,49 @@ type WirelessSsids struct {
 	// The passkey for the SSID. This param is only valid if the authMode is 'psk'
 	Psk pulumi.StringPtrOutput `pulumi:"psk"`
 	// Whether or not RADIUS accounting is enabled
-	RadiusAccountingEnabled pulumi.BoolOutput `pulumi:"radiusAccountingEnabled"`
+	RadiusAccountingEnabled pulumi.BoolPtrOutput `pulumi:"radiusAccountingEnabled"`
 	// The interval (in seconds) in which accounting information is updated and sent to the RADIUS accounting server.
-	RadiusAccountingInterimInterval pulumi.IntOutput `pulumi:"radiusAccountingInterimInterval"`
+	RadiusAccountingInterimInterval pulumi.IntPtrOutput `pulumi:"radiusAccountingInterimInterval"`
 	// List of RADIUS accounting 802.1X servers to be used for authentication
 	RadiusAccountingServers WirelessSsidsRadiusAccountingServerArrayOutput `pulumi:"radiusAccountingServers"`
 	// RADIUS attribute used to look up group policies
 	RadiusAttributeForGroupPolicies pulumi.StringOutput `pulumi:"radiusAttributeForGroupPolicies"`
 	// The template of the NAS identifier to be used for RADIUS authentication (ex. $NODE*MAC$:$VAP*NUM$).
-	RadiusAuthenticationNasId pulumi.StringOutput `pulumi:"radiusAuthenticationNasId"`
+	RadiusAuthenticationNasId pulumi.StringPtrOutput `pulumi:"radiusAuthenticationNasId"`
 	// The template of the called station identifier to be used for RADIUS (ex. $NODE*MAC$:$VAP*NUM$).
-	RadiusCalledStationId pulumi.StringOutput `pulumi:"radiusCalledStationId"`
+	RadiusCalledStationId pulumi.StringPtrOutput `pulumi:"radiusCalledStationId"`
 	// If true, Meraki devices will act as a RADIUS Dynamic Authorization Server and will respond to RADIUS Change-of-Authorization and Disconnect messages sent by the RADIUS server.
-	RadiusCoaEnabled pulumi.BoolOutput `pulumi:"radiusCoaEnabled"`
+	RadiusCoaEnabled pulumi.BoolPtrOutput `pulumi:"radiusCoaEnabled"`
 	// Whether RADIUS authentication is enabled
 	RadiusEnabled pulumi.BoolOutput `pulumi:"radiusEnabled"`
 	// Policy which determines how authentication requests should be handled in the event that all of the configured RADIUS servers are unreachable
 	RadiusFailoverPolicy pulumi.StringOutput `pulumi:"radiusFailoverPolicy"`
 	// Whether or not higher priority RADIUS servers should be retried after 60 seconds.
-	RadiusFallbackEnabled pulumi.BoolOutput `pulumi:"radiusFallbackEnabled"`
+	RadiusFallbackEnabled pulumi.BoolPtrOutput `pulumi:"radiusFallbackEnabled"`
 	// Whether or not RADIUS Guest VLAN is enabled. This param is only valid if the authMode is 'open-with-radius' and addressing mode is not set to 'isolated' or 'nat' mode
-	RadiusGuestVlanEnabled pulumi.BoolOutput `pulumi:"radiusGuestVlanEnabled"`
+	RadiusGuestVlanEnabled pulumi.BoolPtrOutput `pulumi:"radiusGuestVlanEnabled"`
 	// VLAN ID of the RADIUS Guest VLAN. This param is only valid if the authMode is 'open-with-radius' and addressing mode is not set to 'isolated' or 'nat' mode
-	RadiusGuestVlanId pulumi.IntOutput `pulumi:"radiusGuestVlanId"`
+	RadiusGuestVlanId pulumi.IntPtrOutput `pulumi:"radiusGuestVlanId"`
 	// Policy which determines which RADIUS server will be contacted first in an authentication attempt, and the ordering of any necessary retry attempts
 	RadiusLoadBalancingPolicy pulumi.StringOutput `pulumi:"radiusLoadBalancingPolicy"`
 	// If true, the RADIUS response can override VLAN tag. This is not valid when ipAssignmentMode is 'NAT mode'.
-	RadiusOverride pulumi.BoolOutput `pulumi:"radiusOverride"`
+	RadiusOverride pulumi.BoolPtrOutput `pulumi:"radiusOverride"`
 	// If true, Meraki devices will proxy RADIUS messages through the Meraki cloud to the configured RADIUS auth and accounting servers.
-	RadiusProxyEnabled pulumi.BoolOutput `pulumi:"radiusProxyEnabled"`
+	RadiusProxyEnabled pulumi.BoolPtrOutput `pulumi:"radiusProxyEnabled"`
 	// The maximum number of transmit attempts after which a RADIUS server is failed over (must be between 1-5).
-	RadiusServerAttemptsLimit pulumi.IntOutput `pulumi:"radiusServerAttemptsLimit"`
+	RadiusServerAttemptsLimit pulumi.IntPtrOutput `pulumi:"radiusServerAttemptsLimit"`
 	// The amount of time for which a RADIUS client waits for a reply from the RADIUS server (must be between 1-10 seconds).
-	RadiusServerTimeout pulumi.IntOutput `pulumi:"radiusServerTimeout"`
+	RadiusServerTimeout pulumi.IntPtrOutput `pulumi:"radiusServerTimeout"`
 	// The RADIUS 802.1X servers to be used for authentication. This param is only valid if the authMode is 'open-with-radius', '8021x-radius' or 'ipsk-with-radius'
 	RadiusServers WirelessSsidsRadiusServerArrayOutput `pulumi:"radiusServers"`
 	// The RADIUS 802.1X servers to be used for authentication. This param is only valid if the authMode is 'open-with-radius', '8021x-radius' or 'ipsk-with-radius'
 	RadiusServersResponses WirelessSsidsRadiusServersResponseArrayOutput `pulumi:"radiusServersResponses"`
 	// If true, Meraki devices will periodically send Access-Request messages to configured RADIUS servers using identity 'meraki*8021x*test' to ensure that the RADIUS servers are reachable.
-	RadiusTestingEnabled pulumi.BoolOutput `pulumi:"radiusTestingEnabled"`
+	RadiusTestingEnabled pulumi.BoolPtrOutput `pulumi:"radiusTestingEnabled"`
 	// The secondary concentrator to use when the ipAssignmentMode is 'VPN'. If configured, the APs will switch to using this concentrator if the primary concentrator is unreachable. This param is optional. ('disabled' represents no secondary concentrator.)
-	SecondaryConcentratorNetworkId pulumi.StringOutput `pulumi:"secondaryConcentratorNetworkId"`
+	SecondaryConcentratorNetworkId pulumi.StringPtrOutput `pulumi:"secondaryConcentratorNetworkId"`
 	// The SpeedBurst setting for this SSID'
-	SpeedBurst WirelessSsidsSpeedBurstOutput `pulumi:"speedBurst"`
+	SpeedBurst WirelessSsidsSpeedBurstPtrOutput `pulumi:"speedBurst"`
 	// Array of valid sponsor email domains for sponsored guest splash type.
 	SplashGuestSponsorDomains pulumi.StringArrayOutput `pulumi:"splashGuestSponsorDomains"`
 	// The type of splash page for the SSID
@@ -144,13 +144,13 @@ type WirelessSsids struct {
 	// SSID Administrator access status
 	SsidAdminAccessible pulumi.BoolOutput `pulumi:"ssidAdminAccessible"`
 	// Whether or not traffic should be directed to use specific VLANs. This param is only valid if the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
-	UseVlanTagging pulumi.BoolOutput `pulumi:"useVlanTagging"`
+	UseVlanTagging pulumi.BoolPtrOutput `pulumi:"useVlanTagging"`
 	// Whether the SSID is advertised or hidden by the AP
 	Visible pulumi.BoolOutput `pulumi:"visible"`
 	// The VLAN ID used for VLAN tagging. This param is only valid when the ipAssignmentMode is 'Layer 3 roaming with a concentrator' or 'VPN'
-	VlanId pulumi.IntOutput `pulumi:"vlanId"`
+	VlanId pulumi.IntPtrOutput `pulumi:"vlanId"`
 	// Allow users to access a configurable list of IP ranges prior to sign-on
-	WalledGardenEnabled pulumi.BoolOutput `pulumi:"walledGardenEnabled"`
+	WalledGardenEnabled pulumi.BoolPtrOutput `pulumi:"walledGardenEnabled"`
 	// Domain names and IP address ranges available in Walled Garden mode
 	WalledGardenRanges pulumi.StringArrayOutput `pulumi:"walledGardenRanges"`
 	// The types of WPA encryption
@@ -807,8 +807,8 @@ func (o WirelessSsidsOutput) ToWirelessSsidsOutputWithContext(ctx context.Contex
 }
 
 // The current setting for Active Directory. Only valid if splashPage is 'Password-protected with Active Directory'
-func (o WirelessSsidsOutput) ActiveDirectory() WirelessSsidsActiveDirectoryOutput {
-	return o.ApplyT(func(v *WirelessSsids) WirelessSsidsActiveDirectoryOutput { return v.ActiveDirectory }).(WirelessSsidsActiveDirectoryOutput)
+func (o WirelessSsidsOutput) ActiveDirectory() WirelessSsidsActiveDirectoryPtrOutput {
+	return o.ApplyT(func(v *WirelessSsids) WirelessSsidsActiveDirectoryPtrOutput { return v.ActiveDirectory }).(WirelessSsidsActiveDirectoryPtrOutput)
 }
 
 func (o WirelessSsidsOutput) AdminSplashUrl() pulumi.StringOutput {
@@ -816,8 +816,8 @@ func (o WirelessSsidsOutput) AdminSplashUrl() pulumi.StringOutput {
 }
 
 // Boolean indicating whether or not adult content will be blocked
-func (o WirelessSsidsOutput) AdultContentFilteringEnabled() pulumi.BoolOutput {
-	return o.ApplyT(func(v *WirelessSsids) pulumi.BoolOutput { return v.AdultContentFilteringEnabled }).(pulumi.BoolOutput)
+func (o WirelessSsidsOutput) AdultContentFilteringEnabled() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *WirelessSsids) pulumi.BoolPtrOutput { return v.AdultContentFilteringEnabled }).(pulumi.BoolPtrOutput)
 }
 
 // The list of tags and VLAN IDs used for VLAN tagging. This param is only valid when the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
@@ -846,8 +846,8 @@ func (o WirelessSsidsOutput) BandSelection() pulumi.StringOutput {
 }
 
 // The concentrator to use when the ipAssignmentMode is 'Layer 3 roaming with a concentrator' or 'VPN'.
-func (o WirelessSsidsOutput) ConcentratorNetworkId() pulumi.StringOutput {
-	return o.ApplyT(func(v *WirelessSsids) pulumi.StringOutput { return v.ConcentratorNetworkId }).(pulumi.StringOutput)
+func (o WirelessSsidsOutput) ConcentratorNetworkId() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *WirelessSsids) pulumi.StringPtrOutput { return v.ConcentratorNetworkId }).(pulumi.StringPtrOutput)
 }
 
 // The default VLAN ID used for 'all other APs'. This param is only valid when the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
@@ -856,23 +856,23 @@ func (o WirelessSsidsOutput) DefaultVlanId() pulumi.IntOutput {
 }
 
 // Disassociate clients when 'VPN' concentrator failover occurs in order to trigger clients to re-associate and generate new DHCP requests. This param is only valid if ipAssignmentMode is 'VPN'.
-func (o WirelessSsidsOutput) DisassociateClientsOnVpnFailover() pulumi.BoolOutput {
-	return o.ApplyT(func(v *WirelessSsids) pulumi.BoolOutput { return v.DisassociateClientsOnVpnFailover }).(pulumi.BoolOutput)
+func (o WirelessSsidsOutput) DisassociateClientsOnVpnFailover() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *WirelessSsids) pulumi.BoolPtrOutput { return v.DisassociateClientsOnVpnFailover }).(pulumi.BoolPtrOutput)
 }
 
 // DNS servers rewrite settings
-func (o WirelessSsidsOutput) DnsRewrite() WirelessSsidsDnsRewriteOutput {
-	return o.ApplyT(func(v *WirelessSsids) WirelessSsidsDnsRewriteOutput { return v.DnsRewrite }).(WirelessSsidsDnsRewriteOutput)
+func (o WirelessSsidsOutput) DnsRewrite() WirelessSsidsDnsRewritePtrOutput {
+	return o.ApplyT(func(v *WirelessSsids) WirelessSsidsDnsRewritePtrOutput { return v.DnsRewrite }).(WirelessSsidsDnsRewritePtrOutput)
 }
 
 // The current setting for 802.11r
-func (o WirelessSsidsOutput) Dot11r() WirelessSsidsDot11rOutput {
-	return o.ApplyT(func(v *WirelessSsids) WirelessSsidsDot11rOutput { return v.Dot11r }).(WirelessSsidsDot11rOutput)
+func (o WirelessSsidsOutput) Dot11r() WirelessSsidsDot11rPtrOutput {
+	return o.ApplyT(func(v *WirelessSsids) WirelessSsidsDot11rPtrOutput { return v.Dot11r }).(WirelessSsidsDot11rPtrOutput)
 }
 
 // The current setting for Protected Management Frames (802.11w).
-func (o WirelessSsidsOutput) Dot11w() WirelessSsidsDot11wOutput {
-	return o.ApplyT(func(v *WirelessSsids) WirelessSsidsDot11wOutput { return v.Dot11w }).(WirelessSsidsDot11wOutput)
+func (o WirelessSsidsOutput) Dot11w() WirelessSsidsDot11wPtrOutput {
+	return o.ApplyT(func(v *WirelessSsids) WirelessSsidsDot11wPtrOutput { return v.Dot11w }).(WirelessSsidsDot11wPtrOutput)
 }
 
 // Whether or not the SSID is enabled
@@ -886,13 +886,13 @@ func (o WirelessSsidsOutput) EncryptionMode() pulumi.StringOutput {
 }
 
 // Whether or not an SSID is accessible by 'enterprise' administrators ('access disabled' or 'access enabled')
-func (o WirelessSsidsOutput) EnterpriseAdminAccess() pulumi.StringOutput {
-	return o.ApplyT(func(v *WirelessSsids) pulumi.StringOutput { return v.EnterpriseAdminAccess }).(pulumi.StringOutput)
+func (o WirelessSsidsOutput) EnterpriseAdminAccess() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *WirelessSsids) pulumi.StringPtrOutput { return v.EnterpriseAdminAccess }).(pulumi.StringPtrOutput)
 }
 
 // Ethernet over GRE settings
-func (o WirelessSsidsOutput) Gre() WirelessSsidsGreOutput {
-	return o.ApplyT(func(v *WirelessSsids) WirelessSsidsGreOutput { return v.Gre }).(WirelessSsidsGreOutput)
+func (o WirelessSsidsOutput) Gre() WirelessSsidsGrePtrOutput {
+	return o.ApplyT(func(v *WirelessSsids) WirelessSsidsGrePtrOutput { return v.Gre }).(WirelessSsidsGrePtrOutput)
 }
 
 // The client IP assignment mode
@@ -901,13 +901,13 @@ func (o WirelessSsidsOutput) IpAssignmentMode() pulumi.StringOutput {
 }
 
 // Boolean indicating whether Layer 2 LAN isolation should be enabled or disabled. Only configurable when ipAssignmentMode is 'Bridge mode'.
-func (o WirelessSsidsOutput) LanIsolationEnabled() pulumi.BoolOutput {
-	return o.ApplyT(func(v *WirelessSsids) pulumi.BoolOutput { return v.LanIsolationEnabled }).(pulumi.BoolOutput)
+func (o WirelessSsidsOutput) LanIsolationEnabled() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *WirelessSsids) pulumi.BoolPtrOutput { return v.LanIsolationEnabled }).(pulumi.BoolPtrOutput)
 }
 
 // The current setting for LDAP. Only valid if splashPage is 'Password-protected with LDAP'.
-func (o WirelessSsidsOutput) Ldap() WirelessSsidsLdapOutput {
-	return o.ApplyT(func(v *WirelessSsids) WirelessSsidsLdapOutput { return v.Ldap }).(WirelessSsidsLdapOutput)
+func (o WirelessSsidsOutput) Ldap() WirelessSsidsLdapPtrOutput {
+	return o.ApplyT(func(v *WirelessSsids) WirelessSsidsLdapPtrOutput { return v.Ldap }).(WirelessSsidsLdapPtrOutput)
 }
 
 // Extended local auth flag for Enterprise NAC
@@ -916,8 +916,8 @@ func (o WirelessSsidsOutput) LocalAuth() pulumi.BoolOutput {
 }
 
 // The current setting for Local Authentication, a built-in RADIUS server on the access point. Only valid if authMode is '8021x-localradius'.
-func (o WirelessSsidsOutput) LocalRadius() WirelessSsidsLocalRadiusOutput {
-	return o.ApplyT(func(v *WirelessSsids) WirelessSsidsLocalRadiusOutput { return v.LocalRadius }).(WirelessSsidsLocalRadiusOutput)
+func (o WirelessSsidsOutput) LocalRadius() WirelessSsidsLocalRadiusPtrOutput {
+	return o.ApplyT(func(v *WirelessSsids) WirelessSsidsLocalRadiusPtrOutput { return v.LocalRadius }).(WirelessSsidsLocalRadiusPtrOutput)
 }
 
 // Whether clients connecting to this SSID must use the IP address assigned by the DHCP server
@@ -936,8 +936,8 @@ func (o WirelessSsidsOutput) Name() pulumi.StringOutput {
 }
 
 // Named VLAN settings.
-func (o WirelessSsidsOutput) NamedVlans() WirelessSsidsNamedVlansOutput {
-	return o.ApplyT(func(v *WirelessSsids) WirelessSsidsNamedVlansOutput { return v.NamedVlans }).(WirelessSsidsNamedVlansOutput)
+func (o WirelessSsidsOutput) NamedVlans() WirelessSsidsNamedVlansPtrOutput {
+	return o.ApplyT(func(v *WirelessSsids) WirelessSsidsNamedVlansPtrOutput { return v.NamedVlans }).(WirelessSsidsNamedVlansPtrOutput)
 }
 
 // networkId path parameter. Network ID
@@ -951,8 +951,8 @@ func (o WirelessSsidsOutput) Number() pulumi.IntOutput {
 }
 
 // The OAuth settings of this SSID. Only valid if splashPage is 'Google OAuth'.
-func (o WirelessSsidsOutput) Oauth() WirelessSsidsOauthOutput {
-	return o.ApplyT(func(v *WirelessSsids) WirelessSsidsOauthOutput { return v.Oauth }).(WirelessSsidsOauthOutput)
+func (o WirelessSsidsOutput) Oauth() WirelessSsidsOauthPtrOutput {
+	return o.ApplyT(func(v *WirelessSsids) WirelessSsidsOauthPtrOutput { return v.Oauth }).(WirelessSsidsOauthPtrOutput)
 }
 
 // The download bandwidth limit in Kbps. (0 represents no limit.)
@@ -981,13 +981,13 @@ func (o WirelessSsidsOutput) Psk() pulumi.StringPtrOutput {
 }
 
 // Whether or not RADIUS accounting is enabled
-func (o WirelessSsidsOutput) RadiusAccountingEnabled() pulumi.BoolOutput {
-	return o.ApplyT(func(v *WirelessSsids) pulumi.BoolOutput { return v.RadiusAccountingEnabled }).(pulumi.BoolOutput)
+func (o WirelessSsidsOutput) RadiusAccountingEnabled() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *WirelessSsids) pulumi.BoolPtrOutput { return v.RadiusAccountingEnabled }).(pulumi.BoolPtrOutput)
 }
 
 // The interval (in seconds) in which accounting information is updated and sent to the RADIUS accounting server.
-func (o WirelessSsidsOutput) RadiusAccountingInterimInterval() pulumi.IntOutput {
-	return o.ApplyT(func(v *WirelessSsids) pulumi.IntOutput { return v.RadiusAccountingInterimInterval }).(pulumi.IntOutput)
+func (o WirelessSsidsOutput) RadiusAccountingInterimInterval() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *WirelessSsids) pulumi.IntPtrOutput { return v.RadiusAccountingInterimInterval }).(pulumi.IntPtrOutput)
 }
 
 // List of RADIUS accounting 802.1X servers to be used for authentication
@@ -1003,18 +1003,18 @@ func (o WirelessSsidsOutput) RadiusAttributeForGroupPolicies() pulumi.StringOutp
 }
 
 // The template of the NAS identifier to be used for RADIUS authentication (ex. $NODE*MAC$:$VAP*NUM$).
-func (o WirelessSsidsOutput) RadiusAuthenticationNasId() pulumi.StringOutput {
-	return o.ApplyT(func(v *WirelessSsids) pulumi.StringOutput { return v.RadiusAuthenticationNasId }).(pulumi.StringOutput)
+func (o WirelessSsidsOutput) RadiusAuthenticationNasId() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *WirelessSsids) pulumi.StringPtrOutput { return v.RadiusAuthenticationNasId }).(pulumi.StringPtrOutput)
 }
 
 // The template of the called station identifier to be used for RADIUS (ex. $NODE*MAC$:$VAP*NUM$).
-func (o WirelessSsidsOutput) RadiusCalledStationId() pulumi.StringOutput {
-	return o.ApplyT(func(v *WirelessSsids) pulumi.StringOutput { return v.RadiusCalledStationId }).(pulumi.StringOutput)
+func (o WirelessSsidsOutput) RadiusCalledStationId() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *WirelessSsids) pulumi.StringPtrOutput { return v.RadiusCalledStationId }).(pulumi.StringPtrOutput)
 }
 
 // If true, Meraki devices will act as a RADIUS Dynamic Authorization Server and will respond to RADIUS Change-of-Authorization and Disconnect messages sent by the RADIUS server.
-func (o WirelessSsidsOutput) RadiusCoaEnabled() pulumi.BoolOutput {
-	return o.ApplyT(func(v *WirelessSsids) pulumi.BoolOutput { return v.RadiusCoaEnabled }).(pulumi.BoolOutput)
+func (o WirelessSsidsOutput) RadiusCoaEnabled() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *WirelessSsids) pulumi.BoolPtrOutput { return v.RadiusCoaEnabled }).(pulumi.BoolPtrOutput)
 }
 
 // Whether RADIUS authentication is enabled
@@ -1028,18 +1028,18 @@ func (o WirelessSsidsOutput) RadiusFailoverPolicy() pulumi.StringOutput {
 }
 
 // Whether or not higher priority RADIUS servers should be retried after 60 seconds.
-func (o WirelessSsidsOutput) RadiusFallbackEnabled() pulumi.BoolOutput {
-	return o.ApplyT(func(v *WirelessSsids) pulumi.BoolOutput { return v.RadiusFallbackEnabled }).(pulumi.BoolOutput)
+func (o WirelessSsidsOutput) RadiusFallbackEnabled() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *WirelessSsids) pulumi.BoolPtrOutput { return v.RadiusFallbackEnabled }).(pulumi.BoolPtrOutput)
 }
 
 // Whether or not RADIUS Guest VLAN is enabled. This param is only valid if the authMode is 'open-with-radius' and addressing mode is not set to 'isolated' or 'nat' mode
-func (o WirelessSsidsOutput) RadiusGuestVlanEnabled() pulumi.BoolOutput {
-	return o.ApplyT(func(v *WirelessSsids) pulumi.BoolOutput { return v.RadiusGuestVlanEnabled }).(pulumi.BoolOutput)
+func (o WirelessSsidsOutput) RadiusGuestVlanEnabled() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *WirelessSsids) pulumi.BoolPtrOutput { return v.RadiusGuestVlanEnabled }).(pulumi.BoolPtrOutput)
 }
 
 // VLAN ID of the RADIUS Guest VLAN. This param is only valid if the authMode is 'open-with-radius' and addressing mode is not set to 'isolated' or 'nat' mode
-func (o WirelessSsidsOutput) RadiusGuestVlanId() pulumi.IntOutput {
-	return o.ApplyT(func(v *WirelessSsids) pulumi.IntOutput { return v.RadiusGuestVlanId }).(pulumi.IntOutput)
+func (o WirelessSsidsOutput) RadiusGuestVlanId() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *WirelessSsids) pulumi.IntPtrOutput { return v.RadiusGuestVlanId }).(pulumi.IntPtrOutput)
 }
 
 // Policy which determines which RADIUS server will be contacted first in an authentication attempt, and the ordering of any necessary retry attempts
@@ -1048,23 +1048,23 @@ func (o WirelessSsidsOutput) RadiusLoadBalancingPolicy() pulumi.StringOutput {
 }
 
 // If true, the RADIUS response can override VLAN tag. This is not valid when ipAssignmentMode is 'NAT mode'.
-func (o WirelessSsidsOutput) RadiusOverride() pulumi.BoolOutput {
-	return o.ApplyT(func(v *WirelessSsids) pulumi.BoolOutput { return v.RadiusOverride }).(pulumi.BoolOutput)
+func (o WirelessSsidsOutput) RadiusOverride() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *WirelessSsids) pulumi.BoolPtrOutput { return v.RadiusOverride }).(pulumi.BoolPtrOutput)
 }
 
 // If true, Meraki devices will proxy RADIUS messages through the Meraki cloud to the configured RADIUS auth and accounting servers.
-func (o WirelessSsidsOutput) RadiusProxyEnabled() pulumi.BoolOutput {
-	return o.ApplyT(func(v *WirelessSsids) pulumi.BoolOutput { return v.RadiusProxyEnabled }).(pulumi.BoolOutput)
+func (o WirelessSsidsOutput) RadiusProxyEnabled() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *WirelessSsids) pulumi.BoolPtrOutput { return v.RadiusProxyEnabled }).(pulumi.BoolPtrOutput)
 }
 
 // The maximum number of transmit attempts after which a RADIUS server is failed over (must be between 1-5).
-func (o WirelessSsidsOutput) RadiusServerAttemptsLimit() pulumi.IntOutput {
-	return o.ApplyT(func(v *WirelessSsids) pulumi.IntOutput { return v.RadiusServerAttemptsLimit }).(pulumi.IntOutput)
+func (o WirelessSsidsOutput) RadiusServerAttemptsLimit() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *WirelessSsids) pulumi.IntPtrOutput { return v.RadiusServerAttemptsLimit }).(pulumi.IntPtrOutput)
 }
 
 // The amount of time for which a RADIUS client waits for a reply from the RADIUS server (must be between 1-10 seconds).
-func (o WirelessSsidsOutput) RadiusServerTimeout() pulumi.IntOutput {
-	return o.ApplyT(func(v *WirelessSsids) pulumi.IntOutput { return v.RadiusServerTimeout }).(pulumi.IntOutput)
+func (o WirelessSsidsOutput) RadiusServerTimeout() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *WirelessSsids) pulumi.IntPtrOutput { return v.RadiusServerTimeout }).(pulumi.IntPtrOutput)
 }
 
 // The RADIUS 802.1X servers to be used for authentication. This param is only valid if the authMode is 'open-with-radius', '8021x-radius' or 'ipsk-with-radius'
@@ -1078,18 +1078,18 @@ func (o WirelessSsidsOutput) RadiusServersResponses() WirelessSsidsRadiusServers
 }
 
 // If true, Meraki devices will periodically send Access-Request messages to configured RADIUS servers using identity 'meraki*8021x*test' to ensure that the RADIUS servers are reachable.
-func (o WirelessSsidsOutput) RadiusTestingEnabled() pulumi.BoolOutput {
-	return o.ApplyT(func(v *WirelessSsids) pulumi.BoolOutput { return v.RadiusTestingEnabled }).(pulumi.BoolOutput)
+func (o WirelessSsidsOutput) RadiusTestingEnabled() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *WirelessSsids) pulumi.BoolPtrOutput { return v.RadiusTestingEnabled }).(pulumi.BoolPtrOutput)
 }
 
 // The secondary concentrator to use when the ipAssignmentMode is 'VPN'. If configured, the APs will switch to using this concentrator if the primary concentrator is unreachable. This param is optional. ('disabled' represents no secondary concentrator.)
-func (o WirelessSsidsOutput) SecondaryConcentratorNetworkId() pulumi.StringOutput {
-	return o.ApplyT(func(v *WirelessSsids) pulumi.StringOutput { return v.SecondaryConcentratorNetworkId }).(pulumi.StringOutput)
+func (o WirelessSsidsOutput) SecondaryConcentratorNetworkId() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *WirelessSsids) pulumi.StringPtrOutput { return v.SecondaryConcentratorNetworkId }).(pulumi.StringPtrOutput)
 }
 
 // The SpeedBurst setting for this SSID'
-func (o WirelessSsidsOutput) SpeedBurst() WirelessSsidsSpeedBurstOutput {
-	return o.ApplyT(func(v *WirelessSsids) WirelessSsidsSpeedBurstOutput { return v.SpeedBurst }).(WirelessSsidsSpeedBurstOutput)
+func (o WirelessSsidsOutput) SpeedBurst() WirelessSsidsSpeedBurstPtrOutput {
+	return o.ApplyT(func(v *WirelessSsids) WirelessSsidsSpeedBurstPtrOutput { return v.SpeedBurst }).(WirelessSsidsSpeedBurstPtrOutput)
 }
 
 // Array of valid sponsor email domains for sponsored guest splash type.
@@ -1113,8 +1113,8 @@ func (o WirelessSsidsOutput) SsidAdminAccessible() pulumi.BoolOutput {
 }
 
 // Whether or not traffic should be directed to use specific VLANs. This param is only valid if the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
-func (o WirelessSsidsOutput) UseVlanTagging() pulumi.BoolOutput {
-	return o.ApplyT(func(v *WirelessSsids) pulumi.BoolOutput { return v.UseVlanTagging }).(pulumi.BoolOutput)
+func (o WirelessSsidsOutput) UseVlanTagging() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *WirelessSsids) pulumi.BoolPtrOutput { return v.UseVlanTagging }).(pulumi.BoolPtrOutput)
 }
 
 // Whether the SSID is advertised or hidden by the AP
@@ -1123,13 +1123,13 @@ func (o WirelessSsidsOutput) Visible() pulumi.BoolOutput {
 }
 
 // The VLAN ID used for VLAN tagging. This param is only valid when the ipAssignmentMode is 'Layer 3 roaming with a concentrator' or 'VPN'
-func (o WirelessSsidsOutput) VlanId() pulumi.IntOutput {
-	return o.ApplyT(func(v *WirelessSsids) pulumi.IntOutput { return v.VlanId }).(pulumi.IntOutput)
+func (o WirelessSsidsOutput) VlanId() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *WirelessSsids) pulumi.IntPtrOutput { return v.VlanId }).(pulumi.IntPtrOutput)
 }
 
 // Allow users to access a configurable list of IP ranges prior to sign-on
-func (o WirelessSsidsOutput) WalledGardenEnabled() pulumi.BoolOutput {
-	return o.ApplyT(func(v *WirelessSsids) pulumi.BoolOutput { return v.WalledGardenEnabled }).(pulumi.BoolOutput)
+func (o WirelessSsidsOutput) WalledGardenEnabled() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *WirelessSsids) pulumi.BoolPtrOutput { return v.WalledGardenEnabled }).(pulumi.BoolPtrOutput)
 }
 
 // Domain names and IP address ranges available in Walled Garden mode

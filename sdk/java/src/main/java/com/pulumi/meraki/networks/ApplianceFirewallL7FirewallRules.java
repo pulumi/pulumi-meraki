@@ -20,7 +20,8 @@ import javax.annotation.Nullable;
  * 
  * ### 1
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -42,24 +43,26 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ApplianceFirewallL7FirewallRules(&#34;example&#34;, ApplianceFirewallL7FirewallRulesArgs.builder()        
- *             .networkId(&#34;string&#34;)
+ *         var example = new ApplianceFirewallL7FirewallRules("example", ApplianceFirewallL7FirewallRulesArgs.builder()
+ *             .networkId("string")
  *             .rules(ApplianceFirewallL7FirewallRulesRuleArgs.builder()
- *                 .policy(&#34;deny&#34;)
- *                 .type(&#34;host&#34;)
- *                 .value(&#34;google.com&#34;)
+ *                 .policy("deny")
+ *                 .type("host")
+ *                 .value("google.com")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksApplianceFirewallL7FirewallRulesExample&#34;, example);
+ *         ctx.export("merakiNetworksApplianceFirewallL7FirewallRulesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ### 2
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -81,24 +84,26 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ApplianceFirewallL7FirewallRules(&#34;example&#34;, ApplianceFirewallL7FirewallRulesArgs.builder()        
- *             .networkId(&#34;string&#34;)
+ *         var example = new ApplianceFirewallL7FirewallRules("example", ApplianceFirewallL7FirewallRulesArgs.builder()
+ *             .networkId("string")
  *             .rules(ApplianceFirewallL7FirewallRulesRuleArgs.builder()
- *                 .policy(&#34;deny&#34;)
- *                 .type(&#34;applicationCategory&#34;)
+ *                 .policy("deny")
+ *                 .type("applicationCategory")
  *                 .value_obj(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksApplianceFirewallL7FirewallRulesExample&#34;, example);
+ *         ctx.export("merakiNetworksApplianceFirewallL7FirewallRulesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ### 3
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -120,22 +125,23 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ApplianceFirewallL7FirewallRules(&#34;example&#34;, ApplianceFirewallL7FirewallRulesArgs.builder()        
- *             .networkId(&#34;string&#34;)
+ *         var example = new ApplianceFirewallL7FirewallRules("example", ApplianceFirewallL7FirewallRulesArgs.builder()
+ *             .networkId("string")
  *             .rules(ApplianceFirewallL7FirewallRulesRuleArgs.builder()
- *                 .policy(&#34;deny&#34;)
- *                 .type(&#34;blockedCountries&#34;)
+ *                 .policy("deny")
+ *                 .type("blockedCountries")
  *                 .value_list(                
- *                     &#34;IT&#34;,
- *                     &#34;IL&#34;,
- *                     &#34;US&#34;)
+ *                     "IT",
+ *                     "IL",
+ *                     "US")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksApplianceFirewallL7FirewallRulesExample&#34;, example);
+ *         ctx.export("merakiNetworksApplianceFirewallL7FirewallRulesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

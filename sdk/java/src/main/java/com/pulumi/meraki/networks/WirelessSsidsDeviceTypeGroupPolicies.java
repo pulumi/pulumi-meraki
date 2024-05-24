@@ -20,7 +20,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -42,20 +43,21 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new WirelessSsidsDeviceTypeGroupPolicies(&#34;example&#34;, WirelessSsidsDeviceTypeGroupPoliciesArgs.builder()        
+ *         var example = new WirelessSsidsDeviceTypeGroupPolicies("example", WirelessSsidsDeviceTypeGroupPoliciesArgs.builder()
  *             .deviceTypePolicies(WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgs.builder()
- *                 .device_policy(&#34;Allowed&#34;)
- *                 .device_type(&#34;Android&#34;)
+ *                 .device_policy("Allowed")
+ *                 .device_type("Android")
  *                 .build())
  *             .enabled(true)
- *             .networkId(&#34;string&#34;)
- *             .number(&#34;string&#34;)
+ *             .networkId("string")
+ *             .number("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksWirelessSsidsDeviceTypeGroupPoliciesExample&#34;, example);
+ *         ctx.export("merakiNetworksWirelessSsidsDeviceTypeGroupPoliciesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

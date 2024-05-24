@@ -19,7 +19,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -40,16 +41,17 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new EarlyAccessFeaturesOptIns(&#34;example&#34;, EarlyAccessFeaturesOptInsArgs.builder()        
- *             .limitScopeToNetworks(&#34;N_12345&#34;)
- *             .organizationId(&#34;string&#34;)
- *             .shortName(&#34;has_magnetic_beta&#34;)
+ *         var example = new EarlyAccessFeaturesOptIns("example", EarlyAccessFeaturesOptInsArgs.builder()
+ *             .limitScopeToNetworks("N_12345")
+ *             .organizationId("string")
+ *             .shortName("has_magnetic_beta")
  *             .build());
  * 
- *         ctx.export(&#34;merakiOrganizationsEarlyAccessFeaturesOptInsExample&#34;, example);
+ *         ctx.export("merakiOrganizationsEarlyAccessFeaturesOptInsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

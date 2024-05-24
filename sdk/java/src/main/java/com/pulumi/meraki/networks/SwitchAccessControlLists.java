@@ -20,7 +20,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -42,25 +43,26 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SwitchAccessControlLists(&#34;example&#34;, SwitchAccessControlListsArgs.builder()        
- *             .networkId(&#34;string&#34;)
+ *         var example = new SwitchAccessControlLists("example", SwitchAccessControlListsArgs.builder()
+ *             .networkId("string")
  *             .rules(SwitchAccessControlListsRuleArgs.builder()
- *                 .comment(&#34;Deny SSH&#34;)
- *                 .dst_cidr(&#34;172.16.30/24&#34;)
- *                 .dst_port(&#34;22&#34;)
- *                 .ip_version(&#34;ipv4&#34;)
- *                 .policy(&#34;deny&#34;)
- *                 .protocol(&#34;tcp&#34;)
- *                 .src_cidr(&#34;10.1.10.0/24&#34;)
- *                 .src_port(&#34;any&#34;)
- *                 .vlan(&#34;10&#34;)
+ *                 .comment("Deny SSH")
+ *                 .dst_cidr("172.16.30/24")
+ *                 .dst_port("22")
+ *                 .ip_version("ipv4")
+ *                 .policy("deny")
+ *                 .protocol("tcp")
+ *                 .src_cidr("10.1.10.0/24")
+ *                 .src_port("any")
+ *                 .vlan("10")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksSwitchAccessControlListsExample&#34;, example);
+ *         ctx.export("merakiNetworksSwitchAccessControlListsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

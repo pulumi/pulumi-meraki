@@ -23,7 +23,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -45,20 +46,21 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new LicensingSubscriptionSubscriptionsClaim(&#34;example&#34;, LicensingSubscriptionSubscriptionsClaimArgs.builder()        
+ *         var example = new LicensingSubscriptionSubscriptionsClaim("example", LicensingSubscriptionSubscriptionsClaimArgs.builder()
  *             .validate(false)
  *             .parameters(LicensingSubscriptionSubscriptionsClaimParametersArgs.builder()
- *                 .claim_key(&#34;S2345-6789A-BCDEF-GHJKM&#34;)
- *                 .description(&#34;Subscription for all main offices&#34;)
- *                 .name(&#34;Corporate subscription&#34;)
- *                 .organization_id(&#34;12345678910&#34;)
+ *                 .claim_key("S2345-6789A-BCDEF-GHJKM")
+ *                 .description("Subscription for all main offices")
+ *                 .name("Corporate subscription")
+ *                 .organization_id("12345678910")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiAdministeredLicensingSubscriptionSubscriptionsClaimExample&#34;, example);
+ *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsClaimExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

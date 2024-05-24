@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,21 +45,22 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SwitchPortsCycle(&#34;example&#34;, SwitchPortsCycleArgs.builder()        
- *             .serial(&#34;string&#34;)
+ *         var example = new SwitchPortsCycle("example", SwitchPortsCycleArgs.builder()
+ *             .serial("string")
  *             .parameters(SwitchPortsCycleParametersArgs.builder()
  *                 .ports(                
- *                     &#34;1&#34;,
- *                     &#34;2-5&#34;,
- *                     &#34;1_MA-MOD-8X10G_1&#34;,
- *                     &#34;1_MA-MOD-8X10G_2-1_MA-MOD-8X10G_8&#34;)
+ *                     "1",
+ *                     "2-5",
+ *                     "1_MA-MOD-8X10G_1",
+ *                     "1_MA-MOD-8X10G_2-1_MA-MOD-8X10G_8")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiDevicesSwitchPortsCycleExample&#34;, example);
+ *         ctx.export("merakiDevicesSwitchPortsCycleExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

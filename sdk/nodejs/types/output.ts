@@ -3928,6 +3928,20 @@ export namespace networks {
         snmp: boolean;
     }
 
+    export interface AlertsSettingsMuting {
+        /**
+         * by_port_schedules
+         */
+        byPortSchedules: outputs.networks.AlertsSettingsMutingByPortSchedules;
+    }
+
+    export interface AlertsSettingsMutingByPortSchedules {
+        /**
+         * enabled
+         */
+        enabled: boolean;
+    }
+
     export interface ApplianceConnectivityMonitoringDestinationsDestination {
         /**
          * Boolean indicating whether this is the default testing destination (true) or not (false). Defaults to false. Only one default is allowed
@@ -19498,6 +19512,29 @@ export namespace networks {
     }
 
     export interface WirelessSsidsFirewallL3FirewallRulesRule {
+        /**
+         * Description of the rule (optional)
+         */
+        comment: string;
+        /**
+         * Comma-separated list of destination IP address(es) (in IP or CIDR notation), fully-qualified domain names (FQDN) or 'any'
+         */
+        destCidr: string;
+        /**
+         * Comma-separated list of destination port(s) (integer in the range 1-65535), or 'any'
+         */
+        destPort: string;
+        /**
+         * 'allow' or 'deny' traffic specified by this rule
+         */
+        policy: string;
+        /**
+         * The type of protocol (must be 'tcp', 'udp', 'icmp', 'icmp6' or 'any')
+         */
+        protocol: string;
+    }
+
+    export interface WirelessSsidsFirewallL3FirewallRulesRulesResponse {
         /**
          * Description of the rule (optional)
          */

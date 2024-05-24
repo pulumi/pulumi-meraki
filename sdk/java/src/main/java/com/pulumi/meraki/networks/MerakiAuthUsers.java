@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -43,24 +44,25 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new MerakiAuthUsers(&#34;example&#34;, MerakiAuthUsersArgs.builder()        
- *             .accountType(&#34;802.1X&#34;)
+ *         var example = new MerakiAuthUsers("example", MerakiAuthUsersArgs.builder()
+ *             .accountType("802.1X")
  *             .authorizations(MerakiAuthUsersAuthorizationArgs.builder()
- *                 .expires_at(&#34;2018-03-13T00:00:00.090210Z&#34;)
+ *                 .expires_at("2018-03-13T00:00:00.090210Z")
  *                 .ssid_number(1)
  *                 .build())
- *             .email(&#34;miles@meraki.com&#34;)
+ *             .email("miles{@literal @}meraki.com")
  *             .emailPasswordToUser(false)
  *             .isAdmin(false)
- *             .name(&#34;Miles Meraki&#34;)
- *             .networkId(&#34;string&#34;)
- *             .password(&#34;secret&#34;)
+ *             .name("Miles Meraki")
+ *             .networkId("string")
+ *             .password("secret")
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksMerakiAuthUsersExample&#34;, example);
+ *         ctx.export("merakiNetworksMerakiAuthUsersExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

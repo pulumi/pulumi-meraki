@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -43,21 +44,22 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new AdaptivePolicyGroups(&#34;example&#34;, AdaptivePolicyGroupsArgs.builder()        
- *             .description(&#34;Group of XYZ Corp Employees&#34;)
- *             .name(&#34;Employee Group&#34;)
- *             .organizationId(&#34;string&#34;)
+ *         var example = new AdaptivePolicyGroups("example", AdaptivePolicyGroupsArgs.builder()
+ *             .description("Group of XYZ Corp Employees")
+ *             .name("Employee Group")
+ *             .organizationId("string")
  *             .policyObjects(AdaptivePolicyGroupsPolicyObjectArgs.builder()
- *                 .id(&#34;2345&#34;)
- *                 .name(&#34;Example Policy Object&#34;)
+ *                 .id("2345")
+ *                 .name("Example Policy Object")
  *                 .build())
  *             .sgt(1000)
  *             .build());
  * 
- *         ctx.export(&#34;merakiOrganizationsAdaptivePolicyGroupsExample&#34;, example);
+ *         ctx.export("merakiOrganizationsAdaptivePolicyGroupsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

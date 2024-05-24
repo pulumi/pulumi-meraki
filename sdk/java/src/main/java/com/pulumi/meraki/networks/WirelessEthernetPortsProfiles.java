@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,27 +45,28 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new WirelessEthernetPortsProfiles(&#34;example&#34;, WirelessEthernetPortsProfilesArgs.builder()        
- *             .name(&#34;string&#34;)
- *             .networkId(&#34;string&#34;)
+ *         var example = new WirelessEthernetPortsProfiles("example", WirelessEthernetPortsProfilesArgs.builder()
+ *             .name("string")
+ *             .networkId("string")
  *             .ports(WirelessEthernetPortsProfilesPortArgs.builder()
  *                 .enabled(false)
- *                 .name(&#34;string&#34;)
- *                 .psk_group_id(&#34;string&#34;)
+ *                 .name("string")
+ *                 .psk_group_id("string")
  *                 .ssid(1)
  *                 .build())
- *             .profileId(&#34;string&#34;)
+ *             .profileId("string")
  *             .usbPorts(WirelessEthernetPortsProfilesUsbPortArgs.builder()
  *                 .enabled(false)
- *                 .name(&#34;string&#34;)
+ *                 .name("string")
  *                 .ssid(1)
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksWirelessEthernetPortsProfilesExample&#34;, example);
+ *         ctx.export("merakiNetworksWirelessEthernetPortsProfilesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,24 +45,25 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ClientsProvision(&#34;example&#34;, ClientsProvisionArgs.builder()        
- *             .networkId(&#34;string&#34;)
+ *         var example = new ClientsProvision("example", ClientsProvisionArgs.builder()
+ *             .networkId("string")
  *             .parameters(ClientsProvisionParametersArgs.builder()
  *                 .clients(ClientsProvisionParametersClientArgs.builder()
- *                     .mac(&#34;00:11:22:33:44:55&#34;)
- *                     .name(&#34;Miles&#39;s phone&#34;)
+ *                     .mac("00:11:22:33:44:55")
+ *                     .name("Miles's phone")
  *                     .build())
- *                 .device_policy(&#34;Group policy&#34;)
- *                 .group_policy_id(&#34;101&#34;)
+ *                 .device_policy("Group policy")
+ *                 .group_policy_id("101")
  *                 .policies_by_security_appliance(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .policies_by_ssid(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksClientsProvisionExample&#34;, example);
+ *         ctx.export("merakiNetworksClientsProvisionExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

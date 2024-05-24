@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,17 +45,18 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new InventoryRelease(&#34;example&#34;, InventoryReleaseArgs.builder()        
- *             .organizationId(&#34;string&#34;)
+ *         var example = new InventoryRelease("example", InventoryReleaseArgs.builder()
+ *             .organizationId("string")
  *             .parameters(InventoryReleaseParametersArgs.builder()
- *                 .serials(&#34;Q234-ABCD-5678&#34;)
+ *                 .serials("Q234-ABCD-5678")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiOrganizationsInventoryReleaseExample&#34;, example);
+ *         ctx.export("merakiOrganizationsInventoryReleaseExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

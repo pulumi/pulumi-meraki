@@ -40,6 +40,12 @@ namespace Pulumi.Meraki.Networks
         public Output<Outputs.AlertsSettingsDefaultDestinations> DefaultDestinations { get; private set; } = null!;
 
         /// <summary>
+        /// muting
+        /// </summary>
+        [Output("muting")]
+        public Output<Outputs.AlertsSettingsMuting> Muting { get; private set; } = null!;
+
+        /// <summary>
         /// networkId path parameter. Network ID
         /// </summary>
         [Output("networkId")]
@@ -111,6 +117,12 @@ namespace Pulumi.Meraki.Networks
         public Input<Inputs.AlertsSettingsDefaultDestinationsArgs>? DefaultDestinations { get; set; }
 
         /// <summary>
+        /// muting
+        /// </summary>
+        [Input("muting")]
+        public Input<Inputs.AlertsSettingsMutingArgs>? Muting { get; set; }
+
+        /// <summary>
         /// networkId path parameter. Network ID
         /// </summary>
         [Input("networkId", required: true)]
@@ -153,6 +165,12 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         [Input("defaultDestinations")]
         public Input<Inputs.AlertsSettingsDefaultDestinationsGetArgs>? DefaultDestinations { get; set; }
+
+        /// <summary>
+        /// muting
+        /// </summary>
+        [Input("muting")]
+        public Input<Inputs.AlertsSettingsMutingGetArgs>? Muting { get; set; }
 
         /// <summary>
         /// networkId path parameter. Network ID

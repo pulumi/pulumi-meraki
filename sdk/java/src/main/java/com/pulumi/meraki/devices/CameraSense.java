@@ -20,7 +20,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -42,19 +43,20 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CameraSense(&#34;example&#34;, CameraSenseArgs.builder()        
+ *         var example = new CameraSense("example", CameraSenseArgs.builder()
  *             .audioDetection(CameraSenseAudioDetectionArgs.builder()
  *                 .enabled(false)
  *                 .build())
- *             .mqttBrokerId(&#34;1234&#34;)
+ *             .mqttBrokerId("1234")
  *             .senseEnabled(true)
- *             .serial(&#34;string&#34;)
+ *             .serial("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiDevicesCameraSenseExample&#34;, example);
+ *         ctx.export("merakiDevicesCameraSenseExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

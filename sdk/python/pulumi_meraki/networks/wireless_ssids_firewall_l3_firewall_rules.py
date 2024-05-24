@@ -19,13 +19,15 @@ class WirelessSsidsFirewallL3FirewallRulesArgs:
                  network_id: pulumi.Input[str],
                  number: pulumi.Input[str],
                  allow_lan_access: Optional[pulumi.Input[bool]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsFirewallL3FirewallRulesRuleArgs']]]] = None):
+                 rules: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsFirewallL3FirewallRulesRuleArgs']]]] = None,
+                 rules_responses: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsFirewallL3FirewallRulesRulesResponseArgs']]]] = None):
         """
         The set of arguments for constructing a WirelessSsidsFirewallL3FirewallRules resource.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[str] number: number path parameter.
         :param pulumi.Input[bool] allow_lan_access: Allow wireless client access to local LAN (boolean value - true allows access and false denies access) (optional)
         :param pulumi.Input[Sequence[pulumi.Input['WirelessSsidsFirewallL3FirewallRulesRuleArgs']]] rules: An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
+        :param pulumi.Input[Sequence[pulumi.Input['WirelessSsidsFirewallL3FirewallRulesRulesResponseArgs']]] rules_responses: An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
         """
         pulumi.set(__self__, "network_id", network_id)
         pulumi.set(__self__, "number", number)
@@ -33,6 +35,8 @@ class WirelessSsidsFirewallL3FirewallRulesArgs:
             pulumi.set(__self__, "allow_lan_access", allow_lan_access)
         if rules is not None:
             pulumi.set(__self__, "rules", rules)
+        if rules_responses is not None:
+            pulumi.set(__self__, "rules_responses", rules_responses)
 
     @property
     @pulumi.getter(name="networkId")
@@ -82,6 +86,18 @@ class WirelessSsidsFirewallL3FirewallRulesArgs:
     def rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsFirewallL3FirewallRulesRuleArgs']]]]):
         pulumi.set(self, "rules", value)
 
+    @property
+    @pulumi.getter(name="rulesResponses")
+    def rules_responses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsFirewallL3FirewallRulesRulesResponseArgs']]]]:
+        """
+        An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
+        """
+        return pulumi.get(self, "rules_responses")
+
+    @rules_responses.setter
+    def rules_responses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsFirewallL3FirewallRulesRulesResponseArgs']]]]):
+        pulumi.set(self, "rules_responses", value)
+
 
 @pulumi.input_type
 class _WirelessSsidsFirewallL3FirewallRulesState:
@@ -89,13 +105,15 @@ class _WirelessSsidsFirewallL3FirewallRulesState:
                  allow_lan_access: Optional[pulumi.Input[bool]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
                  number: Optional[pulumi.Input[str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsFirewallL3FirewallRulesRuleArgs']]]] = None):
+                 rules: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsFirewallL3FirewallRulesRuleArgs']]]] = None,
+                 rules_responses: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsFirewallL3FirewallRulesRulesResponseArgs']]]] = None):
         """
         Input properties used for looking up and filtering WirelessSsidsFirewallL3FirewallRules resources.
         :param pulumi.Input[bool] allow_lan_access: Allow wireless client access to local LAN (boolean value - true allows access and false denies access) (optional)
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[str] number: number path parameter.
         :param pulumi.Input[Sequence[pulumi.Input['WirelessSsidsFirewallL3FirewallRulesRuleArgs']]] rules: An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
+        :param pulumi.Input[Sequence[pulumi.Input['WirelessSsidsFirewallL3FirewallRulesRulesResponseArgs']]] rules_responses: An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
         """
         if allow_lan_access is not None:
             pulumi.set(__self__, "allow_lan_access", allow_lan_access)
@@ -105,6 +123,8 @@ class _WirelessSsidsFirewallL3FirewallRulesState:
             pulumi.set(__self__, "number", number)
         if rules is not None:
             pulumi.set(__self__, "rules", rules)
+        if rules_responses is not None:
+            pulumi.set(__self__, "rules_responses", rules_responses)
 
     @property
     @pulumi.getter(name="allowLanAccess")
@@ -154,6 +174,18 @@ class _WirelessSsidsFirewallL3FirewallRulesState:
     def rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsFirewallL3FirewallRulesRuleArgs']]]]):
         pulumi.set(self, "rules", value)
 
+    @property
+    @pulumi.getter(name="rulesResponses")
+    def rules_responses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsFirewallL3FirewallRulesRulesResponseArgs']]]]:
+        """
+        An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
+        """
+        return pulumi.get(self, "rules_responses")
+
+    @rules_responses.setter
+    def rules_responses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsFirewallL3FirewallRulesRulesResponseArgs']]]]):
+        pulumi.set(self, "rules_responses", value)
+
 
 class WirelessSsidsFirewallL3FirewallRules(pulumi.CustomResource):
     @overload
@@ -164,6 +196,7 @@ class WirelessSsidsFirewallL3FirewallRules(pulumi.CustomResource):
                  network_id: Optional[pulumi.Input[str]] = None,
                  number: Optional[pulumi.Input[str]] = None,
                  rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['WirelessSsidsFirewallL3FirewallRulesRuleArgs']]]]] = None,
+                 rules_responses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['WirelessSsidsFirewallL3FirewallRulesRulesResponseArgs']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -180,6 +213,7 @@ class WirelessSsidsFirewallL3FirewallRules(pulumi.CustomResource):
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[str] number: number path parameter.
         :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['WirelessSsidsFirewallL3FirewallRulesRuleArgs']]]] rules: An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
+        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['WirelessSsidsFirewallL3FirewallRulesRulesResponseArgs']]]] rules_responses: An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
         """
         ...
     @overload
@@ -215,6 +249,7 @@ class WirelessSsidsFirewallL3FirewallRules(pulumi.CustomResource):
                  network_id: Optional[pulumi.Input[str]] = None,
                  number: Optional[pulumi.Input[str]] = None,
                  rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['WirelessSsidsFirewallL3FirewallRulesRuleArgs']]]]] = None,
+                 rules_responses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['WirelessSsidsFirewallL3FirewallRulesRulesResponseArgs']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -232,6 +267,7 @@ class WirelessSsidsFirewallL3FirewallRules(pulumi.CustomResource):
                 raise TypeError("Missing required property 'number'")
             __props__.__dict__["number"] = number
             __props__.__dict__["rules"] = rules
+            __props__.__dict__["rules_responses"] = rules_responses
         super(WirelessSsidsFirewallL3FirewallRules, __self__).__init__(
             'meraki:networks/wirelessSsidsFirewallL3FirewallRules:WirelessSsidsFirewallL3FirewallRules',
             resource_name,
@@ -245,7 +281,8 @@ class WirelessSsidsFirewallL3FirewallRules(pulumi.CustomResource):
             allow_lan_access: Optional[pulumi.Input[bool]] = None,
             network_id: Optional[pulumi.Input[str]] = None,
             number: Optional[pulumi.Input[str]] = None,
-            rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['WirelessSsidsFirewallL3FirewallRulesRuleArgs']]]]] = None) -> 'WirelessSsidsFirewallL3FirewallRules':
+            rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['WirelessSsidsFirewallL3FirewallRulesRuleArgs']]]]] = None,
+            rules_responses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['WirelessSsidsFirewallL3FirewallRulesRulesResponseArgs']]]]] = None) -> 'WirelessSsidsFirewallL3FirewallRules':
         """
         Get an existing WirelessSsidsFirewallL3FirewallRules resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -257,6 +294,7 @@ class WirelessSsidsFirewallL3FirewallRules(pulumi.CustomResource):
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[str] number: number path parameter.
         :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['WirelessSsidsFirewallL3FirewallRulesRuleArgs']]]] rules: An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
+        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['WirelessSsidsFirewallL3FirewallRulesRulesResponseArgs']]]] rules_responses: An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -266,11 +304,12 @@ class WirelessSsidsFirewallL3FirewallRules(pulumi.CustomResource):
         __props__.__dict__["network_id"] = network_id
         __props__.__dict__["number"] = number
         __props__.__dict__["rules"] = rules
+        __props__.__dict__["rules_responses"] = rules_responses
         return WirelessSsidsFirewallL3FirewallRules(resource_name, opts=opts, __props__=__props__)
 
     @property
     @pulumi.getter(name="allowLanAccess")
-    def allow_lan_access(self) -> pulumi.Output[bool]:
+    def allow_lan_access(self) -> pulumi.Output[Optional[bool]]:
         """
         Allow wireless client access to local LAN (boolean value - true allows access and false denies access) (optional)
         """
@@ -299,4 +338,12 @@ class WirelessSsidsFirewallL3FirewallRules(pulumi.CustomResource):
         An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
         """
         return pulumi.get(self, "rules")
+
+    @property
+    @pulumi.getter(name="rulesResponses")
+    def rules_responses(self) -> pulumi.Output[Sequence['outputs.WirelessSsidsFirewallL3FirewallRulesRulesResponse']]:
+        """
+        An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
+        """
+        return pulumi.get(self, "rules_responses")
 

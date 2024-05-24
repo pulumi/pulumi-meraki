@@ -462,7 +462,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -484,16 +485,17 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getAlertsHistory(GetAlertsHistoryArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksAlertsHistoryExample&#34;, example.applyValue(getAlertsHistoryResult -&gt; getAlertsHistoryResult.items()));
+     *         ctx.export("merakiNetworksAlertsHistoryExample", example.applyValue(getAlertsHistoryResult -> getAlertsHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -504,7 +506,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -526,16 +529,17 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getAlertsHistory(GetAlertsHistoryArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksAlertsHistoryExample&#34;, example.applyValue(getAlertsHistoryResult -&gt; getAlertsHistoryResult.items()));
+     *         ctx.export("merakiNetworksAlertsHistoryExample", example.applyValue(getAlertsHistoryResult -> getAlertsHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -546,7 +550,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -568,16 +573,17 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getAlertsHistory(GetAlertsHistoryArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksAlertsHistoryExample&#34;, example.applyValue(getAlertsHistoryResult -&gt; getAlertsHistoryResult.items()));
+     *         ctx.export("merakiNetworksAlertsHistoryExample", example.applyValue(getAlertsHistoryResult -> getAlertsHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -588,7 +594,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -610,16 +617,17 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getAlertsHistory(GetAlertsHistoryArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksAlertsHistoryExample&#34;, example.applyValue(getAlertsHistoryResult -&gt; getAlertsHistoryResult.items()));
+     *         ctx.export("merakiNetworksAlertsHistoryExample", example.applyValue(getAlertsHistoryResult -> getAlertsHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -630,7 +638,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -652,13 +661,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getAlertsSettings(GetAlertsSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksAlertsSettingsExample&#34;, example.applyValue(getAlertsSettingsResult -&gt; getAlertsSettingsResult.item()));
+     *         ctx.export("merakiNetworksAlertsSettingsExample", example.applyValue(getAlertsSettingsResult -> getAlertsSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -669,7 +679,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -691,13 +702,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getAlertsSettings(GetAlertsSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksAlertsSettingsExample&#34;, example.applyValue(getAlertsSettingsResult -&gt; getAlertsSettingsResult.item()));
+     *         ctx.export("merakiNetworksAlertsSettingsExample", example.applyValue(getAlertsSettingsResult -> getAlertsSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -708,7 +720,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -730,13 +743,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getAlertsSettings(GetAlertsSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksAlertsSettingsExample&#34;, example.applyValue(getAlertsSettingsResult -&gt; getAlertsSettingsResult.item()));
+     *         ctx.export("merakiNetworksAlertsSettingsExample", example.applyValue(getAlertsSettingsResult -> getAlertsSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -747,7 +761,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -769,13 +784,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getAlertsSettings(GetAlertsSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksAlertsSettingsExample&#34;, example.applyValue(getAlertsSettingsResult -&gt; getAlertsSettingsResult.item()));
+     *         ctx.export("merakiNetworksAlertsSettingsExample", example.applyValue(getAlertsSettingsResult -> getAlertsSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -786,7 +802,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -808,13 +825,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceConnectivityMonitoringDestinations(GetApplianceConnectivityMonitoringDestinationsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceConnectivityMonitoringDestinationsExample&#34;, example.applyValue(getApplianceConnectivityMonitoringDestinationsResult -&gt; getApplianceConnectivityMonitoringDestinationsResult.item()));
+     *         ctx.export("merakiNetworksApplianceConnectivityMonitoringDestinationsExample", example.applyValue(getApplianceConnectivityMonitoringDestinationsResult -> getApplianceConnectivityMonitoringDestinationsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -825,7 +843,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -847,13 +866,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceConnectivityMonitoringDestinations(GetApplianceConnectivityMonitoringDestinationsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceConnectivityMonitoringDestinationsExample&#34;, example.applyValue(getApplianceConnectivityMonitoringDestinationsResult -&gt; getApplianceConnectivityMonitoringDestinationsResult.item()));
+     *         ctx.export("merakiNetworksApplianceConnectivityMonitoringDestinationsExample", example.applyValue(getApplianceConnectivityMonitoringDestinationsResult -> getApplianceConnectivityMonitoringDestinationsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -864,7 +884,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -886,13 +907,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceConnectivityMonitoringDestinations(GetApplianceConnectivityMonitoringDestinationsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceConnectivityMonitoringDestinationsExample&#34;, example.applyValue(getApplianceConnectivityMonitoringDestinationsResult -&gt; getApplianceConnectivityMonitoringDestinationsResult.item()));
+     *         ctx.export("merakiNetworksApplianceConnectivityMonitoringDestinationsExample", example.applyValue(getApplianceConnectivityMonitoringDestinationsResult -> getApplianceConnectivityMonitoringDestinationsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -903,7 +925,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -925,13 +948,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceConnectivityMonitoringDestinations(GetApplianceConnectivityMonitoringDestinationsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceConnectivityMonitoringDestinationsExample&#34;, example.applyValue(getApplianceConnectivityMonitoringDestinationsResult -&gt; getApplianceConnectivityMonitoringDestinationsResult.item()));
+     *         ctx.export("merakiNetworksApplianceConnectivityMonitoringDestinationsExample", example.applyValue(getApplianceConnectivityMonitoringDestinationsResult -> getApplianceConnectivityMonitoringDestinationsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -942,7 +966,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -964,13 +989,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceContentFiltering(GetApplianceContentFilteringArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceContentFilteringExample&#34;, example.applyValue(getApplianceContentFilteringResult -&gt; getApplianceContentFilteringResult.item()));
+     *         ctx.export("merakiNetworksApplianceContentFilteringExample", example.applyValue(getApplianceContentFilteringResult -> getApplianceContentFilteringResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -981,7 +1007,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1003,13 +1030,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceContentFiltering(GetApplianceContentFilteringArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceContentFilteringExample&#34;, example.applyValue(getApplianceContentFilteringResult -&gt; getApplianceContentFilteringResult.item()));
+     *         ctx.export("merakiNetworksApplianceContentFilteringExample", example.applyValue(getApplianceContentFilteringResult -> getApplianceContentFilteringResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1020,7 +1048,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1042,13 +1071,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceContentFiltering(GetApplianceContentFilteringArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceContentFilteringExample&#34;, example.applyValue(getApplianceContentFilteringResult -&gt; getApplianceContentFilteringResult.item()));
+     *         ctx.export("merakiNetworksApplianceContentFilteringExample", example.applyValue(getApplianceContentFilteringResult -> getApplianceContentFilteringResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1059,7 +1089,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1081,13 +1112,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceContentFiltering(GetApplianceContentFilteringArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceContentFilteringExample&#34;, example.applyValue(getApplianceContentFilteringResult -&gt; getApplianceContentFilteringResult.item()));
+     *         ctx.export("merakiNetworksApplianceContentFilteringExample", example.applyValue(getApplianceContentFilteringResult -> getApplianceContentFilteringResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1098,7 +1130,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1120,13 +1153,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceContentFilteringCategories(GetApplianceContentFilteringCategoriesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceContentFilteringCategoriesExample&#34;, example.applyValue(getApplianceContentFilteringCategoriesResult -&gt; getApplianceContentFilteringCategoriesResult.item()));
+     *         ctx.export("merakiNetworksApplianceContentFilteringCategoriesExample", example.applyValue(getApplianceContentFilteringCategoriesResult -> getApplianceContentFilteringCategoriesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1137,7 +1171,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1159,13 +1194,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceContentFilteringCategories(GetApplianceContentFilteringCategoriesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceContentFilteringCategoriesExample&#34;, example.applyValue(getApplianceContentFilteringCategoriesResult -&gt; getApplianceContentFilteringCategoriesResult.item()));
+     *         ctx.export("merakiNetworksApplianceContentFilteringCategoriesExample", example.applyValue(getApplianceContentFilteringCategoriesResult -> getApplianceContentFilteringCategoriesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1176,7 +1212,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1198,13 +1235,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceContentFilteringCategories(GetApplianceContentFilteringCategoriesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceContentFilteringCategoriesExample&#34;, example.applyValue(getApplianceContentFilteringCategoriesResult -&gt; getApplianceContentFilteringCategoriesResult.item()));
+     *         ctx.export("merakiNetworksApplianceContentFilteringCategoriesExample", example.applyValue(getApplianceContentFilteringCategoriesResult -> getApplianceContentFilteringCategoriesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1215,7 +1253,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1237,13 +1276,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceContentFilteringCategories(GetApplianceContentFilteringCategoriesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceContentFilteringCategoriesExample&#34;, example.applyValue(getApplianceContentFilteringCategoriesResult -&gt; getApplianceContentFilteringCategoriesResult.item()));
+     *         ctx.export("merakiNetworksApplianceContentFilteringCategoriesExample", example.applyValue(getApplianceContentFilteringCategoriesResult -> getApplianceContentFilteringCategoriesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1254,7 +1294,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1276,13 +1317,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallCellularFirewallRules(GetApplianceFirewallCellularFirewallRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallCellularFirewallRulesExample&#34;, example.applyValue(getApplianceFirewallCellularFirewallRulesResult -&gt; getApplianceFirewallCellularFirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallCellularFirewallRulesExample", example.applyValue(getApplianceFirewallCellularFirewallRulesResult -> getApplianceFirewallCellularFirewallRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1293,7 +1335,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1315,13 +1358,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallCellularFirewallRules(GetApplianceFirewallCellularFirewallRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallCellularFirewallRulesExample&#34;, example.applyValue(getApplianceFirewallCellularFirewallRulesResult -&gt; getApplianceFirewallCellularFirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallCellularFirewallRulesExample", example.applyValue(getApplianceFirewallCellularFirewallRulesResult -> getApplianceFirewallCellularFirewallRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1332,7 +1376,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1354,13 +1399,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallCellularFirewallRules(GetApplianceFirewallCellularFirewallRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallCellularFirewallRulesExample&#34;, example.applyValue(getApplianceFirewallCellularFirewallRulesResult -&gt; getApplianceFirewallCellularFirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallCellularFirewallRulesExample", example.applyValue(getApplianceFirewallCellularFirewallRulesResult -> getApplianceFirewallCellularFirewallRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1371,7 +1417,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1393,13 +1440,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallCellularFirewallRules(GetApplianceFirewallCellularFirewallRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallCellularFirewallRulesExample&#34;, example.applyValue(getApplianceFirewallCellularFirewallRulesResult -&gt; getApplianceFirewallCellularFirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallCellularFirewallRulesExample", example.applyValue(getApplianceFirewallCellularFirewallRulesResult -> getApplianceFirewallCellularFirewallRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1410,7 +1458,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1432,14 +1481,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallFirewalledServices(GetApplianceFirewallFirewalledServicesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .service(&#34;string&#34;)
+     *             .networkId("string")
+     *             .service("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallFirewalledServicesExample&#34;, example.applyValue(getApplianceFirewallFirewalledServicesResult -&gt; getApplianceFirewallFirewalledServicesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallFirewalledServicesExample", example.applyValue(getApplianceFirewallFirewalledServicesResult -> getApplianceFirewallFirewalledServicesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1450,7 +1500,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1472,14 +1523,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallFirewalledServices(GetApplianceFirewallFirewalledServicesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .service(&#34;string&#34;)
+     *             .networkId("string")
+     *             .service("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallFirewalledServicesExample&#34;, example.applyValue(getApplianceFirewallFirewalledServicesResult -&gt; getApplianceFirewallFirewalledServicesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallFirewalledServicesExample", example.applyValue(getApplianceFirewallFirewalledServicesResult -> getApplianceFirewallFirewalledServicesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1490,7 +1542,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1512,14 +1565,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallFirewalledServices(GetApplianceFirewallFirewalledServicesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .service(&#34;string&#34;)
+     *             .networkId("string")
+     *             .service("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallFirewalledServicesExample&#34;, example.applyValue(getApplianceFirewallFirewalledServicesResult -&gt; getApplianceFirewallFirewalledServicesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallFirewalledServicesExample", example.applyValue(getApplianceFirewallFirewalledServicesResult -> getApplianceFirewallFirewalledServicesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1530,7 +1584,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1552,14 +1607,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallFirewalledServices(GetApplianceFirewallFirewalledServicesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .service(&#34;string&#34;)
+     *             .networkId("string")
+     *             .service("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallFirewalledServicesExample&#34;, example.applyValue(getApplianceFirewallFirewalledServicesResult -&gt; getApplianceFirewallFirewalledServicesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallFirewalledServicesExample", example.applyValue(getApplianceFirewallFirewalledServicesResult -> getApplianceFirewallFirewalledServicesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1570,7 +1626,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1592,13 +1649,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallInboundFirewallRules(GetApplianceFirewallInboundFirewallRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallInboundFirewallRulesExample&#34;, example.applyValue(getApplianceFirewallInboundFirewallRulesResult -&gt; getApplianceFirewallInboundFirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallInboundFirewallRulesExample", example.applyValue(getApplianceFirewallInboundFirewallRulesResult -> getApplianceFirewallInboundFirewallRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1609,7 +1667,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1631,13 +1690,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallInboundFirewallRules(GetApplianceFirewallInboundFirewallRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallInboundFirewallRulesExample&#34;, example.applyValue(getApplianceFirewallInboundFirewallRulesResult -&gt; getApplianceFirewallInboundFirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallInboundFirewallRulesExample", example.applyValue(getApplianceFirewallInboundFirewallRulesResult -> getApplianceFirewallInboundFirewallRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1648,7 +1708,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1670,13 +1731,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallInboundFirewallRules(GetApplianceFirewallInboundFirewallRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallInboundFirewallRulesExample&#34;, example.applyValue(getApplianceFirewallInboundFirewallRulesResult -&gt; getApplianceFirewallInboundFirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallInboundFirewallRulesExample", example.applyValue(getApplianceFirewallInboundFirewallRulesResult -> getApplianceFirewallInboundFirewallRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1687,7 +1749,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1709,13 +1772,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallInboundFirewallRules(GetApplianceFirewallInboundFirewallRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallInboundFirewallRulesExample&#34;, example.applyValue(getApplianceFirewallInboundFirewallRulesResult -&gt; getApplianceFirewallInboundFirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallInboundFirewallRulesExample", example.applyValue(getApplianceFirewallInboundFirewallRulesResult -> getApplianceFirewallInboundFirewallRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1726,7 +1790,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1748,13 +1813,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallL3FirewallRules(GetApplianceFirewallL3FirewallRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallL3FirewallRulesExample&#34;, example.applyValue(getApplianceFirewallL3FirewallRulesResult -&gt; getApplianceFirewallL3FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallL3FirewallRulesExample", example.applyValue(getApplianceFirewallL3FirewallRulesResult -> getApplianceFirewallL3FirewallRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1765,7 +1831,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1787,13 +1854,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallL3FirewallRules(GetApplianceFirewallL3FirewallRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallL3FirewallRulesExample&#34;, example.applyValue(getApplianceFirewallL3FirewallRulesResult -&gt; getApplianceFirewallL3FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallL3FirewallRulesExample", example.applyValue(getApplianceFirewallL3FirewallRulesResult -> getApplianceFirewallL3FirewallRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1804,7 +1872,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1826,13 +1895,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallL3FirewallRules(GetApplianceFirewallL3FirewallRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallL3FirewallRulesExample&#34;, example.applyValue(getApplianceFirewallL3FirewallRulesResult -&gt; getApplianceFirewallL3FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallL3FirewallRulesExample", example.applyValue(getApplianceFirewallL3FirewallRulesResult -> getApplianceFirewallL3FirewallRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1843,7 +1913,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1865,13 +1936,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallL3FirewallRules(GetApplianceFirewallL3FirewallRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallL3FirewallRulesExample&#34;, example.applyValue(getApplianceFirewallL3FirewallRulesResult -&gt; getApplianceFirewallL3FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallL3FirewallRulesExample", example.applyValue(getApplianceFirewallL3FirewallRulesResult -> getApplianceFirewallL3FirewallRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1882,7 +1954,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1904,13 +1977,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallL7FirewallRules(GetApplianceFirewallL7FirewallRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallL7FirewallRulesExample&#34;, example.applyValue(getApplianceFirewallL7FirewallRulesResult -&gt; getApplianceFirewallL7FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallL7FirewallRulesExample", example.applyValue(getApplianceFirewallL7FirewallRulesResult -> getApplianceFirewallL7FirewallRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1921,7 +1995,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1943,13 +2018,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallL7FirewallRules(GetApplianceFirewallL7FirewallRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallL7FirewallRulesExample&#34;, example.applyValue(getApplianceFirewallL7FirewallRulesResult -&gt; getApplianceFirewallL7FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallL7FirewallRulesExample", example.applyValue(getApplianceFirewallL7FirewallRulesResult -> getApplianceFirewallL7FirewallRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1960,7 +2036,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1982,13 +2059,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallL7FirewallRules(GetApplianceFirewallL7FirewallRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallL7FirewallRulesExample&#34;, example.applyValue(getApplianceFirewallL7FirewallRulesResult -&gt; getApplianceFirewallL7FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallL7FirewallRulesExample", example.applyValue(getApplianceFirewallL7FirewallRulesResult -> getApplianceFirewallL7FirewallRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1999,7 +2077,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2021,13 +2100,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallL7FirewallRules(GetApplianceFirewallL7FirewallRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallL7FirewallRulesExample&#34;, example.applyValue(getApplianceFirewallL7FirewallRulesResult -&gt; getApplianceFirewallL7FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallL7FirewallRulesExample", example.applyValue(getApplianceFirewallL7FirewallRulesResult -> getApplianceFirewallL7FirewallRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2038,7 +2118,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2060,13 +2141,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallL7FirewallRulesApplicationCategories(GetApplianceFirewallL7FirewallRulesApplicationCategoriesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallL7FirewallRulesApplicationCategoriesExample&#34;, example.applyValue(getApplianceFirewallL7FirewallRulesApplicationCategoriesResult -&gt; getApplianceFirewallL7FirewallRulesApplicationCategoriesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallL7FirewallRulesApplicationCategoriesExample", example.applyValue(getApplianceFirewallL7FirewallRulesApplicationCategoriesResult -> getApplianceFirewallL7FirewallRulesApplicationCategoriesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2077,7 +2159,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2099,13 +2182,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallL7FirewallRulesApplicationCategories(GetApplianceFirewallL7FirewallRulesApplicationCategoriesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallL7FirewallRulesApplicationCategoriesExample&#34;, example.applyValue(getApplianceFirewallL7FirewallRulesApplicationCategoriesResult -&gt; getApplianceFirewallL7FirewallRulesApplicationCategoriesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallL7FirewallRulesApplicationCategoriesExample", example.applyValue(getApplianceFirewallL7FirewallRulesApplicationCategoriesResult -> getApplianceFirewallL7FirewallRulesApplicationCategoriesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2116,7 +2200,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2138,13 +2223,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallL7FirewallRulesApplicationCategories(GetApplianceFirewallL7FirewallRulesApplicationCategoriesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallL7FirewallRulesApplicationCategoriesExample&#34;, example.applyValue(getApplianceFirewallL7FirewallRulesApplicationCategoriesResult -&gt; getApplianceFirewallL7FirewallRulesApplicationCategoriesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallL7FirewallRulesApplicationCategoriesExample", example.applyValue(getApplianceFirewallL7FirewallRulesApplicationCategoriesResult -> getApplianceFirewallL7FirewallRulesApplicationCategoriesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2155,7 +2241,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2177,13 +2264,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallL7FirewallRulesApplicationCategories(GetApplianceFirewallL7FirewallRulesApplicationCategoriesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallL7FirewallRulesApplicationCategoriesExample&#34;, example.applyValue(getApplianceFirewallL7FirewallRulesApplicationCategoriesResult -&gt; getApplianceFirewallL7FirewallRulesApplicationCategoriesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallL7FirewallRulesApplicationCategoriesExample", example.applyValue(getApplianceFirewallL7FirewallRulesApplicationCategoriesResult -> getApplianceFirewallL7FirewallRulesApplicationCategoriesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2194,7 +2282,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2216,13 +2305,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallOneToManyNatRules(GetApplianceFirewallOneToManyNatRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallOneToManyNatRulesExample&#34;, example.applyValue(getApplianceFirewallOneToManyNatRulesResult -&gt; getApplianceFirewallOneToManyNatRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallOneToManyNatRulesExample", example.applyValue(getApplianceFirewallOneToManyNatRulesResult -> getApplianceFirewallOneToManyNatRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2233,7 +2323,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2255,13 +2346,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallOneToManyNatRules(GetApplianceFirewallOneToManyNatRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallOneToManyNatRulesExample&#34;, example.applyValue(getApplianceFirewallOneToManyNatRulesResult -&gt; getApplianceFirewallOneToManyNatRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallOneToManyNatRulesExample", example.applyValue(getApplianceFirewallOneToManyNatRulesResult -> getApplianceFirewallOneToManyNatRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2272,7 +2364,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2294,13 +2387,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallOneToManyNatRules(GetApplianceFirewallOneToManyNatRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallOneToManyNatRulesExample&#34;, example.applyValue(getApplianceFirewallOneToManyNatRulesResult -&gt; getApplianceFirewallOneToManyNatRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallOneToManyNatRulesExample", example.applyValue(getApplianceFirewallOneToManyNatRulesResult -> getApplianceFirewallOneToManyNatRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2311,7 +2405,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2333,13 +2428,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallOneToManyNatRules(GetApplianceFirewallOneToManyNatRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallOneToManyNatRulesExample&#34;, example.applyValue(getApplianceFirewallOneToManyNatRulesResult -&gt; getApplianceFirewallOneToManyNatRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallOneToManyNatRulesExample", example.applyValue(getApplianceFirewallOneToManyNatRulesResult -> getApplianceFirewallOneToManyNatRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2350,7 +2446,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2372,13 +2469,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallOneToOneNatRules(GetApplianceFirewallOneToOneNatRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallOneToOneNatRulesExample&#34;, example.applyValue(getApplianceFirewallOneToOneNatRulesResult -&gt; getApplianceFirewallOneToOneNatRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallOneToOneNatRulesExample", example.applyValue(getApplianceFirewallOneToOneNatRulesResult -> getApplianceFirewallOneToOneNatRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2389,7 +2487,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2411,13 +2510,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallOneToOneNatRules(GetApplianceFirewallOneToOneNatRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallOneToOneNatRulesExample&#34;, example.applyValue(getApplianceFirewallOneToOneNatRulesResult -&gt; getApplianceFirewallOneToOneNatRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallOneToOneNatRulesExample", example.applyValue(getApplianceFirewallOneToOneNatRulesResult -> getApplianceFirewallOneToOneNatRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2428,7 +2528,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2450,13 +2551,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallOneToOneNatRules(GetApplianceFirewallOneToOneNatRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallOneToOneNatRulesExample&#34;, example.applyValue(getApplianceFirewallOneToOneNatRulesResult -&gt; getApplianceFirewallOneToOneNatRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallOneToOneNatRulesExample", example.applyValue(getApplianceFirewallOneToOneNatRulesResult -> getApplianceFirewallOneToOneNatRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2467,7 +2569,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2489,13 +2592,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallOneToOneNatRules(GetApplianceFirewallOneToOneNatRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallOneToOneNatRulesExample&#34;, example.applyValue(getApplianceFirewallOneToOneNatRulesResult -&gt; getApplianceFirewallOneToOneNatRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallOneToOneNatRulesExample", example.applyValue(getApplianceFirewallOneToOneNatRulesResult -> getApplianceFirewallOneToOneNatRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2506,7 +2610,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2528,13 +2633,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallPortForwardingRules(GetApplianceFirewallPortForwardingRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallPortForwardingRulesExample&#34;, example.applyValue(getApplianceFirewallPortForwardingRulesResult -&gt; getApplianceFirewallPortForwardingRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallPortForwardingRulesExample", example.applyValue(getApplianceFirewallPortForwardingRulesResult -> getApplianceFirewallPortForwardingRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2545,7 +2651,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2567,13 +2674,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallPortForwardingRules(GetApplianceFirewallPortForwardingRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallPortForwardingRulesExample&#34;, example.applyValue(getApplianceFirewallPortForwardingRulesResult -&gt; getApplianceFirewallPortForwardingRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallPortForwardingRulesExample", example.applyValue(getApplianceFirewallPortForwardingRulesResult -> getApplianceFirewallPortForwardingRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2584,7 +2692,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2606,13 +2715,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallPortForwardingRules(GetApplianceFirewallPortForwardingRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallPortForwardingRulesExample&#34;, example.applyValue(getApplianceFirewallPortForwardingRulesResult -&gt; getApplianceFirewallPortForwardingRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallPortForwardingRulesExample", example.applyValue(getApplianceFirewallPortForwardingRulesResult -> getApplianceFirewallPortForwardingRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2623,7 +2733,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2645,13 +2756,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallPortForwardingRules(GetApplianceFirewallPortForwardingRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallPortForwardingRulesExample&#34;, example.applyValue(getApplianceFirewallPortForwardingRulesResult -&gt; getApplianceFirewallPortForwardingRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallPortForwardingRulesExample", example.applyValue(getApplianceFirewallPortForwardingRulesResult -> getApplianceFirewallPortForwardingRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2662,7 +2774,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2684,13 +2797,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallSettings(GetApplianceFirewallSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallSettingsExample&#34;, example.applyValue(getApplianceFirewallSettingsResult -&gt; getApplianceFirewallSettingsResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallSettingsExample", example.applyValue(getApplianceFirewallSettingsResult -> getApplianceFirewallSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2701,7 +2815,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2723,13 +2838,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallSettings(GetApplianceFirewallSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallSettingsExample&#34;, example.applyValue(getApplianceFirewallSettingsResult -&gt; getApplianceFirewallSettingsResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallSettingsExample", example.applyValue(getApplianceFirewallSettingsResult -> getApplianceFirewallSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2740,7 +2856,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2762,13 +2879,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallSettings(GetApplianceFirewallSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallSettingsExample&#34;, example.applyValue(getApplianceFirewallSettingsResult -&gt; getApplianceFirewallSettingsResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallSettingsExample", example.applyValue(getApplianceFirewallSettingsResult -> getApplianceFirewallSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2779,7 +2897,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2801,13 +2920,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceFirewallSettings(GetApplianceFirewallSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceFirewallSettingsExample&#34;, example.applyValue(getApplianceFirewallSettingsResult -&gt; getApplianceFirewallSettingsResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallSettingsExample", example.applyValue(getApplianceFirewallSettingsResult -> getApplianceFirewallSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2902,7 +3022,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2924,13 +3045,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceRfProfiles(GetApplianceRfProfilesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceRfProfilesExample&#34;, example.applyValue(getApplianceRfProfilesResult -&gt; getApplianceRfProfilesResult.item()));
+     *         ctx.export("merakiNetworksApplianceRfProfilesExample", example.applyValue(getApplianceRfProfilesResult -> getApplianceRfProfilesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2941,7 +3063,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2963,13 +3086,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceRfProfiles(GetApplianceRfProfilesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceRfProfilesExample&#34;, example.applyValue(getApplianceRfProfilesResult -&gt; getApplianceRfProfilesResult.item()));
+     *         ctx.export("merakiNetworksApplianceRfProfilesExample", example.applyValue(getApplianceRfProfilesResult -> getApplianceRfProfilesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2980,7 +3104,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3002,13 +3127,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceRfProfiles(GetApplianceRfProfilesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceRfProfilesExample&#34;, example.applyValue(getApplianceRfProfilesResult -&gt; getApplianceRfProfilesResult.item()));
+     *         ctx.export("merakiNetworksApplianceRfProfilesExample", example.applyValue(getApplianceRfProfilesResult -> getApplianceRfProfilesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3019,7 +3145,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3041,13 +3168,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceRfProfiles(GetApplianceRfProfilesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceRfProfilesExample&#34;, example.applyValue(getApplianceRfProfilesResult -&gt; getApplianceRfProfilesResult.item()));
+     *         ctx.export("merakiNetworksApplianceRfProfilesExample", example.applyValue(getApplianceRfProfilesResult -> getApplianceRfProfilesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3058,7 +3186,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3080,13 +3209,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceRfProfiles(GetApplianceRfProfilesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceRfProfilesExample&#34;, example.applyValue(getApplianceRfProfilesResult -&gt; getApplianceRfProfilesResult.item()));
+     *         ctx.export("merakiNetworksApplianceRfProfilesExample", example.applyValue(getApplianceRfProfilesResult -> getApplianceRfProfilesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3097,7 +3227,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3119,13 +3250,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceRfProfiles(GetApplianceRfProfilesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceRfProfilesExample&#34;, example.applyValue(getApplianceRfProfilesResult -&gt; getApplianceRfProfilesResult.item()));
+     *         ctx.export("merakiNetworksApplianceRfProfilesExample", example.applyValue(getApplianceRfProfilesResult -> getApplianceRfProfilesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3136,7 +3268,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3158,13 +3291,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceSecurityIntrusion(GetApplianceSecurityIntrusionArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceSecurityIntrusionExample&#34;, example.applyValue(getApplianceSecurityIntrusionResult -&gt; getApplianceSecurityIntrusionResult.item()));
+     *         ctx.export("merakiNetworksApplianceSecurityIntrusionExample", example.applyValue(getApplianceSecurityIntrusionResult -> getApplianceSecurityIntrusionResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3175,7 +3309,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3197,13 +3332,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceSecurityIntrusion(GetApplianceSecurityIntrusionArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceSecurityIntrusionExample&#34;, example.applyValue(getApplianceSecurityIntrusionResult -&gt; getApplianceSecurityIntrusionResult.item()));
+     *         ctx.export("merakiNetworksApplianceSecurityIntrusionExample", example.applyValue(getApplianceSecurityIntrusionResult -> getApplianceSecurityIntrusionResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3214,7 +3350,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3236,13 +3373,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceSecurityIntrusion(GetApplianceSecurityIntrusionArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceSecurityIntrusionExample&#34;, example.applyValue(getApplianceSecurityIntrusionResult -&gt; getApplianceSecurityIntrusionResult.item()));
+     *         ctx.export("merakiNetworksApplianceSecurityIntrusionExample", example.applyValue(getApplianceSecurityIntrusionResult -> getApplianceSecurityIntrusionResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3253,7 +3391,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3275,13 +3414,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceSecurityIntrusion(GetApplianceSecurityIntrusionArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceSecurityIntrusionExample&#34;, example.applyValue(getApplianceSecurityIntrusionResult -&gt; getApplianceSecurityIntrusionResult.item()));
+     *         ctx.export("merakiNetworksApplianceSecurityIntrusionExample", example.applyValue(getApplianceSecurityIntrusionResult -> getApplianceSecurityIntrusionResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3292,7 +3432,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3314,13 +3455,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceSecurityMalware(GetApplianceSecurityMalwareArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceSecurityMalwareExample&#34;, example.applyValue(getApplianceSecurityMalwareResult -&gt; getApplianceSecurityMalwareResult.item()));
+     *         ctx.export("merakiNetworksApplianceSecurityMalwareExample", example.applyValue(getApplianceSecurityMalwareResult -> getApplianceSecurityMalwareResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3331,7 +3473,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3353,13 +3496,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceSecurityMalware(GetApplianceSecurityMalwareArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceSecurityMalwareExample&#34;, example.applyValue(getApplianceSecurityMalwareResult -&gt; getApplianceSecurityMalwareResult.item()));
+     *         ctx.export("merakiNetworksApplianceSecurityMalwareExample", example.applyValue(getApplianceSecurityMalwareResult -> getApplianceSecurityMalwareResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3370,7 +3514,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3392,13 +3537,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceSecurityMalware(GetApplianceSecurityMalwareArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceSecurityMalwareExample&#34;, example.applyValue(getApplianceSecurityMalwareResult -&gt; getApplianceSecurityMalwareResult.item()));
+     *         ctx.export("merakiNetworksApplianceSecurityMalwareExample", example.applyValue(getApplianceSecurityMalwareResult -> getApplianceSecurityMalwareResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3409,7 +3555,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3431,13 +3578,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceSecurityMalware(GetApplianceSecurityMalwareArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceSecurityMalwareExample&#34;, example.applyValue(getApplianceSecurityMalwareResult -&gt; getApplianceSecurityMalwareResult.item()));
+     *         ctx.export("merakiNetworksApplianceSecurityMalwareExample", example.applyValue(getApplianceSecurityMalwareResult -> getApplianceSecurityMalwareResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3448,7 +3596,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3470,13 +3619,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceSettings(GetApplianceSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceSettingsExample&#34;, example.applyValue(getApplianceSettingsResult -&gt; getApplianceSettingsResult.item()));
+     *         ctx.export("merakiNetworksApplianceSettingsExample", example.applyValue(getApplianceSettingsResult -> getApplianceSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3487,7 +3637,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3509,13 +3660,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceSettings(GetApplianceSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceSettingsExample&#34;, example.applyValue(getApplianceSettingsResult -&gt; getApplianceSettingsResult.item()));
+     *         ctx.export("merakiNetworksApplianceSettingsExample", example.applyValue(getApplianceSettingsResult -> getApplianceSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3526,7 +3678,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3548,13 +3701,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceSettings(GetApplianceSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceSettingsExample&#34;, example.applyValue(getApplianceSettingsResult -&gt; getApplianceSettingsResult.item()));
+     *         ctx.export("merakiNetworksApplianceSettingsExample", example.applyValue(getApplianceSettingsResult -> getApplianceSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3565,7 +3719,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3587,13 +3742,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceSettings(GetApplianceSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceSettingsExample&#34;, example.applyValue(getApplianceSettingsResult -&gt; getApplianceSettingsResult.item()));
+     *         ctx.export("merakiNetworksApplianceSettingsExample", example.applyValue(getApplianceSettingsResult -> getApplianceSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3604,7 +3760,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3626,13 +3783,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceSingleLan(GetApplianceSingleLanArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceSingleLanExample&#34;, example.applyValue(getApplianceSingleLanResult -&gt; getApplianceSingleLanResult.item()));
+     *         ctx.export("merakiNetworksApplianceSingleLanExample", example.applyValue(getApplianceSingleLanResult -> getApplianceSingleLanResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3643,7 +3801,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3665,13 +3824,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceSingleLan(GetApplianceSingleLanArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceSingleLanExample&#34;, example.applyValue(getApplianceSingleLanResult -&gt; getApplianceSingleLanResult.item()));
+     *         ctx.export("merakiNetworksApplianceSingleLanExample", example.applyValue(getApplianceSingleLanResult -> getApplianceSingleLanResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3682,7 +3842,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3704,13 +3865,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceSingleLan(GetApplianceSingleLanArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceSingleLanExample&#34;, example.applyValue(getApplianceSingleLanResult -&gt; getApplianceSingleLanResult.item()));
+     *         ctx.export("merakiNetworksApplianceSingleLanExample", example.applyValue(getApplianceSingleLanResult -> getApplianceSingleLanResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3721,7 +3883,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3743,13 +3906,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceSingleLan(GetApplianceSingleLanArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceSingleLanExample&#34;, example.applyValue(getApplianceSingleLanResult -&gt; getApplianceSingleLanResult.item()));
+     *         ctx.export("merakiNetworksApplianceSingleLanExample", example.applyValue(getApplianceSingleLanResult -> getApplianceSingleLanResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3802,7 +3966,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3824,13 +3989,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceTrafficShaping(GetApplianceTrafficShapingArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceTrafficShapingExample&#34;, example.applyValue(getApplianceTrafficShapingResult -&gt; getApplianceTrafficShapingResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingExample", example.applyValue(getApplianceTrafficShapingResult -> getApplianceTrafficShapingResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3841,7 +4007,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3863,13 +4030,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceTrafficShaping(GetApplianceTrafficShapingArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceTrafficShapingExample&#34;, example.applyValue(getApplianceTrafficShapingResult -&gt; getApplianceTrafficShapingResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingExample", example.applyValue(getApplianceTrafficShapingResult -> getApplianceTrafficShapingResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3880,7 +4048,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3902,13 +4071,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceTrafficShaping(GetApplianceTrafficShapingArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceTrafficShapingExample&#34;, example.applyValue(getApplianceTrafficShapingResult -&gt; getApplianceTrafficShapingResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingExample", example.applyValue(getApplianceTrafficShapingResult -> getApplianceTrafficShapingResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3919,7 +4089,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3941,13 +4112,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceTrafficShaping(GetApplianceTrafficShapingArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceTrafficShapingExample&#34;, example.applyValue(getApplianceTrafficShapingResult -&gt; getApplianceTrafficShapingResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingExample", example.applyValue(getApplianceTrafficShapingResult -> getApplianceTrafficShapingResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3958,7 +4130,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3980,13 +4153,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceTrafficShapingRules(GetApplianceTrafficShapingRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceTrafficShapingRulesExample&#34;, example.applyValue(getApplianceTrafficShapingRulesResult -&gt; getApplianceTrafficShapingRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingRulesExample", example.applyValue(getApplianceTrafficShapingRulesResult -> getApplianceTrafficShapingRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3997,7 +4171,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4019,13 +4194,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceTrafficShapingRules(GetApplianceTrafficShapingRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceTrafficShapingRulesExample&#34;, example.applyValue(getApplianceTrafficShapingRulesResult -&gt; getApplianceTrafficShapingRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingRulesExample", example.applyValue(getApplianceTrafficShapingRulesResult -> getApplianceTrafficShapingRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4036,7 +4212,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4058,13 +4235,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceTrafficShapingRules(GetApplianceTrafficShapingRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceTrafficShapingRulesExample&#34;, example.applyValue(getApplianceTrafficShapingRulesResult -&gt; getApplianceTrafficShapingRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingRulesExample", example.applyValue(getApplianceTrafficShapingRulesResult -> getApplianceTrafficShapingRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4075,7 +4253,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4097,13 +4276,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceTrafficShapingRules(GetApplianceTrafficShapingRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceTrafficShapingRulesExample&#34;, example.applyValue(getApplianceTrafficShapingRulesResult -&gt; getApplianceTrafficShapingRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingRulesExample", example.applyValue(getApplianceTrafficShapingRulesResult -> getApplianceTrafficShapingRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4114,7 +4294,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4136,13 +4317,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceTrafficShapingUplinkBandwidth(GetApplianceTrafficShapingUplinkBandwidthArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceTrafficShapingUplinkBandwidthExample&#34;, example.applyValue(getApplianceTrafficShapingUplinkBandwidthResult -&gt; getApplianceTrafficShapingUplinkBandwidthResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingUplinkBandwidthExample", example.applyValue(getApplianceTrafficShapingUplinkBandwidthResult -> getApplianceTrafficShapingUplinkBandwidthResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4153,7 +4335,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4175,13 +4358,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceTrafficShapingUplinkBandwidth(GetApplianceTrafficShapingUplinkBandwidthArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceTrafficShapingUplinkBandwidthExample&#34;, example.applyValue(getApplianceTrafficShapingUplinkBandwidthResult -&gt; getApplianceTrafficShapingUplinkBandwidthResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingUplinkBandwidthExample", example.applyValue(getApplianceTrafficShapingUplinkBandwidthResult -> getApplianceTrafficShapingUplinkBandwidthResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4192,7 +4376,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4214,13 +4399,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceTrafficShapingUplinkBandwidth(GetApplianceTrafficShapingUplinkBandwidthArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceTrafficShapingUplinkBandwidthExample&#34;, example.applyValue(getApplianceTrafficShapingUplinkBandwidthResult -&gt; getApplianceTrafficShapingUplinkBandwidthResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingUplinkBandwidthExample", example.applyValue(getApplianceTrafficShapingUplinkBandwidthResult -> getApplianceTrafficShapingUplinkBandwidthResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4231,7 +4417,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4253,13 +4440,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceTrafficShapingUplinkBandwidth(GetApplianceTrafficShapingUplinkBandwidthArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceTrafficShapingUplinkBandwidthExample&#34;, example.applyValue(getApplianceTrafficShapingUplinkBandwidthResult -&gt; getApplianceTrafficShapingUplinkBandwidthResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingUplinkBandwidthExample", example.applyValue(getApplianceTrafficShapingUplinkBandwidthResult -> getApplianceTrafficShapingUplinkBandwidthResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4270,7 +4458,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4292,13 +4481,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceTrafficShapingUplinkSelection(GetApplianceTrafficShapingUplinkSelectionArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceTrafficShapingUplinkSelectionExample&#34;, example.applyValue(getApplianceTrafficShapingUplinkSelectionResult -&gt; getApplianceTrafficShapingUplinkSelectionResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingUplinkSelectionExample", example.applyValue(getApplianceTrafficShapingUplinkSelectionResult -> getApplianceTrafficShapingUplinkSelectionResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4309,7 +4499,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4331,13 +4522,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceTrafficShapingUplinkSelection(GetApplianceTrafficShapingUplinkSelectionArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceTrafficShapingUplinkSelectionExample&#34;, example.applyValue(getApplianceTrafficShapingUplinkSelectionResult -&gt; getApplianceTrafficShapingUplinkSelectionResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingUplinkSelectionExample", example.applyValue(getApplianceTrafficShapingUplinkSelectionResult -> getApplianceTrafficShapingUplinkSelectionResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4348,7 +4540,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4370,13 +4563,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceTrafficShapingUplinkSelection(GetApplianceTrafficShapingUplinkSelectionArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceTrafficShapingUplinkSelectionExample&#34;, example.applyValue(getApplianceTrafficShapingUplinkSelectionResult -&gt; getApplianceTrafficShapingUplinkSelectionResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingUplinkSelectionExample", example.applyValue(getApplianceTrafficShapingUplinkSelectionResult -> getApplianceTrafficShapingUplinkSelectionResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4387,7 +4581,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4409,13 +4604,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceTrafficShapingUplinkSelection(GetApplianceTrafficShapingUplinkSelectionArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceTrafficShapingUplinkSelectionExample&#34;, example.applyValue(getApplianceTrafficShapingUplinkSelectionResult -&gt; getApplianceTrafficShapingUplinkSelectionResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingUplinkSelectionExample", example.applyValue(getApplianceTrafficShapingUplinkSelectionResult -> getApplianceTrafficShapingUplinkSelectionResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4468,7 +4664,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4490,13 +4687,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceVlansSettings(GetApplianceVlansSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceVlansSettingsExample&#34;, example.applyValue(getApplianceVlansSettingsResult -&gt; getApplianceVlansSettingsResult.item()));
+     *         ctx.export("merakiNetworksApplianceVlansSettingsExample", example.applyValue(getApplianceVlansSettingsResult -> getApplianceVlansSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4507,7 +4705,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4529,13 +4728,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceVlansSettings(GetApplianceVlansSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceVlansSettingsExample&#34;, example.applyValue(getApplianceVlansSettingsResult -&gt; getApplianceVlansSettingsResult.item()));
+     *         ctx.export("merakiNetworksApplianceVlansSettingsExample", example.applyValue(getApplianceVlansSettingsResult -> getApplianceVlansSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4546,7 +4746,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4568,13 +4769,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceVlansSettings(GetApplianceVlansSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceVlansSettingsExample&#34;, example.applyValue(getApplianceVlansSettingsResult -&gt; getApplianceVlansSettingsResult.item()));
+     *         ctx.export("merakiNetworksApplianceVlansSettingsExample", example.applyValue(getApplianceVlansSettingsResult -> getApplianceVlansSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4585,7 +4787,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4607,13 +4810,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceVlansSettings(GetApplianceVlansSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceVlansSettingsExample&#34;, example.applyValue(getApplianceVlansSettingsResult -&gt; getApplianceVlansSettingsResult.item()));
+     *         ctx.export("merakiNetworksApplianceVlansSettingsExample", example.applyValue(getApplianceVlansSettingsResult -> getApplianceVlansSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4624,7 +4828,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4646,13 +4851,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceVpnBgp(GetApplianceVpnBgpArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceVpnBgpExample&#34;, example.applyValue(getApplianceVpnBgpResult -&gt; getApplianceVpnBgpResult.item()));
+     *         ctx.export("merakiNetworksApplianceVpnBgpExample", example.applyValue(getApplianceVpnBgpResult -> getApplianceVpnBgpResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4663,7 +4869,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4685,13 +4892,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceVpnBgp(GetApplianceVpnBgpArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceVpnBgpExample&#34;, example.applyValue(getApplianceVpnBgpResult -&gt; getApplianceVpnBgpResult.item()));
+     *         ctx.export("merakiNetworksApplianceVpnBgpExample", example.applyValue(getApplianceVpnBgpResult -> getApplianceVpnBgpResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4702,7 +4910,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4724,13 +4933,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceVpnBgp(GetApplianceVpnBgpArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceVpnBgpExample&#34;, example.applyValue(getApplianceVpnBgpResult -&gt; getApplianceVpnBgpResult.item()));
+     *         ctx.export("merakiNetworksApplianceVpnBgpExample", example.applyValue(getApplianceVpnBgpResult -> getApplianceVpnBgpResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4741,7 +4951,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4763,13 +4974,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceVpnBgp(GetApplianceVpnBgpArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceVpnBgpExample&#34;, example.applyValue(getApplianceVpnBgpResult -&gt; getApplianceVpnBgpResult.item()));
+     *         ctx.export("merakiNetworksApplianceVpnBgpExample", example.applyValue(getApplianceVpnBgpResult -> getApplianceVpnBgpResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4780,7 +4992,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4802,13 +5015,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceVpnSiteToSiteVpn(GetApplianceVpnSiteToSiteVpnArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceVpnSiteToSiteVpnExample&#34;, example.applyValue(getApplianceVpnSiteToSiteVpnResult -&gt; getApplianceVpnSiteToSiteVpnResult.item()));
+     *         ctx.export("merakiNetworksApplianceVpnSiteToSiteVpnExample", example.applyValue(getApplianceVpnSiteToSiteVpnResult -> getApplianceVpnSiteToSiteVpnResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4819,7 +5033,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4841,13 +5056,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceVpnSiteToSiteVpn(GetApplianceVpnSiteToSiteVpnArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceVpnSiteToSiteVpnExample&#34;, example.applyValue(getApplianceVpnSiteToSiteVpnResult -&gt; getApplianceVpnSiteToSiteVpnResult.item()));
+     *         ctx.export("merakiNetworksApplianceVpnSiteToSiteVpnExample", example.applyValue(getApplianceVpnSiteToSiteVpnResult -> getApplianceVpnSiteToSiteVpnResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4858,7 +5074,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4880,13 +5097,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceVpnSiteToSiteVpn(GetApplianceVpnSiteToSiteVpnArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceVpnSiteToSiteVpnExample&#34;, example.applyValue(getApplianceVpnSiteToSiteVpnResult -&gt; getApplianceVpnSiteToSiteVpnResult.item()));
+     *         ctx.export("merakiNetworksApplianceVpnSiteToSiteVpnExample", example.applyValue(getApplianceVpnSiteToSiteVpnResult -> getApplianceVpnSiteToSiteVpnResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4897,7 +5115,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4919,13 +5138,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceVpnSiteToSiteVpn(GetApplianceVpnSiteToSiteVpnArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceVpnSiteToSiteVpnExample&#34;, example.applyValue(getApplianceVpnSiteToSiteVpnResult -&gt; getApplianceVpnSiteToSiteVpnResult.item()));
+     *         ctx.export("merakiNetworksApplianceVpnSiteToSiteVpnExample", example.applyValue(getApplianceVpnSiteToSiteVpnResult -> getApplianceVpnSiteToSiteVpnResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4936,7 +5156,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4958,13 +5179,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceWarmSpare(GetApplianceWarmSpareArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceWarmSpareExample&#34;, example.applyValue(getApplianceWarmSpareResult -&gt; getApplianceWarmSpareResult.item()));
+     *         ctx.export("merakiNetworksApplianceWarmSpareExample", example.applyValue(getApplianceWarmSpareResult -> getApplianceWarmSpareResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4975,7 +5197,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4997,13 +5220,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceWarmSpare(GetApplianceWarmSpareArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceWarmSpareExample&#34;, example.applyValue(getApplianceWarmSpareResult -&gt; getApplianceWarmSpareResult.item()));
+     *         ctx.export("merakiNetworksApplianceWarmSpareExample", example.applyValue(getApplianceWarmSpareResult -> getApplianceWarmSpareResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5014,7 +5238,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5036,13 +5261,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceWarmSpare(GetApplianceWarmSpareArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceWarmSpareExample&#34;, example.applyValue(getApplianceWarmSpareResult -&gt; getApplianceWarmSpareResult.item()));
+     *         ctx.export("merakiNetworksApplianceWarmSpareExample", example.applyValue(getApplianceWarmSpareResult -> getApplianceWarmSpareResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5053,7 +5279,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5075,13 +5302,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getApplianceWarmSpare(GetApplianceWarmSpareArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksApplianceWarmSpareExample&#34;, example.applyValue(getApplianceWarmSpareResult -&gt; getApplianceWarmSpareResult.item()));
+     *         ctx.export("merakiNetworksApplianceWarmSpareExample", example.applyValue(getApplianceWarmSpareResult -> getApplianceWarmSpareResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5092,7 +5320,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5114,16 +5343,17 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getBluetoothClients(GetBluetoothClientsArgs.builder()
-     *             .bluetoothClientId(&#34;string&#34;)
+     *             .bluetoothClientId("string")
      *             .connectivityHistoryTimespan(1)
      *             .includeConnectivityHistory(false)
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksBluetoothClientsExample&#34;, example.applyValue(getBluetoothClientsResult -&gt; getBluetoothClientsResult.item()));
+     *         ctx.export("merakiNetworksBluetoothClientsExample", example.applyValue(getBluetoothClientsResult -> getBluetoothClientsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5134,7 +5364,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5156,16 +5387,17 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getBluetoothClients(GetBluetoothClientsArgs.builder()
-     *             .bluetoothClientId(&#34;string&#34;)
+     *             .bluetoothClientId("string")
      *             .connectivityHistoryTimespan(1)
      *             .includeConnectivityHistory(false)
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksBluetoothClientsExample&#34;, example.applyValue(getBluetoothClientsResult -&gt; getBluetoothClientsResult.item()));
+     *         ctx.export("merakiNetworksBluetoothClientsExample", example.applyValue(getBluetoothClientsResult -> getBluetoothClientsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5176,7 +5408,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5198,16 +5431,17 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getBluetoothClients(GetBluetoothClientsArgs.builder()
-     *             .bluetoothClientId(&#34;string&#34;)
+     *             .bluetoothClientId("string")
      *             .connectivityHistoryTimespan(1)
      *             .includeConnectivityHistory(false)
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksBluetoothClientsExample&#34;, example.applyValue(getBluetoothClientsResult -&gt; getBluetoothClientsResult.item()));
+     *         ctx.export("merakiNetworksBluetoothClientsExample", example.applyValue(getBluetoothClientsResult -> getBluetoothClientsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5218,7 +5452,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5240,16 +5475,17 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getBluetoothClients(GetBluetoothClientsArgs.builder()
-     *             .bluetoothClientId(&#34;string&#34;)
+     *             .bluetoothClientId("string")
      *             .connectivityHistoryTimespan(1)
      *             .includeConnectivityHistory(false)
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksBluetoothClientsExample&#34;, example.applyValue(getBluetoothClientsResult -&gt; getBluetoothClientsResult.item()));
+     *         ctx.export("merakiNetworksBluetoothClientsExample", example.applyValue(getBluetoothClientsResult -> getBluetoothClientsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5344,7 +5580,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5366,13 +5603,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getCellularGatewayConnectivityMonitoringDestinations(GetCellularGatewayConnectivityMonitoringDestinationsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksCellularGatewayConnectivityMonitoringDestinationsExample&#34;, example.applyValue(getCellularGatewayConnectivityMonitoringDestinationsResult -&gt; getCellularGatewayConnectivityMonitoringDestinationsResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewayConnectivityMonitoringDestinationsExample", example.applyValue(getCellularGatewayConnectivityMonitoringDestinationsResult -> getCellularGatewayConnectivityMonitoringDestinationsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5383,7 +5621,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5405,13 +5644,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getCellularGatewayConnectivityMonitoringDestinations(GetCellularGatewayConnectivityMonitoringDestinationsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksCellularGatewayConnectivityMonitoringDestinationsExample&#34;, example.applyValue(getCellularGatewayConnectivityMonitoringDestinationsResult -&gt; getCellularGatewayConnectivityMonitoringDestinationsResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewayConnectivityMonitoringDestinationsExample", example.applyValue(getCellularGatewayConnectivityMonitoringDestinationsResult -> getCellularGatewayConnectivityMonitoringDestinationsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5422,7 +5662,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5444,13 +5685,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getCellularGatewayConnectivityMonitoringDestinations(GetCellularGatewayConnectivityMonitoringDestinationsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksCellularGatewayConnectivityMonitoringDestinationsExample&#34;, example.applyValue(getCellularGatewayConnectivityMonitoringDestinationsResult -&gt; getCellularGatewayConnectivityMonitoringDestinationsResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewayConnectivityMonitoringDestinationsExample", example.applyValue(getCellularGatewayConnectivityMonitoringDestinationsResult -> getCellularGatewayConnectivityMonitoringDestinationsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5461,7 +5703,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5483,13 +5726,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getCellularGatewayConnectivityMonitoringDestinations(GetCellularGatewayConnectivityMonitoringDestinationsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksCellularGatewayConnectivityMonitoringDestinationsExample&#34;, example.applyValue(getCellularGatewayConnectivityMonitoringDestinationsResult -&gt; getCellularGatewayConnectivityMonitoringDestinationsResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewayConnectivityMonitoringDestinationsExample", example.applyValue(getCellularGatewayConnectivityMonitoringDestinationsResult -> getCellularGatewayConnectivityMonitoringDestinationsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5500,7 +5744,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5522,13 +5767,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getCellularGatewayDhcp(GetCellularGatewayDhcpArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksCellularGatewayDhcpExample&#34;, example.applyValue(getCellularGatewayDhcpResult -&gt; getCellularGatewayDhcpResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewayDhcpExample", example.applyValue(getCellularGatewayDhcpResult -> getCellularGatewayDhcpResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5539,7 +5785,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5561,13 +5808,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getCellularGatewayDhcp(GetCellularGatewayDhcpArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksCellularGatewayDhcpExample&#34;, example.applyValue(getCellularGatewayDhcpResult -&gt; getCellularGatewayDhcpResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewayDhcpExample", example.applyValue(getCellularGatewayDhcpResult -> getCellularGatewayDhcpResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5578,7 +5826,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5600,13 +5849,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getCellularGatewayDhcp(GetCellularGatewayDhcpArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksCellularGatewayDhcpExample&#34;, example.applyValue(getCellularGatewayDhcpResult -&gt; getCellularGatewayDhcpResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewayDhcpExample", example.applyValue(getCellularGatewayDhcpResult -> getCellularGatewayDhcpResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5617,7 +5867,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5639,13 +5890,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getCellularGatewayDhcp(GetCellularGatewayDhcpArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksCellularGatewayDhcpExample&#34;, example.applyValue(getCellularGatewayDhcpResult -&gt; getCellularGatewayDhcpResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewayDhcpExample", example.applyValue(getCellularGatewayDhcpResult -> getCellularGatewayDhcpResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5656,7 +5908,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5678,13 +5931,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getCellularGatewaySubnetPool(GetCellularGatewaySubnetPoolArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksCellularGatewaySubnetPoolExample&#34;, example.applyValue(getCellularGatewaySubnetPoolResult -&gt; getCellularGatewaySubnetPoolResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewaySubnetPoolExample", example.applyValue(getCellularGatewaySubnetPoolResult -> getCellularGatewaySubnetPoolResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5695,7 +5949,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5717,13 +5972,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getCellularGatewaySubnetPool(GetCellularGatewaySubnetPoolArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksCellularGatewaySubnetPoolExample&#34;, example.applyValue(getCellularGatewaySubnetPoolResult -&gt; getCellularGatewaySubnetPoolResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewaySubnetPoolExample", example.applyValue(getCellularGatewaySubnetPoolResult -> getCellularGatewaySubnetPoolResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5734,7 +5990,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5756,13 +6013,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getCellularGatewaySubnetPool(GetCellularGatewaySubnetPoolArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksCellularGatewaySubnetPoolExample&#34;, example.applyValue(getCellularGatewaySubnetPoolResult -&gt; getCellularGatewaySubnetPoolResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewaySubnetPoolExample", example.applyValue(getCellularGatewaySubnetPoolResult -> getCellularGatewaySubnetPoolResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5773,7 +6031,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5795,13 +6054,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getCellularGatewaySubnetPool(GetCellularGatewaySubnetPoolArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksCellularGatewaySubnetPoolExample&#34;, example.applyValue(getCellularGatewaySubnetPoolResult -&gt; getCellularGatewaySubnetPoolResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewaySubnetPoolExample", example.applyValue(getCellularGatewaySubnetPoolResult -> getCellularGatewaySubnetPoolResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5812,7 +6072,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5834,13 +6095,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getCellularGatewayUplink(GetCellularGatewayUplinkArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksCellularGatewayUplinkExample&#34;, example.applyValue(getCellularGatewayUplinkResult -&gt; getCellularGatewayUplinkResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewayUplinkExample", example.applyValue(getCellularGatewayUplinkResult -> getCellularGatewayUplinkResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5851,7 +6113,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5873,13 +6136,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getCellularGatewayUplink(GetCellularGatewayUplinkArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksCellularGatewayUplinkExample&#34;, example.applyValue(getCellularGatewayUplinkResult -&gt; getCellularGatewayUplinkResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewayUplinkExample", example.applyValue(getCellularGatewayUplinkResult -> getCellularGatewayUplinkResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5890,7 +6154,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5912,13 +6177,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getCellularGatewayUplink(GetCellularGatewayUplinkArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksCellularGatewayUplinkExample&#34;, example.applyValue(getCellularGatewayUplinkResult -&gt; getCellularGatewayUplinkResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewayUplinkExample", example.applyValue(getCellularGatewayUplinkResult -> getCellularGatewayUplinkResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5929,7 +6195,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5951,13 +6218,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getCellularGatewayUplink(GetCellularGatewayUplinkArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksCellularGatewayUplinkExample&#34;, example.applyValue(getCellularGatewayUplinkResult -&gt; getCellularGatewayUplinkResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewayUplinkExample", example.applyValue(getCellularGatewayUplinkResult -> getCellularGatewayUplinkResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -5968,7 +6236,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5990,14 +6259,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getClients(GetClientsArgs.builder()
-     *             .clientId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .clientId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksClientsExample&#34;, example.applyValue(getClientsResult -&gt; getClientsResult.item()));
+     *         ctx.export("merakiNetworksClientsExample", example.applyValue(getClientsResult -> getClientsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6008,7 +6278,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6030,14 +6301,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getClients(GetClientsArgs.builder()
-     *             .clientId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .clientId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksClientsExample&#34;, example.applyValue(getClientsResult -&gt; getClientsResult.item()));
+     *         ctx.export("merakiNetworksClientsExample", example.applyValue(getClientsResult -> getClientsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6048,7 +6320,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6070,14 +6343,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getClients(GetClientsArgs.builder()
-     *             .clientId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .clientId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksClientsExample&#34;, example.applyValue(getClientsResult -&gt; getClientsResult.item()));
+     *         ctx.export("merakiNetworksClientsExample", example.applyValue(getClientsResult -> getClientsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6088,7 +6362,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6110,14 +6385,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getClients(GetClientsArgs.builder()
-     *             .clientId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .clientId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksClientsExample&#34;, example.applyValue(getClientsResult -&gt; getClientsResult.item()));
+     *         ctx.export("merakiNetworksClientsExample", example.applyValue(getClientsResult -> getClientsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6128,7 +6404,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6150,17 +6427,18 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getClientsOverview(GetClientsOverviewArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .resolution(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksClientsOverviewExample&#34;, example.applyValue(getClientsOverviewResult -&gt; getClientsOverviewResult.item()));
+     *         ctx.export("merakiNetworksClientsOverviewExample", example.applyValue(getClientsOverviewResult -> getClientsOverviewResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6171,7 +6449,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6193,17 +6472,18 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getClientsOverview(GetClientsOverviewArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .resolution(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksClientsOverviewExample&#34;, example.applyValue(getClientsOverviewResult -&gt; getClientsOverviewResult.item()));
+     *         ctx.export("merakiNetworksClientsOverviewExample", example.applyValue(getClientsOverviewResult -> getClientsOverviewResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6214,7 +6494,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6236,17 +6517,18 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getClientsOverview(GetClientsOverviewArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .resolution(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksClientsOverviewExample&#34;, example.applyValue(getClientsOverviewResult -&gt; getClientsOverviewResult.item()));
+     *         ctx.export("merakiNetworksClientsOverviewExample", example.applyValue(getClientsOverviewResult -> getClientsOverviewResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6257,7 +6539,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6279,17 +6562,18 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getClientsOverview(GetClientsOverviewArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .resolution(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksClientsOverviewExample&#34;, example.applyValue(getClientsOverviewResult -&gt; getClientsOverviewResult.item()));
+     *         ctx.export("merakiNetworksClientsOverviewExample", example.applyValue(getClientsOverviewResult -> getClientsOverviewResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6300,7 +6584,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6322,14 +6607,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getClientsPolicy(GetClientsPolicyArgs.builder()
-     *             .clientId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .clientId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksClientsPolicyExample&#34;, example.applyValue(getClientsPolicyResult -&gt; getClientsPolicyResult.item()));
+     *         ctx.export("merakiNetworksClientsPolicyExample", example.applyValue(getClientsPolicyResult -> getClientsPolicyResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6340,7 +6626,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6362,14 +6649,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getClientsPolicy(GetClientsPolicyArgs.builder()
-     *             .clientId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .clientId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksClientsPolicyExample&#34;, example.applyValue(getClientsPolicyResult -&gt; getClientsPolicyResult.item()));
+     *         ctx.export("merakiNetworksClientsPolicyExample", example.applyValue(getClientsPolicyResult -> getClientsPolicyResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6380,7 +6668,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6402,14 +6691,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getClientsPolicy(GetClientsPolicyArgs.builder()
-     *             .clientId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .clientId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksClientsPolicyExample&#34;, example.applyValue(getClientsPolicyResult -&gt; getClientsPolicyResult.item()));
+     *         ctx.export("merakiNetworksClientsPolicyExample", example.applyValue(getClientsPolicyResult -> getClientsPolicyResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6420,7 +6710,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6442,14 +6733,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getClientsPolicy(GetClientsPolicyArgs.builder()
-     *             .clientId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .clientId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksClientsPolicyExample&#34;, example.applyValue(getClientsPolicyResult -&gt; getClientsPolicyResult.item()));
+     *         ctx.export("merakiNetworksClientsPolicyExample", example.applyValue(getClientsPolicyResult -> getClientsPolicyResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6460,7 +6752,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6482,14 +6775,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getClientsSplashAuthorizationStatus(GetClientsSplashAuthorizationStatusArgs.builder()
-     *             .clientId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .clientId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksClientsSplashAuthorizationStatusExample&#34;, example.applyValue(getClientsSplashAuthorizationStatusResult -&gt; getClientsSplashAuthorizationStatusResult.item()));
+     *         ctx.export("merakiNetworksClientsSplashAuthorizationStatusExample", example.applyValue(getClientsSplashAuthorizationStatusResult -> getClientsSplashAuthorizationStatusResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6500,7 +6794,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6522,14 +6817,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getClientsSplashAuthorizationStatus(GetClientsSplashAuthorizationStatusArgs.builder()
-     *             .clientId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .clientId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksClientsSplashAuthorizationStatusExample&#34;, example.applyValue(getClientsSplashAuthorizationStatusResult -&gt; getClientsSplashAuthorizationStatusResult.item()));
+     *         ctx.export("merakiNetworksClientsSplashAuthorizationStatusExample", example.applyValue(getClientsSplashAuthorizationStatusResult -> getClientsSplashAuthorizationStatusResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6540,7 +6836,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6562,14 +6859,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getClientsSplashAuthorizationStatus(GetClientsSplashAuthorizationStatusArgs.builder()
-     *             .clientId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .clientId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksClientsSplashAuthorizationStatusExample&#34;, example.applyValue(getClientsSplashAuthorizationStatusResult -&gt; getClientsSplashAuthorizationStatusResult.item()));
+     *         ctx.export("merakiNetworksClientsSplashAuthorizationStatusExample", example.applyValue(getClientsSplashAuthorizationStatusResult -> getClientsSplashAuthorizationStatusResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6580,7 +6878,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6602,14 +6901,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getClientsSplashAuthorizationStatus(GetClientsSplashAuthorizationStatusArgs.builder()
-     *             .clientId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .clientId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksClientsSplashAuthorizationStatusExample&#34;, example.applyValue(getClientsSplashAuthorizationStatusResult -&gt; getClientsSplashAuthorizationStatusResult.item()));
+     *         ctx.export("merakiNetworksClientsSplashAuthorizationStatusExample", example.applyValue(getClientsSplashAuthorizationStatusResult -> getClientsSplashAuthorizationStatusResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6620,7 +6920,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6642,27 +6943,28 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getEvents(GetEventsArgs.builder()
-     *             .clientIp(&#34;string&#34;)
-     *             .clientMac(&#34;string&#34;)
-     *             .clientName(&#34;string&#34;)
-     *             .deviceMac(&#34;string&#34;)
-     *             .deviceName(&#34;string&#34;)
-     *             .deviceSerial(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .excludedEventTypes(&#34;string&#34;)
-     *             .includedEventTypes(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .clientIp("string")
+     *             .clientMac("string")
+     *             .clientName("string")
+     *             .deviceMac("string")
+     *             .deviceName("string")
+     *             .deviceSerial("string")
+     *             .endingBefore("string")
+     *             .excludedEventTypes("string")
+     *             .includedEventTypes("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .productType(&#34;string&#34;)
-     *             .smDeviceMac(&#34;string&#34;)
-     *             .smDeviceName(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
+     *             .productType("string")
+     *             .smDeviceMac("string")
+     *             .smDeviceName("string")
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksEventsExample&#34;, example.applyValue(getEventsResult -&gt; getEventsResult.item()));
+     *         ctx.export("merakiNetworksEventsExample", example.applyValue(getEventsResult -> getEventsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6673,7 +6975,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6695,27 +6998,28 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getEvents(GetEventsArgs.builder()
-     *             .clientIp(&#34;string&#34;)
-     *             .clientMac(&#34;string&#34;)
-     *             .clientName(&#34;string&#34;)
-     *             .deviceMac(&#34;string&#34;)
-     *             .deviceName(&#34;string&#34;)
-     *             .deviceSerial(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .excludedEventTypes(&#34;string&#34;)
-     *             .includedEventTypes(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .clientIp("string")
+     *             .clientMac("string")
+     *             .clientName("string")
+     *             .deviceMac("string")
+     *             .deviceName("string")
+     *             .deviceSerial("string")
+     *             .endingBefore("string")
+     *             .excludedEventTypes("string")
+     *             .includedEventTypes("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .productType(&#34;string&#34;)
-     *             .smDeviceMac(&#34;string&#34;)
-     *             .smDeviceName(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
+     *             .productType("string")
+     *             .smDeviceMac("string")
+     *             .smDeviceName("string")
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksEventsExample&#34;, example.applyValue(getEventsResult -&gt; getEventsResult.item()));
+     *         ctx.export("merakiNetworksEventsExample", example.applyValue(getEventsResult -> getEventsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6726,7 +7030,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6748,27 +7053,28 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getEvents(GetEventsArgs.builder()
-     *             .clientIp(&#34;string&#34;)
-     *             .clientMac(&#34;string&#34;)
-     *             .clientName(&#34;string&#34;)
-     *             .deviceMac(&#34;string&#34;)
-     *             .deviceName(&#34;string&#34;)
-     *             .deviceSerial(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .excludedEventTypes(&#34;string&#34;)
-     *             .includedEventTypes(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .clientIp("string")
+     *             .clientMac("string")
+     *             .clientName("string")
+     *             .deviceMac("string")
+     *             .deviceName("string")
+     *             .deviceSerial("string")
+     *             .endingBefore("string")
+     *             .excludedEventTypes("string")
+     *             .includedEventTypes("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .productType(&#34;string&#34;)
-     *             .smDeviceMac(&#34;string&#34;)
-     *             .smDeviceName(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
+     *             .productType("string")
+     *             .smDeviceMac("string")
+     *             .smDeviceName("string")
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksEventsExample&#34;, example.applyValue(getEventsResult -&gt; getEventsResult.item()));
+     *         ctx.export("merakiNetworksEventsExample", example.applyValue(getEventsResult -> getEventsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6779,7 +7085,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6801,27 +7108,28 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getEvents(GetEventsArgs.builder()
-     *             .clientIp(&#34;string&#34;)
-     *             .clientMac(&#34;string&#34;)
-     *             .clientName(&#34;string&#34;)
-     *             .deviceMac(&#34;string&#34;)
-     *             .deviceName(&#34;string&#34;)
-     *             .deviceSerial(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .excludedEventTypes(&#34;string&#34;)
-     *             .includedEventTypes(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .clientIp("string")
+     *             .clientMac("string")
+     *             .clientName("string")
+     *             .deviceMac("string")
+     *             .deviceName("string")
+     *             .deviceSerial("string")
+     *             .endingBefore("string")
+     *             .excludedEventTypes("string")
+     *             .includedEventTypes("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .productType(&#34;string&#34;)
-     *             .smDeviceMac(&#34;string&#34;)
-     *             .smDeviceName(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
+     *             .productType("string")
+     *             .smDeviceMac("string")
+     *             .smDeviceName("string")
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksEventsExample&#34;, example.applyValue(getEventsResult -&gt; getEventsResult.item()));
+     *         ctx.export("merakiNetworksEventsExample", example.applyValue(getEventsResult -> getEventsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6832,7 +7140,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6854,13 +7163,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getEventsEventTypes(GetEventsEventTypesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksEventsEventTypesExample&#34;, example.applyValue(getEventsEventTypesResult -&gt; getEventsEventTypesResult.items()));
+     *         ctx.export("merakiNetworksEventsEventTypesExample", example.applyValue(getEventsEventTypesResult -> getEventsEventTypesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6871,7 +7181,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6893,13 +7204,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getEventsEventTypes(GetEventsEventTypesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksEventsEventTypesExample&#34;, example.applyValue(getEventsEventTypesResult -&gt; getEventsEventTypesResult.items()));
+     *         ctx.export("merakiNetworksEventsEventTypesExample", example.applyValue(getEventsEventTypesResult -> getEventsEventTypesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6910,7 +7222,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6932,13 +7245,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getEventsEventTypes(GetEventsEventTypesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksEventsEventTypesExample&#34;, example.applyValue(getEventsEventTypesResult -&gt; getEventsEventTypesResult.items()));
+     *         ctx.export("merakiNetworksEventsEventTypesExample", example.applyValue(getEventsEventTypesResult -> getEventsEventTypesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6949,7 +7263,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -6971,13 +7286,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getEventsEventTypes(GetEventsEventTypesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksEventsEventTypesExample&#34;, example.applyValue(getEventsEventTypesResult -&gt; getEventsEventTypesResult.items()));
+     *         ctx.export("merakiNetworksEventsEventTypesExample", example.applyValue(getEventsEventTypesResult -> getEventsEventTypesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -6988,7 +7304,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7010,13 +7327,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getFirmwareUpgrades(GetFirmwareUpgradesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksFirmwareUpgradesExample&#34;, example.applyValue(getFirmwareUpgradesResult -&gt; getFirmwareUpgradesResult.item()));
+     *         ctx.export("merakiNetworksFirmwareUpgradesExample", example.applyValue(getFirmwareUpgradesResult -> getFirmwareUpgradesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7027,7 +7345,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7049,13 +7368,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getFirmwareUpgrades(GetFirmwareUpgradesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksFirmwareUpgradesExample&#34;, example.applyValue(getFirmwareUpgradesResult -&gt; getFirmwareUpgradesResult.item()));
+     *         ctx.export("merakiNetworksFirmwareUpgradesExample", example.applyValue(getFirmwareUpgradesResult -> getFirmwareUpgradesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7066,7 +7386,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7088,13 +7409,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getFirmwareUpgrades(GetFirmwareUpgradesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksFirmwareUpgradesExample&#34;, example.applyValue(getFirmwareUpgradesResult -&gt; getFirmwareUpgradesResult.item()));
+     *         ctx.export("merakiNetworksFirmwareUpgradesExample", example.applyValue(getFirmwareUpgradesResult -> getFirmwareUpgradesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7105,7 +7427,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7127,13 +7450,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getFirmwareUpgrades(GetFirmwareUpgradesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksFirmwareUpgradesExample&#34;, example.applyValue(getFirmwareUpgradesResult -&gt; getFirmwareUpgradesResult.item()));
+     *         ctx.export("merakiNetworksFirmwareUpgradesExample", example.applyValue(getFirmwareUpgradesResult -> getFirmwareUpgradesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7144,7 +7468,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7166,13 +7491,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getFirmwareUpgradesStagedEvents(GetFirmwareUpgradesStagedEventsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksFirmwareUpgradesStagedEventsExample&#34;, example.applyValue(getFirmwareUpgradesStagedEventsResult -&gt; getFirmwareUpgradesStagedEventsResult.item()));
+     *         ctx.export("merakiNetworksFirmwareUpgradesStagedEventsExample", example.applyValue(getFirmwareUpgradesStagedEventsResult -> getFirmwareUpgradesStagedEventsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7183,7 +7509,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7205,13 +7532,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getFirmwareUpgradesStagedEvents(GetFirmwareUpgradesStagedEventsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksFirmwareUpgradesStagedEventsExample&#34;, example.applyValue(getFirmwareUpgradesStagedEventsResult -&gt; getFirmwareUpgradesStagedEventsResult.item()));
+     *         ctx.export("merakiNetworksFirmwareUpgradesStagedEventsExample", example.applyValue(getFirmwareUpgradesStagedEventsResult -> getFirmwareUpgradesStagedEventsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7222,7 +7550,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7244,13 +7573,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getFirmwareUpgradesStagedEvents(GetFirmwareUpgradesStagedEventsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksFirmwareUpgradesStagedEventsExample&#34;, example.applyValue(getFirmwareUpgradesStagedEventsResult -&gt; getFirmwareUpgradesStagedEventsResult.item()));
+     *         ctx.export("merakiNetworksFirmwareUpgradesStagedEventsExample", example.applyValue(getFirmwareUpgradesStagedEventsResult -> getFirmwareUpgradesStagedEventsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7261,7 +7591,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7283,13 +7614,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getFirmwareUpgradesStagedEvents(GetFirmwareUpgradesStagedEventsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksFirmwareUpgradesStagedEventsExample&#34;, example.applyValue(getFirmwareUpgradesStagedEventsResult -&gt; getFirmwareUpgradesStagedEventsResult.item()));
+     *         ctx.export("merakiNetworksFirmwareUpgradesStagedEventsExample", example.applyValue(getFirmwareUpgradesStagedEventsResult -> getFirmwareUpgradesStagedEventsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7342,7 +7674,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7364,13 +7697,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getFirmwareUpgradesStagedStages(GetFirmwareUpgradesStagedStagesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksFirmwareUpgradesStagedStagesExample&#34;, example.applyValue(getFirmwareUpgradesStagedStagesResult -&gt; getFirmwareUpgradesStagedStagesResult.items()));
+     *         ctx.export("merakiNetworksFirmwareUpgradesStagedStagesExample", example.applyValue(getFirmwareUpgradesStagedStagesResult -> getFirmwareUpgradesStagedStagesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7381,7 +7715,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7403,13 +7738,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getFirmwareUpgradesStagedStages(GetFirmwareUpgradesStagedStagesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksFirmwareUpgradesStagedStagesExample&#34;, example.applyValue(getFirmwareUpgradesStagedStagesResult -&gt; getFirmwareUpgradesStagedStagesResult.items()));
+     *         ctx.export("merakiNetworksFirmwareUpgradesStagedStagesExample", example.applyValue(getFirmwareUpgradesStagedStagesResult -> getFirmwareUpgradesStagedStagesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7420,7 +7756,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7442,13 +7779,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getFirmwareUpgradesStagedStages(GetFirmwareUpgradesStagedStagesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksFirmwareUpgradesStagedStagesExample&#34;, example.applyValue(getFirmwareUpgradesStagedStagesResult -&gt; getFirmwareUpgradesStagedStagesResult.items()));
+     *         ctx.export("merakiNetworksFirmwareUpgradesStagedStagesExample", example.applyValue(getFirmwareUpgradesStagedStagesResult -> getFirmwareUpgradesStagedStagesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7459,7 +7797,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7481,13 +7820,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getFirmwareUpgradesStagedStages(GetFirmwareUpgradesStagedStagesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksFirmwareUpgradesStagedStagesExample&#34;, example.applyValue(getFirmwareUpgradesStagedStagesResult -&gt; getFirmwareUpgradesStagedStagesResult.items()));
+     *         ctx.export("merakiNetworksFirmwareUpgradesStagedStagesExample", example.applyValue(getFirmwareUpgradesStagedStagesResult -> getFirmwareUpgradesStagedStagesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7582,7 +7922,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7604,13 +7945,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getHealthAlerts(GetHealthAlertsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksHealthAlertsExample&#34;, example.applyValue(getHealthAlertsResult -&gt; getHealthAlertsResult.items()));
+     *         ctx.export("merakiNetworksHealthAlertsExample", example.applyValue(getHealthAlertsResult -> getHealthAlertsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7621,7 +7963,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7643,13 +7986,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getHealthAlerts(GetHealthAlertsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksHealthAlertsExample&#34;, example.applyValue(getHealthAlertsResult -&gt; getHealthAlertsResult.items()));
+     *         ctx.export("merakiNetworksHealthAlertsExample", example.applyValue(getHealthAlertsResult -> getHealthAlertsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7660,7 +8004,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7682,13 +8027,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getHealthAlerts(GetHealthAlertsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksHealthAlertsExample&#34;, example.applyValue(getHealthAlertsResult -&gt; getHealthAlertsResult.items()));
+     *         ctx.export("merakiNetworksHealthAlertsExample", example.applyValue(getHealthAlertsResult -> getHealthAlertsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7699,7 +8045,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7721,13 +8068,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getHealthAlerts(GetHealthAlertsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksHealthAlertsExample&#34;, example.applyValue(getHealthAlertsResult -&gt; getHealthAlertsResult.items()));
+     *         ctx.export("merakiNetworksHealthAlertsExample", example.applyValue(getHealthAlertsResult -> getHealthAlertsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7738,7 +8086,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7760,18 +8109,19 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getInsightApplicationsHealthByTime(GetInsightApplicationsHealthByTimeArgs.builder()
-     *             .applicationId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .applicationId("string")
+     *             .networkId("string")
      *             .resolution(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksInsightApplicationsHealthByTimeExample&#34;, example.applyValue(getInsightApplicationsHealthByTimeResult -&gt; getInsightApplicationsHealthByTimeResult.items()));
+     *         ctx.export("merakiNetworksInsightApplicationsHealthByTimeExample", example.applyValue(getInsightApplicationsHealthByTimeResult -> getInsightApplicationsHealthByTimeResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7782,7 +8132,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7804,18 +8155,19 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getInsightApplicationsHealthByTime(GetInsightApplicationsHealthByTimeArgs.builder()
-     *             .applicationId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .applicationId("string")
+     *             .networkId("string")
      *             .resolution(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksInsightApplicationsHealthByTimeExample&#34;, example.applyValue(getInsightApplicationsHealthByTimeResult -&gt; getInsightApplicationsHealthByTimeResult.items()));
+     *         ctx.export("merakiNetworksInsightApplicationsHealthByTimeExample", example.applyValue(getInsightApplicationsHealthByTimeResult -> getInsightApplicationsHealthByTimeResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7826,7 +8178,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7848,18 +8201,19 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getInsightApplicationsHealthByTime(GetInsightApplicationsHealthByTimeArgs.builder()
-     *             .applicationId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .applicationId("string")
+     *             .networkId("string")
      *             .resolution(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksInsightApplicationsHealthByTimeExample&#34;, example.applyValue(getInsightApplicationsHealthByTimeResult -&gt; getInsightApplicationsHealthByTimeResult.items()));
+     *         ctx.export("merakiNetworksInsightApplicationsHealthByTimeExample", example.applyValue(getInsightApplicationsHealthByTimeResult -> getInsightApplicationsHealthByTimeResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7870,7 +8224,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7892,18 +8247,19 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getInsightApplicationsHealthByTime(GetInsightApplicationsHealthByTimeArgs.builder()
-     *             .applicationId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .applicationId("string")
+     *             .networkId("string")
      *             .resolution(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksInsightApplicationsHealthByTimeExample&#34;, example.applyValue(getInsightApplicationsHealthByTimeResult -&gt; getInsightApplicationsHealthByTimeResult.items()));
+     *         ctx.export("merakiNetworksInsightApplicationsHealthByTimeExample", example.applyValue(getInsightApplicationsHealthByTimeResult -> getInsightApplicationsHealthByTimeResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7956,7 +8312,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -7978,13 +8335,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getNetflow(GetNetflowArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksNetflowExample&#34;, example.applyValue(getNetflowResult -&gt; getNetflowResult.item()));
+     *         ctx.export("merakiNetworksNetflowExample", example.applyValue(getNetflowResult -> getNetflowResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -7995,7 +8353,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8017,13 +8376,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getNetflow(GetNetflowArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksNetflowExample&#34;, example.applyValue(getNetflowResult -&gt; getNetflowResult.item()));
+     *         ctx.export("merakiNetworksNetflowExample", example.applyValue(getNetflowResult -> getNetflowResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8034,7 +8394,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8056,13 +8417,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getNetflow(GetNetflowArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksNetflowExample&#34;, example.applyValue(getNetflowResult -&gt; getNetflowResult.item()));
+     *         ctx.export("merakiNetworksNetflowExample", example.applyValue(getNetflowResult -> getNetflowResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8073,7 +8435,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8095,13 +8458,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getNetflow(GetNetflowArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksNetflowExample&#34;, example.applyValue(getNetflowResult -&gt; getNetflowResult.item()));
+     *         ctx.export("merakiNetworksNetflowExample", example.applyValue(getNetflowResult -> getNetflowResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8112,7 +8476,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8134,19 +8499,20 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getPiiPiiKeys(GetPiiPiiKeysArgs.builder()
-     *             .bluetoothMac(&#34;string&#34;)
-     *             .email(&#34;string&#34;)
-     *             .imei(&#34;string&#34;)
-     *             .mac(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
-     *             .username(&#34;string&#34;)
+     *             .bluetoothMac("string")
+     *             .email("string")
+     *             .imei("string")
+     *             .mac("string")
+     *             .networkId("string")
+     *             .serial("string")
+     *             .username("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksPiiPiiKeysExample&#34;, example.applyValue(getPiiPiiKeysResult -&gt; getPiiPiiKeysResult.item()));
+     *         ctx.export("merakiNetworksPiiPiiKeysExample", example.applyValue(getPiiPiiKeysResult -> getPiiPiiKeysResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8157,7 +8523,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8179,19 +8546,20 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getPiiPiiKeys(GetPiiPiiKeysArgs.builder()
-     *             .bluetoothMac(&#34;string&#34;)
-     *             .email(&#34;string&#34;)
-     *             .imei(&#34;string&#34;)
-     *             .mac(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
-     *             .username(&#34;string&#34;)
+     *             .bluetoothMac("string")
+     *             .email("string")
+     *             .imei("string")
+     *             .mac("string")
+     *             .networkId("string")
+     *             .serial("string")
+     *             .username("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksPiiPiiKeysExample&#34;, example.applyValue(getPiiPiiKeysResult -&gt; getPiiPiiKeysResult.item()));
+     *         ctx.export("merakiNetworksPiiPiiKeysExample", example.applyValue(getPiiPiiKeysResult -> getPiiPiiKeysResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8202,7 +8570,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8224,19 +8593,20 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getPiiPiiKeys(GetPiiPiiKeysArgs.builder()
-     *             .bluetoothMac(&#34;string&#34;)
-     *             .email(&#34;string&#34;)
-     *             .imei(&#34;string&#34;)
-     *             .mac(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
-     *             .username(&#34;string&#34;)
+     *             .bluetoothMac("string")
+     *             .email("string")
+     *             .imei("string")
+     *             .mac("string")
+     *             .networkId("string")
+     *             .serial("string")
+     *             .username("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksPiiPiiKeysExample&#34;, example.applyValue(getPiiPiiKeysResult -&gt; getPiiPiiKeysResult.item()));
+     *         ctx.export("merakiNetworksPiiPiiKeysExample", example.applyValue(getPiiPiiKeysResult -> getPiiPiiKeysResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8247,7 +8617,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8269,19 +8640,20 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getPiiPiiKeys(GetPiiPiiKeysArgs.builder()
-     *             .bluetoothMac(&#34;string&#34;)
-     *             .email(&#34;string&#34;)
-     *             .imei(&#34;string&#34;)
-     *             .mac(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
-     *             .username(&#34;string&#34;)
+     *             .bluetoothMac("string")
+     *             .email("string")
+     *             .imei("string")
+     *             .mac("string")
+     *             .networkId("string")
+     *             .serial("string")
+     *             .username("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksPiiPiiKeysExample&#34;, example.applyValue(getPiiPiiKeysResult -&gt; getPiiPiiKeysResult.item()));
+     *         ctx.export("merakiNetworksPiiPiiKeysExample", example.applyValue(getPiiPiiKeysResult -> getPiiPiiKeysResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8334,7 +8706,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8356,19 +8729,20 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getPiiSmDevicesForKey(GetPiiSmDevicesForKeyArgs.builder()
-     *             .bluetoothMac(&#34;string&#34;)
-     *             .email(&#34;string&#34;)
-     *             .imei(&#34;string&#34;)
-     *             .mac(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
-     *             .username(&#34;string&#34;)
+     *             .bluetoothMac("string")
+     *             .email("string")
+     *             .imei("string")
+     *             .mac("string")
+     *             .networkId("string")
+     *             .serial("string")
+     *             .username("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksPiiSmDevicesForKeyExample&#34;, example.applyValue(getPiiSmDevicesForKeyResult -&gt; getPiiSmDevicesForKeyResult.item()));
+     *         ctx.export("merakiNetworksPiiSmDevicesForKeyExample", example.applyValue(getPiiSmDevicesForKeyResult -> getPiiSmDevicesForKeyResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8379,7 +8753,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8401,19 +8776,20 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getPiiSmDevicesForKey(GetPiiSmDevicesForKeyArgs.builder()
-     *             .bluetoothMac(&#34;string&#34;)
-     *             .email(&#34;string&#34;)
-     *             .imei(&#34;string&#34;)
-     *             .mac(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
-     *             .username(&#34;string&#34;)
+     *             .bluetoothMac("string")
+     *             .email("string")
+     *             .imei("string")
+     *             .mac("string")
+     *             .networkId("string")
+     *             .serial("string")
+     *             .username("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksPiiSmDevicesForKeyExample&#34;, example.applyValue(getPiiSmDevicesForKeyResult -&gt; getPiiSmDevicesForKeyResult.item()));
+     *         ctx.export("merakiNetworksPiiSmDevicesForKeyExample", example.applyValue(getPiiSmDevicesForKeyResult -> getPiiSmDevicesForKeyResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8424,7 +8800,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8446,19 +8823,20 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getPiiSmDevicesForKey(GetPiiSmDevicesForKeyArgs.builder()
-     *             .bluetoothMac(&#34;string&#34;)
-     *             .email(&#34;string&#34;)
-     *             .imei(&#34;string&#34;)
-     *             .mac(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
-     *             .username(&#34;string&#34;)
+     *             .bluetoothMac("string")
+     *             .email("string")
+     *             .imei("string")
+     *             .mac("string")
+     *             .networkId("string")
+     *             .serial("string")
+     *             .username("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksPiiSmDevicesForKeyExample&#34;, example.applyValue(getPiiSmDevicesForKeyResult -&gt; getPiiSmDevicesForKeyResult.item()));
+     *         ctx.export("merakiNetworksPiiSmDevicesForKeyExample", example.applyValue(getPiiSmDevicesForKeyResult -> getPiiSmDevicesForKeyResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8469,7 +8847,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8491,19 +8870,20 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getPiiSmDevicesForKey(GetPiiSmDevicesForKeyArgs.builder()
-     *             .bluetoothMac(&#34;string&#34;)
-     *             .email(&#34;string&#34;)
-     *             .imei(&#34;string&#34;)
-     *             .mac(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
-     *             .username(&#34;string&#34;)
+     *             .bluetoothMac("string")
+     *             .email("string")
+     *             .imei("string")
+     *             .mac("string")
+     *             .networkId("string")
+     *             .serial("string")
+     *             .username("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksPiiSmDevicesForKeyExample&#34;, example.applyValue(getPiiSmDevicesForKeyResult -&gt; getPiiSmDevicesForKeyResult.item()));
+     *         ctx.export("merakiNetworksPiiSmDevicesForKeyExample", example.applyValue(getPiiSmDevicesForKeyResult -> getPiiSmDevicesForKeyResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8514,7 +8894,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8536,19 +8917,20 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getPiiSmOwnersForKey(GetPiiSmOwnersForKeyArgs.builder()
-     *             .bluetoothMac(&#34;string&#34;)
-     *             .email(&#34;string&#34;)
-     *             .imei(&#34;string&#34;)
-     *             .mac(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
-     *             .username(&#34;string&#34;)
+     *             .bluetoothMac("string")
+     *             .email("string")
+     *             .imei("string")
+     *             .mac("string")
+     *             .networkId("string")
+     *             .serial("string")
+     *             .username("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksPiiSmOwnersForKeyExample&#34;, example.applyValue(getPiiSmOwnersForKeyResult -&gt; getPiiSmOwnersForKeyResult.item()));
+     *         ctx.export("merakiNetworksPiiSmOwnersForKeyExample", example.applyValue(getPiiSmOwnersForKeyResult -> getPiiSmOwnersForKeyResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8559,7 +8941,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8581,19 +8964,20 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getPiiSmOwnersForKey(GetPiiSmOwnersForKeyArgs.builder()
-     *             .bluetoothMac(&#34;string&#34;)
-     *             .email(&#34;string&#34;)
-     *             .imei(&#34;string&#34;)
-     *             .mac(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
-     *             .username(&#34;string&#34;)
+     *             .bluetoothMac("string")
+     *             .email("string")
+     *             .imei("string")
+     *             .mac("string")
+     *             .networkId("string")
+     *             .serial("string")
+     *             .username("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksPiiSmOwnersForKeyExample&#34;, example.applyValue(getPiiSmOwnersForKeyResult -&gt; getPiiSmOwnersForKeyResult.item()));
+     *         ctx.export("merakiNetworksPiiSmOwnersForKeyExample", example.applyValue(getPiiSmOwnersForKeyResult -> getPiiSmOwnersForKeyResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8604,7 +8988,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8626,19 +9011,20 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getPiiSmOwnersForKey(GetPiiSmOwnersForKeyArgs.builder()
-     *             .bluetoothMac(&#34;string&#34;)
-     *             .email(&#34;string&#34;)
-     *             .imei(&#34;string&#34;)
-     *             .mac(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
-     *             .username(&#34;string&#34;)
+     *             .bluetoothMac("string")
+     *             .email("string")
+     *             .imei("string")
+     *             .mac("string")
+     *             .networkId("string")
+     *             .serial("string")
+     *             .username("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksPiiSmOwnersForKeyExample&#34;, example.applyValue(getPiiSmOwnersForKeyResult -&gt; getPiiSmOwnersForKeyResult.item()));
+     *         ctx.export("merakiNetworksPiiSmOwnersForKeyExample", example.applyValue(getPiiSmOwnersForKeyResult -> getPiiSmOwnersForKeyResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8649,7 +9035,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8671,19 +9058,20 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getPiiSmOwnersForKey(GetPiiSmOwnersForKeyArgs.builder()
-     *             .bluetoothMac(&#34;string&#34;)
-     *             .email(&#34;string&#34;)
-     *             .imei(&#34;string&#34;)
-     *             .mac(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
-     *             .username(&#34;string&#34;)
+     *             .bluetoothMac("string")
+     *             .email("string")
+     *             .imei("string")
+     *             .mac("string")
+     *             .networkId("string")
+     *             .serial("string")
+     *             .username("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksPiiSmOwnersForKeyExample&#34;, example.applyValue(getPiiSmOwnersForKeyResult -&gt; getPiiSmOwnersForKeyResult.item()));
+     *         ctx.export("merakiNetworksPiiSmOwnersForKeyExample", example.applyValue(getPiiSmOwnersForKeyResult -> getPiiSmOwnersForKeyResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8694,7 +9082,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8716,18 +9105,19 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getPoliciesByClient(GetPoliciesByClientArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
+     *             .startingAfter("string")
+     *             .t0("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksPoliciesByClientExample&#34;, example.applyValue(getPoliciesByClientResult -&gt; getPoliciesByClientResult.items()));
+     *         ctx.export("merakiNetworksPoliciesByClientExample", example.applyValue(getPoliciesByClientResult -> getPoliciesByClientResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8738,7 +9128,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8760,18 +9151,19 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getPoliciesByClient(GetPoliciesByClientArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
+     *             .startingAfter("string")
+     *             .t0("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksPoliciesByClientExample&#34;, example.applyValue(getPoliciesByClientResult -&gt; getPoliciesByClientResult.items()));
+     *         ctx.export("merakiNetworksPoliciesByClientExample", example.applyValue(getPoliciesByClientResult -> getPoliciesByClientResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8782,7 +9174,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8804,18 +9197,19 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getPoliciesByClient(GetPoliciesByClientArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
+     *             .startingAfter("string")
+     *             .t0("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksPoliciesByClientExample&#34;, example.applyValue(getPoliciesByClientResult -&gt; getPoliciesByClientResult.items()));
+     *         ctx.export("merakiNetworksPoliciesByClientExample", example.applyValue(getPoliciesByClientResult -> getPoliciesByClientResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8826,7 +9220,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8848,18 +9243,19 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getPoliciesByClient(GetPoliciesByClientArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
+     *             .startingAfter("string")
+     *             .t0("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksPoliciesByClientExample&#34;, example.applyValue(getPoliciesByClientResult -&gt; getPoliciesByClientResult.items()));
+     *         ctx.export("merakiNetworksPoliciesByClientExample", example.applyValue(getPoliciesByClientResult -> getPoliciesByClientResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8870,7 +9266,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8892,13 +9289,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSensorAlertsCurrentOverviewByMetric(GetSensorAlertsCurrentOverviewByMetricArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSensorAlertsCurrentOverviewByMetricExample&#34;, example.applyValue(getSensorAlertsCurrentOverviewByMetricResult -&gt; getSensorAlertsCurrentOverviewByMetricResult.item()));
+     *         ctx.export("merakiNetworksSensorAlertsCurrentOverviewByMetricExample", example.applyValue(getSensorAlertsCurrentOverviewByMetricResult -> getSensorAlertsCurrentOverviewByMetricResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8909,7 +9307,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8931,13 +9330,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSensorAlertsCurrentOverviewByMetric(GetSensorAlertsCurrentOverviewByMetricArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSensorAlertsCurrentOverviewByMetricExample&#34;, example.applyValue(getSensorAlertsCurrentOverviewByMetricResult -&gt; getSensorAlertsCurrentOverviewByMetricResult.item()));
+     *         ctx.export("merakiNetworksSensorAlertsCurrentOverviewByMetricExample", example.applyValue(getSensorAlertsCurrentOverviewByMetricResult -> getSensorAlertsCurrentOverviewByMetricResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8948,7 +9348,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -8970,13 +9371,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSensorAlertsCurrentOverviewByMetric(GetSensorAlertsCurrentOverviewByMetricArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSensorAlertsCurrentOverviewByMetricExample&#34;, example.applyValue(getSensorAlertsCurrentOverviewByMetricResult -&gt; getSensorAlertsCurrentOverviewByMetricResult.item()));
+     *         ctx.export("merakiNetworksSensorAlertsCurrentOverviewByMetricExample", example.applyValue(getSensorAlertsCurrentOverviewByMetricResult -> getSensorAlertsCurrentOverviewByMetricResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -8987,7 +9389,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9009,13 +9412,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSensorAlertsCurrentOverviewByMetric(GetSensorAlertsCurrentOverviewByMetricArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSensorAlertsCurrentOverviewByMetricExample&#34;, example.applyValue(getSensorAlertsCurrentOverviewByMetricResult -&gt; getSensorAlertsCurrentOverviewByMetricResult.item()));
+     *         ctx.export("merakiNetworksSensorAlertsCurrentOverviewByMetricExample", example.applyValue(getSensorAlertsCurrentOverviewByMetricResult -> getSensorAlertsCurrentOverviewByMetricResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9026,7 +9430,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9049,16 +9454,17 @@ public final class NetworksFunctions {
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSensorAlertsOverviewByMetric(GetSensorAlertsOverviewByMetricArgs.builder()
      *             .interval(1)
-     *             .networkId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .networkId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSensorAlertsOverviewByMetricExample&#34;, example.applyValue(getSensorAlertsOverviewByMetricResult -&gt; getSensorAlertsOverviewByMetricResult.items()));
+     *         ctx.export("merakiNetworksSensorAlertsOverviewByMetricExample", example.applyValue(getSensorAlertsOverviewByMetricResult -> getSensorAlertsOverviewByMetricResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9069,7 +9475,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9092,16 +9499,17 @@ public final class NetworksFunctions {
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSensorAlertsOverviewByMetric(GetSensorAlertsOverviewByMetricArgs.builder()
      *             .interval(1)
-     *             .networkId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .networkId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSensorAlertsOverviewByMetricExample&#34;, example.applyValue(getSensorAlertsOverviewByMetricResult -&gt; getSensorAlertsOverviewByMetricResult.items()));
+     *         ctx.export("merakiNetworksSensorAlertsOverviewByMetricExample", example.applyValue(getSensorAlertsOverviewByMetricResult -> getSensorAlertsOverviewByMetricResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9112,7 +9520,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9135,16 +9544,17 @@ public final class NetworksFunctions {
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSensorAlertsOverviewByMetric(GetSensorAlertsOverviewByMetricArgs.builder()
      *             .interval(1)
-     *             .networkId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .networkId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSensorAlertsOverviewByMetricExample&#34;, example.applyValue(getSensorAlertsOverviewByMetricResult -&gt; getSensorAlertsOverviewByMetricResult.items()));
+     *         ctx.export("merakiNetworksSensorAlertsOverviewByMetricExample", example.applyValue(getSensorAlertsOverviewByMetricResult -> getSensorAlertsOverviewByMetricResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9155,7 +9565,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9178,16 +9589,17 @@ public final class NetworksFunctions {
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSensorAlertsOverviewByMetric(GetSensorAlertsOverviewByMetricArgs.builder()
      *             .interval(1)
-     *             .networkId(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .networkId("string")
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSensorAlertsOverviewByMetricExample&#34;, example.applyValue(getSensorAlertsOverviewByMetricResult -&gt; getSensorAlertsOverviewByMetricResult.items()));
+     *         ctx.export("merakiNetworksSensorAlertsOverviewByMetricExample", example.applyValue(getSensorAlertsOverviewByMetricResult -> getSensorAlertsOverviewByMetricResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9282,7 +9694,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9304,13 +9717,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSensorRelationships(GetSensorRelationshipsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSensorRelationshipsExample&#34;, example.applyValue(getSensorRelationshipsResult -&gt; getSensorRelationshipsResult.items()));
+     *         ctx.export("merakiNetworksSensorRelationshipsExample", example.applyValue(getSensorRelationshipsResult -> getSensorRelationshipsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9321,7 +9735,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9343,13 +9758,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSensorRelationships(GetSensorRelationshipsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSensorRelationshipsExample&#34;, example.applyValue(getSensorRelationshipsResult -&gt; getSensorRelationshipsResult.items()));
+     *         ctx.export("merakiNetworksSensorRelationshipsExample", example.applyValue(getSensorRelationshipsResult -> getSensorRelationshipsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9360,7 +9776,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9382,13 +9799,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSensorRelationships(GetSensorRelationshipsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSensorRelationshipsExample&#34;, example.applyValue(getSensorRelationshipsResult -&gt; getSensorRelationshipsResult.items()));
+     *         ctx.export("merakiNetworksSensorRelationshipsExample", example.applyValue(getSensorRelationshipsResult -> getSensorRelationshipsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9399,7 +9817,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9421,13 +9840,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSensorRelationships(GetSensorRelationshipsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSensorRelationshipsExample&#34;, example.applyValue(getSensorRelationshipsResult -&gt; getSensorRelationshipsResult.items()));
+     *         ctx.export("merakiNetworksSensorRelationshipsExample", example.applyValue(getSensorRelationshipsResult -> getSensorRelationshipsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9438,7 +9858,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9460,13 +9881,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSettings(GetSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSettingsExample&#34;, example.applyValue(getSettingsResult -&gt; getSettingsResult.item()));
+     *         ctx.export("merakiNetworksSettingsExample", example.applyValue(getSettingsResult -> getSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9477,7 +9899,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9499,13 +9922,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSettings(GetSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSettingsExample&#34;, example.applyValue(getSettingsResult -&gt; getSettingsResult.item()));
+     *         ctx.export("merakiNetworksSettingsExample", example.applyValue(getSettingsResult -> getSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9516,7 +9940,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9538,13 +9963,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSettings(GetSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSettingsExample&#34;, example.applyValue(getSettingsResult -&gt; getSettingsResult.item()));
+     *         ctx.export("merakiNetworksSettingsExample", example.applyValue(getSettingsResult -> getSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9555,7 +9981,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9577,13 +10004,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSettings(GetSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSettingsExample&#34;, example.applyValue(getSettingsResult -&gt; getSettingsResult.item()));
+     *         ctx.export("merakiNetworksSettingsExample", example.applyValue(getSettingsResult -> getSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9594,7 +10022,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9616,14 +10045,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmBypassActivationLockAttempts(GetSmBypassActivationLockAttemptsArgs.builder()
-     *             .attemptId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .attemptId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmBypassActivationLockAttemptsExample&#34;, example.applyValue(getSmBypassActivationLockAttemptsResult -&gt; getSmBypassActivationLockAttemptsResult.item()));
+     *         ctx.export("merakiNetworksSmBypassActivationLockAttemptsExample", example.applyValue(getSmBypassActivationLockAttemptsResult -> getSmBypassActivationLockAttemptsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9634,7 +10064,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9656,14 +10087,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmBypassActivationLockAttempts(GetSmBypassActivationLockAttemptsArgs.builder()
-     *             .attemptId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .attemptId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmBypassActivationLockAttemptsExample&#34;, example.applyValue(getSmBypassActivationLockAttemptsResult -&gt; getSmBypassActivationLockAttemptsResult.item()));
+     *         ctx.export("merakiNetworksSmBypassActivationLockAttemptsExample", example.applyValue(getSmBypassActivationLockAttemptsResult -> getSmBypassActivationLockAttemptsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9674,7 +10106,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9696,14 +10129,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmBypassActivationLockAttempts(GetSmBypassActivationLockAttemptsArgs.builder()
-     *             .attemptId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .attemptId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmBypassActivationLockAttemptsExample&#34;, example.applyValue(getSmBypassActivationLockAttemptsResult -&gt; getSmBypassActivationLockAttemptsResult.item()));
+     *         ctx.export("merakiNetworksSmBypassActivationLockAttemptsExample", example.applyValue(getSmBypassActivationLockAttemptsResult -> getSmBypassActivationLockAttemptsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9714,7 +10148,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9736,14 +10171,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmBypassActivationLockAttempts(GetSmBypassActivationLockAttemptsArgs.builder()
-     *             .attemptId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .attemptId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmBypassActivationLockAttemptsExample&#34;, example.applyValue(getSmBypassActivationLockAttemptsResult -&gt; getSmBypassActivationLockAttemptsResult.item()));
+     *         ctx.export("merakiNetworksSmBypassActivationLockAttemptsExample", example.applyValue(getSmBypassActivationLockAttemptsResult -> getSmBypassActivationLockAttemptsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9754,7 +10190,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9776,23 +10213,24 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevices(GetSmDevicesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .fields(&#34;string&#34;)
-     *             .ids(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .fields("string")
+     *             .ids("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .scopes(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .systemTypes(&#34;string&#34;)
-     *             .uuids(&#34;string&#34;)
-     *             .wifiMacs(&#34;string&#34;)
+     *             .scopes("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .systemTypes("string")
+     *             .uuids("string")
+     *             .wifiMacs("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesExample&#34;, example.applyValue(getSmDevicesResult -&gt; getSmDevicesResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesExample", example.applyValue(getSmDevicesResult -> getSmDevicesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9803,7 +10241,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9825,23 +10264,24 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevices(GetSmDevicesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .fields(&#34;string&#34;)
-     *             .ids(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .fields("string")
+     *             .ids("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .scopes(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .systemTypes(&#34;string&#34;)
-     *             .uuids(&#34;string&#34;)
-     *             .wifiMacs(&#34;string&#34;)
+     *             .scopes("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .systemTypes("string")
+     *             .uuids("string")
+     *             .wifiMacs("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesExample&#34;, example.applyValue(getSmDevicesResult -&gt; getSmDevicesResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesExample", example.applyValue(getSmDevicesResult -> getSmDevicesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9852,7 +10292,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9874,23 +10315,24 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevices(GetSmDevicesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .fields(&#34;string&#34;)
-     *             .ids(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .fields("string")
+     *             .ids("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .scopes(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .systemTypes(&#34;string&#34;)
-     *             .uuids(&#34;string&#34;)
-     *             .wifiMacs(&#34;string&#34;)
+     *             .scopes("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .systemTypes("string")
+     *             .uuids("string")
+     *             .wifiMacs("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesExample&#34;, example.applyValue(getSmDevicesResult -&gt; getSmDevicesResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesExample", example.applyValue(getSmDevicesResult -> getSmDevicesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9901,7 +10343,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9923,23 +10366,24 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevices(GetSmDevicesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .fields(&#34;string&#34;)
-     *             .ids(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .fields("string")
+     *             .ids("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .scopes(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
-     *             .systemTypes(&#34;string&#34;)
-     *             .uuids(&#34;string&#34;)
-     *             .wifiMacs(&#34;string&#34;)
+     *             .scopes("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .systemTypes("string")
+     *             .uuids("string")
+     *             .wifiMacs("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesExample&#34;, example.applyValue(getSmDevicesResult -&gt; getSmDevicesResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesExample", example.applyValue(getSmDevicesResult -> getSmDevicesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9950,7 +10394,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -9972,14 +10417,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesCellularUsageHistory(GetSmDevicesCellularUsageHistoryArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesCellularUsageHistoryExample&#34;, example.applyValue(getSmDevicesCellularUsageHistoryResult -&gt; getSmDevicesCellularUsageHistoryResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesCellularUsageHistoryExample", example.applyValue(getSmDevicesCellularUsageHistoryResult -> getSmDevicesCellularUsageHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -9990,7 +10436,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10012,14 +10459,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesCellularUsageHistory(GetSmDevicesCellularUsageHistoryArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesCellularUsageHistoryExample&#34;, example.applyValue(getSmDevicesCellularUsageHistoryResult -&gt; getSmDevicesCellularUsageHistoryResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesCellularUsageHistoryExample", example.applyValue(getSmDevicesCellularUsageHistoryResult -> getSmDevicesCellularUsageHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10030,7 +10478,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10052,14 +10501,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesCellularUsageHistory(GetSmDevicesCellularUsageHistoryArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesCellularUsageHistoryExample&#34;, example.applyValue(getSmDevicesCellularUsageHistoryResult -&gt; getSmDevicesCellularUsageHistoryResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesCellularUsageHistoryExample", example.applyValue(getSmDevicesCellularUsageHistoryResult -> getSmDevicesCellularUsageHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10070,7 +10520,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10092,14 +10543,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesCellularUsageHistory(GetSmDevicesCellularUsageHistoryArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesCellularUsageHistoryExample&#34;, example.applyValue(getSmDevicesCellularUsageHistoryResult -&gt; getSmDevicesCellularUsageHistoryResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesCellularUsageHistoryExample", example.applyValue(getSmDevicesCellularUsageHistoryResult -> getSmDevicesCellularUsageHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10110,7 +10562,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10132,14 +10585,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesCerts(GetSmDevicesCertsArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesCertsExample&#34;, example.applyValue(getSmDevicesCertsResult -&gt; getSmDevicesCertsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesCertsExample", example.applyValue(getSmDevicesCertsResult -> getSmDevicesCertsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10150,7 +10604,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10172,14 +10627,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesCerts(GetSmDevicesCertsArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesCertsExample&#34;, example.applyValue(getSmDevicesCertsResult -&gt; getSmDevicesCertsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesCertsExample", example.applyValue(getSmDevicesCertsResult -> getSmDevicesCertsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10190,7 +10646,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10212,14 +10669,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesCerts(GetSmDevicesCertsArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesCertsExample&#34;, example.applyValue(getSmDevicesCertsResult -&gt; getSmDevicesCertsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesCertsExample", example.applyValue(getSmDevicesCertsResult -> getSmDevicesCertsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10230,7 +10688,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10252,14 +10711,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesCerts(GetSmDevicesCertsArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesCertsExample&#34;, example.applyValue(getSmDevicesCertsResult -&gt; getSmDevicesCertsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesCertsExample", example.applyValue(getSmDevicesCertsResult -> getSmDevicesCertsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10270,7 +10730,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10292,17 +10753,18 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesConnectivity(GetSmDevicesConnectivityArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesConnectivityExample&#34;, example.applyValue(getSmDevicesConnectivityResult -&gt; getSmDevicesConnectivityResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesConnectivityExample", example.applyValue(getSmDevicesConnectivityResult -> getSmDevicesConnectivityResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10313,7 +10775,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10335,17 +10798,18 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesConnectivity(GetSmDevicesConnectivityArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesConnectivityExample&#34;, example.applyValue(getSmDevicesConnectivityResult -&gt; getSmDevicesConnectivityResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesConnectivityExample", example.applyValue(getSmDevicesConnectivityResult -> getSmDevicesConnectivityResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10356,7 +10820,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10378,17 +10843,18 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesConnectivity(GetSmDevicesConnectivityArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesConnectivityExample&#34;, example.applyValue(getSmDevicesConnectivityResult -&gt; getSmDevicesConnectivityResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesConnectivityExample", example.applyValue(getSmDevicesConnectivityResult -> getSmDevicesConnectivityResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10399,7 +10865,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10421,17 +10888,18 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesConnectivity(GetSmDevicesConnectivityArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesConnectivityExample&#34;, example.applyValue(getSmDevicesConnectivityResult -&gt; getSmDevicesConnectivityResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesConnectivityExample", example.applyValue(getSmDevicesConnectivityResult -> getSmDevicesConnectivityResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10442,7 +10910,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10464,17 +10933,18 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesDesktopLogs(GetSmDevicesDesktopLogsArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesDesktopLogsExample&#34;, example.applyValue(getSmDevicesDesktopLogsResult -&gt; getSmDevicesDesktopLogsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesDesktopLogsExample", example.applyValue(getSmDevicesDesktopLogsResult -> getSmDevicesDesktopLogsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10485,7 +10955,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10507,17 +10978,18 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesDesktopLogs(GetSmDevicesDesktopLogsArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesDesktopLogsExample&#34;, example.applyValue(getSmDevicesDesktopLogsResult -&gt; getSmDevicesDesktopLogsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesDesktopLogsExample", example.applyValue(getSmDevicesDesktopLogsResult -> getSmDevicesDesktopLogsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10528,7 +11000,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10550,17 +11023,18 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesDesktopLogs(GetSmDevicesDesktopLogsArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesDesktopLogsExample&#34;, example.applyValue(getSmDevicesDesktopLogsResult -&gt; getSmDevicesDesktopLogsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesDesktopLogsExample", example.applyValue(getSmDevicesDesktopLogsResult -> getSmDevicesDesktopLogsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10571,7 +11045,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10593,17 +11068,18 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesDesktopLogs(GetSmDevicesDesktopLogsArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesDesktopLogsExample&#34;, example.applyValue(getSmDevicesDesktopLogsResult -&gt; getSmDevicesDesktopLogsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesDesktopLogsExample", example.applyValue(getSmDevicesDesktopLogsResult -> getSmDevicesDesktopLogsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10614,7 +11090,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10636,17 +11113,18 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesDeviceCommandLogs(GetSmDevicesDeviceCommandLogsArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesDeviceCommandLogsExample&#34;, example.applyValue(getSmDevicesDeviceCommandLogsResult -&gt; getSmDevicesDeviceCommandLogsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesDeviceCommandLogsExample", example.applyValue(getSmDevicesDeviceCommandLogsResult -> getSmDevicesDeviceCommandLogsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10657,7 +11135,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10679,17 +11158,18 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesDeviceCommandLogs(GetSmDevicesDeviceCommandLogsArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesDeviceCommandLogsExample&#34;, example.applyValue(getSmDevicesDeviceCommandLogsResult -&gt; getSmDevicesDeviceCommandLogsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesDeviceCommandLogsExample", example.applyValue(getSmDevicesDeviceCommandLogsResult -> getSmDevicesDeviceCommandLogsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10700,7 +11180,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10722,17 +11203,18 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesDeviceCommandLogs(GetSmDevicesDeviceCommandLogsArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesDeviceCommandLogsExample&#34;, example.applyValue(getSmDevicesDeviceCommandLogsResult -&gt; getSmDevicesDeviceCommandLogsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesDeviceCommandLogsExample", example.applyValue(getSmDevicesDeviceCommandLogsResult -> getSmDevicesDeviceCommandLogsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10743,7 +11225,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10765,17 +11248,18 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesDeviceCommandLogs(GetSmDevicesDeviceCommandLogsArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesDeviceCommandLogsExample&#34;, example.applyValue(getSmDevicesDeviceCommandLogsResult -&gt; getSmDevicesDeviceCommandLogsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesDeviceCommandLogsExample", example.applyValue(getSmDevicesDeviceCommandLogsResult -> getSmDevicesDeviceCommandLogsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10786,7 +11270,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10808,14 +11293,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesDeviceProfiles(GetSmDevicesDeviceProfilesArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesDeviceProfilesExample&#34;, example.applyValue(getSmDevicesDeviceProfilesResult -&gt; getSmDevicesDeviceProfilesResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesDeviceProfilesExample", example.applyValue(getSmDevicesDeviceProfilesResult -> getSmDevicesDeviceProfilesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10826,7 +11312,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10848,14 +11335,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesDeviceProfiles(GetSmDevicesDeviceProfilesArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesDeviceProfilesExample&#34;, example.applyValue(getSmDevicesDeviceProfilesResult -&gt; getSmDevicesDeviceProfilesResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesDeviceProfilesExample", example.applyValue(getSmDevicesDeviceProfilesResult -> getSmDevicesDeviceProfilesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10866,7 +11354,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10888,14 +11377,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesDeviceProfiles(GetSmDevicesDeviceProfilesArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesDeviceProfilesExample&#34;, example.applyValue(getSmDevicesDeviceProfilesResult -&gt; getSmDevicesDeviceProfilesResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesDeviceProfilesExample", example.applyValue(getSmDevicesDeviceProfilesResult -> getSmDevicesDeviceProfilesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10906,7 +11396,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10928,14 +11419,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesDeviceProfiles(GetSmDevicesDeviceProfilesArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesDeviceProfilesExample&#34;, example.applyValue(getSmDevicesDeviceProfilesResult -&gt; getSmDevicesDeviceProfilesResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesDeviceProfilesExample", example.applyValue(getSmDevicesDeviceProfilesResult -> getSmDevicesDeviceProfilesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10946,7 +11438,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -10968,14 +11461,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesNetworkAdapters(GetSmDevicesNetworkAdaptersArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesNetworkAdaptersExample&#34;, example.applyValue(getSmDevicesNetworkAdaptersResult -&gt; getSmDevicesNetworkAdaptersResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesNetworkAdaptersExample", example.applyValue(getSmDevicesNetworkAdaptersResult -> getSmDevicesNetworkAdaptersResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -10986,7 +11480,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11008,14 +11503,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesNetworkAdapters(GetSmDevicesNetworkAdaptersArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesNetworkAdaptersExample&#34;, example.applyValue(getSmDevicesNetworkAdaptersResult -&gt; getSmDevicesNetworkAdaptersResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesNetworkAdaptersExample", example.applyValue(getSmDevicesNetworkAdaptersResult -> getSmDevicesNetworkAdaptersResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11026,7 +11522,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11048,14 +11545,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesNetworkAdapters(GetSmDevicesNetworkAdaptersArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesNetworkAdaptersExample&#34;, example.applyValue(getSmDevicesNetworkAdaptersResult -&gt; getSmDevicesNetworkAdaptersResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesNetworkAdaptersExample", example.applyValue(getSmDevicesNetworkAdaptersResult -> getSmDevicesNetworkAdaptersResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11066,7 +11564,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11088,14 +11587,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesNetworkAdapters(GetSmDevicesNetworkAdaptersArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesNetworkAdaptersExample&#34;, example.applyValue(getSmDevicesNetworkAdaptersResult -&gt; getSmDevicesNetworkAdaptersResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesNetworkAdaptersExample", example.applyValue(getSmDevicesNetworkAdaptersResult -> getSmDevicesNetworkAdaptersResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11106,7 +11606,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11128,17 +11629,18 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesPerformanceHistory(GetSmDevicesPerformanceHistoryArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesPerformanceHistoryExample&#34;, example.applyValue(getSmDevicesPerformanceHistoryResult -&gt; getSmDevicesPerformanceHistoryResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesPerformanceHistoryExample", example.applyValue(getSmDevicesPerformanceHistoryResult -> getSmDevicesPerformanceHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11149,7 +11651,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11171,17 +11674,18 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesPerformanceHistory(GetSmDevicesPerformanceHistoryArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesPerformanceHistoryExample&#34;, example.applyValue(getSmDevicesPerformanceHistoryResult -&gt; getSmDevicesPerformanceHistoryResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesPerformanceHistoryExample", example.applyValue(getSmDevicesPerformanceHistoryResult -> getSmDevicesPerformanceHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11192,7 +11696,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11214,17 +11719,18 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesPerformanceHistory(GetSmDevicesPerformanceHistoryArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesPerformanceHistoryExample&#34;, example.applyValue(getSmDevicesPerformanceHistoryResult -&gt; getSmDevicesPerformanceHistoryResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesPerformanceHistoryExample", example.applyValue(getSmDevicesPerformanceHistoryResult -> getSmDevicesPerformanceHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11235,7 +11741,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11257,17 +11764,18 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesPerformanceHistory(GetSmDevicesPerformanceHistoryArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesPerformanceHistoryExample&#34;, example.applyValue(getSmDevicesPerformanceHistoryResult -&gt; getSmDevicesPerformanceHistoryResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesPerformanceHistoryExample", example.applyValue(getSmDevicesPerformanceHistoryResult -> getSmDevicesPerformanceHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11278,7 +11786,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11300,14 +11809,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesSecurityCenters(GetSmDevicesSecurityCentersArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesSecurityCentersExample&#34;, example.applyValue(getSmDevicesSecurityCentersResult -&gt; getSmDevicesSecurityCentersResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesSecurityCentersExample", example.applyValue(getSmDevicesSecurityCentersResult -> getSmDevicesSecurityCentersResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11318,7 +11828,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11340,14 +11851,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesSecurityCenters(GetSmDevicesSecurityCentersArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesSecurityCentersExample&#34;, example.applyValue(getSmDevicesSecurityCentersResult -&gt; getSmDevicesSecurityCentersResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesSecurityCentersExample", example.applyValue(getSmDevicesSecurityCentersResult -> getSmDevicesSecurityCentersResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11358,7 +11870,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11380,14 +11893,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesSecurityCenters(GetSmDevicesSecurityCentersArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesSecurityCentersExample&#34;, example.applyValue(getSmDevicesSecurityCentersResult -&gt; getSmDevicesSecurityCentersResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesSecurityCentersExample", example.applyValue(getSmDevicesSecurityCentersResult -> getSmDevicesSecurityCentersResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11398,7 +11912,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11420,14 +11935,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesSecurityCenters(GetSmDevicesSecurityCentersArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesSecurityCentersExample&#34;, example.applyValue(getSmDevicesSecurityCentersResult -&gt; getSmDevicesSecurityCentersResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesSecurityCentersExample", example.applyValue(getSmDevicesSecurityCentersResult -> getSmDevicesSecurityCentersResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11438,7 +11954,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11460,14 +11977,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesSecurityCenters(GetSmDevicesSecurityCentersArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesSecurityCentersExample&#34;, example.applyValue(getSmDevicesSecurityCentersResult -&gt; getSmDevicesSecurityCentersResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesSecurityCentersExample", example.applyValue(getSmDevicesSecurityCentersResult -> getSmDevicesSecurityCentersResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11478,7 +11996,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11500,14 +12019,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesSecurityCenters(GetSmDevicesSecurityCentersArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesSecurityCentersExample&#34;, example.applyValue(getSmDevicesSecurityCentersResult -&gt; getSmDevicesSecurityCentersResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesSecurityCentersExample", example.applyValue(getSmDevicesSecurityCentersResult -> getSmDevicesSecurityCentersResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11518,7 +12038,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11540,14 +12061,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesWlanLists(GetSmDevicesWlanListsArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesWlanListsExample&#34;, example.applyValue(getSmDevicesWlanListsResult -&gt; getSmDevicesWlanListsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesWlanListsExample", example.applyValue(getSmDevicesWlanListsResult -> getSmDevicesWlanListsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11558,7 +12080,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11580,14 +12103,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesWlanLists(GetSmDevicesWlanListsArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesWlanListsExample&#34;, example.applyValue(getSmDevicesWlanListsResult -&gt; getSmDevicesWlanListsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesWlanListsExample", example.applyValue(getSmDevicesWlanListsResult -> getSmDevicesWlanListsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11598,7 +12122,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11620,14 +12145,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesWlanLists(GetSmDevicesWlanListsArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesWlanListsExample&#34;, example.applyValue(getSmDevicesWlanListsResult -&gt; getSmDevicesWlanListsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesWlanListsExample", example.applyValue(getSmDevicesWlanListsResult -> getSmDevicesWlanListsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11638,7 +12164,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11660,14 +12187,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmDevicesWlanLists(GetSmDevicesWlanListsArgs.builder()
-     *             .deviceId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .deviceId("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmDevicesWlanListsExample&#34;, example.applyValue(getSmDevicesWlanListsResult -&gt; getSmDevicesWlanListsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesWlanListsExample", example.applyValue(getSmDevicesWlanListsResult -> getSmDevicesWlanListsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11678,7 +12206,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11700,14 +12229,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmProfiles(GetSmProfilesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .payloadTypes(&#34;string&#34;)
+     *             .networkId("string")
+     *             .payloadTypes("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmProfilesExample&#34;, example.applyValue(getSmProfilesResult -&gt; getSmProfilesResult.items()));
+     *         ctx.export("merakiNetworksSmProfilesExample", example.applyValue(getSmProfilesResult -> getSmProfilesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11718,7 +12248,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11740,14 +12271,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmProfiles(GetSmProfilesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .payloadTypes(&#34;string&#34;)
+     *             .networkId("string")
+     *             .payloadTypes("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmProfilesExample&#34;, example.applyValue(getSmProfilesResult -&gt; getSmProfilesResult.items()));
+     *         ctx.export("merakiNetworksSmProfilesExample", example.applyValue(getSmProfilesResult -> getSmProfilesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11758,7 +12290,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11780,14 +12313,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmProfiles(GetSmProfilesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .payloadTypes(&#34;string&#34;)
+     *             .networkId("string")
+     *             .payloadTypes("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmProfilesExample&#34;, example.applyValue(getSmProfilesResult -&gt; getSmProfilesResult.items()));
+     *         ctx.export("merakiNetworksSmProfilesExample", example.applyValue(getSmProfilesResult -> getSmProfilesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11798,7 +12332,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11820,14 +12355,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmProfiles(GetSmProfilesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .payloadTypes(&#34;string&#34;)
+     *             .networkId("string")
+     *             .payloadTypes("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmProfilesExample&#34;, example.applyValue(getSmProfilesResult -&gt; getSmProfilesResult.items()));
+     *         ctx.export("merakiNetworksSmProfilesExample", example.applyValue(getSmProfilesResult -> getSmProfilesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11880,7 +12416,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11902,16 +12439,17 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmTrustedAccessConfigs(GetSmTrustedAccessConfigsArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmTrustedAccessConfigsExample&#34;, example.applyValue(getSmTrustedAccessConfigsResult -&gt; getSmTrustedAccessConfigsResult.items()));
+     *         ctx.export("merakiNetworksSmTrustedAccessConfigsExample", example.applyValue(getSmTrustedAccessConfigsResult -> getSmTrustedAccessConfigsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11922,7 +12460,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11944,16 +12483,17 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmTrustedAccessConfigs(GetSmTrustedAccessConfigsArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmTrustedAccessConfigsExample&#34;, example.applyValue(getSmTrustedAccessConfigsResult -&gt; getSmTrustedAccessConfigsResult.items()));
+     *         ctx.export("merakiNetworksSmTrustedAccessConfigsExample", example.applyValue(getSmTrustedAccessConfigsResult -> getSmTrustedAccessConfigsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -11964,7 +12504,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -11986,16 +12527,17 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmTrustedAccessConfigs(GetSmTrustedAccessConfigsArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmTrustedAccessConfigsExample&#34;, example.applyValue(getSmTrustedAccessConfigsResult -&gt; getSmTrustedAccessConfigsResult.items()));
+     *         ctx.export("merakiNetworksSmTrustedAccessConfigsExample", example.applyValue(getSmTrustedAccessConfigsResult -> getSmTrustedAccessConfigsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12006,7 +12548,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12028,16 +12571,17 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmTrustedAccessConfigs(GetSmTrustedAccessConfigsArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmTrustedAccessConfigsExample&#34;, example.applyValue(getSmTrustedAccessConfigsResult -&gt; getSmTrustedAccessConfigsResult.items()));
+     *         ctx.export("merakiNetworksSmTrustedAccessConfigsExample", example.applyValue(getSmTrustedAccessConfigsResult -> getSmTrustedAccessConfigsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12048,7 +12592,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12070,16 +12615,17 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmUserAccessDevices(GetSmUserAccessDevicesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmUserAccessDevicesExample&#34;, example.applyValue(getSmUserAccessDevicesResult -&gt; getSmUserAccessDevicesResult.items()));
+     *         ctx.export("merakiNetworksSmUserAccessDevicesExample", example.applyValue(getSmUserAccessDevicesResult -> getSmUserAccessDevicesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12090,7 +12636,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12112,16 +12659,17 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmUserAccessDevices(GetSmUserAccessDevicesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmUserAccessDevicesExample&#34;, example.applyValue(getSmUserAccessDevicesResult -&gt; getSmUserAccessDevicesResult.items()));
+     *         ctx.export("merakiNetworksSmUserAccessDevicesExample", example.applyValue(getSmUserAccessDevicesResult -> getSmUserAccessDevicesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12132,7 +12680,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12154,16 +12703,17 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmUserAccessDevices(GetSmUserAccessDevicesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmUserAccessDevicesExample&#34;, example.applyValue(getSmUserAccessDevicesResult -&gt; getSmUserAccessDevicesResult.items()));
+     *         ctx.export("merakiNetworksSmUserAccessDevicesExample", example.applyValue(getSmUserAccessDevicesResult -> getSmUserAccessDevicesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12174,7 +12724,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12196,16 +12747,17 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmUserAccessDevices(GetSmUserAccessDevicesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmUserAccessDevicesExample&#34;, example.applyValue(getSmUserAccessDevicesResult -&gt; getSmUserAccessDevicesResult.items()));
+     *         ctx.export("merakiNetworksSmUserAccessDevicesExample", example.applyValue(getSmUserAccessDevicesResult -> getSmUserAccessDevicesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12216,7 +12768,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12238,17 +12791,18 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmUsers(GetSmUsersArgs.builder()
-     *             .emails(&#34;string&#34;)
-     *             .ids(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
-     *             .scopes(&#34;string&#34;)
-     *             .usernames(&#34;string&#34;)
+     *             .emails("string")
+     *             .ids("string")
+     *             .networkId("string")
+     *             .scopes("string")
+     *             .usernames("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmUsersExample&#34;, example.applyValue(getSmUsersResult -&gt; getSmUsersResult.items()));
+     *         ctx.export("merakiNetworksSmUsersExample", example.applyValue(getSmUsersResult -> getSmUsersResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12259,7 +12813,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12281,17 +12836,18 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmUsers(GetSmUsersArgs.builder()
-     *             .emails(&#34;string&#34;)
-     *             .ids(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
-     *             .scopes(&#34;string&#34;)
-     *             .usernames(&#34;string&#34;)
+     *             .emails("string")
+     *             .ids("string")
+     *             .networkId("string")
+     *             .scopes("string")
+     *             .usernames("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmUsersExample&#34;, example.applyValue(getSmUsersResult -&gt; getSmUsersResult.items()));
+     *         ctx.export("merakiNetworksSmUsersExample", example.applyValue(getSmUsersResult -> getSmUsersResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12302,7 +12858,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12324,17 +12881,18 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmUsers(GetSmUsersArgs.builder()
-     *             .emails(&#34;string&#34;)
-     *             .ids(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
-     *             .scopes(&#34;string&#34;)
-     *             .usernames(&#34;string&#34;)
+     *             .emails("string")
+     *             .ids("string")
+     *             .networkId("string")
+     *             .scopes("string")
+     *             .usernames("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmUsersExample&#34;, example.applyValue(getSmUsersResult -&gt; getSmUsersResult.items()));
+     *         ctx.export("merakiNetworksSmUsersExample", example.applyValue(getSmUsersResult -> getSmUsersResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12345,7 +12903,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12367,17 +12926,18 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmUsers(GetSmUsersArgs.builder()
-     *             .emails(&#34;string&#34;)
-     *             .ids(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
-     *             .scopes(&#34;string&#34;)
-     *             .usernames(&#34;string&#34;)
+     *             .emails("string")
+     *             .ids("string")
+     *             .networkId("string")
+     *             .scopes("string")
+     *             .usernames("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmUsersExample&#34;, example.applyValue(getSmUsersResult -&gt; getSmUsersResult.items()));
+     *         ctx.export("merakiNetworksSmUsersExample", example.applyValue(getSmUsersResult -> getSmUsersResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12388,7 +12948,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12410,14 +12971,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmUsersDeviceProfiles(GetSmUsersDeviceProfilesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .userId(&#34;string&#34;)
+     *             .networkId("string")
+     *             .userId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmUsersDeviceProfilesExample&#34;, example.applyValue(getSmUsersDeviceProfilesResult -&gt; getSmUsersDeviceProfilesResult.items()));
+     *         ctx.export("merakiNetworksSmUsersDeviceProfilesExample", example.applyValue(getSmUsersDeviceProfilesResult -> getSmUsersDeviceProfilesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12428,7 +12990,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12450,14 +13013,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmUsersDeviceProfiles(GetSmUsersDeviceProfilesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .userId(&#34;string&#34;)
+     *             .networkId("string")
+     *             .userId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmUsersDeviceProfilesExample&#34;, example.applyValue(getSmUsersDeviceProfilesResult -&gt; getSmUsersDeviceProfilesResult.items()));
+     *         ctx.export("merakiNetworksSmUsersDeviceProfilesExample", example.applyValue(getSmUsersDeviceProfilesResult -> getSmUsersDeviceProfilesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12468,7 +13032,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12490,14 +13055,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmUsersDeviceProfiles(GetSmUsersDeviceProfilesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .userId(&#34;string&#34;)
+     *             .networkId("string")
+     *             .userId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmUsersDeviceProfilesExample&#34;, example.applyValue(getSmUsersDeviceProfilesResult -&gt; getSmUsersDeviceProfilesResult.items()));
+     *         ctx.export("merakiNetworksSmUsersDeviceProfilesExample", example.applyValue(getSmUsersDeviceProfilesResult -> getSmUsersDeviceProfilesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12508,7 +13074,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12530,14 +13097,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmUsersDeviceProfiles(GetSmUsersDeviceProfilesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .userId(&#34;string&#34;)
+     *             .networkId("string")
+     *             .userId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmUsersDeviceProfilesExample&#34;, example.applyValue(getSmUsersDeviceProfilesResult -&gt; getSmUsersDeviceProfilesResult.items()));
+     *         ctx.export("merakiNetworksSmUsersDeviceProfilesExample", example.applyValue(getSmUsersDeviceProfilesResult -> getSmUsersDeviceProfilesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12548,7 +13116,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12570,14 +13139,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmUsersSoftwares(GetSmUsersSoftwaresArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .userId(&#34;string&#34;)
+     *             .networkId("string")
+     *             .userId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmUsersSoftwaresExample&#34;, example.applyValue(getSmUsersSoftwaresResult -&gt; getSmUsersSoftwaresResult.items()));
+     *         ctx.export("merakiNetworksSmUsersSoftwaresExample", example.applyValue(getSmUsersSoftwaresResult -> getSmUsersSoftwaresResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12588,7 +13158,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12610,14 +13181,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmUsersSoftwares(GetSmUsersSoftwaresArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .userId(&#34;string&#34;)
+     *             .networkId("string")
+     *             .userId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmUsersSoftwaresExample&#34;, example.applyValue(getSmUsersSoftwaresResult -&gt; getSmUsersSoftwaresResult.items()));
+     *         ctx.export("merakiNetworksSmUsersSoftwaresExample", example.applyValue(getSmUsersSoftwaresResult -> getSmUsersSoftwaresResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12628,7 +13200,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12650,14 +13223,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmUsersSoftwares(GetSmUsersSoftwaresArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .userId(&#34;string&#34;)
+     *             .networkId("string")
+     *             .userId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmUsersSoftwaresExample&#34;, example.applyValue(getSmUsersSoftwaresResult -&gt; getSmUsersSoftwaresResult.items()));
+     *         ctx.export("merakiNetworksSmUsersSoftwaresExample", example.applyValue(getSmUsersSoftwaresResult -> getSmUsersSoftwaresResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12668,7 +13242,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12690,14 +13265,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSmUsersSoftwares(GetSmUsersSoftwaresArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .userId(&#34;string&#34;)
+     *             .networkId("string")
+     *             .userId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSmUsersSoftwaresExample&#34;, example.applyValue(getSmUsersSoftwaresResult -&gt; getSmUsersSoftwaresResult.items()));
+     *         ctx.export("merakiNetworksSmUsersSoftwaresExample", example.applyValue(getSmUsersSoftwaresResult -> getSmUsersSoftwaresResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12708,7 +13284,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12730,13 +13307,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSnmp(GetSnmpArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSnmpExample&#34;, example.applyValue(getSnmpResult -&gt; getSnmpResult.item()));
+     *         ctx.export("merakiNetworksSnmpExample", example.applyValue(getSnmpResult -> getSnmpResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12747,7 +13325,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12769,13 +13348,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSnmp(GetSnmpArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSnmpExample&#34;, example.applyValue(getSnmpResult -&gt; getSnmpResult.item()));
+     *         ctx.export("merakiNetworksSnmpExample", example.applyValue(getSnmpResult -> getSnmpResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12786,7 +13366,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12808,13 +13389,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSnmp(GetSnmpArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSnmpExample&#34;, example.applyValue(getSnmpResult -&gt; getSnmpResult.item()));
+     *         ctx.export("merakiNetworksSnmpExample", example.applyValue(getSnmpResult -> getSnmpResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12825,7 +13407,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12847,13 +13430,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSnmp(GetSnmpArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSnmpExample&#34;, example.applyValue(getSnmpResult -&gt; getSnmpResult.item()));
+     *         ctx.export("merakiNetworksSnmpExample", example.applyValue(getSnmpResult -> getSnmpResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12864,7 +13448,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12886,13 +13471,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchAccessControlLists(GetSwitchAccessControlListsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchAccessControlListsExample&#34;, example.applyValue(getSwitchAccessControlListsResult -&gt; getSwitchAccessControlListsResult.item()));
+     *         ctx.export("merakiNetworksSwitchAccessControlListsExample", example.applyValue(getSwitchAccessControlListsResult -> getSwitchAccessControlListsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12903,7 +13489,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12925,13 +13512,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchAccessControlLists(GetSwitchAccessControlListsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchAccessControlListsExample&#34;, example.applyValue(getSwitchAccessControlListsResult -&gt; getSwitchAccessControlListsResult.item()));
+     *         ctx.export("merakiNetworksSwitchAccessControlListsExample", example.applyValue(getSwitchAccessControlListsResult -> getSwitchAccessControlListsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12942,7 +13530,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -12964,13 +13553,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchAccessControlLists(GetSwitchAccessControlListsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchAccessControlListsExample&#34;, example.applyValue(getSwitchAccessControlListsResult -&gt; getSwitchAccessControlListsResult.item()));
+     *         ctx.export("merakiNetworksSwitchAccessControlListsExample", example.applyValue(getSwitchAccessControlListsResult -> getSwitchAccessControlListsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -12981,7 +13571,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13003,13 +13594,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchAccessControlLists(GetSwitchAccessControlListsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchAccessControlListsExample&#34;, example.applyValue(getSwitchAccessControlListsResult -&gt; getSwitchAccessControlListsResult.item()));
+     *         ctx.export("merakiNetworksSwitchAccessControlListsExample", example.applyValue(getSwitchAccessControlListsResult -> getSwitchAccessControlListsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13062,7 +13654,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13084,13 +13677,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchAlternateManagementInterface(GetSwitchAlternateManagementInterfaceArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchAlternateManagementInterfaceExample&#34;, example.applyValue(getSwitchAlternateManagementInterfaceResult -&gt; getSwitchAlternateManagementInterfaceResult.item()));
+     *         ctx.export("merakiNetworksSwitchAlternateManagementInterfaceExample", example.applyValue(getSwitchAlternateManagementInterfaceResult -> getSwitchAlternateManagementInterfaceResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13101,7 +13695,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13123,13 +13718,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchAlternateManagementInterface(GetSwitchAlternateManagementInterfaceArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchAlternateManagementInterfaceExample&#34;, example.applyValue(getSwitchAlternateManagementInterfaceResult -&gt; getSwitchAlternateManagementInterfaceResult.item()));
+     *         ctx.export("merakiNetworksSwitchAlternateManagementInterfaceExample", example.applyValue(getSwitchAlternateManagementInterfaceResult -> getSwitchAlternateManagementInterfaceResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13140,7 +13736,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13162,13 +13759,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchAlternateManagementInterface(GetSwitchAlternateManagementInterfaceArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchAlternateManagementInterfaceExample&#34;, example.applyValue(getSwitchAlternateManagementInterfaceResult -&gt; getSwitchAlternateManagementInterfaceResult.item()));
+     *         ctx.export("merakiNetworksSwitchAlternateManagementInterfaceExample", example.applyValue(getSwitchAlternateManagementInterfaceResult -> getSwitchAlternateManagementInterfaceResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13179,7 +13777,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13201,13 +13800,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchAlternateManagementInterface(GetSwitchAlternateManagementInterfaceArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchAlternateManagementInterfaceExample&#34;, example.applyValue(getSwitchAlternateManagementInterfaceResult -&gt; getSwitchAlternateManagementInterfaceResult.item()));
+     *         ctx.export("merakiNetworksSwitchAlternateManagementInterfaceExample", example.applyValue(getSwitchAlternateManagementInterfaceResult -> getSwitchAlternateManagementInterfaceResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13218,7 +13818,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13240,13 +13841,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchDhcpServerPolicy(GetSwitchDhcpServerPolicyArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchDhcpServerPolicyExample&#34;, example.applyValue(getSwitchDhcpServerPolicyResult -&gt; getSwitchDhcpServerPolicyResult.item()));
+     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyExample", example.applyValue(getSwitchDhcpServerPolicyResult -> getSwitchDhcpServerPolicyResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13257,7 +13859,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13279,13 +13882,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchDhcpServerPolicy(GetSwitchDhcpServerPolicyArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchDhcpServerPolicyExample&#34;, example.applyValue(getSwitchDhcpServerPolicyResult -&gt; getSwitchDhcpServerPolicyResult.item()));
+     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyExample", example.applyValue(getSwitchDhcpServerPolicyResult -> getSwitchDhcpServerPolicyResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13296,7 +13900,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13318,13 +13923,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchDhcpServerPolicy(GetSwitchDhcpServerPolicyArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchDhcpServerPolicyExample&#34;, example.applyValue(getSwitchDhcpServerPolicyResult -&gt; getSwitchDhcpServerPolicyResult.item()));
+     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyExample", example.applyValue(getSwitchDhcpServerPolicyResult -> getSwitchDhcpServerPolicyResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13335,7 +13941,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13357,13 +13964,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchDhcpServerPolicy(GetSwitchDhcpServerPolicyArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchDhcpServerPolicyExample&#34;, example.applyValue(getSwitchDhcpServerPolicyResult -&gt; getSwitchDhcpServerPolicyResult.item()));
+     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyExample", example.applyValue(getSwitchDhcpServerPolicyResult -> getSwitchDhcpServerPolicyResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13374,7 +13982,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13396,16 +14005,17 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchDhcpServerPolicyArpInspectionTrustedServers(GetSwitchDhcpServerPolicyArpInspectionTrustedServersArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchDhcpServerPolicyArpInspectionTrustedServersExample&#34;, example.applyValue(getSwitchDhcpServerPolicyArpInspectionTrustedServersResult -&gt; getSwitchDhcpServerPolicyArpInspectionTrustedServersResult.items()));
+     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyArpInspectionTrustedServersExample", example.applyValue(getSwitchDhcpServerPolicyArpInspectionTrustedServersResult -> getSwitchDhcpServerPolicyArpInspectionTrustedServersResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13416,7 +14026,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13438,16 +14049,17 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchDhcpServerPolicyArpInspectionTrustedServers(GetSwitchDhcpServerPolicyArpInspectionTrustedServersArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchDhcpServerPolicyArpInspectionTrustedServersExample&#34;, example.applyValue(getSwitchDhcpServerPolicyArpInspectionTrustedServersResult -&gt; getSwitchDhcpServerPolicyArpInspectionTrustedServersResult.items()));
+     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyArpInspectionTrustedServersExample", example.applyValue(getSwitchDhcpServerPolicyArpInspectionTrustedServersResult -> getSwitchDhcpServerPolicyArpInspectionTrustedServersResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13458,7 +14070,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13480,16 +14093,17 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchDhcpServerPolicyArpInspectionTrustedServers(GetSwitchDhcpServerPolicyArpInspectionTrustedServersArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchDhcpServerPolicyArpInspectionTrustedServersExample&#34;, example.applyValue(getSwitchDhcpServerPolicyArpInspectionTrustedServersResult -&gt; getSwitchDhcpServerPolicyArpInspectionTrustedServersResult.items()));
+     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyArpInspectionTrustedServersExample", example.applyValue(getSwitchDhcpServerPolicyArpInspectionTrustedServersResult -> getSwitchDhcpServerPolicyArpInspectionTrustedServersResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13500,7 +14114,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13522,16 +14137,17 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchDhcpServerPolicyArpInspectionTrustedServers(GetSwitchDhcpServerPolicyArpInspectionTrustedServersArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchDhcpServerPolicyArpInspectionTrustedServersExample&#34;, example.applyValue(getSwitchDhcpServerPolicyArpInspectionTrustedServersResult -&gt; getSwitchDhcpServerPolicyArpInspectionTrustedServersResult.items()));
+     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyArpInspectionTrustedServersExample", example.applyValue(getSwitchDhcpServerPolicyArpInspectionTrustedServersResult -> getSwitchDhcpServerPolicyArpInspectionTrustedServersResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13542,7 +14158,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13564,16 +14181,17 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchDhcpServerPolicyArpInspectionWarningsByDevice(GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchDhcpServerPolicyArpInspectionWarningsByDeviceExample&#34;, example.applyValue(getSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult -&gt; getSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult.items()));
+     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyArpInspectionWarningsByDeviceExample", example.applyValue(getSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult -> getSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13584,7 +14202,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13606,16 +14225,17 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchDhcpServerPolicyArpInspectionWarningsByDevice(GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchDhcpServerPolicyArpInspectionWarningsByDeviceExample&#34;, example.applyValue(getSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult -&gt; getSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult.items()));
+     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyArpInspectionWarningsByDeviceExample", example.applyValue(getSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult -> getSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13626,7 +14246,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13648,16 +14269,17 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchDhcpServerPolicyArpInspectionWarningsByDevice(GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchDhcpServerPolicyArpInspectionWarningsByDeviceExample&#34;, example.applyValue(getSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult -&gt; getSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult.items()));
+     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyArpInspectionWarningsByDeviceExample", example.applyValue(getSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult -> getSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13668,7 +14290,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13690,16 +14313,17 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchDhcpServerPolicyArpInspectionWarningsByDevice(GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchDhcpServerPolicyArpInspectionWarningsByDeviceExample&#34;, example.applyValue(getSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult -&gt; getSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult.items()));
+     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyArpInspectionWarningsByDeviceExample", example.applyValue(getSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult -> getSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13710,7 +14334,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13732,18 +14357,19 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchDhcpV4ServersSeen(GetSwitchDhcpV4ServersSeenArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
+     *             .startingAfter("string")
+     *             .t0("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchDhcpV4ServersSeenExample&#34;, example.applyValue(getSwitchDhcpV4ServersSeenResult -&gt; getSwitchDhcpV4ServersSeenResult.items()));
+     *         ctx.export("merakiNetworksSwitchDhcpV4ServersSeenExample", example.applyValue(getSwitchDhcpV4ServersSeenResult -> getSwitchDhcpV4ServersSeenResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13754,7 +14380,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13776,18 +14403,19 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchDhcpV4ServersSeen(GetSwitchDhcpV4ServersSeenArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
+     *             .startingAfter("string")
+     *             .t0("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchDhcpV4ServersSeenExample&#34;, example.applyValue(getSwitchDhcpV4ServersSeenResult -&gt; getSwitchDhcpV4ServersSeenResult.items()));
+     *         ctx.export("merakiNetworksSwitchDhcpV4ServersSeenExample", example.applyValue(getSwitchDhcpV4ServersSeenResult -> getSwitchDhcpV4ServersSeenResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13798,7 +14426,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13820,18 +14449,19 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchDhcpV4ServersSeen(GetSwitchDhcpV4ServersSeenArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
+     *             .startingAfter("string")
+     *             .t0("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchDhcpV4ServersSeenExample&#34;, example.applyValue(getSwitchDhcpV4ServersSeenResult -&gt; getSwitchDhcpV4ServersSeenResult.items()));
+     *         ctx.export("merakiNetworksSwitchDhcpV4ServersSeenExample", example.applyValue(getSwitchDhcpV4ServersSeenResult -> getSwitchDhcpV4ServersSeenResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13842,7 +14472,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13864,18 +14495,19 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchDhcpV4ServersSeen(GetSwitchDhcpV4ServersSeenArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
+     *             .startingAfter("string")
+     *             .t0("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchDhcpV4ServersSeenExample&#34;, example.applyValue(getSwitchDhcpV4ServersSeenResult -&gt; getSwitchDhcpV4ServersSeenResult.items()));
+     *         ctx.export("merakiNetworksSwitchDhcpV4ServersSeenExample", example.applyValue(getSwitchDhcpV4ServersSeenResult -> getSwitchDhcpV4ServersSeenResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13886,7 +14518,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13908,13 +14541,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchDscpToCosMappings(GetSwitchDscpToCosMappingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchDscpToCosMappingsExample&#34;, example.applyValue(getSwitchDscpToCosMappingsResult -&gt; getSwitchDscpToCosMappingsResult.item()));
+     *         ctx.export("merakiNetworksSwitchDscpToCosMappingsExample", example.applyValue(getSwitchDscpToCosMappingsResult -> getSwitchDscpToCosMappingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13925,7 +14559,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13947,13 +14582,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchDscpToCosMappings(GetSwitchDscpToCosMappingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchDscpToCosMappingsExample&#34;, example.applyValue(getSwitchDscpToCosMappingsResult -&gt; getSwitchDscpToCosMappingsResult.item()));
+     *         ctx.export("merakiNetworksSwitchDscpToCosMappingsExample", example.applyValue(getSwitchDscpToCosMappingsResult -> getSwitchDscpToCosMappingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -13964,7 +14600,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -13986,13 +14623,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchDscpToCosMappings(GetSwitchDscpToCosMappingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchDscpToCosMappingsExample&#34;, example.applyValue(getSwitchDscpToCosMappingsResult -&gt; getSwitchDscpToCosMappingsResult.item()));
+     *         ctx.export("merakiNetworksSwitchDscpToCosMappingsExample", example.applyValue(getSwitchDscpToCosMappingsResult -> getSwitchDscpToCosMappingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14003,7 +14641,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14025,13 +14664,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchDscpToCosMappings(GetSwitchDscpToCosMappingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchDscpToCosMappingsExample&#34;, example.applyValue(getSwitchDscpToCosMappingsResult -&gt; getSwitchDscpToCosMappingsResult.item()));
+     *         ctx.export("merakiNetworksSwitchDscpToCosMappingsExample", example.applyValue(getSwitchDscpToCosMappingsResult -> getSwitchDscpToCosMappingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14042,7 +14682,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14064,13 +14705,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchLinkAggregations(GetSwitchLinkAggregationsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchLinkAggregationsExample&#34;, example.applyValue(getSwitchLinkAggregationsResult -&gt; getSwitchLinkAggregationsResult.items()));
+     *         ctx.export("merakiNetworksSwitchLinkAggregationsExample", example.applyValue(getSwitchLinkAggregationsResult -> getSwitchLinkAggregationsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14081,7 +14723,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14103,13 +14746,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchLinkAggregations(GetSwitchLinkAggregationsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchLinkAggregationsExample&#34;, example.applyValue(getSwitchLinkAggregationsResult -&gt; getSwitchLinkAggregationsResult.items()));
+     *         ctx.export("merakiNetworksSwitchLinkAggregationsExample", example.applyValue(getSwitchLinkAggregationsResult -> getSwitchLinkAggregationsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14120,7 +14764,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14142,13 +14787,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchLinkAggregations(GetSwitchLinkAggregationsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchLinkAggregationsExample&#34;, example.applyValue(getSwitchLinkAggregationsResult -&gt; getSwitchLinkAggregationsResult.items()));
+     *         ctx.export("merakiNetworksSwitchLinkAggregationsExample", example.applyValue(getSwitchLinkAggregationsResult -> getSwitchLinkAggregationsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14159,7 +14805,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14181,13 +14828,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchLinkAggregations(GetSwitchLinkAggregationsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchLinkAggregationsExample&#34;, example.applyValue(getSwitchLinkAggregationsResult -&gt; getSwitchLinkAggregationsResult.items()));
+     *         ctx.export("merakiNetworksSwitchLinkAggregationsExample", example.applyValue(getSwitchLinkAggregationsResult -> getSwitchLinkAggregationsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14198,7 +14846,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14220,13 +14869,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchMtu(GetSwitchMtuArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchMtuExample&#34;, example.applyValue(getSwitchMtuResult -&gt; getSwitchMtuResult.item()));
+     *         ctx.export("merakiNetworksSwitchMtuExample", example.applyValue(getSwitchMtuResult -> getSwitchMtuResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14237,7 +14887,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14259,13 +14910,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchMtu(GetSwitchMtuArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchMtuExample&#34;, example.applyValue(getSwitchMtuResult -&gt; getSwitchMtuResult.item()));
+     *         ctx.export("merakiNetworksSwitchMtuExample", example.applyValue(getSwitchMtuResult -> getSwitchMtuResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14276,7 +14928,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14298,13 +14951,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchMtu(GetSwitchMtuArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchMtuExample&#34;, example.applyValue(getSwitchMtuResult -&gt; getSwitchMtuResult.item()));
+     *         ctx.export("merakiNetworksSwitchMtuExample", example.applyValue(getSwitchMtuResult -> getSwitchMtuResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14315,7 +14969,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14337,13 +14992,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchMtu(GetSwitchMtuArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchMtuExample&#34;, example.applyValue(getSwitchMtuResult -&gt; getSwitchMtuResult.item()));
+     *         ctx.export("merakiNetworksSwitchMtuExample", example.applyValue(getSwitchMtuResult -> getSwitchMtuResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14354,7 +15010,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14376,13 +15033,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchPortSchedules(GetSwitchPortSchedulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchPortSchedulesExample&#34;, example.applyValue(getSwitchPortSchedulesResult -&gt; getSwitchPortSchedulesResult.items()));
+     *         ctx.export("merakiNetworksSwitchPortSchedulesExample", example.applyValue(getSwitchPortSchedulesResult -> getSwitchPortSchedulesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14393,7 +15051,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14415,13 +15074,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchPortSchedules(GetSwitchPortSchedulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchPortSchedulesExample&#34;, example.applyValue(getSwitchPortSchedulesResult -&gt; getSwitchPortSchedulesResult.items()));
+     *         ctx.export("merakiNetworksSwitchPortSchedulesExample", example.applyValue(getSwitchPortSchedulesResult -> getSwitchPortSchedulesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14432,7 +15092,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14454,13 +15115,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchPortSchedules(GetSwitchPortSchedulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchPortSchedulesExample&#34;, example.applyValue(getSwitchPortSchedulesResult -&gt; getSwitchPortSchedulesResult.items()));
+     *         ctx.export("merakiNetworksSwitchPortSchedulesExample", example.applyValue(getSwitchPortSchedulesResult -> getSwitchPortSchedulesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14471,7 +15133,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14493,13 +15156,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchPortSchedules(GetSwitchPortSchedulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchPortSchedulesExample&#34;, example.applyValue(getSwitchPortSchedulesResult -&gt; getSwitchPortSchedulesResult.items()));
+     *         ctx.export("merakiNetworksSwitchPortSchedulesExample", example.applyValue(getSwitchPortSchedulesResult -> getSwitchPortSchedulesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14552,7 +15216,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14574,13 +15239,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchRoutingMulticast(GetSwitchRoutingMulticastArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchRoutingMulticastExample&#34;, example.applyValue(getSwitchRoutingMulticastResult -&gt; getSwitchRoutingMulticastResult.item()));
+     *         ctx.export("merakiNetworksSwitchRoutingMulticastExample", example.applyValue(getSwitchRoutingMulticastResult -> getSwitchRoutingMulticastResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14591,7 +15257,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14613,13 +15280,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchRoutingMulticast(GetSwitchRoutingMulticastArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchRoutingMulticastExample&#34;, example.applyValue(getSwitchRoutingMulticastResult -&gt; getSwitchRoutingMulticastResult.item()));
+     *         ctx.export("merakiNetworksSwitchRoutingMulticastExample", example.applyValue(getSwitchRoutingMulticastResult -> getSwitchRoutingMulticastResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14630,7 +15298,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14652,13 +15321,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchRoutingMulticast(GetSwitchRoutingMulticastArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchRoutingMulticastExample&#34;, example.applyValue(getSwitchRoutingMulticastResult -&gt; getSwitchRoutingMulticastResult.item()));
+     *         ctx.export("merakiNetworksSwitchRoutingMulticastExample", example.applyValue(getSwitchRoutingMulticastResult -> getSwitchRoutingMulticastResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14669,7 +15339,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14691,13 +15362,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchRoutingMulticast(GetSwitchRoutingMulticastArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchRoutingMulticastExample&#34;, example.applyValue(getSwitchRoutingMulticastResult -&gt; getSwitchRoutingMulticastResult.item()));
+     *         ctx.export("merakiNetworksSwitchRoutingMulticastExample", example.applyValue(getSwitchRoutingMulticastResult -> getSwitchRoutingMulticastResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14750,7 +15422,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14772,13 +15445,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchRoutingOspf(GetSwitchRoutingOspfArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchRoutingOspfExample&#34;, example.applyValue(getSwitchRoutingOspfResult -&gt; getSwitchRoutingOspfResult.item()));
+     *         ctx.export("merakiNetworksSwitchRoutingOspfExample", example.applyValue(getSwitchRoutingOspfResult -> getSwitchRoutingOspfResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14789,7 +15463,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14811,13 +15486,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchRoutingOspf(GetSwitchRoutingOspfArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchRoutingOspfExample&#34;, example.applyValue(getSwitchRoutingOspfResult -&gt; getSwitchRoutingOspfResult.item()));
+     *         ctx.export("merakiNetworksSwitchRoutingOspfExample", example.applyValue(getSwitchRoutingOspfResult -> getSwitchRoutingOspfResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14828,7 +15504,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14850,13 +15527,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchRoutingOspf(GetSwitchRoutingOspfArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchRoutingOspfExample&#34;, example.applyValue(getSwitchRoutingOspfResult -&gt; getSwitchRoutingOspfResult.item()));
+     *         ctx.export("merakiNetworksSwitchRoutingOspfExample", example.applyValue(getSwitchRoutingOspfResult -> getSwitchRoutingOspfResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14867,7 +15545,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14889,13 +15568,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchRoutingOspf(GetSwitchRoutingOspfArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchRoutingOspfExample&#34;, example.applyValue(getSwitchRoutingOspfResult -&gt; getSwitchRoutingOspfResult.item()));
+     *         ctx.export("merakiNetworksSwitchRoutingOspfExample", example.applyValue(getSwitchRoutingOspfResult -> getSwitchRoutingOspfResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14906,7 +15586,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14928,13 +15609,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchSettings(GetSwitchSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchSettingsExample&#34;, example.applyValue(getSwitchSettingsResult -&gt; getSwitchSettingsResult.item()));
+     *         ctx.export("merakiNetworksSwitchSettingsExample", example.applyValue(getSwitchSettingsResult -> getSwitchSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14945,7 +15627,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -14967,13 +15650,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchSettings(GetSwitchSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchSettingsExample&#34;, example.applyValue(getSwitchSettingsResult -&gt; getSwitchSettingsResult.item()));
+     *         ctx.export("merakiNetworksSwitchSettingsExample", example.applyValue(getSwitchSettingsResult -> getSwitchSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -14984,7 +15668,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15006,13 +15691,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchSettings(GetSwitchSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchSettingsExample&#34;, example.applyValue(getSwitchSettingsResult -&gt; getSwitchSettingsResult.item()));
+     *         ctx.export("merakiNetworksSwitchSettingsExample", example.applyValue(getSwitchSettingsResult -> getSwitchSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15023,7 +15709,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15045,13 +15732,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchSettings(GetSwitchSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchSettingsExample&#34;, example.applyValue(getSwitchSettingsResult -&gt; getSwitchSettingsResult.item()));
+     *         ctx.export("merakiNetworksSwitchSettingsExample", example.applyValue(getSwitchSettingsResult -> getSwitchSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15146,7 +15834,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15168,15 +15857,16 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchStacksRoutingInterfacesDhcp(GetSwitchStacksRoutingInterfacesDhcpArgs.builder()
-     *             .interfaceId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
-     *             .switchStackId(&#34;string&#34;)
+     *             .interfaceId("string")
+     *             .networkId("string")
+     *             .switchStackId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchStacksRoutingInterfacesDhcpExample&#34;, example.applyValue(getSwitchStacksRoutingInterfacesDhcpResult -&gt; getSwitchStacksRoutingInterfacesDhcpResult.item()));
+     *         ctx.export("merakiNetworksSwitchStacksRoutingInterfacesDhcpExample", example.applyValue(getSwitchStacksRoutingInterfacesDhcpResult -> getSwitchStacksRoutingInterfacesDhcpResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15187,7 +15877,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15209,15 +15900,16 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchStacksRoutingInterfacesDhcp(GetSwitchStacksRoutingInterfacesDhcpArgs.builder()
-     *             .interfaceId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
-     *             .switchStackId(&#34;string&#34;)
+     *             .interfaceId("string")
+     *             .networkId("string")
+     *             .switchStackId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchStacksRoutingInterfacesDhcpExample&#34;, example.applyValue(getSwitchStacksRoutingInterfacesDhcpResult -&gt; getSwitchStacksRoutingInterfacesDhcpResult.item()));
+     *         ctx.export("merakiNetworksSwitchStacksRoutingInterfacesDhcpExample", example.applyValue(getSwitchStacksRoutingInterfacesDhcpResult -> getSwitchStacksRoutingInterfacesDhcpResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15228,7 +15920,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15250,15 +15943,16 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchStacksRoutingInterfacesDhcp(GetSwitchStacksRoutingInterfacesDhcpArgs.builder()
-     *             .interfaceId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
-     *             .switchStackId(&#34;string&#34;)
+     *             .interfaceId("string")
+     *             .networkId("string")
+     *             .switchStackId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchStacksRoutingInterfacesDhcpExample&#34;, example.applyValue(getSwitchStacksRoutingInterfacesDhcpResult -&gt; getSwitchStacksRoutingInterfacesDhcpResult.item()));
+     *         ctx.export("merakiNetworksSwitchStacksRoutingInterfacesDhcpExample", example.applyValue(getSwitchStacksRoutingInterfacesDhcpResult -> getSwitchStacksRoutingInterfacesDhcpResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15269,7 +15963,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15291,15 +15986,16 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchStacksRoutingInterfacesDhcp(GetSwitchStacksRoutingInterfacesDhcpArgs.builder()
-     *             .interfaceId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
-     *             .switchStackId(&#34;string&#34;)
+     *             .interfaceId("string")
+     *             .networkId("string")
+     *             .switchStackId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchStacksRoutingInterfacesDhcpExample&#34;, example.applyValue(getSwitchStacksRoutingInterfacesDhcpResult -&gt; getSwitchStacksRoutingInterfacesDhcpResult.item()));
+     *         ctx.export("merakiNetworksSwitchStacksRoutingInterfacesDhcpExample", example.applyValue(getSwitchStacksRoutingInterfacesDhcpResult -> getSwitchStacksRoutingInterfacesDhcpResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15352,7 +16048,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15374,13 +16071,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchStormControl(GetSwitchStormControlArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchStormControlExample&#34;, example.applyValue(getSwitchStormControlResult -&gt; getSwitchStormControlResult.item()));
+     *         ctx.export("merakiNetworksSwitchStormControlExample", example.applyValue(getSwitchStormControlResult -> getSwitchStormControlResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15391,7 +16089,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15413,13 +16112,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchStormControl(GetSwitchStormControlArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchStormControlExample&#34;, example.applyValue(getSwitchStormControlResult -&gt; getSwitchStormControlResult.item()));
+     *         ctx.export("merakiNetworksSwitchStormControlExample", example.applyValue(getSwitchStormControlResult -> getSwitchStormControlResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15430,7 +16130,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15452,13 +16153,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchStormControl(GetSwitchStormControlArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchStormControlExample&#34;, example.applyValue(getSwitchStormControlResult -&gt; getSwitchStormControlResult.item()));
+     *         ctx.export("merakiNetworksSwitchStormControlExample", example.applyValue(getSwitchStormControlResult -> getSwitchStormControlResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15469,7 +16171,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15491,13 +16194,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchStormControl(GetSwitchStormControlArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchStormControlExample&#34;, example.applyValue(getSwitchStormControlResult -&gt; getSwitchStormControlResult.item()));
+     *         ctx.export("merakiNetworksSwitchStormControlExample", example.applyValue(getSwitchStormControlResult -> getSwitchStormControlResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15508,7 +16212,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15530,13 +16235,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchStp(GetSwitchStpArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchStpExample&#34;, example.applyValue(getSwitchStpResult -&gt; getSwitchStpResult.item()));
+     *         ctx.export("merakiNetworksSwitchStpExample", example.applyValue(getSwitchStpResult -> getSwitchStpResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15547,7 +16253,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15569,13 +16276,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchStp(GetSwitchStpArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchStpExample&#34;, example.applyValue(getSwitchStpResult -&gt; getSwitchStpResult.item()));
+     *         ctx.export("merakiNetworksSwitchStpExample", example.applyValue(getSwitchStpResult -> getSwitchStpResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15586,7 +16294,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15608,13 +16317,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchStp(GetSwitchStpArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchStpExample&#34;, example.applyValue(getSwitchStpResult -&gt; getSwitchStpResult.item()));
+     *         ctx.export("merakiNetworksSwitchStpExample", example.applyValue(getSwitchStpResult -> getSwitchStpResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15625,7 +16335,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15647,13 +16358,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSwitchStp(GetSwitchStpArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSwitchStpExample&#34;, example.applyValue(getSwitchStpResult -&gt; getSwitchStpResult.item()));
+     *         ctx.export("merakiNetworksSwitchStpExample", example.applyValue(getSwitchStpResult -> getSwitchStpResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15664,7 +16376,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15686,13 +16399,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSyslogServers(GetSyslogServersArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSyslogServersExample&#34;, example.applyValue(getSyslogServersResult -&gt; getSyslogServersResult.item()));
+     *         ctx.export("merakiNetworksSyslogServersExample", example.applyValue(getSyslogServersResult -> getSyslogServersResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15703,7 +16417,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15725,13 +16440,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSyslogServers(GetSyslogServersArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSyslogServersExample&#34;, example.applyValue(getSyslogServersResult -&gt; getSyslogServersResult.item()));
+     *         ctx.export("merakiNetworksSyslogServersExample", example.applyValue(getSyslogServersResult -> getSyslogServersResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15742,7 +16458,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15764,13 +16481,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSyslogServers(GetSyslogServersArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSyslogServersExample&#34;, example.applyValue(getSyslogServersResult -&gt; getSyslogServersResult.item()));
+     *         ctx.export("merakiNetworksSyslogServersExample", example.applyValue(getSyslogServersResult -> getSyslogServersResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15781,7 +16499,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15803,13 +16522,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getSyslogServers(GetSyslogServersArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksSyslogServersExample&#34;, example.applyValue(getSyslogServersResult -&gt; getSyslogServersResult.item()));
+     *         ctx.export("merakiNetworksSyslogServersExample", example.applyValue(getSyslogServersResult -> getSyslogServersResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15820,7 +16540,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15842,13 +16563,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getTopologyLinkLayer(GetTopologyLinkLayerArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksTopologyLinkLayerExample&#34;, example.applyValue(getTopologyLinkLayerResult -&gt; getTopologyLinkLayerResult.item()));
+     *         ctx.export("merakiNetworksTopologyLinkLayerExample", example.applyValue(getTopologyLinkLayerResult -> getTopologyLinkLayerResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15859,7 +16581,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15881,13 +16604,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getTopologyLinkLayer(GetTopologyLinkLayerArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksTopologyLinkLayerExample&#34;, example.applyValue(getTopologyLinkLayerResult -&gt; getTopologyLinkLayerResult.item()));
+     *         ctx.export("merakiNetworksTopologyLinkLayerExample", example.applyValue(getTopologyLinkLayerResult -> getTopologyLinkLayerResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15898,7 +16622,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15920,13 +16645,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getTopologyLinkLayer(GetTopologyLinkLayerArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksTopologyLinkLayerExample&#34;, example.applyValue(getTopologyLinkLayerResult -&gt; getTopologyLinkLayerResult.item()));
+     *         ctx.export("merakiNetworksTopologyLinkLayerExample", example.applyValue(getTopologyLinkLayerResult -> getTopologyLinkLayerResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15937,7 +16663,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15959,13 +16686,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getTopologyLinkLayer(GetTopologyLinkLayerArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksTopologyLinkLayerExample&#34;, example.applyValue(getTopologyLinkLayerResult -&gt; getTopologyLinkLayerResult.item()));
+     *         ctx.export("merakiNetworksTopologyLinkLayerExample", example.applyValue(getTopologyLinkLayerResult -> getTopologyLinkLayerResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -15976,7 +16704,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -15998,13 +16727,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getTrafficAnalysis(GetTrafficAnalysisArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksTrafficAnalysisExample&#34;, example.applyValue(getTrafficAnalysisResult -&gt; getTrafficAnalysisResult.item()));
+     *         ctx.export("merakiNetworksTrafficAnalysisExample", example.applyValue(getTrafficAnalysisResult -> getTrafficAnalysisResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16015,7 +16745,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16037,13 +16768,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getTrafficAnalysis(GetTrafficAnalysisArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksTrafficAnalysisExample&#34;, example.applyValue(getTrafficAnalysisResult -&gt; getTrafficAnalysisResult.item()));
+     *         ctx.export("merakiNetworksTrafficAnalysisExample", example.applyValue(getTrafficAnalysisResult -> getTrafficAnalysisResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16054,7 +16786,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16076,13 +16809,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getTrafficAnalysis(GetTrafficAnalysisArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksTrafficAnalysisExample&#34;, example.applyValue(getTrafficAnalysisResult -&gt; getTrafficAnalysisResult.item()));
+     *         ctx.export("merakiNetworksTrafficAnalysisExample", example.applyValue(getTrafficAnalysisResult -> getTrafficAnalysisResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16093,7 +16827,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16115,13 +16850,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getTrafficAnalysis(GetTrafficAnalysisArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksTrafficAnalysisExample&#34;, example.applyValue(getTrafficAnalysisResult -&gt; getTrafficAnalysisResult.item()));
+     *         ctx.export("merakiNetworksTrafficAnalysisExample", example.applyValue(getTrafficAnalysisResult -> getTrafficAnalysisResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16132,7 +16868,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16154,13 +16891,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getTrafficShapingApplicationCategories(GetTrafficShapingApplicationCategoriesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksTrafficShapingApplicationCategoriesExample&#34;, example.applyValue(getTrafficShapingApplicationCategoriesResult -&gt; getTrafficShapingApplicationCategoriesResult.item()));
+     *         ctx.export("merakiNetworksTrafficShapingApplicationCategoriesExample", example.applyValue(getTrafficShapingApplicationCategoriesResult -> getTrafficShapingApplicationCategoriesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16171,7 +16909,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16193,13 +16932,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getTrafficShapingApplicationCategories(GetTrafficShapingApplicationCategoriesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksTrafficShapingApplicationCategoriesExample&#34;, example.applyValue(getTrafficShapingApplicationCategoriesResult -&gt; getTrafficShapingApplicationCategoriesResult.item()));
+     *         ctx.export("merakiNetworksTrafficShapingApplicationCategoriesExample", example.applyValue(getTrafficShapingApplicationCategoriesResult -> getTrafficShapingApplicationCategoriesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16210,7 +16950,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16232,13 +16973,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getTrafficShapingApplicationCategories(GetTrafficShapingApplicationCategoriesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksTrafficShapingApplicationCategoriesExample&#34;, example.applyValue(getTrafficShapingApplicationCategoriesResult -&gt; getTrafficShapingApplicationCategoriesResult.item()));
+     *         ctx.export("merakiNetworksTrafficShapingApplicationCategoriesExample", example.applyValue(getTrafficShapingApplicationCategoriesResult -> getTrafficShapingApplicationCategoriesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16249,7 +16991,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16271,13 +17014,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getTrafficShapingApplicationCategories(GetTrafficShapingApplicationCategoriesArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksTrafficShapingApplicationCategoriesExample&#34;, example.applyValue(getTrafficShapingApplicationCategoriesResult -&gt; getTrafficShapingApplicationCategoriesResult.item()));
+     *         ctx.export("merakiNetworksTrafficShapingApplicationCategoriesExample", example.applyValue(getTrafficShapingApplicationCategoriesResult -> getTrafficShapingApplicationCategoriesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16288,7 +17032,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16310,13 +17055,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getTrafficShapingDscpTaggingOptions(GetTrafficShapingDscpTaggingOptionsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksTrafficShapingDscpTaggingOptionsExample&#34;, example.applyValue(getTrafficShapingDscpTaggingOptionsResult -&gt; getTrafficShapingDscpTaggingOptionsResult.items()));
+     *         ctx.export("merakiNetworksTrafficShapingDscpTaggingOptionsExample", example.applyValue(getTrafficShapingDscpTaggingOptionsResult -> getTrafficShapingDscpTaggingOptionsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16327,7 +17073,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16349,13 +17096,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getTrafficShapingDscpTaggingOptions(GetTrafficShapingDscpTaggingOptionsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksTrafficShapingDscpTaggingOptionsExample&#34;, example.applyValue(getTrafficShapingDscpTaggingOptionsResult -&gt; getTrafficShapingDscpTaggingOptionsResult.items()));
+     *         ctx.export("merakiNetworksTrafficShapingDscpTaggingOptionsExample", example.applyValue(getTrafficShapingDscpTaggingOptionsResult -> getTrafficShapingDscpTaggingOptionsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16366,7 +17114,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16388,13 +17137,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getTrafficShapingDscpTaggingOptions(GetTrafficShapingDscpTaggingOptionsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksTrafficShapingDscpTaggingOptionsExample&#34;, example.applyValue(getTrafficShapingDscpTaggingOptionsResult -&gt; getTrafficShapingDscpTaggingOptionsResult.items()));
+     *         ctx.export("merakiNetworksTrafficShapingDscpTaggingOptionsExample", example.applyValue(getTrafficShapingDscpTaggingOptionsResult -> getTrafficShapingDscpTaggingOptionsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16405,7 +17155,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16427,13 +17178,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getTrafficShapingDscpTaggingOptions(GetTrafficShapingDscpTaggingOptionsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksTrafficShapingDscpTaggingOptionsExample&#34;, example.applyValue(getTrafficShapingDscpTaggingOptionsResult -&gt; getTrafficShapingDscpTaggingOptionsResult.items()));
+     *         ctx.export("merakiNetworksTrafficShapingDscpTaggingOptionsExample", example.applyValue(getTrafficShapingDscpTaggingOptionsResult -> getTrafficShapingDscpTaggingOptionsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16444,7 +17196,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16466,14 +17219,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getVlanProfiles(GetVlanProfilesArgs.builder()
-     *             .iname(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .iname("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksVlanProfilesExample&#34;, example.applyValue(getVlanProfilesResult -&gt; getVlanProfilesResult.item()));
+     *         ctx.export("merakiNetworksVlanProfilesExample", example.applyValue(getVlanProfilesResult -> getVlanProfilesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16484,7 +17238,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16506,14 +17261,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getVlanProfiles(GetVlanProfilesArgs.builder()
-     *             .iname(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .iname("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksVlanProfilesExample&#34;, example.applyValue(getVlanProfilesResult -&gt; getVlanProfilesResult.item()));
+     *         ctx.export("merakiNetworksVlanProfilesExample", example.applyValue(getVlanProfilesResult -> getVlanProfilesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16524,7 +17280,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16546,14 +17303,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getVlanProfiles(GetVlanProfilesArgs.builder()
-     *             .iname(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .iname("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksVlanProfilesExample&#34;, example.applyValue(getVlanProfilesResult -&gt; getVlanProfilesResult.item()));
+     *         ctx.export("merakiNetworksVlanProfilesExample", example.applyValue(getVlanProfilesResult -> getVlanProfilesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16564,7 +17322,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16586,14 +17345,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getVlanProfiles(GetVlanProfilesArgs.builder()
-     *             .iname(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .iname("string")
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksVlanProfilesExample&#34;, example.applyValue(getVlanProfilesResult -&gt; getVlanProfilesResult.item()));
+     *         ctx.export("merakiNetworksVlanProfilesExample", example.applyValue(getVlanProfilesResult -> getVlanProfilesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16604,7 +17364,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16626,19 +17387,20 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getVlanProfilesAssignmentsByDevice(GetVlanProfilesAssignmentsByDeviceArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .stackIds(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .serials("string")
+     *             .stackIds("string")
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksVlanProfilesAssignmentsByDeviceExample&#34;, example.applyValue(getVlanProfilesAssignmentsByDeviceResult -&gt; getVlanProfilesAssignmentsByDeviceResult.items()));
+     *         ctx.export("merakiNetworksVlanProfilesAssignmentsByDeviceExample", example.applyValue(getVlanProfilesAssignmentsByDeviceResult -> getVlanProfilesAssignmentsByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16649,7 +17411,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16671,19 +17434,20 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getVlanProfilesAssignmentsByDevice(GetVlanProfilesAssignmentsByDeviceArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .stackIds(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .serials("string")
+     *             .stackIds("string")
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksVlanProfilesAssignmentsByDeviceExample&#34;, example.applyValue(getVlanProfilesAssignmentsByDeviceResult -&gt; getVlanProfilesAssignmentsByDeviceResult.items()));
+     *         ctx.export("merakiNetworksVlanProfilesAssignmentsByDeviceExample", example.applyValue(getVlanProfilesAssignmentsByDeviceResult -> getVlanProfilesAssignmentsByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16694,7 +17458,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16716,19 +17481,20 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getVlanProfilesAssignmentsByDevice(GetVlanProfilesAssignmentsByDeviceArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .stackIds(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .serials("string")
+     *             .stackIds("string")
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksVlanProfilesAssignmentsByDeviceExample&#34;, example.applyValue(getVlanProfilesAssignmentsByDeviceResult -&gt; getVlanProfilesAssignmentsByDeviceResult.items()));
+     *         ctx.export("merakiNetworksVlanProfilesAssignmentsByDeviceExample", example.applyValue(getVlanProfilesAssignmentsByDeviceResult -> getVlanProfilesAssignmentsByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16739,7 +17505,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16761,19 +17528,20 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getVlanProfilesAssignmentsByDevice(GetVlanProfilesAssignmentsByDeviceArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .productTypes(&#34;string&#34;)
-     *             .serials(&#34;string&#34;)
-     *             .stackIds(&#34;string&#34;)
-     *             .startingAfter(&#34;string&#34;)
+     *             .productTypes("string")
+     *             .serials("string")
+     *             .stackIds("string")
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksVlanProfilesAssignmentsByDeviceExample&#34;, example.applyValue(getVlanProfilesAssignmentsByDeviceResult -&gt; getVlanProfilesAssignmentsByDeviceResult.items()));
+     *         ctx.export("merakiNetworksVlanProfilesAssignmentsByDeviceExample", example.applyValue(getVlanProfilesAssignmentsByDeviceResult -> getVlanProfilesAssignmentsByDeviceResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16868,7 +17636,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16890,14 +17659,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWebhooksWebhookTests(GetWebhooksWebhookTestsArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .webhookTestId(&#34;string&#34;)
+     *             .networkId("string")
+     *             .webhookTestId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWebhooksWebhookTestsExample&#34;, example.applyValue(getWebhooksWebhookTestsResult -&gt; getWebhooksWebhookTestsResult.item()));
+     *         ctx.export("merakiNetworksWebhooksWebhookTestsExample", example.applyValue(getWebhooksWebhookTestsResult -> getWebhooksWebhookTestsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16908,7 +17678,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16930,14 +17701,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWebhooksWebhookTests(GetWebhooksWebhookTestsArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .webhookTestId(&#34;string&#34;)
+     *             .networkId("string")
+     *             .webhookTestId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWebhooksWebhookTestsExample&#34;, example.applyValue(getWebhooksWebhookTestsResult -&gt; getWebhooksWebhookTestsResult.item()));
+     *         ctx.export("merakiNetworksWebhooksWebhookTestsExample", example.applyValue(getWebhooksWebhookTestsResult -> getWebhooksWebhookTestsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16948,7 +17720,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -16970,14 +17743,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWebhooksWebhookTests(GetWebhooksWebhookTestsArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .webhookTestId(&#34;string&#34;)
+     *             .networkId("string")
+     *             .webhookTestId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWebhooksWebhookTestsExample&#34;, example.applyValue(getWebhooksWebhookTestsResult -&gt; getWebhooksWebhookTestsResult.item()));
+     *         ctx.export("merakiNetworksWebhooksWebhookTestsExample", example.applyValue(getWebhooksWebhookTestsResult -> getWebhooksWebhookTestsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -16988,7 +17762,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17010,14 +17785,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWebhooksWebhookTests(GetWebhooksWebhookTestsArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .webhookTestId(&#34;string&#34;)
+     *             .networkId("string")
+     *             .webhookTestId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWebhooksWebhookTestsExample&#34;, example.applyValue(getWebhooksWebhookTestsResult -&gt; getWebhooksWebhookTestsResult.item()));
+     *         ctx.export("merakiNetworksWebhooksWebhookTestsExample", example.applyValue(getWebhooksWebhookTestsResult -> getWebhooksWebhookTestsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17028,7 +17804,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17050,13 +17827,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessAlternateManagementInterface(GetWirelessAlternateManagementInterfaceArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessAlternateManagementInterfaceExample&#34;, example.applyValue(getWirelessAlternateManagementInterfaceResult -&gt; getWirelessAlternateManagementInterfaceResult.item()));
+     *         ctx.export("merakiNetworksWirelessAlternateManagementInterfaceExample", example.applyValue(getWirelessAlternateManagementInterfaceResult -> getWirelessAlternateManagementInterfaceResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17067,7 +17845,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17089,13 +17868,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessAlternateManagementInterface(GetWirelessAlternateManagementInterfaceArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessAlternateManagementInterfaceExample&#34;, example.applyValue(getWirelessAlternateManagementInterfaceResult -&gt; getWirelessAlternateManagementInterfaceResult.item()));
+     *         ctx.export("merakiNetworksWirelessAlternateManagementInterfaceExample", example.applyValue(getWirelessAlternateManagementInterfaceResult -> getWirelessAlternateManagementInterfaceResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17106,7 +17886,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17128,13 +17909,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessAlternateManagementInterface(GetWirelessAlternateManagementInterfaceArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessAlternateManagementInterfaceExample&#34;, example.applyValue(getWirelessAlternateManagementInterfaceResult -&gt; getWirelessAlternateManagementInterfaceResult.item()));
+     *         ctx.export("merakiNetworksWirelessAlternateManagementInterfaceExample", example.applyValue(getWirelessAlternateManagementInterfaceResult -> getWirelessAlternateManagementInterfaceResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17145,7 +17927,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17167,13 +17950,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessAlternateManagementInterface(GetWirelessAlternateManagementInterfaceArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessAlternateManagementInterfaceExample&#34;, example.applyValue(getWirelessAlternateManagementInterfaceResult -&gt; getWirelessAlternateManagementInterfaceResult.item()));
+     *         ctx.export("merakiNetworksWirelessAlternateManagementInterfaceExample", example.applyValue(getWirelessAlternateManagementInterfaceResult -> getWirelessAlternateManagementInterfaceResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17184,7 +17968,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17206,13 +17991,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessBilling(GetWirelessBillingArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessBillingExample&#34;, example.applyValue(getWirelessBillingResult -&gt; getWirelessBillingResult.item()));
+     *         ctx.export("merakiNetworksWirelessBillingExample", example.applyValue(getWirelessBillingResult -> getWirelessBillingResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17223,7 +18009,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17245,13 +18032,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessBilling(GetWirelessBillingArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessBillingExample&#34;, example.applyValue(getWirelessBillingResult -&gt; getWirelessBillingResult.item()));
+     *         ctx.export("merakiNetworksWirelessBillingExample", example.applyValue(getWirelessBillingResult -> getWirelessBillingResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17262,7 +18050,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17284,13 +18073,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessBilling(GetWirelessBillingArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessBillingExample&#34;, example.applyValue(getWirelessBillingResult -&gt; getWirelessBillingResult.item()));
+     *         ctx.export("merakiNetworksWirelessBillingExample", example.applyValue(getWirelessBillingResult -> getWirelessBillingResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17301,7 +18091,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17323,13 +18114,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessBilling(GetWirelessBillingArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessBillingExample&#34;, example.applyValue(getWirelessBillingResult -&gt; getWirelessBillingResult.item()));
+     *         ctx.export("merakiNetworksWirelessBillingExample", example.applyValue(getWirelessBillingResult -> getWirelessBillingResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17340,7 +18132,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17362,13 +18155,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessBluetoothSettings(GetWirelessBluetoothSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessBluetoothSettingsExample&#34;, example.applyValue(getWirelessBluetoothSettingsResult -&gt; getWirelessBluetoothSettingsResult.item()));
+     *         ctx.export("merakiNetworksWirelessBluetoothSettingsExample", example.applyValue(getWirelessBluetoothSettingsResult -> getWirelessBluetoothSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17379,7 +18173,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17401,13 +18196,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessBluetoothSettings(GetWirelessBluetoothSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessBluetoothSettingsExample&#34;, example.applyValue(getWirelessBluetoothSettingsResult -&gt; getWirelessBluetoothSettingsResult.item()));
+     *         ctx.export("merakiNetworksWirelessBluetoothSettingsExample", example.applyValue(getWirelessBluetoothSettingsResult -> getWirelessBluetoothSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17418,7 +18214,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17440,13 +18237,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessBluetoothSettings(GetWirelessBluetoothSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessBluetoothSettingsExample&#34;, example.applyValue(getWirelessBluetoothSettingsResult -&gt; getWirelessBluetoothSettingsResult.item()));
+     *         ctx.export("merakiNetworksWirelessBluetoothSettingsExample", example.applyValue(getWirelessBluetoothSettingsResult -> getWirelessBluetoothSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17457,7 +18255,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17479,13 +18278,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessBluetoothSettings(GetWirelessBluetoothSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessBluetoothSettingsExample&#34;, example.applyValue(getWirelessBluetoothSettingsResult -&gt; getWirelessBluetoothSettingsResult.item()));
+     *         ctx.export("merakiNetworksWirelessBluetoothSettingsExample", example.applyValue(getWirelessBluetoothSettingsResult -> getWirelessBluetoothSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17496,7 +18296,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17518,22 +18319,23 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessChannelUtilizationHistory(GetWirelessChannelUtilizationHistoryArgs.builder()
-     *             .apTag(&#34;string&#34;)
+     *             .apTag("string")
      *             .autoResolution(false)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .deviceSerial(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .band("string")
+     *             .clientId("string")
+     *             .deviceSerial("string")
+     *             .networkId("string")
      *             .resolution(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessChannelUtilizationHistoryExample&#34;, example.applyValue(getWirelessChannelUtilizationHistoryResult -&gt; getWirelessChannelUtilizationHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessChannelUtilizationHistoryExample", example.applyValue(getWirelessChannelUtilizationHistoryResult -> getWirelessChannelUtilizationHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17544,7 +18346,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17566,22 +18369,23 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessChannelUtilizationHistory(GetWirelessChannelUtilizationHistoryArgs.builder()
-     *             .apTag(&#34;string&#34;)
+     *             .apTag("string")
      *             .autoResolution(false)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .deviceSerial(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .band("string")
+     *             .clientId("string")
+     *             .deviceSerial("string")
+     *             .networkId("string")
      *             .resolution(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessChannelUtilizationHistoryExample&#34;, example.applyValue(getWirelessChannelUtilizationHistoryResult -&gt; getWirelessChannelUtilizationHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessChannelUtilizationHistoryExample", example.applyValue(getWirelessChannelUtilizationHistoryResult -> getWirelessChannelUtilizationHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17592,7 +18396,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17614,22 +18419,23 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessChannelUtilizationHistory(GetWirelessChannelUtilizationHistoryArgs.builder()
-     *             .apTag(&#34;string&#34;)
+     *             .apTag("string")
      *             .autoResolution(false)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .deviceSerial(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .band("string")
+     *             .clientId("string")
+     *             .deviceSerial("string")
+     *             .networkId("string")
      *             .resolution(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessChannelUtilizationHistoryExample&#34;, example.applyValue(getWirelessChannelUtilizationHistoryResult -&gt; getWirelessChannelUtilizationHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessChannelUtilizationHistoryExample", example.applyValue(getWirelessChannelUtilizationHistoryResult -> getWirelessChannelUtilizationHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17640,7 +18446,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17662,22 +18469,23 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessChannelUtilizationHistory(GetWirelessChannelUtilizationHistoryArgs.builder()
-     *             .apTag(&#34;string&#34;)
+     *             .apTag("string")
      *             .autoResolution(false)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .deviceSerial(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .band("string")
+     *             .clientId("string")
+     *             .deviceSerial("string")
+     *             .networkId("string")
      *             .resolution(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessChannelUtilizationHistoryExample&#34;, example.applyValue(getWirelessChannelUtilizationHistoryResult -&gt; getWirelessChannelUtilizationHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessChannelUtilizationHistoryExample", example.applyValue(getWirelessChannelUtilizationHistoryResult -> getWirelessChannelUtilizationHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17688,7 +18496,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17710,23 +18519,24 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessClientCountHistory(GetWirelessClientCountHistoryArgs.builder()
-     *             .apTag(&#34;string&#34;)
+     *             .apTag("string")
      *             .autoResolution(false)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .deviceSerial(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .band("string")
+     *             .clientId("string")
+     *             .deviceSerial("string")
+     *             .networkId("string")
      *             .resolution(1)
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessClientCountHistoryExample&#34;, example.applyValue(getWirelessClientCountHistoryResult -&gt; getWirelessClientCountHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessClientCountHistoryExample", example.applyValue(getWirelessClientCountHistoryResult -> getWirelessClientCountHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17737,7 +18547,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17759,23 +18570,24 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessClientCountHistory(GetWirelessClientCountHistoryArgs.builder()
-     *             .apTag(&#34;string&#34;)
+     *             .apTag("string")
      *             .autoResolution(false)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .deviceSerial(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .band("string")
+     *             .clientId("string")
+     *             .deviceSerial("string")
+     *             .networkId("string")
      *             .resolution(1)
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessClientCountHistoryExample&#34;, example.applyValue(getWirelessClientCountHistoryResult -&gt; getWirelessClientCountHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessClientCountHistoryExample", example.applyValue(getWirelessClientCountHistoryResult -> getWirelessClientCountHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17786,7 +18598,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17808,23 +18621,24 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessClientCountHistory(GetWirelessClientCountHistoryArgs.builder()
-     *             .apTag(&#34;string&#34;)
+     *             .apTag("string")
      *             .autoResolution(false)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .deviceSerial(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .band("string")
+     *             .clientId("string")
+     *             .deviceSerial("string")
+     *             .networkId("string")
      *             .resolution(1)
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessClientCountHistoryExample&#34;, example.applyValue(getWirelessClientCountHistoryResult -&gt; getWirelessClientCountHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessClientCountHistoryExample", example.applyValue(getWirelessClientCountHistoryResult -> getWirelessClientCountHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17835,7 +18649,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17857,23 +18672,24 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessClientCountHistory(GetWirelessClientCountHistoryArgs.builder()
-     *             .apTag(&#34;string&#34;)
+     *             .apTag("string")
      *             .autoResolution(false)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .deviceSerial(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .band("string")
+     *             .clientId("string")
+     *             .deviceSerial("string")
+     *             .networkId("string")
      *             .resolution(1)
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessClientCountHistoryExample&#34;, example.applyValue(getWirelessClientCountHistoryResult -&gt; getWirelessClientCountHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessClientCountHistoryExample", example.applyValue(getWirelessClientCountHistoryResult -> getWirelessClientCountHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17884,7 +18700,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17906,21 +18723,22 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessClientsConnectionStats(GetWirelessClientsConnectionStatsArgs.builder()
-     *             .apTag(&#34;string&#34;)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .apTag("string")
+     *             .band("string")
+     *             .clientId("string")
+     *             .networkId("string")
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessClientsConnectionStatsExample&#34;, example.applyValue(getWirelessClientsConnectionStatsResult -&gt; getWirelessClientsConnectionStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessClientsConnectionStatsExample", example.applyValue(getWirelessClientsConnectionStatsResult -> getWirelessClientsConnectionStatsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17931,7 +18749,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -17953,21 +18772,22 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessClientsConnectionStats(GetWirelessClientsConnectionStatsArgs.builder()
-     *             .apTag(&#34;string&#34;)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .apTag("string")
+     *             .band("string")
+     *             .clientId("string")
+     *             .networkId("string")
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessClientsConnectionStatsExample&#34;, example.applyValue(getWirelessClientsConnectionStatsResult -&gt; getWirelessClientsConnectionStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessClientsConnectionStatsExample", example.applyValue(getWirelessClientsConnectionStatsResult -> getWirelessClientsConnectionStatsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -17978,7 +18798,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18000,21 +18821,22 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessClientsConnectionStats(GetWirelessClientsConnectionStatsArgs.builder()
-     *             .apTag(&#34;string&#34;)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .apTag("string")
+     *             .band("string")
+     *             .clientId("string")
+     *             .networkId("string")
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessClientsConnectionStatsExample&#34;, example.applyValue(getWirelessClientsConnectionStatsResult -&gt; getWirelessClientsConnectionStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessClientsConnectionStatsExample", example.applyValue(getWirelessClientsConnectionStatsResult -> getWirelessClientsConnectionStatsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18025,7 +18847,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18047,21 +18870,22 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessClientsConnectionStats(GetWirelessClientsConnectionStatsArgs.builder()
-     *             .apTag(&#34;string&#34;)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .apTag("string")
+     *             .band("string")
+     *             .clientId("string")
+     *             .networkId("string")
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessClientsConnectionStatsExample&#34;, example.applyValue(getWirelessClientsConnectionStatsResult -&gt; getWirelessClientsConnectionStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessClientsConnectionStatsExample", example.applyValue(getWirelessClientsConnectionStatsResult -> getWirelessClientsConnectionStatsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18072,7 +18896,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18094,22 +18919,23 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessClientsLatencyStats(GetWirelessClientsLatencyStatsArgs.builder()
-     *             .apTag(&#34;string&#34;)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .fields(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .apTag("string")
+     *             .band("string")
+     *             .clientId("string")
+     *             .fields("string")
+     *             .networkId("string")
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessClientsLatencyStatsExample&#34;, example.applyValue(getWirelessClientsLatencyStatsResult -&gt; getWirelessClientsLatencyStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessClientsLatencyStatsExample", example.applyValue(getWirelessClientsLatencyStatsResult -> getWirelessClientsLatencyStatsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18120,7 +18946,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18142,22 +18969,23 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessClientsLatencyStats(GetWirelessClientsLatencyStatsArgs.builder()
-     *             .apTag(&#34;string&#34;)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .fields(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .apTag("string")
+     *             .band("string")
+     *             .clientId("string")
+     *             .fields("string")
+     *             .networkId("string")
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessClientsLatencyStatsExample&#34;, example.applyValue(getWirelessClientsLatencyStatsResult -&gt; getWirelessClientsLatencyStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessClientsLatencyStatsExample", example.applyValue(getWirelessClientsLatencyStatsResult -> getWirelessClientsLatencyStatsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18168,7 +18996,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18190,22 +19019,23 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessClientsLatencyStats(GetWirelessClientsLatencyStatsArgs.builder()
-     *             .apTag(&#34;string&#34;)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .fields(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .apTag("string")
+     *             .band("string")
+     *             .clientId("string")
+     *             .fields("string")
+     *             .networkId("string")
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessClientsLatencyStatsExample&#34;, example.applyValue(getWirelessClientsLatencyStatsResult -&gt; getWirelessClientsLatencyStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessClientsLatencyStatsExample", example.applyValue(getWirelessClientsLatencyStatsResult -> getWirelessClientsLatencyStatsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18216,7 +19046,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18238,22 +19069,23 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessClientsLatencyStats(GetWirelessClientsLatencyStatsArgs.builder()
-     *             .apTag(&#34;string&#34;)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .fields(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .apTag("string")
+     *             .band("string")
+     *             .clientId("string")
+     *             .fields("string")
+     *             .networkId("string")
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessClientsLatencyStatsExample&#34;, example.applyValue(getWirelessClientsLatencyStatsResult -&gt; getWirelessClientsLatencyStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessClientsLatencyStatsExample", example.applyValue(getWirelessClientsLatencyStatsResult -> getWirelessClientsLatencyStatsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18264,7 +19096,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18286,20 +19119,21 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessConnectionStats(GetWirelessConnectionStatsArgs.builder()
-     *             .apTag(&#34;string&#34;)
-     *             .band(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .apTag("string")
+     *             .band("string")
+     *             .networkId("string")
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessConnectionStatsExample&#34;, example.applyValue(getWirelessConnectionStatsResult -&gt; getWirelessConnectionStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessConnectionStatsExample", example.applyValue(getWirelessConnectionStatsResult -> getWirelessConnectionStatsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18310,7 +19144,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18332,20 +19167,21 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessConnectionStats(GetWirelessConnectionStatsArgs.builder()
-     *             .apTag(&#34;string&#34;)
-     *             .band(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .apTag("string")
+     *             .band("string")
+     *             .networkId("string")
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessConnectionStatsExample&#34;, example.applyValue(getWirelessConnectionStatsResult -&gt; getWirelessConnectionStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessConnectionStatsExample", example.applyValue(getWirelessConnectionStatsResult -> getWirelessConnectionStatsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18356,7 +19192,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18378,20 +19215,21 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessConnectionStats(GetWirelessConnectionStatsArgs.builder()
-     *             .apTag(&#34;string&#34;)
-     *             .band(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .apTag("string")
+     *             .band("string")
+     *             .networkId("string")
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessConnectionStatsExample&#34;, example.applyValue(getWirelessConnectionStatsResult -&gt; getWirelessConnectionStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessConnectionStatsExample", example.applyValue(getWirelessConnectionStatsResult -> getWirelessConnectionStatsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18402,7 +19240,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18424,20 +19263,21 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessConnectionStats(GetWirelessConnectionStatsArgs.builder()
-     *             .apTag(&#34;string&#34;)
-     *             .band(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .apTag("string")
+     *             .band("string")
+     *             .networkId("string")
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessConnectionStatsExample&#34;, example.applyValue(getWirelessConnectionStatsResult -&gt; getWirelessConnectionStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessConnectionStatsExample", example.applyValue(getWirelessConnectionStatsResult -> getWirelessConnectionStatsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18448,7 +19288,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18470,23 +19311,24 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessDataRateHistory(GetWirelessDataRateHistoryArgs.builder()
-     *             .apTag(&#34;string&#34;)
+     *             .apTag("string")
      *             .autoResolution(false)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .deviceSerial(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .band("string")
+     *             .clientId("string")
+     *             .deviceSerial("string")
+     *             .networkId("string")
      *             .resolution(1)
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessDataRateHistoryExample&#34;, example.applyValue(getWirelessDataRateHistoryResult -&gt; getWirelessDataRateHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessDataRateHistoryExample", example.applyValue(getWirelessDataRateHistoryResult -> getWirelessDataRateHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18497,7 +19339,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18519,23 +19362,24 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessDataRateHistory(GetWirelessDataRateHistoryArgs.builder()
-     *             .apTag(&#34;string&#34;)
+     *             .apTag("string")
      *             .autoResolution(false)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .deviceSerial(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .band("string")
+     *             .clientId("string")
+     *             .deviceSerial("string")
+     *             .networkId("string")
      *             .resolution(1)
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessDataRateHistoryExample&#34;, example.applyValue(getWirelessDataRateHistoryResult -&gt; getWirelessDataRateHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessDataRateHistoryExample", example.applyValue(getWirelessDataRateHistoryResult -> getWirelessDataRateHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18546,7 +19390,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18568,23 +19413,24 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessDataRateHistory(GetWirelessDataRateHistoryArgs.builder()
-     *             .apTag(&#34;string&#34;)
+     *             .apTag("string")
      *             .autoResolution(false)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .deviceSerial(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .band("string")
+     *             .clientId("string")
+     *             .deviceSerial("string")
+     *             .networkId("string")
      *             .resolution(1)
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessDataRateHistoryExample&#34;, example.applyValue(getWirelessDataRateHistoryResult -&gt; getWirelessDataRateHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessDataRateHistoryExample", example.applyValue(getWirelessDataRateHistoryResult -> getWirelessDataRateHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18595,7 +19441,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18617,23 +19464,24 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessDataRateHistory(GetWirelessDataRateHistoryArgs.builder()
-     *             .apTag(&#34;string&#34;)
+     *             .apTag("string")
      *             .autoResolution(false)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .deviceSerial(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .band("string")
+     *             .clientId("string")
+     *             .deviceSerial("string")
+     *             .networkId("string")
      *             .resolution(1)
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessDataRateHistoryExample&#34;, example.applyValue(getWirelessDataRateHistoryResult -&gt; getWirelessDataRateHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessDataRateHistoryExample", example.applyValue(getWirelessDataRateHistoryResult -> getWirelessDataRateHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18644,7 +19492,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18666,20 +19515,21 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessDevicesConnectionStats(GetWirelessDevicesConnectionStatsArgs.builder()
-     *             .apTag(&#34;string&#34;)
-     *             .band(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .apTag("string")
+     *             .band("string")
+     *             .networkId("string")
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessDevicesConnectionStatsExample&#34;, example.applyValue(getWirelessDevicesConnectionStatsResult -&gt; getWirelessDevicesConnectionStatsResult.items()));
+     *         ctx.export("merakiNetworksWirelessDevicesConnectionStatsExample", example.applyValue(getWirelessDevicesConnectionStatsResult -> getWirelessDevicesConnectionStatsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18690,7 +19540,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18712,20 +19563,21 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessDevicesConnectionStats(GetWirelessDevicesConnectionStatsArgs.builder()
-     *             .apTag(&#34;string&#34;)
-     *             .band(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .apTag("string")
+     *             .band("string")
+     *             .networkId("string")
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessDevicesConnectionStatsExample&#34;, example.applyValue(getWirelessDevicesConnectionStatsResult -&gt; getWirelessDevicesConnectionStatsResult.items()));
+     *         ctx.export("merakiNetworksWirelessDevicesConnectionStatsExample", example.applyValue(getWirelessDevicesConnectionStatsResult -> getWirelessDevicesConnectionStatsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18736,7 +19588,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18758,20 +19611,21 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessDevicesConnectionStats(GetWirelessDevicesConnectionStatsArgs.builder()
-     *             .apTag(&#34;string&#34;)
-     *             .band(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .apTag("string")
+     *             .band("string")
+     *             .networkId("string")
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessDevicesConnectionStatsExample&#34;, example.applyValue(getWirelessDevicesConnectionStatsResult -&gt; getWirelessDevicesConnectionStatsResult.items()));
+     *         ctx.export("merakiNetworksWirelessDevicesConnectionStatsExample", example.applyValue(getWirelessDevicesConnectionStatsResult -> getWirelessDevicesConnectionStatsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18782,7 +19636,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18804,20 +19659,21 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessDevicesConnectionStats(GetWirelessDevicesConnectionStatsArgs.builder()
-     *             .apTag(&#34;string&#34;)
-     *             .band(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .apTag("string")
+     *             .band("string")
+     *             .networkId("string")
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessDevicesConnectionStatsExample&#34;, example.applyValue(getWirelessDevicesConnectionStatsResult -&gt; getWirelessDevicesConnectionStatsResult.items()));
+     *         ctx.export("merakiNetworksWirelessDevicesConnectionStatsExample", example.applyValue(getWirelessDevicesConnectionStatsResult -> getWirelessDevicesConnectionStatsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18828,7 +19684,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18850,14 +19707,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessEthernetPortsProfiles(GetWirelessEthernetPortsProfilesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .profileId(&#34;string&#34;)
+     *             .networkId("string")
+     *             .profileId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessEthernetPortsProfilesExample&#34;, example.applyValue(getWirelessEthernetPortsProfilesResult -&gt; getWirelessEthernetPortsProfilesResult.item()));
+     *         ctx.export("merakiNetworksWirelessEthernetPortsProfilesExample", example.applyValue(getWirelessEthernetPortsProfilesResult -> getWirelessEthernetPortsProfilesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18868,7 +19726,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18890,14 +19749,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessEthernetPortsProfiles(GetWirelessEthernetPortsProfilesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .profileId(&#34;string&#34;)
+     *             .networkId("string")
+     *             .profileId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessEthernetPortsProfilesExample&#34;, example.applyValue(getWirelessEthernetPortsProfilesResult -&gt; getWirelessEthernetPortsProfilesResult.item()));
+     *         ctx.export("merakiNetworksWirelessEthernetPortsProfilesExample", example.applyValue(getWirelessEthernetPortsProfilesResult -> getWirelessEthernetPortsProfilesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18908,7 +19768,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18930,14 +19791,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessEthernetPortsProfiles(GetWirelessEthernetPortsProfilesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .profileId(&#34;string&#34;)
+     *             .networkId("string")
+     *             .profileId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessEthernetPortsProfilesExample&#34;, example.applyValue(getWirelessEthernetPortsProfilesResult -&gt; getWirelessEthernetPortsProfilesResult.item()));
+     *         ctx.export("merakiNetworksWirelessEthernetPortsProfilesExample", example.applyValue(getWirelessEthernetPortsProfilesResult -> getWirelessEthernetPortsProfilesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18948,7 +19810,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -18970,14 +19833,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessEthernetPortsProfiles(GetWirelessEthernetPortsProfilesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .profileId(&#34;string&#34;)
+     *             .networkId("string")
+     *             .profileId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessEthernetPortsProfilesExample&#34;, example.applyValue(getWirelessEthernetPortsProfilesResult -&gt; getWirelessEthernetPortsProfilesResult.item()));
+     *         ctx.export("merakiNetworksWirelessEthernetPortsProfilesExample", example.applyValue(getWirelessEthernetPortsProfilesResult -> getWirelessEthernetPortsProfilesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -18988,7 +19852,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19010,22 +19875,23 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessFailedConnections(GetWirelessFailedConnectionsArgs.builder()
-     *             .apTag(&#34;string&#34;)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
+     *             .apTag("string")
+     *             .band("string")
+     *             .clientId("string")
+     *             .networkId("string")
+     *             .serial("string")
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessFailedConnectionsExample&#34;, example.applyValue(getWirelessFailedConnectionsResult -&gt; getWirelessFailedConnectionsResult.items()));
+     *         ctx.export("merakiNetworksWirelessFailedConnectionsExample", example.applyValue(getWirelessFailedConnectionsResult -> getWirelessFailedConnectionsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19036,7 +19902,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19058,22 +19925,23 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessFailedConnections(GetWirelessFailedConnectionsArgs.builder()
-     *             .apTag(&#34;string&#34;)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
+     *             .apTag("string")
+     *             .band("string")
+     *             .clientId("string")
+     *             .networkId("string")
+     *             .serial("string")
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessFailedConnectionsExample&#34;, example.applyValue(getWirelessFailedConnectionsResult -&gt; getWirelessFailedConnectionsResult.items()));
+     *         ctx.export("merakiNetworksWirelessFailedConnectionsExample", example.applyValue(getWirelessFailedConnectionsResult -> getWirelessFailedConnectionsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19084,7 +19952,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19106,22 +19975,23 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessFailedConnections(GetWirelessFailedConnectionsArgs.builder()
-     *             .apTag(&#34;string&#34;)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
+     *             .apTag("string")
+     *             .band("string")
+     *             .clientId("string")
+     *             .networkId("string")
+     *             .serial("string")
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessFailedConnectionsExample&#34;, example.applyValue(getWirelessFailedConnectionsResult -&gt; getWirelessFailedConnectionsResult.items()));
+     *         ctx.export("merakiNetworksWirelessFailedConnectionsExample", example.applyValue(getWirelessFailedConnectionsResult -> getWirelessFailedConnectionsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19132,7 +20002,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19154,22 +20025,23 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessFailedConnections(GetWirelessFailedConnectionsArgs.builder()
-     *             .apTag(&#34;string&#34;)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
+     *             .apTag("string")
+     *             .band("string")
+     *             .clientId("string")
+     *             .networkId("string")
+     *             .serial("string")
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessFailedConnectionsExample&#34;, example.applyValue(getWirelessFailedConnectionsResult -&gt; getWirelessFailedConnectionsResult.items()));
+     *         ctx.export("merakiNetworksWirelessFailedConnectionsExample", example.applyValue(getWirelessFailedConnectionsResult -> getWirelessFailedConnectionsResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19180,7 +20052,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19202,24 +20075,25 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessLatencyHistory(GetWirelessLatencyHistoryArgs.builder()
-     *             .accessCategory(&#34;string&#34;)
-     *             .apTag(&#34;string&#34;)
+     *             .accessCategory("string")
+     *             .apTag("string")
      *             .autoResolution(false)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .deviceSerial(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .band("string")
+     *             .clientId("string")
+     *             .deviceSerial("string")
+     *             .networkId("string")
      *             .resolution(1)
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessLatencyHistoryExample&#34;, example.applyValue(getWirelessLatencyHistoryResult -&gt; getWirelessLatencyHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessLatencyHistoryExample", example.applyValue(getWirelessLatencyHistoryResult -> getWirelessLatencyHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19230,7 +20104,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19252,24 +20127,25 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessLatencyHistory(GetWirelessLatencyHistoryArgs.builder()
-     *             .accessCategory(&#34;string&#34;)
-     *             .apTag(&#34;string&#34;)
+     *             .accessCategory("string")
+     *             .apTag("string")
      *             .autoResolution(false)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .deviceSerial(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .band("string")
+     *             .clientId("string")
+     *             .deviceSerial("string")
+     *             .networkId("string")
      *             .resolution(1)
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessLatencyHistoryExample&#34;, example.applyValue(getWirelessLatencyHistoryResult -&gt; getWirelessLatencyHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessLatencyHistoryExample", example.applyValue(getWirelessLatencyHistoryResult -> getWirelessLatencyHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19280,7 +20156,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19302,24 +20179,25 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessLatencyHistory(GetWirelessLatencyHistoryArgs.builder()
-     *             .accessCategory(&#34;string&#34;)
-     *             .apTag(&#34;string&#34;)
+     *             .accessCategory("string")
+     *             .apTag("string")
      *             .autoResolution(false)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .deviceSerial(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .band("string")
+     *             .clientId("string")
+     *             .deviceSerial("string")
+     *             .networkId("string")
      *             .resolution(1)
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessLatencyHistoryExample&#34;, example.applyValue(getWirelessLatencyHistoryResult -&gt; getWirelessLatencyHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessLatencyHistoryExample", example.applyValue(getWirelessLatencyHistoryResult -> getWirelessLatencyHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19330,7 +20208,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19352,24 +20231,25 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessLatencyHistory(GetWirelessLatencyHistoryArgs.builder()
-     *             .accessCategory(&#34;string&#34;)
-     *             .apTag(&#34;string&#34;)
+     *             .accessCategory("string")
+     *             .apTag("string")
      *             .autoResolution(false)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .deviceSerial(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .band("string")
+     *             .clientId("string")
+     *             .deviceSerial("string")
+     *             .networkId("string")
      *             .resolution(1)
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessLatencyHistoryExample&#34;, example.applyValue(getWirelessLatencyHistoryResult -&gt; getWirelessLatencyHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessLatencyHistoryExample", example.applyValue(getWirelessLatencyHistoryResult -> getWirelessLatencyHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19380,7 +20260,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19402,21 +20283,22 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessLatencyStats(GetWirelessLatencyStatsArgs.builder()
-     *             .apTag(&#34;string&#34;)
-     *             .band(&#34;string&#34;)
-     *             .fields(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .apTag("string")
+     *             .band("string")
+     *             .fields("string")
+     *             .networkId("string")
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessLatencyStatsExample&#34;, example.applyValue(getWirelessLatencyStatsResult -&gt; getWirelessLatencyStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessLatencyStatsExample", example.applyValue(getWirelessLatencyStatsResult -> getWirelessLatencyStatsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19427,7 +20309,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19449,21 +20332,22 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessLatencyStats(GetWirelessLatencyStatsArgs.builder()
-     *             .apTag(&#34;string&#34;)
-     *             .band(&#34;string&#34;)
-     *             .fields(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .apTag("string")
+     *             .band("string")
+     *             .fields("string")
+     *             .networkId("string")
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessLatencyStatsExample&#34;, example.applyValue(getWirelessLatencyStatsResult -&gt; getWirelessLatencyStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessLatencyStatsExample", example.applyValue(getWirelessLatencyStatsResult -> getWirelessLatencyStatsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19474,7 +20358,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19496,21 +20381,22 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessLatencyStats(GetWirelessLatencyStatsArgs.builder()
-     *             .apTag(&#34;string&#34;)
-     *             .band(&#34;string&#34;)
-     *             .fields(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .apTag("string")
+     *             .band("string")
+     *             .fields("string")
+     *             .networkId("string")
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessLatencyStatsExample&#34;, example.applyValue(getWirelessLatencyStatsResult -&gt; getWirelessLatencyStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessLatencyStatsExample", example.applyValue(getWirelessLatencyStatsResult -> getWirelessLatencyStatsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19521,7 +20407,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19543,21 +20430,22 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessLatencyStats(GetWirelessLatencyStatsArgs.builder()
-     *             .apTag(&#34;string&#34;)
-     *             .band(&#34;string&#34;)
-     *             .fields(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .apTag("string")
+     *             .band("string")
+     *             .fields("string")
+     *             .networkId("string")
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessLatencyStatsExample&#34;, example.applyValue(getWirelessLatencyStatsResult -&gt; getWirelessLatencyStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessLatencyStatsExample", example.applyValue(getWirelessLatencyStatsResult -> getWirelessLatencyStatsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19568,7 +20456,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19590,16 +20479,17 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessMeshStatuses(GetWirelessMeshStatusesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessMeshStatusesExample&#34;, example.applyValue(getWirelessMeshStatusesResult -&gt; getWirelessMeshStatusesResult.items()));
+     *         ctx.export("merakiNetworksWirelessMeshStatusesExample", example.applyValue(getWirelessMeshStatusesResult -> getWirelessMeshStatusesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19610,7 +20500,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19632,16 +20523,17 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessMeshStatuses(GetWirelessMeshStatusesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessMeshStatusesExample&#34;, example.applyValue(getWirelessMeshStatusesResult -&gt; getWirelessMeshStatusesResult.items()));
+     *         ctx.export("merakiNetworksWirelessMeshStatusesExample", example.applyValue(getWirelessMeshStatusesResult -> getWirelessMeshStatusesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19652,7 +20544,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19674,16 +20567,17 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessMeshStatuses(GetWirelessMeshStatusesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessMeshStatusesExample&#34;, example.applyValue(getWirelessMeshStatusesResult -&gt; getWirelessMeshStatusesResult.items()));
+     *         ctx.export("merakiNetworksWirelessMeshStatusesExample", example.applyValue(getWirelessMeshStatusesResult -> getWirelessMeshStatusesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19694,7 +20588,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19716,16 +20611,17 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessMeshStatuses(GetWirelessMeshStatusesArgs.builder()
-     *             .endingBefore(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .endingBefore("string")
+     *             .networkId("string")
      *             .perPage(1)
-     *             .startingAfter(&#34;string&#34;)
+     *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessMeshStatusesExample&#34;, example.applyValue(getWirelessMeshStatusesResult -&gt; getWirelessMeshStatusesResult.items()));
+     *         ctx.export("merakiNetworksWirelessMeshStatusesExample", example.applyValue(getWirelessMeshStatusesResult -> getWirelessMeshStatusesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19736,7 +20632,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19759,13 +20656,14 @@ public final class NetworksFunctions {
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessRfProfiles(GetWirelessRfProfilesArgs.builder()
      *             .includeTemplateProfiles(false)
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessRfProfilesExample&#34;, example.applyValue(getWirelessRfProfilesResult -&gt; getWirelessRfProfilesResult.item()));
+     *         ctx.export("merakiNetworksWirelessRfProfilesExample", example.applyValue(getWirelessRfProfilesResult -> getWirelessRfProfilesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19776,7 +20674,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19799,13 +20698,14 @@ public final class NetworksFunctions {
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessRfProfiles(GetWirelessRfProfilesArgs.builder()
      *             .includeTemplateProfiles(false)
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessRfProfilesExample&#34;, example.applyValue(getWirelessRfProfilesResult -&gt; getWirelessRfProfilesResult.item()));
+     *         ctx.export("merakiNetworksWirelessRfProfilesExample", example.applyValue(getWirelessRfProfilesResult -> getWirelessRfProfilesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19816,7 +20716,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19839,13 +20740,14 @@ public final class NetworksFunctions {
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessRfProfiles(GetWirelessRfProfilesArgs.builder()
      *             .includeTemplateProfiles(false)
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessRfProfilesExample&#34;, example.applyValue(getWirelessRfProfilesResult -&gt; getWirelessRfProfilesResult.item()));
+     *         ctx.export("merakiNetworksWirelessRfProfilesExample", example.applyValue(getWirelessRfProfilesResult -> getWirelessRfProfilesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19856,7 +20758,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19879,13 +20782,14 @@ public final class NetworksFunctions {
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessRfProfiles(GetWirelessRfProfilesArgs.builder()
      *             .includeTemplateProfiles(false)
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessRfProfilesExample&#34;, example.applyValue(getWirelessRfProfilesResult -&gt; getWirelessRfProfilesResult.item()));
+     *         ctx.export("merakiNetworksWirelessRfProfilesExample", example.applyValue(getWirelessRfProfilesResult -> getWirelessRfProfilesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19896,7 +20800,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19919,13 +20824,14 @@ public final class NetworksFunctions {
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessRfProfiles(GetWirelessRfProfilesArgs.builder()
      *             .includeTemplateProfiles(false)
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessRfProfilesExample&#34;, example.applyValue(getWirelessRfProfilesResult -&gt; getWirelessRfProfilesResult.item()));
+     *         ctx.export("merakiNetworksWirelessRfProfilesExample", example.applyValue(getWirelessRfProfilesResult -> getWirelessRfProfilesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19936,7 +20842,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19959,13 +20866,14 @@ public final class NetworksFunctions {
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessRfProfiles(GetWirelessRfProfilesArgs.builder()
      *             .includeTemplateProfiles(false)
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessRfProfilesExample&#34;, example.applyValue(getWirelessRfProfilesResult -&gt; getWirelessRfProfilesResult.item()));
+     *         ctx.export("merakiNetworksWirelessRfProfilesExample", example.applyValue(getWirelessRfProfilesResult -> getWirelessRfProfilesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -19976,7 +20884,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -19998,13 +20907,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSettings(GetWirelessSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSettingsExample&#34;, example.applyValue(getWirelessSettingsResult -&gt; getWirelessSettingsResult.item()));
+     *         ctx.export("merakiNetworksWirelessSettingsExample", example.applyValue(getWirelessSettingsResult -> getWirelessSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20015,7 +20925,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20037,13 +20948,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSettings(GetWirelessSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSettingsExample&#34;, example.applyValue(getWirelessSettingsResult -&gt; getWirelessSettingsResult.item()));
+     *         ctx.export("merakiNetworksWirelessSettingsExample", example.applyValue(getWirelessSettingsResult -> getWirelessSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20054,7 +20966,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20076,13 +20989,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSettings(GetWirelessSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSettingsExample&#34;, example.applyValue(getWirelessSettingsResult -&gt; getWirelessSettingsResult.item()));
+     *         ctx.export("merakiNetworksWirelessSettingsExample", example.applyValue(getWirelessSettingsResult -> getWirelessSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20093,7 +21007,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20115,13 +21030,14 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSettings(GetWirelessSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
+     *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSettingsExample&#34;, example.applyValue(getWirelessSettingsResult -&gt; getWirelessSettingsResult.item()));
+     *         ctx.export("merakiNetworksWirelessSettingsExample", example.applyValue(getWirelessSettingsResult -> getWirelessSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20132,7 +21048,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20154,23 +21071,24 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSignalQualityHistory(GetWirelessSignalQualityHistoryArgs.builder()
-     *             .apTag(&#34;string&#34;)
+     *             .apTag("string")
      *             .autoResolution(false)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .deviceSerial(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .band("string")
+     *             .clientId("string")
+     *             .deviceSerial("string")
+     *             .networkId("string")
      *             .resolution(1)
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSignalQualityHistoryExample&#34;, example.applyValue(getWirelessSignalQualityHistoryResult -&gt; getWirelessSignalQualityHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessSignalQualityHistoryExample", example.applyValue(getWirelessSignalQualityHistoryResult -> getWirelessSignalQualityHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20181,7 +21099,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20203,23 +21122,24 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSignalQualityHistory(GetWirelessSignalQualityHistoryArgs.builder()
-     *             .apTag(&#34;string&#34;)
+     *             .apTag("string")
      *             .autoResolution(false)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .deviceSerial(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .band("string")
+     *             .clientId("string")
+     *             .deviceSerial("string")
+     *             .networkId("string")
      *             .resolution(1)
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSignalQualityHistoryExample&#34;, example.applyValue(getWirelessSignalQualityHistoryResult -&gt; getWirelessSignalQualityHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessSignalQualityHistoryExample", example.applyValue(getWirelessSignalQualityHistoryResult -> getWirelessSignalQualityHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20230,7 +21150,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20252,23 +21173,24 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSignalQualityHistory(GetWirelessSignalQualityHistoryArgs.builder()
-     *             .apTag(&#34;string&#34;)
+     *             .apTag("string")
      *             .autoResolution(false)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .deviceSerial(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .band("string")
+     *             .clientId("string")
+     *             .deviceSerial("string")
+     *             .networkId("string")
      *             .resolution(1)
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSignalQualityHistoryExample&#34;, example.applyValue(getWirelessSignalQualityHistoryResult -&gt; getWirelessSignalQualityHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessSignalQualityHistoryExample", example.applyValue(getWirelessSignalQualityHistoryResult -> getWirelessSignalQualityHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20279,7 +21201,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20301,23 +21224,24 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSignalQualityHistory(GetWirelessSignalQualityHistoryArgs.builder()
-     *             .apTag(&#34;string&#34;)
+     *             .apTag("string")
      *             .autoResolution(false)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .deviceSerial(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .band("string")
+     *             .clientId("string")
+     *             .deviceSerial("string")
+     *             .networkId("string")
      *             .resolution(1)
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSignalQualityHistoryExample&#34;, example.applyValue(getWirelessSignalQualityHistoryResult -&gt; getWirelessSignalQualityHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessSignalQualityHistoryExample", example.applyValue(getWirelessSignalQualityHistoryResult -> getWirelessSignalQualityHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20370,7 +21294,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20392,14 +21317,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsBonjourForwarding(GetWirelessSsidsBonjourForwardingArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsBonjourForwardingExample&#34;, example.applyValue(getWirelessSsidsBonjourForwardingResult -&gt; getWirelessSsidsBonjourForwardingResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsBonjourForwardingExample", example.applyValue(getWirelessSsidsBonjourForwardingResult -> getWirelessSsidsBonjourForwardingResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20410,7 +21336,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20432,14 +21359,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsBonjourForwarding(GetWirelessSsidsBonjourForwardingArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsBonjourForwardingExample&#34;, example.applyValue(getWirelessSsidsBonjourForwardingResult -&gt; getWirelessSsidsBonjourForwardingResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsBonjourForwardingExample", example.applyValue(getWirelessSsidsBonjourForwardingResult -> getWirelessSsidsBonjourForwardingResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20450,7 +21378,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20472,14 +21401,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsBonjourForwarding(GetWirelessSsidsBonjourForwardingArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsBonjourForwardingExample&#34;, example.applyValue(getWirelessSsidsBonjourForwardingResult -&gt; getWirelessSsidsBonjourForwardingResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsBonjourForwardingExample", example.applyValue(getWirelessSsidsBonjourForwardingResult -> getWirelessSsidsBonjourForwardingResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20490,7 +21420,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20512,14 +21443,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsBonjourForwarding(GetWirelessSsidsBonjourForwardingArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsBonjourForwardingExample&#34;, example.applyValue(getWirelessSsidsBonjourForwardingResult -&gt; getWirelessSsidsBonjourForwardingResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsBonjourForwardingExample", example.applyValue(getWirelessSsidsBonjourForwardingResult -> getWirelessSsidsBonjourForwardingResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20530,7 +21462,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20552,14 +21485,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsDeviceTypeGroupPolicies(GetWirelessSsidsDeviceTypeGroupPoliciesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsDeviceTypeGroupPoliciesExample&#34;, example.applyValue(getWirelessSsidsDeviceTypeGroupPoliciesResult -&gt; getWirelessSsidsDeviceTypeGroupPoliciesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsDeviceTypeGroupPoliciesExample", example.applyValue(getWirelessSsidsDeviceTypeGroupPoliciesResult -> getWirelessSsidsDeviceTypeGroupPoliciesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20570,7 +21504,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20592,14 +21527,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsDeviceTypeGroupPolicies(GetWirelessSsidsDeviceTypeGroupPoliciesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsDeviceTypeGroupPoliciesExample&#34;, example.applyValue(getWirelessSsidsDeviceTypeGroupPoliciesResult -&gt; getWirelessSsidsDeviceTypeGroupPoliciesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsDeviceTypeGroupPoliciesExample", example.applyValue(getWirelessSsidsDeviceTypeGroupPoliciesResult -> getWirelessSsidsDeviceTypeGroupPoliciesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20610,7 +21546,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20632,14 +21569,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsDeviceTypeGroupPolicies(GetWirelessSsidsDeviceTypeGroupPoliciesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsDeviceTypeGroupPoliciesExample&#34;, example.applyValue(getWirelessSsidsDeviceTypeGroupPoliciesResult -&gt; getWirelessSsidsDeviceTypeGroupPoliciesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsDeviceTypeGroupPoliciesExample", example.applyValue(getWirelessSsidsDeviceTypeGroupPoliciesResult -> getWirelessSsidsDeviceTypeGroupPoliciesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20650,7 +21588,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20672,14 +21611,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsDeviceTypeGroupPolicies(GetWirelessSsidsDeviceTypeGroupPoliciesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsDeviceTypeGroupPoliciesExample&#34;, example.applyValue(getWirelessSsidsDeviceTypeGroupPoliciesResult -&gt; getWirelessSsidsDeviceTypeGroupPoliciesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsDeviceTypeGroupPoliciesExample", example.applyValue(getWirelessSsidsDeviceTypeGroupPoliciesResult -> getWirelessSsidsDeviceTypeGroupPoliciesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20690,7 +21630,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20712,14 +21653,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsEapOverride(GetWirelessSsidsEapOverrideArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsEapOverrideExample&#34;, example.applyValue(getWirelessSsidsEapOverrideResult -&gt; getWirelessSsidsEapOverrideResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsEapOverrideExample", example.applyValue(getWirelessSsidsEapOverrideResult -> getWirelessSsidsEapOverrideResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20730,7 +21672,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20752,14 +21695,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsEapOverride(GetWirelessSsidsEapOverrideArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsEapOverrideExample&#34;, example.applyValue(getWirelessSsidsEapOverrideResult -&gt; getWirelessSsidsEapOverrideResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsEapOverrideExample", example.applyValue(getWirelessSsidsEapOverrideResult -> getWirelessSsidsEapOverrideResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20770,7 +21714,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20792,14 +21737,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsEapOverride(GetWirelessSsidsEapOverrideArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsEapOverrideExample&#34;, example.applyValue(getWirelessSsidsEapOverrideResult -&gt; getWirelessSsidsEapOverrideResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsEapOverrideExample", example.applyValue(getWirelessSsidsEapOverrideResult -> getWirelessSsidsEapOverrideResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20810,7 +21756,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20832,14 +21779,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsEapOverride(GetWirelessSsidsEapOverrideArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsEapOverrideExample&#34;, example.applyValue(getWirelessSsidsEapOverrideResult -&gt; getWirelessSsidsEapOverrideResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsEapOverrideExample", example.applyValue(getWirelessSsidsEapOverrideResult -> getWirelessSsidsEapOverrideResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20850,7 +21798,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20872,14 +21821,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsFirewallL3FirewallRules(GetWirelessSsidsFirewallL3FirewallRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsFirewallL3FirewallRulesExample&#34;, example.applyValue(getWirelessSsidsFirewallL3FirewallRulesResult -&gt; getWirelessSsidsFirewallL3FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsFirewallL3FirewallRulesExample", example.applyValue(getWirelessSsidsFirewallL3FirewallRulesResult -> getWirelessSsidsFirewallL3FirewallRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20890,7 +21840,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20912,14 +21863,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsFirewallL3FirewallRules(GetWirelessSsidsFirewallL3FirewallRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsFirewallL3FirewallRulesExample&#34;, example.applyValue(getWirelessSsidsFirewallL3FirewallRulesResult -&gt; getWirelessSsidsFirewallL3FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsFirewallL3FirewallRulesExample", example.applyValue(getWirelessSsidsFirewallL3FirewallRulesResult -> getWirelessSsidsFirewallL3FirewallRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20930,7 +21882,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20952,14 +21905,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsFirewallL3FirewallRules(GetWirelessSsidsFirewallL3FirewallRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsFirewallL3FirewallRulesExample&#34;, example.applyValue(getWirelessSsidsFirewallL3FirewallRulesResult -&gt; getWirelessSsidsFirewallL3FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsFirewallL3FirewallRulesExample", example.applyValue(getWirelessSsidsFirewallL3FirewallRulesResult -> getWirelessSsidsFirewallL3FirewallRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -20970,7 +21924,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -20992,14 +21947,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsFirewallL3FirewallRules(GetWirelessSsidsFirewallL3FirewallRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsFirewallL3FirewallRulesExample&#34;, example.applyValue(getWirelessSsidsFirewallL3FirewallRulesResult -&gt; getWirelessSsidsFirewallL3FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsFirewallL3FirewallRulesExample", example.applyValue(getWirelessSsidsFirewallL3FirewallRulesResult -> getWirelessSsidsFirewallL3FirewallRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21010,7 +21966,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21032,14 +21989,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsFirewallL7FirewallRules(GetWirelessSsidsFirewallL7FirewallRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsFirewallL7FirewallRulesExample&#34;, example.applyValue(getWirelessSsidsFirewallL7FirewallRulesResult -&gt; getWirelessSsidsFirewallL7FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsFirewallL7FirewallRulesExample", example.applyValue(getWirelessSsidsFirewallL7FirewallRulesResult -> getWirelessSsidsFirewallL7FirewallRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21050,7 +22008,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21072,14 +22031,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsFirewallL7FirewallRules(GetWirelessSsidsFirewallL7FirewallRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsFirewallL7FirewallRulesExample&#34;, example.applyValue(getWirelessSsidsFirewallL7FirewallRulesResult -&gt; getWirelessSsidsFirewallL7FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsFirewallL7FirewallRulesExample", example.applyValue(getWirelessSsidsFirewallL7FirewallRulesResult -> getWirelessSsidsFirewallL7FirewallRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21090,7 +22050,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21112,14 +22073,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsFirewallL7FirewallRules(GetWirelessSsidsFirewallL7FirewallRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsFirewallL7FirewallRulesExample&#34;, example.applyValue(getWirelessSsidsFirewallL7FirewallRulesResult -&gt; getWirelessSsidsFirewallL7FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsFirewallL7FirewallRulesExample", example.applyValue(getWirelessSsidsFirewallL7FirewallRulesResult -> getWirelessSsidsFirewallL7FirewallRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21130,7 +22092,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21152,14 +22115,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsFirewallL7FirewallRules(GetWirelessSsidsFirewallL7FirewallRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsFirewallL7FirewallRulesExample&#34;, example.applyValue(getWirelessSsidsFirewallL7FirewallRulesResult -&gt; getWirelessSsidsFirewallL7FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsFirewallL7FirewallRulesExample", example.applyValue(getWirelessSsidsFirewallL7FirewallRulesResult -> getWirelessSsidsFirewallL7FirewallRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21170,7 +22134,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21192,14 +22157,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsHotspot20(GetWirelessSsidsHotspot20Args.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsHotspot20Example&#34;, example.applyValue(getWirelessSsidsHotspot20Result -&gt; getWirelessSsidsHotspot20Result.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsHotspot20Example", example.applyValue(getWirelessSsidsHotspot20Result -> getWirelessSsidsHotspot20Result.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21210,7 +22176,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21232,14 +22199,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsHotspot20(GetWirelessSsidsHotspot20Args.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsHotspot20Example&#34;, example.applyValue(getWirelessSsidsHotspot20Result -&gt; getWirelessSsidsHotspot20Result.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsHotspot20Example", example.applyValue(getWirelessSsidsHotspot20Result -> getWirelessSsidsHotspot20Result.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21250,7 +22218,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21272,14 +22241,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsHotspot20(GetWirelessSsidsHotspot20Args.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsHotspot20Example&#34;, example.applyValue(getWirelessSsidsHotspot20Result -&gt; getWirelessSsidsHotspot20Result.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsHotspot20Example", example.applyValue(getWirelessSsidsHotspot20Result -> getWirelessSsidsHotspot20Result.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21290,7 +22260,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21312,14 +22283,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsHotspot20(GetWirelessSsidsHotspot20Args.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsHotspot20Example&#34;, example.applyValue(getWirelessSsidsHotspot20Result -&gt; getWirelessSsidsHotspot20Result.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsHotspot20Example", example.applyValue(getWirelessSsidsHotspot20Result -> getWirelessSsidsHotspot20Result.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21372,7 +22344,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21394,14 +22367,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsSchedules(GetWirelessSsidsSchedulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsSchedulesExample&#34;, example.applyValue(getWirelessSsidsSchedulesResult -&gt; getWirelessSsidsSchedulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsSchedulesExample", example.applyValue(getWirelessSsidsSchedulesResult -> getWirelessSsidsSchedulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21412,7 +22386,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21434,14 +22409,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsSchedules(GetWirelessSsidsSchedulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsSchedulesExample&#34;, example.applyValue(getWirelessSsidsSchedulesResult -&gt; getWirelessSsidsSchedulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsSchedulesExample", example.applyValue(getWirelessSsidsSchedulesResult -> getWirelessSsidsSchedulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21452,7 +22428,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21474,14 +22451,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsSchedules(GetWirelessSsidsSchedulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsSchedulesExample&#34;, example.applyValue(getWirelessSsidsSchedulesResult -&gt; getWirelessSsidsSchedulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsSchedulesExample", example.applyValue(getWirelessSsidsSchedulesResult -> getWirelessSsidsSchedulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21492,7 +22470,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21514,14 +22493,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsSchedules(GetWirelessSsidsSchedulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsSchedulesExample&#34;, example.applyValue(getWirelessSsidsSchedulesResult -&gt; getWirelessSsidsSchedulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsSchedulesExample", example.applyValue(getWirelessSsidsSchedulesResult -> getWirelessSsidsSchedulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21532,7 +22512,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21554,14 +22535,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsSplashSettings(GetWirelessSsidsSplashSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsSplashSettingsExample&#34;, example.applyValue(getWirelessSsidsSplashSettingsResult -&gt; getWirelessSsidsSplashSettingsResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsSplashSettingsExample", example.applyValue(getWirelessSsidsSplashSettingsResult -> getWirelessSsidsSplashSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21572,7 +22554,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21594,14 +22577,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsSplashSettings(GetWirelessSsidsSplashSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsSplashSettingsExample&#34;, example.applyValue(getWirelessSsidsSplashSettingsResult -&gt; getWirelessSsidsSplashSettingsResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsSplashSettingsExample", example.applyValue(getWirelessSsidsSplashSettingsResult -> getWirelessSsidsSplashSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21612,7 +22596,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21634,14 +22619,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsSplashSettings(GetWirelessSsidsSplashSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsSplashSettingsExample&#34;, example.applyValue(getWirelessSsidsSplashSettingsResult -&gt; getWirelessSsidsSplashSettingsResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsSplashSettingsExample", example.applyValue(getWirelessSsidsSplashSettingsResult -> getWirelessSsidsSplashSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21652,7 +22638,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21674,14 +22661,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsSplashSettings(GetWirelessSsidsSplashSettingsArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsSplashSettingsExample&#34;, example.applyValue(getWirelessSsidsSplashSettingsResult -&gt; getWirelessSsidsSplashSettingsResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsSplashSettingsExample", example.applyValue(getWirelessSsidsSplashSettingsResult -> getWirelessSsidsSplashSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21692,7 +22680,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21714,14 +22703,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsTrafficShapingRules(GetWirelessSsidsTrafficShapingRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsTrafficShapingRulesExample&#34;, example.applyValue(getWirelessSsidsTrafficShapingRulesResult -&gt; getWirelessSsidsTrafficShapingRulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsTrafficShapingRulesExample", example.applyValue(getWirelessSsidsTrafficShapingRulesResult -> getWirelessSsidsTrafficShapingRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21732,7 +22722,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21754,14 +22745,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsTrafficShapingRules(GetWirelessSsidsTrafficShapingRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsTrafficShapingRulesExample&#34;, example.applyValue(getWirelessSsidsTrafficShapingRulesResult -&gt; getWirelessSsidsTrafficShapingRulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsTrafficShapingRulesExample", example.applyValue(getWirelessSsidsTrafficShapingRulesResult -> getWirelessSsidsTrafficShapingRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21772,7 +22764,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21794,14 +22787,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsTrafficShapingRules(GetWirelessSsidsTrafficShapingRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsTrafficShapingRulesExample&#34;, example.applyValue(getWirelessSsidsTrafficShapingRulesResult -&gt; getWirelessSsidsTrafficShapingRulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsTrafficShapingRulesExample", example.applyValue(getWirelessSsidsTrafficShapingRulesResult -> getWirelessSsidsTrafficShapingRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21812,7 +22806,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21834,14 +22829,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsTrafficShapingRules(GetWirelessSsidsTrafficShapingRulesArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsTrafficShapingRulesExample&#34;, example.applyValue(getWirelessSsidsTrafficShapingRulesResult -&gt; getWirelessSsidsTrafficShapingRulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsTrafficShapingRulesExample", example.applyValue(getWirelessSsidsTrafficShapingRulesResult -> getWirelessSsidsTrafficShapingRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21852,7 +22848,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21874,14 +22871,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsVpn(GetWirelessSsidsVpnArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsVpnExample&#34;, example.applyValue(getWirelessSsidsVpnResult -&gt; getWirelessSsidsVpnResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsVpnExample", example.applyValue(getWirelessSsidsVpnResult -> getWirelessSsidsVpnResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21892,7 +22890,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21914,14 +22913,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsVpn(GetWirelessSsidsVpnArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsVpnExample&#34;, example.applyValue(getWirelessSsidsVpnResult -&gt; getWirelessSsidsVpnResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsVpnExample", example.applyValue(getWirelessSsidsVpnResult -> getWirelessSsidsVpnResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21932,7 +22932,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21954,14 +22955,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsVpn(GetWirelessSsidsVpnArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsVpnExample&#34;, example.applyValue(getWirelessSsidsVpnResult -&gt; getWirelessSsidsVpnResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsVpnExample", example.applyValue(getWirelessSsidsVpnResult -> getWirelessSsidsVpnResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -21972,7 +22974,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -21994,14 +22997,15 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessSsidsVpn(GetWirelessSsidsVpnArgs.builder()
-     *             .networkId(&#34;string&#34;)
-     *             .number(&#34;string&#34;)
+     *             .networkId("string")
+     *             .number("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessSsidsVpnExample&#34;, example.applyValue(getWirelessSsidsVpnResult -&gt; getWirelessSsidsVpnResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsVpnExample", example.applyValue(getWirelessSsidsVpnResult -> getWirelessSsidsVpnResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22012,7 +23016,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22034,23 +23039,24 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessUsageHistory(GetWirelessUsageHistoryArgs.builder()
-     *             .apTag(&#34;string&#34;)
+     *             .apTag("string")
      *             .autoResolution(false)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .deviceSerial(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .band("string")
+     *             .clientId("string")
+     *             .deviceSerial("string")
+     *             .networkId("string")
      *             .resolution(1)
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessUsageHistoryExample&#34;, example.applyValue(getWirelessUsageHistoryResult -&gt; getWirelessUsageHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessUsageHistoryExample", example.applyValue(getWirelessUsageHistoryResult -> getWirelessUsageHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22061,7 +23067,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22083,23 +23090,24 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessUsageHistory(GetWirelessUsageHistoryArgs.builder()
-     *             .apTag(&#34;string&#34;)
+     *             .apTag("string")
      *             .autoResolution(false)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .deviceSerial(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .band("string")
+     *             .clientId("string")
+     *             .deviceSerial("string")
+     *             .networkId("string")
      *             .resolution(1)
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessUsageHistoryExample&#34;, example.applyValue(getWirelessUsageHistoryResult -&gt; getWirelessUsageHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessUsageHistoryExample", example.applyValue(getWirelessUsageHistoryResult -> getWirelessUsageHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22110,7 +23118,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22132,23 +23141,24 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessUsageHistory(GetWirelessUsageHistoryArgs.builder()
-     *             .apTag(&#34;string&#34;)
+     *             .apTag("string")
      *             .autoResolution(false)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .deviceSerial(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .band("string")
+     *             .clientId("string")
+     *             .deviceSerial("string")
+     *             .networkId("string")
      *             .resolution(1)
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessUsageHistoryExample&#34;, example.applyValue(getWirelessUsageHistoryResult -&gt; getWirelessUsageHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessUsageHistoryExample", example.applyValue(getWirelessUsageHistoryResult -> getWirelessUsageHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -22159,7 +23169,8 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -22181,23 +23192,24 @@ public final class NetworksFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = NetworksFunctions.getWirelessUsageHistory(GetWirelessUsageHistoryArgs.builder()
-     *             .apTag(&#34;string&#34;)
+     *             .apTag("string")
      *             .autoResolution(false)
-     *             .band(&#34;string&#34;)
-     *             .clientId(&#34;string&#34;)
-     *             .deviceSerial(&#34;string&#34;)
-     *             .networkId(&#34;string&#34;)
+     *             .band("string")
+     *             .clientId("string")
+     *             .deviceSerial("string")
+     *             .networkId("string")
      *             .resolution(1)
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiNetworksWirelessUsageHistoryExample&#34;, example.applyValue(getWirelessUsageHistoryResult -&gt; getWirelessUsageHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessUsageHistoryExample", example.applyValue(getWirelessUsageHistoryResult -> getWirelessUsageHistoryResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */

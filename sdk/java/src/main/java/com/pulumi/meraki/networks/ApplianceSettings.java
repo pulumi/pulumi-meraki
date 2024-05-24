@@ -18,7 +18,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -40,20 +41,21 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ApplianceSettings(&#34;example&#34;, ApplianceSettingsArgs.builder()        
- *             .clientTrackingMethod(&#34;MAC address&#34;)
- *             .deploymentMode(&#34;routed&#34;)
+ *         var example = new ApplianceSettings("example", ApplianceSettingsArgs.builder()
+ *             .clientTrackingMethod("MAC address")
+ *             .deploymentMode("routed")
  *             .dynamicDns(ApplianceSettingsDynamicDnsArgs.builder()
  *                 .enabled(true)
- *                 .prefix(&#34;test&#34;)
+ *                 .prefix("test")
  *                 .build())
- *             .networkId(&#34;string&#34;)
+ *             .networkId("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksApplianceSettingsExample&#34;, example);
+ *         ctx.export("merakiNetworksApplianceSettingsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

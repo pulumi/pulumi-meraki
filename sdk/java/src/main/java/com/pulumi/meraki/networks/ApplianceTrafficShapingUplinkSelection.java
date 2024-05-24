@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -47,32 +48,33 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ApplianceTrafficShapingUplinkSelection(&#34;example&#34;, ApplianceTrafficShapingUplinkSelectionArgs.builder()        
+ *         var example = new ApplianceTrafficShapingUplinkSelection("example", ApplianceTrafficShapingUplinkSelectionArgs.builder()
  *             .activeActiveAutoVpnEnabled(true)
- *             .defaultUplink(&#34;wan1&#34;)
+ *             .defaultUplink("wan1")
  *             .failoverAndFailback(ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgs.builder()
  *                 .immediate(ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackImmediateArgs.builder()
  *                     .enabled(true)
  *                     .build())
  *                 .build())
  *             .loadBalancingEnabled(true)
- *             .networkId(&#34;string&#34;)
+ *             .networkId("string")
  *             .vpnTrafficUplinkPreferences(ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgs.builder()
- *                 .fail_over_criterion(&#34;poorPerformance&#34;)
+ *                 .fail_over_criterion("poorPerformance")
  *                 .performance_class(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
- *                 .preferred_uplink(&#34;bestForVoIP&#34;)
+ *                 .preferred_uplink("bestForVoIP")
  *                 .traffic_filters(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .build())
  *             .wanTrafficUplinkPreferences(ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgs.builder()
- *                 .preferred_uplink(&#34;wan1&#34;)
+ *                 .preferred_uplink("wan1")
  *                 .traffic_filters(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksApplianceTrafficShapingUplinkSelectionExample&#34;, example);
+ *         ctx.export("merakiNetworksApplianceTrafficShapingUplinkSelectionExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

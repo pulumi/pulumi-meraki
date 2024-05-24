@@ -19,7 +19,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -42,8 +43,8 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ApplianceSingleLan(&#34;example&#34;, ApplianceSingleLanArgs.builder()        
- *             .applianceIp(&#34;string&#34;)
+ *         var example = new ApplianceSingleLan("example", ApplianceSingleLanArgs.builder()
+ *             .applianceIp("string")
  *             .ipv6(ApplianceSingleLanIpv6Args.builder()
  *                 .enabled(false)
  *                 .prefix_assignments(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
@@ -51,14 +52,15 @@ import javax.annotation.Nullable;
  *             .mandatoryDhcp(ApplianceSingleLanMandatoryDhcpArgs.builder()
  *                 .enabled(false)
  *                 .build())
- *             .networkId(&#34;string&#34;)
- *             .subnet(&#34;string&#34;)
+ *             .networkId("string")
+ *             .subnet("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksApplianceSingleLanExample&#34;, example);
+ *         ctx.export("merakiNetworksApplianceSingleLanExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

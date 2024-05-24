@@ -18,7 +18,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -39,19 +40,20 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CellularGatewayDhcp(&#34;example&#34;, CellularGatewayDhcpArgs.builder()        
- *             .dhcpLeaseTime(&#34;1 hour&#34;)
+ *         var example = new CellularGatewayDhcp("example", CellularGatewayDhcpArgs.builder()
+ *             .dhcpLeaseTime("1 hour")
  *             .dnsCustomNameservers(            
- *                 &#34;172.16.2.111&#34;,
- *                 &#34;172.16.2.30&#34;)
- *             .dnsNameservers(&#34;custom&#34;)
- *             .networkId(&#34;string&#34;)
+ *                 "172.16.2.111",
+ *                 "172.16.2.30")
+ *             .dnsNameservers("custom")
+ *             .networkId("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksCellularGatewayDhcpExample&#34;, example);
+ *         ctx.export("merakiNetworksCellularGatewayDhcpExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

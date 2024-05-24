@@ -18,7 +18,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -39,15 +40,16 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CameraVideoSettings(&#34;example&#34;, CameraVideoSettingsArgs.builder()        
+ *         var example = new CameraVideoSettings("example", CameraVideoSettingsArgs.builder()
  *             .externalRtspEnabled(true)
- *             .serial(&#34;string&#34;)
+ *             .serial("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiDevicesCameraVideoSettingsExample&#34;, example);
+ *         ctx.export("merakiDevicesCameraVideoSettingsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

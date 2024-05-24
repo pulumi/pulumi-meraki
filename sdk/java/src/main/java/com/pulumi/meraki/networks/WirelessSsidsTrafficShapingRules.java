@@ -20,7 +20,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -42,14 +43,14 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new WirelessSsidsTrafficShapingRules(&#34;example&#34;, WirelessSsidsTrafficShapingRulesArgs.builder()        
+ *         var example = new WirelessSsidsTrafficShapingRules("example", WirelessSsidsTrafficShapingRulesArgs.builder()
  *             .defaultRulesEnabled(true)
- *             .networkId(&#34;string&#34;)
- *             .number(&#34;string&#34;)
+ *             .networkId("string")
+ *             .number("string")
  *             .rules(WirelessSsidsTrafficShapingRulesRuleArgs.builder()
  *                 .definitions(WirelessSsidsTrafficShapingRulesRuleDefinitionArgs.builder()
- *                     .type(&#34;host&#34;)
- *                     .value(&#34;google.com&#34;)
+ *                     .type("host")
+ *                     .value("google.com")
  *                     .build())
  *                 .dscp_tag_value(1)
  *                 .pcp_tag_value(1)
@@ -58,10 +59,11 @@ import javax.annotation.Nullable;
  *             .trafficShapingEnabled(true)
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksWirelessSsidsTrafficShapingRulesExample&#34;, example);
+ *         ctx.export("merakiNetworksWirelessSsidsTrafficShapingRulesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

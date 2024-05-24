@@ -19,7 +19,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -40,16 +41,17 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ConfigTemplates(&#34;example&#34;, ConfigTemplatesArgs.builder()        
- *             .name(&#34;My config template&#34;)
- *             .organizationId(&#34;string&#34;)
- *             .timeZone(&#34;America/Los_Angeles&#34;)
+ *         var example = new ConfigTemplates("example", ConfigTemplatesArgs.builder()
+ *             .name("My config template")
+ *             .organizationId("string")
+ *             .timeZone("America/Los_Angeles")
  *             .build());
  * 
- *         ctx.export(&#34;merakiOrganizationsConfigTemplatesExample&#34;, example);
+ *         ctx.export("merakiOrganizationsConfigTemplatesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

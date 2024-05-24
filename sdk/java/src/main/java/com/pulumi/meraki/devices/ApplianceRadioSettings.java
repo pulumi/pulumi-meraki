@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -45,24 +46,25 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ApplianceRadioSettings(&#34;example&#34;, ApplianceRadioSettingsArgs.builder()        
+ *         var example = new ApplianceRadioSettings("example", ApplianceRadioSettingsArgs.builder()
  *             .fiveGhzSettings(ApplianceRadioSettingsFiveGhzSettingsArgs.builder()
  *                 .channel(149)
  *                 .channel_width(20)
  *                 .target_power(15)
  *                 .build())
- *             .rfProfileId(&#34;1234&#34;)
- *             .serial(&#34;string&#34;)
+ *             .rfProfileId("1234")
+ *             .serial("string")
  *             .twoFourGhzSettings(ApplianceRadioSettingsTwoFourGhzSettingsArgs.builder()
  *                 .channel(11)
  *                 .target_power(21)
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiDevicesApplianceRadioSettingsExample&#34;, example);
+ *         ctx.export("merakiDevicesApplianceRadioSettingsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

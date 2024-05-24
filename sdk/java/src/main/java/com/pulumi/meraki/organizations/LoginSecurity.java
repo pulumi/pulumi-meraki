@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -43,7 +44,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new LoginSecurity(&#34;example&#34;, LoginSecurityArgs.builder()        
+ *         var example = new LoginSecurity("example", LoginSecurityArgs.builder()
  *             .accountLockoutAttempts(3)
  *             .apiAuthentication(LoginSecurityApiAuthenticationArgs.builder()
  *                 .ip_restrictions_for_keys(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
@@ -57,17 +58,18 @@ import javax.annotation.Nullable;
  *             .enforceTwoFactorAuth(true)
  *             .idleTimeoutMinutes(30)
  *             .loginIpRanges(            
- *                 &#34;192.195.83.1&#34;,
- *                 &#34;192.195.83.255&#34;)
+ *                 "192.195.83.1",
+ *                 "192.195.83.255")
  *             .numDifferentPasswords(3)
- *             .organizationId(&#34;string&#34;)
+ *             .organizationId("string")
  *             .passwordExpirationDays(90)
  *             .build());
  * 
- *         ctx.export(&#34;merakiOrganizationsLoginSecurityExample&#34;, example);
+ *         ctx.export("merakiOrganizationsLoginSecurityExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

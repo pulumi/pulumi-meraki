@@ -19,7 +19,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -41,19 +42,20 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CellularGatewayConnectivityMonitoringDestinations(&#34;example&#34;, CellularGatewayConnectivityMonitoringDestinationsArgs.builder()        
+ *         var example = new CellularGatewayConnectivityMonitoringDestinations("example", CellularGatewayConnectivityMonitoringDestinationsArgs.builder()
  *             .destinations(CellularGatewayConnectivityMonitoringDestinationsDestinationArgs.builder()
  *                 .default_(false)
- *                 .description(&#34;Google&#34;)
- *                 .ip(&#34;8.8.8.8&#34;)
+ *                 .description("Google")
+ *                 .ip("8.8.8.8")
  *                 .build())
- *             .networkId(&#34;string&#34;)
+ *             .networkId("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksCellularGatewayConnectivityMonitoringDestinationsExample&#34;, example);
+ *         ctx.export("merakiNetworksCellularGatewayConnectivityMonitoringDestinationsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

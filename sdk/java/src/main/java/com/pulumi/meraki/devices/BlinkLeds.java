@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,8 +45,8 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new BlinkLeds(&#34;example&#34;, BlinkLedsArgs.builder()        
- *             .serial(&#34;string&#34;)
+ *         var example = new BlinkLeds("example", BlinkLedsArgs.builder()
+ *             .serial("string")
  *             .parameters(BlinkLedsParametersArgs.builder()
  *                 .duration(20)
  *                 .duty(50)
@@ -53,10 +54,11 @@ import javax.annotation.Nullable;
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiDevicesBlinkLedsExample&#34;, example);
+ *         ctx.export("merakiDevicesBlinkLedsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

@@ -20,7 +20,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -43,24 +44,25 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CellularGatewayLan(&#34;example&#34;, CellularGatewayLanArgs.builder()        
+ *         var example = new CellularGatewayLan("example", CellularGatewayLanArgs.builder()
  *             .fixedIpAssignments(CellularGatewayLanFixedIpAssignmentArgs.builder()
- *                 .ip(&#34;192.168.0.10&#34;)
- *                 .mac(&#34;0b:00:00:00:00:ac&#34;)
- *                 .name(&#34;server 1&#34;)
+ *                 .ip("192.168.0.10")
+ *                 .mac("0b:00:00:00:00:ac")
+ *                 .name("server 1")
  *                 .build())
  *             .reservedIpRanges(CellularGatewayLanReservedIpRangeArgs.builder()
- *                 .comment(&#34;A reserved IP range&#34;)
- *                 .end(&#34;192.168.1.1&#34;)
- *                 .start(&#34;192.168.1.0&#34;)
+ *                 .comment("A reserved IP range")
+ *                 .end("192.168.1.1")
+ *                 .start("192.168.1.0")
  *                 .build())
- *             .serial(&#34;string&#34;)
+ *             .serial("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiDevicesCellularGatewayLanExample&#34;, example);
+ *         ctx.export("merakiDevicesCellularGatewayLanExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

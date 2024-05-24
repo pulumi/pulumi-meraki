@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -43,16 +44,17 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new LicensingSubscriptionSubscriptionsClaimKeyValidate(&#34;example&#34;, LicensingSubscriptionSubscriptionsClaimKeyValidateArgs.builder()        
+ *         var example = new LicensingSubscriptionSubscriptionsClaimKeyValidate("example", LicensingSubscriptionSubscriptionsClaimKeyValidateArgs.builder()
  *             .parameters(LicensingSubscriptionSubscriptionsClaimKeyValidateParametersArgs.builder()
- *                 .claim_key(&#34;S2345-6789A-BCDEF-GHJKM&#34;)
+ *                 .claim_key("S2345-6789A-BCDEF-GHJKM")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiAdministeredLicensingSubscriptionSubscriptionsClaimKeyValidateExample&#34;, example);
+ *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsClaimKeyValidateExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

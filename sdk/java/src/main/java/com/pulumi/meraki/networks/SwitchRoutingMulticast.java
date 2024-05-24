@@ -20,7 +20,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -43,33 +44,34 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SwitchRoutingMulticast(&#34;example&#34;, SwitchRoutingMulticastArgs.builder()        
+ *         var example = new SwitchRoutingMulticast("example", SwitchRoutingMulticastArgs.builder()
  *             .defaultSettings(SwitchRoutingMulticastDefaultSettingsArgs.builder()
  *                 .flood_unknown_multicast_traffic_enabled(true)
  *                 .igmp_snooping_enabled(true)
  *                 .build())
- *             .networkId(&#34;string&#34;)
+ *             .networkId("string")
  *             .overrides(SwitchRoutingMulticastOverrideArgs.builder()
  *                 .flood_unknown_multicast_traffic_enabled(true)
  *                 .igmp_snooping_enabled(true)
  *                 .stacks(                
- *                     &#34;789102&#34;,
- *                     &#34;123456&#34;,
- *                     &#34;129102&#34;)
+ *                     "789102",
+ *                     "123456",
+ *                     "129102")
  *                 .switch_profiles(                
- *                     &#34;1234&#34;,
- *                     &#34;4567&#34;)
+ *                     "1234",
+ *                     "4567")
  *                 .switches(                
- *                     &#34;Q234-ABCD-0001&#34;,
- *                     &#34;Q234-ABCD-0002&#34;,
- *                     &#34;Q234-ABCD-0003&#34;)
+ *                     "Q234-ABCD-0001",
+ *                     "Q234-ABCD-0002",
+ *                     "Q234-ABCD-0003")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksSwitchRoutingMulticastExample&#34;, example);
+ *         ctx.export("merakiNetworksSwitchRoutingMulticastExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

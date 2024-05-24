@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,18 +45,19 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ApplianceTrafficShapingVpnExclusions(&#34;example&#34;, ApplianceTrafficShapingVpnExclusionsArgs.builder()        
- *             .networkId(&#34;string&#34;)
+ *         var example = new ApplianceTrafficShapingVpnExclusions("example", ApplianceTrafficShapingVpnExclusionsArgs.builder()
+ *             .networkId("string")
  *             .parameters(ApplianceTrafficShapingVpnExclusionsParametersArgs.builder()
  *                 .custom(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .major_applications(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksApplianceTrafficShapingVpnExclusionsExample&#34;, example);
+ *         ctx.export("merakiNetworksApplianceTrafficShapingVpnExclusionsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -42,14 +43,15 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ApplianceVmxAuthenticationToken(&#34;example&#34;, ApplianceVmxAuthenticationTokenArgs.builder()        
- *             .serial(&#34;string&#34;)
+ *         var example = new ApplianceVmxAuthenticationToken("example", ApplianceVmxAuthenticationTokenArgs.builder()
+ *             .serial("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiDevicesApplianceVmxAuthenticationTokenExample&#34;, example);
+ *         ctx.export("merakiDevicesApplianceVmxAuthenticationTokenExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

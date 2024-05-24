@@ -114,7 +114,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -136,13 +137,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getAppliancePerformance(GetAppliancePerformanceArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesAppliancePerformanceExample&#34;, example.applyValue(getAppliancePerformanceResult -&gt; getAppliancePerformanceResult.item()));
+     *         ctx.export("merakiDevicesAppliancePerformanceExample", example.applyValue(getAppliancePerformanceResult -> getAppliancePerformanceResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -153,7 +155,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -175,13 +178,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getAppliancePerformance(GetAppliancePerformanceArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesAppliancePerformanceExample&#34;, example.applyValue(getAppliancePerformanceResult -&gt; getAppliancePerformanceResult.item()));
+     *         ctx.export("merakiDevicesAppliancePerformanceExample", example.applyValue(getAppliancePerformanceResult -> getAppliancePerformanceResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -192,7 +196,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -214,13 +219,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getAppliancePerformance(GetAppliancePerformanceArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesAppliancePerformanceExample&#34;, example.applyValue(getAppliancePerformanceResult -&gt; getAppliancePerformanceResult.item()));
+     *         ctx.export("merakiDevicesAppliancePerformanceExample", example.applyValue(getAppliancePerformanceResult -> getAppliancePerformanceResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -231,7 +237,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -253,13 +260,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getAppliancePerformance(GetAppliancePerformanceArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesAppliancePerformanceExample&#34;, example.applyValue(getAppliancePerformanceResult -&gt; getAppliancePerformanceResult.item()));
+     *         ctx.export("merakiDevicesAppliancePerformanceExample", example.applyValue(getAppliancePerformanceResult -> getAppliancePerformanceResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -270,7 +278,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -292,13 +301,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getApplianceRadioSettings(GetApplianceRadioSettingsArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesApplianceRadioSettingsExample&#34;, example.applyValue(getApplianceRadioSettingsResult -&gt; getApplianceRadioSettingsResult.item()));
+     *         ctx.export("merakiDevicesApplianceRadioSettingsExample", example.applyValue(getApplianceRadioSettingsResult -> getApplianceRadioSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -309,7 +319,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -331,13 +342,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getApplianceRadioSettings(GetApplianceRadioSettingsArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesApplianceRadioSettingsExample&#34;, example.applyValue(getApplianceRadioSettingsResult -&gt; getApplianceRadioSettingsResult.item()));
+     *         ctx.export("merakiDevicesApplianceRadioSettingsExample", example.applyValue(getApplianceRadioSettingsResult -> getApplianceRadioSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -348,7 +360,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -370,13 +383,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getApplianceRadioSettings(GetApplianceRadioSettingsArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesApplianceRadioSettingsExample&#34;, example.applyValue(getApplianceRadioSettingsResult -&gt; getApplianceRadioSettingsResult.item()));
+     *         ctx.export("merakiDevicesApplianceRadioSettingsExample", example.applyValue(getApplianceRadioSettingsResult -> getApplianceRadioSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -387,7 +401,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -409,13 +424,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getApplianceRadioSettings(GetApplianceRadioSettingsArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesApplianceRadioSettingsExample&#34;, example.applyValue(getApplianceRadioSettingsResult -&gt; getApplianceRadioSettingsResult.item()));
+     *         ctx.export("merakiDevicesApplianceRadioSettingsExample", example.applyValue(getApplianceRadioSettingsResult -> getApplianceRadioSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -426,7 +442,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -448,13 +465,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getApplianceUplinksSettings(GetApplianceUplinksSettingsArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesApplianceUplinksSettingsExample&#34;, example.applyValue(getApplianceUplinksSettingsResult -&gt; getApplianceUplinksSettingsResult.item()));
+     *         ctx.export("merakiDevicesApplianceUplinksSettingsExample", example.applyValue(getApplianceUplinksSettingsResult -> getApplianceUplinksSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -465,7 +483,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -487,13 +506,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getApplianceUplinksSettings(GetApplianceUplinksSettingsArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesApplianceUplinksSettingsExample&#34;, example.applyValue(getApplianceUplinksSettingsResult -&gt; getApplianceUplinksSettingsResult.item()));
+     *         ctx.export("merakiDevicesApplianceUplinksSettingsExample", example.applyValue(getApplianceUplinksSettingsResult -> getApplianceUplinksSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -504,7 +524,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -526,13 +547,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getApplianceUplinksSettings(GetApplianceUplinksSettingsArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesApplianceUplinksSettingsExample&#34;, example.applyValue(getApplianceUplinksSettingsResult -&gt; getApplianceUplinksSettingsResult.item()));
+     *         ctx.export("merakiDevicesApplianceUplinksSettingsExample", example.applyValue(getApplianceUplinksSettingsResult -> getApplianceUplinksSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -543,7 +565,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -565,13 +588,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getApplianceUplinksSettings(GetApplianceUplinksSettingsArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesApplianceUplinksSettingsExample&#34;, example.applyValue(getApplianceUplinksSettingsResult -&gt; getApplianceUplinksSettingsResult.item()));
+     *         ctx.export("merakiDevicesApplianceUplinksSettingsExample", example.applyValue(getApplianceUplinksSettingsResult -> getApplianceUplinksSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -582,7 +606,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -604,13 +629,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCameraAnalyticsLive(GetCameraAnalyticsLiveArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCameraAnalyticsLiveExample&#34;, example.applyValue(getCameraAnalyticsLiveResult -&gt; getCameraAnalyticsLiveResult.item()));
+     *         ctx.export("merakiDevicesCameraAnalyticsLiveExample", example.applyValue(getCameraAnalyticsLiveResult -> getCameraAnalyticsLiveResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -621,7 +647,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -643,13 +670,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCameraAnalyticsLive(GetCameraAnalyticsLiveArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCameraAnalyticsLiveExample&#34;, example.applyValue(getCameraAnalyticsLiveResult -&gt; getCameraAnalyticsLiveResult.item()));
+     *         ctx.export("merakiDevicesCameraAnalyticsLiveExample", example.applyValue(getCameraAnalyticsLiveResult -> getCameraAnalyticsLiveResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -660,7 +688,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -682,13 +711,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCameraAnalyticsLive(GetCameraAnalyticsLiveArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCameraAnalyticsLiveExample&#34;, example.applyValue(getCameraAnalyticsLiveResult -&gt; getCameraAnalyticsLiveResult.item()));
+     *         ctx.export("merakiDevicesCameraAnalyticsLiveExample", example.applyValue(getCameraAnalyticsLiveResult -> getCameraAnalyticsLiveResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -699,7 +729,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -721,13 +752,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCameraAnalyticsLive(GetCameraAnalyticsLiveArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCameraAnalyticsLiveExample&#34;, example.applyValue(getCameraAnalyticsLiveResult -&gt; getCameraAnalyticsLiveResult.item()));
+     *         ctx.export("merakiDevicesCameraAnalyticsLiveExample", example.applyValue(getCameraAnalyticsLiveResult -> getCameraAnalyticsLiveResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -738,7 +770,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -760,13 +793,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCameraCustomAnalytics(GetCameraCustomAnalyticsArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCameraCustomAnalyticsExample&#34;, example.applyValue(getCameraCustomAnalyticsResult -&gt; getCameraCustomAnalyticsResult.item()));
+     *         ctx.export("merakiDevicesCameraCustomAnalyticsExample", example.applyValue(getCameraCustomAnalyticsResult -> getCameraCustomAnalyticsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -777,7 +811,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -799,13 +834,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCameraCustomAnalytics(GetCameraCustomAnalyticsArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCameraCustomAnalyticsExample&#34;, example.applyValue(getCameraCustomAnalyticsResult -&gt; getCameraCustomAnalyticsResult.item()));
+     *         ctx.export("merakiDevicesCameraCustomAnalyticsExample", example.applyValue(getCameraCustomAnalyticsResult -> getCameraCustomAnalyticsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -816,7 +852,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -838,13 +875,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCameraCustomAnalytics(GetCameraCustomAnalyticsArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCameraCustomAnalyticsExample&#34;, example.applyValue(getCameraCustomAnalyticsResult -&gt; getCameraCustomAnalyticsResult.item()));
+     *         ctx.export("merakiDevicesCameraCustomAnalyticsExample", example.applyValue(getCameraCustomAnalyticsResult -> getCameraCustomAnalyticsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -855,7 +893,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -877,13 +916,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCameraCustomAnalytics(GetCameraCustomAnalyticsArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCameraCustomAnalyticsExample&#34;, example.applyValue(getCameraCustomAnalyticsResult -&gt; getCameraCustomAnalyticsResult.item()));
+     *         ctx.export("merakiDevicesCameraCustomAnalyticsExample", example.applyValue(getCameraCustomAnalyticsResult -> getCameraCustomAnalyticsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -894,7 +934,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -916,13 +957,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCameraQualityAndRetention(GetCameraQualityAndRetentionArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCameraQualityAndRetentionExample&#34;, example.applyValue(getCameraQualityAndRetentionResult -&gt; getCameraQualityAndRetentionResult.item()));
+     *         ctx.export("merakiDevicesCameraQualityAndRetentionExample", example.applyValue(getCameraQualityAndRetentionResult -> getCameraQualityAndRetentionResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -933,7 +975,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -955,13 +998,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCameraQualityAndRetention(GetCameraQualityAndRetentionArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCameraQualityAndRetentionExample&#34;, example.applyValue(getCameraQualityAndRetentionResult -&gt; getCameraQualityAndRetentionResult.item()));
+     *         ctx.export("merakiDevicesCameraQualityAndRetentionExample", example.applyValue(getCameraQualityAndRetentionResult -> getCameraQualityAndRetentionResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -972,7 +1016,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -994,13 +1039,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCameraQualityAndRetention(GetCameraQualityAndRetentionArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCameraQualityAndRetentionExample&#34;, example.applyValue(getCameraQualityAndRetentionResult -&gt; getCameraQualityAndRetentionResult.item()));
+     *         ctx.export("merakiDevicesCameraQualityAndRetentionExample", example.applyValue(getCameraQualityAndRetentionResult -> getCameraQualityAndRetentionResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1011,7 +1057,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1033,13 +1080,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCameraQualityAndRetention(GetCameraQualityAndRetentionArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCameraQualityAndRetentionExample&#34;, example.applyValue(getCameraQualityAndRetentionResult -&gt; getCameraQualityAndRetentionResult.item()));
+     *         ctx.export("merakiDevicesCameraQualityAndRetentionExample", example.applyValue(getCameraQualityAndRetentionResult -> getCameraQualityAndRetentionResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1050,7 +1098,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1072,13 +1121,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCameraSense(GetCameraSenseArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCameraSenseExample&#34;, example.applyValue(getCameraSenseResult -&gt; getCameraSenseResult.item()));
+     *         ctx.export("merakiDevicesCameraSenseExample", example.applyValue(getCameraSenseResult -> getCameraSenseResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1089,7 +1139,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1111,13 +1162,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCameraSense(GetCameraSenseArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCameraSenseExample&#34;, example.applyValue(getCameraSenseResult -&gt; getCameraSenseResult.item()));
+     *         ctx.export("merakiDevicesCameraSenseExample", example.applyValue(getCameraSenseResult -> getCameraSenseResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1128,7 +1180,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1150,13 +1203,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCameraSense(GetCameraSenseArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCameraSenseExample&#34;, example.applyValue(getCameraSenseResult -&gt; getCameraSenseResult.item()));
+     *         ctx.export("merakiDevicesCameraSenseExample", example.applyValue(getCameraSenseResult -> getCameraSenseResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1167,7 +1221,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1189,13 +1244,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCameraSense(GetCameraSenseArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCameraSenseExample&#34;, example.applyValue(getCameraSenseResult -&gt; getCameraSenseResult.item()));
+     *         ctx.export("merakiDevicesCameraSenseExample", example.applyValue(getCameraSenseResult -> getCameraSenseResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1206,7 +1262,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1228,14 +1285,15 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCameraVideoLink(GetCameraVideoLinkArgs.builder()
-     *             .serial(&#34;string&#34;)
-     *             .timestamp(&#34;string&#34;)
+     *             .serial("string")
+     *             .timestamp("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCameraVideoLinkExample&#34;, example.applyValue(getCameraVideoLinkResult -&gt; getCameraVideoLinkResult.item()));
+     *         ctx.export("merakiDevicesCameraVideoLinkExample", example.applyValue(getCameraVideoLinkResult -> getCameraVideoLinkResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1246,7 +1304,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1268,14 +1327,15 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCameraVideoLink(GetCameraVideoLinkArgs.builder()
-     *             .serial(&#34;string&#34;)
-     *             .timestamp(&#34;string&#34;)
+     *             .serial("string")
+     *             .timestamp("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCameraVideoLinkExample&#34;, example.applyValue(getCameraVideoLinkResult -&gt; getCameraVideoLinkResult.item()));
+     *         ctx.export("merakiDevicesCameraVideoLinkExample", example.applyValue(getCameraVideoLinkResult -> getCameraVideoLinkResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1286,7 +1346,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1308,14 +1369,15 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCameraVideoLink(GetCameraVideoLinkArgs.builder()
-     *             .serial(&#34;string&#34;)
-     *             .timestamp(&#34;string&#34;)
+     *             .serial("string")
+     *             .timestamp("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCameraVideoLinkExample&#34;, example.applyValue(getCameraVideoLinkResult -&gt; getCameraVideoLinkResult.item()));
+     *         ctx.export("merakiDevicesCameraVideoLinkExample", example.applyValue(getCameraVideoLinkResult -> getCameraVideoLinkResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1326,7 +1388,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1348,14 +1411,15 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCameraVideoLink(GetCameraVideoLinkArgs.builder()
-     *             .serial(&#34;string&#34;)
-     *             .timestamp(&#34;string&#34;)
+     *             .serial("string")
+     *             .timestamp("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCameraVideoLinkExample&#34;, example.applyValue(getCameraVideoLinkResult -&gt; getCameraVideoLinkResult.item()));
+     *         ctx.export("merakiDevicesCameraVideoLinkExample", example.applyValue(getCameraVideoLinkResult -> getCameraVideoLinkResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1366,7 +1430,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1388,13 +1453,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCameraVideoSettings(GetCameraVideoSettingsArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCameraVideoSettingsExample&#34;, example.applyValue(getCameraVideoSettingsResult -&gt; getCameraVideoSettingsResult.item()));
+     *         ctx.export("merakiDevicesCameraVideoSettingsExample", example.applyValue(getCameraVideoSettingsResult -> getCameraVideoSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1405,7 +1471,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1427,13 +1494,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCameraVideoSettings(GetCameraVideoSettingsArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCameraVideoSettingsExample&#34;, example.applyValue(getCameraVideoSettingsResult -&gt; getCameraVideoSettingsResult.item()));
+     *         ctx.export("merakiDevicesCameraVideoSettingsExample", example.applyValue(getCameraVideoSettingsResult -> getCameraVideoSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1444,7 +1512,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1466,13 +1535,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCameraVideoSettings(GetCameraVideoSettingsArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCameraVideoSettingsExample&#34;, example.applyValue(getCameraVideoSettingsResult -&gt; getCameraVideoSettingsResult.item()));
+     *         ctx.export("merakiDevicesCameraVideoSettingsExample", example.applyValue(getCameraVideoSettingsResult -> getCameraVideoSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1483,7 +1553,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1505,13 +1576,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCameraVideoSettings(GetCameraVideoSettingsArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCameraVideoSettingsExample&#34;, example.applyValue(getCameraVideoSettingsResult -&gt; getCameraVideoSettingsResult.item()));
+     *         ctx.export("merakiDevicesCameraVideoSettingsExample", example.applyValue(getCameraVideoSettingsResult -> getCameraVideoSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1522,7 +1594,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1544,13 +1617,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCameraWirelessProfiles(GetCameraWirelessProfilesArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCameraWirelessProfilesExample&#34;, example.applyValue(getCameraWirelessProfilesResult -&gt; getCameraWirelessProfilesResult.item()));
+     *         ctx.export("merakiDevicesCameraWirelessProfilesExample", example.applyValue(getCameraWirelessProfilesResult -> getCameraWirelessProfilesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1561,7 +1635,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1583,13 +1658,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCameraWirelessProfiles(GetCameraWirelessProfilesArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCameraWirelessProfilesExample&#34;, example.applyValue(getCameraWirelessProfilesResult -&gt; getCameraWirelessProfilesResult.item()));
+     *         ctx.export("merakiDevicesCameraWirelessProfilesExample", example.applyValue(getCameraWirelessProfilesResult -> getCameraWirelessProfilesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1600,7 +1676,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1622,13 +1699,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCameraWirelessProfiles(GetCameraWirelessProfilesArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCameraWirelessProfilesExample&#34;, example.applyValue(getCameraWirelessProfilesResult -&gt; getCameraWirelessProfilesResult.item()));
+     *         ctx.export("merakiDevicesCameraWirelessProfilesExample", example.applyValue(getCameraWirelessProfilesResult -> getCameraWirelessProfilesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1639,7 +1717,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1661,13 +1740,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCameraWirelessProfiles(GetCameraWirelessProfilesArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCameraWirelessProfilesExample&#34;, example.applyValue(getCameraWirelessProfilesResult -&gt; getCameraWirelessProfilesResult.item()));
+     *         ctx.export("merakiDevicesCameraWirelessProfilesExample", example.applyValue(getCameraWirelessProfilesResult -> getCameraWirelessProfilesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1678,7 +1758,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1700,13 +1781,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCellularGatewayLan(GetCellularGatewayLanArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCellularGatewayLanExample&#34;, example.applyValue(getCellularGatewayLanResult -&gt; getCellularGatewayLanResult.item()));
+     *         ctx.export("merakiDevicesCellularGatewayLanExample", example.applyValue(getCellularGatewayLanResult -> getCellularGatewayLanResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1717,7 +1799,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1739,13 +1822,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCellularGatewayLan(GetCellularGatewayLanArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCellularGatewayLanExample&#34;, example.applyValue(getCellularGatewayLanResult -&gt; getCellularGatewayLanResult.item()));
+     *         ctx.export("merakiDevicesCellularGatewayLanExample", example.applyValue(getCellularGatewayLanResult -> getCellularGatewayLanResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1756,7 +1840,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1778,13 +1863,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCellularGatewayLan(GetCellularGatewayLanArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCellularGatewayLanExample&#34;, example.applyValue(getCellularGatewayLanResult -&gt; getCellularGatewayLanResult.item()));
+     *         ctx.export("merakiDevicesCellularGatewayLanExample", example.applyValue(getCellularGatewayLanResult -> getCellularGatewayLanResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1795,7 +1881,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1817,13 +1904,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCellularGatewayLan(GetCellularGatewayLanArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCellularGatewayLanExample&#34;, example.applyValue(getCellularGatewayLanResult -&gt; getCellularGatewayLanResult.item()));
+     *         ctx.export("merakiDevicesCellularGatewayLanExample", example.applyValue(getCellularGatewayLanResult -> getCellularGatewayLanResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1834,7 +1922,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1856,13 +1945,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCellularGatewayPortForwardingRules(GetCellularGatewayPortForwardingRulesArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCellularGatewayPortForwardingRulesExample&#34;, example.applyValue(getCellularGatewayPortForwardingRulesResult -&gt; getCellularGatewayPortForwardingRulesResult.item()));
+     *         ctx.export("merakiDevicesCellularGatewayPortForwardingRulesExample", example.applyValue(getCellularGatewayPortForwardingRulesResult -> getCellularGatewayPortForwardingRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1873,7 +1963,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1895,13 +1986,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCellularGatewayPortForwardingRules(GetCellularGatewayPortForwardingRulesArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCellularGatewayPortForwardingRulesExample&#34;, example.applyValue(getCellularGatewayPortForwardingRulesResult -&gt; getCellularGatewayPortForwardingRulesResult.item()));
+     *         ctx.export("merakiDevicesCellularGatewayPortForwardingRulesExample", example.applyValue(getCellularGatewayPortForwardingRulesResult -> getCellularGatewayPortForwardingRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1912,7 +2004,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1934,13 +2027,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCellularGatewayPortForwardingRules(GetCellularGatewayPortForwardingRulesArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCellularGatewayPortForwardingRulesExample&#34;, example.applyValue(getCellularGatewayPortForwardingRulesResult -&gt; getCellularGatewayPortForwardingRulesResult.item()));
+     *         ctx.export("merakiDevicesCellularGatewayPortForwardingRulesExample", example.applyValue(getCellularGatewayPortForwardingRulesResult -> getCellularGatewayPortForwardingRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1951,7 +2045,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -1973,13 +2068,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCellularGatewayPortForwardingRules(GetCellularGatewayPortForwardingRulesArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCellularGatewayPortForwardingRulesExample&#34;, example.applyValue(getCellularGatewayPortForwardingRulesResult -&gt; getCellularGatewayPortForwardingRulesResult.item()));
+     *         ctx.export("merakiDevicesCellularGatewayPortForwardingRulesExample", example.applyValue(getCellularGatewayPortForwardingRulesResult -> getCellularGatewayPortForwardingRulesResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -1990,7 +2086,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2012,13 +2109,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCellularSims(GetCellularSimsArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCellularSimsExample&#34;, example.applyValue(getCellularSimsResult -&gt; getCellularSimsResult.item()));
+     *         ctx.export("merakiDevicesCellularSimsExample", example.applyValue(getCellularSimsResult -> getCellularSimsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2029,7 +2127,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2051,13 +2150,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCellularSims(GetCellularSimsArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCellularSimsExample&#34;, example.applyValue(getCellularSimsResult -&gt; getCellularSimsResult.item()));
+     *         ctx.export("merakiDevicesCellularSimsExample", example.applyValue(getCellularSimsResult -> getCellularSimsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2068,7 +2168,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2090,13 +2191,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCellularSims(GetCellularSimsArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCellularSimsExample&#34;, example.applyValue(getCellularSimsResult -&gt; getCellularSimsResult.item()));
+     *         ctx.export("merakiDevicesCellularSimsExample", example.applyValue(getCellularSimsResult -> getCellularSimsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2107,7 +2209,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2129,13 +2232,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getCellularSims(GetCellularSimsArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesCellularSimsExample&#34;, example.applyValue(getCellularSimsResult -&gt; getCellularSimsResult.item()));
+     *         ctx.export("merakiDevicesCellularSimsExample", example.applyValue(getCellularSimsResult -> getCellularSimsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2146,7 +2250,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2168,14 +2273,15 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getLiveToolsArpTable(GetLiveToolsArpTableArgs.builder()
-     *             .arpTableId(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
+     *             .arpTableId("string")
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesLiveToolsArpTableExample&#34;, example.applyValue(getLiveToolsArpTableResult -&gt; getLiveToolsArpTableResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsArpTableExample", example.applyValue(getLiveToolsArpTableResult -> getLiveToolsArpTableResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2186,7 +2292,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2208,14 +2315,15 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getLiveToolsArpTable(GetLiveToolsArpTableArgs.builder()
-     *             .arpTableId(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
+     *             .arpTableId("string")
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesLiveToolsArpTableExample&#34;, example.applyValue(getLiveToolsArpTableResult -&gt; getLiveToolsArpTableResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsArpTableExample", example.applyValue(getLiveToolsArpTableResult -> getLiveToolsArpTableResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2226,7 +2334,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2248,14 +2357,15 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getLiveToolsArpTable(GetLiveToolsArpTableArgs.builder()
-     *             .arpTableId(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
+     *             .arpTableId("string")
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesLiveToolsArpTableExample&#34;, example.applyValue(getLiveToolsArpTableResult -&gt; getLiveToolsArpTableResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsArpTableExample", example.applyValue(getLiveToolsArpTableResult -> getLiveToolsArpTableResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2266,7 +2376,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2288,14 +2399,15 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getLiveToolsArpTable(GetLiveToolsArpTableArgs.builder()
-     *             .arpTableId(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
+     *             .arpTableId("string")
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesLiveToolsArpTableExample&#34;, example.applyValue(getLiveToolsArpTableResult -&gt; getLiveToolsArpTableResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsArpTableExample", example.applyValue(getLiveToolsArpTableResult -> getLiveToolsArpTableResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2306,7 +2418,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2328,14 +2441,15 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getLiveToolsCableTest(GetLiveToolsCableTestArgs.builder()
-     *             .id(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
+     *             .id("string")
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesLiveToolsCableTestExample&#34;, example.applyValue(getLiveToolsCableTestResult -&gt; getLiveToolsCableTestResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsCableTestExample", example.applyValue(getLiveToolsCableTestResult -> getLiveToolsCableTestResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2346,7 +2460,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2368,14 +2483,15 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getLiveToolsCableTest(GetLiveToolsCableTestArgs.builder()
-     *             .id(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
+     *             .id("string")
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesLiveToolsCableTestExample&#34;, example.applyValue(getLiveToolsCableTestResult -&gt; getLiveToolsCableTestResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsCableTestExample", example.applyValue(getLiveToolsCableTestResult -> getLiveToolsCableTestResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2386,7 +2502,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2408,14 +2525,15 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getLiveToolsCableTest(GetLiveToolsCableTestArgs.builder()
-     *             .id(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
+     *             .id("string")
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesLiveToolsCableTestExample&#34;, example.applyValue(getLiveToolsCableTestResult -&gt; getLiveToolsCableTestResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsCableTestExample", example.applyValue(getLiveToolsCableTestResult -> getLiveToolsCableTestResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2426,7 +2544,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2448,14 +2567,15 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getLiveToolsCableTest(GetLiveToolsCableTestArgs.builder()
-     *             .id(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
+     *             .id("string")
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesLiveToolsCableTestExample&#34;, example.applyValue(getLiveToolsCableTestResult -&gt; getLiveToolsCableTestResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsCableTestExample", example.applyValue(getLiveToolsCableTestResult -> getLiveToolsCableTestResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2466,7 +2586,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2488,14 +2609,15 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getLiveToolsPing(GetLiveToolsPingArgs.builder()
-     *             .id(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
+     *             .id("string")
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesLiveToolsPingExample&#34;, example.applyValue(getLiveToolsPingResult -&gt; getLiveToolsPingResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsPingExample", example.applyValue(getLiveToolsPingResult -> getLiveToolsPingResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2506,7 +2628,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2528,14 +2651,15 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getLiveToolsPing(GetLiveToolsPingArgs.builder()
-     *             .id(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
+     *             .id("string")
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesLiveToolsPingExample&#34;, example.applyValue(getLiveToolsPingResult -&gt; getLiveToolsPingResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsPingExample", example.applyValue(getLiveToolsPingResult -> getLiveToolsPingResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2546,7 +2670,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2568,14 +2693,15 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getLiveToolsPing(GetLiveToolsPingArgs.builder()
-     *             .id(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
+     *             .id("string")
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesLiveToolsPingExample&#34;, example.applyValue(getLiveToolsPingResult -&gt; getLiveToolsPingResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsPingExample", example.applyValue(getLiveToolsPingResult -> getLiveToolsPingResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2586,7 +2712,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2608,14 +2735,15 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getLiveToolsPing(GetLiveToolsPingArgs.builder()
-     *             .id(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
+     *             .id("string")
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesLiveToolsPingExample&#34;, example.applyValue(getLiveToolsPingResult -&gt; getLiveToolsPingResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsPingExample", example.applyValue(getLiveToolsPingResult -> getLiveToolsPingResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2626,7 +2754,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2648,14 +2777,15 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getLiveToolsPingDevice(GetLiveToolsPingDeviceArgs.builder()
-     *             .id(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
+     *             .id("string")
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesLiveToolsPingDeviceExample&#34;, example.applyValue(getLiveToolsPingDeviceResult -&gt; getLiveToolsPingDeviceResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsPingDeviceExample", example.applyValue(getLiveToolsPingDeviceResult -> getLiveToolsPingDeviceResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2666,7 +2796,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2688,14 +2819,15 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getLiveToolsPingDevice(GetLiveToolsPingDeviceArgs.builder()
-     *             .id(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
+     *             .id("string")
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesLiveToolsPingDeviceExample&#34;, example.applyValue(getLiveToolsPingDeviceResult -&gt; getLiveToolsPingDeviceResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsPingDeviceExample", example.applyValue(getLiveToolsPingDeviceResult -> getLiveToolsPingDeviceResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2706,7 +2838,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2728,14 +2861,15 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getLiveToolsPingDevice(GetLiveToolsPingDeviceArgs.builder()
-     *             .id(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
+     *             .id("string")
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesLiveToolsPingDeviceExample&#34;, example.applyValue(getLiveToolsPingDeviceResult -&gt; getLiveToolsPingDeviceResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsPingDeviceExample", example.applyValue(getLiveToolsPingDeviceResult -> getLiveToolsPingDeviceResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2746,7 +2880,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2768,14 +2903,15 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getLiveToolsPingDevice(GetLiveToolsPingDeviceArgs.builder()
-     *             .id(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
+     *             .id("string")
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesLiveToolsPingDeviceExample&#34;, example.applyValue(getLiveToolsPingDeviceResult -&gt; getLiveToolsPingDeviceResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsPingDeviceExample", example.applyValue(getLiveToolsPingDeviceResult -> getLiveToolsPingDeviceResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2786,7 +2922,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2808,14 +2945,15 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getLiveToolsThroughputTest(GetLiveToolsThroughputTestArgs.builder()
-     *             .serial(&#34;string&#34;)
-     *             .throughputTestId(&#34;string&#34;)
+     *             .serial("string")
+     *             .throughputTestId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesLiveToolsThroughputTestExample&#34;, example.applyValue(getLiveToolsThroughputTestResult -&gt; getLiveToolsThroughputTestResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsThroughputTestExample", example.applyValue(getLiveToolsThroughputTestResult -> getLiveToolsThroughputTestResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2826,7 +2964,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2848,14 +2987,15 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getLiveToolsThroughputTest(GetLiveToolsThroughputTestArgs.builder()
-     *             .serial(&#34;string&#34;)
-     *             .throughputTestId(&#34;string&#34;)
+     *             .serial("string")
+     *             .throughputTestId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesLiveToolsThroughputTestExample&#34;, example.applyValue(getLiveToolsThroughputTestResult -&gt; getLiveToolsThroughputTestResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsThroughputTestExample", example.applyValue(getLiveToolsThroughputTestResult -> getLiveToolsThroughputTestResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2866,7 +3006,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2888,14 +3029,15 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getLiveToolsThroughputTest(GetLiveToolsThroughputTestArgs.builder()
-     *             .serial(&#34;string&#34;)
-     *             .throughputTestId(&#34;string&#34;)
+     *             .serial("string")
+     *             .throughputTestId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesLiveToolsThroughputTestExample&#34;, example.applyValue(getLiveToolsThroughputTestResult -&gt; getLiveToolsThroughputTestResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsThroughputTestExample", example.applyValue(getLiveToolsThroughputTestResult -> getLiveToolsThroughputTestResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2906,7 +3048,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2928,14 +3071,15 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getLiveToolsThroughputTest(GetLiveToolsThroughputTestArgs.builder()
-     *             .serial(&#34;string&#34;)
-     *             .throughputTestId(&#34;string&#34;)
+     *             .serial("string")
+     *             .throughputTestId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesLiveToolsThroughputTestExample&#34;, example.applyValue(getLiveToolsThroughputTestResult -&gt; getLiveToolsThroughputTestResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsThroughputTestExample", example.applyValue(getLiveToolsThroughputTestResult -> getLiveToolsThroughputTestResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2946,7 +3090,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -2968,14 +3113,15 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getLiveToolsWakeOnLan(GetLiveToolsWakeOnLanArgs.builder()
-     *             .serial(&#34;string&#34;)
-     *             .wakeOnLanId(&#34;string&#34;)
+     *             .serial("string")
+     *             .wakeOnLanId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesLiveToolsWakeOnLanExample&#34;, example.applyValue(getLiveToolsWakeOnLanResult -&gt; getLiveToolsWakeOnLanResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsWakeOnLanExample", example.applyValue(getLiveToolsWakeOnLanResult -> getLiveToolsWakeOnLanResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -2986,7 +3132,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3008,14 +3155,15 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getLiveToolsWakeOnLan(GetLiveToolsWakeOnLanArgs.builder()
-     *             .serial(&#34;string&#34;)
-     *             .wakeOnLanId(&#34;string&#34;)
+     *             .serial("string")
+     *             .wakeOnLanId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesLiveToolsWakeOnLanExample&#34;, example.applyValue(getLiveToolsWakeOnLanResult -&gt; getLiveToolsWakeOnLanResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsWakeOnLanExample", example.applyValue(getLiveToolsWakeOnLanResult -> getLiveToolsWakeOnLanResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3026,7 +3174,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3048,14 +3197,15 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getLiveToolsWakeOnLan(GetLiveToolsWakeOnLanArgs.builder()
-     *             .serial(&#34;string&#34;)
-     *             .wakeOnLanId(&#34;string&#34;)
+     *             .serial("string")
+     *             .wakeOnLanId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesLiveToolsWakeOnLanExample&#34;, example.applyValue(getLiveToolsWakeOnLanResult -&gt; getLiveToolsWakeOnLanResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsWakeOnLanExample", example.applyValue(getLiveToolsWakeOnLanResult -> getLiveToolsWakeOnLanResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3066,7 +3216,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3088,14 +3239,15 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getLiveToolsWakeOnLan(GetLiveToolsWakeOnLanArgs.builder()
-     *             .serial(&#34;string&#34;)
-     *             .wakeOnLanId(&#34;string&#34;)
+     *             .serial("string")
+     *             .wakeOnLanId("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesLiveToolsWakeOnLanExample&#34;, example.applyValue(getLiveToolsWakeOnLanResult -&gt; getLiveToolsWakeOnLanResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsWakeOnLanExample", example.applyValue(getLiveToolsWakeOnLanResult -> getLiveToolsWakeOnLanResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3106,7 +3258,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3128,13 +3281,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getLldpCdp(GetLldpCdpArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesLldpCdpExample&#34;, example.applyValue(getLldpCdpResult -&gt; getLldpCdpResult.item()));
+     *         ctx.export("merakiDevicesLldpCdpExample", example.applyValue(getLldpCdpResult -> getLldpCdpResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3145,7 +3299,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3167,13 +3322,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getLldpCdp(GetLldpCdpArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesLldpCdpExample&#34;, example.applyValue(getLldpCdpResult -&gt; getLldpCdpResult.item()));
+     *         ctx.export("merakiDevicesLldpCdpExample", example.applyValue(getLldpCdpResult -> getLldpCdpResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3184,7 +3340,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3206,13 +3363,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getLldpCdp(GetLldpCdpArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesLldpCdpExample&#34;, example.applyValue(getLldpCdpResult -&gt; getLldpCdpResult.item()));
+     *         ctx.export("merakiDevicesLldpCdpExample", example.applyValue(getLldpCdpResult -> getLldpCdpResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3223,7 +3381,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3245,13 +3404,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getLldpCdp(GetLldpCdpArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesLldpCdpExample&#34;, example.applyValue(getLldpCdpResult -&gt; getLldpCdpResult.item()));
+     *         ctx.export("merakiDevicesLldpCdpExample", example.applyValue(getLldpCdpResult -> getLldpCdpResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3262,7 +3422,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3284,13 +3445,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getManagementInterface(GetManagementInterfaceArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesManagementInterfaceExample&#34;, example.applyValue(getManagementInterfaceResult -&gt; getManagementInterfaceResult.item()));
+     *         ctx.export("merakiDevicesManagementInterfaceExample", example.applyValue(getManagementInterfaceResult -> getManagementInterfaceResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3301,7 +3463,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3323,13 +3486,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getManagementInterface(GetManagementInterfaceArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesManagementInterfaceExample&#34;, example.applyValue(getManagementInterfaceResult -&gt; getManagementInterfaceResult.item()));
+     *         ctx.export("merakiDevicesManagementInterfaceExample", example.applyValue(getManagementInterfaceResult -> getManagementInterfaceResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3340,7 +3504,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3362,13 +3527,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getManagementInterface(GetManagementInterfaceArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesManagementInterfaceExample&#34;, example.applyValue(getManagementInterfaceResult -&gt; getManagementInterfaceResult.item()));
+     *         ctx.export("merakiDevicesManagementInterfaceExample", example.applyValue(getManagementInterfaceResult -> getManagementInterfaceResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3379,7 +3545,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3401,13 +3568,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getManagementInterface(GetManagementInterfaceArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesManagementInterfaceExample&#34;, example.applyValue(getManagementInterfaceResult -&gt; getManagementInterfaceResult.item()));
+     *         ctx.export("merakiDevicesManagementInterfaceExample", example.applyValue(getManagementInterfaceResult -> getManagementInterfaceResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3418,7 +3586,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3440,13 +3609,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getSensorRelationships(GetSensorRelationshipsArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesSensorRelationshipsExample&#34;, example.applyValue(getSensorRelationshipsResult -&gt; getSensorRelationshipsResult.item()));
+     *         ctx.export("merakiDevicesSensorRelationshipsExample", example.applyValue(getSensorRelationshipsResult -> getSensorRelationshipsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3457,7 +3627,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3479,13 +3650,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getSensorRelationships(GetSensorRelationshipsArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesSensorRelationshipsExample&#34;, example.applyValue(getSensorRelationshipsResult -&gt; getSensorRelationshipsResult.item()));
+     *         ctx.export("merakiDevicesSensorRelationshipsExample", example.applyValue(getSensorRelationshipsResult -> getSensorRelationshipsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3496,7 +3668,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3518,13 +3691,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getSensorRelationships(GetSensorRelationshipsArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesSensorRelationshipsExample&#34;, example.applyValue(getSensorRelationshipsResult -&gt; getSensorRelationshipsResult.item()));
+     *         ctx.export("merakiDevicesSensorRelationshipsExample", example.applyValue(getSensorRelationshipsResult -> getSensorRelationshipsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3535,7 +3709,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3557,13 +3732,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getSensorRelationships(GetSensorRelationshipsArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesSensorRelationshipsExample&#34;, example.applyValue(getSensorRelationshipsResult -&gt; getSensorRelationshipsResult.item()));
+     *         ctx.export("merakiDevicesSensorRelationshipsExample", example.applyValue(getSensorRelationshipsResult -> getSensorRelationshipsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3616,7 +3792,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3638,15 +3815,16 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getSwitchPortsStatuses(GetSwitchPortsStatusesArgs.builder()
-     *             .serial(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
+     *             .serial("string")
+     *             .t0("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesSwitchPortsStatusesExample&#34;, example.applyValue(getSwitchPortsStatusesResult -&gt; getSwitchPortsStatusesResult.items()));
+     *         ctx.export("merakiDevicesSwitchPortsStatusesExample", example.applyValue(getSwitchPortsStatusesResult -> getSwitchPortsStatusesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3657,7 +3835,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3679,15 +3858,16 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getSwitchPortsStatuses(GetSwitchPortsStatusesArgs.builder()
-     *             .serial(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
+     *             .serial("string")
+     *             .t0("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesSwitchPortsStatusesExample&#34;, example.applyValue(getSwitchPortsStatusesResult -&gt; getSwitchPortsStatusesResult.items()));
+     *         ctx.export("merakiDevicesSwitchPortsStatusesExample", example.applyValue(getSwitchPortsStatusesResult -> getSwitchPortsStatusesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3698,7 +3878,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3720,15 +3901,16 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getSwitchPortsStatuses(GetSwitchPortsStatusesArgs.builder()
-     *             .serial(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
+     *             .serial("string")
+     *             .t0("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesSwitchPortsStatusesExample&#34;, example.applyValue(getSwitchPortsStatusesResult -&gt; getSwitchPortsStatusesResult.items()));
+     *         ctx.export("merakiDevicesSwitchPortsStatusesExample", example.applyValue(getSwitchPortsStatusesResult -> getSwitchPortsStatusesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3739,7 +3921,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3761,15 +3944,16 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getSwitchPortsStatuses(GetSwitchPortsStatusesArgs.builder()
-     *             .serial(&#34;string&#34;)
-     *             .t0(&#34;string&#34;)
+     *             .serial("string")
+     *             .t0("string")
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesSwitchPortsStatusesExample&#34;, example.applyValue(getSwitchPortsStatusesResult -&gt; getSwitchPortsStatusesResult.items()));
+     *         ctx.export("merakiDevicesSwitchPortsStatusesExample", example.applyValue(getSwitchPortsStatusesResult -> getSwitchPortsStatusesResult.items()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3822,7 +4006,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3844,14 +4029,15 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getSwitchRoutingInterfacesDhcp(GetSwitchRoutingInterfacesDhcpArgs.builder()
-     *             .interfaceId(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
+     *             .interfaceId("string")
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesSwitchRoutingInterfacesDhcpExample&#34;, example.applyValue(getSwitchRoutingInterfacesDhcpResult -&gt; getSwitchRoutingInterfacesDhcpResult.item()));
+     *         ctx.export("merakiDevicesSwitchRoutingInterfacesDhcpExample", example.applyValue(getSwitchRoutingInterfacesDhcpResult -> getSwitchRoutingInterfacesDhcpResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3862,7 +4048,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3884,14 +4071,15 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getSwitchRoutingInterfacesDhcp(GetSwitchRoutingInterfacesDhcpArgs.builder()
-     *             .interfaceId(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
+     *             .interfaceId("string")
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesSwitchRoutingInterfacesDhcpExample&#34;, example.applyValue(getSwitchRoutingInterfacesDhcpResult -&gt; getSwitchRoutingInterfacesDhcpResult.item()));
+     *         ctx.export("merakiDevicesSwitchRoutingInterfacesDhcpExample", example.applyValue(getSwitchRoutingInterfacesDhcpResult -> getSwitchRoutingInterfacesDhcpResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3902,7 +4090,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3924,14 +4113,15 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getSwitchRoutingInterfacesDhcp(GetSwitchRoutingInterfacesDhcpArgs.builder()
-     *             .interfaceId(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
+     *             .interfaceId("string")
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesSwitchRoutingInterfacesDhcpExample&#34;, example.applyValue(getSwitchRoutingInterfacesDhcpResult -&gt; getSwitchRoutingInterfacesDhcpResult.item()));
+     *         ctx.export("merakiDevicesSwitchRoutingInterfacesDhcpExample", example.applyValue(getSwitchRoutingInterfacesDhcpResult -> getSwitchRoutingInterfacesDhcpResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -3942,7 +4132,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -3964,14 +4155,15 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getSwitchRoutingInterfacesDhcp(GetSwitchRoutingInterfacesDhcpArgs.builder()
-     *             .interfaceId(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
+     *             .interfaceId("string")
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesSwitchRoutingInterfacesDhcpExample&#34;, example.applyValue(getSwitchRoutingInterfacesDhcpResult -&gt; getSwitchRoutingInterfacesDhcpResult.item()));
+     *         ctx.export("merakiDevicesSwitchRoutingInterfacesDhcpExample", example.applyValue(getSwitchRoutingInterfacesDhcpResult -> getSwitchRoutingInterfacesDhcpResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4024,7 +4216,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4046,13 +4239,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getSwitchWarmSpare(GetSwitchWarmSpareArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesSwitchWarmSpareExample&#34;, example.applyValue(getSwitchWarmSpareResult -&gt; getSwitchWarmSpareResult.item()));
+     *         ctx.export("merakiDevicesSwitchWarmSpareExample", example.applyValue(getSwitchWarmSpareResult -> getSwitchWarmSpareResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4063,7 +4257,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4085,13 +4280,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getSwitchWarmSpare(GetSwitchWarmSpareArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesSwitchWarmSpareExample&#34;, example.applyValue(getSwitchWarmSpareResult -&gt; getSwitchWarmSpareResult.item()));
+     *         ctx.export("merakiDevicesSwitchWarmSpareExample", example.applyValue(getSwitchWarmSpareResult -> getSwitchWarmSpareResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4102,7 +4298,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4124,13 +4321,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getSwitchWarmSpare(GetSwitchWarmSpareArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesSwitchWarmSpareExample&#34;, example.applyValue(getSwitchWarmSpareResult -&gt; getSwitchWarmSpareResult.item()));
+     *         ctx.export("merakiDevicesSwitchWarmSpareExample", example.applyValue(getSwitchWarmSpareResult -> getSwitchWarmSpareResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4141,7 +4339,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4163,13 +4362,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getSwitchWarmSpare(GetSwitchWarmSpareArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesSwitchWarmSpareExample&#34;, example.applyValue(getSwitchWarmSpareResult -&gt; getSwitchWarmSpareResult.item()));
+     *         ctx.export("merakiDevicesSwitchWarmSpareExample", example.applyValue(getSwitchWarmSpareResult -> getSwitchWarmSpareResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4180,7 +4380,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4202,13 +4403,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getWirelessBluetoothSettings(GetWirelessBluetoothSettingsArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesWirelessBluetoothSettingsExample&#34;, example.applyValue(getWirelessBluetoothSettingsResult -&gt; getWirelessBluetoothSettingsResult.item()));
+     *         ctx.export("merakiDevicesWirelessBluetoothSettingsExample", example.applyValue(getWirelessBluetoothSettingsResult -> getWirelessBluetoothSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4219,7 +4421,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4241,13 +4444,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getWirelessBluetoothSettings(GetWirelessBluetoothSettingsArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesWirelessBluetoothSettingsExample&#34;, example.applyValue(getWirelessBluetoothSettingsResult -&gt; getWirelessBluetoothSettingsResult.item()));
+     *         ctx.export("merakiDevicesWirelessBluetoothSettingsExample", example.applyValue(getWirelessBluetoothSettingsResult -> getWirelessBluetoothSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4258,7 +4462,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4280,13 +4485,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getWirelessBluetoothSettings(GetWirelessBluetoothSettingsArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesWirelessBluetoothSettingsExample&#34;, example.applyValue(getWirelessBluetoothSettingsResult -&gt; getWirelessBluetoothSettingsResult.item()));
+     *         ctx.export("merakiDevicesWirelessBluetoothSettingsExample", example.applyValue(getWirelessBluetoothSettingsResult -> getWirelessBluetoothSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4297,7 +4503,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4319,13 +4526,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getWirelessBluetoothSettings(GetWirelessBluetoothSettingsArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesWirelessBluetoothSettingsExample&#34;, example.applyValue(getWirelessBluetoothSettingsResult -&gt; getWirelessBluetoothSettingsResult.item()));
+     *         ctx.export("merakiDevicesWirelessBluetoothSettingsExample", example.applyValue(getWirelessBluetoothSettingsResult -> getWirelessBluetoothSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4336,7 +4544,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4358,20 +4567,21 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getWirelessConnectionStats(GetWirelessConnectionStatsArgs.builder()
-     *             .apTag(&#34;string&#34;)
-     *             .band(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
+     *             .apTag("string")
+     *             .band("string")
+     *             .serial("string")
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesWirelessConnectionStatsExample&#34;, example.applyValue(getWirelessConnectionStatsResult -&gt; getWirelessConnectionStatsResult.item()));
+     *         ctx.export("merakiDevicesWirelessConnectionStatsExample", example.applyValue(getWirelessConnectionStatsResult -> getWirelessConnectionStatsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4382,7 +4592,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4404,20 +4615,21 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getWirelessConnectionStats(GetWirelessConnectionStatsArgs.builder()
-     *             .apTag(&#34;string&#34;)
-     *             .band(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
+     *             .apTag("string")
+     *             .band("string")
+     *             .serial("string")
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesWirelessConnectionStatsExample&#34;, example.applyValue(getWirelessConnectionStatsResult -&gt; getWirelessConnectionStatsResult.item()));
+     *         ctx.export("merakiDevicesWirelessConnectionStatsExample", example.applyValue(getWirelessConnectionStatsResult -> getWirelessConnectionStatsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4428,7 +4640,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4450,20 +4663,21 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getWirelessConnectionStats(GetWirelessConnectionStatsArgs.builder()
-     *             .apTag(&#34;string&#34;)
-     *             .band(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
+     *             .apTag("string")
+     *             .band("string")
+     *             .serial("string")
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesWirelessConnectionStatsExample&#34;, example.applyValue(getWirelessConnectionStatsResult -&gt; getWirelessConnectionStatsResult.item()));
+     *         ctx.export("merakiDevicesWirelessConnectionStatsExample", example.applyValue(getWirelessConnectionStatsResult -> getWirelessConnectionStatsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4474,7 +4688,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4496,20 +4711,21 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getWirelessConnectionStats(GetWirelessConnectionStatsArgs.builder()
-     *             .apTag(&#34;string&#34;)
-     *             .band(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
+     *             .apTag("string")
+     *             .band("string")
+     *             .serial("string")
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesWirelessConnectionStatsExample&#34;, example.applyValue(getWirelessConnectionStatsResult -&gt; getWirelessConnectionStatsResult.item()));
+     *         ctx.export("merakiDevicesWirelessConnectionStatsExample", example.applyValue(getWirelessConnectionStatsResult -> getWirelessConnectionStatsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4520,7 +4736,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4542,21 +4759,22 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getWirelessLatencyStats(GetWirelessLatencyStatsArgs.builder()
-     *             .apTag(&#34;string&#34;)
-     *             .band(&#34;string&#34;)
-     *             .fields(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
+     *             .apTag("string")
+     *             .band("string")
+     *             .fields("string")
+     *             .serial("string")
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesWirelessLatencyStatsExample&#34;, example.applyValue(getWirelessLatencyStatsResult -&gt; getWirelessLatencyStatsResult.item()));
+     *         ctx.export("merakiDevicesWirelessLatencyStatsExample", example.applyValue(getWirelessLatencyStatsResult -> getWirelessLatencyStatsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4567,7 +4785,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4589,21 +4808,22 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getWirelessLatencyStats(GetWirelessLatencyStatsArgs.builder()
-     *             .apTag(&#34;string&#34;)
-     *             .band(&#34;string&#34;)
-     *             .fields(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
+     *             .apTag("string")
+     *             .band("string")
+     *             .fields("string")
+     *             .serial("string")
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesWirelessLatencyStatsExample&#34;, example.applyValue(getWirelessLatencyStatsResult -&gt; getWirelessLatencyStatsResult.item()));
+     *         ctx.export("merakiDevicesWirelessLatencyStatsExample", example.applyValue(getWirelessLatencyStatsResult -> getWirelessLatencyStatsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4614,7 +4834,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4636,21 +4857,22 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getWirelessLatencyStats(GetWirelessLatencyStatsArgs.builder()
-     *             .apTag(&#34;string&#34;)
-     *             .band(&#34;string&#34;)
-     *             .fields(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
+     *             .apTag("string")
+     *             .band("string")
+     *             .fields("string")
+     *             .serial("string")
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesWirelessLatencyStatsExample&#34;, example.applyValue(getWirelessLatencyStatsResult -&gt; getWirelessLatencyStatsResult.item()));
+     *         ctx.export("merakiDevicesWirelessLatencyStatsExample", example.applyValue(getWirelessLatencyStatsResult -> getWirelessLatencyStatsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4661,7 +4883,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4683,21 +4906,22 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getWirelessLatencyStats(GetWirelessLatencyStatsArgs.builder()
-     *             .apTag(&#34;string&#34;)
-     *             .band(&#34;string&#34;)
-     *             .fields(&#34;string&#34;)
-     *             .serial(&#34;string&#34;)
+     *             .apTag("string")
+     *             .band("string")
+     *             .fields("string")
+     *             .serial("string")
      *             .ssid(1)
-     *             .t0(&#34;string&#34;)
-     *             .t1(&#34;string&#34;)
+     *             .t0("string")
+     *             .t1("string")
      *             .timespan(1)
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesWirelessLatencyStatsExample&#34;, example.applyValue(getWirelessLatencyStatsResult -&gt; getWirelessLatencyStatsResult.item()));
+     *         ctx.export("merakiDevicesWirelessLatencyStatsExample", example.applyValue(getWirelessLatencyStatsResult -> getWirelessLatencyStatsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4708,7 +4932,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4730,13 +4955,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getWirelessRadioSettings(GetWirelessRadioSettingsArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesWirelessRadioSettingsExample&#34;, example.applyValue(getWirelessRadioSettingsResult -&gt; getWirelessRadioSettingsResult.item()));
+     *         ctx.export("merakiDevicesWirelessRadioSettingsExample", example.applyValue(getWirelessRadioSettingsResult -> getWirelessRadioSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4747,7 +4973,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4769,13 +4996,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getWirelessRadioSettings(GetWirelessRadioSettingsArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesWirelessRadioSettingsExample&#34;, example.applyValue(getWirelessRadioSettingsResult -&gt; getWirelessRadioSettingsResult.item()));
+     *         ctx.export("merakiDevicesWirelessRadioSettingsExample", example.applyValue(getWirelessRadioSettingsResult -> getWirelessRadioSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4786,7 +5014,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4808,13 +5037,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getWirelessRadioSettings(GetWirelessRadioSettingsArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesWirelessRadioSettingsExample&#34;, example.applyValue(getWirelessRadioSettingsResult -&gt; getWirelessRadioSettingsResult.item()));
+     *         ctx.export("merakiDevicesWirelessRadioSettingsExample", example.applyValue(getWirelessRadioSettingsResult -> getWirelessRadioSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4825,7 +5055,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4847,13 +5078,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getWirelessRadioSettings(GetWirelessRadioSettingsArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesWirelessRadioSettingsExample&#34;, example.applyValue(getWirelessRadioSettingsResult -&gt; getWirelessRadioSettingsResult.item()));
+     *         ctx.export("merakiDevicesWirelessRadioSettingsExample", example.applyValue(getWirelessRadioSettingsResult -> getWirelessRadioSettingsResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4864,7 +5096,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4886,13 +5119,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getWirelessStatus(GetWirelessStatusArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesWirelessStatusExample&#34;, example.applyValue(getWirelessStatusResult -&gt; getWirelessStatusResult.item()));
+     *         ctx.export("merakiDevicesWirelessStatusExample", example.applyValue(getWirelessStatusResult -> getWirelessStatusResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4903,7 +5137,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4925,13 +5160,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getWirelessStatus(GetWirelessStatusArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesWirelessStatusExample&#34;, example.applyValue(getWirelessStatusResult -&gt; getWirelessStatusResult.item()));
+     *         ctx.export("merakiDevicesWirelessStatusExample", example.applyValue(getWirelessStatusResult -> getWirelessStatusResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4942,7 +5178,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -4964,13 +5201,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getWirelessStatus(GetWirelessStatusArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesWirelessStatusExample&#34;, example.applyValue(getWirelessStatusResult -&gt; getWirelessStatusResult.item()));
+     *         ctx.export("merakiDevicesWirelessStatusExample", example.applyValue(getWirelessStatusResult -> getWirelessStatusResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
@@ -4981,7 +5219,8 @@ public final class DevicesFunctions {
      * ## Example Usage
      * 
      * &lt;!--Start PulumiCodeChooser --&gt;
-     * ```java
+     * <pre>
+     * {@code
      * package generated_program;
      * 
      * import com.pulumi.Context;
@@ -5003,13 +5242,14 @@ public final class DevicesFunctions {
      * 
      *     public static void stack(Context ctx) {
      *         final var example = DevicesFunctions.getWirelessStatus(GetWirelessStatusArgs.builder()
-     *             .serial(&#34;string&#34;)
+     *             .serial("string")
      *             .build());
      * 
-     *         ctx.export(&#34;merakiDevicesWirelessStatusExample&#34;, example.applyValue(getWirelessStatusResult -&gt; getWirelessStatusResult.item()));
+     *         ctx.export("merakiDevicesWirelessStatusExample", example.applyValue(getWirelessStatusResult -> getWirelessStatusResult.item()));
      *     }
      * }
-     * ```
+     * }
+     * </pre>
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */

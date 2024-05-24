@@ -18,7 +18,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -58,35 +59,35 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ApplianceUplinksSettings(&#34;example&#34;, ApplianceUplinksSettingsArgs.builder()        
+ *         var example = new ApplianceUplinksSettings("example", ApplianceUplinksSettingsArgs.builder()
  *             .interfaces(ApplianceUplinksSettingsInterfacesArgs.builder()
  *                 .wan1(ApplianceUplinksSettingsInterfacesWan1Args.builder()
  *                     .enabled(true)
  *                     .pppoe(ApplianceUplinksSettingsInterfacesWan1PppoeArgs.builder()
  *                         .authentication(ApplianceUplinksSettingsInterfacesWan1PppoeAuthenticationArgs.builder()
  *                             .enabled(true)
- *                             .password(&#34;password&#34;)
- *                             .username(&#34;username&#34;)
+ *                             .password("password")
+ *                             .username("username")
  *                             .build())
  *                         .enabled(true)
  *                         .build())
  *                     .svis(ApplianceUplinksSettingsInterfacesWan1SvisArgs.builder()
  *                         .ipv4(ApplianceUplinksSettingsInterfacesWan1SvisIpv4Args.builder()
- *                             .address(&#34;9.10.11.10/16&#34;)
- *                             .assignmentMode(&#34;static&#34;)
- *                             .gateway(&#34;13.14.15.16&#34;)
+ *                             .address("9.10.11.10/16")
+ *                             .assignmentMode("static")
+ *                             .gateway("13.14.15.16")
  *                             .nameservers(ApplianceUplinksSettingsInterfacesWan1SvisIpv4NameserversArgs.builder()
- *                                 .addresses(&#34;1.2.3.4&#34;)
+ *                                 .addresses("1.2.3.4")
  *                                 .build())
  *                             .build())
  *                         .ipv6(ApplianceUplinksSettingsInterfacesWan1SvisIpv6Args.builder()
- *                             .address(&#34;1:2:3::4&#34;)
- *                             .assignmentMode(&#34;static&#34;)
- *                             .gateway(&#34;1:2:3::5&#34;)
+ *                             .address("1:2:3::4")
+ *                             .assignmentMode("static")
+ *                             .gateway("1:2:3::5")
  *                             .nameservers(ApplianceUplinksSettingsInterfacesWan1SvisIpv6NameserversArgs.builder()
  *                                 .addresses(                                
- *                                     &#34;1001:4860:4860::8888&#34;,
- *                                     &#34;1001:4860:4860::8844&#34;)
+ *                                     "1001:4860:4860::8888",
+ *                                     "1001:4860:4860::8844")
  *                                 .build())
  *                             .build())
  *                         .build())
@@ -100,28 +101,28 @@ import javax.annotation.Nullable;
  *                     .pppoe(ApplianceUplinksSettingsInterfacesWan2PppoeArgs.builder()
  *                         .authentication(ApplianceUplinksSettingsInterfacesWan2PppoeAuthenticationArgs.builder()
  *                             .enabled(true)
- *                             .password(&#34;password&#34;)
- *                             .username(&#34;username&#34;)
+ *                             .password("password")
+ *                             .username("username")
  *                             .build())
  *                         .enabled(true)
  *                         .build())
  *                     .svis(ApplianceUplinksSettingsInterfacesWan2SvisArgs.builder()
  *                         .ipv4(ApplianceUplinksSettingsInterfacesWan2SvisIpv4Args.builder()
- *                             .address(&#34;9.10.11.10/16&#34;)
- *                             .assignmentMode(&#34;static&#34;)
- *                             .gateway(&#34;13.14.15.16&#34;)
+ *                             .address("9.10.11.10/16")
+ *                             .assignmentMode("static")
+ *                             .gateway("13.14.15.16")
  *                             .nameservers(ApplianceUplinksSettingsInterfacesWan2SvisIpv4NameserversArgs.builder()
- *                                 .addresses(&#34;1.2.3.4&#34;)
+ *                                 .addresses("1.2.3.4")
  *                                 .build())
  *                             .build())
  *                         .ipv6(ApplianceUplinksSettingsInterfacesWan2SvisIpv6Args.builder()
- *                             .address(&#34;1:2:3::4&#34;)
- *                             .assignmentMode(&#34;static&#34;)
- *                             .gateway(&#34;1:2:3::5&#34;)
+ *                             .address("1:2:3::4")
+ *                             .assignmentMode("static")
+ *                             .gateway("1:2:3::5")
  *                             .nameservers(ApplianceUplinksSettingsInterfacesWan2SvisIpv6NameserversArgs.builder()
  *                                 .addresses(                                
- *                                     &#34;1001:4860:4860::8888&#34;,
- *                                     &#34;1001:4860:4860::8844&#34;)
+ *                                     "1001:4860:4860::8888",
+ *                                     "1001:4860:4860::8844")
  *                                 .build())
  *                             .build())
  *                         .build())
@@ -131,13 +132,14 @@ import javax.annotation.Nullable;
  *                         .build())
  *                     .build())
  *                 .build())
- *             .serial(&#34;string&#34;)
+ *             .serial("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiDevicesApplianceUplinksSettingsExample&#34;, example);
+ *         ctx.export("merakiDevicesApplianceUplinksSettingsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

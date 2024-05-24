@@ -19,7 +19,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -41,20 +42,21 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new TrafficAnalysis(&#34;example&#34;, TrafficAnalysisArgs.builder()        
+ *         var example = new TrafficAnalysis("example", TrafficAnalysisArgs.builder()
  *             .customPieChartItems(TrafficAnalysisCustomPieChartItemArgs.builder()
- *                 .name(&#34;Item from hostname&#34;)
- *                 .type(&#34;host&#34;)
- *                 .value(&#34;example.com&#34;)
+ *                 .name("Item from hostname")
+ *                 .type("host")
+ *                 .value("example.com")
  *                 .build())
- *             .mode(&#34;disabled&#34;)
- *             .networkId(&#34;string&#34;)
+ *             .mode("disabled")
+ *             .networkId("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksTrafficAnalysisExample&#34;, example);
+ *         ctx.export("merakiNetworksTrafficAnalysisExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

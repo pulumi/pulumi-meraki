@@ -19,7 +19,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -40,21 +41,22 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CameraQualityAndRetention(&#34;example&#34;, CameraQualityAndRetentionArgs.builder()        
+ *         var example = new CameraQualityAndRetention("example", CameraQualityAndRetentionArgs.builder()
  *             .audioRecordingEnabled(false)
  *             .motionBasedRetentionEnabled(false)
  *             .motionDetectorVersion(2)
- *             .profileId(&#34;1234&#34;)
- *             .quality(&#34;Standard&#34;)
- *             .resolution(&#34;1280x720&#34;)
+ *             .profileId("1234")
+ *             .quality("Standard")
+ *             .resolution("1280x720")
  *             .restrictedBandwidthModeEnabled(false)
- *             .serial(&#34;string&#34;)
+ *             .serial("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiDevicesCameraQualityAndRetentionExample&#34;, example);
+ *         ctx.export("merakiDevicesCameraQualityAndRetentionExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

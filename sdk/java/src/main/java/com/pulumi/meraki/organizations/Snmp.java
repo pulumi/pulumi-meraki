@@ -20,7 +20,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -41,21 +42,22 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new Snmp(&#34;example&#34;, SnmpArgs.builder()        
- *             .organizationId(&#34;string&#34;)
- *             .peerIps(&#34;123.123.123.1&#34;)
+ *         var example = new Snmp("example", SnmpArgs.builder()
+ *             .organizationId("string")
+ *             .peerIps("123.123.123.1")
  *             .v2cEnabled(false)
- *             .v3AuthMode(&#34;SHA&#34;)
- *             .v3AuthPass(&#34;password&#34;)
+ *             .v3AuthMode("SHA")
+ *             .v3AuthPass("password")
  *             .v3Enabled(true)
- *             .v3PrivMode(&#34;AES128&#34;)
- *             .v3PrivPass(&#34;password&#34;)
+ *             .v3PrivMode("AES128")
+ *             .v3PrivPass("password")
  *             .build());
  * 
- *         ctx.export(&#34;merakiOrganizationsSnmpExample&#34;, example);
+ *         ctx.export("merakiOrganizationsSnmpExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

@@ -18,7 +18,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -40,20 +41,21 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new AppliancePrefixesDelegatedStatics(&#34;example&#34;, AppliancePrefixesDelegatedStaticsArgs.builder()        
- *             .description(&#34;Prefix on WAN 1 of Long Island Office network&#34;)
- *             .networkId(&#34;string&#34;)
+ *         var example = new AppliancePrefixesDelegatedStatics("example", AppliancePrefixesDelegatedStaticsArgs.builder()
+ *             .description("Prefix on WAN 1 of Long Island Office network")
+ *             .networkId("string")
  *             .origin(AppliancePrefixesDelegatedStaticsOriginArgs.builder()
- *                 .interfaces(&#34;wan1&#34;)
- *                 .type(&#34;internet&#34;)
+ *                 .interfaces("wan1")
+ *                 .type("internet")
  *                 .build())
- *             .prefix(&#34;2001:db8:3c4d:15::/64&#34;)
+ *             .prefix("2001:db8:3c4d:15::/64")
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksAppliancePrefixesDelegatedStaticsExample&#34;, example);
+ *         ctx.export("merakiNetworksAppliancePrefixesDelegatedStaticsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

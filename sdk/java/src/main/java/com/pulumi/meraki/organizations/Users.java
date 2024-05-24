@@ -20,7 +20,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -41,15 +42,16 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new Users(&#34;example&#34;, UsersArgs.builder()        
- *             .organizationId(&#34;string&#34;)
- *             .userId(&#34;string&#34;)
+ *         var example = new Users("example", UsersArgs.builder()
+ *             .organizationId("string")
+ *             .userId("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiOrganizationsUsersExample&#34;, example);
+ *         ctx.export("merakiOrganizationsUsersExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

@@ -19,7 +19,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -41,18 +42,19 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ApplianceSecurityIntrusion(&#34;example&#34;, ApplianceSecurityIntrusionArgs.builder()        
+ *         var example = new ApplianceSecurityIntrusion("example", ApplianceSecurityIntrusionArgs.builder()
  *             .allowedRules(ApplianceSecurityIntrusionAllowedRuleArgs.builder()
- *                 .message(&#34;SQL sa login failed&#34;)
- *                 .rule_id(&#34;meraki:intrusion/snort/GID/01/SID/688&#34;)
+ *                 .message("SQL sa login failed")
+ *                 .rule_id("meraki:intrusion/snort/GID/01/SID/688")
  *                 .build())
- *             .organizationId(&#34;string&#34;)
+ *             .organizationId("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiOrganizationsApplianceSecurityIntrusionExample&#34;, example);
+ *         ctx.export("merakiOrganizationsApplianceSecurityIntrusionExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

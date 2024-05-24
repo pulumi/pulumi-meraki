@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,28 +45,29 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new WirelessAlternateManagementInterfaceIpv6(&#34;example&#34;, WirelessAlternateManagementInterfaceIpv6Args.builder()        
- *             .serial(&#34;string&#34;)
+ *         var example = new WirelessAlternateManagementInterfaceIpv6("example", WirelessAlternateManagementInterfaceIpv6Args.builder()
+ *             .serial("string")
  *             .parameters(WirelessAlternateManagementInterfaceIpv6ParametersArgs.builder()
  *                 .addresses(WirelessAlternateManagementInterfaceIpv6ParametersAddressArgs.builder()
- *                     .address(&#34;2001:db8:3c4d:15::1&#34;)
- *                     .assignmentMode(&#34;static&#34;)
- *                     .gateway(&#34;fe80:db8:c15:c0:d0c::10ca:1d02&#34;)
+ *                     .address("2001:db8:3c4d:15::1")
+ *                     .assignmentMode("static")
+ *                     .gateway("fe80:db8:c15:c0:d0c::10ca:1d02")
  *                     .nameservers(WirelessAlternateManagementInterfaceIpv6ParametersAddressNameserversArgs.builder()
  *                         .addresses(                        
- *                             &#34;2001:db8:3c4d:15::1&#34;,
- *                             &#34;2001:db8:3c4d:15::1&#34;)
+ *                             "2001:db8:3c4d:15::1",
+ *                             "2001:db8:3c4d:15::1")
  *                         .build())
- *                     .prefix(&#34;2001:db8:3c4d:15::/64&#34;)
- *                     .protocol(&#34;ipv6&#34;)
+ *                     .prefix("2001:db8:3c4d:15::/64")
+ *                     .protocol("ipv6")
  *                     .build())
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiDevicesWirelessAlternateManagementInterfaceIpv6Example&#34;, example);
+ *         ctx.export("merakiDevicesWirelessAlternateManagementInterfaceIpv6Example", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

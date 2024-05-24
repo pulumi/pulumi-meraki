@@ -18,7 +18,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -40,27 +41,28 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ApplianceSecurityIntrusion(&#34;example&#34;, ApplianceSecurityIntrusionArgs.builder()        
- *             .idsRulesets(&#34;balanced&#34;)
- *             .mode(&#34;prevention&#34;)
- *             .networkId(&#34;string&#34;)
+ *         var example = new ApplianceSecurityIntrusion("example", ApplianceSecurityIntrusionArgs.builder()
+ *             .idsRulesets("balanced")
+ *             .mode("prevention")
+ *             .networkId("string")
  *             .protectedNetworks(ApplianceSecurityIntrusionProtectedNetworksArgs.builder()
  *                 .excluded_cidr(                
- *                     &#34;10.0.0.0/8&#34;,
- *                     &#34;127.0.0.0/8&#34;)
+ *                     "10.0.0.0/8",
+ *                     "127.0.0.0/8")
  *                 .included_cidr(                
- *                     &#34;10.0.0.0/8&#34;,
- *                     &#34;127.0.0.0/8&#34;,
- *                     &#34;169.254.0.0/16&#34;,
- *                     &#34;172.16.0.0/12&#34;)
+ *                     "10.0.0.0/8",
+ *                     "127.0.0.0/8",
+ *                     "169.254.0.0/16",
+ *                     "172.16.0.0/12")
  *                 .use_default(false)
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksApplianceSecurityIntrusionExample&#34;, example);
+ *         ctx.export("merakiNetworksApplianceSecurityIntrusionExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

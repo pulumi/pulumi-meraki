@@ -11,16 +11,19 @@ import com.pulumi.meraki.Utilities;
 import com.pulumi.meraki.networks.WirelessSsidsFirewallL3FirewallRulesArgs;
 import com.pulumi.meraki.networks.inputs.WirelessSsidsFirewallL3FirewallRulesState;
 import com.pulumi.meraki.networks.outputs.WirelessSsidsFirewallL3FirewallRulesRule;
+import com.pulumi.meraki.networks.outputs.WirelessSsidsFirewallL3FirewallRulesRulesResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -42,23 +45,24 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new WirelessSsidsFirewallL3FirewallRules(&#34;example&#34;, WirelessSsidsFirewallL3FirewallRulesArgs.builder()        
+ *         var example = new WirelessSsidsFirewallL3FirewallRules("example", WirelessSsidsFirewallL3FirewallRulesArgs.builder()
  *             .allowLanAccess(true)
- *             .networkId(&#34;string&#34;)
- *             .number(&#34;string&#34;)
+ *             .networkId("string")
+ *             .number("string")
  *             .rules(WirelessSsidsFirewallL3FirewallRulesRuleArgs.builder()
- *                 .comment(&#34;Allow TCP traffic to subnet with HTTP servers.&#34;)
- *                 .dest_cidr(&#34;192.168.1.0/24&#34;)
- *                 .dest_port(&#34;443&#34;)
- *                 .policy(&#34;allow&#34;)
- *                 .protocol(&#34;tcp&#34;)
+ *                 .comment("Allow TCP traffic to subnet with HTTP servers.")
+ *                 .dest_cidr("192.168.1.0/24")
+ *                 .dest_port("443")
+ *                 .policy("allow")
+ *                 .protocol("tcp")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksWirelessSsidsFirewallL3FirewallRulesExample&#34;, example);
+ *         ctx.export("merakiNetworksWirelessSsidsFirewallL3FirewallRulesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import
@@ -75,14 +79,14 @@ public class WirelessSsidsFirewallL3FirewallRules extends com.pulumi.resources.C
      * 
      */
     @Export(name="allowLanAccess", refs={Boolean.class}, tree="[0]")
-    private Output<Boolean> allowLanAccess;
+    private Output</* @Nullable */ Boolean> allowLanAccess;
 
     /**
      * @return Allow wireless client access to local LAN (boolean value - true allows access and false denies access) (optional)
      * 
      */
-    public Output<Boolean> allowLanAccess() {
-        return this.allowLanAccess;
+    public Output<Optional<Boolean>> allowLanAccess() {
+        return Codegen.optional(this.allowLanAccess);
     }
     /**
      * networkId path parameter. Network ID
@@ -125,6 +129,20 @@ public class WirelessSsidsFirewallL3FirewallRules extends com.pulumi.resources.C
      */
     public Output<List<WirelessSsidsFirewallL3FirewallRulesRule>> rules() {
         return this.rules;
+    }
+    /**
+     * An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
+     * 
+     */
+    @Export(name="rulesResponses", refs={List.class,WirelessSsidsFirewallL3FirewallRulesRulesResponse.class}, tree="[0,1]")
+    private Output<List<WirelessSsidsFirewallL3FirewallRulesRulesResponse>> rulesResponses;
+
+    /**
+     * @return An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
+     * 
+     */
+    public Output<List<WirelessSsidsFirewallL3FirewallRulesRulesResponse>> rulesResponses() {
+        return this.rulesResponses;
     }
 
     /**

@@ -19,7 +19,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -40,20 +41,21 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new WirelessBluetoothSettings(&#34;example&#34;, WirelessBluetoothSettingsArgs.builder()        
+ *         var example = new WirelessBluetoothSettings("example", WirelessBluetoothSettingsArgs.builder()
  *             .advertisingEnabled(true)
  *             .major(1)
- *             .majorMinorAssignmentMode(&#34;Non-unique&#34;)
+ *             .majorMinorAssignmentMode("Non-unique")
  *             .minor(1)
- *             .networkId(&#34;string&#34;)
+ *             .networkId("string")
  *             .scanningEnabled(true)
- *             .uuid(&#34;00000000-0000-0000-000-000000000000&#34;)
+ *             .uuid("00000000-0000-0000-000-000000000000")
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksWirelessBluetoothSettingsExample&#34;, example);
+ *         ctx.export("merakiNetworksWirelessBluetoothSettingsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import
