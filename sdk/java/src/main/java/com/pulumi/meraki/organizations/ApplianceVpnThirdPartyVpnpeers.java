@@ -19,7 +19,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -41,28 +42,29 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ApplianceVpnThirdPartyVpnpeers(&#34;example&#34;, ApplianceVpnThirdPartyVpnpeersArgs.builder()        
- *             .organizationId(&#34;string&#34;)
+ *         var example = new ApplianceVpnThirdPartyVpnpeers("example", ApplianceVpnThirdPartyVpnpeersArgs.builder()
+ *             .organizationId("string")
  *             .peers(ApplianceVpnThirdPartyVpnpeersPeerArgs.builder()
- *                 .ike_version(&#34;2&#34;)
+ *                 .ike_version("2")
  *                 .ipsec_policies(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
- *                 .ipsec_policies_preset(&#34;default&#34;)
- *                 .local_id(&#34;myMXId@meraki.com&#34;)
- *                 .name(&#34;Peer Name&#34;)
- *                 .network_tags(&#34;none&#34;)
+ *                 .ipsec_policies_preset("default")
+ *                 .local_id("myMXId{@literal @}meraki.com")
+ *                 .name("Peer Name")
+ *                 .network_tags("none")
  *                 .private_subnets(                
- *                     &#34;192.168.1.0/24&#34;,
- *                     &#34;192.168.128.0/24&#34;)
- *                 .public_ip(&#34;123.123.123.1&#34;)
- *                 .remote_id(&#34;miles@meraki.com&#34;)
- *                 .secret(&#34;Sample Password&#34;)
+ *                     "192.168.1.0/24",
+ *                     "192.168.128.0/24")
+ *                 .public_ip("123.123.123.1")
+ *                 .remote_id("miles{@literal @}meraki.com")
+ *                 .secret("Sample Password")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiOrganizationsApplianceVpnThirdPartyVpnpeersExample&#34;, example);
+ *         ctx.export("merakiOrganizationsApplianceVpnThirdPartyVpnpeersExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

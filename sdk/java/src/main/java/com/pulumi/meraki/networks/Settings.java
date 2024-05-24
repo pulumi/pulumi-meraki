@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -47,28 +48,29 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new Settings(&#34;example&#34;, SettingsArgs.builder()        
+ *         var example = new Settings("example", SettingsArgs.builder()
  *             .localStatusPage(SettingsLocalStatusPageArgs.builder()
  *                 .authentication(SettingsLocalStatusPageAuthenticationArgs.builder()
  *                     .enabled(false)
- *                     .password(&#34;miles123&#34;)
+ *                     .password("miles123")
  *                     .build())
  *                 .build())
  *             .localStatusPageEnabled(true)
  *             .namedVlans(SettingsNamedVlansArgs.builder()
  *                 .enabled(true)
  *                 .build())
- *             .networkId(&#34;string&#34;)
+ *             .networkId("string")
  *             .remoteStatusPageEnabled(true)
  *             .securePort(SettingsSecurePortArgs.builder()
  *                 .enabled(false)
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksSettingsExample&#34;, example);
+ *         ctx.export("merakiNetworksSettingsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

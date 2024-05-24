@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,22 +45,23 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SwitchStp(&#34;example&#34;, SwitchStpArgs.builder()        
- *             .networkId(&#34;string&#34;)
+ *         var example = new SwitchStp("example", SwitchStpArgs.builder()
+ *             .networkId("string")
  *             .rstpEnabled(true)
  *             .stpBridgePriorities(SwitchStpStpBridgePriorityArgs.builder()
  *                 .stp_priority(4096)
  *                 .switches(                
- *                     &#34;Q234-ABCD-0001&#34;,
- *                     &#34;Q234-ABCD-0002&#34;,
- *                     &#34;Q234-ABCD-0003&#34;)
+ *                     "Q234-ABCD-0001",
+ *                     "Q234-ABCD-0002",
+ *                     "Q234-ABCD-0003")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksSwitchStpExample&#34;, example);
+ *         ctx.export("merakiNetworksSwitchStpExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

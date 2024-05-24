@@ -20,7 +20,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,29 +45,30 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SwitchDhcpServerPolicy(&#34;example&#34;, SwitchDhcpServerPolicyArgs.builder()        
+ *         var example = new SwitchDhcpServerPolicy("example", SwitchDhcpServerPolicyArgs.builder()
  *             .alerts(SwitchDhcpServerPolicyAlertsArgs.builder()
  *                 .email(SwitchDhcpServerPolicyAlertsEmailArgs.builder()
  *                     .enabled(true)
  *                     .build())
  *                 .build())
  *             .allowedServers(            
- *                 &#34;00:50:56:00:00:01&#34;,
- *                 &#34;00:50:56:00:00:02&#34;)
+ *                 "00:50:56:00:00:01",
+ *                 "00:50:56:00:00:02")
  *             .arpInspection(SwitchDhcpServerPolicyArpInspectionArgs.builder()
  *                 .enabled(true)
  *                 .build())
  *             .blockedServers(            
- *                 &#34;00:50:56:00:00:03&#34;,
- *                 &#34;00:50:56:00:00:04&#34;)
- *             .defaultPolicy(&#34;block&#34;)
- *             .networkId(&#34;string&#34;)
+ *                 "00:50:56:00:00:03",
+ *                 "00:50:56:00:00:04")
+ *             .defaultPolicy("block")
+ *             .networkId("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksSwitchDhcpServerPolicyExample&#34;, example);
+ *         ctx.export("merakiNetworksSwitchDhcpServerPolicyExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

@@ -13,6 +13,7 @@ import com.pulumi.meraki.networks.inputs.AlertsSettingsState;
 import com.pulumi.meraki.networks.outputs.AlertsSettingsAlert;
 import com.pulumi.meraki.networks.outputs.AlertsSettingsAlertsResponse;
 import com.pulumi.meraki.networks.outputs.AlertsSettingsDefaultDestinations;
+import com.pulumi.meraki.networks.outputs.AlertsSettingsMuting;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -22,7 +23,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -46,28 +48,29 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new AlertsSettings(&#34;example&#34;, AlertsSettingsArgs.builder()        
+ *         var example = new AlertsSettings("example", AlertsSettingsArgs.builder()
  *             .alerts(AlertsSettingsAlertArgs.builder()
  *                 .alert_destinations(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .enabled(true)
  *                 .filters(AlertsSettingsAlertFiltersArgs.builder()
  *                     .timeout(60)
  *                     .build())
- *                 .type(&#34;gatewayDown&#34;)
+ *                 .type("gatewayDown")
  *                 .build())
  *             .defaultDestinations(AlertsSettingsDefaultDestinationsArgs.builder()
  *                 .all_admins(true)
- *                 .emails(&#34;miles@meraki.com&#34;)
- *                 .http_server_ids(&#34;aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M=&#34;)
+ *                 .emails("miles{@literal @}meraki.com")
+ *                 .http_server_ids("aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M=")
  *                 .snmp(true)
  *                 .build())
- *             .networkId(&#34;string&#34;)
+ *             .networkId("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksAlertsSettingsExample&#34;, example);
+ *         ctx.export("merakiNetworksAlertsSettingsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import
@@ -120,6 +123,20 @@ public class AlertsSettings extends com.pulumi.resources.CustomResource {
      */
     public Output<AlertsSettingsDefaultDestinations> defaultDestinations() {
         return this.defaultDestinations;
+    }
+    /**
+     * muting
+     * 
+     */
+    @Export(name="muting", refs={AlertsSettingsMuting.class}, tree="[0]")
+    private Output<AlertsSettingsMuting> muting;
+
+    /**
+     * @return muting
+     * 
+     */
+    public Output<AlertsSettingsMuting> muting() {
+        return this.muting;
     }
     /**
      * networkId path parameter. Network ID

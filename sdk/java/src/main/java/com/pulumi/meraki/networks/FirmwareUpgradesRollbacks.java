@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,23 +45,24 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new FirmwareUpgradesRollbacks(&#34;example&#34;, FirmwareUpgradesRollbacksArgs.builder()        
- *             .networkId(&#34;string&#34;)
+ *         var example = new FirmwareUpgradesRollbacks("example", FirmwareUpgradesRollbacksArgs.builder()
+ *             .networkId("string")
  *             .parameters(FirmwareUpgradesRollbacksParametersArgs.builder()
- *                 .product(&#34;switch&#34;)
+ *                 .product("switch")
  *                 .reasons(FirmwareUpgradesRollbacksParametersReasonArgs.builder()
- *                     .category(&#34;performance&#34;)
- *                     .comment(&#34;Network was slower with the upgrade&#34;)
+ *                     .category("performance")
+ *                     .comment("Network was slower with the upgrade")
  *                     .build())
- *                 .time(&#34;2020-10-21T02:00:00Z&#34;)
+ *                 .time("2020-10-21T02:00:00Z")
  *                 .to_version(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksFirmwareUpgradesRollbacksExample&#34;, example);
+ *         ctx.export("merakiNetworksFirmwareUpgradesRollbacksExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

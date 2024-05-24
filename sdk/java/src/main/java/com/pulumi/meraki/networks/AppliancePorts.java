@@ -19,7 +19,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -40,21 +41,22 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new AppliancePorts(&#34;example&#34;, AppliancePortsArgs.builder()        
- *             .accessPolicy(&#34;open&#34;)
- *             .allowedVlans(&#34;all&#34;)
+ *         var example = new AppliancePorts("example", AppliancePortsArgs.builder()
+ *             .accessPolicy("open")
+ *             .allowedVlans("all")
  *             .dropUntaggedTraffic(false)
  *             .enabled(true)
- *             .networkId(&#34;string&#34;)
- *             .portId(&#34;string&#34;)
- *             .type(&#34;access&#34;)
+ *             .networkId("string")
+ *             .portId("string")
+ *             .type("access")
  *             .vlan(3)
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksAppliancePortsExample&#34;, example);
+ *         ctx.export("merakiNetworksAppliancePortsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

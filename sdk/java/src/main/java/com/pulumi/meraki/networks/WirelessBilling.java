@@ -19,7 +19,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -41,21 +42,22 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new WirelessBilling(&#34;example&#34;, WirelessBillingArgs.builder()        
- *             .currency(&#34;USD&#34;)
- *             .networkId(&#34;string&#34;)
+ *         var example = new WirelessBilling("example", WirelessBillingArgs.builder()
+ *             .currency("USD")
+ *             .networkId("string")
  *             .plans(WirelessBillingPlanArgs.builder()
  *                 .bandwidth_limits(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
- *                 .id(&#34;1&#34;)
+ *                 .id("1")
  *                 .price(5)
- *                 .time_limit(&#34;1 hour&#34;)
+ *                 .time_limit("1 hour")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksWirelessBillingExample&#34;, example);
+ *         ctx.export("merakiNetworksWirelessBillingExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

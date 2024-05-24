@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -45,27 +46,28 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new LicensingCotermLicensesMove(&#34;example&#34;, LicensingCotermLicensesMoveArgs.builder()        
- *             .organizationId(&#34;string&#34;)
+ *         var example = new LicensingCotermLicensesMove("example", LicensingCotermLicensesMoveArgs.builder()
+ *             .organizationId("string")
  *             .parameters(LicensingCotermLicensesMoveParametersArgs.builder()
  *                 .destination(LicensingCotermLicensesMoveParametersDestinationArgs.builder()
- *                     .mode(&#34;addDevices&#34;)
- *                     .organizationId(&#34;123&#34;)
+ *                     .mode("addDevices")
+ *                     .organizationId("123")
  *                     .build())
  *                 .licenses(LicensingCotermLicensesMoveParametersLicenseArgs.builder()
  *                     .counts(LicensingCotermLicensesMoveParametersLicenseCountArgs.builder()
  *                         .count(5)
- *                         .model(&#34;MR Enterprise&#34;)
+ *                         .model("MR Enterprise")
  *                         .build())
- *                     .key(&#34;Z2AA-BBBB-CCCC&#34;)
+ *                     .key("Z2AA-BBBB-CCCC")
  *                     .build())
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiOrganizationsLicensingCotermLicensesMoveExample&#34;, example);
+ *         ctx.export("merakiOrganizationsLicensingCotermLicensesMoveExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

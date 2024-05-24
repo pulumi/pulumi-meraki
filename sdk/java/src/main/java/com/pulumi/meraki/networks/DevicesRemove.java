@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -43,17 +44,18 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new DevicesRemove(&#34;example&#34;, DevicesRemoveArgs.builder()        
- *             .networkId(&#34;string&#34;)
+ *         var example = new DevicesRemove("example", DevicesRemoveArgs.builder()
+ *             .networkId("string")
  *             .parameters(DevicesRemoveParametersArgs.builder()
- *                 .serial(&#34;Q234-ABCD-5678&#34;)
+ *                 .serial("Q234-ABCD-5678")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksDevicesRemoveExample&#34;, example);
+ *         ctx.export("merakiNetworksDevicesRemoveExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

@@ -20,7 +20,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -42,18 +43,19 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SwitchLinkAggregations(&#34;example&#34;, SwitchLinkAggregationsArgs.builder()        
- *             .networkId(&#34;string&#34;)
+ *         var example = new SwitchLinkAggregations("example", SwitchLinkAggregationsArgs.builder()
+ *             .networkId("string")
  *             .switchPorts(SwitchLinkAggregationsSwitchPortArgs.builder()
- *                 .port_id(&#34;1&#34;)
- *                 .serial(&#34;Q234-ABCD-0001&#34;)
+ *                 .port_id("1")
+ *                 .serial("Q234-ABCD-0001")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksSwitchLinkAggregationsExample&#34;, example);
+ *         ctx.export("merakiNetworksSwitchLinkAggregationsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

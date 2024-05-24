@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,28 +45,29 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SmSentryPoliciesAssignments(&#34;example&#34;, SmSentryPoliciesAssignmentsArgs.builder()        
- *             .organizationId(&#34;string&#34;)
+ *         var example = new SmSentryPoliciesAssignments("example", SmSentryPoliciesAssignmentsArgs.builder()
+ *             .organizationId("string")
  *             .parameters(SmSentryPoliciesAssignmentsParametersArgs.builder()
  *                 .items(SmSentryPoliciesAssignmentsParametersItemArgs.builder()
- *                     .networkId(&#34;N_24329156&#34;)
+ *                     .networkId("N_24329156")
  *                     .policies(SmSentryPoliciesAssignmentsParametersItemPolicyArgs.builder()
- *                         .groupPolicyId(&#34;1284392014819&#34;)
- *                         .policyId(&#34;1284392014819&#34;)
- *                         .scope(&#34;withAny&#34;)
- *                         .smNetworkId(&#34;N_24329156&#34;)
+ *                         .groupPolicyId("1284392014819")
+ *                         .policyId("1284392014819")
+ *                         .scope("withAny")
+ *                         .smNetworkId("N_24329156")
  *                         .tags(                        
- *                             &#34;tag1&#34;,
- *                             &#34;tag2&#34;)
+ *                             "tag1",
+ *                             "tag2")
  *                         .build())
  *                     .build())
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiOrganizationsSmSentryPoliciesAssignmentsExample&#34;, example);
+ *         ctx.export("merakiOrganizationsSmSentryPoliciesAssignmentsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

@@ -18,7 +18,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -39,19 +40,20 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SwitchRoutingStaticRoutes(&#34;example&#34;, SwitchRoutingStaticRoutesArgs.builder()        
+ *         var example = new SwitchRoutingStaticRoutes("example", SwitchRoutingStaticRoutesArgs.builder()
  *             .advertiseViaOspfEnabled(false)
- *             .name(&#34;My route&#34;)
- *             .nextHopIp(&#34;1.2.3.4&#34;)
+ *             .name("My route")
+ *             .nextHopIp("1.2.3.4")
  *             .preferOverOspfRoutesEnabled(false)
- *             .serial(&#34;string&#34;)
- *             .subnet(&#34;192.168.1.0/24&#34;)
+ *             .serial("string")
+ *             .subnet("192.168.1.0/24")
  *             .build());
  * 
- *         ctx.export(&#34;merakiDevicesSwitchRoutingStaticRoutesExample&#34;, example);
+ *         ctx.export("merakiDevicesSwitchRoutingStaticRoutesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

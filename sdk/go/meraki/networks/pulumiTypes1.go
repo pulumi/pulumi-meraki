@@ -13,6 +13,497 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
+type WirelessSsidsSplashSettingsSentryEnrollment struct {
+	// The system types that the Sentry enforces.
+	EnforcedSystems []string `pulumi:"enforcedSystems"`
+	// The strength of the enforcement of selected system types.
+	Strength *string `pulumi:"strength"`
+	// Systems Manager network targeted for sentry enrollment.
+	SystemsManagerNetwork *WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetwork `pulumi:"systemsManagerNetwork"`
+}
+
+// WirelessSsidsSplashSettingsSentryEnrollmentInput is an input type that accepts WirelessSsidsSplashSettingsSentryEnrollmentArgs and WirelessSsidsSplashSettingsSentryEnrollmentOutput values.
+// You can construct a concrete instance of `WirelessSsidsSplashSettingsSentryEnrollmentInput` via:
+//
+//	WirelessSsidsSplashSettingsSentryEnrollmentArgs{...}
+type WirelessSsidsSplashSettingsSentryEnrollmentInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsSplashSettingsSentryEnrollmentOutput() WirelessSsidsSplashSettingsSentryEnrollmentOutput
+	ToWirelessSsidsSplashSettingsSentryEnrollmentOutputWithContext(context.Context) WirelessSsidsSplashSettingsSentryEnrollmentOutput
+}
+
+type WirelessSsidsSplashSettingsSentryEnrollmentArgs struct {
+	// The system types that the Sentry enforces.
+	EnforcedSystems pulumi.StringArrayInput `pulumi:"enforcedSystems"`
+	// The strength of the enforcement of selected system types.
+	Strength pulumi.StringPtrInput `pulumi:"strength"`
+	// Systems Manager network targeted for sentry enrollment.
+	SystemsManagerNetwork WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrInput `pulumi:"systemsManagerNetwork"`
+}
+
+func (WirelessSsidsSplashSettingsSentryEnrollmentArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsSplashSettingsSentryEnrollment)(nil)).Elem()
+}
+
+func (i WirelessSsidsSplashSettingsSentryEnrollmentArgs) ToWirelessSsidsSplashSettingsSentryEnrollmentOutput() WirelessSsidsSplashSettingsSentryEnrollmentOutput {
+	return i.ToWirelessSsidsSplashSettingsSentryEnrollmentOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsSplashSettingsSentryEnrollmentArgs) ToWirelessSsidsSplashSettingsSentryEnrollmentOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsSentryEnrollmentOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsSplashSettingsSentryEnrollmentOutput)
+}
+
+func (i WirelessSsidsSplashSettingsSentryEnrollmentArgs) ToWirelessSsidsSplashSettingsSentryEnrollmentPtrOutput() WirelessSsidsSplashSettingsSentryEnrollmentPtrOutput {
+	return i.ToWirelessSsidsSplashSettingsSentryEnrollmentPtrOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsSplashSettingsSentryEnrollmentArgs) ToWirelessSsidsSplashSettingsSentryEnrollmentPtrOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsSentryEnrollmentPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsSplashSettingsSentryEnrollmentOutput).ToWirelessSsidsSplashSettingsSentryEnrollmentPtrOutputWithContext(ctx)
+}
+
+// WirelessSsidsSplashSettingsSentryEnrollmentPtrInput is an input type that accepts WirelessSsidsSplashSettingsSentryEnrollmentArgs, WirelessSsidsSplashSettingsSentryEnrollmentPtr and WirelessSsidsSplashSettingsSentryEnrollmentPtrOutput values.
+// You can construct a concrete instance of `WirelessSsidsSplashSettingsSentryEnrollmentPtrInput` via:
+//
+//	        WirelessSsidsSplashSettingsSentryEnrollmentArgs{...}
+//
+//	or:
+//
+//	        nil
+type WirelessSsidsSplashSettingsSentryEnrollmentPtrInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsSplashSettingsSentryEnrollmentPtrOutput() WirelessSsidsSplashSettingsSentryEnrollmentPtrOutput
+	ToWirelessSsidsSplashSettingsSentryEnrollmentPtrOutputWithContext(context.Context) WirelessSsidsSplashSettingsSentryEnrollmentPtrOutput
+}
+
+type wirelessSsidsSplashSettingsSentryEnrollmentPtrType WirelessSsidsSplashSettingsSentryEnrollmentArgs
+
+func WirelessSsidsSplashSettingsSentryEnrollmentPtr(v *WirelessSsidsSplashSettingsSentryEnrollmentArgs) WirelessSsidsSplashSettingsSentryEnrollmentPtrInput {
+	return (*wirelessSsidsSplashSettingsSentryEnrollmentPtrType)(v)
+}
+
+func (*wirelessSsidsSplashSettingsSentryEnrollmentPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsSplashSettingsSentryEnrollment)(nil)).Elem()
+}
+
+func (i *wirelessSsidsSplashSettingsSentryEnrollmentPtrType) ToWirelessSsidsSplashSettingsSentryEnrollmentPtrOutput() WirelessSsidsSplashSettingsSentryEnrollmentPtrOutput {
+	return i.ToWirelessSsidsSplashSettingsSentryEnrollmentPtrOutputWithContext(context.Background())
+}
+
+func (i *wirelessSsidsSplashSettingsSentryEnrollmentPtrType) ToWirelessSsidsSplashSettingsSentryEnrollmentPtrOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsSentryEnrollmentPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsSplashSettingsSentryEnrollmentPtrOutput)
+}
+
+type WirelessSsidsSplashSettingsSentryEnrollmentOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsSplashSettingsSentryEnrollmentOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsSplashSettingsSentryEnrollment)(nil)).Elem()
+}
+
+func (o WirelessSsidsSplashSettingsSentryEnrollmentOutput) ToWirelessSsidsSplashSettingsSentryEnrollmentOutput() WirelessSsidsSplashSettingsSentryEnrollmentOutput {
+	return o
+}
+
+func (o WirelessSsidsSplashSettingsSentryEnrollmentOutput) ToWirelessSsidsSplashSettingsSentryEnrollmentOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsSentryEnrollmentOutput {
+	return o
+}
+
+func (o WirelessSsidsSplashSettingsSentryEnrollmentOutput) ToWirelessSsidsSplashSettingsSentryEnrollmentPtrOutput() WirelessSsidsSplashSettingsSentryEnrollmentPtrOutput {
+	return o.ToWirelessSsidsSplashSettingsSentryEnrollmentPtrOutputWithContext(context.Background())
+}
+
+func (o WirelessSsidsSplashSettingsSentryEnrollmentOutput) ToWirelessSsidsSplashSettingsSentryEnrollmentPtrOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsSentryEnrollmentPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v WirelessSsidsSplashSettingsSentryEnrollment) *WirelessSsidsSplashSettingsSentryEnrollment {
+		return &v
+	}).(WirelessSsidsSplashSettingsSentryEnrollmentPtrOutput)
+}
+
+// The system types that the Sentry enforces.
+func (o WirelessSsidsSplashSettingsSentryEnrollmentOutput) EnforcedSystems() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v WirelessSsidsSplashSettingsSentryEnrollment) []string { return v.EnforcedSystems }).(pulumi.StringArrayOutput)
+}
+
+// The strength of the enforcement of selected system types.
+func (o WirelessSsidsSplashSettingsSentryEnrollmentOutput) Strength() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsSplashSettingsSentryEnrollment) *string { return v.Strength }).(pulumi.StringPtrOutput)
+}
+
+// Systems Manager network targeted for sentry enrollment.
+func (o WirelessSsidsSplashSettingsSentryEnrollmentOutput) SystemsManagerNetwork() WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsSplashSettingsSentryEnrollment) *WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetwork {
+		return v.SystemsManagerNetwork
+	}).(WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutput)
+}
+
+type WirelessSsidsSplashSettingsSentryEnrollmentPtrOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsSplashSettingsSentryEnrollmentPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsSplashSettingsSentryEnrollment)(nil)).Elem()
+}
+
+func (o WirelessSsidsSplashSettingsSentryEnrollmentPtrOutput) ToWirelessSsidsSplashSettingsSentryEnrollmentPtrOutput() WirelessSsidsSplashSettingsSentryEnrollmentPtrOutput {
+	return o
+}
+
+func (o WirelessSsidsSplashSettingsSentryEnrollmentPtrOutput) ToWirelessSsidsSplashSettingsSentryEnrollmentPtrOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsSentryEnrollmentPtrOutput {
+	return o
+}
+
+func (o WirelessSsidsSplashSettingsSentryEnrollmentPtrOutput) Elem() WirelessSsidsSplashSettingsSentryEnrollmentOutput {
+	return o.ApplyT(func(v *WirelessSsidsSplashSettingsSentryEnrollment) WirelessSsidsSplashSettingsSentryEnrollment {
+		if v != nil {
+			return *v
+		}
+		var ret WirelessSsidsSplashSettingsSentryEnrollment
+		return ret
+	}).(WirelessSsidsSplashSettingsSentryEnrollmentOutput)
+}
+
+// The system types that the Sentry enforces.
+func (o WirelessSsidsSplashSettingsSentryEnrollmentPtrOutput) EnforcedSystems() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *WirelessSsidsSplashSettingsSentryEnrollment) []string {
+		if v == nil {
+			return nil
+		}
+		return v.EnforcedSystems
+	}).(pulumi.StringArrayOutput)
+}
+
+// The strength of the enforcement of selected system types.
+func (o WirelessSsidsSplashSettingsSentryEnrollmentPtrOutput) Strength() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsSplashSettingsSentryEnrollment) *string {
+		if v == nil {
+			return nil
+		}
+		return v.Strength
+	}).(pulumi.StringPtrOutput)
+}
+
+// Systems Manager network targeted for sentry enrollment.
+func (o WirelessSsidsSplashSettingsSentryEnrollmentPtrOutput) SystemsManagerNetwork() WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsSplashSettingsSentryEnrollment) *WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetwork {
+		if v == nil {
+			return nil
+		}
+		return v.SystemsManagerNetwork
+	}).(WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutput)
+}
+
+type WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetwork struct {
+	// The network ID of the Systems Manager network.
+	Id *string `pulumi:"id"`
+}
+
+// WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkInput is an input type that accepts WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkArgs and WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkOutput values.
+// You can construct a concrete instance of `WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkInput` via:
+//
+//	WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkArgs{...}
+type WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkOutput() WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkOutput
+	ToWirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkOutputWithContext(context.Context) WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkOutput
+}
+
+type WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkArgs struct {
+	// The network ID of the Systems Manager network.
+	Id pulumi.StringPtrInput `pulumi:"id"`
+}
+
+func (WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetwork)(nil)).Elem()
+}
+
+func (i WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkArgs) ToWirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkOutput() WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkOutput {
+	return i.ToWirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkArgs) ToWirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkOutput)
+}
+
+func (i WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkArgs) ToWirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutput() WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutput {
+	return i.ToWirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkArgs) ToWirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkOutput).ToWirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutputWithContext(ctx)
+}
+
+// WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrInput is an input type that accepts WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkArgs, WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtr and WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutput values.
+// You can construct a concrete instance of `WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrInput` via:
+//
+//	        WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkArgs{...}
+//
+//	or:
+//
+//	        nil
+type WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutput() WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutput
+	ToWirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutputWithContext(context.Context) WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutput
+}
+
+type wirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrType WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkArgs
+
+func WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtr(v *WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkArgs) WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrInput {
+	return (*wirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrType)(v)
+}
+
+func (*wirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetwork)(nil)).Elem()
+}
+
+func (i *wirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrType) ToWirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutput() WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutput {
+	return i.ToWirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutputWithContext(context.Background())
+}
+
+func (i *wirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrType) ToWirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutput)
+}
+
+type WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetwork)(nil)).Elem()
+}
+
+func (o WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkOutput) ToWirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkOutput() WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkOutput {
+	return o
+}
+
+func (o WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkOutput) ToWirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkOutput {
+	return o
+}
+
+func (o WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkOutput) ToWirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutput() WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutput {
+	return o.ToWirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutputWithContext(context.Background())
+}
+
+func (o WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkOutput) ToWirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetwork) *WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetwork {
+		return &v
+	}).(WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutput)
+}
+
+// The network ID of the Systems Manager network.
+func (o WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkOutput) Id() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetwork) *string { return v.Id }).(pulumi.StringPtrOutput)
+}
+
+type WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetwork)(nil)).Elem()
+}
+
+func (o WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutput) ToWirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutput() WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutput {
+	return o
+}
+
+func (o WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutput) ToWirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutput {
+	return o
+}
+
+func (o WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutput) Elem() WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkOutput {
+	return o.ApplyT(func(v *WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetwork) WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetwork {
+		if v != nil {
+			return *v
+		}
+		var ret WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetwork
+		return ret
+	}).(WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkOutput)
+}
+
+// The network ID of the Systems Manager network.
+func (o WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutput) Id() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetwork) *string {
+		if v == nil {
+			return nil
+		}
+		return v.Id
+	}).(pulumi.StringPtrOutput)
+}
+
+type WirelessSsidsSplashSettingsSplashImage struct {
+	// The extension of the image file.
+	Extension *string `pulumi:"extension"`
+	// Properties for setting a new image.
+	Image *WirelessSsidsSplashSettingsSplashImageImage `pulumi:"image"`
+	// The MD5 value of the image file.
+	Md5 *string `pulumi:"md5"`
+}
+
+// WirelessSsidsSplashSettingsSplashImageInput is an input type that accepts WirelessSsidsSplashSettingsSplashImageArgs and WirelessSsidsSplashSettingsSplashImageOutput values.
+// You can construct a concrete instance of `WirelessSsidsSplashSettingsSplashImageInput` via:
+//
+//	WirelessSsidsSplashSettingsSplashImageArgs{...}
+type WirelessSsidsSplashSettingsSplashImageInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsSplashSettingsSplashImageOutput() WirelessSsidsSplashSettingsSplashImageOutput
+	ToWirelessSsidsSplashSettingsSplashImageOutputWithContext(context.Context) WirelessSsidsSplashSettingsSplashImageOutput
+}
+
+type WirelessSsidsSplashSettingsSplashImageArgs struct {
+	// The extension of the image file.
+	Extension pulumi.StringPtrInput `pulumi:"extension"`
+	// Properties for setting a new image.
+	Image WirelessSsidsSplashSettingsSplashImageImagePtrInput `pulumi:"image"`
+	// The MD5 value of the image file.
+	Md5 pulumi.StringPtrInput `pulumi:"md5"`
+}
+
+func (WirelessSsidsSplashSettingsSplashImageArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsSplashSettingsSplashImage)(nil)).Elem()
+}
+
+func (i WirelessSsidsSplashSettingsSplashImageArgs) ToWirelessSsidsSplashSettingsSplashImageOutput() WirelessSsidsSplashSettingsSplashImageOutput {
+	return i.ToWirelessSsidsSplashSettingsSplashImageOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsSplashSettingsSplashImageArgs) ToWirelessSsidsSplashSettingsSplashImageOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsSplashImageOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsSplashSettingsSplashImageOutput)
+}
+
+func (i WirelessSsidsSplashSettingsSplashImageArgs) ToWirelessSsidsSplashSettingsSplashImagePtrOutput() WirelessSsidsSplashSettingsSplashImagePtrOutput {
+	return i.ToWirelessSsidsSplashSettingsSplashImagePtrOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsSplashSettingsSplashImageArgs) ToWirelessSsidsSplashSettingsSplashImagePtrOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsSplashImagePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsSplashSettingsSplashImageOutput).ToWirelessSsidsSplashSettingsSplashImagePtrOutputWithContext(ctx)
+}
+
+// WirelessSsidsSplashSettingsSplashImagePtrInput is an input type that accepts WirelessSsidsSplashSettingsSplashImageArgs, WirelessSsidsSplashSettingsSplashImagePtr and WirelessSsidsSplashSettingsSplashImagePtrOutput values.
+// You can construct a concrete instance of `WirelessSsidsSplashSettingsSplashImagePtrInput` via:
+//
+//	        WirelessSsidsSplashSettingsSplashImageArgs{...}
+//
+//	or:
+//
+//	        nil
+type WirelessSsidsSplashSettingsSplashImagePtrInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsSplashSettingsSplashImagePtrOutput() WirelessSsidsSplashSettingsSplashImagePtrOutput
+	ToWirelessSsidsSplashSettingsSplashImagePtrOutputWithContext(context.Context) WirelessSsidsSplashSettingsSplashImagePtrOutput
+}
+
+type wirelessSsidsSplashSettingsSplashImagePtrType WirelessSsidsSplashSettingsSplashImageArgs
+
+func WirelessSsidsSplashSettingsSplashImagePtr(v *WirelessSsidsSplashSettingsSplashImageArgs) WirelessSsidsSplashSettingsSplashImagePtrInput {
+	return (*wirelessSsidsSplashSettingsSplashImagePtrType)(v)
+}
+
+func (*wirelessSsidsSplashSettingsSplashImagePtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsSplashSettingsSplashImage)(nil)).Elem()
+}
+
+func (i *wirelessSsidsSplashSettingsSplashImagePtrType) ToWirelessSsidsSplashSettingsSplashImagePtrOutput() WirelessSsidsSplashSettingsSplashImagePtrOutput {
+	return i.ToWirelessSsidsSplashSettingsSplashImagePtrOutputWithContext(context.Background())
+}
+
+func (i *wirelessSsidsSplashSettingsSplashImagePtrType) ToWirelessSsidsSplashSettingsSplashImagePtrOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsSplashImagePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsSplashSettingsSplashImagePtrOutput)
+}
+
+type WirelessSsidsSplashSettingsSplashImageOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsSplashSettingsSplashImageOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsSplashSettingsSplashImage)(nil)).Elem()
+}
+
+func (o WirelessSsidsSplashSettingsSplashImageOutput) ToWirelessSsidsSplashSettingsSplashImageOutput() WirelessSsidsSplashSettingsSplashImageOutput {
+	return o
+}
+
+func (o WirelessSsidsSplashSettingsSplashImageOutput) ToWirelessSsidsSplashSettingsSplashImageOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsSplashImageOutput {
+	return o
+}
+
+func (o WirelessSsidsSplashSettingsSplashImageOutput) ToWirelessSsidsSplashSettingsSplashImagePtrOutput() WirelessSsidsSplashSettingsSplashImagePtrOutput {
+	return o.ToWirelessSsidsSplashSettingsSplashImagePtrOutputWithContext(context.Background())
+}
+
+func (o WirelessSsidsSplashSettingsSplashImageOutput) ToWirelessSsidsSplashSettingsSplashImagePtrOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsSplashImagePtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v WirelessSsidsSplashSettingsSplashImage) *WirelessSsidsSplashSettingsSplashImage {
+		return &v
+	}).(WirelessSsidsSplashSettingsSplashImagePtrOutput)
+}
+
+// The extension of the image file.
+func (o WirelessSsidsSplashSettingsSplashImageOutput) Extension() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsSplashSettingsSplashImage) *string { return v.Extension }).(pulumi.StringPtrOutput)
+}
+
+// Properties for setting a new image.
+func (o WirelessSsidsSplashSettingsSplashImageOutput) Image() WirelessSsidsSplashSettingsSplashImageImagePtrOutput {
+	return o.ApplyT(func(v WirelessSsidsSplashSettingsSplashImage) *WirelessSsidsSplashSettingsSplashImageImage {
+		return v.Image
+	}).(WirelessSsidsSplashSettingsSplashImageImagePtrOutput)
+}
+
+// The MD5 value of the image file.
+func (o WirelessSsidsSplashSettingsSplashImageOutput) Md5() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsSplashSettingsSplashImage) *string { return v.Md5 }).(pulumi.StringPtrOutput)
+}
+
+type WirelessSsidsSplashSettingsSplashImagePtrOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsSplashSettingsSplashImagePtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsSplashSettingsSplashImage)(nil)).Elem()
+}
+
+func (o WirelessSsidsSplashSettingsSplashImagePtrOutput) ToWirelessSsidsSplashSettingsSplashImagePtrOutput() WirelessSsidsSplashSettingsSplashImagePtrOutput {
+	return o
+}
+
+func (o WirelessSsidsSplashSettingsSplashImagePtrOutput) ToWirelessSsidsSplashSettingsSplashImagePtrOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsSplashImagePtrOutput {
+	return o
+}
+
+func (o WirelessSsidsSplashSettingsSplashImagePtrOutput) Elem() WirelessSsidsSplashSettingsSplashImageOutput {
+	return o.ApplyT(func(v *WirelessSsidsSplashSettingsSplashImage) WirelessSsidsSplashSettingsSplashImage {
+		if v != nil {
+			return *v
+		}
+		var ret WirelessSsidsSplashSettingsSplashImage
+		return ret
+	}).(WirelessSsidsSplashSettingsSplashImageOutput)
+}
+
+// The extension of the image file.
+func (o WirelessSsidsSplashSettingsSplashImagePtrOutput) Extension() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsSplashSettingsSplashImage) *string {
+		if v == nil {
+			return nil
+		}
+		return v.Extension
+	}).(pulumi.StringPtrOutput)
+}
+
+// Properties for setting a new image.
+func (o WirelessSsidsSplashSettingsSplashImagePtrOutput) Image() WirelessSsidsSplashSettingsSplashImageImagePtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsSplashSettingsSplashImage) *WirelessSsidsSplashSettingsSplashImageImage {
+		if v == nil {
+			return nil
+		}
+		return v.Image
+	}).(WirelessSsidsSplashSettingsSplashImageImagePtrOutput)
+}
+
+// The MD5 value of the image file.
+func (o WirelessSsidsSplashSettingsSplashImagePtrOutput) Md5() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsSplashSettingsSplashImage) *string {
+		if v == nil {
+			return nil
+		}
+		return v.Md5
+	}).(pulumi.StringPtrOutput)
+}
+
 type WirelessSsidsSplashSettingsSplashImageImage struct {
 	// The file contents (a base 64 encoded string) of your new image.
 	Contents *string `pulumi:"contents"`
@@ -45820,201 +46311,13 @@ func (o GetWirelessRfProfilesItemPerSsidSettingsStatus1Output) Name() pulumi.Str
 	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus1) string { return v.Name }).(pulumi.StringOutput)
 }
 
-type GetWirelessRfProfilesItemPerSsidSettingsStatus1Bands struct {
-	// List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-	Enableds []string `pulumi:"enableds"`
-}
-
-// GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsInput is an input type that accepts GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsArgs and GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput values.
-// You can construct a concrete instance of `GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsInput` via:
-//
-//	GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsArgs{...}
-type GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsInput interface {
-	pulumi.Input
-
-	ToGetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput() GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput
-	ToGetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutputWithContext(context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsArgs struct {
-	// List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-	Enableds pulumi.StringArrayInput `pulumi:"enableds"`
-}
-
-func (GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus1Bands)(nil)).Elem()
-}
-
-func (i GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsArgs) ToGetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput() GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput {
-	return i.ToGetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutputWithContext(context.Background())
-}
-
-func (i GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsArgs) ToGetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput)
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput struct{ *pulumi.OutputState }
-
-func (GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus1Bands)(nil)).Elem()
-}
-
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput) ToGetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput() GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput {
-	return o
-}
-
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput) ToGetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput {
-	return o
-}
-
-// List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput) Enableds() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus1Bands) []string { return v.Enableds }).(pulumi.StringArrayOutput)
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus2 struct {
-	// Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-	BandOperationMode string `pulumi:"bandOperationMode"`
-	// Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-	BandSteeringEnabled bool `pulumi:"bandSteeringEnabled"`
-	// Settings related to all bands
-	Bands GetWirelessRfProfilesItemPerSsidSettingsStatus2Bands `pulumi:"bands"`
-	// Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-	MinBitrate int `pulumi:"minBitrate"`
-	// Name of SSID
-	Name string `pulumi:"name"`
-}
-
-// GetWirelessRfProfilesItemPerSsidSettingsStatus2Input is an input type that accepts GetWirelessRfProfilesItemPerSsidSettingsStatus2Args and GetWirelessRfProfilesItemPerSsidSettingsStatus2Output values.
-// You can construct a concrete instance of `GetWirelessRfProfilesItemPerSsidSettingsStatus2Input` via:
-//
-//	GetWirelessRfProfilesItemPerSsidSettingsStatus2Args{...}
-type GetWirelessRfProfilesItemPerSsidSettingsStatus2Input interface {
-	pulumi.Input
-
-	ToGetWirelessRfProfilesItemPerSsidSettingsStatus2Output() GetWirelessRfProfilesItemPerSsidSettingsStatus2Output
-	ToGetWirelessRfProfilesItemPerSsidSettingsStatus2OutputWithContext(context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus2Output
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus2Args struct {
-	// Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-	BandOperationMode pulumi.StringInput `pulumi:"bandOperationMode"`
-	// Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-	BandSteeringEnabled pulumi.BoolInput `pulumi:"bandSteeringEnabled"`
-	// Settings related to all bands
-	Bands GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsInput `pulumi:"bands"`
-	// Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-	MinBitrate pulumi.IntInput `pulumi:"minBitrate"`
-	// Name of SSID
-	Name pulumi.StringInput `pulumi:"name"`
-}
-
-func (GetWirelessRfProfilesItemPerSsidSettingsStatus2Args) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus2)(nil)).Elem()
-}
-
-func (i GetWirelessRfProfilesItemPerSsidSettingsStatus2Args) ToGetWirelessRfProfilesItemPerSsidSettingsStatus2Output() GetWirelessRfProfilesItemPerSsidSettingsStatus2Output {
-	return i.ToGetWirelessRfProfilesItemPerSsidSettingsStatus2OutputWithContext(context.Background())
-}
-
-func (i GetWirelessRfProfilesItemPerSsidSettingsStatus2Args) ToGetWirelessRfProfilesItemPerSsidSettingsStatus2OutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus2Output {
-	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessRfProfilesItemPerSsidSettingsStatus2Output)
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus2Output struct{ *pulumi.OutputState }
-
-func (GetWirelessRfProfilesItemPerSsidSettingsStatus2Output) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus2)(nil)).Elem()
-}
-
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus2Output) ToGetWirelessRfProfilesItemPerSsidSettingsStatus2Output() GetWirelessRfProfilesItemPerSsidSettingsStatus2Output {
-	return o
-}
-
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus2Output) ToGetWirelessRfProfilesItemPerSsidSettingsStatus2OutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus2Output {
-	return o
-}
-
-// Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus2Output) BandOperationMode() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus2) string { return v.BandOperationMode }).(pulumi.StringOutput)
-}
-
-// Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus2Output) BandSteeringEnabled() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus2) bool { return v.BandSteeringEnabled }).(pulumi.BoolOutput)
-}
-
-// Settings related to all bands
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus2Output) Bands() GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus2) GetWirelessRfProfilesItemPerSsidSettingsStatus2Bands {
-		return v.Bands
-	}).(GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput)
-}
-
-// Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus2Output) MinBitrate() pulumi.IntOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus2) int { return v.MinBitrate }).(pulumi.IntOutput)
-}
-
-// Name of SSID
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus2Output) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus2) string { return v.Name }).(pulumi.StringOutput)
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus2Bands struct {
-	// List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-	Enableds []string `pulumi:"enableds"`
-}
-
-// GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsInput is an input type that accepts GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsArgs and GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput values.
-// You can construct a concrete instance of `GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsInput` via:
-//
-//	GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsArgs{...}
-type GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsInput interface {
-	pulumi.Input
-
-	ToGetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput() GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput
-	ToGetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutputWithContext(context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsArgs struct {
-	// List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-	Enableds pulumi.StringArrayInput `pulumi:"enableds"`
-}
-
-func (GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus2Bands)(nil)).Elem()
-}
-
-func (i GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsArgs) ToGetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput() GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput {
-	return i.ToGetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutputWithContext(context.Background())
-}
-
-func (i GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsArgs) ToGetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput)
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput struct{ *pulumi.OutputState }
-
-func (GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus2Bands)(nil)).Elem()
-}
-
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput) ToGetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput() GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput {
-	return o
-}
-
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput) ToGetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput {
-	return o
-}
-
-// List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput) Enableds() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus2Bands) []string { return v.Enableds }).(pulumi.StringArrayOutput)
-}
-
 func init() {
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsSplashSettingsSentryEnrollmentInput)(nil)).Elem(), WirelessSsidsSplashSettingsSentryEnrollmentArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsSplashSettingsSentryEnrollmentPtrInput)(nil)).Elem(), WirelessSsidsSplashSettingsSentryEnrollmentArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkInput)(nil)).Elem(), WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrInput)(nil)).Elem(), WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsSplashSettingsSplashImageInput)(nil)).Elem(), WirelessSsidsSplashSettingsSplashImageArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsSplashSettingsSplashImagePtrInput)(nil)).Elem(), WirelessSsidsSplashSettingsSplashImageArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsSplashSettingsSplashImageImageInput)(nil)).Elem(), WirelessSsidsSplashSettingsSplashImageImageArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsSplashSettingsSplashImageImagePtrInput)(nil)).Elem(), WirelessSsidsSplashSettingsSplashImageImageArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsSplashSettingsSplashLogoInput)(nil)).Elem(), WirelessSsidsSplashSettingsSplashLogoArgs{})
@@ -46682,9 +46985,12 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus14Input)(nil)).Elem(), GetWirelessRfProfilesItemPerSsidSettingsStatus14Args{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus14BandsInput)(nil)).Elem(), GetWirelessRfProfilesItemPerSsidSettingsStatus14BandsArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus1Input)(nil)).Elem(), GetWirelessRfProfilesItemPerSsidSettingsStatus1Args{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsInput)(nil)).Elem(), GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus2Input)(nil)).Elem(), GetWirelessRfProfilesItemPerSsidSettingsStatus2Args{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsInput)(nil)).Elem(), GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsArgs{})
+	pulumi.RegisterOutputType(WirelessSsidsSplashSettingsSentryEnrollmentOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsSplashSettingsSentryEnrollmentPtrOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkPtrOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsSplashSettingsSplashImageOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsSplashSettingsSplashImagePtrOutput{})
 	pulumi.RegisterOutputType(WirelessSsidsSplashSettingsSplashImageImageOutput{})
 	pulumi.RegisterOutputType(WirelessSsidsSplashSettingsSplashImageImagePtrOutput{})
 	pulumi.RegisterOutputType(WirelessSsidsSplashSettingsSplashLogoOutput{})
@@ -47352,7 +47658,4 @@ func init() {
 	pulumi.RegisterOutputType(GetWirelessRfProfilesItemPerSsidSettingsStatus14Output{})
 	pulumi.RegisterOutputType(GetWirelessRfProfilesItemPerSsidSettingsStatus14BandsOutput{})
 	pulumi.RegisterOutputType(GetWirelessRfProfilesItemPerSsidSettingsStatus1Output{})
-	pulumi.RegisterOutputType(GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput{})
-	pulumi.RegisterOutputType(GetWirelessRfProfilesItemPerSsidSettingsStatus2Output{})
-	pulumi.RegisterOutputType(GetWirelessRfProfilesItemPerSsidSettingsStatus2BandsOutput{})
 }

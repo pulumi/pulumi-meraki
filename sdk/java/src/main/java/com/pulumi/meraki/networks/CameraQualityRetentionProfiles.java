@@ -20,7 +20,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -41,15 +42,16 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CameraQualityRetentionProfiles(&#34;example&#34;, CameraQualityRetentionProfilesArgs.builder()        
- *             .name(&#34;Sample quality retention profile&#34;)
- *             .networkId(&#34;string&#34;)
+ *         var example = new CameraQualityRetentionProfiles("example", CameraQualityRetentionProfilesArgs.builder()
+ *             .name("Sample quality retention profile")
+ *             .networkId("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksCameraQualityRetentionProfilesExample&#34;, example);
+ *         ctx.export("merakiNetworksCameraQualityRetentionProfilesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

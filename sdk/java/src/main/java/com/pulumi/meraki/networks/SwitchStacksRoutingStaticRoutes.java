@@ -18,7 +18,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -39,20 +40,21 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SwitchStacksRoutingStaticRoutes(&#34;example&#34;, SwitchStacksRoutingStaticRoutesArgs.builder()        
+ *         var example = new SwitchStacksRoutingStaticRoutes("example", SwitchStacksRoutingStaticRoutesArgs.builder()
  *             .advertiseViaOspfEnabled(false)
- *             .name(&#34;My route&#34;)
- *             .networkId(&#34;string&#34;)
- *             .nextHopIp(&#34;1.2.3.4&#34;)
+ *             .name("My route")
+ *             .networkId("string")
+ *             .nextHopIp("1.2.3.4")
  *             .preferOverOspfRoutesEnabled(false)
- *             .subnet(&#34;192.168.1.0/24&#34;)
- *             .switchStackId(&#34;string&#34;)
+ *             .subnet("192.168.1.0/24")
+ *             .switchStackId("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksSwitchStacksRoutingStaticRoutesExample&#34;, example);
+ *         ctx.export("merakiNetworksSwitchStacksRoutingStaticRoutesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

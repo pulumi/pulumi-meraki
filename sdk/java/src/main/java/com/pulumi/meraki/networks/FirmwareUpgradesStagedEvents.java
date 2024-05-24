@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -49,13 +50,13 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new FirmwareUpgradesStagedEvents(&#34;example&#34;, FirmwareUpgradesStagedEventsArgs.builder()        
- *             .networkId(&#34;string&#34;)
+ *         var example = new FirmwareUpgradesStagedEvents("example", FirmwareUpgradesStagedEventsArgs.builder()
+ *             .networkId("string")
  *             .products(FirmwareUpgradesStagedEventsProductsArgs.builder()
  *                 .switch_(FirmwareUpgradesStagedEventsProductsSwitchArgs.builder()
  *                     .nextUpgrade(FirmwareUpgradesStagedEventsProductsSwitchNextUpgradeArgs.builder()
  *                         .toVersion(FirmwareUpgradesStagedEventsProductsSwitchNextUpgradeToVersionArgs.builder()
- *                             .id(&#34;1234&#34;)
+ *                             .id("1234")
  *                             .build())
  *                         .build())
  *                     .build())
@@ -63,18 +64,19 @@ import javax.annotation.Nullable;
  *                 .build())
  *             .stages(FirmwareUpgradesStagedEventsStageArgs.builder()
  *                 .group(FirmwareUpgradesStagedEventsStageGroupArgs.builder()
- *                     .id(&#34;1234&#34;)
+ *                     .id("1234")
  *                     .build())
  *                 .milestones(FirmwareUpgradesStagedEventsStageMilestonesArgs.builder()
- *                     .scheduledFor(&#34;2018-02-11T00:00:00Z&#34;)
+ *                     .scheduledFor("2018-02-11T00:00:00Z")
  *                     .build())
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksFirmwareUpgradesStagedEventsExample&#34;, example);
+ *         ctx.export("merakiNetworksFirmwareUpgradesStagedEventsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

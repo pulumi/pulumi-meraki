@@ -20,7 +20,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -42,7 +43,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new WirelessSettings(&#34;example&#34;, WirelessSettingsArgs.builder()        
+ *         var example = new WirelessSettings("example", WirelessSettingsArgs.builder()
  *             .ipv6BridgeEnabled(false)
  *             .ledLightsOn(false)
  *             .locationAnalyticsEnabled(false)
@@ -50,14 +51,15 @@ import javax.annotation.Nullable;
  *             .namedVlans(WirelessSettingsNamedVlansArgs.builder()
  *                 .pool_dhcp_monitoring(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .build())
- *             .networkId(&#34;string&#34;)
- *             .upgradestrategy(&#34;minimizeUpgradeTime&#34;)
+ *             .networkId("string")
+ *             .upgradestrategy("minimizeUpgradeTime")
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksWirelessSettingsExample&#34;, example);
+ *         ctx.export("merakiNetworksWirelessSettingsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

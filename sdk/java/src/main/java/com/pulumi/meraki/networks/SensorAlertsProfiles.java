@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -62,11 +63,11 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SensorAlertsProfiles(&#34;example&#34;, SensorAlertsProfilesArgs.builder()        
+ *         var example = new SensorAlertsProfiles("example", SensorAlertsProfilesArgs.builder()
  *             .conditions(SensorAlertsProfilesConditionArgs.builder()
- *                 .direction(&#34;above&#34;)
+ *                 .direction("above")
  *                 .duration(60)
- *                 .metric(&#34;temperature&#34;)
+ *                 .metric("temperature")
  *                 .threshold(SensorAlertsProfilesConditionThresholdArgs.builder()
  *                     .apparentPower(SensorAlertsProfilesConditionThresholdApparentPowerArgs.builder()
  *                         .draw(17.2)
@@ -81,22 +82,22 @@ import javax.annotation.Nullable;
  *                         .level(58.8)
  *                         .build())
  *                     .humidity(SensorAlertsProfilesConditionThresholdHumidityArgs.builder()
- *                         .quality(&#34;inadequate&#34;)
+ *                         .quality("inadequate")
  *                         .relativePercentage(65)
  *                         .build())
  *                     .indoorAirQuality(SensorAlertsProfilesConditionThresholdIndoorAirQualityArgs.builder()
- *                         .quality(&#34;fair&#34;)
+ *                         .quality("fair")
  *                         .score(80)
  *                         .build())
  *                     .noise(SensorAlertsProfilesConditionThresholdNoiseArgs.builder()
  *                         .ambient(SensorAlertsProfilesConditionThresholdNoiseAmbientArgs.builder()
  *                             .level(120)
- *                             .quality(&#34;poor&#34;)
+ *                             .quality("poor")
  *                             .build())
  *                         .build())
  *                     .pm25(SensorAlertsProfilesConditionThresholdPm25Args.builder()
  *                         .concentration(90)
- *                         .quality(&#34;fair&#34;)
+ *                         .quality("fair")
  *                         .build())
  *                     .powerFactor(SensorAlertsProfilesConditionThresholdPowerFactorArgs.builder()
  *                         .percentage(81)
@@ -107,11 +108,11 @@ import javax.annotation.Nullable;
  *                     .temperature(SensorAlertsProfilesConditionThresholdTemperatureArgs.builder()
  *                         .celsius(20.5)
  *                         .fahrenheit(70)
- *                         .quality(&#34;good&#34;)
+ *                         .quality("good")
  *                         .build())
  *                     .tvoc(SensorAlertsProfilesConditionThresholdTvocArgs.builder()
  *                         .concentration(400)
- *                         .quality(&#34;poor&#34;)
+ *                         .quality("poor")
  *                         .build())
  *                     .upstreamPower(SensorAlertsProfilesConditionThresholdUpstreamPowerArgs.builder()
  *                         .outageDetected(true)
@@ -124,26 +125,27 @@ import javax.annotation.Nullable;
  *                         .build())
  *                     .build())
  *                 .build())
- *             .name(&#34;My Sensor Alert Profile&#34;)
- *             .networkId(&#34;string&#34;)
+ *             .name("My Sensor Alert Profile")
+ *             .networkId("string")
  *             .recipients(SensorAlertsProfilesRecipientsArgs.builder()
- *                 .emails(&#34;miles@meraki.com&#34;)
- *                 .http_server_ids(&#34;aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M=&#34;)
- *                 .sms_numbers(&#34;+15555555555&#34;)
+ *                 .emails("miles{@literal @}meraki.com")
+ *                 .http_server_ids("aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M=")
+ *                 .sms_numbers("+15555555555")
  *                 .build())
  *             .schedule(SensorAlertsProfilesScheduleArgs.builder()
- *                 .id(&#34;5&#34;)
+ *                 .id("5")
  *                 .build())
  *             .serials(            
- *                 &#34;Q234-ABCD-0001&#34;,
- *                 &#34;Q234-ABCD-0002&#34;,
- *                 &#34;Q234-ABCD-0003&#34;)
+ *                 "Q234-ABCD-0001",
+ *                 "Q234-ABCD-0002",
+ *                 "Q234-ABCD-0003")
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksSensorAlertsProfilesExample&#34;, example);
+ *         ctx.export("merakiNetworksSensorAlertsProfilesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

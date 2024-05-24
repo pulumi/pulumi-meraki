@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -43,18 +44,19 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CameraGenerateSnapshot(&#34;example&#34;, CameraGenerateSnapshotArgs.builder()        
- *             .serial(&#34;string&#34;)
+ *         var example = new CameraGenerateSnapshot("example", CameraGenerateSnapshotArgs.builder()
+ *             .serial("string")
  *             .parameters(CameraGenerateSnapshotParametersArgs.builder()
  *                 .fullframe(false)
- *                 .timestamp(&#34;2021-04-30T15:18:08Z&#34;)
+ *                 .timestamp("2021-04-30T15:18:08Z")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiDevicesCameraGenerateSnapshotExample&#34;, example);
+ *         ctx.export("merakiDevicesCameraGenerateSnapshotExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

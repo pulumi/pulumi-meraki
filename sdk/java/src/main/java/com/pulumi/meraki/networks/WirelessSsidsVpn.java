@@ -20,7 +20,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,34 +45,35 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new WirelessSsidsVpn(&#34;example&#34;, WirelessSsidsVpnArgs.builder()        
+ *         var example = new WirelessSsidsVpn("example", WirelessSsidsVpnArgs.builder()
  *             .concentrator(WirelessSsidsVpnConcentratorArgs.builder()
- *                 .network_id(&#34;N_123&#34;)
+ *                 .network_id("N_123")
  *                 .vlan_id(44)
  *                 .build())
  *             .failover(WirelessSsidsVpnFailoverArgs.builder()
  *                 .heartbeat_interval(10)
  *                 .idle_timeout(30)
- *                 .request_ip(&#34;1.1.1.1&#34;)
+ *                 .request_ip("1.1.1.1")
  *                 .build())
- *             .networkId(&#34;string&#34;)
- *             .number(&#34;string&#34;)
+ *             .networkId("string")
+ *             .number("string")
  *             .splitTunnel(WirelessSsidsVpnSplitTunnelArgs.builder()
  *                 .enabled(true)
  *                 .rules(WirelessSsidsVpnSplitTunnelRuleArgs.builder()
- *                     .comment(&#34;split tunnel rule 1&#34;)
- *                     .destCidr(&#34;1.1.1.1/32&#34;)
- *                     .destPort(&#34;any&#34;)
- *                     .policy(&#34;allow&#34;)
- *                     .protocol(&#34;Any&#34;)
+ *                     .comment("split tunnel rule 1")
+ *                     .destCidr("1.1.1.1/32")
+ *                     .destPort("any")
+ *                     .policy("allow")
+ *                     .protocol("Any")
  *                     .build())
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksWirelessSsidsVpnExample&#34;, example);
+ *         ctx.export("merakiNetworksWirelessSsidsVpnExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

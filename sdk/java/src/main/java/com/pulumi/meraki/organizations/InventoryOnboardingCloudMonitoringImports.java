@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -43,21 +44,22 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new InventoryOnboardingCloudMonitoringImports(&#34;example&#34;, InventoryOnboardingCloudMonitoringImportsArgs.builder()        
- *             .organizationId(&#34;string&#34;)
+ *         var example = new InventoryOnboardingCloudMonitoringImports("example", InventoryOnboardingCloudMonitoringImportsArgs.builder()
+ *             .organizationId("string")
  *             .parameters(InventoryOnboardingCloudMonitoringImportsParametersArgs.builder()
  *                 .devices(InventoryOnboardingCloudMonitoringImportsParametersDeviceArgs.builder()
- *                     .deviceId(&#34;161b2602-a713-4aac-b1eb-d9b55205353d&#34;)
- *                     .networkId(&#34;1338481&#34;)
- *                     .udi(&#34;PID:C9200L-24P-4G SN:JAE25220R2K&#34;)
+ *                     .deviceId("161b2602-a713-4aac-b1eb-d9b55205353d")
+ *                     .networkId("1338481")
+ *                     .udi("PID:C9200L-24P-4G SN:JAE25220R2K")
  *                     .build())
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiOrganizationsInventoryOnboardingCloudMonitoringImportsExample&#34;, example);
+ *         ctx.export("merakiOrganizationsInventoryOnboardingCloudMonitoringImportsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

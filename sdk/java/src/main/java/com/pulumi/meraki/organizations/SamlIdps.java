@@ -17,7 +17,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -38,16 +39,17 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SamlIdps(&#34;example&#34;, SamlIdpsArgs.builder()        
- *             .organizationId(&#34;string&#34;)
- *             .sloLogoutUrl(&#34;https://somewhere.com&#34;)
- *             .x509certSha1Fingerprint(&#34;00:11:22:33:44:55:66:77:88:99:00:11:22:33:44:55:66:77:88:99&#34;)
+ *         var example = new SamlIdps("example", SamlIdpsArgs.builder()
+ *             .organizationId("string")
+ *             .sloLogoutUrl("https://somewhere.com")
+ *             .x509certSha1Fingerprint("00:11:22:33:44:55:66:77:88:99:00:11:22:33:44:55:66:77:88:99")
  *             .build());
  * 
- *         ctx.export(&#34;merakiOrganizationsSamlIdpsExample&#34;, example);
+ *         ctx.export("merakiOrganizationsSamlIdpsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

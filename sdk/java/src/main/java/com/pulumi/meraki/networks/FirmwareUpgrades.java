@@ -19,7 +19,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -57,23 +58,23 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new FirmwareUpgrades(&#34;example&#34;, FirmwareUpgradesArgs.builder()        
- *             .networkId(&#34;string&#34;)
+ *         var example = new FirmwareUpgrades("example", FirmwareUpgradesArgs.builder()
+ *             .networkId("string")
  *             .products(FirmwareUpgradesProductsArgs.builder()
  *                 .appliance(FirmwareUpgradesProductsApplianceArgs.builder()
  *                     .nextUpgrade(FirmwareUpgradesProductsApplianceNextUpgradeArgs.builder()
- *                         .time(&#34;2019-03-17T17:22:52Z&#34;)
+ *                         .time("2019-03-17T17:22:52Z")
  *                         .toVersion(FirmwareUpgradesProductsApplianceNextUpgradeToVersionArgs.builder()
- *                             .id(&#34;1001&#34;)
+ *                             .id("1001")
  *                             .build())
  *                         .build())
  *                     .participateInNextBetaRelease(false)
  *                     .build())
  *                 .camera(FirmwareUpgradesProductsCameraArgs.builder()
  *                     .nextUpgrade(FirmwareUpgradesProductsCameraNextUpgradeArgs.builder()
- *                         .time(&#34;2019-03-17T17:22:52Z&#34;)
+ *                         .time("2019-03-17T17:22:52Z")
  *                         .toVersion(FirmwareUpgradesProductsCameraNextUpgradeToVersionArgs.builder()
- *                             .id(&#34;1003&#34;)
+ *                             .id("1003")
  *                             .build())
  *                         .build())
  *                     .participateInNextBetaRelease(false)
@@ -81,18 +82,18 @@ import javax.annotation.Nullable;
  *                 .cellular_gateway(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .sensor(FirmwareUpgradesProductsSensorArgs.builder()
  *                     .nextUpgrade(FirmwareUpgradesProductsSensorNextUpgradeArgs.builder()
- *                         .time(&#34;2019-03-17T17:22:52Z&#34;)
+ *                         .time("2019-03-17T17:22:52Z")
  *                         .toVersion(FirmwareUpgradesProductsSensorNextUpgradeToVersionArgs.builder()
- *                             .id(&#34;1005&#34;)
+ *                             .id("1005")
  *                             .build())
  *                         .build())
  *                     .participateInNextBetaRelease(false)
  *                     .build())
  *                 .switch_(FirmwareUpgradesProductsSwitchArgs.builder()
  *                     .nextUpgrade(FirmwareUpgradesProductsSwitchNextUpgradeArgs.builder()
- *                         .time(&#34;2019-03-17T17:22:52Z&#34;)
+ *                         .time("2019-03-17T17:22:52Z")
  *                         .toVersion(FirmwareUpgradesProductsSwitchNextUpgradeToVersionArgs.builder()
- *                             .id(&#34;1002&#34;)
+ *                             .id("1002")
  *                             .build())
  *                         .build())
  *                     .participateInNextBetaRelease(false)
@@ -100,25 +101,26 @@ import javax.annotation.Nullable;
  *                 .switch_catalyst(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .wireless(FirmwareUpgradesProductsWirelessArgs.builder()
  *                     .nextUpgrade(FirmwareUpgradesProductsWirelessNextUpgradeArgs.builder()
- *                         .time(&#34;2019-03-17T17:22:52Z&#34;)
+ *                         .time("2019-03-17T17:22:52Z")
  *                         .toVersion(FirmwareUpgradesProductsWirelessNextUpgradeToVersionArgs.builder()
- *                             .id(&#34;1000&#34;)
+ *                             .id("1000")
  *                             .build())
  *                         .build())
  *                     .participateInNextBetaRelease(false)
  *                     .build())
  *                 .build())
- *             .timezone(&#34;America/Los_Angeles&#34;)
+ *             .timezone("America/Los_Angeles")
  *             .upgradeWindow(FirmwareUpgradesUpgradeWindowArgs.builder()
- *                 .day_of_week(&#34;sun&#34;)
- *                 .hour_of_day(&#34;4:00&#34;)
+ *                 .day_of_week("sun")
+ *                 .hour_of_day("4:00")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksFirmwareUpgradesExample&#34;, example);
+ *         ctx.export("merakiNetworksFirmwareUpgradesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

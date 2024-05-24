@@ -46,7 +46,7 @@ export class WirelessSsidsFirewallL3FirewallRules extends pulumi.CustomResource 
     /**
      * Allow wireless client access to local LAN (boolean value - true allows access and false denies access) (optional)
      */
-    public readonly allowLanAccess!: pulumi.Output<boolean>;
+    public readonly allowLanAccess!: pulumi.Output<boolean | undefined>;
     /**
      * networkId path parameter. Network ID
      */
@@ -59,6 +59,10 @@ export class WirelessSsidsFirewallL3FirewallRules extends pulumi.CustomResource 
      * An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
      */
     public readonly rules!: pulumi.Output<outputs.networks.WirelessSsidsFirewallL3FirewallRulesRule[]>;
+    /**
+     * An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
+     */
+    public readonly rulesResponses!: pulumi.Output<outputs.networks.WirelessSsidsFirewallL3FirewallRulesRulesResponse[]>;
 
     /**
      * Create a WirelessSsidsFirewallL3FirewallRules resource with the given unique name, arguments, and options.
@@ -77,6 +81,7 @@ export class WirelessSsidsFirewallL3FirewallRules extends pulumi.CustomResource 
             resourceInputs["networkId"] = state ? state.networkId : undefined;
             resourceInputs["number"] = state ? state.number : undefined;
             resourceInputs["rules"] = state ? state.rules : undefined;
+            resourceInputs["rulesResponses"] = state ? state.rulesResponses : undefined;
         } else {
             const args = argsOrState as WirelessSsidsFirewallL3FirewallRulesArgs | undefined;
             if ((!args || args.networkId === undefined) && !opts.urn) {
@@ -89,6 +94,7 @@ export class WirelessSsidsFirewallL3FirewallRules extends pulumi.CustomResource 
             resourceInputs["networkId"] = args ? args.networkId : undefined;
             resourceInputs["number"] = args ? args.number : undefined;
             resourceInputs["rules"] = args ? args.rules : undefined;
+            resourceInputs["rulesResponses"] = args ? args.rulesResponses : undefined;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(WirelessSsidsFirewallL3FirewallRules.__pulumiType, name, resourceInputs, opts);
@@ -115,6 +121,10 @@ export interface WirelessSsidsFirewallL3FirewallRulesState {
      * An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
      */
     rules?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsFirewallL3FirewallRulesRule>[]>;
+    /**
+     * An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
+     */
+    rulesResponses?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsFirewallL3FirewallRulesRulesResponse>[]>;
 }
 
 /**
@@ -137,4 +147,8 @@ export interface WirelessSsidsFirewallL3FirewallRulesArgs {
      * An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
      */
     rules?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsFirewallL3FirewallRulesRule>[]>;
+    /**
+     * An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
+     */
+    rulesResponses?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsFirewallL3FirewallRulesRulesResponse>[]>;
 }

@@ -18,7 +18,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -39,17 +40,18 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SmAdminsRoles(&#34;example&#34;, SmAdminsRolesArgs.builder()        
- *             .name(&#34;sample name&#34;)
- *             .organizationId(&#34;string&#34;)
- *             .scope(&#34;all_tags&#34;)
- *             .tags(&#34;tag&#34;)
+ *         var example = new SmAdminsRoles("example", SmAdminsRolesArgs.builder()
+ *             .name("sample name")
+ *             .organizationId("string")
+ *             .scope("all_tags")
+ *             .tags("tag")
  *             .build());
  * 
- *         ctx.export(&#34;merakiOrganizationsSmAdminsRolesExample&#34;, example);
+ *         ctx.export("merakiOrganizationsSmAdminsRolesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

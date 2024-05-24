@@ -19,7 +19,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -41,23 +42,24 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ApplianceFirewallPortForwardingRules(&#34;example&#34;, ApplianceFirewallPortForwardingRulesArgs.builder()        
- *             .networkId(&#34;string&#34;)
+ *         var example = new ApplianceFirewallPortForwardingRules("example", ApplianceFirewallPortForwardingRulesArgs.builder()
+ *             .networkId("string")
  *             .rules(ApplianceFirewallPortForwardingRulesRuleArgs.builder()
- *                 .allowed_ips(&#34;any&#34;)
- *                 .lan_ip(&#34;192.168.128.1&#34;)
- *                 .local_port(&#34;442-443&#34;)
- *                 .name(&#34;Description of Port Forwarding Rule&#34;)
- *                 .protocol(&#34;tcp&#34;)
- *                 .public_port(&#34;8100-8101&#34;)
- *                 .uplink(&#34;both&#34;)
+ *                 .allowed_ips("any")
+ *                 .lan_ip("192.168.128.1")
+ *                 .local_port("442-443")
+ *                 .name("Description of Port Forwarding Rule")
+ *                 .protocol("tcp")
+ *                 .public_port("8100-8101")
+ *                 .uplink("both")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksApplianceFirewallPortForwardingRulesExample&#34;, example);
+ *         ctx.export("merakiNetworksApplianceFirewallPortForwardingRulesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

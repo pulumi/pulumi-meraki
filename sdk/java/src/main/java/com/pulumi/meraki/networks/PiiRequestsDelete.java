@@ -20,7 +20,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -41,15 +42,16 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new PiiRequestsDelete(&#34;example&#34;, PiiRequestsDeleteArgs.builder()        
- *             .networkId(&#34;string&#34;)
- *             .requestId(&#34;string&#34;)
+ *         var example = new PiiRequestsDelete("example", PiiRequestsDeleteArgs.builder()
+ *             .networkId("string")
+ *             .requestId("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksPiiRequestsDeleteExample&#34;, example);
+ *         ctx.export("merakiNetworksPiiRequestsDeleteExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

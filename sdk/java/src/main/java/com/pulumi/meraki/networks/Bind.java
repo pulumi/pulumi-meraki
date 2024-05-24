@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,18 +45,19 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new Bind(&#34;example&#34;, BindArgs.builder()        
- *             .networkId(&#34;string&#34;)
+ *         var example = new Bind("example", BindArgs.builder()
+ *             .networkId("string")
  *             .parameters(BindParametersArgs.builder()
  *                 .auto_bind(false)
- *                 .config_template_id(&#34;N_23952905&#34;)
+ *                 .config_template_id("N_23952905")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksBindExample&#34;, example);
+ *         ctx.export("merakiNetworksBindExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -43,26 +44,27 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SwitchAlternateManagementInterface(&#34;example&#34;, SwitchAlternateManagementInterfaceArgs.builder()        
+ *         var example = new SwitchAlternateManagementInterface("example", SwitchAlternateManagementInterfaceArgs.builder()
  *             .enabled(true)
- *             .networkId(&#34;string&#34;)
+ *             .networkId("string")
  *             .protocols(            
- *                 &#34;radius&#34;,
- *                 &#34;snmp&#34;,
- *                 &#34;syslog&#34;)
+ *                 "radius",
+ *                 "snmp",
+ *                 "syslog")
  *             .switches(SwitchAlternateManagementInterfaceSwitchArgs.builder()
- *                 .alternate_management_ip(&#34;1.2.3.4&#34;)
- *                 .gateway(&#34;1.2.3.5&#34;)
- *                 .serial(&#34;Q234-ABCD-5678&#34;)
- *                 .subnet_mask(&#34;255.255.255.0&#34;)
+ *                 .alternate_management_ip("1.2.3.4")
+ *                 .gateway("1.2.3.5")
+ *                 .serial("Q234-ABCD-5678")
+ *                 .subnet_mask("255.255.255.0")
  *                 .build())
  *             .vlanId(100)
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksSwitchAlternateManagementInterfaceExample&#34;, example);
+ *         ctx.export("merakiNetworksSwitchAlternateManagementInterfaceExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

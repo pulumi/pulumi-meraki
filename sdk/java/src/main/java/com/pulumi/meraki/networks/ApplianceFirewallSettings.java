@@ -18,7 +18,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -40,17 +41,18 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ApplianceFirewallSettings(&#34;example&#34;, ApplianceFirewallSettingsArgs.builder()        
- *             .networkId(&#34;string&#34;)
+ *         var example = new ApplianceFirewallSettings("example", ApplianceFirewallSettingsArgs.builder()
+ *             .networkId("string")
  *             .spoofingProtection(ApplianceFirewallSettingsSpoofingProtectionArgs.builder()
  *                 .ip_source_guard(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksApplianceFirewallSettingsExample&#34;, example);
+ *         ctx.export("merakiNetworksApplianceFirewallSettingsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

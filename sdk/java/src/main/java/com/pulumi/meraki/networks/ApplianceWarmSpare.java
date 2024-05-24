@@ -20,7 +20,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -41,19 +42,20 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ApplianceWarmSpare(&#34;example&#34;, ApplianceWarmSpareArgs.builder()        
+ *         var example = new ApplianceWarmSpare("example", ApplianceWarmSpareArgs.builder()
  *             .enabled(true)
- *             .networkId(&#34;string&#34;)
- *             .spareSerial(&#34;Q234-ABCD-5678&#34;)
- *             .uplinkMode(&#34;virtual&#34;)
- *             .virtualIp1(&#34;1.2.3.4&#34;)
- *             .virtualIp2(&#34;1.2.3.4&#34;)
+ *             .networkId("string")
+ *             .spareSerial("Q234-ABCD-5678")
+ *             .uplinkMode("virtual")
+ *             .virtualIp1("1.2.3.4")
+ *             .virtualIp2("1.2.3.4")
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksApplianceWarmSpareExample&#34;, example);
+ *         ctx.export("merakiNetworksApplianceWarmSpareExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

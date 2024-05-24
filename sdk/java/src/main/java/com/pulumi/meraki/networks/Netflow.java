@@ -19,7 +19,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -40,19 +41,20 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new Netflow(&#34;example&#34;, NetflowArgs.builder()        
- *             .collectorIp(&#34;1.2.3.4&#34;)
+ *         var example = new Netflow("example", NetflowArgs.builder()
+ *             .collectorIp("1.2.3.4")
  *             .collectorPort(443)
  *             .etaDstPort(443)
  *             .etaEnabled(true)
- *             .networkId(&#34;string&#34;)
+ *             .networkId("string")
  *             .reportingEnabled(true)
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksNetflowExample&#34;, example);
+ *         ctx.export("merakiNetworksNetflowExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

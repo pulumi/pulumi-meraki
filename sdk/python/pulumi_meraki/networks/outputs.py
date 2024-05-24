@@ -18,6 +18,8 @@ __all__ = [
     'AlertsSettingsAlertsResponseAlertDestinations',
     'AlertsSettingsAlertsResponseFilters',
     'AlertsSettingsDefaultDestinations',
+    'AlertsSettingsMuting',
+    'AlertsSettingsMutingByPortSchedules',
     'ApplianceConnectivityMonitoringDestinationsDestination',
     'ApplianceContentFilteringBlockedUrlCategory',
     'ApplianceFirewallCellularFirewallRulesRule',
@@ -475,6 +477,7 @@ __all__ = [
     'WirelessSsidsEapOverrideEapolKey',
     'WirelessSsidsEapOverrideIdentity',
     'WirelessSsidsFirewallL3FirewallRulesRule',
+    'WirelessSsidsFirewallL3FirewallRulesRulesResponse',
     'WirelessSsidsFirewallL7FirewallRulesRule',
     'WirelessSsidsGre',
     'WirelessSsidsGreConcentrator',
@@ -1503,6 +1506,61 @@ class AlertsSettingsDefaultDestinations(dict):
         If true, then an SNMP trap will be sent if there is an SNMP trap server configured for this network.
         """
         return pulumi.get(self, "snmp")
+
+
+@pulumi.output_type
+class AlertsSettingsMuting(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "byPortSchedules":
+            suggest = "by_port_schedules"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in AlertsSettingsMuting. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        AlertsSettingsMuting.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        AlertsSettingsMuting.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 by_port_schedules: Optional['outputs.AlertsSettingsMutingByPortSchedules'] = None):
+        """
+        :param 'AlertsSettingsMutingByPortSchedulesArgs' by_port_schedules: by_port_schedules
+        """
+        if by_port_schedules is not None:
+            pulumi.set(__self__, "by_port_schedules", by_port_schedules)
+
+    @property
+    @pulumi.getter(name="byPortSchedules")
+    def by_port_schedules(self) -> Optional['outputs.AlertsSettingsMutingByPortSchedules']:
+        """
+        by_port_schedules
+        """
+        return pulumi.get(self, "by_port_schedules")
+
+
+@pulumi.output_type
+class AlertsSettingsMutingByPortSchedules(dict):
+    def __init__(__self__, *,
+                 enabled: Optional[bool] = None):
+        """
+        :param bool enabled: enabled
+        """
+        if enabled is not None:
+            pulumi.set(__self__, "enabled", enabled)
+
+    @property
+    @pulumi.getter
+    def enabled(self) -> Optional[bool]:
+        """
+        enabled
+        """
+        return pulumi.get(self, "enabled")
 
 
 @pulumi.output_type
@@ -26121,6 +26179,92 @@ class WirelessSsidsFirewallL3FirewallRulesRule(dict):
 
     def get(self, key: str, default = None) -> Any:
         WirelessSsidsFirewallL3FirewallRulesRule.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 comment: Optional[str] = None,
+                 dest_cidr: Optional[str] = None,
+                 dest_port: Optional[str] = None,
+                 policy: Optional[str] = None,
+                 protocol: Optional[str] = None):
+        """
+        :param str comment: Description of the rule (optional)
+        :param str dest_cidr: Comma-separated list of destination IP address(es) (in IP or CIDR notation), fully-qualified domain names (FQDN) or 'any'
+        :param str dest_port: Comma-separated list of destination port(s) (integer in the range 1-65535), or 'any'
+        :param str policy: 'allow' or 'deny' traffic specified by this rule
+        :param str protocol: The type of protocol (must be 'tcp', 'udp', 'icmp', 'icmp6' or 'any')
+        """
+        if comment is not None:
+            pulumi.set(__self__, "comment", comment)
+        if dest_cidr is not None:
+            pulumi.set(__self__, "dest_cidr", dest_cidr)
+        if dest_port is not None:
+            pulumi.set(__self__, "dest_port", dest_port)
+        if policy is not None:
+            pulumi.set(__self__, "policy", policy)
+        if protocol is not None:
+            pulumi.set(__self__, "protocol", protocol)
+
+    @property
+    @pulumi.getter
+    def comment(self) -> Optional[str]:
+        """
+        Description of the rule (optional)
+        """
+        return pulumi.get(self, "comment")
+
+    @property
+    @pulumi.getter(name="destCidr")
+    def dest_cidr(self) -> Optional[str]:
+        """
+        Comma-separated list of destination IP address(es) (in IP or CIDR notation), fully-qualified domain names (FQDN) or 'any'
+        """
+        return pulumi.get(self, "dest_cidr")
+
+    @property
+    @pulumi.getter(name="destPort")
+    def dest_port(self) -> Optional[str]:
+        """
+        Comma-separated list of destination port(s) (integer in the range 1-65535), or 'any'
+        """
+        return pulumi.get(self, "dest_port")
+
+    @property
+    @pulumi.getter
+    def policy(self) -> Optional[str]:
+        """
+        'allow' or 'deny' traffic specified by this rule
+        """
+        return pulumi.get(self, "policy")
+
+    @property
+    @pulumi.getter
+    def protocol(self) -> Optional[str]:
+        """
+        The type of protocol (must be 'tcp', 'udp', 'icmp', 'icmp6' or 'any')
+        """
+        return pulumi.get(self, "protocol")
+
+
+@pulumi.output_type
+class WirelessSsidsFirewallL3FirewallRulesRulesResponse(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "destCidr":
+            suggest = "dest_cidr"
+        elif key == "destPort":
+            suggest = "dest_port"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in WirelessSsidsFirewallL3FirewallRulesRulesResponse. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        WirelessSsidsFirewallL3FirewallRulesRulesResponse.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        WirelessSsidsFirewallL3FirewallRulesRulesResponse.__key_warning(key)
         return super().get(key, default)
 
     def __init__(__self__, *,

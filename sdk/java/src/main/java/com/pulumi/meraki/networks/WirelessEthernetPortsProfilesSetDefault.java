@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,17 +45,18 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new WirelessEthernetPortsProfilesSetDefault(&#34;example&#34;, WirelessEthernetPortsProfilesSetDefaultArgs.builder()        
- *             .networkId(&#34;string&#34;)
+ *         var example = new WirelessEthernetPortsProfilesSetDefault("example", WirelessEthernetPortsProfilesSetDefaultArgs.builder()
+ *             .networkId("string")
  *             .parameters(WirelessEthernetPortsProfilesSetDefaultParametersArgs.builder()
- *                 .profile_id(&#34;1001&#34;)
+ *                 .profile_id("1001")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksWirelessEthernetPortsProfilesSetDefaultExample&#34;, example);
+ *         ctx.export("merakiNetworksWirelessEthernetPortsProfilesSetDefaultExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -45,26 +46,27 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new Admins(&#34;example&#34;, AdminsArgs.builder()        
- *             .authenticationMethod(&#34;Email&#34;)
- *             .email(&#34;miles@meraki.com&#34;)
- *             .name(&#34;Miles Meraki&#34;)
+ *         var example = new Admins("example", AdminsArgs.builder()
+ *             .authenticationMethod("Email")
+ *             .email("miles{@literal @}meraki.com")
+ *             .name("Miles Meraki")
  *             .networks(AdminsNetworkArgs.builder()
- *                 .access(&#34;full&#34;)
- *                 .id(&#34;N_24329156&#34;)
+ *                 .access("full")
+ *                 .id("N_24329156")
  *                 .build())
- *             .orgAccess(&#34;none&#34;)
- *             .organizationId(&#34;string&#34;)
+ *             .orgAccess("none")
+ *             .organizationId("string")
  *             .tags(AdminsTagArgs.builder()
- *                 .access(&#34;read-only&#34;)
- *                 .tag(&#34;west&#34;)
+ *                 .access("read-only")
+ *                 .tag("west")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiOrganizationsAdminsExample&#34;, example);
+ *         ctx.export("merakiOrganizationsAdminsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

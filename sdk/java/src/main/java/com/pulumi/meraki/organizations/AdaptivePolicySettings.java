@@ -18,7 +18,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -39,19 +40,20 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new AdaptivePolicySettings(&#34;example&#34;, AdaptivePolicySettingsArgs.builder()        
+ *         var example = new AdaptivePolicySettings("example", AdaptivePolicySettingsArgs.builder()
  *             .enabledNetworks(            
- *                 &#34;L_11111111&#34;,
- *                 &#34;L_22222222&#34;,
- *                 &#34;N_33333333&#34;,
- *                 &#34;L_44444444&#34;)
- *             .organizationId(&#34;string&#34;)
+ *                 "L_11111111",
+ *                 "L_22222222",
+ *                 "N_33333333",
+ *                 "L_44444444")
+ *             .organizationId("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiOrganizationsAdaptivePolicySettingsExample&#34;, example);
+ *         ctx.export("merakiOrganizationsAdaptivePolicySettingsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

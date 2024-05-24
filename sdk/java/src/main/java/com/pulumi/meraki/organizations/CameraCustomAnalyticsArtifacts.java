@@ -18,7 +18,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -39,15 +40,16 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CameraCustomAnalyticsArtifacts(&#34;example&#34;, CameraCustomAnalyticsArtifactsArgs.builder()        
- *             .name(&#34;example&#34;)
- *             .organizationId(&#34;string&#34;)
+ *         var example = new CameraCustomAnalyticsArtifacts("example", CameraCustomAnalyticsArtifactsArgs.builder()
+ *             .name("example")
+ *             .organizationId("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiOrganizationsCameraCustomAnalyticsArtifactsExample&#34;, example);
+ *         ctx.export("merakiOrganizationsCameraCustomAnalyticsArtifactsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

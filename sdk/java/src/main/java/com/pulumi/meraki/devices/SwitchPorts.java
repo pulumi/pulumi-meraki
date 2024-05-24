@@ -23,7 +23,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -45,50 +46,51 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SwitchPorts(&#34;example&#34;, SwitchPortsArgs.builder()        
+ *         var example = new SwitchPorts("example", SwitchPortsArgs.builder()
  *             .accessPolicyNumber(2)
- *             .accessPolicyType(&#34;Sticky MAC allow list&#34;)
- *             .adaptivePolicyGroupId(&#34;123&#34;)
- *             .allowedVlans(&#34;1,3,5-10&#34;)
+ *             .accessPolicyType("Sticky MAC allow list")
+ *             .adaptivePolicyGroupId("123")
+ *             .allowedVlans("1,3,5-10")
  *             .daiTrusted(false)
  *             .enabled(true)
  *             .flexibleStackingEnabled(true)
  *             .isolationEnabled(false)
- *             .linkNegotiation(&#34;Auto negotiate&#34;)
+ *             .linkNegotiation("Auto negotiate")
  *             .macAllowLists(            
- *                 &#34;34:56:fe:ce:8e:b0&#34;,
- *                 &#34;34:56:fe:ce:8e:b1&#34;)
- *             .name(&#34;My switch port&#34;)
+ *                 "34:56:fe:ce:8e:b0",
+ *                 "34:56:fe:ce:8e:b1")
+ *             .name("My switch port")
  *             .peerSgtCapable(false)
  *             .poeEnabled(true)
- *             .portId(&#34;string&#34;)
- *             .portScheduleId(&#34;1234&#34;)
+ *             .portId("string")
+ *             .portScheduleId("1234")
  *             .profile(SwitchPortsProfileArgs.builder()
  *                 .enabled(false)
- *                 .id(&#34;1284392014819&#34;)
- *                 .iname(&#34;iname&#34;)
+ *                 .id("1284392014819")
+ *                 .iname("iname")
  *                 .build())
  *             .rstpEnabled(true)
- *             .serial(&#34;string&#34;)
+ *             .serial("string")
  *             .stickyMacAllowLists(            
- *                 &#34;34:56:fe:ce:8e:b0&#34;,
- *                 &#34;34:56:fe:ce:8e:b1&#34;)
+ *                 "34:56:fe:ce:8e:b0",
+ *                 "34:56:fe:ce:8e:b1")
  *             .stickyMacAllowListLimit(5)
  *             .stormControlEnabled(true)
- *             .stpGuard(&#34;disabled&#34;)
+ *             .stpGuard("disabled")
  *             .tags(            
- *                 &#34;tag1&#34;,
- *                 &#34;tag2&#34;)
- *             .type(&#34;access&#34;)
- *             .udld(&#34;Alert only&#34;)
+ *                 "tag1",
+ *                 "tag2")
+ *             .type("access")
+ *             .udld("Alert only")
  *             .vlan(10)
  *             .voiceVlan(20)
  *             .build());
  * 
- *         ctx.export(&#34;merakiDevicesSwitchPortsExample&#34;, example);
+ *         ctx.export("merakiDevicesSwitchPortsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

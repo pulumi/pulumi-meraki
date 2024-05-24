@@ -17,6 +17,8 @@ __all__ = [
     'AlertsSettingsAlertsResponseAlertDestinationsArgs',
     'AlertsSettingsAlertsResponseFiltersArgs',
     'AlertsSettingsDefaultDestinationsArgs',
+    'AlertsSettingsMutingArgs',
+    'AlertsSettingsMutingByPortSchedulesArgs',
     'ApplianceConnectivityMonitoringDestinationsDestinationArgs',
     'ApplianceContentFilteringBlockedUrlCategoryArgs',
     'ApplianceFirewallCellularFirewallRulesRuleArgs',
@@ -474,6 +476,7 @@ __all__ = [
     'WirelessSsidsEapOverrideEapolKeyArgs',
     'WirelessSsidsEapOverrideIdentityArgs',
     'WirelessSsidsFirewallL3FirewallRulesRuleArgs',
+    'WirelessSsidsFirewallL3FirewallRulesRulesResponseArgs',
     'WirelessSsidsFirewallL7FirewallRulesRuleArgs',
     'WirelessSsidsGreArgs',
     'WirelessSsidsGreConcentratorArgs',
@@ -960,6 +963,52 @@ class AlertsSettingsDefaultDestinationsArgs:
     @snmp.setter
     def snmp(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "snmp", value)
+
+
+@pulumi.input_type
+class AlertsSettingsMutingArgs:
+    def __init__(__self__, *,
+                 by_port_schedules: Optional[pulumi.Input['AlertsSettingsMutingByPortSchedulesArgs']] = None):
+        """
+        :param pulumi.Input['AlertsSettingsMutingByPortSchedulesArgs'] by_port_schedules: by_port_schedules
+        """
+        if by_port_schedules is not None:
+            pulumi.set(__self__, "by_port_schedules", by_port_schedules)
+
+    @property
+    @pulumi.getter(name="byPortSchedules")
+    def by_port_schedules(self) -> Optional[pulumi.Input['AlertsSettingsMutingByPortSchedulesArgs']]:
+        """
+        by_port_schedules
+        """
+        return pulumi.get(self, "by_port_schedules")
+
+    @by_port_schedules.setter
+    def by_port_schedules(self, value: Optional[pulumi.Input['AlertsSettingsMutingByPortSchedulesArgs']]):
+        pulumi.set(self, "by_port_schedules", value)
+
+
+@pulumi.input_type
+class AlertsSettingsMutingByPortSchedulesArgs:
+    def __init__(__self__, *,
+                 enabled: Optional[pulumi.Input[bool]] = None):
+        """
+        :param pulumi.Input[bool] enabled: enabled
+        """
+        if enabled is not None:
+            pulumi.set(__self__, "enabled", enabled)
+
+    @property
+    @pulumi.getter
+    def enabled(self) -> Optional[pulumi.Input[bool]]:
+        """
+        enabled
+        """
+        return pulumi.get(self, "enabled")
+
+    @enabled.setter
+    def enabled(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "enabled", value)
 
 
 @pulumi.input_type
@@ -25852,6 +25901,93 @@ class WirelessSsidsEapOverrideIdentityArgs:
 
 @pulumi.input_type
 class WirelessSsidsFirewallL3FirewallRulesRuleArgs:
+    def __init__(__self__, *,
+                 comment: Optional[pulumi.Input[str]] = None,
+                 dest_cidr: Optional[pulumi.Input[str]] = None,
+                 dest_port: Optional[pulumi.Input[str]] = None,
+                 policy: Optional[pulumi.Input[str]] = None,
+                 protocol: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[str] comment: Description of the rule (optional)
+        :param pulumi.Input[str] dest_cidr: Comma-separated list of destination IP address(es) (in IP or CIDR notation), fully-qualified domain names (FQDN) or 'any'
+        :param pulumi.Input[str] dest_port: Comma-separated list of destination port(s) (integer in the range 1-65535), or 'any'
+        :param pulumi.Input[str] policy: 'allow' or 'deny' traffic specified by this rule
+        :param pulumi.Input[str] protocol: The type of protocol (must be 'tcp', 'udp', 'icmp', 'icmp6' or 'any')
+        """
+        if comment is not None:
+            pulumi.set(__self__, "comment", comment)
+        if dest_cidr is not None:
+            pulumi.set(__self__, "dest_cidr", dest_cidr)
+        if dest_port is not None:
+            pulumi.set(__self__, "dest_port", dest_port)
+        if policy is not None:
+            pulumi.set(__self__, "policy", policy)
+        if protocol is not None:
+            pulumi.set(__self__, "protocol", protocol)
+
+    @property
+    @pulumi.getter
+    def comment(self) -> Optional[pulumi.Input[str]]:
+        """
+        Description of the rule (optional)
+        """
+        return pulumi.get(self, "comment")
+
+    @comment.setter
+    def comment(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "comment", value)
+
+    @property
+    @pulumi.getter(name="destCidr")
+    def dest_cidr(self) -> Optional[pulumi.Input[str]]:
+        """
+        Comma-separated list of destination IP address(es) (in IP or CIDR notation), fully-qualified domain names (FQDN) or 'any'
+        """
+        return pulumi.get(self, "dest_cidr")
+
+    @dest_cidr.setter
+    def dest_cidr(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "dest_cidr", value)
+
+    @property
+    @pulumi.getter(name="destPort")
+    def dest_port(self) -> Optional[pulumi.Input[str]]:
+        """
+        Comma-separated list of destination port(s) (integer in the range 1-65535), or 'any'
+        """
+        return pulumi.get(self, "dest_port")
+
+    @dest_port.setter
+    def dest_port(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "dest_port", value)
+
+    @property
+    @pulumi.getter
+    def policy(self) -> Optional[pulumi.Input[str]]:
+        """
+        'allow' or 'deny' traffic specified by this rule
+        """
+        return pulumi.get(self, "policy")
+
+    @policy.setter
+    def policy(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "policy", value)
+
+    @property
+    @pulumi.getter
+    def protocol(self) -> Optional[pulumi.Input[str]]:
+        """
+        The type of protocol (must be 'tcp', 'udp', 'icmp', 'icmp6' or 'any')
+        """
+        return pulumi.get(self, "protocol")
+
+    @protocol.setter
+    def protocol(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "protocol", value)
+
+
+@pulumi.input_type
+class WirelessSsidsFirewallL3FirewallRulesRulesResponseArgs:
     def __init__(__self__, *,
                  comment: Optional[pulumi.Input[str]] = None,
                  dest_cidr: Optional[pulumi.Input[str]] = None,

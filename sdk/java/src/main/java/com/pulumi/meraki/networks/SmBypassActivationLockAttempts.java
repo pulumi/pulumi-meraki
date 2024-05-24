@@ -20,7 +20,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -41,17 +42,18 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SmBypassActivationLockAttempts(&#34;example&#34;, SmBypassActivationLockAttemptsArgs.builder()        
+ *         var example = new SmBypassActivationLockAttempts("example", SmBypassActivationLockAttemptsArgs.builder()
  *             .ids(            
- *                 &#34;1284392014819&#34;,
- *                 &#34;2983092129865&#34;)
- *             .networkId(&#34;string&#34;)
+ *                 "1284392014819",
+ *                 "2983092129865")
+ *             .networkId("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksSmBypassActivationLockAttemptsExample&#34;, example);
+ *         ctx.export("merakiNetworksSmBypassActivationLockAttemptsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

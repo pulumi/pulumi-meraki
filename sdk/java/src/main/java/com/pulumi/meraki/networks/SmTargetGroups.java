@@ -19,7 +19,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -40,16 +41,17 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SmTargetGroups(&#34;example&#34;, SmTargetGroupsArgs.builder()        
- *             .name(&#34;Target group name&#34;)
- *             .networkId(&#34;string&#34;)
- *             .scope(&#34;withAny, tag1, tag2&#34;)
+ *         var example = new SmTargetGroups("example", SmTargetGroupsArgs.builder()
+ *             .name("Target group name")
+ *             .networkId("string")
+ *             .scope("withAny, tag1, tag2")
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksSmTargetGroupsExample&#34;, example);
+ *         ctx.export("merakiNetworksSmTargetGroupsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

@@ -18,7 +18,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -39,15 +40,16 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ApplianceVlansSettings(&#34;example&#34;, ApplianceVlansSettingsArgs.builder()        
- *             .networkId(&#34;string&#34;)
+ *         var example = new ApplianceVlansSettings("example", ApplianceVlansSettingsArgs.builder()
+ *             .networkId("string")
  *             .vlansEnabled(true)
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksApplianceVlansSettingsExample&#34;, example);
+ *         ctx.export("merakiNetworksApplianceVlansSettingsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,19 +45,20 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new VlanProfilesAssignmentsReassign(&#34;example&#34;, VlanProfilesAssignmentsReassignArgs.builder()        
- *             .networkId(&#34;string&#34;)
+ *         var example = new VlanProfilesAssignmentsReassign("example", VlanProfilesAssignmentsReassignArgs.builder()
+ *             .networkId("string")
  *             .parameters(VlanProfilesAssignmentsReassignParametersArgs.builder()
- *                 .serials(&#34;Q234-ABCD-5678&#34;)
- *                 .stack_ids(&#34;1234&#34;)
+ *                 .serials("Q234-ABCD-5678")
+ *                 .stack_ids("1234")
  *                 .vlan_profile(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksVlanProfilesAssignmentsReassignExample&#34;, example);
+ *         ctx.export("merakiNetworksVlanProfilesAssignmentsReassignExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

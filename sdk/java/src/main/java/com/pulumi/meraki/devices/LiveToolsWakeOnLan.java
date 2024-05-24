@@ -20,7 +20,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -42,22 +43,23 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new LiveToolsWakeOnLan(&#34;example&#34;, LiveToolsWakeOnLanArgs.builder()        
+ *         var example = new LiveToolsWakeOnLan("example", LiveToolsWakeOnLanArgs.builder()
  *             .callback(LiveToolsWakeOnLanCallbackArgs.builder()
  *                 .http_server(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .payload_template(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
- *                 .shared_secret(&#34;secret&#34;)
- *                 .url(&#34;https://webhook.site/28efa24e-f830-4d9f-a12b-fbb9e5035031&#34;)
+ *                 .shared_secret("secret")
+ *                 .url("https://webhook.site/28efa24e-f830-4d9f-a12b-fbb9e5035031")
  *                 .build())
- *             .mac(&#34;00:11:22:33:44:55&#34;)
- *             .serial(&#34;string&#34;)
+ *             .mac("00:11:22:33:44:55")
+ *             .serial("string")
  *             .vlanId(12)
  *             .build());
  * 
- *         ctx.export(&#34;merakiDevicesLiveToolsWakeOnLanExample&#34;, example);
+ *         ctx.export("merakiDevicesLiveToolsWakeOnLanExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

@@ -18,7 +18,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -39,17 +40,18 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new PolicyObjectsGroups(&#34;example&#34;, PolicyObjectsGroupsArgs.builder()        
- *             .category(&#34;NetworkObjectGroup&#34;)
- *             .name(&#34;Web Servers - Datacenter 10&#34;)
+ *         var example = new PolicyObjectsGroups("example", PolicyObjectsGroupsArgs.builder()
+ *             .category("NetworkObjectGroup")
+ *             .name("Web Servers - Datacenter 10")
  *             .objectIds(100)
- *             .organizationId(&#34;string&#34;)
+ *             .organizationId("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiOrganizationsPolicyObjectsGroupsExample&#34;, example);
+ *         ctx.export("merakiOrganizationsPolicyObjectsGroupsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

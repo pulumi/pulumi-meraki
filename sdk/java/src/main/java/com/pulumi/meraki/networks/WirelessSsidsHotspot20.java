@@ -23,7 +23,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -48,44 +49,45 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new WirelessSsidsHotspot20(&#34;example&#34;, WirelessSsidsHotspot20Args.builder()        
+ *         var example = new WirelessSsidsHotspot20("example", WirelessSsidsHotspot20Args.builder()
  *             .domains(            
- *                 &#34;meraki.local&#34;,
- *                 &#34;domain2.com&#34;)
+ *                 "meraki.local",
+ *                 "domain2.com")
  *             .enabled(true)
  *             .mccMncs(WirelessSsidsHotspot20MccMncArgs.builder()
- *                 .mcc(&#34;123&#34;)
- *                 .mnc(&#34;456&#34;)
+ *                 .mcc("123")
+ *                 .mnc("456")
  *                 .build())
  *             .naiRealms(WirelessSsidsHotspot20NaiRealmArgs.builder()
- *                 .format(&#34;1&#34;)
+ *                 .format("1")
  *                 .methods(WirelessSsidsHotspot20NaiRealmMethodArgs.builder()
  *                     .authenticationTypes(WirelessSsidsHotspot20NaiRealmMethodAuthenticationTypesArgs.builder()
- *                         .eapinnerAuthentication(&#34;EAP-TTLS with MSCHAPv2&#34;)
- *                         .nonEapinnerAuthentication(&#34;MSCHAP&#34;)
+ *                         .eapinnerAuthentication("EAP-TTLS with MSCHAPv2")
+ *                         .nonEapinnerAuthentication("MSCHAP")
  *                         .build())
- *                     .id(&#34;1&#34;)
+ *                     .id("1")
  *                     .build())
  *                 .build())
- *             .networkAccessType(&#34;Private network&#34;)
- *             .networkId(&#34;string&#34;)
- *             .number(&#34;string&#34;)
+ *             .networkAccessType("Private network")
+ *             .networkId("string")
+ *             .number("string")
  *             .operator(WirelessSsidsHotspot20OperatorArgs.builder()
- *                 .name(&#34;Meraki Product Management&#34;)
+ *                 .name("Meraki Product Management")
  *                 .build())
  *             .roamConsortOis(            
- *                 &#34;ABC123&#34;,
- *                 &#34;456EFG&#34;)
+ *                 "ABC123",
+ *                 "456EFG")
  *             .venue(WirelessSsidsHotspot20VenueArgs.builder()
- *                 .name(&#34;SF Branch&#34;)
- *                 .type(&#34;Unspecified Assembly&#34;)
+ *                 .name("SF Branch")
+ *                 .type("Unspecified Assembly")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksWirelessSsidsHotspot20Example&#34;, example);
+ *         ctx.export("merakiNetworksWirelessSsidsHotspot20Example", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

@@ -23,7 +23,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -45,20 +46,21 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SmDevicesFields(&#34;example&#34;, SmDevicesFieldsArgs.builder()        
- *             .networkId(&#34;string&#34;)
+ *         var example = new SmDevicesFields("example", SmDevicesFieldsArgs.builder()
+ *             .networkId("string")
  *             .parameters(SmDevicesFieldsParametersArgs.builder()
  *                 .device_fields(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
- *                 .id(&#34;1284392014819&#34;)
- *                 .serial(&#34;XY0XX0Y0X0&#34;)
- *                 .wifi_mac(&#34;00:11:22:33:44:55&#34;)
+ *                 .id("1284392014819")
+ *                 .serial("XY0XX0Y0X0")
+ *                 .wifi_mac("00:11:22:33:44:55")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksSmDevicesFieldsExample&#34;, example);
+ *         ctx.export("merakiNetworksSmDevicesFieldsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

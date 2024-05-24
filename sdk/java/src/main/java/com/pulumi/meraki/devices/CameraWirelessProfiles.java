@@ -18,7 +18,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -40,19 +41,20 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CameraWirelessProfiles(&#34;example&#34;, CameraWirelessProfilesArgs.builder()        
+ *         var example = new CameraWirelessProfiles("example", CameraWirelessProfilesArgs.builder()
  *             .ids(CameraWirelessProfilesIdsArgs.builder()
- *                 .backup(&#34;1&#34;)
- *                 .primary(&#34;3&#34;)
- *                 .secondary(&#34;2&#34;)
+ *                 .backup("1")
+ *                 .primary("3")
+ *                 .secondary("2")
  *                 .build())
- *             .serial(&#34;string&#34;)
+ *             .serial("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiDevicesCameraWirelessProfilesExample&#34;, example);
+ *         ctx.export("merakiDevicesCameraWirelessProfilesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

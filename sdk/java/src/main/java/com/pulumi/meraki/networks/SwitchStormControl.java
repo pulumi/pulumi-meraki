@@ -18,7 +18,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -39,17 +40,18 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SwitchStormControl(&#34;example&#34;, SwitchStormControlArgs.builder()        
+ *         var example = new SwitchStormControl("example", SwitchStormControlArgs.builder()
  *             .broadcastThreshold(30)
  *             .multicastThreshold(30)
- *             .networkId(&#34;string&#34;)
+ *             .networkId("string")
  *             .unknownUnicastThreshold(30)
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksSwitchStormControlExample&#34;, example);
+ *         ctx.export("merakiNetworksSwitchStormControlExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

@@ -23,7 +23,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -57,18 +58,18 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new GroupPolicies(&#34;example&#34;, GroupPoliciesArgs.builder()        
+ *         var example = new GroupPolicies("example", GroupPoliciesArgs.builder()
  *             .bandwidth(GroupPoliciesBandwidthArgs.builder()
  *                 .bandwidth_limits(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
- *                 .settings(&#34;custom&#34;)
+ *                 .settings("custom")
  *                 .build())
  *             .bonjourForwarding(GroupPoliciesBonjourForwardingArgs.builder()
  *                 .rules(GroupPoliciesBonjourForwardingRuleArgs.builder()
- *                     .description(&#34;A simple bonjour rule&#34;)
- *                     .services(&#34;All Services&#34;)
- *                     .vlanId(&#34;1&#34;)
+ *                     .description("A simple bonjour rule")
+ *                     .services("All Services")
+ *                     .vlanId("1")
  *                     .build())
- *                 .settings(&#34;custom&#34;)
+ *                 .settings("custom")
  *                 .build())
  *             .contentFiltering(GroupPoliciesContentFilteringArgs.builder()
  *                 .allowed_url_patterns(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
@@ -78,60 +79,61 @@ import javax.annotation.Nullable;
  *             .firewallAndTrafficShaping(GroupPoliciesFirewallAndTrafficShapingArgs.builder()
  *                 .l3_firewall_rules(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .l7_firewall_rules(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
- *                 .settings(&#34;custom&#34;)
+ *                 .settings("custom")
  *                 .traffic_shaping_rules(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .build())
- *             .name(&#34;No video streaming&#34;)
- *             .networkId(&#34;string&#34;)
+ *             .name("No video streaming")
+ *             .networkId("string")
  *             .scheduling(GroupPoliciesSchedulingArgs.builder()
  *                 .enabled(true)
  *                 .friday(GroupPoliciesSchedulingFridayArgs.builder()
  *                     .active(true)
- *                     .from(&#34;9:00&#34;)
- *                     .to(&#34;17:00&#34;)
+ *                     .from("9:00")
+ *                     .to("17:00")
  *                     .build())
  *                 .monday(GroupPoliciesSchedulingMondayArgs.builder()
  *                     .active(true)
- *                     .from(&#34;9:00&#34;)
- *                     .to(&#34;17:00&#34;)
+ *                     .from("9:00")
+ *                     .to("17:00")
  *                     .build())
  *                 .saturday(GroupPoliciesSchedulingSaturdayArgs.builder()
  *                     .active(true)
- *                     .from(&#34;9:00&#34;)
- *                     .to(&#34;17:00&#34;)
+ *                     .from("9:00")
+ *                     .to("17:00")
  *                     .build())
  *                 .sunday(GroupPoliciesSchedulingSundayArgs.builder()
  *                     .active(true)
- *                     .from(&#34;9:00&#34;)
- *                     .to(&#34;17:00&#34;)
+ *                     .from("9:00")
+ *                     .to("17:00")
  *                     .build())
  *                 .thursday(GroupPoliciesSchedulingThursdayArgs.builder()
  *                     .active(true)
- *                     .from(&#34;9:00&#34;)
- *                     .to(&#34;17:00&#34;)
+ *                     .from("9:00")
+ *                     .to("17:00")
  *                     .build())
  *                 .tuesday(GroupPoliciesSchedulingTuesdayArgs.builder()
  *                     .active(true)
- *                     .from(&#34;9:00&#34;)
- *                     .to(&#34;17:00&#34;)
+ *                     .from("9:00")
+ *                     .to("17:00")
  *                     .build())
  *                 .wednesday(GroupPoliciesSchedulingWednesdayArgs.builder()
  *                     .active(true)
- *                     .from(&#34;9:00&#34;)
- *                     .to(&#34;17:00&#34;)
+ *                     .from("9:00")
+ *                     .to("17:00")
  *                     .build())
  *                 .build())
- *             .splashAuthSettings(&#34;bypass&#34;)
+ *             .splashAuthSettings("bypass")
  *             .vlanTagging(GroupPoliciesVlanTaggingArgs.builder()
- *                 .settings(&#34;custom&#34;)
- *                 .vlan_id(&#34;1&#34;)
+ *                 .settings("custom")
+ *                 .vlan_id("1")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksGroupPoliciesExample&#34;, example);
+ *         ctx.export("merakiNetworksGroupPoliciesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

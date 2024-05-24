@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.meraki.networks.inputs.AlertsSettingsAlertArgs;
 import com.pulumi.meraki.networks.inputs.AlertsSettingsDefaultDestinationsArgs;
+import com.pulumi.meraki.networks.inputs.AlertsSettingsMutingArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -50,6 +51,21 @@ public final class AlertsSettingsArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
+     * muting
+     * 
+     */
+    @Import(name="muting")
+    private @Nullable Output<AlertsSettingsMutingArgs> muting;
+
+    /**
+     * @return muting
+     * 
+     */
+    public Optional<Output<AlertsSettingsMutingArgs>> muting() {
+        return Optional.ofNullable(this.muting);
+    }
+
+    /**
      * networkId path parameter. Network ID
      * 
      */
@@ -69,6 +85,7 @@ public final class AlertsSettingsArgs extends com.pulumi.resources.ResourceArgs 
     private AlertsSettingsArgs(AlertsSettingsArgs $) {
         this.alerts = $.alerts;
         this.defaultDestinations = $.defaultDestinations;
+        this.muting = $.muting;
         this.networkId = $.networkId;
     }
 
@@ -140,6 +157,27 @@ public final class AlertsSettingsArgs extends com.pulumi.resources.ResourceArgs 
          */
         public Builder defaultDestinations(AlertsSettingsDefaultDestinationsArgs defaultDestinations) {
             return defaultDestinations(Output.of(defaultDestinations));
+        }
+
+        /**
+         * @param muting muting
+         * 
+         * @return builder
+         * 
+         */
+        public Builder muting(@Nullable Output<AlertsSettingsMutingArgs> muting) {
+            $.muting = muting;
+            return this;
+        }
+
+        /**
+         * @param muting muting
+         * 
+         * @return builder
+         * 
+         */
+        public Builder muting(AlertsSettingsMutingArgs muting) {
+            return muting(Output.of(muting));
         }
 
         /**

@@ -35,7 +35,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -75,37 +76,37 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new WirelessSsids(&#34;example&#34;, WirelessSsidsArgs.builder()        
+ *         var example = new WirelessSsids("example", WirelessSsidsArgs.builder()
  *             .activeDirectory(WirelessSsidsActiveDirectoryArgs.builder()
  *                 .credentials(WirelessSsidsActiveDirectoryCredentialsArgs.builder()
- *                     .logonName(&#34;user&#34;)
- *                     .password(&#34;password&#34;)
+ *                     .logonName("user")
+ *                     .password("password")
  *                     .build())
  *                 .servers(WirelessSsidsActiveDirectoryServerArgs.builder()
- *                     .host(&#34;127.0.0.1&#34;)
+ *                     .host("127.0.0.1")
  *                     .port(3268)
  *                     .build())
  *                 .build())
  *             .adultContentFilteringEnabled(false)
  *             .apTagsAndVlanIds(WirelessSsidsApTagsAndVlanIdArgs.builder()
  *                 .tags(                
- *                     &#34;tag1&#34;,
- *                     &#34;tag2&#34;)
+ *                     "tag1",
+ *                     "tag2")
  *                 .vlan_id(100)
  *                 .build())
- *             .authMode(&#34;8021x-radius&#34;)
+ *             .authMode("8021x-radius")
  *             .availabilityTags(            
- *                 &#34;tag1&#34;,
- *                 &#34;tag2&#34;)
+ *                 "tag1",
+ *                 "tag2")
  *             .availableOnAllAps(false)
- *             .bandSelection(&#34;5 GHz band only&#34;)
- *             .concentratorNetworkId(&#34;N_24329156&#34;)
+ *             .bandSelection("5 GHz band only")
+ *             .concentratorNetworkId("N_24329156")
  *             .defaultVlanId(1)
  *             .disassociateClientsOnVpnFailover(false)
  *             .dnsRewrite(WirelessSsidsDnsRewriteArgs.builder()
  *                 .dns_custom_nameservers(                
- *                     &#34;8.8.8.8&#34;,
- *                     &#34;8.8.4.4&#34;)
+ *                     "8.8.8.8",
+ *                     "8.8.4.4")
  *                 .enabled(true)
  *                 .build())
  *             .dot11r(WirelessSsidsDot11rArgs.builder()
@@ -117,25 +118,25 @@ import javax.annotation.Nullable;
  *                 .required(false)
  *                 .build())
  *             .enabled(true)
- *             .encryptionMode(&#34;wpa&#34;)
- *             .enterpriseAdminAccess(&#34;access enabled&#34;)
+ *             .encryptionMode("wpa")
+ *             .enterpriseAdminAccess("access enabled")
  *             .gre(WirelessSsidsGreArgs.builder()
  *                 .concentrator(WirelessSsidsGreConcentratorArgs.builder()
- *                     .host(&#34;192.168.1.1&#34;)
+ *                     .host("192.168.1.1")
  *                     .build())
  *                 .key(5)
  *                 .build())
- *             .ipAssignmentMode(&#34;NAT mode&#34;)
+ *             .ipAssignmentMode("NAT mode")
  *             .lanIsolationEnabled(true)
  *             .ldap(WirelessSsidsLdapArgs.builder()
- *                 .base_distinguished_name(&#34;dc=example,dc=com&#34;)
+ *                 .base_distinguished_name("dc=example,dc=com")
  *                 .credentials(WirelessSsidsLdapCredentialsArgs.builder()
- *                     .distinguishedName(&#34;cn=user,dc=example,dc=com&#34;)
- *                     .password(&#34;password&#34;)
+ *                     .distinguishedName("cn=user,dc=example,dc=com")
+ *                     .password("password")
  *                     .build())
  *                 .server_ca_certificate(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .servers(WirelessSsidsLdapServerArgs.builder()
- *                     .host(&#34;127.0.0.1&#34;)
+ *                     .host("127.0.0.1")
  *                     .port(389)
  *                     .build())
  *                 .build())
@@ -146,40 +147,40 @@ import javax.annotation.Nullable;
  *                 .build())
  *             .mandatoryDhcpEnabled(false)
  *             .minBitrate(5.5)
- *             .name(&#34;My SSID&#34;)
+ *             .name("My SSID")
  *             .namedVlans(WirelessSsidsNamedVlansArgs.builder()
  *                 .radius(WirelessSsidsNamedVlansRadiusArgs.builder()
  *                     .guestVlan(WirelessSsidsNamedVlansRadiusGuestVlanArgs.builder()
  *                         .enabled(true)
- *                         .name(&#34;Guest VLAN&#34;)
+ *                         .name("Guest VLAN")
  *                         .build())
  *                     .build())
  *                 .tagging(WirelessSsidsNamedVlansTaggingArgs.builder()
  *                     .byApTags(WirelessSsidsNamedVlansTaggingByApTagArgs.builder()
  *                         .tags(                        
- *                             &#34;tag1&#34;,
- *                             &#34;tag2&#34;)
- *                         .vlanName(&#34;My VLAN&#34;)
+ *                             "tag1",
+ *                             "tag2")
+ *                         .vlanName("My VLAN")
  *                         .build())
- *                     .defaultVlanName(&#34;My VLAN&#34;)
+ *                     .defaultVlanName("My VLAN")
  *                     .enabled(true)
  *                     .build())
  *                 .build())
- *             .networkId(&#34;string&#34;)
- *             .number(&#34;string&#34;)
+ *             .networkId("string")
+ *             .number("string")
  *             .oauth(WirelessSsidsOauthArgs.builder()
- *                 .allowed_domains(&#34;example.com&#34;)
+ *                 .allowed_domains("example.com")
  *                 .build())
  *             .perClientBandwidthLimitDown(1)
  *             .perClientBandwidthLimitUp(1)
  *             .perSsidBandwidthLimitDown(1)
  *             .perSsidBandwidthLimitUp(1)
- *             .psk(&#34;deadbeef&#34;)
+ *             .psk("deadbeef")
  *             .radiusAccountingEnabled(true)
  *             .radiusAccountingInterimInterval(5)
  *             .radiusAccountingServers(WirelessSsidsRadiusAccountingServerArgs.builder()
- *                 .ca_certificate(&#34;&#34;&#34;
- *           &#34;-----BEGIN CERTIFICATE-----
+ *                 .ca_certificate("""
+ *           "-----BEGIN CERTIFICATE-----
  *         MIIDyTCCArGgAwIBAgIKBBNXOVCGU1YztjANBgkqhkiG9w0BAQsFADAnMQ4wDAYD
  *         VQQKEwVDaXNjbzEVMBMGA1UEAxMMQUNUMiBTVURJIENBMB4XDTIxMDUzMTEzNTUx
  *         NVoXDTI5MDUxNDIwMjU0MVowbTEpMCcGA1UEBRMgUElEOkM5MjAwTC0yNFAtNEcg
@@ -202,29 +203,29 @@ import javax.annotation.Nullable;
  *         0m3M6yKpe5+VZzHZwmWdUf3Ot+zKjhveK5/YNsMIASdvtvymxUizq2Hr1hvR/kPc
  *         p1vuyWxipU8JfzOh/A==
  *         -----END CERTIFICATE-----
- *         &#34;
- *                 &#34;&#34;&#34;)
- *                 .host(&#34;0.0.0.0&#34;)
+ *         "
+ *                 """)
+ *                 .host("0.0.0.0")
  *                 .port(3000)
  *                 .radsec_enabled(true)
- *                 .secret(&#34;secret-string&#34;)
+ *                 .secret("secret-string")
  *                 .build())
- *             .radiusAttributeForGroupPolicies(&#34;Filter-Id&#34;)
- *             .radiusAuthenticationNasId(&#34;00-11-22-33-44-55:AP1&#34;)
- *             .radiusCalledStationId(&#34;00-11-22-33-44-55:AP1&#34;)
+ *             .radiusAttributeForGroupPolicies("Filter-Id")
+ *             .radiusAuthenticationNasId("00-11-22-33-44-55:AP1")
+ *             .radiusCalledStationId("00-11-22-33-44-55:AP1")
  *             .radiusCoaEnabled(true)
- *             .radiusFailoverPolicy(&#34;Deny access&#34;)
+ *             .radiusFailoverPolicy("Deny access")
  *             .radiusFallbackEnabled(true)
  *             .radiusGuestVlanEnabled(true)
  *             .radiusGuestVlanId(1)
- *             .radiusLoadBalancingPolicy(&#34;Round robin&#34;)
+ *             .radiusLoadBalancingPolicy("Round robin")
  *             .radiusOverride(false)
  *             .radiusProxyEnabled(false)
  *             .radiusServerAttemptsLimit(5)
  *             .radiusServerTimeout(5)
  *             .radiusServers(WirelessSsidsRadiusServerArgs.builder()
- *                 .ca_certificate(&#34;&#34;&#34;
- *           &#34;-----BEGIN CERTIFICATE-----
+ *                 .ca_certificate("""
+ *           "-----BEGIN CERTIFICATE-----
  *         MIIDyTCCArGgAwIBAgIKBBNXOVCGU1YztjANBgkqhkiG9w0BAQsFADAnMQ4wDAYD
  *         VQQKEwVDaXNjbzEVMBMGA1UEAxMMQUNUMiBTVURJIENBMB4XDTIxMDUzMTEzNTUx
  *         NVoXDTI5MDUxNDIwMjU0MVowbTEpMCcGA1UEBRMgUElEOkM5MjAwTC0yNFAtNEcg
@@ -247,35 +248,36 @@ import javax.annotation.Nullable;
  *         0m3M6yKpe5+VZzHZwmWdUf3Ot+zKjhveK5/YNsMIASdvtvymxUizq2Hr1hvR/kPc
  *         p1vuyWxipU8JfzOh/A==
  *         -----END CERTIFICATE-----
- *         &#34;
- *                 &#34;&#34;&#34;)
- *                 .host(&#34;0.0.0.0&#34;)
+ *         "
+ *                 """)
+ *                 .host("0.0.0.0")
  *                 .open_roaming_certificate_id(2)
  *                 .port(3000)
  *                 .radsec_enabled(true)
- *                 .secret(&#34;secret-string&#34;)
+ *                 .secret("secret-string")
  *                 .build())
  *             .radiusTestingEnabled(true)
- *             .secondaryConcentratorNetworkId(&#34;disabled&#34;)
+ *             .secondaryConcentratorNetworkId("disabled")
  *             .speedBurst(WirelessSsidsSpeedBurstArgs.builder()
  *                 .enabled(true)
  *                 .build())
- *             .splashGuestSponsorDomains(&#34;example.com&#34;)
- *             .splashPage(&#34;Click-through splash page&#34;)
+ *             .splashGuestSponsorDomains("example.com")
+ *             .splashPage("Click-through splash page")
  *             .useVlanTagging(false)
  *             .visible(true)
  *             .vlanId(10)
  *             .walledGardenEnabled(true)
  *             .walledGardenRanges(            
- *                 &#34;example.com&#34;,
- *                 &#34;1.1.1.1/32&#34;)
- *             .wpaEncryptionMode(&#34;WPA2 only&#34;)
+ *                 "example.com",
+ *                 "1.1.1.1/32")
+ *             .wpaEncryptionMode("WPA2 only")
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksWirelessSsidsExample&#34;, example);
+ *         ctx.export("merakiNetworksWirelessSsidsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import
@@ -292,14 +294,14 @@ public class WirelessSsids extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="activeDirectory", refs={WirelessSsidsActiveDirectory.class}, tree="[0]")
-    private Output<WirelessSsidsActiveDirectory> activeDirectory;
+    private Output</* @Nullable */ WirelessSsidsActiveDirectory> activeDirectory;
 
     /**
      * @return The current setting for Active Directory. Only valid if splashPage is &#39;Password-protected with Active Directory&#39;
      * 
      */
-    public Output<WirelessSsidsActiveDirectory> activeDirectory() {
-        return this.activeDirectory;
+    public Output<Optional<WirelessSsidsActiveDirectory>> activeDirectory() {
+        return Codegen.optional(this.activeDirectory);
     }
     @Export(name="adminSplashUrl", refs={String.class}, tree="[0]")
     private Output<String> adminSplashUrl;
@@ -312,28 +314,28 @@ public class WirelessSsids extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="adultContentFilteringEnabled", refs={Boolean.class}, tree="[0]")
-    private Output<Boolean> adultContentFilteringEnabled;
+    private Output</* @Nullable */ Boolean> adultContentFilteringEnabled;
 
     /**
      * @return Boolean indicating whether or not adult content will be blocked
      * 
      */
-    public Output<Boolean> adultContentFilteringEnabled() {
-        return this.adultContentFilteringEnabled;
+    public Output<Optional<Boolean>> adultContentFilteringEnabled() {
+        return Codegen.optional(this.adultContentFilteringEnabled);
     }
     /**
      * The list of tags and VLAN IDs used for VLAN tagging. This param is only valid when the ipAssignmentMode is &#39;Bridge mode&#39; or &#39;Layer 3 roaming&#39;
      * 
      */
     @Export(name="apTagsAndVlanIds", refs={List.class,WirelessSsidsApTagsAndVlanId.class}, tree="[0,1]")
-    private Output<List<WirelessSsidsApTagsAndVlanId>> apTagsAndVlanIds;
+    private Output</* @Nullable */ List<WirelessSsidsApTagsAndVlanId>> apTagsAndVlanIds;
 
     /**
      * @return The list of tags and VLAN IDs used for VLAN tagging. This param is only valid when the ipAssignmentMode is &#39;Bridge mode&#39; or &#39;Layer 3 roaming&#39;
      * 
      */
-    public Output<List<WirelessSsidsApTagsAndVlanId>> apTagsAndVlanIds() {
-        return this.apTagsAndVlanIds;
+    public Output<Optional<List<WirelessSsidsApTagsAndVlanId>>> apTagsAndVlanIds() {
+        return Codegen.optional(this.apTagsAndVlanIds);
     }
     /**
      * The association control method for the SSID
@@ -354,14 +356,14 @@ public class WirelessSsids extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="availabilityTags", refs={List.class,String.class}, tree="[0,1]")
-    private Output<List<String>> availabilityTags;
+    private Output</* @Nullable */ List<String>> availabilityTags;
 
     /**
      * @return List of tags for this SSID. If availableOnAllAps is false, then the SSID is only broadcast by APs with tags matching any of the tags in this list
      * 
      */
-    public Output<List<String>> availabilityTags() {
-        return this.availabilityTags;
+    public Output<Optional<List<String>>> availabilityTags() {
+        return Codegen.optional(this.availabilityTags);
     }
     /**
      * Whether all APs broadcast the SSID or if it&#39;s restricted to APs matching any availability tags
@@ -396,14 +398,14 @@ public class WirelessSsids extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="concentratorNetworkId", refs={String.class}, tree="[0]")
-    private Output<String> concentratorNetworkId;
+    private Output</* @Nullable */ String> concentratorNetworkId;
 
     /**
      * @return The concentrator to use when the ipAssignmentMode is &#39;Layer 3 roaming with a concentrator&#39; or &#39;VPN&#39;.
      * 
      */
-    public Output<String> concentratorNetworkId() {
-        return this.concentratorNetworkId;
+    public Output<Optional<String>> concentratorNetworkId() {
+        return Codegen.optional(this.concentratorNetworkId);
     }
     /**
      * The default VLAN ID used for &#39;all other APs&#39;. This param is only valid when the ipAssignmentMode is &#39;Bridge mode&#39; or &#39;Layer 3 roaming&#39;
@@ -424,56 +426,56 @@ public class WirelessSsids extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="disassociateClientsOnVpnFailover", refs={Boolean.class}, tree="[0]")
-    private Output<Boolean> disassociateClientsOnVpnFailover;
+    private Output</* @Nullable */ Boolean> disassociateClientsOnVpnFailover;
 
     /**
      * @return Disassociate clients when &#39;VPN&#39; concentrator failover occurs in order to trigger clients to re-associate and generate new DHCP requests. This param is only valid if ipAssignmentMode is &#39;VPN&#39;.
      * 
      */
-    public Output<Boolean> disassociateClientsOnVpnFailover() {
-        return this.disassociateClientsOnVpnFailover;
+    public Output<Optional<Boolean>> disassociateClientsOnVpnFailover() {
+        return Codegen.optional(this.disassociateClientsOnVpnFailover);
     }
     /**
      * DNS servers rewrite settings
      * 
      */
     @Export(name="dnsRewrite", refs={WirelessSsidsDnsRewrite.class}, tree="[0]")
-    private Output<WirelessSsidsDnsRewrite> dnsRewrite;
+    private Output</* @Nullable */ WirelessSsidsDnsRewrite> dnsRewrite;
 
     /**
      * @return DNS servers rewrite settings
      * 
      */
-    public Output<WirelessSsidsDnsRewrite> dnsRewrite() {
-        return this.dnsRewrite;
+    public Output<Optional<WirelessSsidsDnsRewrite>> dnsRewrite() {
+        return Codegen.optional(this.dnsRewrite);
     }
     /**
      * The current setting for 802.11r
      * 
      */
     @Export(name="dot11r", refs={WirelessSsidsDot11r.class}, tree="[0]")
-    private Output<WirelessSsidsDot11r> dot11r;
+    private Output</* @Nullable */ WirelessSsidsDot11r> dot11r;
 
     /**
      * @return The current setting for 802.11r
      * 
      */
-    public Output<WirelessSsidsDot11r> dot11r() {
-        return this.dot11r;
+    public Output<Optional<WirelessSsidsDot11r>> dot11r() {
+        return Codegen.optional(this.dot11r);
     }
     /**
      * The current setting for Protected Management Frames (802.11w).
      * 
      */
     @Export(name="dot11w", refs={WirelessSsidsDot11w.class}, tree="[0]")
-    private Output<WirelessSsidsDot11w> dot11w;
+    private Output</* @Nullable */ WirelessSsidsDot11w> dot11w;
 
     /**
      * @return The current setting for Protected Management Frames (802.11w).
      * 
      */
-    public Output<WirelessSsidsDot11w> dot11w() {
-        return this.dot11w;
+    public Output<Optional<WirelessSsidsDot11w>> dot11w() {
+        return Codegen.optional(this.dot11w);
     }
     /**
      * Whether or not the SSID is enabled
@@ -508,28 +510,28 @@ public class WirelessSsids extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="enterpriseAdminAccess", refs={String.class}, tree="[0]")
-    private Output<String> enterpriseAdminAccess;
+    private Output</* @Nullable */ String> enterpriseAdminAccess;
 
     /**
      * @return Whether or not an SSID is accessible by &#39;enterprise&#39; administrators (&#39;access disabled&#39; or &#39;access enabled&#39;)
      * 
      */
-    public Output<String> enterpriseAdminAccess() {
-        return this.enterpriseAdminAccess;
+    public Output<Optional<String>> enterpriseAdminAccess() {
+        return Codegen.optional(this.enterpriseAdminAccess);
     }
     /**
      * Ethernet over GRE settings
      * 
      */
     @Export(name="gre", refs={WirelessSsidsGre.class}, tree="[0]")
-    private Output<WirelessSsidsGre> gre;
+    private Output</* @Nullable */ WirelessSsidsGre> gre;
 
     /**
      * @return Ethernet over GRE settings
      * 
      */
-    public Output<WirelessSsidsGre> gre() {
-        return this.gre;
+    public Output<Optional<WirelessSsidsGre>> gre() {
+        return Codegen.optional(this.gre);
     }
     /**
      * The client IP assignment mode
@@ -550,28 +552,28 @@ public class WirelessSsids extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="lanIsolationEnabled", refs={Boolean.class}, tree="[0]")
-    private Output<Boolean> lanIsolationEnabled;
+    private Output</* @Nullable */ Boolean> lanIsolationEnabled;
 
     /**
      * @return Boolean indicating whether Layer 2 LAN isolation should be enabled or disabled. Only configurable when ipAssignmentMode is &#39;Bridge mode&#39;.
      * 
      */
-    public Output<Boolean> lanIsolationEnabled() {
-        return this.lanIsolationEnabled;
+    public Output<Optional<Boolean>> lanIsolationEnabled() {
+        return Codegen.optional(this.lanIsolationEnabled);
     }
     /**
      * The current setting for LDAP. Only valid if splashPage is &#39;Password-protected with LDAP&#39;.
      * 
      */
     @Export(name="ldap", refs={WirelessSsidsLdap.class}, tree="[0]")
-    private Output<WirelessSsidsLdap> ldap;
+    private Output</* @Nullable */ WirelessSsidsLdap> ldap;
 
     /**
      * @return The current setting for LDAP. Only valid if splashPage is &#39;Password-protected with LDAP&#39;.
      * 
      */
-    public Output<WirelessSsidsLdap> ldap() {
-        return this.ldap;
+    public Output<Optional<WirelessSsidsLdap>> ldap() {
+        return Codegen.optional(this.ldap);
     }
     /**
      * Extended local auth flag for Enterprise NAC
@@ -592,14 +594,14 @@ public class WirelessSsids extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="localRadius", refs={WirelessSsidsLocalRadius.class}, tree="[0]")
-    private Output<WirelessSsidsLocalRadius> localRadius;
+    private Output</* @Nullable */ WirelessSsidsLocalRadius> localRadius;
 
     /**
      * @return The current setting for Local Authentication, a built-in RADIUS server on the access point. Only valid if authMode is &#39;8021x-localradius&#39;.
      * 
      */
-    public Output<WirelessSsidsLocalRadius> localRadius() {
-        return this.localRadius;
+    public Output<Optional<WirelessSsidsLocalRadius>> localRadius() {
+        return Codegen.optional(this.localRadius);
     }
     /**
      * Whether clients connecting to this SSID must use the IP address assigned by the DHCP server
@@ -648,14 +650,14 @@ public class WirelessSsids extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="namedVlans", refs={WirelessSsidsNamedVlans.class}, tree="[0]")
-    private Output<WirelessSsidsNamedVlans> namedVlans;
+    private Output</* @Nullable */ WirelessSsidsNamedVlans> namedVlans;
 
     /**
      * @return Named VLAN settings.
      * 
      */
-    public Output<WirelessSsidsNamedVlans> namedVlans() {
-        return this.namedVlans;
+    public Output<Optional<WirelessSsidsNamedVlans>> namedVlans() {
+        return Codegen.optional(this.namedVlans);
     }
     /**
      * networkId path parameter. Network ID
@@ -690,14 +692,14 @@ public class WirelessSsids extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="oauth", refs={WirelessSsidsOauth.class}, tree="[0]")
-    private Output<WirelessSsidsOauth> oauth;
+    private Output</* @Nullable */ WirelessSsidsOauth> oauth;
 
     /**
      * @return The OAuth settings of this SSID. Only valid if splashPage is &#39;Google OAuth&#39;.
      * 
      */
-    public Output<WirelessSsidsOauth> oauth() {
-        return this.oauth;
+    public Output<Optional<WirelessSsidsOauth>> oauth() {
+        return Codegen.optional(this.oauth);
     }
     /**
      * The download bandwidth limit in Kbps. (0 represents no limit.)
@@ -774,28 +776,28 @@ public class WirelessSsids extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="radiusAccountingEnabled", refs={Boolean.class}, tree="[0]")
-    private Output<Boolean> radiusAccountingEnabled;
+    private Output</* @Nullable */ Boolean> radiusAccountingEnabled;
 
     /**
      * @return Whether or not RADIUS accounting is enabled
      * 
      */
-    public Output<Boolean> radiusAccountingEnabled() {
-        return this.radiusAccountingEnabled;
+    public Output<Optional<Boolean>> radiusAccountingEnabled() {
+        return Codegen.optional(this.radiusAccountingEnabled);
     }
     /**
      * The interval (in seconds) in which accounting information is updated and sent to the RADIUS accounting server.
      * 
      */
     @Export(name="radiusAccountingInterimInterval", refs={Integer.class}, tree="[0]")
-    private Output<Integer> radiusAccountingInterimInterval;
+    private Output</* @Nullable */ Integer> radiusAccountingInterimInterval;
 
     /**
      * @return The interval (in seconds) in which accounting information is updated and sent to the RADIUS accounting server.
      * 
      */
-    public Output<Integer> radiusAccountingInterimInterval() {
-        return this.radiusAccountingInterimInterval;
+    public Output<Optional<Integer>> radiusAccountingInterimInterval() {
+        return Codegen.optional(this.radiusAccountingInterimInterval);
     }
     /**
      * List of RADIUS accounting 802.1X servers to be used for authentication
@@ -830,42 +832,42 @@ public class WirelessSsids extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="radiusAuthenticationNasId", refs={String.class}, tree="[0]")
-    private Output<String> radiusAuthenticationNasId;
+    private Output</* @Nullable */ String> radiusAuthenticationNasId;
 
     /**
      * @return The template of the NAS identifier to be used for RADIUS authentication (ex. $NODE*MAC$:$VAP*NUM$).
      * 
      */
-    public Output<String> radiusAuthenticationNasId() {
-        return this.radiusAuthenticationNasId;
+    public Output<Optional<String>> radiusAuthenticationNasId() {
+        return Codegen.optional(this.radiusAuthenticationNasId);
     }
     /**
      * The template of the called station identifier to be used for RADIUS (ex. $NODE*MAC$:$VAP*NUM$).
      * 
      */
     @Export(name="radiusCalledStationId", refs={String.class}, tree="[0]")
-    private Output<String> radiusCalledStationId;
+    private Output</* @Nullable */ String> radiusCalledStationId;
 
     /**
      * @return The template of the called station identifier to be used for RADIUS (ex. $NODE*MAC$:$VAP*NUM$).
      * 
      */
-    public Output<String> radiusCalledStationId() {
-        return this.radiusCalledStationId;
+    public Output<Optional<String>> radiusCalledStationId() {
+        return Codegen.optional(this.radiusCalledStationId);
     }
     /**
      * If true, Meraki devices will act as a RADIUS Dynamic Authorization Server and will respond to RADIUS Change-of-Authorization and Disconnect messages sent by the RADIUS server.
      * 
      */
     @Export(name="radiusCoaEnabled", refs={Boolean.class}, tree="[0]")
-    private Output<Boolean> radiusCoaEnabled;
+    private Output</* @Nullable */ Boolean> radiusCoaEnabled;
 
     /**
      * @return If true, Meraki devices will act as a RADIUS Dynamic Authorization Server and will respond to RADIUS Change-of-Authorization and Disconnect messages sent by the RADIUS server.
      * 
      */
-    public Output<Boolean> radiusCoaEnabled() {
-        return this.radiusCoaEnabled;
+    public Output<Optional<Boolean>> radiusCoaEnabled() {
+        return Codegen.optional(this.radiusCoaEnabled);
     }
     /**
      * Whether RADIUS authentication is enabled
@@ -900,42 +902,42 @@ public class WirelessSsids extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="radiusFallbackEnabled", refs={Boolean.class}, tree="[0]")
-    private Output<Boolean> radiusFallbackEnabled;
+    private Output</* @Nullable */ Boolean> radiusFallbackEnabled;
 
     /**
      * @return Whether or not higher priority RADIUS servers should be retried after 60 seconds.
      * 
      */
-    public Output<Boolean> radiusFallbackEnabled() {
-        return this.radiusFallbackEnabled;
+    public Output<Optional<Boolean>> radiusFallbackEnabled() {
+        return Codegen.optional(this.radiusFallbackEnabled);
     }
     /**
      * Whether or not RADIUS Guest VLAN is enabled. This param is only valid if the authMode is &#39;open-with-radius&#39; and addressing mode is not set to &#39;isolated&#39; or &#39;nat&#39; mode
      * 
      */
     @Export(name="radiusGuestVlanEnabled", refs={Boolean.class}, tree="[0]")
-    private Output<Boolean> radiusGuestVlanEnabled;
+    private Output</* @Nullable */ Boolean> radiusGuestVlanEnabled;
 
     /**
      * @return Whether or not RADIUS Guest VLAN is enabled. This param is only valid if the authMode is &#39;open-with-radius&#39; and addressing mode is not set to &#39;isolated&#39; or &#39;nat&#39; mode
      * 
      */
-    public Output<Boolean> radiusGuestVlanEnabled() {
-        return this.radiusGuestVlanEnabled;
+    public Output<Optional<Boolean>> radiusGuestVlanEnabled() {
+        return Codegen.optional(this.radiusGuestVlanEnabled);
     }
     /**
      * VLAN ID of the RADIUS Guest VLAN. This param is only valid if the authMode is &#39;open-with-radius&#39; and addressing mode is not set to &#39;isolated&#39; or &#39;nat&#39; mode
      * 
      */
     @Export(name="radiusGuestVlanId", refs={Integer.class}, tree="[0]")
-    private Output<Integer> radiusGuestVlanId;
+    private Output</* @Nullable */ Integer> radiusGuestVlanId;
 
     /**
      * @return VLAN ID of the RADIUS Guest VLAN. This param is only valid if the authMode is &#39;open-with-radius&#39; and addressing mode is not set to &#39;isolated&#39; or &#39;nat&#39; mode
      * 
      */
-    public Output<Integer> radiusGuestVlanId() {
-        return this.radiusGuestVlanId;
+    public Output<Optional<Integer>> radiusGuestVlanId() {
+        return Codegen.optional(this.radiusGuestVlanId);
     }
     /**
      * Policy which determines which RADIUS server will be contacted first in an authentication attempt, and the ordering of any necessary retry attempts
@@ -956,56 +958,56 @@ public class WirelessSsids extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="radiusOverride", refs={Boolean.class}, tree="[0]")
-    private Output<Boolean> radiusOverride;
+    private Output</* @Nullable */ Boolean> radiusOverride;
 
     /**
      * @return If true, the RADIUS response can override VLAN tag. This is not valid when ipAssignmentMode is &#39;NAT mode&#39;.
      * 
      */
-    public Output<Boolean> radiusOverride() {
-        return this.radiusOverride;
+    public Output<Optional<Boolean>> radiusOverride() {
+        return Codegen.optional(this.radiusOverride);
     }
     /**
      * If true, Meraki devices will proxy RADIUS messages through the Meraki cloud to the configured RADIUS auth and accounting servers.
      * 
      */
     @Export(name="radiusProxyEnabled", refs={Boolean.class}, tree="[0]")
-    private Output<Boolean> radiusProxyEnabled;
+    private Output</* @Nullable */ Boolean> radiusProxyEnabled;
 
     /**
      * @return If true, Meraki devices will proxy RADIUS messages through the Meraki cloud to the configured RADIUS auth and accounting servers.
      * 
      */
-    public Output<Boolean> radiusProxyEnabled() {
-        return this.radiusProxyEnabled;
+    public Output<Optional<Boolean>> radiusProxyEnabled() {
+        return Codegen.optional(this.radiusProxyEnabled);
     }
     /**
      * The maximum number of transmit attempts after which a RADIUS server is failed over (must be between 1-5).
      * 
      */
     @Export(name="radiusServerAttemptsLimit", refs={Integer.class}, tree="[0]")
-    private Output<Integer> radiusServerAttemptsLimit;
+    private Output</* @Nullable */ Integer> radiusServerAttemptsLimit;
 
     /**
      * @return The maximum number of transmit attempts after which a RADIUS server is failed over (must be between 1-5).
      * 
      */
-    public Output<Integer> radiusServerAttemptsLimit() {
-        return this.radiusServerAttemptsLimit;
+    public Output<Optional<Integer>> radiusServerAttemptsLimit() {
+        return Codegen.optional(this.radiusServerAttemptsLimit);
     }
     /**
      * The amount of time for which a RADIUS client waits for a reply from the RADIUS server (must be between 1-10 seconds).
      * 
      */
     @Export(name="radiusServerTimeout", refs={Integer.class}, tree="[0]")
-    private Output<Integer> radiusServerTimeout;
+    private Output</* @Nullable */ Integer> radiusServerTimeout;
 
     /**
      * @return The amount of time for which a RADIUS client waits for a reply from the RADIUS server (must be between 1-10 seconds).
      * 
      */
-    public Output<Integer> radiusServerTimeout() {
-        return this.radiusServerTimeout;
+    public Output<Optional<Integer>> radiusServerTimeout() {
+        return Codegen.optional(this.radiusServerTimeout);
     }
     /**
      * The RADIUS 802.1X servers to be used for authentication. This param is only valid if the authMode is &#39;open-with-radius&#39;, &#39;8021x-radius&#39; or &#39;ipsk-with-radius&#39;
@@ -1040,42 +1042,42 @@ public class WirelessSsids extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="radiusTestingEnabled", refs={Boolean.class}, tree="[0]")
-    private Output<Boolean> radiusTestingEnabled;
+    private Output</* @Nullable */ Boolean> radiusTestingEnabled;
 
     /**
      * @return If true, Meraki devices will periodically send Access-Request messages to configured RADIUS servers using identity &#39;meraki*8021x*test&#39; to ensure that the RADIUS servers are reachable.
      * 
      */
-    public Output<Boolean> radiusTestingEnabled() {
-        return this.radiusTestingEnabled;
+    public Output<Optional<Boolean>> radiusTestingEnabled() {
+        return Codegen.optional(this.radiusTestingEnabled);
     }
     /**
      * The secondary concentrator to use when the ipAssignmentMode is &#39;VPN&#39;. If configured, the APs will switch to using this concentrator if the primary concentrator is unreachable. This param is optional. (&#39;disabled&#39; represents no secondary concentrator.)
      * 
      */
     @Export(name="secondaryConcentratorNetworkId", refs={String.class}, tree="[0]")
-    private Output<String> secondaryConcentratorNetworkId;
+    private Output</* @Nullable */ String> secondaryConcentratorNetworkId;
 
     /**
      * @return The secondary concentrator to use when the ipAssignmentMode is &#39;VPN&#39;. If configured, the APs will switch to using this concentrator if the primary concentrator is unreachable. This param is optional. (&#39;disabled&#39; represents no secondary concentrator.)
      * 
      */
-    public Output<String> secondaryConcentratorNetworkId() {
-        return this.secondaryConcentratorNetworkId;
+    public Output<Optional<String>> secondaryConcentratorNetworkId() {
+        return Codegen.optional(this.secondaryConcentratorNetworkId);
     }
     /**
      * The SpeedBurst setting for this SSID&#39;
      * 
      */
     @Export(name="speedBurst", refs={WirelessSsidsSpeedBurst.class}, tree="[0]")
-    private Output<WirelessSsidsSpeedBurst> speedBurst;
+    private Output</* @Nullable */ WirelessSsidsSpeedBurst> speedBurst;
 
     /**
      * @return The SpeedBurst setting for this SSID&#39;
      * 
      */
-    public Output<WirelessSsidsSpeedBurst> speedBurst() {
-        return this.speedBurst;
+    public Output<Optional<WirelessSsidsSpeedBurst>> speedBurst() {
+        return Codegen.optional(this.speedBurst);
     }
     /**
      * Array of valid sponsor email domains for sponsored guest splash type.
@@ -1138,14 +1140,14 @@ public class WirelessSsids extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="useVlanTagging", refs={Boolean.class}, tree="[0]")
-    private Output<Boolean> useVlanTagging;
+    private Output</* @Nullable */ Boolean> useVlanTagging;
 
     /**
      * @return Whether or not traffic should be directed to use specific VLANs. This param is only valid if the ipAssignmentMode is &#39;Bridge mode&#39; or &#39;Layer 3 roaming&#39;
      * 
      */
-    public Output<Boolean> useVlanTagging() {
-        return this.useVlanTagging;
+    public Output<Optional<Boolean>> useVlanTagging() {
+        return Codegen.optional(this.useVlanTagging);
     }
     /**
      * Whether the SSID is advertised or hidden by the AP
@@ -1166,42 +1168,42 @@ public class WirelessSsids extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="vlanId", refs={Integer.class}, tree="[0]")
-    private Output<Integer> vlanId;
+    private Output</* @Nullable */ Integer> vlanId;
 
     /**
      * @return The VLAN ID used for VLAN tagging. This param is only valid when the ipAssignmentMode is &#39;Layer 3 roaming with a concentrator&#39; or &#39;VPN&#39;
      * 
      */
-    public Output<Integer> vlanId() {
-        return this.vlanId;
+    public Output<Optional<Integer>> vlanId() {
+        return Codegen.optional(this.vlanId);
     }
     /**
      * Allow users to access a configurable list of IP ranges prior to sign-on
      * 
      */
     @Export(name="walledGardenEnabled", refs={Boolean.class}, tree="[0]")
-    private Output<Boolean> walledGardenEnabled;
+    private Output</* @Nullable */ Boolean> walledGardenEnabled;
 
     /**
      * @return Allow users to access a configurable list of IP ranges prior to sign-on
      * 
      */
-    public Output<Boolean> walledGardenEnabled() {
-        return this.walledGardenEnabled;
+    public Output<Optional<Boolean>> walledGardenEnabled() {
+        return Codegen.optional(this.walledGardenEnabled);
     }
     /**
      * Domain names and IP address ranges available in Walled Garden mode
      * 
      */
     @Export(name="walledGardenRanges", refs={List.class,String.class}, tree="[0,1]")
-    private Output<List<String>> walledGardenRanges;
+    private Output</* @Nullable */ List<String>> walledGardenRanges;
 
     /**
      * @return Domain names and IP address ranges available in Walled Garden mode
      * 
      */
-    public Output<List<String>> walledGardenRanges() {
-        return this.walledGardenRanges;
+    public Output<Optional<List<String>>> walledGardenRanges() {
+        return Codegen.optional(this.walledGardenRanges);
     }
     /**
      * The types of WPA encryption

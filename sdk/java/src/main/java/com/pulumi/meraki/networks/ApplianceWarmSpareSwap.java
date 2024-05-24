@@ -20,7 +20,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -41,14 +42,15 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ApplianceWarmSpareSwap(&#34;example&#34;, ApplianceWarmSpareSwapArgs.builder()        
- *             .networkId(&#34;string&#34;)
+ *         var example = new ApplianceWarmSpareSwap("example", ApplianceWarmSpareSwapArgs.builder()
+ *             .networkId("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksApplianceWarmSpareSwapExample&#34;, example);
+ *         ctx.export("merakiNetworksApplianceWarmSpareSwapExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

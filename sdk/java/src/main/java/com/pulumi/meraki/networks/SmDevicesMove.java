@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,29 +45,30 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SmDevicesMove(&#34;example&#34;, SmDevicesMoveArgs.builder()        
- *             .networkId(&#34;string&#34;)
+ *         var example = new SmDevicesMove("example", SmDevicesMoveArgs.builder()
+ *             .networkId("string")
  *             .parameters(SmDevicesMoveParametersArgs.builder()
  *                 .ids(                
- *                     &#34;1284392014819&#34;,
- *                     &#34;2983092129865&#34;)
- *                 .new_network(&#34;1284392014819&#34;)
+ *                     "1284392014819",
+ *                     "2983092129865")
+ *                 .new_network("1284392014819")
  *                 .scope(                
- *                     &#34;withAny&#34;,
- *                     &#34;tag1&#34;,
- *                     &#34;tag2&#34;)
+ *                     "withAny",
+ *                     "tag1",
+ *                     "tag2")
  *                 .serials(                
- *                     &#34;XY0XX0Y0X0&#34;,
- *                     &#34;A01B01CD00E&#34;,
- *                     &#34;X02YZ1ZYZX&#34;)
- *                 .wifi_macs(&#34;00:11:22:33:44:55&#34;)
+ *                     "XY0XX0Y0X0",
+ *                     "A01B01CD00E",
+ *                     "X02YZ1ZYZX")
+ *                 .wifi_macs("00:11:22:33:44:55")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksSmDevicesMoveExample&#34;, example);
+ *         ctx.export("merakiNetworksSmDevicesMoveExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

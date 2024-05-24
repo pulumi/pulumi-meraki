@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -45,26 +46,27 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ActionBatches(&#34;example&#34;, ActionBatchesArgs.builder()        
+ *         var example = new ActionBatches("example", ActionBatchesArgs.builder()
  *             .actions(ActionBatchesActionArgs.builder()
- *                 .operation(&#34;create&#34;)
- *                 .resource(&#34;/devices/QXXX-XXXX-XXXX/switch/ports/3&#34;)
+ *                 .operation("create")
+ *                 .resource("/devices/QXXX-XXXX-XXXX/switch/ports/3")
  *                 .build())
  *             .callback(ActionBatchesCallbackArgs.builder()
  *                 .http_server(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .payload_template(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
- *                 .shared_secret(&#34;secret&#34;)
- *                 .url(&#34;https://webhook.site/28efa24e-f830-4d9f-a12b-fbb9e5035031&#34;)
+ *                 .shared_secret("secret")
+ *                 .url("https://webhook.site/28efa24e-f830-4d9f-a12b-fbb9e5035031")
  *                 .build())
  *             .confirmed(true)
- *             .organizationId(&#34;string&#34;)
+ *             .organizationId("string")
  *             .synchronous(true)
  *             .build());
  * 
- *         ctx.export(&#34;merakiOrganizationsActionBatchesExample&#34;, example);
+ *         ctx.export("merakiOrganizationsActionBatchesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

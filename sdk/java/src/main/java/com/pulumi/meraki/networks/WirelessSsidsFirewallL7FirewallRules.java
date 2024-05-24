@@ -19,7 +19,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -41,20 +42,21 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new WirelessSsidsFirewallL7FirewallRules(&#34;example&#34;, WirelessSsidsFirewallL7FirewallRulesArgs.builder()        
- *             .networkId(&#34;string&#34;)
- *             .number(&#34;string&#34;)
+ *         var example = new WirelessSsidsFirewallL7FirewallRules("example", WirelessSsidsFirewallL7FirewallRulesArgs.builder()
+ *             .networkId("string")
+ *             .number("string")
  *             .rules(WirelessSsidsFirewallL7FirewallRulesRuleArgs.builder()
- *                 .policy(&#34;deny&#34;)
- *                 .type(&#34;host&#34;)
- *                 .value(&#34;google.com&#34;)
+ *                 .policy("deny")
+ *                 .type("host")
+ *                 .value("google.com")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksWirelessSsidsFirewallL7FirewallRulesExample&#34;, example);
+ *         ctx.export("merakiNetworksWirelessSsidsFirewallL7FirewallRulesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

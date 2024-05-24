@@ -20,7 +20,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -42,22 +43,23 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new WebhooksPayloadTemplates(&#34;example&#34;, WebhooksPayloadTemplatesArgs.builder()        
- *             .body(&#34;{&#39;event_type&#39;:&#39;{{alertTypeId}}&#39;,&#39;client_payload&#39;:{&#39;text&#39;:&#39;{{alertData}}&#39;}}&#34;)
- *             .bodyFile(&#34;Qm9keSBGaWxl&#34;)
+ *         var example = new WebhooksPayloadTemplates("example", WebhooksPayloadTemplatesArgs.builder()
+ *             .body("{'event_type':'{{alertTypeId}}','client_payload':{'text':'{{alertData}}'}}")
+ *             .bodyFile("Qm9keSBGaWxl")
  *             .headers(WebhooksPayloadTemplatesHeaderArgs.builder()
- *                 .name(&#34;Authorization&#34;)
- *                 .template(&#34;Bearer {{sharedSecret}}&#34;)
+ *                 .name("Authorization")
+ *                 .template("Bearer {{sharedSecret}}")
  *                 .build())
- *             .headersFile(&#34;SGVhZGVycyBGaWxl&#34;)
- *             .name(&#34;Custom Template&#34;)
- *             .networkId(&#34;string&#34;)
+ *             .headersFile("SGVhZGVycyBGaWxl")
+ *             .name("Custom Template")
+ *             .networkId("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksWebhooksPayloadTemplatesExample&#34;, example);
+ *         ctx.export("merakiNetworksWebhooksPayloadTemplatesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

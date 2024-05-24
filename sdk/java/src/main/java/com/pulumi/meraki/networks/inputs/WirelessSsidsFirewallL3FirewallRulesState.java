@@ -6,6 +6,7 @@ package com.pulumi.meraki.networks.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.meraki.networks.inputs.WirelessSsidsFirewallL3FirewallRulesRuleArgs;
+import com.pulumi.meraki.networks.inputs.WirelessSsidsFirewallL3FirewallRulesRulesResponseArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -78,6 +79,21 @@ public final class WirelessSsidsFirewallL3FirewallRulesState extends com.pulumi.
         return Optional.ofNullable(this.rules);
     }
 
+    /**
+     * An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
+     * 
+     */
+    @Import(name="rulesResponses")
+    private @Nullable Output<List<WirelessSsidsFirewallL3FirewallRulesRulesResponseArgs>> rulesResponses;
+
+    /**
+     * @return An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
+     * 
+     */
+    public Optional<Output<List<WirelessSsidsFirewallL3FirewallRulesRulesResponseArgs>>> rulesResponses() {
+        return Optional.ofNullable(this.rulesResponses);
+    }
+
     private WirelessSsidsFirewallL3FirewallRulesState() {}
 
     private WirelessSsidsFirewallL3FirewallRulesState(WirelessSsidsFirewallL3FirewallRulesState $) {
@@ -85,6 +101,7 @@ public final class WirelessSsidsFirewallL3FirewallRulesState extends com.pulumi.
         this.networkId = $.networkId;
         this.number = $.number;
         this.rules = $.rules;
+        this.rulesResponses = $.rulesResponses;
     }
 
     public static Builder builder() {
@@ -197,6 +214,37 @@ public final class WirelessSsidsFirewallL3FirewallRulesState extends com.pulumi.
          */
         public Builder rules(WirelessSsidsFirewallL3FirewallRulesRuleArgs... rules) {
             return rules(List.of(rules));
+        }
+
+        /**
+         * @param rulesResponses An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder rulesResponses(@Nullable Output<List<WirelessSsidsFirewallL3FirewallRulesRulesResponseArgs>> rulesResponses) {
+            $.rulesResponses = rulesResponses;
+            return this;
+        }
+
+        /**
+         * @param rulesResponses An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder rulesResponses(List<WirelessSsidsFirewallL3FirewallRulesRulesResponseArgs> rulesResponses) {
+            return rulesResponses(Output.of(rulesResponses));
+        }
+
+        /**
+         * @param rulesResponses An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
+         * 
+         * @return builder
+         * 
+         */
+        public Builder rulesResponses(WirelessSsidsFirewallL3FirewallRulesRulesResponseArgs... rulesResponses) {
+            return rulesResponses(List.of(rulesResponses));
         }
 
         public WirelessSsidsFirewallL3FirewallRulesState build() {

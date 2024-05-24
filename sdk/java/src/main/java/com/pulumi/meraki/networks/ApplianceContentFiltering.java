@@ -19,45 +19,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.meraki.networks.ApplianceContentFiltering;
- * import com.pulumi.meraki.networks.ApplianceContentFilteringArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new ApplianceContentFiltering(&#34;example&#34;, ApplianceContentFilteringArgs.builder()        
- *             .allowedUrlPatterns(            
- *                 &#34;http://www.example.org&#34;,
- *                 &#34;http://help.com.au&#34;)
- *             .blockedUrlCategories(            
- *                 &#34;meraki:contentFiltering/category/1&#34;,
- *                 &#34;meraki:contentFiltering/category/7&#34;)
- *             .blockedUrlPatterns(            
- *                 &#34;http://www.example.com&#34;,
- *                 &#34;http://www.betting.com&#34;)
- *             .networkId(&#34;string&#34;)
- *             .urlCategoryListSize(&#34;topSites&#34;)
- *             .build());
- * 
- *         ctx.export(&#34;merakiNetworksApplianceContentFilteringExample&#34;, example);
- *     }
- * }
- * ```
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

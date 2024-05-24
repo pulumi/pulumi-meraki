@@ -25,52 +25,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.meraki.networks.ApplianceVlans;
- * import com.pulumi.meraki.networks.ApplianceVlansArgs;
- * import com.pulumi.meraki.networks.inputs.ApplianceVlansIpv6Args;
- * import com.pulumi.meraki.networks.inputs.ApplianceVlansMandatoryDhcpArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new ApplianceVlans(&#34;example&#34;, ApplianceVlansArgs.builder()        
- *             .applianceIp(&#34;192.168.1.2&#34;)
- *             .cidr(&#34;192.168.1.0/24&#34;)
- *             .groupPolicyId(&#34;101&#34;)
- *             .id(&#34;1234&#34;)
- *             .ipv6(ApplianceVlansIpv6Args.builder()
- *                 .enabled(true)
- *                 .prefix_assignments(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
- *                 .build())
- *             .mandatoryDhcp(ApplianceVlansMandatoryDhcpArgs.builder()
- *                 .enabled(true)
- *                 .build())
- *             .mask(28)
- *             .name(&#34;My VLAN&#34;)
- *             .networkId(&#34;string&#34;)
- *             .subnet(&#34;192.168.1.0/24&#34;)
- *             .templateVlanType(&#34;same&#34;)
- *             .build());
- * 
- *         ctx.export(&#34;merakiNetworksApplianceVlansExample&#34;, example);
- *     }
- * }
- * ```
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

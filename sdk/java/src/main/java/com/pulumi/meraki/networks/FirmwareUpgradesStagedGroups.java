@@ -19,7 +19,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -41,24 +42,25 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new FirmwareUpgradesStagedGroups(&#34;example&#34;, FirmwareUpgradesStagedGroupsArgs.builder()        
+ *         var example = new FirmwareUpgradesStagedGroups("example", FirmwareUpgradesStagedGroupsArgs.builder()
  *             .assignedDevices(FirmwareUpgradesStagedGroupsAssignedDevicesArgs.builder()
  *                 .devices(FirmwareUpgradesStagedGroupsAssignedDevicesDeviceArgs.builder()
- *                     .name(&#34;Device Name&#34;)
- *                     .serial(&#34;Q234-ABCD-5678&#34;)
+ *                     .name("Device Name")
+ *                     .serial("Q234-ABCD-5678")
  *                     .build())
  *                 .switch_stacks(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .build())
- *             .description(&#34;The description of the group&#34;)
+ *             .description("The description of the group")
  *             .isDefault(false)
- *             .name(&#34;My Staged Upgrade Group&#34;)
- *             .networkId(&#34;string&#34;)
+ *             .name("My Staged Upgrade Group")
+ *             .networkId("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksFirmwareUpgradesStagedGroupsExample&#34;, example);
+ *         ctx.export("merakiNetworksFirmwareUpgradesStagedGroupsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

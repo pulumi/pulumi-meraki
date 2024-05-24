@@ -23,7 +23,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -45,29 +46,30 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SmDevicesModifyTags(&#34;example&#34;, SmDevicesModifyTagsArgs.builder()        
- *             .networkId(&#34;string&#34;)
+ *         var example = new SmDevicesModifyTags("example", SmDevicesModifyTagsArgs.builder()
+ *             .networkId("string")
  *             .parameters(SmDevicesModifyTagsParametersArgs.builder()
  *                 .ids(                
- *                     &#34;1284392014819&#34;,
- *                     &#34;2983092129865&#34;)
- *                 .scope(&#34;withAny, old_tag&#34;)
+ *                     "1284392014819",
+ *                     "2983092129865")
+ *                 .scope("withAny, old_tag")
  *                 .serials(                
- *                     &#34;XY0XX0Y0X0&#34;,
- *                     &#34;A01B01CD00E&#34;,
- *                     &#34;X02YZ1ZYZX&#34;)
+ *                     "XY0XX0Y0X0",
+ *                     "A01B01CD00E",
+ *                     "X02YZ1ZYZX")
  *                 .tags(                
- *                     &#34;tag1&#34;,
- *                     &#34;tag2&#34;)
- *                 .update_action(&#34;add&#34;)
- *                 .wifi_macs(&#34;00:11:22:33:44:55&#34;)
+ *                     "tag1",
+ *                     "tag2")
+ *                 .update_action("add")
+ *                 .wifi_macs("00:11:22:33:44:55")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksSmDevicesModifyTagsExample&#34;, example);
+ *         ctx.export("merakiNetworksSmDevicesModifyTagsExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

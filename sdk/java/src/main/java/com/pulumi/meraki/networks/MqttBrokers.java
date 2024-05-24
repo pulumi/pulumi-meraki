@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -47,30 +48,31 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new MqttBrokers(&#34;example&#34;, MqttBrokersArgs.builder()        
- *             .networkId(&#34;string&#34;)
+ *         var example = new MqttBrokers("example", MqttBrokersArgs.builder()
+ *             .networkId("string")
  *             .parameters(MqttBrokersParametersArgs.builder()
  *                 .authentication(MqttBrokersParametersAuthenticationArgs.builder()
- *                     .password(&#34;*****&#34;)
- *                     .username(&#34;milesmeraki&#34;)
+ *                     .password("*****")
+ *                     .username("milesmeraki")
  *                     .build())
- *                 .host(&#34;1.2.3.4&#34;)
- *                 .name(&#34;MQTT_Broker_1&#34;)
+ *                 .host("1.2.3.4")
+ *                 .name("MQTT_Broker_1")
  *                 .port(443)
  *                 .security(MqttBrokersParametersSecurityArgs.builder()
- *                     .mode(&#34;tls&#34;)
+ *                     .mode("tls")
  *                     .tls(MqttBrokersParametersSecurityTlsArgs.builder()
- *                         .caCertificate(&#34;*****&#34;)
+ *                         .caCertificate("*****")
  *                         .verifyHostnames(true)
  *                         .build())
  *                     .build())
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksMqttBrokersExample&#34;, example);
+ *         ctx.export("merakiNetworksMqttBrokersExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

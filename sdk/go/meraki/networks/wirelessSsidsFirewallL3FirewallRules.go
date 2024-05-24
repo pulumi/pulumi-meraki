@@ -23,13 +23,15 @@ type WirelessSsidsFirewallL3FirewallRules struct {
 	pulumi.CustomResourceState
 
 	// Allow wireless client access to local LAN (boolean value - true allows access and false denies access) (optional)
-	AllowLanAccess pulumi.BoolOutput `pulumi:"allowLanAccess"`
+	AllowLanAccess pulumi.BoolPtrOutput `pulumi:"allowLanAccess"`
 	// networkId path parameter. Network ID
 	NetworkId pulumi.StringOutput `pulumi:"networkId"`
 	// number path parameter.
 	Number pulumi.StringOutput `pulumi:"number"`
 	// An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
 	Rules WirelessSsidsFirewallL3FirewallRulesRuleArrayOutput `pulumi:"rules"`
+	// An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
+	RulesResponses WirelessSsidsFirewallL3FirewallRulesRulesResponseArrayOutput `pulumi:"rulesResponses"`
 }
 
 // NewWirelessSsidsFirewallL3FirewallRules registers a new resource with the given unique name, arguments, and options.
@@ -76,6 +78,8 @@ type wirelessSsidsFirewallL3FirewallRulesState struct {
 	Number *string `pulumi:"number"`
 	// An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
 	Rules []WirelessSsidsFirewallL3FirewallRulesRule `pulumi:"rules"`
+	// An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
+	RulesResponses []WirelessSsidsFirewallL3FirewallRulesRulesResponse `pulumi:"rulesResponses"`
 }
 
 type WirelessSsidsFirewallL3FirewallRulesState struct {
@@ -87,6 +91,8 @@ type WirelessSsidsFirewallL3FirewallRulesState struct {
 	Number pulumi.StringPtrInput
 	// An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
 	Rules WirelessSsidsFirewallL3FirewallRulesRuleArrayInput
+	// An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
+	RulesResponses WirelessSsidsFirewallL3FirewallRulesRulesResponseArrayInput
 }
 
 func (WirelessSsidsFirewallL3FirewallRulesState) ElementType() reflect.Type {
@@ -102,6 +108,8 @@ type wirelessSsidsFirewallL3FirewallRulesArgs struct {
 	Number string `pulumi:"number"`
 	// An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
 	Rules []WirelessSsidsFirewallL3FirewallRulesRule `pulumi:"rules"`
+	// An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
+	RulesResponses []WirelessSsidsFirewallL3FirewallRulesRulesResponse `pulumi:"rulesResponses"`
 }
 
 // The set of arguments for constructing a WirelessSsidsFirewallL3FirewallRules resource.
@@ -114,6 +122,8 @@ type WirelessSsidsFirewallL3FirewallRulesArgs struct {
 	Number pulumi.StringInput
 	// An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
 	Rules WirelessSsidsFirewallL3FirewallRulesRuleArrayInput
+	// An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
+	RulesResponses WirelessSsidsFirewallL3FirewallRulesRulesResponseArrayInput
 }
 
 func (WirelessSsidsFirewallL3FirewallRulesArgs) ElementType() reflect.Type {
@@ -204,8 +214,8 @@ func (o WirelessSsidsFirewallL3FirewallRulesOutput) ToWirelessSsidsFirewallL3Fir
 }
 
 // Allow wireless client access to local LAN (boolean value - true allows access and false denies access) (optional)
-func (o WirelessSsidsFirewallL3FirewallRulesOutput) AllowLanAccess() pulumi.BoolOutput {
-	return o.ApplyT(func(v *WirelessSsidsFirewallL3FirewallRules) pulumi.BoolOutput { return v.AllowLanAccess }).(pulumi.BoolOutput)
+func (o WirelessSsidsFirewallL3FirewallRulesOutput) AllowLanAccess() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsFirewallL3FirewallRules) pulumi.BoolPtrOutput { return v.AllowLanAccess }).(pulumi.BoolPtrOutput)
 }
 
 // networkId path parameter. Network ID
@@ -223,6 +233,13 @@ func (o WirelessSsidsFirewallL3FirewallRulesOutput) Rules() WirelessSsidsFirewal
 	return o.ApplyT(func(v *WirelessSsidsFirewallL3FirewallRules) WirelessSsidsFirewallL3FirewallRulesRuleArrayOutput {
 		return v.Rules
 	}).(WirelessSsidsFirewallL3FirewallRulesRuleArrayOutput)
+}
+
+// An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
+func (o WirelessSsidsFirewallL3FirewallRulesOutput) RulesResponses() WirelessSsidsFirewallL3FirewallRulesRulesResponseArrayOutput {
+	return o.ApplyT(func(v *WirelessSsidsFirewallL3FirewallRules) WirelessSsidsFirewallL3FirewallRulesRulesResponseArrayOutput {
+		return v.RulesResponses
+	}).(WirelessSsidsFirewallL3FirewallRulesRulesResponseArrayOutput)
 }
 
 type WirelessSsidsFirewallL3FirewallRulesArrayOutput struct{ *pulumi.OutputState }

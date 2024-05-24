@@ -19,7 +19,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -40,17 +41,18 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new InsightMonitoredMediaServers(&#34;example&#34;, InsightMonitoredMediaServersArgs.builder()        
- *             .address(&#34;123.123.123.1&#34;)
+ *         var example = new InsightMonitoredMediaServers("example", InsightMonitoredMediaServersArgs.builder()
+ *             .address("123.123.123.1")
  *             .bestEffortMonitoringEnabled(true)
- *             .name(&#34;Sample VoIP Provider&#34;)
- *             .organizationId(&#34;string&#34;)
+ *             .name("Sample VoIP Provider")
+ *             .organizationId("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiOrganizationsInsightMonitoredMediaServersExample&#34;, example);
+ *         ctx.export("merakiOrganizationsInsightMonitoredMediaServersExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

@@ -20,7 +20,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -43,23 +44,24 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ApplianceVpnSiteToSiteVpn(&#34;example&#34;, ApplianceVpnSiteToSiteVpnArgs.builder()        
+ *         var example = new ApplianceVpnSiteToSiteVpn("example", ApplianceVpnSiteToSiteVpnArgs.builder()
  *             .hubs(ApplianceVpnSiteToSiteVpnHubArgs.builder()
- *                 .hub_id(&#34;N_4901849&#34;)
+ *                 .hub_id("N_4901849")
  *                 .use_default_route(true)
  *                 .build())
- *             .mode(&#34;spoke&#34;)
- *             .networkId(&#34;string&#34;)
+ *             .mode("spoke")
+ *             .networkId("string")
  *             .subnets(ApplianceVpnSiteToSiteVpnSubnetArgs.builder()
- *                 .local_subnet(&#34;192.168.1.0/24&#34;)
+ *                 .local_subnet("192.168.1.0/24")
  *                 .use_vpn(true)
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksApplianceVpnSiteToSiteVpnExample&#34;, example);
+ *         ctx.export("merakiNetworksApplianceVpnSiteToSiteVpnExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

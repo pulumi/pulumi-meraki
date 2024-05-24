@@ -2608,7 +2608,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="activeDirectory")
-    def active_directory(self) -> pulumi.Output['outputs.WirelessSsidsActiveDirectory']:
+    def active_directory(self) -> pulumi.Output[Optional['outputs.WirelessSsidsActiveDirectory']]:
         """
         The current setting for Active Directory. Only valid if splashPage is 'Password-protected with Active Directory'
         """
@@ -2621,7 +2621,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="adultContentFilteringEnabled")
-    def adult_content_filtering_enabled(self) -> pulumi.Output[bool]:
+    def adult_content_filtering_enabled(self) -> pulumi.Output[Optional[bool]]:
         """
         Boolean indicating whether or not adult content will be blocked
         """
@@ -2629,7 +2629,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="apTagsAndVlanIds")
-    def ap_tags_and_vlan_ids(self) -> pulumi.Output[Sequence['outputs.WirelessSsidsApTagsAndVlanId']]:
+    def ap_tags_and_vlan_ids(self) -> pulumi.Output[Optional[Sequence['outputs.WirelessSsidsApTagsAndVlanId']]]:
         """
         The list of tags and VLAN IDs used for VLAN tagging. This param is only valid when the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
         """
@@ -2645,7 +2645,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="availabilityTags")
-    def availability_tags(self) -> pulumi.Output[Sequence[str]]:
+    def availability_tags(self) -> pulumi.Output[Optional[Sequence[str]]]:
         """
         List of tags for this SSID. If availableOnAllAps is false, then the SSID is only broadcast by APs with tags matching any of the tags in this list
         """
@@ -2669,7 +2669,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="concentratorNetworkId")
-    def concentrator_network_id(self) -> pulumi.Output[str]:
+    def concentrator_network_id(self) -> pulumi.Output[Optional[str]]:
         """
         The concentrator to use when the ipAssignmentMode is 'Layer 3 roaming with a concentrator' or 'VPN'.
         """
@@ -2685,7 +2685,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="disassociateClientsOnVpnFailover")
-    def disassociate_clients_on_vpn_failover(self) -> pulumi.Output[bool]:
+    def disassociate_clients_on_vpn_failover(self) -> pulumi.Output[Optional[bool]]:
         """
         Disassociate clients when 'VPN' concentrator failover occurs in order to trigger clients to re-associate and generate new DHCP requests. This param is only valid if ipAssignmentMode is 'VPN'.
         """
@@ -2693,7 +2693,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="dnsRewrite")
-    def dns_rewrite(self) -> pulumi.Output['outputs.WirelessSsidsDnsRewrite']:
+    def dns_rewrite(self) -> pulumi.Output[Optional['outputs.WirelessSsidsDnsRewrite']]:
         """
         DNS servers rewrite settings
         """
@@ -2701,7 +2701,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter
-    def dot11r(self) -> pulumi.Output['outputs.WirelessSsidsDot11r']:
+    def dot11r(self) -> pulumi.Output[Optional['outputs.WirelessSsidsDot11r']]:
         """
         The current setting for 802.11r
         """
@@ -2709,7 +2709,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter
-    def dot11w(self) -> pulumi.Output['outputs.WirelessSsidsDot11w']:
+    def dot11w(self) -> pulumi.Output[Optional['outputs.WirelessSsidsDot11w']]:
         """
         The current setting for Protected Management Frames (802.11w).
         """
@@ -2733,7 +2733,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="enterpriseAdminAccess")
-    def enterprise_admin_access(self) -> pulumi.Output[str]:
+    def enterprise_admin_access(self) -> pulumi.Output[Optional[str]]:
         """
         Whether or not an SSID is accessible by 'enterprise' administrators ('access disabled' or 'access enabled')
         """
@@ -2741,7 +2741,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter
-    def gre(self) -> pulumi.Output['outputs.WirelessSsidsGre']:
+    def gre(self) -> pulumi.Output[Optional['outputs.WirelessSsidsGre']]:
         """
         Ethernet over GRE settings
         """
@@ -2757,7 +2757,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="lanIsolationEnabled")
-    def lan_isolation_enabled(self) -> pulumi.Output[bool]:
+    def lan_isolation_enabled(self) -> pulumi.Output[Optional[bool]]:
         """
         Boolean indicating whether Layer 2 LAN isolation should be enabled or disabled. Only configurable when ipAssignmentMode is 'Bridge mode'.
         """
@@ -2765,7 +2765,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter
-    def ldap(self) -> pulumi.Output['outputs.WirelessSsidsLdap']:
+    def ldap(self) -> pulumi.Output[Optional['outputs.WirelessSsidsLdap']]:
         """
         The current setting for LDAP. Only valid if splashPage is 'Password-protected with LDAP'.
         """
@@ -2781,7 +2781,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="localRadius")
-    def local_radius(self) -> pulumi.Output['outputs.WirelessSsidsLocalRadius']:
+    def local_radius(self) -> pulumi.Output[Optional['outputs.WirelessSsidsLocalRadius']]:
         """
         The current setting for Local Authentication, a built-in RADIUS server on the access point. Only valid if authMode is '8021x-localradius'.
         """
@@ -2813,7 +2813,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="namedVlans")
-    def named_vlans(self) -> pulumi.Output['outputs.WirelessSsidsNamedVlans']:
+    def named_vlans(self) -> pulumi.Output[Optional['outputs.WirelessSsidsNamedVlans']]:
         """
         Named VLAN settings.
         """
@@ -2837,7 +2837,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter
-    def oauth(self) -> pulumi.Output['outputs.WirelessSsidsOauth']:
+    def oauth(self) -> pulumi.Output[Optional['outputs.WirelessSsidsOauth']]:
         """
         The OAuth settings of this SSID. Only valid if splashPage is 'Google OAuth'.
         """
@@ -2885,7 +2885,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="radiusAccountingEnabled")
-    def radius_accounting_enabled(self) -> pulumi.Output[bool]:
+    def radius_accounting_enabled(self) -> pulumi.Output[Optional[bool]]:
         """
         Whether or not RADIUS accounting is enabled
         """
@@ -2893,7 +2893,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="radiusAccountingInterimInterval")
-    def radius_accounting_interim_interval(self) -> pulumi.Output[int]:
+    def radius_accounting_interim_interval(self) -> pulumi.Output[Optional[int]]:
         """
         The interval (in seconds) in which accounting information is updated and sent to the RADIUS accounting server.
         """
@@ -2917,7 +2917,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="radiusAuthenticationNasId")
-    def radius_authentication_nas_id(self) -> pulumi.Output[str]:
+    def radius_authentication_nas_id(self) -> pulumi.Output[Optional[str]]:
         """
         The template of the NAS identifier to be used for RADIUS authentication (ex. $NODE*MAC$:$VAP*NUM$).
         """
@@ -2925,7 +2925,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="radiusCalledStationId")
-    def radius_called_station_id(self) -> pulumi.Output[str]:
+    def radius_called_station_id(self) -> pulumi.Output[Optional[str]]:
         """
         The template of the called station identifier to be used for RADIUS (ex. $NODE*MAC$:$VAP*NUM$).
         """
@@ -2933,7 +2933,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="radiusCoaEnabled")
-    def radius_coa_enabled(self) -> pulumi.Output[bool]:
+    def radius_coa_enabled(self) -> pulumi.Output[Optional[bool]]:
         """
         If true, Meraki devices will act as a RADIUS Dynamic Authorization Server and will respond to RADIUS Change-of-Authorization and Disconnect messages sent by the RADIUS server.
         """
@@ -2957,7 +2957,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="radiusFallbackEnabled")
-    def radius_fallback_enabled(self) -> pulumi.Output[bool]:
+    def radius_fallback_enabled(self) -> pulumi.Output[Optional[bool]]:
         """
         Whether or not higher priority RADIUS servers should be retried after 60 seconds.
         """
@@ -2965,7 +2965,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="radiusGuestVlanEnabled")
-    def radius_guest_vlan_enabled(self) -> pulumi.Output[bool]:
+    def radius_guest_vlan_enabled(self) -> pulumi.Output[Optional[bool]]:
         """
         Whether or not RADIUS Guest VLAN is enabled. This param is only valid if the authMode is 'open-with-radius' and addressing mode is not set to 'isolated' or 'nat' mode
         """
@@ -2973,7 +2973,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="radiusGuestVlanId")
-    def radius_guest_vlan_id(self) -> pulumi.Output[int]:
+    def radius_guest_vlan_id(self) -> pulumi.Output[Optional[int]]:
         """
         VLAN ID of the RADIUS Guest VLAN. This param is only valid if the authMode is 'open-with-radius' and addressing mode is not set to 'isolated' or 'nat' mode
         """
@@ -2989,7 +2989,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="radiusOverride")
-    def radius_override(self) -> pulumi.Output[bool]:
+    def radius_override(self) -> pulumi.Output[Optional[bool]]:
         """
         If true, the RADIUS response can override VLAN tag. This is not valid when ipAssignmentMode is 'NAT mode'.
         """
@@ -2997,7 +2997,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="radiusProxyEnabled")
-    def radius_proxy_enabled(self) -> pulumi.Output[bool]:
+    def radius_proxy_enabled(self) -> pulumi.Output[Optional[bool]]:
         """
         If true, Meraki devices will proxy RADIUS messages through the Meraki cloud to the configured RADIUS auth and accounting servers.
         """
@@ -3005,7 +3005,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="radiusServerAttemptsLimit")
-    def radius_server_attempts_limit(self) -> pulumi.Output[int]:
+    def radius_server_attempts_limit(self) -> pulumi.Output[Optional[int]]:
         """
         The maximum number of transmit attempts after which a RADIUS server is failed over (must be between 1-5).
         """
@@ -3013,7 +3013,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="radiusServerTimeout")
-    def radius_server_timeout(self) -> pulumi.Output[int]:
+    def radius_server_timeout(self) -> pulumi.Output[Optional[int]]:
         """
         The amount of time for which a RADIUS client waits for a reply from the RADIUS server (must be between 1-10 seconds).
         """
@@ -3037,7 +3037,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="radiusTestingEnabled")
-    def radius_testing_enabled(self) -> pulumi.Output[bool]:
+    def radius_testing_enabled(self) -> pulumi.Output[Optional[bool]]:
         """
         If true, Meraki devices will periodically send Access-Request messages to configured RADIUS servers using identity 'meraki*8021x*test' to ensure that the RADIUS servers are reachable.
         """
@@ -3045,7 +3045,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="secondaryConcentratorNetworkId")
-    def secondary_concentrator_network_id(self) -> pulumi.Output[str]:
+    def secondary_concentrator_network_id(self) -> pulumi.Output[Optional[str]]:
         """
         The secondary concentrator to use when the ipAssignmentMode is 'VPN'. If configured, the APs will switch to using this concentrator if the primary concentrator is unreachable. This param is optional. ('disabled' represents no secondary concentrator.)
         """
@@ -3053,7 +3053,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="speedBurst")
-    def speed_burst(self) -> pulumi.Output['outputs.WirelessSsidsSpeedBurst']:
+    def speed_burst(self) -> pulumi.Output[Optional['outputs.WirelessSsidsSpeedBurst']]:
         """
         The SpeedBurst setting for this SSID'
         """
@@ -3093,7 +3093,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="useVlanTagging")
-    def use_vlan_tagging(self) -> pulumi.Output[bool]:
+    def use_vlan_tagging(self) -> pulumi.Output[Optional[bool]]:
         """
         Whether or not traffic should be directed to use specific VLANs. This param is only valid if the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
         """
@@ -3109,7 +3109,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="vlanId")
-    def vlan_id(self) -> pulumi.Output[int]:
+    def vlan_id(self) -> pulumi.Output[Optional[int]]:
         """
         The VLAN ID used for VLAN tagging. This param is only valid when the ipAssignmentMode is 'Layer 3 roaming with a concentrator' or 'VPN'
         """
@@ -3117,7 +3117,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="walledGardenEnabled")
-    def walled_garden_enabled(self) -> pulumi.Output[bool]:
+    def walled_garden_enabled(self) -> pulumi.Output[Optional[bool]]:
         """
         Allow users to access a configurable list of IP ranges prior to sign-on
         """
@@ -3125,7 +3125,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="walledGardenRanges")
-    def walled_garden_ranges(self) -> pulumi.Output[Sequence[str]]:
+    def walled_garden_ranges(self) -> pulumi.Output[Optional[Sequence[str]]]:
         """
         Domain names and IP address ranges available in Walled Garden mode
         """

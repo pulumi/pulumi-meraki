@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -47,46 +48,47 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new BrandingPolicies(&#34;example&#34;, BrandingPoliciesArgs.builder()        
+ *         var example = new BrandingPolicies("example", BrandingPoliciesArgs.builder()
  *             .adminSettings(BrandingPoliciesAdminSettingsArgs.builder()
- *                 .applies_to(&#34;All admins of networks...&#34;)
+ *                 .applies_to("All admins of networks...")
  *                 .values(                
- *                     &#34;N_1234&#34;,
- *                     &#34;L_5678&#34;)
+ *                     "N_1234",
+ *                     "L_5678")
  *                 .build())
  *             .customLogo(BrandingPoliciesCustomLogoArgs.builder()
  *                 .enabled(true)
  *                 .image(BrandingPoliciesCustomLogoImageArgs.builder()
- *                     .contents(&#34;Hyperg26C8F4h8CvcoUqpA==&#34;)
- *                     .format(&#34;jpg&#34;)
+ *                     .contents("Hyperg26C8F4h8CvcoUqpA==")
+ *                     .format("jpg")
  *                     .build())
  *                 .build())
  *             .enabled(true)
  *             .helpSettings(BrandingPoliciesHelpSettingsArgs.builder()
- *                 .api_docs_subtab(&#34;default or inherit&#34;)
- *                 .cases_subtab(&#34;hide&#34;)
- *                 .cisco_meraki_product_documentation(&#34;show&#34;)
- *                 .community_subtab(&#34;show&#34;)
- *                 .data_protection_requests_subtab(&#34;default or inherit&#34;)
- *                 .firewall_info_subtab(&#34;hide&#34;)
- *                 .get_help_subtab(&#34;default or inherit&#34;)
- *                 .get_help_subtab_knowledge_base_search(&#34;&lt;h1&gt;Some custom HTML content&lt;/h1&gt;&#34;)
- *                 .hardware_replacements_subtab(&#34;hide&#34;)
- *                 .help_tab(&#34;show&#34;)
- *                 .help_widget(&#34;hide&#34;)
- *                 .new_features_subtab(&#34;show&#34;)
- *                 .sm_forums(&#34;hide&#34;)
- *                 .support_contact_info(&#34;show&#34;)
- *                 .universal_search_knowledge_base_search(&#34;hide&#34;)
+ *                 .api_docs_subtab("default or inherit")
+ *                 .cases_subtab("hide")
+ *                 .cisco_meraki_product_documentation("show")
+ *                 .community_subtab("show")
+ *                 .data_protection_requests_subtab("default or inherit")
+ *                 .firewall_info_subtab("hide")
+ *                 .get_help_subtab("default or inherit")
+ *                 .get_help_subtab_knowledge_base_search("<h1>Some custom HTML content</h1>")
+ *                 .hardware_replacements_subtab("hide")
+ *                 .help_tab("show")
+ *                 .help_widget("hide")
+ *                 .new_features_subtab("show")
+ *                 .sm_forums("hide")
+ *                 .support_contact_info("show")
+ *                 .universal_search_knowledge_base_search("hide")
  *                 .build())
- *             .name(&#34;My Branding Policy&#34;)
- *             .organizationId(&#34;string&#34;)
+ *             .name("My Branding Policy")
+ *             .organizationId("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiOrganizationsBrandingPoliciesExample&#34;, example);
+ *         ctx.export("merakiOrganizationsBrandingPoliciesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

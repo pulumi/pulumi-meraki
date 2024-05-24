@@ -2213,6 +2213,9 @@
                 "fields": {
                     "rules": {
                         "maxItemsOne": false
+                    },
+                    "rules_response": {
+                        "maxItemsOne": false
                     }
                 }
             },

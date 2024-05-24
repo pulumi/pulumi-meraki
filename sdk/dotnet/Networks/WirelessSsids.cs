@@ -25,7 +25,7 @@ namespace Pulumi.Meraki.Networks
         /// The current setting for Active Directory. Only valid if splashPage is 'Password-protected with Active Directory'
         /// </summary>
         [Output("activeDirectory")]
-        public Output<Outputs.WirelessSsidsActiveDirectory> ActiveDirectory { get; private set; } = null!;
+        public Output<Outputs.WirelessSsidsActiveDirectory?> ActiveDirectory { get; private set; } = null!;
 
         [Output("adminSplashUrl")]
         public Output<string> AdminSplashUrl { get; private set; } = null!;
@@ -34,7 +34,7 @@ namespace Pulumi.Meraki.Networks
         /// Boolean indicating whether or not adult content will be blocked
         /// </summary>
         [Output("adultContentFilteringEnabled")]
-        public Output<bool> AdultContentFilteringEnabled { get; private set; } = null!;
+        public Output<bool?> AdultContentFilteringEnabled { get; private set; } = null!;
 
         /// <summary>
         /// The list of tags and VLAN IDs used for VLAN tagging. This param is only valid when the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
@@ -70,7 +70,7 @@ namespace Pulumi.Meraki.Networks
         /// The concentrator to use when the ipAssignmentMode is 'Layer 3 roaming with a concentrator' or 'VPN'.
         /// </summary>
         [Output("concentratorNetworkId")]
-        public Output<string> ConcentratorNetworkId { get; private set; } = null!;
+        public Output<string?> ConcentratorNetworkId { get; private set; } = null!;
 
         /// <summary>
         /// The default VLAN ID used for 'all other APs'. This param is only valid when the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
@@ -82,25 +82,25 @@ namespace Pulumi.Meraki.Networks
         /// Disassociate clients when 'VPN' concentrator failover occurs in order to trigger clients to re-associate and generate new DHCP requests. This param is only valid if ipAssignmentMode is 'VPN'.
         /// </summary>
         [Output("disassociateClientsOnVpnFailover")]
-        public Output<bool> DisassociateClientsOnVpnFailover { get; private set; } = null!;
+        public Output<bool?> DisassociateClientsOnVpnFailover { get; private set; } = null!;
 
         /// <summary>
         /// DNS servers rewrite settings
         /// </summary>
         [Output("dnsRewrite")]
-        public Output<Outputs.WirelessSsidsDnsRewrite> DnsRewrite { get; private set; } = null!;
+        public Output<Outputs.WirelessSsidsDnsRewrite?> DnsRewrite { get; private set; } = null!;
 
         /// <summary>
         /// The current setting for 802.11r
         /// </summary>
         [Output("dot11r")]
-        public Output<Outputs.WirelessSsidsDot11r> Dot11r { get; private set; } = null!;
+        public Output<Outputs.WirelessSsidsDot11r?> Dot11r { get; private set; } = null!;
 
         /// <summary>
         /// The current setting for Protected Management Frames (802.11w).
         /// </summary>
         [Output("dot11w")]
-        public Output<Outputs.WirelessSsidsDot11w> Dot11w { get; private set; } = null!;
+        public Output<Outputs.WirelessSsidsDot11w?> Dot11w { get; private set; } = null!;
 
         /// <summary>
         /// Whether or not the SSID is enabled
@@ -118,13 +118,13 @@ namespace Pulumi.Meraki.Networks
         /// Whether or not an SSID is accessible by 'enterprise' administrators ('access disabled' or 'access enabled')
         /// </summary>
         [Output("enterpriseAdminAccess")]
-        public Output<string> EnterpriseAdminAccess { get; private set; } = null!;
+        public Output<string?> EnterpriseAdminAccess { get; private set; } = null!;
 
         /// <summary>
         /// Ethernet over GRE settings
         /// </summary>
         [Output("gre")]
-        public Output<Outputs.WirelessSsidsGre> Gre { get; private set; } = null!;
+        public Output<Outputs.WirelessSsidsGre?> Gre { get; private set; } = null!;
 
         /// <summary>
         /// The client IP assignment mode
@@ -136,13 +136,13 @@ namespace Pulumi.Meraki.Networks
         /// Boolean indicating whether Layer 2 LAN isolation should be enabled or disabled. Only configurable when ipAssignmentMode is 'Bridge mode'.
         /// </summary>
         [Output("lanIsolationEnabled")]
-        public Output<bool> LanIsolationEnabled { get; private set; } = null!;
+        public Output<bool?> LanIsolationEnabled { get; private set; } = null!;
 
         /// <summary>
         /// The current setting for LDAP. Only valid if splashPage is 'Password-protected with LDAP'.
         /// </summary>
         [Output("ldap")]
-        public Output<Outputs.WirelessSsidsLdap> Ldap { get; private set; } = null!;
+        public Output<Outputs.WirelessSsidsLdap?> Ldap { get; private set; } = null!;
 
         /// <summary>
         /// Extended local auth flag for Enterprise NAC
@@ -154,7 +154,7 @@ namespace Pulumi.Meraki.Networks
         /// The current setting for Local Authentication, a built-in RADIUS server on the access point. Only valid if authMode is '8021x-localradius'.
         /// </summary>
         [Output("localRadius")]
-        public Output<Outputs.WirelessSsidsLocalRadius> LocalRadius { get; private set; } = null!;
+        public Output<Outputs.WirelessSsidsLocalRadius?> LocalRadius { get; private set; } = null!;
 
         /// <summary>
         /// Whether clients connecting to this SSID must use the IP address assigned by the DHCP server
@@ -178,7 +178,7 @@ namespace Pulumi.Meraki.Networks
         /// Named VLAN settings.
         /// </summary>
         [Output("namedVlans")]
-        public Output<Outputs.WirelessSsidsNamedVlans> NamedVlans { get; private set; } = null!;
+        public Output<Outputs.WirelessSsidsNamedVlans?> NamedVlans { get; private set; } = null!;
 
         /// <summary>
         /// networkId path parameter. Network ID
@@ -196,7 +196,7 @@ namespace Pulumi.Meraki.Networks
         /// The OAuth settings of this SSID. Only valid if splashPage is 'Google OAuth'.
         /// </summary>
         [Output("oauth")]
-        public Output<Outputs.WirelessSsidsOauth> Oauth { get; private set; } = null!;
+        public Output<Outputs.WirelessSsidsOauth?> Oauth { get; private set; } = null!;
 
         /// <summary>
         /// The download bandwidth limit in Kbps. (0 represents no limit.)
@@ -232,13 +232,13 @@ namespace Pulumi.Meraki.Networks
         /// Whether or not RADIUS accounting is enabled
         /// </summary>
         [Output("radiusAccountingEnabled")]
-        public Output<bool> RadiusAccountingEnabled { get; private set; } = null!;
+        public Output<bool?> RadiusAccountingEnabled { get; private set; } = null!;
 
         /// <summary>
         /// The interval (in seconds) in which accounting information is updated and sent to the RADIUS accounting server.
         /// </summary>
         [Output("radiusAccountingInterimInterval")]
-        public Output<int> RadiusAccountingInterimInterval { get; private set; } = null!;
+        public Output<int?> RadiusAccountingInterimInterval { get; private set; } = null!;
 
         /// <summary>
         /// List of RADIUS accounting 802.1X servers to be used for authentication
@@ -256,19 +256,19 @@ namespace Pulumi.Meraki.Networks
         /// The template of the NAS identifier to be used for RADIUS authentication (ex. $NODE*MAC$:$VAP*NUM$).
         /// </summary>
         [Output("radiusAuthenticationNasId")]
-        public Output<string> RadiusAuthenticationNasId { get; private set; } = null!;
+        public Output<string?> RadiusAuthenticationNasId { get; private set; } = null!;
 
         /// <summary>
         /// The template of the called station identifier to be used for RADIUS (ex. $NODE*MAC$:$VAP*NUM$).
         /// </summary>
         [Output("radiusCalledStationId")]
-        public Output<string> RadiusCalledStationId { get; private set; } = null!;
+        public Output<string?> RadiusCalledStationId { get; private set; } = null!;
 
         /// <summary>
         /// If true, Meraki devices will act as a RADIUS Dynamic Authorization Server and will respond to RADIUS Change-of-Authorization and Disconnect messages sent by the RADIUS server.
         /// </summary>
         [Output("radiusCoaEnabled")]
-        public Output<bool> RadiusCoaEnabled { get; private set; } = null!;
+        public Output<bool?> RadiusCoaEnabled { get; private set; } = null!;
 
         /// <summary>
         /// Whether RADIUS authentication is enabled
@@ -286,19 +286,19 @@ namespace Pulumi.Meraki.Networks
         /// Whether or not higher priority RADIUS servers should be retried after 60 seconds.
         /// </summary>
         [Output("radiusFallbackEnabled")]
-        public Output<bool> RadiusFallbackEnabled { get; private set; } = null!;
+        public Output<bool?> RadiusFallbackEnabled { get; private set; } = null!;
 
         /// <summary>
         /// Whether or not RADIUS Guest VLAN is enabled. This param is only valid if the authMode is 'open-with-radius' and addressing mode is not set to 'isolated' or 'nat' mode
         /// </summary>
         [Output("radiusGuestVlanEnabled")]
-        public Output<bool> RadiusGuestVlanEnabled { get; private set; } = null!;
+        public Output<bool?> RadiusGuestVlanEnabled { get; private set; } = null!;
 
         /// <summary>
         /// VLAN ID of the RADIUS Guest VLAN. This param is only valid if the authMode is 'open-with-radius' and addressing mode is not set to 'isolated' or 'nat' mode
         /// </summary>
         [Output("radiusGuestVlanId")]
-        public Output<int> RadiusGuestVlanId { get; private set; } = null!;
+        public Output<int?> RadiusGuestVlanId { get; private set; } = null!;
 
         /// <summary>
         /// Policy which determines which RADIUS server will be contacted first in an authentication attempt, and the ordering of any necessary retry attempts
@@ -310,25 +310,25 @@ namespace Pulumi.Meraki.Networks
         /// If true, the RADIUS response can override VLAN tag. This is not valid when ipAssignmentMode is 'NAT mode'.
         /// </summary>
         [Output("radiusOverride")]
-        public Output<bool> RadiusOverride { get; private set; } = null!;
+        public Output<bool?> RadiusOverride { get; private set; } = null!;
 
         /// <summary>
         /// If true, Meraki devices will proxy RADIUS messages through the Meraki cloud to the configured RADIUS auth and accounting servers.
         /// </summary>
         [Output("radiusProxyEnabled")]
-        public Output<bool> RadiusProxyEnabled { get; private set; } = null!;
+        public Output<bool?> RadiusProxyEnabled { get; private set; } = null!;
 
         /// <summary>
         /// The maximum number of transmit attempts after which a RADIUS server is failed over (must be between 1-5).
         /// </summary>
         [Output("radiusServerAttemptsLimit")]
-        public Output<int> RadiusServerAttemptsLimit { get; private set; } = null!;
+        public Output<int?> RadiusServerAttemptsLimit { get; private set; } = null!;
 
         /// <summary>
         /// The amount of time for which a RADIUS client waits for a reply from the RADIUS server (must be between 1-10 seconds).
         /// </summary>
         [Output("radiusServerTimeout")]
-        public Output<int> RadiusServerTimeout { get; private set; } = null!;
+        public Output<int?> RadiusServerTimeout { get; private set; } = null!;
 
         /// <summary>
         /// The RADIUS 802.1X servers to be used for authentication. This param is only valid if the authMode is 'open-with-radius', '8021x-radius' or 'ipsk-with-radius'
@@ -346,19 +346,19 @@ namespace Pulumi.Meraki.Networks
         /// If true, Meraki devices will periodically send Access-Request messages to configured RADIUS servers using identity 'meraki*8021x*test' to ensure that the RADIUS servers are reachable.
         /// </summary>
         [Output("radiusTestingEnabled")]
-        public Output<bool> RadiusTestingEnabled { get; private set; } = null!;
+        public Output<bool?> RadiusTestingEnabled { get; private set; } = null!;
 
         /// <summary>
         /// The secondary concentrator to use when the ipAssignmentMode is 'VPN'. If configured, the APs will switch to using this concentrator if the primary concentrator is unreachable. This param is optional. ('disabled' represents no secondary concentrator.)
         /// </summary>
         [Output("secondaryConcentratorNetworkId")]
-        public Output<string> SecondaryConcentratorNetworkId { get; private set; } = null!;
+        public Output<string?> SecondaryConcentratorNetworkId { get; private set; } = null!;
 
         /// <summary>
         /// The SpeedBurst setting for this SSID'
         /// </summary>
         [Output("speedBurst")]
-        public Output<Outputs.WirelessSsidsSpeedBurst> SpeedBurst { get; private set; } = null!;
+        public Output<Outputs.WirelessSsidsSpeedBurst?> SpeedBurst { get; private set; } = null!;
 
         /// <summary>
         /// Array of valid sponsor email domains for sponsored guest splash type.
@@ -388,7 +388,7 @@ namespace Pulumi.Meraki.Networks
         /// Whether or not traffic should be directed to use specific VLANs. This param is only valid if the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
         /// </summary>
         [Output("useVlanTagging")]
-        public Output<bool> UseVlanTagging { get; private set; } = null!;
+        public Output<bool?> UseVlanTagging { get; private set; } = null!;
 
         /// <summary>
         /// Whether the SSID is advertised or hidden by the AP
@@ -400,13 +400,13 @@ namespace Pulumi.Meraki.Networks
         /// The VLAN ID used for VLAN tagging. This param is only valid when the ipAssignmentMode is 'Layer 3 roaming with a concentrator' or 'VPN'
         /// </summary>
         [Output("vlanId")]
-        public Output<int> VlanId { get; private set; } = null!;
+        public Output<int?> VlanId { get; private set; } = null!;
 
         /// <summary>
         /// Allow users to access a configurable list of IP ranges prior to sign-on
         /// </summary>
         [Output("walledGardenEnabled")]
-        public Output<bool> WalledGardenEnabled { get; private set; } = null!;
+        public Output<bool?> WalledGardenEnabled { get; private set; } = null!;
 
         /// <summary>
         /// Domain names and IP address ranges available in Walled Garden mode

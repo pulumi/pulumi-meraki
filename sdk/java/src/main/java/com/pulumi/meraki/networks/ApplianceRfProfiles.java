@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -45,13 +46,13 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ApplianceRfProfiles(&#34;example&#34;, ApplianceRfProfilesArgs.builder()        
+ *         var example = new ApplianceRfProfiles("example", ApplianceRfProfilesArgs.builder()
  *             .fiveGhzSettings(ApplianceRfProfilesFiveGhzSettingsArgs.builder()
  *                 .ax_enabled(true)
  *                 .min_bitrate(48)
  *                 .build())
- *             .name(&#34;MX RF Profile&#34;)
- *             .networkId(&#34;string&#34;)
+ *             .name("MX RF Profile")
+ *             .networkId("string")
  *             .perSsidSettings(ApplianceRfProfilesPerSsidSettingsArgs.builder()
  *                 .status_1(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .status_2(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
@@ -64,10 +65,11 @@ import javax.annotation.Nullable;
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksApplianceRfProfilesExample&#34;, example);
+ *         ctx.export("merakiNetworksApplianceRfProfilesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

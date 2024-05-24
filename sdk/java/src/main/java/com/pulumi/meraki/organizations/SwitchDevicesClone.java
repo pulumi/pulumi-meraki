@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -43,21 +44,22 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SwitchDevicesClone(&#34;example&#34;, SwitchDevicesCloneArgs.builder()        
- *             .organizationId(&#34;string&#34;)
+ *         var example = new SwitchDevicesClone("example", SwitchDevicesCloneArgs.builder()
+ *             .organizationId("string")
  *             .parameters(SwitchDevicesCloneParametersArgs.builder()
- *                 .source_serial(&#34;Q234-ABCD-5678&#34;)
+ *                 .source_serial("Q234-ABCD-5678")
  *                 .target_serials(                
- *                     &#34;Q234-ABCD-0001&#34;,
- *                     &#34;Q234-ABCD-0002&#34;,
- *                     &#34;Q234-ABCD-0003&#34;)
+ *                     "Q234-ABCD-0001",
+ *                     "Q234-ABCD-0002",
+ *                     "Q234-ABCD-0003")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiOrganizationsSwitchDevicesCloneExample&#34;, example);
+ *         ctx.export("merakiOrganizationsSwitchDevicesCloneExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

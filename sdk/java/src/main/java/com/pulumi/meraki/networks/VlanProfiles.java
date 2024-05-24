@@ -21,7 +21,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -44,25 +45,26 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new VlanProfiles(&#34;example&#34;, VlanProfilesArgs.builder()        
- *             .iname(&#34;string&#34;)
- *             .name(&#34;My VLAN profile name&#34;)
- *             .networkId(&#34;string&#34;)
+ *         var example = new VlanProfiles("example", VlanProfilesArgs.builder()
+ *             .iname("string")
+ *             .name("My VLAN profile name")
+ *             .networkId("string")
  *             .vlanGroups(VlanProfilesVlanGroupArgs.builder()
- *                 .name(&#34;named-group-1&#34;)
- *                 .vlan_ids(&#34;2,5-7&#34;)
+ *                 .name("named-group-1")
+ *                 .vlan_ids("2,5-7")
  *                 .build())
  *             .vlanNames(VlanProfilesVlanNameArgs.builder()
  *                 .adaptive_policy_group(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
- *                 .name(&#34;named-1&#34;)
- *                 .vlan_id(&#34;1&#34;)
+ *                 .name("named-1")
+ *                 .vlan_id("1")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksVlanProfilesExample&#34;, example);
+ *         ctx.export("merakiNetworksVlanProfilesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

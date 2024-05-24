@@ -23,7 +23,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -45,12 +46,12 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new InventoryOnboardingCloudMonitoringPrepare(&#34;example&#34;, InventoryOnboardingCloudMonitoringPrepareArgs.builder()        
- *             .organizationId(&#34;string&#34;)
+ *         var example = new InventoryOnboardingCloudMonitoringPrepare("example", InventoryOnboardingCloudMonitoringPrepareArgs.builder()
+ *             .organizationId("string")
  *             .parameters(InventoryOnboardingCloudMonitoringPrepareParametersArgs.builder()
  *                 .devices(InventoryOnboardingCloudMonitoringPrepareParametersDeviceArgs.builder()
- *                     .sudi(&#34;&#34;&#34;
- *           &#34;-----BEGIN CERTIFICATE-----
+ *                     .sudi("""
+ *           "-----BEGIN CERTIFICATE-----
  *         MIIDyTCCArGgAwIBAgIKBBNXOVCGU1YztjANBgkqhkiG9w0BAQsFADAnMQ4wDAYD
  *         VQQKEwVDaXNjbzEVMBMGA1UEAxMMQUNUMiBTVURJIENBMB4XDTIxMDUzMTEzNTUx
  *         NVoXDTI5MDUxNDIwMjU0MVowbTEpMCcGA1UEBRMgUElEOkM5MjAwTC0yNFAtNEcg
@@ -73,34 +74,34 @@ import javax.annotation.Nullable;
  *         0m3M6yKpe5+VZzHZwmWdUf3Ot+zKjhveK5/YNsMIASdvtvymxUizq2Hr1hvR/kPc
  *         p1vuyWxipU8JfzOh/A==
  *         -----END CERTIFICATE-----
- *         &#34;
- *                     &#34;&#34;&#34;)
+ *         "
+ *                     """)
  *                     .tunnel(InventoryOnboardingCloudMonitoringPrepareParametersDeviceTunnelArgs.builder()
- *                         .certificateName(&#34;DeviceSUDI&#34;)
+ *                         .certificateName("DeviceSUDI")
  *                         .localInterface(1)
  *                         .loopbackNumber(1000)
- *                         .name(&#34;MERAKI&#34;)
+ *                         .name("MERAKI")
  *                         .build())
  *                     .user(InventoryOnboardingCloudMonitoringPrepareParametersDeviceUserArgs.builder()
- *                         .username(&#34;Meraki&#34;)
+ *                         .username("Meraki")
  *                         .build())
  *                     .vty(InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyArgs.builder()
  *                         .accessList(InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListArgs.builder()
  *                             .vtyIn(InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyInArgs.builder()
- *                                 .name(&#34;MERAKI_IN&#34;)
+ *                                 .name("MERAKI_IN")
  *                                 .build())
  *                             .vtyOut(InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyOutArgs.builder()
- *                                 .name(&#34;MERAKI_OUT&#34;)
+ *                                 .name("MERAKI_OUT")
  *                                 .build())
  *                             .build())
  *                         .authentication(InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationArgs.builder()
  *                             .group(InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationGroupArgs.builder()
- *                                 .name(&#34;&#34;)
+ *                                 .name("")
  *                                 .build())
  *                             .build())
  *                         .authorization(InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationArgs.builder()
  *                             .group(InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationGroupArgs.builder()
- *                                 .name(&#34;MERAKI&#34;)
+ *                                 .name("MERAKI")
  *                                 .build())
  *                             .build())
  *                         .endLineNumber(17)
@@ -111,10 +112,11 @@ import javax.annotation.Nullable;
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiOrganizationsInventoryOnboardingCloudMonitoringPrepareExample&#34;, example);
+ *         ctx.export("merakiOrganizationsInventoryOnboardingCloudMonitoringPrepareExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

@@ -20,7 +20,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -43,36 +44,37 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ManagementInterface(&#34;example&#34;, ManagementInterfaceArgs.builder()        
- *             .serial(&#34;string&#34;)
+ *         var example = new ManagementInterface("example", ManagementInterfaceArgs.builder()
+ *             .serial("string")
  *             .wan1(ManagementInterfaceWan1Args.builder()
  *                 .static_dns(                
- *                     &#34;1.2.3.2&#34;,
- *                     &#34;1.2.3.3&#34;)
- *                 .static_gateway_ip(&#34;1.2.3.1&#34;)
- *                 .static_ip(&#34;1.2.3.4&#34;)
- *                 .static_subnet_mask(&#34;255.255.255.0&#34;)
+ *                     "1.2.3.2",
+ *                     "1.2.3.3")
+ *                 .static_gateway_ip("1.2.3.1")
+ *                 .static_ip("1.2.3.4")
+ *                 .static_subnet_mask("255.255.255.0")
  *                 .using_static_ip(true)
  *                 .vlan(7)
- *                 .wan_enabled(&#34;not configured&#34;)
+ *                 .wan_enabled("not configured")
  *                 .build())
  *             .wan2(ManagementInterfaceWan2Args.builder()
  *                 .static_dns(                
- *                     &#34;1.2.3.2&#34;,
- *                     &#34;1.2.3.3&#34;)
- *                 .static_gateway_ip(&#34;1.2.3.1&#34;)
- *                 .static_ip(&#34;1.2.3.4&#34;)
- *                 .static_subnet_mask(&#34;255.255.255.0&#34;)
+ *                     "1.2.3.2",
+ *                     "1.2.3.3")
+ *                 .static_gateway_ip("1.2.3.1")
+ *                 .static_ip("1.2.3.4")
+ *                 .static_subnet_mask("255.255.255.0")
  *                 .using_static_ip(false)
  *                 .vlan(2)
- *                 .wan_enabled(&#34;enabled&#34;)
+ *                 .wan_enabled("enabled")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiDevicesManagementInterfaceExample&#34;, example);
+ *         ctx.export("merakiDevicesManagementInterfaceExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

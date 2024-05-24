@@ -25,7 +25,7 @@ namespace Pulumi.Meraki.Networks
         /// Allow wireless client access to local LAN (boolean value - true allows access and false denies access) (optional)
         /// </summary>
         [Output("allowLanAccess")]
-        public Output<bool> AllowLanAccess { get; private set; } = null!;
+        public Output<bool?> AllowLanAccess { get; private set; } = null!;
 
         /// <summary>
         /// networkId path parameter. Network ID
@@ -44,6 +44,12 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         [Output("rules")]
         public Output<ImmutableArray<Outputs.WirelessSsidsFirewallL3FirewallRulesRule>> Rules { get; private set; } = null!;
+
+        /// <summary>
+        /// An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
+        /// </summary>
+        [Output("rulesResponses")]
+        public Output<ImmutableArray<Outputs.WirelessSsidsFirewallL3FirewallRulesRulesResponse>> RulesResponses { get; private set; } = null!;
 
 
         /// <summary>
@@ -122,6 +128,18 @@ namespace Pulumi.Meraki.Networks
             set => _rules = value;
         }
 
+        [Input("rulesResponses")]
+        private InputList<Inputs.WirelessSsidsFirewallL3FirewallRulesRulesResponseArgs>? _rulesResponses;
+
+        /// <summary>
+        /// An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
+        /// </summary>
+        public InputList<Inputs.WirelessSsidsFirewallL3FirewallRulesRulesResponseArgs> RulesResponses
+        {
+            get => _rulesResponses ?? (_rulesResponses = new InputList<Inputs.WirelessSsidsFirewallL3FirewallRulesRulesResponseArgs>());
+            set => _rulesResponses = value;
+        }
+
         public WirelessSsidsFirewallL3FirewallRulesArgs()
         {
         }
@@ -158,6 +176,18 @@ namespace Pulumi.Meraki.Networks
         {
             get => _rules ?? (_rules = new InputList<Inputs.WirelessSsidsFirewallL3FirewallRulesRuleGetArgs>());
             set => _rules = value;
+        }
+
+        [Input("rulesResponses")]
+        private InputList<Inputs.WirelessSsidsFirewallL3FirewallRulesRulesResponseGetArgs>? _rulesResponses;
+
+        /// <summary>
+        /// An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
+        /// </summary>
+        public InputList<Inputs.WirelessSsidsFirewallL3FirewallRulesRulesResponseGetArgs> RulesResponses
+        {
+            get => _rulesResponses ?? (_rulesResponses = new InputList<Inputs.WirelessSsidsFirewallL3FirewallRulesRulesResponseGetArgs>());
+            set => _rulesResponses = value;
         }
 
         public WirelessSsidsFirewallL3FirewallRulesState()

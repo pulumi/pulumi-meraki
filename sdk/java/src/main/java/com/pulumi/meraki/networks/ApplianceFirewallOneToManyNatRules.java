@@ -19,7 +19,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -41,19 +42,20 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ApplianceFirewallOneToManyNatRules(&#34;example&#34;, ApplianceFirewallOneToManyNatRulesArgs.builder()        
- *             .networkId(&#34;string&#34;)
+ *         var example = new ApplianceFirewallOneToManyNatRules("example", ApplianceFirewallOneToManyNatRulesArgs.builder()
+ *             .networkId("string")
  *             .rules(ApplianceFirewallOneToManyNatRulesRuleArgs.builder()
  *                 .port_rules(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
- *                 .public_ip(&#34;146.11.11.13&#34;)
- *                 .uplink(&#34;internet1&#34;)
+ *                 .public_ip("146.11.11.13")
+ *                 .uplink("internet1")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksApplianceFirewallOneToManyNatRulesExample&#34;, example);
+ *         ctx.export("merakiNetworksApplianceFirewallOneToManyNatRulesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

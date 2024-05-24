@@ -19,7 +19,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -41,21 +42,22 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new SyslogServers(&#34;example&#34;, SyslogServersArgs.builder()        
- *             .networkId(&#34;string&#34;)
+ *         var example = new SyslogServers("example", SyslogServersArgs.builder()
+ *             .networkId("string")
  *             .servers(SyslogServersServerArgs.builder()
- *                 .host(&#34;1.2.3.4&#34;)
+ *                 .host("1.2.3.4")
  *                 .port(443)
  *                 .roles(                
- *                     &#34;Wireless event log&#34;,
- *                     &#34;URLs&#34;)
+ *                     "Wireless event log",
+ *                     "URLs")
  *                 .build())
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksSyslogServersExample&#34;, example);
+ *         ctx.export("merakiNetworksSyslogServersExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

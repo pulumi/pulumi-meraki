@@ -18,7 +18,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -39,19 +40,20 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new WirelessSsidsIdentityPsks(&#34;example&#34;, WirelessSsidsIdentityPsksArgs.builder()        
- *             .expiresAt(&#34;2018-02-11T00:00:00.090210Z&#34;)
- *             .groupPolicyId(&#34;101&#34;)
- *             .name(&#34;Sample Identity PSK&#34;)
- *             .networkId(&#34;string&#34;)
- *             .number(&#34;string&#34;)
- *             .passphrase(&#34;secret&#34;)
+ *         var example = new WirelessSsidsIdentityPsks("example", WirelessSsidsIdentityPsksArgs.builder()
+ *             .expiresAt("2018-02-11T00:00:00.090210Z")
+ *             .groupPolicyId("101")
+ *             .name("Sample Identity PSK")
+ *             .networkId("string")
+ *             .number("string")
+ *             .passphrase("secret")
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksWirelessSsidsIdentityPsksExample&#34;, example);
+ *         ctx.export("merakiNetworksWirelessSsidsIdentityPsksExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

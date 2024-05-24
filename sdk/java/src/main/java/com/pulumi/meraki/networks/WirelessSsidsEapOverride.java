@@ -20,7 +20,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -43,7 +44,7 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new WirelessSsidsEapOverride(&#34;example&#34;, WirelessSsidsEapOverrideArgs.builder()        
+ *         var example = new WirelessSsidsEapOverride("example", WirelessSsidsEapOverrideArgs.builder()
  *             .eapolKey(WirelessSsidsEapOverrideEapolKeyArgs.builder()
  *                 .retries(5)
  *                 .timeout_in_ms(5000)
@@ -53,15 +54,16 @@ import javax.annotation.Nullable;
  *                 .timeout(5)
  *                 .build())
  *             .maxRetries(5)
- *             .networkId(&#34;string&#34;)
- *             .number(&#34;string&#34;)
+ *             .networkId("string")
+ *             .number("string")
  *             .timeout(5)
  *             .build());
  * 
- *         ctx.export(&#34;merakiNetworksWirelessSsidsEapOverrideExample&#34;, example);
+ *         ctx.export("merakiNetworksWirelessSsidsEapOverrideExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

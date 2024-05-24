@@ -22,7 +22,8 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * ```java
+ * <pre>
+ * {@code
  * package generated_program;
  * 
  * import com.pulumi.Context;
@@ -46,28 +47,29 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new CameraRoles(&#34;example&#34;, CameraRolesArgs.builder()        
+ *         var example = new CameraRoles("example", CameraRolesArgs.builder()
  *             .appliedOnDevices(CameraRolesAppliedOnDeviceArgs.builder()
- *                 .id(&#34;&#34;)
- *                 .permission_scope_id(&#34;1&#34;)
- *                 .tag(&#34;reception-desk&#34;)
+ *                 .id("")
+ *                 .permission_scope_id("1")
+ *                 .tag("reception-desk")
  *                 .build())
  *             .appliedOnNetworks(CameraRolesAppliedOnNetworkArgs.builder()
- *                 .id(&#34;&#34;)
- *                 .permission_scope_id(&#34;2&#34;)
- *                 .tag(&#34;building-a&#34;)
+ *                 .id("")
+ *                 .permission_scope_id("2")
+ *                 .tag("building-a")
  *                 .build())
  *             .appliedOrgWides(CameraRolesAppliedOrgWideArgs.builder()
- *                 .permission_scope_id(&#34;2&#34;)
+ *                 .permission_scope_id("2")
  *                 .build())
- *             .name(&#34;Security_Guard&#34;)
- *             .organizationId(&#34;string&#34;)
+ *             .name("Security_Guard")
+ *             .organizationId("string")
  *             .build());
  * 
- *         ctx.export(&#34;merakiOrganizationsCameraRolesExample&#34;, example);
+ *         ctx.export("merakiOrganizationsCameraRolesExample", example);
  *     }
  * }
- * ```
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import
