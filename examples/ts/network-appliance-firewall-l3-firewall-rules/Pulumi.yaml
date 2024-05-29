@@ -1,0 +1,3 @@
+name: network-appliance-firewall-l3-firewall-ts
+runtime: nodejs
+description: A minimal TypeScript Pulumi program

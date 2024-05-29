@@ -1,0 +1,247 @@
+I0522 17:10:55.704497    2843 backend.go:1267] Stack dev being updated to version 10
+I0522 17:10:55.857658    2843 update.go:206] *** Starting Update(preview=false) ***
+I0522 17:10:55.858415    2843 plugins.go:124] gatherPluginsFromProgram(): gathering plugins from language host
+I0522 17:10:55.955459    2843 plugins.go:1791] GetPluginPath(language, nodejs, <nil>): found on $PATH /home/pedwards/.pulumi/bin/pulumi-language-nodejs
+I0522 17:10:55.955548    2843 plugins.go:1814] GetPluginPath(language, nodejs, <nil>): found next to current executable /home/pedwards/.pulumi/bin/pulumi-language-nodejs
+I0522 17:10:56.122966    2843 langruntime_plugin.go:249] langhost[nodejs].GetPluginInfo() executing
+I0522 17:10:56.123369    2843 langruntime_plugin.go:136] langhost[nodejs].GetRequiredPlugins(root=/home/pedwards/repos/pulumi-meraki/examples/ts/network-appliance-ssids, program=/home/pedwards/repos/pulumi-meraki/examples/ts/network-appliance-ssids, entryPoint=.) executing
+I0522 17:10:56.153289    2843 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0522 17:10:56.153160    2884 main.go:321] one or more errors while discovering plugins: 2 errors occurred:
+<{%reset%}>)
+I0522 17:10:56.153360    2843 eventsink.go:78] eventSink::Infoerr(<{%reset%}>	* unmarshaling package.json /home/pedwards/repos/pulumi-meraki/examples/ts/network-appliance-ssids/node_modules/resolve/test/resolver/false_main/package.json: json: cannot unmarshal bool into Go struct field packageJSON.main of type string
+<{%reset%}>)
+I0522 17:10:56.153379    2843 eventsink.go:78] eventSink::Infoerr(<{%reset%}>	* unmarshaling package.json /home/pedwards/repos/pulumi-meraki/examples/ts/network-appliance-ssids/node_modules/resolve/test/resolver/invalid_main/package.json: json: cannot unmarshal array into Go struct field packageJSON.main of type string
+<{%reset%}>)
+I0522 17:10:56.153518    2843 langruntime_plugin.go:186] langhost[nodejs].GetRequiredPlugins(root=/home/pedwards/repos/pulumi-meraki/examples/ts/network-appliance-ssids, program=/home/pedwards/repos/pulumi-meraki/examples/ts/network-appliance-ssids, entryPoint=.) success: #versions=1
+I0522 17:10:56.153559    2843 plugins.go:137] gatherPluginsFromProgram(): plugin nodejs <nil> () is required by language host
+I0522 17:10:56.153571    2843 plugins.go:137] gatherPluginsFromProgram(): plugin meraki 0.1.2 (github://api.github.com/pulumi/pulumi-meraki) is required by language host
+I0522 17:10:56.153576    2843 plugins.go:149] gatherPluginsFromSnapshot(): gathering plugins from snapshot
+I0522 17:10:56.153591    2843 plugins.go:174] gatherPluginsFromSnapshot(): plugin meraki 0.1.2 is required by first-class provider "urn:pulumi:dev::network-appliance-ssids-ts::pulumi:providers:meraki::default_0_1_2_github_/api.github.com/pulumi/pulumi-meraki"
+I0522 17:10:56.153601    2843 plugins.go:193] ensurePluginsAreInstalled(): beginning
+I0522 17:10:56.225005    2843 plugins.go:1791] GetPluginPath(language, nodejs, <nil>): found on $PATH /home/pedwards/.pulumi/bin/pulumi-language-nodejs
+I0522 17:10:56.225115    2843 plugins.go:1814] GetPluginPath(language, nodejs, <nil>): found next to current executable /home/pedwards/.pulumi/bin/pulumi-language-nodejs
+I0522 17:10:56.225131    2843 plugins.go:203] ensurePluginsAreInstalled(): plugin nodejs <nil> already installed
+I0522 17:10:56.293301    2843 plugins.go:1865] GetPluginPath(resource, meraki, 0.1.2): enabling new plugin behavior
+I0522 17:10:56.293357    2843 plugins.go:1999] SelectCompatiblePlugin(..., meraki): beginning
+I0522 17:10:56.293371    2843 plugins.go:2032] SelectCompatiblePlugin(..., meraki): skipping plugin meraki-0.1.0: semver mismatch
+I0522 17:10:56.293377    2843 plugins.go:2032] SelectCompatiblePlugin(..., meraki): skipping plugin meraki-0.1.1: semver mismatch
+I0522 17:10:56.293382    2843 plugins.go:2028] SelectCompatiblePlugin(..., meraki): best plugin meraki-0.1.2: semver match
+I0522 17:10:56.293394    2843 plugins.go:1874] GetPluginPath(resource, meraki, 0.1.2): found in cache at /home/pedwards/.pulumi/plugins/resource-meraki-v0.1.2/pulumi-resource-meraki
+I0522 17:10:56.293404    2843 plugins.go:203] ensurePluginsAreInstalled(): plugin meraki 0.1.2 already installed
+I0522 17:10:56.293422    2843 plugins.go:236] ensurePluginsAreInstalled(): completed
+I0522 17:10:56.293437    2843 plugins.go:340] computeDefaultProviderPlugins(): considering nodejs
+I0522 17:10:56.293444    2843 plugins.go:340] computeDefaultProviderPlugins(): considering meraki-0.1.2
+I0522 17:10:56.293450    2843 plugins.go:371] computeDefaultProviderPlugins(): plugin meraki-0.1.2 selected for package meraki (first seen)
+I0522 17:10:56.293457    2843 log.go:73] computeDefaultProviderPlugins(): summary of default plugins:
+I0522 17:10:56.293464    2843 plugins.go:379]   meraki          = 0.1.2
+I0522 17:10:56.293746    2843 deployment_executor.go:218] deploymentExecutor.Execute(...): waiting for incoming events
+I0522 17:10:56.293775    2843 step_executor.go:513] StepExecutor worker(10): worker coming online
+I0522 17:10:56.293799    2843 step_executor.go:513] StepExecutor worker(17): worker coming online
+I0522 17:10:56.293819    2843 step_executor.go:513] StepExecutor worker(17): worker waiting for incoming chains
+I0522 17:10:56.293824    2843 step_executor.go:513] StepExecutor worker(18): worker coming online
+I0522 17:10:56.293834    2843 step_executor.go:513] StepExecutor worker(19): worker coming online
+I0522 17:10:56.293859    2843 step_executor.go:513] StepExecutor worker(6): worker coming online
+I0522 17:10:56.293868    2843 step_executor.go:513] StepExecutor worker(15): worker coming online
+I0522 17:10:56.293870    2843 step_executor.go:513] StepExecutor worker(20): worker coming online
+I0522 17:10:56.293874    2843 step_executor.go:513] StepExecutor worker(4): worker coming online
+I0522 17:10:56.293885    2843 step_executor.go:513] StepExecutor worker(21): worker coming online
+I0522 17:10:56.293890    2843 step_executor.go:513] StepExecutor worker(9): worker coming online
+I0522 17:10:56.293899    2843 step_executor.go:513] StepExecutor worker(9): worker waiting for incoming chains
+I0522 17:10:56.293901    2843 step_executor.go:513] StepExecutor worker(0): worker coming online
+I0522 17:10:56.293907    2843 step_executor.go:513] StepExecutor worker(3): worker coming online
+I0522 17:10:56.293915    2843 step_executor.go:513] StepExecutor worker(3): worker waiting for incoming chains
+I0522 17:10:56.293863    2843 step_executor.go:513] StepExecutor worker(14): worker coming online
+I0522 17:10:56.293924    2843 step_executor.go:513] StepExecutor worker(14): worker waiting for incoming chains
+I0522 17:10:56.293909    2843 step_executor.go:513] StepExecutor worker(0): worker waiting for incoming chains
+I0522 17:10:56.293900    2843 step_executor.go:513] StepExecutor worker(2): worker coming online
+I0522 17:10:56.293933    2843 step_executor.go:513] StepExecutor worker(2): worker waiting for incoming chains
+I0522 17:10:56.293892    2843 step_executor.go:513] StepExecutor worker(4): worker waiting for incoming chains
+I0522 17:10:56.293877    2843 step_executor.go:513] StepExecutor worker(7): worker coming online
+I0522 17:10:56.293937    2843 step_executor.go:513] StepExecutor worker(1): worker coming online
+I0522 17:10:56.293974    2843 step_executor.go:513] StepExecutor worker(1): worker waiting for incoming chains
+I0522 17:10:56.293839    2843 step_executor.go:513] StepExecutor worker(18): worker waiting for incoming chains
+I0522 17:10:56.293871    2843 step_executor.go:513] StepExecutor worker(6): worker waiting for incoming chains
+I0522 17:10:56.293846    2843 step_executor.go:513] StepExecutor worker(11): worker coming online
+I0522 17:10:56.293993    2843 step_executor.go:513] StepExecutor worker(11): worker waiting for incoming chains
+I0522 17:10:56.293844    2843 langruntime_plugin.go:196] langhost[nodejs].Run(pwd=/home/pedwards/repos/pulumi-meraki/examples/ts/network-appliance-ssids,root=/home/pedwards/repos/pulumi-meraki/examples/ts/network-appliance-ssids, program=/home/pedwards/repos/pulumi-meraki/examples/ts/network-appliance-ssids, entryPoint=.,#args=0,proj=network-appliance-ssids-ts,stack=dev,#config=0,dryrun=false) executing
+I0522 17:10:56.293852    2843 step_executor.go:513] StepExecutor worker(12): worker coming online
+I0522 17:10:56.294151    2843 step_executor.go:513] StepExecutor worker(12): worker waiting for incoming chains
+I0522 17:10:56.293853    2843 step_executor.go:513] StepExecutor worker(5): worker coming online
+I0522 17:10:56.294169    2843 step_executor.go:513] StepExecutor worker(5): worker waiting for incoming chains
+I0522 17:10:56.293857    2843 step_executor.go:513] StepExecutor worker(13): worker coming online
+I0522 17:10:56.294177    2843 step_executor.go:513] StepExecutor worker(13): worker waiting for incoming chains
+I0522 17:10:56.293862    2843 step_executor.go:513] StepExecutor worker(19): worker waiting for incoming chains
+I0522 17:10:56.293874    2843 step_executor.go:513] StepExecutor worker(15): worker waiting for incoming chains
+I0522 17:10:56.293879    2843 step_executor.go:513] StepExecutor worker(16): worker coming online
+I0522 17:10:56.294189    2843 step_executor.go:513] StepExecutor worker(16): worker waiting for incoming chains
+I0522 17:10:56.293879    2843 step_executor.go:513] StepExecutor worker(20): worker waiting for incoming chains
+I0522 17:10:56.293807    2843 step_executor.go:513] StepExecutor worker(10): worker waiting for incoming chains
+I0522 17:10:56.293882    2843 step_executor.go:513] StepExecutor worker(8): worker coming online
+I0522 17:10:56.294201    2843 step_executor.go:513] StepExecutor worker(8): worker waiting for incoming chains
+I0522 17:10:56.293884    2843 step_executor.go:513] StepExecutor worker(23): worker coming online
+I0522 17:10:56.294208    2843 step_executor.go:513] StepExecutor worker(23): worker waiting for incoming chains
+I0522 17:10:56.293895    2843 step_executor.go:513] StepExecutor worker(21): worker waiting for incoming chains
+I0522 17:10:56.293893    2843 step_executor.go:513] StepExecutor worker(22): worker coming online
+I0522 17:10:56.294218    2843 step_executor.go:513] StepExecutor worker(22): worker waiting for incoming chains
+I0522 17:10:56.293946    2843 step_executor.go:513] StepExecutor worker(7): worker waiting for incoming chains
+I0522 17:10:56.320810    2843 eventsink.go:78] eventSink::Infoerr(<{%reset%}>I0522 17:10:56.320658    2884 log.go:73] Language host launching process: /home/pedwards/.nvm/versions/node/v20.12.0/bin/node/home/pedwards/repos/pulumi-meraki/examples/ts/network-appliance-ssids/node_modules/@pulumi/pulumi/cmd/run/index.js --monitor 127.0.0.1:38057 --engine 127.0.0.1:44561 --sync /tmp/pulumi-node-pipes3164337670 --organization team-ce --project network-appliance-ssids-ts --stack dev --pwd /home/pedwards/repos/pulumi-meraki/examples/ts/network-appliance-ssids --query-mode false --parallel 24 .
+<{%reset%}>)
+I0522 17:10:56.903500    2843 eventsink.go:59] Found typescript version 5.4.5 at /home/pedwards/repos/pulumi-meraki/examples/ts/network-appliance-ssids/node_modules/typescript/lib/typescript.js
+I0522 17:10:56.903526    2843 source_eval.go:816] ResourceMonitor.SupportsFeature(id: secrets) = true
+I0522 17:10:56.903786    2843 source_eval.go:1780] ResourceMonitor.RegisterResource received: t=pulumi:pulumi:Stack, name=network-appliance-ssids-ts-dev, custom=false, #props=0, parent=, protect=false, provider=, deps=[], deleteBeforeReplace=<nil>, ignoreChanges=[], aliases=[], customTimeouts=, providers=map[], replaceOnChanges=[], retainOnDelete=false, deletedWith=
+I0522 17:10:56.903865    2843 source_eval.go:191] EvalSourceIterator produced a registration: t=pulumi:pulumi:Stack,name=network-appliance-ssids-ts-dev,#props=0
+I0522 17:10:56.903883    2843 deployment_executor.go:222] deploymentExecutor.Execute(...): incoming event (nil? false, <nil>)
+I0522 17:10:56.903892    2843 deployment_executor.go:439] deploymentExecutor.handleSingleEvent(...): received RegisterResourceEvent
+I0522 17:10:56.903916    2843 step_generator.go:950] Planner decided not to update 'urn:pulumi:dev::network-appliance-ssids-ts::pulumi:pulumi:Stack::network-appliance-ssids-ts-dev' after diff (same) (inputs=map[])
+I0522 17:10:56.903930    2843 step_generator.go:273] Checking step same for urn:pulumi:dev::network-appliance-ssids-ts::pulumi:pulumi:Stack::network-appliance-ssids-ts-dev
+I0522 17:10:56.903946    2843 step_executor.go:513] StepExecutor worker(17): worker received chain for execution
+I0522 17:10:56.904060    2843 step_executor.go:513] StepExecutor worker(17): applying step same on urn:pulumi:dev::network-appliance-ssids-ts::pulumi:pulumi:Stack::network-appliance-ssids-ts-dev (preview false)
+I0522 17:10:56.904113    2843 step_executor.go:513] StepExecutor worker(17): step same on urn:pulumi:dev::network-appliance-ssids-ts::pulumi:pulumi:Stack::network-appliance-ssids-ts-dev retired
+I0522 17:10:56.904123    2843 step_executor.go:513] StepExecutor worker(17): worker waiting for incoming chains
+I0522 17:10:56.904133    2843 source_eval.go:2012] ResourceMonitor.RegisterResource operation finished: t=pulumi:pulumi:Stack, urn=urn:pulumi:dev::network-appliance-ssids-ts::pulumi:pulumi:Stack::network-appliance-ssids-ts-dev, #outs=0
+I0522 17:10:56.916410    2843 source_eval.go:816] ResourceMonitor.SupportsFeature(id: resourceReferences) = true
+I0522 17:10:56.918233    2843 eventsink.go:59] Using vendored ts-node@7.0.1
+I0522 17:10:56.920323    2843 source_eval.go:816] ResourceMonitor.SupportsFeature(id: outputValues) = true
+I0522 17:10:56.921254    2843 eventsink.go:59] Registering resource: t=pulumi:pulumi:Stack, name=network-appliance-ssids-ts-dev, custom=false, remote=false
+I0522 17:10:56.922826    2843 source_eval.go:816] ResourceMonitor.SupportsFeature(id: deletedWith) = true
+I0522 17:10:56.924637    2843 eventsink.go:59] RegisterResource RPC prepared: t=pulumi:pulumi:Stack, name=network-appliance-ssids-ts-dev
+I0522 17:10:56.926513    2843 source_eval.go:816] ResourceMonitor.SupportsFeature(id: aliasSpecs) = true
+I0522 17:10:56.928018    2843 eventsink.go:59] RegisterResource RPC finished: resource:network-appliance-ssids-ts-dev[pulumi:pulumi:Stack]; err: null, resp: urn:pulumi:dev::network-appliance-ssids-ts::pulumi:pulumi:Stack::network-appliance-ssids-ts-dev,,,,
+I0522 17:10:56.930061    2843 source_eval.go:816] ResourceMonitor.SupportsFeature(id: transforms) = true
+I0522 17:10:56.941802    2843 eventsink.go:59] Running program '/home/pedwards/repos/pulumi-meraki/examples/ts/network-appliance-ssids' in pwd '/home/pedwards/repos/pulumi-meraki/examples/ts/network-appliance-ssids' w/ args: 
+I0522 17:10:57.348932    2843 eventsink.go:59] Invoking function: tok=meraki:index/getOrganizations:getOrganizations asynchronously
+I0522 17:10:57.349327    2843 source_eval.go:398] handling default provider request for package meraki-0.1.2
+I0522 17:10:57.349374    2843 source_eval.go:316] normalizeProviderRequest(meraki-0.1.2): using version 0.1.2 from request
+I0522 17:10:57.349384    2843 source_eval.go:332] normalizeProviderRequest(meraki-0.1.2): default pluginDownloadURL hit on github://api.github.com/pulumi/pulumi-meraki
+I0522 17:10:57.349392    2843 source_eval.go:350] normalizeProviderRequest(meraki-0.1.2-github://api.github.com/pulumi/pulumi-meraki): default pluginChecksums miss, sending empty map to engine
+I0522 17:10:57.349441    2843 source_eval.go:433] waiting for default provider for package meraki-0.1.2-github://api.github.com/pulumi/pulumi-meraki
+I0522 17:10:57.349454    2843 source_eval.go:191] EvalSourceIterator produced a registration: t=pulumi:providers:meraki,name=default_0_1_2_github_/api.github.com/pulumi/pulumi-meraki,#props=2
+I0522 17:10:57.349472    2843 deployment_executor.go:222] deploymentExecutor.Execute(...): incoming event (nil? false, <nil>)
+I0522 17:10:57.349479    2843 deployment_executor.go:439] deploymentExecutor.handleSingleEvent(...): received RegisterResourceEvent
+I0522 17:10:57.349521    2843 registry.go:310] ProviderRegistry.Check(urn:pulumi:dev::network-appliance-ssids-ts::pulumi:providers:meraki::default_0_1_2_github_/api.github.com/pulumi/pulumi-meraki) executing (#olds=2,#news=2)
+I0522 17:10:57.349972    2843 eventsink.go:59] , obj={}
+I0522 17:10:57.410173    2843 plugins.go:1865] GetPluginPath(resource, meraki, 0.1.2): enabling new plugin behavior
+I0522 17:10:57.410224    2843 plugins.go:1999] SelectCompatiblePlugin(..., meraki): beginning
+I0522 17:10:57.410237    2843 plugins.go:2032] SelectCompatiblePlugin(..., meraki): skipping plugin meraki-0.1.0: semver mismatch
+I0522 17:10:57.410243    2843 plugins.go:2032] SelectCompatiblePlugin(..., meraki): skipping plugin meraki-0.1.1: semver mismatch
+I0522 17:10:57.410248    2843 plugins.go:2028] SelectCompatiblePlugin(..., meraki): best plugin meraki-0.1.2: semver match
+I0522 17:10:57.410259    2843 plugins.go:1874] GetPluginPath(resource, meraki, 0.1.2): found in cache at /home/pedwards/.pulumi/plugins/resource-meraki-v0.1.2/pulumi-resource-meraki
+I0522 17:10:58.722612    2843 provider_plugin.go:1745] Provider[meraki, 0xc002431580].GetPluginInfo() executing
+I0522 17:10:58.722963    2843 provider_plugin.go:1770] Provider[meraki, 0xc002431580].GetPluginInfo() success (#version=0.1.2) success
+I0522 17:10:58.723031    2843 provider_plugin.go:322] Provider[meraki, 0xc002431580].CheckConfig(urn:pulumi:dev::network-appliance-ssids-ts::pulumi:providers:meraki::default_0_1_2_github_/api.github.com/pulumi/pulumi-meraki) executing (#olds=2,#news=2)
+I0522 17:10:58.724010    2843 provider_plugin.go:381] Provider[meraki, 0xc002431580].CheckConfig(urn:pulumi:dev::network-appliance-ssids-ts::pulumi:providers:meraki::default_0_1_2_github_/api.github.com/pulumi/pulumi-meraki) success: inputs=#2 failures=#0
+I0522 17:10:58.724047    2843 registry.go:221] setProvider(urn:pulumi:dev::network-appliance-ssids-ts::pulumi:providers:meraki::default_0_1_2_github_/api.github.com/pulumi/pulumi-meraki::unconfigured)
+I0522 17:10:58.724066    2843 registry.go:363] ProviderRegistry.Diff(urn:pulumi:dev::network-appliance-ssids-ts::pulumi:providers:meraki::default_0_1_2_github_/api.github.com/pulumi/pulumi-meraki,ef654ecd-0790-4950-b8e9-e02158951ebf): executing (#oldInputs=2#oldOutputs=2,#newInputs=2)
+I0522 17:10:58.724074    2843 registry.go:211] GetProvider(urn:pulumi:dev::network-appliance-ssids-ts::pulumi:providers:meraki::default_0_1_2_github_/api.github.com/pulumi/pulumi-meraki::unconfigured)
+I0522 17:10:58.724081    2843 provider_plugin.go:424] Provider[meraki, 0xc002431580].DiffConfig(urn:pulumi:dev::network-appliance-ssids-ts::pulumi:providers:meraki::default_0_1_2_github_/api.github.com/pulumi/pulumi-meraki): executing (#oldInputs=2#oldOutputs=2,#newInputs=2)
+I0522 17:10:58.724438    2843 provider_plugin.go:511] Provider[meraki, 0xc002431580].DiffConfig(urn:pulumi:dev::network-appliance-ssids-ts::pulumi:providers:meraki::default_0_1_2_github_/api.github.com/pulumi/pulumi-meraki) success: changes=0 #replaces=[] #stables=[] delbefrepl=false, diffs=#[]
+I0522 17:10:58.724476    2843 registry.go:396] ProviderRegistry.Diff(urn:pulumi:dev::network-appliance-ssids-ts::pulumi:providers:meraki::default_0_1_2_github_/api.github.com/pulumi/pulumi-meraki,ef654ecd-0790-4950-b8e9-e02158951ebf): executed (1, []resource.PropertyKey(nil))
+I0522 17:10:58.724495    2843 step_generator.go:950] Planner decided not to update 'urn:pulumi:dev::network-appliance-ssids-ts::pulumi:providers:meraki::default_0_1_2_github_/api.github.com/pulumi/pulumi-meraki' after diff (same) (inputs=map[pluginDownloadURL:{github://api.github.com/pulumi/pulumi-meraki} version:{0.1.2}])
+I0522 17:10:58.724509    2843 step_generator.go:273] Checking step same for urn:pulumi:dev::network-appliance-ssids-ts::pulumi:providers:meraki::default_0_1_2_github_/api.github.com/pulumi/pulumi-meraki
+I0522 17:10:58.724535    2843 step_executor.go:513] StepExecutor worker(9): worker received chain for execution
+I0522 17:10:58.724603    2843 step_executor.go:513] StepExecutor worker(9): applying step same on urn:pulumi:dev::network-appliance-ssids-ts::pulumi:providers:meraki::default_0_1_2_github_/api.github.com/pulumi/pulumi-meraki (preview false)
+I0522 17:10:58.724615    2843 registry.go:415] Same(urn:pulumi:dev::network-appliance-ssids-ts::pulumi:providers:meraki::default_0_1_2_github_/api.github.com/pulumi/pulumi-meraki::ef654ecd-0790-4950-b8e9-e02158951ebf)
+I0522 17:10:58.724621    2843 registry.go:211] GetProvider(urn:pulumi:dev::network-appliance-ssids-ts::pulumi:providers:meraki::default_0_1_2_github_/api.github.com/pulumi/pulumi-meraki::ef654ecd-0790-4950-b8e9-e02158951ebf)
+I0522 17:10:58.724636    2843 provider_plugin.go:675] Provider[meraki, 0xc002431580].Configure() executing (#vars=2)
+I0522 17:10:58.724647    2843 registry.go:457] loaded provider urn:pulumi:dev::network-appliance-ssids-ts::pulumi:providers:meraki::default_0_1_2_github_/api.github.com/pulumi/pulumi-meraki::ef654ecd-0790-4950-b8e9-e02158951ebf
+I0522 17:10:58.724652    2843 registry.go:221] setProvider(urn:pulumi:dev::network-appliance-ssids-ts::pulumi:providers:meraki::default_0_1_2_github_/api.github.com/pulumi/pulumi-meraki::ef654ecd-0790-4950-b8e9-e02158951ebf)
+I0522 17:10:58.724746    2843 step_executor.go:513] StepExecutor worker(9): step same on urn:pulumi:dev::network-appliance-ssids-ts::pulumi:providers:meraki::default_0_1_2_github_/api.github.com/pulumi/pulumi-meraki retired
+I0522 17:10:58.724776    2843 step_executor.go:513] StepExecutor worker(9): worker waiting for incoming chains
+I0522 17:10:58.724789    2843 source_eval.go:442] registered default provider for package meraki-0.1.2-github://api.github.com/pulumi/pulumi-meraki: urn:pulumi:dev::network-appliance-ssids-ts::pulumi:providers:meraki::default_0_1_2_github_/api.github.com/pulumi/pulumi-meraki
+I0522 17:10:58.724809    2843 registry.go:211] GetProvider(urn:pulumi:dev::network-appliance-ssids-ts::pulumi:providers:meraki::default_0_1_2_github_/api.github.com/pulumi/pulumi-meraki::ef654ecd-0790-4950-b8e9-e02158951ebf)
+I0522 17:10:58.724820    2843 source_eval.go:853] ResourceMonitor.Invoke received: tok=meraki:index/getOrganizations:getOrganizations #args=0
+I0522 17:10:58.724830    2843 provider_plugin.go:1508] Provider[meraki, 0xc002431580].Invoke(meraki:index/getOrganizations:getOrganizations) executing (#args=0)
+I0522 17:10:58.751359    2843 eventsink.go:78] eventSink::Infoerr(<{%reset%}>2024/05/22 17:10:58 [DEBUG] Selecting method. Method 1 [false false false]
+<{%reset%}>)
+I0522 17:10:58.751401    2843 eventsink.go:78] eventSink::Infoerr(<{%reset%}>2024/05/22 17:10:58 [DEBUG] Selecting method. Method 2 [false]
+<{%reset%}>)
+I0522 17:10:58.751428    2843 eventsink.go:78] eventSink::Infoerr(<{%reset%}>2024/05/22 17:10:58 [DEBUG] Selected method: GetOrganizations
+<{%reset%}>)
+I0522 17:10:58.999659    2843 provider_plugin.go:1558] Provider[meraki, 0xc002431580].Invoke(meraki:index/getOrganizations:getOrganizations) success (#ret=1,#failures=0) success
+I0522 17:10:59.033898    2843 eventsink.go:59] Invoke RPC finished: tok=meraki:index/getOrganizations:getOrganizations; err: null, resp: items,,,,,,,,,,api,,,,,enabled,,,,true,cloud,,,,,region,,,,,name,,,North America,id,,,1541814,licensing,,,,,model,,,co-term,management,,,,,details,,,,,,,,,,name,,,customer number,value,,,43710023,name,,,Accenture - McDonalds - Lab Dev,url,,,https://n219.meraki.com/o/drEWOb/manage/organization/overview,,,,,api,,,,,enabled,,,,true,cloud,,,,,region,,,,,name,,,North America,id,,,1550324,licensing,,,,,model,,,co-term,management,,,,,details,,,,,,,,,,name,,,customer number,value,,,43710023,name,,,Accenture - McDonalds - Lab - SSE,url,,,https://n219.meraki.com/o/FxGJCd/manage/organization/overview,
+I0522 17:10:59.034102    2843 source_eval.go:398] handling default provider request for package meraki-0.1.2
+I0522 17:10:59.034181    2843 source_eval.go:316] normalizeProviderRequest(meraki-0.1.2): using version 0.1.2 from request
+I0522 17:10:59.034199    2843 source_eval.go:332] normalizeProviderRequest(meraki-0.1.2): default pluginDownloadURL hit on github://api.github.com/pulumi/pulumi-meraki
+I0522 17:10:59.034213    2843 source_eval.go:350] normalizeProviderRequest(meraki-0.1.2-github://api.github.com/pulumi/pulumi-meraki): default pluginChecksums miss, sending empty map to engine
+I0522 17:10:59.034233    2843 registry.go:211] GetProvider(urn:pulumi:dev::network-appliance-ssids-ts::pulumi:providers:meraki::default_0_1_2_github_/api.github.com/pulumi/pulumi-meraki::ef654ecd-0790-4950-b8e9-e02158951ebf)
+I0522 17:10:59.034260    2843 source_eval.go:853] ResourceMonitor.Invoke received: tok=meraki:index/getNetworks:getNetworks #args=1
+I0522 17:10:59.034274    2843 provider_plugin.go:1508] Provider[meraki, 0xc002431580].Invoke(meraki:index/getNetworks:getNetworks) executing (#args=1)
+I0522 17:10:59.036181    2843 eventsink.go:59] Invoking function: tok=meraki:index/getNetworks:getNetworks asynchronously
+I0522 17:10:59.037662    2843 eventsink.go:59] , obj={"organizationId":"1541814"}
+I0522 17:10:59.062381    2843 eventsink.go:78] eventSink::Infoerr(<{%reset%}>2024/05/22 17:10:59 [DEBUG] Selecting method. Method 1 [false]
+<{%reset%}>)
+I0522 17:10:59.062455    2843 eventsink.go:78] eventSink::Infoerr(<{%reset%}>2024/05/22 17:10:59 [DEBUG] Selecting method. Method 2 [true false false false false false false false]
+<{%reset%}>)
+I0522 17:10:59.062472    2843 eventsink.go:78] eventSink::Infoerr(<{%reset%}>2024/05/22 17:10:59 [DEBUG] Selected method: GetOrganizationNetworks
+<{%reset%}>)
+I0522 17:10:59.194837    2843 eventsink.go:59]   fwschemadata/value_semantic_equality.go:87: sdk.framework: Value switched to prior value due to semantic equality logic: provider=meraki@v0.1.2 tf_attribute_path=organization_id
+I0522 17:10:59.195959    2843 provider_plugin.go:1558] Provider[meraki, 0xc002431580].Invoke(meraki:index/getNetworks:getNetworks) success (#ret=2,#failures=0) success
+I0522 17:10:59.229962    2843 eventsink.go:59] Invoke RPC finished: tok=meraki:index/getNetworks:getNetworks; err: null, resp: items,,,,,,,,,,enrollmentString,,,,id,,,L_686235993220604110,isBoundToConfigTemplate,,,,false,name,,,test,notes,,,,organizationId,,,1541814,productTypes,,,,,,,,appliance,,,camera,,,cellularGateway,,,sensor,,,switch,,,wireless,timeZone,,,America/Los_Angeles,url,,,https://n219.meraki.com/test-appliance/n/7ks6GaBd/manage/usage/list,organizationId,,,1541814,
+I0522 17:10:59.230267    2843 source_eval.go:2084] ResourceMonitor.RegisterResourceOutputs received: urn=urn:pulumi:dev::network-appliance-ssids-ts::pulumi:pulumi:Stack::network-appliance-ssids-ts-dev, #outs=1
+I0522 17:10:59.230325    2843 source_eval.go:196] EvalSourceIterator produced a completion: urn=urn:pulumi:dev::network-appliance-ssids-ts::pulumi:pulumi:Stack::network-appliance-ssids-ts-dev,#outs=1
+I0522 17:10:59.230338    2843 deployment_executor.go:222] deploymentExecutor.Execute(...): incoming event (nil? false, <nil>)
+I0522 17:10:59.230348    2843 deployment_executor.go:445] deploymentExecutor.handleSingleEvent(...): received register resource outputs
+I0522 17:10:59.230356    2843 source_eval.go:2108] ResourceMonitor.RegisterResourceOutputs operation finished: urn=urn:pulumi:dev::network-appliance-ssids-ts::pulumi:pulumi:Stack::network-appliance-ssids-ts-dev, #outs=1
+I0522 17:10:59.230272    2843 source_eval.go:398] handling default provider request for package meraki-0.1.2-github://api.github.com/pulumi/pulumi-meraki
+I0522 17:10:59.230393    2843 source_eval.go:316] normalizeProviderRequest(meraki-0.1.2-github://api.github.com/pulumi/pulumi-meraki): using version 0.1.2 from request
+I0522 17:10:59.230419    2843 source_eval.go:328] normalizeProviderRequest(meraki-0.1.2-github://api.github.com/pulumi/pulumi-meraki): using pluginDownloadURL github://api.github.com/pulumi/pulumi-meraki from request
+I0522 17:10:59.230436    2843 source_eval.go:350] normalizeProviderRequest(meraki-0.1.2-github://api.github.com/pulumi/pulumi-meraki): default pluginChecksums miss, sending empty map to engine
+I0522 17:10:59.230479    2843 source_eval.go:1780] ResourceMonitor.RegisterResource received: t=meraki:networks/applianceSsids:ApplianceSsids, name=example, custom=true, #props=13, parent=urn:pulumi:dev::network-appliance-ssids-ts::pulumi:pulumi:Stack::network-appliance-ssids-ts-dev, protect=false, provider=urn:pulumi:dev::network-appliance-ssids-ts::pulumi:providers:meraki::default_0_1_2_github_/api.github.com/pulumi/pulumi-meraki::ef654ecd-0790-4950-b8e9-e02158951ebf, deps=[], deleteBeforeReplace=<nil>, ignoreChanges=[], aliases=[], customTimeouts=, providers=map[], replaceOnChanges=[], retainOnDelete=false, deletedWith=
+I0522 17:10:59.230511    2843 source_eval.go:191] EvalSourceIterator produced a registration: t=meraki:networks/applianceSsids:ApplianceSsids,name=example,#props=13
+I0522 17:10:59.230519    2843 deployment_executor.go:222] deploymentExecutor.Execute(...): incoming event (nil? false, <nil>)
+I0522 17:10:59.230525    2843 deployment_executor.go:439] deploymentExecutor.handleSingleEvent(...): received RegisterResourceEvent
+I0522 17:10:59.230544    2843 registry.go:211] GetProvider(urn:pulumi:dev::network-appliance-ssids-ts::pulumi:providers:meraki::default_0_1_2_github_/api.github.com/pulumi/pulumi-meraki::ef654ecd-0790-4950-b8e9-e02158951ebf)
+I0522 17:10:59.230559    2843 provider_plugin.go:759] Provider[meraki, 0xc002431580].Check(urn:pulumi:dev::network-appliance-ssids-ts::meraki:networks/applianceSsids:ApplianceSsids::example) executing (#olds=0,#news=13)
+I0522 17:10:59.231193    2843 eventsink.go:59] Registering resource: t=meraki:networks/applianceSsids:ApplianceSsids, name=example, custom=true, remote=false
+I0522 17:10:59.233062    2843 eventsink.go:59] RegisterResourceOutputs RPC prepared: urn=urn:pulumi:dev::network-appliance-ssids-ts::pulumi:pulumi:Stack::network-appliance-ssids-ts-dev
+I0522 17:10:59.234021    2843 eventsink.go:59] RegisterResource RPC prepared: t=meraki:networks/applianceSsids:ApplianceSsids, name=example
+I0522 17:10:59.235100    2843 eventsink.go:59] RegisterResourceOutputs RPC finished: urn=urn:pulumi:dev::network-appliance-ssids-ts::pulumi:pulumi:Stack::network-appliance-ssids-ts-dev; err: null, resp: 
+I0522 17:10:59.236050    2843 eventsink.go:59] RegisterResourceOutputs RPC finished: urn=urn:pulumi:dev::network-appliance-ssids-ts::pulumi:pulumi:Stack::network-appliance-ssids-ts-dev; err: null, resp: 
+I0522 17:10:59.249212    2843 provider_plugin.go:833] Provider[meraki, 0xc002431580].Check(urn:pulumi:dev::network-appliance-ssids-ts::meraki:networks/applianceSsids:ApplianceSsids::example) success: inputs=#13 failures=#0
+I0522 17:10:59.249287    2843 step_generator.go:988] Planner decided to create 'urn:pulumi:dev::network-appliance-ssids-ts::meraki:networks/applianceSsids:ApplianceSsids::example' (inputs=map[authMode:{8021x-radius} defaultVlanId:{1} dhcpEnforcedDeauthentication:{map[enabled:{true}]} dot11w:{map[enabled:{true} required:{true}]} enabled:{true} encryptionMode:{wpa} name:{My SSID} networkId:{L_686235993220604110} number:{0} psk:{psk} radiusServers:{[{map[host:{0.0.0.0} port:{1000} secret:{secret}]}]} visible:{true} wpaEncryptionMode:{WPA2 only}])
+I0522 17:10:59.249306    2843 step_generator.go:273] Checking step create for urn:pulumi:dev::network-appliance-ssids-ts::meraki:networks/applianceSsids:ApplianceSsids::example
+I0522 17:10:59.249335    2843 step_executor.go:513] StepExecutor worker(3): worker received chain for execution
+I0522 17:10:59.342540    2843 step_executor.go:513] StepExecutor worker(3): applying step create on urn:pulumi:dev::network-appliance-ssids-ts::meraki:networks/applianceSsids:ApplianceSsids::example (preview false)
+I0522 17:10:59.342591    2843 registry.go:211] GetProvider(urn:pulumi:dev::network-appliance-ssids-ts::pulumi:providers:meraki::default_0_1_2_github_/api.github.com/pulumi/pulumi-meraki::ef654ecd-0790-4950-b8e9-e02158951ebf)
+I0522 17:10:59.342607    2843 provider_plugin.go:953] Provider[meraki, 0xc002431580].Create(urn:pulumi:dev::network-appliance-ssids-ts::meraki:networks/applianceSsids:ApplianceSsids::example) executing (#props=13)
+I0522 17:10:59.359066    2843 eventsink.go:59]   fwserver/server_planresourcechange.go:195: sdk.framework: Marking Computed attributes with null configuration values as unknown (known after apply) in the plan to prevent potential Terraform errors: provider=meraki@v0.1.2
+I0522 17:10:59.359481    2843 eventsink.go:59]   fwserver/server_planresourcechange.go:409: sdk.framework: marking computed attribute that is null in the config as unknown: tf_attribute_path="AttributeName(\"radius_servers_response\")" provider=meraki@v0.1.2
+I0522 17:10:59.518960    2843 provider_plugin.go:1010] Provider[meraki, 0xc002431580].Create(urn:pulumi:dev::network-appliance-ssids-ts::meraki:networks/applianceSsids:ApplianceSsids::example) failed: Resource NetworksApplianceSSIDs only have update context, not create.: error with operation GetNetworkApplianceSsid
+I0522 17:10:59.519029    2843 eventsink.go:86] eventSink::Error(<{%reset%}>Resource NetworksApplianceSSIDs only have update context, not create.: error with operation GetNetworkApplianceSsid<{%reset%}>)
+I0522 17:10:59.676193    2843 step_executor.go:513] StepExecutor worker(3): step create on urn:pulumi:dev::network-appliance-ssids-ts::meraki:networks/applianceSsids:ApplianceSsids::example failed with an error: Resource NetworksApplianceSSIDs only have update context, not create.: error with operation GetNetworkApplianceSsid
+I0522 17:10:59.676283    2843 step_executor.go:513] StepExecutor worker(3): step create on urn:pulumi:dev::network-appliance-ssids-ts::meraki:networks/applianceSsids:ApplianceSsids::example failed, signalling cancellation
+I0522 17:10:59.676354    2843 step_executor.go:513] StepExecutor worker(3): worker waiting for incoming chains
+I0522 17:10:59.676373    2843 step_executor.go:513] StepExecutor worker(3): worker exiting due to cancellation
+I0522 17:10:59.676385    2843 step_executor.go:513] StepExecutor worker(14): worker exiting due to cancellation
+I0522 17:10:59.676398    2843 deployment_executor.go:264] deploymentExecutor.Execute(...): context finished: context canceled
+I0522 17:10:59.676413    2843 step_executor.go:513] StepExecutor worker(-1): StepExecutor.waitForCompletion(): waiting for worker threads to exit
+I0522 17:10:59.676424    2843 step_executor.go:513] StepExecutor worker(19): worker exiting due to cancellation
+I0522 17:10:59.676434    2843 step_executor.go:513] StepExecutor worker(13): worker exiting due to cancellation
+I0522 17:10:59.676444    2843 step_executor.go:513] StepExecutor worker(5): worker exiting due to cancellation
+I0522 17:10:59.676453    2843 step_executor.go:513] StepExecutor worker(12): worker exiting due to cancellation
+I0522 17:10:59.676447    2843 step_executor.go:513] StepExecutor worker(15): worker exiting due to cancellation
+I0522 17:10:59.676479    2843 step_executor.go:513] StepExecutor worker(1): worker exiting due to cancellation
+I0522 17:10:59.676462    2843 step_executor.go:513] StepExecutor worker(11): worker exiting due to cancellation
+I0522 17:10:59.676467    2843 step_executor.go:513] StepExecutor worker(6): worker exiting due to cancellation
+I0522 17:10:59.676530    2843 step_executor.go:513] StepExecutor worker(7): worker exiting due to cancellation
+I0522 17:10:59.676539    2843 step_executor.go:513] StepExecutor worker(0): worker exiting due to cancellation
+I0522 17:10:59.676474    2843 step_executor.go:513] StepExecutor worker(18): worker exiting due to cancellation
+I0522 17:10:59.676488    2843 step_executor.go:513] StepExecutor worker(9): worker exiting due to cancellation
+I0522 17:10:59.676521    2843 step_executor.go:513] StepExecutor worker(17): worker exiting due to cancellation
+I0522 17:10:59.676550    2843 step_executor.go:513] StepExecutor worker(22): worker exiting due to cancellation
+I0522 17:10:59.676570    2843 step_executor.go:513] StepExecutor worker(10): worker exiting due to cancellation
+I0522 17:10:59.676567    2843 step_executor.go:513] StepExecutor worker(2): worker exiting due to cancellation
+I0522 17:10:59.676555    2843 step_executor.go:513] StepExecutor worker(21): worker exiting due to cancellation
+I0522 17:10:59.676560    2843 step_executor.go:513] StepExecutor worker(23): worker exiting due to cancellation
+I0522 17:10:59.676565    2843 step_executor.go:513] StepExecutor worker(8): worker exiting due to cancellation
+I0522 17:10:59.676579    2843 step_executor.go:513] StepExecutor worker(4): worker exiting due to cancellation
+I0522 17:10:59.676583    2843 step_executor.go:513] StepExecutor worker(20): worker exiting due to cancellation
+I0522 17:10:59.676586    2843 step_executor.go:513] StepExecutor worker(16): worker exiting due to cancellation
+I0522 17:10:59.676724    2843 step_executor.go:513] StepExecutor worker(-1): StepExecutor.waitForCompletion(): worker threads all exited
+I0522 17:10:59.676771    2843 step_executor.go:513] StepExecutor worker(-1): registered resource outputs urn:pulumi:dev::network-appliance-ssids-ts::pulumi:pulumi:Stack::network-appliance-ssids-ts-dev: old=#1, new=#1
+I0522 17:10:59.677019    2843 deployment_executor.go:286] deploymentExecutor.Execute(...): step executor has completed
+I0522 17:10:59.677079    2843 eventsink.go:86] eventSink::Error(<{%reset%}>update failed<{%reset%}>)
+I0522 17:10:59.677119    2843 deployment_executor.go:143] deploymentExecutor.Execute(...): exiting provider canceller
+I0522 17:10:59.680456    2843 langruntime_plugin.go:235] langhost[nodejs].Run(pwd=/home/pedwards/repos/pulumi-meraki/examples/ts/network-appliance-ssids,root=/home/pedwards/repos/pulumi-meraki/examples/ts/network-appliance-ssids, program=/home/pedwards/repos/pulumi-meraki/examples/ts/network-appliance-ssids, entryPoint=.,...,dryrun=false) failed: err=grpc: the client connection is closing
+I0522 17:10:59.680573    2843 source_eval.go:211] EvalSourceIterator ended with an error: grpc: the client connection is closing
+I0522 17:10:59.680591    2843 deployment_executor.go:203] deploymentExecutor.Execute(...): incoming events goroutine exiting
+I0522 17:10:59.689820    2843 update.go:211] *** Update(preview=false) complete ***

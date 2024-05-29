@@ -1,0 +1,3 @@
+name: network-firmware-upgrades-ts
+runtime: nodejs
+description: A minimal TypeScript Pulumi program

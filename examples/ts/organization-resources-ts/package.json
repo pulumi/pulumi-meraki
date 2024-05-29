@@ -1,0 +1,12 @@
+{
+    "name": "organization-resources-ts",
+    "main": "index.ts",
+    "devDependencies": {
+        "@types/node": "^18",
+        "typescript": "^5.0.0"
+    },
+    "dependencies": {
+        "@pulumi/meraki": "^0.1.0",
+        "@pulumi/pulumi": "^3.113.0"
+    }
+}

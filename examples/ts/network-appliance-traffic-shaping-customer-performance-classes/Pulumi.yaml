@@ -1,0 +1,3 @@
+name: network-network-appliance-traffic-shaping-customer-performance-classes-ts
+runtime: nodejs
+description: A minimal TypeScript Pulumi program
