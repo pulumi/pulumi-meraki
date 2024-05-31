@@ -128,11 +128,6 @@ func Provider() tfbridge.ProviderInfo {
 		// DisplayName is a way to be able to change the casing of the provider
 		// name when being displayed on the Pulumi registry
 		DisplayName: "Cisco Meraki",
-		// The default publisher for all packages is Pulumi.
-		// Change this to your personal name (or a company name) that you
-		// would like to be shown in the Pulumi Registry if this package is published
-		// there.
-		Publisher: "pulumi",
 		// LogoURL points to the assets/meraki.png file on the assets branch of
 		// this repo.
 		LogoURL: "https://raw.githubusercontent.com/pulumi/pulumi-meraki/assets/assets/meraki.png",
@@ -150,7 +145,7 @@ func Provider() tfbridge.ProviderInfo {
 			"category/network",
 		},
 		License:    "Apache-2.0",
-		Homepage:   "https://github.com/pulumi/pulumi-meraki",
+		Homepage:   "https://pulumi.com",
 		Repository: "https://github.com/pulumi/pulumi-meraki",
 		// The GitHub Org for the provider - defaults to `terraform-providers`. Note that this
 		// should match the TF provider module's require directive, not any replace directives.
