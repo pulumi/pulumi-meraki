@@ -412,14 +412,14 @@ public class WirelessSsids extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="defaultVlanId", refs={Integer.class}, tree="[0]")
-    private Output<Integer> defaultVlanId;
+    private Output</* @Nullable */ Integer> defaultVlanId;
 
     /**
      * @return The default VLAN ID used for &#39;all other APs&#39;. This param is only valid when the ipAssignmentMode is &#39;Bridge mode&#39; or &#39;Layer 3 roaming&#39;
      * 
      */
-    public Output<Integer> defaultVlanId() {
-        return this.defaultVlanId;
+    public Output<Optional<Integer>> defaultVlanId() {
+        return Codegen.optional(this.defaultVlanId);
     }
     /**
      * Disassociate clients when &#39;VPN&#39; concentrator failover occurs in order to trigger clients to re-associate and generate new DHCP requests. This param is only valid if ipAssignmentMode is &#39;VPN&#39;.

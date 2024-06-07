@@ -59,7 +59,7 @@ type SwitchStacks struct {
 	// Serials of the switches in the switch stack
 	Serials pulumi.StringArrayOutput `pulumi:"serials"`
 	// switchStackId path parameter. Switch stack ID
-	SwitchStackId pulumi.StringPtrOutput `pulumi:"switchStackId"`
+	SwitchStackId pulumi.StringOutput `pulumi:"switchStackId"`
 }
 
 // NewSwitchStacks registers a new resource with the given unique name, arguments, and options.
@@ -246,8 +246,8 @@ func (o SwitchStacksOutput) Serials() pulumi.StringArrayOutput {
 }
 
 // switchStackId path parameter. Switch stack ID
-func (o SwitchStacksOutput) SwitchStackId() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *SwitchStacks) pulumi.StringPtrOutput { return v.SwitchStackId }).(pulumi.StringPtrOutput)
+func (o SwitchStacksOutput) SwitchStackId() pulumi.StringOutput {
+	return o.ApplyT(func(v *SwitchStacks) pulumi.StringOutput { return v.SwitchStackId }).(pulumi.StringOutput)
 }
 
 type SwitchStacksArrayOutput struct{ *pulumi.OutputState }

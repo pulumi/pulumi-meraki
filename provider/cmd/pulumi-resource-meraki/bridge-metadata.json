@@ -1512,7 +1512,13 @@
                     "radius_accounting_servers": {
                         "maxItemsOne": false
                     },
+                    "radius_accounting_servers_response": {
+                        "maxItemsOne": false
+                    },
                     "radius_servers": {
+                        "maxItemsOne": false
+                    },
+                    "radius_servers_response": {
                         "maxItemsOne": false
                     },
                     "url_redirect_walled_garden_ranges": {

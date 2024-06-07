@@ -2677,7 +2677,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="defaultVlanId")
-    def default_vlan_id(self) -> pulumi.Output[int]:
+    def default_vlan_id(self) -> pulumi.Output[Optional[int]]:
         """
         The default VLAN ID used for 'all other APs'. This param is only valid when the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
         """

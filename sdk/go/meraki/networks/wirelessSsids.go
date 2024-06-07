@@ -40,7 +40,7 @@ type WirelessSsids struct {
 	// The concentrator to use when the ipAssignmentMode is 'Layer 3 roaming with a concentrator' or 'VPN'.
 	ConcentratorNetworkId pulumi.StringPtrOutput `pulumi:"concentratorNetworkId"`
 	// The default VLAN ID used for 'all other APs'. This param is only valid when the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
-	DefaultVlanId pulumi.IntOutput `pulumi:"defaultVlanId"`
+	DefaultVlanId pulumi.IntPtrOutput `pulumi:"defaultVlanId"`
 	// Disassociate clients when 'VPN' concentrator failover occurs in order to trigger clients to re-associate and generate new DHCP requests. This param is only valid if ipAssignmentMode is 'VPN'.
 	DisassociateClientsOnVpnFailover pulumi.BoolPtrOutput `pulumi:"disassociateClientsOnVpnFailover"`
 	// DNS servers rewrite settings
@@ -851,8 +851,8 @@ func (o WirelessSsidsOutput) ConcentratorNetworkId() pulumi.StringPtrOutput {
 }
 
 // The default VLAN ID used for 'all other APs'. This param is only valid when the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
-func (o WirelessSsidsOutput) DefaultVlanId() pulumi.IntOutput {
-	return o.ApplyT(func(v *WirelessSsids) pulumi.IntOutput { return v.DefaultVlanId }).(pulumi.IntOutput)
+func (o WirelessSsidsOutput) DefaultVlanId() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *WirelessSsids) pulumi.IntPtrOutput { return v.DefaultVlanId }).(pulumi.IntPtrOutput)
 }
 
 // Disassociate clients when 'VPN' concentrator failover occurs in order to trigger clients to re-associate and generate new DHCP requests. This param is only valid if ipAssignmentMode is 'VPN'.

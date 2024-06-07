@@ -76,7 +76,7 @@ namespace Pulumi.Meraki.Networks
         /// The default VLAN ID used for 'all other APs'. This param is only valid when the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
         /// </summary>
         [Output("defaultVlanId")]
-        public Output<int> DefaultVlanId { get; private set; } = null!;
+        public Output<int?> DefaultVlanId { get; private set; } = null!;
 
         /// <summary>
         /// Disassociate clients when 'VPN' concentrator failover occurs in order to trigger clients to re-associate and generate new DHCP requests. This param is only valid if ipAssignmentMode is 'VPN'.

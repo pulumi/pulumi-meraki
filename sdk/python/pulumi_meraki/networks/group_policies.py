@@ -21,7 +21,6 @@ class GroupPoliciesArgs:
                  bonjour_forwarding: Optional[pulumi.Input['GroupPoliciesBonjourForwardingArgs']] = None,
                  content_filtering: Optional[pulumi.Input['GroupPoliciesContentFilteringArgs']] = None,
                  firewall_and_traffic_shaping: Optional[pulumi.Input['GroupPoliciesFirewallAndTrafficShapingArgs']] = None,
-                 group_policy_id: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  scheduling: Optional[pulumi.Input['GroupPoliciesSchedulingArgs']] = None,
                  splash_auth_settings: Optional[pulumi.Input[str]] = None,
@@ -33,7 +32,6 @@ class GroupPoliciesArgs:
         :param pulumi.Input['GroupPoliciesBonjourForwardingArgs'] bonjour_forwarding: The Bonjour settings for your group policy. Only valid if your network has a wireless configuration.
         :param pulumi.Input['GroupPoliciesContentFilteringArgs'] content_filtering: The content filtering settings for your group policy
         :param pulumi.Input['GroupPoliciesFirewallAndTrafficShapingArgs'] firewall_and_traffic_shaping: The firewall and traffic shaping rules and settings for your policy.
-        :param pulumi.Input[str] group_policy_id: The ID of the group policy
         :param pulumi.Input[str] name: The name for your group policy. Required.
         :param pulumi.Input['GroupPoliciesSchedulingArgs'] scheduling: The schedule for the group policy. Schedules are applied to days of the week.
         :param pulumi.Input[str] splash_auth_settings: Whether clients bound to your policy will bypass splash authorization or behave according to the network's rules. Can be one of 'network default' or 'bypass'. Only available if your network has a wireless configuration.
@@ -48,8 +46,6 @@ class GroupPoliciesArgs:
             pulumi.set(__self__, "content_filtering", content_filtering)
         if firewall_and_traffic_shaping is not None:
             pulumi.set(__self__, "firewall_and_traffic_shaping", firewall_and_traffic_shaping)
-        if group_policy_id is not None:
-            pulumi.set(__self__, "group_policy_id", group_policy_id)
         if name is not None:
             pulumi.set(__self__, "name", name)
         if scheduling is not None:
@@ -118,18 +114,6 @@ class GroupPoliciesArgs:
     @firewall_and_traffic_shaping.setter
     def firewall_and_traffic_shaping(self, value: Optional[pulumi.Input['GroupPoliciesFirewallAndTrafficShapingArgs']]):
         pulumi.set(self, "firewall_and_traffic_shaping", value)
-
-    @property
-    @pulumi.getter(name="groupPolicyId")
-    def group_policy_id(self) -> Optional[pulumi.Input[str]]:
-        """
-        The ID of the group policy
-        """
-        return pulumi.get(self, "group_policy_id")
-
-    @group_policy_id.setter
-    def group_policy_id(self, value: Optional[pulumi.Input[str]]):
-        pulumi.set(self, "group_policy_id", value)
 
     @property
     @pulumi.getter
@@ -357,7 +341,6 @@ class GroupPolicies(pulumi.CustomResource):
                  bonjour_forwarding: Optional[pulumi.Input[pulumi.InputType['GroupPoliciesBonjourForwardingArgs']]] = None,
                  content_filtering: Optional[pulumi.Input[pulumi.InputType['GroupPoliciesContentFilteringArgs']]] = None,
                  firewall_and_traffic_shaping: Optional[pulumi.Input[pulumi.InputType['GroupPoliciesFirewallAndTrafficShapingArgs']]] = None,
-                 group_policy_id: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
                  scheduling: Optional[pulumi.Input[pulumi.InputType['GroupPoliciesSchedulingArgs']]] = None,
@@ -379,7 +362,6 @@ class GroupPolicies(pulumi.CustomResource):
         :param pulumi.Input[pulumi.InputType['GroupPoliciesBonjourForwardingArgs']] bonjour_forwarding: The Bonjour settings for your group policy. Only valid if your network has a wireless configuration.
         :param pulumi.Input[pulumi.InputType['GroupPoliciesContentFilteringArgs']] content_filtering: The content filtering settings for your group policy
         :param pulumi.Input[pulumi.InputType['GroupPoliciesFirewallAndTrafficShapingArgs']] firewall_and_traffic_shaping: The firewall and traffic shaping rules and settings for your policy.
-        :param pulumi.Input[str] group_policy_id: The ID of the group policy
         :param pulumi.Input[str] name: The name for your group policy. Required.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[pulumi.InputType['GroupPoliciesSchedulingArgs']] scheduling: The schedule for the group policy. Schedules are applied to days of the week.
@@ -420,7 +402,6 @@ class GroupPolicies(pulumi.CustomResource):
                  bonjour_forwarding: Optional[pulumi.Input[pulumi.InputType['GroupPoliciesBonjourForwardingArgs']]] = None,
                  content_filtering: Optional[pulumi.Input[pulumi.InputType['GroupPoliciesContentFilteringArgs']]] = None,
                  firewall_and_traffic_shaping: Optional[pulumi.Input[pulumi.InputType['GroupPoliciesFirewallAndTrafficShapingArgs']]] = None,
-                 group_policy_id: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
                  scheduling: Optional[pulumi.Input[pulumi.InputType['GroupPoliciesSchedulingArgs']]] = None,
@@ -439,7 +420,6 @@ class GroupPolicies(pulumi.CustomResource):
             __props__.__dict__["bonjour_forwarding"] = bonjour_forwarding
             __props__.__dict__["content_filtering"] = content_filtering
             __props__.__dict__["firewall_and_traffic_shaping"] = firewall_and_traffic_shaping
-            __props__.__dict__["group_policy_id"] = group_policy_id
             __props__.__dict__["name"] = name
             if network_id is None and not opts.urn:
                 raise TypeError("Missing required property 'network_id'")
@@ -447,6 +427,7 @@ class GroupPolicies(pulumi.CustomResource):
             __props__.__dict__["scheduling"] = scheduling
             __props__.__dict__["splash_auth_settings"] = splash_auth_settings
             __props__.__dict__["vlan_tagging"] = vlan_tagging
+            __props__.__dict__["group_policy_id"] = None
         super(GroupPolicies, __self__).__init__(
             'meraki:networks/groupPolicies:GroupPolicies',
             resource_name,

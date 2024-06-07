@@ -55,7 +55,7 @@ namespace Pulumi.Meraki.Networks
         /// ID for the guest VLAN allow unauthorized devices access to limited network resources
         /// </summary>
         [Output("guestVlanId")]
-        public Output<int> GuestVlanId { get; private set; } = null!;
+        public Output<int?> GuestVlanId { get; private set; } = null!;
 
         /// <summary>
         /// Choose the Host Mode for the access policy.
@@ -100,6 +100,12 @@ namespace Pulumi.Meraki.Networks
         public Output<ImmutableArray<Outputs.SwitchAccessPoliciesRadiusAccountingServer>> RadiusAccountingServers { get; private set; } = null!;
 
         /// <summary>
+        /// List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
+        /// </summary>
+        [Output("radiusAccountingServersResponses")]
+        public Output<ImmutableArray<Outputs.SwitchAccessPoliciesRadiusAccountingServersResponse>> RadiusAccountingServersResponses { get; private set; } = null!;
+
+        /// <summary>
         /// Change of authentication for RADIUS re-authentication and disconnection
         /// </summary>
         [Output("radiusCoaSupportEnabled")]
@@ -116,6 +122,12 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         [Output("radiusServers")]
         public Output<ImmutableArray<Outputs.SwitchAccessPoliciesRadiusServer>> RadiusServers { get; private set; } = null!;
+
+        /// <summary>
+        /// List of RADIUS servers to require connecting devices to authenticate against before granting network access
+        /// </summary>
+        [Output("radiusServersResponses")]
+        public Output<ImmutableArray<Outputs.SwitchAccessPoliciesRadiusServersResponse>> RadiusServersResponses { get; private set; } = null!;
 
         /// <summary>
         /// If enabled, Meraki devices will periodically send access-request messages to these RADIUS servers
@@ -412,6 +424,18 @@ namespace Pulumi.Meraki.Networks
             set => _radiusAccountingServers = value;
         }
 
+        [Input("radiusAccountingServersResponses")]
+        private InputList<Inputs.SwitchAccessPoliciesRadiusAccountingServersResponseGetArgs>? _radiusAccountingServersResponses;
+
+        /// <summary>
+        /// List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
+        /// </summary>
+        public InputList<Inputs.SwitchAccessPoliciesRadiusAccountingServersResponseGetArgs> RadiusAccountingServersResponses
+        {
+            get => _radiusAccountingServersResponses ?? (_radiusAccountingServersResponses = new InputList<Inputs.SwitchAccessPoliciesRadiusAccountingServersResponseGetArgs>());
+            set => _radiusAccountingServersResponses = value;
+        }
+
         /// <summary>
         /// Change of authentication for RADIUS re-authentication and disconnection
         /// </summary>
@@ -434,6 +458,18 @@ namespace Pulumi.Meraki.Networks
         {
             get => _radiusServers ?? (_radiusServers = new InputList<Inputs.SwitchAccessPoliciesRadiusServerGetArgs>());
             set => _radiusServers = value;
+        }
+
+        [Input("radiusServersResponses")]
+        private InputList<Inputs.SwitchAccessPoliciesRadiusServersResponseGetArgs>? _radiusServersResponses;
+
+        /// <summary>
+        /// List of RADIUS servers to require connecting devices to authenticate against before granting network access
+        /// </summary>
+        public InputList<Inputs.SwitchAccessPoliciesRadiusServersResponseGetArgs> RadiusServersResponses
+        {
+            get => _radiusServersResponses ?? (_radiusServersResponses = new InputList<Inputs.SwitchAccessPoliciesRadiusServersResponseGetArgs>());
+            set => _radiusServersResponses = value;
         }
 
         /// <summary>

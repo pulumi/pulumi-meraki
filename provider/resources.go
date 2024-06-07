@@ -22,7 +22,7 @@ import (
 
 	_ "embed" // Allow embedding provider metadata
 
-	"terraform-provider-meraki/meraki"
+	"github.com/cisco-open/terraform-provider-meraki/meraki"
 
 	pf "github.com/pulumi/pulumi-terraform-bridge/pf/tfbridge"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"

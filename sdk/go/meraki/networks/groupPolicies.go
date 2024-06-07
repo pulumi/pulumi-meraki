@@ -135,8 +135,6 @@ type groupPoliciesArgs struct {
 	ContentFiltering *GroupPoliciesContentFiltering `pulumi:"contentFiltering"`
 	// The firewall and traffic shaping rules and settings for your policy.
 	FirewallAndTrafficShaping *GroupPoliciesFirewallAndTrafficShaping `pulumi:"firewallAndTrafficShaping"`
-	// The ID of the group policy
-	GroupPolicyId *string `pulumi:"groupPolicyId"`
 	// The name for your group policy. Required.
 	Name *string `pulumi:"name"`
 	// networkId path parameter. Network ID
@@ -159,8 +157,6 @@ type GroupPoliciesArgs struct {
 	ContentFiltering GroupPoliciesContentFilteringPtrInput
 	// The firewall and traffic shaping rules and settings for your policy.
 	FirewallAndTrafficShaping GroupPoliciesFirewallAndTrafficShapingPtrInput
-	// The ID of the group policy
-	GroupPolicyId pulumi.StringPtrInput
 	// The name for your group policy. Required.
 	Name pulumi.StringPtrInput
 	// networkId path parameter. Network ID
