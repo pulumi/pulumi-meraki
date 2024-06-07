@@ -33,7 +33,7 @@ type SwitchAccessPolicies struct {
 	// If enabled, Meraki devices will periodically send access-request messages to these RADIUS servers
 	GuestPortBouncing pulumi.BoolOutput `pulumi:"guestPortBouncing"`
 	// ID for the guest VLAN allow unauthorized devices access to limited network resources
-	GuestVlanId pulumi.IntOutput `pulumi:"guestVlanId"`
+	GuestVlanId pulumi.IntPtrOutput `pulumi:"guestVlanId"`
 	// Choose the Host Mode for the access policy.
 	HostMode pulumi.StringOutput `pulumi:"hostMode"`
 	// Enabling this option will make switches execute 802.1X and MAC-bypass authentication simultaneously so that clients authenticate faster. Only required when accessPolicyType is 'Hybrid Authentication.
@@ -48,12 +48,16 @@ type SwitchAccessPolicies struct {
 	RadiusAccountingEnabled pulumi.BoolOutput `pulumi:"radiusAccountingEnabled"`
 	// List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
 	RadiusAccountingServers SwitchAccessPoliciesRadiusAccountingServerArrayOutput `pulumi:"radiusAccountingServers"`
+	// List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
+	RadiusAccountingServersResponses SwitchAccessPoliciesRadiusAccountingServersResponseArrayOutput `pulumi:"radiusAccountingServersResponses"`
 	// Change of authentication for RADIUS re-authentication and disconnection
 	RadiusCoaSupportEnabled pulumi.BoolOutput `pulumi:"radiusCoaSupportEnabled"`
 	// Acceptable values are *""* for None, or *"11"* for Group Policies ACL
 	RadiusGroupAttribute pulumi.StringOutput `pulumi:"radiusGroupAttribute"`
 	// List of RADIUS servers to require connecting devices to authenticate against before granting network access
 	RadiusServers SwitchAccessPoliciesRadiusServerArrayOutput `pulumi:"radiusServers"`
+	// List of RADIUS servers to require connecting devices to authenticate against before granting network access
+	RadiusServersResponses SwitchAccessPoliciesRadiusServersResponseArrayOutput `pulumi:"radiusServersResponses"`
 	// If enabled, Meraki devices will periodically send access-request messages to these RADIUS servers
 	RadiusTestingEnabled pulumi.BoolOutput `pulumi:"radiusTestingEnabled"`
 	// Enable to restrict access for clients to a responseObjectific set of IP addresses or hostnames prior to authentication
@@ -123,12 +127,16 @@ type switchAccessPoliciesState struct {
 	RadiusAccountingEnabled *bool `pulumi:"radiusAccountingEnabled"`
 	// List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
 	RadiusAccountingServers []SwitchAccessPoliciesRadiusAccountingServer `pulumi:"radiusAccountingServers"`
+	// List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
+	RadiusAccountingServersResponses []SwitchAccessPoliciesRadiusAccountingServersResponse `pulumi:"radiusAccountingServersResponses"`
 	// Change of authentication for RADIUS re-authentication and disconnection
 	RadiusCoaSupportEnabled *bool `pulumi:"radiusCoaSupportEnabled"`
 	// Acceptable values are *""* for None, or *"11"* for Group Policies ACL
 	RadiusGroupAttribute *string `pulumi:"radiusGroupAttribute"`
 	// List of RADIUS servers to require connecting devices to authenticate against before granting network access
 	RadiusServers []SwitchAccessPoliciesRadiusServer `pulumi:"radiusServers"`
+	// List of RADIUS servers to require connecting devices to authenticate against before granting network access
+	RadiusServersResponses []SwitchAccessPoliciesRadiusServersResponse `pulumi:"radiusServersResponses"`
 	// If enabled, Meraki devices will periodically send access-request messages to these RADIUS servers
 	RadiusTestingEnabled *bool `pulumi:"radiusTestingEnabled"`
 	// Enable to restrict access for clients to a responseObjectific set of IP addresses or hostnames prior to authentication
@@ -166,12 +174,16 @@ type SwitchAccessPoliciesState struct {
 	RadiusAccountingEnabled pulumi.BoolPtrInput
 	// List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
 	RadiusAccountingServers SwitchAccessPoliciesRadiusAccountingServerArrayInput
+	// List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
+	RadiusAccountingServersResponses SwitchAccessPoliciesRadiusAccountingServersResponseArrayInput
 	// Change of authentication for RADIUS re-authentication and disconnection
 	RadiusCoaSupportEnabled pulumi.BoolPtrInput
 	// Acceptable values are *""* for None, or *"11"* for Group Policies ACL
 	RadiusGroupAttribute pulumi.StringPtrInput
 	// List of RADIUS servers to require connecting devices to authenticate against before granting network access
 	RadiusServers SwitchAccessPoliciesRadiusServerArrayInput
+	// List of RADIUS servers to require connecting devices to authenticate against before granting network access
+	RadiusServersResponses SwitchAccessPoliciesRadiusServersResponseArrayInput
 	// If enabled, Meraki devices will periodically send access-request messages to these RADIUS servers
 	RadiusTestingEnabled pulumi.BoolPtrInput
 	// Enable to restrict access for clients to a responseObjectific set of IP addresses or hostnames prior to authentication
@@ -382,8 +394,8 @@ func (o SwitchAccessPoliciesOutput) GuestPortBouncing() pulumi.BoolOutput {
 }
 
 // ID for the guest VLAN allow unauthorized devices access to limited network resources
-func (o SwitchAccessPoliciesOutput) GuestVlanId() pulumi.IntOutput {
-	return o.ApplyT(func(v *SwitchAccessPolicies) pulumi.IntOutput { return v.GuestVlanId }).(pulumi.IntOutput)
+func (o SwitchAccessPoliciesOutput) GuestVlanId() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *SwitchAccessPolicies) pulumi.IntPtrOutput { return v.GuestVlanId }).(pulumi.IntPtrOutput)
 }
 
 // Choose the Host Mode for the access policy.
@@ -423,6 +435,13 @@ func (o SwitchAccessPoliciesOutput) RadiusAccountingServers() SwitchAccessPolici
 	}).(SwitchAccessPoliciesRadiusAccountingServerArrayOutput)
 }
 
+// List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
+func (o SwitchAccessPoliciesOutput) RadiusAccountingServersResponses() SwitchAccessPoliciesRadiusAccountingServersResponseArrayOutput {
+	return o.ApplyT(func(v *SwitchAccessPolicies) SwitchAccessPoliciesRadiusAccountingServersResponseArrayOutput {
+		return v.RadiusAccountingServersResponses
+	}).(SwitchAccessPoliciesRadiusAccountingServersResponseArrayOutput)
+}
+
 // Change of authentication for RADIUS re-authentication and disconnection
 func (o SwitchAccessPoliciesOutput) RadiusCoaSupportEnabled() pulumi.BoolOutput {
 	return o.ApplyT(func(v *SwitchAccessPolicies) pulumi.BoolOutput { return v.RadiusCoaSupportEnabled }).(pulumi.BoolOutput)
@@ -436,6 +455,13 @@ func (o SwitchAccessPoliciesOutput) RadiusGroupAttribute() pulumi.StringOutput {
 // List of RADIUS servers to require connecting devices to authenticate against before granting network access
 func (o SwitchAccessPoliciesOutput) RadiusServers() SwitchAccessPoliciesRadiusServerArrayOutput {
 	return o.ApplyT(func(v *SwitchAccessPolicies) SwitchAccessPoliciesRadiusServerArrayOutput { return v.RadiusServers }).(SwitchAccessPoliciesRadiusServerArrayOutput)
+}
+
+// List of RADIUS servers to require connecting devices to authenticate against before granting network access
+func (o SwitchAccessPoliciesOutput) RadiusServersResponses() SwitchAccessPoliciesRadiusServersResponseArrayOutput {
+	return o.ApplyT(func(v *SwitchAccessPolicies) SwitchAccessPoliciesRadiusServersResponseArrayOutput {
+		return v.RadiusServersResponses
+	}).(SwitchAccessPoliciesRadiusServersResponseArrayOutput)
 }
 
 // If enabled, Meraki devices will periodically send access-request messages to these RADIUS servers

@@ -357,8 +357,10 @@ __all__ = [
     'SwitchAccessPoliciesDot1xArgs',
     'SwitchAccessPoliciesRadiusArgs',
     'SwitchAccessPoliciesRadiusAccountingServerArgs',
+    'SwitchAccessPoliciesRadiusAccountingServersResponseArgs',
     'SwitchAccessPoliciesRadiusCriticalAuthArgs',
     'SwitchAccessPoliciesRadiusServerArgs',
+    'SwitchAccessPoliciesRadiusServersResponseArgs',
     'SwitchAlternateManagementInterfaceSwitchArgs',
     'SwitchDhcpServerPolicyAlertsArgs',
     'SwitchDhcpServerPolicyAlertsEmailArgs',
@@ -19664,6 +19666,61 @@ class SwitchAccessPoliciesRadiusAccountingServerArgs:
 
 
 @pulumi.input_type
+class SwitchAccessPoliciesRadiusAccountingServersResponseArgs:
+    def __init__(__self__, *,
+                 host: Optional[pulumi.Input[str]] = None,
+                 port: Optional[pulumi.Input[int]] = None,
+                 secret: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[str] host: Public IP address of the RADIUS accounting server
+        :param pulumi.Input[int] port: UDP port that the RADIUS Accounting server listens on for access requests
+        :param pulumi.Input[str] secret: RADIUS client shared secret
+        """
+        if host is not None:
+            pulumi.set(__self__, "host", host)
+        if port is not None:
+            pulumi.set(__self__, "port", port)
+        if secret is not None:
+            pulumi.set(__self__, "secret", secret)
+
+    @property
+    @pulumi.getter
+    def host(self) -> Optional[pulumi.Input[str]]:
+        """
+        Public IP address of the RADIUS accounting server
+        """
+        return pulumi.get(self, "host")
+
+    @host.setter
+    def host(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "host", value)
+
+    @property
+    @pulumi.getter
+    def port(self) -> Optional[pulumi.Input[int]]:
+        """
+        UDP port that the RADIUS Accounting server listens on for access requests
+        """
+        return pulumi.get(self, "port")
+
+    @port.setter
+    def port(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "port", value)
+
+    @property
+    @pulumi.getter
+    def secret(self) -> Optional[pulumi.Input[str]]:
+        """
+        RADIUS client shared secret
+        """
+        return pulumi.get(self, "secret")
+
+    @secret.setter
+    def secret(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "secret", value)
+
+
+@pulumi.input_type
 class SwitchAccessPoliciesRadiusCriticalAuthArgs:
     def __init__(__self__, *,
                  data_vlan_id: Optional[pulumi.Input[int]] = None,
@@ -19720,6 +19777,61 @@ class SwitchAccessPoliciesRadiusCriticalAuthArgs:
 
 @pulumi.input_type
 class SwitchAccessPoliciesRadiusServerArgs:
+    def __init__(__self__, *,
+                 host: Optional[pulumi.Input[str]] = None,
+                 port: Optional[pulumi.Input[int]] = None,
+                 secret: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[str] host: Public IP address of the RADIUS server
+        :param pulumi.Input[int] port: UDP port that the RADIUS server listens on for access requests
+        :param pulumi.Input[str] secret: RADIUS client shared secret
+        """
+        if host is not None:
+            pulumi.set(__self__, "host", host)
+        if port is not None:
+            pulumi.set(__self__, "port", port)
+        if secret is not None:
+            pulumi.set(__self__, "secret", secret)
+
+    @property
+    @pulumi.getter
+    def host(self) -> Optional[pulumi.Input[str]]:
+        """
+        Public IP address of the RADIUS server
+        """
+        return pulumi.get(self, "host")
+
+    @host.setter
+    def host(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "host", value)
+
+    @property
+    @pulumi.getter
+    def port(self) -> Optional[pulumi.Input[int]]:
+        """
+        UDP port that the RADIUS server listens on for access requests
+        """
+        return pulumi.get(self, "port")
+
+    @port.setter
+    def port(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "port", value)
+
+    @property
+    @pulumi.getter
+    def secret(self) -> Optional[pulumi.Input[str]]:
+        """
+        RADIUS client shared secret
+        """
+        return pulumi.get(self, "secret")
+
+    @secret.setter
+    def secret(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "secret", value)
+
+
+@pulumi.input_type
+class SwitchAccessPoliciesRadiusServersResponseArgs:
     def __init__(__self__, *,
                  host: Optional[pulumi.Input[str]] = None,
                  port: Optional[pulumi.Input[int]] = None,

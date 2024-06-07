@@ -874,7 +874,7 @@ export namespace devices {
         /**
          * The ID of the VLAN to use for VLAN tagging.
          */
-        vlanId: number;
+        vlanId?: number;
     }
 
     export interface ApplianceUplinksSettingsInterfacesWan2 {
@@ -993,7 +993,7 @@ export namespace devices {
         /**
          * The ID of the VLAN to use for VLAN tagging.
          */
-        vlanId: number;
+        vlanId?: number;
     }
 
     export interface ApplianceVmxAuthenticationTokenItem {
@@ -17271,7 +17271,7 @@ export namespace networks {
         /**
          * The password used for Local Status Page(s). Set this to null to clear the password.
          */
-        password: string;
+        password?: string;
         /**
          * The username used for Local Status Page(s).
          */
@@ -17786,10 +17786,25 @@ export namespace networks {
         /**
          * Re-authentication period in seconds. Will be null if hostMode is Multi-Auth
          */
-        reAuthenticationInterval: number;
+        reAuthenticationInterval?: number;
     }
 
     export interface SwitchAccessPoliciesRadiusAccountingServer {
+        /**
+         * Public IP address of the RADIUS accounting server
+         */
+        host?: string;
+        /**
+         * UDP port that the RADIUS Accounting server listens on for access requests
+         */
+        port?: number;
+        /**
+         * RADIUS client shared secret
+         */
+        secret?: string;
+    }
+
+    export interface SwitchAccessPoliciesRadiusAccountingServersResponse {
         /**
          * Public IP address of the RADIUS accounting server
          */
@@ -17816,10 +17831,25 @@ export namespace networks {
         /**
          * VLAN that clients who use voice will be placed on when RADIUS authentication fails. Will be null if hostMode is Multi-Auth
          */
-        voiceVlanId: number;
+        voiceVlanId?: number;
     }
 
     export interface SwitchAccessPoliciesRadiusServer {
+        /**
+         * Public IP address of the RADIUS server
+         */
+        host?: string;
+        /**
+         * UDP port that the RADIUS server listens on for access requests
+         */
+        port?: number;
+        /**
+         * RADIUS client shared secret
+         */
+        secret?: string;
+    }
+
+    export interface SwitchAccessPoliciesRadiusServersResponse {
         /**
          * Public IP address of the RADIUS server
          */

@@ -8,8 +8,10 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.meraki.networks.inputs.SwitchAccessPoliciesCountsArgs;
 import com.pulumi.meraki.networks.inputs.SwitchAccessPoliciesDot1xArgs;
 import com.pulumi.meraki.networks.inputs.SwitchAccessPoliciesRadiusAccountingServerArgs;
+import com.pulumi.meraki.networks.inputs.SwitchAccessPoliciesRadiusAccountingServersResponseArgs;
 import com.pulumi.meraki.networks.inputs.SwitchAccessPoliciesRadiusArgs;
 import com.pulumi.meraki.networks.inputs.SwitchAccessPoliciesRadiusServerArgs;
+import com.pulumi.meraki.networks.inputs.SwitchAccessPoliciesRadiusServersResponseArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -219,6 +221,21 @@ public final class SwitchAccessPoliciesState extends com.pulumi.resources.Resour
     }
 
     /**
+     * List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
+     * 
+     */
+    @Import(name="radiusAccountingServersResponses")
+    private @Nullable Output<List<SwitchAccessPoliciesRadiusAccountingServersResponseArgs>> radiusAccountingServersResponses;
+
+    /**
+     * @return List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
+     * 
+     */
+    public Optional<Output<List<SwitchAccessPoliciesRadiusAccountingServersResponseArgs>>> radiusAccountingServersResponses() {
+        return Optional.ofNullable(this.radiusAccountingServersResponses);
+    }
+
+    /**
      * Change of authentication for RADIUS re-authentication and disconnection
      * 
      */
@@ -261,6 +278,21 @@ public final class SwitchAccessPoliciesState extends com.pulumi.resources.Resour
      */
     public Optional<Output<List<SwitchAccessPoliciesRadiusServerArgs>>> radiusServers() {
         return Optional.ofNullable(this.radiusServers);
+    }
+
+    /**
+     * List of RADIUS servers to require connecting devices to authenticate against before granting network access
+     * 
+     */
+    @Import(name="radiusServersResponses")
+    private @Nullable Output<List<SwitchAccessPoliciesRadiusServersResponseArgs>> radiusServersResponses;
+
+    /**
+     * @return List of RADIUS servers to require connecting devices to authenticate against before granting network access
+     * 
+     */
+    public Optional<Output<List<SwitchAccessPoliciesRadiusServersResponseArgs>>> radiusServersResponses() {
+        return Optional.ofNullable(this.radiusServersResponses);
     }
 
     /**
@@ -339,9 +371,11 @@ public final class SwitchAccessPoliciesState extends com.pulumi.resources.Resour
         this.radius = $.radius;
         this.radiusAccountingEnabled = $.radiusAccountingEnabled;
         this.radiusAccountingServers = $.radiusAccountingServers;
+        this.radiusAccountingServersResponses = $.radiusAccountingServersResponses;
         this.radiusCoaSupportEnabled = $.radiusCoaSupportEnabled;
         this.radiusGroupAttribute = $.radiusGroupAttribute;
         this.radiusServers = $.radiusServers;
+        this.radiusServersResponses = $.radiusServersResponses;
         this.radiusTestingEnabled = $.radiusTestingEnabled;
         this.urlRedirectWalledGardenEnabled = $.urlRedirectWalledGardenEnabled;
         this.urlRedirectWalledGardenRanges = $.urlRedirectWalledGardenRanges;
@@ -650,6 +684,37 @@ public final class SwitchAccessPoliciesState extends com.pulumi.resources.Resour
         }
 
         /**
+         * @param radiusAccountingServersResponses List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
+         * 
+         * @return builder
+         * 
+         */
+        public Builder radiusAccountingServersResponses(@Nullable Output<List<SwitchAccessPoliciesRadiusAccountingServersResponseArgs>> radiusAccountingServersResponses) {
+            $.radiusAccountingServersResponses = radiusAccountingServersResponses;
+            return this;
+        }
+
+        /**
+         * @param radiusAccountingServersResponses List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
+         * 
+         * @return builder
+         * 
+         */
+        public Builder radiusAccountingServersResponses(List<SwitchAccessPoliciesRadiusAccountingServersResponseArgs> radiusAccountingServersResponses) {
+            return radiusAccountingServersResponses(Output.of(radiusAccountingServersResponses));
+        }
+
+        /**
+         * @param radiusAccountingServersResponses List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
+         * 
+         * @return builder
+         * 
+         */
+        public Builder radiusAccountingServersResponses(SwitchAccessPoliciesRadiusAccountingServersResponseArgs... radiusAccountingServersResponses) {
+            return radiusAccountingServersResponses(List.of(radiusAccountingServersResponses));
+        }
+
+        /**
          * @param radiusCoaSupportEnabled Change of authentication for RADIUS re-authentication and disconnection
          * 
          * @return builder
@@ -720,6 +785,37 @@ public final class SwitchAccessPoliciesState extends com.pulumi.resources.Resour
          */
         public Builder radiusServers(SwitchAccessPoliciesRadiusServerArgs... radiusServers) {
             return radiusServers(List.of(radiusServers));
+        }
+
+        /**
+         * @param radiusServersResponses List of RADIUS servers to require connecting devices to authenticate against before granting network access
+         * 
+         * @return builder
+         * 
+         */
+        public Builder radiusServersResponses(@Nullable Output<List<SwitchAccessPoliciesRadiusServersResponseArgs>> radiusServersResponses) {
+            $.radiusServersResponses = radiusServersResponses;
+            return this;
+        }
+
+        /**
+         * @param radiusServersResponses List of RADIUS servers to require connecting devices to authenticate against before granting network access
+         * 
+         * @return builder
+         * 
+         */
+        public Builder radiusServersResponses(List<SwitchAccessPoliciesRadiusServersResponseArgs> radiusServersResponses) {
+            return radiusServersResponses(Output.of(radiusServersResponses));
+        }
+
+        /**
+         * @param radiusServersResponses List of RADIUS servers to require connecting devices to authenticate against before granting network access
+         * 
+         * @return builder
+         * 
+         */
+        public Builder radiusServersResponses(SwitchAccessPoliciesRadiusServersResponseArgs... radiusServersResponses) {
+            return radiusServersResponses(List.of(radiusServersResponses));
         }
 
         /**

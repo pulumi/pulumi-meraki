@@ -153,12 +153,6 @@ namespace Pulumi.Meraki.Networks
         public Input<Inputs.GroupPoliciesFirewallAndTrafficShapingArgs>? FirewallAndTrafficShaping { get; set; }
 
         /// <summary>
-        /// The ID of the group policy
-        /// </summary>
-        [Input("groupPolicyId")]
-        public Input<string>? GroupPolicyId { get; set; }
-
-        /// <summary>
         /// The name for your group policy. Required.
         /// </summary>
         [Input("name")]

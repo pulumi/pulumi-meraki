@@ -6745,6 +6745,21 @@ export namespace networks {
         secret?: pulumi.Input<string>;
     }
 
+    export interface SwitchAccessPoliciesRadiusAccountingServersResponse {
+        /**
+         * Public IP address of the RADIUS accounting server
+         */
+        host?: pulumi.Input<string>;
+        /**
+         * UDP port that the RADIUS Accounting server listens on for access requests
+         */
+        port?: pulumi.Input<number>;
+        /**
+         * RADIUS client shared secret
+         */
+        secret?: pulumi.Input<string>;
+    }
+
     export interface SwitchAccessPoliciesRadiusCriticalAuth {
         /**
          * VLAN that clients who use data will be placed on when RADIUS authentication fails. Will be null if hostMode is Multi-Auth
@@ -6761,6 +6776,21 @@ export namespace networks {
     }
 
     export interface SwitchAccessPoliciesRadiusServer {
+        /**
+         * Public IP address of the RADIUS server
+         */
+        host?: pulumi.Input<string>;
+        /**
+         * UDP port that the RADIUS server listens on for access requests
+         */
+        port?: pulumi.Input<number>;
+        /**
+         * RADIUS client shared secret
+         */
+        secret?: pulumi.Input<string>;
+    }
+
+    export interface SwitchAccessPoliciesRadiusServersResponse {
         /**
          * Public IP address of the RADIUS server
          */

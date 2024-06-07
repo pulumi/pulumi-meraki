@@ -83,21 +83,6 @@ public final class GroupPoliciesArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ID of the group policy
-     * 
-     */
-    @Import(name="groupPolicyId")
-    private @Nullable Output<String> groupPolicyId;
-
-    /**
-     * @return The ID of the group policy
-     * 
-     */
-    public Optional<Output<String>> groupPolicyId() {
-        return Optional.ofNullable(this.groupPolicyId);
-    }
-
-    /**
      * The name for your group policy. Required.
      * 
      */
@@ -179,7 +164,6 @@ public final class GroupPoliciesArgs extends com.pulumi.resources.ResourceArgs {
         this.bonjourForwarding = $.bonjourForwarding;
         this.contentFiltering = $.contentFiltering;
         this.firewallAndTrafficShaping = $.firewallAndTrafficShaping;
-        this.groupPolicyId = $.groupPolicyId;
         this.name = $.name;
         this.networkId = $.networkId;
         this.scheduling = $.scheduling;
@@ -287,27 +271,6 @@ public final class GroupPoliciesArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder firewallAndTrafficShaping(GroupPoliciesFirewallAndTrafficShapingArgs firewallAndTrafficShaping) {
             return firewallAndTrafficShaping(Output.of(firewallAndTrafficShaping));
-        }
-
-        /**
-         * @param groupPolicyId The ID of the group policy
-         * 
-         * @return builder
-         * 
-         */
-        public Builder groupPolicyId(@Nullable Output<String> groupPolicyId) {
-            $.groupPolicyId = groupPolicyId;
-            return this;
-        }
-
-        /**
-         * @param groupPolicyId The ID of the group policy
-         * 
-         * @return builder
-         * 
-         */
-        public Builder groupPolicyId(String groupPolicyId) {
-            return groupPolicyId(Output.of(groupPolicyId));
         }
 
         /**

@@ -12,7 +12,6 @@ import com.pulumi.meraki.networks.SwitchStacksArgs;
 import com.pulumi.meraki.networks.inputs.SwitchStacksState;
 import java.lang.String;
 import java.util.List;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -112,14 +111,14 @@ public class SwitchStacks extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="switchStackId", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> switchStackId;
+    private Output<String> switchStackId;
 
     /**
      * @return switchStackId path parameter. Switch stack ID
      * 
      */
-    public Output<Optional<String>> switchStackId() {
-        return Codegen.optional(this.switchStackId);
+    public Output<String> switchStackId() {
+        return this.switchStackId;
     }
 
     /**

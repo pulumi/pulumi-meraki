@@ -358,8 +358,10 @@ __all__ = [
     'SwitchAccessPoliciesDot1x',
     'SwitchAccessPoliciesRadius',
     'SwitchAccessPoliciesRadiusAccountingServer',
+    'SwitchAccessPoliciesRadiusAccountingServersResponse',
     'SwitchAccessPoliciesRadiusCriticalAuth',
     'SwitchAccessPoliciesRadiusServer',
+    'SwitchAccessPoliciesRadiusServersResponse',
     'SwitchAlternateManagementInterfaceSwitch',
     'SwitchDhcpServerPolicyAlerts',
     'SwitchDhcpServerPolicyAlertsEmail',
@@ -19966,6 +19968,49 @@ class SwitchAccessPoliciesRadiusAccountingServer(dict):
 
 
 @pulumi.output_type
+class SwitchAccessPoliciesRadiusAccountingServersResponse(dict):
+    def __init__(__self__, *,
+                 host: Optional[str] = None,
+                 port: Optional[int] = None,
+                 secret: Optional[str] = None):
+        """
+        :param str host: Public IP address of the RADIUS accounting server
+        :param int port: UDP port that the RADIUS Accounting server listens on for access requests
+        :param str secret: RADIUS client shared secret
+        """
+        if host is not None:
+            pulumi.set(__self__, "host", host)
+        if port is not None:
+            pulumi.set(__self__, "port", port)
+        if secret is not None:
+            pulumi.set(__self__, "secret", secret)
+
+    @property
+    @pulumi.getter
+    def host(self) -> Optional[str]:
+        """
+        Public IP address of the RADIUS accounting server
+        """
+        return pulumi.get(self, "host")
+
+    @property
+    @pulumi.getter
+    def port(self) -> Optional[int]:
+        """
+        UDP port that the RADIUS Accounting server listens on for access requests
+        """
+        return pulumi.get(self, "port")
+
+    @property
+    @pulumi.getter
+    def secret(self) -> Optional[str]:
+        """
+        RADIUS client shared secret
+        """
+        return pulumi.get(self, "secret")
+
+
+@pulumi.output_type
 class SwitchAccessPoliciesRadiusCriticalAuth(dict):
     @staticmethod
     def __key_warning(key: str):
@@ -20031,6 +20076,49 @@ class SwitchAccessPoliciesRadiusCriticalAuth(dict):
 
 @pulumi.output_type
 class SwitchAccessPoliciesRadiusServer(dict):
+    def __init__(__self__, *,
+                 host: Optional[str] = None,
+                 port: Optional[int] = None,
+                 secret: Optional[str] = None):
+        """
+        :param str host: Public IP address of the RADIUS server
+        :param int port: UDP port that the RADIUS server listens on for access requests
+        :param str secret: RADIUS client shared secret
+        """
+        if host is not None:
+            pulumi.set(__self__, "host", host)
+        if port is not None:
+            pulumi.set(__self__, "port", port)
+        if secret is not None:
+            pulumi.set(__self__, "secret", secret)
+
+    @property
+    @pulumi.getter
+    def host(self) -> Optional[str]:
+        """
+        Public IP address of the RADIUS server
+        """
+        return pulumi.get(self, "host")
+
+    @property
+    @pulumi.getter
+    def port(self) -> Optional[int]:
+        """
+        UDP port that the RADIUS server listens on for access requests
+        """
+        return pulumi.get(self, "port")
+
+    @property
+    @pulumi.getter
+    def secret(self) -> Optional[str]:
+        """
+        RADIUS client shared secret
+        """
+        return pulumi.get(self, "secret")
+
+
+@pulumi.output_type
+class SwitchAccessPoliciesRadiusServersResponse(dict):
     def __init__(__self__, *,
                  host: Optional[str] = None,
                  port: Optional[int] = None,

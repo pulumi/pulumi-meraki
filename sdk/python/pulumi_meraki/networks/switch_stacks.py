@@ -319,7 +319,7 @@ class SwitchStacks(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="switchStackId")
-    def switch_stack_id(self) -> pulumi.Output[Optional[str]]:
+    def switch_stack_id(self) -> pulumi.Output[str]:
         """
         switchStackId path parameter. Switch stack ID
         """

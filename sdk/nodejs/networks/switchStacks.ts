@@ -71,7 +71,7 @@ export class SwitchStacks extends pulumi.CustomResource {
     /**
      * switchStackId path parameter. Switch stack ID
      */
-    public readonly switchStackId!: pulumi.Output<string | undefined>;
+    public readonly switchStackId!: pulumi.Output<string>;
 
     /**
      * Create a SwitchStacks resource with the given unique name, arguments, and options.

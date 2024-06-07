@@ -79,7 +79,7 @@ export class WirelessSsids extends pulumi.CustomResource {
     /**
      * The default VLAN ID used for 'all other APs'. This param is only valid when the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
      */
-    public readonly defaultVlanId!: pulumi.Output<number>;
+    public readonly defaultVlanId!: pulumi.Output<number | undefined>;
     /**
      * Disassociate clients when 'VPN' concentrator failover occurs in order to trigger clients to re-associate and generate new DHCP requests. This param is only valid if ipAssignmentMode is 'VPN'.
      */

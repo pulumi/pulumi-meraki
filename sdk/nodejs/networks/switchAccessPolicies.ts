@@ -66,7 +66,7 @@ export class SwitchAccessPolicies extends pulumi.CustomResource {
     /**
      * ID for the guest VLAN allow unauthorized devices access to limited network resources
      */
-    public readonly guestVlanId!: pulumi.Output<number>;
+    public readonly guestVlanId!: pulumi.Output<number | undefined>;
     /**
      * Choose the Host Mode for the access policy.
      */
@@ -94,7 +94,11 @@ export class SwitchAccessPolicies extends pulumi.CustomResource {
     /**
      * List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
      */
-    public readonly radiusAccountingServers!: pulumi.Output<outputs.networks.SwitchAccessPoliciesRadiusAccountingServer[]>;
+    public readonly radiusAccountingServers!: pulumi.Output<outputs.networks.SwitchAccessPoliciesRadiusAccountingServer[] | undefined>;
+    /**
+     * List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
+     */
+    public /*out*/ readonly radiusAccountingServersResponses!: pulumi.Output<outputs.networks.SwitchAccessPoliciesRadiusAccountingServersResponse[]>;
     /**
      * Change of authentication for RADIUS re-authentication and disconnection
      */
@@ -106,7 +110,11 @@ export class SwitchAccessPolicies extends pulumi.CustomResource {
     /**
      * List of RADIUS servers to require connecting devices to authenticate against before granting network access
      */
-    public readonly radiusServers!: pulumi.Output<outputs.networks.SwitchAccessPoliciesRadiusServer[]>;
+    public readonly radiusServers!: pulumi.Output<outputs.networks.SwitchAccessPoliciesRadiusServer[] | undefined>;
+    /**
+     * List of RADIUS servers to require connecting devices to authenticate against before granting network access
+     */
+    public /*out*/ readonly radiusServersResponses!: pulumi.Output<outputs.networks.SwitchAccessPoliciesRadiusServersResponse[]>;
     /**
      * If enabled, Meraki devices will periodically send access-request messages to these RADIUS servers
      */
@@ -118,7 +126,7 @@ export class SwitchAccessPolicies extends pulumi.CustomResource {
     /**
      * IP address ranges, in CIDR notation, to restrict access for clients to a specific set of IP addresses or hostnames prior to authentication
      */
-    public readonly urlRedirectWalledGardenRanges!: pulumi.Output<string[]>;
+    public readonly urlRedirectWalledGardenRanges!: pulumi.Output<string[] | undefined>;
     /**
      * CDP/LLDP capable voice clients will be able to use this VLAN. Automatically true when hostMode is 'Multi-Domain'.
      */
@@ -150,9 +158,11 @@ export class SwitchAccessPolicies extends pulumi.CustomResource {
             resourceInputs["radius"] = state ? state.radius : undefined;
             resourceInputs["radiusAccountingEnabled"] = state ? state.radiusAccountingEnabled : undefined;
             resourceInputs["radiusAccountingServers"] = state ? state.radiusAccountingServers : undefined;
+            resourceInputs["radiusAccountingServersResponses"] = state ? state.radiusAccountingServersResponses : undefined;
             resourceInputs["radiusCoaSupportEnabled"] = state ? state.radiusCoaSupportEnabled : undefined;
             resourceInputs["radiusGroupAttribute"] = state ? state.radiusGroupAttribute : undefined;
             resourceInputs["radiusServers"] = state ? state.radiusServers : undefined;
+            resourceInputs["radiusServersResponses"] = state ? state.radiusServersResponses : undefined;
             resourceInputs["radiusTestingEnabled"] = state ? state.radiusTestingEnabled : undefined;
             resourceInputs["urlRedirectWalledGardenEnabled"] = state ? state.urlRedirectWalledGardenEnabled : undefined;
             resourceInputs["urlRedirectWalledGardenRanges"] = state ? state.urlRedirectWalledGardenRanges : undefined;
@@ -182,6 +192,8 @@ export class SwitchAccessPolicies extends pulumi.CustomResource {
             resourceInputs["urlRedirectWalledGardenRanges"] = args ? args.urlRedirectWalledGardenRanges : undefined;
             resourceInputs["voiceVlanClients"] = args ? args.voiceVlanClients : undefined;
             resourceInputs["counts"] = undefined /*out*/;
+            resourceInputs["radiusAccountingServersResponses"] = undefined /*out*/;
+            resourceInputs["radiusServersResponses"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(SwitchAccessPolicies.__pulumiType, name, resourceInputs, opts);
@@ -245,6 +257,10 @@ export interface SwitchAccessPoliciesState {
      */
     radiusAccountingServers?: pulumi.Input<pulumi.Input<inputs.networks.SwitchAccessPoliciesRadiusAccountingServer>[]>;
     /**
+     * List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
+     */
+    radiusAccountingServersResponses?: pulumi.Input<pulumi.Input<inputs.networks.SwitchAccessPoliciesRadiusAccountingServersResponse>[]>;
+    /**
      * Change of authentication for RADIUS re-authentication and disconnection
      */
     radiusCoaSupportEnabled?: pulumi.Input<boolean>;
@@ -256,6 +272,10 @@ export interface SwitchAccessPoliciesState {
      * List of RADIUS servers to require connecting devices to authenticate against before granting network access
      */
     radiusServers?: pulumi.Input<pulumi.Input<inputs.networks.SwitchAccessPoliciesRadiusServer>[]>;
+    /**
+     * List of RADIUS servers to require connecting devices to authenticate against before granting network access
+     */
+    radiusServersResponses?: pulumi.Input<pulumi.Input<inputs.networks.SwitchAccessPoliciesRadiusServersResponse>[]>;
     /**
      * If enabled, Meraki devices will periodically send access-request messages to these RADIUS servers
      */

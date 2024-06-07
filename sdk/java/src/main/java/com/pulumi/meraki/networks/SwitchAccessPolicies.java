@@ -14,11 +14,14 @@ import com.pulumi.meraki.networks.outputs.SwitchAccessPoliciesCounts;
 import com.pulumi.meraki.networks.outputs.SwitchAccessPoliciesDot1x;
 import com.pulumi.meraki.networks.outputs.SwitchAccessPoliciesRadius;
 import com.pulumi.meraki.networks.outputs.SwitchAccessPoliciesRadiusAccountingServer;
+import com.pulumi.meraki.networks.outputs.SwitchAccessPoliciesRadiusAccountingServersResponse;
 import com.pulumi.meraki.networks.outputs.SwitchAccessPoliciesRadiusServer;
+import com.pulumi.meraki.networks.outputs.SwitchAccessPoliciesRadiusServersResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -177,14 +180,14 @@ public class SwitchAccessPolicies extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="guestVlanId", refs={Integer.class}, tree="[0]")
-    private Output<Integer> guestVlanId;
+    private Output</* @Nullable */ Integer> guestVlanId;
 
     /**
      * @return ID for the guest VLAN allow unauthorized devices access to limited network resources
      * 
      */
-    public Output<Integer> guestVlanId() {
-        return this.guestVlanId;
+    public Output<Optional<Integer>> guestVlanId() {
+        return Codegen.optional(this.guestVlanId);
     }
     /**
      * Choose the Host Mode for the access policy.
@@ -275,14 +278,28 @@ public class SwitchAccessPolicies extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="radiusAccountingServers", refs={List.class,SwitchAccessPoliciesRadiusAccountingServer.class}, tree="[0,1]")
-    private Output<List<SwitchAccessPoliciesRadiusAccountingServer>> radiusAccountingServers;
+    private Output</* @Nullable */ List<SwitchAccessPoliciesRadiusAccountingServer>> radiusAccountingServers;
 
     /**
      * @return List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
      * 
      */
-    public Output<List<SwitchAccessPoliciesRadiusAccountingServer>> radiusAccountingServers() {
-        return this.radiusAccountingServers;
+    public Output<Optional<List<SwitchAccessPoliciesRadiusAccountingServer>>> radiusAccountingServers() {
+        return Codegen.optional(this.radiusAccountingServers);
+    }
+    /**
+     * List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
+     * 
+     */
+    @Export(name="radiusAccountingServersResponses", refs={List.class,SwitchAccessPoliciesRadiusAccountingServersResponse.class}, tree="[0,1]")
+    private Output<List<SwitchAccessPoliciesRadiusAccountingServersResponse>> radiusAccountingServersResponses;
+
+    /**
+     * @return List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
+     * 
+     */
+    public Output<List<SwitchAccessPoliciesRadiusAccountingServersResponse>> radiusAccountingServersResponses() {
+        return this.radiusAccountingServersResponses;
     }
     /**
      * Change of authentication for RADIUS re-authentication and disconnection
@@ -317,14 +334,28 @@ public class SwitchAccessPolicies extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="radiusServers", refs={List.class,SwitchAccessPoliciesRadiusServer.class}, tree="[0,1]")
-    private Output<List<SwitchAccessPoliciesRadiusServer>> radiusServers;
+    private Output</* @Nullable */ List<SwitchAccessPoliciesRadiusServer>> radiusServers;
 
     /**
      * @return List of RADIUS servers to require connecting devices to authenticate against before granting network access
      * 
      */
-    public Output<List<SwitchAccessPoliciesRadiusServer>> radiusServers() {
-        return this.radiusServers;
+    public Output<Optional<List<SwitchAccessPoliciesRadiusServer>>> radiusServers() {
+        return Codegen.optional(this.radiusServers);
+    }
+    /**
+     * List of RADIUS servers to require connecting devices to authenticate against before granting network access
+     * 
+     */
+    @Export(name="radiusServersResponses", refs={List.class,SwitchAccessPoliciesRadiusServersResponse.class}, tree="[0,1]")
+    private Output<List<SwitchAccessPoliciesRadiusServersResponse>> radiusServersResponses;
+
+    /**
+     * @return List of RADIUS servers to require connecting devices to authenticate against before granting network access
+     * 
+     */
+    public Output<List<SwitchAccessPoliciesRadiusServersResponse>> radiusServersResponses() {
+        return this.radiusServersResponses;
     }
     /**
      * If enabled, Meraki devices will periodically send access-request messages to these RADIUS servers
@@ -359,14 +390,14 @@ public class SwitchAccessPolicies extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="urlRedirectWalledGardenRanges", refs={List.class,String.class}, tree="[0,1]")
-    private Output<List<String>> urlRedirectWalledGardenRanges;
+    private Output</* @Nullable */ List<String>> urlRedirectWalledGardenRanges;
 
     /**
      * @return IP address ranges, in CIDR notation, to restrict access for clients to a specific set of IP addresses or hostnames prior to authentication
      * 
      */
-    public Output<List<String>> urlRedirectWalledGardenRanges() {
-        return this.urlRedirectWalledGardenRanges;
+    public Output<Optional<List<String>>> urlRedirectWalledGardenRanges() {
+        return Codegen.optional(this.urlRedirectWalledGardenRanges);
     }
     /**
      * CDP/LLDP capable voice clients will be able to use this VLAN. Automatically true when hostMode is &#39;Multi-Domain&#39;.

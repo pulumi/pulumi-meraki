@@ -13,6 +13,318 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
+type WirelessSsidsSplashSettingsGuestSponsorship struct {
+	// Duration in minutes of sponsored guest authorization.
+	DurationInMinutes *int `pulumi:"durationInMinutes"`
+	// Whether or not guests can specify how much time they are requesting.
+	GuestCanRequestTimeframe *bool `pulumi:"guestCanRequestTimeframe"`
+}
+
+// WirelessSsidsSplashSettingsGuestSponsorshipInput is an input type that accepts WirelessSsidsSplashSettingsGuestSponsorshipArgs and WirelessSsidsSplashSettingsGuestSponsorshipOutput values.
+// You can construct a concrete instance of `WirelessSsidsSplashSettingsGuestSponsorshipInput` via:
+//
+//	WirelessSsidsSplashSettingsGuestSponsorshipArgs{...}
+type WirelessSsidsSplashSettingsGuestSponsorshipInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsSplashSettingsGuestSponsorshipOutput() WirelessSsidsSplashSettingsGuestSponsorshipOutput
+	ToWirelessSsidsSplashSettingsGuestSponsorshipOutputWithContext(context.Context) WirelessSsidsSplashSettingsGuestSponsorshipOutput
+}
+
+type WirelessSsidsSplashSettingsGuestSponsorshipArgs struct {
+	// Duration in minutes of sponsored guest authorization.
+	DurationInMinutes pulumi.IntPtrInput `pulumi:"durationInMinutes"`
+	// Whether or not guests can specify how much time they are requesting.
+	GuestCanRequestTimeframe pulumi.BoolPtrInput `pulumi:"guestCanRequestTimeframe"`
+}
+
+func (WirelessSsidsSplashSettingsGuestSponsorshipArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsSplashSettingsGuestSponsorship)(nil)).Elem()
+}
+
+func (i WirelessSsidsSplashSettingsGuestSponsorshipArgs) ToWirelessSsidsSplashSettingsGuestSponsorshipOutput() WirelessSsidsSplashSettingsGuestSponsorshipOutput {
+	return i.ToWirelessSsidsSplashSettingsGuestSponsorshipOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsSplashSettingsGuestSponsorshipArgs) ToWirelessSsidsSplashSettingsGuestSponsorshipOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsGuestSponsorshipOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsSplashSettingsGuestSponsorshipOutput)
+}
+
+func (i WirelessSsidsSplashSettingsGuestSponsorshipArgs) ToWirelessSsidsSplashSettingsGuestSponsorshipPtrOutput() WirelessSsidsSplashSettingsGuestSponsorshipPtrOutput {
+	return i.ToWirelessSsidsSplashSettingsGuestSponsorshipPtrOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsSplashSettingsGuestSponsorshipArgs) ToWirelessSsidsSplashSettingsGuestSponsorshipPtrOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsGuestSponsorshipPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsSplashSettingsGuestSponsorshipOutput).ToWirelessSsidsSplashSettingsGuestSponsorshipPtrOutputWithContext(ctx)
+}
+
+// WirelessSsidsSplashSettingsGuestSponsorshipPtrInput is an input type that accepts WirelessSsidsSplashSettingsGuestSponsorshipArgs, WirelessSsidsSplashSettingsGuestSponsorshipPtr and WirelessSsidsSplashSettingsGuestSponsorshipPtrOutput values.
+// You can construct a concrete instance of `WirelessSsidsSplashSettingsGuestSponsorshipPtrInput` via:
+//
+//	        WirelessSsidsSplashSettingsGuestSponsorshipArgs{...}
+//
+//	or:
+//
+//	        nil
+type WirelessSsidsSplashSettingsGuestSponsorshipPtrInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsSplashSettingsGuestSponsorshipPtrOutput() WirelessSsidsSplashSettingsGuestSponsorshipPtrOutput
+	ToWirelessSsidsSplashSettingsGuestSponsorshipPtrOutputWithContext(context.Context) WirelessSsidsSplashSettingsGuestSponsorshipPtrOutput
+}
+
+type wirelessSsidsSplashSettingsGuestSponsorshipPtrType WirelessSsidsSplashSettingsGuestSponsorshipArgs
+
+func WirelessSsidsSplashSettingsGuestSponsorshipPtr(v *WirelessSsidsSplashSettingsGuestSponsorshipArgs) WirelessSsidsSplashSettingsGuestSponsorshipPtrInput {
+	return (*wirelessSsidsSplashSettingsGuestSponsorshipPtrType)(v)
+}
+
+func (*wirelessSsidsSplashSettingsGuestSponsorshipPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsSplashSettingsGuestSponsorship)(nil)).Elem()
+}
+
+func (i *wirelessSsidsSplashSettingsGuestSponsorshipPtrType) ToWirelessSsidsSplashSettingsGuestSponsorshipPtrOutput() WirelessSsidsSplashSettingsGuestSponsorshipPtrOutput {
+	return i.ToWirelessSsidsSplashSettingsGuestSponsorshipPtrOutputWithContext(context.Background())
+}
+
+func (i *wirelessSsidsSplashSettingsGuestSponsorshipPtrType) ToWirelessSsidsSplashSettingsGuestSponsorshipPtrOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsGuestSponsorshipPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsSplashSettingsGuestSponsorshipPtrOutput)
+}
+
+type WirelessSsidsSplashSettingsGuestSponsorshipOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsSplashSettingsGuestSponsorshipOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsSplashSettingsGuestSponsorship)(nil)).Elem()
+}
+
+func (o WirelessSsidsSplashSettingsGuestSponsorshipOutput) ToWirelessSsidsSplashSettingsGuestSponsorshipOutput() WirelessSsidsSplashSettingsGuestSponsorshipOutput {
+	return o
+}
+
+func (o WirelessSsidsSplashSettingsGuestSponsorshipOutput) ToWirelessSsidsSplashSettingsGuestSponsorshipOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsGuestSponsorshipOutput {
+	return o
+}
+
+func (o WirelessSsidsSplashSettingsGuestSponsorshipOutput) ToWirelessSsidsSplashSettingsGuestSponsorshipPtrOutput() WirelessSsidsSplashSettingsGuestSponsorshipPtrOutput {
+	return o.ToWirelessSsidsSplashSettingsGuestSponsorshipPtrOutputWithContext(context.Background())
+}
+
+func (o WirelessSsidsSplashSettingsGuestSponsorshipOutput) ToWirelessSsidsSplashSettingsGuestSponsorshipPtrOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsGuestSponsorshipPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v WirelessSsidsSplashSettingsGuestSponsorship) *WirelessSsidsSplashSettingsGuestSponsorship {
+		return &v
+	}).(WirelessSsidsSplashSettingsGuestSponsorshipPtrOutput)
+}
+
+// Duration in minutes of sponsored guest authorization.
+func (o WirelessSsidsSplashSettingsGuestSponsorshipOutput) DurationInMinutes() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsSplashSettingsGuestSponsorship) *int { return v.DurationInMinutes }).(pulumi.IntPtrOutput)
+}
+
+// Whether or not guests can specify how much time they are requesting.
+func (o WirelessSsidsSplashSettingsGuestSponsorshipOutput) GuestCanRequestTimeframe() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsSplashSettingsGuestSponsorship) *bool { return v.GuestCanRequestTimeframe }).(pulumi.BoolPtrOutput)
+}
+
+type WirelessSsidsSplashSettingsGuestSponsorshipPtrOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsSplashSettingsGuestSponsorshipPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsSplashSettingsGuestSponsorship)(nil)).Elem()
+}
+
+func (o WirelessSsidsSplashSettingsGuestSponsorshipPtrOutput) ToWirelessSsidsSplashSettingsGuestSponsorshipPtrOutput() WirelessSsidsSplashSettingsGuestSponsorshipPtrOutput {
+	return o
+}
+
+func (o WirelessSsidsSplashSettingsGuestSponsorshipPtrOutput) ToWirelessSsidsSplashSettingsGuestSponsorshipPtrOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsGuestSponsorshipPtrOutput {
+	return o
+}
+
+func (o WirelessSsidsSplashSettingsGuestSponsorshipPtrOutput) Elem() WirelessSsidsSplashSettingsGuestSponsorshipOutput {
+	return o.ApplyT(func(v *WirelessSsidsSplashSettingsGuestSponsorship) WirelessSsidsSplashSettingsGuestSponsorship {
+		if v != nil {
+			return *v
+		}
+		var ret WirelessSsidsSplashSettingsGuestSponsorship
+		return ret
+	}).(WirelessSsidsSplashSettingsGuestSponsorshipOutput)
+}
+
+// Duration in minutes of sponsored guest authorization.
+func (o WirelessSsidsSplashSettingsGuestSponsorshipPtrOutput) DurationInMinutes() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsSplashSettingsGuestSponsorship) *int {
+		if v == nil {
+			return nil
+		}
+		return v.DurationInMinutes
+	}).(pulumi.IntPtrOutput)
+}
+
+// Whether or not guests can specify how much time they are requesting.
+func (o WirelessSsidsSplashSettingsGuestSponsorshipPtrOutput) GuestCanRequestTimeframe() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsSplashSettingsGuestSponsorship) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.GuestCanRequestTimeframe
+	}).(pulumi.BoolPtrOutput)
+}
+
+type WirelessSsidsSplashSettingsSelfRegistration struct {
+	// How created user accounts should be authorized.
+	AuthorizationType *string `pulumi:"authorizationType"`
+	// Whether or not to allow users to create their own account on the network.
+	Enabled *bool `pulumi:"enabled"`
+}
+
+// WirelessSsidsSplashSettingsSelfRegistrationInput is an input type that accepts WirelessSsidsSplashSettingsSelfRegistrationArgs and WirelessSsidsSplashSettingsSelfRegistrationOutput values.
+// You can construct a concrete instance of `WirelessSsidsSplashSettingsSelfRegistrationInput` via:
+//
+//	WirelessSsidsSplashSettingsSelfRegistrationArgs{...}
+type WirelessSsidsSplashSettingsSelfRegistrationInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsSplashSettingsSelfRegistrationOutput() WirelessSsidsSplashSettingsSelfRegistrationOutput
+	ToWirelessSsidsSplashSettingsSelfRegistrationOutputWithContext(context.Context) WirelessSsidsSplashSettingsSelfRegistrationOutput
+}
+
+type WirelessSsidsSplashSettingsSelfRegistrationArgs struct {
+	// How created user accounts should be authorized.
+	AuthorizationType pulumi.StringPtrInput `pulumi:"authorizationType"`
+	// Whether or not to allow users to create their own account on the network.
+	Enabled pulumi.BoolPtrInput `pulumi:"enabled"`
+}
+
+func (WirelessSsidsSplashSettingsSelfRegistrationArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsSplashSettingsSelfRegistration)(nil)).Elem()
+}
+
+func (i WirelessSsidsSplashSettingsSelfRegistrationArgs) ToWirelessSsidsSplashSettingsSelfRegistrationOutput() WirelessSsidsSplashSettingsSelfRegistrationOutput {
+	return i.ToWirelessSsidsSplashSettingsSelfRegistrationOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsSplashSettingsSelfRegistrationArgs) ToWirelessSsidsSplashSettingsSelfRegistrationOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsSelfRegistrationOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsSplashSettingsSelfRegistrationOutput)
+}
+
+func (i WirelessSsidsSplashSettingsSelfRegistrationArgs) ToWirelessSsidsSplashSettingsSelfRegistrationPtrOutput() WirelessSsidsSplashSettingsSelfRegistrationPtrOutput {
+	return i.ToWirelessSsidsSplashSettingsSelfRegistrationPtrOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsSplashSettingsSelfRegistrationArgs) ToWirelessSsidsSplashSettingsSelfRegistrationPtrOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsSelfRegistrationPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsSplashSettingsSelfRegistrationOutput).ToWirelessSsidsSplashSettingsSelfRegistrationPtrOutputWithContext(ctx)
+}
+
+// WirelessSsidsSplashSettingsSelfRegistrationPtrInput is an input type that accepts WirelessSsidsSplashSettingsSelfRegistrationArgs, WirelessSsidsSplashSettingsSelfRegistrationPtr and WirelessSsidsSplashSettingsSelfRegistrationPtrOutput values.
+// You can construct a concrete instance of `WirelessSsidsSplashSettingsSelfRegistrationPtrInput` via:
+//
+//	        WirelessSsidsSplashSettingsSelfRegistrationArgs{...}
+//
+//	or:
+//
+//	        nil
+type WirelessSsidsSplashSettingsSelfRegistrationPtrInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsSplashSettingsSelfRegistrationPtrOutput() WirelessSsidsSplashSettingsSelfRegistrationPtrOutput
+	ToWirelessSsidsSplashSettingsSelfRegistrationPtrOutputWithContext(context.Context) WirelessSsidsSplashSettingsSelfRegistrationPtrOutput
+}
+
+type wirelessSsidsSplashSettingsSelfRegistrationPtrType WirelessSsidsSplashSettingsSelfRegistrationArgs
+
+func WirelessSsidsSplashSettingsSelfRegistrationPtr(v *WirelessSsidsSplashSettingsSelfRegistrationArgs) WirelessSsidsSplashSettingsSelfRegistrationPtrInput {
+	return (*wirelessSsidsSplashSettingsSelfRegistrationPtrType)(v)
+}
+
+func (*wirelessSsidsSplashSettingsSelfRegistrationPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsSplashSettingsSelfRegistration)(nil)).Elem()
+}
+
+func (i *wirelessSsidsSplashSettingsSelfRegistrationPtrType) ToWirelessSsidsSplashSettingsSelfRegistrationPtrOutput() WirelessSsidsSplashSettingsSelfRegistrationPtrOutput {
+	return i.ToWirelessSsidsSplashSettingsSelfRegistrationPtrOutputWithContext(context.Background())
+}
+
+func (i *wirelessSsidsSplashSettingsSelfRegistrationPtrType) ToWirelessSsidsSplashSettingsSelfRegistrationPtrOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsSelfRegistrationPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsSplashSettingsSelfRegistrationPtrOutput)
+}
+
+type WirelessSsidsSplashSettingsSelfRegistrationOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsSplashSettingsSelfRegistrationOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsSplashSettingsSelfRegistration)(nil)).Elem()
+}
+
+func (o WirelessSsidsSplashSettingsSelfRegistrationOutput) ToWirelessSsidsSplashSettingsSelfRegistrationOutput() WirelessSsidsSplashSettingsSelfRegistrationOutput {
+	return o
+}
+
+func (o WirelessSsidsSplashSettingsSelfRegistrationOutput) ToWirelessSsidsSplashSettingsSelfRegistrationOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsSelfRegistrationOutput {
+	return o
+}
+
+func (o WirelessSsidsSplashSettingsSelfRegistrationOutput) ToWirelessSsidsSplashSettingsSelfRegistrationPtrOutput() WirelessSsidsSplashSettingsSelfRegistrationPtrOutput {
+	return o.ToWirelessSsidsSplashSettingsSelfRegistrationPtrOutputWithContext(context.Background())
+}
+
+func (o WirelessSsidsSplashSettingsSelfRegistrationOutput) ToWirelessSsidsSplashSettingsSelfRegistrationPtrOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsSelfRegistrationPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v WirelessSsidsSplashSettingsSelfRegistration) *WirelessSsidsSplashSettingsSelfRegistration {
+		return &v
+	}).(WirelessSsidsSplashSettingsSelfRegistrationPtrOutput)
+}
+
+// How created user accounts should be authorized.
+func (o WirelessSsidsSplashSettingsSelfRegistrationOutput) AuthorizationType() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsSplashSettingsSelfRegistration) *string { return v.AuthorizationType }).(pulumi.StringPtrOutput)
+}
+
+// Whether or not to allow users to create their own account on the network.
+func (o WirelessSsidsSplashSettingsSelfRegistrationOutput) Enabled() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsSplashSettingsSelfRegistration) *bool { return v.Enabled }).(pulumi.BoolPtrOutput)
+}
+
+type WirelessSsidsSplashSettingsSelfRegistrationPtrOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsSplashSettingsSelfRegistrationPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsSplashSettingsSelfRegistration)(nil)).Elem()
+}
+
+func (o WirelessSsidsSplashSettingsSelfRegistrationPtrOutput) ToWirelessSsidsSplashSettingsSelfRegistrationPtrOutput() WirelessSsidsSplashSettingsSelfRegistrationPtrOutput {
+	return o
+}
+
+func (o WirelessSsidsSplashSettingsSelfRegistrationPtrOutput) ToWirelessSsidsSplashSettingsSelfRegistrationPtrOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsSelfRegistrationPtrOutput {
+	return o
+}
+
+func (o WirelessSsidsSplashSettingsSelfRegistrationPtrOutput) Elem() WirelessSsidsSplashSettingsSelfRegistrationOutput {
+	return o.ApplyT(func(v *WirelessSsidsSplashSettingsSelfRegistration) WirelessSsidsSplashSettingsSelfRegistration {
+		if v != nil {
+			return *v
+		}
+		var ret WirelessSsidsSplashSettingsSelfRegistration
+		return ret
+	}).(WirelessSsidsSplashSettingsSelfRegistrationOutput)
+}
+
+// How created user accounts should be authorized.
+func (o WirelessSsidsSplashSettingsSelfRegistrationPtrOutput) AuthorizationType() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsSplashSettingsSelfRegistration) *string {
+		if v == nil {
+			return nil
+		}
+		return v.AuthorizationType
+	}).(pulumi.StringPtrOutput)
+}
+
+// Whether or not to allow users to create their own account on the network.
+func (o WirelessSsidsSplashSettingsSelfRegistrationPtrOutput) Enabled() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsSplashSettingsSelfRegistration) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.Enabled
+	}).(pulumi.BoolPtrOutput)
+}
+
 type WirelessSsidsSplashSettingsSentryEnrollment struct {
 	// The system types that the Sentry enforces.
 	EnforcedSystems []string `pulumi:"enforcedSystems"`
@@ -46169,149 +46481,11 @@ func (o GetWirelessRfProfilesItemPerSsidSettingsStatus14Output) Name() pulumi.St
 	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus14) string { return v.Name }).(pulumi.StringOutput)
 }
 
-type GetWirelessRfProfilesItemPerSsidSettingsStatus14Bands struct {
-	// List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-	Enableds []string `pulumi:"enableds"`
-}
-
-// GetWirelessRfProfilesItemPerSsidSettingsStatus14BandsInput is an input type that accepts GetWirelessRfProfilesItemPerSsidSettingsStatus14BandsArgs and GetWirelessRfProfilesItemPerSsidSettingsStatus14BandsOutput values.
-// You can construct a concrete instance of `GetWirelessRfProfilesItemPerSsidSettingsStatus14BandsInput` via:
-//
-//	GetWirelessRfProfilesItemPerSsidSettingsStatus14BandsArgs{...}
-type GetWirelessRfProfilesItemPerSsidSettingsStatus14BandsInput interface {
-	pulumi.Input
-
-	ToGetWirelessRfProfilesItemPerSsidSettingsStatus14BandsOutput() GetWirelessRfProfilesItemPerSsidSettingsStatus14BandsOutput
-	ToGetWirelessRfProfilesItemPerSsidSettingsStatus14BandsOutputWithContext(context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus14BandsOutput
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus14BandsArgs struct {
-	// List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-	Enableds pulumi.StringArrayInput `pulumi:"enableds"`
-}
-
-func (GetWirelessRfProfilesItemPerSsidSettingsStatus14BandsArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus14Bands)(nil)).Elem()
-}
-
-func (i GetWirelessRfProfilesItemPerSsidSettingsStatus14BandsArgs) ToGetWirelessRfProfilesItemPerSsidSettingsStatus14BandsOutput() GetWirelessRfProfilesItemPerSsidSettingsStatus14BandsOutput {
-	return i.ToGetWirelessRfProfilesItemPerSsidSettingsStatus14BandsOutputWithContext(context.Background())
-}
-
-func (i GetWirelessRfProfilesItemPerSsidSettingsStatus14BandsArgs) ToGetWirelessRfProfilesItemPerSsidSettingsStatus14BandsOutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus14BandsOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessRfProfilesItemPerSsidSettingsStatus14BandsOutput)
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus14BandsOutput struct{ *pulumi.OutputState }
-
-func (GetWirelessRfProfilesItemPerSsidSettingsStatus14BandsOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus14Bands)(nil)).Elem()
-}
-
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus14BandsOutput) ToGetWirelessRfProfilesItemPerSsidSettingsStatus14BandsOutput() GetWirelessRfProfilesItemPerSsidSettingsStatus14BandsOutput {
-	return o
-}
-
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus14BandsOutput) ToGetWirelessRfProfilesItemPerSsidSettingsStatus14BandsOutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus14BandsOutput {
-	return o
-}
-
-// List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus14BandsOutput) Enableds() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus14Bands) []string { return v.Enableds }).(pulumi.StringArrayOutput)
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus1 struct {
-	// Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-	BandOperationMode string `pulumi:"bandOperationMode"`
-	// Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-	BandSteeringEnabled bool `pulumi:"bandSteeringEnabled"`
-	// Settings related to all bands
-	Bands GetWirelessRfProfilesItemPerSsidSettingsStatus1Bands `pulumi:"bands"`
-	// Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-	MinBitrate int `pulumi:"minBitrate"`
-	// Name of SSID
-	Name string `pulumi:"name"`
-}
-
-// GetWirelessRfProfilesItemPerSsidSettingsStatus1Input is an input type that accepts GetWirelessRfProfilesItemPerSsidSettingsStatus1Args and GetWirelessRfProfilesItemPerSsidSettingsStatus1Output values.
-// You can construct a concrete instance of `GetWirelessRfProfilesItemPerSsidSettingsStatus1Input` via:
-//
-//	GetWirelessRfProfilesItemPerSsidSettingsStatus1Args{...}
-type GetWirelessRfProfilesItemPerSsidSettingsStatus1Input interface {
-	pulumi.Input
-
-	ToGetWirelessRfProfilesItemPerSsidSettingsStatus1Output() GetWirelessRfProfilesItemPerSsidSettingsStatus1Output
-	ToGetWirelessRfProfilesItemPerSsidSettingsStatus1OutputWithContext(context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus1Output
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus1Args struct {
-	// Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-	BandOperationMode pulumi.StringInput `pulumi:"bandOperationMode"`
-	// Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-	BandSteeringEnabled pulumi.BoolInput `pulumi:"bandSteeringEnabled"`
-	// Settings related to all bands
-	Bands GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsInput `pulumi:"bands"`
-	// Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-	MinBitrate pulumi.IntInput `pulumi:"minBitrate"`
-	// Name of SSID
-	Name pulumi.StringInput `pulumi:"name"`
-}
-
-func (GetWirelessRfProfilesItemPerSsidSettingsStatus1Args) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus1)(nil)).Elem()
-}
-
-func (i GetWirelessRfProfilesItemPerSsidSettingsStatus1Args) ToGetWirelessRfProfilesItemPerSsidSettingsStatus1Output() GetWirelessRfProfilesItemPerSsidSettingsStatus1Output {
-	return i.ToGetWirelessRfProfilesItemPerSsidSettingsStatus1OutputWithContext(context.Background())
-}
-
-func (i GetWirelessRfProfilesItemPerSsidSettingsStatus1Args) ToGetWirelessRfProfilesItemPerSsidSettingsStatus1OutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus1Output {
-	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessRfProfilesItemPerSsidSettingsStatus1Output)
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus1Output struct{ *pulumi.OutputState }
-
-func (GetWirelessRfProfilesItemPerSsidSettingsStatus1Output) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus1)(nil)).Elem()
-}
-
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus1Output) ToGetWirelessRfProfilesItemPerSsidSettingsStatus1Output() GetWirelessRfProfilesItemPerSsidSettingsStatus1Output {
-	return o
-}
-
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus1Output) ToGetWirelessRfProfilesItemPerSsidSettingsStatus1OutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus1Output {
-	return o
-}
-
-// Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus1Output) BandOperationMode() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus1) string { return v.BandOperationMode }).(pulumi.StringOutput)
-}
-
-// Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus1Output) BandSteeringEnabled() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus1) bool { return v.BandSteeringEnabled }).(pulumi.BoolOutput)
-}
-
-// Settings related to all bands
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus1Output) Bands() GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus1) GetWirelessRfProfilesItemPerSsidSettingsStatus1Bands {
-		return v.Bands
-	}).(GetWirelessRfProfilesItemPerSsidSettingsStatus1BandsOutput)
-}
-
-// Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus1Output) MinBitrate() pulumi.IntOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus1) int { return v.MinBitrate }).(pulumi.IntOutput)
-}
-
-// Name of SSID
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus1Output) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus1) string { return v.Name }).(pulumi.StringOutput)
-}
-
 func init() {
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsSplashSettingsGuestSponsorshipInput)(nil)).Elem(), WirelessSsidsSplashSettingsGuestSponsorshipArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsSplashSettingsGuestSponsorshipPtrInput)(nil)).Elem(), WirelessSsidsSplashSettingsGuestSponsorshipArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsSplashSettingsSelfRegistrationInput)(nil)).Elem(), WirelessSsidsSplashSettingsSelfRegistrationArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsSplashSettingsSelfRegistrationPtrInput)(nil)).Elem(), WirelessSsidsSplashSettingsSelfRegistrationArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsSplashSettingsSentryEnrollmentInput)(nil)).Elem(), WirelessSsidsSplashSettingsSentryEnrollmentArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsSplashSettingsSentryEnrollmentPtrInput)(nil)).Elem(), WirelessSsidsSplashSettingsSentryEnrollmentArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkInput)(nil)).Elem(), WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkArgs{})
@@ -46983,8 +47157,10 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus13Input)(nil)).Elem(), GetWirelessRfProfilesItemPerSsidSettingsStatus13Args{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus13BandsInput)(nil)).Elem(), GetWirelessRfProfilesItemPerSsidSettingsStatus13BandsArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus14Input)(nil)).Elem(), GetWirelessRfProfilesItemPerSsidSettingsStatus14Args{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus14BandsInput)(nil)).Elem(), GetWirelessRfProfilesItemPerSsidSettingsStatus14BandsArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus1Input)(nil)).Elem(), GetWirelessRfProfilesItemPerSsidSettingsStatus1Args{})
+	pulumi.RegisterOutputType(WirelessSsidsSplashSettingsGuestSponsorshipOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsSplashSettingsGuestSponsorshipPtrOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsSplashSettingsSelfRegistrationOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsSplashSettingsSelfRegistrationPtrOutput{})
 	pulumi.RegisterOutputType(WirelessSsidsSplashSettingsSentryEnrollmentOutput{})
 	pulumi.RegisterOutputType(WirelessSsidsSplashSettingsSentryEnrollmentPtrOutput{})
 	pulumi.RegisterOutputType(WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkOutput{})
@@ -47656,6 +47832,4 @@ func init() {
 	pulumi.RegisterOutputType(GetWirelessRfProfilesItemPerSsidSettingsStatus13Output{})
 	pulumi.RegisterOutputType(GetWirelessRfProfilesItemPerSsidSettingsStatus13BandsOutput{})
 	pulumi.RegisterOutputType(GetWirelessRfProfilesItemPerSsidSettingsStatus14Output{})
-	pulumi.RegisterOutputType(GetWirelessRfProfilesItemPerSsidSettingsStatus14BandsOutput{})
-	pulumi.RegisterOutputType(GetWirelessRfProfilesItemPerSsidSettingsStatus1Output{})
 }

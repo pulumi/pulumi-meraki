@@ -340,9 +340,11 @@ class _SwitchAccessPoliciesState:
                  radius: Optional[pulumi.Input['SwitchAccessPoliciesRadiusArgs']] = None,
                  radius_accounting_enabled: Optional[pulumi.Input[bool]] = None,
                  radius_accounting_servers: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchAccessPoliciesRadiusAccountingServerArgs']]]] = None,
+                 radius_accounting_servers_responses: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchAccessPoliciesRadiusAccountingServersResponseArgs']]]] = None,
                  radius_coa_support_enabled: Optional[pulumi.Input[bool]] = None,
                  radius_group_attribute: Optional[pulumi.Input[str]] = None,
                  radius_servers: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchAccessPoliciesRadiusServerArgs']]]] = None,
+                 radius_servers_responses: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchAccessPoliciesRadiusServersResponseArgs']]]] = None,
                  radius_testing_enabled: Optional[pulumi.Input[bool]] = None,
                  url_redirect_walled_garden_enabled: Optional[pulumi.Input[bool]] = None,
                  url_redirect_walled_garden_ranges: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
@@ -362,9 +364,11 @@ class _SwitchAccessPoliciesState:
         :param pulumi.Input['SwitchAccessPoliciesRadiusArgs'] radius: Object for RADIUS Settings
         :param pulumi.Input[bool] radius_accounting_enabled: Enable to send start, interim-update and stop messages to a configured RADIUS accounting server for tracking connected clients
         :param pulumi.Input[Sequence[pulumi.Input['SwitchAccessPoliciesRadiusAccountingServerArgs']]] radius_accounting_servers: List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
+        :param pulumi.Input[Sequence[pulumi.Input['SwitchAccessPoliciesRadiusAccountingServersResponseArgs']]] radius_accounting_servers_responses: List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
         :param pulumi.Input[bool] radius_coa_support_enabled: Change of authentication for RADIUS re-authentication and disconnection
         :param pulumi.Input[str] radius_group_attribute: Acceptable values are *""* for None, or *"11"* for Group Policies ACL
         :param pulumi.Input[Sequence[pulumi.Input['SwitchAccessPoliciesRadiusServerArgs']]] radius_servers: List of RADIUS servers to require connecting devices to authenticate against before granting network access
+        :param pulumi.Input[Sequence[pulumi.Input['SwitchAccessPoliciesRadiusServersResponseArgs']]] radius_servers_responses: List of RADIUS servers to require connecting devices to authenticate against before granting network access
         :param pulumi.Input[bool] radius_testing_enabled: If enabled, Meraki devices will periodically send access-request messages to these RADIUS servers
         :param pulumi.Input[bool] url_redirect_walled_garden_enabled: Enable to restrict access for clients to a response_objectific set of IP addresses or hostnames prior to authentication
         :param pulumi.Input[Sequence[pulumi.Input[str]]] url_redirect_walled_garden_ranges: IP address ranges, in CIDR notation, to restrict access for clients to a specific set of IP addresses or hostnames prior to authentication
@@ -396,12 +400,16 @@ class _SwitchAccessPoliciesState:
             pulumi.set(__self__, "radius_accounting_enabled", radius_accounting_enabled)
         if radius_accounting_servers is not None:
             pulumi.set(__self__, "radius_accounting_servers", radius_accounting_servers)
+        if radius_accounting_servers_responses is not None:
+            pulumi.set(__self__, "radius_accounting_servers_responses", radius_accounting_servers_responses)
         if radius_coa_support_enabled is not None:
             pulumi.set(__self__, "radius_coa_support_enabled", radius_coa_support_enabled)
         if radius_group_attribute is not None:
             pulumi.set(__self__, "radius_group_attribute", radius_group_attribute)
         if radius_servers is not None:
             pulumi.set(__self__, "radius_servers", radius_servers)
+        if radius_servers_responses is not None:
+            pulumi.set(__self__, "radius_servers_responses", radius_servers_responses)
         if radius_testing_enabled is not None:
             pulumi.set(__self__, "radius_testing_enabled", radius_testing_enabled)
         if url_redirect_walled_garden_enabled is not None:
@@ -568,6 +576,18 @@ class _SwitchAccessPoliciesState:
         pulumi.set(self, "radius_accounting_servers", value)
 
     @property
+    @pulumi.getter(name="radiusAccountingServersResponses")
+    def radius_accounting_servers_responses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SwitchAccessPoliciesRadiusAccountingServersResponseArgs']]]]:
+        """
+        List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
+        """
+        return pulumi.get(self, "radius_accounting_servers_responses")
+
+    @radius_accounting_servers_responses.setter
+    def radius_accounting_servers_responses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchAccessPoliciesRadiusAccountingServersResponseArgs']]]]):
+        pulumi.set(self, "radius_accounting_servers_responses", value)
+
+    @property
     @pulumi.getter(name="radiusCoaSupportEnabled")
     def radius_coa_support_enabled(self) -> Optional[pulumi.Input[bool]]:
         """
@@ -602,6 +622,18 @@ class _SwitchAccessPoliciesState:
     @radius_servers.setter
     def radius_servers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchAccessPoliciesRadiusServerArgs']]]]):
         pulumi.set(self, "radius_servers", value)
+
+    @property
+    @pulumi.getter(name="radiusServersResponses")
+    def radius_servers_responses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SwitchAccessPoliciesRadiusServersResponseArgs']]]]:
+        """
+        List of RADIUS servers to require connecting devices to authenticate against before granting network access
+        """
+        return pulumi.get(self, "radius_servers_responses")
+
+    @radius_servers_responses.setter
+    def radius_servers_responses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchAccessPoliciesRadiusServersResponseArgs']]]]):
+        pulumi.set(self, "radius_servers_responses", value)
 
     @property
     @pulumi.getter(name="radiusTestingEnabled")
@@ -788,6 +820,8 @@ class SwitchAccessPolicies(pulumi.CustomResource):
             __props__.__dict__["url_redirect_walled_garden_ranges"] = url_redirect_walled_garden_ranges
             __props__.__dict__["voice_vlan_clients"] = voice_vlan_clients
             __props__.__dict__["counts"] = None
+            __props__.__dict__["radius_accounting_servers_responses"] = None
+            __props__.__dict__["radius_servers_responses"] = None
         super(SwitchAccessPolicies, __self__).__init__(
             'meraki:networks/switchAccessPolicies:SwitchAccessPolicies',
             resource_name,
@@ -811,9 +845,11 @@ class SwitchAccessPolicies(pulumi.CustomResource):
             radius: Optional[pulumi.Input[pulumi.InputType['SwitchAccessPoliciesRadiusArgs']]] = None,
             radius_accounting_enabled: Optional[pulumi.Input[bool]] = None,
             radius_accounting_servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchAccessPoliciesRadiusAccountingServerArgs']]]]] = None,
+            radius_accounting_servers_responses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchAccessPoliciesRadiusAccountingServersResponseArgs']]]]] = None,
             radius_coa_support_enabled: Optional[pulumi.Input[bool]] = None,
             radius_group_attribute: Optional[pulumi.Input[str]] = None,
             radius_servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchAccessPoliciesRadiusServerArgs']]]]] = None,
+            radius_servers_responses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchAccessPoliciesRadiusServersResponseArgs']]]]] = None,
             radius_testing_enabled: Optional[pulumi.Input[bool]] = None,
             url_redirect_walled_garden_enabled: Optional[pulumi.Input[bool]] = None,
             url_redirect_walled_garden_ranges: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
@@ -838,9 +874,11 @@ class SwitchAccessPolicies(pulumi.CustomResource):
         :param pulumi.Input[pulumi.InputType['SwitchAccessPoliciesRadiusArgs']] radius: Object for RADIUS Settings
         :param pulumi.Input[bool] radius_accounting_enabled: Enable to send start, interim-update and stop messages to a configured RADIUS accounting server for tracking connected clients
         :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchAccessPoliciesRadiusAccountingServerArgs']]]] radius_accounting_servers: List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
+        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchAccessPoliciesRadiusAccountingServersResponseArgs']]]] radius_accounting_servers_responses: List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
         :param pulumi.Input[bool] radius_coa_support_enabled: Change of authentication for RADIUS re-authentication and disconnection
         :param pulumi.Input[str] radius_group_attribute: Acceptable values are *""* for None, or *"11"* for Group Policies ACL
         :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchAccessPoliciesRadiusServerArgs']]]] radius_servers: List of RADIUS servers to require connecting devices to authenticate against before granting network access
+        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchAccessPoliciesRadiusServersResponseArgs']]]] radius_servers_responses: List of RADIUS servers to require connecting devices to authenticate against before granting network access
         :param pulumi.Input[bool] radius_testing_enabled: If enabled, Meraki devices will periodically send access-request messages to these RADIUS servers
         :param pulumi.Input[bool] url_redirect_walled_garden_enabled: Enable to restrict access for clients to a response_objectific set of IP addresses or hostnames prior to authentication
         :param pulumi.Input[Sequence[pulumi.Input[str]]] url_redirect_walled_garden_ranges: IP address ranges, in CIDR notation, to restrict access for clients to a specific set of IP addresses or hostnames prior to authentication
@@ -863,9 +901,11 @@ class SwitchAccessPolicies(pulumi.CustomResource):
         __props__.__dict__["radius"] = radius
         __props__.__dict__["radius_accounting_enabled"] = radius_accounting_enabled
         __props__.__dict__["radius_accounting_servers"] = radius_accounting_servers
+        __props__.__dict__["radius_accounting_servers_responses"] = radius_accounting_servers_responses
         __props__.__dict__["radius_coa_support_enabled"] = radius_coa_support_enabled
         __props__.__dict__["radius_group_attribute"] = radius_group_attribute
         __props__.__dict__["radius_servers"] = radius_servers
+        __props__.__dict__["radius_servers_responses"] = radius_servers_responses
         __props__.__dict__["radius_testing_enabled"] = radius_testing_enabled
         __props__.__dict__["url_redirect_walled_garden_enabled"] = url_redirect_walled_garden_enabled
         __props__.__dict__["url_redirect_walled_garden_ranges"] = url_redirect_walled_garden_ranges
@@ -914,7 +954,7 @@ class SwitchAccessPolicies(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="guestVlanId")
-    def guest_vlan_id(self) -> pulumi.Output[int]:
+    def guest_vlan_id(self) -> pulumi.Output[Optional[int]]:
         """
         ID for the guest VLAN allow unauthorized devices access to limited network resources
         """
@@ -970,11 +1010,19 @@ class SwitchAccessPolicies(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="radiusAccountingServers")
-    def radius_accounting_servers(self) -> pulumi.Output[Sequence['outputs.SwitchAccessPoliciesRadiusAccountingServer']]:
+    def radius_accounting_servers(self) -> pulumi.Output[Optional[Sequence['outputs.SwitchAccessPoliciesRadiusAccountingServer']]]:
         """
         List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
         """
         return pulumi.get(self, "radius_accounting_servers")
+
+    @property
+    @pulumi.getter(name="radiusAccountingServersResponses")
+    def radius_accounting_servers_responses(self) -> pulumi.Output[Sequence['outputs.SwitchAccessPoliciesRadiusAccountingServersResponse']]:
+        """
+        List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
+        """
+        return pulumi.get(self, "radius_accounting_servers_responses")
 
     @property
     @pulumi.getter(name="radiusCoaSupportEnabled")
@@ -994,11 +1042,19 @@ class SwitchAccessPolicies(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="radiusServers")
-    def radius_servers(self) -> pulumi.Output[Sequence['outputs.SwitchAccessPoliciesRadiusServer']]:
+    def radius_servers(self) -> pulumi.Output[Optional[Sequence['outputs.SwitchAccessPoliciesRadiusServer']]]:
         """
         List of RADIUS servers to require connecting devices to authenticate against before granting network access
         """
         return pulumi.get(self, "radius_servers")
+
+    @property
+    @pulumi.getter(name="radiusServersResponses")
+    def radius_servers_responses(self) -> pulumi.Output[Sequence['outputs.SwitchAccessPoliciesRadiusServersResponse']]:
+        """
+        List of RADIUS servers to require connecting devices to authenticate against before granting network access
+        """
+        return pulumi.get(self, "radius_servers_responses")
 
     @property
     @pulumi.getter(name="radiusTestingEnabled")
@@ -1018,7 +1074,7 @@ class SwitchAccessPolicies(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="urlRedirectWalledGardenRanges")
-    def url_redirect_walled_garden_ranges(self) -> pulumi.Output[Sequence[str]]:
+    def url_redirect_walled_garden_ranges(self) -> pulumi.Output[Optional[Sequence[str]]]:
         """
         IP address ranges, in CIDR notation, to restrict access for clients to a specific set of IP addresses or hostnames prior to authentication
         """

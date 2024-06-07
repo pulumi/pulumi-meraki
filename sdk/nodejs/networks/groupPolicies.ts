@@ -62,7 +62,7 @@ export class GroupPolicies extends pulumi.CustomResource {
     /**
      * The ID of the group policy
      */
-    public readonly groupPolicyId!: pulumi.Output<string>;
+    public /*out*/ readonly groupPolicyId!: pulumi.Output<string>;
     /**
      * The name for your group policy. Required.
      */
@@ -116,12 +116,12 @@ export class GroupPolicies extends pulumi.CustomResource {
             resourceInputs["bonjourForwarding"] = args ? args.bonjourForwarding : undefined;
             resourceInputs["contentFiltering"] = args ? args.contentFiltering : undefined;
             resourceInputs["firewallAndTrafficShaping"] = args ? args.firewallAndTrafficShaping : undefined;
-            resourceInputs["groupPolicyId"] = args ? args.groupPolicyId : undefined;
             resourceInputs["name"] = args ? args.name : undefined;
             resourceInputs["networkId"] = args ? args.networkId : undefined;
             resourceInputs["scheduling"] = args ? args.scheduling : undefined;
             resourceInputs["splashAuthSettings"] = args ? args.splashAuthSettings : undefined;
             resourceInputs["vlanTagging"] = args ? args.vlanTagging : undefined;
+            resourceInputs["groupPolicyId"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(GroupPolicies.__pulumiType, name, resourceInputs, opts);
@@ -194,10 +194,6 @@ export interface GroupPoliciesArgs {
      * The firewall and traffic shaping rules and settings for your policy.
      */
     firewallAndTrafficShaping?: pulumi.Input<inputs.networks.GroupPoliciesFirewallAndTrafficShaping>;
-    /**
-     * The ID of the group policy
-     */
-    groupPolicyId?: pulumi.Input<string>;
     /**
      * The name for your group policy. Required.
      */

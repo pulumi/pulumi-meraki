@@ -69,7 +69,7 @@ namespace Pulumi.Meraki.Networks
         /// switchStackId path parameter. Switch stack ID
         /// </summary>
         [Output("switchStackId")]
-        public Output<string?> SwitchStackId { get; private set; } = null!;
+        public Output<string> SwitchStackId { get; private set; } = null!;
 
 
         /// <summary>
