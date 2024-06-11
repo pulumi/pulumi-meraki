@@ -309,6 +309,21 @@ public final class ApplianceVlansArgs extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
+     * The VLAN ID of the VLAN
+     * 
+     */
+    @Import(name="vlanId", required=true)
+    private Output<String> vlanId;
+
+    /**
+     * @return The VLAN ID of the VLAN
+     * 
+     */
+    public Output<String> vlanId() {
+        return this.vlanId;
+    }
+
+    /**
      * The translated VPN subnet if VPN and VPN subnet translation are enabled on the VLAN
      * 
      */
@@ -345,6 +360,7 @@ public final class ApplianceVlansArgs extends com.pulumi.resources.ResourceArgs 
         this.reservedIpRanges = $.reservedIpRanges;
         this.subnet = $.subnet;
         this.templateVlanType = $.templateVlanType;
+        this.vlanId = $.vlanId;
         this.vpnNatSubnet = $.vpnNatSubnet;
     }
 
@@ -796,6 +812,27 @@ public final class ApplianceVlansArgs extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
+         * @param vlanId The VLAN ID of the VLAN
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vlanId(Output<String> vlanId) {
+            $.vlanId = vlanId;
+            return this;
+        }
+
+        /**
+         * @param vlanId The VLAN ID of the VLAN
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vlanId(String vlanId) {
+            return vlanId(Output.of(vlanId));
+        }
+
+        /**
          * @param vpnNatSubnet The translated VPN subnet if VPN and VPN subnet translation are enabled on the VLAN
          * 
          * @return builder
@@ -819,6 +856,9 @@ public final class ApplianceVlansArgs extends com.pulumi.resources.ResourceArgs 
         public ApplianceVlansArgs build() {
             if ($.networkId == null) {
                 throw new MissingRequiredPropertyException("ApplianceVlansArgs", "networkId");
+            }
+            if ($.vlanId == null) {
+                throw new MissingRequiredPropertyException("ApplianceVlansArgs", "vlanId");
             }
             return $;
         }

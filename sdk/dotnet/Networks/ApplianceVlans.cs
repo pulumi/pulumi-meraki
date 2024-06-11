@@ -142,6 +142,12 @@ namespace Pulumi.Meraki.Networks
         public Output<string> TemplateVlanType { get; private set; } = null!;
 
         /// <summary>
+        /// The VLAN ID of the VLAN
+        /// </summary>
+        [Output("vlanId")]
+        public Output<string> VlanId { get; private set; } = null!;
+
+        /// <summary>
         /// The translated VPN subnet if VPN and VPN subnet translation are enabled on the VLAN
         /// </summary>
         [Output("vpnNatSubnet")]
@@ -327,6 +333,12 @@ namespace Pulumi.Meraki.Networks
         public Input<string>? TemplateVlanType { get; set; }
 
         /// <summary>
+        /// The VLAN ID of the VLAN
+        /// </summary>
+        [Input("vlanId", required: true)]
+        public Input<string> VlanId { get; set; } = null!;
+
+        /// <summary>
         /// The translated VPN subnet if VPN and VPN subnet translation are enabled on the VLAN
         /// </summary>
         [Input("vpnNatSubnet")]
@@ -477,6 +489,12 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         [Input("templateVlanType")]
         public Input<string>? TemplateVlanType { get; set; }
+
+        /// <summary>
+        /// The VLAN ID of the VLAN
+        /// </summary>
+        [Input("vlanId")]
+        public Input<string>? VlanId { get; set; }
 
         /// <summary>
         /// The translated VPN subnet if VPN and VPN subnet translation are enabled on the VLAN
