@@ -25,6 +25,54 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.ApplianceVlans;
+ * import com.pulumi.meraki.networks.ApplianceVlansArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceVlansIpv6Args;
+ * import com.pulumi.meraki.networks.inputs.ApplianceVlansMandatoryDhcpArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ApplianceVlans("example", ApplianceVlansArgs.builder()
+ *             .applianceIp("192.168.1.2")
+ *             .cidr("192.168.1.0/24")
+ *             .groupPolicyId("101")
+ *             .vlanId("1234")
+ *             .ipv6(ApplianceVlansIpv6Args.builder()
+ *                 .enabled(true)
+ *                 .prefix_assignments(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
+ *                 .build())
+ *             .mandatoryDhcp(ApplianceVlansMandatoryDhcpArgs.builder()
+ *                 .enabled(true)
+ *                 .build())
+ *             .mask(28)
+ *             .name("My VLAN")
+ *             .networkId("string")
+ *             .subnet("192.168.1.0/24")
+ *             .templateVlanType("same")
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksApplianceVlansExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import
@@ -315,6 +363,20 @@ public class ApplianceVlans extends com.pulumi.resources.CustomResource {
      */
     public Output<String> templateVlanType() {
         return this.templateVlanType;
+    }
+    /**
+     * The VLAN ID of the VLAN
+     * 
+     */
+    @Export(name="vlanId", refs={String.class}, tree="[0]")
+    private Output<String> vlanId;
+
+    /**
+     * @return The VLAN ID of the VLAN
+     * 
+     */
+    public Output<String> vlanId() {
+        return this.vlanId;
     }
     /**
      * The translated VPN subnet if VPN and VPN subnet translation are enabled on the VLAN

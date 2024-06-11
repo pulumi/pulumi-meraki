@@ -323,6 +323,21 @@ public final class ApplianceVlansState extends com.pulumi.resources.ResourceArgs
     }
 
     /**
+     * The VLAN ID of the VLAN
+     * 
+     */
+    @Import(name="vlanId")
+    private @Nullable Output<String> vlanId;
+
+    /**
+     * @return The VLAN ID of the VLAN
+     * 
+     */
+    public Optional<Output<String>> vlanId() {
+        return Optional.ofNullable(this.vlanId);
+    }
+
+    /**
      * The translated VPN subnet if VPN and VPN subnet translation are enabled on the VLAN
      * 
      */
@@ -360,6 +375,7 @@ public final class ApplianceVlansState extends com.pulumi.resources.ResourceArgs
         this.reservedIpRanges = $.reservedIpRanges;
         this.subnet = $.subnet;
         this.templateVlanType = $.templateVlanType;
+        this.vlanId = $.vlanId;
         this.vpnNatSubnet = $.vpnNatSubnet;
     }
 
@@ -829,6 +845,27 @@ public final class ApplianceVlansState extends com.pulumi.resources.ResourceArgs
          */
         public Builder templateVlanType(String templateVlanType) {
             return templateVlanType(Output.of(templateVlanType));
+        }
+
+        /**
+         * @param vlanId The VLAN ID of the VLAN
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vlanId(@Nullable Output<String> vlanId) {
+            $.vlanId = vlanId;
+            return this;
+        }
+
+        /**
+         * @param vlanId The VLAN ID of the VLAN
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vlanId(String vlanId) {
+            return vlanId(Output.of(vlanId));
         }
 
         /**

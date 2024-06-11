@@ -17,6 +17,7 @@ __all__ = ['ApplianceVlansArgs', 'ApplianceVlans']
 class ApplianceVlansArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[str],
+                 vlan_id: pulumi.Input[str],
                  appliance_ip: Optional[pulumi.Input[str]] = None,
                  cidr: Optional[pulumi.Input[str]] = None,
                  dhcp_boot_filename: Optional[pulumi.Input[str]] = None,
@@ -39,6 +40,7 @@ class ApplianceVlansArgs:
         """
         The set of arguments for constructing a ApplianceVlans resource.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
+        :param pulumi.Input[str] vlan_id: The VLAN ID of the VLAN
         :param pulumi.Input[str] appliance_ip: The local IP of the appliance on the VLAN
         :param pulumi.Input[str] cidr: CIDR of the pool of subnets. Applicable only for template network. Each network bound to the template will automatically pick a subnet from this pool to build its own VLAN.
         :param pulumi.Input[str] dhcp_boot_filename: DHCP boot option for boot filename
@@ -60,6 +62,7 @@ class ApplianceVlansArgs:
         :param pulumi.Input[str] vpn_nat_subnet: The translated VPN subnet if VPN and VPN subnet translation are enabled on the VLAN
         """
         pulumi.set(__self__, "network_id", network_id)
+        pulumi.set(__self__, "vlan_id", vlan_id)
         if appliance_ip is not None:
             pulumi.set(__self__, "appliance_ip", appliance_ip)
         if cidr is not None:
@@ -110,6 +113,18 @@ class ApplianceVlansArgs:
     @network_id.setter
     def network_id(self, value: pulumi.Input[str]):
         pulumi.set(self, "network_id", value)
+
+    @property
+    @pulumi.getter(name="vlanId")
+    def vlan_id(self) -> pulumi.Input[str]:
+        """
+        The VLAN ID of the VLAN
+        """
+        return pulumi.get(self, "vlan_id")
+
+    @vlan_id.setter
+    def vlan_id(self, value: pulumi.Input[str]):
+        pulumi.set(self, "vlan_id", value)
 
     @property
     @pulumi.getter(name="applianceIp")
@@ -363,6 +378,7 @@ class _ApplianceVlansState:
                  reserved_ip_ranges: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVlansReservedIpRangeArgs']]]] = None,
                  subnet: Optional[pulumi.Input[str]] = None,
                  template_vlan_type: Optional[pulumi.Input[str]] = None,
+                 vlan_id: Optional[pulumi.Input[str]] = None,
                  vpn_nat_subnet: Optional[pulumi.Input[str]] = None):
         """
         Input properties used for looking up and filtering ApplianceVlans resources.
@@ -386,6 +402,7 @@ class _ApplianceVlansState:
         :param pulumi.Input[Sequence[pulumi.Input['ApplianceVlansReservedIpRangeArgs']]] reserved_ip_ranges: The DHCP reserved IP ranges on the VLAN
         :param pulumi.Input[str] subnet: The subnet of the VLAN
         :param pulumi.Input[str] template_vlan_type: Type of subnetting of the VLAN. Applicable only for template network.
+        :param pulumi.Input[str] vlan_id: The VLAN ID of the VLAN
         :param pulumi.Input[str] vpn_nat_subnet: The translated VPN subnet if VPN and VPN subnet translation are enabled on the VLAN
         """
         if appliance_ip is not None:
@@ -428,6 +445,8 @@ class _ApplianceVlansState:
             pulumi.set(__self__, "subnet", subnet)
         if template_vlan_type is not None:
             pulumi.set(__self__, "template_vlan_type", template_vlan_type)
+        if vlan_id is not None:
+            pulumi.set(__self__, "vlan_id", vlan_id)
         if vpn_nat_subnet is not None:
             pulumi.set(__self__, "vpn_nat_subnet", vpn_nat_subnet)
 
@@ -672,6 +691,18 @@ class _ApplianceVlansState:
         pulumi.set(self, "template_vlan_type", value)
 
     @property
+    @pulumi.getter(name="vlanId")
+    def vlan_id(self) -> Optional[pulumi.Input[str]]:
+        """
+        The VLAN ID of the VLAN
+        """
+        return pulumi.get(self, "vlan_id")
+
+    @vlan_id.setter
+    def vlan_id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "vlan_id", value)
+
+    @property
     @pulumi.getter(name="vpnNatSubnet")
     def vpn_nat_subnet(self) -> Optional[pulumi.Input[str]]:
         """
@@ -708,6 +739,7 @@ class ApplianceVlans(pulumi.CustomResource):
                  reserved_ip_ranges: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceVlansReservedIpRangeArgs']]]]] = None,
                  subnet: Optional[pulumi.Input[str]] = None,
                  template_vlan_type: Optional[pulumi.Input[str]] = None,
+                 vlan_id: Optional[pulumi.Input[str]] = None,
                  vpn_nat_subnet: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
@@ -740,6 +772,7 @@ class ApplianceVlans(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceVlansReservedIpRangeArgs']]]] reserved_ip_ranges: The DHCP reserved IP ranges on the VLAN
         :param pulumi.Input[str] subnet: The subnet of the VLAN
         :param pulumi.Input[str] template_vlan_type: Type of subnetting of the VLAN. Applicable only for template network.
+        :param pulumi.Input[str] vlan_id: The VLAN ID of the VLAN
         :param pulumi.Input[str] vpn_nat_subnet: The translated VPN subnet if VPN and VPN subnet translation are enabled on the VLAN
         """
         ...
@@ -791,6 +824,7 @@ class ApplianceVlans(pulumi.CustomResource):
                  reserved_ip_ranges: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceVlansReservedIpRangeArgs']]]]] = None,
                  subnet: Optional[pulumi.Input[str]] = None,
                  template_vlan_type: Optional[pulumi.Input[str]] = None,
+                 vlan_id: Optional[pulumi.Input[str]] = None,
                  vpn_nat_subnet: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -822,6 +856,9 @@ class ApplianceVlans(pulumi.CustomResource):
             __props__.__dict__["reserved_ip_ranges"] = reserved_ip_ranges
             __props__.__dict__["subnet"] = subnet
             __props__.__dict__["template_vlan_type"] = template_vlan_type
+            if vlan_id is None and not opts.urn:
+                raise TypeError("Missing required property 'vlan_id'")
+            __props__.__dict__["vlan_id"] = vlan_id
             __props__.__dict__["vpn_nat_subnet"] = vpn_nat_subnet
             __props__.__dict__["interface_id"] = None
         super(ApplianceVlans, __self__).__init__(
@@ -854,6 +891,7 @@ class ApplianceVlans(pulumi.CustomResource):
             reserved_ip_ranges: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceVlansReservedIpRangeArgs']]]]] = None,
             subnet: Optional[pulumi.Input[str]] = None,
             template_vlan_type: Optional[pulumi.Input[str]] = None,
+            vlan_id: Optional[pulumi.Input[str]] = None,
             vpn_nat_subnet: Optional[pulumi.Input[str]] = None) -> 'ApplianceVlans':
         """
         Get an existing ApplianceVlans resource's state with the given name, id, and optional extra
@@ -882,6 +920,7 @@ class ApplianceVlans(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceVlansReservedIpRangeArgs']]]] reserved_ip_ranges: The DHCP reserved IP ranges on the VLAN
         :param pulumi.Input[str] subnet: The subnet of the VLAN
         :param pulumi.Input[str] template_vlan_type: Type of subnetting of the VLAN. Applicable only for template network.
+        :param pulumi.Input[str] vlan_id: The VLAN ID of the VLAN
         :param pulumi.Input[str] vpn_nat_subnet: The translated VPN subnet if VPN and VPN subnet translation are enabled on the VLAN
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -908,6 +947,7 @@ class ApplianceVlans(pulumi.CustomResource):
         __props__.__dict__["reserved_ip_ranges"] = reserved_ip_ranges
         __props__.__dict__["subnet"] = subnet
         __props__.__dict__["template_vlan_type"] = template_vlan_type
+        __props__.__dict__["vlan_id"] = vlan_id
         __props__.__dict__["vpn_nat_subnet"] = vpn_nat_subnet
         return ApplianceVlans(resource_name, opts=opts, __props__=__props__)
 
@@ -1070,6 +1110,14 @@ class ApplianceVlans(pulumi.CustomResource):
         Type of subnetting of the VLAN. Applicable only for template network.
         """
         return pulumi.get(self, "template_vlan_type")
+
+    @property
+    @pulumi.getter(name="vlanId")
+    def vlan_id(self) -> pulumi.Output[str]:
+        """
+        The VLAN ID of the VLAN
+        """
+        return pulumi.get(self, "vlan_id")
 
     @property
     @pulumi.getter(name="vpnNatSubnet")

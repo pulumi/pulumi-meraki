@@ -124,6 +124,10 @@ export class ApplianceVlans extends pulumi.CustomResource {
      */
     public readonly templateVlanType!: pulumi.Output<string>;
     /**
+     * The VLAN ID of the VLAN
+     */
+    public readonly vlanId!: pulumi.Output<string>;
+    /**
      * The translated VPN subnet if VPN and VPN subnet translation are enabled on the VLAN
      */
     public readonly vpnNatSubnet!: pulumi.Output<string>;
@@ -161,11 +165,15 @@ export class ApplianceVlans extends pulumi.CustomResource {
             resourceInputs["reservedIpRanges"] = state ? state.reservedIpRanges : undefined;
             resourceInputs["subnet"] = state ? state.subnet : undefined;
             resourceInputs["templateVlanType"] = state ? state.templateVlanType : undefined;
+            resourceInputs["vlanId"] = state ? state.vlanId : undefined;
             resourceInputs["vpnNatSubnet"] = state ? state.vpnNatSubnet : undefined;
         } else {
             const args = argsOrState as ApplianceVlansArgs | undefined;
             if ((!args || args.networkId === undefined) && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
+            }
+            if ((!args || args.vlanId === undefined) && !opts.urn) {
+                throw new Error("Missing required property 'vlanId'");
             }
             resourceInputs["applianceIp"] = args ? args.applianceIp : undefined;
             resourceInputs["cidr"] = args ? args.cidr : undefined;
@@ -186,6 +194,7 @@ export class ApplianceVlans extends pulumi.CustomResource {
             resourceInputs["reservedIpRanges"] = args ? args.reservedIpRanges : undefined;
             resourceInputs["subnet"] = args ? args.subnet : undefined;
             resourceInputs["templateVlanType"] = args ? args.templateVlanType : undefined;
+            resourceInputs["vlanId"] = args ? args.vlanId : undefined;
             resourceInputs["vpnNatSubnet"] = args ? args.vpnNatSubnet : undefined;
             resourceInputs["interfaceId"] = undefined /*out*/;
         }
@@ -279,6 +288,10 @@ export interface ApplianceVlansState {
      */
     templateVlanType?: pulumi.Input<string>;
     /**
+     * The VLAN ID of the VLAN
+     */
+    vlanId?: pulumi.Input<string>;
+    /**
      * The translated VPN subnet if VPN and VPN subnet translation are enabled on the VLAN
      */
     vpnNatSubnet?: pulumi.Input<string>;
@@ -364,6 +377,10 @@ export interface ApplianceVlansArgs {
      * Type of subnetting of the VLAN. Applicable only for template network.
      */
     templateVlanType?: pulumi.Input<string>;
+    /**
+     * The VLAN ID of the VLAN
+     */
+    vlanId: pulumi.Input<string>;
     /**
      * The translated VPN subnet if VPN and VPN subnet translation are enabled on the VLAN
      */

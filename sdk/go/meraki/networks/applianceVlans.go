@@ -62,6 +62,8 @@ type ApplianceVlans struct {
 	Subnet pulumi.StringOutput `pulumi:"subnet"`
 	// Type of subnetting of the VLAN. Applicable only for template network.
 	TemplateVlanType pulumi.StringOutput `pulumi:"templateVlanType"`
+	// The VLAN ID of the VLAN
+	VlanId pulumi.StringOutput `pulumi:"vlanId"`
 	// The translated VPN subnet if VPN and VPN subnet translation are enabled on the VLAN
 	VpnNatSubnet pulumi.StringOutput `pulumi:"vpnNatSubnet"`
 }
@@ -75,6 +77,9 @@ func NewApplianceVlans(ctx *pulumi.Context,
 
 	if args.NetworkId == nil {
 		return nil, errors.New("invalid value for required argument 'NetworkId'")
+	}
+	if args.VlanId == nil {
+		return nil, errors.New("invalid value for required argument 'VlanId'")
 	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource ApplianceVlans
@@ -139,6 +144,8 @@ type applianceVlansState struct {
 	Subnet *string `pulumi:"subnet"`
 	// Type of subnetting of the VLAN. Applicable only for template network.
 	TemplateVlanType *string `pulumi:"templateVlanType"`
+	// The VLAN ID of the VLAN
+	VlanId *string `pulumi:"vlanId"`
 	// The translated VPN subnet if VPN and VPN subnet translation are enabled on the VLAN
 	VpnNatSubnet *string `pulumi:"vpnNatSubnet"`
 }
@@ -184,6 +191,8 @@ type ApplianceVlansState struct {
 	Subnet pulumi.StringPtrInput
 	// Type of subnetting of the VLAN. Applicable only for template network.
 	TemplateVlanType pulumi.StringPtrInput
+	// The VLAN ID of the VLAN
+	VlanId pulumi.StringPtrInput
 	// The translated VPN subnet if VPN and VPN subnet translation are enabled on the VLAN
 	VpnNatSubnet pulumi.StringPtrInput
 }
@@ -231,6 +240,8 @@ type applianceVlansArgs struct {
 	Subnet *string `pulumi:"subnet"`
 	// Type of subnetting of the VLAN. Applicable only for template network.
 	TemplateVlanType *string `pulumi:"templateVlanType"`
+	// The VLAN ID of the VLAN
+	VlanId string `pulumi:"vlanId"`
 	// The translated VPN subnet if VPN and VPN subnet translation are enabled on the VLAN
 	VpnNatSubnet *string `pulumi:"vpnNatSubnet"`
 }
@@ -275,6 +286,8 @@ type ApplianceVlansArgs struct {
 	Subnet pulumi.StringPtrInput
 	// Type of subnetting of the VLAN. Applicable only for template network.
 	TemplateVlanType pulumi.StringPtrInput
+	// The VLAN ID of the VLAN
+	VlanId pulumi.StringInput
 	// The translated VPN subnet if VPN and VPN subnet translation are enabled on the VLAN
 	VpnNatSubnet pulumi.StringPtrInput
 }
@@ -464,6 +477,11 @@ func (o ApplianceVlansOutput) Subnet() pulumi.StringOutput {
 // Type of subnetting of the VLAN. Applicable only for template network.
 func (o ApplianceVlansOutput) TemplateVlanType() pulumi.StringOutput {
 	return o.ApplyT(func(v *ApplianceVlans) pulumi.StringOutput { return v.TemplateVlanType }).(pulumi.StringOutput)
+}
+
+// The VLAN ID of the VLAN
+func (o ApplianceVlansOutput) VlanId() pulumi.StringOutput {
+	return o.ApplyT(func(v *ApplianceVlans) pulumi.StringOutput { return v.VlanId }).(pulumi.StringOutput)
 }
 
 // The translated VPN subnet if VPN and VPN subnet translation are enabled on the VLAN
