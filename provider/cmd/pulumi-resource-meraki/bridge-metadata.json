@@ -7975,9 +7975,6 @@
             "meraki_networks_appliance_traffic_shaping_vpn_exclusions": [
                 "network_id"
             ],
-            "meraki_networks_appliance_vlans": [
-                "network_id"
-            ],
             "meraki_networks_appliance_vlans_settings": [
                 "network_id"
             ],

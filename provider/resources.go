@@ -123,32 +123,20 @@ func Provider() tfbridge.ProviderInfo {
 
 	// Create a Pulumi provider mapping
 	prov := tfbridge.ProviderInfo{
-		P:    p,
-		Name: "meraki",
-		// DisplayName is a way to be able to change the casing of the provider
-		// name when being displayed on the Pulumi registry
-		DisplayName: "Cisco Meraki",
-		// LogoURL points to the assets/meraki.png file on the assets branch of
-		// this repo.
-		LogoURL: "https://raw.githubusercontent.com/pulumi/pulumi-meraki/assets/assets/meraki.png",
-		// PluginDownloadURL is an optional URL used to download the Provider
-		// for use in Pulumi programs
-		// e.g https://github.com/org/pulumi-provider-name/releases/
+		P:                 p,
+		Name:              "meraki",
+		DisplayName:       "Cisco Meraki",
+		LogoURL:           "https://raw.githubusercontent.com/pulumi/pulumi-meraki/assets/assets/meraki.png",
 		PluginDownloadURL: "github://api.github.com/pulumi/pulumi-meraki",
 		Description:       "A Pulumi package for creating and managing Cisco Meraki resources",
-		// category/cloud tag helps with categorizing the package in the Pulumi Registry.
-		// For all available categories, see `Keywords` in
-		// https://www.pulumi.com/docs/guides/pulumi-packages/schema/#package.
 		Keywords: []string{
 			"pulumi",
 			"meraki",
 			"category/network",
 		},
-		License:    "Apache-2.0",
-		Homepage:   "https://pulumi.com",
-		Repository: "https://github.com/pulumi/pulumi-meraki",
-		// The GitHub Org for the provider - defaults to `terraform-providers`. Note that this
-		// should match the TF provider module's require directive, not any replace directives.
+		License:           "Apache-2.0",
+		Homepage:          "https://pulumi.com",
+		Repository:        "https://github.com/pulumi/pulumi-meraki",
 		Version:           version.Version,
 		GitHubOrg:         "cisco-open",
 		MetadataInfo:      tfbridge.NewProviderMetadata(bridgeMetadata),
@@ -169,6 +157,19 @@ func Provider() tfbridge.ProviderInfo {
 			"meraki_devices":       {Tok: makeResource("devices", "base")},
 			"meraki_networks":      {Tok: makeResource("networks", "base")},
 			"meraki_organizations": {Tok: makeResource("organizations", "base")},
+
+			// Work around https://github.com/pulumi/pulumi-meraki/issues/57
+			//
+			// meraki_networks_appliance_vlans has an input property called
+			// "id", but Pulumi doesn't allow properties to be called "id".
+			//
+			// We work around this by renaming the "id" field (so it can be an
+			// input), and then delegating the "id" output field back to the
+			// original "id" field.
+			"meraki_networks_appliance_vlans": {
+				Fields:    map[string]*tfbridge.SchemaInfo{"id": {Name: "vlanId"}},
+				ComputeID: delegateIDField("vlanId"),
+			},
 		},
 		JavaScript: &tfbridge.JavaScriptInfo{
 			PackageName: "@pulumi/meraki",
@@ -186,12 +187,9 @@ func Provider() tfbridge.ProviderInfo {
 		Python: &tfbridge.PythonInfo{
 			RespectSchemaVersion: true,
 			PackageName:          "pulumi_meraki",
-
-			// List any Python dependencies and their version ranges
 			Requires: map[string]string{
 				"pulumi": ">=3.0.0,<4.0.0",
 			},
-
 			PyProject: struct{ Enabled bool }{true},
 		},
 		Golang: &tfbridge.GolangInfo{
