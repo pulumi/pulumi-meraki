@@ -145,12 +145,6 @@ namespace Pulumi.Meraki.Networks
         public Output<Outputs.WirelessSsidsLdap?> Ldap { get; private set; } = null!;
 
         /// <summary>
-        /// Extended local auth flag for Enterprise NAC
-        /// </summary>
-        [Output("localAuth")]
-        public Output<bool> LocalAuth { get; private set; } = null!;
-
-        /// <summary>
         /// The current setting for Local Authentication, a built-in RADIUS server on the access point. Only valid if authMode is '8021x-localradius'.
         /// </summary>
         [Output("localRadius")]
@@ -232,7 +226,7 @@ namespace Pulumi.Meraki.Networks
         /// Whether or not RADIUS accounting is enabled
         /// </summary>
         [Output("radiusAccountingEnabled")]
-        public Output<bool?> RadiusAccountingEnabled { get; private set; } = null!;
+        public Output<bool> RadiusAccountingEnabled { get; private set; } = null!;
 
         /// <summary>
         /// The interval (in seconds) in which accounting information is updated and sent to the RADIUS accounting server.
@@ -245,6 +239,12 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         [Output("radiusAccountingServers")]
         public Output<ImmutableArray<Outputs.WirelessSsidsRadiusAccountingServer>> RadiusAccountingServers { get; private set; } = null!;
+
+        /// <summary>
+        /// List of RADIUS accounting 802.1X servers to be used for authentication
+        /// </summary>
+        [Output("radiusAccountingServersResponses")]
+        public Output<ImmutableArray<Outputs.WirelessSsidsRadiusAccountingServersResponse>> RadiusAccountingServersResponses { get; private set; } = null!;
 
         /// <summary>
         /// RADIUS attribute used to look up group policies
@@ -269,12 +269,6 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         [Output("radiusCoaEnabled")]
         public Output<bool?> RadiusCoaEnabled { get; private set; } = null!;
-
-        /// <summary>
-        /// Whether RADIUS authentication is enabled
-        /// </summary>
-        [Output("radiusEnabled")]
-        public Output<bool> RadiusEnabled { get; private set; } = null!;
 
         /// <summary>
         /// Policy which determines how authentication requests should be handled in the event that all of the configured RADIUS servers are unreachable
@@ -1013,12 +1007,6 @@ namespace Pulumi.Meraki.Networks
         public Input<Inputs.WirelessSsidsLdapGetArgs>? Ldap { get; set; }
 
         /// <summary>
-        /// Extended local auth flag for Enterprise NAC
-        /// </summary>
-        [Input("localAuth")]
-        public Input<bool>? LocalAuth { get; set; }
-
-        /// <summary>
         /// The current setting for Local Authentication, a built-in RADIUS server on the access point. Only valid if authMode is '8021x-localradius'.
         /// </summary>
         [Input("localRadius")]
@@ -1120,6 +1108,18 @@ namespace Pulumi.Meraki.Networks
             set => _radiusAccountingServers = value;
         }
 
+        [Input("radiusAccountingServersResponses")]
+        private InputList<Inputs.WirelessSsidsRadiusAccountingServersResponseGetArgs>? _radiusAccountingServersResponses;
+
+        /// <summary>
+        /// List of RADIUS accounting 802.1X servers to be used for authentication
+        /// </summary>
+        public InputList<Inputs.WirelessSsidsRadiusAccountingServersResponseGetArgs> RadiusAccountingServersResponses
+        {
+            get => _radiusAccountingServersResponses ?? (_radiusAccountingServersResponses = new InputList<Inputs.WirelessSsidsRadiusAccountingServersResponseGetArgs>());
+            set => _radiusAccountingServersResponses = value;
+        }
+
         /// <summary>
         /// RADIUS attribute used to look up group policies
         /// </summary>
@@ -1143,12 +1143,6 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         [Input("radiusCoaEnabled")]
         public Input<bool>? RadiusCoaEnabled { get; set; }
-
-        /// <summary>
-        /// Whether RADIUS authentication is enabled
-        /// </summary>
-        [Input("radiusEnabled")]
-        public Input<bool>? RadiusEnabled { get; set; }
 
         /// <summary>
         /// Policy which determines how authentication requests should be handled in the event that all of the configured RADIUS servers are unreachable

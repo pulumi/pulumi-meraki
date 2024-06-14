@@ -46,7 +46,11 @@ export class SensorAlertsProfiles extends pulumi.CustomResource {
     /**
      * List of conditions that will cause the profile to send an alert.
      */
-    public readonly conditions!: pulumi.Output<outputs.networks.SensorAlertsProfilesCondition[]>;
+    public readonly conditions!: pulumi.Output<outputs.networks.SensorAlertsProfilesCondition[] | undefined>;
+    /**
+     * List of conditions that will cause the profile to send an alert.
+     */
+    public /*out*/ readonly conditionsResponses!: pulumi.Output<outputs.networks.SensorAlertsProfilesConditionsResponse[]>;
     /**
      * Name of the sensor alert profile.
      */
@@ -86,6 +90,7 @@ export class SensorAlertsProfiles extends pulumi.CustomResource {
         if (opts.id) {
             const state = argsOrState as SensorAlertsProfilesState | undefined;
             resourceInputs["conditions"] = state ? state.conditions : undefined;
+            resourceInputs["conditionsResponses"] = state ? state.conditionsResponses : undefined;
             resourceInputs["name"] = state ? state.name : undefined;
             resourceInputs["networkId"] = state ? state.networkId : undefined;
             resourceInputs["profileId"] = state ? state.profileId : undefined;
@@ -103,6 +108,7 @@ export class SensorAlertsProfiles extends pulumi.CustomResource {
             resourceInputs["recipients"] = args ? args.recipients : undefined;
             resourceInputs["schedule"] = args ? args.schedule : undefined;
             resourceInputs["serials"] = args ? args.serials : undefined;
+            resourceInputs["conditionsResponses"] = undefined /*out*/;
             resourceInputs["profileId"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -118,6 +124,10 @@ export interface SensorAlertsProfilesState {
      * List of conditions that will cause the profile to send an alert.
      */
     conditions?: pulumi.Input<pulumi.Input<inputs.networks.SensorAlertsProfilesCondition>[]>;
+    /**
+     * List of conditions that will cause the profile to send an alert.
+     */
+    conditionsResponses?: pulumi.Input<pulumi.Input<inputs.networks.SensorAlertsProfilesConditionsResponse>[]>;
     /**
      * Name of the sensor alert profile.
      */

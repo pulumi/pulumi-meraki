@@ -61,6 +61,21 @@ public final class WirelessSsidsFirewallL3FirewallRulesRuleArgs extends com.pulu
     }
 
     /**
+     * Ip Ver
+     * 
+     */
+    @Import(name="ipVer")
+    private @Nullable Output<String> ipVer;
+
+    /**
+     * @return Ip Ver
+     * 
+     */
+    public Optional<Output<String>> ipVer() {
+        return Optional.ofNullable(this.ipVer);
+    }
+
+    /**
      * &#39;allow&#39; or &#39;deny&#39; traffic specified by this rule
      * 
      */
@@ -96,6 +111,7 @@ public final class WirelessSsidsFirewallL3FirewallRulesRuleArgs extends com.pulu
         this.comment = $.comment;
         this.destCidr = $.destCidr;
         this.destPort = $.destPort;
+        this.ipVer = $.ipVer;
         this.policy = $.policy;
         this.protocol = $.protocol;
     }
@@ -179,6 +195,27 @@ public final class WirelessSsidsFirewallL3FirewallRulesRuleArgs extends com.pulu
          */
         public Builder destPort(String destPort) {
             return destPort(Output.of(destPort));
+        }
+
+        /**
+         * @param ipVer Ip Ver
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipVer(@Nullable Output<String> ipVer) {
+            $.ipVer = ipVer;
+            return this;
+        }
+
+        /**
+         * @param ipVer Ip Ver
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipVer(String ipVer) {
+            return ipVer(Output.of(ipVer));
         }
 
         /**

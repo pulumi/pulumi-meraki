@@ -347,7 +347,7 @@ class WebhooksHttpServers(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="httpServerId")
-    def http_server_id(self) -> pulumi.Output[Optional[str]]:
+    def http_server_id(self) -> pulumi.Output[str]:
         """
         httpServerId path parameter. Http server ID
         """

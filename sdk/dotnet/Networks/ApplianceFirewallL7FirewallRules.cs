@@ -63,6 +63,12 @@ namespace Pulumi.Meraki.Networks
         [Output("rules")]
         public Output<ImmutableArray<Outputs.ApplianceFirewallL7FirewallRulesRule>> Rules { get; private set; } = null!;
 
+        /// <summary>
+        /// An ordered array of the MX L7 firewall rules
+        /// </summary>
+        [Output("rulesResponses")]
+        public Output<ImmutableArray<Outputs.ApplianceFirewallL7FirewallRulesRulesResponse>> RulesResponses { get; private set; } = null!;
+
 
         /// <summary>
         /// Create a ApplianceFirewallL7FirewallRules resource with the given unique name, arguments, and options.
@@ -152,6 +158,18 @@ namespace Pulumi.Meraki.Networks
         {
             get => _rules ?? (_rules = new InputList<Inputs.ApplianceFirewallL7FirewallRulesRuleGetArgs>());
             set => _rules = value;
+        }
+
+        [Input("rulesResponses")]
+        private InputList<Inputs.ApplianceFirewallL7FirewallRulesRulesResponseGetArgs>? _rulesResponses;
+
+        /// <summary>
+        /// An ordered array of the MX L7 firewall rules
+        /// </summary>
+        public InputList<Inputs.ApplianceFirewallL7FirewallRulesRulesResponseGetArgs> RulesResponses
+        {
+            get => _rulesResponses ?? (_rulesResponses = new InputList<Inputs.ApplianceFirewallL7FirewallRulesRulesResponseGetArgs>());
+            set => _rulesResponses = value;
         }
 
         public ApplianceFirewallL7FirewallRulesState()

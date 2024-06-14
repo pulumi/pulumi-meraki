@@ -1773,6 +1773,41 @@ export namespace networks {
         syslogEnabled?: pulumi.Input<boolean>;
     }
 
+    export interface ApplianceFirewallInboundFirewallRulesRulesResponse {
+        /**
+         * Description of the rule (optional)
+         */
+        comment?: pulumi.Input<string>;
+        /**
+         * Comma-separated list of destination IP address(es) (in IP or CIDR notation), fully-qualified domain names (FQDN) or 'any'
+         */
+        destCidr?: pulumi.Input<string>;
+        /**
+         * Comma-separated list of destination port(s) (integer in the range 1-65535), or 'any'
+         */
+        destPort?: pulumi.Input<string>;
+        /**
+         * 'allow' or 'deny' traffic specified by this rule
+         */
+        policy?: pulumi.Input<string>;
+        /**
+         * The type of protocol (must be 'tcp', 'udp', 'icmp', 'icmp6' or 'any')
+         */
+        protocol?: pulumi.Input<string>;
+        /**
+         * Comma-separated list of source IP address(es) (in IP or CIDR notation), or 'any' (note: FQDN not supported for source addresses)
+         */
+        srcCidr?: pulumi.Input<string>;
+        /**
+         * Comma-separated list of source port(s) (integer in the range 1-65535), or 'any'
+         */
+        srcPort?: pulumi.Input<string>;
+        /**
+         * Log this rule to syslog (true or false, boolean value) - only applicable if a syslog has been configured (optional)
+         */
+        syslogEnabled?: pulumi.Input<boolean>;
+    }
+
     export interface ApplianceFirewallL3FirewallRulesRule {
         /**
          * Description of the rule (optional)
@@ -1867,6 +1902,34 @@ export namespace networks {
     }
 
     export interface ApplianceFirewallL7FirewallRulesRuleValueObj {
+        id?: pulumi.Input<string>;
+        name?: pulumi.Input<string>;
+    }
+
+    export interface ApplianceFirewallL7FirewallRulesRulesResponse {
+        /**
+         * 'Deny' traffic specified by this rule
+         */
+        policy?: pulumi.Input<string>;
+        /**
+         * Type of the L7 rule. One of: 'application', 'applicationCategory', 'host', 'port', 'ipRange'
+         */
+        type?: pulumi.Input<string>;
+        /**
+         * The 'value' of what you want to block. Format of 'value' varies depending on type of the rule. The application categories and application ids can be retrieved from the the 'MX L7 application categories' endpoint. The countries follow the two-letter ISO 3166-1 alpha-2 format.
+         */
+        value?: pulumi.Input<string>;
+        /**
+         * The 'value_list' of what you want to block. Send a list in request
+         */
+        valueLists?: pulumi.Input<pulumi.Input<string>[]>;
+        /**
+         * The 'value_obj' of what you want to block. Send a dict in request
+         */
+        valueObj?: pulumi.Input<inputs.networks.ApplianceFirewallL7FirewallRulesRulesResponseValueObj>;
+    }
+
+    export interface ApplianceFirewallL7FirewallRulesRulesResponseValueObj {
         id?: pulumi.Input<string>;
         name?: pulumi.Input<string>;
     }
@@ -6164,6 +6227,228 @@ export namespace networks {
         present?: pulumi.Input<boolean>;
     }
 
+    export interface SensorAlertsProfilesConditionsResponse {
+        /**
+         * If 'above', an alert will be sent when a sensor reads above the threshold. If 'below', an alert will be sent when a sensor reads below the threshold. Only applicable for temperature, humidity, realPower, apparentPower, powerFactor, voltage, current, and frequency thresholds.
+         */
+        direction?: pulumi.Input<string>;
+        /**
+         * Length of time in seconds that the triggering state must persist before an alert is sent. Available options are 0 seconds, 1 minute, 2 minutes, 3 minutes, 4 minutes, 5 minutes, 10 minutes, 15 minutes, 30 minutes, 1 hour, 2 hours, 4 hours, and 8 hours. Default is 0.
+         */
+        duration?: pulumi.Input<number>;
+        /**
+         * The type of sensor metric that will be monitored for changes. Available metrics are apparentPower, co2, current, door, frequency, humidity, indoorAirQuality, noise, pm25, powerFactor, realPower, temperature, tvoc, upstreamPower, voltage, and water.
+         */
+        metric?: pulumi.Input<string>;
+        /**
+         * Threshold for sensor readings that will cause an alert to be sent. This object should contain a single property key matching the condition's 'metric' value.
+         */
+        threshold?: pulumi.Input<inputs.networks.SensorAlertsProfilesConditionsResponseThreshold>;
+    }
+
+    export interface SensorAlertsProfilesConditionsResponseThreshold {
+        /**
+         * Apparent power threshold. 'draw' must be provided.
+         */
+        apparentPower?: pulumi.Input<inputs.networks.SensorAlertsProfilesConditionsResponseThresholdApparentPower>;
+        /**
+         * Electrical current threshold. 'level' must be provided.
+         */
+        current?: pulumi.Input<inputs.networks.SensorAlertsProfilesConditionsResponseThresholdCurrent>;
+        /**
+         * Door open threshold. 'open' must be provided and set to true.
+         */
+        door?: pulumi.Input<inputs.networks.SensorAlertsProfilesConditionsResponseThresholdDoor>;
+        /**
+         * Electrical frequency threshold. 'level' must be provided.
+         */
+        frequency?: pulumi.Input<inputs.networks.SensorAlertsProfilesConditionsResponseThresholdFrequency>;
+        /**
+         * Humidity threshold. One of 'relativePercentage' or 'quality' must be provided.
+         */
+        humidity?: pulumi.Input<inputs.networks.SensorAlertsProfilesConditionsResponseThresholdHumidity>;
+        /**
+         * Indoor air quality score threshold. One of 'score' or 'quality' must be provided.
+         */
+        indoorAirQuality?: pulumi.Input<inputs.networks.SensorAlertsProfilesConditionsResponseThresholdIndoorAirQuality>;
+        /**
+         * Noise threshold. 'ambient' must be provided.
+         */
+        noise?: pulumi.Input<inputs.networks.SensorAlertsProfilesConditionsResponseThresholdNoise>;
+        /**
+         * PM2.5 concentration threshold. One of 'concentration' or 'quality' must be provided.
+         */
+        pm25?: pulumi.Input<inputs.networks.SensorAlertsProfilesConditionsResponseThresholdPm25>;
+        /**
+         * Power factor threshold. 'percentage' must be provided.
+         */
+        powerFactor?: pulumi.Input<inputs.networks.SensorAlertsProfilesConditionsResponseThresholdPowerFactor>;
+        /**
+         * Real power threshold. 'draw' must be provided.
+         */
+        realPower?: pulumi.Input<inputs.networks.SensorAlertsProfilesConditionsResponseThresholdRealPower>;
+        /**
+         * Temperature threshold. One of 'celsius', 'fahrenheit', or 'quality' must be provided.
+         */
+        temperature?: pulumi.Input<inputs.networks.SensorAlertsProfilesConditionsResponseThresholdTemperature>;
+        /**
+         * TVOC concentration threshold. One of 'concentration' or 'quality' must be provided.
+         */
+        tvoc?: pulumi.Input<inputs.networks.SensorAlertsProfilesConditionsResponseThresholdTvoc>;
+        /**
+         * Upstream power threshold. 'outageDetected' must be provided and set to true.
+         */
+        upstreamPower?: pulumi.Input<inputs.networks.SensorAlertsProfilesConditionsResponseThresholdUpstreamPower>;
+        /**
+         * Voltage threshold. 'level' must be provided.
+         */
+        voltage?: pulumi.Input<inputs.networks.SensorAlertsProfilesConditionsResponseThresholdVoltage>;
+        /**
+         * Water detection threshold. 'present' must be provided and set to true.
+         */
+        water?: pulumi.Input<inputs.networks.SensorAlertsProfilesConditionsResponseThresholdWater>;
+    }
+
+    export interface SensorAlertsProfilesConditionsResponseThresholdApparentPower {
+        /**
+         * Alerting threshold in volt-amps. Must be between 0 and 3750.
+         */
+        draw?: pulumi.Input<number>;
+    }
+
+    export interface SensorAlertsProfilesConditionsResponseThresholdCurrent {
+        /**
+         * Alerting threshold in amps. Must be between 0 and 15.
+         */
+        draw?: pulumi.Input<number>;
+    }
+
+    export interface SensorAlertsProfilesConditionsResponseThresholdDoor {
+        /**
+         * Alerting threshold for a door open event. Must be set to true.
+         */
+        open?: pulumi.Input<boolean>;
+    }
+
+    export interface SensorAlertsProfilesConditionsResponseThresholdFrequency {
+        /**
+         * Alerting threshold in hertz. Must be between 0 and 60.
+         */
+        level?: pulumi.Input<number>;
+    }
+
+    export interface SensorAlertsProfilesConditionsResponseThresholdHumidity {
+        /**
+         * Alerting threshold as a qualitative humidity level.
+         */
+        quality?: pulumi.Input<string>;
+        /**
+         * Alerting threshold in %RH.
+         */
+        relativePercentage?: pulumi.Input<number>;
+    }
+
+    export interface SensorAlertsProfilesConditionsResponseThresholdIndoorAirQuality {
+        /**
+         * Alerting threshold as a qualitative indoor air quality level.
+         */
+        quality?: pulumi.Input<string>;
+        /**
+         * Alerting threshold as indoor air quality score.
+         */
+        score?: pulumi.Input<number>;
+    }
+
+    export interface SensorAlertsProfilesConditionsResponseThresholdNoise {
+        /**
+         * Ambient noise threshold. One of 'level' or 'quality' must be provided.
+         */
+        ambient?: pulumi.Input<inputs.networks.SensorAlertsProfilesConditionsResponseThresholdNoiseAmbient>;
+    }
+
+    export interface SensorAlertsProfilesConditionsResponseThresholdNoiseAmbient {
+        /**
+         * Alerting threshold as adjusted decibels.
+         */
+        level?: pulumi.Input<number>;
+        /**
+         * Alerting threshold as a qualitative ambient noise level.
+         */
+        quality?: pulumi.Input<string>;
+    }
+
+    export interface SensorAlertsProfilesConditionsResponseThresholdPm25 {
+        /**
+         * Alerting threshold as PM2.5 parts per million.
+         */
+        concentration?: pulumi.Input<number>;
+        /**
+         * Alerting threshold as a qualitative PM2.5 level.
+         */
+        quality?: pulumi.Input<string>;
+    }
+
+    export interface SensorAlertsProfilesConditionsResponseThresholdPowerFactor {
+        /**
+         * Alerting threshold as the ratio of active power to apparent power. Must be between 0 and 100.
+         */
+        percentage?: pulumi.Input<number>;
+    }
+
+    export interface SensorAlertsProfilesConditionsResponseThresholdRealPower {
+        /**
+         * Alerting threshold in watts. Must be between 0 and 3750.
+         */
+        draw?: pulumi.Input<number>;
+    }
+
+    export interface SensorAlertsProfilesConditionsResponseThresholdTemperature {
+        /**
+         * Alerting threshold in degrees Celsius.
+         */
+        celsius?: pulumi.Input<number>;
+        /**
+         * Alerting threshold in degrees Fahrenheit.
+         */
+        fahrenheit?: pulumi.Input<number>;
+        /**
+         * Alerting threshold as a qualitative temperature level.
+         */
+        quality?: pulumi.Input<string>;
+    }
+
+    export interface SensorAlertsProfilesConditionsResponseThresholdTvoc {
+        /**
+         * Alerting threshold as TVOC micrograms per cubic meter.
+         */
+        concentration?: pulumi.Input<number>;
+        /**
+         * Alerting threshold as a qualitative TVOC level.
+         */
+        quality?: pulumi.Input<string>;
+    }
+
+    export interface SensorAlertsProfilesConditionsResponseThresholdUpstreamPower {
+        /**
+         * Alerting threshold for an upstream power event. Must be set to true.
+         */
+        outageDetected?: pulumi.Input<boolean>;
+    }
+
+    export interface SensorAlertsProfilesConditionsResponseThresholdVoltage {
+        /**
+         * Alerting threshold in volts. Must be between 0 and 250.
+         */
+        level?: pulumi.Input<number>;
+    }
+
+    export interface SensorAlertsProfilesConditionsResponseThresholdWater {
+        /**
+         * Alerting threshold for a water detection event. Must be set to true.
+         */
+        present?: pulumi.Input<boolean>;
+    }
+
     export interface SensorAlertsProfilesRecipients {
         /**
          * A list of emails that will receive information about the alert.
@@ -8496,6 +8781,10 @@ export namespace networks {
          */
         destPort?: pulumi.Input<string>;
         /**
+         * Ip Ver
+         */
+        ipVer?: pulumi.Input<string>;
+        /**
          * 'allow' or 'deny' traffic specified by this rule
          */
         policy?: pulumi.Input<string>;
@@ -8518,6 +8807,10 @@ export namespace networks {
          * Comma-separated list of destination port(s) (integer in the range 1-65535), or 'any'
          */
         destPort?: pulumi.Input<string>;
+        /**
+         * Ip Version
+         */
+        ipVer?: pulumi.Input<string>;
         /**
          * 'allow' or 'deny' traffic specified by this rule
          */
@@ -8787,6 +9080,33 @@ export namespace networks {
     }
 
     export interface WirelessSsidsRadiusAccountingServer {
+        /**
+         * Certificate used for authorization for the RADSEC Server
+         */
+        caCertificate?: pulumi.Input<string>;
+        /**
+         * IP address (or FQDN) to which the APs will send RADIUS accounting messages
+         */
+        host?: pulumi.Input<string>;
+        /**
+         * The ID of the Openroaming Certificate attached to radius server
+         */
+        openRoamingCertificateId?: pulumi.Input<number>;
+        /**
+         * Port on the RADIUS server that is listening for accounting messages
+         */
+        port?: pulumi.Input<number>;
+        /**
+         * Use RADSEC (TLS over TCP) to connect to this RADIUS accounting server. Requires radiusProxyEnabled.
+         */
+        radsecEnabled?: pulumi.Input<boolean>;
+        /**
+         * Shared key used to authenticate messages between the APs and RADIUS server
+         */
+        secret?: pulumi.Input<string>;
+    }
+
+    export interface WirelessSsidsRadiusAccountingServersResponse {
         /**
          * Certificate used for authorization for the RADSEC Server
          */

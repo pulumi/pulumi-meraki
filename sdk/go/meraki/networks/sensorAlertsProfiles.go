@@ -24,6 +24,8 @@ type SensorAlertsProfiles struct {
 
 	// List of conditions that will cause the profile to send an alert.
 	Conditions SensorAlertsProfilesConditionArrayOutput `pulumi:"conditions"`
+	// List of conditions that will cause the profile to send an alert.
+	ConditionsResponses SensorAlertsProfilesConditionsResponseArrayOutput `pulumi:"conditionsResponses"`
 	// Name of the sensor alert profile.
 	Name pulumi.StringOutput `pulumi:"name"`
 	// networkId path parameter. Network ID
@@ -73,6 +75,8 @@ func GetSensorAlertsProfiles(ctx *pulumi.Context,
 type sensorAlertsProfilesState struct {
 	// List of conditions that will cause the profile to send an alert.
 	Conditions []SensorAlertsProfilesCondition `pulumi:"conditions"`
+	// List of conditions that will cause the profile to send an alert.
+	ConditionsResponses []SensorAlertsProfilesConditionsResponse `pulumi:"conditionsResponses"`
 	// Name of the sensor alert profile.
 	Name *string `pulumi:"name"`
 	// networkId path parameter. Network ID
@@ -90,6 +94,8 @@ type sensorAlertsProfilesState struct {
 type SensorAlertsProfilesState struct {
 	// List of conditions that will cause the profile to send an alert.
 	Conditions SensorAlertsProfilesConditionArrayInput
+	// List of conditions that will cause the profile to send an alert.
+	ConditionsResponses SensorAlertsProfilesConditionsResponseArrayInput
 	// Name of the sensor alert profile.
 	Name pulumi.StringPtrInput
 	// networkId path parameter. Network ID
@@ -229,6 +235,13 @@ func (o SensorAlertsProfilesOutput) ToSensorAlertsProfilesOutputWithContext(ctx 
 // List of conditions that will cause the profile to send an alert.
 func (o SensorAlertsProfilesOutput) Conditions() SensorAlertsProfilesConditionArrayOutput {
 	return o.ApplyT(func(v *SensorAlertsProfiles) SensorAlertsProfilesConditionArrayOutput { return v.Conditions }).(SensorAlertsProfilesConditionArrayOutput)
+}
+
+// List of conditions that will cause the profile to send an alert.
+func (o SensorAlertsProfilesOutput) ConditionsResponses() SensorAlertsProfilesConditionsResponseArrayOutput {
+	return o.ApplyT(func(v *SensorAlertsProfiles) SensorAlertsProfilesConditionsResponseArrayOutput {
+		return v.ConditionsResponses
+	}).(SensorAlertsProfilesConditionsResponseArrayOutput)
 }
 
 // Name of the sensor alert profile.

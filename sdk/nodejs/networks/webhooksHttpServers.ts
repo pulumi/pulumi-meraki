@@ -46,7 +46,7 @@ export class WebhooksHttpServers extends pulumi.CustomResource {
     /**
      * httpServerId path parameter. Http server ID
      */
-    public readonly httpServerId!: pulumi.Output<string | undefined>;
+    public readonly httpServerId!: pulumi.Output<string>;
     /**
      * A name for easy reference to the HTTP server
      */

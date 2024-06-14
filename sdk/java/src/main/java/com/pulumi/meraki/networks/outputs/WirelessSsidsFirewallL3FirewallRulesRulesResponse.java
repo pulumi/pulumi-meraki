@@ -27,6 +27,11 @@ public final class WirelessSsidsFirewallL3FirewallRulesRulesResponse {
      */
     private @Nullable String destPort;
     /**
+     * @return Ip Version
+     * 
+     */
+    private @Nullable String ipVer;
+    /**
      * @return &#39;allow&#39; or &#39;deny&#39; traffic specified by this rule
      * 
      */
@@ -60,6 +65,13 @@ public final class WirelessSsidsFirewallL3FirewallRulesRulesResponse {
         return Optional.ofNullable(this.destPort);
     }
     /**
+     * @return Ip Version
+     * 
+     */
+    public Optional<String> ipVer() {
+        return Optional.ofNullable(this.ipVer);
+    }
+    /**
      * @return &#39;allow&#39; or &#39;deny&#39; traffic specified by this rule
      * 
      */
@@ -86,6 +98,7 @@ public final class WirelessSsidsFirewallL3FirewallRulesRulesResponse {
         private @Nullable String comment;
         private @Nullable String destCidr;
         private @Nullable String destPort;
+        private @Nullable String ipVer;
         private @Nullable String policy;
         private @Nullable String protocol;
         public Builder() {}
@@ -94,6 +107,7 @@ public final class WirelessSsidsFirewallL3FirewallRulesRulesResponse {
     	      this.comment = defaults.comment;
     	      this.destCidr = defaults.destCidr;
     	      this.destPort = defaults.destPort;
+    	      this.ipVer = defaults.ipVer;
     	      this.policy = defaults.policy;
     	      this.protocol = defaults.protocol;
         }
@@ -117,6 +131,12 @@ public final class WirelessSsidsFirewallL3FirewallRulesRulesResponse {
             return this;
         }
         @CustomType.Setter
+        public Builder ipVer(@Nullable String ipVer) {
+
+            this.ipVer = ipVer;
+            return this;
+        }
+        @CustomType.Setter
         public Builder policy(@Nullable String policy) {
 
             this.policy = policy;
@@ -133,6 +153,7 @@ public final class WirelessSsidsFirewallL3FirewallRulesRulesResponse {
             _resultValue.comment = comment;
             _resultValue.destCidr = destCidr;
             _resultValue.destPort = destPort;
+            _resultValue.ipVer = ipVer;
             _resultValue.policy = policy;
             _resultValue.protocol = protocol;
             return _resultValue;

@@ -31,6 +31,12 @@ namespace Pulumi.Meraki.Networks.Inputs
         public Input<string>? DestPort { get; set; }
 
         /// <summary>
+        /// Ip Ver
+        /// </summary>
+        [Input("ipVer")]
+        public Input<string>? IpVer { get; set; }
+
+        /// <summary>
         /// 'allow' or 'deny' traffic specified by this rule
         /// </summary>
         [Input("policy")]

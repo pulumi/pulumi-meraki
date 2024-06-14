@@ -11,9 +11,11 @@ import com.pulumi.meraki.Utilities;
 import com.pulumi.meraki.networks.ApplianceFirewallInboundFirewallRulesArgs;
 import com.pulumi.meraki.networks.inputs.ApplianceFirewallInboundFirewallRulesState;
 import com.pulumi.meraki.networks.outputs.ApplianceFirewallInboundFirewallRulesRule;
+import com.pulumi.meraki.networks.outputs.ApplianceFirewallInboundFirewallRulesRulesResponse;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -93,14 +95,28 @@ public class ApplianceFirewallInboundFirewallRules extends com.pulumi.resources.
      * 
      */
     @Export(name="rules", refs={List.class,ApplianceFirewallInboundFirewallRulesRule.class}, tree="[0,1]")
-    private Output<List<ApplianceFirewallInboundFirewallRulesRule>> rules;
+    private Output</* @Nullable */ List<ApplianceFirewallInboundFirewallRulesRule>> rules;
 
     /**
      * @return An ordered array of the firewall rules (not including the default rule)
      * 
      */
-    public Output<List<ApplianceFirewallInboundFirewallRulesRule>> rules() {
-        return this.rules;
+    public Output<Optional<List<ApplianceFirewallInboundFirewallRulesRule>>> rules() {
+        return Codegen.optional(this.rules);
+    }
+    /**
+     * An ordered array of the firewall rules (not including the default rule)
+     * 
+     */
+    @Export(name="rulesResponses", refs={List.class,ApplianceFirewallInboundFirewallRulesRulesResponse.class}, tree="[0,1]")
+    private Output<List<ApplianceFirewallInboundFirewallRulesRulesResponse>> rulesResponses;
+
+    /**
+     * @return An ordered array of the firewall rules (not including the default rule)
+     * 
+     */
+    public Output<List<ApplianceFirewallInboundFirewallRulesRulesResponse>> rulesResponses() {
+        return this.rulesResponses;
     }
     /**
      * Log the special default rule (boolean value - enable only if you&#39;ve configured a syslog server) (optional)

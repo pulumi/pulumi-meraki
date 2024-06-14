@@ -21,6 +21,7 @@ import com.pulumi.meraki.networks.outputs.WirelessSsidsLocalRadius;
 import com.pulumi.meraki.networks.outputs.WirelessSsidsNamedVlans;
 import com.pulumi.meraki.networks.outputs.WirelessSsidsOauth;
 import com.pulumi.meraki.networks.outputs.WirelessSsidsRadiusAccountingServer;
+import com.pulumi.meraki.networks.outputs.WirelessSsidsRadiusAccountingServersResponse;
 import com.pulumi.meraki.networks.outputs.WirelessSsidsRadiusServer;
 import com.pulumi.meraki.networks.outputs.WirelessSsidsRadiusServersResponse;
 import com.pulumi.meraki.networks.outputs.WirelessSsidsSpeedBurst;
@@ -576,20 +577,6 @@ public class WirelessSsids extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.ldap);
     }
     /**
-     * Extended local auth flag for Enterprise NAC
-     * 
-     */
-    @Export(name="localAuth", refs={Boolean.class}, tree="[0]")
-    private Output<Boolean> localAuth;
-
-    /**
-     * @return Extended local auth flag for Enterprise NAC
-     * 
-     */
-    public Output<Boolean> localAuth() {
-        return this.localAuth;
-    }
-    /**
      * The current setting for Local Authentication, a built-in RADIUS server on the access point. Only valid if authMode is &#39;8021x-localradius&#39;.
      * 
      */
@@ -776,14 +763,14 @@ public class WirelessSsids extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="radiusAccountingEnabled", refs={Boolean.class}, tree="[0]")
-    private Output</* @Nullable */ Boolean> radiusAccountingEnabled;
+    private Output<Boolean> radiusAccountingEnabled;
 
     /**
      * @return Whether or not RADIUS accounting is enabled
      * 
      */
-    public Output<Optional<Boolean>> radiusAccountingEnabled() {
-        return Codegen.optional(this.radiusAccountingEnabled);
+    public Output<Boolean> radiusAccountingEnabled() {
+        return this.radiusAccountingEnabled;
     }
     /**
      * The interval (in seconds) in which accounting information is updated and sent to the RADIUS accounting server.
@@ -804,14 +791,28 @@ public class WirelessSsids extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="radiusAccountingServers", refs={List.class,WirelessSsidsRadiusAccountingServer.class}, tree="[0,1]")
-    private Output<List<WirelessSsidsRadiusAccountingServer>> radiusAccountingServers;
+    private Output</* @Nullable */ List<WirelessSsidsRadiusAccountingServer>> radiusAccountingServers;
 
     /**
      * @return List of RADIUS accounting 802.1X servers to be used for authentication
      * 
      */
-    public Output<List<WirelessSsidsRadiusAccountingServer>> radiusAccountingServers() {
-        return this.radiusAccountingServers;
+    public Output<Optional<List<WirelessSsidsRadiusAccountingServer>>> radiusAccountingServers() {
+        return Codegen.optional(this.radiusAccountingServers);
+    }
+    /**
+     * List of RADIUS accounting 802.1X servers to be used for authentication
+     * 
+     */
+    @Export(name="radiusAccountingServersResponses", refs={List.class,WirelessSsidsRadiusAccountingServersResponse.class}, tree="[0,1]")
+    private Output<List<WirelessSsidsRadiusAccountingServersResponse>> radiusAccountingServersResponses;
+
+    /**
+     * @return List of RADIUS accounting 802.1X servers to be used for authentication
+     * 
+     */
+    public Output<List<WirelessSsidsRadiusAccountingServersResponse>> radiusAccountingServersResponses() {
+        return this.radiusAccountingServersResponses;
     }
     /**
      * RADIUS attribute used to look up group policies
@@ -868,20 +869,6 @@ public class WirelessSsids extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<Boolean>> radiusCoaEnabled() {
         return Codegen.optional(this.radiusCoaEnabled);
-    }
-    /**
-     * Whether RADIUS authentication is enabled
-     * 
-     */
-    @Export(name="radiusEnabled", refs={Boolean.class}, tree="[0]")
-    private Output<Boolean> radiusEnabled;
-
-    /**
-     * @return Whether RADIUS authentication is enabled
-     * 
-     */
-    public Output<Boolean> radiusEnabled() {
-        return this.radiusEnabled;
     }
     /**
      * Policy which determines how authentication requests should be handled in the event that all of the configured RADIUS servers are unreachable

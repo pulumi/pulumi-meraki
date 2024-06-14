@@ -73,17 +73,21 @@ class _ApplianceFirewallInboundFirewallRulesState:
     def __init__(__self__, *,
                  network_id: Optional[pulumi.Input[str]] = None,
                  rules: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallInboundFirewallRulesRuleArgs']]]] = None,
+                 rules_responses: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallInboundFirewallRulesRulesResponseArgs']]]] = None,
                  syslog_default_rule: Optional[pulumi.Input[bool]] = None):
         """
         Input properties used for looking up and filtering ApplianceFirewallInboundFirewallRules resources.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallInboundFirewallRulesRuleArgs']]] rules: An ordered array of the firewall rules (not including the default rule)
+        :param pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallInboundFirewallRulesRulesResponseArgs']]] rules_responses: An ordered array of the firewall rules (not including the default rule)
         :param pulumi.Input[bool] syslog_default_rule: Log the special default rule (boolean value - enable only if you've configured a syslog server) (optional)
         """
         if network_id is not None:
             pulumi.set(__self__, "network_id", network_id)
         if rules is not None:
             pulumi.set(__self__, "rules", rules)
+        if rules_responses is not None:
+            pulumi.set(__self__, "rules_responses", rules_responses)
         if syslog_default_rule is not None:
             pulumi.set(__self__, "syslog_default_rule", syslog_default_rule)
 
@@ -110,6 +114,18 @@ class _ApplianceFirewallInboundFirewallRulesState:
     @rules.setter
     def rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallInboundFirewallRulesRuleArgs']]]]):
         pulumi.set(self, "rules", value)
+
+    @property
+    @pulumi.getter(name="rulesResponses")
+    def rules_responses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallInboundFirewallRulesRulesResponseArgs']]]]:
+        """
+        An ordered array of the firewall rules (not including the default rule)
+        """
+        return pulumi.get(self, "rules_responses")
+
+    @rules_responses.setter
+    def rules_responses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallInboundFirewallRulesRulesResponseArgs']]]]):
+        pulumi.set(self, "rules_responses", value)
 
     @property
     @pulumi.getter(name="syslogDefaultRule")
@@ -195,6 +211,7 @@ class ApplianceFirewallInboundFirewallRules(pulumi.CustomResource):
             __props__.__dict__["network_id"] = network_id
             __props__.__dict__["rules"] = rules
             __props__.__dict__["syslog_default_rule"] = syslog_default_rule
+            __props__.__dict__["rules_responses"] = None
         super(ApplianceFirewallInboundFirewallRules, __self__).__init__(
             'meraki:networks/applianceFirewallInboundFirewallRules:ApplianceFirewallInboundFirewallRules',
             resource_name,
@@ -207,6 +224,7 @@ class ApplianceFirewallInboundFirewallRules(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             network_id: Optional[pulumi.Input[str]] = None,
             rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceFirewallInboundFirewallRulesRuleArgs']]]]] = None,
+            rules_responses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceFirewallInboundFirewallRulesRulesResponseArgs']]]]] = None,
             syslog_default_rule: Optional[pulumi.Input[bool]] = None) -> 'ApplianceFirewallInboundFirewallRules':
         """
         Get an existing ApplianceFirewallInboundFirewallRules resource's state with the given name, id, and optional extra
@@ -217,6 +235,7 @@ class ApplianceFirewallInboundFirewallRules(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceFirewallInboundFirewallRulesRuleArgs']]]] rules: An ordered array of the firewall rules (not including the default rule)
+        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceFirewallInboundFirewallRulesRulesResponseArgs']]]] rules_responses: An ordered array of the firewall rules (not including the default rule)
         :param pulumi.Input[bool] syslog_default_rule: Log the special default rule (boolean value - enable only if you've configured a syslog server) (optional)
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -225,6 +244,7 @@ class ApplianceFirewallInboundFirewallRules(pulumi.CustomResource):
 
         __props__.__dict__["network_id"] = network_id
         __props__.__dict__["rules"] = rules
+        __props__.__dict__["rules_responses"] = rules_responses
         __props__.__dict__["syslog_default_rule"] = syslog_default_rule
         return ApplianceFirewallInboundFirewallRules(resource_name, opts=opts, __props__=__props__)
 
@@ -238,11 +258,19 @@ class ApplianceFirewallInboundFirewallRules(pulumi.CustomResource):
 
     @property
     @pulumi.getter
-    def rules(self) -> pulumi.Output[Sequence['outputs.ApplianceFirewallInboundFirewallRulesRule']]:
+    def rules(self) -> pulumi.Output[Optional[Sequence['outputs.ApplianceFirewallInboundFirewallRulesRule']]]:
         """
         An ordered array of the firewall rules (not including the default rule)
         """
         return pulumi.get(self, "rules")
+
+    @property
+    @pulumi.getter(name="rulesResponses")
+    def rules_responses(self) -> pulumi.Output[Sequence['outputs.ApplianceFirewallInboundFirewallRulesRulesResponse']]:
+        """
+        An ordered array of the firewall rules (not including the default rule)
+        """
+        return pulumi.get(self, "rules_responses")
 
     @property
     @pulumi.getter(name="syslogDefaultRule")

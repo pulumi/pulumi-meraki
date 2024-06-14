@@ -125,10 +125,6 @@ export class WirelessSsids extends pulumi.CustomResource {
      */
     public readonly ldap!: pulumi.Output<outputs.networks.WirelessSsidsLdap | undefined>;
     /**
-     * Extended local auth flag for Enterprise NAC
-     */
-    public /*out*/ readonly localAuth!: pulumi.Output<boolean>;
-    /**
      * The current setting for Local Authentication, a built-in RADIUS server on the access point. Only valid if authMode is '8021x-localradius'.
      */
     public readonly localRadius!: pulumi.Output<outputs.networks.WirelessSsidsLocalRadius | undefined>;
@@ -183,7 +179,7 @@ export class WirelessSsids extends pulumi.CustomResource {
     /**
      * Whether or not RADIUS accounting is enabled
      */
-    public readonly radiusAccountingEnabled!: pulumi.Output<boolean | undefined>;
+    public readonly radiusAccountingEnabled!: pulumi.Output<boolean>;
     /**
      * The interval (in seconds) in which accounting information is updated and sent to the RADIUS accounting server.
      */
@@ -191,7 +187,11 @@ export class WirelessSsids extends pulumi.CustomResource {
     /**
      * List of RADIUS accounting 802.1X servers to be used for authentication
      */
-    public readonly radiusAccountingServers!: pulumi.Output<outputs.networks.WirelessSsidsRadiusAccountingServer[]>;
+    public readonly radiusAccountingServers!: pulumi.Output<outputs.networks.WirelessSsidsRadiusAccountingServer[] | undefined>;
+    /**
+     * List of RADIUS accounting 802.1X servers to be used for authentication
+     */
+    public /*out*/ readonly radiusAccountingServersResponses!: pulumi.Output<outputs.networks.WirelessSsidsRadiusAccountingServersResponse[]>;
     /**
      * RADIUS attribute used to look up group policies
      */
@@ -208,10 +208,6 @@ export class WirelessSsids extends pulumi.CustomResource {
      * If true, Meraki devices will act as a RADIUS Dynamic Authorization Server and will respond to RADIUS Change-of-Authorization and Disconnect messages sent by the RADIUS server.
      */
     public readonly radiusCoaEnabled!: pulumi.Output<boolean | undefined>;
-    /**
-     * Whether RADIUS authentication is enabled
-     */
-    public /*out*/ readonly radiusEnabled!: pulumi.Output<boolean>;
     /**
      * Policy which determines how authentication requests should be handled in the event that all of the configured RADIUS servers are unreachable
      */
@@ -343,7 +339,6 @@ export class WirelessSsids extends pulumi.CustomResource {
             resourceInputs["ipAssignmentMode"] = state ? state.ipAssignmentMode : undefined;
             resourceInputs["lanIsolationEnabled"] = state ? state.lanIsolationEnabled : undefined;
             resourceInputs["ldap"] = state ? state.ldap : undefined;
-            resourceInputs["localAuth"] = state ? state.localAuth : undefined;
             resourceInputs["localRadius"] = state ? state.localRadius : undefined;
             resourceInputs["mandatoryDhcpEnabled"] = state ? state.mandatoryDhcpEnabled : undefined;
             resourceInputs["minBitrate"] = state ? state.minBitrate : undefined;
@@ -360,11 +355,11 @@ export class WirelessSsids extends pulumi.CustomResource {
             resourceInputs["radiusAccountingEnabled"] = state ? state.radiusAccountingEnabled : undefined;
             resourceInputs["radiusAccountingInterimInterval"] = state ? state.radiusAccountingInterimInterval : undefined;
             resourceInputs["radiusAccountingServers"] = state ? state.radiusAccountingServers : undefined;
+            resourceInputs["radiusAccountingServersResponses"] = state ? state.radiusAccountingServersResponses : undefined;
             resourceInputs["radiusAttributeForGroupPolicies"] = state ? state.radiusAttributeForGroupPolicies : undefined;
             resourceInputs["radiusAuthenticationNasId"] = state ? state.radiusAuthenticationNasId : undefined;
             resourceInputs["radiusCalledStationId"] = state ? state.radiusCalledStationId : undefined;
             resourceInputs["radiusCoaEnabled"] = state ? state.radiusCoaEnabled : undefined;
-            resourceInputs["radiusEnabled"] = state ? state.radiusEnabled : undefined;
             resourceInputs["radiusFailoverPolicy"] = state ? state.radiusFailoverPolicy : undefined;
             resourceInputs["radiusFallbackEnabled"] = state ? state.radiusFallbackEnabled : undefined;
             resourceInputs["radiusGuestVlanEnabled"] = state ? state.radiusGuestVlanEnabled : undefined;
@@ -459,8 +454,7 @@ export class WirelessSsids extends pulumi.CustomResource {
             resourceInputs["walledGardenRanges"] = args ? args.walledGardenRanges : undefined;
             resourceInputs["wpaEncryptionMode"] = args ? args.wpaEncryptionMode : undefined;
             resourceInputs["adminSplashUrl"] = undefined /*out*/;
-            resourceInputs["localAuth"] = undefined /*out*/;
-            resourceInputs["radiusEnabled"] = undefined /*out*/;
+            resourceInputs["radiusAccountingServersResponses"] = undefined /*out*/;
             resourceInputs["radiusServersResponses"] = undefined /*out*/;
             resourceInputs["splashTimeout"] = undefined /*out*/;
             resourceInputs["ssidAdminAccessible"] = undefined /*out*/;
@@ -556,10 +550,6 @@ export interface WirelessSsidsState {
      */
     ldap?: pulumi.Input<inputs.networks.WirelessSsidsLdap>;
     /**
-     * Extended local auth flag for Enterprise NAC
-     */
-    localAuth?: pulumi.Input<boolean>;
-    /**
      * The current setting for Local Authentication, a built-in RADIUS server on the access point. Only valid if authMode is '8021x-localradius'.
      */
     localRadius?: pulumi.Input<inputs.networks.WirelessSsidsLocalRadius>;
@@ -624,6 +614,10 @@ export interface WirelessSsidsState {
      */
     radiusAccountingServers?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsRadiusAccountingServer>[]>;
     /**
+     * List of RADIUS accounting 802.1X servers to be used for authentication
+     */
+    radiusAccountingServersResponses?: pulumi.Input<pulumi.Input<inputs.networks.WirelessSsidsRadiusAccountingServersResponse>[]>;
+    /**
      * RADIUS attribute used to look up group policies
      */
     radiusAttributeForGroupPolicies?: pulumi.Input<string>;
@@ -639,10 +633,6 @@ export interface WirelessSsidsState {
      * If true, Meraki devices will act as a RADIUS Dynamic Authorization Server and will respond to RADIUS Change-of-Authorization and Disconnect messages sent by the RADIUS server.
      */
     radiusCoaEnabled?: pulumi.Input<boolean>;
-    /**
-     * Whether RADIUS authentication is enabled
-     */
-    radiusEnabled?: pulumi.Input<boolean>;
     /**
      * Policy which determines how authentication requests should be handled in the event that all of the configured RADIUS servers are unreachable
      */

@@ -16,6 +16,7 @@ import com.pulumi.meraki.networks.inputs.WirelessSsidsLocalRadiusArgs;
 import com.pulumi.meraki.networks.inputs.WirelessSsidsNamedVlansArgs;
 import com.pulumi.meraki.networks.inputs.WirelessSsidsOauthArgs;
 import com.pulumi.meraki.networks.inputs.WirelessSsidsRadiusAccountingServerArgs;
+import com.pulumi.meraki.networks.inputs.WirelessSsidsRadiusAccountingServersResponseArgs;
 import com.pulumi.meraki.networks.inputs.WirelessSsidsRadiusServerArgs;
 import com.pulumi.meraki.networks.inputs.WirelessSsidsRadiusServersResponseArgs;
 import com.pulumi.meraki.networks.inputs.WirelessSsidsSpeedBurstArgs;
@@ -340,21 +341,6 @@ public final class WirelessSsidsState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Extended local auth flag for Enterprise NAC
-     * 
-     */
-    @Import(name="localAuth")
-    private @Nullable Output<Boolean> localAuth;
-
-    /**
-     * @return Extended local auth flag for Enterprise NAC
-     * 
-     */
-    public Optional<Output<Boolean>> localAuth() {
-        return Optional.ofNullable(this.localAuth);
-    }
-
-    /**
      * The current setting for Local Authentication, a built-in RADIUS server on the access point. Only valid if authMode is &#39;8021x-localradius&#39;.
      * 
      */
@@ -595,6 +581,21 @@ public final class WirelessSsidsState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
+     * List of RADIUS accounting 802.1X servers to be used for authentication
+     * 
+     */
+    @Import(name="radiusAccountingServersResponses")
+    private @Nullable Output<List<WirelessSsidsRadiusAccountingServersResponseArgs>> radiusAccountingServersResponses;
+
+    /**
+     * @return List of RADIUS accounting 802.1X servers to be used for authentication
+     * 
+     */
+    public Optional<Output<List<WirelessSsidsRadiusAccountingServersResponseArgs>>> radiusAccountingServersResponses() {
+        return Optional.ofNullable(this.radiusAccountingServersResponses);
+    }
+
+    /**
      * RADIUS attribute used to look up group policies
      * 
      */
@@ -652,21 +653,6 @@ public final class WirelessSsidsState extends com.pulumi.resources.ResourceArgs 
      */
     public Optional<Output<Boolean>> radiusCoaEnabled() {
         return Optional.ofNullable(this.radiusCoaEnabled);
-    }
-
-    /**
-     * Whether RADIUS authentication is enabled
-     * 
-     */
-    @Import(name="radiusEnabled")
-    private @Nullable Output<Boolean> radiusEnabled;
-
-    /**
-     * @return Whether RADIUS authentication is enabled
-     * 
-     */
-    public Optional<Output<Boolean>> radiusEnabled() {
-        return Optional.ofNullable(this.radiusEnabled);
     }
 
     /**
@@ -1053,7 +1039,6 @@ public final class WirelessSsidsState extends com.pulumi.resources.ResourceArgs 
         this.ipAssignmentMode = $.ipAssignmentMode;
         this.lanIsolationEnabled = $.lanIsolationEnabled;
         this.ldap = $.ldap;
-        this.localAuth = $.localAuth;
         this.localRadius = $.localRadius;
         this.mandatoryDhcpEnabled = $.mandatoryDhcpEnabled;
         this.minBitrate = $.minBitrate;
@@ -1070,11 +1055,11 @@ public final class WirelessSsidsState extends com.pulumi.resources.ResourceArgs 
         this.radiusAccountingEnabled = $.radiusAccountingEnabled;
         this.radiusAccountingInterimInterval = $.radiusAccountingInterimInterval;
         this.radiusAccountingServers = $.radiusAccountingServers;
+        this.radiusAccountingServersResponses = $.radiusAccountingServersResponses;
         this.radiusAttributeForGroupPolicies = $.radiusAttributeForGroupPolicies;
         this.radiusAuthenticationNasId = $.radiusAuthenticationNasId;
         this.radiusCalledStationId = $.radiusCalledStationId;
         this.radiusCoaEnabled = $.radiusCoaEnabled;
-        this.radiusEnabled = $.radiusEnabled;
         this.radiusFailoverPolicy = $.radiusFailoverPolicy;
         this.radiusFallbackEnabled = $.radiusFallbackEnabled;
         this.radiusGuestVlanEnabled = $.radiusGuestVlanEnabled;
@@ -1569,27 +1554,6 @@ public final class WirelessSsidsState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param localAuth Extended local auth flag for Enterprise NAC
-         * 
-         * @return builder
-         * 
-         */
-        public Builder localAuth(@Nullable Output<Boolean> localAuth) {
-            $.localAuth = localAuth;
-            return this;
-        }
-
-        /**
-         * @param localAuth Extended local auth flag for Enterprise NAC
-         * 
-         * @return builder
-         * 
-         */
-        public Builder localAuth(Boolean localAuth) {
-            return localAuth(Output.of(localAuth));
-        }
-
-        /**
          * @param localRadius The current setting for Local Authentication, a built-in RADIUS server on the access point. Only valid if authMode is &#39;8021x-localradius&#39;.
          * 
          * @return builder
@@ -1936,6 +1900,37 @@ public final class WirelessSsidsState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
+         * @param radiusAccountingServersResponses List of RADIUS accounting 802.1X servers to be used for authentication
+         * 
+         * @return builder
+         * 
+         */
+        public Builder radiusAccountingServersResponses(@Nullable Output<List<WirelessSsidsRadiusAccountingServersResponseArgs>> radiusAccountingServersResponses) {
+            $.radiusAccountingServersResponses = radiusAccountingServersResponses;
+            return this;
+        }
+
+        /**
+         * @param radiusAccountingServersResponses List of RADIUS accounting 802.1X servers to be used for authentication
+         * 
+         * @return builder
+         * 
+         */
+        public Builder radiusAccountingServersResponses(List<WirelessSsidsRadiusAccountingServersResponseArgs> radiusAccountingServersResponses) {
+            return radiusAccountingServersResponses(Output.of(radiusAccountingServersResponses));
+        }
+
+        /**
+         * @param radiusAccountingServersResponses List of RADIUS accounting 802.1X servers to be used for authentication
+         * 
+         * @return builder
+         * 
+         */
+        public Builder radiusAccountingServersResponses(WirelessSsidsRadiusAccountingServersResponseArgs... radiusAccountingServersResponses) {
+            return radiusAccountingServersResponses(List.of(radiusAccountingServersResponses));
+        }
+
+        /**
          * @param radiusAttributeForGroupPolicies RADIUS attribute used to look up group policies
          * 
          * @return builder
@@ -2017,27 +2012,6 @@ public final class WirelessSsidsState extends com.pulumi.resources.ResourceArgs 
          */
         public Builder radiusCoaEnabled(Boolean radiusCoaEnabled) {
             return radiusCoaEnabled(Output.of(radiusCoaEnabled));
-        }
-
-        /**
-         * @param radiusEnabled Whether RADIUS authentication is enabled
-         * 
-         * @return builder
-         * 
-         */
-        public Builder radiusEnabled(@Nullable Output<Boolean> radiusEnabled) {
-            $.radiusEnabled = radiusEnabled;
-            return this;
-        }
-
-        /**
-         * @param radiusEnabled Whether RADIUS authentication is enabled
-         * 
-         * @return builder
-         * 
-         */
-        public Builder radiusEnabled(Boolean radiusEnabled) {
-            return radiusEnabled(Output.of(radiusEnabled));
         }
 
         /**

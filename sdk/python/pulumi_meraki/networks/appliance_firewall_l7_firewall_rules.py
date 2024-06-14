@@ -56,16 +56,20 @@ class ApplianceFirewallL7FirewallRulesArgs:
 class _ApplianceFirewallL7FirewallRulesState:
     def __init__(__self__, *,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallL7FirewallRulesRuleArgs']]]] = None):
+                 rules: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallL7FirewallRulesRuleArgs']]]] = None,
+                 rules_responses: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallL7FirewallRulesRulesResponseArgs']]]] = None):
         """
         Input properties used for looking up and filtering ApplianceFirewallL7FirewallRules resources.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallL7FirewallRulesRuleArgs']]] rules: An ordered array of the MX L7 firewall rules
+        :param pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallL7FirewallRulesRulesResponseArgs']]] rules_responses: An ordered array of the MX L7 firewall rules
         """
         if network_id is not None:
             pulumi.set(__self__, "network_id", network_id)
         if rules is not None:
             pulumi.set(__self__, "rules", rules)
+        if rules_responses is not None:
+            pulumi.set(__self__, "rules_responses", rules_responses)
 
     @property
     @pulumi.getter(name="networkId")
@@ -90,6 +94,18 @@ class _ApplianceFirewallL7FirewallRulesState:
     @rules.setter
     def rules(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallL7FirewallRulesRuleArgs']]]]):
         pulumi.set(self, "rules", value)
+
+    @property
+    @pulumi.getter(name="rulesResponses")
+    def rules_responses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallL7FirewallRulesRulesResponseArgs']]]]:
+        """
+        An ordered array of the MX L7 firewall rules
+        """
+        return pulumi.get(self, "rules_responses")
+
+    @rules_responses.setter
+    def rules_responses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallL7FirewallRulesRulesResponseArgs']]]]):
+        pulumi.set(self, "rules_responses", value)
 
 
 class ApplianceFirewallL7FirewallRules(pulumi.CustomResource):
@@ -189,6 +205,7 @@ class ApplianceFirewallL7FirewallRules(pulumi.CustomResource):
                 raise TypeError("Missing required property 'network_id'")
             __props__.__dict__["network_id"] = network_id
             __props__.__dict__["rules"] = rules
+            __props__.__dict__["rules_responses"] = None
         super(ApplianceFirewallL7FirewallRules, __self__).__init__(
             'meraki:networks/applianceFirewallL7FirewallRules:ApplianceFirewallL7FirewallRules',
             resource_name,
@@ -200,7 +217,8 @@ class ApplianceFirewallL7FirewallRules(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             network_id: Optional[pulumi.Input[str]] = None,
-            rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceFirewallL7FirewallRulesRuleArgs']]]]] = None) -> 'ApplianceFirewallL7FirewallRules':
+            rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceFirewallL7FirewallRulesRuleArgs']]]]] = None,
+            rules_responses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceFirewallL7FirewallRulesRulesResponseArgs']]]]] = None) -> 'ApplianceFirewallL7FirewallRules':
         """
         Get an existing ApplianceFirewallL7FirewallRules resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -210,6 +228,7 @@ class ApplianceFirewallL7FirewallRules(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceFirewallL7FirewallRulesRuleArgs']]]] rules: An ordered array of the MX L7 firewall rules
+        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceFirewallL7FirewallRulesRulesResponseArgs']]]] rules_responses: An ordered array of the MX L7 firewall rules
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -217,6 +236,7 @@ class ApplianceFirewallL7FirewallRules(pulumi.CustomResource):
 
         __props__.__dict__["network_id"] = network_id
         __props__.__dict__["rules"] = rules
+        __props__.__dict__["rules_responses"] = rules_responses
         return ApplianceFirewallL7FirewallRules(resource_name, opts=opts, __props__=__props__)
 
     @property
@@ -229,9 +249,17 @@ class ApplianceFirewallL7FirewallRules(pulumi.CustomResource):
 
     @property
     @pulumi.getter
-    def rules(self) -> pulumi.Output[Sequence['outputs.ApplianceFirewallL7FirewallRulesRule']]:
+    def rules(self) -> pulumi.Output[Optional[Sequence['outputs.ApplianceFirewallL7FirewallRulesRule']]]:
         """
         An ordered array of the MX L7 firewall rules
         """
         return pulumi.get(self, "rules")
+
+    @property
+    @pulumi.getter(name="rulesResponses")
+    def rules_responses(self) -> pulumi.Output[Sequence['outputs.ApplianceFirewallL7FirewallRulesRulesResponse']]:
+        """
+        An ordered array of the MX L7 firewall rules
+        """
+        return pulumi.get(self, "rules_responses")
 
