@@ -66,7 +66,11 @@ export class ApplianceFirewallL7FirewallRules extends pulumi.CustomResource {
     /**
      * An ordered array of the MX L7 firewall rules
      */
-    public readonly rules!: pulumi.Output<outputs.networks.ApplianceFirewallL7FirewallRulesRule[]>;
+    public readonly rules!: pulumi.Output<outputs.networks.ApplianceFirewallL7FirewallRulesRule[] | undefined>;
+    /**
+     * An ordered array of the MX L7 firewall rules
+     */
+    public /*out*/ readonly rulesResponses!: pulumi.Output<outputs.networks.ApplianceFirewallL7FirewallRulesRulesResponse[]>;
 
     /**
      * Create a ApplianceFirewallL7FirewallRules resource with the given unique name, arguments, and options.
@@ -83,6 +87,7 @@ export class ApplianceFirewallL7FirewallRules extends pulumi.CustomResource {
             const state = argsOrState as ApplianceFirewallL7FirewallRulesState | undefined;
             resourceInputs["networkId"] = state ? state.networkId : undefined;
             resourceInputs["rules"] = state ? state.rules : undefined;
+            resourceInputs["rulesResponses"] = state ? state.rulesResponses : undefined;
         } else {
             const args = argsOrState as ApplianceFirewallL7FirewallRulesArgs | undefined;
             if ((!args || args.networkId === undefined) && !opts.urn) {
@@ -90,6 +95,7 @@ export class ApplianceFirewallL7FirewallRules extends pulumi.CustomResource {
             }
             resourceInputs["networkId"] = args ? args.networkId : undefined;
             resourceInputs["rules"] = args ? args.rules : undefined;
+            resourceInputs["rulesResponses"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(ApplianceFirewallL7FirewallRules.__pulumiType, name, resourceInputs, opts);
@@ -108,6 +114,10 @@ export interface ApplianceFirewallL7FirewallRulesState {
      * An ordered array of the MX L7 firewall rules
      */
     rules?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceFirewallL7FirewallRulesRule>[]>;
+    /**
+     * An ordered array of the MX L7 firewall rules
+     */
+    rulesResponses?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceFirewallL7FirewallRulesRulesResponse>[]>;
 }
 
 /**

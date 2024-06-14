@@ -6,6 +6,7 @@ package com.pulumi.meraki.networks.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.meraki.networks.inputs.SensorAlertsProfilesConditionArgs;
+import com.pulumi.meraki.networks.inputs.SensorAlertsProfilesConditionsResponseArgs;
 import com.pulumi.meraki.networks.inputs.SensorAlertsProfilesRecipientsArgs;
 import com.pulumi.meraki.networks.inputs.SensorAlertsProfilesScheduleArgs;
 import java.lang.String;
@@ -32,6 +33,21 @@ public final class SensorAlertsProfilesState extends com.pulumi.resources.Resour
      */
     public Optional<Output<List<SensorAlertsProfilesConditionArgs>>> conditions() {
         return Optional.ofNullable(this.conditions);
+    }
+
+    /**
+     * List of conditions that will cause the profile to send an alert.
+     * 
+     */
+    @Import(name="conditionsResponses")
+    private @Nullable Output<List<SensorAlertsProfilesConditionsResponseArgs>> conditionsResponses;
+
+    /**
+     * @return List of conditions that will cause the profile to send an alert.
+     * 
+     */
+    public Optional<Output<List<SensorAlertsProfilesConditionsResponseArgs>>> conditionsResponses() {
+        return Optional.ofNullable(this.conditionsResponses);
     }
 
     /**
@@ -128,6 +144,7 @@ public final class SensorAlertsProfilesState extends com.pulumi.resources.Resour
 
     private SensorAlertsProfilesState(SensorAlertsProfilesState $) {
         this.conditions = $.conditions;
+        this.conditionsResponses = $.conditionsResponses;
         this.name = $.name;
         this.networkId = $.networkId;
         this.profileId = $.profileId;
@@ -183,6 +200,37 @@ public final class SensorAlertsProfilesState extends com.pulumi.resources.Resour
          */
         public Builder conditions(SensorAlertsProfilesConditionArgs... conditions) {
             return conditions(List.of(conditions));
+        }
+
+        /**
+         * @param conditionsResponses List of conditions that will cause the profile to send an alert.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder conditionsResponses(@Nullable Output<List<SensorAlertsProfilesConditionsResponseArgs>> conditionsResponses) {
+            $.conditionsResponses = conditionsResponses;
+            return this;
+        }
+
+        /**
+         * @param conditionsResponses List of conditions that will cause the profile to send an alert.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder conditionsResponses(List<SensorAlertsProfilesConditionsResponseArgs> conditionsResponses) {
+            return conditionsResponses(Output.of(conditionsResponses));
+        }
+
+        /**
+         * @param conditionsResponses List of conditions that will cause the profile to send an alert.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder conditionsResponses(SensorAlertsProfilesConditionsResponseArgs... conditionsResponses) {
+            return conditionsResponses(List.of(conditionsResponses));
         }
 
         /**

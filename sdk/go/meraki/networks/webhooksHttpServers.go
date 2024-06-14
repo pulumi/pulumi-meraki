@@ -23,7 +23,7 @@ type WebhooksHttpServers struct {
 	pulumi.CustomResourceState
 
 	// httpServerId path parameter. Http server ID
-	HttpServerId pulumi.StringPtrOutput `pulumi:"httpServerId"`
+	HttpServerId pulumi.StringOutput `pulumi:"httpServerId"`
 	// A name for easy reference to the HTTP server
 	Name pulumi.StringOutput `pulumi:"name"`
 	// A Meraki network ID.
@@ -221,8 +221,8 @@ func (o WebhooksHttpServersOutput) ToWebhooksHttpServersOutputWithContext(ctx co
 }
 
 // httpServerId path parameter. Http server ID
-func (o WebhooksHttpServersOutput) HttpServerId() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *WebhooksHttpServers) pulumi.StringPtrOutput { return v.HttpServerId }).(pulumi.StringPtrOutput)
+func (o WebhooksHttpServersOutput) HttpServerId() pulumi.StringOutput {
+	return o.ApplyT(func(v *WebhooksHttpServers) pulumi.StringOutput { return v.HttpServerId }).(pulumi.StringOutput)
 }
 
 // A name for easy reference to the HTTP server

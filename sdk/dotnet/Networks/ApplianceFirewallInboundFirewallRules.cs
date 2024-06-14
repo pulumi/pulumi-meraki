@@ -34,6 +34,12 @@ namespace Pulumi.Meraki.Networks
         public Output<ImmutableArray<Outputs.ApplianceFirewallInboundFirewallRulesRule>> Rules { get; private set; } = null!;
 
         /// <summary>
+        /// An ordered array of the firewall rules (not including the default rule)
+        /// </summary>
+        [Output("rulesResponses")]
+        public Output<ImmutableArray<Outputs.ApplianceFirewallInboundFirewallRulesRulesResponse>> RulesResponses { get; private set; } = null!;
+
+        /// <summary>
         /// Log the special default rule (boolean value - enable only if you've configured a syslog server) (optional)
         /// </summary>
         [Output("syslogDefaultRule")]
@@ -134,6 +140,18 @@ namespace Pulumi.Meraki.Networks
         {
             get => _rules ?? (_rules = new InputList<Inputs.ApplianceFirewallInboundFirewallRulesRuleGetArgs>());
             set => _rules = value;
+        }
+
+        [Input("rulesResponses")]
+        private InputList<Inputs.ApplianceFirewallInboundFirewallRulesRulesResponseGetArgs>? _rulesResponses;
+
+        /// <summary>
+        /// An ordered array of the firewall rules (not including the default rule)
+        /// </summary>
+        public InputList<Inputs.ApplianceFirewallInboundFirewallRulesRulesResponseGetArgs> RulesResponses
+        {
+            get => _rulesResponses ?? (_rulesResponses = new InputList<Inputs.ApplianceFirewallInboundFirewallRulesRulesResponseGetArgs>());
+            set => _rulesResponses = value;
         }
 
         /// <summary>

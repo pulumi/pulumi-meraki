@@ -525,6 +525,9 @@
                 "fields": {
                     "rules": {
                         "maxItemsOne": false
+                    },
+                    "rules_response": {
+                        "maxItemsOne": false
                     }
                 }
             },
@@ -543,6 +546,16 @@
                 "current": "meraki:networks/applianceFirewallL7FirewallRules:ApplianceFirewallL7FirewallRules",
                 "fields": {
                     "rules": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "value_list": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    },
+                    "rules_response": {
                         "maxItemsOne": false,
                         "elem": {
                             "fields": {
@@ -1191,6 +1204,9 @@
                 "current": "meraki:networks/sensorAlertsProfiles:SensorAlertsProfiles",
                 "fields": {
                     "conditions": {
+                        "maxItemsOne": false
+                    },
+                    "conditions_response": {
                         "maxItemsOne": false
                     },
                     "recipients": {
@@ -2172,6 +2188,9 @@
                         }
                     },
                     "radius_accounting_servers": {
+                        "maxItemsOne": false
+                    },
+                    "radius_accounting_servers_response": {
                         "maxItemsOne": false
                     },
                     "radius_servers": {

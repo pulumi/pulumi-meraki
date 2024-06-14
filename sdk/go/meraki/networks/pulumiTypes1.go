@@ -13,6 +13,3210 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
+type WirelessSsidsLdapCredentials struct {
+	// The distinguished name of the LDAP user account (example: cn=user,dc=meraki,dc=com).
+	DistinguishedName *string `pulumi:"distinguishedName"`
+	// The password of the LDAP user account.
+	Password *string `pulumi:"password"`
+}
+
+// WirelessSsidsLdapCredentialsInput is an input type that accepts WirelessSsidsLdapCredentialsArgs and WirelessSsidsLdapCredentialsOutput values.
+// You can construct a concrete instance of `WirelessSsidsLdapCredentialsInput` via:
+//
+//	WirelessSsidsLdapCredentialsArgs{...}
+type WirelessSsidsLdapCredentialsInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsLdapCredentialsOutput() WirelessSsidsLdapCredentialsOutput
+	ToWirelessSsidsLdapCredentialsOutputWithContext(context.Context) WirelessSsidsLdapCredentialsOutput
+}
+
+type WirelessSsidsLdapCredentialsArgs struct {
+	// The distinguished name of the LDAP user account (example: cn=user,dc=meraki,dc=com).
+	DistinguishedName pulumi.StringPtrInput `pulumi:"distinguishedName"`
+	// The password of the LDAP user account.
+	Password pulumi.StringPtrInput `pulumi:"password"`
+}
+
+func (WirelessSsidsLdapCredentialsArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsLdapCredentials)(nil)).Elem()
+}
+
+func (i WirelessSsidsLdapCredentialsArgs) ToWirelessSsidsLdapCredentialsOutput() WirelessSsidsLdapCredentialsOutput {
+	return i.ToWirelessSsidsLdapCredentialsOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsLdapCredentialsArgs) ToWirelessSsidsLdapCredentialsOutputWithContext(ctx context.Context) WirelessSsidsLdapCredentialsOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsLdapCredentialsOutput)
+}
+
+func (i WirelessSsidsLdapCredentialsArgs) ToWirelessSsidsLdapCredentialsPtrOutput() WirelessSsidsLdapCredentialsPtrOutput {
+	return i.ToWirelessSsidsLdapCredentialsPtrOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsLdapCredentialsArgs) ToWirelessSsidsLdapCredentialsPtrOutputWithContext(ctx context.Context) WirelessSsidsLdapCredentialsPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsLdapCredentialsOutput).ToWirelessSsidsLdapCredentialsPtrOutputWithContext(ctx)
+}
+
+// WirelessSsidsLdapCredentialsPtrInput is an input type that accepts WirelessSsidsLdapCredentialsArgs, WirelessSsidsLdapCredentialsPtr and WirelessSsidsLdapCredentialsPtrOutput values.
+// You can construct a concrete instance of `WirelessSsidsLdapCredentialsPtrInput` via:
+//
+//	        WirelessSsidsLdapCredentialsArgs{...}
+//
+//	or:
+//
+//	        nil
+type WirelessSsidsLdapCredentialsPtrInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsLdapCredentialsPtrOutput() WirelessSsidsLdapCredentialsPtrOutput
+	ToWirelessSsidsLdapCredentialsPtrOutputWithContext(context.Context) WirelessSsidsLdapCredentialsPtrOutput
+}
+
+type wirelessSsidsLdapCredentialsPtrType WirelessSsidsLdapCredentialsArgs
+
+func WirelessSsidsLdapCredentialsPtr(v *WirelessSsidsLdapCredentialsArgs) WirelessSsidsLdapCredentialsPtrInput {
+	return (*wirelessSsidsLdapCredentialsPtrType)(v)
+}
+
+func (*wirelessSsidsLdapCredentialsPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsLdapCredentials)(nil)).Elem()
+}
+
+func (i *wirelessSsidsLdapCredentialsPtrType) ToWirelessSsidsLdapCredentialsPtrOutput() WirelessSsidsLdapCredentialsPtrOutput {
+	return i.ToWirelessSsidsLdapCredentialsPtrOutputWithContext(context.Background())
+}
+
+func (i *wirelessSsidsLdapCredentialsPtrType) ToWirelessSsidsLdapCredentialsPtrOutputWithContext(ctx context.Context) WirelessSsidsLdapCredentialsPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsLdapCredentialsPtrOutput)
+}
+
+type WirelessSsidsLdapCredentialsOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsLdapCredentialsOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsLdapCredentials)(nil)).Elem()
+}
+
+func (o WirelessSsidsLdapCredentialsOutput) ToWirelessSsidsLdapCredentialsOutput() WirelessSsidsLdapCredentialsOutput {
+	return o
+}
+
+func (o WirelessSsidsLdapCredentialsOutput) ToWirelessSsidsLdapCredentialsOutputWithContext(ctx context.Context) WirelessSsidsLdapCredentialsOutput {
+	return o
+}
+
+func (o WirelessSsidsLdapCredentialsOutput) ToWirelessSsidsLdapCredentialsPtrOutput() WirelessSsidsLdapCredentialsPtrOutput {
+	return o.ToWirelessSsidsLdapCredentialsPtrOutputWithContext(context.Background())
+}
+
+func (o WirelessSsidsLdapCredentialsOutput) ToWirelessSsidsLdapCredentialsPtrOutputWithContext(ctx context.Context) WirelessSsidsLdapCredentialsPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v WirelessSsidsLdapCredentials) *WirelessSsidsLdapCredentials {
+		return &v
+	}).(WirelessSsidsLdapCredentialsPtrOutput)
+}
+
+// The distinguished name of the LDAP user account (example: cn=user,dc=meraki,dc=com).
+func (o WirelessSsidsLdapCredentialsOutput) DistinguishedName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsLdapCredentials) *string { return v.DistinguishedName }).(pulumi.StringPtrOutput)
+}
+
+// The password of the LDAP user account.
+func (o WirelessSsidsLdapCredentialsOutput) Password() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsLdapCredentials) *string { return v.Password }).(pulumi.StringPtrOutput)
+}
+
+type WirelessSsidsLdapCredentialsPtrOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsLdapCredentialsPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsLdapCredentials)(nil)).Elem()
+}
+
+func (o WirelessSsidsLdapCredentialsPtrOutput) ToWirelessSsidsLdapCredentialsPtrOutput() WirelessSsidsLdapCredentialsPtrOutput {
+	return o
+}
+
+func (o WirelessSsidsLdapCredentialsPtrOutput) ToWirelessSsidsLdapCredentialsPtrOutputWithContext(ctx context.Context) WirelessSsidsLdapCredentialsPtrOutput {
+	return o
+}
+
+func (o WirelessSsidsLdapCredentialsPtrOutput) Elem() WirelessSsidsLdapCredentialsOutput {
+	return o.ApplyT(func(v *WirelessSsidsLdapCredentials) WirelessSsidsLdapCredentials {
+		if v != nil {
+			return *v
+		}
+		var ret WirelessSsidsLdapCredentials
+		return ret
+	}).(WirelessSsidsLdapCredentialsOutput)
+}
+
+// The distinguished name of the LDAP user account (example: cn=user,dc=meraki,dc=com).
+func (o WirelessSsidsLdapCredentialsPtrOutput) DistinguishedName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsLdapCredentials) *string {
+		if v == nil {
+			return nil
+		}
+		return v.DistinguishedName
+	}).(pulumi.StringPtrOutput)
+}
+
+// The password of the LDAP user account.
+func (o WirelessSsidsLdapCredentialsPtrOutput) Password() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsLdapCredentials) *string {
+		if v == nil {
+			return nil
+		}
+		return v.Password
+	}).(pulumi.StringPtrOutput)
+}
+
+type WirelessSsidsLdapServer struct {
+	// IP address (or FQDN) of your LDAP server.
+	Host *string `pulumi:"host"`
+	// UDP port the LDAP server listens on.
+	Port *int `pulumi:"port"`
+}
+
+// WirelessSsidsLdapServerInput is an input type that accepts WirelessSsidsLdapServerArgs and WirelessSsidsLdapServerOutput values.
+// You can construct a concrete instance of `WirelessSsidsLdapServerInput` via:
+//
+//	WirelessSsidsLdapServerArgs{...}
+type WirelessSsidsLdapServerInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsLdapServerOutput() WirelessSsidsLdapServerOutput
+	ToWirelessSsidsLdapServerOutputWithContext(context.Context) WirelessSsidsLdapServerOutput
+}
+
+type WirelessSsidsLdapServerArgs struct {
+	// IP address (or FQDN) of your LDAP server.
+	Host pulumi.StringPtrInput `pulumi:"host"`
+	// UDP port the LDAP server listens on.
+	Port pulumi.IntPtrInput `pulumi:"port"`
+}
+
+func (WirelessSsidsLdapServerArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsLdapServer)(nil)).Elem()
+}
+
+func (i WirelessSsidsLdapServerArgs) ToWirelessSsidsLdapServerOutput() WirelessSsidsLdapServerOutput {
+	return i.ToWirelessSsidsLdapServerOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsLdapServerArgs) ToWirelessSsidsLdapServerOutputWithContext(ctx context.Context) WirelessSsidsLdapServerOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsLdapServerOutput)
+}
+
+// WirelessSsidsLdapServerArrayInput is an input type that accepts WirelessSsidsLdapServerArray and WirelessSsidsLdapServerArrayOutput values.
+// You can construct a concrete instance of `WirelessSsidsLdapServerArrayInput` via:
+//
+//	WirelessSsidsLdapServerArray{ WirelessSsidsLdapServerArgs{...} }
+type WirelessSsidsLdapServerArrayInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsLdapServerArrayOutput() WirelessSsidsLdapServerArrayOutput
+	ToWirelessSsidsLdapServerArrayOutputWithContext(context.Context) WirelessSsidsLdapServerArrayOutput
+}
+
+type WirelessSsidsLdapServerArray []WirelessSsidsLdapServerInput
+
+func (WirelessSsidsLdapServerArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]WirelessSsidsLdapServer)(nil)).Elem()
+}
+
+func (i WirelessSsidsLdapServerArray) ToWirelessSsidsLdapServerArrayOutput() WirelessSsidsLdapServerArrayOutput {
+	return i.ToWirelessSsidsLdapServerArrayOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsLdapServerArray) ToWirelessSsidsLdapServerArrayOutputWithContext(ctx context.Context) WirelessSsidsLdapServerArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsLdapServerArrayOutput)
+}
+
+type WirelessSsidsLdapServerOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsLdapServerOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsLdapServer)(nil)).Elem()
+}
+
+func (o WirelessSsidsLdapServerOutput) ToWirelessSsidsLdapServerOutput() WirelessSsidsLdapServerOutput {
+	return o
+}
+
+func (o WirelessSsidsLdapServerOutput) ToWirelessSsidsLdapServerOutputWithContext(ctx context.Context) WirelessSsidsLdapServerOutput {
+	return o
+}
+
+// IP address (or FQDN) of your LDAP server.
+func (o WirelessSsidsLdapServerOutput) Host() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsLdapServer) *string { return v.Host }).(pulumi.StringPtrOutput)
+}
+
+// UDP port the LDAP server listens on.
+func (o WirelessSsidsLdapServerOutput) Port() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsLdapServer) *int { return v.Port }).(pulumi.IntPtrOutput)
+}
+
+type WirelessSsidsLdapServerArrayOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsLdapServerArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]WirelessSsidsLdapServer)(nil)).Elem()
+}
+
+func (o WirelessSsidsLdapServerArrayOutput) ToWirelessSsidsLdapServerArrayOutput() WirelessSsidsLdapServerArrayOutput {
+	return o
+}
+
+func (o WirelessSsidsLdapServerArrayOutput) ToWirelessSsidsLdapServerArrayOutputWithContext(ctx context.Context) WirelessSsidsLdapServerArrayOutput {
+	return o
+}
+
+func (o WirelessSsidsLdapServerArrayOutput) Index(i pulumi.IntInput) WirelessSsidsLdapServerOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) WirelessSsidsLdapServer {
+		return vs[0].([]WirelessSsidsLdapServer)[vs[1].(int)]
+	}).(WirelessSsidsLdapServerOutput)
+}
+
+type WirelessSsidsLdapServerCaCertificate struct {
+	// The contents of the CA certificate. Must be in PEM or DER format.
+	Contents *string `pulumi:"contents"`
+}
+
+// WirelessSsidsLdapServerCaCertificateInput is an input type that accepts WirelessSsidsLdapServerCaCertificateArgs and WirelessSsidsLdapServerCaCertificateOutput values.
+// You can construct a concrete instance of `WirelessSsidsLdapServerCaCertificateInput` via:
+//
+//	WirelessSsidsLdapServerCaCertificateArgs{...}
+type WirelessSsidsLdapServerCaCertificateInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsLdapServerCaCertificateOutput() WirelessSsidsLdapServerCaCertificateOutput
+	ToWirelessSsidsLdapServerCaCertificateOutputWithContext(context.Context) WirelessSsidsLdapServerCaCertificateOutput
+}
+
+type WirelessSsidsLdapServerCaCertificateArgs struct {
+	// The contents of the CA certificate. Must be in PEM or DER format.
+	Contents pulumi.StringPtrInput `pulumi:"contents"`
+}
+
+func (WirelessSsidsLdapServerCaCertificateArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsLdapServerCaCertificate)(nil)).Elem()
+}
+
+func (i WirelessSsidsLdapServerCaCertificateArgs) ToWirelessSsidsLdapServerCaCertificateOutput() WirelessSsidsLdapServerCaCertificateOutput {
+	return i.ToWirelessSsidsLdapServerCaCertificateOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsLdapServerCaCertificateArgs) ToWirelessSsidsLdapServerCaCertificateOutputWithContext(ctx context.Context) WirelessSsidsLdapServerCaCertificateOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsLdapServerCaCertificateOutput)
+}
+
+func (i WirelessSsidsLdapServerCaCertificateArgs) ToWirelessSsidsLdapServerCaCertificatePtrOutput() WirelessSsidsLdapServerCaCertificatePtrOutput {
+	return i.ToWirelessSsidsLdapServerCaCertificatePtrOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsLdapServerCaCertificateArgs) ToWirelessSsidsLdapServerCaCertificatePtrOutputWithContext(ctx context.Context) WirelessSsidsLdapServerCaCertificatePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsLdapServerCaCertificateOutput).ToWirelessSsidsLdapServerCaCertificatePtrOutputWithContext(ctx)
+}
+
+// WirelessSsidsLdapServerCaCertificatePtrInput is an input type that accepts WirelessSsidsLdapServerCaCertificateArgs, WirelessSsidsLdapServerCaCertificatePtr and WirelessSsidsLdapServerCaCertificatePtrOutput values.
+// You can construct a concrete instance of `WirelessSsidsLdapServerCaCertificatePtrInput` via:
+//
+//	        WirelessSsidsLdapServerCaCertificateArgs{...}
+//
+//	or:
+//
+//	        nil
+type WirelessSsidsLdapServerCaCertificatePtrInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsLdapServerCaCertificatePtrOutput() WirelessSsidsLdapServerCaCertificatePtrOutput
+	ToWirelessSsidsLdapServerCaCertificatePtrOutputWithContext(context.Context) WirelessSsidsLdapServerCaCertificatePtrOutput
+}
+
+type wirelessSsidsLdapServerCaCertificatePtrType WirelessSsidsLdapServerCaCertificateArgs
+
+func WirelessSsidsLdapServerCaCertificatePtr(v *WirelessSsidsLdapServerCaCertificateArgs) WirelessSsidsLdapServerCaCertificatePtrInput {
+	return (*wirelessSsidsLdapServerCaCertificatePtrType)(v)
+}
+
+func (*wirelessSsidsLdapServerCaCertificatePtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsLdapServerCaCertificate)(nil)).Elem()
+}
+
+func (i *wirelessSsidsLdapServerCaCertificatePtrType) ToWirelessSsidsLdapServerCaCertificatePtrOutput() WirelessSsidsLdapServerCaCertificatePtrOutput {
+	return i.ToWirelessSsidsLdapServerCaCertificatePtrOutputWithContext(context.Background())
+}
+
+func (i *wirelessSsidsLdapServerCaCertificatePtrType) ToWirelessSsidsLdapServerCaCertificatePtrOutputWithContext(ctx context.Context) WirelessSsidsLdapServerCaCertificatePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsLdapServerCaCertificatePtrOutput)
+}
+
+type WirelessSsidsLdapServerCaCertificateOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsLdapServerCaCertificateOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsLdapServerCaCertificate)(nil)).Elem()
+}
+
+func (o WirelessSsidsLdapServerCaCertificateOutput) ToWirelessSsidsLdapServerCaCertificateOutput() WirelessSsidsLdapServerCaCertificateOutput {
+	return o
+}
+
+func (o WirelessSsidsLdapServerCaCertificateOutput) ToWirelessSsidsLdapServerCaCertificateOutputWithContext(ctx context.Context) WirelessSsidsLdapServerCaCertificateOutput {
+	return o
+}
+
+func (o WirelessSsidsLdapServerCaCertificateOutput) ToWirelessSsidsLdapServerCaCertificatePtrOutput() WirelessSsidsLdapServerCaCertificatePtrOutput {
+	return o.ToWirelessSsidsLdapServerCaCertificatePtrOutputWithContext(context.Background())
+}
+
+func (o WirelessSsidsLdapServerCaCertificateOutput) ToWirelessSsidsLdapServerCaCertificatePtrOutputWithContext(ctx context.Context) WirelessSsidsLdapServerCaCertificatePtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v WirelessSsidsLdapServerCaCertificate) *WirelessSsidsLdapServerCaCertificate {
+		return &v
+	}).(WirelessSsidsLdapServerCaCertificatePtrOutput)
+}
+
+// The contents of the CA certificate. Must be in PEM or DER format.
+func (o WirelessSsidsLdapServerCaCertificateOutput) Contents() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsLdapServerCaCertificate) *string { return v.Contents }).(pulumi.StringPtrOutput)
+}
+
+type WirelessSsidsLdapServerCaCertificatePtrOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsLdapServerCaCertificatePtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsLdapServerCaCertificate)(nil)).Elem()
+}
+
+func (o WirelessSsidsLdapServerCaCertificatePtrOutput) ToWirelessSsidsLdapServerCaCertificatePtrOutput() WirelessSsidsLdapServerCaCertificatePtrOutput {
+	return o
+}
+
+func (o WirelessSsidsLdapServerCaCertificatePtrOutput) ToWirelessSsidsLdapServerCaCertificatePtrOutputWithContext(ctx context.Context) WirelessSsidsLdapServerCaCertificatePtrOutput {
+	return o
+}
+
+func (o WirelessSsidsLdapServerCaCertificatePtrOutput) Elem() WirelessSsidsLdapServerCaCertificateOutput {
+	return o.ApplyT(func(v *WirelessSsidsLdapServerCaCertificate) WirelessSsidsLdapServerCaCertificate {
+		if v != nil {
+			return *v
+		}
+		var ret WirelessSsidsLdapServerCaCertificate
+		return ret
+	}).(WirelessSsidsLdapServerCaCertificateOutput)
+}
+
+// The contents of the CA certificate. Must be in PEM or DER format.
+func (o WirelessSsidsLdapServerCaCertificatePtrOutput) Contents() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsLdapServerCaCertificate) *string {
+		if v == nil {
+			return nil
+		}
+		return v.Contents
+	}).(pulumi.StringPtrOutput)
+}
+
+type WirelessSsidsLocalRadius struct {
+	// The duration (in seconds) for which LDAP and OCSP lookups are cached.
+	CacheTimeout *int `pulumi:"cacheTimeout"`
+	// The current setting for certificate verification.
+	CertificateAuthentication *WirelessSsidsLocalRadiusCertificateAuthentication `pulumi:"certificateAuthentication"`
+	// The current setting for password-based authentication.
+	PasswordAuthentication *WirelessSsidsLocalRadiusPasswordAuthentication `pulumi:"passwordAuthentication"`
+}
+
+// WirelessSsidsLocalRadiusInput is an input type that accepts WirelessSsidsLocalRadiusArgs and WirelessSsidsLocalRadiusOutput values.
+// You can construct a concrete instance of `WirelessSsidsLocalRadiusInput` via:
+//
+//	WirelessSsidsLocalRadiusArgs{...}
+type WirelessSsidsLocalRadiusInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsLocalRadiusOutput() WirelessSsidsLocalRadiusOutput
+	ToWirelessSsidsLocalRadiusOutputWithContext(context.Context) WirelessSsidsLocalRadiusOutput
+}
+
+type WirelessSsidsLocalRadiusArgs struct {
+	// The duration (in seconds) for which LDAP and OCSP lookups are cached.
+	CacheTimeout pulumi.IntPtrInput `pulumi:"cacheTimeout"`
+	// The current setting for certificate verification.
+	CertificateAuthentication WirelessSsidsLocalRadiusCertificateAuthenticationPtrInput `pulumi:"certificateAuthentication"`
+	// The current setting for password-based authentication.
+	PasswordAuthentication WirelessSsidsLocalRadiusPasswordAuthenticationPtrInput `pulumi:"passwordAuthentication"`
+}
+
+func (WirelessSsidsLocalRadiusArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsLocalRadius)(nil)).Elem()
+}
+
+func (i WirelessSsidsLocalRadiusArgs) ToWirelessSsidsLocalRadiusOutput() WirelessSsidsLocalRadiusOutput {
+	return i.ToWirelessSsidsLocalRadiusOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsLocalRadiusArgs) ToWirelessSsidsLocalRadiusOutputWithContext(ctx context.Context) WirelessSsidsLocalRadiusOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsLocalRadiusOutput)
+}
+
+func (i WirelessSsidsLocalRadiusArgs) ToWirelessSsidsLocalRadiusPtrOutput() WirelessSsidsLocalRadiusPtrOutput {
+	return i.ToWirelessSsidsLocalRadiusPtrOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsLocalRadiusArgs) ToWirelessSsidsLocalRadiusPtrOutputWithContext(ctx context.Context) WirelessSsidsLocalRadiusPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsLocalRadiusOutput).ToWirelessSsidsLocalRadiusPtrOutputWithContext(ctx)
+}
+
+// WirelessSsidsLocalRadiusPtrInput is an input type that accepts WirelessSsidsLocalRadiusArgs, WirelessSsidsLocalRadiusPtr and WirelessSsidsLocalRadiusPtrOutput values.
+// You can construct a concrete instance of `WirelessSsidsLocalRadiusPtrInput` via:
+//
+//	        WirelessSsidsLocalRadiusArgs{...}
+//
+//	or:
+//
+//	        nil
+type WirelessSsidsLocalRadiusPtrInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsLocalRadiusPtrOutput() WirelessSsidsLocalRadiusPtrOutput
+	ToWirelessSsidsLocalRadiusPtrOutputWithContext(context.Context) WirelessSsidsLocalRadiusPtrOutput
+}
+
+type wirelessSsidsLocalRadiusPtrType WirelessSsidsLocalRadiusArgs
+
+func WirelessSsidsLocalRadiusPtr(v *WirelessSsidsLocalRadiusArgs) WirelessSsidsLocalRadiusPtrInput {
+	return (*wirelessSsidsLocalRadiusPtrType)(v)
+}
+
+func (*wirelessSsidsLocalRadiusPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsLocalRadius)(nil)).Elem()
+}
+
+func (i *wirelessSsidsLocalRadiusPtrType) ToWirelessSsidsLocalRadiusPtrOutput() WirelessSsidsLocalRadiusPtrOutput {
+	return i.ToWirelessSsidsLocalRadiusPtrOutputWithContext(context.Background())
+}
+
+func (i *wirelessSsidsLocalRadiusPtrType) ToWirelessSsidsLocalRadiusPtrOutputWithContext(ctx context.Context) WirelessSsidsLocalRadiusPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsLocalRadiusPtrOutput)
+}
+
+type WirelessSsidsLocalRadiusOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsLocalRadiusOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsLocalRadius)(nil)).Elem()
+}
+
+func (o WirelessSsidsLocalRadiusOutput) ToWirelessSsidsLocalRadiusOutput() WirelessSsidsLocalRadiusOutput {
+	return o
+}
+
+func (o WirelessSsidsLocalRadiusOutput) ToWirelessSsidsLocalRadiusOutputWithContext(ctx context.Context) WirelessSsidsLocalRadiusOutput {
+	return o
+}
+
+func (o WirelessSsidsLocalRadiusOutput) ToWirelessSsidsLocalRadiusPtrOutput() WirelessSsidsLocalRadiusPtrOutput {
+	return o.ToWirelessSsidsLocalRadiusPtrOutputWithContext(context.Background())
+}
+
+func (o WirelessSsidsLocalRadiusOutput) ToWirelessSsidsLocalRadiusPtrOutputWithContext(ctx context.Context) WirelessSsidsLocalRadiusPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v WirelessSsidsLocalRadius) *WirelessSsidsLocalRadius {
+		return &v
+	}).(WirelessSsidsLocalRadiusPtrOutput)
+}
+
+// The duration (in seconds) for which LDAP and OCSP lookups are cached.
+func (o WirelessSsidsLocalRadiusOutput) CacheTimeout() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsLocalRadius) *int { return v.CacheTimeout }).(pulumi.IntPtrOutput)
+}
+
+// The current setting for certificate verification.
+func (o WirelessSsidsLocalRadiusOutput) CertificateAuthentication() WirelessSsidsLocalRadiusCertificateAuthenticationPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsLocalRadius) *WirelessSsidsLocalRadiusCertificateAuthentication {
+		return v.CertificateAuthentication
+	}).(WirelessSsidsLocalRadiusCertificateAuthenticationPtrOutput)
+}
+
+// The current setting for password-based authentication.
+func (o WirelessSsidsLocalRadiusOutput) PasswordAuthentication() WirelessSsidsLocalRadiusPasswordAuthenticationPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsLocalRadius) *WirelessSsidsLocalRadiusPasswordAuthentication {
+		return v.PasswordAuthentication
+	}).(WirelessSsidsLocalRadiusPasswordAuthenticationPtrOutput)
+}
+
+type WirelessSsidsLocalRadiusPtrOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsLocalRadiusPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsLocalRadius)(nil)).Elem()
+}
+
+func (o WirelessSsidsLocalRadiusPtrOutput) ToWirelessSsidsLocalRadiusPtrOutput() WirelessSsidsLocalRadiusPtrOutput {
+	return o
+}
+
+func (o WirelessSsidsLocalRadiusPtrOutput) ToWirelessSsidsLocalRadiusPtrOutputWithContext(ctx context.Context) WirelessSsidsLocalRadiusPtrOutput {
+	return o
+}
+
+func (o WirelessSsidsLocalRadiusPtrOutput) Elem() WirelessSsidsLocalRadiusOutput {
+	return o.ApplyT(func(v *WirelessSsidsLocalRadius) WirelessSsidsLocalRadius {
+		if v != nil {
+			return *v
+		}
+		var ret WirelessSsidsLocalRadius
+		return ret
+	}).(WirelessSsidsLocalRadiusOutput)
+}
+
+// The duration (in seconds) for which LDAP and OCSP lookups are cached.
+func (o WirelessSsidsLocalRadiusPtrOutput) CacheTimeout() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsLocalRadius) *int {
+		if v == nil {
+			return nil
+		}
+		return v.CacheTimeout
+	}).(pulumi.IntPtrOutput)
+}
+
+// The current setting for certificate verification.
+func (o WirelessSsidsLocalRadiusPtrOutput) CertificateAuthentication() WirelessSsidsLocalRadiusCertificateAuthenticationPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsLocalRadius) *WirelessSsidsLocalRadiusCertificateAuthentication {
+		if v == nil {
+			return nil
+		}
+		return v.CertificateAuthentication
+	}).(WirelessSsidsLocalRadiusCertificateAuthenticationPtrOutput)
+}
+
+// The current setting for password-based authentication.
+func (o WirelessSsidsLocalRadiusPtrOutput) PasswordAuthentication() WirelessSsidsLocalRadiusPasswordAuthenticationPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsLocalRadius) *WirelessSsidsLocalRadiusPasswordAuthentication {
+		if v == nil {
+			return nil
+		}
+		return v.PasswordAuthentication
+	}).(WirelessSsidsLocalRadiusPasswordAuthenticationPtrOutput)
+}
+
+type WirelessSsidsLocalRadiusCertificateAuthentication struct {
+	// The Client CA Certificate used to sign the client certificate.
+	ClientRootCaCertificate *WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificate `pulumi:"clientRootCaCertificate"`
+	// Whether or not to use EAP-TLS certificate-based authentication to validate wireless clients.
+	Enabled *bool `pulumi:"enabled"`
+	// (Optional) The URL of the OCSP responder to verify client certificate status.
+	OcspResponderUrl *string `pulumi:"ocspResponderUrl"`
+	// Whether or not to verify the certificate with LDAP.
+	UseLdap *bool `pulumi:"useLdap"`
+	// Whether or not to verify the certificate with OCSP.
+	UseOcsp *bool `pulumi:"useOcsp"`
+}
+
+// WirelessSsidsLocalRadiusCertificateAuthenticationInput is an input type that accepts WirelessSsidsLocalRadiusCertificateAuthenticationArgs and WirelessSsidsLocalRadiusCertificateAuthenticationOutput values.
+// You can construct a concrete instance of `WirelessSsidsLocalRadiusCertificateAuthenticationInput` via:
+//
+//	WirelessSsidsLocalRadiusCertificateAuthenticationArgs{...}
+type WirelessSsidsLocalRadiusCertificateAuthenticationInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsLocalRadiusCertificateAuthenticationOutput() WirelessSsidsLocalRadiusCertificateAuthenticationOutput
+	ToWirelessSsidsLocalRadiusCertificateAuthenticationOutputWithContext(context.Context) WirelessSsidsLocalRadiusCertificateAuthenticationOutput
+}
+
+type WirelessSsidsLocalRadiusCertificateAuthenticationArgs struct {
+	// The Client CA Certificate used to sign the client certificate.
+	ClientRootCaCertificate WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrInput `pulumi:"clientRootCaCertificate"`
+	// Whether or not to use EAP-TLS certificate-based authentication to validate wireless clients.
+	Enabled pulumi.BoolPtrInput `pulumi:"enabled"`
+	// (Optional) The URL of the OCSP responder to verify client certificate status.
+	OcspResponderUrl pulumi.StringPtrInput `pulumi:"ocspResponderUrl"`
+	// Whether or not to verify the certificate with LDAP.
+	UseLdap pulumi.BoolPtrInput `pulumi:"useLdap"`
+	// Whether or not to verify the certificate with OCSP.
+	UseOcsp pulumi.BoolPtrInput `pulumi:"useOcsp"`
+}
+
+func (WirelessSsidsLocalRadiusCertificateAuthenticationArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsLocalRadiusCertificateAuthentication)(nil)).Elem()
+}
+
+func (i WirelessSsidsLocalRadiusCertificateAuthenticationArgs) ToWirelessSsidsLocalRadiusCertificateAuthenticationOutput() WirelessSsidsLocalRadiusCertificateAuthenticationOutput {
+	return i.ToWirelessSsidsLocalRadiusCertificateAuthenticationOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsLocalRadiusCertificateAuthenticationArgs) ToWirelessSsidsLocalRadiusCertificateAuthenticationOutputWithContext(ctx context.Context) WirelessSsidsLocalRadiusCertificateAuthenticationOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsLocalRadiusCertificateAuthenticationOutput)
+}
+
+func (i WirelessSsidsLocalRadiusCertificateAuthenticationArgs) ToWirelessSsidsLocalRadiusCertificateAuthenticationPtrOutput() WirelessSsidsLocalRadiusCertificateAuthenticationPtrOutput {
+	return i.ToWirelessSsidsLocalRadiusCertificateAuthenticationPtrOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsLocalRadiusCertificateAuthenticationArgs) ToWirelessSsidsLocalRadiusCertificateAuthenticationPtrOutputWithContext(ctx context.Context) WirelessSsidsLocalRadiusCertificateAuthenticationPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsLocalRadiusCertificateAuthenticationOutput).ToWirelessSsidsLocalRadiusCertificateAuthenticationPtrOutputWithContext(ctx)
+}
+
+// WirelessSsidsLocalRadiusCertificateAuthenticationPtrInput is an input type that accepts WirelessSsidsLocalRadiusCertificateAuthenticationArgs, WirelessSsidsLocalRadiusCertificateAuthenticationPtr and WirelessSsidsLocalRadiusCertificateAuthenticationPtrOutput values.
+// You can construct a concrete instance of `WirelessSsidsLocalRadiusCertificateAuthenticationPtrInput` via:
+//
+//	        WirelessSsidsLocalRadiusCertificateAuthenticationArgs{...}
+//
+//	or:
+//
+//	        nil
+type WirelessSsidsLocalRadiusCertificateAuthenticationPtrInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsLocalRadiusCertificateAuthenticationPtrOutput() WirelessSsidsLocalRadiusCertificateAuthenticationPtrOutput
+	ToWirelessSsidsLocalRadiusCertificateAuthenticationPtrOutputWithContext(context.Context) WirelessSsidsLocalRadiusCertificateAuthenticationPtrOutput
+}
+
+type wirelessSsidsLocalRadiusCertificateAuthenticationPtrType WirelessSsidsLocalRadiusCertificateAuthenticationArgs
+
+func WirelessSsidsLocalRadiusCertificateAuthenticationPtr(v *WirelessSsidsLocalRadiusCertificateAuthenticationArgs) WirelessSsidsLocalRadiusCertificateAuthenticationPtrInput {
+	return (*wirelessSsidsLocalRadiusCertificateAuthenticationPtrType)(v)
+}
+
+func (*wirelessSsidsLocalRadiusCertificateAuthenticationPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsLocalRadiusCertificateAuthentication)(nil)).Elem()
+}
+
+func (i *wirelessSsidsLocalRadiusCertificateAuthenticationPtrType) ToWirelessSsidsLocalRadiusCertificateAuthenticationPtrOutput() WirelessSsidsLocalRadiusCertificateAuthenticationPtrOutput {
+	return i.ToWirelessSsidsLocalRadiusCertificateAuthenticationPtrOutputWithContext(context.Background())
+}
+
+func (i *wirelessSsidsLocalRadiusCertificateAuthenticationPtrType) ToWirelessSsidsLocalRadiusCertificateAuthenticationPtrOutputWithContext(ctx context.Context) WirelessSsidsLocalRadiusCertificateAuthenticationPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsLocalRadiusCertificateAuthenticationPtrOutput)
+}
+
+type WirelessSsidsLocalRadiusCertificateAuthenticationOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsLocalRadiusCertificateAuthenticationOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsLocalRadiusCertificateAuthentication)(nil)).Elem()
+}
+
+func (o WirelessSsidsLocalRadiusCertificateAuthenticationOutput) ToWirelessSsidsLocalRadiusCertificateAuthenticationOutput() WirelessSsidsLocalRadiusCertificateAuthenticationOutput {
+	return o
+}
+
+func (o WirelessSsidsLocalRadiusCertificateAuthenticationOutput) ToWirelessSsidsLocalRadiusCertificateAuthenticationOutputWithContext(ctx context.Context) WirelessSsidsLocalRadiusCertificateAuthenticationOutput {
+	return o
+}
+
+func (o WirelessSsidsLocalRadiusCertificateAuthenticationOutput) ToWirelessSsidsLocalRadiusCertificateAuthenticationPtrOutput() WirelessSsidsLocalRadiusCertificateAuthenticationPtrOutput {
+	return o.ToWirelessSsidsLocalRadiusCertificateAuthenticationPtrOutputWithContext(context.Background())
+}
+
+func (o WirelessSsidsLocalRadiusCertificateAuthenticationOutput) ToWirelessSsidsLocalRadiusCertificateAuthenticationPtrOutputWithContext(ctx context.Context) WirelessSsidsLocalRadiusCertificateAuthenticationPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v WirelessSsidsLocalRadiusCertificateAuthentication) *WirelessSsidsLocalRadiusCertificateAuthentication {
+		return &v
+	}).(WirelessSsidsLocalRadiusCertificateAuthenticationPtrOutput)
+}
+
+// The Client CA Certificate used to sign the client certificate.
+func (o WirelessSsidsLocalRadiusCertificateAuthenticationOutput) ClientRootCaCertificate() WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutput {
+	return o.ApplyT(func(v WirelessSsidsLocalRadiusCertificateAuthentication) *WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificate {
+		return v.ClientRootCaCertificate
+	}).(WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutput)
+}
+
+// Whether or not to use EAP-TLS certificate-based authentication to validate wireless clients.
+func (o WirelessSsidsLocalRadiusCertificateAuthenticationOutput) Enabled() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsLocalRadiusCertificateAuthentication) *bool { return v.Enabled }).(pulumi.BoolPtrOutput)
+}
+
+// (Optional) The URL of the OCSP responder to verify client certificate status.
+func (o WirelessSsidsLocalRadiusCertificateAuthenticationOutput) OcspResponderUrl() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsLocalRadiusCertificateAuthentication) *string { return v.OcspResponderUrl }).(pulumi.StringPtrOutput)
+}
+
+// Whether or not to verify the certificate with LDAP.
+func (o WirelessSsidsLocalRadiusCertificateAuthenticationOutput) UseLdap() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsLocalRadiusCertificateAuthentication) *bool { return v.UseLdap }).(pulumi.BoolPtrOutput)
+}
+
+// Whether or not to verify the certificate with OCSP.
+func (o WirelessSsidsLocalRadiusCertificateAuthenticationOutput) UseOcsp() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsLocalRadiusCertificateAuthentication) *bool { return v.UseOcsp }).(pulumi.BoolPtrOutput)
+}
+
+type WirelessSsidsLocalRadiusCertificateAuthenticationPtrOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsLocalRadiusCertificateAuthenticationPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsLocalRadiusCertificateAuthentication)(nil)).Elem()
+}
+
+func (o WirelessSsidsLocalRadiusCertificateAuthenticationPtrOutput) ToWirelessSsidsLocalRadiusCertificateAuthenticationPtrOutput() WirelessSsidsLocalRadiusCertificateAuthenticationPtrOutput {
+	return o
+}
+
+func (o WirelessSsidsLocalRadiusCertificateAuthenticationPtrOutput) ToWirelessSsidsLocalRadiusCertificateAuthenticationPtrOutputWithContext(ctx context.Context) WirelessSsidsLocalRadiusCertificateAuthenticationPtrOutput {
+	return o
+}
+
+func (o WirelessSsidsLocalRadiusCertificateAuthenticationPtrOutput) Elem() WirelessSsidsLocalRadiusCertificateAuthenticationOutput {
+	return o.ApplyT(func(v *WirelessSsidsLocalRadiusCertificateAuthentication) WirelessSsidsLocalRadiusCertificateAuthentication {
+		if v != nil {
+			return *v
+		}
+		var ret WirelessSsidsLocalRadiusCertificateAuthentication
+		return ret
+	}).(WirelessSsidsLocalRadiusCertificateAuthenticationOutput)
+}
+
+// The Client CA Certificate used to sign the client certificate.
+func (o WirelessSsidsLocalRadiusCertificateAuthenticationPtrOutput) ClientRootCaCertificate() WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsLocalRadiusCertificateAuthentication) *WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificate {
+		if v == nil {
+			return nil
+		}
+		return v.ClientRootCaCertificate
+	}).(WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutput)
+}
+
+// Whether or not to use EAP-TLS certificate-based authentication to validate wireless clients.
+func (o WirelessSsidsLocalRadiusCertificateAuthenticationPtrOutput) Enabled() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsLocalRadiusCertificateAuthentication) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.Enabled
+	}).(pulumi.BoolPtrOutput)
+}
+
+// (Optional) The URL of the OCSP responder to verify client certificate status.
+func (o WirelessSsidsLocalRadiusCertificateAuthenticationPtrOutput) OcspResponderUrl() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsLocalRadiusCertificateAuthentication) *string {
+		if v == nil {
+			return nil
+		}
+		return v.OcspResponderUrl
+	}).(pulumi.StringPtrOutput)
+}
+
+// Whether or not to verify the certificate with LDAP.
+func (o WirelessSsidsLocalRadiusCertificateAuthenticationPtrOutput) UseLdap() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsLocalRadiusCertificateAuthentication) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.UseLdap
+	}).(pulumi.BoolPtrOutput)
+}
+
+// Whether or not to verify the certificate with OCSP.
+func (o WirelessSsidsLocalRadiusCertificateAuthenticationPtrOutput) UseOcsp() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsLocalRadiusCertificateAuthentication) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.UseOcsp
+	}).(pulumi.BoolPtrOutput)
+}
+
+type WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificate struct {
+	// The contents of the Client CA Certificate. Must be in PEM or DER format.
+	Contents *string `pulumi:"contents"`
+}
+
+// WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateInput is an input type that accepts WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateArgs and WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateOutput values.
+// You can construct a concrete instance of `WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateInput` via:
+//
+//	WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateArgs{...}
+type WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateOutput() WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateOutput
+	ToWirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateOutputWithContext(context.Context) WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateOutput
+}
+
+type WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateArgs struct {
+	// The contents of the Client CA Certificate. Must be in PEM or DER format.
+	Contents pulumi.StringPtrInput `pulumi:"contents"`
+}
+
+func (WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificate)(nil)).Elem()
+}
+
+func (i WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateArgs) ToWirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateOutput() WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateOutput {
+	return i.ToWirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateArgs) ToWirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateOutputWithContext(ctx context.Context) WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateOutput)
+}
+
+func (i WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateArgs) ToWirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutput() WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutput {
+	return i.ToWirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateArgs) ToWirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutputWithContext(ctx context.Context) WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateOutput).ToWirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutputWithContext(ctx)
+}
+
+// WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrInput is an input type that accepts WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateArgs, WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtr and WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutput values.
+// You can construct a concrete instance of `WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrInput` via:
+//
+//	        WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateArgs{...}
+//
+//	or:
+//
+//	        nil
+type WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutput() WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutput
+	ToWirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutputWithContext(context.Context) WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutput
+}
+
+type wirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrType WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateArgs
+
+func WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtr(v *WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateArgs) WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrInput {
+	return (*wirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrType)(v)
+}
+
+func (*wirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificate)(nil)).Elem()
+}
+
+func (i *wirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrType) ToWirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutput() WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutput {
+	return i.ToWirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutputWithContext(context.Background())
+}
+
+func (i *wirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrType) ToWirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutputWithContext(ctx context.Context) WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutput)
+}
+
+type WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificate)(nil)).Elem()
+}
+
+func (o WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateOutput) ToWirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateOutput() WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateOutput {
+	return o
+}
+
+func (o WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateOutput) ToWirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateOutputWithContext(ctx context.Context) WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateOutput {
+	return o
+}
+
+func (o WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateOutput) ToWirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutput() WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutput {
+	return o.ToWirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutputWithContext(context.Background())
+}
+
+func (o WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateOutput) ToWirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutputWithContext(ctx context.Context) WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificate) *WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificate {
+		return &v
+	}).(WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutput)
+}
+
+// The contents of the Client CA Certificate. Must be in PEM or DER format.
+func (o WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateOutput) Contents() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificate) *string {
+		return v.Contents
+	}).(pulumi.StringPtrOutput)
+}
+
+type WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificate)(nil)).Elem()
+}
+
+func (o WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutput) ToWirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutput() WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutput {
+	return o
+}
+
+func (o WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutput) ToWirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutputWithContext(ctx context.Context) WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutput {
+	return o
+}
+
+func (o WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutput) Elem() WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateOutput {
+	return o.ApplyT(func(v *WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificate) WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificate {
+		if v != nil {
+			return *v
+		}
+		var ret WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificate
+		return ret
+	}).(WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateOutput)
+}
+
+// The contents of the Client CA Certificate. Must be in PEM or DER format.
+func (o WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutput) Contents() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificate) *string {
+		if v == nil {
+			return nil
+		}
+		return v.Contents
+	}).(pulumi.StringPtrOutput)
+}
+
+type WirelessSsidsLocalRadiusPasswordAuthentication struct {
+	// Whether or not to use EAP-TTLS/PAP or PEAP-GTC password-based authentication via LDAP lookup.
+	Enabled *bool `pulumi:"enabled"`
+}
+
+// WirelessSsidsLocalRadiusPasswordAuthenticationInput is an input type that accepts WirelessSsidsLocalRadiusPasswordAuthenticationArgs and WirelessSsidsLocalRadiusPasswordAuthenticationOutput values.
+// You can construct a concrete instance of `WirelessSsidsLocalRadiusPasswordAuthenticationInput` via:
+//
+//	WirelessSsidsLocalRadiusPasswordAuthenticationArgs{...}
+type WirelessSsidsLocalRadiusPasswordAuthenticationInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsLocalRadiusPasswordAuthenticationOutput() WirelessSsidsLocalRadiusPasswordAuthenticationOutput
+	ToWirelessSsidsLocalRadiusPasswordAuthenticationOutputWithContext(context.Context) WirelessSsidsLocalRadiusPasswordAuthenticationOutput
+}
+
+type WirelessSsidsLocalRadiusPasswordAuthenticationArgs struct {
+	// Whether or not to use EAP-TTLS/PAP or PEAP-GTC password-based authentication via LDAP lookup.
+	Enabled pulumi.BoolPtrInput `pulumi:"enabled"`
+}
+
+func (WirelessSsidsLocalRadiusPasswordAuthenticationArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsLocalRadiusPasswordAuthentication)(nil)).Elem()
+}
+
+func (i WirelessSsidsLocalRadiusPasswordAuthenticationArgs) ToWirelessSsidsLocalRadiusPasswordAuthenticationOutput() WirelessSsidsLocalRadiusPasswordAuthenticationOutput {
+	return i.ToWirelessSsidsLocalRadiusPasswordAuthenticationOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsLocalRadiusPasswordAuthenticationArgs) ToWirelessSsidsLocalRadiusPasswordAuthenticationOutputWithContext(ctx context.Context) WirelessSsidsLocalRadiusPasswordAuthenticationOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsLocalRadiusPasswordAuthenticationOutput)
+}
+
+func (i WirelessSsidsLocalRadiusPasswordAuthenticationArgs) ToWirelessSsidsLocalRadiusPasswordAuthenticationPtrOutput() WirelessSsidsLocalRadiusPasswordAuthenticationPtrOutput {
+	return i.ToWirelessSsidsLocalRadiusPasswordAuthenticationPtrOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsLocalRadiusPasswordAuthenticationArgs) ToWirelessSsidsLocalRadiusPasswordAuthenticationPtrOutputWithContext(ctx context.Context) WirelessSsidsLocalRadiusPasswordAuthenticationPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsLocalRadiusPasswordAuthenticationOutput).ToWirelessSsidsLocalRadiusPasswordAuthenticationPtrOutputWithContext(ctx)
+}
+
+// WirelessSsidsLocalRadiusPasswordAuthenticationPtrInput is an input type that accepts WirelessSsidsLocalRadiusPasswordAuthenticationArgs, WirelessSsidsLocalRadiusPasswordAuthenticationPtr and WirelessSsidsLocalRadiusPasswordAuthenticationPtrOutput values.
+// You can construct a concrete instance of `WirelessSsidsLocalRadiusPasswordAuthenticationPtrInput` via:
+//
+//	        WirelessSsidsLocalRadiusPasswordAuthenticationArgs{...}
+//
+//	or:
+//
+//	        nil
+type WirelessSsidsLocalRadiusPasswordAuthenticationPtrInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsLocalRadiusPasswordAuthenticationPtrOutput() WirelessSsidsLocalRadiusPasswordAuthenticationPtrOutput
+	ToWirelessSsidsLocalRadiusPasswordAuthenticationPtrOutputWithContext(context.Context) WirelessSsidsLocalRadiusPasswordAuthenticationPtrOutput
+}
+
+type wirelessSsidsLocalRadiusPasswordAuthenticationPtrType WirelessSsidsLocalRadiusPasswordAuthenticationArgs
+
+func WirelessSsidsLocalRadiusPasswordAuthenticationPtr(v *WirelessSsidsLocalRadiusPasswordAuthenticationArgs) WirelessSsidsLocalRadiusPasswordAuthenticationPtrInput {
+	return (*wirelessSsidsLocalRadiusPasswordAuthenticationPtrType)(v)
+}
+
+func (*wirelessSsidsLocalRadiusPasswordAuthenticationPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsLocalRadiusPasswordAuthentication)(nil)).Elem()
+}
+
+func (i *wirelessSsidsLocalRadiusPasswordAuthenticationPtrType) ToWirelessSsidsLocalRadiusPasswordAuthenticationPtrOutput() WirelessSsidsLocalRadiusPasswordAuthenticationPtrOutput {
+	return i.ToWirelessSsidsLocalRadiusPasswordAuthenticationPtrOutputWithContext(context.Background())
+}
+
+func (i *wirelessSsidsLocalRadiusPasswordAuthenticationPtrType) ToWirelessSsidsLocalRadiusPasswordAuthenticationPtrOutputWithContext(ctx context.Context) WirelessSsidsLocalRadiusPasswordAuthenticationPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsLocalRadiusPasswordAuthenticationPtrOutput)
+}
+
+type WirelessSsidsLocalRadiusPasswordAuthenticationOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsLocalRadiusPasswordAuthenticationOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsLocalRadiusPasswordAuthentication)(nil)).Elem()
+}
+
+func (o WirelessSsidsLocalRadiusPasswordAuthenticationOutput) ToWirelessSsidsLocalRadiusPasswordAuthenticationOutput() WirelessSsidsLocalRadiusPasswordAuthenticationOutput {
+	return o
+}
+
+func (o WirelessSsidsLocalRadiusPasswordAuthenticationOutput) ToWirelessSsidsLocalRadiusPasswordAuthenticationOutputWithContext(ctx context.Context) WirelessSsidsLocalRadiusPasswordAuthenticationOutput {
+	return o
+}
+
+func (o WirelessSsidsLocalRadiusPasswordAuthenticationOutput) ToWirelessSsidsLocalRadiusPasswordAuthenticationPtrOutput() WirelessSsidsLocalRadiusPasswordAuthenticationPtrOutput {
+	return o.ToWirelessSsidsLocalRadiusPasswordAuthenticationPtrOutputWithContext(context.Background())
+}
+
+func (o WirelessSsidsLocalRadiusPasswordAuthenticationOutput) ToWirelessSsidsLocalRadiusPasswordAuthenticationPtrOutputWithContext(ctx context.Context) WirelessSsidsLocalRadiusPasswordAuthenticationPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v WirelessSsidsLocalRadiusPasswordAuthentication) *WirelessSsidsLocalRadiusPasswordAuthentication {
+		return &v
+	}).(WirelessSsidsLocalRadiusPasswordAuthenticationPtrOutput)
+}
+
+// Whether or not to use EAP-TTLS/PAP or PEAP-GTC password-based authentication via LDAP lookup.
+func (o WirelessSsidsLocalRadiusPasswordAuthenticationOutput) Enabled() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsLocalRadiusPasswordAuthentication) *bool { return v.Enabled }).(pulumi.BoolPtrOutput)
+}
+
+type WirelessSsidsLocalRadiusPasswordAuthenticationPtrOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsLocalRadiusPasswordAuthenticationPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsLocalRadiusPasswordAuthentication)(nil)).Elem()
+}
+
+func (o WirelessSsidsLocalRadiusPasswordAuthenticationPtrOutput) ToWirelessSsidsLocalRadiusPasswordAuthenticationPtrOutput() WirelessSsidsLocalRadiusPasswordAuthenticationPtrOutput {
+	return o
+}
+
+func (o WirelessSsidsLocalRadiusPasswordAuthenticationPtrOutput) ToWirelessSsidsLocalRadiusPasswordAuthenticationPtrOutputWithContext(ctx context.Context) WirelessSsidsLocalRadiusPasswordAuthenticationPtrOutput {
+	return o
+}
+
+func (o WirelessSsidsLocalRadiusPasswordAuthenticationPtrOutput) Elem() WirelessSsidsLocalRadiusPasswordAuthenticationOutput {
+	return o.ApplyT(func(v *WirelessSsidsLocalRadiusPasswordAuthentication) WirelessSsidsLocalRadiusPasswordAuthentication {
+		if v != nil {
+			return *v
+		}
+		var ret WirelessSsidsLocalRadiusPasswordAuthentication
+		return ret
+	}).(WirelessSsidsLocalRadiusPasswordAuthenticationOutput)
+}
+
+// Whether or not to use EAP-TTLS/PAP or PEAP-GTC password-based authentication via LDAP lookup.
+func (o WirelessSsidsLocalRadiusPasswordAuthenticationPtrOutput) Enabled() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsLocalRadiusPasswordAuthentication) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.Enabled
+	}).(pulumi.BoolPtrOutput)
+}
+
+type WirelessSsidsNamedVlans struct {
+	// RADIUS settings. This param is only valid when authMode is 'open-with-radius' and ipAssignmentMode is not 'NAT mode'.
+	Radius *WirelessSsidsNamedVlansRadius `pulumi:"radius"`
+	// VLAN tagging settings. This param is only valid when ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'.
+	Tagging *WirelessSsidsNamedVlansTagging `pulumi:"tagging"`
+}
+
+// WirelessSsidsNamedVlansInput is an input type that accepts WirelessSsidsNamedVlansArgs and WirelessSsidsNamedVlansOutput values.
+// You can construct a concrete instance of `WirelessSsidsNamedVlansInput` via:
+//
+//	WirelessSsidsNamedVlansArgs{...}
+type WirelessSsidsNamedVlansInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsNamedVlansOutput() WirelessSsidsNamedVlansOutput
+	ToWirelessSsidsNamedVlansOutputWithContext(context.Context) WirelessSsidsNamedVlansOutput
+}
+
+type WirelessSsidsNamedVlansArgs struct {
+	// RADIUS settings. This param is only valid when authMode is 'open-with-radius' and ipAssignmentMode is not 'NAT mode'.
+	Radius WirelessSsidsNamedVlansRadiusPtrInput `pulumi:"radius"`
+	// VLAN tagging settings. This param is only valid when ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'.
+	Tagging WirelessSsidsNamedVlansTaggingPtrInput `pulumi:"tagging"`
+}
+
+func (WirelessSsidsNamedVlansArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsNamedVlans)(nil)).Elem()
+}
+
+func (i WirelessSsidsNamedVlansArgs) ToWirelessSsidsNamedVlansOutput() WirelessSsidsNamedVlansOutput {
+	return i.ToWirelessSsidsNamedVlansOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsNamedVlansArgs) ToWirelessSsidsNamedVlansOutputWithContext(ctx context.Context) WirelessSsidsNamedVlansOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsNamedVlansOutput)
+}
+
+func (i WirelessSsidsNamedVlansArgs) ToWirelessSsidsNamedVlansPtrOutput() WirelessSsidsNamedVlansPtrOutput {
+	return i.ToWirelessSsidsNamedVlansPtrOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsNamedVlansArgs) ToWirelessSsidsNamedVlansPtrOutputWithContext(ctx context.Context) WirelessSsidsNamedVlansPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsNamedVlansOutput).ToWirelessSsidsNamedVlansPtrOutputWithContext(ctx)
+}
+
+// WirelessSsidsNamedVlansPtrInput is an input type that accepts WirelessSsidsNamedVlansArgs, WirelessSsidsNamedVlansPtr and WirelessSsidsNamedVlansPtrOutput values.
+// You can construct a concrete instance of `WirelessSsidsNamedVlansPtrInput` via:
+//
+//	        WirelessSsidsNamedVlansArgs{...}
+//
+//	or:
+//
+//	        nil
+type WirelessSsidsNamedVlansPtrInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsNamedVlansPtrOutput() WirelessSsidsNamedVlansPtrOutput
+	ToWirelessSsidsNamedVlansPtrOutputWithContext(context.Context) WirelessSsidsNamedVlansPtrOutput
+}
+
+type wirelessSsidsNamedVlansPtrType WirelessSsidsNamedVlansArgs
+
+func WirelessSsidsNamedVlansPtr(v *WirelessSsidsNamedVlansArgs) WirelessSsidsNamedVlansPtrInput {
+	return (*wirelessSsidsNamedVlansPtrType)(v)
+}
+
+func (*wirelessSsidsNamedVlansPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsNamedVlans)(nil)).Elem()
+}
+
+func (i *wirelessSsidsNamedVlansPtrType) ToWirelessSsidsNamedVlansPtrOutput() WirelessSsidsNamedVlansPtrOutput {
+	return i.ToWirelessSsidsNamedVlansPtrOutputWithContext(context.Background())
+}
+
+func (i *wirelessSsidsNamedVlansPtrType) ToWirelessSsidsNamedVlansPtrOutputWithContext(ctx context.Context) WirelessSsidsNamedVlansPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsNamedVlansPtrOutput)
+}
+
+type WirelessSsidsNamedVlansOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsNamedVlansOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsNamedVlans)(nil)).Elem()
+}
+
+func (o WirelessSsidsNamedVlansOutput) ToWirelessSsidsNamedVlansOutput() WirelessSsidsNamedVlansOutput {
+	return o
+}
+
+func (o WirelessSsidsNamedVlansOutput) ToWirelessSsidsNamedVlansOutputWithContext(ctx context.Context) WirelessSsidsNamedVlansOutput {
+	return o
+}
+
+func (o WirelessSsidsNamedVlansOutput) ToWirelessSsidsNamedVlansPtrOutput() WirelessSsidsNamedVlansPtrOutput {
+	return o.ToWirelessSsidsNamedVlansPtrOutputWithContext(context.Background())
+}
+
+func (o WirelessSsidsNamedVlansOutput) ToWirelessSsidsNamedVlansPtrOutputWithContext(ctx context.Context) WirelessSsidsNamedVlansPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v WirelessSsidsNamedVlans) *WirelessSsidsNamedVlans {
+		return &v
+	}).(WirelessSsidsNamedVlansPtrOutput)
+}
+
+// RADIUS settings. This param is only valid when authMode is 'open-with-radius' and ipAssignmentMode is not 'NAT mode'.
+func (o WirelessSsidsNamedVlansOutput) Radius() WirelessSsidsNamedVlansRadiusPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsNamedVlans) *WirelessSsidsNamedVlansRadius { return v.Radius }).(WirelessSsidsNamedVlansRadiusPtrOutput)
+}
+
+// VLAN tagging settings. This param is only valid when ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'.
+func (o WirelessSsidsNamedVlansOutput) Tagging() WirelessSsidsNamedVlansTaggingPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsNamedVlans) *WirelessSsidsNamedVlansTagging { return v.Tagging }).(WirelessSsidsNamedVlansTaggingPtrOutput)
+}
+
+type WirelessSsidsNamedVlansPtrOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsNamedVlansPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsNamedVlans)(nil)).Elem()
+}
+
+func (o WirelessSsidsNamedVlansPtrOutput) ToWirelessSsidsNamedVlansPtrOutput() WirelessSsidsNamedVlansPtrOutput {
+	return o
+}
+
+func (o WirelessSsidsNamedVlansPtrOutput) ToWirelessSsidsNamedVlansPtrOutputWithContext(ctx context.Context) WirelessSsidsNamedVlansPtrOutput {
+	return o
+}
+
+func (o WirelessSsidsNamedVlansPtrOutput) Elem() WirelessSsidsNamedVlansOutput {
+	return o.ApplyT(func(v *WirelessSsidsNamedVlans) WirelessSsidsNamedVlans {
+		if v != nil {
+			return *v
+		}
+		var ret WirelessSsidsNamedVlans
+		return ret
+	}).(WirelessSsidsNamedVlansOutput)
+}
+
+// RADIUS settings. This param is only valid when authMode is 'open-with-radius' and ipAssignmentMode is not 'NAT mode'.
+func (o WirelessSsidsNamedVlansPtrOutput) Radius() WirelessSsidsNamedVlansRadiusPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsNamedVlans) *WirelessSsidsNamedVlansRadius {
+		if v == nil {
+			return nil
+		}
+		return v.Radius
+	}).(WirelessSsidsNamedVlansRadiusPtrOutput)
+}
+
+// VLAN tagging settings. This param is only valid when ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'.
+func (o WirelessSsidsNamedVlansPtrOutput) Tagging() WirelessSsidsNamedVlansTaggingPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsNamedVlans) *WirelessSsidsNamedVlansTagging {
+		if v == nil {
+			return nil
+		}
+		return v.Tagging
+	}).(WirelessSsidsNamedVlansTaggingPtrOutput)
+}
+
+type WirelessSsidsNamedVlansRadius struct {
+	// Guest VLAN settings. Used to direct traffic to a guest VLAN when none of the RADIUS servers are reachable or a client receives access-reject from the RADIUS server.
+	GuestVlan *WirelessSsidsNamedVlansRadiusGuestVlan `pulumi:"guestVlan"`
+}
+
+// WirelessSsidsNamedVlansRadiusInput is an input type that accepts WirelessSsidsNamedVlansRadiusArgs and WirelessSsidsNamedVlansRadiusOutput values.
+// You can construct a concrete instance of `WirelessSsidsNamedVlansRadiusInput` via:
+//
+//	WirelessSsidsNamedVlansRadiusArgs{...}
+type WirelessSsidsNamedVlansRadiusInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsNamedVlansRadiusOutput() WirelessSsidsNamedVlansRadiusOutput
+	ToWirelessSsidsNamedVlansRadiusOutputWithContext(context.Context) WirelessSsidsNamedVlansRadiusOutput
+}
+
+type WirelessSsidsNamedVlansRadiusArgs struct {
+	// Guest VLAN settings. Used to direct traffic to a guest VLAN when none of the RADIUS servers are reachable or a client receives access-reject from the RADIUS server.
+	GuestVlan WirelessSsidsNamedVlansRadiusGuestVlanPtrInput `pulumi:"guestVlan"`
+}
+
+func (WirelessSsidsNamedVlansRadiusArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsNamedVlansRadius)(nil)).Elem()
+}
+
+func (i WirelessSsidsNamedVlansRadiusArgs) ToWirelessSsidsNamedVlansRadiusOutput() WirelessSsidsNamedVlansRadiusOutput {
+	return i.ToWirelessSsidsNamedVlansRadiusOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsNamedVlansRadiusArgs) ToWirelessSsidsNamedVlansRadiusOutputWithContext(ctx context.Context) WirelessSsidsNamedVlansRadiusOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsNamedVlansRadiusOutput)
+}
+
+func (i WirelessSsidsNamedVlansRadiusArgs) ToWirelessSsidsNamedVlansRadiusPtrOutput() WirelessSsidsNamedVlansRadiusPtrOutput {
+	return i.ToWirelessSsidsNamedVlansRadiusPtrOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsNamedVlansRadiusArgs) ToWirelessSsidsNamedVlansRadiusPtrOutputWithContext(ctx context.Context) WirelessSsidsNamedVlansRadiusPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsNamedVlansRadiusOutput).ToWirelessSsidsNamedVlansRadiusPtrOutputWithContext(ctx)
+}
+
+// WirelessSsidsNamedVlansRadiusPtrInput is an input type that accepts WirelessSsidsNamedVlansRadiusArgs, WirelessSsidsNamedVlansRadiusPtr and WirelessSsidsNamedVlansRadiusPtrOutput values.
+// You can construct a concrete instance of `WirelessSsidsNamedVlansRadiusPtrInput` via:
+//
+//	        WirelessSsidsNamedVlansRadiusArgs{...}
+//
+//	or:
+//
+//	        nil
+type WirelessSsidsNamedVlansRadiusPtrInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsNamedVlansRadiusPtrOutput() WirelessSsidsNamedVlansRadiusPtrOutput
+	ToWirelessSsidsNamedVlansRadiusPtrOutputWithContext(context.Context) WirelessSsidsNamedVlansRadiusPtrOutput
+}
+
+type wirelessSsidsNamedVlansRadiusPtrType WirelessSsidsNamedVlansRadiusArgs
+
+func WirelessSsidsNamedVlansRadiusPtr(v *WirelessSsidsNamedVlansRadiusArgs) WirelessSsidsNamedVlansRadiusPtrInput {
+	return (*wirelessSsidsNamedVlansRadiusPtrType)(v)
+}
+
+func (*wirelessSsidsNamedVlansRadiusPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsNamedVlansRadius)(nil)).Elem()
+}
+
+func (i *wirelessSsidsNamedVlansRadiusPtrType) ToWirelessSsidsNamedVlansRadiusPtrOutput() WirelessSsidsNamedVlansRadiusPtrOutput {
+	return i.ToWirelessSsidsNamedVlansRadiusPtrOutputWithContext(context.Background())
+}
+
+func (i *wirelessSsidsNamedVlansRadiusPtrType) ToWirelessSsidsNamedVlansRadiusPtrOutputWithContext(ctx context.Context) WirelessSsidsNamedVlansRadiusPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsNamedVlansRadiusPtrOutput)
+}
+
+type WirelessSsidsNamedVlansRadiusOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsNamedVlansRadiusOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsNamedVlansRadius)(nil)).Elem()
+}
+
+func (o WirelessSsidsNamedVlansRadiusOutput) ToWirelessSsidsNamedVlansRadiusOutput() WirelessSsidsNamedVlansRadiusOutput {
+	return o
+}
+
+func (o WirelessSsidsNamedVlansRadiusOutput) ToWirelessSsidsNamedVlansRadiusOutputWithContext(ctx context.Context) WirelessSsidsNamedVlansRadiusOutput {
+	return o
+}
+
+func (o WirelessSsidsNamedVlansRadiusOutput) ToWirelessSsidsNamedVlansRadiusPtrOutput() WirelessSsidsNamedVlansRadiusPtrOutput {
+	return o.ToWirelessSsidsNamedVlansRadiusPtrOutputWithContext(context.Background())
+}
+
+func (o WirelessSsidsNamedVlansRadiusOutput) ToWirelessSsidsNamedVlansRadiusPtrOutputWithContext(ctx context.Context) WirelessSsidsNamedVlansRadiusPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v WirelessSsidsNamedVlansRadius) *WirelessSsidsNamedVlansRadius {
+		return &v
+	}).(WirelessSsidsNamedVlansRadiusPtrOutput)
+}
+
+// Guest VLAN settings. Used to direct traffic to a guest VLAN when none of the RADIUS servers are reachable or a client receives access-reject from the RADIUS server.
+func (o WirelessSsidsNamedVlansRadiusOutput) GuestVlan() WirelessSsidsNamedVlansRadiusGuestVlanPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsNamedVlansRadius) *WirelessSsidsNamedVlansRadiusGuestVlan { return v.GuestVlan }).(WirelessSsidsNamedVlansRadiusGuestVlanPtrOutput)
+}
+
+type WirelessSsidsNamedVlansRadiusPtrOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsNamedVlansRadiusPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsNamedVlansRadius)(nil)).Elem()
+}
+
+func (o WirelessSsidsNamedVlansRadiusPtrOutput) ToWirelessSsidsNamedVlansRadiusPtrOutput() WirelessSsidsNamedVlansRadiusPtrOutput {
+	return o
+}
+
+func (o WirelessSsidsNamedVlansRadiusPtrOutput) ToWirelessSsidsNamedVlansRadiusPtrOutputWithContext(ctx context.Context) WirelessSsidsNamedVlansRadiusPtrOutput {
+	return o
+}
+
+func (o WirelessSsidsNamedVlansRadiusPtrOutput) Elem() WirelessSsidsNamedVlansRadiusOutput {
+	return o.ApplyT(func(v *WirelessSsidsNamedVlansRadius) WirelessSsidsNamedVlansRadius {
+		if v != nil {
+			return *v
+		}
+		var ret WirelessSsidsNamedVlansRadius
+		return ret
+	}).(WirelessSsidsNamedVlansRadiusOutput)
+}
+
+// Guest VLAN settings. Used to direct traffic to a guest VLAN when none of the RADIUS servers are reachable or a client receives access-reject from the RADIUS server.
+func (o WirelessSsidsNamedVlansRadiusPtrOutput) GuestVlan() WirelessSsidsNamedVlansRadiusGuestVlanPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsNamedVlansRadius) *WirelessSsidsNamedVlansRadiusGuestVlan {
+		if v == nil {
+			return nil
+		}
+		return v.GuestVlan
+	}).(WirelessSsidsNamedVlansRadiusGuestVlanPtrOutput)
+}
+
+type WirelessSsidsNamedVlansRadiusGuestVlan struct {
+	// Whether or not RADIUS guest named VLAN is enabled.
+	Enabled *bool `pulumi:"enabled"`
+	// RADIUS guest VLAN name.
+	Name *string `pulumi:"name"`
+}
+
+// WirelessSsidsNamedVlansRadiusGuestVlanInput is an input type that accepts WirelessSsidsNamedVlansRadiusGuestVlanArgs and WirelessSsidsNamedVlansRadiusGuestVlanOutput values.
+// You can construct a concrete instance of `WirelessSsidsNamedVlansRadiusGuestVlanInput` via:
+//
+//	WirelessSsidsNamedVlansRadiusGuestVlanArgs{...}
+type WirelessSsidsNamedVlansRadiusGuestVlanInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsNamedVlansRadiusGuestVlanOutput() WirelessSsidsNamedVlansRadiusGuestVlanOutput
+	ToWirelessSsidsNamedVlansRadiusGuestVlanOutputWithContext(context.Context) WirelessSsidsNamedVlansRadiusGuestVlanOutput
+}
+
+type WirelessSsidsNamedVlansRadiusGuestVlanArgs struct {
+	// Whether or not RADIUS guest named VLAN is enabled.
+	Enabled pulumi.BoolPtrInput `pulumi:"enabled"`
+	// RADIUS guest VLAN name.
+	Name pulumi.StringPtrInput `pulumi:"name"`
+}
+
+func (WirelessSsidsNamedVlansRadiusGuestVlanArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsNamedVlansRadiusGuestVlan)(nil)).Elem()
+}
+
+func (i WirelessSsidsNamedVlansRadiusGuestVlanArgs) ToWirelessSsidsNamedVlansRadiusGuestVlanOutput() WirelessSsidsNamedVlansRadiusGuestVlanOutput {
+	return i.ToWirelessSsidsNamedVlansRadiusGuestVlanOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsNamedVlansRadiusGuestVlanArgs) ToWirelessSsidsNamedVlansRadiusGuestVlanOutputWithContext(ctx context.Context) WirelessSsidsNamedVlansRadiusGuestVlanOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsNamedVlansRadiusGuestVlanOutput)
+}
+
+func (i WirelessSsidsNamedVlansRadiusGuestVlanArgs) ToWirelessSsidsNamedVlansRadiusGuestVlanPtrOutput() WirelessSsidsNamedVlansRadiusGuestVlanPtrOutput {
+	return i.ToWirelessSsidsNamedVlansRadiusGuestVlanPtrOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsNamedVlansRadiusGuestVlanArgs) ToWirelessSsidsNamedVlansRadiusGuestVlanPtrOutputWithContext(ctx context.Context) WirelessSsidsNamedVlansRadiusGuestVlanPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsNamedVlansRadiusGuestVlanOutput).ToWirelessSsidsNamedVlansRadiusGuestVlanPtrOutputWithContext(ctx)
+}
+
+// WirelessSsidsNamedVlansRadiusGuestVlanPtrInput is an input type that accepts WirelessSsidsNamedVlansRadiusGuestVlanArgs, WirelessSsidsNamedVlansRadiusGuestVlanPtr and WirelessSsidsNamedVlansRadiusGuestVlanPtrOutput values.
+// You can construct a concrete instance of `WirelessSsidsNamedVlansRadiusGuestVlanPtrInput` via:
+//
+//	        WirelessSsidsNamedVlansRadiusGuestVlanArgs{...}
+//
+//	or:
+//
+//	        nil
+type WirelessSsidsNamedVlansRadiusGuestVlanPtrInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsNamedVlansRadiusGuestVlanPtrOutput() WirelessSsidsNamedVlansRadiusGuestVlanPtrOutput
+	ToWirelessSsidsNamedVlansRadiusGuestVlanPtrOutputWithContext(context.Context) WirelessSsidsNamedVlansRadiusGuestVlanPtrOutput
+}
+
+type wirelessSsidsNamedVlansRadiusGuestVlanPtrType WirelessSsidsNamedVlansRadiusGuestVlanArgs
+
+func WirelessSsidsNamedVlansRadiusGuestVlanPtr(v *WirelessSsidsNamedVlansRadiusGuestVlanArgs) WirelessSsidsNamedVlansRadiusGuestVlanPtrInput {
+	return (*wirelessSsidsNamedVlansRadiusGuestVlanPtrType)(v)
+}
+
+func (*wirelessSsidsNamedVlansRadiusGuestVlanPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsNamedVlansRadiusGuestVlan)(nil)).Elem()
+}
+
+func (i *wirelessSsidsNamedVlansRadiusGuestVlanPtrType) ToWirelessSsidsNamedVlansRadiusGuestVlanPtrOutput() WirelessSsidsNamedVlansRadiusGuestVlanPtrOutput {
+	return i.ToWirelessSsidsNamedVlansRadiusGuestVlanPtrOutputWithContext(context.Background())
+}
+
+func (i *wirelessSsidsNamedVlansRadiusGuestVlanPtrType) ToWirelessSsidsNamedVlansRadiusGuestVlanPtrOutputWithContext(ctx context.Context) WirelessSsidsNamedVlansRadiusGuestVlanPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsNamedVlansRadiusGuestVlanPtrOutput)
+}
+
+type WirelessSsidsNamedVlansRadiusGuestVlanOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsNamedVlansRadiusGuestVlanOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsNamedVlansRadiusGuestVlan)(nil)).Elem()
+}
+
+func (o WirelessSsidsNamedVlansRadiusGuestVlanOutput) ToWirelessSsidsNamedVlansRadiusGuestVlanOutput() WirelessSsidsNamedVlansRadiusGuestVlanOutput {
+	return o
+}
+
+func (o WirelessSsidsNamedVlansRadiusGuestVlanOutput) ToWirelessSsidsNamedVlansRadiusGuestVlanOutputWithContext(ctx context.Context) WirelessSsidsNamedVlansRadiusGuestVlanOutput {
+	return o
+}
+
+func (o WirelessSsidsNamedVlansRadiusGuestVlanOutput) ToWirelessSsidsNamedVlansRadiusGuestVlanPtrOutput() WirelessSsidsNamedVlansRadiusGuestVlanPtrOutput {
+	return o.ToWirelessSsidsNamedVlansRadiusGuestVlanPtrOutputWithContext(context.Background())
+}
+
+func (o WirelessSsidsNamedVlansRadiusGuestVlanOutput) ToWirelessSsidsNamedVlansRadiusGuestVlanPtrOutputWithContext(ctx context.Context) WirelessSsidsNamedVlansRadiusGuestVlanPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v WirelessSsidsNamedVlansRadiusGuestVlan) *WirelessSsidsNamedVlansRadiusGuestVlan {
+		return &v
+	}).(WirelessSsidsNamedVlansRadiusGuestVlanPtrOutput)
+}
+
+// Whether or not RADIUS guest named VLAN is enabled.
+func (o WirelessSsidsNamedVlansRadiusGuestVlanOutput) Enabled() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsNamedVlansRadiusGuestVlan) *bool { return v.Enabled }).(pulumi.BoolPtrOutput)
+}
+
+// RADIUS guest VLAN name.
+func (o WirelessSsidsNamedVlansRadiusGuestVlanOutput) Name() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsNamedVlansRadiusGuestVlan) *string { return v.Name }).(pulumi.StringPtrOutput)
+}
+
+type WirelessSsidsNamedVlansRadiusGuestVlanPtrOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsNamedVlansRadiusGuestVlanPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsNamedVlansRadiusGuestVlan)(nil)).Elem()
+}
+
+func (o WirelessSsidsNamedVlansRadiusGuestVlanPtrOutput) ToWirelessSsidsNamedVlansRadiusGuestVlanPtrOutput() WirelessSsidsNamedVlansRadiusGuestVlanPtrOutput {
+	return o
+}
+
+func (o WirelessSsidsNamedVlansRadiusGuestVlanPtrOutput) ToWirelessSsidsNamedVlansRadiusGuestVlanPtrOutputWithContext(ctx context.Context) WirelessSsidsNamedVlansRadiusGuestVlanPtrOutput {
+	return o
+}
+
+func (o WirelessSsidsNamedVlansRadiusGuestVlanPtrOutput) Elem() WirelessSsidsNamedVlansRadiusGuestVlanOutput {
+	return o.ApplyT(func(v *WirelessSsidsNamedVlansRadiusGuestVlan) WirelessSsidsNamedVlansRadiusGuestVlan {
+		if v != nil {
+			return *v
+		}
+		var ret WirelessSsidsNamedVlansRadiusGuestVlan
+		return ret
+	}).(WirelessSsidsNamedVlansRadiusGuestVlanOutput)
+}
+
+// Whether or not RADIUS guest named VLAN is enabled.
+func (o WirelessSsidsNamedVlansRadiusGuestVlanPtrOutput) Enabled() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsNamedVlansRadiusGuestVlan) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.Enabled
+	}).(pulumi.BoolPtrOutput)
+}
+
+// RADIUS guest VLAN name.
+func (o WirelessSsidsNamedVlansRadiusGuestVlanPtrOutput) Name() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsNamedVlansRadiusGuestVlan) *string {
+		if v == nil {
+			return nil
+		}
+		return v.Name
+	}).(pulumi.StringPtrOutput)
+}
+
+type WirelessSsidsNamedVlansTagging struct {
+	// The list of AP tags and VLAN names used for named VLAN tagging. If an AP has a tag matching one in the list, then traffic on this SSID will be directed to use the VLAN name associated to the tag.
+	ByApTags []WirelessSsidsNamedVlansTaggingByApTag `pulumi:"byApTags"`
+	// The default VLAN name used to tag traffic in the absence of a matching AP tag.
+	DefaultVlanName *string `pulumi:"defaultVlanName"`
+	// Whether or not traffic should be directed to use specific VLAN names.
+	Enabled *bool `pulumi:"enabled"`
+}
+
+// WirelessSsidsNamedVlansTaggingInput is an input type that accepts WirelessSsidsNamedVlansTaggingArgs and WirelessSsidsNamedVlansTaggingOutput values.
+// You can construct a concrete instance of `WirelessSsidsNamedVlansTaggingInput` via:
+//
+//	WirelessSsidsNamedVlansTaggingArgs{...}
+type WirelessSsidsNamedVlansTaggingInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsNamedVlansTaggingOutput() WirelessSsidsNamedVlansTaggingOutput
+	ToWirelessSsidsNamedVlansTaggingOutputWithContext(context.Context) WirelessSsidsNamedVlansTaggingOutput
+}
+
+type WirelessSsidsNamedVlansTaggingArgs struct {
+	// The list of AP tags and VLAN names used for named VLAN tagging. If an AP has a tag matching one in the list, then traffic on this SSID will be directed to use the VLAN name associated to the tag.
+	ByApTags WirelessSsidsNamedVlansTaggingByApTagArrayInput `pulumi:"byApTags"`
+	// The default VLAN name used to tag traffic in the absence of a matching AP tag.
+	DefaultVlanName pulumi.StringPtrInput `pulumi:"defaultVlanName"`
+	// Whether or not traffic should be directed to use specific VLAN names.
+	Enabled pulumi.BoolPtrInput `pulumi:"enabled"`
+}
+
+func (WirelessSsidsNamedVlansTaggingArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsNamedVlansTagging)(nil)).Elem()
+}
+
+func (i WirelessSsidsNamedVlansTaggingArgs) ToWirelessSsidsNamedVlansTaggingOutput() WirelessSsidsNamedVlansTaggingOutput {
+	return i.ToWirelessSsidsNamedVlansTaggingOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsNamedVlansTaggingArgs) ToWirelessSsidsNamedVlansTaggingOutputWithContext(ctx context.Context) WirelessSsidsNamedVlansTaggingOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsNamedVlansTaggingOutput)
+}
+
+func (i WirelessSsidsNamedVlansTaggingArgs) ToWirelessSsidsNamedVlansTaggingPtrOutput() WirelessSsidsNamedVlansTaggingPtrOutput {
+	return i.ToWirelessSsidsNamedVlansTaggingPtrOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsNamedVlansTaggingArgs) ToWirelessSsidsNamedVlansTaggingPtrOutputWithContext(ctx context.Context) WirelessSsidsNamedVlansTaggingPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsNamedVlansTaggingOutput).ToWirelessSsidsNamedVlansTaggingPtrOutputWithContext(ctx)
+}
+
+// WirelessSsidsNamedVlansTaggingPtrInput is an input type that accepts WirelessSsidsNamedVlansTaggingArgs, WirelessSsidsNamedVlansTaggingPtr and WirelessSsidsNamedVlansTaggingPtrOutput values.
+// You can construct a concrete instance of `WirelessSsidsNamedVlansTaggingPtrInput` via:
+//
+//	        WirelessSsidsNamedVlansTaggingArgs{...}
+//
+//	or:
+//
+//	        nil
+type WirelessSsidsNamedVlansTaggingPtrInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsNamedVlansTaggingPtrOutput() WirelessSsidsNamedVlansTaggingPtrOutput
+	ToWirelessSsidsNamedVlansTaggingPtrOutputWithContext(context.Context) WirelessSsidsNamedVlansTaggingPtrOutput
+}
+
+type wirelessSsidsNamedVlansTaggingPtrType WirelessSsidsNamedVlansTaggingArgs
+
+func WirelessSsidsNamedVlansTaggingPtr(v *WirelessSsidsNamedVlansTaggingArgs) WirelessSsidsNamedVlansTaggingPtrInput {
+	return (*wirelessSsidsNamedVlansTaggingPtrType)(v)
+}
+
+func (*wirelessSsidsNamedVlansTaggingPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsNamedVlansTagging)(nil)).Elem()
+}
+
+func (i *wirelessSsidsNamedVlansTaggingPtrType) ToWirelessSsidsNamedVlansTaggingPtrOutput() WirelessSsidsNamedVlansTaggingPtrOutput {
+	return i.ToWirelessSsidsNamedVlansTaggingPtrOutputWithContext(context.Background())
+}
+
+func (i *wirelessSsidsNamedVlansTaggingPtrType) ToWirelessSsidsNamedVlansTaggingPtrOutputWithContext(ctx context.Context) WirelessSsidsNamedVlansTaggingPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsNamedVlansTaggingPtrOutput)
+}
+
+type WirelessSsidsNamedVlansTaggingOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsNamedVlansTaggingOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsNamedVlansTagging)(nil)).Elem()
+}
+
+func (o WirelessSsidsNamedVlansTaggingOutput) ToWirelessSsidsNamedVlansTaggingOutput() WirelessSsidsNamedVlansTaggingOutput {
+	return o
+}
+
+func (o WirelessSsidsNamedVlansTaggingOutput) ToWirelessSsidsNamedVlansTaggingOutputWithContext(ctx context.Context) WirelessSsidsNamedVlansTaggingOutput {
+	return o
+}
+
+func (o WirelessSsidsNamedVlansTaggingOutput) ToWirelessSsidsNamedVlansTaggingPtrOutput() WirelessSsidsNamedVlansTaggingPtrOutput {
+	return o.ToWirelessSsidsNamedVlansTaggingPtrOutputWithContext(context.Background())
+}
+
+func (o WirelessSsidsNamedVlansTaggingOutput) ToWirelessSsidsNamedVlansTaggingPtrOutputWithContext(ctx context.Context) WirelessSsidsNamedVlansTaggingPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v WirelessSsidsNamedVlansTagging) *WirelessSsidsNamedVlansTagging {
+		return &v
+	}).(WirelessSsidsNamedVlansTaggingPtrOutput)
+}
+
+// The list of AP tags and VLAN names used for named VLAN tagging. If an AP has a tag matching one in the list, then traffic on this SSID will be directed to use the VLAN name associated to the tag.
+func (o WirelessSsidsNamedVlansTaggingOutput) ByApTags() WirelessSsidsNamedVlansTaggingByApTagArrayOutput {
+	return o.ApplyT(func(v WirelessSsidsNamedVlansTagging) []WirelessSsidsNamedVlansTaggingByApTag { return v.ByApTags }).(WirelessSsidsNamedVlansTaggingByApTagArrayOutput)
+}
+
+// The default VLAN name used to tag traffic in the absence of a matching AP tag.
+func (o WirelessSsidsNamedVlansTaggingOutput) DefaultVlanName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsNamedVlansTagging) *string { return v.DefaultVlanName }).(pulumi.StringPtrOutput)
+}
+
+// Whether or not traffic should be directed to use specific VLAN names.
+func (o WirelessSsidsNamedVlansTaggingOutput) Enabled() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsNamedVlansTagging) *bool { return v.Enabled }).(pulumi.BoolPtrOutput)
+}
+
+type WirelessSsidsNamedVlansTaggingPtrOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsNamedVlansTaggingPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsNamedVlansTagging)(nil)).Elem()
+}
+
+func (o WirelessSsidsNamedVlansTaggingPtrOutput) ToWirelessSsidsNamedVlansTaggingPtrOutput() WirelessSsidsNamedVlansTaggingPtrOutput {
+	return o
+}
+
+func (o WirelessSsidsNamedVlansTaggingPtrOutput) ToWirelessSsidsNamedVlansTaggingPtrOutputWithContext(ctx context.Context) WirelessSsidsNamedVlansTaggingPtrOutput {
+	return o
+}
+
+func (o WirelessSsidsNamedVlansTaggingPtrOutput) Elem() WirelessSsidsNamedVlansTaggingOutput {
+	return o.ApplyT(func(v *WirelessSsidsNamedVlansTagging) WirelessSsidsNamedVlansTagging {
+		if v != nil {
+			return *v
+		}
+		var ret WirelessSsidsNamedVlansTagging
+		return ret
+	}).(WirelessSsidsNamedVlansTaggingOutput)
+}
+
+// The list of AP tags and VLAN names used for named VLAN tagging. If an AP has a tag matching one in the list, then traffic on this SSID will be directed to use the VLAN name associated to the tag.
+func (o WirelessSsidsNamedVlansTaggingPtrOutput) ByApTags() WirelessSsidsNamedVlansTaggingByApTagArrayOutput {
+	return o.ApplyT(func(v *WirelessSsidsNamedVlansTagging) []WirelessSsidsNamedVlansTaggingByApTag {
+		if v == nil {
+			return nil
+		}
+		return v.ByApTags
+	}).(WirelessSsidsNamedVlansTaggingByApTagArrayOutput)
+}
+
+// The default VLAN name used to tag traffic in the absence of a matching AP tag.
+func (o WirelessSsidsNamedVlansTaggingPtrOutput) DefaultVlanName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsNamedVlansTagging) *string {
+		if v == nil {
+			return nil
+		}
+		return v.DefaultVlanName
+	}).(pulumi.StringPtrOutput)
+}
+
+// Whether or not traffic should be directed to use specific VLAN names.
+func (o WirelessSsidsNamedVlansTaggingPtrOutput) Enabled() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsNamedVlansTagging) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.Enabled
+	}).(pulumi.BoolPtrOutput)
+}
+
+type WirelessSsidsNamedVlansTaggingByApTag struct {
+	// List of AP tags.
+	Tags []string `pulumi:"tags"`
+	// VLAN name that will be used to tag traffic.
+	VlanName *string `pulumi:"vlanName"`
+}
+
+// WirelessSsidsNamedVlansTaggingByApTagInput is an input type that accepts WirelessSsidsNamedVlansTaggingByApTagArgs and WirelessSsidsNamedVlansTaggingByApTagOutput values.
+// You can construct a concrete instance of `WirelessSsidsNamedVlansTaggingByApTagInput` via:
+//
+//	WirelessSsidsNamedVlansTaggingByApTagArgs{...}
+type WirelessSsidsNamedVlansTaggingByApTagInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsNamedVlansTaggingByApTagOutput() WirelessSsidsNamedVlansTaggingByApTagOutput
+	ToWirelessSsidsNamedVlansTaggingByApTagOutputWithContext(context.Context) WirelessSsidsNamedVlansTaggingByApTagOutput
+}
+
+type WirelessSsidsNamedVlansTaggingByApTagArgs struct {
+	// List of AP tags.
+	Tags pulumi.StringArrayInput `pulumi:"tags"`
+	// VLAN name that will be used to tag traffic.
+	VlanName pulumi.StringPtrInput `pulumi:"vlanName"`
+}
+
+func (WirelessSsidsNamedVlansTaggingByApTagArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsNamedVlansTaggingByApTag)(nil)).Elem()
+}
+
+func (i WirelessSsidsNamedVlansTaggingByApTagArgs) ToWirelessSsidsNamedVlansTaggingByApTagOutput() WirelessSsidsNamedVlansTaggingByApTagOutput {
+	return i.ToWirelessSsidsNamedVlansTaggingByApTagOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsNamedVlansTaggingByApTagArgs) ToWirelessSsidsNamedVlansTaggingByApTagOutputWithContext(ctx context.Context) WirelessSsidsNamedVlansTaggingByApTagOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsNamedVlansTaggingByApTagOutput)
+}
+
+// WirelessSsidsNamedVlansTaggingByApTagArrayInput is an input type that accepts WirelessSsidsNamedVlansTaggingByApTagArray and WirelessSsidsNamedVlansTaggingByApTagArrayOutput values.
+// You can construct a concrete instance of `WirelessSsidsNamedVlansTaggingByApTagArrayInput` via:
+//
+//	WirelessSsidsNamedVlansTaggingByApTagArray{ WirelessSsidsNamedVlansTaggingByApTagArgs{...} }
+type WirelessSsidsNamedVlansTaggingByApTagArrayInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsNamedVlansTaggingByApTagArrayOutput() WirelessSsidsNamedVlansTaggingByApTagArrayOutput
+	ToWirelessSsidsNamedVlansTaggingByApTagArrayOutputWithContext(context.Context) WirelessSsidsNamedVlansTaggingByApTagArrayOutput
+}
+
+type WirelessSsidsNamedVlansTaggingByApTagArray []WirelessSsidsNamedVlansTaggingByApTagInput
+
+func (WirelessSsidsNamedVlansTaggingByApTagArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]WirelessSsidsNamedVlansTaggingByApTag)(nil)).Elem()
+}
+
+func (i WirelessSsidsNamedVlansTaggingByApTagArray) ToWirelessSsidsNamedVlansTaggingByApTagArrayOutput() WirelessSsidsNamedVlansTaggingByApTagArrayOutput {
+	return i.ToWirelessSsidsNamedVlansTaggingByApTagArrayOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsNamedVlansTaggingByApTagArray) ToWirelessSsidsNamedVlansTaggingByApTagArrayOutputWithContext(ctx context.Context) WirelessSsidsNamedVlansTaggingByApTagArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsNamedVlansTaggingByApTagArrayOutput)
+}
+
+type WirelessSsidsNamedVlansTaggingByApTagOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsNamedVlansTaggingByApTagOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsNamedVlansTaggingByApTag)(nil)).Elem()
+}
+
+func (o WirelessSsidsNamedVlansTaggingByApTagOutput) ToWirelessSsidsNamedVlansTaggingByApTagOutput() WirelessSsidsNamedVlansTaggingByApTagOutput {
+	return o
+}
+
+func (o WirelessSsidsNamedVlansTaggingByApTagOutput) ToWirelessSsidsNamedVlansTaggingByApTagOutputWithContext(ctx context.Context) WirelessSsidsNamedVlansTaggingByApTagOutput {
+	return o
+}
+
+// List of AP tags.
+func (o WirelessSsidsNamedVlansTaggingByApTagOutput) Tags() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v WirelessSsidsNamedVlansTaggingByApTag) []string { return v.Tags }).(pulumi.StringArrayOutput)
+}
+
+// VLAN name that will be used to tag traffic.
+func (o WirelessSsidsNamedVlansTaggingByApTagOutput) VlanName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsNamedVlansTaggingByApTag) *string { return v.VlanName }).(pulumi.StringPtrOutput)
+}
+
+type WirelessSsidsNamedVlansTaggingByApTagArrayOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsNamedVlansTaggingByApTagArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]WirelessSsidsNamedVlansTaggingByApTag)(nil)).Elem()
+}
+
+func (o WirelessSsidsNamedVlansTaggingByApTagArrayOutput) ToWirelessSsidsNamedVlansTaggingByApTagArrayOutput() WirelessSsidsNamedVlansTaggingByApTagArrayOutput {
+	return o
+}
+
+func (o WirelessSsidsNamedVlansTaggingByApTagArrayOutput) ToWirelessSsidsNamedVlansTaggingByApTagArrayOutputWithContext(ctx context.Context) WirelessSsidsNamedVlansTaggingByApTagArrayOutput {
+	return o
+}
+
+func (o WirelessSsidsNamedVlansTaggingByApTagArrayOutput) Index(i pulumi.IntInput) WirelessSsidsNamedVlansTaggingByApTagOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) WirelessSsidsNamedVlansTaggingByApTag {
+		return vs[0].([]WirelessSsidsNamedVlansTaggingByApTag)[vs[1].(int)]
+	}).(WirelessSsidsNamedVlansTaggingByApTagOutput)
+}
+
+type WirelessSsidsOauth struct {
+	// (Optional) The list of domains allowed access to the network.
+	AllowedDomains []string `pulumi:"allowedDomains"`
+}
+
+// WirelessSsidsOauthInput is an input type that accepts WirelessSsidsOauthArgs and WirelessSsidsOauthOutput values.
+// You can construct a concrete instance of `WirelessSsidsOauthInput` via:
+//
+//	WirelessSsidsOauthArgs{...}
+type WirelessSsidsOauthInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsOauthOutput() WirelessSsidsOauthOutput
+	ToWirelessSsidsOauthOutputWithContext(context.Context) WirelessSsidsOauthOutput
+}
+
+type WirelessSsidsOauthArgs struct {
+	// (Optional) The list of domains allowed access to the network.
+	AllowedDomains pulumi.StringArrayInput `pulumi:"allowedDomains"`
+}
+
+func (WirelessSsidsOauthArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsOauth)(nil)).Elem()
+}
+
+func (i WirelessSsidsOauthArgs) ToWirelessSsidsOauthOutput() WirelessSsidsOauthOutput {
+	return i.ToWirelessSsidsOauthOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsOauthArgs) ToWirelessSsidsOauthOutputWithContext(ctx context.Context) WirelessSsidsOauthOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsOauthOutput)
+}
+
+func (i WirelessSsidsOauthArgs) ToWirelessSsidsOauthPtrOutput() WirelessSsidsOauthPtrOutput {
+	return i.ToWirelessSsidsOauthPtrOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsOauthArgs) ToWirelessSsidsOauthPtrOutputWithContext(ctx context.Context) WirelessSsidsOauthPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsOauthOutput).ToWirelessSsidsOauthPtrOutputWithContext(ctx)
+}
+
+// WirelessSsidsOauthPtrInput is an input type that accepts WirelessSsidsOauthArgs, WirelessSsidsOauthPtr and WirelessSsidsOauthPtrOutput values.
+// You can construct a concrete instance of `WirelessSsidsOauthPtrInput` via:
+//
+//	        WirelessSsidsOauthArgs{...}
+//
+//	or:
+//
+//	        nil
+type WirelessSsidsOauthPtrInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsOauthPtrOutput() WirelessSsidsOauthPtrOutput
+	ToWirelessSsidsOauthPtrOutputWithContext(context.Context) WirelessSsidsOauthPtrOutput
+}
+
+type wirelessSsidsOauthPtrType WirelessSsidsOauthArgs
+
+func WirelessSsidsOauthPtr(v *WirelessSsidsOauthArgs) WirelessSsidsOauthPtrInput {
+	return (*wirelessSsidsOauthPtrType)(v)
+}
+
+func (*wirelessSsidsOauthPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsOauth)(nil)).Elem()
+}
+
+func (i *wirelessSsidsOauthPtrType) ToWirelessSsidsOauthPtrOutput() WirelessSsidsOauthPtrOutput {
+	return i.ToWirelessSsidsOauthPtrOutputWithContext(context.Background())
+}
+
+func (i *wirelessSsidsOauthPtrType) ToWirelessSsidsOauthPtrOutputWithContext(ctx context.Context) WirelessSsidsOauthPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsOauthPtrOutput)
+}
+
+type WirelessSsidsOauthOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsOauthOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsOauth)(nil)).Elem()
+}
+
+func (o WirelessSsidsOauthOutput) ToWirelessSsidsOauthOutput() WirelessSsidsOauthOutput {
+	return o
+}
+
+func (o WirelessSsidsOauthOutput) ToWirelessSsidsOauthOutputWithContext(ctx context.Context) WirelessSsidsOauthOutput {
+	return o
+}
+
+func (o WirelessSsidsOauthOutput) ToWirelessSsidsOauthPtrOutput() WirelessSsidsOauthPtrOutput {
+	return o.ToWirelessSsidsOauthPtrOutputWithContext(context.Background())
+}
+
+func (o WirelessSsidsOauthOutput) ToWirelessSsidsOauthPtrOutputWithContext(ctx context.Context) WirelessSsidsOauthPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v WirelessSsidsOauth) *WirelessSsidsOauth {
+		return &v
+	}).(WirelessSsidsOauthPtrOutput)
+}
+
+// (Optional) The list of domains allowed access to the network.
+func (o WirelessSsidsOauthOutput) AllowedDomains() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v WirelessSsidsOauth) []string { return v.AllowedDomains }).(pulumi.StringArrayOutput)
+}
+
+type WirelessSsidsOauthPtrOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsOauthPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsOauth)(nil)).Elem()
+}
+
+func (o WirelessSsidsOauthPtrOutput) ToWirelessSsidsOauthPtrOutput() WirelessSsidsOauthPtrOutput {
+	return o
+}
+
+func (o WirelessSsidsOauthPtrOutput) ToWirelessSsidsOauthPtrOutputWithContext(ctx context.Context) WirelessSsidsOauthPtrOutput {
+	return o
+}
+
+func (o WirelessSsidsOauthPtrOutput) Elem() WirelessSsidsOauthOutput {
+	return o.ApplyT(func(v *WirelessSsidsOauth) WirelessSsidsOauth {
+		if v != nil {
+			return *v
+		}
+		var ret WirelessSsidsOauth
+		return ret
+	}).(WirelessSsidsOauthOutput)
+}
+
+// (Optional) The list of domains allowed access to the network.
+func (o WirelessSsidsOauthPtrOutput) AllowedDomains() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *WirelessSsidsOauth) []string {
+		if v == nil {
+			return nil
+		}
+		return v.AllowedDomains
+	}).(pulumi.StringArrayOutput)
+}
+
+type WirelessSsidsRadiusAccountingServer struct {
+	// Certificate used for authorization for the RADSEC Server
+	CaCertificate *string `pulumi:"caCertificate"`
+	// IP address (or FQDN) to which the APs will send RADIUS accounting messages
+	Host *string `pulumi:"host"`
+	// The ID of the Openroaming Certificate attached to radius server
+	OpenRoamingCertificateId *int `pulumi:"openRoamingCertificateId"`
+	// Port on the RADIUS server that is listening for accounting messages
+	Port *int `pulumi:"port"`
+	// Use RADSEC (TLS over TCP) to connect to this RADIUS accounting server. Requires radiusProxyEnabled.
+	RadsecEnabled *bool `pulumi:"radsecEnabled"`
+	// Shared key used to authenticate messages between the APs and RADIUS server
+	Secret *string `pulumi:"secret"`
+}
+
+// WirelessSsidsRadiusAccountingServerInput is an input type that accepts WirelessSsidsRadiusAccountingServerArgs and WirelessSsidsRadiusAccountingServerOutput values.
+// You can construct a concrete instance of `WirelessSsidsRadiusAccountingServerInput` via:
+//
+//	WirelessSsidsRadiusAccountingServerArgs{...}
+type WirelessSsidsRadiusAccountingServerInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsRadiusAccountingServerOutput() WirelessSsidsRadiusAccountingServerOutput
+	ToWirelessSsidsRadiusAccountingServerOutputWithContext(context.Context) WirelessSsidsRadiusAccountingServerOutput
+}
+
+type WirelessSsidsRadiusAccountingServerArgs struct {
+	// Certificate used for authorization for the RADSEC Server
+	CaCertificate pulumi.StringPtrInput `pulumi:"caCertificate"`
+	// IP address (or FQDN) to which the APs will send RADIUS accounting messages
+	Host pulumi.StringPtrInput `pulumi:"host"`
+	// The ID of the Openroaming Certificate attached to radius server
+	OpenRoamingCertificateId pulumi.IntPtrInput `pulumi:"openRoamingCertificateId"`
+	// Port on the RADIUS server that is listening for accounting messages
+	Port pulumi.IntPtrInput `pulumi:"port"`
+	// Use RADSEC (TLS over TCP) to connect to this RADIUS accounting server. Requires radiusProxyEnabled.
+	RadsecEnabled pulumi.BoolPtrInput `pulumi:"radsecEnabled"`
+	// Shared key used to authenticate messages between the APs and RADIUS server
+	Secret pulumi.StringPtrInput `pulumi:"secret"`
+}
+
+func (WirelessSsidsRadiusAccountingServerArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsRadiusAccountingServer)(nil)).Elem()
+}
+
+func (i WirelessSsidsRadiusAccountingServerArgs) ToWirelessSsidsRadiusAccountingServerOutput() WirelessSsidsRadiusAccountingServerOutput {
+	return i.ToWirelessSsidsRadiusAccountingServerOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsRadiusAccountingServerArgs) ToWirelessSsidsRadiusAccountingServerOutputWithContext(ctx context.Context) WirelessSsidsRadiusAccountingServerOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsRadiusAccountingServerOutput)
+}
+
+// WirelessSsidsRadiusAccountingServerArrayInput is an input type that accepts WirelessSsidsRadiusAccountingServerArray and WirelessSsidsRadiusAccountingServerArrayOutput values.
+// You can construct a concrete instance of `WirelessSsidsRadiusAccountingServerArrayInput` via:
+//
+//	WirelessSsidsRadiusAccountingServerArray{ WirelessSsidsRadiusAccountingServerArgs{...} }
+type WirelessSsidsRadiusAccountingServerArrayInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsRadiusAccountingServerArrayOutput() WirelessSsidsRadiusAccountingServerArrayOutput
+	ToWirelessSsidsRadiusAccountingServerArrayOutputWithContext(context.Context) WirelessSsidsRadiusAccountingServerArrayOutput
+}
+
+type WirelessSsidsRadiusAccountingServerArray []WirelessSsidsRadiusAccountingServerInput
+
+func (WirelessSsidsRadiusAccountingServerArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]WirelessSsidsRadiusAccountingServer)(nil)).Elem()
+}
+
+func (i WirelessSsidsRadiusAccountingServerArray) ToWirelessSsidsRadiusAccountingServerArrayOutput() WirelessSsidsRadiusAccountingServerArrayOutput {
+	return i.ToWirelessSsidsRadiusAccountingServerArrayOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsRadiusAccountingServerArray) ToWirelessSsidsRadiusAccountingServerArrayOutputWithContext(ctx context.Context) WirelessSsidsRadiusAccountingServerArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsRadiusAccountingServerArrayOutput)
+}
+
+type WirelessSsidsRadiusAccountingServerOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsRadiusAccountingServerOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsRadiusAccountingServer)(nil)).Elem()
+}
+
+func (o WirelessSsidsRadiusAccountingServerOutput) ToWirelessSsidsRadiusAccountingServerOutput() WirelessSsidsRadiusAccountingServerOutput {
+	return o
+}
+
+func (o WirelessSsidsRadiusAccountingServerOutput) ToWirelessSsidsRadiusAccountingServerOutputWithContext(ctx context.Context) WirelessSsidsRadiusAccountingServerOutput {
+	return o
+}
+
+// Certificate used for authorization for the RADSEC Server
+func (o WirelessSsidsRadiusAccountingServerOutput) CaCertificate() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsRadiusAccountingServer) *string { return v.CaCertificate }).(pulumi.StringPtrOutput)
+}
+
+// IP address (or FQDN) to which the APs will send RADIUS accounting messages
+func (o WirelessSsidsRadiusAccountingServerOutput) Host() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsRadiusAccountingServer) *string { return v.Host }).(pulumi.StringPtrOutput)
+}
+
+// The ID of the Openroaming Certificate attached to radius server
+func (o WirelessSsidsRadiusAccountingServerOutput) OpenRoamingCertificateId() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsRadiusAccountingServer) *int { return v.OpenRoamingCertificateId }).(pulumi.IntPtrOutput)
+}
+
+// Port on the RADIUS server that is listening for accounting messages
+func (o WirelessSsidsRadiusAccountingServerOutput) Port() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsRadiusAccountingServer) *int { return v.Port }).(pulumi.IntPtrOutput)
+}
+
+// Use RADSEC (TLS over TCP) to connect to this RADIUS accounting server. Requires radiusProxyEnabled.
+func (o WirelessSsidsRadiusAccountingServerOutput) RadsecEnabled() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsRadiusAccountingServer) *bool { return v.RadsecEnabled }).(pulumi.BoolPtrOutput)
+}
+
+// Shared key used to authenticate messages between the APs and RADIUS server
+func (o WirelessSsidsRadiusAccountingServerOutput) Secret() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsRadiusAccountingServer) *string { return v.Secret }).(pulumi.StringPtrOutput)
+}
+
+type WirelessSsidsRadiusAccountingServerArrayOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsRadiusAccountingServerArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]WirelessSsidsRadiusAccountingServer)(nil)).Elem()
+}
+
+func (o WirelessSsidsRadiusAccountingServerArrayOutput) ToWirelessSsidsRadiusAccountingServerArrayOutput() WirelessSsidsRadiusAccountingServerArrayOutput {
+	return o
+}
+
+func (o WirelessSsidsRadiusAccountingServerArrayOutput) ToWirelessSsidsRadiusAccountingServerArrayOutputWithContext(ctx context.Context) WirelessSsidsRadiusAccountingServerArrayOutput {
+	return o
+}
+
+func (o WirelessSsidsRadiusAccountingServerArrayOutput) Index(i pulumi.IntInput) WirelessSsidsRadiusAccountingServerOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) WirelessSsidsRadiusAccountingServer {
+		return vs[0].([]WirelessSsidsRadiusAccountingServer)[vs[1].(int)]
+	}).(WirelessSsidsRadiusAccountingServerOutput)
+}
+
+type WirelessSsidsRadiusAccountingServersResponse struct {
+	// Certificate used for authorization for the RADSEC Server
+	CaCertificate *string `pulumi:"caCertificate"`
+	// IP address (or FQDN) to which the APs will send RADIUS accounting messages
+	Host *string `pulumi:"host"`
+	// The ID of the Openroaming Certificate attached to radius server
+	OpenRoamingCertificateId *int `pulumi:"openRoamingCertificateId"`
+	// Port on the RADIUS server that is listening for accounting messages
+	Port *int `pulumi:"port"`
+	// Use RADSEC (TLS over TCP) to connect to this RADIUS accounting server. Requires radiusProxyEnabled.
+	RadsecEnabled *bool `pulumi:"radsecEnabled"`
+	// Shared key used to authenticate messages between the APs and RADIUS server
+	Secret *string `pulumi:"secret"`
+}
+
+// WirelessSsidsRadiusAccountingServersResponseInput is an input type that accepts WirelessSsidsRadiusAccountingServersResponseArgs and WirelessSsidsRadiusAccountingServersResponseOutput values.
+// You can construct a concrete instance of `WirelessSsidsRadiusAccountingServersResponseInput` via:
+//
+//	WirelessSsidsRadiusAccountingServersResponseArgs{...}
+type WirelessSsidsRadiusAccountingServersResponseInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsRadiusAccountingServersResponseOutput() WirelessSsidsRadiusAccountingServersResponseOutput
+	ToWirelessSsidsRadiusAccountingServersResponseOutputWithContext(context.Context) WirelessSsidsRadiusAccountingServersResponseOutput
+}
+
+type WirelessSsidsRadiusAccountingServersResponseArgs struct {
+	// Certificate used for authorization for the RADSEC Server
+	CaCertificate pulumi.StringPtrInput `pulumi:"caCertificate"`
+	// IP address (or FQDN) to which the APs will send RADIUS accounting messages
+	Host pulumi.StringPtrInput `pulumi:"host"`
+	// The ID of the Openroaming Certificate attached to radius server
+	OpenRoamingCertificateId pulumi.IntPtrInput `pulumi:"openRoamingCertificateId"`
+	// Port on the RADIUS server that is listening for accounting messages
+	Port pulumi.IntPtrInput `pulumi:"port"`
+	// Use RADSEC (TLS over TCP) to connect to this RADIUS accounting server. Requires radiusProxyEnabled.
+	RadsecEnabled pulumi.BoolPtrInput `pulumi:"radsecEnabled"`
+	// Shared key used to authenticate messages between the APs and RADIUS server
+	Secret pulumi.StringPtrInput `pulumi:"secret"`
+}
+
+func (WirelessSsidsRadiusAccountingServersResponseArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsRadiusAccountingServersResponse)(nil)).Elem()
+}
+
+func (i WirelessSsidsRadiusAccountingServersResponseArgs) ToWirelessSsidsRadiusAccountingServersResponseOutput() WirelessSsidsRadiusAccountingServersResponseOutput {
+	return i.ToWirelessSsidsRadiusAccountingServersResponseOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsRadiusAccountingServersResponseArgs) ToWirelessSsidsRadiusAccountingServersResponseOutputWithContext(ctx context.Context) WirelessSsidsRadiusAccountingServersResponseOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsRadiusAccountingServersResponseOutput)
+}
+
+// WirelessSsidsRadiusAccountingServersResponseArrayInput is an input type that accepts WirelessSsidsRadiusAccountingServersResponseArray and WirelessSsidsRadiusAccountingServersResponseArrayOutput values.
+// You can construct a concrete instance of `WirelessSsidsRadiusAccountingServersResponseArrayInput` via:
+//
+//	WirelessSsidsRadiusAccountingServersResponseArray{ WirelessSsidsRadiusAccountingServersResponseArgs{...} }
+type WirelessSsidsRadiusAccountingServersResponseArrayInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsRadiusAccountingServersResponseArrayOutput() WirelessSsidsRadiusAccountingServersResponseArrayOutput
+	ToWirelessSsidsRadiusAccountingServersResponseArrayOutputWithContext(context.Context) WirelessSsidsRadiusAccountingServersResponseArrayOutput
+}
+
+type WirelessSsidsRadiusAccountingServersResponseArray []WirelessSsidsRadiusAccountingServersResponseInput
+
+func (WirelessSsidsRadiusAccountingServersResponseArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]WirelessSsidsRadiusAccountingServersResponse)(nil)).Elem()
+}
+
+func (i WirelessSsidsRadiusAccountingServersResponseArray) ToWirelessSsidsRadiusAccountingServersResponseArrayOutput() WirelessSsidsRadiusAccountingServersResponseArrayOutput {
+	return i.ToWirelessSsidsRadiusAccountingServersResponseArrayOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsRadiusAccountingServersResponseArray) ToWirelessSsidsRadiusAccountingServersResponseArrayOutputWithContext(ctx context.Context) WirelessSsidsRadiusAccountingServersResponseArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsRadiusAccountingServersResponseArrayOutput)
+}
+
+type WirelessSsidsRadiusAccountingServersResponseOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsRadiusAccountingServersResponseOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsRadiusAccountingServersResponse)(nil)).Elem()
+}
+
+func (o WirelessSsidsRadiusAccountingServersResponseOutput) ToWirelessSsidsRadiusAccountingServersResponseOutput() WirelessSsidsRadiusAccountingServersResponseOutput {
+	return o
+}
+
+func (o WirelessSsidsRadiusAccountingServersResponseOutput) ToWirelessSsidsRadiusAccountingServersResponseOutputWithContext(ctx context.Context) WirelessSsidsRadiusAccountingServersResponseOutput {
+	return o
+}
+
+// Certificate used for authorization for the RADSEC Server
+func (o WirelessSsidsRadiusAccountingServersResponseOutput) CaCertificate() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsRadiusAccountingServersResponse) *string { return v.CaCertificate }).(pulumi.StringPtrOutput)
+}
+
+// IP address (or FQDN) to which the APs will send RADIUS accounting messages
+func (o WirelessSsidsRadiusAccountingServersResponseOutput) Host() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsRadiusAccountingServersResponse) *string { return v.Host }).(pulumi.StringPtrOutput)
+}
+
+// The ID of the Openroaming Certificate attached to radius server
+func (o WirelessSsidsRadiusAccountingServersResponseOutput) OpenRoamingCertificateId() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsRadiusAccountingServersResponse) *int { return v.OpenRoamingCertificateId }).(pulumi.IntPtrOutput)
+}
+
+// Port on the RADIUS server that is listening for accounting messages
+func (o WirelessSsidsRadiusAccountingServersResponseOutput) Port() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsRadiusAccountingServersResponse) *int { return v.Port }).(pulumi.IntPtrOutput)
+}
+
+// Use RADSEC (TLS over TCP) to connect to this RADIUS accounting server. Requires radiusProxyEnabled.
+func (o WirelessSsidsRadiusAccountingServersResponseOutput) RadsecEnabled() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsRadiusAccountingServersResponse) *bool { return v.RadsecEnabled }).(pulumi.BoolPtrOutput)
+}
+
+// Shared key used to authenticate messages between the APs and RADIUS server
+func (o WirelessSsidsRadiusAccountingServersResponseOutput) Secret() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsRadiusAccountingServersResponse) *string { return v.Secret }).(pulumi.StringPtrOutput)
+}
+
+type WirelessSsidsRadiusAccountingServersResponseArrayOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsRadiusAccountingServersResponseArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]WirelessSsidsRadiusAccountingServersResponse)(nil)).Elem()
+}
+
+func (o WirelessSsidsRadiusAccountingServersResponseArrayOutput) ToWirelessSsidsRadiusAccountingServersResponseArrayOutput() WirelessSsidsRadiusAccountingServersResponseArrayOutput {
+	return o
+}
+
+func (o WirelessSsidsRadiusAccountingServersResponseArrayOutput) ToWirelessSsidsRadiusAccountingServersResponseArrayOutputWithContext(ctx context.Context) WirelessSsidsRadiusAccountingServersResponseArrayOutput {
+	return o
+}
+
+func (o WirelessSsidsRadiusAccountingServersResponseArrayOutput) Index(i pulumi.IntInput) WirelessSsidsRadiusAccountingServersResponseOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) WirelessSsidsRadiusAccountingServersResponse {
+		return vs[0].([]WirelessSsidsRadiusAccountingServersResponse)[vs[1].(int)]
+	}).(WirelessSsidsRadiusAccountingServersResponseOutput)
+}
+
+type WirelessSsidsRadiusServer struct {
+	// Certificate used for authorization for the RADSEC Server
+	CaCertificate *string `pulumi:"caCertificate"`
+	// IP address of your RADIUS server
+	Host *string `pulumi:"host"`
+	// The ID of the Openroaming Certificate attached to radius server.
+	OpenRoamingCertificateId *int `pulumi:"openRoamingCertificateId"`
+	// UDP port the RADIUS server listens on for Access-requests
+	Port *int `pulumi:"port"`
+	// Use RADSEC (TLS over TCP) to connect to this RADIUS server. Requires radiusProxyEnabled.
+	RadsecEnabled *bool `pulumi:"radsecEnabled"`
+	// RADIUS client shared secret
+	Secret *string `pulumi:"secret"`
+}
+
+// WirelessSsidsRadiusServerInput is an input type that accepts WirelessSsidsRadiusServerArgs and WirelessSsidsRadiusServerOutput values.
+// You can construct a concrete instance of `WirelessSsidsRadiusServerInput` via:
+//
+//	WirelessSsidsRadiusServerArgs{...}
+type WirelessSsidsRadiusServerInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsRadiusServerOutput() WirelessSsidsRadiusServerOutput
+	ToWirelessSsidsRadiusServerOutputWithContext(context.Context) WirelessSsidsRadiusServerOutput
+}
+
+type WirelessSsidsRadiusServerArgs struct {
+	// Certificate used for authorization for the RADSEC Server
+	CaCertificate pulumi.StringPtrInput `pulumi:"caCertificate"`
+	// IP address of your RADIUS server
+	Host pulumi.StringPtrInput `pulumi:"host"`
+	// The ID of the Openroaming Certificate attached to radius server.
+	OpenRoamingCertificateId pulumi.IntPtrInput `pulumi:"openRoamingCertificateId"`
+	// UDP port the RADIUS server listens on for Access-requests
+	Port pulumi.IntPtrInput `pulumi:"port"`
+	// Use RADSEC (TLS over TCP) to connect to this RADIUS server. Requires radiusProxyEnabled.
+	RadsecEnabled pulumi.BoolPtrInput `pulumi:"radsecEnabled"`
+	// RADIUS client shared secret
+	Secret pulumi.StringPtrInput `pulumi:"secret"`
+}
+
+func (WirelessSsidsRadiusServerArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsRadiusServer)(nil)).Elem()
+}
+
+func (i WirelessSsidsRadiusServerArgs) ToWirelessSsidsRadiusServerOutput() WirelessSsidsRadiusServerOutput {
+	return i.ToWirelessSsidsRadiusServerOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsRadiusServerArgs) ToWirelessSsidsRadiusServerOutputWithContext(ctx context.Context) WirelessSsidsRadiusServerOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsRadiusServerOutput)
+}
+
+// WirelessSsidsRadiusServerArrayInput is an input type that accepts WirelessSsidsRadiusServerArray and WirelessSsidsRadiusServerArrayOutput values.
+// You can construct a concrete instance of `WirelessSsidsRadiusServerArrayInput` via:
+//
+//	WirelessSsidsRadiusServerArray{ WirelessSsidsRadiusServerArgs{...} }
+type WirelessSsidsRadiusServerArrayInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsRadiusServerArrayOutput() WirelessSsidsRadiusServerArrayOutput
+	ToWirelessSsidsRadiusServerArrayOutputWithContext(context.Context) WirelessSsidsRadiusServerArrayOutput
+}
+
+type WirelessSsidsRadiusServerArray []WirelessSsidsRadiusServerInput
+
+func (WirelessSsidsRadiusServerArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]WirelessSsidsRadiusServer)(nil)).Elem()
+}
+
+func (i WirelessSsidsRadiusServerArray) ToWirelessSsidsRadiusServerArrayOutput() WirelessSsidsRadiusServerArrayOutput {
+	return i.ToWirelessSsidsRadiusServerArrayOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsRadiusServerArray) ToWirelessSsidsRadiusServerArrayOutputWithContext(ctx context.Context) WirelessSsidsRadiusServerArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsRadiusServerArrayOutput)
+}
+
+type WirelessSsidsRadiusServerOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsRadiusServerOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsRadiusServer)(nil)).Elem()
+}
+
+func (o WirelessSsidsRadiusServerOutput) ToWirelessSsidsRadiusServerOutput() WirelessSsidsRadiusServerOutput {
+	return o
+}
+
+func (o WirelessSsidsRadiusServerOutput) ToWirelessSsidsRadiusServerOutputWithContext(ctx context.Context) WirelessSsidsRadiusServerOutput {
+	return o
+}
+
+// Certificate used for authorization for the RADSEC Server
+func (o WirelessSsidsRadiusServerOutput) CaCertificate() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsRadiusServer) *string { return v.CaCertificate }).(pulumi.StringPtrOutput)
+}
+
+// IP address of your RADIUS server
+func (o WirelessSsidsRadiusServerOutput) Host() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsRadiusServer) *string { return v.Host }).(pulumi.StringPtrOutput)
+}
+
+// The ID of the Openroaming Certificate attached to radius server.
+func (o WirelessSsidsRadiusServerOutput) OpenRoamingCertificateId() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsRadiusServer) *int { return v.OpenRoamingCertificateId }).(pulumi.IntPtrOutput)
+}
+
+// UDP port the RADIUS server listens on for Access-requests
+func (o WirelessSsidsRadiusServerOutput) Port() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsRadiusServer) *int { return v.Port }).(pulumi.IntPtrOutput)
+}
+
+// Use RADSEC (TLS over TCP) to connect to this RADIUS server. Requires radiusProxyEnabled.
+func (o WirelessSsidsRadiusServerOutput) RadsecEnabled() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsRadiusServer) *bool { return v.RadsecEnabled }).(pulumi.BoolPtrOutput)
+}
+
+// RADIUS client shared secret
+func (o WirelessSsidsRadiusServerOutput) Secret() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsRadiusServer) *string { return v.Secret }).(pulumi.StringPtrOutput)
+}
+
+type WirelessSsidsRadiusServerArrayOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsRadiusServerArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]WirelessSsidsRadiusServer)(nil)).Elem()
+}
+
+func (o WirelessSsidsRadiusServerArrayOutput) ToWirelessSsidsRadiusServerArrayOutput() WirelessSsidsRadiusServerArrayOutput {
+	return o
+}
+
+func (o WirelessSsidsRadiusServerArrayOutput) ToWirelessSsidsRadiusServerArrayOutputWithContext(ctx context.Context) WirelessSsidsRadiusServerArrayOutput {
+	return o
+}
+
+func (o WirelessSsidsRadiusServerArrayOutput) Index(i pulumi.IntInput) WirelessSsidsRadiusServerOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) WirelessSsidsRadiusServer {
+		return vs[0].([]WirelessSsidsRadiusServer)[vs[1].(int)]
+	}).(WirelessSsidsRadiusServerOutput)
+}
+
+type WirelessSsidsRadiusServersResponse struct {
+	// Certificate used for authorization for the RADSEC Server
+	CaCertificate *string `pulumi:"caCertificate"`
+	// IP address of your RADIUS server
+	Host *string `pulumi:"host"`
+	// The ID of the Openroaming Certificate attached to radius server.
+	OpenRoamingCertificateId *int `pulumi:"openRoamingCertificateId"`
+	// UDP port the RADIUS server listens on for Access-requests
+	Port *int `pulumi:"port"`
+	// Use RADSEC (TLS over TCP) to connect to this RADIUS server. Requires radiusProxyEnabled.
+	RadsecEnabled *bool `pulumi:"radsecEnabled"`
+	// RADIUS client shared secret
+	Secret *string `pulumi:"secret"`
+}
+
+// WirelessSsidsRadiusServersResponseInput is an input type that accepts WirelessSsidsRadiusServersResponseArgs and WirelessSsidsRadiusServersResponseOutput values.
+// You can construct a concrete instance of `WirelessSsidsRadiusServersResponseInput` via:
+//
+//	WirelessSsidsRadiusServersResponseArgs{...}
+type WirelessSsidsRadiusServersResponseInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsRadiusServersResponseOutput() WirelessSsidsRadiusServersResponseOutput
+	ToWirelessSsidsRadiusServersResponseOutputWithContext(context.Context) WirelessSsidsRadiusServersResponseOutput
+}
+
+type WirelessSsidsRadiusServersResponseArgs struct {
+	// Certificate used for authorization for the RADSEC Server
+	CaCertificate pulumi.StringPtrInput `pulumi:"caCertificate"`
+	// IP address of your RADIUS server
+	Host pulumi.StringPtrInput `pulumi:"host"`
+	// The ID of the Openroaming Certificate attached to radius server.
+	OpenRoamingCertificateId pulumi.IntPtrInput `pulumi:"openRoamingCertificateId"`
+	// UDP port the RADIUS server listens on for Access-requests
+	Port pulumi.IntPtrInput `pulumi:"port"`
+	// Use RADSEC (TLS over TCP) to connect to this RADIUS server. Requires radiusProxyEnabled.
+	RadsecEnabled pulumi.BoolPtrInput `pulumi:"radsecEnabled"`
+	// RADIUS client shared secret
+	Secret pulumi.StringPtrInput `pulumi:"secret"`
+}
+
+func (WirelessSsidsRadiusServersResponseArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsRadiusServersResponse)(nil)).Elem()
+}
+
+func (i WirelessSsidsRadiusServersResponseArgs) ToWirelessSsidsRadiusServersResponseOutput() WirelessSsidsRadiusServersResponseOutput {
+	return i.ToWirelessSsidsRadiusServersResponseOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsRadiusServersResponseArgs) ToWirelessSsidsRadiusServersResponseOutputWithContext(ctx context.Context) WirelessSsidsRadiusServersResponseOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsRadiusServersResponseOutput)
+}
+
+// WirelessSsidsRadiusServersResponseArrayInput is an input type that accepts WirelessSsidsRadiusServersResponseArray and WirelessSsidsRadiusServersResponseArrayOutput values.
+// You can construct a concrete instance of `WirelessSsidsRadiusServersResponseArrayInput` via:
+//
+//	WirelessSsidsRadiusServersResponseArray{ WirelessSsidsRadiusServersResponseArgs{...} }
+type WirelessSsidsRadiusServersResponseArrayInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsRadiusServersResponseArrayOutput() WirelessSsidsRadiusServersResponseArrayOutput
+	ToWirelessSsidsRadiusServersResponseArrayOutputWithContext(context.Context) WirelessSsidsRadiusServersResponseArrayOutput
+}
+
+type WirelessSsidsRadiusServersResponseArray []WirelessSsidsRadiusServersResponseInput
+
+func (WirelessSsidsRadiusServersResponseArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]WirelessSsidsRadiusServersResponse)(nil)).Elem()
+}
+
+func (i WirelessSsidsRadiusServersResponseArray) ToWirelessSsidsRadiusServersResponseArrayOutput() WirelessSsidsRadiusServersResponseArrayOutput {
+	return i.ToWirelessSsidsRadiusServersResponseArrayOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsRadiusServersResponseArray) ToWirelessSsidsRadiusServersResponseArrayOutputWithContext(ctx context.Context) WirelessSsidsRadiusServersResponseArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsRadiusServersResponseArrayOutput)
+}
+
+type WirelessSsidsRadiusServersResponseOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsRadiusServersResponseOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsRadiusServersResponse)(nil)).Elem()
+}
+
+func (o WirelessSsidsRadiusServersResponseOutput) ToWirelessSsidsRadiusServersResponseOutput() WirelessSsidsRadiusServersResponseOutput {
+	return o
+}
+
+func (o WirelessSsidsRadiusServersResponseOutput) ToWirelessSsidsRadiusServersResponseOutputWithContext(ctx context.Context) WirelessSsidsRadiusServersResponseOutput {
+	return o
+}
+
+// Certificate used for authorization for the RADSEC Server
+func (o WirelessSsidsRadiusServersResponseOutput) CaCertificate() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsRadiusServersResponse) *string { return v.CaCertificate }).(pulumi.StringPtrOutput)
+}
+
+// IP address of your RADIUS server
+func (o WirelessSsidsRadiusServersResponseOutput) Host() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsRadiusServersResponse) *string { return v.Host }).(pulumi.StringPtrOutput)
+}
+
+// The ID of the Openroaming Certificate attached to radius server.
+func (o WirelessSsidsRadiusServersResponseOutput) OpenRoamingCertificateId() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsRadiusServersResponse) *int { return v.OpenRoamingCertificateId }).(pulumi.IntPtrOutput)
+}
+
+// UDP port the RADIUS server listens on for Access-requests
+func (o WirelessSsidsRadiusServersResponseOutput) Port() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsRadiusServersResponse) *int { return v.Port }).(pulumi.IntPtrOutput)
+}
+
+// Use RADSEC (TLS over TCP) to connect to this RADIUS server. Requires radiusProxyEnabled.
+func (o WirelessSsidsRadiusServersResponseOutput) RadsecEnabled() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsRadiusServersResponse) *bool { return v.RadsecEnabled }).(pulumi.BoolPtrOutput)
+}
+
+// RADIUS client shared secret
+func (o WirelessSsidsRadiusServersResponseOutput) Secret() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsRadiusServersResponse) *string { return v.Secret }).(pulumi.StringPtrOutput)
+}
+
+type WirelessSsidsRadiusServersResponseArrayOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsRadiusServersResponseArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]WirelessSsidsRadiusServersResponse)(nil)).Elem()
+}
+
+func (o WirelessSsidsRadiusServersResponseArrayOutput) ToWirelessSsidsRadiusServersResponseArrayOutput() WirelessSsidsRadiusServersResponseArrayOutput {
+	return o
+}
+
+func (o WirelessSsidsRadiusServersResponseArrayOutput) ToWirelessSsidsRadiusServersResponseArrayOutputWithContext(ctx context.Context) WirelessSsidsRadiusServersResponseArrayOutput {
+	return o
+}
+
+func (o WirelessSsidsRadiusServersResponseArrayOutput) Index(i pulumi.IntInput) WirelessSsidsRadiusServersResponseOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) WirelessSsidsRadiusServersResponse {
+		return vs[0].([]WirelessSsidsRadiusServersResponse)[vs[1].(int)]
+	}).(WirelessSsidsRadiusServersResponseOutput)
+}
+
+type WirelessSsidsSchedulesRange struct {
+	// Day of when the outage ends. Can be either full day name, or three letter abbreviation
+	EndDay *string `pulumi:"endDay"`
+	// 24 hour time when the outage ends.
+	EndTime *string `pulumi:"endTime"`
+	// Day of when the outage starts. Can be either full day name, or three letter abbreviation.
+	StartDay *string `pulumi:"startDay"`
+	// 24 hour time when the outage starts.
+	StartTime *string `pulumi:"startTime"`
+}
+
+// WirelessSsidsSchedulesRangeInput is an input type that accepts WirelessSsidsSchedulesRangeArgs and WirelessSsidsSchedulesRangeOutput values.
+// You can construct a concrete instance of `WirelessSsidsSchedulesRangeInput` via:
+//
+//	WirelessSsidsSchedulesRangeArgs{...}
+type WirelessSsidsSchedulesRangeInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsSchedulesRangeOutput() WirelessSsidsSchedulesRangeOutput
+	ToWirelessSsidsSchedulesRangeOutputWithContext(context.Context) WirelessSsidsSchedulesRangeOutput
+}
+
+type WirelessSsidsSchedulesRangeArgs struct {
+	// Day of when the outage ends. Can be either full day name, or three letter abbreviation
+	EndDay pulumi.StringPtrInput `pulumi:"endDay"`
+	// 24 hour time when the outage ends.
+	EndTime pulumi.StringPtrInput `pulumi:"endTime"`
+	// Day of when the outage starts. Can be either full day name, or three letter abbreviation.
+	StartDay pulumi.StringPtrInput `pulumi:"startDay"`
+	// 24 hour time when the outage starts.
+	StartTime pulumi.StringPtrInput `pulumi:"startTime"`
+}
+
+func (WirelessSsidsSchedulesRangeArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsSchedulesRange)(nil)).Elem()
+}
+
+func (i WirelessSsidsSchedulesRangeArgs) ToWirelessSsidsSchedulesRangeOutput() WirelessSsidsSchedulesRangeOutput {
+	return i.ToWirelessSsidsSchedulesRangeOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsSchedulesRangeArgs) ToWirelessSsidsSchedulesRangeOutputWithContext(ctx context.Context) WirelessSsidsSchedulesRangeOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsSchedulesRangeOutput)
+}
+
+// WirelessSsidsSchedulesRangeArrayInput is an input type that accepts WirelessSsidsSchedulesRangeArray and WirelessSsidsSchedulesRangeArrayOutput values.
+// You can construct a concrete instance of `WirelessSsidsSchedulesRangeArrayInput` via:
+//
+//	WirelessSsidsSchedulesRangeArray{ WirelessSsidsSchedulesRangeArgs{...} }
+type WirelessSsidsSchedulesRangeArrayInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsSchedulesRangeArrayOutput() WirelessSsidsSchedulesRangeArrayOutput
+	ToWirelessSsidsSchedulesRangeArrayOutputWithContext(context.Context) WirelessSsidsSchedulesRangeArrayOutput
+}
+
+type WirelessSsidsSchedulesRangeArray []WirelessSsidsSchedulesRangeInput
+
+func (WirelessSsidsSchedulesRangeArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]WirelessSsidsSchedulesRange)(nil)).Elem()
+}
+
+func (i WirelessSsidsSchedulesRangeArray) ToWirelessSsidsSchedulesRangeArrayOutput() WirelessSsidsSchedulesRangeArrayOutput {
+	return i.ToWirelessSsidsSchedulesRangeArrayOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsSchedulesRangeArray) ToWirelessSsidsSchedulesRangeArrayOutputWithContext(ctx context.Context) WirelessSsidsSchedulesRangeArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsSchedulesRangeArrayOutput)
+}
+
+type WirelessSsidsSchedulesRangeOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsSchedulesRangeOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsSchedulesRange)(nil)).Elem()
+}
+
+func (o WirelessSsidsSchedulesRangeOutput) ToWirelessSsidsSchedulesRangeOutput() WirelessSsidsSchedulesRangeOutput {
+	return o
+}
+
+func (o WirelessSsidsSchedulesRangeOutput) ToWirelessSsidsSchedulesRangeOutputWithContext(ctx context.Context) WirelessSsidsSchedulesRangeOutput {
+	return o
+}
+
+// Day of when the outage ends. Can be either full day name, or three letter abbreviation
+func (o WirelessSsidsSchedulesRangeOutput) EndDay() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsSchedulesRange) *string { return v.EndDay }).(pulumi.StringPtrOutput)
+}
+
+// 24 hour time when the outage ends.
+func (o WirelessSsidsSchedulesRangeOutput) EndTime() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsSchedulesRange) *string { return v.EndTime }).(pulumi.StringPtrOutput)
+}
+
+// Day of when the outage starts. Can be either full day name, or three letter abbreviation.
+func (o WirelessSsidsSchedulesRangeOutput) StartDay() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsSchedulesRange) *string { return v.StartDay }).(pulumi.StringPtrOutput)
+}
+
+// 24 hour time when the outage starts.
+func (o WirelessSsidsSchedulesRangeOutput) StartTime() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsSchedulesRange) *string { return v.StartTime }).(pulumi.StringPtrOutput)
+}
+
+type WirelessSsidsSchedulesRangeArrayOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsSchedulesRangeArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]WirelessSsidsSchedulesRange)(nil)).Elem()
+}
+
+func (o WirelessSsidsSchedulesRangeArrayOutput) ToWirelessSsidsSchedulesRangeArrayOutput() WirelessSsidsSchedulesRangeArrayOutput {
+	return o
+}
+
+func (o WirelessSsidsSchedulesRangeArrayOutput) ToWirelessSsidsSchedulesRangeArrayOutputWithContext(ctx context.Context) WirelessSsidsSchedulesRangeArrayOutput {
+	return o
+}
+
+func (o WirelessSsidsSchedulesRangeArrayOutput) Index(i pulumi.IntInput) WirelessSsidsSchedulesRangeOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) WirelessSsidsSchedulesRange {
+		return vs[0].([]WirelessSsidsSchedulesRange)[vs[1].(int)]
+	}).(WirelessSsidsSchedulesRangeOutput)
+}
+
+type WirelessSsidsSchedulesRangesInSecond struct {
+	// Seconds since Sunday at midnight when that outage range ends.
+	End *int `pulumi:"end"`
+	// Seconds since Sunday at midnight when the outage range starts.
+	Start *int `pulumi:"start"`
+}
+
+// WirelessSsidsSchedulesRangesInSecondInput is an input type that accepts WirelessSsidsSchedulesRangesInSecondArgs and WirelessSsidsSchedulesRangesInSecondOutput values.
+// You can construct a concrete instance of `WirelessSsidsSchedulesRangesInSecondInput` via:
+//
+//	WirelessSsidsSchedulesRangesInSecondArgs{...}
+type WirelessSsidsSchedulesRangesInSecondInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsSchedulesRangesInSecondOutput() WirelessSsidsSchedulesRangesInSecondOutput
+	ToWirelessSsidsSchedulesRangesInSecondOutputWithContext(context.Context) WirelessSsidsSchedulesRangesInSecondOutput
+}
+
+type WirelessSsidsSchedulesRangesInSecondArgs struct {
+	// Seconds since Sunday at midnight when that outage range ends.
+	End pulumi.IntPtrInput `pulumi:"end"`
+	// Seconds since Sunday at midnight when the outage range starts.
+	Start pulumi.IntPtrInput `pulumi:"start"`
+}
+
+func (WirelessSsidsSchedulesRangesInSecondArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsSchedulesRangesInSecond)(nil)).Elem()
+}
+
+func (i WirelessSsidsSchedulesRangesInSecondArgs) ToWirelessSsidsSchedulesRangesInSecondOutput() WirelessSsidsSchedulesRangesInSecondOutput {
+	return i.ToWirelessSsidsSchedulesRangesInSecondOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsSchedulesRangesInSecondArgs) ToWirelessSsidsSchedulesRangesInSecondOutputWithContext(ctx context.Context) WirelessSsidsSchedulesRangesInSecondOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsSchedulesRangesInSecondOutput)
+}
+
+// WirelessSsidsSchedulesRangesInSecondArrayInput is an input type that accepts WirelessSsidsSchedulesRangesInSecondArray and WirelessSsidsSchedulesRangesInSecondArrayOutput values.
+// You can construct a concrete instance of `WirelessSsidsSchedulesRangesInSecondArrayInput` via:
+//
+//	WirelessSsidsSchedulesRangesInSecondArray{ WirelessSsidsSchedulesRangesInSecondArgs{...} }
+type WirelessSsidsSchedulesRangesInSecondArrayInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsSchedulesRangesInSecondArrayOutput() WirelessSsidsSchedulesRangesInSecondArrayOutput
+	ToWirelessSsidsSchedulesRangesInSecondArrayOutputWithContext(context.Context) WirelessSsidsSchedulesRangesInSecondArrayOutput
+}
+
+type WirelessSsidsSchedulesRangesInSecondArray []WirelessSsidsSchedulesRangesInSecondInput
+
+func (WirelessSsidsSchedulesRangesInSecondArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]WirelessSsidsSchedulesRangesInSecond)(nil)).Elem()
+}
+
+func (i WirelessSsidsSchedulesRangesInSecondArray) ToWirelessSsidsSchedulesRangesInSecondArrayOutput() WirelessSsidsSchedulesRangesInSecondArrayOutput {
+	return i.ToWirelessSsidsSchedulesRangesInSecondArrayOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsSchedulesRangesInSecondArray) ToWirelessSsidsSchedulesRangesInSecondArrayOutputWithContext(ctx context.Context) WirelessSsidsSchedulesRangesInSecondArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsSchedulesRangesInSecondArrayOutput)
+}
+
+type WirelessSsidsSchedulesRangesInSecondOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsSchedulesRangesInSecondOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsSchedulesRangesInSecond)(nil)).Elem()
+}
+
+func (o WirelessSsidsSchedulesRangesInSecondOutput) ToWirelessSsidsSchedulesRangesInSecondOutput() WirelessSsidsSchedulesRangesInSecondOutput {
+	return o
+}
+
+func (o WirelessSsidsSchedulesRangesInSecondOutput) ToWirelessSsidsSchedulesRangesInSecondOutputWithContext(ctx context.Context) WirelessSsidsSchedulesRangesInSecondOutput {
+	return o
+}
+
+// Seconds since Sunday at midnight when that outage range ends.
+func (o WirelessSsidsSchedulesRangesInSecondOutput) End() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsSchedulesRangesInSecond) *int { return v.End }).(pulumi.IntPtrOutput)
+}
+
+// Seconds since Sunday at midnight when the outage range starts.
+func (o WirelessSsidsSchedulesRangesInSecondOutput) Start() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsSchedulesRangesInSecond) *int { return v.Start }).(pulumi.IntPtrOutput)
+}
+
+type WirelessSsidsSchedulesRangesInSecondArrayOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsSchedulesRangesInSecondArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]WirelessSsidsSchedulesRangesInSecond)(nil)).Elem()
+}
+
+func (o WirelessSsidsSchedulesRangesInSecondArrayOutput) ToWirelessSsidsSchedulesRangesInSecondArrayOutput() WirelessSsidsSchedulesRangesInSecondArrayOutput {
+	return o
+}
+
+func (o WirelessSsidsSchedulesRangesInSecondArrayOutput) ToWirelessSsidsSchedulesRangesInSecondArrayOutputWithContext(ctx context.Context) WirelessSsidsSchedulesRangesInSecondArrayOutput {
+	return o
+}
+
+func (o WirelessSsidsSchedulesRangesInSecondArrayOutput) Index(i pulumi.IntInput) WirelessSsidsSchedulesRangesInSecondOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) WirelessSsidsSchedulesRangesInSecond {
+		return vs[0].([]WirelessSsidsSchedulesRangesInSecond)[vs[1].(int)]
+	}).(WirelessSsidsSchedulesRangesInSecondOutput)
+}
+
+type WirelessSsidsSpeedBurst struct {
+	// Boolean indicating whether or not to allow users to temporarily exceed the bandwidth limit for short periods while still keeping them under the bandwidth limit over time.
+	Enabled *bool `pulumi:"enabled"`
+}
+
+// WirelessSsidsSpeedBurstInput is an input type that accepts WirelessSsidsSpeedBurstArgs and WirelessSsidsSpeedBurstOutput values.
+// You can construct a concrete instance of `WirelessSsidsSpeedBurstInput` via:
+//
+//	WirelessSsidsSpeedBurstArgs{...}
+type WirelessSsidsSpeedBurstInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsSpeedBurstOutput() WirelessSsidsSpeedBurstOutput
+	ToWirelessSsidsSpeedBurstOutputWithContext(context.Context) WirelessSsidsSpeedBurstOutput
+}
+
+type WirelessSsidsSpeedBurstArgs struct {
+	// Boolean indicating whether or not to allow users to temporarily exceed the bandwidth limit for short periods while still keeping them under the bandwidth limit over time.
+	Enabled pulumi.BoolPtrInput `pulumi:"enabled"`
+}
+
+func (WirelessSsidsSpeedBurstArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsSpeedBurst)(nil)).Elem()
+}
+
+func (i WirelessSsidsSpeedBurstArgs) ToWirelessSsidsSpeedBurstOutput() WirelessSsidsSpeedBurstOutput {
+	return i.ToWirelessSsidsSpeedBurstOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsSpeedBurstArgs) ToWirelessSsidsSpeedBurstOutputWithContext(ctx context.Context) WirelessSsidsSpeedBurstOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsSpeedBurstOutput)
+}
+
+func (i WirelessSsidsSpeedBurstArgs) ToWirelessSsidsSpeedBurstPtrOutput() WirelessSsidsSpeedBurstPtrOutput {
+	return i.ToWirelessSsidsSpeedBurstPtrOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsSpeedBurstArgs) ToWirelessSsidsSpeedBurstPtrOutputWithContext(ctx context.Context) WirelessSsidsSpeedBurstPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsSpeedBurstOutput).ToWirelessSsidsSpeedBurstPtrOutputWithContext(ctx)
+}
+
+// WirelessSsidsSpeedBurstPtrInput is an input type that accepts WirelessSsidsSpeedBurstArgs, WirelessSsidsSpeedBurstPtr and WirelessSsidsSpeedBurstPtrOutput values.
+// You can construct a concrete instance of `WirelessSsidsSpeedBurstPtrInput` via:
+//
+//	        WirelessSsidsSpeedBurstArgs{...}
+//
+//	or:
+//
+//	        nil
+type WirelessSsidsSpeedBurstPtrInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsSpeedBurstPtrOutput() WirelessSsidsSpeedBurstPtrOutput
+	ToWirelessSsidsSpeedBurstPtrOutputWithContext(context.Context) WirelessSsidsSpeedBurstPtrOutput
+}
+
+type wirelessSsidsSpeedBurstPtrType WirelessSsidsSpeedBurstArgs
+
+func WirelessSsidsSpeedBurstPtr(v *WirelessSsidsSpeedBurstArgs) WirelessSsidsSpeedBurstPtrInput {
+	return (*wirelessSsidsSpeedBurstPtrType)(v)
+}
+
+func (*wirelessSsidsSpeedBurstPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsSpeedBurst)(nil)).Elem()
+}
+
+func (i *wirelessSsidsSpeedBurstPtrType) ToWirelessSsidsSpeedBurstPtrOutput() WirelessSsidsSpeedBurstPtrOutput {
+	return i.ToWirelessSsidsSpeedBurstPtrOutputWithContext(context.Background())
+}
+
+func (i *wirelessSsidsSpeedBurstPtrType) ToWirelessSsidsSpeedBurstPtrOutputWithContext(ctx context.Context) WirelessSsidsSpeedBurstPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsSpeedBurstPtrOutput)
+}
+
+type WirelessSsidsSpeedBurstOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsSpeedBurstOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsSpeedBurst)(nil)).Elem()
+}
+
+func (o WirelessSsidsSpeedBurstOutput) ToWirelessSsidsSpeedBurstOutput() WirelessSsidsSpeedBurstOutput {
+	return o
+}
+
+func (o WirelessSsidsSpeedBurstOutput) ToWirelessSsidsSpeedBurstOutputWithContext(ctx context.Context) WirelessSsidsSpeedBurstOutput {
+	return o
+}
+
+func (o WirelessSsidsSpeedBurstOutput) ToWirelessSsidsSpeedBurstPtrOutput() WirelessSsidsSpeedBurstPtrOutput {
+	return o.ToWirelessSsidsSpeedBurstPtrOutputWithContext(context.Background())
+}
+
+func (o WirelessSsidsSpeedBurstOutput) ToWirelessSsidsSpeedBurstPtrOutputWithContext(ctx context.Context) WirelessSsidsSpeedBurstPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v WirelessSsidsSpeedBurst) *WirelessSsidsSpeedBurst {
+		return &v
+	}).(WirelessSsidsSpeedBurstPtrOutput)
+}
+
+// Boolean indicating whether or not to allow users to temporarily exceed the bandwidth limit for short periods while still keeping them under the bandwidth limit over time.
+func (o WirelessSsidsSpeedBurstOutput) Enabled() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsSpeedBurst) *bool { return v.Enabled }).(pulumi.BoolPtrOutput)
+}
+
+type WirelessSsidsSpeedBurstPtrOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsSpeedBurstPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsSpeedBurst)(nil)).Elem()
+}
+
+func (o WirelessSsidsSpeedBurstPtrOutput) ToWirelessSsidsSpeedBurstPtrOutput() WirelessSsidsSpeedBurstPtrOutput {
+	return o
+}
+
+func (o WirelessSsidsSpeedBurstPtrOutput) ToWirelessSsidsSpeedBurstPtrOutputWithContext(ctx context.Context) WirelessSsidsSpeedBurstPtrOutput {
+	return o
+}
+
+func (o WirelessSsidsSpeedBurstPtrOutput) Elem() WirelessSsidsSpeedBurstOutput {
+	return o.ApplyT(func(v *WirelessSsidsSpeedBurst) WirelessSsidsSpeedBurst {
+		if v != nil {
+			return *v
+		}
+		var ret WirelessSsidsSpeedBurst
+		return ret
+	}).(WirelessSsidsSpeedBurstOutput)
+}
+
+// Boolean indicating whether or not to allow users to temporarily exceed the bandwidth limit for short periods while still keeping them under the bandwidth limit over time.
+func (o WirelessSsidsSpeedBurstPtrOutput) Enabled() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsSpeedBurst) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.Enabled
+	}).(pulumi.BoolPtrOutput)
+}
+
+type WirelessSsidsSplashSettingsBilling struct {
+	// Details associated with a free access plan with limits
+	FreeAccess *WirelessSsidsSplashSettingsBillingFreeAccess `pulumi:"freeAccess"`
+	// Whether or not billing uses the fast login prepaid access option.
+	PrepaidAccessFastLoginEnabled *bool `pulumi:"prepaidAccessFastLoginEnabled"`
+	// The email address that reeceives replies from clients
+	ReplyToEmailAddress *string `pulumi:"replyToEmailAddress"`
+}
+
+// WirelessSsidsSplashSettingsBillingInput is an input type that accepts WirelessSsidsSplashSettingsBillingArgs and WirelessSsidsSplashSettingsBillingOutput values.
+// You can construct a concrete instance of `WirelessSsidsSplashSettingsBillingInput` via:
+//
+//	WirelessSsidsSplashSettingsBillingArgs{...}
+type WirelessSsidsSplashSettingsBillingInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsSplashSettingsBillingOutput() WirelessSsidsSplashSettingsBillingOutput
+	ToWirelessSsidsSplashSettingsBillingOutputWithContext(context.Context) WirelessSsidsSplashSettingsBillingOutput
+}
+
+type WirelessSsidsSplashSettingsBillingArgs struct {
+	// Details associated with a free access plan with limits
+	FreeAccess WirelessSsidsSplashSettingsBillingFreeAccessPtrInput `pulumi:"freeAccess"`
+	// Whether or not billing uses the fast login prepaid access option.
+	PrepaidAccessFastLoginEnabled pulumi.BoolPtrInput `pulumi:"prepaidAccessFastLoginEnabled"`
+	// The email address that reeceives replies from clients
+	ReplyToEmailAddress pulumi.StringPtrInput `pulumi:"replyToEmailAddress"`
+}
+
+func (WirelessSsidsSplashSettingsBillingArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsSplashSettingsBilling)(nil)).Elem()
+}
+
+func (i WirelessSsidsSplashSettingsBillingArgs) ToWirelessSsidsSplashSettingsBillingOutput() WirelessSsidsSplashSettingsBillingOutput {
+	return i.ToWirelessSsidsSplashSettingsBillingOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsSplashSettingsBillingArgs) ToWirelessSsidsSplashSettingsBillingOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsBillingOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsSplashSettingsBillingOutput)
+}
+
+func (i WirelessSsidsSplashSettingsBillingArgs) ToWirelessSsidsSplashSettingsBillingPtrOutput() WirelessSsidsSplashSettingsBillingPtrOutput {
+	return i.ToWirelessSsidsSplashSettingsBillingPtrOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsSplashSettingsBillingArgs) ToWirelessSsidsSplashSettingsBillingPtrOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsBillingPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsSplashSettingsBillingOutput).ToWirelessSsidsSplashSettingsBillingPtrOutputWithContext(ctx)
+}
+
+// WirelessSsidsSplashSettingsBillingPtrInput is an input type that accepts WirelessSsidsSplashSettingsBillingArgs, WirelessSsidsSplashSettingsBillingPtr and WirelessSsidsSplashSettingsBillingPtrOutput values.
+// You can construct a concrete instance of `WirelessSsidsSplashSettingsBillingPtrInput` via:
+//
+//	        WirelessSsidsSplashSettingsBillingArgs{...}
+//
+//	or:
+//
+//	        nil
+type WirelessSsidsSplashSettingsBillingPtrInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsSplashSettingsBillingPtrOutput() WirelessSsidsSplashSettingsBillingPtrOutput
+	ToWirelessSsidsSplashSettingsBillingPtrOutputWithContext(context.Context) WirelessSsidsSplashSettingsBillingPtrOutput
+}
+
+type wirelessSsidsSplashSettingsBillingPtrType WirelessSsidsSplashSettingsBillingArgs
+
+func WirelessSsidsSplashSettingsBillingPtr(v *WirelessSsidsSplashSettingsBillingArgs) WirelessSsidsSplashSettingsBillingPtrInput {
+	return (*wirelessSsidsSplashSettingsBillingPtrType)(v)
+}
+
+func (*wirelessSsidsSplashSettingsBillingPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsSplashSettingsBilling)(nil)).Elem()
+}
+
+func (i *wirelessSsidsSplashSettingsBillingPtrType) ToWirelessSsidsSplashSettingsBillingPtrOutput() WirelessSsidsSplashSettingsBillingPtrOutput {
+	return i.ToWirelessSsidsSplashSettingsBillingPtrOutputWithContext(context.Background())
+}
+
+func (i *wirelessSsidsSplashSettingsBillingPtrType) ToWirelessSsidsSplashSettingsBillingPtrOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsBillingPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsSplashSettingsBillingPtrOutput)
+}
+
+type WirelessSsidsSplashSettingsBillingOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsSplashSettingsBillingOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsSplashSettingsBilling)(nil)).Elem()
+}
+
+func (o WirelessSsidsSplashSettingsBillingOutput) ToWirelessSsidsSplashSettingsBillingOutput() WirelessSsidsSplashSettingsBillingOutput {
+	return o
+}
+
+func (o WirelessSsidsSplashSettingsBillingOutput) ToWirelessSsidsSplashSettingsBillingOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsBillingOutput {
+	return o
+}
+
+func (o WirelessSsidsSplashSettingsBillingOutput) ToWirelessSsidsSplashSettingsBillingPtrOutput() WirelessSsidsSplashSettingsBillingPtrOutput {
+	return o.ToWirelessSsidsSplashSettingsBillingPtrOutputWithContext(context.Background())
+}
+
+func (o WirelessSsidsSplashSettingsBillingOutput) ToWirelessSsidsSplashSettingsBillingPtrOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsBillingPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v WirelessSsidsSplashSettingsBilling) *WirelessSsidsSplashSettingsBilling {
+		return &v
+	}).(WirelessSsidsSplashSettingsBillingPtrOutput)
+}
+
+// Details associated with a free access plan with limits
+func (o WirelessSsidsSplashSettingsBillingOutput) FreeAccess() WirelessSsidsSplashSettingsBillingFreeAccessPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsSplashSettingsBilling) *WirelessSsidsSplashSettingsBillingFreeAccess {
+		return v.FreeAccess
+	}).(WirelessSsidsSplashSettingsBillingFreeAccessPtrOutput)
+}
+
+// Whether or not billing uses the fast login prepaid access option.
+func (o WirelessSsidsSplashSettingsBillingOutput) PrepaidAccessFastLoginEnabled() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsSplashSettingsBilling) *bool { return v.PrepaidAccessFastLoginEnabled }).(pulumi.BoolPtrOutput)
+}
+
+// The email address that reeceives replies from clients
+func (o WirelessSsidsSplashSettingsBillingOutput) ReplyToEmailAddress() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsSplashSettingsBilling) *string { return v.ReplyToEmailAddress }).(pulumi.StringPtrOutput)
+}
+
+type WirelessSsidsSplashSettingsBillingPtrOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsSplashSettingsBillingPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsSplashSettingsBilling)(nil)).Elem()
+}
+
+func (o WirelessSsidsSplashSettingsBillingPtrOutput) ToWirelessSsidsSplashSettingsBillingPtrOutput() WirelessSsidsSplashSettingsBillingPtrOutput {
+	return o
+}
+
+func (o WirelessSsidsSplashSettingsBillingPtrOutput) ToWirelessSsidsSplashSettingsBillingPtrOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsBillingPtrOutput {
+	return o
+}
+
+func (o WirelessSsidsSplashSettingsBillingPtrOutput) Elem() WirelessSsidsSplashSettingsBillingOutput {
+	return o.ApplyT(func(v *WirelessSsidsSplashSettingsBilling) WirelessSsidsSplashSettingsBilling {
+		if v != nil {
+			return *v
+		}
+		var ret WirelessSsidsSplashSettingsBilling
+		return ret
+	}).(WirelessSsidsSplashSettingsBillingOutput)
+}
+
+// Details associated with a free access plan with limits
+func (o WirelessSsidsSplashSettingsBillingPtrOutput) FreeAccess() WirelessSsidsSplashSettingsBillingFreeAccessPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsSplashSettingsBilling) *WirelessSsidsSplashSettingsBillingFreeAccess {
+		if v == nil {
+			return nil
+		}
+		return v.FreeAccess
+	}).(WirelessSsidsSplashSettingsBillingFreeAccessPtrOutput)
+}
+
+// Whether or not billing uses the fast login prepaid access option.
+func (o WirelessSsidsSplashSettingsBillingPtrOutput) PrepaidAccessFastLoginEnabled() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsSplashSettingsBilling) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.PrepaidAccessFastLoginEnabled
+	}).(pulumi.BoolPtrOutput)
+}
+
+// The email address that reeceives replies from clients
+func (o WirelessSsidsSplashSettingsBillingPtrOutput) ReplyToEmailAddress() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsSplashSettingsBilling) *string {
+		if v == nil {
+			return nil
+		}
+		return v.ReplyToEmailAddress
+	}).(pulumi.StringPtrOutput)
+}
+
+type WirelessSsidsSplashSettingsBillingFreeAccess struct {
+	// How long a device can use a network for free.
+	DurationInMinutes *int `pulumi:"durationInMinutes"`
+	// Whether or not free access is enabled.
+	Enabled *bool `pulumi:"enabled"`
+}
+
+// WirelessSsidsSplashSettingsBillingFreeAccessInput is an input type that accepts WirelessSsidsSplashSettingsBillingFreeAccessArgs and WirelessSsidsSplashSettingsBillingFreeAccessOutput values.
+// You can construct a concrete instance of `WirelessSsidsSplashSettingsBillingFreeAccessInput` via:
+//
+//	WirelessSsidsSplashSettingsBillingFreeAccessArgs{...}
+type WirelessSsidsSplashSettingsBillingFreeAccessInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsSplashSettingsBillingFreeAccessOutput() WirelessSsidsSplashSettingsBillingFreeAccessOutput
+	ToWirelessSsidsSplashSettingsBillingFreeAccessOutputWithContext(context.Context) WirelessSsidsSplashSettingsBillingFreeAccessOutput
+}
+
+type WirelessSsidsSplashSettingsBillingFreeAccessArgs struct {
+	// How long a device can use a network for free.
+	DurationInMinutes pulumi.IntPtrInput `pulumi:"durationInMinutes"`
+	// Whether or not free access is enabled.
+	Enabled pulumi.BoolPtrInput `pulumi:"enabled"`
+}
+
+func (WirelessSsidsSplashSettingsBillingFreeAccessArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsSplashSettingsBillingFreeAccess)(nil)).Elem()
+}
+
+func (i WirelessSsidsSplashSettingsBillingFreeAccessArgs) ToWirelessSsidsSplashSettingsBillingFreeAccessOutput() WirelessSsidsSplashSettingsBillingFreeAccessOutput {
+	return i.ToWirelessSsidsSplashSettingsBillingFreeAccessOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsSplashSettingsBillingFreeAccessArgs) ToWirelessSsidsSplashSettingsBillingFreeAccessOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsBillingFreeAccessOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsSplashSettingsBillingFreeAccessOutput)
+}
+
+func (i WirelessSsidsSplashSettingsBillingFreeAccessArgs) ToWirelessSsidsSplashSettingsBillingFreeAccessPtrOutput() WirelessSsidsSplashSettingsBillingFreeAccessPtrOutput {
+	return i.ToWirelessSsidsSplashSettingsBillingFreeAccessPtrOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsSplashSettingsBillingFreeAccessArgs) ToWirelessSsidsSplashSettingsBillingFreeAccessPtrOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsBillingFreeAccessPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsSplashSettingsBillingFreeAccessOutput).ToWirelessSsidsSplashSettingsBillingFreeAccessPtrOutputWithContext(ctx)
+}
+
+// WirelessSsidsSplashSettingsBillingFreeAccessPtrInput is an input type that accepts WirelessSsidsSplashSettingsBillingFreeAccessArgs, WirelessSsidsSplashSettingsBillingFreeAccessPtr and WirelessSsidsSplashSettingsBillingFreeAccessPtrOutput values.
+// You can construct a concrete instance of `WirelessSsidsSplashSettingsBillingFreeAccessPtrInput` via:
+//
+//	        WirelessSsidsSplashSettingsBillingFreeAccessArgs{...}
+//
+//	or:
+//
+//	        nil
+type WirelessSsidsSplashSettingsBillingFreeAccessPtrInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsSplashSettingsBillingFreeAccessPtrOutput() WirelessSsidsSplashSettingsBillingFreeAccessPtrOutput
+	ToWirelessSsidsSplashSettingsBillingFreeAccessPtrOutputWithContext(context.Context) WirelessSsidsSplashSettingsBillingFreeAccessPtrOutput
+}
+
+type wirelessSsidsSplashSettingsBillingFreeAccessPtrType WirelessSsidsSplashSettingsBillingFreeAccessArgs
+
+func WirelessSsidsSplashSettingsBillingFreeAccessPtr(v *WirelessSsidsSplashSettingsBillingFreeAccessArgs) WirelessSsidsSplashSettingsBillingFreeAccessPtrInput {
+	return (*wirelessSsidsSplashSettingsBillingFreeAccessPtrType)(v)
+}
+
+func (*wirelessSsidsSplashSettingsBillingFreeAccessPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsSplashSettingsBillingFreeAccess)(nil)).Elem()
+}
+
+func (i *wirelessSsidsSplashSettingsBillingFreeAccessPtrType) ToWirelessSsidsSplashSettingsBillingFreeAccessPtrOutput() WirelessSsidsSplashSettingsBillingFreeAccessPtrOutput {
+	return i.ToWirelessSsidsSplashSettingsBillingFreeAccessPtrOutputWithContext(context.Background())
+}
+
+func (i *wirelessSsidsSplashSettingsBillingFreeAccessPtrType) ToWirelessSsidsSplashSettingsBillingFreeAccessPtrOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsBillingFreeAccessPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsSplashSettingsBillingFreeAccessPtrOutput)
+}
+
+type WirelessSsidsSplashSettingsBillingFreeAccessOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsSplashSettingsBillingFreeAccessOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsSplashSettingsBillingFreeAccess)(nil)).Elem()
+}
+
+func (o WirelessSsidsSplashSettingsBillingFreeAccessOutput) ToWirelessSsidsSplashSettingsBillingFreeAccessOutput() WirelessSsidsSplashSettingsBillingFreeAccessOutput {
+	return o
+}
+
+func (o WirelessSsidsSplashSettingsBillingFreeAccessOutput) ToWirelessSsidsSplashSettingsBillingFreeAccessOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsBillingFreeAccessOutput {
+	return o
+}
+
+func (o WirelessSsidsSplashSettingsBillingFreeAccessOutput) ToWirelessSsidsSplashSettingsBillingFreeAccessPtrOutput() WirelessSsidsSplashSettingsBillingFreeAccessPtrOutput {
+	return o.ToWirelessSsidsSplashSettingsBillingFreeAccessPtrOutputWithContext(context.Background())
+}
+
+func (o WirelessSsidsSplashSettingsBillingFreeAccessOutput) ToWirelessSsidsSplashSettingsBillingFreeAccessPtrOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsBillingFreeAccessPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v WirelessSsidsSplashSettingsBillingFreeAccess) *WirelessSsidsSplashSettingsBillingFreeAccess {
+		return &v
+	}).(WirelessSsidsSplashSettingsBillingFreeAccessPtrOutput)
+}
+
+// How long a device can use a network for free.
+func (o WirelessSsidsSplashSettingsBillingFreeAccessOutput) DurationInMinutes() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsSplashSettingsBillingFreeAccess) *int { return v.DurationInMinutes }).(pulumi.IntPtrOutput)
+}
+
+// Whether or not free access is enabled.
+func (o WirelessSsidsSplashSettingsBillingFreeAccessOutput) Enabled() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsSplashSettingsBillingFreeAccess) *bool { return v.Enabled }).(pulumi.BoolPtrOutput)
+}
+
+type WirelessSsidsSplashSettingsBillingFreeAccessPtrOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsSplashSettingsBillingFreeAccessPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsSplashSettingsBillingFreeAccess)(nil)).Elem()
+}
+
+func (o WirelessSsidsSplashSettingsBillingFreeAccessPtrOutput) ToWirelessSsidsSplashSettingsBillingFreeAccessPtrOutput() WirelessSsidsSplashSettingsBillingFreeAccessPtrOutput {
+	return o
+}
+
+func (o WirelessSsidsSplashSettingsBillingFreeAccessPtrOutput) ToWirelessSsidsSplashSettingsBillingFreeAccessPtrOutputWithContext(ctx context.Context) WirelessSsidsSplashSettingsBillingFreeAccessPtrOutput {
+	return o
+}
+
+func (o WirelessSsidsSplashSettingsBillingFreeAccessPtrOutput) Elem() WirelessSsidsSplashSettingsBillingFreeAccessOutput {
+	return o.ApplyT(func(v *WirelessSsidsSplashSettingsBillingFreeAccess) WirelessSsidsSplashSettingsBillingFreeAccess {
+		if v != nil {
+			return *v
+		}
+		var ret WirelessSsidsSplashSettingsBillingFreeAccess
+		return ret
+	}).(WirelessSsidsSplashSettingsBillingFreeAccessOutput)
+}
+
+// How long a device can use a network for free.
+func (o WirelessSsidsSplashSettingsBillingFreeAccessPtrOutput) DurationInMinutes() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsSplashSettingsBillingFreeAccess) *int {
+		if v == nil {
+			return nil
+		}
+		return v.DurationInMinutes
+	}).(pulumi.IntPtrOutput)
+}
+
+// Whether or not free access is enabled.
+func (o WirelessSsidsSplashSettingsBillingFreeAccessPtrOutput) Enabled() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsSplashSettingsBillingFreeAccess) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.Enabled
+	}).(pulumi.BoolPtrOutput)
+}
+
 type WirelessSsidsSplashSettingsGuestSponsorship struct {
 	// Duration in minutes of sponsored guest authorization.
 	DurationInMinutes *int `pulumi:"durationInMinutes"`
@@ -44559,1929 +47763,51 @@ func (o GetWirelessFailedConnectionsItemArrayOutput) Index(i pulumi.IntInput) Ge
 	}).(GetWirelessFailedConnectionsItemOutput)
 }
 
-type GetWirelessLatencyHistoryItem struct {
-	// Average latency in milliseconds
-	AvgLatencyMs int `pulumi:"avgLatencyMs"`
-	// The end time of the query range
-	EndTs string `pulumi:"endTs"`
-	// The start time of the query range
-	StartTs string `pulumi:"startTs"`
-}
-
-// GetWirelessLatencyHistoryItemInput is an input type that accepts GetWirelessLatencyHistoryItemArgs and GetWirelessLatencyHistoryItemOutput values.
-// You can construct a concrete instance of `GetWirelessLatencyHistoryItemInput` via:
-//
-//	GetWirelessLatencyHistoryItemArgs{...}
-type GetWirelessLatencyHistoryItemInput interface {
-	pulumi.Input
-
-	ToGetWirelessLatencyHistoryItemOutput() GetWirelessLatencyHistoryItemOutput
-	ToGetWirelessLatencyHistoryItemOutputWithContext(context.Context) GetWirelessLatencyHistoryItemOutput
-}
-
-type GetWirelessLatencyHistoryItemArgs struct {
-	// Average latency in milliseconds
-	AvgLatencyMs pulumi.IntInput `pulumi:"avgLatencyMs"`
-	// The end time of the query range
-	EndTs pulumi.StringInput `pulumi:"endTs"`
-	// The start time of the query range
-	StartTs pulumi.StringInput `pulumi:"startTs"`
-}
-
-func (GetWirelessLatencyHistoryItemArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessLatencyHistoryItem)(nil)).Elem()
-}
-
-func (i GetWirelessLatencyHistoryItemArgs) ToGetWirelessLatencyHistoryItemOutput() GetWirelessLatencyHistoryItemOutput {
-	return i.ToGetWirelessLatencyHistoryItemOutputWithContext(context.Background())
-}
-
-func (i GetWirelessLatencyHistoryItemArgs) ToGetWirelessLatencyHistoryItemOutputWithContext(ctx context.Context) GetWirelessLatencyHistoryItemOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessLatencyHistoryItemOutput)
-}
-
-// GetWirelessLatencyHistoryItemArrayInput is an input type that accepts GetWirelessLatencyHistoryItemArray and GetWirelessLatencyHistoryItemArrayOutput values.
-// You can construct a concrete instance of `GetWirelessLatencyHistoryItemArrayInput` via:
-//
-//	GetWirelessLatencyHistoryItemArray{ GetWirelessLatencyHistoryItemArgs{...} }
-type GetWirelessLatencyHistoryItemArrayInput interface {
-	pulumi.Input
-
-	ToGetWirelessLatencyHistoryItemArrayOutput() GetWirelessLatencyHistoryItemArrayOutput
-	ToGetWirelessLatencyHistoryItemArrayOutputWithContext(context.Context) GetWirelessLatencyHistoryItemArrayOutput
-}
-
-type GetWirelessLatencyHistoryItemArray []GetWirelessLatencyHistoryItemInput
-
-func (GetWirelessLatencyHistoryItemArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetWirelessLatencyHistoryItem)(nil)).Elem()
-}
-
-func (i GetWirelessLatencyHistoryItemArray) ToGetWirelessLatencyHistoryItemArrayOutput() GetWirelessLatencyHistoryItemArrayOutput {
-	return i.ToGetWirelessLatencyHistoryItemArrayOutputWithContext(context.Background())
-}
-
-func (i GetWirelessLatencyHistoryItemArray) ToGetWirelessLatencyHistoryItemArrayOutputWithContext(ctx context.Context) GetWirelessLatencyHistoryItemArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessLatencyHistoryItemArrayOutput)
-}
-
-type GetWirelessLatencyHistoryItemOutput struct{ *pulumi.OutputState }
-
-func (GetWirelessLatencyHistoryItemOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessLatencyHistoryItem)(nil)).Elem()
-}
-
-func (o GetWirelessLatencyHistoryItemOutput) ToGetWirelessLatencyHistoryItemOutput() GetWirelessLatencyHistoryItemOutput {
-	return o
-}
-
-func (o GetWirelessLatencyHistoryItemOutput) ToGetWirelessLatencyHistoryItemOutputWithContext(ctx context.Context) GetWirelessLatencyHistoryItemOutput {
-	return o
-}
-
-// Average latency in milliseconds
-func (o GetWirelessLatencyHistoryItemOutput) AvgLatencyMs() pulumi.IntOutput {
-	return o.ApplyT(func(v GetWirelessLatencyHistoryItem) int { return v.AvgLatencyMs }).(pulumi.IntOutput)
-}
-
-// The end time of the query range
-func (o GetWirelessLatencyHistoryItemOutput) EndTs() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessLatencyHistoryItem) string { return v.EndTs }).(pulumi.StringOutput)
-}
-
-// The start time of the query range
-func (o GetWirelessLatencyHistoryItemOutput) StartTs() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessLatencyHistoryItem) string { return v.StartTs }).(pulumi.StringOutput)
-}
-
-type GetWirelessLatencyHistoryItemArrayOutput struct{ *pulumi.OutputState }
-
-func (GetWirelessLatencyHistoryItemArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetWirelessLatencyHistoryItem)(nil)).Elem()
-}
-
-func (o GetWirelessLatencyHistoryItemArrayOutput) ToGetWirelessLatencyHistoryItemArrayOutput() GetWirelessLatencyHistoryItemArrayOutput {
-	return o
-}
-
-func (o GetWirelessLatencyHistoryItemArrayOutput) ToGetWirelessLatencyHistoryItemArrayOutputWithContext(ctx context.Context) GetWirelessLatencyHistoryItemArrayOutput {
-	return o
-}
-
-func (o GetWirelessLatencyHistoryItemArrayOutput) Index(i pulumi.IntInput) GetWirelessLatencyHistoryItemOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetWirelessLatencyHistoryItem {
-		return vs[0].([]GetWirelessLatencyHistoryItem)[vs[1].(int)]
-	}).(GetWirelessLatencyHistoryItemOutput)
-}
-
-type GetWirelessLatencyStatsItem struct {
-	BackgroundTraffic GetWirelessLatencyStatsItemBackgroundTraffic `pulumi:"backgroundTraffic"`
-	BestEffortTraffic string                                       `pulumi:"bestEffortTraffic"`
-	VideoTraffic      string                                       `pulumi:"videoTraffic"`
-	VoiceTraffic      string                                       `pulumi:"voiceTraffic"`
-}
-
-// GetWirelessLatencyStatsItemInput is an input type that accepts GetWirelessLatencyStatsItemArgs and GetWirelessLatencyStatsItemOutput values.
-// You can construct a concrete instance of `GetWirelessLatencyStatsItemInput` via:
-//
-//	GetWirelessLatencyStatsItemArgs{...}
-type GetWirelessLatencyStatsItemInput interface {
-	pulumi.Input
-
-	ToGetWirelessLatencyStatsItemOutput() GetWirelessLatencyStatsItemOutput
-	ToGetWirelessLatencyStatsItemOutputWithContext(context.Context) GetWirelessLatencyStatsItemOutput
-}
-
-type GetWirelessLatencyStatsItemArgs struct {
-	BackgroundTraffic GetWirelessLatencyStatsItemBackgroundTrafficInput `pulumi:"backgroundTraffic"`
-	BestEffortTraffic pulumi.StringInput                                `pulumi:"bestEffortTraffic"`
-	VideoTraffic      pulumi.StringInput                                `pulumi:"videoTraffic"`
-	VoiceTraffic      pulumi.StringInput                                `pulumi:"voiceTraffic"`
-}
-
-func (GetWirelessLatencyStatsItemArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessLatencyStatsItem)(nil)).Elem()
-}
-
-func (i GetWirelessLatencyStatsItemArgs) ToGetWirelessLatencyStatsItemOutput() GetWirelessLatencyStatsItemOutput {
-	return i.ToGetWirelessLatencyStatsItemOutputWithContext(context.Background())
-}
-
-func (i GetWirelessLatencyStatsItemArgs) ToGetWirelessLatencyStatsItemOutputWithContext(ctx context.Context) GetWirelessLatencyStatsItemOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessLatencyStatsItemOutput)
-}
-
-type GetWirelessLatencyStatsItemOutput struct{ *pulumi.OutputState }
-
-func (GetWirelessLatencyStatsItemOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessLatencyStatsItem)(nil)).Elem()
-}
-
-func (o GetWirelessLatencyStatsItemOutput) ToGetWirelessLatencyStatsItemOutput() GetWirelessLatencyStatsItemOutput {
-	return o
-}
-
-func (o GetWirelessLatencyStatsItemOutput) ToGetWirelessLatencyStatsItemOutputWithContext(ctx context.Context) GetWirelessLatencyStatsItemOutput {
-	return o
-}
-
-func (o GetWirelessLatencyStatsItemOutput) BackgroundTraffic() GetWirelessLatencyStatsItemBackgroundTrafficOutput {
-	return o.ApplyT(func(v GetWirelessLatencyStatsItem) GetWirelessLatencyStatsItemBackgroundTraffic {
-		return v.BackgroundTraffic
-	}).(GetWirelessLatencyStatsItemBackgroundTrafficOutput)
-}
-
-func (o GetWirelessLatencyStatsItemOutput) BestEffortTraffic() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessLatencyStatsItem) string { return v.BestEffortTraffic }).(pulumi.StringOutput)
-}
-
-func (o GetWirelessLatencyStatsItemOutput) VideoTraffic() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessLatencyStatsItem) string { return v.VideoTraffic }).(pulumi.StringOutput)
-}
-
-func (o GetWirelessLatencyStatsItemOutput) VoiceTraffic() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessLatencyStatsItem) string { return v.VoiceTraffic }).(pulumi.StringOutput)
-}
-
-type GetWirelessLatencyStatsItemBackgroundTraffic struct {
-	Avg             float64                                                     `pulumi:"avg"`
-	RawDistribution GetWirelessLatencyStatsItemBackgroundTrafficRawDistribution `pulumi:"rawDistribution"`
-}
-
-// GetWirelessLatencyStatsItemBackgroundTrafficInput is an input type that accepts GetWirelessLatencyStatsItemBackgroundTrafficArgs and GetWirelessLatencyStatsItemBackgroundTrafficOutput values.
-// You can construct a concrete instance of `GetWirelessLatencyStatsItemBackgroundTrafficInput` via:
-//
-//	GetWirelessLatencyStatsItemBackgroundTrafficArgs{...}
-type GetWirelessLatencyStatsItemBackgroundTrafficInput interface {
-	pulumi.Input
-
-	ToGetWirelessLatencyStatsItemBackgroundTrafficOutput() GetWirelessLatencyStatsItemBackgroundTrafficOutput
-	ToGetWirelessLatencyStatsItemBackgroundTrafficOutputWithContext(context.Context) GetWirelessLatencyStatsItemBackgroundTrafficOutput
-}
-
-type GetWirelessLatencyStatsItemBackgroundTrafficArgs struct {
-	Avg             pulumi.Float64Input                                              `pulumi:"avg"`
-	RawDistribution GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionInput `pulumi:"rawDistribution"`
-}
-
-func (GetWirelessLatencyStatsItemBackgroundTrafficArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessLatencyStatsItemBackgroundTraffic)(nil)).Elem()
-}
-
-func (i GetWirelessLatencyStatsItemBackgroundTrafficArgs) ToGetWirelessLatencyStatsItemBackgroundTrafficOutput() GetWirelessLatencyStatsItemBackgroundTrafficOutput {
-	return i.ToGetWirelessLatencyStatsItemBackgroundTrafficOutputWithContext(context.Background())
-}
-
-func (i GetWirelessLatencyStatsItemBackgroundTrafficArgs) ToGetWirelessLatencyStatsItemBackgroundTrafficOutputWithContext(ctx context.Context) GetWirelessLatencyStatsItemBackgroundTrafficOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessLatencyStatsItemBackgroundTrafficOutput)
-}
-
-type GetWirelessLatencyStatsItemBackgroundTrafficOutput struct{ *pulumi.OutputState }
-
-func (GetWirelessLatencyStatsItemBackgroundTrafficOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessLatencyStatsItemBackgroundTraffic)(nil)).Elem()
-}
-
-func (o GetWirelessLatencyStatsItemBackgroundTrafficOutput) ToGetWirelessLatencyStatsItemBackgroundTrafficOutput() GetWirelessLatencyStatsItemBackgroundTrafficOutput {
-	return o
-}
-
-func (o GetWirelessLatencyStatsItemBackgroundTrafficOutput) ToGetWirelessLatencyStatsItemBackgroundTrafficOutputWithContext(ctx context.Context) GetWirelessLatencyStatsItemBackgroundTrafficOutput {
-	return o
-}
-
-func (o GetWirelessLatencyStatsItemBackgroundTrafficOutput) Avg() pulumi.Float64Output {
-	return o.ApplyT(func(v GetWirelessLatencyStatsItemBackgroundTraffic) float64 { return v.Avg }).(pulumi.Float64Output)
-}
-
-func (o GetWirelessLatencyStatsItemBackgroundTrafficOutput) RawDistribution() GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionOutput {
-	return o.ApplyT(func(v GetWirelessLatencyStatsItemBackgroundTraffic) GetWirelessLatencyStatsItemBackgroundTrafficRawDistribution {
-		return v.RawDistribution
-	}).(GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionOutput)
-}
-
-type GetWirelessLatencyStatsItemBackgroundTrafficRawDistribution struct {
-	Status0    int `pulumi:"status0"`
-	Status1    int `pulumi:"status1"`
-	Status1024 int `pulumi:"status1024"`
-	Status128  int `pulumi:"status128"`
-	Status16   int `pulumi:"status16"`
-	Status2    int `pulumi:"status2"`
-	Status2048 int `pulumi:"status2048"`
-	Status256  int `pulumi:"status256"`
-	Status32   int `pulumi:"status32"`
-	Status4    int `pulumi:"status4"`
-	Status512  int `pulumi:"status512"`
-	Status64   int `pulumi:"status64"`
-	Status8    int `pulumi:"status8"`
-}
-
-// GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionInput is an input type that accepts GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionArgs and GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionOutput values.
-// You can construct a concrete instance of `GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionInput` via:
-//
-//	GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionArgs{...}
-type GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionInput interface {
-	pulumi.Input
-
-	ToGetWirelessLatencyStatsItemBackgroundTrafficRawDistributionOutput() GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionOutput
-	ToGetWirelessLatencyStatsItemBackgroundTrafficRawDistributionOutputWithContext(context.Context) GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionOutput
-}
-
-type GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionArgs struct {
-	Status0    pulumi.IntInput `pulumi:"status0"`
-	Status1    pulumi.IntInput `pulumi:"status1"`
-	Status1024 pulumi.IntInput `pulumi:"status1024"`
-	Status128  pulumi.IntInput `pulumi:"status128"`
-	Status16   pulumi.IntInput `pulumi:"status16"`
-	Status2    pulumi.IntInput `pulumi:"status2"`
-	Status2048 pulumi.IntInput `pulumi:"status2048"`
-	Status256  pulumi.IntInput `pulumi:"status256"`
-	Status32   pulumi.IntInput `pulumi:"status32"`
-	Status4    pulumi.IntInput `pulumi:"status4"`
-	Status512  pulumi.IntInput `pulumi:"status512"`
-	Status64   pulumi.IntInput `pulumi:"status64"`
-	Status8    pulumi.IntInput `pulumi:"status8"`
-}
-
-func (GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessLatencyStatsItemBackgroundTrafficRawDistribution)(nil)).Elem()
-}
-
-func (i GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionArgs) ToGetWirelessLatencyStatsItemBackgroundTrafficRawDistributionOutput() GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionOutput {
-	return i.ToGetWirelessLatencyStatsItemBackgroundTrafficRawDistributionOutputWithContext(context.Background())
-}
-
-func (i GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionArgs) ToGetWirelessLatencyStatsItemBackgroundTrafficRawDistributionOutputWithContext(ctx context.Context) GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionOutput)
-}
-
-type GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionOutput struct{ *pulumi.OutputState }
-
-func (GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessLatencyStatsItemBackgroundTrafficRawDistribution)(nil)).Elem()
-}
-
-func (o GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionOutput) ToGetWirelessLatencyStatsItemBackgroundTrafficRawDistributionOutput() GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionOutput {
-	return o
-}
-
-func (o GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionOutput) ToGetWirelessLatencyStatsItemBackgroundTrafficRawDistributionOutputWithContext(ctx context.Context) GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionOutput {
-	return o
-}
-
-func (o GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionOutput) Status0() pulumi.IntOutput {
-	return o.ApplyT(func(v GetWirelessLatencyStatsItemBackgroundTrafficRawDistribution) int { return v.Status0 }).(pulumi.IntOutput)
-}
-
-func (o GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionOutput) Status1() pulumi.IntOutput {
-	return o.ApplyT(func(v GetWirelessLatencyStatsItemBackgroundTrafficRawDistribution) int { return v.Status1 }).(pulumi.IntOutput)
-}
-
-func (o GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionOutput) Status1024() pulumi.IntOutput {
-	return o.ApplyT(func(v GetWirelessLatencyStatsItemBackgroundTrafficRawDistribution) int { return v.Status1024 }).(pulumi.IntOutput)
-}
-
-func (o GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionOutput) Status128() pulumi.IntOutput {
-	return o.ApplyT(func(v GetWirelessLatencyStatsItemBackgroundTrafficRawDistribution) int { return v.Status128 }).(pulumi.IntOutput)
-}
-
-func (o GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionOutput) Status16() pulumi.IntOutput {
-	return o.ApplyT(func(v GetWirelessLatencyStatsItemBackgroundTrafficRawDistribution) int { return v.Status16 }).(pulumi.IntOutput)
-}
-
-func (o GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionOutput) Status2() pulumi.IntOutput {
-	return o.ApplyT(func(v GetWirelessLatencyStatsItemBackgroundTrafficRawDistribution) int { return v.Status2 }).(pulumi.IntOutput)
-}
-
-func (o GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionOutput) Status2048() pulumi.IntOutput {
-	return o.ApplyT(func(v GetWirelessLatencyStatsItemBackgroundTrafficRawDistribution) int { return v.Status2048 }).(pulumi.IntOutput)
-}
-
-func (o GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionOutput) Status256() pulumi.IntOutput {
-	return o.ApplyT(func(v GetWirelessLatencyStatsItemBackgroundTrafficRawDistribution) int { return v.Status256 }).(pulumi.IntOutput)
-}
-
-func (o GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionOutput) Status32() pulumi.IntOutput {
-	return o.ApplyT(func(v GetWirelessLatencyStatsItemBackgroundTrafficRawDistribution) int { return v.Status32 }).(pulumi.IntOutput)
-}
-
-func (o GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionOutput) Status4() pulumi.IntOutput {
-	return o.ApplyT(func(v GetWirelessLatencyStatsItemBackgroundTrafficRawDistribution) int { return v.Status4 }).(pulumi.IntOutput)
-}
-
-func (o GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionOutput) Status512() pulumi.IntOutput {
-	return o.ApplyT(func(v GetWirelessLatencyStatsItemBackgroundTrafficRawDistribution) int { return v.Status512 }).(pulumi.IntOutput)
-}
-
-func (o GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionOutput) Status64() pulumi.IntOutput {
-	return o.ApplyT(func(v GetWirelessLatencyStatsItemBackgroundTrafficRawDistribution) int { return v.Status64 }).(pulumi.IntOutput)
-}
-
-func (o GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionOutput) Status8() pulumi.IntOutput {
-	return o.ApplyT(func(v GetWirelessLatencyStatsItemBackgroundTrafficRawDistribution) int { return v.Status8 }).(pulumi.IntOutput)
-}
-
-type GetWirelessMeshStatusesItem struct {
-	// Current metrics on how the mesh is performing.
-	LatestMeshPerformance GetWirelessMeshStatusesItemLatestMeshPerformance `pulumi:"latestMeshPerformance"`
-	// List of device serials that make up the mesh.
-	MeshRoutes []string `pulumi:"meshRoutes"`
-	// The serial number for the device.
-	Serial string `pulumi:"serial"`
-}
-
-// GetWirelessMeshStatusesItemInput is an input type that accepts GetWirelessMeshStatusesItemArgs and GetWirelessMeshStatusesItemOutput values.
-// You can construct a concrete instance of `GetWirelessMeshStatusesItemInput` via:
-//
-//	GetWirelessMeshStatusesItemArgs{...}
-type GetWirelessMeshStatusesItemInput interface {
-	pulumi.Input
-
-	ToGetWirelessMeshStatusesItemOutput() GetWirelessMeshStatusesItemOutput
-	ToGetWirelessMeshStatusesItemOutputWithContext(context.Context) GetWirelessMeshStatusesItemOutput
-}
-
-type GetWirelessMeshStatusesItemArgs struct {
-	// Current metrics on how the mesh is performing.
-	LatestMeshPerformance GetWirelessMeshStatusesItemLatestMeshPerformanceInput `pulumi:"latestMeshPerformance"`
-	// List of device serials that make up the mesh.
-	MeshRoutes pulumi.StringArrayInput `pulumi:"meshRoutes"`
-	// The serial number for the device.
-	Serial pulumi.StringInput `pulumi:"serial"`
-}
-
-func (GetWirelessMeshStatusesItemArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessMeshStatusesItem)(nil)).Elem()
-}
-
-func (i GetWirelessMeshStatusesItemArgs) ToGetWirelessMeshStatusesItemOutput() GetWirelessMeshStatusesItemOutput {
-	return i.ToGetWirelessMeshStatusesItemOutputWithContext(context.Background())
-}
-
-func (i GetWirelessMeshStatusesItemArgs) ToGetWirelessMeshStatusesItemOutputWithContext(ctx context.Context) GetWirelessMeshStatusesItemOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessMeshStatusesItemOutput)
-}
-
-// GetWirelessMeshStatusesItemArrayInput is an input type that accepts GetWirelessMeshStatusesItemArray and GetWirelessMeshStatusesItemArrayOutput values.
-// You can construct a concrete instance of `GetWirelessMeshStatusesItemArrayInput` via:
-//
-//	GetWirelessMeshStatusesItemArray{ GetWirelessMeshStatusesItemArgs{...} }
-type GetWirelessMeshStatusesItemArrayInput interface {
-	pulumi.Input
-
-	ToGetWirelessMeshStatusesItemArrayOutput() GetWirelessMeshStatusesItemArrayOutput
-	ToGetWirelessMeshStatusesItemArrayOutputWithContext(context.Context) GetWirelessMeshStatusesItemArrayOutput
-}
-
-type GetWirelessMeshStatusesItemArray []GetWirelessMeshStatusesItemInput
-
-func (GetWirelessMeshStatusesItemArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetWirelessMeshStatusesItem)(nil)).Elem()
-}
-
-func (i GetWirelessMeshStatusesItemArray) ToGetWirelessMeshStatusesItemArrayOutput() GetWirelessMeshStatusesItemArrayOutput {
-	return i.ToGetWirelessMeshStatusesItemArrayOutputWithContext(context.Background())
-}
-
-func (i GetWirelessMeshStatusesItemArray) ToGetWirelessMeshStatusesItemArrayOutputWithContext(ctx context.Context) GetWirelessMeshStatusesItemArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessMeshStatusesItemArrayOutput)
-}
-
-type GetWirelessMeshStatusesItemOutput struct{ *pulumi.OutputState }
-
-func (GetWirelessMeshStatusesItemOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessMeshStatusesItem)(nil)).Elem()
-}
-
-func (o GetWirelessMeshStatusesItemOutput) ToGetWirelessMeshStatusesItemOutput() GetWirelessMeshStatusesItemOutput {
-	return o
-}
-
-func (o GetWirelessMeshStatusesItemOutput) ToGetWirelessMeshStatusesItemOutputWithContext(ctx context.Context) GetWirelessMeshStatusesItemOutput {
-	return o
-}
-
-// Current metrics on how the mesh is performing.
-func (o GetWirelessMeshStatusesItemOutput) LatestMeshPerformance() GetWirelessMeshStatusesItemLatestMeshPerformanceOutput {
-	return o.ApplyT(func(v GetWirelessMeshStatusesItem) GetWirelessMeshStatusesItemLatestMeshPerformance {
-		return v.LatestMeshPerformance
-	}).(GetWirelessMeshStatusesItemLatestMeshPerformanceOutput)
-}
-
-// List of device serials that make up the mesh.
-func (o GetWirelessMeshStatusesItemOutput) MeshRoutes() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetWirelessMeshStatusesItem) []string { return v.MeshRoutes }).(pulumi.StringArrayOutput)
-}
-
-// The serial number for the device.
-func (o GetWirelessMeshStatusesItemOutput) Serial() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessMeshStatusesItem) string { return v.Serial }).(pulumi.StringOutput)
-}
-
-type GetWirelessMeshStatusesItemArrayOutput struct{ *pulumi.OutputState }
-
-func (GetWirelessMeshStatusesItemArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetWirelessMeshStatusesItem)(nil)).Elem()
-}
-
-func (o GetWirelessMeshStatusesItemArrayOutput) ToGetWirelessMeshStatusesItemArrayOutput() GetWirelessMeshStatusesItemArrayOutput {
-	return o
-}
-
-func (o GetWirelessMeshStatusesItemArrayOutput) ToGetWirelessMeshStatusesItemArrayOutputWithContext(ctx context.Context) GetWirelessMeshStatusesItemArrayOutput {
-	return o
-}
-
-func (o GetWirelessMeshStatusesItemArrayOutput) Index(i pulumi.IntInput) GetWirelessMeshStatusesItemOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetWirelessMeshStatusesItem {
-		return vs[0].([]GetWirelessMeshStatusesItem)[vs[1].(int)]
-	}).(GetWirelessMeshStatusesItemOutput)
-}
-
-type GetWirelessMeshStatusesItemLatestMeshPerformance struct {
-	// Average Mbps.
-	Mbps int `pulumi:"mbps"`
-	// Represents the quality of the entire route from the repeater access point to its gateway access point.
-	Metric int `pulumi:"metric"`
-	// Mesh utilization as a percentage.
-	UsagePercentage string `pulumi:"usagePercentage"`
-}
-
-// GetWirelessMeshStatusesItemLatestMeshPerformanceInput is an input type that accepts GetWirelessMeshStatusesItemLatestMeshPerformanceArgs and GetWirelessMeshStatusesItemLatestMeshPerformanceOutput values.
-// You can construct a concrete instance of `GetWirelessMeshStatusesItemLatestMeshPerformanceInput` via:
-//
-//	GetWirelessMeshStatusesItemLatestMeshPerformanceArgs{...}
-type GetWirelessMeshStatusesItemLatestMeshPerformanceInput interface {
-	pulumi.Input
-
-	ToGetWirelessMeshStatusesItemLatestMeshPerformanceOutput() GetWirelessMeshStatusesItemLatestMeshPerformanceOutput
-	ToGetWirelessMeshStatusesItemLatestMeshPerformanceOutputWithContext(context.Context) GetWirelessMeshStatusesItemLatestMeshPerformanceOutput
-}
-
-type GetWirelessMeshStatusesItemLatestMeshPerformanceArgs struct {
-	// Average Mbps.
-	Mbps pulumi.IntInput `pulumi:"mbps"`
-	// Represents the quality of the entire route from the repeater access point to its gateway access point.
-	Metric pulumi.IntInput `pulumi:"metric"`
-	// Mesh utilization as a percentage.
-	UsagePercentage pulumi.StringInput `pulumi:"usagePercentage"`
-}
-
-func (GetWirelessMeshStatusesItemLatestMeshPerformanceArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessMeshStatusesItemLatestMeshPerformance)(nil)).Elem()
-}
-
-func (i GetWirelessMeshStatusesItemLatestMeshPerformanceArgs) ToGetWirelessMeshStatusesItemLatestMeshPerformanceOutput() GetWirelessMeshStatusesItemLatestMeshPerformanceOutput {
-	return i.ToGetWirelessMeshStatusesItemLatestMeshPerformanceOutputWithContext(context.Background())
-}
-
-func (i GetWirelessMeshStatusesItemLatestMeshPerformanceArgs) ToGetWirelessMeshStatusesItemLatestMeshPerformanceOutputWithContext(ctx context.Context) GetWirelessMeshStatusesItemLatestMeshPerformanceOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessMeshStatusesItemLatestMeshPerformanceOutput)
-}
-
-type GetWirelessMeshStatusesItemLatestMeshPerformanceOutput struct{ *pulumi.OutputState }
-
-func (GetWirelessMeshStatusesItemLatestMeshPerformanceOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessMeshStatusesItemLatestMeshPerformance)(nil)).Elem()
-}
-
-func (o GetWirelessMeshStatusesItemLatestMeshPerformanceOutput) ToGetWirelessMeshStatusesItemLatestMeshPerformanceOutput() GetWirelessMeshStatusesItemLatestMeshPerformanceOutput {
-	return o
-}
-
-func (o GetWirelessMeshStatusesItemLatestMeshPerformanceOutput) ToGetWirelessMeshStatusesItemLatestMeshPerformanceOutputWithContext(ctx context.Context) GetWirelessMeshStatusesItemLatestMeshPerformanceOutput {
-	return o
-}
-
-// Average Mbps.
-func (o GetWirelessMeshStatusesItemLatestMeshPerformanceOutput) Mbps() pulumi.IntOutput {
-	return o.ApplyT(func(v GetWirelessMeshStatusesItemLatestMeshPerformance) int { return v.Mbps }).(pulumi.IntOutput)
-}
-
-// Represents the quality of the entire route from the repeater access point to its gateway access point.
-func (o GetWirelessMeshStatusesItemLatestMeshPerformanceOutput) Metric() pulumi.IntOutput {
-	return o.ApplyT(func(v GetWirelessMeshStatusesItemLatestMeshPerformance) int { return v.Metric }).(pulumi.IntOutput)
-}
-
-// Mesh utilization as a percentage.
-func (o GetWirelessMeshStatusesItemLatestMeshPerformanceOutput) UsagePercentage() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessMeshStatusesItemLatestMeshPerformance) string { return v.UsagePercentage }).(pulumi.StringOutput)
-}
-
-type GetWirelessRfProfilesItem struct {
-	// Settings that will be enabled if selectionType is set to 'ap'.
-	ApBandSettings GetWirelessRfProfilesItemApBandSettings `pulumi:"apBandSettings"`
-	// Band selection can be set to either 'ssid' or 'ap'. This param is required on creation.
-	BandSelectionType string `pulumi:"bandSelectionType"`
-	// Steers client to best available access point. Can be either true or false. Defaults to true.
-	ClientBalancingEnabled bool `pulumi:"clientBalancingEnabled"`
-	// Settings related to 5Ghz band
-	FiveGhzSettings GetWirelessRfProfilesItemFiveGhzSettings `pulumi:"fiveGhzSettings"`
-	// The name of the new profile. Must be unique.
-	Id string `pulumi:"id"`
-	// Minimum bitrate can be set to either 'band' or 'ssid'. Defaults to band.
-	MinBitrateType string `pulumi:"minBitrateType"`
-	// The name of the new profile. Must be unique. This param is required on creation.
-	Name string `pulumi:"name"`
-	// The network ID of the RF Profile
-	NetworkId string `pulumi:"networkId"`
-	// Per-SSID radio settings by number.
-	PerSsidSettings GetWirelessRfProfilesItemPerSsidSettings `pulumi:"perSsidSettings"`
-	// Settings related to 6Ghz band. Only applicable to networks with 6Ghz capable APs
-	SixGhzSettings GetWirelessRfProfilesItemSixGhzSettings `pulumi:"sixGhzSettings"`
-	// Settings related to radio transmission.
-	Transmission GetWirelessRfProfilesItemTransmission `pulumi:"transmission"`
-	// Settings related to 2.4Ghz band
-	TwoFourGhzSettings GetWirelessRfProfilesItemTwoFourGhzSettings `pulumi:"twoFourGhzSettings"`
-}
-
-// GetWirelessRfProfilesItemInput is an input type that accepts GetWirelessRfProfilesItemArgs and GetWirelessRfProfilesItemOutput values.
-// You can construct a concrete instance of `GetWirelessRfProfilesItemInput` via:
-//
-//	GetWirelessRfProfilesItemArgs{...}
-type GetWirelessRfProfilesItemInput interface {
-	pulumi.Input
-
-	ToGetWirelessRfProfilesItemOutput() GetWirelessRfProfilesItemOutput
-	ToGetWirelessRfProfilesItemOutputWithContext(context.Context) GetWirelessRfProfilesItemOutput
-}
-
-type GetWirelessRfProfilesItemArgs struct {
-	// Settings that will be enabled if selectionType is set to 'ap'.
-	ApBandSettings GetWirelessRfProfilesItemApBandSettingsInput `pulumi:"apBandSettings"`
-	// Band selection can be set to either 'ssid' or 'ap'. This param is required on creation.
-	BandSelectionType pulumi.StringInput `pulumi:"bandSelectionType"`
-	// Steers client to best available access point. Can be either true or false. Defaults to true.
-	ClientBalancingEnabled pulumi.BoolInput `pulumi:"clientBalancingEnabled"`
-	// Settings related to 5Ghz band
-	FiveGhzSettings GetWirelessRfProfilesItemFiveGhzSettingsInput `pulumi:"fiveGhzSettings"`
-	// The name of the new profile. Must be unique.
-	Id pulumi.StringInput `pulumi:"id"`
-	// Minimum bitrate can be set to either 'band' or 'ssid'. Defaults to band.
-	MinBitrateType pulumi.StringInput `pulumi:"minBitrateType"`
-	// The name of the new profile. Must be unique. This param is required on creation.
-	Name pulumi.StringInput `pulumi:"name"`
-	// The network ID of the RF Profile
-	NetworkId pulumi.StringInput `pulumi:"networkId"`
-	// Per-SSID radio settings by number.
-	PerSsidSettings GetWirelessRfProfilesItemPerSsidSettingsInput `pulumi:"perSsidSettings"`
-	// Settings related to 6Ghz band. Only applicable to networks with 6Ghz capable APs
-	SixGhzSettings GetWirelessRfProfilesItemSixGhzSettingsInput `pulumi:"sixGhzSettings"`
-	// Settings related to radio transmission.
-	Transmission GetWirelessRfProfilesItemTransmissionInput `pulumi:"transmission"`
-	// Settings related to 2.4Ghz band
-	TwoFourGhzSettings GetWirelessRfProfilesItemTwoFourGhzSettingsInput `pulumi:"twoFourGhzSettings"`
-}
-
-func (GetWirelessRfProfilesItemArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItem)(nil)).Elem()
-}
-
-func (i GetWirelessRfProfilesItemArgs) ToGetWirelessRfProfilesItemOutput() GetWirelessRfProfilesItemOutput {
-	return i.ToGetWirelessRfProfilesItemOutputWithContext(context.Background())
-}
-
-func (i GetWirelessRfProfilesItemArgs) ToGetWirelessRfProfilesItemOutputWithContext(ctx context.Context) GetWirelessRfProfilesItemOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessRfProfilesItemOutput)
-}
-
-type GetWirelessRfProfilesItemOutput struct{ *pulumi.OutputState }
-
-func (GetWirelessRfProfilesItemOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItem)(nil)).Elem()
-}
-
-func (o GetWirelessRfProfilesItemOutput) ToGetWirelessRfProfilesItemOutput() GetWirelessRfProfilesItemOutput {
-	return o
-}
-
-func (o GetWirelessRfProfilesItemOutput) ToGetWirelessRfProfilesItemOutputWithContext(ctx context.Context) GetWirelessRfProfilesItemOutput {
-	return o
-}
-
-// Settings that will be enabled if selectionType is set to 'ap'.
-func (o GetWirelessRfProfilesItemOutput) ApBandSettings() GetWirelessRfProfilesItemApBandSettingsOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItem) GetWirelessRfProfilesItemApBandSettings { return v.ApBandSettings }).(GetWirelessRfProfilesItemApBandSettingsOutput)
-}
-
-// Band selection can be set to either 'ssid' or 'ap'. This param is required on creation.
-func (o GetWirelessRfProfilesItemOutput) BandSelectionType() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItem) string { return v.BandSelectionType }).(pulumi.StringOutput)
-}
-
-// Steers client to best available access point. Can be either true or false. Defaults to true.
-func (o GetWirelessRfProfilesItemOutput) ClientBalancingEnabled() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItem) bool { return v.ClientBalancingEnabled }).(pulumi.BoolOutput)
-}
-
-// Settings related to 5Ghz band
-func (o GetWirelessRfProfilesItemOutput) FiveGhzSettings() GetWirelessRfProfilesItemFiveGhzSettingsOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItem) GetWirelessRfProfilesItemFiveGhzSettings { return v.FiveGhzSettings }).(GetWirelessRfProfilesItemFiveGhzSettingsOutput)
-}
-
-// The name of the new profile. Must be unique.
-func (o GetWirelessRfProfilesItemOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItem) string { return v.Id }).(pulumi.StringOutput)
-}
-
-// Minimum bitrate can be set to either 'band' or 'ssid'. Defaults to band.
-func (o GetWirelessRfProfilesItemOutput) MinBitrateType() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItem) string { return v.MinBitrateType }).(pulumi.StringOutput)
-}
-
-// The name of the new profile. Must be unique. This param is required on creation.
-func (o GetWirelessRfProfilesItemOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItem) string { return v.Name }).(pulumi.StringOutput)
-}
-
-// The network ID of the RF Profile
-func (o GetWirelessRfProfilesItemOutput) NetworkId() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItem) string { return v.NetworkId }).(pulumi.StringOutput)
-}
-
-// Per-SSID radio settings by number.
-func (o GetWirelessRfProfilesItemOutput) PerSsidSettings() GetWirelessRfProfilesItemPerSsidSettingsOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItem) GetWirelessRfProfilesItemPerSsidSettings { return v.PerSsidSettings }).(GetWirelessRfProfilesItemPerSsidSettingsOutput)
-}
-
-// Settings related to 6Ghz band. Only applicable to networks with 6Ghz capable APs
-func (o GetWirelessRfProfilesItemOutput) SixGhzSettings() GetWirelessRfProfilesItemSixGhzSettingsOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItem) GetWirelessRfProfilesItemSixGhzSettings { return v.SixGhzSettings }).(GetWirelessRfProfilesItemSixGhzSettingsOutput)
-}
-
-// Settings related to radio transmission.
-func (o GetWirelessRfProfilesItemOutput) Transmission() GetWirelessRfProfilesItemTransmissionOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItem) GetWirelessRfProfilesItemTransmission { return v.Transmission }).(GetWirelessRfProfilesItemTransmissionOutput)
-}
-
-// Settings related to 2.4Ghz band
-func (o GetWirelessRfProfilesItemOutput) TwoFourGhzSettings() GetWirelessRfProfilesItemTwoFourGhzSettingsOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItem) GetWirelessRfProfilesItemTwoFourGhzSettings {
-		return v.TwoFourGhzSettings
-	}).(GetWirelessRfProfilesItemTwoFourGhzSettingsOutput)
-}
-
-type GetWirelessRfProfilesItemApBandSettings struct {
-	// Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'. Defaults to dual.
-	BandOperationMode string `pulumi:"bandOperationMode"`
-	// Steers client to most open band. Can be either true or false. Defaults to true.
-	BandSteeringEnabled bool `pulumi:"bandSteeringEnabled"`
-	// Settings related to all bands
-	Bands GetWirelessRfProfilesItemApBandSettingsBands `pulumi:"bands"`
-}
-
-// GetWirelessRfProfilesItemApBandSettingsInput is an input type that accepts GetWirelessRfProfilesItemApBandSettingsArgs and GetWirelessRfProfilesItemApBandSettingsOutput values.
-// You can construct a concrete instance of `GetWirelessRfProfilesItemApBandSettingsInput` via:
-//
-//	GetWirelessRfProfilesItemApBandSettingsArgs{...}
-type GetWirelessRfProfilesItemApBandSettingsInput interface {
-	pulumi.Input
-
-	ToGetWirelessRfProfilesItemApBandSettingsOutput() GetWirelessRfProfilesItemApBandSettingsOutput
-	ToGetWirelessRfProfilesItemApBandSettingsOutputWithContext(context.Context) GetWirelessRfProfilesItemApBandSettingsOutput
-}
-
-type GetWirelessRfProfilesItemApBandSettingsArgs struct {
-	// Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'. Defaults to dual.
-	BandOperationMode pulumi.StringInput `pulumi:"bandOperationMode"`
-	// Steers client to most open band. Can be either true or false. Defaults to true.
-	BandSteeringEnabled pulumi.BoolInput `pulumi:"bandSteeringEnabled"`
-	// Settings related to all bands
-	Bands GetWirelessRfProfilesItemApBandSettingsBandsInput `pulumi:"bands"`
-}
-
-func (GetWirelessRfProfilesItemApBandSettingsArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemApBandSettings)(nil)).Elem()
-}
-
-func (i GetWirelessRfProfilesItemApBandSettingsArgs) ToGetWirelessRfProfilesItemApBandSettingsOutput() GetWirelessRfProfilesItemApBandSettingsOutput {
-	return i.ToGetWirelessRfProfilesItemApBandSettingsOutputWithContext(context.Background())
-}
-
-func (i GetWirelessRfProfilesItemApBandSettingsArgs) ToGetWirelessRfProfilesItemApBandSettingsOutputWithContext(ctx context.Context) GetWirelessRfProfilesItemApBandSettingsOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessRfProfilesItemApBandSettingsOutput)
-}
-
-type GetWirelessRfProfilesItemApBandSettingsOutput struct{ *pulumi.OutputState }
-
-func (GetWirelessRfProfilesItemApBandSettingsOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemApBandSettings)(nil)).Elem()
-}
-
-func (o GetWirelessRfProfilesItemApBandSettingsOutput) ToGetWirelessRfProfilesItemApBandSettingsOutput() GetWirelessRfProfilesItemApBandSettingsOutput {
-	return o
-}
-
-func (o GetWirelessRfProfilesItemApBandSettingsOutput) ToGetWirelessRfProfilesItemApBandSettingsOutputWithContext(ctx context.Context) GetWirelessRfProfilesItemApBandSettingsOutput {
-	return o
-}
-
-// Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'. Defaults to dual.
-func (o GetWirelessRfProfilesItemApBandSettingsOutput) BandOperationMode() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemApBandSettings) string { return v.BandOperationMode }).(pulumi.StringOutput)
-}
-
-// Steers client to most open band. Can be either true or false. Defaults to true.
-func (o GetWirelessRfProfilesItemApBandSettingsOutput) BandSteeringEnabled() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemApBandSettings) bool { return v.BandSteeringEnabled }).(pulumi.BoolOutput)
-}
-
-// Settings related to all bands
-func (o GetWirelessRfProfilesItemApBandSettingsOutput) Bands() GetWirelessRfProfilesItemApBandSettingsBandsOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemApBandSettings) GetWirelessRfProfilesItemApBandSettingsBands {
-		return v.Bands
-	}).(GetWirelessRfProfilesItemApBandSettingsBandsOutput)
-}
-
-type GetWirelessRfProfilesItemApBandSettingsBands struct {
-	// List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-	Enableds []string `pulumi:"enableds"`
-}
-
-// GetWirelessRfProfilesItemApBandSettingsBandsInput is an input type that accepts GetWirelessRfProfilesItemApBandSettingsBandsArgs and GetWirelessRfProfilesItemApBandSettingsBandsOutput values.
-// You can construct a concrete instance of `GetWirelessRfProfilesItemApBandSettingsBandsInput` via:
-//
-//	GetWirelessRfProfilesItemApBandSettingsBandsArgs{...}
-type GetWirelessRfProfilesItemApBandSettingsBandsInput interface {
-	pulumi.Input
-
-	ToGetWirelessRfProfilesItemApBandSettingsBandsOutput() GetWirelessRfProfilesItemApBandSettingsBandsOutput
-	ToGetWirelessRfProfilesItemApBandSettingsBandsOutputWithContext(context.Context) GetWirelessRfProfilesItemApBandSettingsBandsOutput
-}
-
-type GetWirelessRfProfilesItemApBandSettingsBandsArgs struct {
-	// List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-	Enableds pulumi.StringArrayInput `pulumi:"enableds"`
-}
-
-func (GetWirelessRfProfilesItemApBandSettingsBandsArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemApBandSettingsBands)(nil)).Elem()
-}
-
-func (i GetWirelessRfProfilesItemApBandSettingsBandsArgs) ToGetWirelessRfProfilesItemApBandSettingsBandsOutput() GetWirelessRfProfilesItemApBandSettingsBandsOutput {
-	return i.ToGetWirelessRfProfilesItemApBandSettingsBandsOutputWithContext(context.Background())
-}
-
-func (i GetWirelessRfProfilesItemApBandSettingsBandsArgs) ToGetWirelessRfProfilesItemApBandSettingsBandsOutputWithContext(ctx context.Context) GetWirelessRfProfilesItemApBandSettingsBandsOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessRfProfilesItemApBandSettingsBandsOutput)
-}
-
-type GetWirelessRfProfilesItemApBandSettingsBandsOutput struct{ *pulumi.OutputState }
-
-func (GetWirelessRfProfilesItemApBandSettingsBandsOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemApBandSettingsBands)(nil)).Elem()
-}
-
-func (o GetWirelessRfProfilesItemApBandSettingsBandsOutput) ToGetWirelessRfProfilesItemApBandSettingsBandsOutput() GetWirelessRfProfilesItemApBandSettingsBandsOutput {
-	return o
-}
-
-func (o GetWirelessRfProfilesItemApBandSettingsBandsOutput) ToGetWirelessRfProfilesItemApBandSettingsBandsOutputWithContext(ctx context.Context) GetWirelessRfProfilesItemApBandSettingsBandsOutput {
-	return o
-}
-
-// List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-func (o GetWirelessRfProfilesItemApBandSettingsBandsOutput) Enableds() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemApBandSettingsBands) []string { return v.Enableds }).(pulumi.StringArrayOutput)
-}
-
-type GetWirelessRfProfilesItemFiveGhzSettings struct {
-	// Sets channel width (MHz) for 5Ghz band. Can be one of 'auto', '20', '40' or '80'. Defaults to auto.
-	ChannelWidth string `pulumi:"channelWidth"`
-	// Sets max power (dBm) of 5Ghz band. Can be integer between 2 and 30. Defaults to 30.
-	MaxPower int `pulumi:"maxPower"`
-	// Sets min bitrate (Mbps) of 5Ghz band. Can be one of '6', '9', '12', '18', '24', '36', '48' or '54'. Defaults to 12.
-	MinBitrate int `pulumi:"minBitrate"`
-	// Sets min power (dBm) of 5Ghz band. Can be integer between 2 and 30. Defaults to 8.
-	MinPower int `pulumi:"minPower"`
-	// The RX-SOP level controls the sensitivity of the radio. It is strongly recommended to use RX-SOP only after consulting a wireless expert. RX-SOP can be configured in the range of -65 to -95 (dBm). A value of null will reset this to the default.
-	Rxsop int `pulumi:"rxsop"`
-}
-
-// GetWirelessRfProfilesItemFiveGhzSettingsInput is an input type that accepts GetWirelessRfProfilesItemFiveGhzSettingsArgs and GetWirelessRfProfilesItemFiveGhzSettingsOutput values.
-// You can construct a concrete instance of `GetWirelessRfProfilesItemFiveGhzSettingsInput` via:
-//
-//	GetWirelessRfProfilesItemFiveGhzSettingsArgs{...}
-type GetWirelessRfProfilesItemFiveGhzSettingsInput interface {
-	pulumi.Input
-
-	ToGetWirelessRfProfilesItemFiveGhzSettingsOutput() GetWirelessRfProfilesItemFiveGhzSettingsOutput
-	ToGetWirelessRfProfilesItemFiveGhzSettingsOutputWithContext(context.Context) GetWirelessRfProfilesItemFiveGhzSettingsOutput
-}
-
-type GetWirelessRfProfilesItemFiveGhzSettingsArgs struct {
-	// Sets channel width (MHz) for 5Ghz band. Can be one of 'auto', '20', '40' or '80'. Defaults to auto.
-	ChannelWidth pulumi.StringInput `pulumi:"channelWidth"`
-	// Sets max power (dBm) of 5Ghz band. Can be integer between 2 and 30. Defaults to 30.
-	MaxPower pulumi.IntInput `pulumi:"maxPower"`
-	// Sets min bitrate (Mbps) of 5Ghz band. Can be one of '6', '9', '12', '18', '24', '36', '48' or '54'. Defaults to 12.
-	MinBitrate pulumi.IntInput `pulumi:"minBitrate"`
-	// Sets min power (dBm) of 5Ghz band. Can be integer between 2 and 30. Defaults to 8.
-	MinPower pulumi.IntInput `pulumi:"minPower"`
-	// The RX-SOP level controls the sensitivity of the radio. It is strongly recommended to use RX-SOP only after consulting a wireless expert. RX-SOP can be configured in the range of -65 to -95 (dBm). A value of null will reset this to the default.
-	Rxsop pulumi.IntInput `pulumi:"rxsop"`
-}
-
-func (GetWirelessRfProfilesItemFiveGhzSettingsArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemFiveGhzSettings)(nil)).Elem()
-}
-
-func (i GetWirelessRfProfilesItemFiveGhzSettingsArgs) ToGetWirelessRfProfilesItemFiveGhzSettingsOutput() GetWirelessRfProfilesItemFiveGhzSettingsOutput {
-	return i.ToGetWirelessRfProfilesItemFiveGhzSettingsOutputWithContext(context.Background())
-}
-
-func (i GetWirelessRfProfilesItemFiveGhzSettingsArgs) ToGetWirelessRfProfilesItemFiveGhzSettingsOutputWithContext(ctx context.Context) GetWirelessRfProfilesItemFiveGhzSettingsOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessRfProfilesItemFiveGhzSettingsOutput)
-}
-
-type GetWirelessRfProfilesItemFiveGhzSettingsOutput struct{ *pulumi.OutputState }
-
-func (GetWirelessRfProfilesItemFiveGhzSettingsOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemFiveGhzSettings)(nil)).Elem()
-}
-
-func (o GetWirelessRfProfilesItemFiveGhzSettingsOutput) ToGetWirelessRfProfilesItemFiveGhzSettingsOutput() GetWirelessRfProfilesItemFiveGhzSettingsOutput {
-	return o
-}
-
-func (o GetWirelessRfProfilesItemFiveGhzSettingsOutput) ToGetWirelessRfProfilesItemFiveGhzSettingsOutputWithContext(ctx context.Context) GetWirelessRfProfilesItemFiveGhzSettingsOutput {
-	return o
-}
-
-// Sets channel width (MHz) for 5Ghz band. Can be one of 'auto', '20', '40' or '80'. Defaults to auto.
-func (o GetWirelessRfProfilesItemFiveGhzSettingsOutput) ChannelWidth() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemFiveGhzSettings) string { return v.ChannelWidth }).(pulumi.StringOutput)
-}
-
-// Sets max power (dBm) of 5Ghz band. Can be integer between 2 and 30. Defaults to 30.
-func (o GetWirelessRfProfilesItemFiveGhzSettingsOutput) MaxPower() pulumi.IntOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemFiveGhzSettings) int { return v.MaxPower }).(pulumi.IntOutput)
-}
-
-// Sets min bitrate (Mbps) of 5Ghz band. Can be one of '6', '9', '12', '18', '24', '36', '48' or '54'. Defaults to 12.
-func (o GetWirelessRfProfilesItemFiveGhzSettingsOutput) MinBitrate() pulumi.IntOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemFiveGhzSettings) int { return v.MinBitrate }).(pulumi.IntOutput)
-}
-
-// Sets min power (dBm) of 5Ghz band. Can be integer between 2 and 30. Defaults to 8.
-func (o GetWirelessRfProfilesItemFiveGhzSettingsOutput) MinPower() pulumi.IntOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemFiveGhzSettings) int { return v.MinPower }).(pulumi.IntOutput)
-}
-
-// The RX-SOP level controls the sensitivity of the radio. It is strongly recommended to use RX-SOP only after consulting a wireless expert. RX-SOP can be configured in the range of -65 to -95 (dBm). A value of null will reset this to the default.
-func (o GetWirelessRfProfilesItemFiveGhzSettingsOutput) Rxsop() pulumi.IntOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemFiveGhzSettings) int { return v.Rxsop }).(pulumi.IntOutput)
-}
-
-type GetWirelessRfProfilesItemPerSsidSettings struct {
-	// Settings for SSID 0
-	Status0 GetWirelessRfProfilesItemPerSsidSettingsStatus0 `pulumi:"status0"`
-	// Settings for SSID 1
-	Status1 GetWirelessRfProfilesItemPerSsidSettingsStatus1 `pulumi:"status1"`
-	// Settings for SSID 10
-	Status10 GetWirelessRfProfilesItemPerSsidSettingsStatus10 `pulumi:"status10"`
-	// Settings for SSID 11
-	Status11 GetWirelessRfProfilesItemPerSsidSettingsStatus11 `pulumi:"status11"`
-	// Settings for SSID 12
-	Status12 GetWirelessRfProfilesItemPerSsidSettingsStatus12 `pulumi:"status12"`
-	// Settings for SSID 13
-	Status13 GetWirelessRfProfilesItemPerSsidSettingsStatus13 `pulumi:"status13"`
-	// Settings for SSID 14
-	Status14 GetWirelessRfProfilesItemPerSsidSettingsStatus14 `pulumi:"status14"`
-	// Settings for SSID 2
-	Status2 GetWirelessRfProfilesItemPerSsidSettingsStatus2 `pulumi:"status2"`
-	// Settings for SSID 3
-	Status3 GetWirelessRfProfilesItemPerSsidSettingsStatus3 `pulumi:"status3"`
-	// Settings for SSID 4
-	Status4 GetWirelessRfProfilesItemPerSsidSettingsStatus4 `pulumi:"status4"`
-	// Settings for SSID 5
-	Status5 GetWirelessRfProfilesItemPerSsidSettingsStatus5 `pulumi:"status5"`
-	// Settings for SSID 6
-	Status6 GetWirelessRfProfilesItemPerSsidSettingsStatus6 `pulumi:"status6"`
-	// Settings for SSID 7
-	Status7 GetWirelessRfProfilesItemPerSsidSettingsStatus7 `pulumi:"status7"`
-	// Settings for SSID 8
-	Status8 GetWirelessRfProfilesItemPerSsidSettingsStatus8 `pulumi:"status8"`
-	// Settings for SSID 9
-	Status9 GetWirelessRfProfilesItemPerSsidSettingsStatus9 `pulumi:"status9"`
-}
-
-// GetWirelessRfProfilesItemPerSsidSettingsInput is an input type that accepts GetWirelessRfProfilesItemPerSsidSettingsArgs and GetWirelessRfProfilesItemPerSsidSettingsOutput values.
-// You can construct a concrete instance of `GetWirelessRfProfilesItemPerSsidSettingsInput` via:
-//
-//	GetWirelessRfProfilesItemPerSsidSettingsArgs{...}
-type GetWirelessRfProfilesItemPerSsidSettingsInput interface {
-	pulumi.Input
-
-	ToGetWirelessRfProfilesItemPerSsidSettingsOutput() GetWirelessRfProfilesItemPerSsidSettingsOutput
-	ToGetWirelessRfProfilesItemPerSsidSettingsOutputWithContext(context.Context) GetWirelessRfProfilesItemPerSsidSettingsOutput
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsArgs struct {
-	// Settings for SSID 0
-	Status0 GetWirelessRfProfilesItemPerSsidSettingsStatus0Input `pulumi:"status0"`
-	// Settings for SSID 1
-	Status1 GetWirelessRfProfilesItemPerSsidSettingsStatus1Input `pulumi:"status1"`
-	// Settings for SSID 10
-	Status10 GetWirelessRfProfilesItemPerSsidSettingsStatus10Input `pulumi:"status10"`
-	// Settings for SSID 11
-	Status11 GetWirelessRfProfilesItemPerSsidSettingsStatus11Input `pulumi:"status11"`
-	// Settings for SSID 12
-	Status12 GetWirelessRfProfilesItemPerSsidSettingsStatus12Input `pulumi:"status12"`
-	// Settings for SSID 13
-	Status13 GetWirelessRfProfilesItemPerSsidSettingsStatus13Input `pulumi:"status13"`
-	// Settings for SSID 14
-	Status14 GetWirelessRfProfilesItemPerSsidSettingsStatus14Input `pulumi:"status14"`
-	// Settings for SSID 2
-	Status2 GetWirelessRfProfilesItemPerSsidSettingsStatus2Input `pulumi:"status2"`
-	// Settings for SSID 3
-	Status3 GetWirelessRfProfilesItemPerSsidSettingsStatus3Input `pulumi:"status3"`
-	// Settings for SSID 4
-	Status4 GetWirelessRfProfilesItemPerSsidSettingsStatus4Input `pulumi:"status4"`
-	// Settings for SSID 5
-	Status5 GetWirelessRfProfilesItemPerSsidSettingsStatus5Input `pulumi:"status5"`
-	// Settings for SSID 6
-	Status6 GetWirelessRfProfilesItemPerSsidSettingsStatus6Input `pulumi:"status6"`
-	// Settings for SSID 7
-	Status7 GetWirelessRfProfilesItemPerSsidSettingsStatus7Input `pulumi:"status7"`
-	// Settings for SSID 8
-	Status8 GetWirelessRfProfilesItemPerSsidSettingsStatus8Input `pulumi:"status8"`
-	// Settings for SSID 9
-	Status9 GetWirelessRfProfilesItemPerSsidSettingsStatus9Input `pulumi:"status9"`
-}
-
-func (GetWirelessRfProfilesItemPerSsidSettingsArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettings)(nil)).Elem()
-}
-
-func (i GetWirelessRfProfilesItemPerSsidSettingsArgs) ToGetWirelessRfProfilesItemPerSsidSettingsOutput() GetWirelessRfProfilesItemPerSsidSettingsOutput {
-	return i.ToGetWirelessRfProfilesItemPerSsidSettingsOutputWithContext(context.Background())
-}
-
-func (i GetWirelessRfProfilesItemPerSsidSettingsArgs) ToGetWirelessRfProfilesItemPerSsidSettingsOutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessRfProfilesItemPerSsidSettingsOutput)
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsOutput struct{ *pulumi.OutputState }
-
-func (GetWirelessRfProfilesItemPerSsidSettingsOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettings)(nil)).Elem()
-}
-
-func (o GetWirelessRfProfilesItemPerSsidSettingsOutput) ToGetWirelessRfProfilesItemPerSsidSettingsOutput() GetWirelessRfProfilesItemPerSsidSettingsOutput {
-	return o
-}
-
-func (o GetWirelessRfProfilesItemPerSsidSettingsOutput) ToGetWirelessRfProfilesItemPerSsidSettingsOutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsOutput {
-	return o
-}
-
-// Settings for SSID 0
-func (o GetWirelessRfProfilesItemPerSsidSettingsOutput) Status0() GetWirelessRfProfilesItemPerSsidSettingsStatus0Output {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettings) GetWirelessRfProfilesItemPerSsidSettingsStatus0 {
-		return v.Status0
-	}).(GetWirelessRfProfilesItemPerSsidSettingsStatus0Output)
-}
-
-// Settings for SSID 1
-func (o GetWirelessRfProfilesItemPerSsidSettingsOutput) Status1() GetWirelessRfProfilesItemPerSsidSettingsStatus1Output {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettings) GetWirelessRfProfilesItemPerSsidSettingsStatus1 {
-		return v.Status1
-	}).(GetWirelessRfProfilesItemPerSsidSettingsStatus1Output)
-}
-
-// Settings for SSID 10
-func (o GetWirelessRfProfilesItemPerSsidSettingsOutput) Status10() GetWirelessRfProfilesItemPerSsidSettingsStatus10Output {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettings) GetWirelessRfProfilesItemPerSsidSettingsStatus10 {
-		return v.Status10
-	}).(GetWirelessRfProfilesItemPerSsidSettingsStatus10Output)
-}
-
-// Settings for SSID 11
-func (o GetWirelessRfProfilesItemPerSsidSettingsOutput) Status11() GetWirelessRfProfilesItemPerSsidSettingsStatus11Output {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettings) GetWirelessRfProfilesItemPerSsidSettingsStatus11 {
-		return v.Status11
-	}).(GetWirelessRfProfilesItemPerSsidSettingsStatus11Output)
-}
-
-// Settings for SSID 12
-func (o GetWirelessRfProfilesItemPerSsidSettingsOutput) Status12() GetWirelessRfProfilesItemPerSsidSettingsStatus12Output {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettings) GetWirelessRfProfilesItemPerSsidSettingsStatus12 {
-		return v.Status12
-	}).(GetWirelessRfProfilesItemPerSsidSettingsStatus12Output)
-}
-
-// Settings for SSID 13
-func (o GetWirelessRfProfilesItemPerSsidSettingsOutput) Status13() GetWirelessRfProfilesItemPerSsidSettingsStatus13Output {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettings) GetWirelessRfProfilesItemPerSsidSettingsStatus13 {
-		return v.Status13
-	}).(GetWirelessRfProfilesItemPerSsidSettingsStatus13Output)
-}
-
-// Settings for SSID 14
-func (o GetWirelessRfProfilesItemPerSsidSettingsOutput) Status14() GetWirelessRfProfilesItemPerSsidSettingsStatus14Output {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettings) GetWirelessRfProfilesItemPerSsidSettingsStatus14 {
-		return v.Status14
-	}).(GetWirelessRfProfilesItemPerSsidSettingsStatus14Output)
-}
-
-// Settings for SSID 2
-func (o GetWirelessRfProfilesItemPerSsidSettingsOutput) Status2() GetWirelessRfProfilesItemPerSsidSettingsStatus2Output {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettings) GetWirelessRfProfilesItemPerSsidSettingsStatus2 {
-		return v.Status2
-	}).(GetWirelessRfProfilesItemPerSsidSettingsStatus2Output)
-}
-
-// Settings for SSID 3
-func (o GetWirelessRfProfilesItemPerSsidSettingsOutput) Status3() GetWirelessRfProfilesItemPerSsidSettingsStatus3Output {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettings) GetWirelessRfProfilesItemPerSsidSettingsStatus3 {
-		return v.Status3
-	}).(GetWirelessRfProfilesItemPerSsidSettingsStatus3Output)
-}
-
-// Settings for SSID 4
-func (o GetWirelessRfProfilesItemPerSsidSettingsOutput) Status4() GetWirelessRfProfilesItemPerSsidSettingsStatus4Output {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettings) GetWirelessRfProfilesItemPerSsidSettingsStatus4 {
-		return v.Status4
-	}).(GetWirelessRfProfilesItemPerSsidSettingsStatus4Output)
-}
-
-// Settings for SSID 5
-func (o GetWirelessRfProfilesItemPerSsidSettingsOutput) Status5() GetWirelessRfProfilesItemPerSsidSettingsStatus5Output {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettings) GetWirelessRfProfilesItemPerSsidSettingsStatus5 {
-		return v.Status5
-	}).(GetWirelessRfProfilesItemPerSsidSettingsStatus5Output)
-}
-
-// Settings for SSID 6
-func (o GetWirelessRfProfilesItemPerSsidSettingsOutput) Status6() GetWirelessRfProfilesItemPerSsidSettingsStatus6Output {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettings) GetWirelessRfProfilesItemPerSsidSettingsStatus6 {
-		return v.Status6
-	}).(GetWirelessRfProfilesItemPerSsidSettingsStatus6Output)
-}
-
-// Settings for SSID 7
-func (o GetWirelessRfProfilesItemPerSsidSettingsOutput) Status7() GetWirelessRfProfilesItemPerSsidSettingsStatus7Output {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettings) GetWirelessRfProfilesItemPerSsidSettingsStatus7 {
-		return v.Status7
-	}).(GetWirelessRfProfilesItemPerSsidSettingsStatus7Output)
-}
-
-// Settings for SSID 8
-func (o GetWirelessRfProfilesItemPerSsidSettingsOutput) Status8() GetWirelessRfProfilesItemPerSsidSettingsStatus8Output {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettings) GetWirelessRfProfilesItemPerSsidSettingsStatus8 {
-		return v.Status8
-	}).(GetWirelessRfProfilesItemPerSsidSettingsStatus8Output)
-}
-
-// Settings for SSID 9
-func (o GetWirelessRfProfilesItemPerSsidSettingsOutput) Status9() GetWirelessRfProfilesItemPerSsidSettingsStatus9Output {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettings) GetWirelessRfProfilesItemPerSsidSettingsStatus9 {
-		return v.Status9
-	}).(GetWirelessRfProfilesItemPerSsidSettingsStatus9Output)
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus0 struct {
-	// Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-	BandOperationMode string `pulumi:"bandOperationMode"`
-	// Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-	BandSteeringEnabled bool `pulumi:"bandSteeringEnabled"`
-	// Settings related to all bands
-	Bands GetWirelessRfProfilesItemPerSsidSettingsStatus0Bands `pulumi:"bands"`
-	// Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-	MinBitrate int `pulumi:"minBitrate"`
-	// Name of SSID
-	Name string `pulumi:"name"`
-}
-
-// GetWirelessRfProfilesItemPerSsidSettingsStatus0Input is an input type that accepts GetWirelessRfProfilesItemPerSsidSettingsStatus0Args and GetWirelessRfProfilesItemPerSsidSettingsStatus0Output values.
-// You can construct a concrete instance of `GetWirelessRfProfilesItemPerSsidSettingsStatus0Input` via:
-//
-//	GetWirelessRfProfilesItemPerSsidSettingsStatus0Args{...}
-type GetWirelessRfProfilesItemPerSsidSettingsStatus0Input interface {
-	pulumi.Input
-
-	ToGetWirelessRfProfilesItemPerSsidSettingsStatus0Output() GetWirelessRfProfilesItemPerSsidSettingsStatus0Output
-	ToGetWirelessRfProfilesItemPerSsidSettingsStatus0OutputWithContext(context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus0Output
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus0Args struct {
-	// Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-	BandOperationMode pulumi.StringInput `pulumi:"bandOperationMode"`
-	// Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-	BandSteeringEnabled pulumi.BoolInput `pulumi:"bandSteeringEnabled"`
-	// Settings related to all bands
-	Bands GetWirelessRfProfilesItemPerSsidSettingsStatus0BandsInput `pulumi:"bands"`
-	// Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-	MinBitrate pulumi.IntInput `pulumi:"minBitrate"`
-	// Name of SSID
-	Name pulumi.StringInput `pulumi:"name"`
-}
-
-func (GetWirelessRfProfilesItemPerSsidSettingsStatus0Args) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus0)(nil)).Elem()
-}
-
-func (i GetWirelessRfProfilesItemPerSsidSettingsStatus0Args) ToGetWirelessRfProfilesItemPerSsidSettingsStatus0Output() GetWirelessRfProfilesItemPerSsidSettingsStatus0Output {
-	return i.ToGetWirelessRfProfilesItemPerSsidSettingsStatus0OutputWithContext(context.Background())
-}
-
-func (i GetWirelessRfProfilesItemPerSsidSettingsStatus0Args) ToGetWirelessRfProfilesItemPerSsidSettingsStatus0OutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus0Output {
-	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessRfProfilesItemPerSsidSettingsStatus0Output)
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus0Output struct{ *pulumi.OutputState }
-
-func (GetWirelessRfProfilesItemPerSsidSettingsStatus0Output) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus0)(nil)).Elem()
-}
-
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus0Output) ToGetWirelessRfProfilesItemPerSsidSettingsStatus0Output() GetWirelessRfProfilesItemPerSsidSettingsStatus0Output {
-	return o
-}
-
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus0Output) ToGetWirelessRfProfilesItemPerSsidSettingsStatus0OutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus0Output {
-	return o
-}
-
-// Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus0Output) BandOperationMode() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus0) string { return v.BandOperationMode }).(pulumi.StringOutput)
-}
-
-// Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus0Output) BandSteeringEnabled() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus0) bool { return v.BandSteeringEnabled }).(pulumi.BoolOutput)
-}
-
-// Settings related to all bands
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus0Output) Bands() GetWirelessRfProfilesItemPerSsidSettingsStatus0BandsOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus0) GetWirelessRfProfilesItemPerSsidSettingsStatus0Bands {
-		return v.Bands
-	}).(GetWirelessRfProfilesItemPerSsidSettingsStatus0BandsOutput)
-}
-
-// Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus0Output) MinBitrate() pulumi.IntOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus0) int { return v.MinBitrate }).(pulumi.IntOutput)
-}
-
-// Name of SSID
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus0Output) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus0) string { return v.Name }).(pulumi.StringOutput)
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus0Bands struct {
-	// List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-	Enableds []string `pulumi:"enableds"`
-}
-
-// GetWirelessRfProfilesItemPerSsidSettingsStatus0BandsInput is an input type that accepts GetWirelessRfProfilesItemPerSsidSettingsStatus0BandsArgs and GetWirelessRfProfilesItemPerSsidSettingsStatus0BandsOutput values.
-// You can construct a concrete instance of `GetWirelessRfProfilesItemPerSsidSettingsStatus0BandsInput` via:
-//
-//	GetWirelessRfProfilesItemPerSsidSettingsStatus0BandsArgs{...}
-type GetWirelessRfProfilesItemPerSsidSettingsStatus0BandsInput interface {
-	pulumi.Input
-
-	ToGetWirelessRfProfilesItemPerSsidSettingsStatus0BandsOutput() GetWirelessRfProfilesItemPerSsidSettingsStatus0BandsOutput
-	ToGetWirelessRfProfilesItemPerSsidSettingsStatus0BandsOutputWithContext(context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus0BandsOutput
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus0BandsArgs struct {
-	// List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-	Enableds pulumi.StringArrayInput `pulumi:"enableds"`
-}
-
-func (GetWirelessRfProfilesItemPerSsidSettingsStatus0BandsArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus0Bands)(nil)).Elem()
-}
-
-func (i GetWirelessRfProfilesItemPerSsidSettingsStatus0BandsArgs) ToGetWirelessRfProfilesItemPerSsidSettingsStatus0BandsOutput() GetWirelessRfProfilesItemPerSsidSettingsStatus0BandsOutput {
-	return i.ToGetWirelessRfProfilesItemPerSsidSettingsStatus0BandsOutputWithContext(context.Background())
-}
-
-func (i GetWirelessRfProfilesItemPerSsidSettingsStatus0BandsArgs) ToGetWirelessRfProfilesItemPerSsidSettingsStatus0BandsOutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus0BandsOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessRfProfilesItemPerSsidSettingsStatus0BandsOutput)
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus0BandsOutput struct{ *pulumi.OutputState }
-
-func (GetWirelessRfProfilesItemPerSsidSettingsStatus0BandsOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus0Bands)(nil)).Elem()
-}
-
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus0BandsOutput) ToGetWirelessRfProfilesItemPerSsidSettingsStatus0BandsOutput() GetWirelessRfProfilesItemPerSsidSettingsStatus0BandsOutput {
-	return o
-}
-
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus0BandsOutput) ToGetWirelessRfProfilesItemPerSsidSettingsStatus0BandsOutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus0BandsOutput {
-	return o
-}
-
-// List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus0BandsOutput) Enableds() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus0Bands) []string { return v.Enableds }).(pulumi.StringArrayOutput)
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus10 struct {
-	// Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-	BandOperationMode string `pulumi:"bandOperationMode"`
-	// Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-	BandSteeringEnabled bool `pulumi:"bandSteeringEnabled"`
-	// Settings related to all bands
-	Bands GetWirelessRfProfilesItemPerSsidSettingsStatus10Bands `pulumi:"bands"`
-	// Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-	MinBitrate int `pulumi:"minBitrate"`
-	// Name of SSID
-	Name string `pulumi:"name"`
-}
-
-// GetWirelessRfProfilesItemPerSsidSettingsStatus10Input is an input type that accepts GetWirelessRfProfilesItemPerSsidSettingsStatus10Args and GetWirelessRfProfilesItemPerSsidSettingsStatus10Output values.
-// You can construct a concrete instance of `GetWirelessRfProfilesItemPerSsidSettingsStatus10Input` via:
-//
-//	GetWirelessRfProfilesItemPerSsidSettingsStatus10Args{...}
-type GetWirelessRfProfilesItemPerSsidSettingsStatus10Input interface {
-	pulumi.Input
-
-	ToGetWirelessRfProfilesItemPerSsidSettingsStatus10Output() GetWirelessRfProfilesItemPerSsidSettingsStatus10Output
-	ToGetWirelessRfProfilesItemPerSsidSettingsStatus10OutputWithContext(context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus10Output
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus10Args struct {
-	// Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-	BandOperationMode pulumi.StringInput `pulumi:"bandOperationMode"`
-	// Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-	BandSteeringEnabled pulumi.BoolInput `pulumi:"bandSteeringEnabled"`
-	// Settings related to all bands
-	Bands GetWirelessRfProfilesItemPerSsidSettingsStatus10BandsInput `pulumi:"bands"`
-	// Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-	MinBitrate pulumi.IntInput `pulumi:"minBitrate"`
-	// Name of SSID
-	Name pulumi.StringInput `pulumi:"name"`
-}
-
-func (GetWirelessRfProfilesItemPerSsidSettingsStatus10Args) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus10)(nil)).Elem()
-}
-
-func (i GetWirelessRfProfilesItemPerSsidSettingsStatus10Args) ToGetWirelessRfProfilesItemPerSsidSettingsStatus10Output() GetWirelessRfProfilesItemPerSsidSettingsStatus10Output {
-	return i.ToGetWirelessRfProfilesItemPerSsidSettingsStatus10OutputWithContext(context.Background())
-}
-
-func (i GetWirelessRfProfilesItemPerSsidSettingsStatus10Args) ToGetWirelessRfProfilesItemPerSsidSettingsStatus10OutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus10Output {
-	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessRfProfilesItemPerSsidSettingsStatus10Output)
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus10Output struct{ *pulumi.OutputState }
-
-func (GetWirelessRfProfilesItemPerSsidSettingsStatus10Output) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus10)(nil)).Elem()
-}
-
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus10Output) ToGetWirelessRfProfilesItemPerSsidSettingsStatus10Output() GetWirelessRfProfilesItemPerSsidSettingsStatus10Output {
-	return o
-}
-
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus10Output) ToGetWirelessRfProfilesItemPerSsidSettingsStatus10OutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus10Output {
-	return o
-}
-
-// Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus10Output) BandOperationMode() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus10) string { return v.BandOperationMode }).(pulumi.StringOutput)
-}
-
-// Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus10Output) BandSteeringEnabled() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus10) bool { return v.BandSteeringEnabled }).(pulumi.BoolOutput)
-}
-
-// Settings related to all bands
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus10Output) Bands() GetWirelessRfProfilesItemPerSsidSettingsStatus10BandsOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus10) GetWirelessRfProfilesItemPerSsidSettingsStatus10Bands {
-		return v.Bands
-	}).(GetWirelessRfProfilesItemPerSsidSettingsStatus10BandsOutput)
-}
-
-// Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus10Output) MinBitrate() pulumi.IntOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus10) int { return v.MinBitrate }).(pulumi.IntOutput)
-}
-
-// Name of SSID
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus10Output) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus10) string { return v.Name }).(pulumi.StringOutput)
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus10Bands struct {
-	// List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-	Enableds []string `pulumi:"enableds"`
-}
-
-// GetWirelessRfProfilesItemPerSsidSettingsStatus10BandsInput is an input type that accepts GetWirelessRfProfilesItemPerSsidSettingsStatus10BandsArgs and GetWirelessRfProfilesItemPerSsidSettingsStatus10BandsOutput values.
-// You can construct a concrete instance of `GetWirelessRfProfilesItemPerSsidSettingsStatus10BandsInput` via:
-//
-//	GetWirelessRfProfilesItemPerSsidSettingsStatus10BandsArgs{...}
-type GetWirelessRfProfilesItemPerSsidSettingsStatus10BandsInput interface {
-	pulumi.Input
-
-	ToGetWirelessRfProfilesItemPerSsidSettingsStatus10BandsOutput() GetWirelessRfProfilesItemPerSsidSettingsStatus10BandsOutput
-	ToGetWirelessRfProfilesItemPerSsidSettingsStatus10BandsOutputWithContext(context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus10BandsOutput
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus10BandsArgs struct {
-	// List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-	Enableds pulumi.StringArrayInput `pulumi:"enableds"`
-}
-
-func (GetWirelessRfProfilesItemPerSsidSettingsStatus10BandsArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus10Bands)(nil)).Elem()
-}
-
-func (i GetWirelessRfProfilesItemPerSsidSettingsStatus10BandsArgs) ToGetWirelessRfProfilesItemPerSsidSettingsStatus10BandsOutput() GetWirelessRfProfilesItemPerSsidSettingsStatus10BandsOutput {
-	return i.ToGetWirelessRfProfilesItemPerSsidSettingsStatus10BandsOutputWithContext(context.Background())
-}
-
-func (i GetWirelessRfProfilesItemPerSsidSettingsStatus10BandsArgs) ToGetWirelessRfProfilesItemPerSsidSettingsStatus10BandsOutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus10BandsOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessRfProfilesItemPerSsidSettingsStatus10BandsOutput)
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus10BandsOutput struct{ *pulumi.OutputState }
-
-func (GetWirelessRfProfilesItemPerSsidSettingsStatus10BandsOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus10Bands)(nil)).Elem()
-}
-
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus10BandsOutput) ToGetWirelessRfProfilesItemPerSsidSettingsStatus10BandsOutput() GetWirelessRfProfilesItemPerSsidSettingsStatus10BandsOutput {
-	return o
-}
-
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus10BandsOutput) ToGetWirelessRfProfilesItemPerSsidSettingsStatus10BandsOutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus10BandsOutput {
-	return o
-}
-
-// List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus10BandsOutput) Enableds() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus10Bands) []string { return v.Enableds }).(pulumi.StringArrayOutput)
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus11 struct {
-	// Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-	BandOperationMode string `pulumi:"bandOperationMode"`
-	// Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-	BandSteeringEnabled bool `pulumi:"bandSteeringEnabled"`
-	// Settings related to all bands
-	Bands GetWirelessRfProfilesItemPerSsidSettingsStatus11Bands `pulumi:"bands"`
-	// Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-	MinBitrate int `pulumi:"minBitrate"`
-	// Name of SSID
-	Name string `pulumi:"name"`
-}
-
-// GetWirelessRfProfilesItemPerSsidSettingsStatus11Input is an input type that accepts GetWirelessRfProfilesItemPerSsidSettingsStatus11Args and GetWirelessRfProfilesItemPerSsidSettingsStatus11Output values.
-// You can construct a concrete instance of `GetWirelessRfProfilesItemPerSsidSettingsStatus11Input` via:
-//
-//	GetWirelessRfProfilesItemPerSsidSettingsStatus11Args{...}
-type GetWirelessRfProfilesItemPerSsidSettingsStatus11Input interface {
-	pulumi.Input
-
-	ToGetWirelessRfProfilesItemPerSsidSettingsStatus11Output() GetWirelessRfProfilesItemPerSsidSettingsStatus11Output
-	ToGetWirelessRfProfilesItemPerSsidSettingsStatus11OutputWithContext(context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus11Output
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus11Args struct {
-	// Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-	BandOperationMode pulumi.StringInput `pulumi:"bandOperationMode"`
-	// Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-	BandSteeringEnabled pulumi.BoolInput `pulumi:"bandSteeringEnabled"`
-	// Settings related to all bands
-	Bands GetWirelessRfProfilesItemPerSsidSettingsStatus11BandsInput `pulumi:"bands"`
-	// Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-	MinBitrate pulumi.IntInput `pulumi:"minBitrate"`
-	// Name of SSID
-	Name pulumi.StringInput `pulumi:"name"`
-}
-
-func (GetWirelessRfProfilesItemPerSsidSettingsStatus11Args) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus11)(nil)).Elem()
-}
-
-func (i GetWirelessRfProfilesItemPerSsidSettingsStatus11Args) ToGetWirelessRfProfilesItemPerSsidSettingsStatus11Output() GetWirelessRfProfilesItemPerSsidSettingsStatus11Output {
-	return i.ToGetWirelessRfProfilesItemPerSsidSettingsStatus11OutputWithContext(context.Background())
-}
-
-func (i GetWirelessRfProfilesItemPerSsidSettingsStatus11Args) ToGetWirelessRfProfilesItemPerSsidSettingsStatus11OutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus11Output {
-	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessRfProfilesItemPerSsidSettingsStatus11Output)
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus11Output struct{ *pulumi.OutputState }
-
-func (GetWirelessRfProfilesItemPerSsidSettingsStatus11Output) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus11)(nil)).Elem()
-}
-
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus11Output) ToGetWirelessRfProfilesItemPerSsidSettingsStatus11Output() GetWirelessRfProfilesItemPerSsidSettingsStatus11Output {
-	return o
-}
-
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus11Output) ToGetWirelessRfProfilesItemPerSsidSettingsStatus11OutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus11Output {
-	return o
-}
-
-// Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus11Output) BandOperationMode() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus11) string { return v.BandOperationMode }).(pulumi.StringOutput)
-}
-
-// Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus11Output) BandSteeringEnabled() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus11) bool { return v.BandSteeringEnabled }).(pulumi.BoolOutput)
-}
-
-// Settings related to all bands
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus11Output) Bands() GetWirelessRfProfilesItemPerSsidSettingsStatus11BandsOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus11) GetWirelessRfProfilesItemPerSsidSettingsStatus11Bands {
-		return v.Bands
-	}).(GetWirelessRfProfilesItemPerSsidSettingsStatus11BandsOutput)
-}
-
-// Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus11Output) MinBitrate() pulumi.IntOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus11) int { return v.MinBitrate }).(pulumi.IntOutput)
-}
-
-// Name of SSID
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus11Output) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus11) string { return v.Name }).(pulumi.StringOutput)
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus11Bands struct {
-	// List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-	Enableds []string `pulumi:"enableds"`
-}
-
-// GetWirelessRfProfilesItemPerSsidSettingsStatus11BandsInput is an input type that accepts GetWirelessRfProfilesItemPerSsidSettingsStatus11BandsArgs and GetWirelessRfProfilesItemPerSsidSettingsStatus11BandsOutput values.
-// You can construct a concrete instance of `GetWirelessRfProfilesItemPerSsidSettingsStatus11BandsInput` via:
-//
-//	GetWirelessRfProfilesItemPerSsidSettingsStatus11BandsArgs{...}
-type GetWirelessRfProfilesItemPerSsidSettingsStatus11BandsInput interface {
-	pulumi.Input
-
-	ToGetWirelessRfProfilesItemPerSsidSettingsStatus11BandsOutput() GetWirelessRfProfilesItemPerSsidSettingsStatus11BandsOutput
-	ToGetWirelessRfProfilesItemPerSsidSettingsStatus11BandsOutputWithContext(context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus11BandsOutput
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus11BandsArgs struct {
-	// List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-	Enableds pulumi.StringArrayInput `pulumi:"enableds"`
-}
-
-func (GetWirelessRfProfilesItemPerSsidSettingsStatus11BandsArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus11Bands)(nil)).Elem()
-}
-
-func (i GetWirelessRfProfilesItemPerSsidSettingsStatus11BandsArgs) ToGetWirelessRfProfilesItemPerSsidSettingsStatus11BandsOutput() GetWirelessRfProfilesItemPerSsidSettingsStatus11BandsOutput {
-	return i.ToGetWirelessRfProfilesItemPerSsidSettingsStatus11BandsOutputWithContext(context.Background())
-}
-
-func (i GetWirelessRfProfilesItemPerSsidSettingsStatus11BandsArgs) ToGetWirelessRfProfilesItemPerSsidSettingsStatus11BandsOutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus11BandsOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessRfProfilesItemPerSsidSettingsStatus11BandsOutput)
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus11BandsOutput struct{ *pulumi.OutputState }
-
-func (GetWirelessRfProfilesItemPerSsidSettingsStatus11BandsOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus11Bands)(nil)).Elem()
-}
-
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus11BandsOutput) ToGetWirelessRfProfilesItemPerSsidSettingsStatus11BandsOutput() GetWirelessRfProfilesItemPerSsidSettingsStatus11BandsOutput {
-	return o
-}
-
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus11BandsOutput) ToGetWirelessRfProfilesItemPerSsidSettingsStatus11BandsOutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus11BandsOutput {
-	return o
-}
-
-// List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus11BandsOutput) Enableds() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus11Bands) []string { return v.Enableds }).(pulumi.StringArrayOutput)
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus12 struct {
-	// Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-	BandOperationMode string `pulumi:"bandOperationMode"`
-	// Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-	BandSteeringEnabled bool `pulumi:"bandSteeringEnabled"`
-	// Settings related to all bands
-	Bands GetWirelessRfProfilesItemPerSsidSettingsStatus12Bands `pulumi:"bands"`
-	// Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-	MinBitrate int `pulumi:"minBitrate"`
-	// Name of SSID
-	Name string `pulumi:"name"`
-}
-
-// GetWirelessRfProfilesItemPerSsidSettingsStatus12Input is an input type that accepts GetWirelessRfProfilesItemPerSsidSettingsStatus12Args and GetWirelessRfProfilesItemPerSsidSettingsStatus12Output values.
-// You can construct a concrete instance of `GetWirelessRfProfilesItemPerSsidSettingsStatus12Input` via:
-//
-//	GetWirelessRfProfilesItemPerSsidSettingsStatus12Args{...}
-type GetWirelessRfProfilesItemPerSsidSettingsStatus12Input interface {
-	pulumi.Input
-
-	ToGetWirelessRfProfilesItemPerSsidSettingsStatus12Output() GetWirelessRfProfilesItemPerSsidSettingsStatus12Output
-	ToGetWirelessRfProfilesItemPerSsidSettingsStatus12OutputWithContext(context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus12Output
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus12Args struct {
-	// Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-	BandOperationMode pulumi.StringInput `pulumi:"bandOperationMode"`
-	// Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-	BandSteeringEnabled pulumi.BoolInput `pulumi:"bandSteeringEnabled"`
-	// Settings related to all bands
-	Bands GetWirelessRfProfilesItemPerSsidSettingsStatus12BandsInput `pulumi:"bands"`
-	// Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-	MinBitrate pulumi.IntInput `pulumi:"minBitrate"`
-	// Name of SSID
-	Name pulumi.StringInput `pulumi:"name"`
-}
-
-func (GetWirelessRfProfilesItemPerSsidSettingsStatus12Args) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus12)(nil)).Elem()
-}
-
-func (i GetWirelessRfProfilesItemPerSsidSettingsStatus12Args) ToGetWirelessRfProfilesItemPerSsidSettingsStatus12Output() GetWirelessRfProfilesItemPerSsidSettingsStatus12Output {
-	return i.ToGetWirelessRfProfilesItemPerSsidSettingsStatus12OutputWithContext(context.Background())
-}
-
-func (i GetWirelessRfProfilesItemPerSsidSettingsStatus12Args) ToGetWirelessRfProfilesItemPerSsidSettingsStatus12OutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus12Output {
-	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessRfProfilesItemPerSsidSettingsStatus12Output)
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus12Output struct{ *pulumi.OutputState }
-
-func (GetWirelessRfProfilesItemPerSsidSettingsStatus12Output) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus12)(nil)).Elem()
-}
-
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus12Output) ToGetWirelessRfProfilesItemPerSsidSettingsStatus12Output() GetWirelessRfProfilesItemPerSsidSettingsStatus12Output {
-	return o
-}
-
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus12Output) ToGetWirelessRfProfilesItemPerSsidSettingsStatus12OutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus12Output {
-	return o
-}
-
-// Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus12Output) BandOperationMode() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus12) string { return v.BandOperationMode }).(pulumi.StringOutput)
-}
-
-// Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus12Output) BandSteeringEnabled() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus12) bool { return v.BandSteeringEnabled }).(pulumi.BoolOutput)
-}
-
-// Settings related to all bands
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus12Output) Bands() GetWirelessRfProfilesItemPerSsidSettingsStatus12BandsOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus12) GetWirelessRfProfilesItemPerSsidSettingsStatus12Bands {
-		return v.Bands
-	}).(GetWirelessRfProfilesItemPerSsidSettingsStatus12BandsOutput)
-}
-
-// Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus12Output) MinBitrate() pulumi.IntOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus12) int { return v.MinBitrate }).(pulumi.IntOutput)
-}
-
-// Name of SSID
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus12Output) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus12) string { return v.Name }).(pulumi.StringOutput)
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus12Bands struct {
-	// List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-	Enableds []string `pulumi:"enableds"`
-}
-
-// GetWirelessRfProfilesItemPerSsidSettingsStatus12BandsInput is an input type that accepts GetWirelessRfProfilesItemPerSsidSettingsStatus12BandsArgs and GetWirelessRfProfilesItemPerSsidSettingsStatus12BandsOutput values.
-// You can construct a concrete instance of `GetWirelessRfProfilesItemPerSsidSettingsStatus12BandsInput` via:
-//
-//	GetWirelessRfProfilesItemPerSsidSettingsStatus12BandsArgs{...}
-type GetWirelessRfProfilesItemPerSsidSettingsStatus12BandsInput interface {
-	pulumi.Input
-
-	ToGetWirelessRfProfilesItemPerSsidSettingsStatus12BandsOutput() GetWirelessRfProfilesItemPerSsidSettingsStatus12BandsOutput
-	ToGetWirelessRfProfilesItemPerSsidSettingsStatus12BandsOutputWithContext(context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus12BandsOutput
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus12BandsArgs struct {
-	// List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-	Enableds pulumi.StringArrayInput `pulumi:"enableds"`
-}
-
-func (GetWirelessRfProfilesItemPerSsidSettingsStatus12BandsArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus12Bands)(nil)).Elem()
-}
-
-func (i GetWirelessRfProfilesItemPerSsidSettingsStatus12BandsArgs) ToGetWirelessRfProfilesItemPerSsidSettingsStatus12BandsOutput() GetWirelessRfProfilesItemPerSsidSettingsStatus12BandsOutput {
-	return i.ToGetWirelessRfProfilesItemPerSsidSettingsStatus12BandsOutputWithContext(context.Background())
-}
-
-func (i GetWirelessRfProfilesItemPerSsidSettingsStatus12BandsArgs) ToGetWirelessRfProfilesItemPerSsidSettingsStatus12BandsOutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus12BandsOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessRfProfilesItemPerSsidSettingsStatus12BandsOutput)
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus12BandsOutput struct{ *pulumi.OutputState }
-
-func (GetWirelessRfProfilesItemPerSsidSettingsStatus12BandsOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus12Bands)(nil)).Elem()
-}
-
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus12BandsOutput) ToGetWirelessRfProfilesItemPerSsidSettingsStatus12BandsOutput() GetWirelessRfProfilesItemPerSsidSettingsStatus12BandsOutput {
-	return o
-}
-
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus12BandsOutput) ToGetWirelessRfProfilesItemPerSsidSettingsStatus12BandsOutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus12BandsOutput {
-	return o
-}
-
-// List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus12BandsOutput) Enableds() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus12Bands) []string { return v.Enableds }).(pulumi.StringArrayOutput)
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus13 struct {
-	// Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-	BandOperationMode string `pulumi:"bandOperationMode"`
-	// Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-	BandSteeringEnabled bool `pulumi:"bandSteeringEnabled"`
-	// Settings related to all bands
-	Bands GetWirelessRfProfilesItemPerSsidSettingsStatus13Bands `pulumi:"bands"`
-	// Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-	MinBitrate int `pulumi:"minBitrate"`
-	// Name of SSID
-	Name string `pulumi:"name"`
-}
-
-// GetWirelessRfProfilesItemPerSsidSettingsStatus13Input is an input type that accepts GetWirelessRfProfilesItemPerSsidSettingsStatus13Args and GetWirelessRfProfilesItemPerSsidSettingsStatus13Output values.
-// You can construct a concrete instance of `GetWirelessRfProfilesItemPerSsidSettingsStatus13Input` via:
-//
-//	GetWirelessRfProfilesItemPerSsidSettingsStatus13Args{...}
-type GetWirelessRfProfilesItemPerSsidSettingsStatus13Input interface {
-	pulumi.Input
-
-	ToGetWirelessRfProfilesItemPerSsidSettingsStatus13Output() GetWirelessRfProfilesItemPerSsidSettingsStatus13Output
-	ToGetWirelessRfProfilesItemPerSsidSettingsStatus13OutputWithContext(context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus13Output
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus13Args struct {
-	// Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-	BandOperationMode pulumi.StringInput `pulumi:"bandOperationMode"`
-	// Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-	BandSteeringEnabled pulumi.BoolInput `pulumi:"bandSteeringEnabled"`
-	// Settings related to all bands
-	Bands GetWirelessRfProfilesItemPerSsidSettingsStatus13BandsInput `pulumi:"bands"`
-	// Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-	MinBitrate pulumi.IntInput `pulumi:"minBitrate"`
-	// Name of SSID
-	Name pulumi.StringInput `pulumi:"name"`
-}
-
-func (GetWirelessRfProfilesItemPerSsidSettingsStatus13Args) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus13)(nil)).Elem()
-}
-
-func (i GetWirelessRfProfilesItemPerSsidSettingsStatus13Args) ToGetWirelessRfProfilesItemPerSsidSettingsStatus13Output() GetWirelessRfProfilesItemPerSsidSettingsStatus13Output {
-	return i.ToGetWirelessRfProfilesItemPerSsidSettingsStatus13OutputWithContext(context.Background())
-}
-
-func (i GetWirelessRfProfilesItemPerSsidSettingsStatus13Args) ToGetWirelessRfProfilesItemPerSsidSettingsStatus13OutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus13Output {
-	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessRfProfilesItemPerSsidSettingsStatus13Output)
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus13Output struct{ *pulumi.OutputState }
-
-func (GetWirelessRfProfilesItemPerSsidSettingsStatus13Output) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus13)(nil)).Elem()
-}
-
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus13Output) ToGetWirelessRfProfilesItemPerSsidSettingsStatus13Output() GetWirelessRfProfilesItemPerSsidSettingsStatus13Output {
-	return o
-}
-
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus13Output) ToGetWirelessRfProfilesItemPerSsidSettingsStatus13OutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus13Output {
-	return o
-}
-
-// Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus13Output) BandOperationMode() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus13) string { return v.BandOperationMode }).(pulumi.StringOutput)
-}
-
-// Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus13Output) BandSteeringEnabled() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus13) bool { return v.BandSteeringEnabled }).(pulumi.BoolOutput)
-}
-
-// Settings related to all bands
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus13Output) Bands() GetWirelessRfProfilesItemPerSsidSettingsStatus13BandsOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus13) GetWirelessRfProfilesItemPerSsidSettingsStatus13Bands {
-		return v.Bands
-	}).(GetWirelessRfProfilesItemPerSsidSettingsStatus13BandsOutput)
-}
-
-// Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus13Output) MinBitrate() pulumi.IntOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus13) int { return v.MinBitrate }).(pulumi.IntOutput)
-}
-
-// Name of SSID
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus13Output) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus13) string { return v.Name }).(pulumi.StringOutput)
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus13Bands struct {
-	// List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-	Enableds []string `pulumi:"enableds"`
-}
-
-// GetWirelessRfProfilesItemPerSsidSettingsStatus13BandsInput is an input type that accepts GetWirelessRfProfilesItemPerSsidSettingsStatus13BandsArgs and GetWirelessRfProfilesItemPerSsidSettingsStatus13BandsOutput values.
-// You can construct a concrete instance of `GetWirelessRfProfilesItemPerSsidSettingsStatus13BandsInput` via:
-//
-//	GetWirelessRfProfilesItemPerSsidSettingsStatus13BandsArgs{...}
-type GetWirelessRfProfilesItemPerSsidSettingsStatus13BandsInput interface {
-	pulumi.Input
-
-	ToGetWirelessRfProfilesItemPerSsidSettingsStatus13BandsOutput() GetWirelessRfProfilesItemPerSsidSettingsStatus13BandsOutput
-	ToGetWirelessRfProfilesItemPerSsidSettingsStatus13BandsOutputWithContext(context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus13BandsOutput
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus13BandsArgs struct {
-	// List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-	Enableds pulumi.StringArrayInput `pulumi:"enableds"`
-}
-
-func (GetWirelessRfProfilesItemPerSsidSettingsStatus13BandsArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus13Bands)(nil)).Elem()
-}
-
-func (i GetWirelessRfProfilesItemPerSsidSettingsStatus13BandsArgs) ToGetWirelessRfProfilesItemPerSsidSettingsStatus13BandsOutput() GetWirelessRfProfilesItemPerSsidSettingsStatus13BandsOutput {
-	return i.ToGetWirelessRfProfilesItemPerSsidSettingsStatus13BandsOutputWithContext(context.Background())
-}
-
-func (i GetWirelessRfProfilesItemPerSsidSettingsStatus13BandsArgs) ToGetWirelessRfProfilesItemPerSsidSettingsStatus13BandsOutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus13BandsOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessRfProfilesItemPerSsidSettingsStatus13BandsOutput)
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus13BandsOutput struct{ *pulumi.OutputState }
-
-func (GetWirelessRfProfilesItemPerSsidSettingsStatus13BandsOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus13Bands)(nil)).Elem()
-}
-
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus13BandsOutput) ToGetWirelessRfProfilesItemPerSsidSettingsStatus13BandsOutput() GetWirelessRfProfilesItemPerSsidSettingsStatus13BandsOutput {
-	return o
-}
-
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus13BandsOutput) ToGetWirelessRfProfilesItemPerSsidSettingsStatus13BandsOutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus13BandsOutput {
-	return o
-}
-
-// List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus13BandsOutput) Enableds() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus13Bands) []string { return v.Enableds }).(pulumi.StringArrayOutput)
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus14 struct {
-	// Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-	BandOperationMode string `pulumi:"bandOperationMode"`
-	// Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-	BandSteeringEnabled bool `pulumi:"bandSteeringEnabled"`
-	// Settings related to all bands
-	Bands GetWirelessRfProfilesItemPerSsidSettingsStatus14Bands `pulumi:"bands"`
-	// Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-	MinBitrate int `pulumi:"minBitrate"`
-	// Name of SSID
-	Name string `pulumi:"name"`
-}
-
-// GetWirelessRfProfilesItemPerSsidSettingsStatus14Input is an input type that accepts GetWirelessRfProfilesItemPerSsidSettingsStatus14Args and GetWirelessRfProfilesItemPerSsidSettingsStatus14Output values.
-// You can construct a concrete instance of `GetWirelessRfProfilesItemPerSsidSettingsStatus14Input` via:
-//
-//	GetWirelessRfProfilesItemPerSsidSettingsStatus14Args{...}
-type GetWirelessRfProfilesItemPerSsidSettingsStatus14Input interface {
-	pulumi.Input
-
-	ToGetWirelessRfProfilesItemPerSsidSettingsStatus14Output() GetWirelessRfProfilesItemPerSsidSettingsStatus14Output
-	ToGetWirelessRfProfilesItemPerSsidSettingsStatus14OutputWithContext(context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus14Output
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus14Args struct {
-	// Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-	BandOperationMode pulumi.StringInput `pulumi:"bandOperationMode"`
-	// Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-	BandSteeringEnabled pulumi.BoolInput `pulumi:"bandSteeringEnabled"`
-	// Settings related to all bands
-	Bands GetWirelessRfProfilesItemPerSsidSettingsStatus14BandsInput `pulumi:"bands"`
-	// Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-	MinBitrate pulumi.IntInput `pulumi:"minBitrate"`
-	// Name of SSID
-	Name pulumi.StringInput `pulumi:"name"`
-}
-
-func (GetWirelessRfProfilesItemPerSsidSettingsStatus14Args) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus14)(nil)).Elem()
-}
-
-func (i GetWirelessRfProfilesItemPerSsidSettingsStatus14Args) ToGetWirelessRfProfilesItemPerSsidSettingsStatus14Output() GetWirelessRfProfilesItemPerSsidSettingsStatus14Output {
-	return i.ToGetWirelessRfProfilesItemPerSsidSettingsStatus14OutputWithContext(context.Background())
-}
-
-func (i GetWirelessRfProfilesItemPerSsidSettingsStatus14Args) ToGetWirelessRfProfilesItemPerSsidSettingsStatus14OutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus14Output {
-	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessRfProfilesItemPerSsidSettingsStatus14Output)
-}
-
-type GetWirelessRfProfilesItemPerSsidSettingsStatus14Output struct{ *pulumi.OutputState }
-
-func (GetWirelessRfProfilesItemPerSsidSettingsStatus14Output) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus14)(nil)).Elem()
-}
-
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus14Output) ToGetWirelessRfProfilesItemPerSsidSettingsStatus14Output() GetWirelessRfProfilesItemPerSsidSettingsStatus14Output {
-	return o
-}
-
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus14Output) ToGetWirelessRfProfilesItemPerSsidSettingsStatus14OutputWithContext(ctx context.Context) GetWirelessRfProfilesItemPerSsidSettingsStatus14Output {
-	return o
-}
-
-// Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus14Output) BandOperationMode() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus14) string { return v.BandOperationMode }).(pulumi.StringOutput)
-}
-
-// Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus14Output) BandSteeringEnabled() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus14) bool { return v.BandSteeringEnabled }).(pulumi.BoolOutput)
-}
-
-// Settings related to all bands
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus14Output) Bands() GetWirelessRfProfilesItemPerSsidSettingsStatus14BandsOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus14) GetWirelessRfProfilesItemPerSsidSettingsStatus14Bands {
-		return v.Bands
-	}).(GetWirelessRfProfilesItemPerSsidSettingsStatus14BandsOutput)
-}
-
-// Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus14Output) MinBitrate() pulumi.IntOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus14) int { return v.MinBitrate }).(pulumi.IntOutput)
-}
-
-// Name of SSID
-func (o GetWirelessRfProfilesItemPerSsidSettingsStatus14Output) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemPerSsidSettingsStatus14) string { return v.Name }).(pulumi.StringOutput)
-}
-
 func init() {
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsLdapCredentialsInput)(nil)).Elem(), WirelessSsidsLdapCredentialsArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsLdapCredentialsPtrInput)(nil)).Elem(), WirelessSsidsLdapCredentialsArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsLdapServerInput)(nil)).Elem(), WirelessSsidsLdapServerArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsLdapServerArrayInput)(nil)).Elem(), WirelessSsidsLdapServerArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsLdapServerCaCertificateInput)(nil)).Elem(), WirelessSsidsLdapServerCaCertificateArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsLdapServerCaCertificatePtrInput)(nil)).Elem(), WirelessSsidsLdapServerCaCertificateArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsLocalRadiusInput)(nil)).Elem(), WirelessSsidsLocalRadiusArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsLocalRadiusPtrInput)(nil)).Elem(), WirelessSsidsLocalRadiusArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsLocalRadiusCertificateAuthenticationInput)(nil)).Elem(), WirelessSsidsLocalRadiusCertificateAuthenticationArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsLocalRadiusCertificateAuthenticationPtrInput)(nil)).Elem(), WirelessSsidsLocalRadiusCertificateAuthenticationArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateInput)(nil)).Elem(), WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrInput)(nil)).Elem(), WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsLocalRadiusPasswordAuthenticationInput)(nil)).Elem(), WirelessSsidsLocalRadiusPasswordAuthenticationArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsLocalRadiusPasswordAuthenticationPtrInput)(nil)).Elem(), WirelessSsidsLocalRadiusPasswordAuthenticationArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsNamedVlansInput)(nil)).Elem(), WirelessSsidsNamedVlansArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsNamedVlansPtrInput)(nil)).Elem(), WirelessSsidsNamedVlansArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsNamedVlansRadiusInput)(nil)).Elem(), WirelessSsidsNamedVlansRadiusArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsNamedVlansRadiusPtrInput)(nil)).Elem(), WirelessSsidsNamedVlansRadiusArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsNamedVlansRadiusGuestVlanInput)(nil)).Elem(), WirelessSsidsNamedVlansRadiusGuestVlanArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsNamedVlansRadiusGuestVlanPtrInput)(nil)).Elem(), WirelessSsidsNamedVlansRadiusGuestVlanArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsNamedVlansTaggingInput)(nil)).Elem(), WirelessSsidsNamedVlansTaggingArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsNamedVlansTaggingPtrInput)(nil)).Elem(), WirelessSsidsNamedVlansTaggingArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsNamedVlansTaggingByApTagInput)(nil)).Elem(), WirelessSsidsNamedVlansTaggingByApTagArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsNamedVlansTaggingByApTagArrayInput)(nil)).Elem(), WirelessSsidsNamedVlansTaggingByApTagArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsOauthInput)(nil)).Elem(), WirelessSsidsOauthArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsOauthPtrInput)(nil)).Elem(), WirelessSsidsOauthArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsRadiusAccountingServerInput)(nil)).Elem(), WirelessSsidsRadiusAccountingServerArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsRadiusAccountingServerArrayInput)(nil)).Elem(), WirelessSsidsRadiusAccountingServerArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsRadiusAccountingServersResponseInput)(nil)).Elem(), WirelessSsidsRadiusAccountingServersResponseArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsRadiusAccountingServersResponseArrayInput)(nil)).Elem(), WirelessSsidsRadiusAccountingServersResponseArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsRadiusServerInput)(nil)).Elem(), WirelessSsidsRadiusServerArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsRadiusServerArrayInput)(nil)).Elem(), WirelessSsidsRadiusServerArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsRadiusServersResponseInput)(nil)).Elem(), WirelessSsidsRadiusServersResponseArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsRadiusServersResponseArrayInput)(nil)).Elem(), WirelessSsidsRadiusServersResponseArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsSchedulesRangeInput)(nil)).Elem(), WirelessSsidsSchedulesRangeArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsSchedulesRangeArrayInput)(nil)).Elem(), WirelessSsidsSchedulesRangeArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsSchedulesRangesInSecondInput)(nil)).Elem(), WirelessSsidsSchedulesRangesInSecondArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsSchedulesRangesInSecondArrayInput)(nil)).Elem(), WirelessSsidsSchedulesRangesInSecondArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsSpeedBurstInput)(nil)).Elem(), WirelessSsidsSpeedBurstArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsSpeedBurstPtrInput)(nil)).Elem(), WirelessSsidsSpeedBurstArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsSplashSettingsBillingInput)(nil)).Elem(), WirelessSsidsSplashSettingsBillingArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsSplashSettingsBillingPtrInput)(nil)).Elem(), WirelessSsidsSplashSettingsBillingArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsSplashSettingsBillingFreeAccessInput)(nil)).Elem(), WirelessSsidsSplashSettingsBillingFreeAccessArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsSplashSettingsBillingFreeAccessPtrInput)(nil)).Elem(), WirelessSsidsSplashSettingsBillingFreeAccessArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsSplashSettingsGuestSponsorshipInput)(nil)).Elem(), WirelessSsidsSplashSettingsGuestSponsorshipArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsSplashSettingsGuestSponsorshipPtrInput)(nil)).Elem(), WirelessSsidsSplashSettingsGuestSponsorshipArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsSplashSettingsSelfRegistrationInput)(nil)).Elem(), WirelessSsidsSplashSettingsSelfRegistrationArgs{})
@@ -47133,30 +48459,50 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessEthernetPortsProfilesItemUsbPortArrayInput)(nil)).Elem(), GetWirelessEthernetPortsProfilesItemUsbPortArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessFailedConnectionsItemInput)(nil)).Elem(), GetWirelessFailedConnectionsItemArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessFailedConnectionsItemArrayInput)(nil)).Elem(), GetWirelessFailedConnectionsItemArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessLatencyHistoryItemInput)(nil)).Elem(), GetWirelessLatencyHistoryItemArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessLatencyHistoryItemArrayInput)(nil)).Elem(), GetWirelessLatencyHistoryItemArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessLatencyStatsItemInput)(nil)).Elem(), GetWirelessLatencyStatsItemArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessLatencyStatsItemBackgroundTrafficInput)(nil)).Elem(), GetWirelessLatencyStatsItemBackgroundTrafficArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionInput)(nil)).Elem(), GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessMeshStatusesItemInput)(nil)).Elem(), GetWirelessMeshStatusesItemArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessMeshStatusesItemArrayInput)(nil)).Elem(), GetWirelessMeshStatusesItemArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessMeshStatusesItemLatestMeshPerformanceInput)(nil)).Elem(), GetWirelessMeshStatusesItemLatestMeshPerformanceArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessRfProfilesItemInput)(nil)).Elem(), GetWirelessRfProfilesItemArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessRfProfilesItemApBandSettingsInput)(nil)).Elem(), GetWirelessRfProfilesItemApBandSettingsArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessRfProfilesItemApBandSettingsBandsInput)(nil)).Elem(), GetWirelessRfProfilesItemApBandSettingsBandsArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessRfProfilesItemFiveGhzSettingsInput)(nil)).Elem(), GetWirelessRfProfilesItemFiveGhzSettingsArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsInput)(nil)).Elem(), GetWirelessRfProfilesItemPerSsidSettingsArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus0Input)(nil)).Elem(), GetWirelessRfProfilesItemPerSsidSettingsStatus0Args{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus0BandsInput)(nil)).Elem(), GetWirelessRfProfilesItemPerSsidSettingsStatus0BandsArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus10Input)(nil)).Elem(), GetWirelessRfProfilesItemPerSsidSettingsStatus10Args{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus10BandsInput)(nil)).Elem(), GetWirelessRfProfilesItemPerSsidSettingsStatus10BandsArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus11Input)(nil)).Elem(), GetWirelessRfProfilesItemPerSsidSettingsStatus11Args{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus11BandsInput)(nil)).Elem(), GetWirelessRfProfilesItemPerSsidSettingsStatus11BandsArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus12Input)(nil)).Elem(), GetWirelessRfProfilesItemPerSsidSettingsStatus12Args{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus12BandsInput)(nil)).Elem(), GetWirelessRfProfilesItemPerSsidSettingsStatus12BandsArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus13Input)(nil)).Elem(), GetWirelessRfProfilesItemPerSsidSettingsStatus13Args{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus13BandsInput)(nil)).Elem(), GetWirelessRfProfilesItemPerSsidSettingsStatus13BandsArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessRfProfilesItemPerSsidSettingsStatus14Input)(nil)).Elem(), GetWirelessRfProfilesItemPerSsidSettingsStatus14Args{})
+	pulumi.RegisterOutputType(WirelessSsidsLdapCredentialsOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsLdapCredentialsPtrOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsLdapServerOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsLdapServerArrayOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsLdapServerCaCertificateOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsLdapServerCaCertificatePtrOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsLocalRadiusOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsLocalRadiusPtrOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsLocalRadiusCertificateAuthenticationOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsLocalRadiusCertificateAuthenticationPtrOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificatePtrOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsLocalRadiusPasswordAuthenticationOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsLocalRadiusPasswordAuthenticationPtrOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsNamedVlansOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsNamedVlansPtrOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsNamedVlansRadiusOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsNamedVlansRadiusPtrOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsNamedVlansRadiusGuestVlanOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsNamedVlansRadiusGuestVlanPtrOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsNamedVlansTaggingOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsNamedVlansTaggingPtrOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsNamedVlansTaggingByApTagOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsNamedVlansTaggingByApTagArrayOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsOauthOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsOauthPtrOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsRadiusAccountingServerOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsRadiusAccountingServerArrayOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsRadiusAccountingServersResponseOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsRadiusAccountingServersResponseArrayOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsRadiusServerOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsRadiusServerArrayOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsRadiusServersResponseOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsRadiusServersResponseArrayOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsSchedulesRangeOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsSchedulesRangeArrayOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsSchedulesRangesInSecondOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsSchedulesRangesInSecondArrayOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsSpeedBurstOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsSpeedBurstPtrOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsSplashSettingsBillingOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsSplashSettingsBillingPtrOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsSplashSettingsBillingFreeAccessOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsSplashSettingsBillingFreeAccessPtrOutput{})
 	pulumi.RegisterOutputType(WirelessSsidsSplashSettingsGuestSponsorshipOutput{})
 	pulumi.RegisterOutputType(WirelessSsidsSplashSettingsGuestSponsorshipPtrOutput{})
 	pulumi.RegisterOutputType(WirelessSsidsSplashSettingsSelfRegistrationOutput{})
@@ -47808,28 +49154,4 @@ func init() {
 	pulumi.RegisterOutputType(GetWirelessEthernetPortsProfilesItemUsbPortArrayOutput{})
 	pulumi.RegisterOutputType(GetWirelessFailedConnectionsItemOutput{})
 	pulumi.RegisterOutputType(GetWirelessFailedConnectionsItemArrayOutput{})
-	pulumi.RegisterOutputType(GetWirelessLatencyHistoryItemOutput{})
-	pulumi.RegisterOutputType(GetWirelessLatencyHistoryItemArrayOutput{})
-	pulumi.RegisterOutputType(GetWirelessLatencyStatsItemOutput{})
-	pulumi.RegisterOutputType(GetWirelessLatencyStatsItemBackgroundTrafficOutput{})
-	pulumi.RegisterOutputType(GetWirelessLatencyStatsItemBackgroundTrafficRawDistributionOutput{})
-	pulumi.RegisterOutputType(GetWirelessMeshStatusesItemOutput{})
-	pulumi.RegisterOutputType(GetWirelessMeshStatusesItemArrayOutput{})
-	pulumi.RegisterOutputType(GetWirelessMeshStatusesItemLatestMeshPerformanceOutput{})
-	pulumi.RegisterOutputType(GetWirelessRfProfilesItemOutput{})
-	pulumi.RegisterOutputType(GetWirelessRfProfilesItemApBandSettingsOutput{})
-	pulumi.RegisterOutputType(GetWirelessRfProfilesItemApBandSettingsBandsOutput{})
-	pulumi.RegisterOutputType(GetWirelessRfProfilesItemFiveGhzSettingsOutput{})
-	pulumi.RegisterOutputType(GetWirelessRfProfilesItemPerSsidSettingsOutput{})
-	pulumi.RegisterOutputType(GetWirelessRfProfilesItemPerSsidSettingsStatus0Output{})
-	pulumi.RegisterOutputType(GetWirelessRfProfilesItemPerSsidSettingsStatus0BandsOutput{})
-	pulumi.RegisterOutputType(GetWirelessRfProfilesItemPerSsidSettingsStatus10Output{})
-	pulumi.RegisterOutputType(GetWirelessRfProfilesItemPerSsidSettingsStatus10BandsOutput{})
-	pulumi.RegisterOutputType(GetWirelessRfProfilesItemPerSsidSettingsStatus11Output{})
-	pulumi.RegisterOutputType(GetWirelessRfProfilesItemPerSsidSettingsStatus11BandsOutput{})
-	pulumi.RegisterOutputType(GetWirelessRfProfilesItemPerSsidSettingsStatus12Output{})
-	pulumi.RegisterOutputType(GetWirelessRfProfilesItemPerSsidSettingsStatus12BandsOutput{})
-	pulumi.RegisterOutputType(GetWirelessRfProfilesItemPerSsidSettingsStatus13Output{})
-	pulumi.RegisterOutputType(GetWirelessRfProfilesItemPerSsidSettingsStatus13BandsOutput{})
-	pulumi.RegisterOutputType(GetWirelessRfProfilesItemPerSsidSettingsStatus14Output{})
 }

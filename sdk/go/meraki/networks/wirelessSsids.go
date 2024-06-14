@@ -63,8 +63,6 @@ type WirelessSsids struct {
 	LanIsolationEnabled pulumi.BoolPtrOutput `pulumi:"lanIsolationEnabled"`
 	// The current setting for LDAP. Only valid if splashPage is 'Password-protected with LDAP'.
 	Ldap WirelessSsidsLdapPtrOutput `pulumi:"ldap"`
-	// Extended local auth flag for Enterprise NAC
-	LocalAuth pulumi.BoolOutput `pulumi:"localAuth"`
 	// The current setting for Local Authentication, a built-in RADIUS server on the access point. Only valid if authMode is '8021x-localradius'.
 	LocalRadius WirelessSsidsLocalRadiusPtrOutput `pulumi:"localRadius"`
 	// Whether clients connecting to this SSID must use the IP address assigned by the DHCP server
@@ -92,11 +90,13 @@ type WirelessSsids struct {
 	// The passkey for the SSID. This param is only valid if the authMode is 'psk'
 	Psk pulumi.StringPtrOutput `pulumi:"psk"`
 	// Whether or not RADIUS accounting is enabled
-	RadiusAccountingEnabled pulumi.BoolPtrOutput `pulumi:"radiusAccountingEnabled"`
+	RadiusAccountingEnabled pulumi.BoolOutput `pulumi:"radiusAccountingEnabled"`
 	// The interval (in seconds) in which accounting information is updated and sent to the RADIUS accounting server.
 	RadiusAccountingInterimInterval pulumi.IntPtrOutput `pulumi:"radiusAccountingInterimInterval"`
 	// List of RADIUS accounting 802.1X servers to be used for authentication
 	RadiusAccountingServers WirelessSsidsRadiusAccountingServerArrayOutput `pulumi:"radiusAccountingServers"`
+	// List of RADIUS accounting 802.1X servers to be used for authentication
+	RadiusAccountingServersResponses WirelessSsidsRadiusAccountingServersResponseArrayOutput `pulumi:"radiusAccountingServersResponses"`
 	// RADIUS attribute used to look up group policies
 	RadiusAttributeForGroupPolicies pulumi.StringOutput `pulumi:"radiusAttributeForGroupPolicies"`
 	// The template of the NAS identifier to be used for RADIUS authentication (ex. $NODE*MAC$:$VAP*NUM$).
@@ -105,8 +105,6 @@ type WirelessSsids struct {
 	RadiusCalledStationId pulumi.StringPtrOutput `pulumi:"radiusCalledStationId"`
 	// If true, Meraki devices will act as a RADIUS Dynamic Authorization Server and will respond to RADIUS Change-of-Authorization and Disconnect messages sent by the RADIUS server.
 	RadiusCoaEnabled pulumi.BoolPtrOutput `pulumi:"radiusCoaEnabled"`
-	// Whether RADIUS authentication is enabled
-	RadiusEnabled pulumi.BoolOutput `pulumi:"radiusEnabled"`
 	// Policy which determines how authentication requests should be handled in the event that all of the configured RADIUS servers are unreachable
 	RadiusFailoverPolicy pulumi.StringOutput `pulumi:"radiusFailoverPolicy"`
 	// Whether or not higher priority RADIUS servers should be retried after 60 seconds.
@@ -234,8 +232,6 @@ type wirelessSsidsState struct {
 	LanIsolationEnabled *bool `pulumi:"lanIsolationEnabled"`
 	// The current setting for LDAP. Only valid if splashPage is 'Password-protected with LDAP'.
 	Ldap *WirelessSsidsLdap `pulumi:"ldap"`
-	// Extended local auth flag for Enterprise NAC
-	LocalAuth *bool `pulumi:"localAuth"`
 	// The current setting for Local Authentication, a built-in RADIUS server on the access point. Only valid if authMode is '8021x-localradius'.
 	LocalRadius *WirelessSsidsLocalRadius `pulumi:"localRadius"`
 	// Whether clients connecting to this SSID must use the IP address assigned by the DHCP server
@@ -268,6 +264,8 @@ type wirelessSsidsState struct {
 	RadiusAccountingInterimInterval *int `pulumi:"radiusAccountingInterimInterval"`
 	// List of RADIUS accounting 802.1X servers to be used for authentication
 	RadiusAccountingServers []WirelessSsidsRadiusAccountingServer `pulumi:"radiusAccountingServers"`
+	// List of RADIUS accounting 802.1X servers to be used for authentication
+	RadiusAccountingServersResponses []WirelessSsidsRadiusAccountingServersResponse `pulumi:"radiusAccountingServersResponses"`
 	// RADIUS attribute used to look up group policies
 	RadiusAttributeForGroupPolicies *string `pulumi:"radiusAttributeForGroupPolicies"`
 	// The template of the NAS identifier to be used for RADIUS authentication (ex. $NODE*MAC$:$VAP*NUM$).
@@ -276,8 +274,6 @@ type wirelessSsidsState struct {
 	RadiusCalledStationId *string `pulumi:"radiusCalledStationId"`
 	// If true, Meraki devices will act as a RADIUS Dynamic Authorization Server and will respond to RADIUS Change-of-Authorization and Disconnect messages sent by the RADIUS server.
 	RadiusCoaEnabled *bool `pulumi:"radiusCoaEnabled"`
-	// Whether RADIUS authentication is enabled
-	RadiusEnabled *bool `pulumi:"radiusEnabled"`
 	// Policy which determines how authentication requests should be handled in the event that all of the configured RADIUS servers are unreachable
 	RadiusFailoverPolicy *string `pulumi:"radiusFailoverPolicy"`
 	// Whether or not higher priority RADIUS servers should be retried after 60 seconds.
@@ -370,8 +366,6 @@ type WirelessSsidsState struct {
 	LanIsolationEnabled pulumi.BoolPtrInput
 	// The current setting for LDAP. Only valid if splashPage is 'Password-protected with LDAP'.
 	Ldap WirelessSsidsLdapPtrInput
-	// Extended local auth flag for Enterprise NAC
-	LocalAuth pulumi.BoolPtrInput
 	// The current setting for Local Authentication, a built-in RADIUS server on the access point. Only valid if authMode is '8021x-localradius'.
 	LocalRadius WirelessSsidsLocalRadiusPtrInput
 	// Whether clients connecting to this SSID must use the IP address assigned by the DHCP server
@@ -404,6 +398,8 @@ type WirelessSsidsState struct {
 	RadiusAccountingInterimInterval pulumi.IntPtrInput
 	// List of RADIUS accounting 802.1X servers to be used for authentication
 	RadiusAccountingServers WirelessSsidsRadiusAccountingServerArrayInput
+	// List of RADIUS accounting 802.1X servers to be used for authentication
+	RadiusAccountingServersResponses WirelessSsidsRadiusAccountingServersResponseArrayInput
 	// RADIUS attribute used to look up group policies
 	RadiusAttributeForGroupPolicies pulumi.StringPtrInput
 	// The template of the NAS identifier to be used for RADIUS authentication (ex. $NODE*MAC$:$VAP*NUM$).
@@ -412,8 +408,6 @@ type WirelessSsidsState struct {
 	RadiusCalledStationId pulumi.StringPtrInput
 	// If true, Meraki devices will act as a RADIUS Dynamic Authorization Server and will respond to RADIUS Change-of-Authorization and Disconnect messages sent by the RADIUS server.
 	RadiusCoaEnabled pulumi.BoolPtrInput
-	// Whether RADIUS authentication is enabled
-	RadiusEnabled pulumi.BoolPtrInput
 	// Policy which determines how authentication requests should be handled in the event that all of the configured RADIUS servers are unreachable
 	RadiusFailoverPolicy pulumi.StringPtrInput
 	// Whether or not higher priority RADIUS servers should be retried after 60 seconds.
@@ -910,11 +904,6 @@ func (o WirelessSsidsOutput) Ldap() WirelessSsidsLdapPtrOutput {
 	return o.ApplyT(func(v *WirelessSsids) WirelessSsidsLdapPtrOutput { return v.Ldap }).(WirelessSsidsLdapPtrOutput)
 }
 
-// Extended local auth flag for Enterprise NAC
-func (o WirelessSsidsOutput) LocalAuth() pulumi.BoolOutput {
-	return o.ApplyT(func(v *WirelessSsids) pulumi.BoolOutput { return v.LocalAuth }).(pulumi.BoolOutput)
-}
-
 // The current setting for Local Authentication, a built-in RADIUS server on the access point. Only valid if authMode is '8021x-localradius'.
 func (o WirelessSsidsOutput) LocalRadius() WirelessSsidsLocalRadiusPtrOutput {
 	return o.ApplyT(func(v *WirelessSsids) WirelessSsidsLocalRadiusPtrOutput { return v.LocalRadius }).(WirelessSsidsLocalRadiusPtrOutput)
@@ -981,8 +970,8 @@ func (o WirelessSsidsOutput) Psk() pulumi.StringPtrOutput {
 }
 
 // Whether or not RADIUS accounting is enabled
-func (o WirelessSsidsOutput) RadiusAccountingEnabled() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v *WirelessSsids) pulumi.BoolPtrOutput { return v.RadiusAccountingEnabled }).(pulumi.BoolPtrOutput)
+func (o WirelessSsidsOutput) RadiusAccountingEnabled() pulumi.BoolOutput {
+	return o.ApplyT(func(v *WirelessSsids) pulumi.BoolOutput { return v.RadiusAccountingEnabled }).(pulumi.BoolOutput)
 }
 
 // The interval (in seconds) in which accounting information is updated and sent to the RADIUS accounting server.
@@ -995,6 +984,13 @@ func (o WirelessSsidsOutput) RadiusAccountingServers() WirelessSsidsRadiusAccoun
 	return o.ApplyT(func(v *WirelessSsids) WirelessSsidsRadiusAccountingServerArrayOutput {
 		return v.RadiusAccountingServers
 	}).(WirelessSsidsRadiusAccountingServerArrayOutput)
+}
+
+// List of RADIUS accounting 802.1X servers to be used for authentication
+func (o WirelessSsidsOutput) RadiusAccountingServersResponses() WirelessSsidsRadiusAccountingServersResponseArrayOutput {
+	return o.ApplyT(func(v *WirelessSsids) WirelessSsidsRadiusAccountingServersResponseArrayOutput {
+		return v.RadiusAccountingServersResponses
+	}).(WirelessSsidsRadiusAccountingServersResponseArrayOutput)
 }
 
 // RADIUS attribute used to look up group policies
@@ -1015,11 +1011,6 @@ func (o WirelessSsidsOutput) RadiusCalledStationId() pulumi.StringPtrOutput {
 // If true, Meraki devices will act as a RADIUS Dynamic Authorization Server and will respond to RADIUS Change-of-Authorization and Disconnect messages sent by the RADIUS server.
 func (o WirelessSsidsOutput) RadiusCoaEnabled() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *WirelessSsids) pulumi.BoolPtrOutput { return v.RadiusCoaEnabled }).(pulumi.BoolPtrOutput)
-}
-
-// Whether RADIUS authentication is enabled
-func (o WirelessSsidsOutput) RadiusEnabled() pulumi.BoolOutput {
-	return o.ApplyT(func(v *WirelessSsids) pulumi.BoolOutput { return v.RadiusEnabled }).(pulumi.BoolOutput)
 }
 
 // Policy which determines how authentication requests should be handled in the event that all of the configured RADIUS servers are unreachable

@@ -4001,6 +4001,41 @@ export namespace networks {
         /**
          * Description of the rule (optional)
          */
+        comment?: string;
+        /**
+         * Comma-separated list of destination IP address(es) (in IP or CIDR notation), fully-qualified domain names (FQDN) or 'any'
+         */
+        destCidr?: string;
+        /**
+         * Comma-separated list of destination port(s) (integer in the range 1-65535), or 'any'
+         */
+        destPort?: string;
+        /**
+         * 'allow' or 'deny' traffic specified by this rule
+         */
+        policy?: string;
+        /**
+         * The type of protocol (must be 'tcp', 'udp', 'icmp', 'icmp6' or 'any')
+         */
+        protocol?: string;
+        /**
+         * Comma-separated list of source IP address(es) (in IP or CIDR notation), or 'any' (note: FQDN not supported for source addresses)
+         */
+        srcCidr?: string;
+        /**
+         * Comma-separated list of source port(s) (integer in the range 1-65535), or 'any'
+         */
+        srcPort?: string;
+        /**
+         * Log this rule to syslog (true or false, boolean value) - only applicable if a syslog has been configured (optional)
+         */
+        syslogEnabled?: boolean;
+    }
+
+    export interface ApplianceFirewallInboundFirewallRulesRulesResponse {
+        /**
+         * Description of the rule (optional)
+         */
         comment: string;
         /**
          * Comma-separated list of destination IP address(es) (in IP or CIDR notation), fully-qualified domain names (FQDN) or 'any'
@@ -4106,26 +4141,54 @@ export namespace networks {
         /**
          * 'Deny' traffic specified by this rule
          */
+        policy?: string;
+        /**
+         * Type of the L7 rule. One of: 'application', 'applicationCategory', 'host', 'port', 'ipRange'
+         */
+        type?: string;
+        /**
+         * The 'value' of what you want to block. Format of 'value' varies depending on type of the rule. Send a string to request.
+         */
+        value?: string;
+        /**
+         * The 'value_list' of what you want to block. Send a lis of string in request.
+         */
+        valueLists?: string[];
+        /**
+         * The 'value_obj' of what you want to block. Send a dict in request.
+         */
+        valueObj?: outputs.networks.ApplianceFirewallL7FirewallRulesRuleValueObj;
+    }
+
+    export interface ApplianceFirewallL7FirewallRulesRuleValueObj {
+        id?: string;
+        name?: string;
+    }
+
+    export interface ApplianceFirewallL7FirewallRulesRulesResponse {
+        /**
+         * 'Deny' traffic specified by this rule
+         */
         policy: string;
         /**
          * Type of the L7 rule. One of: 'application', 'applicationCategory', 'host', 'port', 'ipRange'
          */
         type: string;
         /**
-         * The 'value' of what you want to block. Format of 'value' varies depending on type of the rule. Send a string to request.
+         * The 'value' of what you want to block. Format of 'value' varies depending on type of the rule. The application categories and application ids can be retrieved from the the 'MX L7 application categories' endpoint. The countries follow the two-letter ISO 3166-1 alpha-2 format.
          */
         value: string;
         /**
-         * The 'value_list' of what you want to block. Send a lis of string in request.
+         * The 'value_list' of what you want to block. Send a list in request
          */
         valueLists: string[];
         /**
-         * The 'value_obj' of what you want to block. Send a dict in request.
+         * The 'value_obj' of what you want to block. Send a dict in request
          */
-        valueObj: outputs.networks.ApplianceFirewallL7FirewallRulesRuleValueObj;
+        valueObj: outputs.networks.ApplianceFirewallL7FirewallRulesRulesResponseValueObj;
     }
 
-    export interface ApplianceFirewallL7FirewallRulesRuleValueObj {
+    export interface ApplianceFirewallL7FirewallRulesRulesResponseValueObj {
         id: string;
         name: string;
     }
@@ -17005,6 +17068,228 @@ export namespace networks {
         /**
          * If 'above', an alert will be sent when a sensor reads above the threshold. If 'below', an alert will be sent when a sensor reads below the threshold. Only applicable for temperature, humidity, realPower, apparentPower, powerFactor, voltage, current, and frequency thresholds.
          */
+        direction?: string;
+        /**
+         * Length of time in seconds that the triggering state must persist before an alert is sent. Available options are 0 seconds, 1 minute, 2 minutes, 3 minutes, 4 minutes, 5 minutes, 10 minutes, 15 minutes, 30 minutes, 1 hour, 2 hours, 4 hours, and 8 hours. Default is 0.
+         */
+        duration?: number;
+        /**
+         * The type of sensor metric that will be monitored for changes. Available metrics are apparentPower, co2, current, door, frequency, humidity, indoorAirQuality, noise, pm25, powerFactor, realPower, temperature, tvoc, upstreamPower, voltage, and water.
+         */
+        metric?: string;
+        /**
+         * Threshold for sensor readings that will cause an alert to be sent. This object should contain a single property key matching the condition's 'metric' value.
+         */
+        threshold?: outputs.networks.SensorAlertsProfilesConditionThreshold;
+    }
+
+    export interface SensorAlertsProfilesConditionThreshold {
+        /**
+         * Apparent power threshold. 'draw' must be provided.
+         */
+        apparentPower?: outputs.networks.SensorAlertsProfilesConditionThresholdApparentPower;
+        /**
+         * Electrical current threshold. 'level' must be provided.
+         */
+        current?: outputs.networks.SensorAlertsProfilesConditionThresholdCurrent;
+        /**
+         * Door open threshold. 'open' must be provided and set to true.
+         */
+        door?: outputs.networks.SensorAlertsProfilesConditionThresholdDoor;
+        /**
+         * Electrical frequency threshold. 'level' must be provided.
+         */
+        frequency?: outputs.networks.SensorAlertsProfilesConditionThresholdFrequency;
+        /**
+         * Humidity threshold. One of 'relativePercentage' or 'quality' must be provided.
+         */
+        humidity?: outputs.networks.SensorAlertsProfilesConditionThresholdHumidity;
+        /**
+         * Indoor air quality score threshold. One of 'score' or 'quality' must be provided.
+         */
+        indoorAirQuality?: outputs.networks.SensorAlertsProfilesConditionThresholdIndoorAirQuality;
+        /**
+         * Noise threshold. 'ambient' must be provided.
+         */
+        noise?: outputs.networks.SensorAlertsProfilesConditionThresholdNoise;
+        /**
+         * PM2.5 concentration threshold. One of 'concentration' or 'quality' must be provided.
+         */
+        pm25?: outputs.networks.SensorAlertsProfilesConditionThresholdPm25;
+        /**
+         * Power factor threshold. 'percentage' must be provided.
+         */
+        powerFactor?: outputs.networks.SensorAlertsProfilesConditionThresholdPowerFactor;
+        /**
+         * Real power threshold. 'draw' must be provided.
+         */
+        realPower?: outputs.networks.SensorAlertsProfilesConditionThresholdRealPower;
+        /**
+         * Temperature threshold. One of 'celsius', 'fahrenheit', or 'quality' must be provided.
+         */
+        temperature?: outputs.networks.SensorAlertsProfilesConditionThresholdTemperature;
+        /**
+         * TVOC concentration threshold. One of 'concentration' or 'quality' must be provided.
+         */
+        tvoc?: outputs.networks.SensorAlertsProfilesConditionThresholdTvoc;
+        /**
+         * Upstream power threshold. 'outageDetected' must be provided and set to true.
+         */
+        upstreamPower?: outputs.networks.SensorAlertsProfilesConditionThresholdUpstreamPower;
+        /**
+         * Voltage threshold. 'level' must be provided.
+         */
+        voltage?: outputs.networks.SensorAlertsProfilesConditionThresholdVoltage;
+        /**
+         * Water detection threshold. 'present' must be provided and set to true.
+         */
+        water?: outputs.networks.SensorAlertsProfilesConditionThresholdWater;
+    }
+
+    export interface SensorAlertsProfilesConditionThresholdApparentPower {
+        /**
+         * Alerting threshold in volt-amps. Must be between 0 and 3750.
+         */
+        draw?: number;
+    }
+
+    export interface SensorAlertsProfilesConditionThresholdCurrent {
+        /**
+         * Alerting threshold in amps. Must be between 0 and 15.
+         */
+        draw?: number;
+    }
+
+    export interface SensorAlertsProfilesConditionThresholdDoor {
+        /**
+         * Alerting threshold for a door open event. Must be set to true.
+         */
+        open?: boolean;
+    }
+
+    export interface SensorAlertsProfilesConditionThresholdFrequency {
+        /**
+         * Alerting threshold in hertz. Must be between 0 and 60.
+         */
+        level?: number;
+    }
+
+    export interface SensorAlertsProfilesConditionThresholdHumidity {
+        /**
+         * Alerting threshold as a qualitative humidity level.
+         */
+        quality?: string;
+        /**
+         * Alerting threshold in %RH.
+         */
+        relativePercentage?: number;
+    }
+
+    export interface SensorAlertsProfilesConditionThresholdIndoorAirQuality {
+        /**
+         * Alerting threshold as a qualitative indoor air quality level.
+         */
+        quality?: string;
+        /**
+         * Alerting threshold as indoor air quality score.
+         */
+        score?: number;
+    }
+
+    export interface SensorAlertsProfilesConditionThresholdNoise {
+        /**
+         * Ambient noise threshold. One of 'level' or 'quality' must be provided.
+         */
+        ambient?: outputs.networks.SensorAlertsProfilesConditionThresholdNoiseAmbient;
+    }
+
+    export interface SensorAlertsProfilesConditionThresholdNoiseAmbient {
+        /**
+         * Alerting threshold as adjusted decibels.
+         */
+        level?: number;
+        /**
+         * Alerting threshold as a qualitative ambient noise level.
+         */
+        quality?: string;
+    }
+
+    export interface SensorAlertsProfilesConditionThresholdPm25 {
+        /**
+         * Alerting threshold as PM2.5 parts per million.
+         */
+        concentration?: number;
+        /**
+         * Alerting threshold as a qualitative PM2.5 level.
+         */
+        quality?: string;
+    }
+
+    export interface SensorAlertsProfilesConditionThresholdPowerFactor {
+        /**
+         * Alerting threshold as the ratio of active power to apparent power. Must be between 0 and 100.
+         */
+        percentage?: number;
+    }
+
+    export interface SensorAlertsProfilesConditionThresholdRealPower {
+        /**
+         * Alerting threshold in watts. Must be between 0 and 3750.
+         */
+        draw?: number;
+    }
+
+    export interface SensorAlertsProfilesConditionThresholdTemperature {
+        /**
+         * Alerting threshold in degrees Celsius.
+         */
+        celsius?: number;
+        /**
+         * Alerting threshold in degrees Fahrenheit.
+         */
+        fahrenheit?: number;
+        /**
+         * Alerting threshold as a qualitative temperature level.
+         */
+        quality?: string;
+    }
+
+    export interface SensorAlertsProfilesConditionThresholdTvoc {
+        /**
+         * Alerting threshold as TVOC micrograms per cubic meter.
+         */
+        concentration?: number;
+        /**
+         * Alerting threshold as a qualitative TVOC level.
+         */
+        quality?: string;
+    }
+
+    export interface SensorAlertsProfilesConditionThresholdUpstreamPower {
+        /**
+         * Alerting threshold for an upstream power event. Must be set to true.
+         */
+        outageDetected?: boolean;
+    }
+
+    export interface SensorAlertsProfilesConditionThresholdVoltage {
+        /**
+         * Alerting threshold in volts. Must be between 0 and 250.
+         */
+        level?: number;
+    }
+
+    export interface SensorAlertsProfilesConditionThresholdWater {
+        /**
+         * Alerting threshold for a water detection event. Must be set to true.
+         */
+        present?: boolean;
+    }
+
+    export interface SensorAlertsProfilesConditionsResponse {
+        /**
+         * If 'above', an alert will be sent when a sensor reads above the threshold. If 'below', an alert will be sent when a sensor reads below the threshold. Only applicable for temperature, humidity, realPower, apparentPower, powerFactor, voltage, current, and frequency thresholds.
+         */
         direction: string;
         /**
          * Length of time in seconds that the triggering state must persist before an alert is sent. Available options are 0 seconds, 1 minute, 2 minutes, 3 minutes, 4 minutes, 5 minutes, 10 minutes, 15 minutes, 30 minutes, 1 hour, 2 hours, 4 hours, and 8 hours. Default is 0.
@@ -17017,101 +17302,101 @@ export namespace networks {
         /**
          * Threshold for sensor readings that will cause an alert to be sent. This object should contain a single property key matching the condition's 'metric' value.
          */
-        threshold: outputs.networks.SensorAlertsProfilesConditionThreshold;
+        threshold: outputs.networks.SensorAlertsProfilesConditionsResponseThreshold;
     }
 
-    export interface SensorAlertsProfilesConditionThreshold {
+    export interface SensorAlertsProfilesConditionsResponseThreshold {
         /**
          * Apparent power threshold. 'draw' must be provided.
          */
-        apparentPower: outputs.networks.SensorAlertsProfilesConditionThresholdApparentPower;
+        apparentPower: outputs.networks.SensorAlertsProfilesConditionsResponseThresholdApparentPower;
         /**
          * Electrical current threshold. 'level' must be provided.
          */
-        current: outputs.networks.SensorAlertsProfilesConditionThresholdCurrent;
+        current: outputs.networks.SensorAlertsProfilesConditionsResponseThresholdCurrent;
         /**
          * Door open threshold. 'open' must be provided and set to true.
          */
-        door: outputs.networks.SensorAlertsProfilesConditionThresholdDoor;
+        door: outputs.networks.SensorAlertsProfilesConditionsResponseThresholdDoor;
         /**
          * Electrical frequency threshold. 'level' must be provided.
          */
-        frequency: outputs.networks.SensorAlertsProfilesConditionThresholdFrequency;
+        frequency: outputs.networks.SensorAlertsProfilesConditionsResponseThresholdFrequency;
         /**
          * Humidity threshold. One of 'relativePercentage' or 'quality' must be provided.
          */
-        humidity: outputs.networks.SensorAlertsProfilesConditionThresholdHumidity;
+        humidity: outputs.networks.SensorAlertsProfilesConditionsResponseThresholdHumidity;
         /**
          * Indoor air quality score threshold. One of 'score' or 'quality' must be provided.
          */
-        indoorAirQuality: outputs.networks.SensorAlertsProfilesConditionThresholdIndoorAirQuality;
+        indoorAirQuality: outputs.networks.SensorAlertsProfilesConditionsResponseThresholdIndoorAirQuality;
         /**
          * Noise threshold. 'ambient' must be provided.
          */
-        noise: outputs.networks.SensorAlertsProfilesConditionThresholdNoise;
+        noise: outputs.networks.SensorAlertsProfilesConditionsResponseThresholdNoise;
         /**
          * PM2.5 concentration threshold. One of 'concentration' or 'quality' must be provided.
          */
-        pm25: outputs.networks.SensorAlertsProfilesConditionThresholdPm25;
+        pm25: outputs.networks.SensorAlertsProfilesConditionsResponseThresholdPm25;
         /**
          * Power factor threshold. 'percentage' must be provided.
          */
-        powerFactor: outputs.networks.SensorAlertsProfilesConditionThresholdPowerFactor;
+        powerFactor: outputs.networks.SensorAlertsProfilesConditionsResponseThresholdPowerFactor;
         /**
          * Real power threshold. 'draw' must be provided.
          */
-        realPower: outputs.networks.SensorAlertsProfilesConditionThresholdRealPower;
+        realPower: outputs.networks.SensorAlertsProfilesConditionsResponseThresholdRealPower;
         /**
          * Temperature threshold. One of 'celsius', 'fahrenheit', or 'quality' must be provided.
          */
-        temperature: outputs.networks.SensorAlertsProfilesConditionThresholdTemperature;
+        temperature: outputs.networks.SensorAlertsProfilesConditionsResponseThresholdTemperature;
         /**
          * TVOC concentration threshold. One of 'concentration' or 'quality' must be provided.
          */
-        tvoc: outputs.networks.SensorAlertsProfilesConditionThresholdTvoc;
+        tvoc: outputs.networks.SensorAlertsProfilesConditionsResponseThresholdTvoc;
         /**
          * Upstream power threshold. 'outageDetected' must be provided and set to true.
          */
-        upstreamPower: outputs.networks.SensorAlertsProfilesConditionThresholdUpstreamPower;
+        upstreamPower: outputs.networks.SensorAlertsProfilesConditionsResponseThresholdUpstreamPower;
         /**
          * Voltage threshold. 'level' must be provided.
          */
-        voltage: outputs.networks.SensorAlertsProfilesConditionThresholdVoltage;
+        voltage: outputs.networks.SensorAlertsProfilesConditionsResponseThresholdVoltage;
         /**
          * Water detection threshold. 'present' must be provided and set to true.
          */
-        water: outputs.networks.SensorAlertsProfilesConditionThresholdWater;
+        water: outputs.networks.SensorAlertsProfilesConditionsResponseThresholdWater;
     }
 
-    export interface SensorAlertsProfilesConditionThresholdApparentPower {
+    export interface SensorAlertsProfilesConditionsResponseThresholdApparentPower {
         /**
          * Alerting threshold in volt-amps. Must be between 0 and 3750.
          */
         draw: number;
     }
 
-    export interface SensorAlertsProfilesConditionThresholdCurrent {
+    export interface SensorAlertsProfilesConditionsResponseThresholdCurrent {
         /**
          * Alerting threshold in amps. Must be between 0 and 15.
          */
         draw: number;
     }
 
-    export interface SensorAlertsProfilesConditionThresholdDoor {
+    export interface SensorAlertsProfilesConditionsResponseThresholdDoor {
         /**
          * Alerting threshold for a door open event. Must be set to true.
          */
         open: boolean;
     }
 
-    export interface SensorAlertsProfilesConditionThresholdFrequency {
+    export interface SensorAlertsProfilesConditionsResponseThresholdFrequency {
         /**
          * Alerting threshold in hertz. Must be between 0 and 60.
          */
         level: number;
     }
 
-    export interface SensorAlertsProfilesConditionThresholdHumidity {
+    export interface SensorAlertsProfilesConditionsResponseThresholdHumidity {
         /**
          * Alerting threshold as a qualitative humidity level.
          */
@@ -17122,7 +17407,7 @@ export namespace networks {
         relativePercentage: number;
     }
 
-    export interface SensorAlertsProfilesConditionThresholdIndoorAirQuality {
+    export interface SensorAlertsProfilesConditionsResponseThresholdIndoorAirQuality {
         /**
          * Alerting threshold as a qualitative indoor air quality level.
          */
@@ -17133,14 +17418,14 @@ export namespace networks {
         score: number;
     }
 
-    export interface SensorAlertsProfilesConditionThresholdNoise {
+    export interface SensorAlertsProfilesConditionsResponseThresholdNoise {
         /**
          * Ambient noise threshold. One of 'level' or 'quality' must be provided.
          */
-        ambient: outputs.networks.SensorAlertsProfilesConditionThresholdNoiseAmbient;
+        ambient: outputs.networks.SensorAlertsProfilesConditionsResponseThresholdNoiseAmbient;
     }
 
-    export interface SensorAlertsProfilesConditionThresholdNoiseAmbient {
+    export interface SensorAlertsProfilesConditionsResponseThresholdNoiseAmbient {
         /**
          * Alerting threshold as adjusted decibels.
          */
@@ -17151,7 +17436,7 @@ export namespace networks {
         quality: string;
     }
 
-    export interface SensorAlertsProfilesConditionThresholdPm25 {
+    export interface SensorAlertsProfilesConditionsResponseThresholdPm25 {
         /**
          * Alerting threshold as PM2.5 parts per million.
          */
@@ -17162,21 +17447,21 @@ export namespace networks {
         quality: string;
     }
 
-    export interface SensorAlertsProfilesConditionThresholdPowerFactor {
+    export interface SensorAlertsProfilesConditionsResponseThresholdPowerFactor {
         /**
          * Alerting threshold as the ratio of active power to apparent power. Must be between 0 and 100.
          */
         percentage: number;
     }
 
-    export interface SensorAlertsProfilesConditionThresholdRealPower {
+    export interface SensorAlertsProfilesConditionsResponseThresholdRealPower {
         /**
          * Alerting threshold in watts. Must be between 0 and 3750.
          */
         draw: number;
     }
 
-    export interface SensorAlertsProfilesConditionThresholdTemperature {
+    export interface SensorAlertsProfilesConditionsResponseThresholdTemperature {
         /**
          * Alerting threshold in degrees Celsius.
          */
@@ -17191,7 +17476,7 @@ export namespace networks {
         quality: string;
     }
 
-    export interface SensorAlertsProfilesConditionThresholdTvoc {
+    export interface SensorAlertsProfilesConditionsResponseThresholdTvoc {
         /**
          * Alerting threshold as TVOC micrograms per cubic meter.
          */
@@ -17202,21 +17487,21 @@ export namespace networks {
         quality: string;
     }
 
-    export interface SensorAlertsProfilesConditionThresholdUpstreamPower {
+    export interface SensorAlertsProfilesConditionsResponseThresholdUpstreamPower {
         /**
          * Alerting threshold for an upstream power event. Must be set to true.
          */
         outageDetected: boolean;
     }
 
-    export interface SensorAlertsProfilesConditionThresholdVoltage {
+    export interface SensorAlertsProfilesConditionsResponseThresholdVoltage {
         /**
          * Alerting threshold in volts. Must be between 0 and 250.
          */
         level: number;
     }
 
-    export interface SensorAlertsProfilesConditionThresholdWater {
+    export interface SensorAlertsProfilesConditionsResponseThresholdWater {
         /**
          * Alerting threshold for a water detection event. Must be set to true.
          */
@@ -17231,7 +17516,7 @@ export namespace networks {
         /**
          * A list of webhook endpoint IDs that will receive information about the alert.
          */
-        httpServerIds: string[];
+        httpServerIds?: string[];
         /**
          * A list of SMS numbers that will receive information about the alert.
          */
@@ -19501,22 +19786,22 @@ export namespace networks {
         /**
          * (Optional) Whether 802.11r is adaptive or not.
          */
-        adaptive: boolean;
+        adaptive?: boolean;
         /**
          * Whether 802.11r is enabled or not.
          */
-        enabled: boolean;
+        enabled?: boolean;
     }
 
     export interface WirelessSsidsDot11w {
         /**
          * Whether 802.11w is enabled or not.
          */
-        enabled: boolean;
+        enabled?: boolean;
         /**
          * (Optional) Whether 802.11w is required or not.
          */
-        required: boolean;
+        required?: boolean;
     }
 
     export interface WirelessSsidsEapOverrideEapolKey {
@@ -19555,6 +19840,10 @@ export namespace networks {
          */
         destPort: string;
         /**
+         * Ip Ver
+         */
+        ipVer: string;
+        /**
          * 'allow' or 'deny' traffic specified by this rule
          */
         policy: string;
@@ -19577,6 +19866,10 @@ export namespace networks {
          * Comma-separated list of destination port(s) (integer in the range 1-65535), or 'any'
          */
         destPort: string;
+        /**
+         * Ip Version
+         */
+        ipVer: string;
         /**
          * 'allow' or 'deny' traffic specified by this rule
          */
@@ -19846,6 +20139,33 @@ export namespace networks {
     }
 
     export interface WirelessSsidsRadiusAccountingServer {
+        /**
+         * Certificate used for authorization for the RADSEC Server
+         */
+        caCertificate?: string;
+        /**
+         * IP address (or FQDN) to which the APs will send RADIUS accounting messages
+         */
+        host?: string;
+        /**
+         * The ID of the Openroaming Certificate attached to radius server
+         */
+        openRoamingCertificateId?: number;
+        /**
+         * Port on the RADIUS server that is listening for accounting messages
+         */
+        port?: number;
+        /**
+         * Use RADSEC (TLS over TCP) to connect to this RADIUS accounting server. Requires radiusProxyEnabled.
+         */
+        radsecEnabled?: boolean;
+        /**
+         * Shared key used to authenticate messages between the APs and RADIUS server
+         */
+        secret?: string;
+    }
+
+    export interface WirelessSsidsRadiusAccountingServersResponse {
         /**
          * Certificate used for authorization for the RADSEC Server
          */

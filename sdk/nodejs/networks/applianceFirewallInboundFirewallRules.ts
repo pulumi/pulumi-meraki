@@ -50,7 +50,11 @@ export class ApplianceFirewallInboundFirewallRules extends pulumi.CustomResource
     /**
      * An ordered array of the firewall rules (not including the default rule)
      */
-    public readonly rules!: pulumi.Output<outputs.networks.ApplianceFirewallInboundFirewallRulesRule[]>;
+    public readonly rules!: pulumi.Output<outputs.networks.ApplianceFirewallInboundFirewallRulesRule[] | undefined>;
+    /**
+     * An ordered array of the firewall rules (not including the default rule)
+     */
+    public /*out*/ readonly rulesResponses!: pulumi.Output<outputs.networks.ApplianceFirewallInboundFirewallRulesRulesResponse[]>;
     /**
      * Log the special default rule (boolean value - enable only if you've configured a syslog server) (optional)
      */
@@ -71,6 +75,7 @@ export class ApplianceFirewallInboundFirewallRules extends pulumi.CustomResource
             const state = argsOrState as ApplianceFirewallInboundFirewallRulesState | undefined;
             resourceInputs["networkId"] = state ? state.networkId : undefined;
             resourceInputs["rules"] = state ? state.rules : undefined;
+            resourceInputs["rulesResponses"] = state ? state.rulesResponses : undefined;
             resourceInputs["syslogDefaultRule"] = state ? state.syslogDefaultRule : undefined;
         } else {
             const args = argsOrState as ApplianceFirewallInboundFirewallRulesArgs | undefined;
@@ -80,6 +85,7 @@ export class ApplianceFirewallInboundFirewallRules extends pulumi.CustomResource
             resourceInputs["networkId"] = args ? args.networkId : undefined;
             resourceInputs["rules"] = args ? args.rules : undefined;
             resourceInputs["syslogDefaultRule"] = args ? args.syslogDefaultRule : undefined;
+            resourceInputs["rulesResponses"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(ApplianceFirewallInboundFirewallRules.__pulumiType, name, resourceInputs, opts);
@@ -98,6 +104,10 @@ export interface ApplianceFirewallInboundFirewallRulesState {
      * An ordered array of the firewall rules (not including the default rule)
      */
     rules?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceFirewallInboundFirewallRulesRule>[]>;
+    /**
+     * An ordered array of the firewall rules (not including the default rule)
+     */
+    rulesResponses?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceFirewallInboundFirewallRulesRulesResponse>[]>;
     /**
      * Log the special default rule (boolean value - enable only if you've configured a syslog server) (optional)
      */

@@ -25,7 +25,7 @@ namespace Pulumi.Meraki.Networks
         /// httpServerId path parameter. Http server ID
         /// </summary>
         [Output("httpServerId")]
-        public Output<string?> HttpServerId { get; private set; } = null!;
+        public Output<string> HttpServerId { get; private set; } = null!;
 
         /// <summary>
         /// A name for easy reference to the HTTP server

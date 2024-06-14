@@ -23,10 +23,13 @@ __all__ = [
     'ApplianceContentFilteringBlockedUrlCategoryArgs',
     'ApplianceFirewallCellularFirewallRulesRuleArgs',
     'ApplianceFirewallInboundFirewallRulesRuleArgs',
+    'ApplianceFirewallInboundFirewallRulesRulesResponseArgs',
     'ApplianceFirewallL3FirewallRulesRuleArgs',
     'ApplianceFirewallL3FirewallRulesRulesResponseArgs',
     'ApplianceFirewallL7FirewallRulesRuleArgs',
     'ApplianceFirewallL7FirewallRulesRuleValueObjArgs',
+    'ApplianceFirewallL7FirewallRulesRulesResponseArgs',
+    'ApplianceFirewallL7FirewallRulesRulesResponseValueObjArgs',
     'ApplianceFirewallOneToManyNatRulesRuleArgs',
     'ApplianceFirewallOneToManyNatRulesRulePortRuleArgs',
     'ApplianceFirewallOneToOneNatRulesRuleArgs',
@@ -317,6 +320,24 @@ __all__ = [
     'SensorAlertsProfilesConditionThresholdUpstreamPowerArgs',
     'SensorAlertsProfilesConditionThresholdVoltageArgs',
     'SensorAlertsProfilesConditionThresholdWaterArgs',
+    'SensorAlertsProfilesConditionsResponseArgs',
+    'SensorAlertsProfilesConditionsResponseThresholdArgs',
+    'SensorAlertsProfilesConditionsResponseThresholdApparentPowerArgs',
+    'SensorAlertsProfilesConditionsResponseThresholdCurrentArgs',
+    'SensorAlertsProfilesConditionsResponseThresholdDoorArgs',
+    'SensorAlertsProfilesConditionsResponseThresholdFrequencyArgs',
+    'SensorAlertsProfilesConditionsResponseThresholdHumidityArgs',
+    'SensorAlertsProfilesConditionsResponseThresholdIndoorAirQualityArgs',
+    'SensorAlertsProfilesConditionsResponseThresholdNoiseArgs',
+    'SensorAlertsProfilesConditionsResponseThresholdNoiseAmbientArgs',
+    'SensorAlertsProfilesConditionsResponseThresholdPm25Args',
+    'SensorAlertsProfilesConditionsResponseThresholdPowerFactorArgs',
+    'SensorAlertsProfilesConditionsResponseThresholdRealPowerArgs',
+    'SensorAlertsProfilesConditionsResponseThresholdTemperatureArgs',
+    'SensorAlertsProfilesConditionsResponseThresholdTvocArgs',
+    'SensorAlertsProfilesConditionsResponseThresholdUpstreamPowerArgs',
+    'SensorAlertsProfilesConditionsResponseThresholdVoltageArgs',
+    'SensorAlertsProfilesConditionsResponseThresholdWaterArgs',
     'SensorAlertsProfilesRecipientsArgs',
     'SensorAlertsProfilesScheduleArgs',
     'SettingsFipsArgs',
@@ -503,6 +524,7 @@ __all__ = [
     'WirelessSsidsNamedVlansTaggingByApTagArgs',
     'WirelessSsidsOauthArgs',
     'WirelessSsidsRadiusAccountingServerArgs',
+    'WirelessSsidsRadiusAccountingServersResponseArgs',
     'WirelessSsidsRadiusServerArgs',
     'WirelessSsidsRadiusServersResponseArgs',
     'WirelessSsidsSchedulesRangeArgs',
@@ -1368,6 +1390,141 @@ class ApplianceFirewallInboundFirewallRulesRuleArgs:
 
 
 @pulumi.input_type
+class ApplianceFirewallInboundFirewallRulesRulesResponseArgs:
+    def __init__(__self__, *,
+                 comment: Optional[pulumi.Input[str]] = None,
+                 dest_cidr: Optional[pulumi.Input[str]] = None,
+                 dest_port: Optional[pulumi.Input[str]] = None,
+                 policy: Optional[pulumi.Input[str]] = None,
+                 protocol: Optional[pulumi.Input[str]] = None,
+                 src_cidr: Optional[pulumi.Input[str]] = None,
+                 src_port: Optional[pulumi.Input[str]] = None,
+                 syslog_enabled: Optional[pulumi.Input[bool]] = None):
+        """
+        :param pulumi.Input[str] comment: Description of the rule (optional)
+        :param pulumi.Input[str] dest_cidr: Comma-separated list of destination IP address(es) (in IP or CIDR notation), fully-qualified domain names (FQDN) or 'any'
+        :param pulumi.Input[str] dest_port: Comma-separated list of destination port(s) (integer in the range 1-65535), or 'any'
+        :param pulumi.Input[str] policy: 'allow' or 'deny' traffic specified by this rule
+        :param pulumi.Input[str] protocol: The type of protocol (must be 'tcp', 'udp', 'icmp', 'icmp6' or 'any')
+        :param pulumi.Input[str] src_cidr: Comma-separated list of source IP address(es) (in IP or CIDR notation), or 'any' (note: FQDN not supported for source addresses)
+        :param pulumi.Input[str] src_port: Comma-separated list of source port(s) (integer in the range 1-65535), or 'any'
+        :param pulumi.Input[bool] syslog_enabled: Log this rule to syslog (true or false, boolean value) - only applicable if a syslog has been configured (optional)
+        """
+        if comment is not None:
+            pulumi.set(__self__, "comment", comment)
+        if dest_cidr is not None:
+            pulumi.set(__self__, "dest_cidr", dest_cidr)
+        if dest_port is not None:
+            pulumi.set(__self__, "dest_port", dest_port)
+        if policy is not None:
+            pulumi.set(__self__, "policy", policy)
+        if protocol is not None:
+            pulumi.set(__self__, "protocol", protocol)
+        if src_cidr is not None:
+            pulumi.set(__self__, "src_cidr", src_cidr)
+        if src_port is not None:
+            pulumi.set(__self__, "src_port", src_port)
+        if syslog_enabled is not None:
+            pulumi.set(__self__, "syslog_enabled", syslog_enabled)
+
+    @property
+    @pulumi.getter
+    def comment(self) -> Optional[pulumi.Input[str]]:
+        """
+        Description of the rule (optional)
+        """
+        return pulumi.get(self, "comment")
+
+    @comment.setter
+    def comment(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "comment", value)
+
+    @property
+    @pulumi.getter(name="destCidr")
+    def dest_cidr(self) -> Optional[pulumi.Input[str]]:
+        """
+        Comma-separated list of destination IP address(es) (in IP or CIDR notation), fully-qualified domain names (FQDN) or 'any'
+        """
+        return pulumi.get(self, "dest_cidr")
+
+    @dest_cidr.setter
+    def dest_cidr(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "dest_cidr", value)
+
+    @property
+    @pulumi.getter(name="destPort")
+    def dest_port(self) -> Optional[pulumi.Input[str]]:
+        """
+        Comma-separated list of destination port(s) (integer in the range 1-65535), or 'any'
+        """
+        return pulumi.get(self, "dest_port")
+
+    @dest_port.setter
+    def dest_port(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "dest_port", value)
+
+    @property
+    @pulumi.getter
+    def policy(self) -> Optional[pulumi.Input[str]]:
+        """
+        'allow' or 'deny' traffic specified by this rule
+        """
+        return pulumi.get(self, "policy")
+
+    @policy.setter
+    def policy(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "policy", value)
+
+    @property
+    @pulumi.getter
+    def protocol(self) -> Optional[pulumi.Input[str]]:
+        """
+        The type of protocol (must be 'tcp', 'udp', 'icmp', 'icmp6' or 'any')
+        """
+        return pulumi.get(self, "protocol")
+
+    @protocol.setter
+    def protocol(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "protocol", value)
+
+    @property
+    @pulumi.getter(name="srcCidr")
+    def src_cidr(self) -> Optional[pulumi.Input[str]]:
+        """
+        Comma-separated list of source IP address(es) (in IP or CIDR notation), or 'any' (note: FQDN not supported for source addresses)
+        """
+        return pulumi.get(self, "src_cidr")
+
+    @src_cidr.setter
+    def src_cidr(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "src_cidr", value)
+
+    @property
+    @pulumi.getter(name="srcPort")
+    def src_port(self) -> Optional[pulumi.Input[str]]:
+        """
+        Comma-separated list of source port(s) (integer in the range 1-65535), or 'any'
+        """
+        return pulumi.get(self, "src_port")
+
+    @src_port.setter
+    def src_port(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "src_port", value)
+
+    @property
+    @pulumi.getter(name="syslogEnabled")
+    def syslog_enabled(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Log this rule to syslog (true or false, boolean value) - only applicable if a syslog has been configured (optional)
+        """
+        return pulumi.get(self, "syslog_enabled")
+
+    @syslog_enabled.setter
+    def syslog_enabled(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "syslog_enabled", value)
+
+
+@pulumi.input_type
 class ApplianceFirewallL3FirewallRulesRuleArgs:
     def __init__(__self__, *,
                  comment: Optional[pulumi.Input[str]] = None,
@@ -1726,6 +1883,122 @@ class ApplianceFirewallL7FirewallRulesRuleArgs:
 
 @pulumi.input_type
 class ApplianceFirewallL7FirewallRulesRuleValueObjArgs:
+    def __init__(__self__, *,
+                 id: Optional[pulumi.Input[str]] = None,
+                 name: Optional[pulumi.Input[str]] = None):
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+        if name is not None:
+            pulumi.set(__self__, "name", name)
+
+    @property
+    @pulumi.getter
+    def id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "id")
+
+    @id.setter
+    def id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "id", value)
+
+    @property
+    @pulumi.getter
+    def name(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "name")
+
+    @name.setter
+    def name(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "name", value)
+
+
+@pulumi.input_type
+class ApplianceFirewallL7FirewallRulesRulesResponseArgs:
+    def __init__(__self__, *,
+                 policy: Optional[pulumi.Input[str]] = None,
+                 type: Optional[pulumi.Input[str]] = None,
+                 value: Optional[pulumi.Input[str]] = None,
+                 value_lists: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+                 value_obj: Optional[pulumi.Input['ApplianceFirewallL7FirewallRulesRulesResponseValueObjArgs']] = None):
+        """
+        :param pulumi.Input[str] policy: 'Deny' traffic specified by this rule
+        :param pulumi.Input[str] type: Type of the L7 rule. One of: 'application', 'applicationCategory', 'host', 'port', 'ipRange'
+        :param pulumi.Input[str] value: The 'value' of what you want to block. Format of 'value' varies depending on type of the rule. The application categories and application ids can be retrieved from the the 'MX L7 application categories' endpoint. The countries follow the two-letter ISO 3166-1 alpha-2 format.
+        :param pulumi.Input[Sequence[pulumi.Input[str]]] value_lists: The 'value_list' of what you want to block. Send a list in request
+        :param pulumi.Input['ApplianceFirewallL7FirewallRulesRulesResponseValueObjArgs'] value_obj: The 'value_obj' of what you want to block. Send a dict in request
+        """
+        if policy is not None:
+            pulumi.set(__self__, "policy", policy)
+        if type is not None:
+            pulumi.set(__self__, "type", type)
+        if value is not None:
+            pulumi.set(__self__, "value", value)
+        if value_lists is not None:
+            pulumi.set(__self__, "value_lists", value_lists)
+        if value_obj is not None:
+            pulumi.set(__self__, "value_obj", value_obj)
+
+    @property
+    @pulumi.getter
+    def policy(self) -> Optional[pulumi.Input[str]]:
+        """
+        'Deny' traffic specified by this rule
+        """
+        return pulumi.get(self, "policy")
+
+    @policy.setter
+    def policy(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "policy", value)
+
+    @property
+    @pulumi.getter
+    def type(self) -> Optional[pulumi.Input[str]]:
+        """
+        Type of the L7 rule. One of: 'application', 'applicationCategory', 'host', 'port', 'ipRange'
+        """
+        return pulumi.get(self, "type")
+
+    @type.setter
+    def type(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "type", value)
+
+    @property
+    @pulumi.getter
+    def value(self) -> Optional[pulumi.Input[str]]:
+        """
+        The 'value' of what you want to block. Format of 'value' varies depending on type of the rule. The application categories and application ids can be retrieved from the the 'MX L7 application categories' endpoint. The countries follow the two-letter ISO 3166-1 alpha-2 format.
+        """
+        return pulumi.get(self, "value")
+
+    @value.setter
+    def value(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "value", value)
+
+    @property
+    @pulumi.getter(name="valueLists")
+    def value_lists(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
+        """
+        The 'value_list' of what you want to block. Send a list in request
+        """
+        return pulumi.get(self, "value_lists")
+
+    @value_lists.setter
+    def value_lists(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
+        pulumi.set(self, "value_lists", value)
+
+    @property
+    @pulumi.getter(name="valueObj")
+    def value_obj(self) -> Optional[pulumi.Input['ApplianceFirewallL7FirewallRulesRulesResponseValueObjArgs']]:
+        """
+        The 'value_obj' of what you want to block. Send a dict in request
+        """
+        return pulumi.get(self, "value_obj")
+
+    @value_obj.setter
+    def value_obj(self, value: Optional[pulumi.Input['ApplianceFirewallL7FirewallRulesRulesResponseValueObjArgs']]):
+        pulumi.set(self, "value_obj", value)
+
+
+@pulumi.input_type
+class ApplianceFirewallL7FirewallRulesRulesResponseValueObjArgs:
     def __init__(__self__, *,
                  id: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None):
@@ -17508,6 +17781,804 @@ class SensorAlertsProfilesConditionThresholdWaterArgs:
 
 
 @pulumi.input_type
+class SensorAlertsProfilesConditionsResponseArgs:
+    def __init__(__self__, *,
+                 direction: Optional[pulumi.Input[str]] = None,
+                 duration: Optional[pulumi.Input[int]] = None,
+                 metric: Optional[pulumi.Input[str]] = None,
+                 threshold: Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdArgs']] = None):
+        """
+        :param pulumi.Input[str] direction: If 'above', an alert will be sent when a sensor reads above the threshold. If 'below', an alert will be sent when a sensor reads below the threshold. Only applicable for temperature, humidity, realPower, apparentPower, powerFactor, voltage, current, and frequency thresholds.
+        :param pulumi.Input[int] duration: Length of time in seconds that the triggering state must persist before an alert is sent. Available options are 0 seconds, 1 minute, 2 minutes, 3 minutes, 4 minutes, 5 minutes, 10 minutes, 15 minutes, 30 minutes, 1 hour, 2 hours, 4 hours, and 8 hours. Default is 0.
+        :param pulumi.Input[str] metric: The type of sensor metric that will be monitored for changes. Available metrics are apparentPower, co2, current, door, frequency, humidity, indoorAirQuality, noise, pm25, powerFactor, realPower, temperature, tvoc, upstreamPower, voltage, and water.
+        :param pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdArgs'] threshold: Threshold for sensor readings that will cause an alert to be sent. This object should contain a single property key matching the condition's 'metric' value.
+        """
+        if direction is not None:
+            pulumi.set(__self__, "direction", direction)
+        if duration is not None:
+            pulumi.set(__self__, "duration", duration)
+        if metric is not None:
+            pulumi.set(__self__, "metric", metric)
+        if threshold is not None:
+            pulumi.set(__self__, "threshold", threshold)
+
+    @property
+    @pulumi.getter
+    def direction(self) -> Optional[pulumi.Input[str]]:
+        """
+        If 'above', an alert will be sent when a sensor reads above the threshold. If 'below', an alert will be sent when a sensor reads below the threshold. Only applicable for temperature, humidity, realPower, apparentPower, powerFactor, voltage, current, and frequency thresholds.
+        """
+        return pulumi.get(self, "direction")
+
+    @direction.setter
+    def direction(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "direction", value)
+
+    @property
+    @pulumi.getter
+    def duration(self) -> Optional[pulumi.Input[int]]:
+        """
+        Length of time in seconds that the triggering state must persist before an alert is sent. Available options are 0 seconds, 1 minute, 2 minutes, 3 minutes, 4 minutes, 5 minutes, 10 minutes, 15 minutes, 30 minutes, 1 hour, 2 hours, 4 hours, and 8 hours. Default is 0.
+        """
+        return pulumi.get(self, "duration")
+
+    @duration.setter
+    def duration(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "duration", value)
+
+    @property
+    @pulumi.getter
+    def metric(self) -> Optional[pulumi.Input[str]]:
+        """
+        The type of sensor metric that will be monitored for changes. Available metrics are apparentPower, co2, current, door, frequency, humidity, indoorAirQuality, noise, pm25, powerFactor, realPower, temperature, tvoc, upstreamPower, voltage, and water.
+        """
+        return pulumi.get(self, "metric")
+
+    @metric.setter
+    def metric(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "metric", value)
+
+    @property
+    @pulumi.getter
+    def threshold(self) -> Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdArgs']]:
+        """
+        Threshold for sensor readings that will cause an alert to be sent. This object should contain a single property key matching the condition's 'metric' value.
+        """
+        return pulumi.get(self, "threshold")
+
+    @threshold.setter
+    def threshold(self, value: Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdArgs']]):
+        pulumi.set(self, "threshold", value)
+
+
+@pulumi.input_type
+class SensorAlertsProfilesConditionsResponseThresholdArgs:
+    def __init__(__self__, *,
+                 apparent_power: Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdApparentPowerArgs']] = None,
+                 current: Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdCurrentArgs']] = None,
+                 door: Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdDoorArgs']] = None,
+                 frequency: Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdFrequencyArgs']] = None,
+                 humidity: Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdHumidityArgs']] = None,
+                 indoor_air_quality: Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdIndoorAirQualityArgs']] = None,
+                 noise: Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdNoiseArgs']] = None,
+                 pm25: Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdPm25Args']] = None,
+                 power_factor: Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdPowerFactorArgs']] = None,
+                 real_power: Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdRealPowerArgs']] = None,
+                 temperature: Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdTemperatureArgs']] = None,
+                 tvoc: Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdTvocArgs']] = None,
+                 upstream_power: Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdUpstreamPowerArgs']] = None,
+                 voltage: Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdVoltageArgs']] = None,
+                 water: Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdWaterArgs']] = None):
+        """
+        :param pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdApparentPowerArgs'] apparent_power: Apparent power threshold. 'draw' must be provided.
+        :param pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdCurrentArgs'] current: Electrical current threshold. 'level' must be provided.
+        :param pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdDoorArgs'] door: Door open threshold. 'open' must be provided and set to true.
+        :param pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdFrequencyArgs'] frequency: Electrical frequency threshold. 'level' must be provided.
+        :param pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdHumidityArgs'] humidity: Humidity threshold. One of 'relativePercentage' or 'quality' must be provided.
+        :param pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdIndoorAirQualityArgs'] indoor_air_quality: Indoor air quality score threshold. One of 'score' or 'quality' must be provided.
+        :param pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdNoiseArgs'] noise: Noise threshold. 'ambient' must be provided.
+        :param pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdPm25Args'] pm25: PM2.5 concentration threshold. One of 'concentration' or 'quality' must be provided.
+        :param pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdPowerFactorArgs'] power_factor: Power factor threshold. 'percentage' must be provided.
+        :param pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdRealPowerArgs'] real_power: Real power threshold. 'draw' must be provided.
+        :param pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdTemperatureArgs'] temperature: Temperature threshold. One of 'celsius', 'fahrenheit', or 'quality' must be provided.
+        :param pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdTvocArgs'] tvoc: TVOC concentration threshold. One of 'concentration' or 'quality' must be provided.
+        :param pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdUpstreamPowerArgs'] upstream_power: Upstream power threshold. 'outageDetected' must be provided and set to true.
+        :param pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdVoltageArgs'] voltage: Voltage threshold. 'level' must be provided.
+        :param pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdWaterArgs'] water: Water detection threshold. 'present' must be provided and set to true.
+        """
+        if apparent_power is not None:
+            pulumi.set(__self__, "apparent_power", apparent_power)
+        if current is not None:
+            pulumi.set(__self__, "current", current)
+        if door is not None:
+            pulumi.set(__self__, "door", door)
+        if frequency is not None:
+            pulumi.set(__self__, "frequency", frequency)
+        if humidity is not None:
+            pulumi.set(__self__, "humidity", humidity)
+        if indoor_air_quality is not None:
+            pulumi.set(__self__, "indoor_air_quality", indoor_air_quality)
+        if noise is not None:
+            pulumi.set(__self__, "noise", noise)
+        if pm25 is not None:
+            pulumi.set(__self__, "pm25", pm25)
+        if power_factor is not None:
+            pulumi.set(__self__, "power_factor", power_factor)
+        if real_power is not None:
+            pulumi.set(__self__, "real_power", real_power)
+        if temperature is not None:
+            pulumi.set(__self__, "temperature", temperature)
+        if tvoc is not None:
+            pulumi.set(__self__, "tvoc", tvoc)
+        if upstream_power is not None:
+            pulumi.set(__self__, "upstream_power", upstream_power)
+        if voltage is not None:
+            pulumi.set(__self__, "voltage", voltage)
+        if water is not None:
+            pulumi.set(__self__, "water", water)
+
+    @property
+    @pulumi.getter(name="apparentPower")
+    def apparent_power(self) -> Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdApparentPowerArgs']]:
+        """
+        Apparent power threshold. 'draw' must be provided.
+        """
+        return pulumi.get(self, "apparent_power")
+
+    @apparent_power.setter
+    def apparent_power(self, value: Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdApparentPowerArgs']]):
+        pulumi.set(self, "apparent_power", value)
+
+    @property
+    @pulumi.getter
+    def current(self) -> Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdCurrentArgs']]:
+        """
+        Electrical current threshold. 'level' must be provided.
+        """
+        return pulumi.get(self, "current")
+
+    @current.setter
+    def current(self, value: Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdCurrentArgs']]):
+        pulumi.set(self, "current", value)
+
+    @property
+    @pulumi.getter
+    def door(self) -> Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdDoorArgs']]:
+        """
+        Door open threshold. 'open' must be provided and set to true.
+        """
+        return pulumi.get(self, "door")
+
+    @door.setter
+    def door(self, value: Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdDoorArgs']]):
+        pulumi.set(self, "door", value)
+
+    @property
+    @pulumi.getter
+    def frequency(self) -> Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdFrequencyArgs']]:
+        """
+        Electrical frequency threshold. 'level' must be provided.
+        """
+        return pulumi.get(self, "frequency")
+
+    @frequency.setter
+    def frequency(self, value: Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdFrequencyArgs']]):
+        pulumi.set(self, "frequency", value)
+
+    @property
+    @pulumi.getter
+    def humidity(self) -> Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdHumidityArgs']]:
+        """
+        Humidity threshold. One of 'relativePercentage' or 'quality' must be provided.
+        """
+        return pulumi.get(self, "humidity")
+
+    @humidity.setter
+    def humidity(self, value: Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdHumidityArgs']]):
+        pulumi.set(self, "humidity", value)
+
+    @property
+    @pulumi.getter(name="indoorAirQuality")
+    def indoor_air_quality(self) -> Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdIndoorAirQualityArgs']]:
+        """
+        Indoor air quality score threshold. One of 'score' or 'quality' must be provided.
+        """
+        return pulumi.get(self, "indoor_air_quality")
+
+    @indoor_air_quality.setter
+    def indoor_air_quality(self, value: Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdIndoorAirQualityArgs']]):
+        pulumi.set(self, "indoor_air_quality", value)
+
+    @property
+    @pulumi.getter
+    def noise(self) -> Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdNoiseArgs']]:
+        """
+        Noise threshold. 'ambient' must be provided.
+        """
+        return pulumi.get(self, "noise")
+
+    @noise.setter
+    def noise(self, value: Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdNoiseArgs']]):
+        pulumi.set(self, "noise", value)
+
+    @property
+    @pulumi.getter
+    def pm25(self) -> Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdPm25Args']]:
+        """
+        PM2.5 concentration threshold. One of 'concentration' or 'quality' must be provided.
+        """
+        return pulumi.get(self, "pm25")
+
+    @pm25.setter
+    def pm25(self, value: Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdPm25Args']]):
+        pulumi.set(self, "pm25", value)
+
+    @property
+    @pulumi.getter(name="powerFactor")
+    def power_factor(self) -> Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdPowerFactorArgs']]:
+        """
+        Power factor threshold. 'percentage' must be provided.
+        """
+        return pulumi.get(self, "power_factor")
+
+    @power_factor.setter
+    def power_factor(self, value: Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdPowerFactorArgs']]):
+        pulumi.set(self, "power_factor", value)
+
+    @property
+    @pulumi.getter(name="realPower")
+    def real_power(self) -> Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdRealPowerArgs']]:
+        """
+        Real power threshold. 'draw' must be provided.
+        """
+        return pulumi.get(self, "real_power")
+
+    @real_power.setter
+    def real_power(self, value: Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdRealPowerArgs']]):
+        pulumi.set(self, "real_power", value)
+
+    @property
+    @pulumi.getter
+    def temperature(self) -> Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdTemperatureArgs']]:
+        """
+        Temperature threshold. One of 'celsius', 'fahrenheit', or 'quality' must be provided.
+        """
+        return pulumi.get(self, "temperature")
+
+    @temperature.setter
+    def temperature(self, value: Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdTemperatureArgs']]):
+        pulumi.set(self, "temperature", value)
+
+    @property
+    @pulumi.getter
+    def tvoc(self) -> Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdTvocArgs']]:
+        """
+        TVOC concentration threshold. One of 'concentration' or 'quality' must be provided.
+        """
+        return pulumi.get(self, "tvoc")
+
+    @tvoc.setter
+    def tvoc(self, value: Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdTvocArgs']]):
+        pulumi.set(self, "tvoc", value)
+
+    @property
+    @pulumi.getter(name="upstreamPower")
+    def upstream_power(self) -> Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdUpstreamPowerArgs']]:
+        """
+        Upstream power threshold. 'outageDetected' must be provided and set to true.
+        """
+        return pulumi.get(self, "upstream_power")
+
+    @upstream_power.setter
+    def upstream_power(self, value: Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdUpstreamPowerArgs']]):
+        pulumi.set(self, "upstream_power", value)
+
+    @property
+    @pulumi.getter
+    def voltage(self) -> Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdVoltageArgs']]:
+        """
+        Voltage threshold. 'level' must be provided.
+        """
+        return pulumi.get(self, "voltage")
+
+    @voltage.setter
+    def voltage(self, value: Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdVoltageArgs']]):
+        pulumi.set(self, "voltage", value)
+
+    @property
+    @pulumi.getter
+    def water(self) -> Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdWaterArgs']]:
+        """
+        Water detection threshold. 'present' must be provided and set to true.
+        """
+        return pulumi.get(self, "water")
+
+    @water.setter
+    def water(self, value: Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdWaterArgs']]):
+        pulumi.set(self, "water", value)
+
+
+@pulumi.input_type
+class SensorAlertsProfilesConditionsResponseThresholdApparentPowerArgs:
+    def __init__(__self__, *,
+                 draw: Optional[pulumi.Input[float]] = None):
+        """
+        :param pulumi.Input[float] draw: Alerting threshold in volt-amps. Must be between 0 and 3750.
+        """
+        if draw is not None:
+            pulumi.set(__self__, "draw", draw)
+
+    @property
+    @pulumi.getter
+    def draw(self) -> Optional[pulumi.Input[float]]:
+        """
+        Alerting threshold in volt-amps. Must be between 0 and 3750.
+        """
+        return pulumi.get(self, "draw")
+
+    @draw.setter
+    def draw(self, value: Optional[pulumi.Input[float]]):
+        pulumi.set(self, "draw", value)
+
+
+@pulumi.input_type
+class SensorAlertsProfilesConditionsResponseThresholdCurrentArgs:
+    def __init__(__self__, *,
+                 draw: Optional[pulumi.Input[float]] = None):
+        """
+        :param pulumi.Input[float] draw: Alerting threshold in amps. Must be between 0 and 15.
+        """
+        if draw is not None:
+            pulumi.set(__self__, "draw", draw)
+
+    @property
+    @pulumi.getter
+    def draw(self) -> Optional[pulumi.Input[float]]:
+        """
+        Alerting threshold in amps. Must be between 0 and 15.
+        """
+        return pulumi.get(self, "draw")
+
+    @draw.setter
+    def draw(self, value: Optional[pulumi.Input[float]]):
+        pulumi.set(self, "draw", value)
+
+
+@pulumi.input_type
+class SensorAlertsProfilesConditionsResponseThresholdDoorArgs:
+    def __init__(__self__, *,
+                 open: Optional[pulumi.Input[bool]] = None):
+        """
+        :param pulumi.Input[bool] open: Alerting threshold for a door open event. Must be set to true.
+        """
+        if open is not None:
+            pulumi.set(__self__, "open", open)
+
+    @property
+    @pulumi.getter
+    def open(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Alerting threshold for a door open event. Must be set to true.
+        """
+        return pulumi.get(self, "open")
+
+    @open.setter
+    def open(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "open", value)
+
+
+@pulumi.input_type
+class SensorAlertsProfilesConditionsResponseThresholdFrequencyArgs:
+    def __init__(__self__, *,
+                 level: Optional[pulumi.Input[float]] = None):
+        """
+        :param pulumi.Input[float] level: Alerting threshold in hertz. Must be between 0 and 60.
+        """
+        if level is not None:
+            pulumi.set(__self__, "level", level)
+
+    @property
+    @pulumi.getter
+    def level(self) -> Optional[pulumi.Input[float]]:
+        """
+        Alerting threshold in hertz. Must be between 0 and 60.
+        """
+        return pulumi.get(self, "level")
+
+    @level.setter
+    def level(self, value: Optional[pulumi.Input[float]]):
+        pulumi.set(self, "level", value)
+
+
+@pulumi.input_type
+class SensorAlertsProfilesConditionsResponseThresholdHumidityArgs:
+    def __init__(__self__, *,
+                 quality: Optional[pulumi.Input[str]] = None,
+                 relative_percentage: Optional[pulumi.Input[int]] = None):
+        """
+        :param pulumi.Input[str] quality: Alerting threshold as a qualitative humidity level.
+        :param pulumi.Input[int] relative_percentage: Alerting threshold in %RH.
+        """
+        if quality is not None:
+            pulumi.set(__self__, "quality", quality)
+        if relative_percentage is not None:
+            pulumi.set(__self__, "relative_percentage", relative_percentage)
+
+    @property
+    @pulumi.getter
+    def quality(self) -> Optional[pulumi.Input[str]]:
+        """
+        Alerting threshold as a qualitative humidity level.
+        """
+        return pulumi.get(self, "quality")
+
+    @quality.setter
+    def quality(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "quality", value)
+
+    @property
+    @pulumi.getter(name="relativePercentage")
+    def relative_percentage(self) -> Optional[pulumi.Input[int]]:
+        """
+        Alerting threshold in %RH.
+        """
+        return pulumi.get(self, "relative_percentage")
+
+    @relative_percentage.setter
+    def relative_percentage(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "relative_percentage", value)
+
+
+@pulumi.input_type
+class SensorAlertsProfilesConditionsResponseThresholdIndoorAirQualityArgs:
+    def __init__(__self__, *,
+                 quality: Optional[pulumi.Input[str]] = None,
+                 score: Optional[pulumi.Input[int]] = None):
+        """
+        :param pulumi.Input[str] quality: Alerting threshold as a qualitative indoor air quality level.
+        :param pulumi.Input[int] score: Alerting threshold as indoor air quality score.
+        """
+        if quality is not None:
+            pulumi.set(__self__, "quality", quality)
+        if score is not None:
+            pulumi.set(__self__, "score", score)
+
+    @property
+    @pulumi.getter
+    def quality(self) -> Optional[pulumi.Input[str]]:
+        """
+        Alerting threshold as a qualitative indoor air quality level.
+        """
+        return pulumi.get(self, "quality")
+
+    @quality.setter
+    def quality(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "quality", value)
+
+    @property
+    @pulumi.getter
+    def score(self) -> Optional[pulumi.Input[int]]:
+        """
+        Alerting threshold as indoor air quality score.
+        """
+        return pulumi.get(self, "score")
+
+    @score.setter
+    def score(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "score", value)
+
+
+@pulumi.input_type
+class SensorAlertsProfilesConditionsResponseThresholdNoiseArgs:
+    def __init__(__self__, *,
+                 ambient: Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdNoiseAmbientArgs']] = None):
+        """
+        :param pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdNoiseAmbientArgs'] ambient: Ambient noise threshold. One of 'level' or 'quality' must be provided.
+        """
+        if ambient is not None:
+            pulumi.set(__self__, "ambient", ambient)
+
+    @property
+    @pulumi.getter
+    def ambient(self) -> Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdNoiseAmbientArgs']]:
+        """
+        Ambient noise threshold. One of 'level' or 'quality' must be provided.
+        """
+        return pulumi.get(self, "ambient")
+
+    @ambient.setter
+    def ambient(self, value: Optional[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdNoiseAmbientArgs']]):
+        pulumi.set(self, "ambient", value)
+
+
+@pulumi.input_type
+class SensorAlertsProfilesConditionsResponseThresholdNoiseAmbientArgs:
+    def __init__(__self__, *,
+                 level: Optional[pulumi.Input[int]] = None,
+                 quality: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[int] level: Alerting threshold as adjusted decibels.
+        :param pulumi.Input[str] quality: Alerting threshold as a qualitative ambient noise level.
+        """
+        if level is not None:
+            pulumi.set(__self__, "level", level)
+        if quality is not None:
+            pulumi.set(__self__, "quality", quality)
+
+    @property
+    @pulumi.getter
+    def level(self) -> Optional[pulumi.Input[int]]:
+        """
+        Alerting threshold as adjusted decibels.
+        """
+        return pulumi.get(self, "level")
+
+    @level.setter
+    def level(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "level", value)
+
+    @property
+    @pulumi.getter
+    def quality(self) -> Optional[pulumi.Input[str]]:
+        """
+        Alerting threshold as a qualitative ambient noise level.
+        """
+        return pulumi.get(self, "quality")
+
+    @quality.setter
+    def quality(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "quality", value)
+
+
+@pulumi.input_type
+class SensorAlertsProfilesConditionsResponseThresholdPm25Args:
+    def __init__(__self__, *,
+                 concentration: Optional[pulumi.Input[int]] = None,
+                 quality: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[int] concentration: Alerting threshold as PM2.5 parts per million.
+        :param pulumi.Input[str] quality: Alerting threshold as a qualitative PM2.5 level.
+        """
+        if concentration is not None:
+            pulumi.set(__self__, "concentration", concentration)
+        if quality is not None:
+            pulumi.set(__self__, "quality", quality)
+
+    @property
+    @pulumi.getter
+    def concentration(self) -> Optional[pulumi.Input[int]]:
+        """
+        Alerting threshold as PM2.5 parts per million.
+        """
+        return pulumi.get(self, "concentration")
+
+    @concentration.setter
+    def concentration(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "concentration", value)
+
+    @property
+    @pulumi.getter
+    def quality(self) -> Optional[pulumi.Input[str]]:
+        """
+        Alerting threshold as a qualitative PM2.5 level.
+        """
+        return pulumi.get(self, "quality")
+
+    @quality.setter
+    def quality(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "quality", value)
+
+
+@pulumi.input_type
+class SensorAlertsProfilesConditionsResponseThresholdPowerFactorArgs:
+    def __init__(__self__, *,
+                 percentage: Optional[pulumi.Input[int]] = None):
+        """
+        :param pulumi.Input[int] percentage: Alerting threshold as the ratio of active power to apparent power. Must be between 0 and 100.
+        """
+        if percentage is not None:
+            pulumi.set(__self__, "percentage", percentage)
+
+    @property
+    @pulumi.getter
+    def percentage(self) -> Optional[pulumi.Input[int]]:
+        """
+        Alerting threshold as the ratio of active power to apparent power. Must be between 0 and 100.
+        """
+        return pulumi.get(self, "percentage")
+
+    @percentage.setter
+    def percentage(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "percentage", value)
+
+
+@pulumi.input_type
+class SensorAlertsProfilesConditionsResponseThresholdRealPowerArgs:
+    def __init__(__self__, *,
+                 draw: Optional[pulumi.Input[float]] = None):
+        """
+        :param pulumi.Input[float] draw: Alerting threshold in watts. Must be between 0 and 3750.
+        """
+        if draw is not None:
+            pulumi.set(__self__, "draw", draw)
+
+    @property
+    @pulumi.getter
+    def draw(self) -> Optional[pulumi.Input[float]]:
+        """
+        Alerting threshold in watts. Must be between 0 and 3750.
+        """
+        return pulumi.get(self, "draw")
+
+    @draw.setter
+    def draw(self, value: Optional[pulumi.Input[float]]):
+        pulumi.set(self, "draw", value)
+
+
+@pulumi.input_type
+class SensorAlertsProfilesConditionsResponseThresholdTemperatureArgs:
+    def __init__(__self__, *,
+                 celsius: Optional[pulumi.Input[float]] = None,
+                 fahrenheit: Optional[pulumi.Input[float]] = None,
+                 quality: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[float] celsius: Alerting threshold in degrees Celsius.
+        :param pulumi.Input[float] fahrenheit: Alerting threshold in degrees Fahrenheit.
+        :param pulumi.Input[str] quality: Alerting threshold as a qualitative temperature level.
+        """
+        if celsius is not None:
+            pulumi.set(__self__, "celsius", celsius)
+        if fahrenheit is not None:
+            pulumi.set(__self__, "fahrenheit", fahrenheit)
+        if quality is not None:
+            pulumi.set(__self__, "quality", quality)
+
+    @property
+    @pulumi.getter
+    def celsius(self) -> Optional[pulumi.Input[float]]:
+        """
+        Alerting threshold in degrees Celsius.
+        """
+        return pulumi.get(self, "celsius")
+
+    @celsius.setter
+    def celsius(self, value: Optional[pulumi.Input[float]]):
+        pulumi.set(self, "celsius", value)
+
+    @property
+    @pulumi.getter
+    def fahrenheit(self) -> Optional[pulumi.Input[float]]:
+        """
+        Alerting threshold in degrees Fahrenheit.
+        """
+        return pulumi.get(self, "fahrenheit")
+
+    @fahrenheit.setter
+    def fahrenheit(self, value: Optional[pulumi.Input[float]]):
+        pulumi.set(self, "fahrenheit", value)
+
+    @property
+    @pulumi.getter
+    def quality(self) -> Optional[pulumi.Input[str]]:
+        """
+        Alerting threshold as a qualitative temperature level.
+        """
+        return pulumi.get(self, "quality")
+
+    @quality.setter
+    def quality(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "quality", value)
+
+
+@pulumi.input_type
+class SensorAlertsProfilesConditionsResponseThresholdTvocArgs:
+    def __init__(__self__, *,
+                 concentration: Optional[pulumi.Input[int]] = None,
+                 quality: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[int] concentration: Alerting threshold as TVOC micrograms per cubic meter.
+        :param pulumi.Input[str] quality: Alerting threshold as a qualitative TVOC level.
+        """
+        if concentration is not None:
+            pulumi.set(__self__, "concentration", concentration)
+        if quality is not None:
+            pulumi.set(__self__, "quality", quality)
+
+    @property
+    @pulumi.getter
+    def concentration(self) -> Optional[pulumi.Input[int]]:
+        """
+        Alerting threshold as TVOC micrograms per cubic meter.
+        """
+        return pulumi.get(self, "concentration")
+
+    @concentration.setter
+    def concentration(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "concentration", value)
+
+    @property
+    @pulumi.getter
+    def quality(self) -> Optional[pulumi.Input[str]]:
+        """
+        Alerting threshold as a qualitative TVOC level.
+        """
+        return pulumi.get(self, "quality")
+
+    @quality.setter
+    def quality(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "quality", value)
+
+
+@pulumi.input_type
+class SensorAlertsProfilesConditionsResponseThresholdUpstreamPowerArgs:
+    def __init__(__self__, *,
+                 outage_detected: Optional[pulumi.Input[bool]] = None):
+        """
+        :param pulumi.Input[bool] outage_detected: Alerting threshold for an upstream power event. Must be set to true.
+        """
+        if outage_detected is not None:
+            pulumi.set(__self__, "outage_detected", outage_detected)
+
+    @property
+    @pulumi.getter(name="outageDetected")
+    def outage_detected(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Alerting threshold for an upstream power event. Must be set to true.
+        """
+        return pulumi.get(self, "outage_detected")
+
+    @outage_detected.setter
+    def outage_detected(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "outage_detected", value)
+
+
+@pulumi.input_type
+class SensorAlertsProfilesConditionsResponseThresholdVoltageArgs:
+    def __init__(__self__, *,
+                 level: Optional[pulumi.Input[float]] = None):
+        """
+        :param pulumi.Input[float] level: Alerting threshold in volts. Must be between 0 and 250.
+        """
+        if level is not None:
+            pulumi.set(__self__, "level", level)
+
+    @property
+    @pulumi.getter
+    def level(self) -> Optional[pulumi.Input[float]]:
+        """
+        Alerting threshold in volts. Must be between 0 and 250.
+        """
+        return pulumi.get(self, "level")
+
+    @level.setter
+    def level(self, value: Optional[pulumi.Input[float]]):
+        pulumi.set(self, "level", value)
+
+
+@pulumi.input_type
+class SensorAlertsProfilesConditionsResponseThresholdWaterArgs:
+    def __init__(__self__, *,
+                 present: Optional[pulumi.Input[bool]] = None):
+        """
+        :param pulumi.Input[bool] present: Alerting threshold for a water detection event. Must be set to true.
+        """
+        if present is not None:
+            pulumi.set(__self__, "present", present)
+
+    @property
+    @pulumi.getter
+    def present(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Alerting threshold for a water detection event. Must be set to true.
+        """
+        return pulumi.get(self, "present")
+
+    @present.setter
+    def present(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "present", value)
+
+
+@pulumi.input_type
 class SensorAlertsProfilesRecipientsArgs:
     def __init__(__self__, *,
                  emails: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
@@ -26017,12 +27088,14 @@ class WirelessSsidsFirewallL3FirewallRulesRuleArgs:
                  comment: Optional[pulumi.Input[str]] = None,
                  dest_cidr: Optional[pulumi.Input[str]] = None,
                  dest_port: Optional[pulumi.Input[str]] = None,
+                 ip_ver: Optional[pulumi.Input[str]] = None,
                  policy: Optional[pulumi.Input[str]] = None,
                  protocol: Optional[pulumi.Input[str]] = None):
         """
         :param pulumi.Input[str] comment: Description of the rule (optional)
         :param pulumi.Input[str] dest_cidr: Comma-separated list of destination IP address(es) (in IP or CIDR notation), fully-qualified domain names (FQDN) or 'any'
         :param pulumi.Input[str] dest_port: Comma-separated list of destination port(s) (integer in the range 1-65535), or 'any'
+        :param pulumi.Input[str] ip_ver: Ip Ver
         :param pulumi.Input[str] policy: 'allow' or 'deny' traffic specified by this rule
         :param pulumi.Input[str] protocol: The type of protocol (must be 'tcp', 'udp', 'icmp', 'icmp6' or 'any')
         """
@@ -26032,6 +27105,8 @@ class WirelessSsidsFirewallL3FirewallRulesRuleArgs:
             pulumi.set(__self__, "dest_cidr", dest_cidr)
         if dest_port is not None:
             pulumi.set(__self__, "dest_port", dest_port)
+        if ip_ver is not None:
+            pulumi.set(__self__, "ip_ver", ip_ver)
         if policy is not None:
             pulumi.set(__self__, "policy", policy)
         if protocol is not None:
@@ -26072,6 +27147,18 @@ class WirelessSsidsFirewallL3FirewallRulesRuleArgs:
     @dest_port.setter
     def dest_port(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "dest_port", value)
+
+    @property
+    @pulumi.getter(name="ipVer")
+    def ip_ver(self) -> Optional[pulumi.Input[str]]:
+        """
+        Ip Ver
+        """
+        return pulumi.get(self, "ip_ver")
+
+    @ip_ver.setter
+    def ip_ver(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "ip_ver", value)
 
     @property
     @pulumi.getter
@@ -26104,12 +27191,14 @@ class WirelessSsidsFirewallL3FirewallRulesRulesResponseArgs:
                  comment: Optional[pulumi.Input[str]] = None,
                  dest_cidr: Optional[pulumi.Input[str]] = None,
                  dest_port: Optional[pulumi.Input[str]] = None,
+                 ip_ver: Optional[pulumi.Input[str]] = None,
                  policy: Optional[pulumi.Input[str]] = None,
                  protocol: Optional[pulumi.Input[str]] = None):
         """
         :param pulumi.Input[str] comment: Description of the rule (optional)
         :param pulumi.Input[str] dest_cidr: Comma-separated list of destination IP address(es) (in IP or CIDR notation), fully-qualified domain names (FQDN) or 'any'
         :param pulumi.Input[str] dest_port: Comma-separated list of destination port(s) (integer in the range 1-65535), or 'any'
+        :param pulumi.Input[str] ip_ver: Ip Version
         :param pulumi.Input[str] policy: 'allow' or 'deny' traffic specified by this rule
         :param pulumi.Input[str] protocol: The type of protocol (must be 'tcp', 'udp', 'icmp', 'icmp6' or 'any')
         """
@@ -26119,6 +27208,8 @@ class WirelessSsidsFirewallL3FirewallRulesRulesResponseArgs:
             pulumi.set(__self__, "dest_cidr", dest_cidr)
         if dest_port is not None:
             pulumi.set(__self__, "dest_port", dest_port)
+        if ip_ver is not None:
+            pulumi.set(__self__, "ip_ver", ip_ver)
         if policy is not None:
             pulumi.set(__self__, "policy", policy)
         if protocol is not None:
@@ -26159,6 +27250,18 @@ class WirelessSsidsFirewallL3FirewallRulesRulesResponseArgs:
     @dest_port.setter
     def dest_port(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "dest_port", value)
+
+    @property
+    @pulumi.getter(name="ipVer")
+    def ip_ver(self) -> Optional[pulumi.Input[str]]:
+        """
+        Ip Version
+        """
+        return pulumi.get(self, "ip_ver")
+
+    @ip_ver.setter
+    def ip_ver(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "ip_ver", value)
 
     @property
     @pulumi.getter
@@ -27142,6 +28245,109 @@ class WirelessSsidsOauthArgs:
 
 @pulumi.input_type
 class WirelessSsidsRadiusAccountingServerArgs:
+    def __init__(__self__, *,
+                 ca_certificate: Optional[pulumi.Input[str]] = None,
+                 host: Optional[pulumi.Input[str]] = None,
+                 open_roaming_certificate_id: Optional[pulumi.Input[int]] = None,
+                 port: Optional[pulumi.Input[int]] = None,
+                 radsec_enabled: Optional[pulumi.Input[bool]] = None,
+                 secret: Optional[pulumi.Input[str]] = None):
+        """
+        :param pulumi.Input[str] ca_certificate: Certificate used for authorization for the RADSEC Server
+        :param pulumi.Input[str] host: IP address (or FQDN) to which the APs will send RADIUS accounting messages
+        :param pulumi.Input[int] open_roaming_certificate_id: The ID of the Openroaming Certificate attached to radius server
+        :param pulumi.Input[int] port: Port on the RADIUS server that is listening for accounting messages
+        :param pulumi.Input[bool] radsec_enabled: Use RADSEC (TLS over TCP) to connect to this RADIUS accounting server. Requires radiusProxyEnabled.
+        :param pulumi.Input[str] secret: Shared key used to authenticate messages between the APs and RADIUS server
+        """
+        if ca_certificate is not None:
+            pulumi.set(__self__, "ca_certificate", ca_certificate)
+        if host is not None:
+            pulumi.set(__self__, "host", host)
+        if open_roaming_certificate_id is not None:
+            pulumi.set(__self__, "open_roaming_certificate_id", open_roaming_certificate_id)
+        if port is not None:
+            pulumi.set(__self__, "port", port)
+        if radsec_enabled is not None:
+            pulumi.set(__self__, "radsec_enabled", radsec_enabled)
+        if secret is not None:
+            pulumi.set(__self__, "secret", secret)
+
+    @property
+    @pulumi.getter(name="caCertificate")
+    def ca_certificate(self) -> Optional[pulumi.Input[str]]:
+        """
+        Certificate used for authorization for the RADSEC Server
+        """
+        return pulumi.get(self, "ca_certificate")
+
+    @ca_certificate.setter
+    def ca_certificate(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "ca_certificate", value)
+
+    @property
+    @pulumi.getter
+    def host(self) -> Optional[pulumi.Input[str]]:
+        """
+        IP address (or FQDN) to which the APs will send RADIUS accounting messages
+        """
+        return pulumi.get(self, "host")
+
+    @host.setter
+    def host(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "host", value)
+
+    @property
+    @pulumi.getter(name="openRoamingCertificateId")
+    def open_roaming_certificate_id(self) -> Optional[pulumi.Input[int]]:
+        """
+        The ID of the Openroaming Certificate attached to radius server
+        """
+        return pulumi.get(self, "open_roaming_certificate_id")
+
+    @open_roaming_certificate_id.setter
+    def open_roaming_certificate_id(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "open_roaming_certificate_id", value)
+
+    @property
+    @pulumi.getter
+    def port(self) -> Optional[pulumi.Input[int]]:
+        """
+        Port on the RADIUS server that is listening for accounting messages
+        """
+        return pulumi.get(self, "port")
+
+    @port.setter
+    def port(self, value: Optional[pulumi.Input[int]]):
+        pulumi.set(self, "port", value)
+
+    @property
+    @pulumi.getter(name="radsecEnabled")
+    def radsec_enabled(self) -> Optional[pulumi.Input[bool]]:
+        """
+        Use RADSEC (TLS over TCP) to connect to this RADIUS accounting server. Requires radiusProxyEnabled.
+        """
+        return pulumi.get(self, "radsec_enabled")
+
+    @radsec_enabled.setter
+    def radsec_enabled(self, value: Optional[pulumi.Input[bool]]):
+        pulumi.set(self, "radsec_enabled", value)
+
+    @property
+    @pulumi.getter
+    def secret(self) -> Optional[pulumi.Input[str]]:
+        """
+        Shared key used to authenticate messages between the APs and RADIUS server
+        """
+        return pulumi.get(self, "secret")
+
+    @secret.setter
+    def secret(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "secret", value)
+
+
+@pulumi.input_type
+class WirelessSsidsRadiusAccountingServersResponseArgs:
     def __init__(__self__, *,
                  ca_certificate: Optional[pulumi.Input[str]] = None,
                  host: Optional[pulumi.Input[str]] = None,

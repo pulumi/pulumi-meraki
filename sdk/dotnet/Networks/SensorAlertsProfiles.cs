@@ -28,6 +28,12 @@ namespace Pulumi.Meraki.Networks
         public Output<ImmutableArray<Outputs.SensorAlertsProfilesCondition>> Conditions { get; private set; } = null!;
 
         /// <summary>
+        /// List of conditions that will cause the profile to send an alert.
+        /// </summary>
+        [Output("conditionsResponses")]
+        public Output<ImmutableArray<Outputs.SensorAlertsProfilesConditionsResponse>> ConditionsResponses { get; private set; } = null!;
+
+        /// <summary>
         /// Name of the sensor alert profile.
         /// </summary>
         [Output("name")]
@@ -176,6 +182,18 @@ namespace Pulumi.Meraki.Networks
         {
             get => _conditions ?? (_conditions = new InputList<Inputs.SensorAlertsProfilesConditionGetArgs>());
             set => _conditions = value;
+        }
+
+        [Input("conditionsResponses")]
+        private InputList<Inputs.SensorAlertsProfilesConditionsResponseGetArgs>? _conditionsResponses;
+
+        /// <summary>
+        /// List of conditions that will cause the profile to send an alert.
+        /// </summary>
+        public InputList<Inputs.SensorAlertsProfilesConditionsResponseGetArgs> ConditionsResponses
+        {
+            get => _conditionsResponses ?? (_conditionsResponses = new InputList<Inputs.SensorAlertsProfilesConditionsResponseGetArgs>());
+            set => _conditionsResponses = value;
         }
 
         /// <summary>

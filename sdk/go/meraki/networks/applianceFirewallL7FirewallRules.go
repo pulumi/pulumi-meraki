@@ -59,6 +59,8 @@ type ApplianceFirewallL7FirewallRules struct {
 	NetworkId pulumi.StringOutput `pulumi:"networkId"`
 	// An ordered array of the MX L7 firewall rules
 	Rules ApplianceFirewallL7FirewallRulesRuleArrayOutput `pulumi:"rules"`
+	// An ordered array of the MX L7 firewall rules
+	RulesResponses ApplianceFirewallL7FirewallRulesRulesResponseArrayOutput `pulumi:"rulesResponses"`
 }
 
 // NewApplianceFirewallL7FirewallRules registers a new resource with the given unique name, arguments, and options.
@@ -98,6 +100,8 @@ type applianceFirewallL7FirewallRulesState struct {
 	NetworkId *string `pulumi:"networkId"`
 	// An ordered array of the MX L7 firewall rules
 	Rules []ApplianceFirewallL7FirewallRulesRule `pulumi:"rules"`
+	// An ordered array of the MX L7 firewall rules
+	RulesResponses []ApplianceFirewallL7FirewallRulesRulesResponse `pulumi:"rulesResponses"`
 }
 
 type ApplianceFirewallL7FirewallRulesState struct {
@@ -105,6 +109,8 @@ type ApplianceFirewallL7FirewallRulesState struct {
 	NetworkId pulumi.StringPtrInput
 	// An ordered array of the MX L7 firewall rules
 	Rules ApplianceFirewallL7FirewallRulesRuleArrayInput
+	// An ordered array of the MX L7 firewall rules
+	RulesResponses ApplianceFirewallL7FirewallRulesRulesResponseArrayInput
 }
 
 func (ApplianceFirewallL7FirewallRulesState) ElementType() reflect.Type {
@@ -223,6 +229,13 @@ func (o ApplianceFirewallL7FirewallRulesOutput) Rules() ApplianceFirewallL7Firew
 	return o.ApplyT(func(v *ApplianceFirewallL7FirewallRules) ApplianceFirewallL7FirewallRulesRuleArrayOutput {
 		return v.Rules
 	}).(ApplianceFirewallL7FirewallRulesRuleArrayOutput)
+}
+
+// An ordered array of the MX L7 firewall rules
+func (o ApplianceFirewallL7FirewallRulesOutput) RulesResponses() ApplianceFirewallL7FirewallRulesRulesResponseArrayOutput {
+	return o.ApplyT(func(v *ApplianceFirewallL7FirewallRules) ApplianceFirewallL7FirewallRulesRulesResponseArrayOutput {
+		return v.RulesResponses
+	}).(ApplianceFirewallL7FirewallRulesRulesResponseArrayOutput)
 }
 
 type ApplianceFirewallL7FirewallRulesArrayOutput struct{ *pulumi.OutputState }

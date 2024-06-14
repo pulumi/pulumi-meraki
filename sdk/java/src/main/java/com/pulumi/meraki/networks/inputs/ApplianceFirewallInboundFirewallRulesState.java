@@ -6,6 +6,7 @@ package com.pulumi.meraki.networks.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.meraki.networks.inputs.ApplianceFirewallInboundFirewallRulesRuleArgs;
+import com.pulumi.meraki.networks.inputs.ApplianceFirewallInboundFirewallRulesRulesResponseArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -49,6 +50,21 @@ public final class ApplianceFirewallInboundFirewallRulesState extends com.pulumi
     }
 
     /**
+     * An ordered array of the firewall rules (not including the default rule)
+     * 
+     */
+    @Import(name="rulesResponses")
+    private @Nullable Output<List<ApplianceFirewallInboundFirewallRulesRulesResponseArgs>> rulesResponses;
+
+    /**
+     * @return An ordered array of the firewall rules (not including the default rule)
+     * 
+     */
+    public Optional<Output<List<ApplianceFirewallInboundFirewallRulesRulesResponseArgs>>> rulesResponses() {
+        return Optional.ofNullable(this.rulesResponses);
+    }
+
+    /**
      * Log the special default rule (boolean value - enable only if you&#39;ve configured a syslog server) (optional)
      * 
      */
@@ -68,6 +84,7 @@ public final class ApplianceFirewallInboundFirewallRulesState extends com.pulumi
     private ApplianceFirewallInboundFirewallRulesState(ApplianceFirewallInboundFirewallRulesState $) {
         this.networkId = $.networkId;
         this.rules = $.rules;
+        this.rulesResponses = $.rulesResponses;
         this.syslogDefaultRule = $.syslogDefaultRule;
     }
 
@@ -139,6 +156,37 @@ public final class ApplianceFirewallInboundFirewallRulesState extends com.pulumi
          */
         public Builder rules(ApplianceFirewallInboundFirewallRulesRuleArgs... rules) {
             return rules(List.of(rules));
+        }
+
+        /**
+         * @param rulesResponses An ordered array of the firewall rules (not including the default rule)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder rulesResponses(@Nullable Output<List<ApplianceFirewallInboundFirewallRulesRulesResponseArgs>> rulesResponses) {
+            $.rulesResponses = rulesResponses;
+            return this;
+        }
+
+        /**
+         * @param rulesResponses An ordered array of the firewall rules (not including the default rule)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder rulesResponses(List<ApplianceFirewallInboundFirewallRulesRulesResponseArgs> rulesResponses) {
+            return rulesResponses(Output.of(rulesResponses));
+        }
+
+        /**
+         * @param rulesResponses An ordered array of the firewall rules (not including the default rule)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder rulesResponses(ApplianceFirewallInboundFirewallRulesRulesResponseArgs... rulesResponses) {
+            return rulesResponses(List.of(rulesResponses));
         }
 
         /**

@@ -12,7 +12,6 @@ import com.pulumi.meraki.networks.WebhooksHttpServersArgs;
 import com.pulumi.meraki.networks.inputs.WebhooksHttpServersState;
 import com.pulumi.meraki.networks.outputs.WebhooksHttpServersPayloadTemplate;
 import java.lang.String;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -74,14 +73,14 @@ public class WebhooksHttpServers extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="httpServerId", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> httpServerId;
+    private Output<String> httpServerId;
 
     /**
      * @return httpServerId path parameter. Http server ID
      * 
      */
-    public Output<Optional<String>> httpServerId() {
-        return Codegen.optional(this.httpServerId);
+    public Output<String> httpServerId() {
+        return this.httpServerId;
     }
     /**
      * A name for easy reference to the HTTP server

@@ -26,6 +26,10 @@ namespace Pulumi.Meraki.Networks.Outputs
         /// </summary>
         public readonly string? DestPort;
         /// <summary>
+        /// Ip Version
+        /// </summary>
+        public readonly string? IpVer;
+        /// <summary>
         /// 'allow' or 'deny' traffic specified by this rule
         /// </summary>
         public readonly string? Policy;
@@ -42,6 +46,8 @@ namespace Pulumi.Meraki.Networks.Outputs
 
             string? destPort,
 
+            string? ipVer,
+
             string? policy,
 
             string? protocol)
@@ -49,6 +55,7 @@ namespace Pulumi.Meraki.Networks.Outputs
             Comment = comment;
             DestCidr = destCidr;
             DestPort = destPort;
+            IpVer = ipVer;
             Policy = policy;
             Protocol = protocol;
         }

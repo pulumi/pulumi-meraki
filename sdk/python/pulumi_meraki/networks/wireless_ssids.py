@@ -1019,7 +1019,6 @@ class _WirelessSsidsState:
                  ip_assignment_mode: Optional[pulumi.Input[str]] = None,
                  lan_isolation_enabled: Optional[pulumi.Input[bool]] = None,
                  ldap: Optional[pulumi.Input['WirelessSsidsLdapArgs']] = None,
-                 local_auth: Optional[pulumi.Input[bool]] = None,
                  local_radius: Optional[pulumi.Input['WirelessSsidsLocalRadiusArgs']] = None,
                  mandatory_dhcp_enabled: Optional[pulumi.Input[bool]] = None,
                  min_bitrate: Optional[pulumi.Input[int]] = None,
@@ -1036,11 +1035,11 @@ class _WirelessSsidsState:
                  radius_accounting_enabled: Optional[pulumi.Input[bool]] = None,
                  radius_accounting_interim_interval: Optional[pulumi.Input[int]] = None,
                  radius_accounting_servers: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsRadiusAccountingServerArgs']]]] = None,
+                 radius_accounting_servers_responses: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsRadiusAccountingServersResponseArgs']]]] = None,
                  radius_attribute_for_group_policies: Optional[pulumi.Input[str]] = None,
                  radius_authentication_nas_id: Optional[pulumi.Input[str]] = None,
                  radius_called_station_id: Optional[pulumi.Input[str]] = None,
                  radius_coa_enabled: Optional[pulumi.Input[bool]] = None,
-                 radius_enabled: Optional[pulumi.Input[bool]] = None,
                  radius_failover_policy: Optional[pulumi.Input[str]] = None,
                  radius_fallback_enabled: Optional[pulumi.Input[bool]] = None,
                  radius_guest_vlan_enabled: Optional[pulumi.Input[bool]] = None,
@@ -1087,7 +1086,6 @@ class _WirelessSsidsState:
         :param pulumi.Input[str] ip_assignment_mode: The client IP assignment mode
         :param pulumi.Input[bool] lan_isolation_enabled: Boolean indicating whether Layer 2 LAN isolation should be enabled or disabled. Only configurable when ipAssignmentMode is 'Bridge mode'.
         :param pulumi.Input['WirelessSsidsLdapArgs'] ldap: The current setting for LDAP. Only valid if splashPage is 'Password-protected with LDAP'.
-        :param pulumi.Input[bool] local_auth: Extended local auth flag for Enterprise NAC
         :param pulumi.Input['WirelessSsidsLocalRadiusArgs'] local_radius: The current setting for Local Authentication, a built-in RADIUS server on the access point. Only valid if authMode is '8021x-localradius'.
         :param pulumi.Input[bool] mandatory_dhcp_enabled: Whether clients connecting to this SSID must use the IP address assigned by the DHCP server
         :param pulumi.Input[int] min_bitrate: The minimum bitrate in Mbps of this SSID in the default indoor RF profile
@@ -1104,11 +1102,11 @@ class _WirelessSsidsState:
         :param pulumi.Input[bool] radius_accounting_enabled: Whether or not RADIUS accounting is enabled
         :param pulumi.Input[int] radius_accounting_interim_interval: The interval (in seconds) in which accounting information is updated and sent to the RADIUS accounting server.
         :param pulumi.Input[Sequence[pulumi.Input['WirelessSsidsRadiusAccountingServerArgs']]] radius_accounting_servers: List of RADIUS accounting 802.1X servers to be used for authentication
+        :param pulumi.Input[Sequence[pulumi.Input['WirelessSsidsRadiusAccountingServersResponseArgs']]] radius_accounting_servers_responses: List of RADIUS accounting 802.1X servers to be used for authentication
         :param pulumi.Input[str] radius_attribute_for_group_policies: RADIUS attribute used to look up group policies
         :param pulumi.Input[str] radius_authentication_nas_id: The template of the NAS identifier to be used for RADIUS authentication (ex. $NODE*MAC$:$VAP*NUM$).
         :param pulumi.Input[str] radius_called_station_id: The template of the called station identifier to be used for RADIUS (ex. $NODE*MAC$:$VAP*NUM$).
         :param pulumi.Input[bool] radius_coa_enabled: If true, Meraki devices will act as a RADIUS Dynamic Authorization Server and will respond to RADIUS Change-of-Authorization and Disconnect messages sent by the RADIUS server.
-        :param pulumi.Input[bool] radius_enabled: Whether RADIUS authentication is enabled
         :param pulumi.Input[str] radius_failover_policy: Policy which determines how authentication requests should be handled in the event that all of the configured RADIUS servers are unreachable
         :param pulumi.Input[bool] radius_fallback_enabled: Whether or not higher priority RADIUS servers should be retried after 60 seconds.
         :param pulumi.Input[bool] radius_guest_vlan_enabled: Whether or not RADIUS Guest VLAN is enabled. This param is only valid if the authMode is 'open-with-radius' and addressing mode is not set to 'isolated' or 'nat' mode
@@ -1176,8 +1174,6 @@ class _WirelessSsidsState:
             pulumi.set(__self__, "lan_isolation_enabled", lan_isolation_enabled)
         if ldap is not None:
             pulumi.set(__self__, "ldap", ldap)
-        if local_auth is not None:
-            pulumi.set(__self__, "local_auth", local_auth)
         if local_radius is not None:
             pulumi.set(__self__, "local_radius", local_radius)
         if mandatory_dhcp_enabled is not None:
@@ -1210,6 +1206,8 @@ class _WirelessSsidsState:
             pulumi.set(__self__, "radius_accounting_interim_interval", radius_accounting_interim_interval)
         if radius_accounting_servers is not None:
             pulumi.set(__self__, "radius_accounting_servers", radius_accounting_servers)
+        if radius_accounting_servers_responses is not None:
+            pulumi.set(__self__, "radius_accounting_servers_responses", radius_accounting_servers_responses)
         if radius_attribute_for_group_policies is not None:
             pulumi.set(__self__, "radius_attribute_for_group_policies", radius_attribute_for_group_policies)
         if radius_authentication_nas_id is not None:
@@ -1218,8 +1216,6 @@ class _WirelessSsidsState:
             pulumi.set(__self__, "radius_called_station_id", radius_called_station_id)
         if radius_coa_enabled is not None:
             pulumi.set(__self__, "radius_coa_enabled", radius_coa_enabled)
-        if radius_enabled is not None:
-            pulumi.set(__self__, "radius_enabled", radius_enabled)
         if radius_failover_policy is not None:
             pulumi.set(__self__, "radius_failover_policy", radius_failover_policy)
         if radius_fallback_enabled is not None:
@@ -1519,18 +1515,6 @@ class _WirelessSsidsState:
         pulumi.set(self, "ldap", value)
 
     @property
-    @pulumi.getter(name="localAuth")
-    def local_auth(self) -> Optional[pulumi.Input[bool]]:
-        """
-        Extended local auth flag for Enterprise NAC
-        """
-        return pulumi.get(self, "local_auth")
-
-    @local_auth.setter
-    def local_auth(self, value: Optional[pulumi.Input[bool]]):
-        pulumi.set(self, "local_auth", value)
-
-    @property
     @pulumi.getter(name="localRadius")
     def local_radius(self) -> Optional[pulumi.Input['WirelessSsidsLocalRadiusArgs']]:
         """
@@ -1723,6 +1707,18 @@ class _WirelessSsidsState:
         pulumi.set(self, "radius_accounting_servers", value)
 
     @property
+    @pulumi.getter(name="radiusAccountingServersResponses")
+    def radius_accounting_servers_responses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsRadiusAccountingServersResponseArgs']]]]:
+        """
+        List of RADIUS accounting 802.1X servers to be used for authentication
+        """
+        return pulumi.get(self, "radius_accounting_servers_responses")
+
+    @radius_accounting_servers_responses.setter
+    def radius_accounting_servers_responses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsRadiusAccountingServersResponseArgs']]]]):
+        pulumi.set(self, "radius_accounting_servers_responses", value)
+
+    @property
     @pulumi.getter(name="radiusAttributeForGroupPolicies")
     def radius_attribute_for_group_policies(self) -> Optional[pulumi.Input[str]]:
         """
@@ -1769,18 +1765,6 @@ class _WirelessSsidsState:
     @radius_coa_enabled.setter
     def radius_coa_enabled(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "radius_coa_enabled", value)
-
-    @property
-    @pulumi.getter(name="radiusEnabled")
-    def radius_enabled(self) -> Optional[pulumi.Input[bool]]:
-        """
-        Whether RADIUS authentication is enabled
-        """
-        return pulumi.get(self, "radius_enabled")
-
-    @radius_enabled.setter
-    def radius_enabled(self, value: Optional[pulumi.Input[bool]]):
-        pulumi.set(self, "radius_enabled", value)
 
     @property
     @pulumi.getter(name="radiusFailoverPolicy")
@@ -2377,8 +2361,7 @@ class WirelessSsids(pulumi.CustomResource):
             __props__.__dict__["walled_garden_ranges"] = walled_garden_ranges
             __props__.__dict__["wpa_encryption_mode"] = wpa_encryption_mode
             __props__.__dict__["admin_splash_url"] = None
-            __props__.__dict__["local_auth"] = None
-            __props__.__dict__["radius_enabled"] = None
+            __props__.__dict__["radius_accounting_servers_responses"] = None
             __props__.__dict__["radius_servers_responses"] = None
             __props__.__dict__["splash_timeout"] = None
             __props__.__dict__["ssid_admin_accessible"] = None
@@ -2413,7 +2396,6 @@ class WirelessSsids(pulumi.CustomResource):
             ip_assignment_mode: Optional[pulumi.Input[str]] = None,
             lan_isolation_enabled: Optional[pulumi.Input[bool]] = None,
             ldap: Optional[pulumi.Input[pulumi.InputType['WirelessSsidsLdapArgs']]] = None,
-            local_auth: Optional[pulumi.Input[bool]] = None,
             local_radius: Optional[pulumi.Input[pulumi.InputType['WirelessSsidsLocalRadiusArgs']]] = None,
             mandatory_dhcp_enabled: Optional[pulumi.Input[bool]] = None,
             min_bitrate: Optional[pulumi.Input[int]] = None,
@@ -2430,11 +2412,11 @@ class WirelessSsids(pulumi.CustomResource):
             radius_accounting_enabled: Optional[pulumi.Input[bool]] = None,
             radius_accounting_interim_interval: Optional[pulumi.Input[int]] = None,
             radius_accounting_servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['WirelessSsidsRadiusAccountingServerArgs']]]]] = None,
+            radius_accounting_servers_responses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['WirelessSsidsRadiusAccountingServersResponseArgs']]]]] = None,
             radius_attribute_for_group_policies: Optional[pulumi.Input[str]] = None,
             radius_authentication_nas_id: Optional[pulumi.Input[str]] = None,
             radius_called_station_id: Optional[pulumi.Input[str]] = None,
             radius_coa_enabled: Optional[pulumi.Input[bool]] = None,
-            radius_enabled: Optional[pulumi.Input[bool]] = None,
             radius_failover_policy: Optional[pulumi.Input[str]] = None,
             radius_fallback_enabled: Optional[pulumi.Input[bool]] = None,
             radius_guest_vlan_enabled: Optional[pulumi.Input[bool]] = None,
@@ -2486,7 +2468,6 @@ class WirelessSsids(pulumi.CustomResource):
         :param pulumi.Input[str] ip_assignment_mode: The client IP assignment mode
         :param pulumi.Input[bool] lan_isolation_enabled: Boolean indicating whether Layer 2 LAN isolation should be enabled or disabled. Only configurable when ipAssignmentMode is 'Bridge mode'.
         :param pulumi.Input[pulumi.InputType['WirelessSsidsLdapArgs']] ldap: The current setting for LDAP. Only valid if splashPage is 'Password-protected with LDAP'.
-        :param pulumi.Input[bool] local_auth: Extended local auth flag for Enterprise NAC
         :param pulumi.Input[pulumi.InputType['WirelessSsidsLocalRadiusArgs']] local_radius: The current setting for Local Authentication, a built-in RADIUS server on the access point. Only valid if authMode is '8021x-localradius'.
         :param pulumi.Input[bool] mandatory_dhcp_enabled: Whether clients connecting to this SSID must use the IP address assigned by the DHCP server
         :param pulumi.Input[int] min_bitrate: The minimum bitrate in Mbps of this SSID in the default indoor RF profile
@@ -2503,11 +2484,11 @@ class WirelessSsids(pulumi.CustomResource):
         :param pulumi.Input[bool] radius_accounting_enabled: Whether or not RADIUS accounting is enabled
         :param pulumi.Input[int] radius_accounting_interim_interval: The interval (in seconds) in which accounting information is updated and sent to the RADIUS accounting server.
         :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['WirelessSsidsRadiusAccountingServerArgs']]]] radius_accounting_servers: List of RADIUS accounting 802.1X servers to be used for authentication
+        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['WirelessSsidsRadiusAccountingServersResponseArgs']]]] radius_accounting_servers_responses: List of RADIUS accounting 802.1X servers to be used for authentication
         :param pulumi.Input[str] radius_attribute_for_group_policies: RADIUS attribute used to look up group policies
         :param pulumi.Input[str] radius_authentication_nas_id: The template of the NAS identifier to be used for RADIUS authentication (ex. $NODE*MAC$:$VAP*NUM$).
         :param pulumi.Input[str] radius_called_station_id: The template of the called station identifier to be used for RADIUS (ex. $NODE*MAC$:$VAP*NUM$).
         :param pulumi.Input[bool] radius_coa_enabled: If true, Meraki devices will act as a RADIUS Dynamic Authorization Server and will respond to RADIUS Change-of-Authorization and Disconnect messages sent by the RADIUS server.
-        :param pulumi.Input[bool] radius_enabled: Whether RADIUS authentication is enabled
         :param pulumi.Input[str] radius_failover_policy: Policy which determines how authentication requests should be handled in the event that all of the configured RADIUS servers are unreachable
         :param pulumi.Input[bool] radius_fallback_enabled: Whether or not higher priority RADIUS servers should be retried after 60 seconds.
         :param pulumi.Input[bool] radius_guest_vlan_enabled: Whether or not RADIUS Guest VLAN is enabled. This param is only valid if the authMode is 'open-with-radius' and addressing mode is not set to 'isolated' or 'nat' mode
@@ -2558,7 +2539,6 @@ class WirelessSsids(pulumi.CustomResource):
         __props__.__dict__["ip_assignment_mode"] = ip_assignment_mode
         __props__.__dict__["lan_isolation_enabled"] = lan_isolation_enabled
         __props__.__dict__["ldap"] = ldap
-        __props__.__dict__["local_auth"] = local_auth
         __props__.__dict__["local_radius"] = local_radius
         __props__.__dict__["mandatory_dhcp_enabled"] = mandatory_dhcp_enabled
         __props__.__dict__["min_bitrate"] = min_bitrate
@@ -2575,11 +2555,11 @@ class WirelessSsids(pulumi.CustomResource):
         __props__.__dict__["radius_accounting_enabled"] = radius_accounting_enabled
         __props__.__dict__["radius_accounting_interim_interval"] = radius_accounting_interim_interval
         __props__.__dict__["radius_accounting_servers"] = radius_accounting_servers
+        __props__.__dict__["radius_accounting_servers_responses"] = radius_accounting_servers_responses
         __props__.__dict__["radius_attribute_for_group_policies"] = radius_attribute_for_group_policies
         __props__.__dict__["radius_authentication_nas_id"] = radius_authentication_nas_id
         __props__.__dict__["radius_called_station_id"] = radius_called_station_id
         __props__.__dict__["radius_coa_enabled"] = radius_coa_enabled
-        __props__.__dict__["radius_enabled"] = radius_enabled
         __props__.__dict__["radius_failover_policy"] = radius_failover_policy
         __props__.__dict__["radius_fallback_enabled"] = radius_fallback_enabled
         __props__.__dict__["radius_guest_vlan_enabled"] = radius_guest_vlan_enabled
@@ -2772,14 +2752,6 @@ class WirelessSsids(pulumi.CustomResource):
         return pulumi.get(self, "ldap")
 
     @property
-    @pulumi.getter(name="localAuth")
-    def local_auth(self) -> pulumi.Output[bool]:
-        """
-        Extended local auth flag for Enterprise NAC
-        """
-        return pulumi.get(self, "local_auth")
-
-    @property
     @pulumi.getter(name="localRadius")
     def local_radius(self) -> pulumi.Output[Optional['outputs.WirelessSsidsLocalRadius']]:
         """
@@ -2885,7 +2857,7 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="radiusAccountingEnabled")
-    def radius_accounting_enabled(self) -> pulumi.Output[Optional[bool]]:
+    def radius_accounting_enabled(self) -> pulumi.Output[bool]:
         """
         Whether or not RADIUS accounting is enabled
         """
@@ -2901,11 +2873,19 @@ class WirelessSsids(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="radiusAccountingServers")
-    def radius_accounting_servers(self) -> pulumi.Output[Sequence['outputs.WirelessSsidsRadiusAccountingServer']]:
+    def radius_accounting_servers(self) -> pulumi.Output[Optional[Sequence['outputs.WirelessSsidsRadiusAccountingServer']]]:
         """
         List of RADIUS accounting 802.1X servers to be used for authentication
         """
         return pulumi.get(self, "radius_accounting_servers")
+
+    @property
+    @pulumi.getter(name="radiusAccountingServersResponses")
+    def radius_accounting_servers_responses(self) -> pulumi.Output[Sequence['outputs.WirelessSsidsRadiusAccountingServersResponse']]:
+        """
+        List of RADIUS accounting 802.1X servers to be used for authentication
+        """
+        return pulumi.get(self, "radius_accounting_servers_responses")
 
     @property
     @pulumi.getter(name="radiusAttributeForGroupPolicies")
@@ -2938,14 +2918,6 @@ class WirelessSsids(pulumi.CustomResource):
         If true, Meraki devices will act as a RADIUS Dynamic Authorization Server and will respond to RADIUS Change-of-Authorization and Disconnect messages sent by the RADIUS server.
         """
         return pulumi.get(self, "radius_coa_enabled")
-
-    @property
-    @pulumi.getter(name="radiusEnabled")
-    def radius_enabled(self) -> pulumi.Output[bool]:
-        """
-        Whether RADIUS authentication is enabled
-        """
-        return pulumi.get(self, "radius_enabled")
 
     @property
     @pulumi.getter(name="radiusFailoverPolicy")

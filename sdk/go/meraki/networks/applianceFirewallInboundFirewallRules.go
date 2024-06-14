@@ -26,6 +26,8 @@ type ApplianceFirewallInboundFirewallRules struct {
 	NetworkId pulumi.StringOutput `pulumi:"networkId"`
 	// An ordered array of the firewall rules (not including the default rule)
 	Rules ApplianceFirewallInboundFirewallRulesRuleArrayOutput `pulumi:"rules"`
+	// An ordered array of the firewall rules (not including the default rule)
+	RulesResponses ApplianceFirewallInboundFirewallRulesRulesResponseArrayOutput `pulumi:"rulesResponses"`
 	// Log the special default rule (boolean value - enable only if you've configured a syslog server) (optional)
 	SyslogDefaultRule pulumi.BoolOutput `pulumi:"syslogDefaultRule"`
 }
@@ -67,6 +69,8 @@ type applianceFirewallInboundFirewallRulesState struct {
 	NetworkId *string `pulumi:"networkId"`
 	// An ordered array of the firewall rules (not including the default rule)
 	Rules []ApplianceFirewallInboundFirewallRulesRule `pulumi:"rules"`
+	// An ordered array of the firewall rules (not including the default rule)
+	RulesResponses []ApplianceFirewallInboundFirewallRulesRulesResponse `pulumi:"rulesResponses"`
 	// Log the special default rule (boolean value - enable only if you've configured a syslog server) (optional)
 	SyslogDefaultRule *bool `pulumi:"syslogDefaultRule"`
 }
@@ -76,6 +80,8 @@ type ApplianceFirewallInboundFirewallRulesState struct {
 	NetworkId pulumi.StringPtrInput
 	// An ordered array of the firewall rules (not including the default rule)
 	Rules ApplianceFirewallInboundFirewallRulesRuleArrayInput
+	// An ordered array of the firewall rules (not including the default rule)
+	RulesResponses ApplianceFirewallInboundFirewallRulesRulesResponseArrayInput
 	// Log the special default rule (boolean value - enable only if you've configured a syslog server) (optional)
 	SyslogDefaultRule pulumi.BoolPtrInput
 }
@@ -200,6 +206,13 @@ func (o ApplianceFirewallInboundFirewallRulesOutput) Rules() ApplianceFirewallIn
 	return o.ApplyT(func(v *ApplianceFirewallInboundFirewallRules) ApplianceFirewallInboundFirewallRulesRuleArrayOutput {
 		return v.Rules
 	}).(ApplianceFirewallInboundFirewallRulesRuleArrayOutput)
+}
+
+// An ordered array of the firewall rules (not including the default rule)
+func (o ApplianceFirewallInboundFirewallRulesOutput) RulesResponses() ApplianceFirewallInboundFirewallRulesRulesResponseArrayOutput {
+	return o.ApplyT(func(v *ApplianceFirewallInboundFirewallRules) ApplianceFirewallInboundFirewallRulesRulesResponseArrayOutput {
+		return v.RulesResponses
+	}).(ApplianceFirewallInboundFirewallRulesRulesResponseArrayOutput)
 }
 
 // Log the special default rule (boolean value - enable only if you've configured a syslog server) (optional)

@@ -6,6 +6,7 @@ package com.pulumi.meraki.networks.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.meraki.networks.inputs.ApplianceFirewallL7FirewallRulesRuleArgs;
+import com.pulumi.meraki.networks.inputs.ApplianceFirewallL7FirewallRulesRulesResponseArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -47,11 +48,27 @@ public final class ApplianceFirewallL7FirewallRulesState extends com.pulumi.reso
         return Optional.ofNullable(this.rules);
     }
 
+    /**
+     * An ordered array of the MX L7 firewall rules
+     * 
+     */
+    @Import(name="rulesResponses")
+    private @Nullable Output<List<ApplianceFirewallL7FirewallRulesRulesResponseArgs>> rulesResponses;
+
+    /**
+     * @return An ordered array of the MX L7 firewall rules
+     * 
+     */
+    public Optional<Output<List<ApplianceFirewallL7FirewallRulesRulesResponseArgs>>> rulesResponses() {
+        return Optional.ofNullable(this.rulesResponses);
+    }
+
     private ApplianceFirewallL7FirewallRulesState() {}
 
     private ApplianceFirewallL7FirewallRulesState(ApplianceFirewallL7FirewallRulesState $) {
         this.networkId = $.networkId;
         this.rules = $.rules;
+        this.rulesResponses = $.rulesResponses;
     }
 
     public static Builder builder() {
@@ -122,6 +139,37 @@ public final class ApplianceFirewallL7FirewallRulesState extends com.pulumi.reso
          */
         public Builder rules(ApplianceFirewallL7FirewallRulesRuleArgs... rules) {
             return rules(List.of(rules));
+        }
+
+        /**
+         * @param rulesResponses An ordered array of the MX L7 firewall rules
+         * 
+         * @return builder
+         * 
+         */
+        public Builder rulesResponses(@Nullable Output<List<ApplianceFirewallL7FirewallRulesRulesResponseArgs>> rulesResponses) {
+            $.rulesResponses = rulesResponses;
+            return this;
+        }
+
+        /**
+         * @param rulesResponses An ordered array of the MX L7 firewall rules
+         * 
+         * @return builder
+         * 
+         */
+        public Builder rulesResponses(List<ApplianceFirewallL7FirewallRulesRulesResponseArgs> rulesResponses) {
+            return rulesResponses(Output.of(rulesResponses));
+        }
+
+        /**
+         * @param rulesResponses An ordered array of the MX L7 firewall rules
+         * 
+         * @return builder
+         * 
+         */
+        public Builder rulesResponses(ApplianceFirewallL7FirewallRulesRulesResponseArgs... rulesResponses) {
+            return rulesResponses(List.of(rulesResponses));
         }
 
         public ApplianceFirewallL7FirewallRulesState build() {

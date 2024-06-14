@@ -11,10 +11,12 @@ import com.pulumi.meraki.Utilities;
 import com.pulumi.meraki.networks.SensorAlertsProfilesArgs;
 import com.pulumi.meraki.networks.inputs.SensorAlertsProfilesState;
 import com.pulumi.meraki.networks.outputs.SensorAlertsProfilesCondition;
+import com.pulumi.meraki.networks.outputs.SensorAlertsProfilesConditionsResponse;
 import com.pulumi.meraki.networks.outputs.SensorAlertsProfilesRecipients;
 import com.pulumi.meraki.networks.outputs.SensorAlertsProfilesSchedule;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -162,14 +164,28 @@ public class SensorAlertsProfiles extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="conditions", refs={List.class,SensorAlertsProfilesCondition.class}, tree="[0,1]")
-    private Output<List<SensorAlertsProfilesCondition>> conditions;
+    private Output</* @Nullable */ List<SensorAlertsProfilesCondition>> conditions;
 
     /**
      * @return List of conditions that will cause the profile to send an alert.
      * 
      */
-    public Output<List<SensorAlertsProfilesCondition>> conditions() {
-        return this.conditions;
+    public Output<Optional<List<SensorAlertsProfilesCondition>>> conditions() {
+        return Codegen.optional(this.conditions);
+    }
+    /**
+     * List of conditions that will cause the profile to send an alert.
+     * 
+     */
+    @Export(name="conditionsResponses", refs={List.class,SensorAlertsProfilesConditionsResponse.class}, tree="[0,1]")
+    private Output<List<SensorAlertsProfilesConditionsResponse>> conditionsResponses;
+
+    /**
+     * @return List of conditions that will cause the profile to send an alert.
+     * 
+     */
+    public Output<List<SensorAlertsProfilesConditionsResponse>> conditionsResponses() {
+        return this.conditionsResponses;
     }
     /**
      * Name of the sensor alert profile.

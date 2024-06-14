@@ -11,8 +11,10 @@ import com.pulumi.meraki.Utilities;
 import com.pulumi.meraki.networks.ApplianceFirewallL7FirewallRulesArgs;
 import com.pulumi.meraki.networks.inputs.ApplianceFirewallL7FirewallRulesState;
 import com.pulumi.meraki.networks.outputs.ApplianceFirewallL7FirewallRulesRule;
+import com.pulumi.meraki.networks.outputs.ApplianceFirewallL7FirewallRulesRulesResponse;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -172,14 +174,28 @@ public class ApplianceFirewallL7FirewallRules extends com.pulumi.resources.Custo
      * 
      */
     @Export(name="rules", refs={List.class,ApplianceFirewallL7FirewallRulesRule.class}, tree="[0,1]")
-    private Output<List<ApplianceFirewallL7FirewallRulesRule>> rules;
+    private Output</* @Nullable */ List<ApplianceFirewallL7FirewallRulesRule>> rules;
 
     /**
      * @return An ordered array of the MX L7 firewall rules
      * 
      */
-    public Output<List<ApplianceFirewallL7FirewallRulesRule>> rules() {
-        return this.rules;
+    public Output<Optional<List<ApplianceFirewallL7FirewallRulesRule>>> rules() {
+        return Codegen.optional(this.rules);
+    }
+    /**
+     * An ordered array of the MX L7 firewall rules
+     * 
+     */
+    @Export(name="rulesResponses", refs={List.class,ApplianceFirewallL7FirewallRulesRulesResponse.class}, tree="[0,1]")
+    private Output<List<ApplianceFirewallL7FirewallRulesRulesResponse>> rulesResponses;
+
+    /**
+     * @return An ordered array of the MX L7 firewall rules
+     * 
+     */
+    public Output<List<ApplianceFirewallL7FirewallRulesRulesResponse>> rulesResponses() {
+        return this.rulesResponses;
     }
 
     /**
