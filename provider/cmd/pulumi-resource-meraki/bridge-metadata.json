@@ -496,7 +496,7 @@
                     "blocked_url_categories": {
                         "maxItemsOne": false
                     },
-                    "blocked_url_categories_rs": {
+                    "blocked_url_categories_response": {
                         "maxItemsOne": false
                     },
                     "blocked_url_patterns": {
@@ -2455,6 +2455,44 @@
                 "current": "meraki:organizations/applianceVpnThirdPartyVpnpeers:ApplianceVpnThirdPartyVpnpeers",
                 "fields": {
                     "peers": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "ipsec_policies": {
+                                    "fields": {
+                                        "child_auth_algo": {
+                                            "maxItemsOne": false
+                                        },
+                                        "child_cipher_algo": {
+                                            "maxItemsOne": false
+                                        },
+                                        "child_pfs_group": {
+                                            "maxItemsOne": false
+                                        },
+                                        "ike_auth_algo": {
+                                            "maxItemsOne": false
+                                        },
+                                        "ike_cipher_algo": {
+                                            "maxItemsOne": false
+                                        },
+                                        "ike_diffie_hellman_group": {
+                                            "maxItemsOne": false
+                                        },
+                                        "ike_prf_algo": {
+                                            "maxItemsOne": false
+                                        }
+                                    }
+                                },
+                                "network_tags": {
+                                    "maxItemsOne": false
+                                },
+                                "private_subnets": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    },
+                    "peers_response": {
                         "maxItemsOne": false,
                         "elem": {
                             "fields": {
