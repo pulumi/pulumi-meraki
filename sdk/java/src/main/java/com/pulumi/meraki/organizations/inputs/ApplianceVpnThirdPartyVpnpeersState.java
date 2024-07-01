@@ -6,6 +6,7 @@ package com.pulumi.meraki.organizations.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.meraki.organizations.inputs.ApplianceVpnThirdPartyVpnpeersPeerArgs;
+import com.pulumi.meraki.organizations.inputs.ApplianceVpnThirdPartyVpnpeersPeersResponseArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -47,11 +48,27 @@ public final class ApplianceVpnThirdPartyVpnpeersState extends com.pulumi.resour
         return Optional.ofNullable(this.peers);
     }
 
+    /**
+     * The list of VPN peers
+     * 
+     */
+    @Import(name="peersResponses")
+    private @Nullable Output<List<ApplianceVpnThirdPartyVpnpeersPeersResponseArgs>> peersResponses;
+
+    /**
+     * @return The list of VPN peers
+     * 
+     */
+    public Optional<Output<List<ApplianceVpnThirdPartyVpnpeersPeersResponseArgs>>> peersResponses() {
+        return Optional.ofNullable(this.peersResponses);
+    }
+
     private ApplianceVpnThirdPartyVpnpeersState() {}
 
     private ApplianceVpnThirdPartyVpnpeersState(ApplianceVpnThirdPartyVpnpeersState $) {
         this.organizationId = $.organizationId;
         this.peers = $.peers;
+        this.peersResponses = $.peersResponses;
     }
 
     public static Builder builder() {
@@ -122,6 +139,37 @@ public final class ApplianceVpnThirdPartyVpnpeersState extends com.pulumi.resour
          */
         public Builder peers(ApplianceVpnThirdPartyVpnpeersPeerArgs... peers) {
             return peers(List.of(peers));
+        }
+
+        /**
+         * @param peersResponses The list of VPN peers
+         * 
+         * @return builder
+         * 
+         */
+        public Builder peersResponses(@Nullable Output<List<ApplianceVpnThirdPartyVpnpeersPeersResponseArgs>> peersResponses) {
+            $.peersResponses = peersResponses;
+            return this;
+        }
+
+        /**
+         * @param peersResponses The list of VPN peers
+         * 
+         * @return builder
+         * 
+         */
+        public Builder peersResponses(List<ApplianceVpnThirdPartyVpnpeersPeersResponseArgs> peersResponses) {
+            return peersResponses(Output.of(peersResponses));
+        }
+
+        /**
+         * @param peersResponses The list of VPN peers
+         * 
+         * @return builder
+         * 
+         */
+        public Builder peersResponses(ApplianceVpnThirdPartyVpnpeersPeersResponseArgs... peersResponses) {
+            return peersResponses(List.of(peersResponses));
         }
 
         public ApplianceVpnThirdPartyVpnpeersState build() {

@@ -26,6 +26,8 @@ type ApplianceVpnThirdPartyVpnpeers struct {
 	OrganizationId pulumi.StringOutput `pulumi:"organizationId"`
 	// The list of VPN peers
 	Peers ApplianceVpnThirdPartyVpnpeersPeerArrayOutput `pulumi:"peers"`
+	// The list of VPN peers
+	PeersResponses ApplianceVpnThirdPartyVpnpeersPeersResponseArrayOutput `pulumi:"peersResponses"`
 }
 
 // NewApplianceVpnThirdPartyVpnpeers registers a new resource with the given unique name, arguments, and options.
@@ -65,6 +67,8 @@ type applianceVpnThirdPartyVpnpeersState struct {
 	OrganizationId *string `pulumi:"organizationId"`
 	// The list of VPN peers
 	Peers []ApplianceVpnThirdPartyVpnpeersPeer `pulumi:"peers"`
+	// The list of VPN peers
+	PeersResponses []ApplianceVpnThirdPartyVpnpeersPeersResponse `pulumi:"peersResponses"`
 }
 
 type ApplianceVpnThirdPartyVpnpeersState struct {
@@ -72,6 +76,8 @@ type ApplianceVpnThirdPartyVpnpeersState struct {
 	OrganizationId pulumi.StringPtrInput
 	// The list of VPN peers
 	Peers ApplianceVpnThirdPartyVpnpeersPeerArrayInput
+	// The list of VPN peers
+	PeersResponses ApplianceVpnThirdPartyVpnpeersPeersResponseArrayInput
 }
 
 func (ApplianceVpnThirdPartyVpnpeersState) ElementType() reflect.Type {
@@ -188,6 +194,13 @@ func (o ApplianceVpnThirdPartyVpnpeersOutput) OrganizationId() pulumi.StringOutp
 // The list of VPN peers
 func (o ApplianceVpnThirdPartyVpnpeersOutput) Peers() ApplianceVpnThirdPartyVpnpeersPeerArrayOutput {
 	return o.ApplyT(func(v *ApplianceVpnThirdPartyVpnpeers) ApplianceVpnThirdPartyVpnpeersPeerArrayOutput { return v.Peers }).(ApplianceVpnThirdPartyVpnpeersPeerArrayOutput)
+}
+
+// The list of VPN peers
+func (o ApplianceVpnThirdPartyVpnpeersOutput) PeersResponses() ApplianceVpnThirdPartyVpnpeersPeersResponseArrayOutput {
+	return o.ApplyT(func(v *ApplianceVpnThirdPartyVpnpeers) ApplianceVpnThirdPartyVpnpeersPeersResponseArrayOutput {
+		return v.PeersResponses
+	}).(ApplianceVpnThirdPartyVpnpeersPeersResponseArrayOutput)
 }
 
 type ApplianceVpnThirdPartyVpnpeersArrayOutput struct{ *pulumi.OutputState }

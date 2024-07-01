@@ -18,22 +18,22 @@ class ApplianceContentFilteringArgs:
     def __init__(__self__, *,
                  network_id: pulumi.Input[str],
                  allowed_url_patterns: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 blocked_url_categories_rs: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+                 blocked_url_categories: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  blocked_url_patterns: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  url_category_list_size: Optional[pulumi.Input[str]] = None):
         """
         The set of arguments for constructing a ApplianceContentFiltering resource.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input[str]]] allowed_url_patterns: A list of URL patterns that are allowed
-        :param pulumi.Input[Sequence[pulumi.Input[str]]] blocked_url_categories_rs: A list of URL categories to block
+        :param pulumi.Input[Sequence[pulumi.Input[str]]] blocked_url_categories: A list of URL categories to block
         :param pulumi.Input[Sequence[pulumi.Input[str]]] blocked_url_patterns: A list of URL patterns that are blocked
         :param pulumi.Input[str] url_category_list_size: URL category list size which is either 'topSites' or 'fullList'
         """
         pulumi.set(__self__, "network_id", network_id)
         if allowed_url_patterns is not None:
             pulumi.set(__self__, "allowed_url_patterns", allowed_url_patterns)
-        if blocked_url_categories_rs is not None:
-            pulumi.set(__self__, "blocked_url_categories_rs", blocked_url_categories_rs)
+        if blocked_url_categories is not None:
+            pulumi.set(__self__, "blocked_url_categories", blocked_url_categories)
         if blocked_url_patterns is not None:
             pulumi.set(__self__, "blocked_url_patterns", blocked_url_patterns)
         if url_category_list_size is not None:
@@ -64,16 +64,16 @@ class ApplianceContentFilteringArgs:
         pulumi.set(self, "allowed_url_patterns", value)
 
     @property
-    @pulumi.getter(name="blockedUrlCategoriesRs")
-    def blocked_url_categories_rs(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
+    @pulumi.getter(name="blockedUrlCategories")
+    def blocked_url_categories(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
         """
         A list of URL categories to block
         """
-        return pulumi.get(self, "blocked_url_categories_rs")
+        return pulumi.get(self, "blocked_url_categories")
 
-    @blocked_url_categories_rs.setter
-    def blocked_url_categories_rs(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
-        pulumi.set(self, "blocked_url_categories_rs", value)
+    @blocked_url_categories.setter
+    def blocked_url_categories(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
+        pulumi.set(self, "blocked_url_categories", value)
 
     @property
     @pulumi.getter(name="blockedUrlPatterns")
@@ -104,15 +104,15 @@ class ApplianceContentFilteringArgs:
 class _ApplianceContentFilteringState:
     def __init__(__self__, *,
                  allowed_url_patterns: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 blocked_url_categories: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceContentFilteringBlockedUrlCategoryArgs']]]] = None,
-                 blocked_url_categories_rs: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+                 blocked_url_categories: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+                 blocked_url_categories_responses: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceContentFilteringBlockedUrlCategoriesResponseArgs']]]] = None,
                  blocked_url_patterns: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
                  url_category_list_size: Optional[pulumi.Input[str]] = None):
         """
         Input properties used for looking up and filtering ApplianceContentFiltering resources.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] allowed_url_patterns: A list of URL patterns that are allowed
-        :param pulumi.Input[Sequence[pulumi.Input[str]]] blocked_url_categories_rs: A list of URL categories to block
+        :param pulumi.Input[Sequence[pulumi.Input[str]]] blocked_url_categories: A list of URL categories to block
         :param pulumi.Input[Sequence[pulumi.Input[str]]] blocked_url_patterns: A list of URL patterns that are blocked
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[str] url_category_list_size: URL category list size which is either 'topSites' or 'fullList'
@@ -121,8 +121,8 @@ class _ApplianceContentFilteringState:
             pulumi.set(__self__, "allowed_url_patterns", allowed_url_patterns)
         if blocked_url_categories is not None:
             pulumi.set(__self__, "blocked_url_categories", blocked_url_categories)
-        if blocked_url_categories_rs is not None:
-            pulumi.set(__self__, "blocked_url_categories_rs", blocked_url_categories_rs)
+        if blocked_url_categories_responses is not None:
+            pulumi.set(__self__, "blocked_url_categories_responses", blocked_url_categories_responses)
         if blocked_url_patterns is not None:
             pulumi.set(__self__, "blocked_url_patterns", blocked_url_patterns)
         if network_id is not None:
@@ -144,24 +144,24 @@ class _ApplianceContentFilteringState:
 
     @property
     @pulumi.getter(name="blockedUrlCategories")
-    def blocked_url_categories(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceContentFilteringBlockedUrlCategoryArgs']]]]:
-        return pulumi.get(self, "blocked_url_categories")
-
-    @blocked_url_categories.setter
-    def blocked_url_categories(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceContentFilteringBlockedUrlCategoryArgs']]]]):
-        pulumi.set(self, "blocked_url_categories", value)
-
-    @property
-    @pulumi.getter(name="blockedUrlCategoriesRs")
-    def blocked_url_categories_rs(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
+    def blocked_url_categories(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
         """
         A list of URL categories to block
         """
-        return pulumi.get(self, "blocked_url_categories_rs")
+        return pulumi.get(self, "blocked_url_categories")
 
-    @blocked_url_categories_rs.setter
-    def blocked_url_categories_rs(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
-        pulumi.set(self, "blocked_url_categories_rs", value)
+    @blocked_url_categories.setter
+    def blocked_url_categories(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
+        pulumi.set(self, "blocked_url_categories", value)
+
+    @property
+    @pulumi.getter(name="blockedUrlCategoriesResponses")
+    def blocked_url_categories_responses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceContentFilteringBlockedUrlCategoriesResponseArgs']]]]:
+        return pulumi.get(self, "blocked_url_categories_responses")
+
+    @blocked_url_categories_responses.setter
+    def blocked_url_categories_responses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceContentFilteringBlockedUrlCategoriesResponseArgs']]]]):
+        pulumi.set(self, "blocked_url_categories_responses", value)
 
     @property
     @pulumi.getter(name="blockedUrlPatterns")
@@ -206,13 +206,35 @@ class ApplianceContentFiltering(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  allowed_url_patterns: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 blocked_url_categories_rs: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+                 blocked_url_categories: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  blocked_url_patterns: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
                  url_category_list_size: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.ApplianceContentFiltering("example",
+            allowed_url_patterns=[
+                "http://www.example.org",
+                "http://help.com.au",
+            ],
+            blocked_url_categories=[
+                "meraki:contentFiltering/category/1",
+                "meraki:contentFiltering/category/7",
+            ],
+            blocked_url_patterns=[
+                "http://www.example.com",
+                "http://www.betting.com",
+            ],
+            network_id="string",
+            url_category_list_size="topSites")
+        pulumi.export("merakiNetworksApplianceContentFilteringExample", example)
+        ```
 
         ## Import
 
@@ -223,7 +245,7 @@ class ApplianceContentFiltering(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] allowed_url_patterns: A list of URL patterns that are allowed
-        :param pulumi.Input[Sequence[pulumi.Input[str]]] blocked_url_categories_rs: A list of URL categories to block
+        :param pulumi.Input[Sequence[pulumi.Input[str]]] blocked_url_categories: A list of URL categories to block
         :param pulumi.Input[Sequence[pulumi.Input[str]]] blocked_url_patterns: A list of URL patterns that are blocked
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[str] url_category_list_size: URL category list size which is either 'topSites' or 'fullList'
@@ -236,6 +258,28 @@ class ApplianceContentFiltering(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.ApplianceContentFiltering("example",
+            allowed_url_patterns=[
+                "http://www.example.org",
+                "http://help.com.au",
+            ],
+            blocked_url_categories=[
+                "meraki:contentFiltering/category/1",
+                "meraki:contentFiltering/category/7",
+            ],
+            blocked_url_patterns=[
+                "http://www.example.com",
+                "http://www.betting.com",
+            ],
+            network_id="string",
+            url_category_list_size="topSites")
+        pulumi.export("merakiNetworksApplianceContentFilteringExample", example)
+        ```
 
         ## Import
 
@@ -259,7 +303,7 @@ class ApplianceContentFiltering(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  allowed_url_patterns: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 blocked_url_categories_rs: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+                 blocked_url_categories: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  blocked_url_patterns: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
                  url_category_list_size: Optional[pulumi.Input[str]] = None,
@@ -273,13 +317,13 @@ class ApplianceContentFiltering(pulumi.CustomResource):
             __props__ = ApplianceContentFilteringArgs.__new__(ApplianceContentFilteringArgs)
 
             __props__.__dict__["allowed_url_patterns"] = allowed_url_patterns
-            __props__.__dict__["blocked_url_categories_rs"] = blocked_url_categories_rs
+            __props__.__dict__["blocked_url_categories"] = blocked_url_categories
             __props__.__dict__["blocked_url_patterns"] = blocked_url_patterns
             if network_id is None and not opts.urn:
                 raise TypeError("Missing required property 'network_id'")
             __props__.__dict__["network_id"] = network_id
             __props__.__dict__["url_category_list_size"] = url_category_list_size
-            __props__.__dict__["blocked_url_categories"] = None
+            __props__.__dict__["blocked_url_categories_responses"] = None
         super(ApplianceContentFiltering, __self__).__init__(
             'meraki:networks/applianceContentFiltering:ApplianceContentFiltering',
             resource_name,
@@ -291,8 +335,8 @@ class ApplianceContentFiltering(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             allowed_url_patterns: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-            blocked_url_categories: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceContentFilteringBlockedUrlCategoryArgs']]]]] = None,
-            blocked_url_categories_rs: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+            blocked_url_categories: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+            blocked_url_categories_responses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceContentFilteringBlockedUrlCategoriesResponseArgs']]]]] = None,
             blocked_url_patterns: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
             network_id: Optional[pulumi.Input[str]] = None,
             url_category_list_size: Optional[pulumi.Input[str]] = None) -> 'ApplianceContentFiltering':
@@ -304,7 +348,7 @@ class ApplianceContentFiltering(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] allowed_url_patterns: A list of URL patterns that are allowed
-        :param pulumi.Input[Sequence[pulumi.Input[str]]] blocked_url_categories_rs: A list of URL categories to block
+        :param pulumi.Input[Sequence[pulumi.Input[str]]] blocked_url_categories: A list of URL categories to block
         :param pulumi.Input[Sequence[pulumi.Input[str]]] blocked_url_patterns: A list of URL patterns that are blocked
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[str] url_category_list_size: URL category list size which is either 'topSites' or 'fullList'
@@ -315,7 +359,7 @@ class ApplianceContentFiltering(pulumi.CustomResource):
 
         __props__.__dict__["allowed_url_patterns"] = allowed_url_patterns
         __props__.__dict__["blocked_url_categories"] = blocked_url_categories
-        __props__.__dict__["blocked_url_categories_rs"] = blocked_url_categories_rs
+        __props__.__dict__["blocked_url_categories_responses"] = blocked_url_categories_responses
         __props__.__dict__["blocked_url_patterns"] = blocked_url_patterns
         __props__.__dict__["network_id"] = network_id
         __props__.__dict__["url_category_list_size"] = url_category_list_size
@@ -331,16 +375,16 @@ class ApplianceContentFiltering(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="blockedUrlCategories")
-    def blocked_url_categories(self) -> pulumi.Output[Sequence['outputs.ApplianceContentFilteringBlockedUrlCategory']]:
-        return pulumi.get(self, "blocked_url_categories")
-
-    @property
-    @pulumi.getter(name="blockedUrlCategoriesRs")
-    def blocked_url_categories_rs(self) -> pulumi.Output[Sequence[str]]:
+    def blocked_url_categories(self) -> pulumi.Output[Optional[Sequence[str]]]:
         """
         A list of URL categories to block
         """
-        return pulumi.get(self, "blocked_url_categories_rs")
+        return pulumi.get(self, "blocked_url_categories")
+
+    @property
+    @pulumi.getter(name="blockedUrlCategoriesResponses")
+    def blocked_url_categories_responses(self) -> pulumi.Output[Sequence['outputs.ApplianceContentFilteringBlockedUrlCategoriesResponse']]:
+        return pulumi.get(self, "blocked_url_categories_responses")
 
     @property
     @pulumi.getter(name="blockedUrlPatterns")
@@ -360,7 +404,7 @@ class ApplianceContentFiltering(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="urlCategoryListSize")
-    def url_category_list_size(self) -> pulumi.Output[str]:
+    def url_category_list_size(self) -> pulumi.Output[Optional[str]]:
         """
         URL category list size which is either 'topSites' or 'fullList'
         """

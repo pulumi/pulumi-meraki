@@ -56,16 +56,20 @@ class ApplianceVpnThirdPartyVpnpeersArgs:
 class _ApplianceVpnThirdPartyVpnpeersState:
     def __init__(__self__, *,
                  organization_id: Optional[pulumi.Input[str]] = None,
-                 peers: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVpnThirdPartyVpnpeersPeerArgs']]]] = None):
+                 peers: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVpnThirdPartyVpnpeersPeerArgs']]]] = None,
+                 peers_responses: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVpnThirdPartyVpnpeersPeersResponseArgs']]]] = None):
         """
         Input properties used for looking up and filtering ApplianceVpnThirdPartyVpnpeers resources.
         :param pulumi.Input[str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[Sequence[pulumi.Input['ApplianceVpnThirdPartyVpnpeersPeerArgs']]] peers: The list of VPN peers
+        :param pulumi.Input[Sequence[pulumi.Input['ApplianceVpnThirdPartyVpnpeersPeersResponseArgs']]] peers_responses: The list of VPN peers
         """
         if organization_id is not None:
             pulumi.set(__self__, "organization_id", organization_id)
         if peers is not None:
             pulumi.set(__self__, "peers", peers)
+        if peers_responses is not None:
+            pulumi.set(__self__, "peers_responses", peers_responses)
 
     @property
     @pulumi.getter(name="organizationId")
@@ -90,6 +94,18 @@ class _ApplianceVpnThirdPartyVpnpeersState:
     @peers.setter
     def peers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVpnThirdPartyVpnpeersPeerArgs']]]]):
         pulumi.set(self, "peers", value)
+
+    @property
+    @pulumi.getter(name="peersResponses")
+    def peers_responses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVpnThirdPartyVpnpeersPeersResponseArgs']]]]:
+        """
+        The list of VPN peers
+        """
+        return pulumi.get(self, "peers_responses")
+
+    @peers_responses.setter
+    def peers_responses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVpnThirdPartyVpnpeersPeersResponseArgs']]]]):
+        pulumi.set(self, "peers_responses", value)
 
 
 class ApplianceVpnThirdPartyVpnpeers(pulumi.CustomResource):
@@ -159,6 +175,7 @@ class ApplianceVpnThirdPartyVpnpeers(pulumi.CustomResource):
                 raise TypeError("Missing required property 'organization_id'")
             __props__.__dict__["organization_id"] = organization_id
             __props__.__dict__["peers"] = peers
+            __props__.__dict__["peers_responses"] = None
         super(ApplianceVpnThirdPartyVpnpeers, __self__).__init__(
             'meraki:organizations/applianceVpnThirdPartyVpnpeers:ApplianceVpnThirdPartyVpnpeers',
             resource_name,
@@ -170,7 +187,8 @@ class ApplianceVpnThirdPartyVpnpeers(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             organization_id: Optional[pulumi.Input[str]] = None,
-            peers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceVpnThirdPartyVpnpeersPeerArgs']]]]] = None) -> 'ApplianceVpnThirdPartyVpnpeers':
+            peers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceVpnThirdPartyVpnpeersPeerArgs']]]]] = None,
+            peers_responses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceVpnThirdPartyVpnpeersPeersResponseArgs']]]]] = None) -> 'ApplianceVpnThirdPartyVpnpeers':
         """
         Get an existing ApplianceVpnThirdPartyVpnpeers resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -180,6 +198,7 @@ class ApplianceVpnThirdPartyVpnpeers(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceVpnThirdPartyVpnpeersPeerArgs']]]] peers: The list of VPN peers
+        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceVpnThirdPartyVpnpeersPeersResponseArgs']]]] peers_responses: The list of VPN peers
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -187,6 +206,7 @@ class ApplianceVpnThirdPartyVpnpeers(pulumi.CustomResource):
 
         __props__.__dict__["organization_id"] = organization_id
         __props__.__dict__["peers"] = peers
+        __props__.__dict__["peers_responses"] = peers_responses
         return ApplianceVpnThirdPartyVpnpeers(resource_name, opts=opts, __props__=__props__)
 
     @property
@@ -199,9 +219,17 @@ class ApplianceVpnThirdPartyVpnpeers(pulumi.CustomResource):
 
     @property
     @pulumi.getter
-    def peers(self) -> pulumi.Output[Sequence['outputs.ApplianceVpnThirdPartyVpnpeersPeer']]:
+    def peers(self) -> pulumi.Output[Optional[Sequence['outputs.ApplianceVpnThirdPartyVpnpeersPeer']]]:
         """
         The list of VPN peers
         """
         return pulumi.get(self, "peers")
+
+    @property
+    @pulumi.getter(name="peersResponses")
+    def peers_responses(self) -> pulumi.Output[Sequence['outputs.ApplianceVpnThirdPartyVpnpeersPeersResponse']]:
+        """
+        The list of VPN peers
+        """
+        return pulumi.get(self, "peers_responses")
 

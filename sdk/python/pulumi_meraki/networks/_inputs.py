@@ -20,7 +20,7 @@ __all__ = [
     'AlertsSettingsMutingArgs',
     'AlertsSettingsMutingByPortSchedulesArgs',
     'ApplianceConnectivityMonitoringDestinationsDestinationArgs',
-    'ApplianceContentFilteringBlockedUrlCategoryArgs',
+    'ApplianceContentFilteringBlockedUrlCategoriesResponseArgs',
     'ApplianceFirewallCellularFirewallRulesRuleArgs',
     'ApplianceFirewallInboundFirewallRulesRuleArgs',
     'ApplianceFirewallInboundFirewallRulesRulesResponseArgs',
@@ -1091,7 +1091,7 @@ class ApplianceConnectivityMonitoringDestinationsDestinationArgs:
 
 
 @pulumi.input_type
-class ApplianceContentFilteringBlockedUrlCategoryArgs:
+class ApplianceContentFilteringBlockedUrlCategoriesResponseArgs:
     def __init__(__self__, *,
                  id: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None):

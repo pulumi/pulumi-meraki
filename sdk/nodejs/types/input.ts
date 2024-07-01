@@ -1698,7 +1698,7 @@ export namespace networks {
         ip?: pulumi.Input<string>;
     }
 
-    export interface ApplianceContentFilteringBlockedUrlCategory {
+    export interface ApplianceContentFilteringBlockedUrlCategoriesResponse {
         id?: pulumi.Input<string>;
         name?: pulumi.Input<string>;
     }
@@ -9776,6 +9776,88 @@ export namespace organizations {
     }
 
     export interface ApplianceVpnThirdPartyVpnpeersPeerIpsecPolicies {
+        /**
+         * This is the authentication algorithms to be used in Phase 2. The value should be an array with one of the following algorithms: 'sha256', 'sha1', 'md5'
+         */
+        childAuthAlgos?: pulumi.Input<pulumi.Input<string>[]>;
+        /**
+         * This is the cipher algorithms to be used in Phase 2. The value should be an array with one or more of the following algorithms: 'aes256', 'aes192', 'aes128', 'tripledes', 'des', 'null'
+         */
+        childCipherAlgos?: pulumi.Input<pulumi.Input<string>[]>;
+        /**
+         * The lifetime of the Phase 2 SA in seconds.
+         */
+        childLifetime?: pulumi.Input<number>;
+        /**
+         * This is the Diffie-Hellman group to be used for Perfect Forward Secrecy in Phase 2. The value should be an array with one of the following values: 'disabled','group14', 'group5', 'group2', 'group1'
+         */
+        childPfsGroups?: pulumi.Input<pulumi.Input<string>[]>;
+        /**
+         * This is the authentication algorithm to be used in Phase 1. The value should be an array with one of the following algorithms: 'sha256', 'sha1', 'md5'
+         */
+        ikeAuthAlgos?: pulumi.Input<pulumi.Input<string>[]>;
+        /**
+         * This is the cipher algorithm to be used in Phase 1. The value should be an array with one of the following algorithms: 'aes256', 'aes192', 'aes128', 'tripledes', 'des'
+         */
+        ikeCipherAlgos?: pulumi.Input<pulumi.Input<string>[]>;
+        /**
+         * This is the Diffie-Hellman group to be used in Phase 1. The value should be an array with one of the following algorithms: 'group14', 'group5', 'group2', 'group1'
+         */
+        ikeDiffieHellmanGroups?: pulumi.Input<pulumi.Input<string>[]>;
+        /**
+         * The lifetime of the Phase 1 SA in seconds.
+         */
+        ikeLifetime?: pulumi.Input<number>;
+        /**
+         * [optional] This is the pseudo-random function to be used in IKE_SA. The value should be an array with one of the following algorithms: 'prfsha256', 'prfsha1', 'prfmd5', 'default'. The 'default' option can be used to default to the Authentication algorithm.
+         */
+        ikePrfAlgos?: pulumi.Input<pulumi.Input<string>[]>;
+    }
+
+    export interface ApplianceVpnThirdPartyVpnpeersPeersResponse {
+        /**
+         * [optional] The IKE version to be used for the IPsec VPN peer configuration. Defaults to '1' when omitted.
+         */
+        ikeVersion?: pulumi.Input<string>;
+        /**
+         * Custom IPSec policies for the VPN peer. If not included and a preset has not been chosen, the default preset for IPSec policies will be used.
+         */
+        ipsecPolicies?: pulumi.Input<inputs.organizations.ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies>;
+        /**
+         * One of the following available presets: 'default', 'aws', 'azure'. If this is provided, the 'ipsecPolicies' parameter is ignored.
+         */
+        ipsecPoliciesPreset?: pulumi.Input<string>;
+        /**
+         * [optional] The local ID is used to identify the MX to the peer. This will apply to all MXs this peer applies to.
+         */
+        localId?: pulumi.Input<string>;
+        /**
+         * The name of the VPN peer
+         */
+        name?: pulumi.Input<string>;
+        /**
+         * A list of network tags that will connect with this peer. Use ['all'] for all networks. Use ['none'] for no networks. If not included, the default is ['all'].
+         */
+        networkTags?: pulumi.Input<pulumi.Input<string>[]>;
+        /**
+         * The list of the private subnets of the VPN peer
+         */
+        privateSubnets?: pulumi.Input<pulumi.Input<string>[]>;
+        /**
+         * [optional] The public IP of the VPN peer
+         */
+        publicIp?: pulumi.Input<string>;
+        /**
+         * [optional] The remote ID is used to identify the connecting VPN peer. This can either be a valid IPv4 Address, FQDN or User FQDN.
+         */
+        remoteId?: pulumi.Input<string>;
+        /**
+         * The shared secret with the VPN peer
+         */
+        secret?: pulumi.Input<string>;
+    }
+
+    export interface ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies {
         /**
          * This is the authentication algorithms to be used in Phase 2. The value should be an array with one of the following algorithms: 'sha256', 'sha1', 'md5'
          */

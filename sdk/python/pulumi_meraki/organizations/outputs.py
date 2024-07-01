@@ -29,6 +29,8 @@ __all__ = [
     'ApplianceSecurityIntrusionAllowedRule',
     'ApplianceVpnThirdPartyVpnpeersPeer',
     'ApplianceVpnThirdPartyVpnpeersPeerIpsecPolicies',
+    'ApplianceVpnThirdPartyVpnpeersPeersResponse',
+    'ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies',
     'ApplianceVpnVpnFirewallRulesRule',
     'BrandingPoliciesAdminSettings',
     'BrandingPoliciesCustomLogo',
@@ -1441,6 +1443,312 @@ class ApplianceVpnThirdPartyVpnpeersPeerIpsecPolicies(dict):
 
     def get(self, key: str, default = None) -> Any:
         ApplianceVpnThirdPartyVpnpeersPeerIpsecPolicies.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 child_auth_algos: Optional[Sequence[str]] = None,
+                 child_cipher_algos: Optional[Sequence[str]] = None,
+                 child_lifetime: Optional[int] = None,
+                 child_pfs_groups: Optional[Sequence[str]] = None,
+                 ike_auth_algos: Optional[Sequence[str]] = None,
+                 ike_cipher_algos: Optional[Sequence[str]] = None,
+                 ike_diffie_hellman_groups: Optional[Sequence[str]] = None,
+                 ike_lifetime: Optional[int] = None,
+                 ike_prf_algos: Optional[Sequence[str]] = None):
+        """
+        :param Sequence[str] child_auth_algos: This is the authentication algorithms to be used in Phase 2. The value should be an array with one of the following algorithms: 'sha256', 'sha1', 'md5'
+        :param Sequence[str] child_cipher_algos: This is the cipher algorithms to be used in Phase 2. The value should be an array with one or more of the following algorithms: 'aes256', 'aes192', 'aes128', 'tripledes', 'des', 'null'
+        :param int child_lifetime: The lifetime of the Phase 2 SA in seconds.
+        :param Sequence[str] child_pfs_groups: This is the Diffie-Hellman group to be used for Perfect Forward Secrecy in Phase 2. The value should be an array with one of the following values: 'disabled','group14', 'group5', 'group2', 'group1'
+        :param Sequence[str] ike_auth_algos: This is the authentication algorithm to be used in Phase 1. The value should be an array with one of the following algorithms: 'sha256', 'sha1', 'md5'
+        :param Sequence[str] ike_cipher_algos: This is the cipher algorithm to be used in Phase 1. The value should be an array with one of the following algorithms: 'aes256', 'aes192', 'aes128', 'tripledes', 'des'
+        :param Sequence[str] ike_diffie_hellman_groups: This is the Diffie-Hellman group to be used in Phase 1. The value should be an array with one of the following algorithms: 'group14', 'group5', 'group2', 'group1'
+        :param int ike_lifetime: The lifetime of the Phase 1 SA in seconds.
+        :param Sequence[str] ike_prf_algos: [optional] This is the pseudo-random function to be used in IKE_SA. The value should be an array with one of the following algorithms: 'prfsha256', 'prfsha1', 'prfmd5', 'default'. The 'default' option can be used to default to the Authentication algorithm.
+        """
+        if child_auth_algos is not None:
+            pulumi.set(__self__, "child_auth_algos", child_auth_algos)
+        if child_cipher_algos is not None:
+            pulumi.set(__self__, "child_cipher_algos", child_cipher_algos)
+        if child_lifetime is not None:
+            pulumi.set(__self__, "child_lifetime", child_lifetime)
+        if child_pfs_groups is not None:
+            pulumi.set(__self__, "child_pfs_groups", child_pfs_groups)
+        if ike_auth_algos is not None:
+            pulumi.set(__self__, "ike_auth_algos", ike_auth_algos)
+        if ike_cipher_algos is not None:
+            pulumi.set(__self__, "ike_cipher_algos", ike_cipher_algos)
+        if ike_diffie_hellman_groups is not None:
+            pulumi.set(__self__, "ike_diffie_hellman_groups", ike_diffie_hellman_groups)
+        if ike_lifetime is not None:
+            pulumi.set(__self__, "ike_lifetime", ike_lifetime)
+        if ike_prf_algos is not None:
+            pulumi.set(__self__, "ike_prf_algos", ike_prf_algos)
+
+    @property
+    @pulumi.getter(name="childAuthAlgos")
+    def child_auth_algos(self) -> Optional[Sequence[str]]:
+        """
+        This is the authentication algorithms to be used in Phase 2. The value should be an array with one of the following algorithms: 'sha256', 'sha1', 'md5'
+        """
+        return pulumi.get(self, "child_auth_algos")
+
+    @property
+    @pulumi.getter(name="childCipherAlgos")
+    def child_cipher_algos(self) -> Optional[Sequence[str]]:
+        """
+        This is the cipher algorithms to be used in Phase 2. The value should be an array with one or more of the following algorithms: 'aes256', 'aes192', 'aes128', 'tripledes', 'des', 'null'
+        """
+        return pulumi.get(self, "child_cipher_algos")
+
+    @property
+    @pulumi.getter(name="childLifetime")
+    def child_lifetime(self) -> Optional[int]:
+        """
+        The lifetime of the Phase 2 SA in seconds.
+        """
+        return pulumi.get(self, "child_lifetime")
+
+    @property
+    @pulumi.getter(name="childPfsGroups")
+    def child_pfs_groups(self) -> Optional[Sequence[str]]:
+        """
+        This is the Diffie-Hellman group to be used for Perfect Forward Secrecy in Phase 2. The value should be an array with one of the following values: 'disabled','group14', 'group5', 'group2', 'group1'
+        """
+        return pulumi.get(self, "child_pfs_groups")
+
+    @property
+    @pulumi.getter(name="ikeAuthAlgos")
+    def ike_auth_algos(self) -> Optional[Sequence[str]]:
+        """
+        This is the authentication algorithm to be used in Phase 1. The value should be an array with one of the following algorithms: 'sha256', 'sha1', 'md5'
+        """
+        return pulumi.get(self, "ike_auth_algos")
+
+    @property
+    @pulumi.getter(name="ikeCipherAlgos")
+    def ike_cipher_algos(self) -> Optional[Sequence[str]]:
+        """
+        This is the cipher algorithm to be used in Phase 1. The value should be an array with one of the following algorithms: 'aes256', 'aes192', 'aes128', 'tripledes', 'des'
+        """
+        return pulumi.get(self, "ike_cipher_algos")
+
+    @property
+    @pulumi.getter(name="ikeDiffieHellmanGroups")
+    def ike_diffie_hellman_groups(self) -> Optional[Sequence[str]]:
+        """
+        This is the Diffie-Hellman group to be used in Phase 1. The value should be an array with one of the following algorithms: 'group14', 'group5', 'group2', 'group1'
+        """
+        return pulumi.get(self, "ike_diffie_hellman_groups")
+
+    @property
+    @pulumi.getter(name="ikeLifetime")
+    def ike_lifetime(self) -> Optional[int]:
+        """
+        The lifetime of the Phase 1 SA in seconds.
+        """
+        return pulumi.get(self, "ike_lifetime")
+
+    @property
+    @pulumi.getter(name="ikePrfAlgos")
+    def ike_prf_algos(self) -> Optional[Sequence[str]]:
+        """
+        [optional] This is the pseudo-random function to be used in IKE_SA. The value should be an array with one of the following algorithms: 'prfsha256', 'prfsha1', 'prfmd5', 'default'. The 'default' option can be used to default to the Authentication algorithm.
+        """
+        return pulumi.get(self, "ike_prf_algos")
+
+
+@pulumi.output_type
+class ApplianceVpnThirdPartyVpnpeersPeersResponse(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "ikeVersion":
+            suggest = "ike_version"
+        elif key == "ipsecPolicies":
+            suggest = "ipsec_policies"
+        elif key == "ipsecPoliciesPreset":
+            suggest = "ipsec_policies_preset"
+        elif key == "localId":
+            suggest = "local_id"
+        elif key == "networkTags":
+            suggest = "network_tags"
+        elif key == "privateSubnets":
+            suggest = "private_subnets"
+        elif key == "publicIp":
+            suggest = "public_ip"
+        elif key == "remoteId":
+            suggest = "remote_id"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in ApplianceVpnThirdPartyVpnpeersPeersResponse. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        ApplianceVpnThirdPartyVpnpeersPeersResponse.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        ApplianceVpnThirdPartyVpnpeersPeersResponse.__key_warning(key)
+        return super().get(key, default)
+
+    def __init__(__self__, *,
+                 ike_version: Optional[str] = None,
+                 ipsec_policies: Optional['outputs.ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies'] = None,
+                 ipsec_policies_preset: Optional[str] = None,
+                 local_id: Optional[str] = None,
+                 name: Optional[str] = None,
+                 network_tags: Optional[Sequence[str]] = None,
+                 private_subnets: Optional[Sequence[str]] = None,
+                 public_ip: Optional[str] = None,
+                 remote_id: Optional[str] = None,
+                 secret: Optional[str] = None):
+        """
+        :param str ike_version: [optional] The IKE version to be used for the IPsec VPN peer configuration. Defaults to '1' when omitted.
+        :param 'ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgs' ipsec_policies: Custom IPSec policies for the VPN peer. If not included and a preset has not been chosen, the default preset for IPSec policies will be used.
+        :param str ipsec_policies_preset: One of the following available presets: 'default', 'aws', 'azure'. If this is provided, the 'ipsecPolicies' parameter is ignored.
+        :param str local_id: [optional] The local ID is used to identify the MX to the peer. This will apply to all MXs this peer applies to.
+        :param str name: The name of the VPN peer
+        :param Sequence[str] network_tags: A list of network tags that will connect with this peer. Use ['all'] for all networks. Use ['none'] for no networks. If not included, the default is ['all'].
+        :param Sequence[str] private_subnets: The list of the private subnets of the VPN peer
+        :param str public_ip: [optional] The public IP of the VPN peer
+        :param str remote_id: [optional] The remote ID is used to identify the connecting VPN peer. This can either be a valid IPv4 Address, FQDN or User FQDN.
+        :param str secret: The shared secret with the VPN peer
+        """
+        if ike_version is not None:
+            pulumi.set(__self__, "ike_version", ike_version)
+        if ipsec_policies is not None:
+            pulumi.set(__self__, "ipsec_policies", ipsec_policies)
+        if ipsec_policies_preset is not None:
+            pulumi.set(__self__, "ipsec_policies_preset", ipsec_policies_preset)
+        if local_id is not None:
+            pulumi.set(__self__, "local_id", local_id)
+        if name is not None:
+            pulumi.set(__self__, "name", name)
+        if network_tags is not None:
+            pulumi.set(__self__, "network_tags", network_tags)
+        if private_subnets is not None:
+            pulumi.set(__self__, "private_subnets", private_subnets)
+        if public_ip is not None:
+            pulumi.set(__self__, "public_ip", public_ip)
+        if remote_id is not None:
+            pulumi.set(__self__, "remote_id", remote_id)
+        if secret is not None:
+            pulumi.set(__self__, "secret", secret)
+
+    @property
+    @pulumi.getter(name="ikeVersion")
+    def ike_version(self) -> Optional[str]:
+        """
+        [optional] The IKE version to be used for the IPsec VPN peer configuration. Defaults to '1' when omitted.
+        """
+        return pulumi.get(self, "ike_version")
+
+    @property
+    @pulumi.getter(name="ipsecPolicies")
+    def ipsec_policies(self) -> Optional['outputs.ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies']:
+        """
+        Custom IPSec policies for the VPN peer. If not included and a preset has not been chosen, the default preset for IPSec policies will be used.
+        """
+        return pulumi.get(self, "ipsec_policies")
+
+    @property
+    @pulumi.getter(name="ipsecPoliciesPreset")
+    def ipsec_policies_preset(self) -> Optional[str]:
+        """
+        One of the following available presets: 'default', 'aws', 'azure'. If this is provided, the 'ipsecPolicies' parameter is ignored.
+        """
+        return pulumi.get(self, "ipsec_policies_preset")
+
+    @property
+    @pulumi.getter(name="localId")
+    def local_id(self) -> Optional[str]:
+        """
+        [optional] The local ID is used to identify the MX to the peer. This will apply to all MXs this peer applies to.
+        """
+        return pulumi.get(self, "local_id")
+
+    @property
+    @pulumi.getter
+    def name(self) -> Optional[str]:
+        """
+        The name of the VPN peer
+        """
+        return pulumi.get(self, "name")
+
+    @property
+    @pulumi.getter(name="networkTags")
+    def network_tags(self) -> Optional[Sequence[str]]:
+        """
+        A list of network tags that will connect with this peer. Use ['all'] for all networks. Use ['none'] for no networks. If not included, the default is ['all'].
+        """
+        return pulumi.get(self, "network_tags")
+
+    @property
+    @pulumi.getter(name="privateSubnets")
+    def private_subnets(self) -> Optional[Sequence[str]]:
+        """
+        The list of the private subnets of the VPN peer
+        """
+        return pulumi.get(self, "private_subnets")
+
+    @property
+    @pulumi.getter(name="publicIp")
+    def public_ip(self) -> Optional[str]:
+        """
+        [optional] The public IP of the VPN peer
+        """
+        return pulumi.get(self, "public_ip")
+
+    @property
+    @pulumi.getter(name="remoteId")
+    def remote_id(self) -> Optional[str]:
+        """
+        [optional] The remote ID is used to identify the connecting VPN peer. This can either be a valid IPv4 Address, FQDN or User FQDN.
+        """
+        return pulumi.get(self, "remote_id")
+
+    @property
+    @pulumi.getter
+    def secret(self) -> Optional[str]:
+        """
+        The shared secret with the VPN peer
+        """
+        return pulumi.get(self, "secret")
+
+
+@pulumi.output_type
+class ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "childAuthAlgos":
+            suggest = "child_auth_algos"
+        elif key == "childCipherAlgos":
+            suggest = "child_cipher_algos"
+        elif key == "childLifetime":
+            suggest = "child_lifetime"
+        elif key == "childPfsGroups":
+            suggest = "child_pfs_groups"
+        elif key == "ikeAuthAlgos":
+            suggest = "ike_auth_algos"
+        elif key == "ikeCipherAlgos":
+            suggest = "ike_cipher_algos"
+        elif key == "ikeDiffieHellmanGroups":
+            suggest = "ike_diffie_hellman_groups"
+        elif key == "ikeLifetime":
+            suggest = "ike_lifetime"
+        elif key == "ikePrfAlgos":
+            suggest = "ike_prf_algos"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies.__key_warning(key)
         return super().get(key, default)
 
     def __init__(__self__, *,

@@ -9,6 +9,29 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.ApplianceContentFiltering("example", {
+ *     allowedUrlPatterns: [
+ *         "http://www.example.org",
+ *         "http://help.com.au",
+ *     ],
+ *     blockedUrlCategories: [
+ *         "meraki:contentFiltering/category/1",
+ *         "meraki:contentFiltering/category/7",
+ *     ],
+ *     blockedUrlPatterns: [
+ *         "http://www.example.com",
+ *         "http://www.betting.com",
+ *     ],
+ *     networkId: "string",
+ *     urlCategoryListSize: "topSites",
+ * });
+ * export const merakiNetworksApplianceContentFilteringExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh
@@ -47,11 +70,11 @@ export class ApplianceContentFiltering extends pulumi.CustomResource {
      * A list of URL patterns that are allowed
      */
     public readonly allowedUrlPatterns!: pulumi.Output<string[]>;
-    public /*out*/ readonly blockedUrlCategories!: pulumi.Output<outputs.networks.ApplianceContentFilteringBlockedUrlCategory[]>;
     /**
      * A list of URL categories to block
      */
-    public readonly blockedUrlCategoriesRs!: pulumi.Output<string[]>;
+    public readonly blockedUrlCategories!: pulumi.Output<string[] | undefined>;
+    public /*out*/ readonly blockedUrlCategoriesResponses!: pulumi.Output<outputs.networks.ApplianceContentFilteringBlockedUrlCategoriesResponse[]>;
     /**
      * A list of URL patterns that are blocked
      */
@@ -63,7 +86,7 @@ export class ApplianceContentFiltering extends pulumi.CustomResource {
     /**
      * URL category list size which is either 'topSites' or 'fullList'
      */
-    public readonly urlCategoryListSize!: pulumi.Output<string>;
+    public readonly urlCategoryListSize!: pulumi.Output<string | undefined>;
 
     /**
      * Create a ApplianceContentFiltering resource with the given unique name, arguments, and options.
@@ -80,7 +103,7 @@ export class ApplianceContentFiltering extends pulumi.CustomResource {
             const state = argsOrState as ApplianceContentFilteringState | undefined;
             resourceInputs["allowedUrlPatterns"] = state ? state.allowedUrlPatterns : undefined;
             resourceInputs["blockedUrlCategories"] = state ? state.blockedUrlCategories : undefined;
-            resourceInputs["blockedUrlCategoriesRs"] = state ? state.blockedUrlCategoriesRs : undefined;
+            resourceInputs["blockedUrlCategoriesResponses"] = state ? state.blockedUrlCategoriesResponses : undefined;
             resourceInputs["blockedUrlPatterns"] = state ? state.blockedUrlPatterns : undefined;
             resourceInputs["networkId"] = state ? state.networkId : undefined;
             resourceInputs["urlCategoryListSize"] = state ? state.urlCategoryListSize : undefined;
@@ -90,11 +113,11 @@ export class ApplianceContentFiltering extends pulumi.CustomResource {
                 throw new Error("Missing required property 'networkId'");
             }
             resourceInputs["allowedUrlPatterns"] = args ? args.allowedUrlPatterns : undefined;
-            resourceInputs["blockedUrlCategoriesRs"] = args ? args.blockedUrlCategoriesRs : undefined;
+            resourceInputs["blockedUrlCategories"] = args ? args.blockedUrlCategories : undefined;
             resourceInputs["blockedUrlPatterns"] = args ? args.blockedUrlPatterns : undefined;
             resourceInputs["networkId"] = args ? args.networkId : undefined;
             resourceInputs["urlCategoryListSize"] = args ? args.urlCategoryListSize : undefined;
-            resourceInputs["blockedUrlCategories"] = undefined /*out*/;
+            resourceInputs["blockedUrlCategoriesResponses"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(ApplianceContentFiltering.__pulumiType, name, resourceInputs, opts);
@@ -109,11 +132,11 @@ export interface ApplianceContentFilteringState {
      * A list of URL patterns that are allowed
      */
     allowedUrlPatterns?: pulumi.Input<pulumi.Input<string>[]>;
-    blockedUrlCategories?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceContentFilteringBlockedUrlCategory>[]>;
     /**
      * A list of URL categories to block
      */
-    blockedUrlCategoriesRs?: pulumi.Input<pulumi.Input<string>[]>;
+    blockedUrlCategories?: pulumi.Input<pulumi.Input<string>[]>;
+    blockedUrlCategoriesResponses?: pulumi.Input<pulumi.Input<inputs.networks.ApplianceContentFilteringBlockedUrlCategoriesResponse>[]>;
     /**
      * A list of URL patterns that are blocked
      */
@@ -139,7 +162,7 @@ export interface ApplianceContentFilteringArgs {
     /**
      * A list of URL categories to block
      */
-    blockedUrlCategoriesRs?: pulumi.Input<pulumi.Input<string>[]>;
+    blockedUrlCategories?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * A list of URL patterns that are blocked
      */

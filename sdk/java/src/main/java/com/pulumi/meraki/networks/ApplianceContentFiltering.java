@@ -10,15 +10,57 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.meraki.Utilities;
 import com.pulumi.meraki.networks.ApplianceContentFilteringArgs;
 import com.pulumi.meraki.networks.inputs.ApplianceContentFilteringState;
-import com.pulumi.meraki.networks.outputs.ApplianceContentFilteringBlockedUrlCategory;
+import com.pulumi.meraki.networks.outputs.ApplianceContentFilteringBlockedUrlCategoriesResponse;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.ApplianceContentFiltering;
+ * import com.pulumi.meraki.networks.ApplianceContentFilteringArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ApplianceContentFiltering("example", ApplianceContentFilteringArgs.builder()
+ *             .allowedUrlPatterns(            
+ *                 "http://www.example.org",
+ *                 "http://help.com.au")
+ *             .blockedUrlCategories(            
+ *                 "meraki:contentFiltering/category/1",
+ *                 "meraki:contentFiltering/category/7")
+ *             .blockedUrlPatterns(            
+ *                 "http://www.example.com",
+ *                 "http://www.betting.com")
+ *             .networkId("string")
+ *             .urlCategoryListSize("topSites")
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksApplianceContentFilteringExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import
@@ -44,25 +86,25 @@ public class ApplianceContentFiltering extends com.pulumi.resources.CustomResour
     public Output<List<String>> allowedUrlPatterns() {
         return this.allowedUrlPatterns;
     }
-    @Export(name="blockedUrlCategories", refs={List.class,ApplianceContentFilteringBlockedUrlCategory.class}, tree="[0,1]")
-    private Output<List<ApplianceContentFilteringBlockedUrlCategory>> blockedUrlCategories;
-
-    public Output<List<ApplianceContentFilteringBlockedUrlCategory>> blockedUrlCategories() {
-        return this.blockedUrlCategories;
-    }
     /**
      * A list of URL categories to block
      * 
      */
-    @Export(name="blockedUrlCategoriesRs", refs={List.class,String.class}, tree="[0,1]")
-    private Output<List<String>> blockedUrlCategoriesRs;
+    @Export(name="blockedUrlCategories", refs={List.class,String.class}, tree="[0,1]")
+    private Output</* @Nullable */ List<String>> blockedUrlCategories;
 
     /**
      * @return A list of URL categories to block
      * 
      */
-    public Output<List<String>> blockedUrlCategoriesRs() {
-        return this.blockedUrlCategoriesRs;
+    public Output<Optional<List<String>>> blockedUrlCategories() {
+        return Codegen.optional(this.blockedUrlCategories);
+    }
+    @Export(name="blockedUrlCategoriesResponses", refs={List.class,ApplianceContentFilteringBlockedUrlCategoriesResponse.class}, tree="[0,1]")
+    private Output<List<ApplianceContentFilteringBlockedUrlCategoriesResponse>> blockedUrlCategoriesResponses;
+
+    public Output<List<ApplianceContentFilteringBlockedUrlCategoriesResponse>> blockedUrlCategoriesResponses() {
+        return this.blockedUrlCategoriesResponses;
     }
     /**
      * A list of URL patterns that are blocked
@@ -97,14 +139,14 @@ public class ApplianceContentFiltering extends com.pulumi.resources.CustomResour
      * 
      */
     @Export(name="urlCategoryListSize", refs={String.class}, tree="[0]")
-    private Output<String> urlCategoryListSize;
+    private Output</* @Nullable */ String> urlCategoryListSize;
 
     /**
      * @return URL category list size which is either &#39;topSites&#39; or &#39;fullList&#39;
      * 
      */
-    public Output<String> urlCategoryListSize() {
-        return this.urlCategoryListSize;
+    public Output<Optional<String>> urlCategoryListSize() {
+        return Codegen.optional(this.urlCategoryListSize);
     }
 
     /**

@@ -2833,6 +2833,477 @@ func (o ApplianceVpnThirdPartyVpnpeersPeerIpsecPoliciesPtrOutput) IkePrfAlgos() 
 	}).(pulumi.StringArrayOutput)
 }
 
+type ApplianceVpnThirdPartyVpnpeersPeersResponse struct {
+	// [optional] The IKE version to be used for the IPsec VPN peer configuration. Defaults to '1' when omitted.
+	IkeVersion *string `pulumi:"ikeVersion"`
+	// Custom IPSec policies for the VPN peer. If not included and a preset has not been chosen, the default preset for IPSec policies will be used.
+	IpsecPolicies *ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies `pulumi:"ipsecPolicies"`
+	// One of the following available presets: 'default', 'aws', 'azure'. If this is provided, the 'ipsecPolicies' parameter is ignored.
+	IpsecPoliciesPreset *string `pulumi:"ipsecPoliciesPreset"`
+	// [optional] The local ID is used to identify the MX to the peer. This will apply to all MXs this peer applies to.
+	LocalId *string `pulumi:"localId"`
+	// The name of the VPN peer
+	Name *string `pulumi:"name"`
+	// A list of network tags that will connect with this peer. Use ['all'] for all networks. Use ['none'] for no networks. If not included, the default is ['all'].
+	NetworkTags []string `pulumi:"networkTags"`
+	// The list of the private subnets of the VPN peer
+	PrivateSubnets []string `pulumi:"privateSubnets"`
+	// [optional] The public IP of the VPN peer
+	PublicIp *string `pulumi:"publicIp"`
+	// [optional] The remote ID is used to identify the connecting VPN peer. This can either be a valid IPv4 Address, FQDN or User FQDN.
+	RemoteId *string `pulumi:"remoteId"`
+	// The shared secret with the VPN peer
+	Secret *string `pulumi:"secret"`
+}
+
+// ApplianceVpnThirdPartyVpnpeersPeersResponseInput is an input type that accepts ApplianceVpnThirdPartyVpnpeersPeersResponseArgs and ApplianceVpnThirdPartyVpnpeersPeersResponseOutput values.
+// You can construct a concrete instance of `ApplianceVpnThirdPartyVpnpeersPeersResponseInput` via:
+//
+//	ApplianceVpnThirdPartyVpnpeersPeersResponseArgs{...}
+type ApplianceVpnThirdPartyVpnpeersPeersResponseInput interface {
+	pulumi.Input
+
+	ToApplianceVpnThirdPartyVpnpeersPeersResponseOutput() ApplianceVpnThirdPartyVpnpeersPeersResponseOutput
+	ToApplianceVpnThirdPartyVpnpeersPeersResponseOutputWithContext(context.Context) ApplianceVpnThirdPartyVpnpeersPeersResponseOutput
+}
+
+type ApplianceVpnThirdPartyVpnpeersPeersResponseArgs struct {
+	// [optional] The IKE version to be used for the IPsec VPN peer configuration. Defaults to '1' when omitted.
+	IkeVersion pulumi.StringPtrInput `pulumi:"ikeVersion"`
+	// Custom IPSec policies for the VPN peer. If not included and a preset has not been chosen, the default preset for IPSec policies will be used.
+	IpsecPolicies ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrInput `pulumi:"ipsecPolicies"`
+	// One of the following available presets: 'default', 'aws', 'azure'. If this is provided, the 'ipsecPolicies' parameter is ignored.
+	IpsecPoliciesPreset pulumi.StringPtrInput `pulumi:"ipsecPoliciesPreset"`
+	// [optional] The local ID is used to identify the MX to the peer. This will apply to all MXs this peer applies to.
+	LocalId pulumi.StringPtrInput `pulumi:"localId"`
+	// The name of the VPN peer
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// A list of network tags that will connect with this peer. Use ['all'] for all networks. Use ['none'] for no networks. If not included, the default is ['all'].
+	NetworkTags pulumi.StringArrayInput `pulumi:"networkTags"`
+	// The list of the private subnets of the VPN peer
+	PrivateSubnets pulumi.StringArrayInput `pulumi:"privateSubnets"`
+	// [optional] The public IP of the VPN peer
+	PublicIp pulumi.StringPtrInput `pulumi:"publicIp"`
+	// [optional] The remote ID is used to identify the connecting VPN peer. This can either be a valid IPv4 Address, FQDN or User FQDN.
+	RemoteId pulumi.StringPtrInput `pulumi:"remoteId"`
+	// The shared secret with the VPN peer
+	Secret pulumi.StringPtrInput `pulumi:"secret"`
+}
+
+func (ApplianceVpnThirdPartyVpnpeersPeersResponseArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ApplianceVpnThirdPartyVpnpeersPeersResponse)(nil)).Elem()
+}
+
+func (i ApplianceVpnThirdPartyVpnpeersPeersResponseArgs) ToApplianceVpnThirdPartyVpnpeersPeersResponseOutput() ApplianceVpnThirdPartyVpnpeersPeersResponseOutput {
+	return i.ToApplianceVpnThirdPartyVpnpeersPeersResponseOutputWithContext(context.Background())
+}
+
+func (i ApplianceVpnThirdPartyVpnpeersPeersResponseArgs) ToApplianceVpnThirdPartyVpnpeersPeersResponseOutputWithContext(ctx context.Context) ApplianceVpnThirdPartyVpnpeersPeersResponseOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ApplianceVpnThirdPartyVpnpeersPeersResponseOutput)
+}
+
+// ApplianceVpnThirdPartyVpnpeersPeersResponseArrayInput is an input type that accepts ApplianceVpnThirdPartyVpnpeersPeersResponseArray and ApplianceVpnThirdPartyVpnpeersPeersResponseArrayOutput values.
+// You can construct a concrete instance of `ApplianceVpnThirdPartyVpnpeersPeersResponseArrayInput` via:
+//
+//	ApplianceVpnThirdPartyVpnpeersPeersResponseArray{ ApplianceVpnThirdPartyVpnpeersPeersResponseArgs{...} }
+type ApplianceVpnThirdPartyVpnpeersPeersResponseArrayInput interface {
+	pulumi.Input
+
+	ToApplianceVpnThirdPartyVpnpeersPeersResponseArrayOutput() ApplianceVpnThirdPartyVpnpeersPeersResponseArrayOutput
+	ToApplianceVpnThirdPartyVpnpeersPeersResponseArrayOutputWithContext(context.Context) ApplianceVpnThirdPartyVpnpeersPeersResponseArrayOutput
+}
+
+type ApplianceVpnThirdPartyVpnpeersPeersResponseArray []ApplianceVpnThirdPartyVpnpeersPeersResponseInput
+
+func (ApplianceVpnThirdPartyVpnpeersPeersResponseArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ApplianceVpnThirdPartyVpnpeersPeersResponse)(nil)).Elem()
+}
+
+func (i ApplianceVpnThirdPartyVpnpeersPeersResponseArray) ToApplianceVpnThirdPartyVpnpeersPeersResponseArrayOutput() ApplianceVpnThirdPartyVpnpeersPeersResponseArrayOutput {
+	return i.ToApplianceVpnThirdPartyVpnpeersPeersResponseArrayOutputWithContext(context.Background())
+}
+
+func (i ApplianceVpnThirdPartyVpnpeersPeersResponseArray) ToApplianceVpnThirdPartyVpnpeersPeersResponseArrayOutputWithContext(ctx context.Context) ApplianceVpnThirdPartyVpnpeersPeersResponseArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ApplianceVpnThirdPartyVpnpeersPeersResponseArrayOutput)
+}
+
+type ApplianceVpnThirdPartyVpnpeersPeersResponseOutput struct{ *pulumi.OutputState }
+
+func (ApplianceVpnThirdPartyVpnpeersPeersResponseOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ApplianceVpnThirdPartyVpnpeersPeersResponse)(nil)).Elem()
+}
+
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseOutput) ToApplianceVpnThirdPartyVpnpeersPeersResponseOutput() ApplianceVpnThirdPartyVpnpeersPeersResponseOutput {
+	return o
+}
+
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseOutput) ToApplianceVpnThirdPartyVpnpeersPeersResponseOutputWithContext(ctx context.Context) ApplianceVpnThirdPartyVpnpeersPeersResponseOutput {
+	return o
+}
+
+// [optional] The IKE version to be used for the IPsec VPN peer configuration. Defaults to '1' when omitted.
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseOutput) IkeVersion() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ApplianceVpnThirdPartyVpnpeersPeersResponse) *string { return v.IkeVersion }).(pulumi.StringPtrOutput)
+}
+
+// Custom IPSec policies for the VPN peer. If not included and a preset has not been chosen, the default preset for IPSec policies will be used.
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseOutput) IpsecPolicies() ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutput {
+	return o.ApplyT(func(v ApplianceVpnThirdPartyVpnpeersPeersResponse) *ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies {
+		return v.IpsecPolicies
+	}).(ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutput)
+}
+
+// One of the following available presets: 'default', 'aws', 'azure'. If this is provided, the 'ipsecPolicies' parameter is ignored.
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseOutput) IpsecPoliciesPreset() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ApplianceVpnThirdPartyVpnpeersPeersResponse) *string { return v.IpsecPoliciesPreset }).(pulumi.StringPtrOutput)
+}
+
+// [optional] The local ID is used to identify the MX to the peer. This will apply to all MXs this peer applies to.
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseOutput) LocalId() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ApplianceVpnThirdPartyVpnpeersPeersResponse) *string { return v.LocalId }).(pulumi.StringPtrOutput)
+}
+
+// The name of the VPN peer
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseOutput) Name() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ApplianceVpnThirdPartyVpnpeersPeersResponse) *string { return v.Name }).(pulumi.StringPtrOutput)
+}
+
+// A list of network tags that will connect with this peer. Use ['all'] for all networks. Use ['none'] for no networks. If not included, the default is ['all'].
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseOutput) NetworkTags() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v ApplianceVpnThirdPartyVpnpeersPeersResponse) []string { return v.NetworkTags }).(pulumi.StringArrayOutput)
+}
+
+// The list of the private subnets of the VPN peer
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseOutput) PrivateSubnets() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v ApplianceVpnThirdPartyVpnpeersPeersResponse) []string { return v.PrivateSubnets }).(pulumi.StringArrayOutput)
+}
+
+// [optional] The public IP of the VPN peer
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseOutput) PublicIp() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ApplianceVpnThirdPartyVpnpeersPeersResponse) *string { return v.PublicIp }).(pulumi.StringPtrOutput)
+}
+
+// [optional] The remote ID is used to identify the connecting VPN peer. This can either be a valid IPv4 Address, FQDN or User FQDN.
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseOutput) RemoteId() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ApplianceVpnThirdPartyVpnpeersPeersResponse) *string { return v.RemoteId }).(pulumi.StringPtrOutput)
+}
+
+// The shared secret with the VPN peer
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseOutput) Secret() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v ApplianceVpnThirdPartyVpnpeersPeersResponse) *string { return v.Secret }).(pulumi.StringPtrOutput)
+}
+
+type ApplianceVpnThirdPartyVpnpeersPeersResponseArrayOutput struct{ *pulumi.OutputState }
+
+func (ApplianceVpnThirdPartyVpnpeersPeersResponseArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]ApplianceVpnThirdPartyVpnpeersPeersResponse)(nil)).Elem()
+}
+
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseArrayOutput) ToApplianceVpnThirdPartyVpnpeersPeersResponseArrayOutput() ApplianceVpnThirdPartyVpnpeersPeersResponseArrayOutput {
+	return o
+}
+
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseArrayOutput) ToApplianceVpnThirdPartyVpnpeersPeersResponseArrayOutputWithContext(ctx context.Context) ApplianceVpnThirdPartyVpnpeersPeersResponseArrayOutput {
+	return o
+}
+
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseArrayOutput) Index(i pulumi.IntInput) ApplianceVpnThirdPartyVpnpeersPeersResponseOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) ApplianceVpnThirdPartyVpnpeersPeersResponse {
+		return vs[0].([]ApplianceVpnThirdPartyVpnpeersPeersResponse)[vs[1].(int)]
+	}).(ApplianceVpnThirdPartyVpnpeersPeersResponseOutput)
+}
+
+type ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies struct {
+	// This is the authentication algorithms to be used in Phase 2. The value should be an array with one of the following algorithms: 'sha256', 'sha1', 'md5'
+	ChildAuthAlgos []string `pulumi:"childAuthAlgos"`
+	// This is the cipher algorithms to be used in Phase 2. The value should be an array with one or more of the following algorithms: 'aes256', 'aes192', 'aes128', 'tripledes', 'des', 'null'
+	ChildCipherAlgos []string `pulumi:"childCipherAlgos"`
+	// The lifetime of the Phase 2 SA in seconds.
+	ChildLifetime *int `pulumi:"childLifetime"`
+	// This is the Diffie-Hellman group to be used for Perfect Forward Secrecy in Phase 2. The value should be an array with one of the following values: 'disabled','group14', 'group5', 'group2', 'group1'
+	ChildPfsGroups []string `pulumi:"childPfsGroups"`
+	// This is the authentication algorithm to be used in Phase 1. The value should be an array with one of the following algorithms: 'sha256', 'sha1', 'md5'
+	IkeAuthAlgos []string `pulumi:"ikeAuthAlgos"`
+	// This is the cipher algorithm to be used in Phase 1. The value should be an array with one of the following algorithms: 'aes256', 'aes192', 'aes128', 'tripledes', 'des'
+	IkeCipherAlgos []string `pulumi:"ikeCipherAlgos"`
+	// This is the Diffie-Hellman group to be used in Phase 1. The value should be an array with one of the following algorithms: 'group14', 'group5', 'group2', 'group1'
+	IkeDiffieHellmanGroups []string `pulumi:"ikeDiffieHellmanGroups"`
+	// The lifetime of the Phase 1 SA in seconds.
+	IkeLifetime *int `pulumi:"ikeLifetime"`
+	// [optional] This is the pseudo-random function to be used in IKE_SA. The value should be an array with one of the following algorithms: 'prfsha256', 'prfsha1', 'prfmd5', 'default'. The 'default' option can be used to default to the Authentication algorithm.
+	IkePrfAlgos []string `pulumi:"ikePrfAlgos"`
+}
+
+// ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesInput is an input type that accepts ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgs and ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesOutput values.
+// You can construct a concrete instance of `ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesInput` via:
+//
+//	ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgs{...}
+type ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesInput interface {
+	pulumi.Input
+
+	ToApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesOutput() ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesOutput
+	ToApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesOutputWithContext(context.Context) ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesOutput
+}
+
+type ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgs struct {
+	// This is the authentication algorithms to be used in Phase 2. The value should be an array with one of the following algorithms: 'sha256', 'sha1', 'md5'
+	ChildAuthAlgos pulumi.StringArrayInput `pulumi:"childAuthAlgos"`
+	// This is the cipher algorithms to be used in Phase 2. The value should be an array with one or more of the following algorithms: 'aes256', 'aes192', 'aes128', 'tripledes', 'des', 'null'
+	ChildCipherAlgos pulumi.StringArrayInput `pulumi:"childCipherAlgos"`
+	// The lifetime of the Phase 2 SA in seconds.
+	ChildLifetime pulumi.IntPtrInput `pulumi:"childLifetime"`
+	// This is the Diffie-Hellman group to be used for Perfect Forward Secrecy in Phase 2. The value should be an array with one of the following values: 'disabled','group14', 'group5', 'group2', 'group1'
+	ChildPfsGroups pulumi.StringArrayInput `pulumi:"childPfsGroups"`
+	// This is the authentication algorithm to be used in Phase 1. The value should be an array with one of the following algorithms: 'sha256', 'sha1', 'md5'
+	IkeAuthAlgos pulumi.StringArrayInput `pulumi:"ikeAuthAlgos"`
+	// This is the cipher algorithm to be used in Phase 1. The value should be an array with one of the following algorithms: 'aes256', 'aes192', 'aes128', 'tripledes', 'des'
+	IkeCipherAlgos pulumi.StringArrayInput `pulumi:"ikeCipherAlgos"`
+	// This is the Diffie-Hellman group to be used in Phase 1. The value should be an array with one of the following algorithms: 'group14', 'group5', 'group2', 'group1'
+	IkeDiffieHellmanGroups pulumi.StringArrayInput `pulumi:"ikeDiffieHellmanGroups"`
+	// The lifetime of the Phase 1 SA in seconds.
+	IkeLifetime pulumi.IntPtrInput `pulumi:"ikeLifetime"`
+	// [optional] This is the pseudo-random function to be used in IKE_SA. The value should be an array with one of the following algorithms: 'prfsha256', 'prfsha1', 'prfmd5', 'default'. The 'default' option can be used to default to the Authentication algorithm.
+	IkePrfAlgos pulumi.StringArrayInput `pulumi:"ikePrfAlgos"`
+}
+
+func (ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies)(nil)).Elem()
+}
+
+func (i ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgs) ToApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesOutput() ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesOutput {
+	return i.ToApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesOutputWithContext(context.Background())
+}
+
+func (i ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgs) ToApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesOutputWithContext(ctx context.Context) ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesOutput)
+}
+
+func (i ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgs) ToApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutput() ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutput {
+	return i.ToApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutputWithContext(context.Background())
+}
+
+func (i ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgs) ToApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutputWithContext(ctx context.Context) ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesOutput).ToApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutputWithContext(ctx)
+}
+
+// ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrInput is an input type that accepts ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgs, ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtr and ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutput values.
+// You can construct a concrete instance of `ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrInput` via:
+//
+//	        ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgs{...}
+//
+//	or:
+//
+//	        nil
+type ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrInput interface {
+	pulumi.Input
+
+	ToApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutput() ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutput
+	ToApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutputWithContext(context.Context) ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutput
+}
+
+type applianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrType ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgs
+
+func ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtr(v *ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgs) ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrInput {
+	return (*applianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrType)(v)
+}
+
+func (*applianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies)(nil)).Elem()
+}
+
+func (i *applianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrType) ToApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutput() ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutput {
+	return i.ToApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutputWithContext(context.Background())
+}
+
+func (i *applianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrType) ToApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutputWithContext(ctx context.Context) ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutput)
+}
+
+type ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesOutput struct{ *pulumi.OutputState }
+
+func (ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies)(nil)).Elem()
+}
+
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesOutput) ToApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesOutput() ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesOutput {
+	return o
+}
+
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesOutput) ToApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesOutputWithContext(ctx context.Context) ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesOutput {
+	return o
+}
+
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesOutput) ToApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutput() ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutput {
+	return o.ToApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutputWithContext(context.Background())
+}
+
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesOutput) ToApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutputWithContext(ctx context.Context) ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies) *ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies {
+		return &v
+	}).(ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutput)
+}
+
+// This is the authentication algorithms to be used in Phase 2. The value should be an array with one of the following algorithms: 'sha256', 'sha1', 'md5'
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesOutput) ChildAuthAlgos() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies) []string { return v.ChildAuthAlgos }).(pulumi.StringArrayOutput)
+}
+
+// This is the cipher algorithms to be used in Phase 2. The value should be an array with one or more of the following algorithms: 'aes256', 'aes192', 'aes128', 'tripledes', 'des', 'null'
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesOutput) ChildCipherAlgos() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies) []string { return v.ChildCipherAlgos }).(pulumi.StringArrayOutput)
+}
+
+// The lifetime of the Phase 2 SA in seconds.
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesOutput) ChildLifetime() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies) *int { return v.ChildLifetime }).(pulumi.IntPtrOutput)
+}
+
+// This is the Diffie-Hellman group to be used for Perfect Forward Secrecy in Phase 2. The value should be an array with one of the following values: 'disabled','group14', 'group5', 'group2', 'group1'
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesOutput) ChildPfsGroups() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies) []string { return v.ChildPfsGroups }).(pulumi.StringArrayOutput)
+}
+
+// This is the authentication algorithm to be used in Phase 1. The value should be an array with one of the following algorithms: 'sha256', 'sha1', 'md5'
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesOutput) IkeAuthAlgos() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies) []string { return v.IkeAuthAlgos }).(pulumi.StringArrayOutput)
+}
+
+// This is the cipher algorithm to be used in Phase 1. The value should be an array with one of the following algorithms: 'aes256', 'aes192', 'aes128', 'tripledes', 'des'
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesOutput) IkeCipherAlgos() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies) []string { return v.IkeCipherAlgos }).(pulumi.StringArrayOutput)
+}
+
+// This is the Diffie-Hellman group to be used in Phase 1. The value should be an array with one of the following algorithms: 'group14', 'group5', 'group2', 'group1'
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesOutput) IkeDiffieHellmanGroups() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies) []string {
+		return v.IkeDiffieHellmanGroups
+	}).(pulumi.StringArrayOutput)
+}
+
+// The lifetime of the Phase 1 SA in seconds.
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesOutput) IkeLifetime() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies) *int { return v.IkeLifetime }).(pulumi.IntPtrOutput)
+}
+
+// [optional] This is the pseudo-random function to be used in IKE_SA. The value should be an array with one of the following algorithms: 'prfsha256', 'prfsha1', 'prfmd5', 'default'. The 'default' option can be used to default to the Authentication algorithm.
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesOutput) IkePrfAlgos() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies) []string { return v.IkePrfAlgos }).(pulumi.StringArrayOutput)
+}
+
+type ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutput struct{ *pulumi.OutputState }
+
+func (ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies)(nil)).Elem()
+}
+
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutput) ToApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutput() ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutput {
+	return o
+}
+
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutput) ToApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutputWithContext(ctx context.Context) ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutput {
+	return o
+}
+
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutput) Elem() ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesOutput {
+	return o.ApplyT(func(v *ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies) ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies {
+		if v != nil {
+			return *v
+		}
+		var ret ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies
+		return ret
+	}).(ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesOutput)
+}
+
+// This is the authentication algorithms to be used in Phase 2. The value should be an array with one of the following algorithms: 'sha256', 'sha1', 'md5'
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutput) ChildAuthAlgos() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies) []string {
+		if v == nil {
+			return nil
+		}
+		return v.ChildAuthAlgos
+	}).(pulumi.StringArrayOutput)
+}
+
+// This is the cipher algorithms to be used in Phase 2. The value should be an array with one or more of the following algorithms: 'aes256', 'aes192', 'aes128', 'tripledes', 'des', 'null'
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutput) ChildCipherAlgos() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies) []string {
+		if v == nil {
+			return nil
+		}
+		return v.ChildCipherAlgos
+	}).(pulumi.StringArrayOutput)
+}
+
+// The lifetime of the Phase 2 SA in seconds.
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutput) ChildLifetime() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies) *int {
+		if v == nil {
+			return nil
+		}
+		return v.ChildLifetime
+	}).(pulumi.IntPtrOutput)
+}
+
+// This is the Diffie-Hellman group to be used for Perfect Forward Secrecy in Phase 2. The value should be an array with one of the following values: 'disabled','group14', 'group5', 'group2', 'group1'
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutput) ChildPfsGroups() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies) []string {
+		if v == nil {
+			return nil
+		}
+		return v.ChildPfsGroups
+	}).(pulumi.StringArrayOutput)
+}
+
+// This is the authentication algorithm to be used in Phase 1. The value should be an array with one of the following algorithms: 'sha256', 'sha1', 'md5'
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutput) IkeAuthAlgos() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies) []string {
+		if v == nil {
+			return nil
+		}
+		return v.IkeAuthAlgos
+	}).(pulumi.StringArrayOutput)
+}
+
+// This is the cipher algorithm to be used in Phase 1. The value should be an array with one of the following algorithms: 'aes256', 'aes192', 'aes128', 'tripledes', 'des'
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutput) IkeCipherAlgos() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies) []string {
+		if v == nil {
+			return nil
+		}
+		return v.IkeCipherAlgos
+	}).(pulumi.StringArrayOutput)
+}
+
+// This is the Diffie-Hellman group to be used in Phase 1. The value should be an array with one of the following algorithms: 'group14', 'group5', 'group2', 'group1'
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutput) IkeDiffieHellmanGroups() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies) []string {
+		if v == nil {
+			return nil
+		}
+		return v.IkeDiffieHellmanGroups
+	}).(pulumi.StringArrayOutput)
+}
+
+// The lifetime of the Phase 1 SA in seconds.
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutput) IkeLifetime() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies) *int {
+		if v == nil {
+			return nil
+		}
+		return v.IkeLifetime
+	}).(pulumi.IntPtrOutput)
+}
+
+// [optional] This is the pseudo-random function to be used in IKE_SA. The value should be an array with one of the following algorithms: 'prfsha256', 'prfsha1', 'prfmd5', 'default'. The 'default' option can be used to default to the Authentication algorithm.
+func (o ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutput) IkePrfAlgos() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPolicies) []string {
+		if v == nil {
+			return nil
+		}
+		return v.IkePrfAlgos
+	}).(pulumi.StringArrayOutput)
+}
+
 type ApplianceVpnVpnFirewallRulesRule struct {
 	// Description of the rule (optional)
 	Comment *string `pulumi:"comment"`
@@ -48065,6 +48536,10 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*ApplianceVpnThirdPartyVpnpeersPeerArrayInput)(nil)).Elem(), ApplianceVpnThirdPartyVpnpeersPeerArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ApplianceVpnThirdPartyVpnpeersPeerIpsecPoliciesInput)(nil)).Elem(), ApplianceVpnThirdPartyVpnpeersPeerIpsecPoliciesArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ApplianceVpnThirdPartyVpnpeersPeerIpsecPoliciesPtrInput)(nil)).Elem(), ApplianceVpnThirdPartyVpnpeersPeerIpsecPoliciesArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ApplianceVpnThirdPartyVpnpeersPeersResponseInput)(nil)).Elem(), ApplianceVpnThirdPartyVpnpeersPeersResponseArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ApplianceVpnThirdPartyVpnpeersPeersResponseArrayInput)(nil)).Elem(), ApplianceVpnThirdPartyVpnpeersPeersResponseArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesInput)(nil)).Elem(), ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrInput)(nil)).Elem(), ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ApplianceVpnVpnFirewallRulesRuleInput)(nil)).Elem(), ApplianceVpnVpnFirewallRulesRuleArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ApplianceVpnVpnFirewallRulesRuleArrayInput)(nil)).Elem(), ApplianceVpnVpnFirewallRulesRuleArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*BrandingPoliciesAdminSettingsInput)(nil)).Elem(), BrandingPoliciesAdminSettingsArgs{})
@@ -48747,6 +49222,10 @@ func init() {
 	pulumi.RegisterOutputType(ApplianceVpnThirdPartyVpnpeersPeerArrayOutput{})
 	pulumi.RegisterOutputType(ApplianceVpnThirdPartyVpnpeersPeerIpsecPoliciesOutput{})
 	pulumi.RegisterOutputType(ApplianceVpnThirdPartyVpnpeersPeerIpsecPoliciesPtrOutput{})
+	pulumi.RegisterOutputType(ApplianceVpnThirdPartyVpnpeersPeersResponseOutput{})
+	pulumi.RegisterOutputType(ApplianceVpnThirdPartyVpnpeersPeersResponseArrayOutput{})
+	pulumi.RegisterOutputType(ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesOutput{})
+	pulumi.RegisterOutputType(ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesPtrOutput{})
 	pulumi.RegisterOutputType(ApplianceVpnVpnFirewallRulesRuleOutput{})
 	pulumi.RegisterOutputType(ApplianceVpnVpnFirewallRulesRuleArrayOutput{})
 	pulumi.RegisterOutputType(BrandingPoliciesAdminSettingsOutput{})

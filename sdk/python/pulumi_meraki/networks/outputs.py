@@ -21,7 +21,7 @@ __all__ = [
     'AlertsSettingsMuting',
     'AlertsSettingsMutingByPortSchedules',
     'ApplianceConnectivityMonitoringDestinationsDestination',
-    'ApplianceContentFilteringBlockedUrlCategory',
+    'ApplianceContentFilteringBlockedUrlCategoriesResponse',
     'ApplianceFirewallCellularFirewallRulesRule',
     'ApplianceFirewallInboundFirewallRulesRule',
     'ApplianceFirewallInboundFirewallRulesRulesResponse',
@@ -1631,7 +1631,7 @@ class ApplianceConnectivityMonitoringDestinationsDestination(dict):
 
 
 @pulumi.output_type
-class ApplianceContentFilteringBlockedUrlCategory(dict):
+class ApplianceContentFilteringBlockedUrlCategoriesResponse(dict):
     def __init__(__self__, *,
                  id: Optional[str] = None,
                  name: Optional[str] = None):
