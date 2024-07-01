@@ -5,7 +5,7 @@ package com.pulumi.meraki.networks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.meraki.networks.inputs.ApplianceContentFilteringBlockedUrlCategoryArgs;
+import com.pulumi.meraki.networks.inputs.ApplianceContentFilteringBlockedUrlCategoriesResponseArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,26 +32,26 @@ public final class ApplianceContentFilteringState extends com.pulumi.resources.R
         return Optional.ofNullable(this.allowedUrlPatterns);
     }
 
-    @Import(name="blockedUrlCategories")
-    private @Nullable Output<List<ApplianceContentFilteringBlockedUrlCategoryArgs>> blockedUrlCategories;
-
-    public Optional<Output<List<ApplianceContentFilteringBlockedUrlCategoryArgs>>> blockedUrlCategories() {
-        return Optional.ofNullable(this.blockedUrlCategories);
-    }
-
     /**
      * A list of URL categories to block
      * 
      */
-    @Import(name="blockedUrlCategoriesRs")
-    private @Nullable Output<List<String>> blockedUrlCategoriesRs;
+    @Import(name="blockedUrlCategories")
+    private @Nullable Output<List<String>> blockedUrlCategories;
 
     /**
      * @return A list of URL categories to block
      * 
      */
-    public Optional<Output<List<String>>> blockedUrlCategoriesRs() {
-        return Optional.ofNullable(this.blockedUrlCategoriesRs);
+    public Optional<Output<List<String>>> blockedUrlCategories() {
+        return Optional.ofNullable(this.blockedUrlCategories);
+    }
+
+    @Import(name="blockedUrlCategoriesResponses")
+    private @Nullable Output<List<ApplianceContentFilteringBlockedUrlCategoriesResponseArgs>> blockedUrlCategoriesResponses;
+
+    public Optional<Output<List<ApplianceContentFilteringBlockedUrlCategoriesResponseArgs>>> blockedUrlCategoriesResponses() {
+        return Optional.ofNullable(this.blockedUrlCategoriesResponses);
     }
 
     /**
@@ -104,7 +104,7 @@ public final class ApplianceContentFilteringState extends com.pulumi.resources.R
     private ApplianceContentFilteringState(ApplianceContentFilteringState $) {
         this.allowedUrlPatterns = $.allowedUrlPatterns;
         this.blockedUrlCategories = $.blockedUrlCategories;
-        this.blockedUrlCategoriesRs = $.blockedUrlCategoriesRs;
+        this.blockedUrlCategoriesResponses = $.blockedUrlCategoriesResponses;
         this.blockedUrlPatterns = $.blockedUrlPatterns;
         this.networkId = $.networkId;
         this.urlCategoryListSize = $.urlCategoryListSize;
@@ -159,48 +159,48 @@ public final class ApplianceContentFilteringState extends com.pulumi.resources.R
             return allowedUrlPatterns(List.of(allowedUrlPatterns));
         }
 
-        public Builder blockedUrlCategories(@Nullable Output<List<ApplianceContentFilteringBlockedUrlCategoryArgs>> blockedUrlCategories) {
+        /**
+         * @param blockedUrlCategories A list of URL categories to block
+         * 
+         * @return builder
+         * 
+         */
+        public Builder blockedUrlCategories(@Nullable Output<List<String>> blockedUrlCategories) {
             $.blockedUrlCategories = blockedUrlCategories;
             return this;
         }
 
-        public Builder blockedUrlCategories(List<ApplianceContentFilteringBlockedUrlCategoryArgs> blockedUrlCategories) {
+        /**
+         * @param blockedUrlCategories A list of URL categories to block
+         * 
+         * @return builder
+         * 
+         */
+        public Builder blockedUrlCategories(List<String> blockedUrlCategories) {
             return blockedUrlCategories(Output.of(blockedUrlCategories));
         }
 
-        public Builder blockedUrlCategories(ApplianceContentFilteringBlockedUrlCategoryArgs... blockedUrlCategories) {
+        /**
+         * @param blockedUrlCategories A list of URL categories to block
+         * 
+         * @return builder
+         * 
+         */
+        public Builder blockedUrlCategories(String... blockedUrlCategories) {
             return blockedUrlCategories(List.of(blockedUrlCategories));
         }
 
-        /**
-         * @param blockedUrlCategoriesRs A list of URL categories to block
-         * 
-         * @return builder
-         * 
-         */
-        public Builder blockedUrlCategoriesRs(@Nullable Output<List<String>> blockedUrlCategoriesRs) {
-            $.blockedUrlCategoriesRs = blockedUrlCategoriesRs;
+        public Builder blockedUrlCategoriesResponses(@Nullable Output<List<ApplianceContentFilteringBlockedUrlCategoriesResponseArgs>> blockedUrlCategoriesResponses) {
+            $.blockedUrlCategoriesResponses = blockedUrlCategoriesResponses;
             return this;
         }
 
-        /**
-         * @param blockedUrlCategoriesRs A list of URL categories to block
-         * 
-         * @return builder
-         * 
-         */
-        public Builder blockedUrlCategoriesRs(List<String> blockedUrlCategoriesRs) {
-            return blockedUrlCategoriesRs(Output.of(blockedUrlCategoriesRs));
+        public Builder blockedUrlCategoriesResponses(List<ApplianceContentFilteringBlockedUrlCategoriesResponseArgs> blockedUrlCategoriesResponses) {
+            return blockedUrlCategoriesResponses(Output.of(blockedUrlCategoriesResponses));
         }
 
-        /**
-         * @param blockedUrlCategoriesRs A list of URL categories to block
-         * 
-         * @return builder
-         * 
-         */
-        public Builder blockedUrlCategoriesRs(String... blockedUrlCategoriesRs) {
-            return blockedUrlCategoriesRs(List.of(blockedUrlCategoriesRs));
+        public Builder blockedUrlCategoriesResponses(ApplianceContentFilteringBlockedUrlCategoriesResponseArgs... blockedUrlCategoriesResponses) {
+            return blockedUrlCategoriesResponses(List.of(blockedUrlCategoriesResponses));
         }
 
         /**

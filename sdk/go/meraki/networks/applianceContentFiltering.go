@@ -14,6 +14,44 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewApplianceContentFiltering(ctx, "example", &networks.ApplianceContentFilteringArgs{
+//				AllowedUrlPatterns: pulumi.StringArray{
+//					pulumi.String("http://www.example.org"),
+//					pulumi.String("http://help.com.au"),
+//				},
+//				BlockedUrlCategories: pulumi.StringArray{
+//					pulumi.String("meraki:contentFiltering/category/1"),
+//					pulumi.String("meraki:contentFiltering/category/7"),
+//				},
+//				BlockedUrlPatterns: pulumi.StringArray{
+//					pulumi.String("http://www.example.com"),
+//					pulumi.String("http://www.betting.com"),
+//				},
+//				NetworkId:           pulumi.String("string"),
+//				UrlCategoryListSize: pulumi.String("topSites"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksApplianceContentFilteringExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh
@@ -23,16 +61,16 @@ type ApplianceContentFiltering struct {
 	pulumi.CustomResourceState
 
 	// A list of URL patterns that are allowed
-	AllowedUrlPatterns   pulumi.StringArrayOutput                               `pulumi:"allowedUrlPatterns"`
-	BlockedUrlCategories ApplianceContentFilteringBlockedUrlCategoryArrayOutput `pulumi:"blockedUrlCategories"`
+	AllowedUrlPatterns pulumi.StringArrayOutput `pulumi:"allowedUrlPatterns"`
 	// A list of URL categories to block
-	BlockedUrlCategoriesRs pulumi.StringArrayOutput `pulumi:"blockedUrlCategoriesRs"`
+	BlockedUrlCategories          pulumi.StringArrayOutput                                         `pulumi:"blockedUrlCategories"`
+	BlockedUrlCategoriesResponses ApplianceContentFilteringBlockedUrlCategoriesResponseArrayOutput `pulumi:"blockedUrlCategoriesResponses"`
 	// A list of URL patterns that are blocked
 	BlockedUrlPatterns pulumi.StringArrayOutput `pulumi:"blockedUrlPatterns"`
 	// networkId path parameter. Network ID
 	NetworkId pulumi.StringOutput `pulumi:"networkId"`
 	// URL category list size which is either 'topSites' or 'fullList'
-	UrlCategoryListSize pulumi.StringOutput `pulumi:"urlCategoryListSize"`
+	UrlCategoryListSize pulumi.StringPtrOutput `pulumi:"urlCategoryListSize"`
 }
 
 // NewApplianceContentFiltering registers a new resource with the given unique name, arguments, and options.
@@ -69,10 +107,10 @@ func GetApplianceContentFiltering(ctx *pulumi.Context,
 // Input properties used for looking up and filtering ApplianceContentFiltering resources.
 type applianceContentFilteringState struct {
 	// A list of URL patterns that are allowed
-	AllowedUrlPatterns   []string                                      `pulumi:"allowedUrlPatterns"`
-	BlockedUrlCategories []ApplianceContentFilteringBlockedUrlCategory `pulumi:"blockedUrlCategories"`
+	AllowedUrlPatterns []string `pulumi:"allowedUrlPatterns"`
 	// A list of URL categories to block
-	BlockedUrlCategoriesRs []string `pulumi:"blockedUrlCategoriesRs"`
+	BlockedUrlCategories          []string                                                `pulumi:"blockedUrlCategories"`
+	BlockedUrlCategoriesResponses []ApplianceContentFilteringBlockedUrlCategoriesResponse `pulumi:"blockedUrlCategoriesResponses"`
 	// A list of URL patterns that are blocked
 	BlockedUrlPatterns []string `pulumi:"blockedUrlPatterns"`
 	// networkId path parameter. Network ID
@@ -83,10 +121,10 @@ type applianceContentFilteringState struct {
 
 type ApplianceContentFilteringState struct {
 	// A list of URL patterns that are allowed
-	AllowedUrlPatterns   pulumi.StringArrayInput
-	BlockedUrlCategories ApplianceContentFilteringBlockedUrlCategoryArrayInput
+	AllowedUrlPatterns pulumi.StringArrayInput
 	// A list of URL categories to block
-	BlockedUrlCategoriesRs pulumi.StringArrayInput
+	BlockedUrlCategories          pulumi.StringArrayInput
+	BlockedUrlCategoriesResponses ApplianceContentFilteringBlockedUrlCategoriesResponseArrayInput
 	// A list of URL patterns that are blocked
 	BlockedUrlPatterns pulumi.StringArrayInput
 	// networkId path parameter. Network ID
@@ -103,7 +141,7 @@ type applianceContentFilteringArgs struct {
 	// A list of URL patterns that are allowed
 	AllowedUrlPatterns []string `pulumi:"allowedUrlPatterns"`
 	// A list of URL categories to block
-	BlockedUrlCategoriesRs []string `pulumi:"blockedUrlCategoriesRs"`
+	BlockedUrlCategories []string `pulumi:"blockedUrlCategories"`
 	// A list of URL patterns that are blocked
 	BlockedUrlPatterns []string `pulumi:"blockedUrlPatterns"`
 	// networkId path parameter. Network ID
@@ -117,7 +155,7 @@ type ApplianceContentFilteringArgs struct {
 	// A list of URL patterns that are allowed
 	AllowedUrlPatterns pulumi.StringArrayInput
 	// A list of URL categories to block
-	BlockedUrlCategoriesRs pulumi.StringArrayInput
+	BlockedUrlCategories pulumi.StringArrayInput
 	// A list of URL patterns that are blocked
 	BlockedUrlPatterns pulumi.StringArrayInput
 	// networkId path parameter. Network ID
@@ -218,15 +256,15 @@ func (o ApplianceContentFilteringOutput) AllowedUrlPatterns() pulumi.StringArray
 	return o.ApplyT(func(v *ApplianceContentFiltering) pulumi.StringArrayOutput { return v.AllowedUrlPatterns }).(pulumi.StringArrayOutput)
 }
 
-func (o ApplianceContentFilteringOutput) BlockedUrlCategories() ApplianceContentFilteringBlockedUrlCategoryArrayOutput {
-	return o.ApplyT(func(v *ApplianceContentFiltering) ApplianceContentFilteringBlockedUrlCategoryArrayOutput {
-		return v.BlockedUrlCategories
-	}).(ApplianceContentFilteringBlockedUrlCategoryArrayOutput)
+// A list of URL categories to block
+func (o ApplianceContentFilteringOutput) BlockedUrlCategories() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *ApplianceContentFiltering) pulumi.StringArrayOutput { return v.BlockedUrlCategories }).(pulumi.StringArrayOutput)
 }
 
-// A list of URL categories to block
-func (o ApplianceContentFilteringOutput) BlockedUrlCategoriesRs() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v *ApplianceContentFiltering) pulumi.StringArrayOutput { return v.BlockedUrlCategoriesRs }).(pulumi.StringArrayOutput)
+func (o ApplianceContentFilteringOutput) BlockedUrlCategoriesResponses() ApplianceContentFilteringBlockedUrlCategoriesResponseArrayOutput {
+	return o.ApplyT(func(v *ApplianceContentFiltering) ApplianceContentFilteringBlockedUrlCategoriesResponseArrayOutput {
+		return v.BlockedUrlCategoriesResponses
+	}).(ApplianceContentFilteringBlockedUrlCategoriesResponseArrayOutput)
 }
 
 // A list of URL patterns that are blocked
@@ -240,8 +278,8 @@ func (o ApplianceContentFilteringOutput) NetworkId() pulumi.StringOutput {
 }
 
 // URL category list size which is either 'topSites' or 'fullList'
-func (o ApplianceContentFilteringOutput) UrlCategoryListSize() pulumi.StringOutput {
-	return o.ApplyT(func(v *ApplianceContentFiltering) pulumi.StringOutput { return v.UrlCategoryListSize }).(pulumi.StringOutput)
+func (o ApplianceContentFilteringOutput) UrlCategoryListSize() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *ApplianceContentFiltering) pulumi.StringPtrOutput { return v.UrlCategoryListSize }).(pulumi.StringPtrOutput)
 }
 
 type ApplianceContentFilteringArrayOutput struct{ *pulumi.OutputState }

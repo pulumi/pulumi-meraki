@@ -36,15 +36,15 @@ public final class ApplianceContentFilteringArgs extends com.pulumi.resources.Re
      * A list of URL categories to block
      * 
      */
-    @Import(name="blockedUrlCategoriesRs")
-    private @Nullable Output<List<String>> blockedUrlCategoriesRs;
+    @Import(name="blockedUrlCategories")
+    private @Nullable Output<List<String>> blockedUrlCategories;
 
     /**
      * @return A list of URL categories to block
      * 
      */
-    public Optional<Output<List<String>>> blockedUrlCategoriesRs() {
-        return Optional.ofNullable(this.blockedUrlCategoriesRs);
+    public Optional<Output<List<String>>> blockedUrlCategories() {
+        return Optional.ofNullable(this.blockedUrlCategories);
     }
 
     /**
@@ -96,7 +96,7 @@ public final class ApplianceContentFilteringArgs extends com.pulumi.resources.Re
 
     private ApplianceContentFilteringArgs(ApplianceContentFilteringArgs $) {
         this.allowedUrlPatterns = $.allowedUrlPatterns;
-        this.blockedUrlCategoriesRs = $.blockedUrlCategoriesRs;
+        this.blockedUrlCategories = $.blockedUrlCategories;
         this.blockedUrlPatterns = $.blockedUrlPatterns;
         this.networkId = $.networkId;
         this.urlCategoryListSize = $.urlCategoryListSize;
@@ -152,34 +152,34 @@ public final class ApplianceContentFilteringArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param blockedUrlCategoriesRs A list of URL categories to block
+         * @param blockedUrlCategories A list of URL categories to block
          * 
          * @return builder
          * 
          */
-        public Builder blockedUrlCategoriesRs(@Nullable Output<List<String>> blockedUrlCategoriesRs) {
-            $.blockedUrlCategoriesRs = blockedUrlCategoriesRs;
+        public Builder blockedUrlCategories(@Nullable Output<List<String>> blockedUrlCategories) {
+            $.blockedUrlCategories = blockedUrlCategories;
             return this;
         }
 
         /**
-         * @param blockedUrlCategoriesRs A list of URL categories to block
+         * @param blockedUrlCategories A list of URL categories to block
          * 
          * @return builder
          * 
          */
-        public Builder blockedUrlCategoriesRs(List<String> blockedUrlCategoriesRs) {
-            return blockedUrlCategoriesRs(Output.of(blockedUrlCategoriesRs));
+        public Builder blockedUrlCategories(List<String> blockedUrlCategories) {
+            return blockedUrlCategories(Output.of(blockedUrlCategories));
         }
 
         /**
-         * @param blockedUrlCategoriesRs A list of URL categories to block
+         * @param blockedUrlCategories A list of URL categories to block
          * 
          * @return builder
          * 
          */
-        public Builder blockedUrlCategoriesRs(String... blockedUrlCategoriesRs) {
-            return blockedUrlCategoriesRs(List.of(blockedUrlCategoriesRs));
+        public Builder blockedUrlCategories(String... blockedUrlCategories) {
+            return blockedUrlCategories(List.of(blockedUrlCategories));
         }
 
         /**

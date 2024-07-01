@@ -12,6 +12,42 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.ApplianceContentFiltering("example", new()
+    ///     {
+    ///         AllowedUrlPatterns = new[]
+    ///         {
+    ///             "http://www.example.org",
+    ///             "http://help.com.au",
+    ///         },
+    ///         BlockedUrlCategories = new[]
+    ///         {
+    ///             "meraki:contentFiltering/category/1",
+    ///             "meraki:contentFiltering/category/7",
+    ///         },
+    ///         BlockedUrlPatterns = new[]
+    ///         {
+    ///             "http://www.example.com",
+    ///             "http://www.betting.com",
+    ///         },
+    ///         NetworkId = "string",
+    ///         UrlCategoryListSize = "topSites",
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksApplianceContentFilteringExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh
@@ -27,14 +63,14 @@ namespace Pulumi.Meraki.Networks
         [Output("allowedUrlPatterns")]
         public Output<ImmutableArray<string>> AllowedUrlPatterns { get; private set; } = null!;
 
-        [Output("blockedUrlCategories")]
-        public Output<ImmutableArray<Outputs.ApplianceContentFilteringBlockedUrlCategory>> BlockedUrlCategories { get; private set; } = null!;
-
         /// <summary>
         /// A list of URL categories to block
         /// </summary>
-        [Output("blockedUrlCategoriesRs")]
-        public Output<ImmutableArray<string>> BlockedUrlCategoriesRs { get; private set; } = null!;
+        [Output("blockedUrlCategories")]
+        public Output<ImmutableArray<string>> BlockedUrlCategories { get; private set; } = null!;
+
+        [Output("blockedUrlCategoriesResponses")]
+        public Output<ImmutableArray<Outputs.ApplianceContentFilteringBlockedUrlCategoriesResponse>> BlockedUrlCategoriesResponses { get; private set; } = null!;
 
         /// <summary>
         /// A list of URL patterns that are blocked
@@ -52,7 +88,7 @@ namespace Pulumi.Meraki.Networks
         /// URL category list size which is either 'topSites' or 'fullList'
         /// </summary>
         [Output("urlCategoryListSize")]
-        public Output<string> UrlCategoryListSize { get; private set; } = null!;
+        public Output<string?> UrlCategoryListSize { get; private set; } = null!;
 
 
         /// <summary>
@@ -113,16 +149,16 @@ namespace Pulumi.Meraki.Networks
             set => _allowedUrlPatterns = value;
         }
 
-        [Input("blockedUrlCategoriesRs")]
-        private InputList<string>? _blockedUrlCategoriesRs;
+        [Input("blockedUrlCategories")]
+        private InputList<string>? _blockedUrlCategories;
 
         /// <summary>
         /// A list of URL categories to block
         /// </summary>
-        public InputList<string> BlockedUrlCategoriesRs
+        public InputList<string> BlockedUrlCategories
         {
-            get => _blockedUrlCategoriesRs ?? (_blockedUrlCategoriesRs = new InputList<string>());
-            set => _blockedUrlCategoriesRs = value;
+            get => _blockedUrlCategories ?? (_blockedUrlCategories = new InputList<string>());
+            set => _blockedUrlCategories = value;
         }
 
         [Input("blockedUrlPatterns")]
@@ -170,23 +206,23 @@ namespace Pulumi.Meraki.Networks
         }
 
         [Input("blockedUrlCategories")]
-        private InputList<Inputs.ApplianceContentFilteringBlockedUrlCategoryGetArgs>? _blockedUrlCategories;
-        public InputList<Inputs.ApplianceContentFilteringBlockedUrlCategoryGetArgs> BlockedUrlCategories
-        {
-            get => _blockedUrlCategories ?? (_blockedUrlCategories = new InputList<Inputs.ApplianceContentFilteringBlockedUrlCategoryGetArgs>());
-            set => _blockedUrlCategories = value;
-        }
-
-        [Input("blockedUrlCategoriesRs")]
-        private InputList<string>? _blockedUrlCategoriesRs;
+        private InputList<string>? _blockedUrlCategories;
 
         /// <summary>
         /// A list of URL categories to block
         /// </summary>
-        public InputList<string> BlockedUrlCategoriesRs
+        public InputList<string> BlockedUrlCategories
         {
-            get => _blockedUrlCategoriesRs ?? (_blockedUrlCategoriesRs = new InputList<string>());
-            set => _blockedUrlCategoriesRs = value;
+            get => _blockedUrlCategories ?? (_blockedUrlCategories = new InputList<string>());
+            set => _blockedUrlCategories = value;
+        }
+
+        [Input("blockedUrlCategoriesResponses")]
+        private InputList<Inputs.ApplianceContentFilteringBlockedUrlCategoriesResponseGetArgs>? _blockedUrlCategoriesResponses;
+        public InputList<Inputs.ApplianceContentFilteringBlockedUrlCategoriesResponseGetArgs> BlockedUrlCategoriesResponses
+        {
+            get => _blockedUrlCategoriesResponses ?? (_blockedUrlCategoriesResponses = new InputList<Inputs.ApplianceContentFilteringBlockedUrlCategoriesResponseGetArgs>());
+            set => _blockedUrlCategoriesResponses = value;
         }
 
         [Input("blockedUrlPatterns")]

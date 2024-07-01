@@ -50,7 +50,11 @@ export class ApplianceVpnThirdPartyVpnpeers extends pulumi.CustomResource {
     /**
      * The list of VPN peers
      */
-    public readonly peers!: pulumi.Output<outputs.organizations.ApplianceVpnThirdPartyVpnpeersPeer[]>;
+    public readonly peers!: pulumi.Output<outputs.organizations.ApplianceVpnThirdPartyVpnpeersPeer[] | undefined>;
+    /**
+     * The list of VPN peers
+     */
+    public /*out*/ readonly peersResponses!: pulumi.Output<outputs.organizations.ApplianceVpnThirdPartyVpnpeersPeersResponse[]>;
 
     /**
      * Create a ApplianceVpnThirdPartyVpnpeers resource with the given unique name, arguments, and options.
@@ -67,6 +71,7 @@ export class ApplianceVpnThirdPartyVpnpeers extends pulumi.CustomResource {
             const state = argsOrState as ApplianceVpnThirdPartyVpnpeersState | undefined;
             resourceInputs["organizationId"] = state ? state.organizationId : undefined;
             resourceInputs["peers"] = state ? state.peers : undefined;
+            resourceInputs["peersResponses"] = state ? state.peersResponses : undefined;
         } else {
             const args = argsOrState as ApplianceVpnThirdPartyVpnpeersArgs | undefined;
             if ((!args || args.organizationId === undefined) && !opts.urn) {
@@ -74,6 +79,7 @@ export class ApplianceVpnThirdPartyVpnpeers extends pulumi.CustomResource {
             }
             resourceInputs["organizationId"] = args ? args.organizationId : undefined;
             resourceInputs["peers"] = args ? args.peers : undefined;
+            resourceInputs["peersResponses"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(ApplianceVpnThirdPartyVpnpeers.__pulumiType, name, resourceInputs, opts);
@@ -92,6 +98,10 @@ export interface ApplianceVpnThirdPartyVpnpeersState {
      * The list of VPN peers
      */
     peers?: pulumi.Input<pulumi.Input<inputs.organizations.ApplianceVpnThirdPartyVpnpeersPeer>[]>;
+    /**
+     * The list of VPN peers
+     */
+    peersResponses?: pulumi.Input<pulumi.Input<inputs.organizations.ApplianceVpnThirdPartyVpnpeersPeersResponse>[]>;
 }
 
 /**

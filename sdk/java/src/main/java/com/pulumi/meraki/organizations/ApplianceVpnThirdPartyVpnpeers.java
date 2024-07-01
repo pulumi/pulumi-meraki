@@ -11,8 +11,10 @@ import com.pulumi.meraki.Utilities;
 import com.pulumi.meraki.organizations.ApplianceVpnThirdPartyVpnpeersArgs;
 import com.pulumi.meraki.organizations.inputs.ApplianceVpnThirdPartyVpnpeersState;
 import com.pulumi.meraki.organizations.outputs.ApplianceVpnThirdPartyVpnpeersPeer;
+import com.pulumi.meraki.organizations.outputs.ApplianceVpnThirdPartyVpnpeersPeersResponse;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -95,14 +97,28 @@ public class ApplianceVpnThirdPartyVpnpeers extends com.pulumi.resources.CustomR
      * 
      */
     @Export(name="peers", refs={List.class,ApplianceVpnThirdPartyVpnpeersPeer.class}, tree="[0,1]")
-    private Output<List<ApplianceVpnThirdPartyVpnpeersPeer>> peers;
+    private Output</* @Nullable */ List<ApplianceVpnThirdPartyVpnpeersPeer>> peers;
 
     /**
      * @return The list of VPN peers
      * 
      */
-    public Output<List<ApplianceVpnThirdPartyVpnpeersPeer>> peers() {
-        return this.peers;
+    public Output<Optional<List<ApplianceVpnThirdPartyVpnpeersPeer>>> peers() {
+        return Codegen.optional(this.peers);
+    }
+    /**
+     * The list of VPN peers
+     * 
+     */
+    @Export(name="peersResponses", refs={List.class,ApplianceVpnThirdPartyVpnpeersPeersResponse.class}, tree="[0,1]")
+    private Output<List<ApplianceVpnThirdPartyVpnpeersPeersResponse>> peersResponses;
+
+    /**
+     * @return The list of VPN peers
+     * 
+     */
+    public Output<List<ApplianceVpnThirdPartyVpnpeersPeersResponse>> peersResponses() {
+        return this.peersResponses;
     }
 
     /**

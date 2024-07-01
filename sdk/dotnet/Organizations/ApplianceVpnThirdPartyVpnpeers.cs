@@ -33,6 +33,12 @@ namespace Pulumi.Meraki.Organizations
         [Output("peers")]
         public Output<ImmutableArray<Outputs.ApplianceVpnThirdPartyVpnpeersPeer>> Peers { get; private set; } = null!;
 
+        /// <summary>
+        /// The list of VPN peers
+        /// </summary>
+        [Output("peersResponses")]
+        public Output<ImmutableArray<Outputs.ApplianceVpnThirdPartyVpnpeersPeersResponse>> PeersResponses { get; private set; } = null!;
+
 
         /// <summary>
         /// Create a ApplianceVpnThirdPartyVpnpeers resource with the given unique name, arguments, and options.
@@ -122,6 +128,18 @@ namespace Pulumi.Meraki.Organizations
         {
             get => _peers ?? (_peers = new InputList<Inputs.ApplianceVpnThirdPartyVpnpeersPeerGetArgs>());
             set => _peers = value;
+        }
+
+        [Input("peersResponses")]
+        private InputList<Inputs.ApplianceVpnThirdPartyVpnpeersPeersResponseGetArgs>? _peersResponses;
+
+        /// <summary>
+        /// The list of VPN peers
+        /// </summary>
+        public InputList<Inputs.ApplianceVpnThirdPartyVpnpeersPeersResponseGetArgs> PeersResponses
+        {
+            get => _peersResponses ?? (_peersResponses = new InputList<Inputs.ApplianceVpnThirdPartyVpnpeersPeersResponseGetArgs>());
+            set => _peersResponses = value;
         }
 
         public ApplianceVpnThirdPartyVpnpeersState()
