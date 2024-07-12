@@ -18831,7 +18831,7 @@ export namespace networks {
         /**
          * Name of the VLAN, string length must be from 1 to 32 characters
          */
-        name: string;
+        name?: string;
         /**
          * VLAN ID
          */

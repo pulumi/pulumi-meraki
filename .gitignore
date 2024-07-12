@@ -33,3 +33,6 @@ sdk/java/gradlew.bat
 sdk/python/venv
 
 sdk/dotnet/logo.png
+
+go.work
+go.work.sum
