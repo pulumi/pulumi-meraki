@@ -5045,7 +5045,7 @@ export namespace networks {
         /**
          * A text comment for the reserved range
          */
-        comment: string;
+        comment?: string;
         /**
          * The last IP in the reserved range
          */
