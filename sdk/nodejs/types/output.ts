@@ -4629,6 +4629,19 @@ export namespace networks {
          * endpoint).
          */
         value: string;
+        /**
+         * The 'value_list' of what you want to block. Send a list in request
+         */
+        valueLists: string[];
+        /**
+         * The 'value_obj' of what you want to block. Send a dict in request
+         */
+        valueObj: outputs.networks.ApplianceTrafficShapingRulesRuleDefinitionValueObj;
+    }
+
+    export interface ApplianceTrafficShapingRulesRuleDefinitionValueObj {
+        id: string;
+        name: string;
     }
 
     export interface ApplianceTrafficShapingRulesRulePerClientBandwidthLimits {
@@ -19069,18 +19082,18 @@ export namespace networks {
         /**
          * Flex radios by model.
          */
-        byModels: outputs.networks.WirelessRfProfilesFlexRadiosByModel[];
+        byModels?: outputs.networks.WirelessRfProfilesFlexRadiosByModel[];
     }
 
     export interface WirelessRfProfilesFlexRadiosByModel {
         /**
          * Band to use for each flex radio. For example, ['6'] will set the AP's first flex radio to 6 GHz
          */
-        bands: string[];
+        bands?: string[];
         /**
          * Model of the AP
          */
-        model: string;
+        model?: string;
     }
 
     export interface WirelessRfProfilesPerSsidSettings {
@@ -19893,6 +19906,19 @@ export namespace networks {
          * The value of what needs to get blocked. Format of the value varies depending on type of the firewall rule selected.
          */
         value: string;
+        /**
+         * The 'value_list' of what you want to block. Send a list in request
+         */
+        valueLists?: string[];
+        /**
+         * The 'value_obj' of what you want to block. Send a dict in request
+         */
+        valueObj?: outputs.networks.WirelessSsidsFirewallL7FirewallRulesRuleValueObj;
+    }
+
+    export interface WirelessSsidsFirewallL7FirewallRulesRuleValueObj {
+        id?: string;
+        name?: string;
     }
 
     export interface WirelessSsidsGre {

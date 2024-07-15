@@ -2370,6 +2370,19 @@ export namespace networks {
          * endpoint).
          */
         value?: pulumi.Input<string>;
+        /**
+         * The 'value_list' of what you want to block. Send a list in request
+         */
+        valueLists?: pulumi.Input<pulumi.Input<string>[]>;
+        /**
+         * The 'value_obj' of what you want to block. Send a dict in request
+         */
+        valueObj?: pulumi.Input<inputs.networks.ApplianceTrafficShapingRulesRuleDefinitionValueObj>;
+    }
+
+    export interface ApplianceTrafficShapingRulesRuleDefinitionValueObj {
+        id?: pulumi.Input<string>;
+        name?: pulumi.Input<string>;
     }
 
     export interface ApplianceTrafficShapingRulesRulePerClientBandwidthLimits {
@@ -8834,6 +8847,19 @@ export namespace networks {
          * The value of what needs to get blocked. Format of the value varies depending on type of the firewall rule selected.
          */
         value?: pulumi.Input<string>;
+        /**
+         * The 'value_list' of what you want to block. Send a list in request
+         */
+        valueLists?: pulumi.Input<pulumi.Input<string>[]>;
+        /**
+         * The 'value_obj' of what you want to block. Send a dict in request
+         */
+        valueObj?: pulumi.Input<inputs.networks.WirelessSsidsFirewallL7FirewallRulesRuleValueObj>;
+    }
+
+    export interface WirelessSsidsFirewallL7FirewallRulesRuleValueObj {
+        id?: pulumi.Input<string>;
+        name?: pulumi.Input<string>;
     }
 
     export interface WirelessSsidsGre {

@@ -5,7 +5,7 @@ Subject: [PATCH] patch vlan profiles to be non-computed
 
 
 diff --git a/internal/provider/resource_meraki_networks_vlan_profiles.go b/internal/provider/resource_meraki_networks_vlan_profiles.go
-index 80dbca9..3cb4b2e 100644
+index ecb3f2d..250327c 100644
 --- a/internal/provider/resource_meraki_networks_vlan_profiles.go
 +++ b/internal/provider/resource_meraki_networks_vlan_profiles.go
 @@ -152,7 +152,6 @@ func (r *NetworksVLANProfilesResource) Schema(_ context.Context, _ resource.Sche

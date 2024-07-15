@@ -49,7 +49,7 @@ namespace Pulumi.Meraki.Networks
         /// Flex radio settings.
         /// </summary>
         [Output("flexRadios")]
-        public Output<Outputs.WirelessRfProfilesFlexRadios> FlexRadios { get; private set; } = null!;
+        public Output<Outputs.WirelessRfProfilesFlexRadios?> FlexRadios { get; private set; } = null!;
 
         /// <summary>
         /// Minimum bitrate can be set to either 'band' or 'ssid'. Defaults to band.
@@ -79,7 +79,7 @@ namespace Pulumi.Meraki.Networks
         /// rfProfileId path parameter. Rf profile ID
         /// </summary>
         [Output("rfProfileId")]
-        public Output<string?> RfProfileId { get; private set; } = null!;
+        public Output<string> RfProfileId { get; private set; } = null!;
 
         /// <summary>
         /// Settings related to 6Ghz band. Only applicable to networks with 6Ghz capable APs

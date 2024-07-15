@@ -24,6 +24,8 @@ type SwitchStacksRoutingInterfaces struct {
 
 	// IPv4 default gateway
 	DefaultGateway pulumi.StringOutput `pulumi:"defaultGateway"`
+	// IPv4 default gateway
+	DefaultGatewayResponse pulumi.StringOutput `pulumi:"defaultGatewayResponse"`
 	// The id
 	InterfaceId pulumi.StringOutput `pulumi:"interfaceId"`
 	// IPv4 address
@@ -86,6 +88,8 @@ func GetSwitchStacksRoutingInterfaces(ctx *pulumi.Context,
 type switchStacksRoutingInterfacesState struct {
 	// IPv4 default gateway
 	DefaultGateway *string `pulumi:"defaultGateway"`
+	// IPv4 default gateway
+	DefaultGatewayResponse *string `pulumi:"defaultGatewayResponse"`
 	// The id
 	InterfaceId *string `pulumi:"interfaceId"`
 	// IPv4 address
@@ -113,6 +117,8 @@ type switchStacksRoutingInterfacesState struct {
 type SwitchStacksRoutingInterfacesState struct {
 	// IPv4 default gateway
 	DefaultGateway pulumi.StringPtrInput
+	// IPv4 default gateway
+	DefaultGatewayResponse pulumi.StringPtrInput
 	// The id
 	InterfaceId pulumi.StringPtrInput
 	// IPv4 address
@@ -282,6 +288,11 @@ func (o SwitchStacksRoutingInterfacesOutput) ToSwitchStacksRoutingInterfacesOutp
 // IPv4 default gateway
 func (o SwitchStacksRoutingInterfacesOutput) DefaultGateway() pulumi.StringOutput {
 	return o.ApplyT(func(v *SwitchStacksRoutingInterfaces) pulumi.StringOutput { return v.DefaultGateway }).(pulumi.StringOutput)
+}
+
+// IPv4 default gateway
+func (o SwitchStacksRoutingInterfacesOutput) DefaultGatewayResponse() pulumi.StringOutput {
+	return o.ApplyT(func(v *SwitchStacksRoutingInterfaces) pulumi.StringOutput { return v.DefaultGatewayResponse }).(pulumi.StringOutput)
 }
 
 // The id

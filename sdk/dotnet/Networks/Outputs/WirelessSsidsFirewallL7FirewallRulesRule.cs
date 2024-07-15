@@ -25,6 +25,14 @@ namespace Pulumi.Meraki.Networks.Outputs
         /// The value of what needs to get blocked. Format of the value varies depending on type of the firewall rule selected.
         /// </summary>
         public readonly string? Value;
+        /// <summary>
+        /// The 'value_list' of what you want to block. Send a list in request
+        /// </summary>
+        public readonly ImmutableArray<string> ValueLists;
+        /// <summary>
+        /// The 'value_obj' of what you want to block. Send a dict in request
+        /// </summary>
+        public readonly Outputs.WirelessSsidsFirewallL7FirewallRulesRuleValueObj? ValueObj;
 
         [OutputConstructor]
         private WirelessSsidsFirewallL7FirewallRulesRule(
@@ -32,11 +40,17 @@ namespace Pulumi.Meraki.Networks.Outputs
 
             string? type,
 
-            string? value)
+            string? value,
+
+            ImmutableArray<string> valueLists,
+
+            Outputs.WirelessSsidsFirewallL7FirewallRulesRuleValueObj? valueObj)
         {
             Policy = policy;
             Type = type;
             Value = value;
+            ValueLists = valueLists;
+            ValueObj = valueObj;
         }
     }
 }

@@ -28,6 +28,12 @@ namespace Pulumi.Meraki.Networks
         public Output<string> DefaultGateway { get; private set; } = null!;
 
         /// <summary>
+        /// IPv4 default gateway
+        /// </summary>
+        [Output("defaultGatewayResponse")]
+        public Output<string> DefaultGatewayResponse { get; private set; } = null!;
+
+        /// <summary>
         /// The id
         /// </summary>
         [Output("interfaceId")]
@@ -219,6 +225,12 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         [Input("defaultGateway")]
         public Input<string>? DefaultGateway { get; set; }
+
+        /// <summary>
+        /// IPv4 default gateway
+        /// </summary>
+        [Input("defaultGatewayResponse")]
+        public Input<string>? DefaultGatewayResponse { get; set; }
 
         /// <summary>
         /// The id

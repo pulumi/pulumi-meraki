@@ -5,7 +5,9 @@ package com.pulumi.meraki.networks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.meraki.networks.inputs.WirelessSsidsFirewallL7FirewallRulesRuleValueObjArgs;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -60,12 +62,44 @@ public final class WirelessSsidsFirewallL7FirewallRulesRuleArgs extends com.pulu
         return Optional.ofNullable(this.value);
     }
 
+    /**
+     * The &#39;value_list&#39; of what you want to block. Send a list in request
+     * 
+     */
+    @Import(name="valueLists")
+    private @Nullable Output<List<String>> valueLists;
+
+    /**
+     * @return The &#39;value_list&#39; of what you want to block. Send a list in request
+     * 
+     */
+    public Optional<Output<List<String>>> valueLists() {
+        return Optional.ofNullable(this.valueLists);
+    }
+
+    /**
+     * The &#39;value_obj&#39; of what you want to block. Send a dict in request
+     * 
+     */
+    @Import(name="valueObj")
+    private @Nullable Output<WirelessSsidsFirewallL7FirewallRulesRuleValueObjArgs> valueObj;
+
+    /**
+     * @return The &#39;value_obj&#39; of what you want to block. Send a dict in request
+     * 
+     */
+    public Optional<Output<WirelessSsidsFirewallL7FirewallRulesRuleValueObjArgs>> valueObj() {
+        return Optional.ofNullable(this.valueObj);
+    }
+
     private WirelessSsidsFirewallL7FirewallRulesRuleArgs() {}
 
     private WirelessSsidsFirewallL7FirewallRulesRuleArgs(WirelessSsidsFirewallL7FirewallRulesRuleArgs $) {
         this.policy = $.policy;
         this.type = $.type;
         this.value = $.value;
+        this.valueLists = $.valueLists;
+        this.valueObj = $.valueObj;
     }
 
     public static Builder builder() {
@@ -147,6 +181,58 @@ public final class WirelessSsidsFirewallL7FirewallRulesRuleArgs extends com.pulu
          */
         public Builder value(String value) {
             return value(Output.of(value));
+        }
+
+        /**
+         * @param valueLists The &#39;value_list&#39; of what you want to block. Send a list in request
+         * 
+         * @return builder
+         * 
+         */
+        public Builder valueLists(@Nullable Output<List<String>> valueLists) {
+            $.valueLists = valueLists;
+            return this;
+        }
+
+        /**
+         * @param valueLists The &#39;value_list&#39; of what you want to block. Send a list in request
+         * 
+         * @return builder
+         * 
+         */
+        public Builder valueLists(List<String> valueLists) {
+            return valueLists(Output.of(valueLists));
+        }
+
+        /**
+         * @param valueLists The &#39;value_list&#39; of what you want to block. Send a list in request
+         * 
+         * @return builder
+         * 
+         */
+        public Builder valueLists(String... valueLists) {
+            return valueLists(List.of(valueLists));
+        }
+
+        /**
+         * @param valueObj The &#39;value_obj&#39; of what you want to block. Send a dict in request
+         * 
+         * @return builder
+         * 
+         */
+        public Builder valueObj(@Nullable Output<WirelessSsidsFirewallL7FirewallRulesRuleValueObjArgs> valueObj) {
+            $.valueObj = valueObj;
+            return this;
+        }
+
+        /**
+         * @param valueObj The &#39;value_obj&#39; of what you want to block. Send a dict in request
+         * 
+         * @return builder
+         * 
+         */
+        public Builder valueObj(WirelessSsidsFirewallL7FirewallRulesRuleValueObjArgs valueObj) {
+            return valueObj(Output.of(valueObj));
         }
 
         public WirelessSsidsFirewallL7FirewallRulesRuleArgs build() {

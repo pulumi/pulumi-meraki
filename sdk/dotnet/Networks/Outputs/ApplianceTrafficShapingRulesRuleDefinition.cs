@@ -28,15 +28,29 @@ namespace Pulumi.Meraki.Networks.Outputs
         /// endpoint).
         /// </summary>
         public readonly string? Value;
+        /// <summary>
+        /// The 'value_list' of what you want to block. Send a list in request
+        /// </summary>
+        public readonly ImmutableArray<string> ValueLists;
+        /// <summary>
+        /// The 'value_obj' of what you want to block. Send a dict in request
+        /// </summary>
+        public readonly Outputs.ApplianceTrafficShapingRulesRuleDefinitionValueObj? ValueObj;
 
         [OutputConstructor]
         private ApplianceTrafficShapingRulesRuleDefinition(
             string? type,
 
-            string? value)
+            string? value,
+
+            ImmutableArray<string> valueLists,
+
+            Outputs.ApplianceTrafficShapingRulesRuleDefinitionValueObj? valueObj)
         {
             Type = type;
             Value = value;
+            ValueLists = valueLists;
+            ValueObj = valueObj;
         }
     }
 }

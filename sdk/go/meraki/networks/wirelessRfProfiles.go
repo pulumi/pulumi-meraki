@@ -31,7 +31,7 @@ type WirelessRfProfiles struct {
 	// Settings related to 5Ghz band
 	FiveGhzSettings WirelessRfProfilesFiveGhzSettingsOutput `pulumi:"fiveGhzSettings"`
 	// Flex radio settings.
-	FlexRadios WirelessRfProfilesFlexRadiosOutput `pulumi:"flexRadios"`
+	FlexRadios WirelessRfProfilesFlexRadiosPtrOutput `pulumi:"flexRadios"`
 	// Minimum bitrate can be set to either 'band' or 'ssid'. Defaults to band.
 	MinBitrateType pulumi.StringOutput `pulumi:"minBitrateType"`
 	// The name of the new profile. Must be unique. This param is required on creation.
@@ -41,7 +41,7 @@ type WirelessRfProfiles struct {
 	// Per-SSID radio settings by number.
 	PerSsidSettings WirelessRfProfilesPerSsidSettingsOutput `pulumi:"perSsidSettings"`
 	// rfProfileId path parameter. Rf profile ID
-	RfProfileId pulumi.StringPtrOutput `pulumi:"rfProfileId"`
+	RfProfileId pulumi.StringOutput `pulumi:"rfProfileId"`
 	// Settings related to 6Ghz band. Only applicable to networks with 6Ghz capable APs
 	SixGhzSettings WirelessRfProfilesSixGhzSettingsOutput `pulumi:"sixGhzSettings"`
 	// Settings related to radio transmission.
@@ -311,8 +311,8 @@ func (o WirelessRfProfilesOutput) FiveGhzSettings() WirelessRfProfilesFiveGhzSet
 }
 
 // Flex radio settings.
-func (o WirelessRfProfilesOutput) FlexRadios() WirelessRfProfilesFlexRadiosOutput {
-	return o.ApplyT(func(v *WirelessRfProfiles) WirelessRfProfilesFlexRadiosOutput { return v.FlexRadios }).(WirelessRfProfilesFlexRadiosOutput)
+func (o WirelessRfProfilesOutput) FlexRadios() WirelessRfProfilesFlexRadiosPtrOutput {
+	return o.ApplyT(func(v *WirelessRfProfiles) WirelessRfProfilesFlexRadiosPtrOutput { return v.FlexRadios }).(WirelessRfProfilesFlexRadiosPtrOutput)
 }
 
 // Minimum bitrate can be set to either 'band' or 'ssid'. Defaults to band.
@@ -336,8 +336,8 @@ func (o WirelessRfProfilesOutput) PerSsidSettings() WirelessRfProfilesPerSsidSet
 }
 
 // rfProfileId path parameter. Rf profile ID
-func (o WirelessRfProfilesOutput) RfProfileId() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *WirelessRfProfiles) pulumi.StringPtrOutput { return v.RfProfileId }).(pulumi.StringPtrOutput)
+func (o WirelessRfProfilesOutput) RfProfileId() pulumi.StringOutput {
+	return o.ApplyT(func(v *WirelessRfProfiles) pulumi.StringOutput { return v.RfProfileId }).(pulumi.StringOutput)
 }
 
 // Settings related to 6Ghz band. Only applicable to networks with 6Ghz capable APs

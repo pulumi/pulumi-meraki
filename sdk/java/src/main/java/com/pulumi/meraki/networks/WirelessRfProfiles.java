@@ -98,14 +98,14 @@ public class WirelessRfProfiles extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="flexRadios", refs={WirelessRfProfilesFlexRadios.class}, tree="[0]")
-    private Output<WirelessRfProfilesFlexRadios> flexRadios;
+    private Output</* @Nullable */ WirelessRfProfilesFlexRadios> flexRadios;
 
     /**
      * @return Flex radio settings.
      * 
      */
-    public Output<WirelessRfProfilesFlexRadios> flexRadios() {
-        return this.flexRadios;
+    public Output<Optional<WirelessRfProfilesFlexRadios>> flexRadios() {
+        return Codegen.optional(this.flexRadios);
     }
     /**
      * Minimum bitrate can be set to either &#39;band&#39; or &#39;ssid&#39;. Defaults to band.
@@ -168,14 +168,14 @@ public class WirelessRfProfiles extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="rfProfileId", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> rfProfileId;
+    private Output<String> rfProfileId;
 
     /**
      * @return rfProfileId path parameter. Rf profile ID
      * 
      */
-    public Output<Optional<String>> rfProfileId() {
-        return Codegen.optional(this.rfProfileId);
+    public Output<String> rfProfileId() {
+        return this.rfProfileId;
     }
     /**
      * Settings related to 6Ghz band. Only applicable to networks with 6Ghz capable APs

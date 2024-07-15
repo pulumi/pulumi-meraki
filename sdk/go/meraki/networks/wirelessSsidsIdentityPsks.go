@@ -59,7 +59,7 @@ type WirelessSsidsIdentityPsks struct {
 	// The group policy to be applied to clients
 	GroupPolicyId pulumi.StringOutput `pulumi:"groupPolicyId"`
 	// identityPskId path parameter. Identity psk ID
-	IdentityPskId pulumi.StringPtrOutput `pulumi:"identityPskId"`
+	IdentityPskId pulumi.StringOutput `pulumi:"identityPskId"`
 	// The name of the Identity PSK
 	Name pulumi.StringOutput `pulumi:"name"`
 	// networkId path parameter. Network ID
@@ -291,8 +291,8 @@ func (o WirelessSsidsIdentityPsksOutput) GroupPolicyId() pulumi.StringOutput {
 }
 
 // identityPskId path parameter. Identity psk ID
-func (o WirelessSsidsIdentityPsksOutput) IdentityPskId() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *WirelessSsidsIdentityPsks) pulumi.StringPtrOutput { return v.IdentityPskId }).(pulumi.StringPtrOutput)
+func (o WirelessSsidsIdentityPsksOutput) IdentityPskId() pulumi.StringOutput {
+	return o.ApplyT(func(v *WirelessSsidsIdentityPsks) pulumi.StringOutput { return v.IdentityPskId }).(pulumi.StringOutput)
 }
 
 // The name of the Identity PSK

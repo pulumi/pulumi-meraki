@@ -11,7 +11,6 @@ import com.pulumi.meraki.Utilities;
 import com.pulumi.meraki.networks.WirelessSsidsIdentityPsksArgs;
 import com.pulumi.meraki.networks.inputs.WirelessSsidsIdentityPsksState;
 import java.lang.String;
-import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
@@ -112,14 +111,14 @@ public class WirelessSsidsIdentityPsks extends com.pulumi.resources.CustomResour
      * 
      */
     @Export(name="identityPskId", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> identityPskId;
+    private Output<String> identityPskId;
 
     /**
      * @return identityPskId path parameter. Identity psk ID
      * 
      */
-    public Output<Optional<String>> identityPskId() {
-        return Codegen.optional(this.identityPskId);
+    public Output<String> identityPskId() {
+        return this.identityPskId;
     }
     /**
      * The name of the Identity PSK

@@ -727,7 +727,14 @@
                         "elem": {
                             "fields": {
                                 "definitions": {
-                                    "maxItemsOne": false
+                                    "maxItemsOne": false,
+                                    "elem": {
+                                        "fields": {
+                                            "value_list": {
+                                                "maxItemsOne": false
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -2248,7 +2255,14 @@
                 "current": "meraki:networks/wirelessSsidsFirewallL7FirewallRules:WirelessSsidsFirewallL7FirewallRules",
                 "fields": {
                     "rules": {
-                        "maxItemsOne": false
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "value_list": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
                     }
                 }
             },

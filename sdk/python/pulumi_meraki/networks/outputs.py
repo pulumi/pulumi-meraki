@@ -62,6 +62,7 @@ __all__ = [
     'ApplianceTrafficShapingGlobalBandwidthLimits',
     'ApplianceTrafficShapingRulesRule',
     'ApplianceTrafficShapingRulesRuleDefinition',
+    'ApplianceTrafficShapingRulesRuleDefinitionValueObj',
     'ApplianceTrafficShapingRulesRulePerClientBandwidthLimits',
     'ApplianceTrafficShapingRulesRulePerClientBandwidthLimitsBandwidthLimits',
     'ApplianceTrafficShapingUplinkBandwidthBandwidthLimits',
@@ -502,6 +503,7 @@ __all__ = [
     'WirelessSsidsFirewallL3FirewallRulesRule',
     'WirelessSsidsFirewallL3FirewallRulesRulesResponse',
     'WirelessSsidsFirewallL7FirewallRulesRule',
+    'WirelessSsidsFirewallL7FirewallRulesRuleValueObj',
     'WirelessSsidsGre',
     'WirelessSsidsGreConcentrator',
     'WirelessSsidsHotspot20MccMnc',
@@ -4057,9 +4059,30 @@ class ApplianceTrafficShapingRulesRule(dict):
 
 @pulumi.output_type
 class ApplianceTrafficShapingRulesRuleDefinition(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "valueLists":
+            suggest = "value_lists"
+        elif key == "valueObj":
+            suggest = "value_obj"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in ApplianceTrafficShapingRulesRuleDefinition. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        ApplianceTrafficShapingRulesRuleDefinition.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        ApplianceTrafficShapingRulesRuleDefinition.__key_warning(key)
+        return super().get(key, default)
+
     def __init__(__self__, *,
                  type: Optional[str] = None,
-                 value: Optional[str] = None):
+                 value: Optional[str] = None,
+                 value_lists: Optional[Sequence[str]] = None,
+                 value_obj: Optional['outputs.ApplianceTrafficShapingRulesRuleDefinitionValueObj'] = None):
         """
         :param str type: The type of definition. Can be one of 'application', 'applicationCategory', 'host', 'port', 'ipRange' or 'localNet'.
         :param str value: If "type" is 'host', 'port', 'ipRange' or 'localNet', then "value" must be a string, matching either
@@ -4070,11 +4093,17 @@ class ApplianceTrafficShapingRulesRuleDefinition(dict):
                with the structure { "id": "meraki:layer7/..." }, where "id" is the application category or
                application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
                endpoint).
+        :param Sequence[str] value_lists: The 'value_list' of what you want to block. Send a list in request
+        :param 'ApplianceTrafficShapingRulesRuleDefinitionValueObjArgs' value_obj: The 'value_obj' of what you want to block. Send a dict in request
         """
         if type is not None:
             pulumi.set(__self__, "type", type)
         if value is not None:
             pulumi.set(__self__, "value", value)
+        if value_lists is not None:
+            pulumi.set(__self__, "value_lists", value_lists)
+        if value_obj is not None:
+            pulumi.set(__self__, "value_obj", value_obj)
 
     @property
     @pulumi.getter
@@ -4098,6 +4127,43 @@ class ApplianceTrafficShapingRulesRuleDefinition(dict):
         endpoint).
         """
         return pulumi.get(self, "value")
+
+    @property
+    @pulumi.getter(name="valueLists")
+    def value_lists(self) -> Optional[Sequence[str]]:
+        """
+        The 'value_list' of what you want to block. Send a list in request
+        """
+        return pulumi.get(self, "value_lists")
+
+    @property
+    @pulumi.getter(name="valueObj")
+    def value_obj(self) -> Optional['outputs.ApplianceTrafficShapingRulesRuleDefinitionValueObj']:
+        """
+        The 'value_obj' of what you want to block. Send a dict in request
+        """
+        return pulumi.get(self, "value_obj")
+
+
+@pulumi.output_type
+class ApplianceTrafficShapingRulesRuleDefinitionValueObj(dict):
+    def __init__(__self__, *,
+                 id: Optional[str] = None,
+                 name: Optional[str] = None):
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+        if name is not None:
+            pulumi.set(__self__, "name", name)
+
+    @property
+    @pulumi.getter
+    def id(self) -> Optional[str]:
+        return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter
+    def name(self) -> Optional[str]:
+        return pulumi.get(self, "name")
 
 
 @pulumi.output_type
@@ -27396,14 +27462,37 @@ class WirelessSsidsFirewallL3FirewallRulesRulesResponse(dict):
 
 @pulumi.output_type
 class WirelessSsidsFirewallL7FirewallRulesRule(dict):
+    @staticmethod
+    def __key_warning(key: str):
+        suggest = None
+        if key == "valueLists":
+            suggest = "value_lists"
+        elif key == "valueObj":
+            suggest = "value_obj"
+
+        if suggest:
+            pulumi.log.warn(f"Key '{key}' not found in WirelessSsidsFirewallL7FirewallRulesRule. Access the value via the '{suggest}' property getter instead.")
+
+    def __getitem__(self, key: str) -> Any:
+        WirelessSsidsFirewallL7FirewallRulesRule.__key_warning(key)
+        return super().__getitem__(key)
+
+    def get(self, key: str, default = None) -> Any:
+        WirelessSsidsFirewallL7FirewallRulesRule.__key_warning(key)
+        return super().get(key, default)
+
     def __init__(__self__, *,
                  policy: Optional[str] = None,
                  type: Optional[str] = None,
-                 value: Optional[str] = None):
+                 value: Optional[str] = None,
+                 value_lists: Optional[Sequence[str]] = None,
+                 value_obj: Optional['outputs.WirelessSsidsFirewallL7FirewallRulesRuleValueObj'] = None):
         """
         :param str policy: 'Deny' traffic specified by this rule
         :param str type: Type of the L7 firewall rule. One of: 'application', 'applicationCategory', 'host', 'port', 'ipRange'
         :param str value: The value of what needs to get blocked. Format of the value varies depending on type of the firewall rule selected.
+        :param Sequence[str] value_lists: The 'value_list' of what you want to block. Send a list in request
+        :param 'WirelessSsidsFirewallL7FirewallRulesRuleValueObjArgs' value_obj: The 'value_obj' of what you want to block. Send a dict in request
         """
         if policy is not None:
             pulumi.set(__self__, "policy", policy)
@@ -27411,6 +27500,10 @@ class WirelessSsidsFirewallL7FirewallRulesRule(dict):
             pulumi.set(__self__, "type", type)
         if value is not None:
             pulumi.set(__self__, "value", value)
+        if value_lists is not None:
+            pulumi.set(__self__, "value_lists", value_lists)
+        if value_obj is not None:
+            pulumi.set(__self__, "value_obj", value_obj)
 
     @property
     @pulumi.getter
@@ -27435,6 +27528,43 @@ class WirelessSsidsFirewallL7FirewallRulesRule(dict):
         The value of what needs to get blocked. Format of the value varies depending on type of the firewall rule selected.
         """
         return pulumi.get(self, "value")
+
+    @property
+    @pulumi.getter(name="valueLists")
+    def value_lists(self) -> Optional[Sequence[str]]:
+        """
+        The 'value_list' of what you want to block. Send a list in request
+        """
+        return pulumi.get(self, "value_lists")
+
+    @property
+    @pulumi.getter(name="valueObj")
+    def value_obj(self) -> Optional['outputs.WirelessSsidsFirewallL7FirewallRulesRuleValueObj']:
+        """
+        The 'value_obj' of what you want to block. Send a dict in request
+        """
+        return pulumi.get(self, "value_obj")
+
+
+@pulumi.output_type
+class WirelessSsidsFirewallL7FirewallRulesRuleValueObj(dict):
+    def __init__(__self__, *,
+                 id: Optional[str] = None,
+                 name: Optional[str] = None):
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+        if name is not None:
+            pulumi.set(__self__, "name", name)
+
+    @property
+    @pulumi.getter
+    def id(self) -> Optional[str]:
+        return pulumi.get(self, "id")
+
+    @property
+    @pulumi.getter
+    def name(self) -> Optional[str]:
+        return pulumi.get(self, "name")
 
 
 @pulumi.output_type
