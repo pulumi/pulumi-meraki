@@ -1,0 +1,18 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Venelin <venelin@pulumi.com>
+Date: Fri, 12 Jul 2024 17:48:20 +0100
+Subject: [PATCH] patch appliance vlans
+
+
+diff --git a/internal/provider/resource_meraki_networks_appliance_vlans.go b/internal/provider/resource_meraki_networks_appliance_vlans.go
+index 4202af8..e4a56b6 100644
+--- a/internal/provider/resource_meraki_networks_appliance_vlans.go
++++ b/internal/provider/resource_meraki_networks_appliance_vlans.go
+@@ -358,7 +358,6 @@ func (r *NetworksApplianceVLANsResource) Schema(_ context.Context, _ resource.Sc
+ 
+ 						"comment": schema.StringAttribute{
+ 							MarkdownDescription: `A text comment for the reserved range`,
+-							Computed:            true,
+ 							Optional:            true,
+ 							PlanModifiers: []planmodifier.String{
+ 								stringplanmodifier.UseStateForUnknown(),
