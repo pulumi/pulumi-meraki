@@ -98,6 +98,20 @@ public class SwitchStacksRoutingInterfaces extends com.pulumi.resources.CustomRe
         return this.defaultGateway;
     }
     /**
+     * IPv4 default gateway
+     * 
+     */
+    @Export(name="defaultGatewayResponse", refs={String.class}, tree="[0]")
+    private Output<String> defaultGatewayResponse;
+
+    /**
+     * @return IPv4 default gateway
+     * 
+     */
+    public Output<String> defaultGatewayResponse() {
+        return this.defaultGatewayResponse;
+    }
+    /**
      * The id
      * 
      */

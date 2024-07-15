@@ -13,6 +13,272 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
+type GetWirelessEthernetPortsProfilesItemUsbPort struct {
+	// Enabled
+	Enabled bool `pulumi:"enabled"`
+	// Name
+	Name string `pulumi:"name"`
+	// Ssid number
+	Ssid int `pulumi:"ssid"`
+}
+
+// GetWirelessEthernetPortsProfilesItemUsbPortInput is an input type that accepts GetWirelessEthernetPortsProfilesItemUsbPortArgs and GetWirelessEthernetPortsProfilesItemUsbPortOutput values.
+// You can construct a concrete instance of `GetWirelessEthernetPortsProfilesItemUsbPortInput` via:
+//
+//	GetWirelessEthernetPortsProfilesItemUsbPortArgs{...}
+type GetWirelessEthernetPortsProfilesItemUsbPortInput interface {
+	pulumi.Input
+
+	ToGetWirelessEthernetPortsProfilesItemUsbPortOutput() GetWirelessEthernetPortsProfilesItemUsbPortOutput
+	ToGetWirelessEthernetPortsProfilesItemUsbPortOutputWithContext(context.Context) GetWirelessEthernetPortsProfilesItemUsbPortOutput
+}
+
+type GetWirelessEthernetPortsProfilesItemUsbPortArgs struct {
+	// Enabled
+	Enabled pulumi.BoolInput `pulumi:"enabled"`
+	// Name
+	Name pulumi.StringInput `pulumi:"name"`
+	// Ssid number
+	Ssid pulumi.IntInput `pulumi:"ssid"`
+}
+
+func (GetWirelessEthernetPortsProfilesItemUsbPortArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetWirelessEthernetPortsProfilesItemUsbPort)(nil)).Elem()
+}
+
+func (i GetWirelessEthernetPortsProfilesItemUsbPortArgs) ToGetWirelessEthernetPortsProfilesItemUsbPortOutput() GetWirelessEthernetPortsProfilesItemUsbPortOutput {
+	return i.ToGetWirelessEthernetPortsProfilesItemUsbPortOutputWithContext(context.Background())
+}
+
+func (i GetWirelessEthernetPortsProfilesItemUsbPortArgs) ToGetWirelessEthernetPortsProfilesItemUsbPortOutputWithContext(ctx context.Context) GetWirelessEthernetPortsProfilesItemUsbPortOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessEthernetPortsProfilesItemUsbPortOutput)
+}
+
+// GetWirelessEthernetPortsProfilesItemUsbPortArrayInput is an input type that accepts GetWirelessEthernetPortsProfilesItemUsbPortArray and GetWirelessEthernetPortsProfilesItemUsbPortArrayOutput values.
+// You can construct a concrete instance of `GetWirelessEthernetPortsProfilesItemUsbPortArrayInput` via:
+//
+//	GetWirelessEthernetPortsProfilesItemUsbPortArray{ GetWirelessEthernetPortsProfilesItemUsbPortArgs{...} }
+type GetWirelessEthernetPortsProfilesItemUsbPortArrayInput interface {
+	pulumi.Input
+
+	ToGetWirelessEthernetPortsProfilesItemUsbPortArrayOutput() GetWirelessEthernetPortsProfilesItemUsbPortArrayOutput
+	ToGetWirelessEthernetPortsProfilesItemUsbPortArrayOutputWithContext(context.Context) GetWirelessEthernetPortsProfilesItemUsbPortArrayOutput
+}
+
+type GetWirelessEthernetPortsProfilesItemUsbPortArray []GetWirelessEthernetPortsProfilesItemUsbPortInput
+
+func (GetWirelessEthernetPortsProfilesItemUsbPortArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetWirelessEthernetPortsProfilesItemUsbPort)(nil)).Elem()
+}
+
+func (i GetWirelessEthernetPortsProfilesItemUsbPortArray) ToGetWirelessEthernetPortsProfilesItemUsbPortArrayOutput() GetWirelessEthernetPortsProfilesItemUsbPortArrayOutput {
+	return i.ToGetWirelessEthernetPortsProfilesItemUsbPortArrayOutputWithContext(context.Background())
+}
+
+func (i GetWirelessEthernetPortsProfilesItemUsbPortArray) ToGetWirelessEthernetPortsProfilesItemUsbPortArrayOutputWithContext(ctx context.Context) GetWirelessEthernetPortsProfilesItemUsbPortArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessEthernetPortsProfilesItemUsbPortArrayOutput)
+}
+
+type GetWirelessEthernetPortsProfilesItemUsbPortOutput struct{ *pulumi.OutputState }
+
+func (GetWirelessEthernetPortsProfilesItemUsbPortOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetWirelessEthernetPortsProfilesItemUsbPort)(nil)).Elem()
+}
+
+func (o GetWirelessEthernetPortsProfilesItemUsbPortOutput) ToGetWirelessEthernetPortsProfilesItemUsbPortOutput() GetWirelessEthernetPortsProfilesItemUsbPortOutput {
+	return o
+}
+
+func (o GetWirelessEthernetPortsProfilesItemUsbPortOutput) ToGetWirelessEthernetPortsProfilesItemUsbPortOutputWithContext(ctx context.Context) GetWirelessEthernetPortsProfilesItemUsbPortOutput {
+	return o
+}
+
+// Enabled
+func (o GetWirelessEthernetPortsProfilesItemUsbPortOutput) Enabled() pulumi.BoolOutput {
+	return o.ApplyT(func(v GetWirelessEthernetPortsProfilesItemUsbPort) bool { return v.Enabled }).(pulumi.BoolOutput)
+}
+
+// Name
+func (o GetWirelessEthernetPortsProfilesItemUsbPortOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v GetWirelessEthernetPortsProfilesItemUsbPort) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// Ssid number
+func (o GetWirelessEthernetPortsProfilesItemUsbPortOutput) Ssid() pulumi.IntOutput {
+	return o.ApplyT(func(v GetWirelessEthernetPortsProfilesItemUsbPort) int { return v.Ssid }).(pulumi.IntOutput)
+}
+
+type GetWirelessEthernetPortsProfilesItemUsbPortArrayOutput struct{ *pulumi.OutputState }
+
+func (GetWirelessEthernetPortsProfilesItemUsbPortArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetWirelessEthernetPortsProfilesItemUsbPort)(nil)).Elem()
+}
+
+func (o GetWirelessEthernetPortsProfilesItemUsbPortArrayOutput) ToGetWirelessEthernetPortsProfilesItemUsbPortArrayOutput() GetWirelessEthernetPortsProfilesItemUsbPortArrayOutput {
+	return o
+}
+
+func (o GetWirelessEthernetPortsProfilesItemUsbPortArrayOutput) ToGetWirelessEthernetPortsProfilesItemUsbPortArrayOutputWithContext(ctx context.Context) GetWirelessEthernetPortsProfilesItemUsbPortArrayOutput {
+	return o
+}
+
+func (o GetWirelessEthernetPortsProfilesItemUsbPortArrayOutput) Index(i pulumi.IntInput) GetWirelessEthernetPortsProfilesItemUsbPortOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetWirelessEthernetPortsProfilesItemUsbPort {
+		return vs[0].([]GetWirelessEthernetPortsProfilesItemUsbPort)[vs[1].(int)]
+	}).(GetWirelessEthernetPortsProfilesItemUsbPortOutput)
+}
+
+type GetWirelessFailedConnectionsItem struct {
+	// Client Mac
+	ClientMac string `pulumi:"clientMac"`
+	// The failed onboarding step. One of: assoc, auth, dhcp, dns.
+	FailureStep string `pulumi:"failureStep"`
+	// Serial Number
+	Serial string `pulumi:"serial"`
+	// SSID Number
+	SsidNumber int `pulumi:"ssidNumber"`
+	// The timestamp when the client mac failed
+	Ts string `pulumi:"ts"`
+	// The failure type in the onboarding step
+	Type string `pulumi:"type"`
+	// LAN
+	Vlan int `pulumi:"vlan"`
+}
+
+// GetWirelessFailedConnectionsItemInput is an input type that accepts GetWirelessFailedConnectionsItemArgs and GetWirelessFailedConnectionsItemOutput values.
+// You can construct a concrete instance of `GetWirelessFailedConnectionsItemInput` via:
+//
+//	GetWirelessFailedConnectionsItemArgs{...}
+type GetWirelessFailedConnectionsItemInput interface {
+	pulumi.Input
+
+	ToGetWirelessFailedConnectionsItemOutput() GetWirelessFailedConnectionsItemOutput
+	ToGetWirelessFailedConnectionsItemOutputWithContext(context.Context) GetWirelessFailedConnectionsItemOutput
+}
+
+type GetWirelessFailedConnectionsItemArgs struct {
+	// Client Mac
+	ClientMac pulumi.StringInput `pulumi:"clientMac"`
+	// The failed onboarding step. One of: assoc, auth, dhcp, dns.
+	FailureStep pulumi.StringInput `pulumi:"failureStep"`
+	// Serial Number
+	Serial pulumi.StringInput `pulumi:"serial"`
+	// SSID Number
+	SsidNumber pulumi.IntInput `pulumi:"ssidNumber"`
+	// The timestamp when the client mac failed
+	Ts pulumi.StringInput `pulumi:"ts"`
+	// The failure type in the onboarding step
+	Type pulumi.StringInput `pulumi:"type"`
+	// LAN
+	Vlan pulumi.IntInput `pulumi:"vlan"`
+}
+
+func (GetWirelessFailedConnectionsItemArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetWirelessFailedConnectionsItem)(nil)).Elem()
+}
+
+func (i GetWirelessFailedConnectionsItemArgs) ToGetWirelessFailedConnectionsItemOutput() GetWirelessFailedConnectionsItemOutput {
+	return i.ToGetWirelessFailedConnectionsItemOutputWithContext(context.Background())
+}
+
+func (i GetWirelessFailedConnectionsItemArgs) ToGetWirelessFailedConnectionsItemOutputWithContext(ctx context.Context) GetWirelessFailedConnectionsItemOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessFailedConnectionsItemOutput)
+}
+
+// GetWirelessFailedConnectionsItemArrayInput is an input type that accepts GetWirelessFailedConnectionsItemArray and GetWirelessFailedConnectionsItemArrayOutput values.
+// You can construct a concrete instance of `GetWirelessFailedConnectionsItemArrayInput` via:
+//
+//	GetWirelessFailedConnectionsItemArray{ GetWirelessFailedConnectionsItemArgs{...} }
+type GetWirelessFailedConnectionsItemArrayInput interface {
+	pulumi.Input
+
+	ToGetWirelessFailedConnectionsItemArrayOutput() GetWirelessFailedConnectionsItemArrayOutput
+	ToGetWirelessFailedConnectionsItemArrayOutputWithContext(context.Context) GetWirelessFailedConnectionsItemArrayOutput
+}
+
+type GetWirelessFailedConnectionsItemArray []GetWirelessFailedConnectionsItemInput
+
+func (GetWirelessFailedConnectionsItemArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetWirelessFailedConnectionsItem)(nil)).Elem()
+}
+
+func (i GetWirelessFailedConnectionsItemArray) ToGetWirelessFailedConnectionsItemArrayOutput() GetWirelessFailedConnectionsItemArrayOutput {
+	return i.ToGetWirelessFailedConnectionsItemArrayOutputWithContext(context.Background())
+}
+
+func (i GetWirelessFailedConnectionsItemArray) ToGetWirelessFailedConnectionsItemArrayOutputWithContext(ctx context.Context) GetWirelessFailedConnectionsItemArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessFailedConnectionsItemArrayOutput)
+}
+
+type GetWirelessFailedConnectionsItemOutput struct{ *pulumi.OutputState }
+
+func (GetWirelessFailedConnectionsItemOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*GetWirelessFailedConnectionsItem)(nil)).Elem()
+}
+
+func (o GetWirelessFailedConnectionsItemOutput) ToGetWirelessFailedConnectionsItemOutput() GetWirelessFailedConnectionsItemOutput {
+	return o
+}
+
+func (o GetWirelessFailedConnectionsItemOutput) ToGetWirelessFailedConnectionsItemOutputWithContext(ctx context.Context) GetWirelessFailedConnectionsItemOutput {
+	return o
+}
+
+// Client Mac
+func (o GetWirelessFailedConnectionsItemOutput) ClientMac() pulumi.StringOutput {
+	return o.ApplyT(func(v GetWirelessFailedConnectionsItem) string { return v.ClientMac }).(pulumi.StringOutput)
+}
+
+// The failed onboarding step. One of: assoc, auth, dhcp, dns.
+func (o GetWirelessFailedConnectionsItemOutput) FailureStep() pulumi.StringOutput {
+	return o.ApplyT(func(v GetWirelessFailedConnectionsItem) string { return v.FailureStep }).(pulumi.StringOutput)
+}
+
+// Serial Number
+func (o GetWirelessFailedConnectionsItemOutput) Serial() pulumi.StringOutput {
+	return o.ApplyT(func(v GetWirelessFailedConnectionsItem) string { return v.Serial }).(pulumi.StringOutput)
+}
+
+// SSID Number
+func (o GetWirelessFailedConnectionsItemOutput) SsidNumber() pulumi.IntOutput {
+	return o.ApplyT(func(v GetWirelessFailedConnectionsItem) int { return v.SsidNumber }).(pulumi.IntOutput)
+}
+
+// The timestamp when the client mac failed
+func (o GetWirelessFailedConnectionsItemOutput) Ts() pulumi.StringOutput {
+	return o.ApplyT(func(v GetWirelessFailedConnectionsItem) string { return v.Ts }).(pulumi.StringOutput)
+}
+
+// The failure type in the onboarding step
+func (o GetWirelessFailedConnectionsItemOutput) Type() pulumi.StringOutput {
+	return o.ApplyT(func(v GetWirelessFailedConnectionsItem) string { return v.Type }).(pulumi.StringOutput)
+}
+
+// LAN
+func (o GetWirelessFailedConnectionsItemOutput) Vlan() pulumi.IntOutput {
+	return o.ApplyT(func(v GetWirelessFailedConnectionsItem) int { return v.Vlan }).(pulumi.IntOutput)
+}
+
+type GetWirelessFailedConnectionsItemArrayOutput struct{ *pulumi.OutputState }
+
+func (GetWirelessFailedConnectionsItemArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]GetWirelessFailedConnectionsItem)(nil)).Elem()
+}
+
+func (o GetWirelessFailedConnectionsItemArrayOutput) ToGetWirelessFailedConnectionsItemArrayOutput() GetWirelessFailedConnectionsItemArrayOutput {
+	return o
+}
+
+func (o GetWirelessFailedConnectionsItemArrayOutput) ToGetWirelessFailedConnectionsItemArrayOutputWithContext(ctx context.Context) GetWirelessFailedConnectionsItemArrayOutput {
+	return o
+}
+
+func (o GetWirelessFailedConnectionsItemArrayOutput) Index(i pulumi.IntInput) GetWirelessFailedConnectionsItemOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetWirelessFailedConnectionsItem {
+		return vs[0].([]GetWirelessFailedConnectionsItem)[vs[1].(int)]
+	}).(GetWirelessFailedConnectionsItemOutput)
+}
+
 type GetWirelessLatencyHistoryItem struct {
 	// Average latency in milliseconds
 	AvgLatencyMs int `pulumi:"avgLatencyMs"`
@@ -8141,6 +8407,10 @@ func (o GetWirelessUsageHistoryItemArrayOutput) Index(i pulumi.IntInput) GetWire
 }
 
 func init() {
+	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessEthernetPortsProfilesItemUsbPortInput)(nil)).Elem(), GetWirelessEthernetPortsProfilesItemUsbPortArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessEthernetPortsProfilesItemUsbPortArrayInput)(nil)).Elem(), GetWirelessEthernetPortsProfilesItemUsbPortArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessFailedConnectionsItemInput)(nil)).Elem(), GetWirelessFailedConnectionsItemArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessFailedConnectionsItemArrayInput)(nil)).Elem(), GetWirelessFailedConnectionsItemArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessLatencyHistoryItemInput)(nil)).Elem(), GetWirelessLatencyHistoryItemArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessLatencyHistoryItemArrayInput)(nil)).Elem(), GetWirelessLatencyHistoryItemArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessLatencyStatsItemInput)(nil)).Elem(), GetWirelessLatencyStatsItemArgs{})
@@ -8255,6 +8525,10 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessSsidsVpnItemSplitTunnelRuleArrayInput)(nil)).Elem(), GetWirelessSsidsVpnItemSplitTunnelRuleArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessUsageHistoryItemInput)(nil)).Elem(), GetWirelessUsageHistoryItemArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessUsageHistoryItemArrayInput)(nil)).Elem(), GetWirelessUsageHistoryItemArray{})
+	pulumi.RegisterOutputType(GetWirelessEthernetPortsProfilesItemUsbPortOutput{})
+	pulumi.RegisterOutputType(GetWirelessEthernetPortsProfilesItemUsbPortArrayOutput{})
+	pulumi.RegisterOutputType(GetWirelessFailedConnectionsItemOutput{})
+	pulumi.RegisterOutputType(GetWirelessFailedConnectionsItemArrayOutput{})
 	pulumi.RegisterOutputType(GetWirelessLatencyHistoryItemOutput{})
 	pulumi.RegisterOutputType(GetWirelessLatencyHistoryItemArrayOutput{})
 	pulumi.RegisterOutputType(GetWirelessLatencyStatsItemOutput{})

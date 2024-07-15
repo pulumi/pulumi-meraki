@@ -4,7 +4,9 @@
 package com.pulumi.meraki.networks.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.meraki.networks.outputs.ApplianceTrafficShapingRulesRuleDefinitionValueObj;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -28,6 +30,16 @@ public final class ApplianceTrafficShapingRulesRuleDefinition {
      * 
      */
     private @Nullable String value;
+    /**
+     * @return The &#39;value_list&#39; of what you want to block. Send a list in request
+     * 
+     */
+    private @Nullable List<String> valueLists;
+    /**
+     * @return The &#39;value_obj&#39; of what you want to block. Send a dict in request
+     * 
+     */
+    private @Nullable ApplianceTrafficShapingRulesRuleDefinitionValueObj valueObj;
 
     private ApplianceTrafficShapingRulesRuleDefinition() {}
     /**
@@ -51,6 +63,20 @@ public final class ApplianceTrafficShapingRulesRuleDefinition {
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
+    /**
+     * @return The &#39;value_list&#39; of what you want to block. Send a list in request
+     * 
+     */
+    public List<String> valueLists() {
+        return this.valueLists == null ? List.of() : this.valueLists;
+    }
+    /**
+     * @return The &#39;value_obj&#39; of what you want to block. Send a dict in request
+     * 
+     */
+    public Optional<ApplianceTrafficShapingRulesRuleDefinitionValueObj> valueObj() {
+        return Optional.ofNullable(this.valueObj);
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -63,11 +89,15 @@ public final class ApplianceTrafficShapingRulesRuleDefinition {
     public static final class Builder {
         private @Nullable String type;
         private @Nullable String value;
+        private @Nullable List<String> valueLists;
+        private @Nullable ApplianceTrafficShapingRulesRuleDefinitionValueObj valueObj;
         public Builder() {}
         public Builder(ApplianceTrafficShapingRulesRuleDefinition defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.type = defaults.type;
     	      this.value = defaults.value;
+    	      this.valueLists = defaults.valueLists;
+    	      this.valueObj = defaults.valueObj;
         }
 
         @CustomType.Setter
@@ -82,10 +112,27 @@ public final class ApplianceTrafficShapingRulesRuleDefinition {
             this.value = value;
             return this;
         }
+        @CustomType.Setter
+        public Builder valueLists(@Nullable List<String> valueLists) {
+
+            this.valueLists = valueLists;
+            return this;
+        }
+        public Builder valueLists(String... valueLists) {
+            return valueLists(List.of(valueLists));
+        }
+        @CustomType.Setter
+        public Builder valueObj(@Nullable ApplianceTrafficShapingRulesRuleDefinitionValueObj valueObj) {
+
+            this.valueObj = valueObj;
+            return this;
+        }
         public ApplianceTrafficShapingRulesRuleDefinition build() {
             final var _resultValue = new ApplianceTrafficShapingRulesRuleDefinition();
             _resultValue.type = type;
             _resultValue.value = value;
+            _resultValue.valueLists = valueLists;
+            _resultValue.valueObj = valueObj;
             return _resultValue;
         }
     }

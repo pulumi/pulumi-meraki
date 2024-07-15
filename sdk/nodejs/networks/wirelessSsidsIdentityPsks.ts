@@ -71,7 +71,7 @@ export class WirelessSsidsIdentityPsks extends pulumi.CustomResource {
     /**
      * identityPskId path parameter. Identity psk ID
      */
-    public readonly identityPskId!: pulumi.Output<string | undefined>;
+    public readonly identityPskId!: pulumi.Output<string>;
     /**
      * The name of the Identity PSK
      */

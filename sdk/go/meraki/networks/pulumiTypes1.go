@@ -13,6 +13,356 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
+type WirelessSsidsHotspot20Venue struct {
+	// Venue name
+	Name *string `pulumi:"name"`
+	// Venue type ('Unspecified', 'Unspecified Assembly', 'Arena', 'Stadium', 'Passenger Terminal', 'Amphitheater', 'Amusement Park', 'Place of Worship', 'Convention Center', 'Library', 'Museum', 'Restaurant', 'Theater', 'Bar', 'Coffee Shop', 'Zoo or Aquarium', 'Emergency Coordination Center', 'Unspecified Business', 'Doctor or Dentist office', 'Bank', 'Fire Station', 'Police Station', 'Post Office', 'Professional Office', 'Research and Development Facility', 'Attorney Office', 'Unspecified Educational', 'School, Primary', 'School, Secondary', 'University or College', 'Unspecified Factory and Industrial', 'Factory', 'Unspecified Institutional', 'Hospital', 'Long-Term Care Facility', 'Alcohol and Drug Rehabilitation Center', 'Group Home', 'Prison or Jail', 'Unspecified Mercantile', 'Retail Store', 'Grocery Market', 'Automotive Service Station', 'Shopping Mall', 'Gas Station', 'Unspecified Residential', 'Private Residence', 'Hotel or Motel', 'Dormitory', 'Boarding House', 'Unspecified Storage', 'Unspecified Utility and Miscellaneous', 'Unspecified Vehicular', 'Automobile or Truck', 'Airplane', 'Bus', 'Ferry', 'Ship or Boat', 'Train', 'Motor Bike', 'Unspecified Outdoor', 'Muni-mesh Network', 'City Park', 'Rest Area', 'Traffic Control', 'Bus Stop', 'Kiosk')
+	Type *string `pulumi:"type"`
+}
+
+// WirelessSsidsHotspot20VenueInput is an input type that accepts WirelessSsidsHotspot20VenueArgs and WirelessSsidsHotspot20VenueOutput values.
+// You can construct a concrete instance of `WirelessSsidsHotspot20VenueInput` via:
+//
+//	WirelessSsidsHotspot20VenueArgs{...}
+type WirelessSsidsHotspot20VenueInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsHotspot20VenueOutput() WirelessSsidsHotspot20VenueOutput
+	ToWirelessSsidsHotspot20VenueOutputWithContext(context.Context) WirelessSsidsHotspot20VenueOutput
+}
+
+type WirelessSsidsHotspot20VenueArgs struct {
+	// Venue name
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// Venue type ('Unspecified', 'Unspecified Assembly', 'Arena', 'Stadium', 'Passenger Terminal', 'Amphitheater', 'Amusement Park', 'Place of Worship', 'Convention Center', 'Library', 'Museum', 'Restaurant', 'Theater', 'Bar', 'Coffee Shop', 'Zoo or Aquarium', 'Emergency Coordination Center', 'Unspecified Business', 'Doctor or Dentist office', 'Bank', 'Fire Station', 'Police Station', 'Post Office', 'Professional Office', 'Research and Development Facility', 'Attorney Office', 'Unspecified Educational', 'School, Primary', 'School, Secondary', 'University or College', 'Unspecified Factory and Industrial', 'Factory', 'Unspecified Institutional', 'Hospital', 'Long-Term Care Facility', 'Alcohol and Drug Rehabilitation Center', 'Group Home', 'Prison or Jail', 'Unspecified Mercantile', 'Retail Store', 'Grocery Market', 'Automotive Service Station', 'Shopping Mall', 'Gas Station', 'Unspecified Residential', 'Private Residence', 'Hotel or Motel', 'Dormitory', 'Boarding House', 'Unspecified Storage', 'Unspecified Utility and Miscellaneous', 'Unspecified Vehicular', 'Automobile or Truck', 'Airplane', 'Bus', 'Ferry', 'Ship or Boat', 'Train', 'Motor Bike', 'Unspecified Outdoor', 'Muni-mesh Network', 'City Park', 'Rest Area', 'Traffic Control', 'Bus Stop', 'Kiosk')
+	Type pulumi.StringPtrInput `pulumi:"type"`
+}
+
+func (WirelessSsidsHotspot20VenueArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsHotspot20Venue)(nil)).Elem()
+}
+
+func (i WirelessSsidsHotspot20VenueArgs) ToWirelessSsidsHotspot20VenueOutput() WirelessSsidsHotspot20VenueOutput {
+	return i.ToWirelessSsidsHotspot20VenueOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsHotspot20VenueArgs) ToWirelessSsidsHotspot20VenueOutputWithContext(ctx context.Context) WirelessSsidsHotspot20VenueOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsHotspot20VenueOutput)
+}
+
+func (i WirelessSsidsHotspot20VenueArgs) ToWirelessSsidsHotspot20VenuePtrOutput() WirelessSsidsHotspot20VenuePtrOutput {
+	return i.ToWirelessSsidsHotspot20VenuePtrOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsHotspot20VenueArgs) ToWirelessSsidsHotspot20VenuePtrOutputWithContext(ctx context.Context) WirelessSsidsHotspot20VenuePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsHotspot20VenueOutput).ToWirelessSsidsHotspot20VenuePtrOutputWithContext(ctx)
+}
+
+// WirelessSsidsHotspot20VenuePtrInput is an input type that accepts WirelessSsidsHotspot20VenueArgs, WirelessSsidsHotspot20VenuePtr and WirelessSsidsHotspot20VenuePtrOutput values.
+// You can construct a concrete instance of `WirelessSsidsHotspot20VenuePtrInput` via:
+//
+//	        WirelessSsidsHotspot20VenueArgs{...}
+//
+//	or:
+//
+//	        nil
+type WirelessSsidsHotspot20VenuePtrInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsHotspot20VenuePtrOutput() WirelessSsidsHotspot20VenuePtrOutput
+	ToWirelessSsidsHotspot20VenuePtrOutputWithContext(context.Context) WirelessSsidsHotspot20VenuePtrOutput
+}
+
+type wirelessSsidsHotspot20VenuePtrType WirelessSsidsHotspot20VenueArgs
+
+func WirelessSsidsHotspot20VenuePtr(v *WirelessSsidsHotspot20VenueArgs) WirelessSsidsHotspot20VenuePtrInput {
+	return (*wirelessSsidsHotspot20VenuePtrType)(v)
+}
+
+func (*wirelessSsidsHotspot20VenuePtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsHotspot20Venue)(nil)).Elem()
+}
+
+func (i *wirelessSsidsHotspot20VenuePtrType) ToWirelessSsidsHotspot20VenuePtrOutput() WirelessSsidsHotspot20VenuePtrOutput {
+	return i.ToWirelessSsidsHotspot20VenuePtrOutputWithContext(context.Background())
+}
+
+func (i *wirelessSsidsHotspot20VenuePtrType) ToWirelessSsidsHotspot20VenuePtrOutputWithContext(ctx context.Context) WirelessSsidsHotspot20VenuePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsHotspot20VenuePtrOutput)
+}
+
+type WirelessSsidsHotspot20VenueOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsHotspot20VenueOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsHotspot20Venue)(nil)).Elem()
+}
+
+func (o WirelessSsidsHotspot20VenueOutput) ToWirelessSsidsHotspot20VenueOutput() WirelessSsidsHotspot20VenueOutput {
+	return o
+}
+
+func (o WirelessSsidsHotspot20VenueOutput) ToWirelessSsidsHotspot20VenueOutputWithContext(ctx context.Context) WirelessSsidsHotspot20VenueOutput {
+	return o
+}
+
+func (o WirelessSsidsHotspot20VenueOutput) ToWirelessSsidsHotspot20VenuePtrOutput() WirelessSsidsHotspot20VenuePtrOutput {
+	return o.ToWirelessSsidsHotspot20VenuePtrOutputWithContext(context.Background())
+}
+
+func (o WirelessSsidsHotspot20VenueOutput) ToWirelessSsidsHotspot20VenuePtrOutputWithContext(ctx context.Context) WirelessSsidsHotspot20VenuePtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v WirelessSsidsHotspot20Venue) *WirelessSsidsHotspot20Venue {
+		return &v
+	}).(WirelessSsidsHotspot20VenuePtrOutput)
+}
+
+// Venue name
+func (o WirelessSsidsHotspot20VenueOutput) Name() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsHotspot20Venue) *string { return v.Name }).(pulumi.StringPtrOutput)
+}
+
+// Venue type ('Unspecified', 'Unspecified Assembly', 'Arena', 'Stadium', 'Passenger Terminal', 'Amphitheater', 'Amusement Park', 'Place of Worship', 'Convention Center', 'Library', 'Museum', 'Restaurant', 'Theater', 'Bar', 'Coffee Shop', 'Zoo or Aquarium', 'Emergency Coordination Center', 'Unspecified Business', 'Doctor or Dentist office', 'Bank', 'Fire Station', 'Police Station', 'Post Office', 'Professional Office', 'Research and Development Facility', 'Attorney Office', 'Unspecified Educational', 'School, Primary', 'School, Secondary', 'University or College', 'Unspecified Factory and Industrial', 'Factory', 'Unspecified Institutional', 'Hospital', 'Long-Term Care Facility', 'Alcohol and Drug Rehabilitation Center', 'Group Home', 'Prison or Jail', 'Unspecified Mercantile', 'Retail Store', 'Grocery Market', 'Automotive Service Station', 'Shopping Mall', 'Gas Station', 'Unspecified Residential', 'Private Residence', 'Hotel or Motel', 'Dormitory', 'Boarding House', 'Unspecified Storage', 'Unspecified Utility and Miscellaneous', 'Unspecified Vehicular', 'Automobile or Truck', 'Airplane', 'Bus', 'Ferry', 'Ship or Boat', 'Train', 'Motor Bike', 'Unspecified Outdoor', 'Muni-mesh Network', 'City Park', 'Rest Area', 'Traffic Control', 'Bus Stop', 'Kiosk')
+func (o WirelessSsidsHotspot20VenueOutput) Type() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsHotspot20Venue) *string { return v.Type }).(pulumi.StringPtrOutput)
+}
+
+type WirelessSsidsHotspot20VenuePtrOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsHotspot20VenuePtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsHotspot20Venue)(nil)).Elem()
+}
+
+func (o WirelessSsidsHotspot20VenuePtrOutput) ToWirelessSsidsHotspot20VenuePtrOutput() WirelessSsidsHotspot20VenuePtrOutput {
+	return o
+}
+
+func (o WirelessSsidsHotspot20VenuePtrOutput) ToWirelessSsidsHotspot20VenuePtrOutputWithContext(ctx context.Context) WirelessSsidsHotspot20VenuePtrOutput {
+	return o
+}
+
+func (o WirelessSsidsHotspot20VenuePtrOutput) Elem() WirelessSsidsHotspot20VenueOutput {
+	return o.ApplyT(func(v *WirelessSsidsHotspot20Venue) WirelessSsidsHotspot20Venue {
+		if v != nil {
+			return *v
+		}
+		var ret WirelessSsidsHotspot20Venue
+		return ret
+	}).(WirelessSsidsHotspot20VenueOutput)
+}
+
+// Venue name
+func (o WirelessSsidsHotspot20VenuePtrOutput) Name() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsHotspot20Venue) *string {
+		if v == nil {
+			return nil
+		}
+		return v.Name
+	}).(pulumi.StringPtrOutput)
+}
+
+// Venue type ('Unspecified', 'Unspecified Assembly', 'Arena', 'Stadium', 'Passenger Terminal', 'Amphitheater', 'Amusement Park', 'Place of Worship', 'Convention Center', 'Library', 'Museum', 'Restaurant', 'Theater', 'Bar', 'Coffee Shop', 'Zoo or Aquarium', 'Emergency Coordination Center', 'Unspecified Business', 'Doctor or Dentist office', 'Bank', 'Fire Station', 'Police Station', 'Post Office', 'Professional Office', 'Research and Development Facility', 'Attorney Office', 'Unspecified Educational', 'School, Primary', 'School, Secondary', 'University or College', 'Unspecified Factory and Industrial', 'Factory', 'Unspecified Institutional', 'Hospital', 'Long-Term Care Facility', 'Alcohol and Drug Rehabilitation Center', 'Group Home', 'Prison or Jail', 'Unspecified Mercantile', 'Retail Store', 'Grocery Market', 'Automotive Service Station', 'Shopping Mall', 'Gas Station', 'Unspecified Residential', 'Private Residence', 'Hotel or Motel', 'Dormitory', 'Boarding House', 'Unspecified Storage', 'Unspecified Utility and Miscellaneous', 'Unspecified Vehicular', 'Automobile or Truck', 'Airplane', 'Bus', 'Ferry', 'Ship or Boat', 'Train', 'Motor Bike', 'Unspecified Outdoor', 'Muni-mesh Network', 'City Park', 'Rest Area', 'Traffic Control', 'Bus Stop', 'Kiosk')
+func (o WirelessSsidsHotspot20VenuePtrOutput) Type() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsHotspot20Venue) *string {
+		if v == nil {
+			return nil
+		}
+		return v.Type
+	}).(pulumi.StringPtrOutput)
+}
+
+type WirelessSsidsLdap struct {
+	// The base distinguished name of users on the LDAP server.
+	BaseDistinguishedName *string `pulumi:"baseDistinguishedName"`
+	// (Optional) The credentials of the user account to be used by the AP to bind to your LDAP server. The LDAP account should have permissions on all your LDAP servers.
+	Credentials *WirelessSsidsLdapCredentials `pulumi:"credentials"`
+	// The CA certificate used to sign the LDAP server's key.
+	ServerCaCertificate *WirelessSsidsLdapServerCaCertificate `pulumi:"serverCaCertificate"`
+	// The LDAP servers to be used for authentication.
+	Servers []WirelessSsidsLdapServer `pulumi:"servers"`
+}
+
+// WirelessSsidsLdapInput is an input type that accepts WirelessSsidsLdapArgs and WirelessSsidsLdapOutput values.
+// You can construct a concrete instance of `WirelessSsidsLdapInput` via:
+//
+//	WirelessSsidsLdapArgs{...}
+type WirelessSsidsLdapInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsLdapOutput() WirelessSsidsLdapOutput
+	ToWirelessSsidsLdapOutputWithContext(context.Context) WirelessSsidsLdapOutput
+}
+
+type WirelessSsidsLdapArgs struct {
+	// The base distinguished name of users on the LDAP server.
+	BaseDistinguishedName pulumi.StringPtrInput `pulumi:"baseDistinguishedName"`
+	// (Optional) The credentials of the user account to be used by the AP to bind to your LDAP server. The LDAP account should have permissions on all your LDAP servers.
+	Credentials WirelessSsidsLdapCredentialsPtrInput `pulumi:"credentials"`
+	// The CA certificate used to sign the LDAP server's key.
+	ServerCaCertificate WirelessSsidsLdapServerCaCertificatePtrInput `pulumi:"serverCaCertificate"`
+	// The LDAP servers to be used for authentication.
+	Servers WirelessSsidsLdapServerArrayInput `pulumi:"servers"`
+}
+
+func (WirelessSsidsLdapArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsLdap)(nil)).Elem()
+}
+
+func (i WirelessSsidsLdapArgs) ToWirelessSsidsLdapOutput() WirelessSsidsLdapOutput {
+	return i.ToWirelessSsidsLdapOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsLdapArgs) ToWirelessSsidsLdapOutputWithContext(ctx context.Context) WirelessSsidsLdapOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsLdapOutput)
+}
+
+func (i WirelessSsidsLdapArgs) ToWirelessSsidsLdapPtrOutput() WirelessSsidsLdapPtrOutput {
+	return i.ToWirelessSsidsLdapPtrOutputWithContext(context.Background())
+}
+
+func (i WirelessSsidsLdapArgs) ToWirelessSsidsLdapPtrOutputWithContext(ctx context.Context) WirelessSsidsLdapPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsLdapOutput).ToWirelessSsidsLdapPtrOutputWithContext(ctx)
+}
+
+// WirelessSsidsLdapPtrInput is an input type that accepts WirelessSsidsLdapArgs, WirelessSsidsLdapPtr and WirelessSsidsLdapPtrOutput values.
+// You can construct a concrete instance of `WirelessSsidsLdapPtrInput` via:
+//
+//	        WirelessSsidsLdapArgs{...}
+//
+//	or:
+//
+//	        nil
+type WirelessSsidsLdapPtrInput interface {
+	pulumi.Input
+
+	ToWirelessSsidsLdapPtrOutput() WirelessSsidsLdapPtrOutput
+	ToWirelessSsidsLdapPtrOutputWithContext(context.Context) WirelessSsidsLdapPtrOutput
+}
+
+type wirelessSsidsLdapPtrType WirelessSsidsLdapArgs
+
+func WirelessSsidsLdapPtr(v *WirelessSsidsLdapArgs) WirelessSsidsLdapPtrInput {
+	return (*wirelessSsidsLdapPtrType)(v)
+}
+
+func (*wirelessSsidsLdapPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsLdap)(nil)).Elem()
+}
+
+func (i *wirelessSsidsLdapPtrType) ToWirelessSsidsLdapPtrOutput() WirelessSsidsLdapPtrOutput {
+	return i.ToWirelessSsidsLdapPtrOutputWithContext(context.Background())
+}
+
+func (i *wirelessSsidsLdapPtrType) ToWirelessSsidsLdapPtrOutputWithContext(ctx context.Context) WirelessSsidsLdapPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(WirelessSsidsLdapPtrOutput)
+}
+
+type WirelessSsidsLdapOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsLdapOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*WirelessSsidsLdap)(nil)).Elem()
+}
+
+func (o WirelessSsidsLdapOutput) ToWirelessSsidsLdapOutput() WirelessSsidsLdapOutput {
+	return o
+}
+
+func (o WirelessSsidsLdapOutput) ToWirelessSsidsLdapOutputWithContext(ctx context.Context) WirelessSsidsLdapOutput {
+	return o
+}
+
+func (o WirelessSsidsLdapOutput) ToWirelessSsidsLdapPtrOutput() WirelessSsidsLdapPtrOutput {
+	return o.ToWirelessSsidsLdapPtrOutputWithContext(context.Background())
+}
+
+func (o WirelessSsidsLdapOutput) ToWirelessSsidsLdapPtrOutputWithContext(ctx context.Context) WirelessSsidsLdapPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v WirelessSsidsLdap) *WirelessSsidsLdap {
+		return &v
+	}).(WirelessSsidsLdapPtrOutput)
+}
+
+// The base distinguished name of users on the LDAP server.
+func (o WirelessSsidsLdapOutput) BaseDistinguishedName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsLdap) *string { return v.BaseDistinguishedName }).(pulumi.StringPtrOutput)
+}
+
+// (Optional) The credentials of the user account to be used by the AP to bind to your LDAP server. The LDAP account should have permissions on all your LDAP servers.
+func (o WirelessSsidsLdapOutput) Credentials() WirelessSsidsLdapCredentialsPtrOutput {
+	return o.ApplyT(func(v WirelessSsidsLdap) *WirelessSsidsLdapCredentials { return v.Credentials }).(WirelessSsidsLdapCredentialsPtrOutput)
+}
+
+// The CA certificate used to sign the LDAP server's key.
+func (o WirelessSsidsLdapOutput) ServerCaCertificate() WirelessSsidsLdapServerCaCertificatePtrOutput {
+	return o.ApplyT(func(v WirelessSsidsLdap) *WirelessSsidsLdapServerCaCertificate { return v.ServerCaCertificate }).(WirelessSsidsLdapServerCaCertificatePtrOutput)
+}
+
+// The LDAP servers to be used for authentication.
+func (o WirelessSsidsLdapOutput) Servers() WirelessSsidsLdapServerArrayOutput {
+	return o.ApplyT(func(v WirelessSsidsLdap) []WirelessSsidsLdapServer { return v.Servers }).(WirelessSsidsLdapServerArrayOutput)
+}
+
+type WirelessSsidsLdapPtrOutput struct{ *pulumi.OutputState }
+
+func (WirelessSsidsLdapPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**WirelessSsidsLdap)(nil)).Elem()
+}
+
+func (o WirelessSsidsLdapPtrOutput) ToWirelessSsidsLdapPtrOutput() WirelessSsidsLdapPtrOutput {
+	return o
+}
+
+func (o WirelessSsidsLdapPtrOutput) ToWirelessSsidsLdapPtrOutputWithContext(ctx context.Context) WirelessSsidsLdapPtrOutput {
+	return o
+}
+
+func (o WirelessSsidsLdapPtrOutput) Elem() WirelessSsidsLdapOutput {
+	return o.ApplyT(func(v *WirelessSsidsLdap) WirelessSsidsLdap {
+		if v != nil {
+			return *v
+		}
+		var ret WirelessSsidsLdap
+		return ret
+	}).(WirelessSsidsLdapOutput)
+}
+
+// The base distinguished name of users on the LDAP server.
+func (o WirelessSsidsLdapPtrOutput) BaseDistinguishedName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsLdap) *string {
+		if v == nil {
+			return nil
+		}
+		return v.BaseDistinguishedName
+	}).(pulumi.StringPtrOutput)
+}
+
+// (Optional) The credentials of the user account to be used by the AP to bind to your LDAP server. The LDAP account should have permissions on all your LDAP servers.
+func (o WirelessSsidsLdapPtrOutput) Credentials() WirelessSsidsLdapCredentialsPtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsLdap) *WirelessSsidsLdapCredentials {
+		if v == nil {
+			return nil
+		}
+		return v.Credentials
+	}).(WirelessSsidsLdapCredentialsPtrOutput)
+}
+
+// The CA certificate used to sign the LDAP server's key.
+func (o WirelessSsidsLdapPtrOutput) ServerCaCertificate() WirelessSsidsLdapServerCaCertificatePtrOutput {
+	return o.ApplyT(func(v *WirelessSsidsLdap) *WirelessSsidsLdapServerCaCertificate {
+		if v == nil {
+			return nil
+		}
+		return v.ServerCaCertificate
+	}).(WirelessSsidsLdapServerCaCertificatePtrOutput)
+}
+
+// The LDAP servers to be used for authentication.
+func (o WirelessSsidsLdapPtrOutput) Servers() WirelessSsidsLdapServerArrayOutput {
+	return o.ApplyT(func(v *WirelessSsidsLdap) []WirelessSsidsLdapServer {
+		if v == nil {
+			return nil
+		}
+		return v.Servers
+	}).(WirelessSsidsLdapServerArrayOutput)
+}
+
 type WirelessSsidsLdapCredentials struct {
 	// The distinguished name of the LDAP user account (example: cn=user,dc=meraki,dc=com).
 	DistinguishedName *string `pulumi:"distinguishedName"`
@@ -47497,273 +47847,11 @@ func (o GetWirelessEthernetPortsProfilesItemPortArrayOutput) Index(i pulumi.IntI
 	}).(GetWirelessEthernetPortsProfilesItemPortOutput)
 }
 
-type GetWirelessEthernetPortsProfilesItemUsbPort struct {
-	// Enabled
-	Enabled bool `pulumi:"enabled"`
-	// Name
-	Name string `pulumi:"name"`
-	// Ssid number
-	Ssid int `pulumi:"ssid"`
-}
-
-// GetWirelessEthernetPortsProfilesItemUsbPortInput is an input type that accepts GetWirelessEthernetPortsProfilesItemUsbPortArgs and GetWirelessEthernetPortsProfilesItemUsbPortOutput values.
-// You can construct a concrete instance of `GetWirelessEthernetPortsProfilesItemUsbPortInput` via:
-//
-//	GetWirelessEthernetPortsProfilesItemUsbPortArgs{...}
-type GetWirelessEthernetPortsProfilesItemUsbPortInput interface {
-	pulumi.Input
-
-	ToGetWirelessEthernetPortsProfilesItemUsbPortOutput() GetWirelessEthernetPortsProfilesItemUsbPortOutput
-	ToGetWirelessEthernetPortsProfilesItemUsbPortOutputWithContext(context.Context) GetWirelessEthernetPortsProfilesItemUsbPortOutput
-}
-
-type GetWirelessEthernetPortsProfilesItemUsbPortArgs struct {
-	// Enabled
-	Enabled pulumi.BoolInput `pulumi:"enabled"`
-	// Name
-	Name pulumi.StringInput `pulumi:"name"`
-	// Ssid number
-	Ssid pulumi.IntInput `pulumi:"ssid"`
-}
-
-func (GetWirelessEthernetPortsProfilesItemUsbPortArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessEthernetPortsProfilesItemUsbPort)(nil)).Elem()
-}
-
-func (i GetWirelessEthernetPortsProfilesItemUsbPortArgs) ToGetWirelessEthernetPortsProfilesItemUsbPortOutput() GetWirelessEthernetPortsProfilesItemUsbPortOutput {
-	return i.ToGetWirelessEthernetPortsProfilesItemUsbPortOutputWithContext(context.Background())
-}
-
-func (i GetWirelessEthernetPortsProfilesItemUsbPortArgs) ToGetWirelessEthernetPortsProfilesItemUsbPortOutputWithContext(ctx context.Context) GetWirelessEthernetPortsProfilesItemUsbPortOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessEthernetPortsProfilesItemUsbPortOutput)
-}
-
-// GetWirelessEthernetPortsProfilesItemUsbPortArrayInput is an input type that accepts GetWirelessEthernetPortsProfilesItemUsbPortArray and GetWirelessEthernetPortsProfilesItemUsbPortArrayOutput values.
-// You can construct a concrete instance of `GetWirelessEthernetPortsProfilesItemUsbPortArrayInput` via:
-//
-//	GetWirelessEthernetPortsProfilesItemUsbPortArray{ GetWirelessEthernetPortsProfilesItemUsbPortArgs{...} }
-type GetWirelessEthernetPortsProfilesItemUsbPortArrayInput interface {
-	pulumi.Input
-
-	ToGetWirelessEthernetPortsProfilesItemUsbPortArrayOutput() GetWirelessEthernetPortsProfilesItemUsbPortArrayOutput
-	ToGetWirelessEthernetPortsProfilesItemUsbPortArrayOutputWithContext(context.Context) GetWirelessEthernetPortsProfilesItemUsbPortArrayOutput
-}
-
-type GetWirelessEthernetPortsProfilesItemUsbPortArray []GetWirelessEthernetPortsProfilesItemUsbPortInput
-
-func (GetWirelessEthernetPortsProfilesItemUsbPortArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetWirelessEthernetPortsProfilesItemUsbPort)(nil)).Elem()
-}
-
-func (i GetWirelessEthernetPortsProfilesItemUsbPortArray) ToGetWirelessEthernetPortsProfilesItemUsbPortArrayOutput() GetWirelessEthernetPortsProfilesItemUsbPortArrayOutput {
-	return i.ToGetWirelessEthernetPortsProfilesItemUsbPortArrayOutputWithContext(context.Background())
-}
-
-func (i GetWirelessEthernetPortsProfilesItemUsbPortArray) ToGetWirelessEthernetPortsProfilesItemUsbPortArrayOutputWithContext(ctx context.Context) GetWirelessEthernetPortsProfilesItemUsbPortArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessEthernetPortsProfilesItemUsbPortArrayOutput)
-}
-
-type GetWirelessEthernetPortsProfilesItemUsbPortOutput struct{ *pulumi.OutputState }
-
-func (GetWirelessEthernetPortsProfilesItemUsbPortOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessEthernetPortsProfilesItemUsbPort)(nil)).Elem()
-}
-
-func (o GetWirelessEthernetPortsProfilesItemUsbPortOutput) ToGetWirelessEthernetPortsProfilesItemUsbPortOutput() GetWirelessEthernetPortsProfilesItemUsbPortOutput {
-	return o
-}
-
-func (o GetWirelessEthernetPortsProfilesItemUsbPortOutput) ToGetWirelessEthernetPortsProfilesItemUsbPortOutputWithContext(ctx context.Context) GetWirelessEthernetPortsProfilesItemUsbPortOutput {
-	return o
-}
-
-// Enabled
-func (o GetWirelessEthernetPortsProfilesItemUsbPortOutput) Enabled() pulumi.BoolOutput {
-	return o.ApplyT(func(v GetWirelessEthernetPortsProfilesItemUsbPort) bool { return v.Enabled }).(pulumi.BoolOutput)
-}
-
-// Name
-func (o GetWirelessEthernetPortsProfilesItemUsbPortOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessEthernetPortsProfilesItemUsbPort) string { return v.Name }).(pulumi.StringOutput)
-}
-
-// Ssid number
-func (o GetWirelessEthernetPortsProfilesItemUsbPortOutput) Ssid() pulumi.IntOutput {
-	return o.ApplyT(func(v GetWirelessEthernetPortsProfilesItemUsbPort) int { return v.Ssid }).(pulumi.IntOutput)
-}
-
-type GetWirelessEthernetPortsProfilesItemUsbPortArrayOutput struct{ *pulumi.OutputState }
-
-func (GetWirelessEthernetPortsProfilesItemUsbPortArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetWirelessEthernetPortsProfilesItemUsbPort)(nil)).Elem()
-}
-
-func (o GetWirelessEthernetPortsProfilesItemUsbPortArrayOutput) ToGetWirelessEthernetPortsProfilesItemUsbPortArrayOutput() GetWirelessEthernetPortsProfilesItemUsbPortArrayOutput {
-	return o
-}
-
-func (o GetWirelessEthernetPortsProfilesItemUsbPortArrayOutput) ToGetWirelessEthernetPortsProfilesItemUsbPortArrayOutputWithContext(ctx context.Context) GetWirelessEthernetPortsProfilesItemUsbPortArrayOutput {
-	return o
-}
-
-func (o GetWirelessEthernetPortsProfilesItemUsbPortArrayOutput) Index(i pulumi.IntInput) GetWirelessEthernetPortsProfilesItemUsbPortOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetWirelessEthernetPortsProfilesItemUsbPort {
-		return vs[0].([]GetWirelessEthernetPortsProfilesItemUsbPort)[vs[1].(int)]
-	}).(GetWirelessEthernetPortsProfilesItemUsbPortOutput)
-}
-
-type GetWirelessFailedConnectionsItem struct {
-	// Client Mac
-	ClientMac string `pulumi:"clientMac"`
-	// The failed onboarding step. One of: assoc, auth, dhcp, dns.
-	FailureStep string `pulumi:"failureStep"`
-	// Serial Number
-	Serial string `pulumi:"serial"`
-	// SSID Number
-	SsidNumber int `pulumi:"ssidNumber"`
-	// The timestamp when the client mac failed
-	Ts string `pulumi:"ts"`
-	// The failure type in the onboarding step
-	Type string `pulumi:"type"`
-	// LAN
-	Vlan int `pulumi:"vlan"`
-}
-
-// GetWirelessFailedConnectionsItemInput is an input type that accepts GetWirelessFailedConnectionsItemArgs and GetWirelessFailedConnectionsItemOutput values.
-// You can construct a concrete instance of `GetWirelessFailedConnectionsItemInput` via:
-//
-//	GetWirelessFailedConnectionsItemArgs{...}
-type GetWirelessFailedConnectionsItemInput interface {
-	pulumi.Input
-
-	ToGetWirelessFailedConnectionsItemOutput() GetWirelessFailedConnectionsItemOutput
-	ToGetWirelessFailedConnectionsItemOutputWithContext(context.Context) GetWirelessFailedConnectionsItemOutput
-}
-
-type GetWirelessFailedConnectionsItemArgs struct {
-	// Client Mac
-	ClientMac pulumi.StringInput `pulumi:"clientMac"`
-	// The failed onboarding step. One of: assoc, auth, dhcp, dns.
-	FailureStep pulumi.StringInput `pulumi:"failureStep"`
-	// Serial Number
-	Serial pulumi.StringInput `pulumi:"serial"`
-	// SSID Number
-	SsidNumber pulumi.IntInput `pulumi:"ssidNumber"`
-	// The timestamp when the client mac failed
-	Ts pulumi.StringInput `pulumi:"ts"`
-	// The failure type in the onboarding step
-	Type pulumi.StringInput `pulumi:"type"`
-	// LAN
-	Vlan pulumi.IntInput `pulumi:"vlan"`
-}
-
-func (GetWirelessFailedConnectionsItemArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessFailedConnectionsItem)(nil)).Elem()
-}
-
-func (i GetWirelessFailedConnectionsItemArgs) ToGetWirelessFailedConnectionsItemOutput() GetWirelessFailedConnectionsItemOutput {
-	return i.ToGetWirelessFailedConnectionsItemOutputWithContext(context.Background())
-}
-
-func (i GetWirelessFailedConnectionsItemArgs) ToGetWirelessFailedConnectionsItemOutputWithContext(ctx context.Context) GetWirelessFailedConnectionsItemOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessFailedConnectionsItemOutput)
-}
-
-// GetWirelessFailedConnectionsItemArrayInput is an input type that accepts GetWirelessFailedConnectionsItemArray and GetWirelessFailedConnectionsItemArrayOutput values.
-// You can construct a concrete instance of `GetWirelessFailedConnectionsItemArrayInput` via:
-//
-//	GetWirelessFailedConnectionsItemArray{ GetWirelessFailedConnectionsItemArgs{...} }
-type GetWirelessFailedConnectionsItemArrayInput interface {
-	pulumi.Input
-
-	ToGetWirelessFailedConnectionsItemArrayOutput() GetWirelessFailedConnectionsItemArrayOutput
-	ToGetWirelessFailedConnectionsItemArrayOutputWithContext(context.Context) GetWirelessFailedConnectionsItemArrayOutput
-}
-
-type GetWirelessFailedConnectionsItemArray []GetWirelessFailedConnectionsItemInput
-
-func (GetWirelessFailedConnectionsItemArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetWirelessFailedConnectionsItem)(nil)).Elem()
-}
-
-func (i GetWirelessFailedConnectionsItemArray) ToGetWirelessFailedConnectionsItemArrayOutput() GetWirelessFailedConnectionsItemArrayOutput {
-	return i.ToGetWirelessFailedConnectionsItemArrayOutputWithContext(context.Background())
-}
-
-func (i GetWirelessFailedConnectionsItemArray) ToGetWirelessFailedConnectionsItemArrayOutputWithContext(ctx context.Context) GetWirelessFailedConnectionsItemArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(GetWirelessFailedConnectionsItemArrayOutput)
-}
-
-type GetWirelessFailedConnectionsItemOutput struct{ *pulumi.OutputState }
-
-func (GetWirelessFailedConnectionsItemOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetWirelessFailedConnectionsItem)(nil)).Elem()
-}
-
-func (o GetWirelessFailedConnectionsItemOutput) ToGetWirelessFailedConnectionsItemOutput() GetWirelessFailedConnectionsItemOutput {
-	return o
-}
-
-func (o GetWirelessFailedConnectionsItemOutput) ToGetWirelessFailedConnectionsItemOutputWithContext(ctx context.Context) GetWirelessFailedConnectionsItemOutput {
-	return o
-}
-
-// Client Mac
-func (o GetWirelessFailedConnectionsItemOutput) ClientMac() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessFailedConnectionsItem) string { return v.ClientMac }).(pulumi.StringOutput)
-}
-
-// The failed onboarding step. One of: assoc, auth, dhcp, dns.
-func (o GetWirelessFailedConnectionsItemOutput) FailureStep() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessFailedConnectionsItem) string { return v.FailureStep }).(pulumi.StringOutput)
-}
-
-// Serial Number
-func (o GetWirelessFailedConnectionsItemOutput) Serial() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessFailedConnectionsItem) string { return v.Serial }).(pulumi.StringOutput)
-}
-
-// SSID Number
-func (o GetWirelessFailedConnectionsItemOutput) SsidNumber() pulumi.IntOutput {
-	return o.ApplyT(func(v GetWirelessFailedConnectionsItem) int { return v.SsidNumber }).(pulumi.IntOutput)
-}
-
-// The timestamp when the client mac failed
-func (o GetWirelessFailedConnectionsItemOutput) Ts() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessFailedConnectionsItem) string { return v.Ts }).(pulumi.StringOutput)
-}
-
-// The failure type in the onboarding step
-func (o GetWirelessFailedConnectionsItemOutput) Type() pulumi.StringOutput {
-	return o.ApplyT(func(v GetWirelessFailedConnectionsItem) string { return v.Type }).(pulumi.StringOutput)
-}
-
-// LAN
-func (o GetWirelessFailedConnectionsItemOutput) Vlan() pulumi.IntOutput {
-	return o.ApplyT(func(v GetWirelessFailedConnectionsItem) int { return v.Vlan }).(pulumi.IntOutput)
-}
-
-type GetWirelessFailedConnectionsItemArrayOutput struct{ *pulumi.OutputState }
-
-func (GetWirelessFailedConnectionsItemArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]GetWirelessFailedConnectionsItem)(nil)).Elem()
-}
-
-func (o GetWirelessFailedConnectionsItemArrayOutput) ToGetWirelessFailedConnectionsItemArrayOutput() GetWirelessFailedConnectionsItemArrayOutput {
-	return o
-}
-
-func (o GetWirelessFailedConnectionsItemArrayOutput) ToGetWirelessFailedConnectionsItemArrayOutputWithContext(ctx context.Context) GetWirelessFailedConnectionsItemArrayOutput {
-	return o
-}
-
-func (o GetWirelessFailedConnectionsItemArrayOutput) Index(i pulumi.IntInput) GetWirelessFailedConnectionsItemOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) GetWirelessFailedConnectionsItem {
-		return vs[0].([]GetWirelessFailedConnectionsItem)[vs[1].(int)]
-	}).(GetWirelessFailedConnectionsItemOutput)
-}
-
 func init() {
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsHotspot20VenueInput)(nil)).Elem(), WirelessSsidsHotspot20VenueArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsHotspot20VenuePtrInput)(nil)).Elem(), WirelessSsidsHotspot20VenueArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsLdapInput)(nil)).Elem(), WirelessSsidsLdapArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsLdapPtrInput)(nil)).Elem(), WirelessSsidsLdapArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsLdapCredentialsInput)(nil)).Elem(), WirelessSsidsLdapCredentialsArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsLdapCredentialsPtrInput)(nil)).Elem(), WirelessSsidsLdapCredentialsArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*WirelessSsidsLdapServerInput)(nil)).Elem(), WirelessSsidsLdapServerArgs{})
@@ -48455,10 +48543,10 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessEthernetPortsProfilesItemInput)(nil)).Elem(), GetWirelessEthernetPortsProfilesItemArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessEthernetPortsProfilesItemPortInput)(nil)).Elem(), GetWirelessEthernetPortsProfilesItemPortArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessEthernetPortsProfilesItemPortArrayInput)(nil)).Elem(), GetWirelessEthernetPortsProfilesItemPortArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessEthernetPortsProfilesItemUsbPortInput)(nil)).Elem(), GetWirelessEthernetPortsProfilesItemUsbPortArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessEthernetPortsProfilesItemUsbPortArrayInput)(nil)).Elem(), GetWirelessEthernetPortsProfilesItemUsbPortArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessFailedConnectionsItemInput)(nil)).Elem(), GetWirelessFailedConnectionsItemArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*GetWirelessFailedConnectionsItemArrayInput)(nil)).Elem(), GetWirelessFailedConnectionsItemArray{})
+	pulumi.RegisterOutputType(WirelessSsidsHotspot20VenueOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsHotspot20VenuePtrOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsLdapOutput{})
+	pulumi.RegisterOutputType(WirelessSsidsLdapPtrOutput{})
 	pulumi.RegisterOutputType(WirelessSsidsLdapCredentialsOutput{})
 	pulumi.RegisterOutputType(WirelessSsidsLdapCredentialsPtrOutput{})
 	pulumi.RegisterOutputType(WirelessSsidsLdapServerOutput{})
@@ -49150,8 +49238,4 @@ func init() {
 	pulumi.RegisterOutputType(GetWirelessEthernetPortsProfilesItemOutput{})
 	pulumi.RegisterOutputType(GetWirelessEthernetPortsProfilesItemPortOutput{})
 	pulumi.RegisterOutputType(GetWirelessEthernetPortsProfilesItemPortArrayOutput{})
-	pulumi.RegisterOutputType(GetWirelessEthernetPortsProfilesItemUsbPortOutput{})
-	pulumi.RegisterOutputType(GetWirelessEthernetPortsProfilesItemUsbPortArrayOutput{})
-	pulumi.RegisterOutputType(GetWirelessFailedConnectionsItemOutput{})
-	pulumi.RegisterOutputType(GetWirelessFailedConnectionsItemArrayOutput{})
 }

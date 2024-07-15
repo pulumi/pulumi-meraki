@@ -68,7 +68,7 @@ namespace Pulumi.Meraki.Networks
         /// identityPskId path parameter. Identity psk ID
         /// </summary>
         [Output("identityPskId")]
-        public Output<string?> IdentityPskId { get; private set; } = null!;
+        public Output<string> IdentityPskId { get; private set; } = null!;
 
         /// <summary>
         /// The name of the Identity PSK

@@ -477,7 +477,7 @@ class WirelessSsidsIdentityPsks(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="identityPskId")
-    def identity_psk_id(self) -> pulumi.Output[Optional[str]]:
+    def identity_psk_id(self) -> pulumi.Output[str]:
         """
         identityPskId path parameter. Identity psk ID
         """

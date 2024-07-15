@@ -62,7 +62,7 @@ export class WirelessRfProfiles extends pulumi.CustomResource {
     /**
      * Flex radio settings.
      */
-    public readonly flexRadios!: pulumi.Output<outputs.networks.WirelessRfProfilesFlexRadios>;
+    public readonly flexRadios!: pulumi.Output<outputs.networks.WirelessRfProfilesFlexRadios | undefined>;
     /**
      * Minimum bitrate can be set to either 'band' or 'ssid'. Defaults to band.
      */
@@ -82,7 +82,7 @@ export class WirelessRfProfiles extends pulumi.CustomResource {
     /**
      * rfProfileId path parameter. Rf profile ID
      */
-    public readonly rfProfileId!: pulumi.Output<string | undefined>;
+    public readonly rfProfileId!: pulumi.Output<string>;
     /**
      * Settings related to 6Ghz band. Only applicable to networks with 6Ghz capable APs
      */

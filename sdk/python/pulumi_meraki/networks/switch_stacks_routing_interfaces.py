@@ -199,6 +199,7 @@ class SwitchStacksRoutingInterfacesArgs:
 class _SwitchStacksRoutingInterfacesState:
     def __init__(__self__, *,
                  default_gateway: Optional[pulumi.Input[str]] = None,
+                 default_gateway_response: Optional[pulumi.Input[str]] = None,
                  interface_id: Optional[pulumi.Input[str]] = None,
                  interface_ip: Optional[pulumi.Input[str]] = None,
                  ipv6: Optional[pulumi.Input['SwitchStacksRoutingInterfacesIpv6Args']] = None,
@@ -213,6 +214,7 @@ class _SwitchStacksRoutingInterfacesState:
         """
         Input properties used for looking up and filtering SwitchStacksRoutingInterfaces resources.
         :param pulumi.Input[str] default_gateway: IPv4 default gateway
+        :param pulumi.Input[str] default_gateway_response: IPv4 default gateway
         :param pulumi.Input[str] interface_id: The id
         :param pulumi.Input[str] interface_ip: IPv4 address
         :param pulumi.Input['SwitchStacksRoutingInterfacesIpv6Args'] ipv6: IPv6 addressing
@@ -227,6 +229,8 @@ class _SwitchStacksRoutingInterfacesState:
         """
         if default_gateway is not None:
             pulumi.set(__self__, "default_gateway", default_gateway)
+        if default_gateway_response is not None:
+            pulumi.set(__self__, "default_gateway_response", default_gateway_response)
         if interface_id is not None:
             pulumi.set(__self__, "interface_id", interface_id)
         if interface_ip is not None:
@@ -261,6 +265,18 @@ class _SwitchStacksRoutingInterfacesState:
     @default_gateway.setter
     def default_gateway(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "default_gateway", value)
+
+    @property
+    @pulumi.getter(name="defaultGatewayResponse")
+    def default_gateway_response(self) -> Optional[pulumi.Input[str]]:
+        """
+        IPv4 default gateway
+        """
+        return pulumi.get(self, "default_gateway_response")
+
+    @default_gateway_response.setter
+    def default_gateway_response(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "default_gateway_response", value)
 
     @property
     @pulumi.getter(name="interfaceId")
@@ -500,6 +516,7 @@ class SwitchStacksRoutingInterfaces(pulumi.CustomResource):
                 raise TypeError("Missing required property 'switch_stack_id'")
             __props__.__dict__["switch_stack_id"] = switch_stack_id
             __props__.__dict__["vlan_id"] = vlan_id
+            __props__.__dict__["default_gateway_response"] = None
             __props__.__dict__["ospf_v3"] = None
         super(SwitchStacksRoutingInterfaces, __self__).__init__(
             'meraki:networks/switchStacksRoutingInterfaces:SwitchStacksRoutingInterfaces',
@@ -512,6 +529,7 @@ class SwitchStacksRoutingInterfaces(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             default_gateway: Optional[pulumi.Input[str]] = None,
+            default_gateway_response: Optional[pulumi.Input[str]] = None,
             interface_id: Optional[pulumi.Input[str]] = None,
             interface_ip: Optional[pulumi.Input[str]] = None,
             ipv6: Optional[pulumi.Input[pulumi.InputType['SwitchStacksRoutingInterfacesIpv6Args']]] = None,
@@ -531,6 +549,7 @@ class SwitchStacksRoutingInterfaces(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] default_gateway: IPv4 default gateway
+        :param pulumi.Input[str] default_gateway_response: IPv4 default gateway
         :param pulumi.Input[str] interface_id: The id
         :param pulumi.Input[str] interface_ip: IPv4 address
         :param pulumi.Input[pulumi.InputType['SwitchStacksRoutingInterfacesIpv6Args']] ipv6: IPv6 addressing
@@ -548,6 +567,7 @@ class SwitchStacksRoutingInterfaces(pulumi.CustomResource):
         __props__ = _SwitchStacksRoutingInterfacesState.__new__(_SwitchStacksRoutingInterfacesState)
 
         __props__.__dict__["default_gateway"] = default_gateway
+        __props__.__dict__["default_gateway_response"] = default_gateway_response
         __props__.__dict__["interface_id"] = interface_id
         __props__.__dict__["interface_ip"] = interface_ip
         __props__.__dict__["ipv6"] = ipv6
@@ -568,6 +588,14 @@ class SwitchStacksRoutingInterfaces(pulumi.CustomResource):
         IPv4 default gateway
         """
         return pulumi.get(self, "default_gateway")
+
+    @property
+    @pulumi.getter(name="defaultGatewayResponse")
+    def default_gateway_response(self) -> pulumi.Output[str]:
+        """
+        IPv4 default gateway
+        """
+        return pulumi.get(self, "default_gateway_response")
 
     @property
     @pulumi.getter(name="interfaceId")

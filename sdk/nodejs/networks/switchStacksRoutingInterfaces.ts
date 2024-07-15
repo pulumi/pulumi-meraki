@@ -48,6 +48,10 @@ export class SwitchStacksRoutingInterfaces extends pulumi.CustomResource {
      */
     public readonly defaultGateway!: pulumi.Output<string>;
     /**
+     * IPv4 default gateway
+     */
+    public /*out*/ readonly defaultGatewayResponse!: pulumi.Output<string>;
+    /**
      * The id
      */
     public readonly interfaceId!: pulumi.Output<string>;
@@ -106,6 +110,7 @@ export class SwitchStacksRoutingInterfaces extends pulumi.CustomResource {
         if (opts.id) {
             const state = argsOrState as SwitchStacksRoutingInterfacesState | undefined;
             resourceInputs["defaultGateway"] = state ? state.defaultGateway : undefined;
+            resourceInputs["defaultGatewayResponse"] = state ? state.defaultGatewayResponse : undefined;
             resourceInputs["interfaceId"] = state ? state.interfaceId : undefined;
             resourceInputs["interfaceIp"] = state ? state.interfaceIp : undefined;
             resourceInputs["ipv6"] = state ? state.ipv6 : undefined;
@@ -136,6 +141,7 @@ export class SwitchStacksRoutingInterfaces extends pulumi.CustomResource {
             resourceInputs["subnet"] = args ? args.subnet : undefined;
             resourceInputs["switchStackId"] = args ? args.switchStackId : undefined;
             resourceInputs["vlanId"] = args ? args.vlanId : undefined;
+            resourceInputs["defaultGatewayResponse"] = undefined /*out*/;
             resourceInputs["ospfV3"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -151,6 +157,10 @@ export interface SwitchStacksRoutingInterfacesState {
      * IPv4 default gateway
      */
     defaultGateway?: pulumi.Input<string>;
+    /**
+     * IPv4 default gateway
+     */
+    defaultGatewayResponse?: pulumi.Input<string>;
     /**
      * The id
      */

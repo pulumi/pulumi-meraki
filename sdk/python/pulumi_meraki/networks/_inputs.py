@@ -61,6 +61,7 @@ __all__ = [
     'ApplianceTrafficShapingGlobalBandwidthLimitsArgs',
     'ApplianceTrafficShapingRulesRuleArgs',
     'ApplianceTrafficShapingRulesRuleDefinitionArgs',
+    'ApplianceTrafficShapingRulesRuleDefinitionValueObjArgs',
     'ApplianceTrafficShapingRulesRulePerClientBandwidthLimitsArgs',
     'ApplianceTrafficShapingRulesRulePerClientBandwidthLimitsBandwidthLimitsArgs',
     'ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs',
@@ -501,6 +502,7 @@ __all__ = [
     'WirelessSsidsFirewallL3FirewallRulesRuleArgs',
     'WirelessSsidsFirewallL3FirewallRulesRulesResponseArgs',
     'WirelessSsidsFirewallL7FirewallRulesRuleArgs',
+    'WirelessSsidsFirewallL7FirewallRulesRuleValueObjArgs',
     'WirelessSsidsGreArgs',
     'WirelessSsidsGreConcentratorArgs',
     'WirelessSsidsHotspot20MccMncArgs',
@@ -3556,7 +3558,9 @@ class ApplianceTrafficShapingRulesRuleArgs:
 class ApplianceTrafficShapingRulesRuleDefinitionArgs:
     def __init__(__self__, *,
                  type: Optional[pulumi.Input[str]] = None,
-                 value: Optional[pulumi.Input[str]] = None):
+                 value: Optional[pulumi.Input[str]] = None,
+                 value_lists: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+                 value_obj: Optional[pulumi.Input['ApplianceTrafficShapingRulesRuleDefinitionValueObjArgs']] = None):
         """
         :param pulumi.Input[str] type: The type of definition. Can be one of 'application', 'applicationCategory', 'host', 'port', 'ipRange' or 'localNet'.
         :param pulumi.Input[str] value: If "type" is 'host', 'port', 'ipRange' or 'localNet', then "value" must be a string, matching either
@@ -3567,11 +3571,17 @@ class ApplianceTrafficShapingRulesRuleDefinitionArgs:
                with the structure { "id": "meraki:layer7/..." }, where "id" is the application category or
                application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
                endpoint).
+        :param pulumi.Input[Sequence[pulumi.Input[str]]] value_lists: The 'value_list' of what you want to block. Send a list in request
+        :param pulumi.Input['ApplianceTrafficShapingRulesRuleDefinitionValueObjArgs'] value_obj: The 'value_obj' of what you want to block. Send a dict in request
         """
         if type is not None:
             pulumi.set(__self__, "type", type)
         if value is not None:
             pulumi.set(__self__, "value", value)
+        if value_lists is not None:
+            pulumi.set(__self__, "value_lists", value_lists)
+        if value_obj is not None:
+            pulumi.set(__self__, "value_obj", value_obj)
 
     @property
     @pulumi.getter
@@ -3603,6 +3613,59 @@ class ApplianceTrafficShapingRulesRuleDefinitionArgs:
     @value.setter
     def value(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "value", value)
+
+    @property
+    @pulumi.getter(name="valueLists")
+    def value_lists(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
+        """
+        The 'value_list' of what you want to block. Send a list in request
+        """
+        return pulumi.get(self, "value_lists")
+
+    @value_lists.setter
+    def value_lists(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
+        pulumi.set(self, "value_lists", value)
+
+    @property
+    @pulumi.getter(name="valueObj")
+    def value_obj(self) -> Optional[pulumi.Input['ApplianceTrafficShapingRulesRuleDefinitionValueObjArgs']]:
+        """
+        The 'value_obj' of what you want to block. Send a dict in request
+        """
+        return pulumi.get(self, "value_obj")
+
+    @value_obj.setter
+    def value_obj(self, value: Optional[pulumi.Input['ApplianceTrafficShapingRulesRuleDefinitionValueObjArgs']]):
+        pulumi.set(self, "value_obj", value)
+
+
+@pulumi.input_type
+class ApplianceTrafficShapingRulesRuleDefinitionValueObjArgs:
+    def __init__(__self__, *,
+                 id: Optional[pulumi.Input[str]] = None,
+                 name: Optional[pulumi.Input[str]] = None):
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+        if name is not None:
+            pulumi.set(__self__, "name", name)
+
+    @property
+    @pulumi.getter
+    def id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "id")
+
+    @id.setter
+    def id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "id", value)
+
+    @property
+    @pulumi.getter
+    def name(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "name")
+
+    @name.setter
+    def name(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "name", value)
 
 
 @pulumi.input_type
@@ -27293,11 +27356,15 @@ class WirelessSsidsFirewallL7FirewallRulesRuleArgs:
     def __init__(__self__, *,
                  policy: Optional[pulumi.Input[str]] = None,
                  type: Optional[pulumi.Input[str]] = None,
-                 value: Optional[pulumi.Input[str]] = None):
+                 value: Optional[pulumi.Input[str]] = None,
+                 value_lists: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+                 value_obj: Optional[pulumi.Input['WirelessSsidsFirewallL7FirewallRulesRuleValueObjArgs']] = None):
         """
         :param pulumi.Input[str] policy: 'Deny' traffic specified by this rule
         :param pulumi.Input[str] type: Type of the L7 firewall rule. One of: 'application', 'applicationCategory', 'host', 'port', 'ipRange'
         :param pulumi.Input[str] value: The value of what needs to get blocked. Format of the value varies depending on type of the firewall rule selected.
+        :param pulumi.Input[Sequence[pulumi.Input[str]]] value_lists: The 'value_list' of what you want to block. Send a list in request
+        :param pulumi.Input['WirelessSsidsFirewallL7FirewallRulesRuleValueObjArgs'] value_obj: The 'value_obj' of what you want to block. Send a dict in request
         """
         if policy is not None:
             pulumi.set(__self__, "policy", policy)
@@ -27305,6 +27372,10 @@ class WirelessSsidsFirewallL7FirewallRulesRuleArgs:
             pulumi.set(__self__, "type", type)
         if value is not None:
             pulumi.set(__self__, "value", value)
+        if value_lists is not None:
+            pulumi.set(__self__, "value_lists", value_lists)
+        if value_obj is not None:
+            pulumi.set(__self__, "value_obj", value_obj)
 
     @property
     @pulumi.getter
@@ -27341,6 +27412,59 @@ class WirelessSsidsFirewallL7FirewallRulesRuleArgs:
     @value.setter
     def value(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "value", value)
+
+    @property
+    @pulumi.getter(name="valueLists")
+    def value_lists(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
+        """
+        The 'value_list' of what you want to block. Send a list in request
+        """
+        return pulumi.get(self, "value_lists")
+
+    @value_lists.setter
+    def value_lists(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
+        pulumi.set(self, "value_lists", value)
+
+    @property
+    @pulumi.getter(name="valueObj")
+    def value_obj(self) -> Optional[pulumi.Input['WirelessSsidsFirewallL7FirewallRulesRuleValueObjArgs']]:
+        """
+        The 'value_obj' of what you want to block. Send a dict in request
+        """
+        return pulumi.get(self, "value_obj")
+
+    @value_obj.setter
+    def value_obj(self, value: Optional[pulumi.Input['WirelessSsidsFirewallL7FirewallRulesRuleValueObjArgs']]):
+        pulumi.set(self, "value_obj", value)
+
+
+@pulumi.input_type
+class WirelessSsidsFirewallL7FirewallRulesRuleValueObjArgs:
+    def __init__(__self__, *,
+                 id: Optional[pulumi.Input[str]] = None,
+                 name: Optional[pulumi.Input[str]] = None):
+        if id is not None:
+            pulumi.set(__self__, "id", id)
+        if name is not None:
+            pulumi.set(__self__, "name", name)
+
+    @property
+    @pulumi.getter
+    def id(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "id")
+
+    @id.setter
+    def id(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "id", value)
+
+    @property
+    @pulumi.getter
+    def name(self) -> Optional[pulumi.Input[str]]:
+        return pulumi.get(self, "name")
+
+    @name.setter
+    def name(self, value: Optional[pulumi.Input[str]]):
+        pulumi.set(self, "name", value)
 
 
 @pulumi.input_type

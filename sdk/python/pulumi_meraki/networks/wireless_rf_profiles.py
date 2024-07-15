@@ -652,7 +652,7 @@ class WirelessRfProfiles(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="flexRadios")
-    def flex_radios(self) -> pulumi.Output['outputs.WirelessRfProfilesFlexRadios']:
+    def flex_radios(self) -> pulumi.Output[Optional['outputs.WirelessRfProfilesFlexRadios']]:
         """
         Flex radio settings.
         """
@@ -692,7 +692,7 @@ class WirelessRfProfiles(pulumi.CustomResource):
 
     @property
     @pulumi.getter(name="rfProfileId")
-    def rf_profile_id(self) -> pulumi.Output[Optional[str]]:
+    def rf_profile_id(self) -> pulumi.Output[str]:
         """
         rfProfileId path parameter. Rf profile ID
         """

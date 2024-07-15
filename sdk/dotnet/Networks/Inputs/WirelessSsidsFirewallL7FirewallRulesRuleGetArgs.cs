@@ -30,6 +30,24 @@ namespace Pulumi.Meraki.Networks.Inputs
         [Input("value")]
         public Input<string>? Value { get; set; }
 
+        [Input("valueLists")]
+        private InputList<string>? _valueLists;
+
+        /// <summary>
+        /// The 'value_list' of what you want to block. Send a list in request
+        /// </summary>
+        public InputList<string> ValueLists
+        {
+            get => _valueLists ?? (_valueLists = new InputList<string>());
+            set => _valueLists = value;
+        }
+
+        /// <summary>
+        /// The 'value_obj' of what you want to block. Send a dict in request
+        /// </summary>
+        [Input("valueObj")]
+        public Input<Inputs.WirelessSsidsFirewallL7FirewallRulesRuleValueObjGetArgs>? ValueObj { get; set; }
+
         public WirelessSsidsFirewallL7FirewallRulesRuleGetArgs()
         {
         }

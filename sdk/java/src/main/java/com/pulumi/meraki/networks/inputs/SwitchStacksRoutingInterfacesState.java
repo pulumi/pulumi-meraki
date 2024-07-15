@@ -35,6 +35,21 @@ public final class SwitchStacksRoutingInterfacesState extends com.pulumi.resourc
     }
 
     /**
+     * IPv4 default gateway
+     * 
+     */
+    @Import(name="defaultGatewayResponse")
+    private @Nullable Output<String> defaultGatewayResponse;
+
+    /**
+     * @return IPv4 default gateway
+     * 
+     */
+    public Optional<Output<String>> defaultGatewayResponse() {
+        return Optional.ofNullable(this.defaultGatewayResponse);
+    }
+
+    /**
      * The id
      * 
      */
@@ -203,6 +218,7 @@ public final class SwitchStacksRoutingInterfacesState extends com.pulumi.resourc
 
     private SwitchStacksRoutingInterfacesState(SwitchStacksRoutingInterfacesState $) {
         this.defaultGateway = $.defaultGateway;
+        this.defaultGatewayResponse = $.defaultGatewayResponse;
         this.interfaceId = $.interfaceId;
         this.interfaceIp = $.interfaceIp;
         this.ipv6 = $.ipv6;
@@ -253,6 +269,27 @@ public final class SwitchStacksRoutingInterfacesState extends com.pulumi.resourc
          */
         public Builder defaultGateway(String defaultGateway) {
             return defaultGateway(Output.of(defaultGateway));
+        }
+
+        /**
+         * @param defaultGatewayResponse IPv4 default gateway
+         * 
+         * @return builder
+         * 
+         */
+        public Builder defaultGatewayResponse(@Nullable Output<String> defaultGatewayResponse) {
+            $.defaultGatewayResponse = defaultGatewayResponse;
+            return this;
+        }
+
+        /**
+         * @param defaultGatewayResponse IPv4 default gateway
+         * 
+         * @return builder
+         * 
+         */
+        public Builder defaultGatewayResponse(String defaultGatewayResponse) {
+            return defaultGatewayResponse(Output.of(defaultGatewayResponse));
         }
 
         /**
