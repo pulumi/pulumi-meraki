@@ -7380,7 +7380,7 @@ export namespace networks {
         /**
          * OSPF area ID
          */
-        areaId?: pulumi.Input<string>;
+        areaId?: pulumi.Input<number>;
         /**
          * Name of the OSPF area
          */
@@ -7425,7 +7425,7 @@ export namespace networks {
         /**
          * OSPF area ID
          */
-        areaId?: pulumi.Input<string>;
+        areaId?: pulumi.Input<number>;
         /**
          * Name of the OSPF area
          */

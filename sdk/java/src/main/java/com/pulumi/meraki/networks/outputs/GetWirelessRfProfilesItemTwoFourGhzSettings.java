@@ -8,7 +8,6 @@ import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
-import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
@@ -43,7 +42,7 @@ public final class GetWirelessRfProfilesItemTwoFourGhzSettings {
      * @return Sets valid auto channels for 2.4Ghz band. Can be one of &#39;1&#39;, &#39;6&#39; or &#39;11&#39;. Defaults to [1, 6, 11].
      * 
      */
-    private List<String> validAutoChannels;
+    private List<Integer> validAutoChannels;
 
     private GetWirelessRfProfilesItemTwoFourGhzSettings() {}
     /**
@@ -85,7 +84,7 @@ public final class GetWirelessRfProfilesItemTwoFourGhzSettings {
      * @return Sets valid auto channels for 2.4Ghz band. Can be one of &#39;1&#39;, &#39;6&#39; or &#39;11&#39;. Defaults to [1, 6, 11].
      * 
      */
-    public List<String> validAutoChannels() {
+    public List<Integer> validAutoChannels() {
         return this.validAutoChannels;
     }
 
@@ -103,7 +102,7 @@ public final class GetWirelessRfProfilesItemTwoFourGhzSettings {
         private Double minBitrate;
         private Integer minPower;
         private Integer rxsop;
-        private List<String> validAutoChannels;
+        private List<Integer> validAutoChannels;
         public Builder() {}
         public Builder(GetWirelessRfProfilesItemTwoFourGhzSettings defaults) {
     	      Objects.requireNonNull(defaults);
@@ -156,14 +155,14 @@ public final class GetWirelessRfProfilesItemTwoFourGhzSettings {
             return this;
         }
         @CustomType.Setter
-        public Builder validAutoChannels(List<String> validAutoChannels) {
+        public Builder validAutoChannels(List<Integer> validAutoChannels) {
             if (validAutoChannels == null) {
               throw new MissingRequiredPropertyException("GetWirelessRfProfilesItemTwoFourGhzSettings", "validAutoChannels");
             }
             this.validAutoChannels = validAutoChannels;
             return this;
         }
-        public Builder validAutoChannels(String... validAutoChannels) {
+        public Builder validAutoChannels(Integer... validAutoChannels) {
             return validAutoChannels(List.of(validAutoChannels));
         }
         public GetWirelessRfProfilesItemTwoFourGhzSettings build() {

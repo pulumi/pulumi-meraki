@@ -5,6 +5,7 @@ package com.pulumi.meraki.networks.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,13 +21,13 @@ public final class SwitchRoutingOspfV3AreaArgs extends com.pulumi.resources.Reso
      * 
      */
     @Import(name="areaId")
-    private @Nullable Output<String> areaId;
+    private @Nullable Output<Integer> areaId;
 
     /**
      * @return OSPF area ID
      * 
      */
-    public Optional<Output<String>> areaId() {
+    public Optional<Output<Integer>> areaId() {
         return Optional.ofNullable(this.areaId);
     }
 
@@ -92,7 +93,7 @@ public final class SwitchRoutingOspfV3AreaArgs extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder areaId(@Nullable Output<String> areaId) {
+        public Builder areaId(@Nullable Output<Integer> areaId) {
             $.areaId = areaId;
             return this;
         }
@@ -103,7 +104,7 @@ public final class SwitchRoutingOspfV3AreaArgs extends com.pulumi.resources.Reso
          * @return builder
          * 
          */
-        public Builder areaId(String areaId) {
+        public Builder areaId(Integer areaId) {
             return areaId(Output.of(areaId));
         }
 

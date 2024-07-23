@@ -16,7 +16,7 @@ namespace Pulumi.Meraki.Networks.Outputs
         /// <summary>
         /// OSPF area ID
         /// </summary>
-        public readonly string? AreaId;
+        public readonly int? AreaId;
         /// <summary>
         /// Name of the OSPF area
         /// </summary>
@@ -28,7 +28,7 @@ namespace Pulumi.Meraki.Networks.Outputs
 
         [OutputConstructor]
         private SwitchRoutingOspfArea(
-            string? areaId,
+            int? areaId,
 
             string? areaName,
 

@@ -22019,11 +22019,11 @@ class SwitchRoutingMulticastOverrideArgs:
 @pulumi.input_type
 class SwitchRoutingOspfAreaArgs:
     def __init__(__self__, *,
-                 area_id: Optional[pulumi.Input[str]] = None,
+                 area_id: Optional[pulumi.Input[int]] = None,
                  area_name: Optional[pulumi.Input[str]] = None,
                  area_type: Optional[pulumi.Input[str]] = None):
         """
-        :param pulumi.Input[str] area_id: OSPF area ID
+        :param pulumi.Input[int] area_id: OSPF area ID
         :param pulumi.Input[str] area_name: Name of the OSPF area
         :param pulumi.Input[str] area_type: Area types in OSPF. Must be one of: ["normal", "stub", "nssa"]
         """
@@ -22036,14 +22036,14 @@ class SwitchRoutingOspfAreaArgs:
 
     @property
     @pulumi.getter(name="areaId")
-    def area_id(self) -> Optional[pulumi.Input[str]]:
+    def area_id(self) -> Optional[pulumi.Input[int]]:
         """
         OSPF area ID
         """
         return pulumi.get(self, "area_id")
 
     @area_id.setter
-    def area_id(self, value: Optional[pulumi.Input[str]]):
+    def area_id(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "area_id", value)
 
     @property
@@ -22184,11 +22184,11 @@ class SwitchRoutingOspfV3Args:
 @pulumi.input_type
 class SwitchRoutingOspfV3AreaArgs:
     def __init__(__self__, *,
-                 area_id: Optional[pulumi.Input[str]] = None,
+                 area_id: Optional[pulumi.Input[int]] = None,
                  area_name: Optional[pulumi.Input[str]] = None,
                  area_type: Optional[pulumi.Input[str]] = None):
         """
-        :param pulumi.Input[str] area_id: OSPF area ID
+        :param pulumi.Input[int] area_id: OSPF area ID
         :param pulumi.Input[str] area_name: Name of the OSPF area
         :param pulumi.Input[str] area_type: Area types in OSPF. Must be one of: ["normal", "stub", "nssa"]
         """
@@ -22201,14 +22201,14 @@ class SwitchRoutingOspfV3AreaArgs:
 
     @property
     @pulumi.getter(name="areaId")
-    def area_id(self) -> Optional[pulumi.Input[str]]:
+    def area_id(self) -> Optional[pulumi.Input[int]]:
         """
         OSPF area ID
         """
         return pulumi.get(self, "area_id")
 
     @area_id.setter
-    def area_id(self, value: Optional[pulumi.Input[str]]):
+    def area_id(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "area_id", value)
 
     @property

@@ -16,7 +16,7 @@ namespace Pulumi.Meraki.Networks.Inputs
         /// OSPF area ID
         /// </summary>
         [Input("areaId")]
-        public Input<string>? AreaId { get; set; }
+        public Input<int>? AreaId { get; set; }
 
         /// <summary>
         /// Name of the OSPF area
