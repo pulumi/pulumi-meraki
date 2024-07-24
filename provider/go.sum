@@ -664,8 +664,8 @@ github.com/mattn/go-runewidth v0.0.4/go.mod h1:LwmH8dsx7+W8Uxz3IHJYH5QSwggIsqBzp
 github.com/mattn/go-runewidth v0.0.12/go.mod h1:RAqKPSqVFrSLVXbA8x7dzmKdmGzieGRCM46jaSJTDAk=
 github.com/mattn/go-runewidth v0.0.15 h1:UNAjwbU9l54TA3KzvqLGxwWjHmMgBUVhBiTjelZgg3U=
 github.com/mattn/go-runewidth v0.0.15/go.mod h1:Jdepj2loyihRzMpdS35Xk/zdY8IAYHsh153qUoGf23w=
-github.com/meraki/dashboard-api-go/v3 v3.0.6 h1:PTAziVh280xNT1O8n2JGI1AF4eeOoqeW/jsxU5/l6PU=
-github.com/meraki/dashboard-api-go/v3 v3.0.6/go.mod h1:ngZmCzPKto29KbttUw7ibrLc+5RHHBKihYFkWFrL1zE=
+github.com/meraki/dashboard-api-go/v3 v3.0.7 h1:B7P36Wb3R3MC4Aus1CzJo4AYtiEl5dP1EQgI7uDz8mY=
+github.com/meraki/dashboard-api-go/v3 v3.0.7/go.mod h1:ngZmCzPKto29KbttUw7ibrLc+5RHHBKihYFkWFrL1zE=
 github.com/mitchellh/cli v1.1.5 h1:OxRIeJXpAMztws/XHlN2vu6imG5Dpq+j61AzAX5fLng=
 github.com/mitchellh/cli v1.1.5/go.mod h1:v8+iFts2sPIKUV1ltktPXMCC8fumSKFItNcD2cLtRR4=
 github.com/mitchellh/copystructure v1.0.0/go.mod h1:SNtv71yrdKgLRyLFxmLdkAbkKEFWgYaq1OVrnRcwhnw=

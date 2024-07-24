@@ -33,6 +33,10 @@ namespace Pulumi.Meraki.Networks.Outputs
         /// The RX-SOP level controls the sensitivity of the radio. It is strongly recommended to use RX-SOP only after consulting a wireless expert. RX-SOP can be configured in the range of -65 to -95 (dBm). A value of null will reset this to the default.
         /// </summary>
         public readonly int Rxsop;
+        /// <summary>
+        /// Sets valid auto channels for 2.4Ghz band. Can be one of '1', '6' or '11'. Defaults to [1, 6, 11].
+        /// </summary>
+        public readonly ImmutableArray<int> ValidAutoChannels;
 
         [OutputConstructor]
         private GetWirelessRfProfilesItemFiveGhzSettingsResult(
@@ -44,13 +48,16 @@ namespace Pulumi.Meraki.Networks.Outputs
 
             int minPower,
 
-            int rxsop)
+            int rxsop,
+
+            ImmutableArray<int> validAutoChannels)
         {
             ChannelWidth = channelWidth;
             MaxPower = maxPower;
             MinBitrate = minBitrate;
             MinPower = minPower;
             Rxsop = rxsop;
+            ValidAutoChannels = validAutoChannels;
         }
     }
 }

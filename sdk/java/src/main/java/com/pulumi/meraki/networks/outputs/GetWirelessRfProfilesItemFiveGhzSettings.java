@@ -7,6 +7,7 @@ import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 
 @CustomType
@@ -36,6 +37,11 @@ public final class GetWirelessRfProfilesItemFiveGhzSettings {
      * 
      */
     private Integer rxsop;
+    /**
+     * @return Sets valid auto channels for 2.4Ghz band. Can be one of &#39;1&#39;, &#39;6&#39; or &#39;11&#39;. Defaults to [1, 6, 11].
+     * 
+     */
+    private List<Integer> validAutoChannels;
 
     private GetWirelessRfProfilesItemFiveGhzSettings() {}
     /**
@@ -73,6 +79,13 @@ public final class GetWirelessRfProfilesItemFiveGhzSettings {
     public Integer rxsop() {
         return this.rxsop;
     }
+    /**
+     * @return Sets valid auto channels for 2.4Ghz band. Can be one of &#39;1&#39;, &#39;6&#39; or &#39;11&#39;. Defaults to [1, 6, 11].
+     * 
+     */
+    public List<Integer> validAutoChannels() {
+        return this.validAutoChannels;
+    }
 
     public static Builder builder() {
         return new Builder();
@@ -88,6 +101,7 @@ public final class GetWirelessRfProfilesItemFiveGhzSettings {
         private Integer minBitrate;
         private Integer minPower;
         private Integer rxsop;
+        private List<Integer> validAutoChannels;
         public Builder() {}
         public Builder(GetWirelessRfProfilesItemFiveGhzSettings defaults) {
     	      Objects.requireNonNull(defaults);
@@ -96,6 +110,7 @@ public final class GetWirelessRfProfilesItemFiveGhzSettings {
     	      this.minBitrate = defaults.minBitrate;
     	      this.minPower = defaults.minPower;
     	      this.rxsop = defaults.rxsop;
+    	      this.validAutoChannels = defaults.validAutoChannels;
         }
 
         @CustomType.Setter
@@ -138,6 +153,17 @@ public final class GetWirelessRfProfilesItemFiveGhzSettings {
             this.rxsop = rxsop;
             return this;
         }
+        @CustomType.Setter
+        public Builder validAutoChannels(List<Integer> validAutoChannels) {
+            if (validAutoChannels == null) {
+              throw new MissingRequiredPropertyException("GetWirelessRfProfilesItemFiveGhzSettings", "validAutoChannels");
+            }
+            this.validAutoChannels = validAutoChannels;
+            return this;
+        }
+        public Builder validAutoChannels(Integer... validAutoChannels) {
+            return validAutoChannels(List.of(validAutoChannels));
+        }
         public GetWirelessRfProfilesItemFiveGhzSettings build() {
             final var _resultValue = new GetWirelessRfProfilesItemFiveGhzSettings();
             _resultValue.channelWidth = channelWidth;
@@ -145,6 +171,7 @@ public final class GetWirelessRfProfilesItemFiveGhzSettings {
             _resultValue.minBitrate = minBitrate;
             _resultValue.minPower = minPower;
             _resultValue.rxsop = rxsop;
+            _resultValue.validAutoChannels = validAutoChannels;
             return _resultValue;
         }
     }

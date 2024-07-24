@@ -1116,6 +1116,8 @@ type GetWirelessRfProfilesItemFiveGhzSettings struct {
 	MinPower int `pulumi:"minPower"`
 	// The RX-SOP level controls the sensitivity of the radio. It is strongly recommended to use RX-SOP only after consulting a wireless expert. RX-SOP can be configured in the range of -65 to -95 (dBm). A value of null will reset this to the default.
 	Rxsop int `pulumi:"rxsop"`
+	// Sets valid auto channels for 2.4Ghz band. Can be one of '1', '6' or '11'. Defaults to [1, 6, 11].
+	ValidAutoChannels []int `pulumi:"validAutoChannels"`
 }
 
 // GetWirelessRfProfilesItemFiveGhzSettingsInput is an input type that accepts GetWirelessRfProfilesItemFiveGhzSettingsArgs and GetWirelessRfProfilesItemFiveGhzSettingsOutput values.
@@ -1140,6 +1142,8 @@ type GetWirelessRfProfilesItemFiveGhzSettingsArgs struct {
 	MinPower pulumi.IntInput `pulumi:"minPower"`
 	// The RX-SOP level controls the sensitivity of the radio. It is strongly recommended to use RX-SOP only after consulting a wireless expert. RX-SOP can be configured in the range of -65 to -95 (dBm). A value of null will reset this to the default.
 	Rxsop pulumi.IntInput `pulumi:"rxsop"`
+	// Sets valid auto channels for 2.4Ghz band. Can be one of '1', '6' or '11'. Defaults to [1, 6, 11].
+	ValidAutoChannels pulumi.IntArrayInput `pulumi:"validAutoChannels"`
 }
 
 func (GetWirelessRfProfilesItemFiveGhzSettingsArgs) ElementType() reflect.Type {
@@ -1191,6 +1195,11 @@ func (o GetWirelessRfProfilesItemFiveGhzSettingsOutput) MinPower() pulumi.IntOut
 // The RX-SOP level controls the sensitivity of the radio. It is strongly recommended to use RX-SOP only after consulting a wireless expert. RX-SOP can be configured in the range of -65 to -95 (dBm). A value of null will reset this to the default.
 func (o GetWirelessRfProfilesItemFiveGhzSettingsOutput) Rxsop() pulumi.IntOutput {
 	return o.ApplyT(func(v GetWirelessRfProfilesItemFiveGhzSettings) int { return v.Rxsop }).(pulumi.IntOutput)
+}
+
+// Sets valid auto channels for 2.4Ghz band. Can be one of '1', '6' or '11'. Defaults to [1, 6, 11].
+func (o GetWirelessRfProfilesItemFiveGhzSettingsOutput) ValidAutoChannels() pulumi.IntArrayOutput {
+	return o.ApplyT(func(v GetWirelessRfProfilesItemFiveGhzSettings) []int { return v.ValidAutoChannels }).(pulumi.IntArrayOutput)
 }
 
 type GetWirelessRfProfilesItemPerSsidSettings struct {
@@ -3543,7 +3552,7 @@ type GetWirelessRfProfilesItemSixGhzSettings struct {
 	// The RX-SOP level controls the sensitivity of the radio. It is strongly recommended to use RX-SOP only after consulting a wireless expert. RX-SOP can be configured in the range of -65 to -95 (dBm). A value of null will reset this to the default.
 	Rxsop int `pulumi:"rxsop"`
 	// Sets valid auto channels for 6Ghz band. Can be one of '1', '5', '9', '13', '17', '21', '25', '29', '33', '37', '41', '45', '49', '53', '57', '61', '65', '69', '73', '77', '81', '85', '89', '93', '97', '101', '105', '109', '113', '117', '121', '125', '129', '133', '137', '141', '145', '149', '153', '157', '161', '165', '169', '173', '177', '181', '185', '189', '193', '197', '201', '205', '209', '213', '217', '221', '225', '229' or '233'. Defaults to auto.
-	ValidAutoChannels []string `pulumi:"validAutoChannels"`
+	ValidAutoChannels []int `pulumi:"validAutoChannels"`
 }
 
 // GetWirelessRfProfilesItemSixGhzSettingsInput is an input type that accepts GetWirelessRfProfilesItemSixGhzSettingsArgs and GetWirelessRfProfilesItemSixGhzSettingsOutput values.
@@ -3569,7 +3578,7 @@ type GetWirelessRfProfilesItemSixGhzSettingsArgs struct {
 	// The RX-SOP level controls the sensitivity of the radio. It is strongly recommended to use RX-SOP only after consulting a wireless expert. RX-SOP can be configured in the range of -65 to -95 (dBm). A value of null will reset this to the default.
 	Rxsop pulumi.IntInput `pulumi:"rxsop"`
 	// Sets valid auto channels for 6Ghz band. Can be one of '1', '5', '9', '13', '17', '21', '25', '29', '33', '37', '41', '45', '49', '53', '57', '61', '65', '69', '73', '77', '81', '85', '89', '93', '97', '101', '105', '109', '113', '117', '121', '125', '129', '133', '137', '141', '145', '149', '153', '157', '161', '165', '169', '173', '177', '181', '185', '189', '193', '197', '201', '205', '209', '213', '217', '221', '225', '229' or '233'. Defaults to auto.
-	ValidAutoChannels pulumi.StringArrayInput `pulumi:"validAutoChannels"`
+	ValidAutoChannels pulumi.IntArrayInput `pulumi:"validAutoChannels"`
 }
 
 func (GetWirelessRfProfilesItemSixGhzSettingsArgs) ElementType() reflect.Type {
@@ -3624,8 +3633,8 @@ func (o GetWirelessRfProfilesItemSixGhzSettingsOutput) Rxsop() pulumi.IntOutput 
 }
 
 // Sets valid auto channels for 6Ghz band. Can be one of '1', '5', '9', '13', '17', '21', '25', '29', '33', '37', '41', '45', '49', '53', '57', '61', '65', '69', '73', '77', '81', '85', '89', '93', '97', '101', '105', '109', '113', '117', '121', '125', '129', '133', '137', '141', '145', '149', '153', '157', '161', '165', '169', '173', '177', '181', '185', '189', '193', '197', '201', '205', '209', '213', '217', '221', '225', '229' or '233'. Defaults to auto.
-func (o GetWirelessRfProfilesItemSixGhzSettingsOutput) ValidAutoChannels() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemSixGhzSettings) []string { return v.ValidAutoChannels }).(pulumi.StringArrayOutput)
+func (o GetWirelessRfProfilesItemSixGhzSettingsOutput) ValidAutoChannels() pulumi.IntArrayOutput {
+	return o.ApplyT(func(v GetWirelessRfProfilesItemSixGhzSettings) []int { return v.ValidAutoChannels }).(pulumi.IntArrayOutput)
 }
 
 type GetWirelessRfProfilesItemTransmission struct {
@@ -3692,7 +3701,7 @@ type GetWirelessRfProfilesItemTwoFourGhzSettings struct {
 	// The RX-SOP level controls the sensitivity of the radio. It is strongly recommended to use RX-SOP only after consulting a wireless expert. RX-SOP can be configured in the range of -65 to -95 (dBm). A value of null will reset this to the default.
 	Rxsop int `pulumi:"rxsop"`
 	// Sets valid auto channels for 2.4Ghz band. Can be one of '1', '6' or '11'. Defaults to [1, 6, 11].
-	ValidAutoChannels []string `pulumi:"validAutoChannels"`
+	ValidAutoChannels []int `pulumi:"validAutoChannels"`
 }
 
 // GetWirelessRfProfilesItemTwoFourGhzSettingsInput is an input type that accepts GetWirelessRfProfilesItemTwoFourGhzSettingsArgs and GetWirelessRfProfilesItemTwoFourGhzSettingsOutput values.
@@ -3718,7 +3727,7 @@ type GetWirelessRfProfilesItemTwoFourGhzSettingsArgs struct {
 	// The RX-SOP level controls the sensitivity of the radio. It is strongly recommended to use RX-SOP only after consulting a wireless expert. RX-SOP can be configured in the range of -65 to -95 (dBm). A value of null will reset this to the default.
 	Rxsop pulumi.IntInput `pulumi:"rxsop"`
 	// Sets valid auto channels for 2.4Ghz band. Can be one of '1', '6' or '11'. Defaults to [1, 6, 11].
-	ValidAutoChannels pulumi.StringArrayInput `pulumi:"validAutoChannels"`
+	ValidAutoChannels pulumi.IntArrayInput `pulumi:"validAutoChannels"`
 }
 
 func (GetWirelessRfProfilesItemTwoFourGhzSettingsArgs) ElementType() reflect.Type {
@@ -3773,8 +3782,8 @@ func (o GetWirelessRfProfilesItemTwoFourGhzSettingsOutput) Rxsop() pulumi.IntOut
 }
 
 // Sets valid auto channels for 2.4Ghz band. Can be one of '1', '6' or '11'. Defaults to [1, 6, 11].
-func (o GetWirelessRfProfilesItemTwoFourGhzSettingsOutput) ValidAutoChannels() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v GetWirelessRfProfilesItemTwoFourGhzSettings) []string { return v.ValidAutoChannels }).(pulumi.StringArrayOutput)
+func (o GetWirelessRfProfilesItemTwoFourGhzSettingsOutput) ValidAutoChannels() pulumi.IntArrayOutput {
+	return o.ApplyT(func(v GetWirelessRfProfilesItemTwoFourGhzSettings) []int { return v.ValidAutoChannels }).(pulumi.IntArrayOutput)
 }
 
 type GetWirelessSettingsItem struct {

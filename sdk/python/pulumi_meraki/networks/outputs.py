@@ -22225,11 +22225,11 @@ class SwitchRoutingOspfArea(dict):
         return super().get(key, default)
 
     def __init__(__self__, *,
-                 area_id: Optional[str] = None,
+                 area_id: Optional[int] = None,
                  area_name: Optional[str] = None,
                  area_type: Optional[str] = None):
         """
-        :param str area_id: OSPF area ID
+        :param int area_id: OSPF area ID
         :param str area_name: Name of the OSPF area
         :param str area_type: Area types in OSPF. Must be one of: ["normal", "stub", "nssa"]
         """
@@ -22242,7 +22242,7 @@ class SwitchRoutingOspfArea(dict):
 
     @property
     @pulumi.getter(name="areaId")
-    def area_id(self) -> Optional[str]:
+    def area_id(self) -> Optional[int]:
         """
         OSPF area ID
         """
@@ -22394,11 +22394,11 @@ class SwitchRoutingOspfV3Area(dict):
         return super().get(key, default)
 
     def __init__(__self__, *,
-                 area_id: Optional[str] = None,
+                 area_id: Optional[int] = None,
                  area_name: Optional[str] = None,
                  area_type: Optional[str] = None):
         """
-        :param str area_id: OSPF area ID
+        :param int area_id: OSPF area ID
         :param str area_name: Name of the OSPF area
         :param str area_type: Area types in OSPF. Must be one of: ["normal", "stub", "nssa"]
         """
@@ -22411,7 +22411,7 @@ class SwitchRoutingOspfV3Area(dict):
 
     @property
     @pulumi.getter(name="areaId")
-    def area_id(self) -> Optional[str]:
+    def area_id(self) -> Optional[int]:
         """
         OSPF area ID
         """
@@ -50939,19 +50939,22 @@ class GetWirelessRfProfilesItemFiveGhzSettingsResult(dict):
                  max_power: int,
                  min_bitrate: int,
                  min_power: int,
-                 rxsop: int):
+                 rxsop: int,
+                 valid_auto_channels: Sequence[int]):
         """
         :param str channel_width: Sets channel width (MHz) for 5Ghz band. Can be one of 'auto', '20', '40' or '80'. Defaults to auto.
         :param int max_power: Sets max power (dBm) of 5Ghz band. Can be integer between 2 and 30. Defaults to 30.
         :param int min_bitrate: Sets min bitrate (Mbps) of 5Ghz band. Can be one of '6', '9', '12', '18', '24', '36', '48' or '54'. Defaults to 12.
         :param int min_power: Sets min power (dBm) of 5Ghz band. Can be integer between 2 and 30. Defaults to 8.
         :param int rxsop: The RX-SOP level controls the sensitivity of the radio. It is strongly recommended to use RX-SOP only after consulting a wireless expert. RX-SOP can be configured in the range of -65 to -95 (dBm). A value of null will reset this to the default.
+        :param Sequence[int] valid_auto_channels: Sets valid auto channels for 2.4Ghz band. Can be one of '1', '6' or '11'. Defaults to [1, 6, 11].
         """
         pulumi.set(__self__, "channel_width", channel_width)
         pulumi.set(__self__, "max_power", max_power)
         pulumi.set(__self__, "min_bitrate", min_bitrate)
         pulumi.set(__self__, "min_power", min_power)
         pulumi.set(__self__, "rxsop", rxsop)
+        pulumi.set(__self__, "valid_auto_channels", valid_auto_channels)
 
     @property
     @pulumi.getter(name="channelWidth")
@@ -50992,6 +50995,14 @@ class GetWirelessRfProfilesItemFiveGhzSettingsResult(dict):
         The RX-SOP level controls the sensitivity of the radio. It is strongly recommended to use RX-SOP only after consulting a wireless expert. RX-SOP can be configured in the range of -65 to -95 (dBm). A value of null will reset this to the default.
         """
         return pulumi.get(self, "rxsop")
+
+    @property
+    @pulumi.getter(name="validAutoChannels")
+    def valid_auto_channels(self) -> Sequence[int]:
+        """
+        Sets valid auto channels for 2.4Ghz band. Can be one of '1', '6' or '11'. Defaults to [1, 6, 11].
+        """
+        return pulumi.get(self, "valid_auto_channels")
 
 
 @pulumi.output_type
@@ -52374,14 +52385,14 @@ class GetWirelessRfProfilesItemSixGhzSettingsResult(dict):
                  min_bitrate: int,
                  min_power: int,
                  rxsop: int,
-                 valid_auto_channels: Sequence[str]):
+                 valid_auto_channels: Sequence[int]):
         """
         :param str channel_width: Sets channel width (MHz) for 6Ghz band. Can be one of '0', '20', '40', '80' or '160'. Defaults to auto.
         :param int max_power: Sets max power (dBm) of 6Ghz band. Can be integer between 2 and 30. Defaults to 30.
         :param int min_bitrate: Sets min bitrate (Mbps) of 6Ghz band. Can be one of '6', '9', '12', '18', '24', '36', '48' or '54'. Defaults to 12.
         :param int min_power: Sets min power (dBm) of 6Ghz band. Can be integer between 2 and 30. Defaults to 8.
         :param int rxsop: The RX-SOP level controls the sensitivity of the radio. It is strongly recommended to use RX-SOP only after consulting a wireless expert. RX-SOP can be configured in the range of -65 to -95 (dBm). A value of null will reset this to the default.
-        :param Sequence[str] valid_auto_channels: Sets valid auto channels for 6Ghz band. Can be one of '1', '5', '9', '13', '17', '21', '25', '29', '33', '37', '41', '45', '49', '53', '57', '61', '65', '69', '73', '77', '81', '85', '89', '93', '97', '101', '105', '109', '113', '117', '121', '125', '129', '133', '137', '141', '145', '149', '153', '157', '161', '165', '169', '173', '177', '181', '185', '189', '193', '197', '201', '205', '209', '213', '217', '221', '225', '229' or '233'. Defaults to auto.
+        :param Sequence[int] valid_auto_channels: Sets valid auto channels for 6Ghz band. Can be one of '1', '5', '9', '13', '17', '21', '25', '29', '33', '37', '41', '45', '49', '53', '57', '61', '65', '69', '73', '77', '81', '85', '89', '93', '97', '101', '105', '109', '113', '117', '121', '125', '129', '133', '137', '141', '145', '149', '153', '157', '161', '165', '169', '173', '177', '181', '185', '189', '193', '197', '201', '205', '209', '213', '217', '221', '225', '229' or '233'. Defaults to auto.
         """
         pulumi.set(__self__, "channel_width", channel_width)
         pulumi.set(__self__, "max_power", max_power)
@@ -52432,7 +52443,7 @@ class GetWirelessRfProfilesItemSixGhzSettingsResult(dict):
 
     @property
     @pulumi.getter(name="validAutoChannels")
-    def valid_auto_channels(self) -> Sequence[str]:
+    def valid_auto_channels(self) -> Sequence[int]:
         """
         Sets valid auto channels for 6Ghz band. Can be one of '1', '5', '9', '13', '17', '21', '25', '29', '33', '37', '41', '45', '49', '53', '57', '61', '65', '69', '73', '77', '81', '85', '89', '93', '97', '101', '105', '109', '113', '117', '121', '125', '129', '133', '137', '141', '145', '149', '153', '157', '161', '165', '169', '173', '177', '181', '185', '189', '193', '197', '201', '205', '209', '213', '217', '221', '225', '229' or '233'. Defaults to auto.
         """
@@ -52465,14 +52476,14 @@ class GetWirelessRfProfilesItemTwoFourGhzSettingsResult(dict):
                  min_bitrate: float,
                  min_power: int,
                  rxsop: int,
-                 valid_auto_channels: Sequence[str]):
+                 valid_auto_channels: Sequence[int]):
         """
         :param bool ax_enabled: Determines whether ax radio on 2.4Ghz band is on or off. Can be either true or false. If false, we highly recommend disabling band steering. Defaults to true.
         :param int max_power: Sets max power (dBm) of 2.4Ghz band. Can be integer between 2 and 30. Defaults to 30.
         :param float min_bitrate: Sets min bitrate (Mbps) of 2.4Ghz band. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'. Defaults to 11.
         :param int min_power: Sets min power (dBm) of 2.4Ghz band. Can be integer between 2 and 30. Defaults to 5.
         :param int rxsop: The RX-SOP level controls the sensitivity of the radio. It is strongly recommended to use RX-SOP only after consulting a wireless expert. RX-SOP can be configured in the range of -65 to -95 (dBm). A value of null will reset this to the default.
-        :param Sequence[str] valid_auto_channels: Sets valid auto channels for 2.4Ghz band. Can be one of '1', '6' or '11'. Defaults to [1, 6, 11].
+        :param Sequence[int] valid_auto_channels: Sets valid auto channels for 2.4Ghz band. Can be one of '1', '6' or '11'. Defaults to [1, 6, 11].
         """
         pulumi.set(__self__, "ax_enabled", ax_enabled)
         pulumi.set(__self__, "max_power", max_power)
@@ -52523,7 +52534,7 @@ class GetWirelessRfProfilesItemTwoFourGhzSettingsResult(dict):
 
     @property
     @pulumi.getter(name="validAutoChannels")
-    def valid_auto_channels(self) -> Sequence[str]:
+    def valid_auto_channels(self) -> Sequence[int]:
         """
         Sets valid auto channels for 2.4Ghz band. Can be one of '1', '6' or '11'. Defaults to [1, 6, 11].
         """

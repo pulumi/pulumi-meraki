@@ -36,7 +36,7 @@ namespace Pulumi.Meraki.Networks.Outputs
         /// <summary>
         /// Sets valid auto channels for 2.4Ghz band. Can be one of '1', '6' or '11'. Defaults to [1, 6, 11].
         /// </summary>
-        public readonly ImmutableArray<string> ValidAutoChannels;
+        public readonly ImmutableArray<int> ValidAutoChannels;
 
         [OutputConstructor]
         private GetWirelessRfProfilesItemTwoFourGhzSettingsResult(
@@ -50,7 +50,7 @@ namespace Pulumi.Meraki.Networks.Outputs
 
             int rxsop,
 
-            ImmutableArray<string> validAutoChannels)
+            ImmutableArray<int> validAutoChannels)
         {
             AxEnabled = axEnabled;
             MaxPower = maxPower;

@@ -5736,6 +5736,13 @@
                                     }
                                 }
                             },
+                            "five_ghz_settings": {
+                                "fields": {
+                                    "valid_auto_channels": {
+                                        "maxItemsOne": false
+                                    }
+                                }
+                            },
                             "per_ssid_settings": {
                                 "fields": {
                                     "status_0": {

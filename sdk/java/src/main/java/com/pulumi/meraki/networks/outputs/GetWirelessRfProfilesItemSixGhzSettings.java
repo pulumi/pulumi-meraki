@@ -41,7 +41,7 @@ public final class GetWirelessRfProfilesItemSixGhzSettings {
      * @return Sets valid auto channels for 6Ghz band. Can be one of &#39;1&#39;, &#39;5&#39;, &#39;9&#39;, &#39;13&#39;, &#39;17&#39;, &#39;21&#39;, &#39;25&#39;, &#39;29&#39;, &#39;33&#39;, &#39;37&#39;, &#39;41&#39;, &#39;45&#39;, &#39;49&#39;, &#39;53&#39;, &#39;57&#39;, &#39;61&#39;, &#39;65&#39;, &#39;69&#39;, &#39;73&#39;, &#39;77&#39;, &#39;81&#39;, &#39;85&#39;, &#39;89&#39;, &#39;93&#39;, &#39;97&#39;, &#39;101&#39;, &#39;105&#39;, &#39;109&#39;, &#39;113&#39;, &#39;117&#39;, &#39;121&#39;, &#39;125&#39;, &#39;129&#39;, &#39;133&#39;, &#39;137&#39;, &#39;141&#39;, &#39;145&#39;, &#39;149&#39;, &#39;153&#39;, &#39;157&#39;, &#39;161&#39;, &#39;165&#39;, &#39;169&#39;, &#39;173&#39;, &#39;177&#39;, &#39;181&#39;, &#39;185&#39;, &#39;189&#39;, &#39;193&#39;, &#39;197&#39;, &#39;201&#39;, &#39;205&#39;, &#39;209&#39;, &#39;213&#39;, &#39;217&#39;, &#39;221&#39;, &#39;225&#39;, &#39;229&#39; or &#39;233&#39;. Defaults to auto.
      * 
      */
-    private List<String> validAutoChannels;
+    private List<Integer> validAutoChannels;
 
     private GetWirelessRfProfilesItemSixGhzSettings() {}
     /**
@@ -83,7 +83,7 @@ public final class GetWirelessRfProfilesItemSixGhzSettings {
      * @return Sets valid auto channels for 6Ghz band. Can be one of &#39;1&#39;, &#39;5&#39;, &#39;9&#39;, &#39;13&#39;, &#39;17&#39;, &#39;21&#39;, &#39;25&#39;, &#39;29&#39;, &#39;33&#39;, &#39;37&#39;, &#39;41&#39;, &#39;45&#39;, &#39;49&#39;, &#39;53&#39;, &#39;57&#39;, &#39;61&#39;, &#39;65&#39;, &#39;69&#39;, &#39;73&#39;, &#39;77&#39;, &#39;81&#39;, &#39;85&#39;, &#39;89&#39;, &#39;93&#39;, &#39;97&#39;, &#39;101&#39;, &#39;105&#39;, &#39;109&#39;, &#39;113&#39;, &#39;117&#39;, &#39;121&#39;, &#39;125&#39;, &#39;129&#39;, &#39;133&#39;, &#39;137&#39;, &#39;141&#39;, &#39;145&#39;, &#39;149&#39;, &#39;153&#39;, &#39;157&#39;, &#39;161&#39;, &#39;165&#39;, &#39;169&#39;, &#39;173&#39;, &#39;177&#39;, &#39;181&#39;, &#39;185&#39;, &#39;189&#39;, &#39;193&#39;, &#39;197&#39;, &#39;201&#39;, &#39;205&#39;, &#39;209&#39;, &#39;213&#39;, &#39;217&#39;, &#39;221&#39;, &#39;225&#39;, &#39;229&#39; or &#39;233&#39;. Defaults to auto.
      * 
      */
-    public List<String> validAutoChannels() {
+    public List<Integer> validAutoChannels() {
         return this.validAutoChannels;
     }
 
@@ -101,7 +101,7 @@ public final class GetWirelessRfProfilesItemSixGhzSettings {
         private Integer minBitrate;
         private Integer minPower;
         private Integer rxsop;
-        private List<String> validAutoChannels;
+        private List<Integer> validAutoChannels;
         public Builder() {}
         public Builder(GetWirelessRfProfilesItemSixGhzSettings defaults) {
     	      Objects.requireNonNull(defaults);
@@ -154,14 +154,14 @@ public final class GetWirelessRfProfilesItemSixGhzSettings {
             return this;
         }
         @CustomType.Setter
-        public Builder validAutoChannels(List<String> validAutoChannels) {
+        public Builder validAutoChannels(List<Integer> validAutoChannels) {
             if (validAutoChannels == null) {
               throw new MissingRequiredPropertyException("GetWirelessRfProfilesItemSixGhzSettings", "validAutoChannels");
             }
             this.validAutoChannels = validAutoChannels;
             return this;
         }
-        public Builder validAutoChannels(String... validAutoChannels) {
+        public Builder validAutoChannels(Integer... validAutoChannels) {
             return validAutoChannels(List.of(validAutoChannels));
         }
         public GetWirelessRfProfilesItemSixGhzSettings build() {
