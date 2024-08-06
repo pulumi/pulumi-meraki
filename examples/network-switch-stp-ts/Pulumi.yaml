@@ -1,0 +1,3 @@
+name: meraki-network-switch-stp-ts
+runtime: nodejs
+description: A minimal TypeScript Pulumi program

@@ -1,0 +1,3 @@
+name: meraki-network-appliance-firewall-l3-firewall-rules-ts
+runtime: nodejs
+description: A minimal TypeScript Pulumi program
