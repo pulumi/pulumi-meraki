@@ -1,0 +1,3 @@
+name: meraki-network-appliance-ports-ts
+runtime: nodejs
+description: A minimal TypeScript Pulumi program

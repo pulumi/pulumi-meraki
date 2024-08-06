@@ -1,0 +1,3 @@
+name: meraki-network-webhooks-payload-templates-ts
+runtime: nodejs
+description: A minimal TypeScript Pulumi program
