@@ -6,19 +6,20 @@ package com.pulumi.meraki.devices.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
+import java.lang.String;
 import java.util.Objects;
 
 @CustomType
 public final class GetWirelessRadioSettingsItemFiveGhzSettings {
     private Integer channel;
-    private Integer channelWidth;
+    private String channelWidth;
     private Integer targetPower;
 
     private GetWirelessRadioSettingsItemFiveGhzSettings() {}
     public Integer channel() {
         return this.channel;
     }
-    public Integer channelWidth() {
+    public String channelWidth() {
         return this.channelWidth;
     }
     public Integer targetPower() {
@@ -35,7 +36,7 @@ public final class GetWirelessRadioSettingsItemFiveGhzSettings {
     @CustomType.Builder
     public static final class Builder {
         private Integer channel;
-        private Integer channelWidth;
+        private String channelWidth;
         private Integer targetPower;
         public Builder() {}
         public Builder(GetWirelessRadioSettingsItemFiveGhzSettings defaults) {
@@ -54,7 +55,7 @@ public final class GetWirelessRadioSettingsItemFiveGhzSettings {
             return this;
         }
         @CustomType.Setter
-        public Builder channelWidth(Integer channelWidth) {
+        public Builder channelWidth(String channelWidth) {
             if (channelWidth == null) {
               throw new MissingRequiredPropertyException("GetWirelessRadioSettingsItemFiveGhzSettings", "channelWidth");
             }

@@ -155,11 +155,18 @@ public class ClientsPolicy extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ClientsPolicy(String name, ClientsPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/clientsPolicy:ClientsPolicy", name, args == null ? ClientsPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/clientsPolicy:ClientsPolicy", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private ClientsPolicy(String name, Output<String> id, @Nullable ClientsPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/clientsPolicy:ClientsPolicy", name, state, makeResourceOptions(options, id));
+    }
+
+    private static ClientsPolicyArgs makeArgs(ClientsPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ClientsPolicyArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

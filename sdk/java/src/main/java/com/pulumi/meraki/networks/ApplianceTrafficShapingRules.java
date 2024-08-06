@@ -142,11 +142,18 @@ public class ApplianceTrafficShapingRules extends com.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public ApplianceTrafficShapingRules(String name, ApplianceTrafficShapingRulesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/applianceTrafficShapingRules:ApplianceTrafficShapingRules", name, args == null ? ApplianceTrafficShapingRulesArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/applianceTrafficShapingRules:ApplianceTrafficShapingRules", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApplianceTrafficShapingRules(String name, Output<String> id, @Nullable ApplianceTrafficShapingRulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/applianceTrafficShapingRules:ApplianceTrafficShapingRules", name, state, makeResourceOptions(options, id));
+    }
+
+    private static ApplianceTrafficShapingRulesArgs makeArgs(ApplianceTrafficShapingRulesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ApplianceTrafficShapingRulesArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

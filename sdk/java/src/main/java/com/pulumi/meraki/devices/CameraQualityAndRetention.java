@@ -203,11 +203,18 @@ public class CameraQualityAndRetention extends com.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public CameraQualityAndRetention(String name, CameraQualityAndRetentionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/cameraQualityAndRetention:CameraQualityAndRetention", name, args == null ? CameraQualityAndRetentionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:devices/cameraQualityAndRetention:CameraQualityAndRetention", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private CameraQualityAndRetention(String name, Output<String> id, @Nullable CameraQualityAndRetentionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:devices/cameraQualityAndRetention:CameraQualityAndRetention", name, state, makeResourceOptions(options, id));
+    }
+
+    private static CameraQualityAndRetentionArgs makeArgs(CameraQualityAndRetentionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? CameraQualityAndRetentionArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

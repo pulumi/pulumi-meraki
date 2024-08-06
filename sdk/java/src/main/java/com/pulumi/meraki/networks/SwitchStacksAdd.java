@@ -126,11 +126,18 @@ public class SwitchStacksAdd extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SwitchStacksAdd(String name, SwitchStacksAddArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/switchStacksAdd:SwitchStacksAdd", name, args == null ? SwitchStacksAddArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/switchStacksAdd:SwitchStacksAdd", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private SwitchStacksAdd(String name, Output<String> id, @Nullable SwitchStacksAddState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/switchStacksAdd:SwitchStacksAdd", name, state, makeResourceOptions(options, id));
+    }
+
+    private static SwitchStacksAddArgs makeArgs(SwitchStacksAddArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? SwitchStacksAddArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

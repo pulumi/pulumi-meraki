@@ -144,11 +144,18 @@ public class CellularGatewayDhcp extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CellularGatewayDhcp(String name, CellularGatewayDhcpArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/cellularGatewayDhcp:CellularGatewayDhcp", name, args == null ? CellularGatewayDhcpArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/cellularGatewayDhcp:CellularGatewayDhcp", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private CellularGatewayDhcp(String name, Output<String> id, @Nullable CellularGatewayDhcpState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/cellularGatewayDhcp:CellularGatewayDhcp", name, state, makeResourceOptions(options, id));
+    }
+
+    private static CellularGatewayDhcpArgs makeArgs(CellularGatewayDhcpArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? CellularGatewayDhcpArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

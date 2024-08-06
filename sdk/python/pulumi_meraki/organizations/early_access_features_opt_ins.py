@@ -16,18 +16,22 @@ class EarlyAccessFeaturesOptInsArgs:
     def __init__(__self__, *,
                  organization_id: pulumi.Input[str],
                  limit_scope_to_networks: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+                 limit_scope_to_networks_rs: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  opt_in_id: Optional[pulumi.Input[str]] = None,
                  short_name: Optional[pulumi.Input[str]] = None):
         """
         The set of arguments for constructing a EarlyAccessFeaturesOptIns resource.
         :param pulumi.Input[str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[Sequence[pulumi.Input[str]]] limit_scope_to_networks: Networks assigned to the Early Access Feature
+        :param pulumi.Input[Sequence[pulumi.Input[str]]] limit_scope_to_networks_rs: Networks assigned to the Early Access Feature
         :param pulumi.Input[str] opt_in_id: optInId path parameter. Opt in ID
         :param pulumi.Input[str] short_name: Name of Early Access Feature
         """
         pulumi.set(__self__, "organization_id", organization_id)
         if limit_scope_to_networks is not None:
             pulumi.set(__self__, "limit_scope_to_networks", limit_scope_to_networks)
+        if limit_scope_to_networks_rs is not None:
+            pulumi.set(__self__, "limit_scope_to_networks_rs", limit_scope_to_networks_rs)
         if opt_in_id is not None:
             pulumi.set(__self__, "opt_in_id", opt_in_id)
         if short_name is not None:
@@ -56,6 +60,18 @@ class EarlyAccessFeaturesOptInsArgs:
     @limit_scope_to_networks.setter
     def limit_scope_to_networks(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
         pulumi.set(self, "limit_scope_to_networks", value)
+
+    @property
+    @pulumi.getter(name="limitScopeToNetworksRs")
+    def limit_scope_to_networks_rs(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
+        """
+        Networks assigned to the Early Access Feature
+        """
+        return pulumi.get(self, "limit_scope_to_networks_rs")
+
+    @limit_scope_to_networks_rs.setter
+    def limit_scope_to_networks_rs(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
+        pulumi.set(self, "limit_scope_to_networks_rs", value)
 
     @property
     @pulumi.getter(name="optInId")
@@ -87,6 +103,7 @@ class _EarlyAccessFeaturesOptInsState:
     def __init__(__self__, *,
                  created_at: Optional[pulumi.Input[str]] = None,
                  limit_scope_to_networks: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+                 limit_scope_to_networks_rs: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  opt_in_id: Optional[pulumi.Input[str]] = None,
                  organization_id: Optional[pulumi.Input[str]] = None,
                  short_name: Optional[pulumi.Input[str]] = None):
@@ -94,6 +111,7 @@ class _EarlyAccessFeaturesOptInsState:
         Input properties used for looking up and filtering EarlyAccessFeaturesOptIns resources.
         :param pulumi.Input[str] created_at: Time when Early Access Feature was created
         :param pulumi.Input[Sequence[pulumi.Input[str]]] limit_scope_to_networks: Networks assigned to the Early Access Feature
+        :param pulumi.Input[Sequence[pulumi.Input[str]]] limit_scope_to_networks_rs: Networks assigned to the Early Access Feature
         :param pulumi.Input[str] opt_in_id: optInId path parameter. Opt in ID
         :param pulumi.Input[str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[str] short_name: Name of Early Access Feature
@@ -102,6 +120,8 @@ class _EarlyAccessFeaturesOptInsState:
             pulumi.set(__self__, "created_at", created_at)
         if limit_scope_to_networks is not None:
             pulumi.set(__self__, "limit_scope_to_networks", limit_scope_to_networks)
+        if limit_scope_to_networks_rs is not None:
+            pulumi.set(__self__, "limit_scope_to_networks_rs", limit_scope_to_networks_rs)
         if opt_in_id is not None:
             pulumi.set(__self__, "opt_in_id", opt_in_id)
         if organization_id is not None:
@@ -132,6 +152,18 @@ class _EarlyAccessFeaturesOptInsState:
     @limit_scope_to_networks.setter
     def limit_scope_to_networks(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
         pulumi.set(self, "limit_scope_to_networks", value)
+
+    @property
+    @pulumi.getter(name="limitScopeToNetworksRs")
+    def limit_scope_to_networks_rs(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
+        """
+        Networks assigned to the Early Access Feature
+        """
+        return pulumi.get(self, "limit_scope_to_networks_rs")
+
+    @limit_scope_to_networks_rs.setter
+    def limit_scope_to_networks_rs(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
+        pulumi.set(self, "limit_scope_to_networks_rs", value)
 
     @property
     @pulumi.getter(name="optInId")
@@ -176,6 +208,7 @@ class EarlyAccessFeaturesOptIns(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  limit_scope_to_networks: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+                 limit_scope_to_networks_rs: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  opt_in_id: Optional[pulumi.Input[str]] = None,
                  organization_id: Optional[pulumi.Input[str]] = None,
                  short_name: Optional[pulumi.Input[str]] = None,
@@ -203,6 +236,7 @@ class EarlyAccessFeaturesOptIns(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] limit_scope_to_networks: Networks assigned to the Early Access Feature
+        :param pulumi.Input[Sequence[pulumi.Input[str]]] limit_scope_to_networks_rs: Networks assigned to the Early Access Feature
         :param pulumi.Input[str] opt_in_id: optInId path parameter. Opt in ID
         :param pulumi.Input[str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[str] short_name: Name of Early Access Feature
@@ -249,6 +283,7 @@ class EarlyAccessFeaturesOptIns(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  limit_scope_to_networks: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+                 limit_scope_to_networks_rs: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  opt_in_id: Optional[pulumi.Input[str]] = None,
                  organization_id: Optional[pulumi.Input[str]] = None,
                  short_name: Optional[pulumi.Input[str]] = None,
@@ -262,6 +297,7 @@ class EarlyAccessFeaturesOptIns(pulumi.CustomResource):
             __props__ = EarlyAccessFeaturesOptInsArgs.__new__(EarlyAccessFeaturesOptInsArgs)
 
             __props__.__dict__["limit_scope_to_networks"] = limit_scope_to_networks
+            __props__.__dict__["limit_scope_to_networks_rs"] = limit_scope_to_networks_rs
             __props__.__dict__["opt_in_id"] = opt_in_id
             if organization_id is None and not opts.urn:
                 raise TypeError("Missing required property 'organization_id'")
@@ -280,6 +316,7 @@ class EarlyAccessFeaturesOptIns(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             created_at: Optional[pulumi.Input[str]] = None,
             limit_scope_to_networks: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
+            limit_scope_to_networks_rs: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
             opt_in_id: Optional[pulumi.Input[str]] = None,
             organization_id: Optional[pulumi.Input[str]] = None,
             short_name: Optional[pulumi.Input[str]] = None) -> 'EarlyAccessFeaturesOptIns':
@@ -292,6 +329,7 @@ class EarlyAccessFeaturesOptIns(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] created_at: Time when Early Access Feature was created
         :param pulumi.Input[Sequence[pulumi.Input[str]]] limit_scope_to_networks: Networks assigned to the Early Access Feature
+        :param pulumi.Input[Sequence[pulumi.Input[str]]] limit_scope_to_networks_rs: Networks assigned to the Early Access Feature
         :param pulumi.Input[str] opt_in_id: optInId path parameter. Opt in ID
         :param pulumi.Input[str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[str] short_name: Name of Early Access Feature
@@ -302,6 +340,7 @@ class EarlyAccessFeaturesOptIns(pulumi.CustomResource):
 
         __props__.__dict__["created_at"] = created_at
         __props__.__dict__["limit_scope_to_networks"] = limit_scope_to_networks
+        __props__.__dict__["limit_scope_to_networks_rs"] = limit_scope_to_networks_rs
         __props__.__dict__["opt_in_id"] = opt_in_id
         __props__.__dict__["organization_id"] = organization_id
         __props__.__dict__["short_name"] = short_name
@@ -322,6 +361,14 @@ class EarlyAccessFeaturesOptIns(pulumi.CustomResource):
         Networks assigned to the Early Access Feature
         """
         return pulumi.get(self, "limit_scope_to_networks")
+
+    @property
+    @pulumi.getter(name="limitScopeToNetworksRs")
+    def limit_scope_to_networks_rs(self) -> pulumi.Output[Sequence[str]]:
+        """
+        Networks assigned to the Early Access Feature
+        """
+        return pulumi.get(self, "limit_scope_to_networks_rs")
 
     @property
     @pulumi.getter(name="optInId")

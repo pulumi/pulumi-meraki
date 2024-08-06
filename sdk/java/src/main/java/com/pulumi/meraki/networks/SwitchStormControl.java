@@ -142,11 +142,18 @@ public class SwitchStormControl extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SwitchStormControl(String name, SwitchStormControlArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/switchStormControl:SwitchStormControl", name, args == null ? SwitchStormControlArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/switchStormControl:SwitchStormControl", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private SwitchStormControl(String name, Output<String> id, @Nullable SwitchStormControlState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/switchStormControl:SwitchStormControl", name, state, makeResourceOptions(options, id));
+    }
+
+    private static SwitchStormControlArgs makeArgs(SwitchStormControlArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? SwitchStormControlArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

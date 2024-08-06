@@ -131,11 +131,18 @@ public class SensorRelationships extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SensorRelationships(String name, SensorRelationshipsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/sensorRelationships:SensorRelationships", name, args == null ? SensorRelationshipsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:devices/sensorRelationships:SensorRelationships", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private SensorRelationships(String name, Output<String> id, @Nullable SensorRelationshipsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:devices/sensorRelationships:SensorRelationships", name, state, makeResourceOptions(options, id));
+    }
+
+    private static SensorRelationshipsArgs makeArgs(SensorRelationshipsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? SensorRelationshipsArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

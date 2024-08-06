@@ -220,11 +220,18 @@ public class LiveToolsWakeOnLan extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LiveToolsWakeOnLan(String name, LiveToolsWakeOnLanArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/liveToolsWakeOnLan:LiveToolsWakeOnLan", name, args == null ? LiveToolsWakeOnLanArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:devices/liveToolsWakeOnLan:LiveToolsWakeOnLan", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private LiveToolsWakeOnLan(String name, Output<String> id, @Nullable LiveToolsWakeOnLanState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:devices/liveToolsWakeOnLan:LiveToolsWakeOnLan", name, state, makeResourceOptions(options, id));
+    }
+
+    private static LiveToolsWakeOnLanArgs makeArgs(LiveToolsWakeOnLanArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? LiveToolsWakeOnLanArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

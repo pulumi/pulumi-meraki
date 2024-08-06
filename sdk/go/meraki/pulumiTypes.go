@@ -21,7 +21,7 @@ type GetDevicesItem struct {
 	// Firmware version of the device
 	Firmware string `pulumi:"firmware"`
 	// IMEI of the device, if applicable
-	Imei string `pulumi:"imei"`
+	Imei float64 `pulumi:"imei"`
 	// LAN IP address of the device
 	LanIp string `pulumi:"lanIp"`
 	// Latitude of the device
@@ -65,7 +65,7 @@ type GetDevicesItemArgs struct {
 	// Firmware version of the device
 	Firmware pulumi.StringInput `pulumi:"firmware"`
 	// IMEI of the device, if applicable
-	Imei pulumi.StringInput `pulumi:"imei"`
+	Imei pulumi.Float64Input `pulumi:"imei"`
 	// LAN IP address of the device
 	LanIp pulumi.StringInput `pulumi:"lanIp"`
 	// Latitude of the device
@@ -157,8 +157,8 @@ func (o GetDevicesItemOutput) Firmware() pulumi.StringOutput {
 }
 
 // IMEI of the device, if applicable
-func (o GetDevicesItemOutput) Imei() pulumi.StringOutput {
-	return o.ApplyT(func(v GetDevicesItem) string { return v.Imei }).(pulumi.StringOutput)
+func (o GetDevicesItemOutput) Imei() pulumi.Float64Output {
+	return o.ApplyT(func(v GetDevicesItem) float64 { return v.Imei }).(pulumi.Float64Output)
 }
 
 // LAN IP address of the device

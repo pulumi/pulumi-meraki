@@ -204,11 +204,18 @@ public class LiveToolsThroughputTest extends com.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public LiveToolsThroughputTest(String name, LiveToolsThroughputTestArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/liveToolsThroughputTest:LiveToolsThroughputTest", name, args == null ? LiveToolsThroughputTestArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:devices/liveToolsThroughputTest:LiveToolsThroughputTest", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private LiveToolsThroughputTest(String name, Output<String> id, @Nullable LiveToolsThroughputTestState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:devices/liveToolsThroughputTest:LiveToolsThroughputTest", name, state, makeResourceOptions(options, id));
+    }
+
+    private static LiveToolsThroughputTestArgs makeArgs(LiveToolsThroughputTestArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? LiveToolsThroughputTestArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

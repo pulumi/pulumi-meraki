@@ -120,11 +120,18 @@ public class SyslogServers extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SyslogServers(String name, SyslogServersArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/syslogServers:SyslogServers", name, args == null ? SyslogServersArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/syslogServers:SyslogServers", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private SyslogServers(String name, Output<String> id, @Nullable SyslogServersState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/syslogServers:SyslogServers", name, state, makeResourceOptions(options, id));
+    }
+
+    private static SyslogServersArgs makeArgs(SyslogServersArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? SyslogServersArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

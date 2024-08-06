@@ -122,11 +122,18 @@ public class ApplianceFirewallPortForwardingRules extends com.pulumi.resources.C
      * @param options A bag of options that control this resource's behavior.
      */
     public ApplianceFirewallPortForwardingRules(String name, ApplianceFirewallPortForwardingRulesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/applianceFirewallPortForwardingRules:ApplianceFirewallPortForwardingRules", name, args == null ? ApplianceFirewallPortForwardingRulesArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/applianceFirewallPortForwardingRules:ApplianceFirewallPortForwardingRules", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApplianceFirewallPortForwardingRules(String name, Output<String> id, @Nullable ApplianceFirewallPortForwardingRulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/applianceFirewallPortForwardingRules:ApplianceFirewallPortForwardingRules", name, state, makeResourceOptions(options, id));
+    }
+
+    private static ApplianceFirewallPortForwardingRulesArgs makeArgs(ApplianceFirewallPortForwardingRulesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ApplianceFirewallPortForwardingRulesArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

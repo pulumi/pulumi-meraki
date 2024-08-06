@@ -415,11 +415,18 @@ public class ApplianceVlans extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApplianceVlans(String name, ApplianceVlansArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/applianceVlans:ApplianceVlans", name, args == null ? ApplianceVlansArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/applianceVlans:ApplianceVlans", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApplianceVlans(String name, Output<String> id, @Nullable ApplianceVlansState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/applianceVlans:ApplianceVlans", name, state, makeResourceOptions(options, id));
+    }
+
+    private static ApplianceVlansArgs makeArgs(ApplianceVlansArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ApplianceVlansArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

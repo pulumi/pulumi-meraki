@@ -62,6 +62,10 @@ export class EarlyAccessFeaturesOptIns extends pulumi.CustomResource {
      */
     public readonly limitScopeToNetworks!: pulumi.Output<string[]>;
     /**
+     * Networks assigned to the Early Access Feature
+     */
+    public readonly limitScopeToNetworksRs!: pulumi.Output<string[]>;
+    /**
      * optInId path parameter. Opt in ID
      */
     public readonly optInId!: pulumi.Output<string | undefined>;
@@ -89,6 +93,7 @@ export class EarlyAccessFeaturesOptIns extends pulumi.CustomResource {
             const state = argsOrState as EarlyAccessFeaturesOptInsState | undefined;
             resourceInputs["createdAt"] = state ? state.createdAt : undefined;
             resourceInputs["limitScopeToNetworks"] = state ? state.limitScopeToNetworks : undefined;
+            resourceInputs["limitScopeToNetworksRs"] = state ? state.limitScopeToNetworksRs : undefined;
             resourceInputs["optInId"] = state ? state.optInId : undefined;
             resourceInputs["organizationId"] = state ? state.organizationId : undefined;
             resourceInputs["shortName"] = state ? state.shortName : undefined;
@@ -98,6 +103,7 @@ export class EarlyAccessFeaturesOptIns extends pulumi.CustomResource {
                 throw new Error("Missing required property 'organizationId'");
             }
             resourceInputs["limitScopeToNetworks"] = args ? args.limitScopeToNetworks : undefined;
+            resourceInputs["limitScopeToNetworksRs"] = args ? args.limitScopeToNetworksRs : undefined;
             resourceInputs["optInId"] = args ? args.optInId : undefined;
             resourceInputs["organizationId"] = args ? args.organizationId : undefined;
             resourceInputs["shortName"] = args ? args.shortName : undefined;
@@ -121,6 +127,10 @@ export interface EarlyAccessFeaturesOptInsState {
      */
     limitScopeToNetworks?: pulumi.Input<pulumi.Input<string>[]>;
     /**
+     * Networks assigned to the Early Access Feature
+     */
+    limitScopeToNetworksRs?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
      * optInId path parameter. Opt in ID
      */
     optInId?: pulumi.Input<string>;
@@ -142,6 +152,10 @@ export interface EarlyAccessFeaturesOptInsArgs {
      * Networks assigned to the Early Access Feature
      */
     limitScopeToNetworks?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * Networks assigned to the Early Access Feature
+     */
+    limitScopeToNetworksRs?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * optInId path parameter. Opt in ID
      */

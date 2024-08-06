@@ -115,11 +115,18 @@ public class LicensingSubscriptionSubscriptionsClaim extends com.pulumi.resource
      * @param options A bag of options that control this resource's behavior.
      */
     public LicensingSubscriptionSubscriptionsClaim(String name, LicensingSubscriptionSubscriptionsClaimArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:administered/licensingSubscriptionSubscriptionsClaim:LicensingSubscriptionSubscriptionsClaim", name, args == null ? LicensingSubscriptionSubscriptionsClaimArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:administered/licensingSubscriptionSubscriptionsClaim:LicensingSubscriptionSubscriptionsClaim", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private LicensingSubscriptionSubscriptionsClaim(String name, Output<String> id, @Nullable LicensingSubscriptionSubscriptionsClaimState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:administered/licensingSubscriptionSubscriptionsClaim:LicensingSubscriptionSubscriptionsClaim", name, state, makeResourceOptions(options, id));
+    }
+
+    private static LicensingSubscriptionSubscriptionsClaimArgs makeArgs(LicensingSubscriptionSubscriptionsClaimArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? LicensingSubscriptionSubscriptionsClaimArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

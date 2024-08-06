@@ -92,6 +92,20 @@ public class EarlyAccessFeaturesOptIns extends com.pulumi.resources.CustomResour
         return this.limitScopeToNetworks;
     }
     /**
+     * Networks assigned to the Early Access Feature
+     * 
+     */
+    @Export(name="limitScopeToNetworksRs", refs={List.class,String.class}, tree="[0,1]")
+    private Output<List<String>> limitScopeToNetworksRs;
+
+    /**
+     * @return Networks assigned to the Early Access Feature
+     * 
+     */
+    public Output<List<String>> limitScopeToNetworksRs() {
+        return this.limitScopeToNetworksRs;
+    }
+    /**
      * optInId path parameter. Opt in ID
      * 
      */
@@ -156,11 +170,18 @@ public class EarlyAccessFeaturesOptIns extends com.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public EarlyAccessFeaturesOptIns(String name, EarlyAccessFeaturesOptInsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/earlyAccessFeaturesOptIns:EarlyAccessFeaturesOptIns", name, args == null ? EarlyAccessFeaturesOptInsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:organizations/earlyAccessFeaturesOptIns:EarlyAccessFeaturesOptIns", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private EarlyAccessFeaturesOptIns(String name, Output<String> id, @Nullable EarlyAccessFeaturesOptInsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:organizations/earlyAccessFeaturesOptIns:EarlyAccessFeaturesOptIns", name, state, makeResourceOptions(options, id));
+    }
+
+    private static EarlyAccessFeaturesOptInsArgs makeArgs(EarlyAccessFeaturesOptInsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? EarlyAccessFeaturesOptInsArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

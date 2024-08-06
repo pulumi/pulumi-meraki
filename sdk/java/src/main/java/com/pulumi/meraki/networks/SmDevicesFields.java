@@ -123,11 +123,18 @@ public class SmDevicesFields extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SmDevicesFields(String name, SmDevicesFieldsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/smDevicesFields:SmDevicesFields", name, args == null ? SmDevicesFieldsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/smDevicesFields:SmDevicesFields", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private SmDevicesFields(String name, Output<String> id, @Nullable SmDevicesFieldsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/smDevicesFields:SmDevicesFields", name, state, makeResourceOptions(options, id));
+    }
+
+    private static SmDevicesFieldsArgs makeArgs(SmDevicesFieldsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? SmDevicesFieldsArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

@@ -160,11 +160,18 @@ public class SwitchDhcpServerPolicyArpInspectionTrustedServers extends com.pulum
      * @param options A bag of options that control this resource's behavior.
      */
     public SwitchDhcpServerPolicyArpInspectionTrustedServers(String name, SwitchDhcpServerPolicyArpInspectionTrustedServersArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/switchDhcpServerPolicyArpInspectionTrustedServers:SwitchDhcpServerPolicyArpInspectionTrustedServers", name, args == null ? SwitchDhcpServerPolicyArpInspectionTrustedServersArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/switchDhcpServerPolicyArpInspectionTrustedServers:SwitchDhcpServerPolicyArpInspectionTrustedServers", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private SwitchDhcpServerPolicyArpInspectionTrustedServers(String name, Output<String> id, @Nullable SwitchDhcpServerPolicyArpInspectionTrustedServersState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/switchDhcpServerPolicyArpInspectionTrustedServers:SwitchDhcpServerPolicyArpInspectionTrustedServers", name, state, makeResourceOptions(options, id));
+    }
+
+    private static SwitchDhcpServerPolicyArpInspectionTrustedServersArgs makeArgs(SwitchDhcpServerPolicyArpInspectionTrustedServersArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? SwitchDhcpServerPolicyArpInspectionTrustedServersArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

@@ -141,11 +141,18 @@ public class SwitchWarmSpare extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SwitchWarmSpare(String name, SwitchWarmSpareArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/switchWarmSpare:SwitchWarmSpare", name, args == null ? SwitchWarmSpareArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:devices/switchWarmSpare:SwitchWarmSpare", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private SwitchWarmSpare(String name, Output<String> id, @Nullable SwitchWarmSpareState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:devices/switchWarmSpare:SwitchWarmSpare", name, state, makeResourceOptions(options, id));
+    }
+
+    private static SwitchWarmSpareArgs makeArgs(SwitchWarmSpareArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? SwitchWarmSpareArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

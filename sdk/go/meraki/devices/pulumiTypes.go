@@ -14673,7 +14673,7 @@ type WirelessRadioSettingsFiveGhzSettings struct {
 	// Sets a manual channel for 5 GHz. Can be '36', '40', '44', '48', '52', '56', '60', '64', '100', '104', '108', '112', '116', '120', '124', '128', '132', '136', '140', '144', '149', '153', '157', '161', '165', '169', '173' or '177' or null for using auto channel.
 	Channel *int `pulumi:"channel"`
 	// Sets a manual channel for 5 GHz. Can be '0', '20', '40', '80' or '160' or null for using auto channel width.
-	ChannelWidth *int `pulumi:"channelWidth"`
+	ChannelWidth *string `pulumi:"channelWidth"`
 	// Set a manual target power for 5 GHz. Can be between '8' or '30' or null for using auto power range.
 	TargetPower *int `pulumi:"targetPower"`
 }
@@ -14693,7 +14693,7 @@ type WirelessRadioSettingsFiveGhzSettingsArgs struct {
 	// Sets a manual channel for 5 GHz. Can be '36', '40', '44', '48', '52', '56', '60', '64', '100', '104', '108', '112', '116', '120', '124', '128', '132', '136', '140', '144', '149', '153', '157', '161', '165', '169', '173' or '177' or null for using auto channel.
 	Channel pulumi.IntPtrInput `pulumi:"channel"`
 	// Sets a manual channel for 5 GHz. Can be '0', '20', '40', '80' or '160' or null for using auto channel width.
-	ChannelWidth pulumi.IntPtrInput `pulumi:"channelWidth"`
+	ChannelWidth pulumi.StringPtrInput `pulumi:"channelWidth"`
 	// Set a manual target power for 5 GHz. Can be between '8' or '30' or null for using auto power range.
 	TargetPower pulumi.IntPtrInput `pulumi:"targetPower"`
 }
@@ -14781,8 +14781,8 @@ func (o WirelessRadioSettingsFiveGhzSettingsOutput) Channel() pulumi.IntPtrOutpu
 }
 
 // Sets a manual channel for 5 GHz. Can be '0', '20', '40', '80' or '160' or null for using auto channel width.
-func (o WirelessRadioSettingsFiveGhzSettingsOutput) ChannelWidth() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v WirelessRadioSettingsFiveGhzSettings) *int { return v.ChannelWidth }).(pulumi.IntPtrOutput)
+func (o WirelessRadioSettingsFiveGhzSettingsOutput) ChannelWidth() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v WirelessRadioSettingsFiveGhzSettings) *string { return v.ChannelWidth }).(pulumi.StringPtrOutput)
 }
 
 // Set a manual target power for 5 GHz. Can be between '8' or '30' or null for using auto power range.
@@ -14825,13 +14825,13 @@ func (o WirelessRadioSettingsFiveGhzSettingsPtrOutput) Channel() pulumi.IntPtrOu
 }
 
 // Sets a manual channel for 5 GHz. Can be '0', '20', '40', '80' or '160' or null for using auto channel width.
-func (o WirelessRadioSettingsFiveGhzSettingsPtrOutput) ChannelWidth() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v *WirelessRadioSettingsFiveGhzSettings) *int {
+func (o WirelessRadioSettingsFiveGhzSettingsPtrOutput) ChannelWidth() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *WirelessRadioSettingsFiveGhzSettings) *string {
 		if v == nil {
 			return nil
 		}
 		return v.ChannelWidth
-	}).(pulumi.IntPtrOutput)
+	}).(pulumi.StringPtrOutput)
 }
 
 // Set a manual target power for 5 GHz. Can be between '8' or '30' or null for using auto power range.
@@ -24457,9 +24457,9 @@ func (o GetWirelessRadioSettingsItemOutput) TwoFourGhzSettings() GetWirelessRadi
 }
 
 type GetWirelessRadioSettingsItemFiveGhzSettings struct {
-	Channel      int `pulumi:"channel"`
-	ChannelWidth int `pulumi:"channelWidth"`
-	TargetPower  int `pulumi:"targetPower"`
+	Channel      int    `pulumi:"channel"`
+	ChannelWidth string `pulumi:"channelWidth"`
+	TargetPower  int    `pulumi:"targetPower"`
 }
 
 // GetWirelessRadioSettingsItemFiveGhzSettingsInput is an input type that accepts GetWirelessRadioSettingsItemFiveGhzSettingsArgs and GetWirelessRadioSettingsItemFiveGhzSettingsOutput values.
@@ -24474,9 +24474,9 @@ type GetWirelessRadioSettingsItemFiveGhzSettingsInput interface {
 }
 
 type GetWirelessRadioSettingsItemFiveGhzSettingsArgs struct {
-	Channel      pulumi.IntInput `pulumi:"channel"`
-	ChannelWidth pulumi.IntInput `pulumi:"channelWidth"`
-	TargetPower  pulumi.IntInput `pulumi:"targetPower"`
+	Channel      pulumi.IntInput    `pulumi:"channel"`
+	ChannelWidth pulumi.StringInput `pulumi:"channelWidth"`
+	TargetPower  pulumi.IntInput    `pulumi:"targetPower"`
 }
 
 func (GetWirelessRadioSettingsItemFiveGhzSettingsArgs) ElementType() reflect.Type {
@@ -24509,8 +24509,8 @@ func (o GetWirelessRadioSettingsItemFiveGhzSettingsOutput) Channel() pulumi.IntO
 	return o.ApplyT(func(v GetWirelessRadioSettingsItemFiveGhzSettings) int { return v.Channel }).(pulumi.IntOutput)
 }
 
-func (o GetWirelessRadioSettingsItemFiveGhzSettingsOutput) ChannelWidth() pulumi.IntOutput {
-	return o.ApplyT(func(v GetWirelessRadioSettingsItemFiveGhzSettings) int { return v.ChannelWidth }).(pulumi.IntOutput)
+func (o GetWirelessRadioSettingsItemFiveGhzSettingsOutput) ChannelWidth() pulumi.StringOutput {
+	return o.ApplyT(func(v GetWirelessRadioSettingsItemFiveGhzSettings) string { return v.ChannelWidth }).(pulumi.StringOutput)
 }
 
 func (o GetWirelessRadioSettingsItemFiveGhzSettingsOutput) TargetPower() pulumi.IntOutput {

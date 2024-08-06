@@ -114,11 +114,18 @@ public class SmDevicesWipe extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SmDevicesWipe(String name, SmDevicesWipeArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/smDevicesWipe:SmDevicesWipe", name, args == null ? SmDevicesWipeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/smDevicesWipe:SmDevicesWipe", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private SmDevicesWipe(String name, Output<String> id, @Nullable SmDevicesWipeState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/smDevicesWipe:SmDevicesWipe", name, state, makeResourceOptions(options, id));
+    }
+
+    private static SmDevicesWipeArgs makeArgs(SmDevicesWipeArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? SmDevicesWipeArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

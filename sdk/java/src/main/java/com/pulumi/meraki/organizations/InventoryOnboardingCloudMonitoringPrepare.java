@@ -179,11 +179,18 @@ public class InventoryOnboardingCloudMonitoringPrepare extends com.pulumi.resour
      * @param options A bag of options that control this resource's behavior.
      */
     public InventoryOnboardingCloudMonitoringPrepare(String name, InventoryOnboardingCloudMonitoringPrepareArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/inventoryOnboardingCloudMonitoringPrepare:InventoryOnboardingCloudMonitoringPrepare", name, args == null ? InventoryOnboardingCloudMonitoringPrepareArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:organizations/inventoryOnboardingCloudMonitoringPrepare:InventoryOnboardingCloudMonitoringPrepare", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private InventoryOnboardingCloudMonitoringPrepare(String name, Output<String> id, @Nullable InventoryOnboardingCloudMonitoringPrepareState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:organizations/inventoryOnboardingCloudMonitoringPrepare:InventoryOnboardingCloudMonitoringPrepare", name, state, makeResourceOptions(options, id));
+    }
+
+    private static InventoryOnboardingCloudMonitoringPrepareArgs makeArgs(InventoryOnboardingCloudMonitoringPrepareArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? InventoryOnboardingCloudMonitoringPrepareArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

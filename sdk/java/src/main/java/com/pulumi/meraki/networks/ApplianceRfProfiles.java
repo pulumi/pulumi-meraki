@@ -188,11 +188,18 @@ public class ApplianceRfProfiles extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApplianceRfProfiles(String name, ApplianceRfProfilesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/applianceRfProfiles:ApplianceRfProfiles", name, args == null ? ApplianceRfProfilesArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/applianceRfProfiles:ApplianceRfProfiles", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApplianceRfProfiles(String name, Output<String> id, @Nullable ApplianceRfProfilesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/applianceRfProfiles:ApplianceRfProfiles", name, state, makeResourceOptions(options, id));
+    }
+
+    private static ApplianceRfProfilesArgs makeArgs(ApplianceRfProfilesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ApplianceRfProfilesArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

@@ -4526,11 +4526,11 @@ class WirelessRadioSettingsFiveGhzSettings(dict):
 
     def __init__(__self__, *,
                  channel: Optional[int] = None,
-                 channel_width: Optional[int] = None,
+                 channel_width: Optional[str] = None,
                  target_power: Optional[int] = None):
         """
         :param int channel: Sets a manual channel for 5 GHz. Can be '36', '40', '44', '48', '52', '56', '60', '64', '100', '104', '108', '112', '116', '120', '124', '128', '132', '136', '140', '144', '149', '153', '157', '161', '165', '169', '173' or '177' or null for using auto channel.
-        :param int channel_width: Sets a manual channel for 5 GHz. Can be '0', '20', '40', '80' or '160' or null for using auto channel width.
+        :param str channel_width: Sets a manual channel for 5 GHz. Can be '0', '20', '40', '80' or '160' or null for using auto channel width.
         :param int target_power: Set a manual target power for 5 GHz. Can be between '8' or '30' or null for using auto power range.
         """
         if channel is not None:
@@ -4550,7 +4550,7 @@ class WirelessRadioSettingsFiveGhzSettings(dict):
 
     @property
     @pulumi.getter(name="channelWidth")
-    def channel_width(self) -> Optional[int]:
+    def channel_width(self) -> Optional[str]:
         """
         Sets a manual channel for 5 GHz. Can be '0', '20', '40', '80' or '160' or null for using auto channel width.
         """
@@ -9610,7 +9610,7 @@ class GetWirelessRadioSettingsItemResult(dict):
 class GetWirelessRadioSettingsItemFiveGhzSettingsResult(dict):
     def __init__(__self__, *,
                  channel: int,
-                 channel_width: int,
+                 channel_width: str,
                  target_power: int):
         pulumi.set(__self__, "channel", channel)
         pulumi.set(__self__, "channel_width", channel_width)
@@ -9623,7 +9623,7 @@ class GetWirelessRadioSettingsItemFiveGhzSettingsResult(dict):
 
     @property
     @pulumi.getter(name="channelWidth")
-    def channel_width(self) -> int:
+    def channel_width(self) -> str:
         return pulumi.get(self, "channel_width")
 
     @property

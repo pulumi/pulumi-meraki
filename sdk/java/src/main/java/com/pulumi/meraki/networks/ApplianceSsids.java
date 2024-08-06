@@ -309,11 +309,18 @@ public class ApplianceSsids extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApplianceSsids(String name, ApplianceSsidsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/applianceSsids:ApplianceSsids", name, args == null ? ApplianceSsidsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/applianceSsids:ApplianceSsids", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApplianceSsids(String name, Output<String> id, @Nullable ApplianceSsidsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/applianceSsids:ApplianceSsids", name, state, makeResourceOptions(options, id));
+    }
+
+    private static ApplianceSsidsArgs makeArgs(ApplianceSsidsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ApplianceSsidsArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

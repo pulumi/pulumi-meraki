@@ -227,11 +227,18 @@ public class BrandingPolicies extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BrandingPolicies(String name, BrandingPoliciesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/brandingPolicies:BrandingPolicies", name, args == null ? BrandingPoliciesArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:organizations/brandingPolicies:BrandingPolicies", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private BrandingPolicies(String name, Output<String> id, @Nullable BrandingPoliciesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:organizations/brandingPolicies:BrandingPolicies", name, state, makeResourceOptions(options, id));
+    }
+
+    private static BrandingPoliciesArgs makeArgs(BrandingPoliciesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? BrandingPoliciesArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

@@ -220,11 +220,18 @@ public class WebhooksPayloadTemplates extends com.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public WebhooksPayloadTemplates(String name, WebhooksPayloadTemplatesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/webhooksPayloadTemplates:WebhooksPayloadTemplates", name, args == null ? WebhooksPayloadTemplatesArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/webhooksPayloadTemplates:WebhooksPayloadTemplates", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebhooksPayloadTemplates(String name, Output<String> id, @Nullable WebhooksPayloadTemplatesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/webhooksPayloadTemplates:WebhooksPayloadTemplates", name, state, makeResourceOptions(options, id));
+    }
+
+    private static WebhooksPayloadTemplatesArgs makeArgs(WebhooksPayloadTemplatesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? WebhooksPayloadTemplatesArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

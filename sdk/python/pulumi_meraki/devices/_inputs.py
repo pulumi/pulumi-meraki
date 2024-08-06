@@ -4655,11 +4655,11 @@ class WirelessAlternateManagementInterfaceIpv6ParametersAddressNameserversArgs:
 class WirelessRadioSettingsFiveGhzSettingsArgs:
     def __init__(__self__, *,
                  channel: Optional[pulumi.Input[int]] = None,
-                 channel_width: Optional[pulumi.Input[int]] = None,
+                 channel_width: Optional[pulumi.Input[str]] = None,
                  target_power: Optional[pulumi.Input[int]] = None):
         """
         :param pulumi.Input[int] channel: Sets a manual channel for 5 GHz. Can be '36', '40', '44', '48', '52', '56', '60', '64', '100', '104', '108', '112', '116', '120', '124', '128', '132', '136', '140', '144', '149', '153', '157', '161', '165', '169', '173' or '177' or null for using auto channel.
-        :param pulumi.Input[int] channel_width: Sets a manual channel for 5 GHz. Can be '0', '20', '40', '80' or '160' or null for using auto channel width.
+        :param pulumi.Input[str] channel_width: Sets a manual channel for 5 GHz. Can be '0', '20', '40', '80' or '160' or null for using auto channel width.
         :param pulumi.Input[int] target_power: Set a manual target power for 5 GHz. Can be between '8' or '30' or null for using auto power range.
         """
         if channel is not None:
@@ -4683,14 +4683,14 @@ class WirelessRadioSettingsFiveGhzSettingsArgs:
 
     @property
     @pulumi.getter(name="channelWidth")
-    def channel_width(self) -> Optional[pulumi.Input[int]]:
+    def channel_width(self) -> Optional[pulumi.Input[str]]:
         """
         Sets a manual channel for 5 GHz. Can be '0', '20', '40', '80' or '160' or null for using auto channel width.
         """
         return pulumi.get(self, "channel_width")
 
     @channel_width.setter
-    def channel_width(self, value: Optional[pulumi.Input[int]]):
+    def channel_width(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "channel_width", value)
 
     @property

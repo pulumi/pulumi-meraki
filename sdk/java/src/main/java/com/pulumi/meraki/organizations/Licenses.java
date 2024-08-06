@@ -311,11 +311,18 @@ public class Licenses extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Licenses(String name, LicensesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/licenses:Licenses", name, args == null ? LicensesArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:organizations/licenses:Licenses", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private Licenses(String name, Output<String> id, @Nullable LicensesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:organizations/licenses:Licenses", name, state, makeResourceOptions(options, id));
+    }
+
+    private static LicensesArgs makeArgs(LicensesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? LicensesArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

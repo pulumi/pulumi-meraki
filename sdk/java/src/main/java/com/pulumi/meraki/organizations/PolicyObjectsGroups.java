@@ -174,11 +174,18 @@ public class PolicyObjectsGroups extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PolicyObjectsGroups(String name, PolicyObjectsGroupsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/policyObjectsGroups:PolicyObjectsGroups", name, args == null ? PolicyObjectsGroupsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:organizations/policyObjectsGroups:PolicyObjectsGroups", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private PolicyObjectsGroups(String name, Output<String> id, @Nullable PolicyObjectsGroupsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:organizations/policyObjectsGroups:PolicyObjectsGroups", name, state, makeResourceOptions(options, id));
+    }
+
+    private static PolicyObjectsGroupsArgs makeArgs(PolicyObjectsGroupsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? PolicyObjectsGroupsArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

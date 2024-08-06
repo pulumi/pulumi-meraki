@@ -121,11 +121,18 @@ public class SmDevicesUninstallApps extends com.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public SmDevicesUninstallApps(String name, SmDevicesUninstallAppsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/smDevicesUninstallApps:SmDevicesUninstallApps", name, args == null ? SmDevicesUninstallAppsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/smDevicesUninstallApps:SmDevicesUninstallApps", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private SmDevicesUninstallApps(String name, Output<String> id, @Nullable SmDevicesUninstallAppsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/smDevicesUninstallApps:SmDevicesUninstallApps", name, state, makeResourceOptions(options, id));
+    }
+
+    private static SmDevicesUninstallAppsArgs makeArgs(SmDevicesUninstallAppsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? SmDevicesUninstallAppsArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

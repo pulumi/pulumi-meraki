@@ -127,11 +127,18 @@ public class CellularSims extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CellularSims(String name, CellularSimsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/cellularSims:CellularSims", name, args == null ? CellularSimsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:devices/cellularSims:CellularSims", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private CellularSims(String name, Output<String> id, @Nullable CellularSimsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:devices/cellularSims:CellularSims", name, state, makeResourceOptions(options, id));
+    }
+
+    private static CellularSimsArgs makeArgs(CellularSimsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? CellularSimsArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

@@ -108,11 +108,18 @@ public class SmUserAccessDevicesDelete extends com.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public SmUserAccessDevicesDelete(String name, SmUserAccessDevicesDeleteArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/smUserAccessDevicesDelete:SmUserAccessDevicesDelete", name, args == null ? SmUserAccessDevicesDeleteArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/smUserAccessDevicesDelete:SmUserAccessDevicesDelete", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private SmUserAccessDevicesDelete(String name, Output<String> id, @Nullable SmUserAccessDevicesDeleteState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/smUserAccessDevicesDelete:SmUserAccessDevicesDelete", name, state, makeResourceOptions(options, id));
+    }
+
+    private static SmUserAccessDevicesDeleteArgs makeArgs(SmUserAccessDevicesDeleteArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? SmUserAccessDevicesDeleteArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

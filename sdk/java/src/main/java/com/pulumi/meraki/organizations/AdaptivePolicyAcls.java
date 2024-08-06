@@ -206,11 +206,18 @@ public class AdaptivePolicyAcls extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AdaptivePolicyAcls(String name, AdaptivePolicyAclsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/adaptivePolicyAcls:AdaptivePolicyAcls", name, args == null ? AdaptivePolicyAclsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:organizations/adaptivePolicyAcls:AdaptivePolicyAcls", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private AdaptivePolicyAcls(String name, Output<String> id, @Nullable AdaptivePolicyAclsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:organizations/adaptivePolicyAcls:AdaptivePolicyAcls", name, state, makeResourceOptions(options, id));
+    }
+
+    private static AdaptivePolicyAclsArgs makeArgs(AdaptivePolicyAclsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? AdaptivePolicyAclsArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

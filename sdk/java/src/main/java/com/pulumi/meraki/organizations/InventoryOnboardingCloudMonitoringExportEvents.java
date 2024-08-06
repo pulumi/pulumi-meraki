@@ -107,11 +107,18 @@ public class InventoryOnboardingCloudMonitoringExportEvents extends com.pulumi.r
      * @param options A bag of options that control this resource's behavior.
      */
     public InventoryOnboardingCloudMonitoringExportEvents(String name, InventoryOnboardingCloudMonitoringExportEventsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/inventoryOnboardingCloudMonitoringExportEvents:InventoryOnboardingCloudMonitoringExportEvents", name, args == null ? InventoryOnboardingCloudMonitoringExportEventsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:organizations/inventoryOnboardingCloudMonitoringExportEvents:InventoryOnboardingCloudMonitoringExportEvents", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private InventoryOnboardingCloudMonitoringExportEvents(String name, Output<String> id, @Nullable InventoryOnboardingCloudMonitoringExportEventsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:organizations/inventoryOnboardingCloudMonitoringExportEvents:InventoryOnboardingCloudMonitoringExportEvents", name, state, makeResourceOptions(options, id));
+    }
+
+    private static InventoryOnboardingCloudMonitoringExportEventsArgs makeArgs(InventoryOnboardingCloudMonitoringExportEventsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? InventoryOnboardingCloudMonitoringExportEventsArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

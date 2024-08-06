@@ -59,6 +59,12 @@ namespace Pulumi.Meraki.Organizations
         public Output<ImmutableArray<string>> LimitScopeToNetworks { get; private set; } = null!;
 
         /// <summary>
+        /// Networks assigned to the Early Access Feature
+        /// </summary>
+        [Output("limitScopeToNetworksRs")]
+        public Output<ImmutableArray<string>> LimitScopeToNetworksRs { get; private set; } = null!;
+
+        /// <summary>
         /// optInId path parameter. Opt in ID
         /// </summary>
         [Output("optInId")]
@@ -135,6 +141,18 @@ namespace Pulumi.Meraki.Organizations
             set => _limitScopeToNetworks = value;
         }
 
+        [Input("limitScopeToNetworksRs")]
+        private InputList<string>? _limitScopeToNetworksRs;
+
+        /// <summary>
+        /// Networks assigned to the Early Access Feature
+        /// </summary>
+        public InputList<string> LimitScopeToNetworksRs
+        {
+            get => _limitScopeToNetworksRs ?? (_limitScopeToNetworksRs = new InputList<string>());
+            set => _limitScopeToNetworksRs = value;
+        }
+
         /// <summary>
         /// optInId path parameter. Opt in ID
         /// </summary>
@@ -177,6 +195,18 @@ namespace Pulumi.Meraki.Organizations
         {
             get => _limitScopeToNetworks ?? (_limitScopeToNetworks = new InputList<string>());
             set => _limitScopeToNetworks = value;
+        }
+
+        [Input("limitScopeToNetworksRs")]
+        private InputList<string>? _limitScopeToNetworksRs;
+
+        /// <summary>
+        /// Networks assigned to the Early Access Feature
+        /// </summary>
+        public InputList<string> LimitScopeToNetworksRs
+        {
+            get => _limitScopeToNetworksRs ?? (_limitScopeToNetworksRs = new InputList<string>());
+            set => _limitScopeToNetworksRs = value;
         }
 
         /// <summary>

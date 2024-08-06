@@ -5,6 +5,7 @@ package com.pulumi.meraki.devices.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
+import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ public final class WirelessRadioSettingsFiveGhzSettings {
      * @return Sets a manual channel for 5 GHz. Can be &#39;0&#39;, &#39;20&#39;, &#39;40&#39;, &#39;80&#39; or &#39;160&#39; or null for using auto channel width.
      * 
      */
-    private @Nullable Integer channelWidth;
+    private @Nullable String channelWidth;
     /**
      * @return Set a manual target power for 5 GHz. Can be between &#39;8&#39; or &#39;30&#39; or null for using auto power range.
      * 
@@ -39,7 +40,7 @@ public final class WirelessRadioSettingsFiveGhzSettings {
      * @return Sets a manual channel for 5 GHz. Can be &#39;0&#39;, &#39;20&#39;, &#39;40&#39;, &#39;80&#39; or &#39;160&#39; or null for using auto channel width.
      * 
      */
-    public Optional<Integer> channelWidth() {
+    public Optional<String> channelWidth() {
         return Optional.ofNullable(this.channelWidth);
     }
     /**
@@ -60,7 +61,7 @@ public final class WirelessRadioSettingsFiveGhzSettings {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable Integer channel;
-        private @Nullable Integer channelWidth;
+        private @Nullable String channelWidth;
         private @Nullable Integer targetPower;
         public Builder() {}
         public Builder(WirelessRadioSettingsFiveGhzSettings defaults) {
@@ -77,7 +78,7 @@ public final class WirelessRadioSettingsFiveGhzSettings {
             return this;
         }
         @CustomType.Setter
-        public Builder channelWidth(@Nullable Integer channelWidth) {
+        public Builder channelWidth(@Nullable String channelWidth) {
 
             this.channelWidth = channelWidth;
             return this;

@@ -55,6 +55,8 @@ type EarlyAccessFeaturesOptIns struct {
 	CreatedAt pulumi.StringOutput `pulumi:"createdAt"`
 	// Networks assigned to the Early Access Feature
 	LimitScopeToNetworks pulumi.StringArrayOutput `pulumi:"limitScopeToNetworks"`
+	// Networks assigned to the Early Access Feature
+	LimitScopeToNetworksRs pulumi.StringArrayOutput `pulumi:"limitScopeToNetworksRs"`
 	// optInId path parameter. Opt in ID
 	OptInId pulumi.StringPtrOutput `pulumi:"optInId"`
 	// organizationId path parameter. Organization ID
@@ -100,6 +102,8 @@ type earlyAccessFeaturesOptInsState struct {
 	CreatedAt *string `pulumi:"createdAt"`
 	// Networks assigned to the Early Access Feature
 	LimitScopeToNetworks []string `pulumi:"limitScopeToNetworks"`
+	// Networks assigned to the Early Access Feature
+	LimitScopeToNetworksRs []string `pulumi:"limitScopeToNetworksRs"`
 	// optInId path parameter. Opt in ID
 	OptInId *string `pulumi:"optInId"`
 	// organizationId path parameter. Organization ID
@@ -113,6 +117,8 @@ type EarlyAccessFeaturesOptInsState struct {
 	CreatedAt pulumi.StringPtrInput
 	// Networks assigned to the Early Access Feature
 	LimitScopeToNetworks pulumi.StringArrayInput
+	// Networks assigned to the Early Access Feature
+	LimitScopeToNetworksRs pulumi.StringArrayInput
 	// optInId path parameter. Opt in ID
 	OptInId pulumi.StringPtrInput
 	// organizationId path parameter. Organization ID
@@ -128,6 +134,8 @@ func (EarlyAccessFeaturesOptInsState) ElementType() reflect.Type {
 type earlyAccessFeaturesOptInsArgs struct {
 	// Networks assigned to the Early Access Feature
 	LimitScopeToNetworks []string `pulumi:"limitScopeToNetworks"`
+	// Networks assigned to the Early Access Feature
+	LimitScopeToNetworksRs []string `pulumi:"limitScopeToNetworksRs"`
 	// optInId path parameter. Opt in ID
 	OptInId *string `pulumi:"optInId"`
 	// organizationId path parameter. Organization ID
@@ -140,6 +148,8 @@ type earlyAccessFeaturesOptInsArgs struct {
 type EarlyAccessFeaturesOptInsArgs struct {
 	// Networks assigned to the Early Access Feature
 	LimitScopeToNetworks pulumi.StringArrayInput
+	// Networks assigned to the Early Access Feature
+	LimitScopeToNetworksRs pulumi.StringArrayInput
 	// optInId path parameter. Opt in ID
 	OptInId pulumi.StringPtrInput
 	// organizationId path parameter. Organization ID
@@ -243,6 +253,11 @@ func (o EarlyAccessFeaturesOptInsOutput) CreatedAt() pulumi.StringOutput {
 // Networks assigned to the Early Access Feature
 func (o EarlyAccessFeaturesOptInsOutput) LimitScopeToNetworks() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *EarlyAccessFeaturesOptIns) pulumi.StringArrayOutput { return v.LimitScopeToNetworks }).(pulumi.StringArrayOutput)
+}
+
+// Networks assigned to the Early Access Feature
+func (o EarlyAccessFeaturesOptInsOutput) LimitScopeToNetworksRs() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *EarlyAccessFeaturesOptIns) pulumi.StringArrayOutput { return v.LimitScopeToNetworksRs }).(pulumi.StringArrayOutput)
 }
 
 // optInId path parameter. Opt in ID

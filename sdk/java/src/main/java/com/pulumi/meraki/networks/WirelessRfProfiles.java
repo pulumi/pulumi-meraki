@@ -242,11 +242,18 @@ public class WirelessRfProfiles extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WirelessRfProfiles(String name, WirelessRfProfilesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/wirelessRfProfiles:WirelessRfProfiles", name, args == null ? WirelessRfProfilesArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/wirelessRfProfiles:WirelessRfProfiles", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private WirelessRfProfiles(String name, Output<String> id, @Nullable WirelessRfProfilesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/wirelessRfProfiles:WirelessRfProfiles", name, state, makeResourceOptions(options, id));
+    }
+
+    private static WirelessRfProfilesArgs makeArgs(WirelessRfProfilesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? WirelessRfProfilesArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

@@ -152,11 +152,18 @@ public class SwitchStp extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SwitchStp(String name, SwitchStpArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/switchStp:SwitchStp", name, args == null ? SwitchStpArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/switchStp:SwitchStp", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private SwitchStp(String name, Output<String> id, @Nullable SwitchStpState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/switchStp:SwitchStp", name, state, makeResourceOptions(options, id));
+    }
+
+    private static SwitchStpArgs makeArgs(SwitchStpArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? SwitchStpArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

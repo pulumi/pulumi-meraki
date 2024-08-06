@@ -240,11 +240,18 @@ public class CameraQualityRetentionProfiles extends com.pulumi.resources.CustomR
      * @param options A bag of options that control this resource's behavior.
      */
     public CameraQualityRetentionProfiles(String name, CameraQualityRetentionProfilesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/cameraQualityRetentionProfiles:CameraQualityRetentionProfiles", name, args == null ? CameraQualityRetentionProfilesArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/cameraQualityRetentionProfiles:CameraQualityRetentionProfiles", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private CameraQualityRetentionProfiles(String name, Output<String> id, @Nullable CameraQualityRetentionProfilesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/cameraQualityRetentionProfiles:CameraQualityRetentionProfiles", name, state, makeResourceOptions(options, id));
+    }
+
+    private static CameraQualityRetentionProfilesArgs makeArgs(CameraQualityRetentionProfilesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? CameraQualityRetentionProfilesArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

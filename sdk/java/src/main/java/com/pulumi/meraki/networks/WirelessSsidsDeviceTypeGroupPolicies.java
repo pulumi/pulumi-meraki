@@ -148,11 +148,18 @@ public class WirelessSsidsDeviceTypeGroupPolicies extends com.pulumi.resources.C
      * @param options A bag of options that control this resource's behavior.
      */
     public WirelessSsidsDeviceTypeGroupPolicies(String name, WirelessSsidsDeviceTypeGroupPoliciesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/wirelessSsidsDeviceTypeGroupPolicies:WirelessSsidsDeviceTypeGroupPolicies", name, args == null ? WirelessSsidsDeviceTypeGroupPoliciesArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/wirelessSsidsDeviceTypeGroupPolicies:WirelessSsidsDeviceTypeGroupPolicies", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private WirelessSsidsDeviceTypeGroupPolicies(String name, Output<String> id, @Nullable WirelessSsidsDeviceTypeGroupPoliciesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/wirelessSsidsDeviceTypeGroupPolicies:WirelessSsidsDeviceTypeGroupPolicies", name, state, makeResourceOptions(options, id));
+    }
+
+    private static WirelessSsidsDeviceTypeGroupPoliciesArgs makeArgs(WirelessSsidsDeviceTypeGroupPoliciesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? WirelessSsidsDeviceTypeGroupPoliciesArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

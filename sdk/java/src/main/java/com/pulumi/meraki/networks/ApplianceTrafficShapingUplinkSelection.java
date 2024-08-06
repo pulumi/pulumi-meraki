@@ -207,11 +207,18 @@ public class ApplianceTrafficShapingUplinkSelection extends com.pulumi.resources
      * @param options A bag of options that control this resource's behavior.
      */
     public ApplianceTrafficShapingUplinkSelection(String name, ApplianceTrafficShapingUplinkSelectionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/applianceTrafficShapingUplinkSelection:ApplianceTrafficShapingUplinkSelection", name, args == null ? ApplianceTrafficShapingUplinkSelectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/applianceTrafficShapingUplinkSelection:ApplianceTrafficShapingUplinkSelection", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApplianceTrafficShapingUplinkSelection(String name, Output<String> id, @Nullable ApplianceTrafficShapingUplinkSelectionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/applianceTrafficShapingUplinkSelection:ApplianceTrafficShapingUplinkSelection", name, state, makeResourceOptions(options, id));
+    }
+
+    private static ApplianceTrafficShapingUplinkSelectionArgs makeArgs(ApplianceTrafficShapingUplinkSelectionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ApplianceTrafficShapingUplinkSelectionArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

@@ -1542,7 +1542,7 @@ export namespace devices {
         /**
          * Sets a manual channel for 5 GHz. Can be '0', '20', '40', '80' or '160' or null for using auto channel width.
          */
-        channelWidth?: pulumi.Input<number>;
+        channelWidth?: pulumi.Input<string>;
         /**
          * Set a manual target power for 5 GHz. Can be between '8' or '30' or null for using auto power range.
          */

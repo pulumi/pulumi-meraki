@@ -116,11 +116,18 @@ public class InventoryClaim extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public InventoryClaim(String name, InventoryClaimArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/inventoryClaim:InventoryClaim", name, args == null ? InventoryClaimArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:organizations/inventoryClaim:InventoryClaim", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private InventoryClaim(String name, Output<String> id, @Nullable InventoryClaimState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:organizations/inventoryClaim:InventoryClaim", name, state, makeResourceOptions(options, id));
+    }
+
+    private static InventoryClaimArgs makeArgs(InventoryClaimArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? InventoryClaimArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

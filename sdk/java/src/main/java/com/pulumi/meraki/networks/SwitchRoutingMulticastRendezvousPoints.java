@@ -152,11 +152,18 @@ public class SwitchRoutingMulticastRendezvousPoints extends com.pulumi.resources
      * @param options A bag of options that control this resource's behavior.
      */
     public SwitchRoutingMulticastRendezvousPoints(String name, SwitchRoutingMulticastRendezvousPointsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/switchRoutingMulticastRendezvousPoints:SwitchRoutingMulticastRendezvousPoints", name, args == null ? SwitchRoutingMulticastRendezvousPointsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/switchRoutingMulticastRendezvousPoints:SwitchRoutingMulticastRendezvousPoints", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private SwitchRoutingMulticastRendezvousPoints(String name, Output<String> id, @Nullable SwitchRoutingMulticastRendezvousPointsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/switchRoutingMulticastRendezvousPoints:SwitchRoutingMulticastRendezvousPoints", name, state, makeResourceOptions(options, id));
+    }
+
+    private static SwitchRoutingMulticastRendezvousPointsArgs makeArgs(SwitchRoutingMulticastRendezvousPointsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? SwitchRoutingMulticastRendezvousPointsArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

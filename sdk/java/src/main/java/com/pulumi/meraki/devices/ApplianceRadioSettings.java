@@ -49,7 +49,7 @@ import javax.annotation.Nullable;
  *         var example = new ApplianceRadioSettings("example", ApplianceRadioSettingsArgs.builder()
  *             .fiveGhzSettings(ApplianceRadioSettingsFiveGhzSettingsArgs.builder()
  *                 .channel(149)
- *                 .channel_width(20)
+ *                 .channel_width("20")
  *                 .target_power(15)
  *                 .build())
  *             .rfProfileId("1234")
@@ -155,11 +155,18 @@ public class ApplianceRadioSettings extends com.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public ApplianceRadioSettings(String name, ApplianceRadioSettingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/applianceRadioSettings:ApplianceRadioSettings", name, args == null ? ApplianceRadioSettingsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:devices/applianceRadioSettings:ApplianceRadioSettings", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApplianceRadioSettings(String name, Output<String> id, @Nullable ApplianceRadioSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:devices/applianceRadioSettings:ApplianceRadioSettings", name, state, makeResourceOptions(options, id));
+    }
+
+    private static ApplianceRadioSettingsArgs makeArgs(ApplianceRadioSettingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ApplianceRadioSettingsArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

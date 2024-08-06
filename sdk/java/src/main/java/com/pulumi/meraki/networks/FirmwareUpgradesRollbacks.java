@@ -117,11 +117,18 @@ public class FirmwareUpgradesRollbacks extends com.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public FirmwareUpgradesRollbacks(String name, FirmwareUpgradesRollbacksArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/firmwareUpgradesRollbacks:FirmwareUpgradesRollbacks", name, args == null ? FirmwareUpgradesRollbacksArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/firmwareUpgradesRollbacks:FirmwareUpgradesRollbacks", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private FirmwareUpgradesRollbacks(String name, Output<String> id, @Nullable FirmwareUpgradesRollbacksState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/firmwareUpgradesRollbacks:FirmwareUpgradesRollbacks", name, state, makeResourceOptions(options, id));
+    }
+
+    private static FirmwareUpgradesRollbacksArgs makeArgs(FirmwareUpgradesRollbacksArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? FirmwareUpgradesRollbacksArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

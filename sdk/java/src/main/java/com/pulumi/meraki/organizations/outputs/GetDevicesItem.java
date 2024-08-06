@@ -32,7 +32,7 @@ public final class GetDevicesItem {
      * @return IMEI of the device, if applicable
      * 
      */
-    private String imei;
+    private Double imei;
     /**
      * @return LAN IP address of the device
      * 
@@ -115,7 +115,7 @@ public final class GetDevicesItem {
      * @return IMEI of the device, if applicable
      * 
      */
-    public String imei() {
+    public Double imei() {
         return this.imei;
     }
     /**
@@ -208,7 +208,7 @@ public final class GetDevicesItem {
         private String address;
         private List<GetDevicesItemDetail> details;
         private String firmware;
-        private String imei;
+        private Double imei;
         private String lanIp;
         private Double lat;
         private Double lng;
@@ -268,7 +268,7 @@ public final class GetDevicesItem {
             return this;
         }
         @CustomType.Setter
-        public Builder imei(String imei) {
+        public Builder imei(Double imei) {
             if (imei == null) {
               throw new MissingRequiredPropertyException("GetDevicesItem", "imei");
             }

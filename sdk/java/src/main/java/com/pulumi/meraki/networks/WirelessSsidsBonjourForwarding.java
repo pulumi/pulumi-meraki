@@ -168,11 +168,18 @@ public class WirelessSsidsBonjourForwarding extends com.pulumi.resources.CustomR
      * @param options A bag of options that control this resource's behavior.
      */
     public WirelessSsidsBonjourForwarding(String name, WirelessSsidsBonjourForwardingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/wirelessSsidsBonjourForwarding:WirelessSsidsBonjourForwarding", name, args == null ? WirelessSsidsBonjourForwardingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/wirelessSsidsBonjourForwarding:WirelessSsidsBonjourForwarding", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private WirelessSsidsBonjourForwarding(String name, Output<String> id, @Nullable WirelessSsidsBonjourForwardingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/wirelessSsidsBonjourForwarding:WirelessSsidsBonjourForwarding", name, state, makeResourceOptions(options, id));
+    }
+
+    private static WirelessSsidsBonjourForwardingArgs makeArgs(WirelessSsidsBonjourForwardingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? WirelessSsidsBonjourForwardingArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
