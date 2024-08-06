@@ -33,6 +33,21 @@ public final class EarlyAccessFeaturesOptInsArgs extends com.pulumi.resources.Re
     }
 
     /**
+     * Networks assigned to the Early Access Feature
+     * 
+     */
+    @Import(name="limitScopeToNetworksRs")
+    private @Nullable Output<List<String>> limitScopeToNetworksRs;
+
+    /**
+     * @return Networks assigned to the Early Access Feature
+     * 
+     */
+    public Optional<Output<List<String>>> limitScopeToNetworksRs() {
+        return Optional.ofNullable(this.limitScopeToNetworksRs);
+    }
+
+    /**
      * optInId path parameter. Opt in ID
      * 
      */
@@ -81,6 +96,7 @@ public final class EarlyAccessFeaturesOptInsArgs extends com.pulumi.resources.Re
 
     private EarlyAccessFeaturesOptInsArgs(EarlyAccessFeaturesOptInsArgs $) {
         this.limitScopeToNetworks = $.limitScopeToNetworks;
+        this.limitScopeToNetworksRs = $.limitScopeToNetworksRs;
         this.optInId = $.optInId;
         this.organizationId = $.organizationId;
         this.shortName = $.shortName;
@@ -133,6 +149,37 @@ public final class EarlyAccessFeaturesOptInsArgs extends com.pulumi.resources.Re
          */
         public Builder limitScopeToNetworks(String... limitScopeToNetworks) {
             return limitScopeToNetworks(List.of(limitScopeToNetworks));
+        }
+
+        /**
+         * @param limitScopeToNetworksRs Networks assigned to the Early Access Feature
+         * 
+         * @return builder
+         * 
+         */
+        public Builder limitScopeToNetworksRs(@Nullable Output<List<String>> limitScopeToNetworksRs) {
+            $.limitScopeToNetworksRs = limitScopeToNetworksRs;
+            return this;
+        }
+
+        /**
+         * @param limitScopeToNetworksRs Networks assigned to the Early Access Feature
+         * 
+         * @return builder
+         * 
+         */
+        public Builder limitScopeToNetworksRs(List<String> limitScopeToNetworksRs) {
+            return limitScopeToNetworksRs(Output.of(limitScopeToNetworksRs));
+        }
+
+        /**
+         * @param limitScopeToNetworksRs Networks assigned to the Early Access Feature
+         * 
+         * @return builder
+         * 
+         */
+        public Builder limitScopeToNetworksRs(String... limitScopeToNetworksRs) {
+            return limitScopeToNetworksRs(List.of(limitScopeToNetworksRs));
         }
 
         /**

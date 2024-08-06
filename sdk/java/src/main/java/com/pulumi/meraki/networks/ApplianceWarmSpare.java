@@ -192,11 +192,18 @@ public class ApplianceWarmSpare extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApplianceWarmSpare(String name, ApplianceWarmSpareArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/applianceWarmSpare:ApplianceWarmSpare", name, args == null ? ApplianceWarmSpareArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/applianceWarmSpare:ApplianceWarmSpare", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApplianceWarmSpare(String name, Output<String> id, @Nullable ApplianceWarmSpareState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/applianceWarmSpare:ApplianceWarmSpare", name, state, makeResourceOptions(options, id));
+    }
+
+    private static ApplianceWarmSpareArgs makeArgs(ApplianceWarmSpareArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ApplianceWarmSpareArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

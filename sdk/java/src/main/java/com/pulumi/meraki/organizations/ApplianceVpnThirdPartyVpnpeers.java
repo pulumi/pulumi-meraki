@@ -143,11 +143,18 @@ public class ApplianceVpnThirdPartyVpnpeers extends com.pulumi.resources.CustomR
      * @param options A bag of options that control this resource's behavior.
      */
     public ApplianceVpnThirdPartyVpnpeers(String name, ApplianceVpnThirdPartyVpnpeersArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/applianceVpnThirdPartyVpnpeers:ApplianceVpnThirdPartyVpnpeers", name, args == null ? ApplianceVpnThirdPartyVpnpeersArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:organizations/applianceVpnThirdPartyVpnpeers:ApplianceVpnThirdPartyVpnpeers", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApplianceVpnThirdPartyVpnpeers(String name, Output<String> id, @Nullable ApplianceVpnThirdPartyVpnpeersState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:organizations/applianceVpnThirdPartyVpnpeers:ApplianceVpnThirdPartyVpnpeers", name, state, makeResourceOptions(options, id));
+    }
+
+    private static ApplianceVpnThirdPartyVpnpeersArgs makeArgs(ApplianceVpnThirdPartyVpnpeersArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ApplianceVpnThirdPartyVpnpeersArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

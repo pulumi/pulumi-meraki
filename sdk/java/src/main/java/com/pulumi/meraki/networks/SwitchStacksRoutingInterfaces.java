@@ -288,11 +288,18 @@ public class SwitchStacksRoutingInterfaces extends com.pulumi.resources.CustomRe
      * @param options A bag of options that control this resource's behavior.
      */
     public SwitchStacksRoutingInterfaces(String name, SwitchStacksRoutingInterfacesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/switchStacksRoutingInterfaces:SwitchStacksRoutingInterfaces", name, args == null ? SwitchStacksRoutingInterfacesArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/switchStacksRoutingInterfaces:SwitchStacksRoutingInterfaces", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private SwitchStacksRoutingInterfaces(String name, Output<String> id, @Nullable SwitchStacksRoutingInterfacesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/switchStacksRoutingInterfaces:SwitchStacksRoutingInterfaces", name, state, makeResourceOptions(options, id));
+    }
+
+    private static SwitchStacksRoutingInterfacesArgs makeArgs(SwitchStacksRoutingInterfacesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? SwitchStacksRoutingInterfacesArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

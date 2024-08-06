@@ -173,11 +173,18 @@ public class Netflow extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Netflow(String name, NetflowArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/netflow:Netflow", name, args == null ? NetflowArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/netflow:Netflow", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private Netflow(String name, Output<String> id, @Nullable NetflowState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/netflow:Netflow", name, state, makeResourceOptions(options, id));
+    }
+
+    private static NetflowArgs makeArgs(NetflowArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? NetflowArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

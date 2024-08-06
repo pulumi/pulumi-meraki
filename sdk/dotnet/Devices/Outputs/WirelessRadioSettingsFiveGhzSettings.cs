@@ -20,7 +20,7 @@ namespace Pulumi.Meraki.Devices.Outputs
         /// <summary>
         /// Sets a manual channel for 5 GHz. Can be '0', '20', '40', '80' or '160' or null for using auto channel width.
         /// </summary>
-        public readonly int? ChannelWidth;
+        public readonly string? ChannelWidth;
         /// <summary>
         /// Set a manual target power for 5 GHz. Can be between '8' or '30' or null for using auto power range.
         /// </summary>
@@ -30,7 +30,7 @@ namespace Pulumi.Meraki.Devices.Outputs
         private WirelessRadioSettingsFiveGhzSettings(
             int? channel,
 
-            int? channelWidth,
+            string? channelWidth,
 
             int? targetPower)
         {

@@ -146,11 +146,18 @@ public class ApplianceSettings extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApplianceSettings(String name, ApplianceSettingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/applianceSettings:ApplianceSettings", name, args == null ? ApplianceSettingsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/applianceSettings:ApplianceSettings", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApplianceSettings(String name, Output<String> id, @Nullable ApplianceSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/applianceSettings:ApplianceSettings", name, state, makeResourceOptions(options, id));
+    }
+
+    private static ApplianceSettingsArgs makeArgs(ApplianceSettingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ApplianceSettingsArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

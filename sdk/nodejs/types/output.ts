@@ -21,7 +21,7 @@ export interface GetDevicesItem {
     /**
      * IMEI of the device, if applicable
      */
-    imei: string;
+    imei: number;
     /**
      * LAN IP address of the device
      */
@@ -2960,7 +2960,7 @@ export namespace devices {
 
     export interface GetWirelessRadioSettingsItemFiveGhzSettings {
         channel: number;
-        channelWidth: number;
+        channelWidth: string;
         targetPower: number;
     }
 
@@ -3800,7 +3800,7 @@ export namespace devices {
         /**
          * Sets a manual channel for 5 GHz. Can be '0', '20', '40', '80' or '160' or null for using auto channel width.
          */
-        channelWidth: number;
+        channelWidth: string;
         /**
          * Set a manual target power for 5 GHz. Can be between '8' or '30' or null for using auto power range.
          */
@@ -23279,7 +23279,7 @@ export namespace organizations {
         /**
          * IMEI of the device, if applicable
          */
-        imei: string;
+        imei: number;
         /**
          * LAN IP address of the device
          */

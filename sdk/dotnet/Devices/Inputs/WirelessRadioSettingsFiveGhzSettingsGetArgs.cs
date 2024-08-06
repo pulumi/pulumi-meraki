@@ -22,7 +22,7 @@ namespace Pulumi.Meraki.Devices.Inputs
         /// Sets a manual channel for 5 GHz. Can be '0', '20', '40', '80' or '160' or null for using auto channel width.
         /// </summary>
         [Input("channelWidth")]
-        public Input<int>? ChannelWidth { get; set; }
+        public Input<string>? ChannelWidth { get; set; }
 
         /// <summary>
         /// Set a manual target power for 5 GHz. Can be between '8' or '30' or null for using auto power range.

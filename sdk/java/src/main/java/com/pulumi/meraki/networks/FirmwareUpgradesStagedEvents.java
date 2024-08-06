@@ -167,11 +167,18 @@ public class FirmwareUpgradesStagedEvents extends com.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public FirmwareUpgradesStagedEvents(String name, FirmwareUpgradesStagedEventsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/firmwareUpgradesStagedEvents:FirmwareUpgradesStagedEvents", name, args == null ? FirmwareUpgradesStagedEventsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/firmwareUpgradesStagedEvents:FirmwareUpgradesStagedEvents", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private FirmwareUpgradesStagedEvents(String name, Output<String> id, @Nullable FirmwareUpgradesStagedEventsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/firmwareUpgradesStagedEvents:FirmwareUpgradesStagedEvents", name, state, makeResourceOptions(options, id));
+    }
+
+    private static FirmwareUpgradesStagedEventsArgs makeArgs(FirmwareUpgradesStagedEventsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? FirmwareUpgradesStagedEventsArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

@@ -117,11 +117,18 @@ public class CameraWirelessProfiles extends com.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public CameraWirelessProfiles(String name, CameraWirelessProfilesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/cameraWirelessProfiles:CameraWirelessProfiles", name, args == null ? CameraWirelessProfilesArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:devices/cameraWirelessProfiles:CameraWirelessProfiles", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private CameraWirelessProfiles(String name, Output<String> id, @Nullable CameraWirelessProfilesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:devices/cameraWirelessProfiles:CameraWirelessProfiles", name, state, makeResourceOptions(options, id));
+    }
+
+    private static CameraWirelessProfilesArgs makeArgs(CameraWirelessProfilesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? CameraWirelessProfilesArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

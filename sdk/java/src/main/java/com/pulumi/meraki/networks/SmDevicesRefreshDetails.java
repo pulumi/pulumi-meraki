@@ -108,11 +108,18 @@ public class SmDevicesRefreshDetails extends com.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public SmDevicesRefreshDetails(String name, SmDevicesRefreshDetailsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/smDevicesRefreshDetails:SmDevicesRefreshDetails", name, args == null ? SmDevicesRefreshDetailsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/smDevicesRefreshDetails:SmDevicesRefreshDetails", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private SmDevicesRefreshDetails(String name, Output<String> id, @Nullable SmDevicesRefreshDetailsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/smDevicesRefreshDetails:SmDevicesRefreshDetails", name, state, makeResourceOptions(options, id));
+    }
+
+    private static SmDevicesRefreshDetailsArgs makeArgs(SmDevicesRefreshDetailsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? SmDevicesRefreshDetailsArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

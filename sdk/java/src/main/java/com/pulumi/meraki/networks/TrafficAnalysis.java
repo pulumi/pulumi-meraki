@@ -135,11 +135,18 @@ public class TrafficAnalysis extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TrafficAnalysis(String name, TrafficAnalysisArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/trafficAnalysis:TrafficAnalysis", name, args == null ? TrafficAnalysisArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/trafficAnalysis:TrafficAnalysis", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private TrafficAnalysis(String name, Output<String> id, @Nullable TrafficAnalysisState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/trafficAnalysis:TrafficAnalysis", name, state, makeResourceOptions(options, id));
+    }
+
+    private static TrafficAnalysisArgs makeArgs(TrafficAnalysisArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? TrafficAnalysisArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

@@ -118,11 +118,18 @@ public class ClientsProvision extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ClientsProvision(String name, ClientsProvisionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/clientsProvision:ClientsProvision", name, args == null ? ClientsProvisionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/clientsProvision:ClientsProvision", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private ClientsProvision(String name, Output<String> id, @Nullable ClientsProvisionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/clientsProvision:ClientsProvision", name, state, makeResourceOptions(options, id));
+    }
+
+    private static ClientsProvisionArgs makeArgs(ClientsProvisionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ClientsProvisionArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

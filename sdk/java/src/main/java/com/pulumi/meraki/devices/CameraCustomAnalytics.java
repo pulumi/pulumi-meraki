@@ -148,11 +148,18 @@ public class CameraCustomAnalytics extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CameraCustomAnalytics(String name, CameraCustomAnalyticsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/cameraCustomAnalytics:CameraCustomAnalytics", name, args == null ? CameraCustomAnalyticsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:devices/cameraCustomAnalytics:CameraCustomAnalytics", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private CameraCustomAnalytics(String name, Output<String> id, @Nullable CameraCustomAnalyticsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:devices/cameraCustomAnalytics:CameraCustomAnalytics", name, state, makeResourceOptions(options, id));
+    }
+
+    private static CameraCustomAnalyticsArgs makeArgs(CameraCustomAnalyticsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? CameraCustomAnalyticsArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

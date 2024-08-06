@@ -132,11 +132,18 @@ public class SmDevicesModifyTags extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SmDevicesModifyTags(String name, SmDevicesModifyTagsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/smDevicesModifyTags:SmDevicesModifyTags", name, args == null ? SmDevicesModifyTagsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/smDevicesModifyTags:SmDevicesModifyTags", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private SmDevicesModifyTags(String name, Output<String> id, @Nullable SmDevicesModifyTagsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/smDevicesModifyTags:SmDevicesModifyTags", name, state, makeResourceOptions(options, id));
+    }
+
+    private static SmDevicesModifyTagsArgs makeArgs(SmDevicesModifyTagsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? SmDevicesModifyTagsArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

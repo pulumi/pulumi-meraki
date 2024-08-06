@@ -29,7 +29,7 @@ class GetDevicesItemResult(dict):
                  address: str,
                  details: Sequence['outputs.GetDevicesItemDetailResult'],
                  firmware: str,
-                 imei: str,
+                 imei: float,
                  lan_ip: str,
                  lat: float,
                  lng: float,
@@ -45,7 +45,7 @@ class GetDevicesItemResult(dict):
         :param str address: Physical address of the device
         :param Sequence['GetDevicesItemDetailArgs'] details: Additional device information
         :param str firmware: Firmware version of the device
-        :param str imei: IMEI of the device, if applicable
+        :param float imei: IMEI of the device, if applicable
         :param str lan_ip: LAN IP address of the device
         :param float lat: Latitude of the device
         :param float lng: Longitude of the device
@@ -100,7 +100,7 @@ class GetDevicesItemResult(dict):
 
     @property
     @pulumi.getter
-    def imei(self) -> str:
+    def imei(self) -> float:
         """
         IMEI of the device, if applicable
         """

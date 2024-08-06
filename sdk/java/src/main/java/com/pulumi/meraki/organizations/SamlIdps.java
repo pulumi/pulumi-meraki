@@ -154,11 +154,18 @@ public class SamlIdps extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SamlIdps(String name, SamlIdpsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/samlIdps:SamlIdps", name, args == null ? SamlIdpsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:organizations/samlIdps:SamlIdps", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private SamlIdps(String name, Output<String> id, @Nullable SamlIdpsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:organizations/samlIdps:SamlIdps", name, state, makeResourceOptions(options, id));
+    }
+
+    private static SamlIdpsArgs makeArgs(SamlIdpsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? SamlIdpsArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

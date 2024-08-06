@@ -130,11 +130,18 @@ public class LicensingSubscriptionSubscriptionsBind extends com.pulumi.resources
      * @param options A bag of options that control this resource's behavior.
      */
     public LicensingSubscriptionSubscriptionsBind(String name, LicensingSubscriptionSubscriptionsBindArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:administered/licensingSubscriptionSubscriptionsBind:LicensingSubscriptionSubscriptionsBind", name, args == null ? LicensingSubscriptionSubscriptionsBindArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:administered/licensingSubscriptionSubscriptionsBind:LicensingSubscriptionSubscriptionsBind", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private LicensingSubscriptionSubscriptionsBind(String name, Output<String> id, @Nullable LicensingSubscriptionSubscriptionsBindState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:administered/licensingSubscriptionSubscriptionsBind:LicensingSubscriptionSubscriptionsBind", name, state, makeResourceOptions(options, id));
+    }
+
+    private static LicensingSubscriptionSubscriptionsBindArgs makeArgs(LicensingSubscriptionSubscriptionsBindArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? LicensingSubscriptionSubscriptionsBindArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

@@ -122,11 +122,18 @@ public class LicensingCotermLicensesMove extends com.pulumi.resources.CustomReso
      * @param options A bag of options that control this resource's behavior.
      */
     public LicensingCotermLicensesMove(String name, LicensingCotermLicensesMoveArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/licensingCotermLicensesMove:LicensingCotermLicensesMove", name, args == null ? LicensingCotermLicensesMoveArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:organizations/licensingCotermLicensesMove:LicensingCotermLicensesMove", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private LicensingCotermLicensesMove(String name, Output<String> id, @Nullable LicensingCotermLicensesMoveState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:organizations/licensingCotermLicensesMove:LicensingCotermLicensesMove", name, state, makeResourceOptions(options, id));
+    }
+
+    private static LicensingCotermLicensesMoveArgs makeArgs(LicensingCotermLicensesMoveArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? LicensingCotermLicensesMoveArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

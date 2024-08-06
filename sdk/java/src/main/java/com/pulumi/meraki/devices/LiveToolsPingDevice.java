@@ -130,11 +130,18 @@ public class LiveToolsPingDevice extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LiveToolsPingDevice(String name, LiveToolsPingDeviceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/liveToolsPingDevice:LiveToolsPingDevice", name, args == null ? LiveToolsPingDeviceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:devices/liveToolsPingDevice:LiveToolsPingDevice", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private LiveToolsPingDevice(String name, Output<String> id, @Nullable LiveToolsPingDeviceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:devices/liveToolsPingDevice:LiveToolsPingDevice", name, state, makeResourceOptions(options, id));
+    }
+
+    private static LiveToolsPingDeviceArgs makeArgs(LiveToolsPingDeviceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? LiveToolsPingDeviceArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

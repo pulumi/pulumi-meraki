@@ -294,11 +294,18 @@ public class SensorAlertsProfiles extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SensorAlertsProfiles(String name, SensorAlertsProfilesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/sensorAlertsProfiles:SensorAlertsProfiles", name, args == null ? SensorAlertsProfilesArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/sensorAlertsProfiles:SensorAlertsProfiles", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private SensorAlertsProfiles(String name, Output<String> id, @Nullable SensorAlertsProfilesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/sensorAlertsProfiles:SensorAlertsProfiles", name, state, makeResourceOptions(options, id));
+    }
+
+    private static SensorAlertsProfilesArgs makeArgs(SensorAlertsProfilesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? SensorAlertsProfilesArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

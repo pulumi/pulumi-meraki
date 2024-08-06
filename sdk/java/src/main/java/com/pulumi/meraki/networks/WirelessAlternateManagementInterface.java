@@ -172,11 +172,18 @@ public class WirelessAlternateManagementInterface extends com.pulumi.resources.C
      * @param options A bag of options that control this resource's behavior.
      */
     public WirelessAlternateManagementInterface(String name, WirelessAlternateManagementInterfaceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/wirelessAlternateManagementInterface:WirelessAlternateManagementInterface", name, args == null ? WirelessAlternateManagementInterfaceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/wirelessAlternateManagementInterface:WirelessAlternateManagementInterface", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private WirelessAlternateManagementInterface(String name, Output<String> id, @Nullable WirelessAlternateManagementInterfaceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/wirelessAlternateManagementInterface:WirelessAlternateManagementInterface", name, state, makeResourceOptions(options, id));
+    }
+
+    private static WirelessAlternateManagementInterfaceArgs makeArgs(WirelessAlternateManagementInterfaceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? WirelessAlternateManagementInterfaceArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

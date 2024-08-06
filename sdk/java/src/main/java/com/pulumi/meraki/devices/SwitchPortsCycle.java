@@ -115,11 +115,18 @@ public class SwitchPortsCycle extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SwitchPortsCycle(String name, SwitchPortsCycleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/switchPortsCycle:SwitchPortsCycle", name, args == null ? SwitchPortsCycleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:devices/switchPortsCycle:SwitchPortsCycle", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private SwitchPortsCycle(String name, Output<String> id, @Nullable SwitchPortsCycleState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:devices/switchPortsCycle:SwitchPortsCycle", name, state, makeResourceOptions(options, id));
+    }
+
+    private static SwitchPortsCycleArgs makeArgs(SwitchPortsCycleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? SwitchPortsCycleArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

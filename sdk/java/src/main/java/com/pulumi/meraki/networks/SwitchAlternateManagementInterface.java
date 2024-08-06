@@ -169,11 +169,18 @@ public class SwitchAlternateManagementInterface extends com.pulumi.resources.Cus
      * @param options A bag of options that control this resource's behavior.
      */
     public SwitchAlternateManagementInterface(String name, SwitchAlternateManagementInterfaceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/switchAlternateManagementInterface:SwitchAlternateManagementInterface", name, args == null ? SwitchAlternateManagementInterfaceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/switchAlternateManagementInterface:SwitchAlternateManagementInterface", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private SwitchAlternateManagementInterface(String name, Output<String> id, @Nullable SwitchAlternateManagementInterfaceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/switchAlternateManagementInterface:SwitchAlternateManagementInterface", name, state, makeResourceOptions(options, id));
+    }
+
+    private static SwitchAlternateManagementInterfaceArgs makeArgs(SwitchAlternateManagementInterfaceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? SwitchAlternateManagementInterfaceArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

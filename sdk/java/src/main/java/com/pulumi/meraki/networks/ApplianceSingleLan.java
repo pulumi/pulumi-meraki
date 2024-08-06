@@ -165,11 +165,18 @@ public class ApplianceSingleLan extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApplianceSingleLan(String name, ApplianceSingleLanArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/applianceSingleLan:ApplianceSingleLan", name, args == null ? ApplianceSingleLanArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/applianceSingleLan:ApplianceSingleLan", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApplianceSingleLan(String name, Output<String> id, @Nullable ApplianceSingleLanState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/applianceSingleLan:ApplianceSingleLan", name, state, makeResourceOptions(options, id));
+    }
+
+    private static ApplianceSingleLanArgs makeArgs(ApplianceSingleLanArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ApplianceSingleLanArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

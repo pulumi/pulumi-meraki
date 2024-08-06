@@ -100,11 +100,18 @@ public class ApplianceVmxAuthenticationToken extends com.pulumi.resources.Custom
      * @param options A bag of options that control this resource's behavior.
      */
     public ApplianceVmxAuthenticationToken(String name, ApplianceVmxAuthenticationTokenArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/applianceVmxAuthenticationToken:ApplianceVmxAuthenticationToken", name, args == null ? ApplianceVmxAuthenticationTokenArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:devices/applianceVmxAuthenticationToken:ApplianceVmxAuthenticationToken", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApplianceVmxAuthenticationToken(String name, Output<String> id, @Nullable ApplianceVmxAuthenticationTokenState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:devices/applianceVmxAuthenticationToken:ApplianceVmxAuthenticationToken", name, state, makeResourceOptions(options, id));
+    }
+
+    private static ApplianceVmxAuthenticationTokenArgs makeArgs(ApplianceVmxAuthenticationTokenArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ApplianceVmxAuthenticationTokenArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

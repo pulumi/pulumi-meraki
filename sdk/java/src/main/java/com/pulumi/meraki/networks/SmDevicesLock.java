@@ -123,11 +123,18 @@ public class SmDevicesLock extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SmDevicesLock(String name, SmDevicesLockArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/smDevicesLock:SmDevicesLock", name, args == null ? SmDevicesLockArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/smDevicesLock:SmDevicesLock", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private SmDevicesLock(String name, Output<String> id, @Nullable SmDevicesLockState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/smDevicesLock:SmDevicesLock", name, state, makeResourceOptions(options, id));
+    }
+
+    private static SmDevicesLockArgs makeArgs(SmDevicesLockArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? SmDevicesLockArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

@@ -118,11 +118,18 @@ public class ApplianceConnectivityMonitoringDestinations extends com.pulumi.reso
      * @param options A bag of options that control this resource's behavior.
      */
     public ApplianceConnectivityMonitoringDestinations(String name, ApplianceConnectivityMonitoringDestinationsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/applianceConnectivityMonitoringDestinations:ApplianceConnectivityMonitoringDestinations", name, args == null ? ApplianceConnectivityMonitoringDestinationsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/applianceConnectivityMonitoringDestinations:ApplianceConnectivityMonitoringDestinations", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApplianceConnectivityMonitoringDestinations(String name, Output<String> id, @Nullable ApplianceConnectivityMonitoringDestinationsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/applianceConnectivityMonitoringDestinations:ApplianceConnectivityMonitoringDestinations", name, state, makeResourceOptions(options, id));
+    }
+
+    private static ApplianceConnectivityMonitoringDestinationsArgs makeArgs(ApplianceConnectivityMonitoringDestinationsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ApplianceConnectivityMonitoringDestinationsArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

@@ -178,11 +178,18 @@ public class WirelessSsidsVpn extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public WirelessSsidsVpn(String name, WirelessSsidsVpnArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/wirelessSsidsVpn:WirelessSsidsVpn", name, args == null ? WirelessSsidsVpnArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/wirelessSsidsVpn:WirelessSsidsVpn", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private WirelessSsidsVpn(String name, Output<String> id, @Nullable WirelessSsidsVpnState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/wirelessSsidsVpn:WirelessSsidsVpn", name, state, makeResourceOptions(options, id));
+    }
+
+    private static WirelessSsidsVpnArgs makeArgs(WirelessSsidsVpnArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? WirelessSsidsVpnArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

@@ -443,11 +443,18 @@ public class WirelessSsidsSplashSettings extends com.pulumi.resources.CustomReso
      * @param options A bag of options that control this resource's behavior.
      */
     public WirelessSsidsSplashSettings(String name, WirelessSsidsSplashSettingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/wirelessSsidsSplashSettings:WirelessSsidsSplashSettings", name, args == null ? WirelessSsidsSplashSettingsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/wirelessSsidsSplashSettings:WirelessSsidsSplashSettings", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private WirelessSsidsSplashSettings(String name, Output<String> id, @Nullable WirelessSsidsSplashSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/wirelessSsidsSplashSettings:WirelessSsidsSplashSettings", name, state, makeResourceOptions(options, id));
+    }
+
+    private static WirelessSsidsSplashSettingsArgs makeArgs(WirelessSsidsSplashSettingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? WirelessSsidsSplashSettingsArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

@@ -133,11 +133,18 @@ public class WirelessSsidsFirewallL7FirewallRules extends com.pulumi.resources.C
      * @param options A bag of options that control this resource's behavior.
      */
     public WirelessSsidsFirewallL7FirewallRules(String name, WirelessSsidsFirewallL7FirewallRulesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/wirelessSsidsFirewallL7FirewallRules:WirelessSsidsFirewallL7FirewallRules", name, args == null ? WirelessSsidsFirewallL7FirewallRulesArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/wirelessSsidsFirewallL7FirewallRules:WirelessSsidsFirewallL7FirewallRules", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private WirelessSsidsFirewallL7FirewallRules(String name, Output<String> id, @Nullable WirelessSsidsFirewallL7FirewallRulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/wirelessSsidsFirewallL7FirewallRules:WirelessSsidsFirewallL7FirewallRules", name, state, makeResourceOptions(options, id));
+    }
+
+    private static WirelessSsidsFirewallL7FirewallRulesArgs makeArgs(WirelessSsidsFirewallL7FirewallRulesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? WirelessSsidsFirewallL7FirewallRulesArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

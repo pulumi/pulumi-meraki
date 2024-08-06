@@ -28,7 +28,7 @@ namespace Pulumi.Meraki.Outputs
         /// <summary>
         /// IMEI of the device, if applicable
         /// </summary>
-        public readonly string Imei;
+        public readonly double Imei;
         /// <summary>
         /// LAN IP address of the device
         /// </summary>
@@ -82,7 +82,7 @@ namespace Pulumi.Meraki.Outputs
 
             string firmware,
 
-            string imei,
+            double imei,
 
             string lanIp,
 

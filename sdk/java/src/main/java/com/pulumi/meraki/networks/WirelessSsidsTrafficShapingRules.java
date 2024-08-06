@@ -172,11 +172,18 @@ public class WirelessSsidsTrafficShapingRules extends com.pulumi.resources.Custo
      * @param options A bag of options that control this resource's behavior.
      */
     public WirelessSsidsTrafficShapingRules(String name, WirelessSsidsTrafficShapingRulesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/wirelessSsidsTrafficShapingRules:WirelessSsidsTrafficShapingRules", name, args == null ? WirelessSsidsTrafficShapingRulesArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/wirelessSsidsTrafficShapingRules:WirelessSsidsTrafficShapingRules", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private WirelessSsidsTrafficShapingRules(String name, Output<String> id, @Nullable WirelessSsidsTrafficShapingRulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/wirelessSsidsTrafficShapingRules:WirelessSsidsTrafficShapingRules", name, state, makeResourceOptions(options, id));
+    }
+
+    private static WirelessSsidsTrafficShapingRulesArgs makeArgs(WirelessSsidsTrafficShapingRulesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? WirelessSsidsTrafficShapingRulesArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

@@ -168,11 +168,18 @@ public class ApplianceVpnBgp extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApplianceVpnBgp(String name, ApplianceVpnBgpArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/applianceVpnBgp:ApplianceVpnBgp", name, args == null ? ApplianceVpnBgpArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/applianceVpnBgp:ApplianceVpnBgp", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApplianceVpnBgp(String name, Output<String> id, @Nullable ApplianceVpnBgpState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/applianceVpnBgp:ApplianceVpnBgp", name, state, makeResourceOptions(options, id));
+    }
+
+    private static ApplianceVpnBgpArgs makeArgs(ApplianceVpnBgpArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? ApplianceVpnBgpArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

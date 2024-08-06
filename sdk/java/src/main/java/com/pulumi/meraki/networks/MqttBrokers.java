@@ -127,11 +127,18 @@ public class MqttBrokers extends com.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MqttBrokers(String name, MqttBrokersArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/mqttBrokers:MqttBrokers", name, args == null ? MqttBrokersArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/mqttBrokers:MqttBrokers", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private MqttBrokers(String name, Output<String> id, @Nullable MqttBrokersState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/mqttBrokers:MqttBrokers", name, state, makeResourceOptions(options, id));
+    }
+
+    private static MqttBrokersArgs makeArgs(MqttBrokersArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? MqttBrokersArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

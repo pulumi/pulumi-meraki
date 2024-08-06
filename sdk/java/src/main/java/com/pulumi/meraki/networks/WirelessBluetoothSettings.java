@@ -202,11 +202,18 @@ public class WirelessBluetoothSettings extends com.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public WirelessBluetoothSettings(String name, WirelessBluetoothSettingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/wirelessBluetoothSettings:WirelessBluetoothSettings", name, args == null ? WirelessBluetoothSettingsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
+        super("meraki:networks/wirelessBluetoothSettings:WirelessBluetoothSettings", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
     }
 
     private WirelessBluetoothSettings(String name, Output<String> id, @Nullable WirelessBluetoothSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("meraki:networks/wirelessBluetoothSettings:WirelessBluetoothSettings", name, state, makeResourceOptions(options, id));
+    }
+
+    private static WirelessBluetoothSettingsArgs makeArgs(WirelessBluetoothSettingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        if (options != null && options.getUrn().isPresent()) {
+            return null;
+        }
+        return args == null ? WirelessBluetoothSettingsArgs.Empty : args;
     }
 
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

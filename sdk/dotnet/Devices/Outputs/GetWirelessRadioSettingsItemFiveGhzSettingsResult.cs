@@ -14,14 +14,14 @@ namespace Pulumi.Meraki.Devices.Outputs
     public sealed class GetWirelessRadioSettingsItemFiveGhzSettingsResult
     {
         public readonly int Channel;
-        public readonly int ChannelWidth;
+        public readonly string ChannelWidth;
         public readonly int TargetPower;
 
         [OutputConstructor]
         private GetWirelessRadioSettingsItemFiveGhzSettingsResult(
             int channel,
 
-            int channelWidth,
+            string channelWidth,
 
             int targetPower)
         {
