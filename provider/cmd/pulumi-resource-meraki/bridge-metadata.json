@@ -2668,6 +2668,9 @@
                 "fields": {
                     "limit_scope_to_networks": {
                         "maxItemsOne": false
+                    },
+                    "limit_scope_to_networks_rs": {
+                        "maxItemsOne": false
                     }
                 }
             },
