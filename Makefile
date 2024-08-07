@@ -8,8 +8,7 @@ VERSION_PATH := $(PROVIDER_PATH)/pkg/version.Version
 TFGEN := pulumi-tfgen-$(PACK)
 PROVIDER := pulumi-resource-$(PACK)
 JAVA_GEN := pulumi-java-gen
-TESTPARALLELISM := 4
-TESTTIMEOUT := 2h
+TESTPARALLELISM := 10
 WORKING_DIR := $(shell pwd)
 PULUMI_PROVIDER_BUILD_PARALLELISM ?=
 PULUMI_CONVERT := 1
@@ -140,10 +139,7 @@ provider: tfgen provider_no_deps
 
 test: export PATH := $(WORKING_DIR)/bin:$(PATH)
 test:
-	cd examples && go test -v -tags=all -parallel $(TESTPARALLELISM) -timeout $(TESTTIMEOUT)
-
-test_nodejs:
-	cd examples && go test -v -json -count=1 -cover -timeout $(TESTTIMEOUT) -tags=nodejs -skip TestPulumiExamples -parallel $(TESTPARALLELISM) . 2>&1 | tee /tmp/gotest.log | gotestfmt
+	cd examples && go test -v -tags=all -parallel $(TESTPARALLELISM) -timeout 2h
 
 test_provider:
 	@echo ""

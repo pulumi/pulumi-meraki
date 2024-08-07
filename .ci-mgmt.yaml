@@ -14,6 +14,10 @@ plugins:
 team: ecosystem
 providerDefaultBranch: main
 
+env:
+  MERAKI_ORG_ID: ${{ secrets.MERAKI_ORG_ID }}
+  MERAKI_DASHBOARD_API_KEY: ${{ secrets.MERAKI_DASHBOARD_API_KEY }}
+
 actions:
   preTest:
     - name: make upstream
