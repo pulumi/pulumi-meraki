@@ -225,7 +225,7 @@ class LiveToolsCable(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 callback: Optional[pulumi.Input[pulumi.InputType['LiveToolsCableCallbackArgs']]] = None,
+                 callback: Optional[pulumi.Input[Union['LiveToolsCableCallbackArgs', 'LiveToolsCableCallbackArgsDict']]] = None,
                  ports: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  serial: Optional[pulumi.Input[str]] = None,
                  __props__=None):
@@ -233,7 +233,7 @@ class LiveToolsCable(pulumi.CustomResource):
         Create a LiveToolsCable resource with the given unique name, props, and options.
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['LiveToolsCableCallbackArgs']] callback: Details for the callback. Please include either an httpServerId OR url and sharedSecret
+        :param pulumi.Input[Union['LiveToolsCableCallbackArgs', 'LiveToolsCableCallbackArgsDict']] callback: Details for the callback. Please include either an httpServerId OR url and sharedSecret
         :param pulumi.Input[Sequence[pulumi.Input[str]]] ports: A list of ports for which to perform the cable test.
         :param pulumi.Input[str] serial: serial path parameter.
         """
@@ -260,7 +260,7 @@ class LiveToolsCable(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 callback: Optional[pulumi.Input[pulumi.InputType['LiveToolsCableCallbackArgs']]] = None,
+                 callback: Optional[pulumi.Input[Union['LiveToolsCableCallbackArgs', 'LiveToolsCableCallbackArgsDict']]] = None,
                  ports: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  serial: Optional[pulumi.Input[str]] = None,
                  __props__=None):
@@ -294,11 +294,11 @@ class LiveToolsCable(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             cable_test_id: Optional[pulumi.Input[str]] = None,
-            callback: Optional[pulumi.Input[pulumi.InputType['LiveToolsCableCallbackArgs']]] = None,
+            callback: Optional[pulumi.Input[Union['LiveToolsCableCallbackArgs', 'LiveToolsCableCallbackArgsDict']]] = None,
             error: Optional[pulumi.Input[str]] = None,
             ports: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-            request: Optional[pulumi.Input[pulumi.InputType['LiveToolsCableRequestArgs']]] = None,
-            results: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['LiveToolsCableResultArgs']]]]] = None,
+            request: Optional[pulumi.Input[Union['LiveToolsCableRequestArgs', 'LiveToolsCableRequestArgsDict']]] = None,
+            results: Optional[pulumi.Input[Sequence[pulumi.Input[Union['LiveToolsCableResultArgs', 'LiveToolsCableResultArgsDict']]]]] = None,
             serial: Optional[pulumi.Input[str]] = None,
             status: Optional[pulumi.Input[str]] = None,
             url: Optional[pulumi.Input[str]] = None) -> 'LiveToolsCable':
@@ -310,11 +310,11 @@ class LiveToolsCable(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] cable_test_id: Id of the cable test request. Used to check the status of the request.
-        :param pulumi.Input[pulumi.InputType['LiveToolsCableCallbackArgs']] callback: Details for the callback. Please include either an httpServerId OR url and sharedSecret
+        :param pulumi.Input[Union['LiveToolsCableCallbackArgs', 'LiveToolsCableCallbackArgsDict']] callback: Details for the callback. Please include either an httpServerId OR url and sharedSecret
         :param pulumi.Input[str] error: An error message for a failed execution
         :param pulumi.Input[Sequence[pulumi.Input[str]]] ports: A list of ports for which to perform the cable test.
-        :param pulumi.Input[pulumi.InputType['LiveToolsCableRequestArgs']] request: Cable test request parameters
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['LiveToolsCableResultArgs']]]] results: Results of the cable test request, one for each requested port.
+        :param pulumi.Input[Union['LiveToolsCableRequestArgs', 'LiveToolsCableRequestArgsDict']] request: Cable test request parameters
+        :param pulumi.Input[Sequence[pulumi.Input[Union['LiveToolsCableResultArgs', 'LiveToolsCableResultArgsDict']]]] results: Results of the cable test request, one for each requested port.
         :param pulumi.Input[str] serial: serial path parameter.
         :param pulumi.Input[str] status: Status of the cable test request.
         :param pulumi.Input[str] url: GET this url to check the status of your cable test request.

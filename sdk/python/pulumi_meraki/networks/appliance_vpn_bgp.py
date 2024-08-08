@@ -196,7 +196,7 @@ class ApplianceVpnBgp(pulumi.CustomResource):
                  as_number: Optional[pulumi.Input[int]] = None,
                  enabled: Optional[pulumi.Input[bool]] = None,
                  ibgp_hold_timer: Optional[pulumi.Input[int]] = None,
-                 neighbors: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceVpnBgpNeighborArgs']]]]] = None,
+                 neighbors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVpnBgpNeighborArgs', 'ApplianceVpnBgpNeighborArgsDict']]]]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
@@ -213,7 +213,7 @@ class ApplianceVpnBgp(pulumi.CustomResource):
         :param pulumi.Input[int] as_number: An Autonomous System Number (ASN) is required if you are to run BGP and peer with another BGP Speaker outside of the Auto VPN domain. This ASN will be applied to the entire Auto VPN domain. The entire 4-byte ASN range is supported. So, the ASN must be an integer between 1 and 4294967295. When absent, this field is not updated. If no value exists then it defaults to 64512.
         :param pulumi.Input[bool] enabled: Boolean value to enable or disable the BGP configuration. When BGP is enabled, the asNumber (ASN) will be autopopulated with the preconfigured ASN at other Hubs or a default value if there is no ASN configured.
         :param pulumi.Input[int] ibgp_hold_timer: The iBGP holdtimer in seconds. The iBGP holdtimer must be an integer between 12 and 240. When absent, this field is not updated. If no value exists then it defaults to 240.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceVpnBgpNeighborArgs']]]] neighbors: List of BGP neighbors. This list replaces the existing set of neighbors. When absent, this field is not updated.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVpnBgpNeighborArgs', 'ApplianceVpnBgpNeighborArgsDict']]]] neighbors: List of BGP neighbors. This list replaces the existing set of neighbors. When absent, this field is not updated.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         """
         ...
@@ -249,7 +249,7 @@ class ApplianceVpnBgp(pulumi.CustomResource):
                  as_number: Optional[pulumi.Input[int]] = None,
                  enabled: Optional[pulumi.Input[bool]] = None,
                  ibgp_hold_timer: Optional[pulumi.Input[int]] = None,
-                 neighbors: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceVpnBgpNeighborArgs']]]]] = None,
+                 neighbors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVpnBgpNeighborArgs', 'ApplianceVpnBgpNeighborArgsDict']]]]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -280,7 +280,7 @@ class ApplianceVpnBgp(pulumi.CustomResource):
             as_number: Optional[pulumi.Input[int]] = None,
             enabled: Optional[pulumi.Input[bool]] = None,
             ibgp_hold_timer: Optional[pulumi.Input[int]] = None,
-            neighbors: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceVpnBgpNeighborArgs']]]]] = None,
+            neighbors: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVpnBgpNeighborArgs', 'ApplianceVpnBgpNeighborArgsDict']]]]] = None,
             network_id: Optional[pulumi.Input[str]] = None) -> 'ApplianceVpnBgp':
         """
         Get an existing ApplianceVpnBgp resource's state with the given name, id, and optional extra
@@ -292,7 +292,7 @@ class ApplianceVpnBgp(pulumi.CustomResource):
         :param pulumi.Input[int] as_number: An Autonomous System Number (ASN) is required if you are to run BGP and peer with another BGP Speaker outside of the Auto VPN domain. This ASN will be applied to the entire Auto VPN domain. The entire 4-byte ASN range is supported. So, the ASN must be an integer between 1 and 4294967295. When absent, this field is not updated. If no value exists then it defaults to 64512.
         :param pulumi.Input[bool] enabled: Boolean value to enable or disable the BGP configuration. When BGP is enabled, the asNumber (ASN) will be autopopulated with the preconfigured ASN at other Hubs or a default value if there is no ASN configured.
         :param pulumi.Input[int] ibgp_hold_timer: The iBGP holdtimer in seconds. The iBGP holdtimer must be an integer between 12 and 240. When absent, this field is not updated. If no value exists then it defaults to 240.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceVpnBgpNeighborArgs']]]] neighbors: List of BGP neighbors. This list replaces the existing set of neighbors. When absent, this field is not updated.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVpnBgpNeighborArgs', 'ApplianceVpnBgpNeighborArgsDict']]]] neighbors: List of BGP neighbors. This list replaces the existing set of neighbors. When absent, this field is not updated.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

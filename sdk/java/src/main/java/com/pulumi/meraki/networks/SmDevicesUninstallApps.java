@@ -103,7 +103,7 @@ public class SmDevicesUninstallApps extends com.pulumi.resources.CustomResource 
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SmDevicesUninstallApps(String name) {
+    public SmDevicesUninstallApps(java.lang.String name) {
         this(name, SmDevicesUninstallAppsArgs.Empty);
     }
     /**
@@ -111,7 +111,7 @@ public class SmDevicesUninstallApps extends com.pulumi.resources.CustomResource 
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SmDevicesUninstallApps(String name, SmDevicesUninstallAppsArgs args) {
+    public SmDevicesUninstallApps(java.lang.String name, SmDevicesUninstallAppsArgs args) {
         this(name, args, null);
     }
     /**
@@ -120,12 +120,12 @@ public class SmDevicesUninstallApps extends com.pulumi.resources.CustomResource 
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SmDevicesUninstallApps(String name, SmDevicesUninstallAppsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/smDevicesUninstallApps:SmDevicesUninstallApps", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public SmDevicesUninstallApps(java.lang.String name, SmDevicesUninstallAppsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/smDevicesUninstallApps:SmDevicesUninstallApps", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SmDevicesUninstallApps(String name, Output<String> id, @Nullable SmDevicesUninstallAppsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/smDevicesUninstallApps:SmDevicesUninstallApps", name, state, makeResourceOptions(options, id));
+    private SmDevicesUninstallApps(java.lang.String name, Output<java.lang.String> id, @Nullable SmDevicesUninstallAppsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/smDevicesUninstallApps:SmDevicesUninstallApps", name, state, makeResourceOptions(options, id), false);
     }
 
     private static SmDevicesUninstallAppsArgs makeArgs(SmDevicesUninstallAppsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -135,7 +135,7 @@ public class SmDevicesUninstallApps extends com.pulumi.resources.CustomResource 
         return args == null ? SmDevicesUninstallAppsArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -151,7 +151,7 @@ public class SmDevicesUninstallApps extends com.pulumi.resources.CustomResource 
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SmDevicesUninstallApps get(String name, Output<String> id, @Nullable SmDevicesUninstallAppsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SmDevicesUninstallApps get(java.lang.String name, Output<java.lang.String> id, @Nullable SmDevicesUninstallAppsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SmDevicesUninstallApps(name, id, state, options);
     }
 }

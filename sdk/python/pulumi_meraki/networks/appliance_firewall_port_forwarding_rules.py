@@ -98,7 +98,7 @@ class ApplianceFirewallPortForwardingRules(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceFirewallPortForwardingRulesRuleArgs']]]]] = None,
+                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceFirewallPortForwardingRulesRuleArgs', 'ApplianceFirewallPortForwardingRulesRuleArgsDict']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -112,7 +112,7 @@ class ApplianceFirewallPortForwardingRules(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceFirewallPortForwardingRulesRuleArgs']]]] rules: An array of port forwarding params
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceFirewallPortForwardingRulesRuleArgs', 'ApplianceFirewallPortForwardingRulesRuleArgsDict']]]] rules: An array of port forwarding params
         """
         ...
     @overload
@@ -145,7 +145,7 @@ class ApplianceFirewallPortForwardingRules(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceFirewallPortForwardingRulesRuleArgs']]]]] = None,
+                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceFirewallPortForwardingRulesRuleArgs', 'ApplianceFirewallPortForwardingRulesRuleArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -170,7 +170,7 @@ class ApplianceFirewallPortForwardingRules(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             network_id: Optional[pulumi.Input[str]] = None,
-            rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceFirewallPortForwardingRulesRuleArgs']]]]] = None) -> 'ApplianceFirewallPortForwardingRules':
+            rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceFirewallPortForwardingRulesRuleArgs', 'ApplianceFirewallPortForwardingRulesRuleArgsDict']]]]] = None) -> 'ApplianceFirewallPortForwardingRules':
         """
         Get an existing ApplianceFirewallPortForwardingRules resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -179,7 +179,7 @@ class ApplianceFirewallPortForwardingRules(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceFirewallPortForwardingRulesRuleArgs']]]] rules: An array of port forwarding params
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceFirewallPortForwardingRulesRuleArgs', 'ApplianceFirewallPortForwardingRulesRuleArgsDict']]]] rules: An array of port forwarding params
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

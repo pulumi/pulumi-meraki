@@ -125,7 +125,7 @@ public class SwitchStacks extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SwitchStacks(String name) {
+    public SwitchStacks(java.lang.String name) {
         this(name, SwitchStacksArgs.Empty);
     }
     /**
@@ -133,7 +133,7 @@ public class SwitchStacks extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SwitchStacks(String name, SwitchStacksArgs args) {
+    public SwitchStacks(java.lang.String name, SwitchStacksArgs args) {
         this(name, args, null);
     }
     /**
@@ -142,12 +142,12 @@ public class SwitchStacks extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SwitchStacks(String name, SwitchStacksArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/switchStacks:SwitchStacks", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public SwitchStacks(java.lang.String name, SwitchStacksArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/switchStacks:SwitchStacks", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SwitchStacks(String name, Output<String> id, @Nullable SwitchStacksState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/switchStacks:SwitchStacks", name, state, makeResourceOptions(options, id));
+    private SwitchStacks(java.lang.String name, Output<java.lang.String> id, @Nullable SwitchStacksState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/switchStacks:SwitchStacks", name, state, makeResourceOptions(options, id), false);
     }
 
     private static SwitchStacksArgs makeArgs(SwitchStacksArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -157,7 +157,7 @@ public class SwitchStacks extends com.pulumi.resources.CustomResource {
         return args == null ? SwitchStacksArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -173,7 +173,7 @@ public class SwitchStacks extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SwitchStacks get(String name, Output<String> id, @Nullable SwitchStacksState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SwitchStacks get(java.lang.String name, Output<java.lang.String> id, @Nullable SwitchStacksState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SwitchStacks(name, id, state, options);
     }
 }

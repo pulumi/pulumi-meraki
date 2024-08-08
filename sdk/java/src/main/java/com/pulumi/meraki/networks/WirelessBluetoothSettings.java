@@ -184,7 +184,7 @@ public class WirelessBluetoothSettings extends com.pulumi.resources.CustomResour
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public WirelessBluetoothSettings(String name) {
+    public WirelessBluetoothSettings(java.lang.String name) {
         this(name, WirelessBluetoothSettingsArgs.Empty);
     }
     /**
@@ -192,7 +192,7 @@ public class WirelessBluetoothSettings extends com.pulumi.resources.CustomResour
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public WirelessBluetoothSettings(String name, WirelessBluetoothSettingsArgs args) {
+    public WirelessBluetoothSettings(java.lang.String name, WirelessBluetoothSettingsArgs args) {
         this(name, args, null);
     }
     /**
@@ -201,12 +201,12 @@ public class WirelessBluetoothSettings extends com.pulumi.resources.CustomResour
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public WirelessBluetoothSettings(String name, WirelessBluetoothSettingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/wirelessBluetoothSettings:WirelessBluetoothSettings", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public WirelessBluetoothSettings(java.lang.String name, WirelessBluetoothSettingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/wirelessBluetoothSettings:WirelessBluetoothSettings", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private WirelessBluetoothSettings(String name, Output<String> id, @Nullable WirelessBluetoothSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/wirelessBluetoothSettings:WirelessBluetoothSettings", name, state, makeResourceOptions(options, id));
+    private WirelessBluetoothSettings(java.lang.String name, Output<java.lang.String> id, @Nullable WirelessBluetoothSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/wirelessBluetoothSettings:WirelessBluetoothSettings", name, state, makeResourceOptions(options, id), false);
     }
 
     private static WirelessBluetoothSettingsArgs makeArgs(WirelessBluetoothSettingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -216,7 +216,7 @@ public class WirelessBluetoothSettings extends com.pulumi.resources.CustomResour
         return args == null ? WirelessBluetoothSettingsArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -232,7 +232,7 @@ public class WirelessBluetoothSettings extends com.pulumi.resources.CustomResour
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WirelessBluetoothSettings get(String name, Output<String> id, @Nullable WirelessBluetoothSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static WirelessBluetoothSettings get(java.lang.String name, Output<java.lang.String> id, @Nullable WirelessBluetoothSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new WirelessBluetoothSettings(name, id, state, options);
     }
 }

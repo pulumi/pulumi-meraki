@@ -256,7 +256,7 @@ class AdaptivePolicyGroups(pulumi.CustomResource):
                  description: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  organization_id: Optional[pulumi.Input[str]] = None,
-                 policy_objects: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AdaptivePolicyGroupsPolicyObjectArgs']]]]] = None,
+                 policy_objects: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AdaptivePolicyGroupsPolicyObjectArgs', 'AdaptivePolicyGroupsPolicyObjectArgsDict']]]]] = None,
                  sgt: Optional[pulumi.Input[int]] = None,
                  __props__=None):
         """
@@ -270,10 +270,10 @@ class AdaptivePolicyGroups(pulumi.CustomResource):
             description="Group of XYZ Corp Employees",
             name="Employee Group",
             organization_id="string",
-            policy_objects=[meraki.organizations.AdaptivePolicyGroupsPolicyObjectArgs(
-                id="2345",
-                name="Example Policy Object",
-            )],
+            policy_objects=[{
+                "id": "2345",
+                "name": "Example Policy Object",
+            }],
             sgt=1000)
         pulumi.export("merakiOrganizationsAdaptivePolicyGroupsExample", example)
         ```
@@ -289,7 +289,7 @@ class AdaptivePolicyGroups(pulumi.CustomResource):
         :param pulumi.Input[str] description: Description of the group (default: "")
         :param pulumi.Input[str] name: Name of the group
         :param pulumi.Input[str] organization_id: organizationId path parameter. Organization ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AdaptivePolicyGroupsPolicyObjectArgs']]]] policy_objects: The policy objects that belong to this group; traffic from addresses specified by these policy objects will be tagged with this group's SGT value if no other tagging scheme is being used (each requires one unique attribute) ()
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AdaptivePolicyGroupsPolicyObjectArgs', 'AdaptivePolicyGroupsPolicyObjectArgsDict']]]] policy_objects: The policy objects that belong to this group; traffic from addresses specified by these policy objects will be tagged with this group's SGT value if no other tagging scheme is being used (each requires one unique attribute) ()
         :param pulumi.Input[int] sgt: SGT value of the group
         """
         ...
@@ -309,10 +309,10 @@ class AdaptivePolicyGroups(pulumi.CustomResource):
             description="Group of XYZ Corp Employees",
             name="Employee Group",
             organization_id="string",
-            policy_objects=[meraki.organizations.AdaptivePolicyGroupsPolicyObjectArgs(
-                id="2345",
-                name="Example Policy Object",
-            )],
+            policy_objects=[{
+                "id": "2345",
+                "name": "Example Policy Object",
+            }],
             sgt=1000)
         pulumi.export("merakiOrganizationsAdaptivePolicyGroupsExample", example)
         ```
@@ -341,7 +341,7 @@ class AdaptivePolicyGroups(pulumi.CustomResource):
                  description: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  organization_id: Optional[pulumi.Input[str]] = None,
-                 policy_objects: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AdaptivePolicyGroupsPolicyObjectArgs']]]]] = None,
+                 policy_objects: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AdaptivePolicyGroupsPolicyObjectArgs', 'AdaptivePolicyGroupsPolicyObjectArgsDict']]]]] = None,
                  sgt: Optional[pulumi.Input[int]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -380,7 +380,7 @@ class AdaptivePolicyGroups(pulumi.CustomResource):
             is_default_group: Optional[pulumi.Input[bool]] = None,
             name: Optional[pulumi.Input[str]] = None,
             organization_id: Optional[pulumi.Input[str]] = None,
-            policy_objects: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AdaptivePolicyGroupsPolicyObjectArgs']]]]] = None,
+            policy_objects: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AdaptivePolicyGroupsPolicyObjectArgs', 'AdaptivePolicyGroupsPolicyObjectArgsDict']]]]] = None,
             required_ip_mappings: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
             sgt: Optional[pulumi.Input[int]] = None,
             updated_at: Optional[pulumi.Input[str]] = None) -> 'AdaptivePolicyGroups':
@@ -394,7 +394,7 @@ class AdaptivePolicyGroups(pulumi.CustomResource):
         :param pulumi.Input[str] description: Description of the group (default: "")
         :param pulumi.Input[str] name: Name of the group
         :param pulumi.Input[str] organization_id: organizationId path parameter. Organization ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AdaptivePolicyGroupsPolicyObjectArgs']]]] policy_objects: The policy objects that belong to this group; traffic from addresses specified by these policy objects will be tagged with this group's SGT value if no other tagging scheme is being used (each requires one unique attribute) ()
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AdaptivePolicyGroupsPolicyObjectArgs', 'AdaptivePolicyGroupsPolicyObjectArgsDict']]]] policy_objects: The policy objects that belong to this group; traffic from addresses specified by these policy objects will be tagged with this group's SGT value if no other tagging scheme is being used (each requires one unique attribute) ()
         :param pulumi.Input[int] sgt: SGT value of the group
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

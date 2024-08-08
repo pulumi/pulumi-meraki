@@ -97,7 +97,7 @@ public class SwitchPortsCycle extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SwitchPortsCycle(String name) {
+    public SwitchPortsCycle(java.lang.String name) {
         this(name, SwitchPortsCycleArgs.Empty);
     }
     /**
@@ -105,7 +105,7 @@ public class SwitchPortsCycle extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SwitchPortsCycle(String name, SwitchPortsCycleArgs args) {
+    public SwitchPortsCycle(java.lang.String name, SwitchPortsCycleArgs args) {
         this(name, args, null);
     }
     /**
@@ -114,12 +114,12 @@ public class SwitchPortsCycle extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SwitchPortsCycle(String name, SwitchPortsCycleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/switchPortsCycle:SwitchPortsCycle", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public SwitchPortsCycle(java.lang.String name, SwitchPortsCycleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/switchPortsCycle:SwitchPortsCycle", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SwitchPortsCycle(String name, Output<String> id, @Nullable SwitchPortsCycleState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/switchPortsCycle:SwitchPortsCycle", name, state, makeResourceOptions(options, id));
+    private SwitchPortsCycle(java.lang.String name, Output<java.lang.String> id, @Nullable SwitchPortsCycleState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/switchPortsCycle:SwitchPortsCycle", name, state, makeResourceOptions(options, id), false);
     }
 
     private static SwitchPortsCycleArgs makeArgs(SwitchPortsCycleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -129,7 +129,7 @@ public class SwitchPortsCycle extends com.pulumi.resources.CustomResource {
         return args == null ? SwitchPortsCycleArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -145,7 +145,7 @@ public class SwitchPortsCycle extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SwitchPortsCycle get(String name, Output<String> id, @Nullable SwitchPortsCycleState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SwitchPortsCycle get(java.lang.String name, Output<java.lang.String> id, @Nullable SwitchPortsCycleState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SwitchPortsCycle(name, id, state, options);
     }
 }

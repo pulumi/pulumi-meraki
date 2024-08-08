@@ -149,7 +149,7 @@ public class WirelessSsidsFirewallL3FirewallRules extends com.pulumi.resources.C
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public WirelessSsidsFirewallL3FirewallRules(String name) {
+    public WirelessSsidsFirewallL3FirewallRules(java.lang.String name) {
         this(name, WirelessSsidsFirewallL3FirewallRulesArgs.Empty);
     }
     /**
@@ -157,7 +157,7 @@ public class WirelessSsidsFirewallL3FirewallRules extends com.pulumi.resources.C
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public WirelessSsidsFirewallL3FirewallRules(String name, WirelessSsidsFirewallL3FirewallRulesArgs args) {
+    public WirelessSsidsFirewallL3FirewallRules(java.lang.String name, WirelessSsidsFirewallL3FirewallRulesArgs args) {
         this(name, args, null);
     }
     /**
@@ -166,12 +166,12 @@ public class WirelessSsidsFirewallL3FirewallRules extends com.pulumi.resources.C
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public WirelessSsidsFirewallL3FirewallRules(String name, WirelessSsidsFirewallL3FirewallRulesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/wirelessSsidsFirewallL3FirewallRules:WirelessSsidsFirewallL3FirewallRules", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public WirelessSsidsFirewallL3FirewallRules(java.lang.String name, WirelessSsidsFirewallL3FirewallRulesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/wirelessSsidsFirewallL3FirewallRules:WirelessSsidsFirewallL3FirewallRules", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private WirelessSsidsFirewallL3FirewallRules(String name, Output<String> id, @Nullable WirelessSsidsFirewallL3FirewallRulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/wirelessSsidsFirewallL3FirewallRules:WirelessSsidsFirewallL3FirewallRules", name, state, makeResourceOptions(options, id));
+    private WirelessSsidsFirewallL3FirewallRules(java.lang.String name, Output<java.lang.String> id, @Nullable WirelessSsidsFirewallL3FirewallRulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/wirelessSsidsFirewallL3FirewallRules:WirelessSsidsFirewallL3FirewallRules", name, state, makeResourceOptions(options, id), false);
     }
 
     private static WirelessSsidsFirewallL3FirewallRulesArgs makeArgs(WirelessSsidsFirewallL3FirewallRulesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -181,7 +181,7 @@ public class WirelessSsidsFirewallL3FirewallRules extends com.pulumi.resources.C
         return args == null ? WirelessSsidsFirewallL3FirewallRulesArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -197,7 +197,7 @@ public class WirelessSsidsFirewallL3FirewallRules extends com.pulumi.resources.C
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WirelessSsidsFirewallL3FirewallRules get(String name, Output<String> id, @Nullable WirelessSsidsFirewallL3FirewallRulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static WirelessSsidsFirewallL3FirewallRules get(java.lang.String name, Output<java.lang.String> id, @Nullable WirelessSsidsFirewallL3FirewallRulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new WirelessSsidsFirewallL3FirewallRules(name, id, state, options);
     }
 }

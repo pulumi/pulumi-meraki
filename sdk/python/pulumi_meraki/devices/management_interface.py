@@ -146,8 +146,8 @@ class ManagementInterface(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  serial: Optional[pulumi.Input[str]] = None,
-                 wan1: Optional[pulumi.Input[pulumi.InputType['ManagementInterfaceWan1Args']]] = None,
-                 wan2: Optional[pulumi.Input[pulumi.InputType['ManagementInterfaceWan2Args']]] = None,
+                 wan1: Optional[pulumi.Input[Union['ManagementInterfaceWan1Args', 'ManagementInterfaceWan1ArgsDict']]] = None,
+                 wan2: Optional[pulumi.Input[Union['ManagementInterfaceWan2Args', 'ManagementInterfaceWan2ArgsDict']]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -161,8 +161,8 @@ class ManagementInterface(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] serial: serial path parameter.
-        :param pulumi.Input[pulumi.InputType['ManagementInterfaceWan1Args']] wan1: WAN 1 settings
-        :param pulumi.Input[pulumi.InputType['ManagementInterfaceWan2Args']] wan2: WAN 2 settings (only for MX devices)
+        :param pulumi.Input[Union['ManagementInterfaceWan1Args', 'ManagementInterfaceWan1ArgsDict']] wan1: WAN 1 settings
+        :param pulumi.Input[Union['ManagementInterfaceWan2Args', 'ManagementInterfaceWan2ArgsDict']] wan2: WAN 2 settings (only for MX devices)
         """
         ...
     @overload
@@ -195,8 +195,8 @@ class ManagementInterface(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  serial: Optional[pulumi.Input[str]] = None,
-                 wan1: Optional[pulumi.Input[pulumi.InputType['ManagementInterfaceWan1Args']]] = None,
-                 wan2: Optional[pulumi.Input[pulumi.InputType['ManagementInterfaceWan2Args']]] = None,
+                 wan1: Optional[pulumi.Input[Union['ManagementInterfaceWan1Args', 'ManagementInterfaceWan1ArgsDict']]] = None,
+                 wan2: Optional[pulumi.Input[Union['ManagementInterfaceWan2Args', 'ManagementInterfaceWan2ArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -222,10 +222,10 @@ class ManagementInterface(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            ddns_hostnames: Optional[pulumi.Input[pulumi.InputType['ManagementInterfaceDdnsHostnamesArgs']]] = None,
+            ddns_hostnames: Optional[pulumi.Input[Union['ManagementInterfaceDdnsHostnamesArgs', 'ManagementInterfaceDdnsHostnamesArgsDict']]] = None,
             serial: Optional[pulumi.Input[str]] = None,
-            wan1: Optional[pulumi.Input[pulumi.InputType['ManagementInterfaceWan1Args']]] = None,
-            wan2: Optional[pulumi.Input[pulumi.InputType['ManagementInterfaceWan2Args']]] = None) -> 'ManagementInterface':
+            wan1: Optional[pulumi.Input[Union['ManagementInterfaceWan1Args', 'ManagementInterfaceWan1ArgsDict']]] = None,
+            wan2: Optional[pulumi.Input[Union['ManagementInterfaceWan2Args', 'ManagementInterfaceWan2ArgsDict']]] = None) -> 'ManagementInterface':
         """
         Get an existing ManagementInterface resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -233,10 +233,10 @@ class ManagementInterface(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['ManagementInterfaceDdnsHostnamesArgs']] ddns_hostnames: Dynamic DNS hostnames.
+        :param pulumi.Input[Union['ManagementInterfaceDdnsHostnamesArgs', 'ManagementInterfaceDdnsHostnamesArgsDict']] ddns_hostnames: Dynamic DNS hostnames.
         :param pulumi.Input[str] serial: serial path parameter.
-        :param pulumi.Input[pulumi.InputType['ManagementInterfaceWan1Args']] wan1: WAN 1 settings
-        :param pulumi.Input[pulumi.InputType['ManagementInterfaceWan2Args']] wan2: WAN 2 settings (only for MX devices)
+        :param pulumi.Input[Union['ManagementInterfaceWan1Args', 'ManagementInterfaceWan1ArgsDict']] wan1: WAN 1 settings
+        :param pulumi.Input[Union['ManagementInterfaceWan2Args', 'ManagementInterfaceWan2ArgsDict']] wan2: WAN 2 settings (only for MX devices)
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

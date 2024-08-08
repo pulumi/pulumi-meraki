@@ -229,11 +229,11 @@ class AdaptivePolicyPolicies(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 acls: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AdaptivePolicyPoliciesAclArgs']]]]] = None,
-                 destination_group: Optional[pulumi.Input[pulumi.InputType['AdaptivePolicyPoliciesDestinationGroupArgs']]] = None,
+                 acls: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AdaptivePolicyPoliciesAclArgs', 'AdaptivePolicyPoliciesAclArgsDict']]]]] = None,
+                 destination_group: Optional[pulumi.Input[Union['AdaptivePolicyPoliciesDestinationGroupArgs', 'AdaptivePolicyPoliciesDestinationGroupArgsDict']]] = None,
                  last_entry_rule: Optional[pulumi.Input[str]] = None,
                  organization_id: Optional[pulumi.Input[str]] = None,
-                 source_group: Optional[pulumi.Input[pulumi.InputType['AdaptivePolicyPoliciesSourceGroupArgs']]] = None,
+                 source_group: Optional[pulumi.Input[Union['AdaptivePolicyPoliciesSourceGroupArgs', 'AdaptivePolicyPoliciesSourceGroupArgsDict']]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -243,22 +243,22 @@ class AdaptivePolicyPolicies(pulumi.CustomResource):
         import pulumi_meraki as meraki
 
         example = meraki.organizations.AdaptivePolicyPolicies("example",
-            acls=[meraki.organizations.AdaptivePolicyPoliciesAclArgs(
-                id="444",
-                name="Block web",
-            )],
-            destination_group=meraki.organizations.AdaptivePolicyPoliciesDestinationGroupArgs(
-                id="333",
-                name="IoT Servers",
-                sgt=51,
-            ),
+            acls=[{
+                "id": "444",
+                "name": "Block web",
+            }],
+            destination_group={
+                "id": "333",
+                "name": "IoT Servers",
+                "sgt": 51,
+            },
             last_entry_rule="allow",
             organization_id="string",
-            source_group=meraki.organizations.AdaptivePolicyPoliciesSourceGroupArgs(
-                id="222",
-                name="IoT Devices",
-                sgt=50,
-            ))
+            source_group={
+                "id": "222",
+                "name": "IoT Devices",
+                "sgt": 50,
+            })
         pulumi.export("merakiOrganizationsAdaptivePolicyPoliciesExample", example)
         ```
 
@@ -270,11 +270,11 @@ class AdaptivePolicyPolicies(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AdaptivePolicyPoliciesAclArgs']]]] acls: An ordered array of adaptive policy ACLs (each requires one unique attribute) that apply to this policy (default: [])
-        :param pulumi.Input[pulumi.InputType['AdaptivePolicyPoliciesDestinationGroupArgs']] destination_group: The destination adaptive policy group (requires one unique attribute)
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AdaptivePolicyPoliciesAclArgs', 'AdaptivePolicyPoliciesAclArgsDict']]]] acls: An ordered array of adaptive policy ACLs (each requires one unique attribute) that apply to this policy (default: [])
+        :param pulumi.Input[Union['AdaptivePolicyPoliciesDestinationGroupArgs', 'AdaptivePolicyPoliciesDestinationGroupArgsDict']] destination_group: The destination adaptive policy group (requires one unique attribute)
         :param pulumi.Input[str] last_entry_rule: The rule to apply if there is no matching ACL (default: "default")
         :param pulumi.Input[str] organization_id: organizationId path parameter. Organization ID
-        :param pulumi.Input[pulumi.InputType['AdaptivePolicyPoliciesSourceGroupArgs']] source_group: The source adaptive policy group (requires one unique attribute)
+        :param pulumi.Input[Union['AdaptivePolicyPoliciesSourceGroupArgs', 'AdaptivePolicyPoliciesSourceGroupArgsDict']] source_group: The source adaptive policy group (requires one unique attribute)
         """
         ...
     @overload
@@ -290,22 +290,22 @@ class AdaptivePolicyPolicies(pulumi.CustomResource):
         import pulumi_meraki as meraki
 
         example = meraki.organizations.AdaptivePolicyPolicies("example",
-            acls=[meraki.organizations.AdaptivePolicyPoliciesAclArgs(
-                id="444",
-                name="Block web",
-            )],
-            destination_group=meraki.organizations.AdaptivePolicyPoliciesDestinationGroupArgs(
-                id="333",
-                name="IoT Servers",
-                sgt=51,
-            ),
+            acls=[{
+                "id": "444",
+                "name": "Block web",
+            }],
+            destination_group={
+                "id": "333",
+                "name": "IoT Servers",
+                "sgt": 51,
+            },
             last_entry_rule="allow",
             organization_id="string",
-            source_group=meraki.organizations.AdaptivePolicyPoliciesSourceGroupArgs(
-                id="222",
-                name="IoT Devices",
-                sgt=50,
-            ))
+            source_group={
+                "id": "222",
+                "name": "IoT Devices",
+                "sgt": 50,
+            })
         pulumi.export("merakiOrganizationsAdaptivePolicyPoliciesExample", example)
         ```
 
@@ -330,11 +330,11 @@ class AdaptivePolicyPolicies(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 acls: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AdaptivePolicyPoliciesAclArgs']]]]] = None,
-                 destination_group: Optional[pulumi.Input[pulumi.InputType['AdaptivePolicyPoliciesDestinationGroupArgs']]] = None,
+                 acls: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AdaptivePolicyPoliciesAclArgs', 'AdaptivePolicyPoliciesAclArgsDict']]]]] = None,
+                 destination_group: Optional[pulumi.Input[Union['AdaptivePolicyPoliciesDestinationGroupArgs', 'AdaptivePolicyPoliciesDestinationGroupArgsDict']]] = None,
                  last_entry_rule: Optional[pulumi.Input[str]] = None,
                  organization_id: Optional[pulumi.Input[str]] = None,
-                 source_group: Optional[pulumi.Input[pulumi.InputType['AdaptivePolicyPoliciesSourceGroupArgs']]] = None,
+                 source_group: Optional[pulumi.Input[Union['AdaptivePolicyPoliciesSourceGroupArgs', 'AdaptivePolicyPoliciesSourceGroupArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -364,13 +364,13 @@ class AdaptivePolicyPolicies(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            acls: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AdaptivePolicyPoliciesAclArgs']]]]] = None,
+            acls: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AdaptivePolicyPoliciesAclArgs', 'AdaptivePolicyPoliciesAclArgsDict']]]]] = None,
             adaptive_policy_id: Optional[pulumi.Input[str]] = None,
             created_at: Optional[pulumi.Input[str]] = None,
-            destination_group: Optional[pulumi.Input[pulumi.InputType['AdaptivePolicyPoliciesDestinationGroupArgs']]] = None,
+            destination_group: Optional[pulumi.Input[Union['AdaptivePolicyPoliciesDestinationGroupArgs', 'AdaptivePolicyPoliciesDestinationGroupArgsDict']]] = None,
             last_entry_rule: Optional[pulumi.Input[str]] = None,
             organization_id: Optional[pulumi.Input[str]] = None,
-            source_group: Optional[pulumi.Input[pulumi.InputType['AdaptivePolicyPoliciesSourceGroupArgs']]] = None,
+            source_group: Optional[pulumi.Input[Union['AdaptivePolicyPoliciesSourceGroupArgs', 'AdaptivePolicyPoliciesSourceGroupArgsDict']]] = None,
             updated_at: Optional[pulumi.Input[str]] = None) -> 'AdaptivePolicyPolicies':
         """
         Get an existing AdaptivePolicyPolicies resource's state with the given name, id, and optional extra
@@ -379,11 +379,11 @@ class AdaptivePolicyPolicies(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AdaptivePolicyPoliciesAclArgs']]]] acls: An ordered array of adaptive policy ACLs (each requires one unique attribute) that apply to this policy (default: [])
-        :param pulumi.Input[pulumi.InputType['AdaptivePolicyPoliciesDestinationGroupArgs']] destination_group: The destination adaptive policy group (requires one unique attribute)
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AdaptivePolicyPoliciesAclArgs', 'AdaptivePolicyPoliciesAclArgsDict']]]] acls: An ordered array of adaptive policy ACLs (each requires one unique attribute) that apply to this policy (default: [])
+        :param pulumi.Input[Union['AdaptivePolicyPoliciesDestinationGroupArgs', 'AdaptivePolicyPoliciesDestinationGroupArgsDict']] destination_group: The destination adaptive policy group (requires one unique attribute)
         :param pulumi.Input[str] last_entry_rule: The rule to apply if there is no matching ACL (default: "default")
         :param pulumi.Input[str] organization_id: organizationId path parameter. Organization ID
-        :param pulumi.Input[pulumi.InputType['AdaptivePolicyPoliciesSourceGroupArgs']] source_group: The source adaptive policy group (requires one unique attribute)
+        :param pulumi.Input[Union['AdaptivePolicyPoliciesSourceGroupArgs', 'AdaptivePolicyPoliciesSourceGroupArgsDict']] source_group: The source adaptive policy group (requires one unique attribute)
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

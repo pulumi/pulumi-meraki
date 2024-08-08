@@ -104,7 +104,7 @@ public class SmDevicesCheckin extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SmDevicesCheckin(String name) {
+    public SmDevicesCheckin(java.lang.String name) {
         this(name, SmDevicesCheckinArgs.Empty);
     }
     /**
@@ -112,7 +112,7 @@ public class SmDevicesCheckin extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SmDevicesCheckin(String name, SmDevicesCheckinArgs args) {
+    public SmDevicesCheckin(java.lang.String name, SmDevicesCheckinArgs args) {
         this(name, args, null);
     }
     /**
@@ -121,12 +121,12 @@ public class SmDevicesCheckin extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SmDevicesCheckin(String name, SmDevicesCheckinArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/smDevicesCheckin:SmDevicesCheckin", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public SmDevicesCheckin(java.lang.String name, SmDevicesCheckinArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/smDevicesCheckin:SmDevicesCheckin", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SmDevicesCheckin(String name, Output<String> id, @Nullable SmDevicesCheckinState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/smDevicesCheckin:SmDevicesCheckin", name, state, makeResourceOptions(options, id));
+    private SmDevicesCheckin(java.lang.String name, Output<java.lang.String> id, @Nullable SmDevicesCheckinState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/smDevicesCheckin:SmDevicesCheckin", name, state, makeResourceOptions(options, id), false);
     }
 
     private static SmDevicesCheckinArgs makeArgs(SmDevicesCheckinArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -136,7 +136,7 @@ public class SmDevicesCheckin extends com.pulumi.resources.CustomResource {
         return args == null ? SmDevicesCheckinArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -152,7 +152,7 @@ public class SmDevicesCheckin extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SmDevicesCheckin get(String name, Output<String> id, @Nullable SmDevicesCheckinState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SmDevicesCheckin get(java.lang.String name, Output<java.lang.String> id, @Nullable SmDevicesCheckinState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SmDevicesCheckin(name, id, state, options);
     }
 }

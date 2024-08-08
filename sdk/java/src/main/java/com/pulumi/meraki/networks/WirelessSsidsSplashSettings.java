@@ -51,18 +51,18 @@ import javax.annotation.Nullable;
  * import java.nio.file.Files;
  * import java.nio.file.Paths;
  * 
- * public class App {
- *     public static void main(String[] args) {
+ * public class App }{{@code
+ *     public static void main(String[] args) }{{@code
  *         Pulumi.run(App::stack);
- *     }
+ *     }}{@code
  * 
- *     public static void stack(Context ctx) {
+ *     public static void stack(Context ctx) }{{@code
  *         var example = new WirelessSsidsSplashSettings("example", WirelessSsidsSplashSettingsArgs.builder()
  *             .allowSimultaneousLogins(false)
  *             .billing(WirelessSsidsSplashSettingsBillingArgs.builder()
  *                 .free_access(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .prepaid_access_fast_login_enabled(true)
- *                 .reply_to_email_address("user{@literal @}email.com")
+ *                 .reply_to_email_address("user}{@literal @}{@code email.com")
  *                 .build())
  *             .blockAllTrafficBeforeSignOn(false)
  *             .controllerDisconnectionBehavior("default")
@@ -111,8 +111,8 @@ import javax.annotation.Nullable;
  *             .build());
  * 
  *         ctx.export("merakiNetworksWirelessSsidsSplashSettingsExample", example);
- *     }
- * }
+ *     }}{@code
+ * }}{@code
  * }
  * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
@@ -425,7 +425,7 @@ public class WirelessSsidsSplashSettings extends com.pulumi.resources.CustomReso
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public WirelessSsidsSplashSettings(String name) {
+    public WirelessSsidsSplashSettings(java.lang.String name) {
         this(name, WirelessSsidsSplashSettingsArgs.Empty);
     }
     /**
@@ -433,7 +433,7 @@ public class WirelessSsidsSplashSettings extends com.pulumi.resources.CustomReso
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public WirelessSsidsSplashSettings(String name, WirelessSsidsSplashSettingsArgs args) {
+    public WirelessSsidsSplashSettings(java.lang.String name, WirelessSsidsSplashSettingsArgs args) {
         this(name, args, null);
     }
     /**
@@ -442,12 +442,12 @@ public class WirelessSsidsSplashSettings extends com.pulumi.resources.CustomReso
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public WirelessSsidsSplashSettings(String name, WirelessSsidsSplashSettingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/wirelessSsidsSplashSettings:WirelessSsidsSplashSettings", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public WirelessSsidsSplashSettings(java.lang.String name, WirelessSsidsSplashSettingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/wirelessSsidsSplashSettings:WirelessSsidsSplashSettings", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private WirelessSsidsSplashSettings(String name, Output<String> id, @Nullable WirelessSsidsSplashSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/wirelessSsidsSplashSettings:WirelessSsidsSplashSettings", name, state, makeResourceOptions(options, id));
+    private WirelessSsidsSplashSettings(java.lang.String name, Output<java.lang.String> id, @Nullable WirelessSsidsSplashSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/wirelessSsidsSplashSettings:WirelessSsidsSplashSettings", name, state, makeResourceOptions(options, id), false);
     }
 
     private static WirelessSsidsSplashSettingsArgs makeArgs(WirelessSsidsSplashSettingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -457,7 +457,7 @@ public class WirelessSsidsSplashSettings extends com.pulumi.resources.CustomReso
         return args == null ? WirelessSsidsSplashSettingsArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -473,7 +473,7 @@ public class WirelessSsidsSplashSettings extends com.pulumi.resources.CustomReso
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WirelessSsidsSplashSettings get(String name, Output<String> id, @Nullable WirelessSsidsSplashSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static WirelessSsidsSplashSettings get(java.lang.String name, Output<java.lang.String> id, @Nullable WirelessSsidsSplashSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new WirelessSsidsSplashSettings(name, id, state, options);
     }
 }

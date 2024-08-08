@@ -186,7 +186,7 @@ public class LiveToolsThroughputTest extends com.pulumi.resources.CustomResource
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public LiveToolsThroughputTest(String name) {
+    public LiveToolsThroughputTest(java.lang.String name) {
         this(name, LiveToolsThroughputTestArgs.Empty);
     }
     /**
@@ -194,7 +194,7 @@ public class LiveToolsThroughputTest extends com.pulumi.resources.CustomResource
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public LiveToolsThroughputTest(String name, LiveToolsThroughputTestArgs args) {
+    public LiveToolsThroughputTest(java.lang.String name, LiveToolsThroughputTestArgs args) {
         this(name, args, null);
     }
     /**
@@ -203,12 +203,12 @@ public class LiveToolsThroughputTest extends com.pulumi.resources.CustomResource
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public LiveToolsThroughputTest(String name, LiveToolsThroughputTestArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/liveToolsThroughputTest:LiveToolsThroughputTest", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public LiveToolsThroughputTest(java.lang.String name, LiveToolsThroughputTestArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/liveToolsThroughputTest:LiveToolsThroughputTest", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private LiveToolsThroughputTest(String name, Output<String> id, @Nullable LiveToolsThroughputTestState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/liveToolsThroughputTest:LiveToolsThroughputTest", name, state, makeResourceOptions(options, id));
+    private LiveToolsThroughputTest(java.lang.String name, Output<java.lang.String> id, @Nullable LiveToolsThroughputTestState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/liveToolsThroughputTest:LiveToolsThroughputTest", name, state, makeResourceOptions(options, id), false);
     }
 
     private static LiveToolsThroughputTestArgs makeArgs(LiveToolsThroughputTestArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -218,7 +218,7 @@ public class LiveToolsThroughputTest extends com.pulumi.resources.CustomResource
         return args == null ? LiveToolsThroughputTestArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -234,7 +234,7 @@ public class LiveToolsThroughputTest extends com.pulumi.resources.CustomResource
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LiveToolsThroughputTest get(String name, Output<String> id, @Nullable LiveToolsThroughputTestState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static LiveToolsThroughputTest get(java.lang.String name, Output<java.lang.String> id, @Nullable LiveToolsThroughputTestState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new LiveToolsThroughputTest(name, id, state, options);
     }
 }

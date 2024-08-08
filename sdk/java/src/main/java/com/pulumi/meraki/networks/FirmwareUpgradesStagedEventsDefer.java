@@ -82,7 +82,7 @@ public class FirmwareUpgradesStagedEventsDefer extends com.pulumi.resources.Cust
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public FirmwareUpgradesStagedEventsDefer(String name) {
+    public FirmwareUpgradesStagedEventsDefer(java.lang.String name) {
         this(name, FirmwareUpgradesStagedEventsDeferArgs.Empty);
     }
     /**
@@ -90,7 +90,7 @@ public class FirmwareUpgradesStagedEventsDefer extends com.pulumi.resources.Cust
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public FirmwareUpgradesStagedEventsDefer(String name, FirmwareUpgradesStagedEventsDeferArgs args) {
+    public FirmwareUpgradesStagedEventsDefer(java.lang.String name, FirmwareUpgradesStagedEventsDeferArgs args) {
         this(name, args, null);
     }
     /**
@@ -99,12 +99,12 @@ public class FirmwareUpgradesStagedEventsDefer extends com.pulumi.resources.Cust
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public FirmwareUpgradesStagedEventsDefer(String name, FirmwareUpgradesStagedEventsDeferArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/firmwareUpgradesStagedEventsDefer:FirmwareUpgradesStagedEventsDefer", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public FirmwareUpgradesStagedEventsDefer(java.lang.String name, FirmwareUpgradesStagedEventsDeferArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/firmwareUpgradesStagedEventsDefer:FirmwareUpgradesStagedEventsDefer", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private FirmwareUpgradesStagedEventsDefer(String name, Output<String> id, @Nullable FirmwareUpgradesStagedEventsDeferState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/firmwareUpgradesStagedEventsDefer:FirmwareUpgradesStagedEventsDefer", name, state, makeResourceOptions(options, id));
+    private FirmwareUpgradesStagedEventsDefer(java.lang.String name, Output<java.lang.String> id, @Nullable FirmwareUpgradesStagedEventsDeferState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/firmwareUpgradesStagedEventsDefer:FirmwareUpgradesStagedEventsDefer", name, state, makeResourceOptions(options, id), false);
     }
 
     private static FirmwareUpgradesStagedEventsDeferArgs makeArgs(FirmwareUpgradesStagedEventsDeferArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -114,7 +114,7 @@ public class FirmwareUpgradesStagedEventsDefer extends com.pulumi.resources.Cust
         return args == null ? FirmwareUpgradesStagedEventsDeferArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -130,7 +130,7 @@ public class FirmwareUpgradesStagedEventsDefer extends com.pulumi.resources.Cust
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FirmwareUpgradesStagedEventsDefer get(String name, Output<String> id, @Nullable FirmwareUpgradesStagedEventsDeferState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static FirmwareUpgradesStagedEventsDefer get(java.lang.String name, Output<java.lang.String> id, @Nullable FirmwareUpgradesStagedEventsDeferState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new FirmwareUpgradesStagedEventsDefer(name, id, state, options);
     }
 }

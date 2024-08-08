@@ -98,7 +98,7 @@ class SyslogServers(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SyslogServersServerArgs']]]]] = None,
+                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SyslogServersServerArgs', 'SyslogServersServerArgsDict']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -109,14 +109,14 @@ class SyslogServers(pulumi.CustomResource):
 
         example = meraki.networks.SyslogServers("example",
             network_id="string",
-            servers=[meraki.networks.SyslogServersServerArgs(
-                host="1.2.3.4",
-                port=443,
-                roles=[
+            servers=[{
+                "host": "1.2.3.4",
+                "port": 443,
+                "roles": [
                     "Wireless event log",
                     "URLs",
                 ],
-            )])
+            }])
         pulumi.export("merakiNetworksSyslogServersExample", example)
         ```
 
@@ -129,7 +129,7 @@ class SyslogServers(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SyslogServersServerArgs']]]] servers: List of the syslog servers for this network
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SyslogServersServerArgs', 'SyslogServersServerArgsDict']]]] servers: List of the syslog servers for this network
         """
         ...
     @overload
@@ -146,14 +146,14 @@ class SyslogServers(pulumi.CustomResource):
 
         example = meraki.networks.SyslogServers("example",
             network_id="string",
-            servers=[meraki.networks.SyslogServersServerArgs(
-                host="1.2.3.4",
-                port=443,
-                roles=[
+            servers=[{
+                "host": "1.2.3.4",
+                "port": 443,
+                "roles": [
                     "Wireless event log",
                     "URLs",
                 ],
-            )])
+            }])
         pulumi.export("merakiNetworksSyslogServersExample", example)
         ```
 
@@ -179,7 +179,7 @@ class SyslogServers(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SyslogServersServerArgs']]]]] = None,
+                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SyslogServersServerArgs', 'SyslogServersServerArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -204,7 +204,7 @@ class SyslogServers(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             network_id: Optional[pulumi.Input[str]] = None,
-            servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SyslogServersServerArgs']]]]] = None) -> 'SyslogServers':
+            servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SyslogServersServerArgs', 'SyslogServersServerArgsDict']]]]] = None) -> 'SyslogServers':
         """
         Get an existing SyslogServers resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -213,7 +213,7 @@ class SyslogServers(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SyslogServersServerArgs']]]] servers: List of the syslog servers for this network
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SyslogServersServerArgs', 'SyslogServersServerArgsDict']]]] servers: List of the syslog servers for this network
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

@@ -113,7 +113,7 @@ class FirmwareUpgradesStagedStages(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 jsons: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['FirmwareUpgradesStagedStagesJsonArgs']]]]] = None,
+                 jsons: Optional[pulumi.Input[Sequence[pulumi.Input[Union['FirmwareUpgradesStagedStagesJsonArgs', 'FirmwareUpgradesStagedStagesJsonArgsDict']]]]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
@@ -124,11 +124,11 @@ class FirmwareUpgradesStagedStages(pulumi.CustomResource):
         import pulumi_meraki as meraki
 
         example = meraki.networks.FirmwareUpgradesStagedStages("example",
-            jsons=[meraki.networks.FirmwareUpgradesStagedStagesJsonArgs(
-                group=meraki.networks.FirmwareUpgradesStagedStagesJsonGroupArgs(
-                    id="1234",
-                ),
-            )],
+            jsons=[{
+                "group": {
+                    "id": "1234",
+                },
+            }],
             network_id="string")
         pulumi.export("merakiNetworksFirmwareUpgradesStagedStagesExample", example)
         ```
@@ -141,7 +141,7 @@ class FirmwareUpgradesStagedStages(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['FirmwareUpgradesStagedStagesJsonArgs']]]] jsons: Array of Staged Upgrade Groups
+        :param pulumi.Input[Sequence[pulumi.Input[Union['FirmwareUpgradesStagedStagesJsonArgs', 'FirmwareUpgradesStagedStagesJsonArgsDict']]]] jsons: Array of Staged Upgrade Groups
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         """
         ...
@@ -158,11 +158,11 @@ class FirmwareUpgradesStagedStages(pulumi.CustomResource):
         import pulumi_meraki as meraki
 
         example = meraki.networks.FirmwareUpgradesStagedStages("example",
-            jsons=[meraki.networks.FirmwareUpgradesStagedStagesJsonArgs(
-                group=meraki.networks.FirmwareUpgradesStagedStagesJsonGroupArgs(
-                    id="1234",
-                ),
-            )],
+            jsons=[{
+                "group": {
+                    "id": "1234",
+                },
+            }],
             network_id="string")
         pulumi.export("merakiNetworksFirmwareUpgradesStagedStagesExample", example)
         ```
@@ -188,7 +188,7 @@ class FirmwareUpgradesStagedStages(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 jsons: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['FirmwareUpgradesStagedStagesJsonArgs']]]]] = None,
+                 jsons: Optional[pulumi.Input[Sequence[pulumi.Input[Union['FirmwareUpgradesStagedStagesJsonArgs', 'FirmwareUpgradesStagedStagesJsonArgsDict']]]]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -214,8 +214,8 @@ class FirmwareUpgradesStagedStages(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            group: Optional[pulumi.Input[pulumi.InputType['FirmwareUpgradesStagedStagesGroupArgs']]] = None,
-            jsons: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['FirmwareUpgradesStagedStagesJsonArgs']]]]] = None,
+            group: Optional[pulumi.Input[Union['FirmwareUpgradesStagedStagesGroupArgs', 'FirmwareUpgradesStagedStagesGroupArgsDict']]] = None,
+            jsons: Optional[pulumi.Input[Sequence[pulumi.Input[Union['FirmwareUpgradesStagedStagesJsonArgs', 'FirmwareUpgradesStagedStagesJsonArgsDict']]]]] = None,
             network_id: Optional[pulumi.Input[str]] = None) -> 'FirmwareUpgradesStagedStages':
         """
         Get an existing FirmwareUpgradesStagedStages resource's state with the given name, id, and optional extra
@@ -224,8 +224,8 @@ class FirmwareUpgradesStagedStages(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['FirmwareUpgradesStagedStagesGroupArgs']] group: The Staged Upgrade Group
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['FirmwareUpgradesStagedStagesJsonArgs']]]] jsons: Array of Staged Upgrade Groups
+        :param pulumi.Input[Union['FirmwareUpgradesStagedStagesGroupArgs', 'FirmwareUpgradesStagedStagesGroupArgsDict']] group: The Staged Upgrade Group
+        :param pulumi.Input[Sequence[pulumi.Input[Union['FirmwareUpgradesStagedStagesJsonArgs', 'FirmwareUpgradesStagedStagesJsonArgsDict']]]] jsons: Array of Staged Upgrade Groups
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

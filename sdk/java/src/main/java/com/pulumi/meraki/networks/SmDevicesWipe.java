@@ -96,7 +96,7 @@ public class SmDevicesWipe extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SmDevicesWipe(String name) {
+    public SmDevicesWipe(java.lang.String name) {
         this(name, SmDevicesWipeArgs.Empty);
     }
     /**
@@ -104,7 +104,7 @@ public class SmDevicesWipe extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SmDevicesWipe(String name, SmDevicesWipeArgs args) {
+    public SmDevicesWipe(java.lang.String name, SmDevicesWipeArgs args) {
         this(name, args, null);
     }
     /**
@@ -113,12 +113,12 @@ public class SmDevicesWipe extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SmDevicesWipe(String name, SmDevicesWipeArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/smDevicesWipe:SmDevicesWipe", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public SmDevicesWipe(java.lang.String name, SmDevicesWipeArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/smDevicesWipe:SmDevicesWipe", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SmDevicesWipe(String name, Output<String> id, @Nullable SmDevicesWipeState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/smDevicesWipe:SmDevicesWipe", name, state, makeResourceOptions(options, id));
+    private SmDevicesWipe(java.lang.String name, Output<java.lang.String> id, @Nullable SmDevicesWipeState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/smDevicesWipe:SmDevicesWipe", name, state, makeResourceOptions(options, id), false);
     }
 
     private static SmDevicesWipeArgs makeArgs(SmDevicesWipeArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -128,7 +128,7 @@ public class SmDevicesWipe extends com.pulumi.resources.CustomResource {
         return args == null ? SmDevicesWipeArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -144,7 +144,7 @@ public class SmDevicesWipe extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SmDevicesWipe get(String name, Output<String> id, @Nullable SmDevicesWipeState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SmDevicesWipe get(java.lang.String name, Output<java.lang.String> id, @Nullable SmDevicesWipeState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SmDevicesWipe(name, id, state, options);
     }
 }

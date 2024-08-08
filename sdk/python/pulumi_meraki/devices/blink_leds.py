@@ -100,7 +100,7 @@ class BlinkLeds(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 parameters: Optional[pulumi.Input[pulumi.InputType['BlinkLedsParametersArgs']]] = None,
+                 parameters: Optional[pulumi.Input[Union['BlinkLedsParametersArgs', 'BlinkLedsParametersArgsDict']]] = None,
                  serial: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
@@ -115,11 +115,11 @@ class BlinkLeds(pulumi.CustomResource):
 
         example = meraki.devices.BlinkLeds("example",
             serial="string",
-            parameters=meraki.devices.BlinkLedsParametersArgs(
-                duration=20,
-                duty=50,
-                period=160,
-            ))
+            parameters={
+                "duration": 20,
+                "duty": 50,
+                "period": 160,
+            })
         pulumi.export("merakiDevicesBlinkLedsExample", example)
         ```
 
@@ -145,11 +145,11 @@ class BlinkLeds(pulumi.CustomResource):
 
         example = meraki.devices.BlinkLeds("example",
             serial="string",
-            parameters=meraki.devices.BlinkLedsParametersArgs(
-                duration=20,
-                duty=50,
-                period=160,
-            ))
+            parameters={
+                "duration": 20,
+                "duty": 50,
+                "period": 160,
+            })
         pulumi.export("merakiDevicesBlinkLedsExample", example)
         ```
 
@@ -168,7 +168,7 @@ class BlinkLeds(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 parameters: Optional[pulumi.Input[pulumi.InputType['BlinkLedsParametersArgs']]] = None,
+                 parameters: Optional[pulumi.Input[Union['BlinkLedsParametersArgs', 'BlinkLedsParametersArgsDict']]] = None,
                  serial: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -196,8 +196,8 @@ class BlinkLeds(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            item: Optional[pulumi.Input[pulumi.InputType['BlinkLedsItemArgs']]] = None,
-            parameters: Optional[pulumi.Input[pulumi.InputType['BlinkLedsParametersArgs']]] = None,
+            item: Optional[pulumi.Input[Union['BlinkLedsItemArgs', 'BlinkLedsItemArgsDict']]] = None,
+            parameters: Optional[pulumi.Input[Union['BlinkLedsParametersArgs', 'BlinkLedsParametersArgsDict']]] = None,
             serial: Optional[pulumi.Input[str]] = None) -> 'BlinkLeds':
         """
         Get an existing BlinkLeds resource's state with the given name, id, and optional extra

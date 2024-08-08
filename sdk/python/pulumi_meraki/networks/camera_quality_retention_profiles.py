@@ -395,7 +395,7 @@ class CameraQualityRetentionProfiles(pulumi.CustomResource):
                  quality_retention_profile_id: Optional[pulumi.Input[str]] = None,
                  restricted_bandwidth_mode_enabled: Optional[pulumi.Input[bool]] = None,
                  schedule_id: Optional[pulumi.Input[str]] = None,
-                 video_settings: Optional[pulumi.Input[pulumi.InputType['CameraQualityRetentionProfilesVideoSettingsArgs']]] = None,
+                 video_settings: Optional[pulumi.Input[Union['CameraQualityRetentionProfilesVideoSettingsArgs', 'CameraQualityRetentionProfilesVideoSettingsArgsDict']]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -428,7 +428,7 @@ class CameraQualityRetentionProfiles(pulumi.CustomResource):
         :param pulumi.Input[str] quality_retention_profile_id: qualityRetentionProfileId path parameter. Quality retention profile ID
         :param pulumi.Input[bool] restricted_bandwidth_mode_enabled: Disable features that require additional bandwidth such as Motion Recap. Can be either true or false. Defaults to false. This setting does not apply to MV2 cameras.
         :param pulumi.Input[str] schedule_id: Schedule for which this camera will record video, or 'null' to always record.
-        :param pulumi.Input[pulumi.InputType['CameraQualityRetentionProfilesVideoSettingsArgs']] video_settings: Video quality and resolution settings for all the camera models.
+        :param pulumi.Input[Union['CameraQualityRetentionProfilesVideoSettingsArgs', 'CameraQualityRetentionProfilesVideoSettingsArgsDict']] video_settings: Video quality and resolution settings for all the camera models.
         """
         ...
     @overload
@@ -480,7 +480,7 @@ class CameraQualityRetentionProfiles(pulumi.CustomResource):
                  quality_retention_profile_id: Optional[pulumi.Input[str]] = None,
                  restricted_bandwidth_mode_enabled: Optional[pulumi.Input[bool]] = None,
                  schedule_id: Optional[pulumi.Input[str]] = None,
-                 video_settings: Optional[pulumi.Input[pulumi.InputType['CameraQualityRetentionProfilesVideoSettingsArgs']]] = None,
+                 video_settings: Optional[pulumi.Input[Union['CameraQualityRetentionProfilesVideoSettingsArgs', 'CameraQualityRetentionProfilesVideoSettingsArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -523,7 +523,7 @@ class CameraQualityRetentionProfiles(pulumi.CustomResource):
             quality_retention_profile_id: Optional[pulumi.Input[str]] = None,
             restricted_bandwidth_mode_enabled: Optional[pulumi.Input[bool]] = None,
             schedule_id: Optional[pulumi.Input[str]] = None,
-            video_settings: Optional[pulumi.Input[pulumi.InputType['CameraQualityRetentionProfilesVideoSettingsArgs']]] = None) -> 'CameraQualityRetentionProfiles':
+            video_settings: Optional[pulumi.Input[Union['CameraQualityRetentionProfilesVideoSettingsArgs', 'CameraQualityRetentionProfilesVideoSettingsArgsDict']]] = None) -> 'CameraQualityRetentionProfiles':
         """
         Get an existing CameraQualityRetentionProfiles resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -541,7 +541,7 @@ class CameraQualityRetentionProfiles(pulumi.CustomResource):
         :param pulumi.Input[str] quality_retention_profile_id: qualityRetentionProfileId path parameter. Quality retention profile ID
         :param pulumi.Input[bool] restricted_bandwidth_mode_enabled: Disable features that require additional bandwidth such as Motion Recap. Can be either true or false. Defaults to false. This setting does not apply to MV2 cameras.
         :param pulumi.Input[str] schedule_id: Schedule for which this camera will record video, or 'null' to always record.
-        :param pulumi.Input[pulumi.InputType['CameraQualityRetentionProfilesVideoSettingsArgs']] video_settings: Video quality and resolution settings for all the camera models.
+        :param pulumi.Input[Union['CameraQualityRetentionProfilesVideoSettingsArgs', 'CameraQualityRetentionProfilesVideoSettingsArgsDict']] video_settings: Video quality and resolution settings for all the camera models.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

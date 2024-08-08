@@ -105,7 +105,7 @@ class InventoryOnboardingCloudMonitoringPrepare(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  organization_id: Optional[pulumi.Input[str]] = None,
-                 parameters: Optional[pulumi.Input[pulumi.InputType['InventoryOnboardingCloudMonitoringPrepareParametersArgs']]] = None,
+                 parameters: Optional[pulumi.Input[Union['InventoryOnboardingCloudMonitoringPrepareParametersArgs', 'InventoryOnboardingCloudMonitoringPrepareParametersArgsDict']]] = None,
                  __props__=None):
         """
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
@@ -119,9 +119,9 @@ class InventoryOnboardingCloudMonitoringPrepare(pulumi.CustomResource):
 
         example = meraki.organizations.InventoryOnboardingCloudMonitoringPrepare("example",
             organization_id="string",
-            parameters=meraki.organizations.InventoryOnboardingCloudMonitoringPrepareParametersArgs(
-                devices=[meraki.organizations.InventoryOnboardingCloudMonitoringPrepareParametersDeviceArgs(
-                    sudi=\"\"\"          "-----BEGIN CERTIFICATE-----
+            parameters={
+                "devices": [{
+                    "sudi": \"\"\"          "-----BEGIN CERTIFICATE-----
                 MIIDyTCCArGgAwIBAgIKBBNXOVCGU1YztjANBgkqhkiG9w0BAQsFADAnMQ4wDAYD
                 VQQKEwVDaXNjbzEVMBMGA1UEAxMMQUNUMiBTVURJIENBMB4XDTIxMDUzMTEzNTUx
                 NVoXDTI5MDUxNDIwMjU0MVowbTEpMCcGA1UEBRMgUElEOkM5MjAwTC0yNFAtNEcg
@@ -146,40 +146,40 @@ class InventoryOnboardingCloudMonitoringPrepare(pulumi.CustomResource):
                 -----END CERTIFICATE-----
                 "
         \"\"\",
-                    tunnel=meraki.organizations.InventoryOnboardingCloudMonitoringPrepareParametersDeviceTunnelArgs(
-                        certificate_name="DeviceSUDI",
-                        local_interface=1,
-                        loopback_number=1000,
-                        name="MERAKI",
-                    ),
-                    user=meraki.organizations.InventoryOnboardingCloudMonitoringPrepareParametersDeviceUserArgs(
-                        username="Meraki",
-                    ),
-                    vty=meraki.organizations.InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyArgs(
-                        access_list=meraki.organizations.InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListArgs(
-                            vty_in=meraki.organizations.InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyInArgs(
-                                name="MERAKI_IN",
-                            ),
-                            vty_out=meraki.organizations.InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyOutArgs(
-                                name="MERAKI_OUT",
-                            ),
-                        ),
-                        authentication=meraki.organizations.InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationArgs(
-                            group=meraki.organizations.InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationGroupArgs(
-                                name="",
-                            ),
-                        ),
-                        authorization=meraki.organizations.InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationArgs(
-                            group=meraki.organizations.InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationGroupArgs(
-                                name="MERAKI",
-                            ),
-                        ),
-                        end_line_number=17,
-                        rotary_number=50,
-                        start_line_number=16,
-                    ),
-                )],
-            ))
+                    "tunnel": {
+                        "certificate_name": "DeviceSUDI",
+                        "local_interface": 1,
+                        "loopback_number": 1000,
+                        "name": "MERAKI",
+                    },
+                    "user": {
+                        "username": "Meraki",
+                    },
+                    "vty": {
+                        "access_list": {
+                            "vty_in": {
+                                "name": "MERAKI_IN",
+                            },
+                            "vty_out": {
+                                "name": "MERAKI_OUT",
+                            },
+                        },
+                        "authentication": {
+                            "group": {
+                                "name": "",
+                            },
+                        },
+                        "authorization": {
+                            "group": {
+                                "name": "MERAKI",
+                            },
+                        },
+                        "end_line_number": 17,
+                        "rotary_number": 50,
+                        "start_line_number": 16,
+                    },
+                }],
+            })
         pulumi.export("merakiOrganizationsInventoryOnboardingCloudMonitoringPrepareExample", example)
         ```
 
@@ -205,9 +205,9 @@ class InventoryOnboardingCloudMonitoringPrepare(pulumi.CustomResource):
 
         example = meraki.organizations.InventoryOnboardingCloudMonitoringPrepare("example",
             organization_id="string",
-            parameters=meraki.organizations.InventoryOnboardingCloudMonitoringPrepareParametersArgs(
-                devices=[meraki.organizations.InventoryOnboardingCloudMonitoringPrepareParametersDeviceArgs(
-                    sudi=\"\"\"          "-----BEGIN CERTIFICATE-----
+            parameters={
+                "devices": [{
+                    "sudi": \"\"\"          "-----BEGIN CERTIFICATE-----
                 MIIDyTCCArGgAwIBAgIKBBNXOVCGU1YztjANBgkqhkiG9w0BAQsFADAnMQ4wDAYD
                 VQQKEwVDaXNjbzEVMBMGA1UEAxMMQUNUMiBTVURJIENBMB4XDTIxMDUzMTEzNTUx
                 NVoXDTI5MDUxNDIwMjU0MVowbTEpMCcGA1UEBRMgUElEOkM5MjAwTC0yNFAtNEcg
@@ -232,40 +232,40 @@ class InventoryOnboardingCloudMonitoringPrepare(pulumi.CustomResource):
                 -----END CERTIFICATE-----
                 "
         \"\"\",
-                    tunnel=meraki.organizations.InventoryOnboardingCloudMonitoringPrepareParametersDeviceTunnelArgs(
-                        certificate_name="DeviceSUDI",
-                        local_interface=1,
-                        loopback_number=1000,
-                        name="MERAKI",
-                    ),
-                    user=meraki.organizations.InventoryOnboardingCloudMonitoringPrepareParametersDeviceUserArgs(
-                        username="Meraki",
-                    ),
-                    vty=meraki.organizations.InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyArgs(
-                        access_list=meraki.organizations.InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListArgs(
-                            vty_in=meraki.organizations.InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyInArgs(
-                                name="MERAKI_IN",
-                            ),
-                            vty_out=meraki.organizations.InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyOutArgs(
-                                name="MERAKI_OUT",
-                            ),
-                        ),
-                        authentication=meraki.organizations.InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationArgs(
-                            group=meraki.organizations.InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationGroupArgs(
-                                name="",
-                            ),
-                        ),
-                        authorization=meraki.organizations.InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationArgs(
-                            group=meraki.organizations.InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationGroupArgs(
-                                name="MERAKI",
-                            ),
-                        ),
-                        end_line_number=17,
-                        rotary_number=50,
-                        start_line_number=16,
-                    ),
-                )],
-            ))
+                    "tunnel": {
+                        "certificate_name": "DeviceSUDI",
+                        "local_interface": 1,
+                        "loopback_number": 1000,
+                        "name": "MERAKI",
+                    },
+                    "user": {
+                        "username": "Meraki",
+                    },
+                    "vty": {
+                        "access_list": {
+                            "vty_in": {
+                                "name": "MERAKI_IN",
+                            },
+                            "vty_out": {
+                                "name": "MERAKI_OUT",
+                            },
+                        },
+                        "authentication": {
+                            "group": {
+                                "name": "",
+                            },
+                        },
+                        "authorization": {
+                            "group": {
+                                "name": "MERAKI",
+                            },
+                        },
+                        "end_line_number": 17,
+                        "rotary_number": 50,
+                        "start_line_number": 16,
+                    },
+                }],
+            })
         pulumi.export("merakiOrganizationsInventoryOnboardingCloudMonitoringPrepareExample", example)
         ```
 
@@ -285,7 +285,7 @@ class InventoryOnboardingCloudMonitoringPrepare(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  organization_id: Optional[pulumi.Input[str]] = None,
-                 parameters: Optional[pulumi.Input[pulumi.InputType['InventoryOnboardingCloudMonitoringPrepareParametersArgs']]] = None,
+                 parameters: Optional[pulumi.Input[Union['InventoryOnboardingCloudMonitoringPrepareParametersArgs', 'InventoryOnboardingCloudMonitoringPrepareParametersArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -312,9 +312,9 @@ class InventoryOnboardingCloudMonitoringPrepare(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            items: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['InventoryOnboardingCloudMonitoringPrepareItemArgs']]]]] = None,
+            items: Optional[pulumi.Input[Sequence[pulumi.Input[Union['InventoryOnboardingCloudMonitoringPrepareItemArgs', 'InventoryOnboardingCloudMonitoringPrepareItemArgsDict']]]]] = None,
             organization_id: Optional[pulumi.Input[str]] = None,
-            parameters: Optional[pulumi.Input[pulumi.InputType['InventoryOnboardingCloudMonitoringPrepareParametersArgs']]] = None) -> 'InventoryOnboardingCloudMonitoringPrepare':
+            parameters: Optional[pulumi.Input[Union['InventoryOnboardingCloudMonitoringPrepareParametersArgs', 'InventoryOnboardingCloudMonitoringPrepareParametersArgsDict']]] = None) -> 'InventoryOnboardingCloudMonitoringPrepare':
         """
         Get an existing InventoryOnboardingCloudMonitoringPrepare resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -322,7 +322,7 @@ class InventoryOnboardingCloudMonitoringPrepare(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['InventoryOnboardingCloudMonitoringPrepareItemArgs']]]] items: Array of ResponseOrganizationsCreateOrganizationInventoryOnboardingCloudMonitoringPrepare
+        :param pulumi.Input[Sequence[pulumi.Input[Union['InventoryOnboardingCloudMonitoringPrepareItemArgs', 'InventoryOnboardingCloudMonitoringPrepareItemArgsDict']]]] items: Array of ResponseOrganizationsCreateOrganizationInventoryOnboardingCloudMonitoringPrepare
         :param pulumi.Input[str] organization_id: organizationId path parameter. Organization ID
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

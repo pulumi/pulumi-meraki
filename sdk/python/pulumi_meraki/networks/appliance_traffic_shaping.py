@@ -97,7 +97,7 @@ class ApplianceTrafficShaping(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 global_bandwidth_limits: Optional[pulumi.Input[pulumi.InputType['ApplianceTrafficShapingGlobalBandwidthLimitsArgs']]] = None,
+                 global_bandwidth_limits: Optional[pulumi.Input[Union['ApplianceTrafficShapingGlobalBandwidthLimitsArgs', 'ApplianceTrafficShapingGlobalBandwidthLimitsArgsDict']]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
@@ -111,7 +111,7 @@ class ApplianceTrafficShaping(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['ApplianceTrafficShapingGlobalBandwidthLimitsArgs']] global_bandwidth_limits: Global per-client bandwidth limit
+        :param pulumi.Input[Union['ApplianceTrafficShapingGlobalBandwidthLimitsArgs', 'ApplianceTrafficShapingGlobalBandwidthLimitsArgsDict']] global_bandwidth_limits: Global per-client bandwidth limit
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         """
         ...
@@ -144,7 +144,7 @@ class ApplianceTrafficShaping(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 global_bandwidth_limits: Optional[pulumi.Input[pulumi.InputType['ApplianceTrafficShapingGlobalBandwidthLimitsArgs']]] = None,
+                 global_bandwidth_limits: Optional[pulumi.Input[Union['ApplianceTrafficShapingGlobalBandwidthLimitsArgs', 'ApplianceTrafficShapingGlobalBandwidthLimitsArgsDict']]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -169,7 +169,7 @@ class ApplianceTrafficShaping(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            global_bandwidth_limits: Optional[pulumi.Input[pulumi.InputType['ApplianceTrafficShapingGlobalBandwidthLimitsArgs']]] = None,
+            global_bandwidth_limits: Optional[pulumi.Input[Union['ApplianceTrafficShapingGlobalBandwidthLimitsArgs', 'ApplianceTrafficShapingGlobalBandwidthLimitsArgsDict']]] = None,
             network_id: Optional[pulumi.Input[str]] = None) -> 'ApplianceTrafficShaping':
         """
         Get an existing ApplianceTrafficShaping resource's state with the given name, id, and optional extra
@@ -178,7 +178,7 @@ class ApplianceTrafficShaping(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['ApplianceTrafficShapingGlobalBandwidthLimitsArgs']] global_bandwidth_limits: Global per-client bandwidth limit
+        :param pulumi.Input[Union['ApplianceTrafficShapingGlobalBandwidthLimitsArgs', 'ApplianceTrafficShapingGlobalBandwidthLimitsArgsDict']] global_bandwidth_limits: Global per-client bandwidth limit
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

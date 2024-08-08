@@ -97,7 +97,7 @@ public class ApplianceFirewallSettings extends com.pulumi.resources.CustomResour
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public ApplianceFirewallSettings(String name) {
+    public ApplianceFirewallSettings(java.lang.String name) {
         this(name, ApplianceFirewallSettingsArgs.Empty);
     }
     /**
@@ -105,7 +105,7 @@ public class ApplianceFirewallSettings extends com.pulumi.resources.CustomResour
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ApplianceFirewallSettings(String name, ApplianceFirewallSettingsArgs args) {
+    public ApplianceFirewallSettings(java.lang.String name, ApplianceFirewallSettingsArgs args) {
         this(name, args, null);
     }
     /**
@@ -114,12 +114,12 @@ public class ApplianceFirewallSettings extends com.pulumi.resources.CustomResour
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ApplianceFirewallSettings(String name, ApplianceFirewallSettingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/applianceFirewallSettings:ApplianceFirewallSettings", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public ApplianceFirewallSettings(java.lang.String name, ApplianceFirewallSettingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/applianceFirewallSettings:ApplianceFirewallSettings", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private ApplianceFirewallSettings(String name, Output<String> id, @Nullable ApplianceFirewallSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/applianceFirewallSettings:ApplianceFirewallSettings", name, state, makeResourceOptions(options, id));
+    private ApplianceFirewallSettings(java.lang.String name, Output<java.lang.String> id, @Nullable ApplianceFirewallSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/applianceFirewallSettings:ApplianceFirewallSettings", name, state, makeResourceOptions(options, id), false);
     }
 
     private static ApplianceFirewallSettingsArgs makeArgs(ApplianceFirewallSettingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -129,7 +129,7 @@ public class ApplianceFirewallSettings extends com.pulumi.resources.CustomResour
         return args == null ? ApplianceFirewallSettingsArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -145,7 +145,7 @@ public class ApplianceFirewallSettings extends com.pulumi.resources.CustomResour
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ApplianceFirewallSettings get(String name, Output<String> id, @Nullable ApplianceFirewallSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ApplianceFirewallSettings get(java.lang.String name, Output<java.lang.String> id, @Nullable ApplianceFirewallSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new ApplianceFirewallSettings(name, id, state, options);
     }
 }
