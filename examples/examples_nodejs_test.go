@@ -14,9 +14,8 @@ import (
 )
 
 func TestGetDevicesTs(t *testing.T) {
-	t.Skip("Skipping Pulumi Test as this currently doesn't work. See https://github.com/pulumi/pulumi-meraki/issues/134 for more details")
-	checkBaseEnvVars(t)
-	test := pulumitest.NewPulumiTest(t, "get-devices-ts",
+checkBaseEnvVars(t)
+test := pulumitest.NewPulumiTest(t, "get-devices-ts",
 		opttest.LocalProviderPath("meraki", filepath.Join(getCwd(t), "..", "bin")),
 	)
 	test.SetConfig("organizationId", os.Getenv(EnvMerakiOrgID))
