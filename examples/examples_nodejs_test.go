@@ -88,3 +88,14 @@ func TestApplianceContentFilterTs(t *testing.T) {
 	test.SetConfig("networkName", "Pulumi Base Test Network_" + randomString(6))
 	test.Up()
 }
+
+func TestWebhooksHttpServersTs(t *testing.T) {
+	checkBaseEnvVars(t)
+	test := pulumitest.NewPulumiTest(t, "network-webhooks-http-servers-ts",
+		opttest.LocalProviderPath("meraki", filepath.Join(getCwd(t), "..", "bin")),
+		opttest.YarnLink("@pulumi/meraki"),
+	)
+	test.SetConfig("organizationId", os.Getenv(EnvMerakiOrgID))
+	test.SetConfig("networkName", "Pulumi Base Test Network_" + randomString(6))
+	test.Up()
+}
