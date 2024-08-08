@@ -1,0 +1,12 @@
+{
+  "name": "meraki-network-appliance-ports",
+  "main": "index.ts",
+  "devDependencies": {
+    "@types/node": "^18",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@pulumi/meraki": "^0.2.0",
+    "@pulumi/pulumi": "^3.113.0"
+  }
+}

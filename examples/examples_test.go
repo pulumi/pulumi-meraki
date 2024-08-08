@@ -1,18 +1,22 @@
-// Copyright 2016-2017, Pulumi Corporation.  All rights reserved.
+// Copyright 2016-2024, Pulumi Corporation.  All rights reserved.
 
 package examples
 
 import (
+	"math/rand"
 	"os"
 	"testing"
-
-	"github.com/pulumi/pulumi/pkg/v3/testing/integration"
 )
 
-func merakiApiKey(t *testing.T) {
-	const env = "MERAKI_DASHBOARD_API_KEY"
-	if key := os.Getenv(env); key == "" {
-		t.Skipf("Skipping test due to missing %s environment variable", env)
+const (
+	EnvMerakiAPIKey    = "MERAKI_DASHBOARD_API_KEY"
+	EnvMerakiOrgID     = "MERAKI_ORG_ID"
+)
+
+func checkEnvVars(t *testing.T, envVar string) {
+	value := os.Getenv(envVar)
+	if value == "" {
+		t.Skipf("Skipping test due to missing %s environment variable", envVar)
 	}
 }
 
@@ -25,7 +29,17 @@ func getCwd(t *testing.T) string {
 	return cwd
 }
 
-func getBaseOptions(t *testing.T) integration.ProgramTestOptions {
-	merakiApiKey(t)
-	return integration.ProgramTestOptions{}
+var letterRunes = []rune("1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
+
+func randomString(length int) string {
+	b := make([]rune, length)
+	for i := range b {
+		b[i] = letterRunes[rand.Intn(len(letterRunes))]
+	}
+	return string(b)
+}
+
+func checkBaseEnvVars(t *testing.T) {
+	checkEnvVars(t, EnvMerakiOrgID)
+	checkEnvVars(t, EnvMerakiAPIKey)
 }
