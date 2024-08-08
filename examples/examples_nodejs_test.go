@@ -22,6 +22,7 @@ func TestGetDevicesTs(t *testing.T) {
 	test.SetConfig("organizationId", os.Getenv(EnvMerakiOrgID))
 	test.Preview()
 }
+
 func TestNetworkBaseTs(t *testing.T) {
 	checkBaseEnvVars(t)
 	test := pulumitest.NewPulumiTest(t, "network-base-ts",
@@ -55,6 +56,17 @@ func TestApplianceVlansTs(t *testing.T) {
 	test.Up()
 }
 
+func TestApplianceVlanProfilesTs(t *testing.T) {
+	checkBaseEnvVars(t)
+	test := pulumitest.NewPulumiTest(t, "network-appliance-vlan-profiles-ts",
+		opttest.LocalProviderPath("meraki", filepath.Join(getCwd(t), "..", "bin")),
+		opttest.YarnLink("@pulumi/meraki"),
+	)
+	test.SetConfig("organizationId", os.Getenv(EnvMerakiOrgID))
+	test.SetConfig("networkName", "Pulumi Base Test Network_" + randomString(6))
+	test.Up()
+}
+
 func TestAlertSettingsTs(t *testing.T) {
 	checkBaseEnvVars(t)
 	test := pulumitest.NewPulumiTest(t, "network-alert-settings-ts",
@@ -65,6 +77,7 @@ func TestAlertSettingsTs(t *testing.T) {
 	test.SetConfig("networkName", "Pulumi Base Test Network_" + randomString(6))
 	test.Up()
 }
+
 func TestApplianceContentFilterTs(t *testing.T) {
 	checkBaseEnvVars(t)
 	test := pulumitest.NewPulumiTest(t, "network-appliance-content-filtering-ts",
