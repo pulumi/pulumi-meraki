@@ -140,3 +140,13 @@ func TestNetworkSwitchRoutingMulticastTs(t *testing.T) {
 	test.SetConfig("networkName", "Pulumi Base Test Network_" + randomString(6))
 	test.Up()
 }
+func TestNetworkSwitchAccessPoliciesTs(t *testing.T) {
+	checkBaseEnvVars(t)
+	test := pulumitest.NewPulumiTest(t, "network-switch-access-policies-ts",
+		opttest.LocalProviderPath("meraki", filepath.Join(getCwd(t), "..", "bin")),
+		opttest.YarnLink("@pulumi/meraki"),
+	)
+	test.SetConfig("organizationId", os.Getenv(EnvMerakiOrgID))
+	test.SetConfig("networkName", "Pulumi Base Test Network_" + randomString(6))
+	test.Up()
+}
