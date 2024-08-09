@@ -98,7 +98,7 @@ class ApplianceFirewallOneToOneNatRules(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceFirewallOneToOneNatRulesRuleArgs']]]]] = None,
+                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceFirewallOneToOneNatRulesRuleArgs', 'ApplianceFirewallOneToOneNatRulesRuleArgsDict']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -112,7 +112,7 @@ class ApplianceFirewallOneToOneNatRules(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceFirewallOneToOneNatRulesRuleArgs']]]] rules: An array of 1:1 nat rules
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceFirewallOneToOneNatRulesRuleArgs', 'ApplianceFirewallOneToOneNatRulesRuleArgsDict']]]] rules: An array of 1:1 nat rules
         """
         ...
     @overload
@@ -145,7 +145,7 @@ class ApplianceFirewallOneToOneNatRules(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceFirewallOneToOneNatRulesRuleArgs']]]]] = None,
+                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceFirewallOneToOneNatRulesRuleArgs', 'ApplianceFirewallOneToOneNatRulesRuleArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -170,7 +170,7 @@ class ApplianceFirewallOneToOneNatRules(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             network_id: Optional[pulumi.Input[str]] = None,
-            rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceFirewallOneToOneNatRulesRuleArgs']]]]] = None) -> 'ApplianceFirewallOneToOneNatRules':
+            rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceFirewallOneToOneNatRulesRuleArgs', 'ApplianceFirewallOneToOneNatRulesRuleArgsDict']]]]] = None) -> 'ApplianceFirewallOneToOneNatRules':
         """
         Get an existing ApplianceFirewallOneToOneNatRules resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -179,7 +179,7 @@ class ApplianceFirewallOneToOneNatRules(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceFirewallOneToOneNatRulesRuleArgs']]]] rules: An array of 1:1 nat rules
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceFirewallOneToOneNatRulesRuleArgs', 'ApplianceFirewallOneToOneNatRulesRuleArgsDict']]]] rules: An array of 1:1 nat rules
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

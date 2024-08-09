@@ -338,7 +338,7 @@ class MerakiAuthUsers(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  account_type: Optional[pulumi.Input[str]] = None,
-                 authorizations: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['MerakiAuthUsersAuthorizationArgs']]]]] = None,
+                 authorizations: Optional[pulumi.Input[Sequence[pulumi.Input[Union['MerakiAuthUsersAuthorizationArgs', 'MerakiAuthUsersAuthorizationArgsDict']]]]] = None,
                  email: Optional[pulumi.Input[str]] = None,
                  email_password_to_user: Optional[pulumi.Input[bool]] = None,
                  is_admin: Optional[pulumi.Input[bool]] = None,
@@ -359,7 +359,7 @@ class MerakiAuthUsers(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] account_type: Authorization type for user.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['MerakiAuthUsersAuthorizationArgs']]]] authorizations: User authorization info
+        :param pulumi.Input[Sequence[pulumi.Input[Union['MerakiAuthUsersAuthorizationArgs', 'MerakiAuthUsersAuthorizationArgsDict']]]] authorizations: User authorization info
         :param pulumi.Input[str] email: Email address of the user
         :param pulumi.Input[bool] email_password_to_user: Whether or not Meraki should email the password to user. Default is false.
         :param pulumi.Input[bool] is_admin: Whether or not the user is a Dashboard administrator
@@ -399,7 +399,7 @@ class MerakiAuthUsers(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  account_type: Optional[pulumi.Input[str]] = None,
-                 authorizations: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['MerakiAuthUsersAuthorizationArgs']]]]] = None,
+                 authorizations: Optional[pulumi.Input[Sequence[pulumi.Input[Union['MerakiAuthUsersAuthorizationArgs', 'MerakiAuthUsersAuthorizationArgsDict']]]]] = None,
                  email: Optional[pulumi.Input[str]] = None,
                  email_password_to_user: Optional[pulumi.Input[bool]] = None,
                  is_admin: Optional[pulumi.Input[bool]] = None,
@@ -441,7 +441,7 @@ class MerakiAuthUsers(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             account_type: Optional[pulumi.Input[str]] = None,
-            authorizations: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['MerakiAuthUsersAuthorizationArgs']]]]] = None,
+            authorizations: Optional[pulumi.Input[Sequence[pulumi.Input[Union['MerakiAuthUsersAuthorizationArgs', 'MerakiAuthUsersAuthorizationArgsDict']]]]] = None,
             created_at: Optional[pulumi.Input[str]] = None,
             email: Optional[pulumi.Input[str]] = None,
             email_password_to_user: Optional[pulumi.Input[bool]] = None,
@@ -458,7 +458,7 @@ class MerakiAuthUsers(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] account_type: Authorization type for user.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['MerakiAuthUsersAuthorizationArgs']]]] authorizations: User authorization info
+        :param pulumi.Input[Sequence[pulumi.Input[Union['MerakiAuthUsersAuthorizationArgs', 'MerakiAuthUsersAuthorizationArgsDict']]]] authorizations: User authorization info
         :param pulumi.Input[str] created_at: Creation time of the user
         :param pulumi.Input[str] email: Email address of the user
         :param pulumi.Input[bool] email_password_to_user: Whether or not Meraki should email the password to user. Default is false.

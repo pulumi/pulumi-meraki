@@ -142,7 +142,7 @@ public class SwitchDhcpServerPolicyArpInspectionTrustedServers extends com.pulum
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SwitchDhcpServerPolicyArpInspectionTrustedServers(String name) {
+    public SwitchDhcpServerPolicyArpInspectionTrustedServers(java.lang.String name) {
         this(name, SwitchDhcpServerPolicyArpInspectionTrustedServersArgs.Empty);
     }
     /**
@@ -150,7 +150,7 @@ public class SwitchDhcpServerPolicyArpInspectionTrustedServers extends com.pulum
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SwitchDhcpServerPolicyArpInspectionTrustedServers(String name, SwitchDhcpServerPolicyArpInspectionTrustedServersArgs args) {
+    public SwitchDhcpServerPolicyArpInspectionTrustedServers(java.lang.String name, SwitchDhcpServerPolicyArpInspectionTrustedServersArgs args) {
         this(name, args, null);
     }
     /**
@@ -159,12 +159,12 @@ public class SwitchDhcpServerPolicyArpInspectionTrustedServers extends com.pulum
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SwitchDhcpServerPolicyArpInspectionTrustedServers(String name, SwitchDhcpServerPolicyArpInspectionTrustedServersArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/switchDhcpServerPolicyArpInspectionTrustedServers:SwitchDhcpServerPolicyArpInspectionTrustedServers", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public SwitchDhcpServerPolicyArpInspectionTrustedServers(java.lang.String name, SwitchDhcpServerPolicyArpInspectionTrustedServersArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/switchDhcpServerPolicyArpInspectionTrustedServers:SwitchDhcpServerPolicyArpInspectionTrustedServers", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SwitchDhcpServerPolicyArpInspectionTrustedServers(String name, Output<String> id, @Nullable SwitchDhcpServerPolicyArpInspectionTrustedServersState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/switchDhcpServerPolicyArpInspectionTrustedServers:SwitchDhcpServerPolicyArpInspectionTrustedServers", name, state, makeResourceOptions(options, id));
+    private SwitchDhcpServerPolicyArpInspectionTrustedServers(java.lang.String name, Output<java.lang.String> id, @Nullable SwitchDhcpServerPolicyArpInspectionTrustedServersState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/switchDhcpServerPolicyArpInspectionTrustedServers:SwitchDhcpServerPolicyArpInspectionTrustedServers", name, state, makeResourceOptions(options, id), false);
     }
 
     private static SwitchDhcpServerPolicyArpInspectionTrustedServersArgs makeArgs(SwitchDhcpServerPolicyArpInspectionTrustedServersArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -174,7 +174,7 @@ public class SwitchDhcpServerPolicyArpInspectionTrustedServers extends com.pulum
         return args == null ? SwitchDhcpServerPolicyArpInspectionTrustedServersArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -190,7 +190,7 @@ public class SwitchDhcpServerPolicyArpInspectionTrustedServers extends com.pulum
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SwitchDhcpServerPolicyArpInspectionTrustedServers get(String name, Output<String> id, @Nullable SwitchDhcpServerPolicyArpInspectionTrustedServersState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SwitchDhcpServerPolicyArpInspectionTrustedServers get(java.lang.String name, Output<java.lang.String> id, @Nullable SwitchDhcpServerPolicyArpInspectionTrustedServersState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SwitchDhcpServerPolicyArpInspectionTrustedServers(name, id, state, options);
     }
 }

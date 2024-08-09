@@ -39,12 +39,12 @@ import javax.annotation.Nullable;
  * import java.nio.file.Files;
  * import java.nio.file.Paths;
  * 
- * public class App {
- *     public static void main(String[] args) {
+ * public class App }{{@code
+ *     public static void main(String[] args) }{{@code
  *         Pulumi.run(App::stack);
- *     }
+ *     }}{@code
  * 
- *     public static void stack(Context ctx) {
+ *     public static void stack(Context ctx) }{{@code
  *         var example = new AlertsProfiles("example", AlertsProfilesArgs.builder()
  *             .alertCondition(AlertsProfilesAlertConditionArgs.builder()
  *                 .bit_rate_bps(10000)
@@ -62,15 +62,15 @@ import javax.annotation.Nullable;
  *                 "tag2")
  *             .organizationId("string")
  *             .recipients(AlertsProfilesRecipientsArgs.builder()
- *                 .emails("admin{@literal @}example.org")
+ *                 .emails("admin}{@literal @}{@code example.org")
  *                 .http_server_ids("aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vcGF0aA==")
  *                 .build())
  *             .type("wanUtilization")
  *             .build());
  * 
  *         ctx.export("merakiOrganizationsAlertsProfilesExample", example);
- *     }
- * }
+ *     }}{@code
+ * }}{@code
  * }
  * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
@@ -201,7 +201,7 @@ public class AlertsProfiles extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public AlertsProfiles(String name) {
+    public AlertsProfiles(java.lang.String name) {
         this(name, AlertsProfilesArgs.Empty);
     }
     /**
@@ -209,7 +209,7 @@ public class AlertsProfiles extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AlertsProfiles(String name, AlertsProfilesArgs args) {
+    public AlertsProfiles(java.lang.String name, AlertsProfilesArgs args) {
         this(name, args, null);
     }
     /**
@@ -218,12 +218,12 @@ public class AlertsProfiles extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AlertsProfiles(String name, AlertsProfilesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/alertsProfiles:AlertsProfiles", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public AlertsProfiles(java.lang.String name, AlertsProfilesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/alertsProfiles:AlertsProfiles", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private AlertsProfiles(String name, Output<String> id, @Nullable AlertsProfilesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/alertsProfiles:AlertsProfiles", name, state, makeResourceOptions(options, id));
+    private AlertsProfiles(java.lang.String name, Output<java.lang.String> id, @Nullable AlertsProfilesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/alertsProfiles:AlertsProfiles", name, state, makeResourceOptions(options, id), false);
     }
 
     private static AlertsProfilesArgs makeArgs(AlertsProfilesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -233,7 +233,7 @@ public class AlertsProfiles extends com.pulumi.resources.CustomResource {
         return args == null ? AlertsProfilesArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -249,7 +249,7 @@ public class AlertsProfiles extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AlertsProfiles get(String name, Output<String> id, @Nullable AlertsProfilesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AlertsProfiles get(java.lang.String name, Output<java.lang.String> id, @Nullable AlertsProfilesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new AlertsProfiles(name, id, state, options);
     }
 }

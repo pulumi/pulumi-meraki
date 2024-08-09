@@ -164,7 +164,7 @@ public class WirelessSsidsEapOverride extends com.pulumi.resources.CustomResourc
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public WirelessSsidsEapOverride(String name) {
+    public WirelessSsidsEapOverride(java.lang.String name) {
         this(name, WirelessSsidsEapOverrideArgs.Empty);
     }
     /**
@@ -172,7 +172,7 @@ public class WirelessSsidsEapOverride extends com.pulumi.resources.CustomResourc
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public WirelessSsidsEapOverride(String name, WirelessSsidsEapOverrideArgs args) {
+    public WirelessSsidsEapOverride(java.lang.String name, WirelessSsidsEapOverrideArgs args) {
         this(name, args, null);
     }
     /**
@@ -181,12 +181,12 @@ public class WirelessSsidsEapOverride extends com.pulumi.resources.CustomResourc
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public WirelessSsidsEapOverride(String name, WirelessSsidsEapOverrideArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/wirelessSsidsEapOverride:WirelessSsidsEapOverride", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public WirelessSsidsEapOverride(java.lang.String name, WirelessSsidsEapOverrideArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/wirelessSsidsEapOverride:WirelessSsidsEapOverride", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private WirelessSsidsEapOverride(String name, Output<String> id, @Nullable WirelessSsidsEapOverrideState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/wirelessSsidsEapOverride:WirelessSsidsEapOverride", name, state, makeResourceOptions(options, id));
+    private WirelessSsidsEapOverride(java.lang.String name, Output<java.lang.String> id, @Nullable WirelessSsidsEapOverrideState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/wirelessSsidsEapOverride:WirelessSsidsEapOverride", name, state, makeResourceOptions(options, id), false);
     }
 
     private static WirelessSsidsEapOverrideArgs makeArgs(WirelessSsidsEapOverrideArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -196,7 +196,7 @@ public class WirelessSsidsEapOverride extends com.pulumi.resources.CustomResourc
         return args == null ? WirelessSsidsEapOverrideArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -212,7 +212,7 @@ public class WirelessSsidsEapOverride extends com.pulumi.resources.CustomResourc
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WirelessSsidsEapOverride get(String name, Output<String> id, @Nullable WirelessSsidsEapOverrideState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static WirelessSsidsEapOverride get(java.lang.String name, Output<java.lang.String> id, @Nullable WirelessSsidsEapOverrideState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new WirelessSsidsEapOverride(name, id, state, options);
     }
 }

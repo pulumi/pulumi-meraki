@@ -482,7 +482,7 @@ class LoginSecurity(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  account_lockout_attempts: Optional[pulumi.Input[int]] = None,
-                 api_authentication: Optional[pulumi.Input[pulumi.InputType['LoginSecurityApiAuthenticationArgs']]] = None,
+                 api_authentication: Optional[pulumi.Input[Union['LoginSecurityApiAuthenticationArgs', 'LoginSecurityApiAuthenticationArgsDict']]] = None,
                  enforce_account_lockout: Optional[pulumi.Input[bool]] = None,
                  enforce_different_passwords: Optional[pulumi.Input[bool]] = None,
                  enforce_idle_timeout: Optional[pulumi.Input[bool]] = None,
@@ -508,7 +508,7 @@ class LoginSecurity(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[int] account_lockout_attempts: Number of consecutive failed login attempts after which users' accounts will be locked.
-        :param pulumi.Input[pulumi.InputType['LoginSecurityApiAuthenticationArgs']] api_authentication: Details for indicating whether organization will restrict access to API (but not Dashboard) to certain IP addresses.
+        :param pulumi.Input[Union['LoginSecurityApiAuthenticationArgs', 'LoginSecurityApiAuthenticationArgsDict']] api_authentication: Details for indicating whether organization will restrict access to API (but not Dashboard) to certain IP addresses.
         :param pulumi.Input[bool] enforce_account_lockout: Boolean indicating whether users' Dashboard accounts will be locked out after a specified number of consecutive failed login attempts.
         :param pulumi.Input[bool] enforce_different_passwords: Boolean indicating whether users, when setting a new password, are forced to choose a new password that is different from any past passwords.
         :param pulumi.Input[bool] enforce_idle_timeout: Boolean indicating whether users will be logged out after being idle for the specified number of minutes.
@@ -553,7 +553,7 @@ class LoginSecurity(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  account_lockout_attempts: Optional[pulumi.Input[int]] = None,
-                 api_authentication: Optional[pulumi.Input[pulumi.InputType['LoginSecurityApiAuthenticationArgs']]] = None,
+                 api_authentication: Optional[pulumi.Input[Union['LoginSecurityApiAuthenticationArgs', 'LoginSecurityApiAuthenticationArgsDict']]] = None,
                  enforce_account_lockout: Optional[pulumi.Input[bool]] = None,
                  enforce_different_passwords: Optional[pulumi.Input[bool]] = None,
                  enforce_idle_timeout: Optional[pulumi.Input[bool]] = None,
@@ -602,7 +602,7 @@ class LoginSecurity(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             account_lockout_attempts: Optional[pulumi.Input[int]] = None,
-            api_authentication: Optional[pulumi.Input[pulumi.InputType['LoginSecurityApiAuthenticationArgs']]] = None,
+            api_authentication: Optional[pulumi.Input[Union['LoginSecurityApiAuthenticationArgs', 'LoginSecurityApiAuthenticationArgsDict']]] = None,
             enforce_account_lockout: Optional[pulumi.Input[bool]] = None,
             enforce_different_passwords: Optional[pulumi.Input[bool]] = None,
             enforce_idle_timeout: Optional[pulumi.Input[bool]] = None,
@@ -623,7 +623,7 @@ class LoginSecurity(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[int] account_lockout_attempts: Number of consecutive failed login attempts after which users' accounts will be locked.
-        :param pulumi.Input[pulumi.InputType['LoginSecurityApiAuthenticationArgs']] api_authentication: Details for indicating whether organization will restrict access to API (but not Dashboard) to certain IP addresses.
+        :param pulumi.Input[Union['LoginSecurityApiAuthenticationArgs', 'LoginSecurityApiAuthenticationArgsDict']] api_authentication: Details for indicating whether organization will restrict access to API (but not Dashboard) to certain IP addresses.
         :param pulumi.Input[bool] enforce_account_lockout: Boolean indicating whether users' Dashboard accounts will be locked out after a specified number of consecutive failed login attempts.
         :param pulumi.Input[bool] enforce_different_passwords: Boolean indicating whether users, when setting a new password, are forced to choose a new password that is different from any past passwords.
         :param pulumi.Input[bool] enforce_idle_timeout: Boolean indicating whether users will be logged out after being idle for the specified number of minutes.

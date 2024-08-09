@@ -100,7 +100,7 @@ public class SwitchDscpToCosMappings extends com.pulumi.resources.CustomResource
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SwitchDscpToCosMappings(String name) {
+    public SwitchDscpToCosMappings(java.lang.String name) {
         this(name, SwitchDscpToCosMappingsArgs.Empty);
     }
     /**
@@ -108,7 +108,7 @@ public class SwitchDscpToCosMappings extends com.pulumi.resources.CustomResource
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SwitchDscpToCosMappings(String name, SwitchDscpToCosMappingsArgs args) {
+    public SwitchDscpToCosMappings(java.lang.String name, SwitchDscpToCosMappingsArgs args) {
         this(name, args, null);
     }
     /**
@@ -117,12 +117,12 @@ public class SwitchDscpToCosMappings extends com.pulumi.resources.CustomResource
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SwitchDscpToCosMappings(String name, SwitchDscpToCosMappingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/switchDscpToCosMappings:SwitchDscpToCosMappings", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public SwitchDscpToCosMappings(java.lang.String name, SwitchDscpToCosMappingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/switchDscpToCosMappings:SwitchDscpToCosMappings", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SwitchDscpToCosMappings(String name, Output<String> id, @Nullable SwitchDscpToCosMappingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/switchDscpToCosMappings:SwitchDscpToCosMappings", name, state, makeResourceOptions(options, id));
+    private SwitchDscpToCosMappings(java.lang.String name, Output<java.lang.String> id, @Nullable SwitchDscpToCosMappingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/switchDscpToCosMappings:SwitchDscpToCosMappings", name, state, makeResourceOptions(options, id), false);
     }
 
     private static SwitchDscpToCosMappingsArgs makeArgs(SwitchDscpToCosMappingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -132,7 +132,7 @@ public class SwitchDscpToCosMappings extends com.pulumi.resources.CustomResource
         return args == null ? SwitchDscpToCosMappingsArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -148,7 +148,7 @@ public class SwitchDscpToCosMappings extends com.pulumi.resources.CustomResource
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SwitchDscpToCosMappings get(String name, Output<String> id, @Nullable SwitchDscpToCosMappingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SwitchDscpToCosMappings get(java.lang.String name, Output<java.lang.String> id, @Nullable SwitchDscpToCosMappingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SwitchDscpToCosMappings(name, id, state, options);
     }
 }

@@ -210,7 +210,7 @@ class LiveToolsArpTable(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  arp_table_id: Optional[pulumi.Input[str]] = None,
-                 callback: Optional[pulumi.Input[pulumi.InputType['LiveToolsArpTableCallbackArgs']]] = None,
+                 callback: Optional[pulumi.Input[Union['LiveToolsArpTableCallbackArgs', 'LiveToolsArpTableCallbackArgsDict']]] = None,
                  serial: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
@@ -225,7 +225,7 @@ class LiveToolsArpTable(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] arp_table_id: Id of the ARP table request. Used to check the status of the request.
-        :param pulumi.Input[pulumi.InputType['LiveToolsArpTableCallbackArgs']] callback: Details for the callback. Please include either an httpServerId OR url and sharedSecret
+        :param pulumi.Input[Union['LiveToolsArpTableCallbackArgs', 'LiveToolsArpTableCallbackArgsDict']] callback: Details for the callback. Please include either an httpServerId OR url and sharedSecret
         :param pulumi.Input[str] serial: serial path parameter.
         """
         ...
@@ -259,7 +259,7 @@ class LiveToolsArpTable(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  arp_table_id: Optional[pulumi.Input[str]] = None,
-                 callback: Optional[pulumi.Input[pulumi.InputType['LiveToolsArpTableCallbackArgs']]] = None,
+                 callback: Optional[pulumi.Input[Union['LiveToolsArpTableCallbackArgs', 'LiveToolsArpTableCallbackArgsDict']]] = None,
                  serial: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -291,10 +291,10 @@ class LiveToolsArpTable(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             arp_table_id: Optional[pulumi.Input[str]] = None,
-            callback: Optional[pulumi.Input[pulumi.InputType['LiveToolsArpTableCallbackArgs']]] = None,
-            entries: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['LiveToolsArpTableEntryArgs']]]]] = None,
+            callback: Optional[pulumi.Input[Union['LiveToolsArpTableCallbackArgs', 'LiveToolsArpTableCallbackArgsDict']]] = None,
+            entries: Optional[pulumi.Input[Sequence[pulumi.Input[Union['LiveToolsArpTableEntryArgs', 'LiveToolsArpTableEntryArgsDict']]]]] = None,
             error: Optional[pulumi.Input[str]] = None,
-            request: Optional[pulumi.Input[pulumi.InputType['LiveToolsArpTableRequestArgs']]] = None,
+            request: Optional[pulumi.Input[Union['LiveToolsArpTableRequestArgs', 'LiveToolsArpTableRequestArgsDict']]] = None,
             serial: Optional[pulumi.Input[str]] = None,
             status: Optional[pulumi.Input[str]] = None,
             url: Optional[pulumi.Input[str]] = None) -> 'LiveToolsArpTable':
@@ -306,10 +306,10 @@ class LiveToolsArpTable(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] arp_table_id: Id of the ARP table request. Used to check the status of the request.
-        :param pulumi.Input[pulumi.InputType['LiveToolsArpTableCallbackArgs']] callback: Details for the callback. Please include either an httpServerId OR url and sharedSecret
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['LiveToolsArpTableEntryArgs']]]] entries: The ARP table entries
+        :param pulumi.Input[Union['LiveToolsArpTableCallbackArgs', 'LiveToolsArpTableCallbackArgsDict']] callback: Details for the callback. Please include either an httpServerId OR url and sharedSecret
+        :param pulumi.Input[Sequence[pulumi.Input[Union['LiveToolsArpTableEntryArgs', 'LiveToolsArpTableEntryArgsDict']]]] entries: The ARP table entries
         :param pulumi.Input[str] error: An error message for a failed execution
-        :param pulumi.Input[pulumi.InputType['LiveToolsArpTableRequestArgs']] request: ARP table request parameters
+        :param pulumi.Input[Union['LiveToolsArpTableRequestArgs', 'LiveToolsArpTableRequestArgsDict']] request: ARP table request parameters
         :param pulumi.Input[str] serial: serial path parameter.
         :param pulumi.Input[str] status: Status of the ARP table request.
         :param pulumi.Input[str] url: GET this url to check the status of your ARP table request.

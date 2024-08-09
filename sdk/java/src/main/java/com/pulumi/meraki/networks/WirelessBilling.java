@@ -116,7 +116,7 @@ public class WirelessBilling extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public WirelessBilling(String name) {
+    public WirelessBilling(java.lang.String name) {
         this(name, WirelessBillingArgs.Empty);
     }
     /**
@@ -124,7 +124,7 @@ public class WirelessBilling extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public WirelessBilling(String name, WirelessBillingArgs args) {
+    public WirelessBilling(java.lang.String name, WirelessBillingArgs args) {
         this(name, args, null);
     }
     /**
@@ -133,12 +133,12 @@ public class WirelessBilling extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public WirelessBilling(String name, WirelessBillingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/wirelessBilling:WirelessBilling", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public WirelessBilling(java.lang.String name, WirelessBillingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/wirelessBilling:WirelessBilling", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private WirelessBilling(String name, Output<String> id, @Nullable WirelessBillingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/wirelessBilling:WirelessBilling", name, state, makeResourceOptions(options, id));
+    private WirelessBilling(java.lang.String name, Output<java.lang.String> id, @Nullable WirelessBillingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/wirelessBilling:WirelessBilling", name, state, makeResourceOptions(options, id), false);
     }
 
     private static WirelessBillingArgs makeArgs(WirelessBillingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -148,7 +148,7 @@ public class WirelessBilling extends com.pulumi.resources.CustomResource {
         return args == null ? WirelessBillingArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -164,7 +164,7 @@ public class WirelessBilling extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WirelessBilling get(String name, Output<String> id, @Nullable WirelessBillingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static WirelessBilling get(java.lang.String name, Output<java.lang.String> id, @Nullable WirelessBillingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new WirelessBilling(name, id, state, options);
     }
 }

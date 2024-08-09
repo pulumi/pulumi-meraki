@@ -97,7 +97,7 @@ class SwitchDscpToCosMappings(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 mappings: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchDscpToCosMappingsMappingArgs']]]]] = None,
+                 mappings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchDscpToCosMappingsMappingArgs', 'SwitchDscpToCosMappingsMappingArgsDict']]]]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
@@ -108,11 +108,11 @@ class SwitchDscpToCosMappings(pulumi.CustomResource):
         import pulumi_meraki as meraki
 
         example = meraki.networks.SwitchDscpToCosMappings("example",
-            mappings=[meraki.networks.SwitchDscpToCosMappingsMappingArgs(
-                cos=1,
-                dscp=1,
-                title="Video",
-            )],
+            mappings=[{
+                "cos": 1,
+                "dscp": 1,
+                "title": "Video",
+            }],
             network_id="string")
         pulumi.export("merakiNetworksSwitchDscpToCosMappingsExample", example)
         ```
@@ -125,7 +125,7 @@ class SwitchDscpToCosMappings(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchDscpToCosMappingsMappingArgs']]]] mappings: An array of DSCP to CoS mappings. An empty array will reset the mappings to default.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchDscpToCosMappingsMappingArgs', 'SwitchDscpToCosMappingsMappingArgsDict']]]] mappings: An array of DSCP to CoS mappings. An empty array will reset the mappings to default.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         """
         ...
@@ -142,11 +142,11 @@ class SwitchDscpToCosMappings(pulumi.CustomResource):
         import pulumi_meraki as meraki
 
         example = meraki.networks.SwitchDscpToCosMappings("example",
-            mappings=[meraki.networks.SwitchDscpToCosMappingsMappingArgs(
-                cos=1,
-                dscp=1,
-                title="Video",
-            )],
+            mappings=[{
+                "cos": 1,
+                "dscp": 1,
+                "title": "Video",
+            }],
             network_id="string")
         pulumi.export("merakiNetworksSwitchDscpToCosMappingsExample", example)
         ```
@@ -172,7 +172,7 @@ class SwitchDscpToCosMappings(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 mappings: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchDscpToCosMappingsMappingArgs']]]]] = None,
+                 mappings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchDscpToCosMappingsMappingArgs', 'SwitchDscpToCosMappingsMappingArgsDict']]]]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -197,7 +197,7 @@ class SwitchDscpToCosMappings(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            mappings: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchDscpToCosMappingsMappingArgs']]]]] = None,
+            mappings: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchDscpToCosMappingsMappingArgs', 'SwitchDscpToCosMappingsMappingArgsDict']]]]] = None,
             network_id: Optional[pulumi.Input[str]] = None) -> 'SwitchDscpToCosMappings':
         """
         Get an existing SwitchDscpToCosMappings resource's state with the given name, id, and optional extra
@@ -206,7 +206,7 @@ class SwitchDscpToCosMappings(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchDscpToCosMappingsMappingArgs']]]] mappings: An array of DSCP to CoS mappings. An empty array will reset the mappings to default.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchDscpToCosMappingsMappingArgs', 'SwitchDscpToCosMappingsMappingArgsDict']]]] mappings: An array of DSCP to CoS mappings. An empty array will reset the mappings to default.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

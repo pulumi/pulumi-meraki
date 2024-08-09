@@ -100,7 +100,7 @@ class LiveToolsPing(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 parameters: Optional[pulumi.Input[pulumi.InputType['LiveToolsPingParametersArgs']]] = None,
+                 parameters: Optional[pulumi.Input[Union['LiveToolsPingParametersArgs', 'LiveToolsPingParametersArgsDict']]] = None,
                  serial: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
@@ -115,20 +115,20 @@ class LiveToolsPing(pulumi.CustomResource):
 
         example = meraki.devices.LiveToolsPing("example",
             serial="string",
-            parameters=meraki.devices.LiveToolsPingParametersArgs(
-                callback=meraki.devices.LiveToolsPingParametersCallbackArgs(
-                    http_server=meraki.devices.LiveToolsPingParametersCallbackHttpServerArgs(
-                        id="aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M=",
-                    ),
-                    payload_template=meraki.devices.LiveToolsPingParametersCallbackPayloadTemplateArgs(
-                        id="wpt_2100",
-                    ),
-                    shared_secret="secret",
-                    url="https://webhook.site/28efa24e-f830-4d9f-a12b-fbb9e5035031",
-                ),
-                count=2,
-                target="75.75.75.75",
-            ))
+            parameters={
+                "callback": {
+                    "http_server": {
+                        "id": "aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M=",
+                    },
+                    "payload_template": {
+                        "id": "wpt_2100",
+                    },
+                    "shared_secret": "secret",
+                    "url": "https://webhook.site/28efa24e-f830-4d9f-a12b-fbb9e5035031",
+                },
+                "count": 2,
+                "target": "75.75.75.75",
+            })
         pulumi.export("merakiDevicesLiveToolsPingExample", example)
         ```
 
@@ -160,20 +160,20 @@ class LiveToolsPing(pulumi.CustomResource):
 
         example = meraki.devices.LiveToolsPing("example",
             serial="string",
-            parameters=meraki.devices.LiveToolsPingParametersArgs(
-                callback=meraki.devices.LiveToolsPingParametersCallbackArgs(
-                    http_server=meraki.devices.LiveToolsPingParametersCallbackHttpServerArgs(
-                        id="aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M=",
-                    ),
-                    payload_template=meraki.devices.LiveToolsPingParametersCallbackPayloadTemplateArgs(
-                        id="wpt_2100",
-                    ),
-                    shared_secret="secret",
-                    url="https://webhook.site/28efa24e-f830-4d9f-a12b-fbb9e5035031",
-                ),
-                count=2,
-                target="75.75.75.75",
-            ))
+            parameters={
+                "callback": {
+                    "http_server": {
+                        "id": "aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M=",
+                    },
+                    "payload_template": {
+                        "id": "wpt_2100",
+                    },
+                    "shared_secret": "secret",
+                    "url": "https://webhook.site/28efa24e-f830-4d9f-a12b-fbb9e5035031",
+                },
+                "count": 2,
+                "target": "75.75.75.75",
+            })
         pulumi.export("merakiDevicesLiveToolsPingExample", example)
         ```
 
@@ -198,7 +198,7 @@ class LiveToolsPing(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 parameters: Optional[pulumi.Input[pulumi.InputType['LiveToolsPingParametersArgs']]] = None,
+                 parameters: Optional[pulumi.Input[Union['LiveToolsPingParametersArgs', 'LiveToolsPingParametersArgsDict']]] = None,
                  serial: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -226,8 +226,8 @@ class LiveToolsPing(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            item: Optional[pulumi.Input[pulumi.InputType['LiveToolsPingItemArgs']]] = None,
-            parameters: Optional[pulumi.Input[pulumi.InputType['LiveToolsPingParametersArgs']]] = None,
+            item: Optional[pulumi.Input[Union['LiveToolsPingItemArgs', 'LiveToolsPingItemArgsDict']]] = None,
+            parameters: Optional[pulumi.Input[Union['LiveToolsPingParametersArgs', 'LiveToolsPingParametersArgsDict']]] = None,
             serial: Optional[pulumi.Input[str]] = None) -> 'LiveToolsPing':
         """
         Get an existing LiveToolsPing resource's state with the given name, id, and optional extra

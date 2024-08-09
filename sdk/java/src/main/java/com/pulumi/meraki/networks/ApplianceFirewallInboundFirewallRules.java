@@ -137,7 +137,7 @@ public class ApplianceFirewallInboundFirewallRules extends com.pulumi.resources.
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public ApplianceFirewallInboundFirewallRules(String name) {
+    public ApplianceFirewallInboundFirewallRules(java.lang.String name) {
         this(name, ApplianceFirewallInboundFirewallRulesArgs.Empty);
     }
     /**
@@ -145,7 +145,7 @@ public class ApplianceFirewallInboundFirewallRules extends com.pulumi.resources.
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ApplianceFirewallInboundFirewallRules(String name, ApplianceFirewallInboundFirewallRulesArgs args) {
+    public ApplianceFirewallInboundFirewallRules(java.lang.String name, ApplianceFirewallInboundFirewallRulesArgs args) {
         this(name, args, null);
     }
     /**
@@ -154,12 +154,12 @@ public class ApplianceFirewallInboundFirewallRules extends com.pulumi.resources.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ApplianceFirewallInboundFirewallRules(String name, ApplianceFirewallInboundFirewallRulesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/applianceFirewallInboundFirewallRules:ApplianceFirewallInboundFirewallRules", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public ApplianceFirewallInboundFirewallRules(java.lang.String name, ApplianceFirewallInboundFirewallRulesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/applianceFirewallInboundFirewallRules:ApplianceFirewallInboundFirewallRules", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private ApplianceFirewallInboundFirewallRules(String name, Output<String> id, @Nullable ApplianceFirewallInboundFirewallRulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/applianceFirewallInboundFirewallRules:ApplianceFirewallInboundFirewallRules", name, state, makeResourceOptions(options, id));
+    private ApplianceFirewallInboundFirewallRules(java.lang.String name, Output<java.lang.String> id, @Nullable ApplianceFirewallInboundFirewallRulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/applianceFirewallInboundFirewallRules:ApplianceFirewallInboundFirewallRules", name, state, makeResourceOptions(options, id), false);
     }
 
     private static ApplianceFirewallInboundFirewallRulesArgs makeArgs(ApplianceFirewallInboundFirewallRulesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -169,7 +169,7 @@ public class ApplianceFirewallInboundFirewallRules extends com.pulumi.resources.
         return args == null ? ApplianceFirewallInboundFirewallRulesArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -185,7 +185,7 @@ public class ApplianceFirewallInboundFirewallRules extends com.pulumi.resources.
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ApplianceFirewallInboundFirewallRules get(String name, Output<String> id, @Nullable ApplianceFirewallInboundFirewallRulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ApplianceFirewallInboundFirewallRules get(java.lang.String name, Output<java.lang.String> id, @Nullable ApplianceFirewallInboundFirewallRulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new ApplianceFirewallInboundFirewallRules(name, id, state, options);
     }
 }

@@ -89,7 +89,7 @@ class DevicesRemove(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 parameters: Optional[pulumi.Input[pulumi.InputType['DevicesRemoveParametersArgs']]] = None,
+                 parameters: Optional[pulumi.Input[Union['DevicesRemoveParametersArgs', 'DevicesRemoveParametersArgsDict']]] = None,
                  __props__=None):
         """
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
@@ -103,9 +103,9 @@ class DevicesRemove(pulumi.CustomResource):
 
         example = meraki.networks.DevicesRemove("example",
             network_id="string",
-            parameters=meraki.networks.DevicesRemoveParametersArgs(
-                serial="Q234-ABCD-5678",
-            ))
+            parameters={
+                "serial": "Q234-ABCD-5678",
+            })
         pulumi.export("merakiNetworksDevicesRemoveExample", example)
         ```
 
@@ -131,9 +131,9 @@ class DevicesRemove(pulumi.CustomResource):
 
         example = meraki.networks.DevicesRemove("example",
             network_id="string",
-            parameters=meraki.networks.DevicesRemoveParametersArgs(
-                serial="Q234-ABCD-5678",
-            ))
+            parameters={
+                "serial": "Q234-ABCD-5678",
+            })
         pulumi.export("merakiNetworksDevicesRemoveExample", example)
         ```
 
@@ -153,7 +153,7 @@ class DevicesRemove(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 parameters: Optional[pulumi.Input[pulumi.InputType['DevicesRemoveParametersArgs']]] = None,
+                 parameters: Optional[pulumi.Input[Union['DevicesRemoveParametersArgs', 'DevicesRemoveParametersArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -180,7 +180,7 @@ class DevicesRemove(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             network_id: Optional[pulumi.Input[str]] = None,
-            parameters: Optional[pulumi.Input[pulumi.InputType['DevicesRemoveParametersArgs']]] = None) -> 'DevicesRemove':
+            parameters: Optional[pulumi.Input[Union['DevicesRemoveParametersArgs', 'DevicesRemoveParametersArgsDict']]] = None) -> 'DevicesRemove':
         """
         Get an existing DevicesRemove resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

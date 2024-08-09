@@ -75,7 +75,7 @@ public class ApplianceWarmSpareSwap extends com.pulumi.resources.CustomResource 
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public ApplianceWarmSpareSwap(String name) {
+    public ApplianceWarmSpareSwap(java.lang.String name) {
         this(name, ApplianceWarmSpareSwapArgs.Empty);
     }
     /**
@@ -83,7 +83,7 @@ public class ApplianceWarmSpareSwap extends com.pulumi.resources.CustomResource 
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ApplianceWarmSpareSwap(String name, ApplianceWarmSpareSwapArgs args) {
+    public ApplianceWarmSpareSwap(java.lang.String name, ApplianceWarmSpareSwapArgs args) {
         this(name, args, null);
     }
     /**
@@ -92,12 +92,12 @@ public class ApplianceWarmSpareSwap extends com.pulumi.resources.CustomResource 
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ApplianceWarmSpareSwap(String name, ApplianceWarmSpareSwapArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/applianceWarmSpareSwap:ApplianceWarmSpareSwap", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public ApplianceWarmSpareSwap(java.lang.String name, ApplianceWarmSpareSwapArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/applianceWarmSpareSwap:ApplianceWarmSpareSwap", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private ApplianceWarmSpareSwap(String name, Output<String> id, @Nullable ApplianceWarmSpareSwapState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/applianceWarmSpareSwap:ApplianceWarmSpareSwap", name, state, makeResourceOptions(options, id));
+    private ApplianceWarmSpareSwap(java.lang.String name, Output<java.lang.String> id, @Nullable ApplianceWarmSpareSwapState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/applianceWarmSpareSwap:ApplianceWarmSpareSwap", name, state, makeResourceOptions(options, id), false);
     }
 
     private static ApplianceWarmSpareSwapArgs makeArgs(ApplianceWarmSpareSwapArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -107,7 +107,7 @@ public class ApplianceWarmSpareSwap extends com.pulumi.resources.CustomResource 
         return args == null ? ApplianceWarmSpareSwapArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -123,7 +123,7 @@ public class ApplianceWarmSpareSwap extends com.pulumi.resources.CustomResource 
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ApplianceWarmSpareSwap get(String name, Output<String> id, @Nullable ApplianceWarmSpareSwapState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ApplianceWarmSpareSwap get(java.lang.String name, Output<java.lang.String> id, @Nullable ApplianceWarmSpareSwapState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new ApplianceWarmSpareSwap(name, id, state, options);
     }
 }

@@ -293,7 +293,7 @@ public class Licenses extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public Licenses(String name) {
+    public Licenses(java.lang.String name) {
         this(name, LicensesArgs.Empty);
     }
     /**
@@ -301,7 +301,7 @@ public class Licenses extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public Licenses(String name, LicensesArgs args) {
+    public Licenses(java.lang.String name, LicensesArgs args) {
         this(name, args, null);
     }
     /**
@@ -310,12 +310,12 @@ public class Licenses extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Licenses(String name, LicensesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/licenses:Licenses", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public Licenses(java.lang.String name, LicensesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/licenses:Licenses", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private Licenses(String name, Output<String> id, @Nullable LicensesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/licenses:Licenses", name, state, makeResourceOptions(options, id));
+    private Licenses(java.lang.String name, Output<java.lang.String> id, @Nullable LicensesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/licenses:Licenses", name, state, makeResourceOptions(options, id), false);
     }
 
     private static LicensesArgs makeArgs(LicensesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -325,7 +325,7 @@ public class Licenses extends com.pulumi.resources.CustomResource {
         return args == null ? LicensesArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -341,7 +341,7 @@ public class Licenses extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Licenses get(String name, Output<String> id, @Nullable LicensesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Licenses get(java.lang.String name, Output<java.lang.String> id, @Nullable LicensesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new Licenses(name, id, state, options);
     }
 }

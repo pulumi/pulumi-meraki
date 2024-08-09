@@ -109,7 +109,7 @@ public class SensorMqttBrokers extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SensorMqttBrokers(String name) {
+    public SensorMqttBrokers(java.lang.String name) {
         this(name, SensorMqttBrokersArgs.Empty);
     }
     /**
@@ -117,7 +117,7 @@ public class SensorMqttBrokers extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SensorMqttBrokers(String name, SensorMqttBrokersArgs args) {
+    public SensorMqttBrokers(java.lang.String name, SensorMqttBrokersArgs args) {
         this(name, args, null);
     }
     /**
@@ -126,12 +126,12 @@ public class SensorMqttBrokers extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SensorMqttBrokers(String name, SensorMqttBrokersArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/sensorMqttBrokers:SensorMqttBrokers", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public SensorMqttBrokers(java.lang.String name, SensorMqttBrokersArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/sensorMqttBrokers:SensorMqttBrokers", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SensorMqttBrokers(String name, Output<String> id, @Nullable SensorMqttBrokersState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/sensorMqttBrokers:SensorMqttBrokers", name, state, makeResourceOptions(options, id));
+    private SensorMqttBrokers(java.lang.String name, Output<java.lang.String> id, @Nullable SensorMqttBrokersState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/sensorMqttBrokers:SensorMqttBrokers", name, state, makeResourceOptions(options, id), false);
     }
 
     private static SensorMqttBrokersArgs makeArgs(SensorMqttBrokersArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -141,7 +141,7 @@ public class SensorMqttBrokers extends com.pulumi.resources.CustomResource {
         return args == null ? SensorMqttBrokersArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -157,7 +157,7 @@ public class SensorMqttBrokers extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SensorMqttBrokers get(String name, Output<String> id, @Nullable SensorMqttBrokersState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SensorMqttBrokers get(java.lang.String name, Output<java.lang.String> id, @Nullable SensorMqttBrokersState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SensorMqttBrokers(name, id, state, options);
     }
 }

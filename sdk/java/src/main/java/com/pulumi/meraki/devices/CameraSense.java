@@ -149,7 +149,7 @@ public class CameraSense extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public CameraSense(String name) {
+    public CameraSense(java.lang.String name) {
         this(name, CameraSenseArgs.Empty);
     }
     /**
@@ -157,7 +157,7 @@ public class CameraSense extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public CameraSense(String name, CameraSenseArgs args) {
+    public CameraSense(java.lang.String name, CameraSenseArgs args) {
         this(name, args, null);
     }
     /**
@@ -166,12 +166,12 @@ public class CameraSense extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CameraSense(String name, CameraSenseArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/cameraSense:CameraSense", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public CameraSense(java.lang.String name, CameraSenseArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/cameraSense:CameraSense", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private CameraSense(String name, Output<String> id, @Nullable CameraSenseState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/cameraSense:CameraSense", name, state, makeResourceOptions(options, id));
+    private CameraSense(java.lang.String name, Output<java.lang.String> id, @Nullable CameraSenseState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/cameraSense:CameraSense", name, state, makeResourceOptions(options, id), false);
     }
 
     private static CameraSenseArgs makeArgs(CameraSenseArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -181,7 +181,7 @@ public class CameraSense extends com.pulumi.resources.CustomResource {
         return args == null ? CameraSenseArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -197,7 +197,7 @@ public class CameraSense extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CameraSense get(String name, Output<String> id, @Nullable CameraSenseState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static CameraSense get(java.lang.String name, Output<java.lang.String> id, @Nullable CameraSenseState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new CameraSense(name, id, state, options);
     }
 }

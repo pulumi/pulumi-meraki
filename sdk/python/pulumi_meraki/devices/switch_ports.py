@@ -959,7 +959,7 @@ class SwitchPorts(pulumi.CustomResource):
                  poe_enabled: Optional[pulumi.Input[bool]] = None,
                  port_id: Optional[pulumi.Input[str]] = None,
                  port_schedule_id: Optional[pulumi.Input[str]] = None,
-                 profile: Optional[pulumi.Input[pulumi.InputType['SwitchPortsProfileArgs']]] = None,
+                 profile: Optional[pulumi.Input[Union['SwitchPortsProfileArgs', 'SwitchPortsProfileArgsDict']]] = None,
                  rstp_enabled: Optional[pulumi.Input[bool]] = None,
                  serial: Optional[pulumi.Input[str]] = None,
                  sticky_mac_allow_list_limit: Optional[pulumi.Input[int]] = None,
@@ -998,11 +998,11 @@ class SwitchPorts(pulumi.CustomResource):
             poe_enabled=True,
             port_id="string",
             port_schedule_id="1234",
-            profile=meraki.devices.SwitchPortsProfileArgs(
-                enabled=False,
-                id="1284392014819",
-                iname="iname",
-            ),
+            profile={
+                "enabled": False,
+                "id": "1284392014819",
+                "iname": "iname",
+            },
             rstp_enabled=True,
             serial="string",
             sticky_mac_allow_lists=[
@@ -1046,7 +1046,7 @@ class SwitchPorts(pulumi.CustomResource):
         :param pulumi.Input[bool] poe_enabled: The PoE status of the switch port.
         :param pulumi.Input[str] port_id: The identifier of the switch port.
         :param pulumi.Input[str] port_schedule_id: The ID of the port schedule. A value of null will clear the port schedule.
-        :param pulumi.Input[pulumi.InputType['SwitchPortsProfileArgs']] profile: Profile attributes
+        :param pulumi.Input[Union['SwitchPortsProfileArgs', 'SwitchPortsProfileArgsDict']] profile: Profile attributes
         :param pulumi.Input[bool] rstp_enabled: The rapid spanning tree protocol status.
         :param pulumi.Input[str] serial: serial path parameter.
         :param pulumi.Input[int] sticky_mac_allow_list_limit: The maximum number of MAC addresses for sticky MAC allow list. Only applicable when 'accessPolicyType' is 'Sticky MAC allow list'.
@@ -1091,11 +1091,11 @@ class SwitchPorts(pulumi.CustomResource):
             poe_enabled=True,
             port_id="string",
             port_schedule_id="1234",
-            profile=meraki.devices.SwitchPortsProfileArgs(
-                enabled=False,
-                id="1284392014819",
-                iname="iname",
-            ),
+            profile={
+                "enabled": False,
+                "id": "1284392014819",
+                "iname": "iname",
+            },
             rstp_enabled=True,
             serial="string",
             sticky_mac_allow_lists=[
@@ -1152,7 +1152,7 @@ class SwitchPorts(pulumi.CustomResource):
                  poe_enabled: Optional[pulumi.Input[bool]] = None,
                  port_id: Optional[pulumi.Input[str]] = None,
                  port_schedule_id: Optional[pulumi.Input[str]] = None,
-                 profile: Optional[pulumi.Input[pulumi.InputType['SwitchPortsProfileArgs']]] = None,
+                 profile: Optional[pulumi.Input[Union['SwitchPortsProfileArgs', 'SwitchPortsProfileArgsDict']]] = None,
                  rstp_enabled: Optional[pulumi.Input[bool]] = None,
                  serial: Optional[pulumi.Input[str]] = None,
                  sticky_mac_allow_list_limit: Optional[pulumi.Input[int]] = None,
@@ -1228,14 +1228,14 @@ class SwitchPorts(pulumi.CustomResource):
             link_negotiation: Optional[pulumi.Input[str]] = None,
             link_negotiation_capabilities: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
             mac_allow_lists: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-            mirror: Optional[pulumi.Input[pulumi.InputType['SwitchPortsMirrorArgs']]] = None,
-            module: Optional[pulumi.Input[pulumi.InputType['SwitchPortsModuleArgs']]] = None,
+            mirror: Optional[pulumi.Input[Union['SwitchPortsMirrorArgs', 'SwitchPortsMirrorArgsDict']]] = None,
+            module: Optional[pulumi.Input[Union['SwitchPortsModuleArgs', 'SwitchPortsModuleArgsDict']]] = None,
             name: Optional[pulumi.Input[str]] = None,
             peer_sgt_capable: Optional[pulumi.Input[bool]] = None,
             poe_enabled: Optional[pulumi.Input[bool]] = None,
             port_id: Optional[pulumi.Input[str]] = None,
             port_schedule_id: Optional[pulumi.Input[str]] = None,
-            profile: Optional[pulumi.Input[pulumi.InputType['SwitchPortsProfileArgs']]] = None,
+            profile: Optional[pulumi.Input[Union['SwitchPortsProfileArgs', 'SwitchPortsProfileArgsDict']]] = None,
             rstp_enabled: Optional[pulumi.Input[bool]] = None,
             serial: Optional[pulumi.Input[str]] = None,
             sticky_mac_allow_list_limit: Optional[pulumi.Input[int]] = None,
@@ -1265,14 +1265,14 @@ class SwitchPorts(pulumi.CustomResource):
         :param pulumi.Input[str] link_negotiation: The link speed for the switch port.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] link_negotiation_capabilities: Available link speeds for the switch port.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] mac_allow_lists: Only devices with MAC addresses specified in this list will have access to this port. Up to 20 MAC addresses can be defined. Only applicable when 'accessPolicyType' is 'MAC allow list'.
-        :param pulumi.Input[pulumi.InputType['SwitchPortsMirrorArgs']] mirror: Port mirror
-        :param pulumi.Input[pulumi.InputType['SwitchPortsModuleArgs']] module: Expansion module
+        :param pulumi.Input[Union['SwitchPortsMirrorArgs', 'SwitchPortsMirrorArgsDict']] mirror: Port mirror
+        :param pulumi.Input[Union['SwitchPortsModuleArgs', 'SwitchPortsModuleArgsDict']] module: Expansion module
         :param pulumi.Input[str] name: The name of the switch port.
         :param pulumi.Input[bool] peer_sgt_capable: If true, Peer SGT is enabled for traffic through this switch port. Applicable to trunk port only, not access port. Cannot be applied to a port on a switch bound to profile.
         :param pulumi.Input[bool] poe_enabled: The PoE status of the switch port.
         :param pulumi.Input[str] port_id: The identifier of the switch port.
         :param pulumi.Input[str] port_schedule_id: The ID of the port schedule. A value of null will clear the port schedule.
-        :param pulumi.Input[pulumi.InputType['SwitchPortsProfileArgs']] profile: Profile attributes
+        :param pulumi.Input[Union['SwitchPortsProfileArgs', 'SwitchPortsProfileArgsDict']] profile: Profile attributes
         :param pulumi.Input[bool] rstp_enabled: The rapid spanning tree protocol status.
         :param pulumi.Input[str] serial: serial path parameter.
         :param pulumi.Input[int] sticky_mac_allow_list_limit: The maximum number of MAC addresses for sticky MAC allow list. Only applicable when 'accessPolicyType' is 'Sticky MAC allow list'.

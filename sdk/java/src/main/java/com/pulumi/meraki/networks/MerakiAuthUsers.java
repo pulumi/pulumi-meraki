@@ -38,19 +38,19 @@ import javax.annotation.Nullable;
  * import java.nio.file.Files;
  * import java.nio.file.Paths;
  * 
- * public class App {
- *     public static void main(String[] args) {
+ * public class App }{{@code
+ *     public static void main(String[] args) }{{@code
  *         Pulumi.run(App::stack);
- *     }
+ *     }}{@code
  * 
- *     public static void stack(Context ctx) {
+ *     public static void stack(Context ctx) }{{@code
  *         var example = new MerakiAuthUsers("example", MerakiAuthUsersArgs.builder()
  *             .accountType("802.1X")
  *             .authorizations(MerakiAuthUsersAuthorizationArgs.builder()
  *                 .expires_at("2018-03-13T00:00:00.090210Z")
  *                 .ssid_number(1)
  *                 .build())
- *             .email("miles{@literal @}meraki.com")
+ *             .email("miles}{@literal @}{@code meraki.com")
  *             .emailPasswordToUser(false)
  *             .isAdmin(false)
  *             .name("Miles Meraki")
@@ -59,8 +59,8 @@ import javax.annotation.Nullable;
  *             .build());
  * 
  *         ctx.export("merakiNetworksMerakiAuthUsersExample", example);
- *     }
- * }
+ *     }}{@code
+ * }}{@code
  * }
  * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
@@ -219,7 +219,7 @@ public class MerakiAuthUsers extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public MerakiAuthUsers(String name) {
+    public MerakiAuthUsers(java.lang.String name) {
         this(name, MerakiAuthUsersArgs.Empty);
     }
     /**
@@ -227,7 +227,7 @@ public class MerakiAuthUsers extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public MerakiAuthUsers(String name, MerakiAuthUsersArgs args) {
+    public MerakiAuthUsers(java.lang.String name, MerakiAuthUsersArgs args) {
         this(name, args, null);
     }
     /**
@@ -236,12 +236,12 @@ public class MerakiAuthUsers extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public MerakiAuthUsers(String name, MerakiAuthUsersArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/merakiAuthUsers:MerakiAuthUsers", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public MerakiAuthUsers(java.lang.String name, MerakiAuthUsersArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/merakiAuthUsers:MerakiAuthUsers", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private MerakiAuthUsers(String name, Output<String> id, @Nullable MerakiAuthUsersState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/merakiAuthUsers:MerakiAuthUsers", name, state, makeResourceOptions(options, id));
+    private MerakiAuthUsers(java.lang.String name, Output<java.lang.String> id, @Nullable MerakiAuthUsersState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/merakiAuthUsers:MerakiAuthUsers", name, state, makeResourceOptions(options, id), false);
     }
 
     private static MerakiAuthUsersArgs makeArgs(MerakiAuthUsersArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -251,7 +251,7 @@ public class MerakiAuthUsers extends com.pulumi.resources.CustomResource {
         return args == null ? MerakiAuthUsersArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .additionalSecretOutputs(List.of(
@@ -270,7 +270,7 @@ public class MerakiAuthUsers extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static MerakiAuthUsers get(String name, Output<String> id, @Nullable MerakiAuthUsersState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static MerakiAuthUsers get(java.lang.String name, Output<java.lang.String> id, @Nullable MerakiAuthUsersState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new MerakiAuthUsers(name, id, state, options);
     }
 }

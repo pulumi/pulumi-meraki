@@ -278,7 +278,7 @@ public class SwitchRoutingInterfacesDhcp extends com.pulumi.resources.CustomReso
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SwitchRoutingInterfacesDhcp(String name) {
+    public SwitchRoutingInterfacesDhcp(java.lang.String name) {
         this(name, SwitchRoutingInterfacesDhcpArgs.Empty);
     }
     /**
@@ -286,7 +286,7 @@ public class SwitchRoutingInterfacesDhcp extends com.pulumi.resources.CustomReso
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SwitchRoutingInterfacesDhcp(String name, SwitchRoutingInterfacesDhcpArgs args) {
+    public SwitchRoutingInterfacesDhcp(java.lang.String name, SwitchRoutingInterfacesDhcpArgs args) {
         this(name, args, null);
     }
     /**
@@ -295,12 +295,12 @@ public class SwitchRoutingInterfacesDhcp extends com.pulumi.resources.CustomReso
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SwitchRoutingInterfacesDhcp(String name, SwitchRoutingInterfacesDhcpArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/switchRoutingInterfacesDhcp:SwitchRoutingInterfacesDhcp", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public SwitchRoutingInterfacesDhcp(java.lang.String name, SwitchRoutingInterfacesDhcpArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/switchRoutingInterfacesDhcp:SwitchRoutingInterfacesDhcp", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SwitchRoutingInterfacesDhcp(String name, Output<String> id, @Nullable SwitchRoutingInterfacesDhcpState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/switchRoutingInterfacesDhcp:SwitchRoutingInterfacesDhcp", name, state, makeResourceOptions(options, id));
+    private SwitchRoutingInterfacesDhcp(java.lang.String name, Output<java.lang.String> id, @Nullable SwitchRoutingInterfacesDhcpState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/switchRoutingInterfacesDhcp:SwitchRoutingInterfacesDhcp", name, state, makeResourceOptions(options, id), false);
     }
 
     private static SwitchRoutingInterfacesDhcpArgs makeArgs(SwitchRoutingInterfacesDhcpArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -310,7 +310,7 @@ public class SwitchRoutingInterfacesDhcp extends com.pulumi.resources.CustomReso
         return args == null ? SwitchRoutingInterfacesDhcpArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -326,7 +326,7 @@ public class SwitchRoutingInterfacesDhcp extends com.pulumi.resources.CustomReso
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SwitchRoutingInterfacesDhcp get(String name, Output<String> id, @Nullable SwitchRoutingInterfacesDhcpState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SwitchRoutingInterfacesDhcp get(java.lang.String name, Output<java.lang.String> id, @Nullable SwitchRoutingInterfacesDhcpState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SwitchRoutingInterfacesDhcp(name, id, state, options);
     }
 }

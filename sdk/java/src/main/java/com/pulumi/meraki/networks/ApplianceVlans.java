@@ -397,7 +397,7 @@ public class ApplianceVlans extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public ApplianceVlans(String name) {
+    public ApplianceVlans(java.lang.String name) {
         this(name, ApplianceVlansArgs.Empty);
     }
     /**
@@ -405,7 +405,7 @@ public class ApplianceVlans extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ApplianceVlans(String name, ApplianceVlansArgs args) {
+    public ApplianceVlans(java.lang.String name, ApplianceVlansArgs args) {
         this(name, args, null);
     }
     /**
@@ -414,12 +414,12 @@ public class ApplianceVlans extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ApplianceVlans(String name, ApplianceVlansArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/applianceVlans:ApplianceVlans", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public ApplianceVlans(java.lang.String name, ApplianceVlansArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/applianceVlans:ApplianceVlans", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private ApplianceVlans(String name, Output<String> id, @Nullable ApplianceVlansState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/applianceVlans:ApplianceVlans", name, state, makeResourceOptions(options, id));
+    private ApplianceVlans(java.lang.String name, Output<java.lang.String> id, @Nullable ApplianceVlansState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/applianceVlans:ApplianceVlans", name, state, makeResourceOptions(options, id), false);
     }
 
     private static ApplianceVlansArgs makeArgs(ApplianceVlansArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -429,7 +429,7 @@ public class ApplianceVlans extends com.pulumi.resources.CustomResource {
         return args == null ? ApplianceVlansArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -445,7 +445,7 @@ public class ApplianceVlans extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ApplianceVlans get(String name, Output<String> id, @Nullable ApplianceVlansState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ApplianceVlans get(java.lang.String name, Output<java.lang.String> id, @Nullable ApplianceVlansState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new ApplianceVlans(name, id, state, options);
     }
 }

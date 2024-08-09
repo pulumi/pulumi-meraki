@@ -59,12 +59,12 @@ import javax.annotation.Nullable;
  * import java.nio.file.Files;
  * import java.nio.file.Paths;
  * 
- * public class App {
- *     public static void main(String[] args) {
+ * public class App }{{@code
+ *     public static void main(String[] args) }{{@code
  *         Pulumi.run(App::stack);
- *     }
+ *     }}{@code
  * 
- *     public static void stack(Context ctx) {
+ *     public static void stack(Context ctx) }{{@code
  *         var example = new SensorAlertsProfiles("example", SensorAlertsProfilesArgs.builder()
  *             .conditions(SensorAlertsProfilesConditionArgs.builder()
  *                 .direction("above")
@@ -130,7 +130,7 @@ import javax.annotation.Nullable;
  *             .name("My Sensor Alert Profile")
  *             .networkId("string")
  *             .recipients(SensorAlertsProfilesRecipientsArgs.builder()
- *                 .emails("miles{@literal @}meraki.com")
+ *                 .emails("miles}{@literal @}{@code meraki.com")
  *                 .http_server_ids("aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M=")
  *                 .sms_numbers("+15555555555")
  *                 .build())
@@ -144,8 +144,8 @@ import javax.annotation.Nullable;
  *             .build());
  * 
  *         ctx.export("merakiNetworksSensorAlertsProfilesExample", example);
- *     }
- * }
+ *     }}{@code
+ * }}{@code
  * }
  * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
@@ -276,7 +276,7 @@ public class SensorAlertsProfiles extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SensorAlertsProfiles(String name) {
+    public SensorAlertsProfiles(java.lang.String name) {
         this(name, SensorAlertsProfilesArgs.Empty);
     }
     /**
@@ -284,7 +284,7 @@ public class SensorAlertsProfiles extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SensorAlertsProfiles(String name, SensorAlertsProfilesArgs args) {
+    public SensorAlertsProfiles(java.lang.String name, SensorAlertsProfilesArgs args) {
         this(name, args, null);
     }
     /**
@@ -293,12 +293,12 @@ public class SensorAlertsProfiles extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SensorAlertsProfiles(String name, SensorAlertsProfilesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/sensorAlertsProfiles:SensorAlertsProfiles", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public SensorAlertsProfiles(java.lang.String name, SensorAlertsProfilesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/sensorAlertsProfiles:SensorAlertsProfiles", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SensorAlertsProfiles(String name, Output<String> id, @Nullable SensorAlertsProfilesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/sensorAlertsProfiles:SensorAlertsProfiles", name, state, makeResourceOptions(options, id));
+    private SensorAlertsProfiles(java.lang.String name, Output<java.lang.String> id, @Nullable SensorAlertsProfilesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/sensorAlertsProfiles:SensorAlertsProfiles", name, state, makeResourceOptions(options, id), false);
     }
 
     private static SensorAlertsProfilesArgs makeArgs(SensorAlertsProfilesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -308,7 +308,7 @@ public class SensorAlertsProfiles extends com.pulumi.resources.CustomResource {
         return args == null ? SensorAlertsProfilesArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -324,7 +324,7 @@ public class SensorAlertsProfiles extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SensorAlertsProfiles get(String name, Output<String> id, @Nullable SensorAlertsProfilesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SensorAlertsProfiles get(java.lang.String name, Output<java.lang.String> id, @Nullable SensorAlertsProfilesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SensorAlertsProfiles(name, id, state, options);
     }
 }

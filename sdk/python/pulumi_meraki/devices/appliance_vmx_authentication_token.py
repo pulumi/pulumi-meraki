@@ -156,7 +156,7 @@ class ApplianceVmxAuthenticationToken(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            item: Optional[pulumi.Input[pulumi.InputType['ApplianceVmxAuthenticationTokenItemArgs']]] = None,
+            item: Optional[pulumi.Input[Union['ApplianceVmxAuthenticationTokenItemArgs', 'ApplianceVmxAuthenticationTokenItemArgsDict']]] = None,
             serial: Optional[pulumi.Input[str]] = None) -> 'ApplianceVmxAuthenticationToken':
         """
         Get an existing ApplianceVmxAuthenticationToken resource's state with the given name, id, and optional extra

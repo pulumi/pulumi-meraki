@@ -98,7 +98,7 @@ class ApplianceFirewallSettings(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 spoofing_protection: Optional[pulumi.Input[pulumi.InputType['ApplianceFirewallSettingsSpoofingProtectionArgs']]] = None,
+                 spoofing_protection: Optional[pulumi.Input[Union['ApplianceFirewallSettingsSpoofingProtectionArgs', 'ApplianceFirewallSettingsSpoofingProtectionArgsDict']]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -112,7 +112,7 @@ class ApplianceFirewallSettings(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[pulumi.InputType['ApplianceFirewallSettingsSpoofingProtectionArgs']] spoofing_protection: Spoofing protection settings
+        :param pulumi.Input[Union['ApplianceFirewallSettingsSpoofingProtectionArgs', 'ApplianceFirewallSettingsSpoofingProtectionArgsDict']] spoofing_protection: Spoofing protection settings
         """
         ...
     @overload
@@ -145,7 +145,7 @@ class ApplianceFirewallSettings(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 spoofing_protection: Optional[pulumi.Input[pulumi.InputType['ApplianceFirewallSettingsSpoofingProtectionArgs']]] = None,
+                 spoofing_protection: Optional[pulumi.Input[Union['ApplianceFirewallSettingsSpoofingProtectionArgs', 'ApplianceFirewallSettingsSpoofingProtectionArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -170,7 +170,7 @@ class ApplianceFirewallSettings(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             network_id: Optional[pulumi.Input[str]] = None,
-            spoofing_protection: Optional[pulumi.Input[pulumi.InputType['ApplianceFirewallSettingsSpoofingProtectionArgs']]] = None) -> 'ApplianceFirewallSettings':
+            spoofing_protection: Optional[pulumi.Input[Union['ApplianceFirewallSettingsSpoofingProtectionArgs', 'ApplianceFirewallSettingsSpoofingProtectionArgsDict']]] = None) -> 'ApplianceFirewallSettings':
         """
         Get an existing ApplianceFirewallSettings resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -179,7 +179,7 @@ class ApplianceFirewallSettings(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[pulumi.InputType['ApplianceFirewallSettingsSpoofingProtectionArgs']] spoofing_protection: Spoofing protection settings
+        :param pulumi.Input[Union['ApplianceFirewallSettingsSpoofingProtectionArgs', 'ApplianceFirewallSettingsSpoofingProtectionArgsDict']] spoofing_protection: Spoofing protection settings
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

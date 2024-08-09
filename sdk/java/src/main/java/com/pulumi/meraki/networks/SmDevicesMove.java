@@ -105,7 +105,7 @@ public class SmDevicesMove extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SmDevicesMove(String name) {
+    public SmDevicesMove(java.lang.String name) {
         this(name, SmDevicesMoveArgs.Empty);
     }
     /**
@@ -113,7 +113,7 @@ public class SmDevicesMove extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SmDevicesMove(String name, SmDevicesMoveArgs args) {
+    public SmDevicesMove(java.lang.String name, SmDevicesMoveArgs args) {
         this(name, args, null);
     }
     /**
@@ -122,12 +122,12 @@ public class SmDevicesMove extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SmDevicesMove(String name, SmDevicesMoveArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/smDevicesMove:SmDevicesMove", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public SmDevicesMove(java.lang.String name, SmDevicesMoveArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/smDevicesMove:SmDevicesMove", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SmDevicesMove(String name, Output<String> id, @Nullable SmDevicesMoveState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/smDevicesMove:SmDevicesMove", name, state, makeResourceOptions(options, id));
+    private SmDevicesMove(java.lang.String name, Output<java.lang.String> id, @Nullable SmDevicesMoveState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/smDevicesMove:SmDevicesMove", name, state, makeResourceOptions(options, id), false);
     }
 
     private static SmDevicesMoveArgs makeArgs(SmDevicesMoveArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -137,7 +137,7 @@ public class SmDevicesMove extends com.pulumi.resources.CustomResource {
         return args == null ? SmDevicesMoveArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -153,7 +153,7 @@ public class SmDevicesMove extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SmDevicesMove get(String name, Output<String> id, @Nullable SmDevicesMoveState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SmDevicesMove get(java.lang.String name, Output<java.lang.String> id, @Nullable SmDevicesMoveState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SmDevicesMove(name, id, state, options);
     }
 }

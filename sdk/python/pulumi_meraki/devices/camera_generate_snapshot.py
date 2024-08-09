@@ -88,7 +88,7 @@ class CameraGenerateSnapshot(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 parameters: Optional[pulumi.Input[pulumi.InputType['CameraGenerateSnapshotParametersArgs']]] = None,
+                 parameters: Optional[pulumi.Input[Union['CameraGenerateSnapshotParametersArgs', 'CameraGenerateSnapshotParametersArgsDict']]] = None,
                  serial: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
@@ -103,10 +103,10 @@ class CameraGenerateSnapshot(pulumi.CustomResource):
 
         example = meraki.devices.CameraGenerateSnapshot("example",
             serial="string",
-            parameters=meraki.devices.CameraGenerateSnapshotParametersArgs(
-                fullframe=False,
-                timestamp="2021-04-30T15:18:08Z",
-            ))
+            parameters={
+                "fullframe": False,
+                "timestamp": "2021-04-30T15:18:08Z",
+            })
         pulumi.export("merakiDevicesCameraGenerateSnapshotExample", example)
         ```
 
@@ -132,10 +132,10 @@ class CameraGenerateSnapshot(pulumi.CustomResource):
 
         example = meraki.devices.CameraGenerateSnapshot("example",
             serial="string",
-            parameters=meraki.devices.CameraGenerateSnapshotParametersArgs(
-                fullframe=False,
-                timestamp="2021-04-30T15:18:08Z",
-            ))
+            parameters={
+                "fullframe": False,
+                "timestamp": "2021-04-30T15:18:08Z",
+            })
         pulumi.export("merakiDevicesCameraGenerateSnapshotExample", example)
         ```
 
@@ -154,7 +154,7 @@ class CameraGenerateSnapshot(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 parameters: Optional[pulumi.Input[pulumi.InputType['CameraGenerateSnapshotParametersArgs']]] = None,
+                 parameters: Optional[pulumi.Input[Union['CameraGenerateSnapshotParametersArgs', 'CameraGenerateSnapshotParametersArgsDict']]] = None,
                  serial: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -181,7 +181,7 @@ class CameraGenerateSnapshot(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            parameters: Optional[pulumi.Input[pulumi.InputType['CameraGenerateSnapshotParametersArgs']]] = None,
+            parameters: Optional[pulumi.Input[Union['CameraGenerateSnapshotParametersArgs', 'CameraGenerateSnapshotParametersArgsDict']]] = None,
             serial: Optional[pulumi.Input[str]] = None) -> 'CameraGenerateSnapshot':
         """
         Get an existing CameraGenerateSnapshot resource's state with the given name, id, and optional extra

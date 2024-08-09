@@ -244,7 +244,7 @@ public class WirelessSsidsHotspot20 extends com.pulumi.resources.CustomResource 
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public WirelessSsidsHotspot20(String name) {
+    public WirelessSsidsHotspot20(java.lang.String name) {
         this(name, WirelessSsidsHotspot20Args.Empty);
     }
     /**
@@ -252,7 +252,7 @@ public class WirelessSsidsHotspot20 extends com.pulumi.resources.CustomResource 
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public WirelessSsidsHotspot20(String name, WirelessSsidsHotspot20Args args) {
+    public WirelessSsidsHotspot20(java.lang.String name, WirelessSsidsHotspot20Args args) {
         this(name, args, null);
     }
     /**
@@ -261,12 +261,12 @@ public class WirelessSsidsHotspot20 extends com.pulumi.resources.CustomResource 
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public WirelessSsidsHotspot20(String name, WirelessSsidsHotspot20Args args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/wirelessSsidsHotspot20:WirelessSsidsHotspot20", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public WirelessSsidsHotspot20(java.lang.String name, WirelessSsidsHotspot20Args args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/wirelessSsidsHotspot20:WirelessSsidsHotspot20", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private WirelessSsidsHotspot20(String name, Output<String> id, @Nullable WirelessSsidsHotspot20State state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/wirelessSsidsHotspot20:WirelessSsidsHotspot20", name, state, makeResourceOptions(options, id));
+    private WirelessSsidsHotspot20(java.lang.String name, Output<java.lang.String> id, @Nullable WirelessSsidsHotspot20State state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/wirelessSsidsHotspot20:WirelessSsidsHotspot20", name, state, makeResourceOptions(options, id), false);
     }
 
     private static WirelessSsidsHotspot20Args makeArgs(WirelessSsidsHotspot20Args args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -276,7 +276,7 @@ public class WirelessSsidsHotspot20 extends com.pulumi.resources.CustomResource 
         return args == null ? WirelessSsidsHotspot20Args.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -292,7 +292,7 @@ public class WirelessSsidsHotspot20 extends com.pulumi.resources.CustomResource 
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WirelessSsidsHotspot20 get(String name, Output<String> id, @Nullable WirelessSsidsHotspot20State state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static WirelessSsidsHotspot20 get(java.lang.String name, Output<java.lang.String> id, @Nullable WirelessSsidsHotspot20State state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new WirelessSsidsHotspot20(name, id, state, options);
     }
 }

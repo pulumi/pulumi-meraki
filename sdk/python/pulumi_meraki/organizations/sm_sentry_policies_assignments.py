@@ -101,7 +101,7 @@ class SmSentryPoliciesAssignments(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  organization_id: Optional[pulumi.Input[str]] = None,
-                 parameters: Optional[pulumi.Input[pulumi.InputType['SmSentryPoliciesAssignmentsParametersArgs']]] = None,
+                 parameters: Optional[pulumi.Input[Union['SmSentryPoliciesAssignmentsParametersArgs', 'SmSentryPoliciesAssignmentsParametersArgsDict']]] = None,
                  __props__=None):
         """
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
@@ -115,21 +115,21 @@ class SmSentryPoliciesAssignments(pulumi.CustomResource):
 
         example = meraki.organizations.SmSentryPoliciesAssignments("example",
             organization_id="string",
-            parameters=meraki.organizations.SmSentryPoliciesAssignmentsParametersArgs(
-                items=[meraki.organizations.SmSentryPoliciesAssignmentsParametersItemArgs(
-                    network_id="N_24329156",
-                    policies=[meraki.organizations.SmSentryPoliciesAssignmentsParametersItemPolicyArgs(
-                        group_policy_id="1284392014819",
-                        policy_id="1284392014819",
-                        scope="withAny",
-                        sm_network_id="N_24329156",
-                        tags=[
+            parameters={
+                "items": [{
+                    "network_id": "N_24329156",
+                    "policies": [{
+                        "group_policy_id": "1284392014819",
+                        "policy_id": "1284392014819",
+                        "scope": "withAny",
+                        "sm_network_id": "N_24329156",
+                        "tags": [
                             "tag1",
                             "tag2",
                         ],
-                    )],
-                )],
-            ))
+                    }],
+                }],
+            })
         pulumi.export("merakiOrganizationsSmSentryPoliciesAssignmentsExample", example)
         ```
 
@@ -155,21 +155,21 @@ class SmSentryPoliciesAssignments(pulumi.CustomResource):
 
         example = meraki.organizations.SmSentryPoliciesAssignments("example",
             organization_id="string",
-            parameters=meraki.organizations.SmSentryPoliciesAssignmentsParametersArgs(
-                items=[meraki.organizations.SmSentryPoliciesAssignmentsParametersItemArgs(
-                    network_id="N_24329156",
-                    policies=[meraki.organizations.SmSentryPoliciesAssignmentsParametersItemPolicyArgs(
-                        group_policy_id="1284392014819",
-                        policy_id="1284392014819",
-                        scope="withAny",
-                        sm_network_id="N_24329156",
-                        tags=[
+            parameters={
+                "items": [{
+                    "network_id": "N_24329156",
+                    "policies": [{
+                        "group_policy_id": "1284392014819",
+                        "policy_id": "1284392014819",
+                        "scope": "withAny",
+                        "sm_network_id": "N_24329156",
+                        "tags": [
                             "tag1",
                             "tag2",
                         ],
-                    )],
-                )],
-            ))
+                    }],
+                }],
+            })
         pulumi.export("merakiOrganizationsSmSentryPoliciesAssignmentsExample", example)
         ```
 
@@ -189,7 +189,7 @@ class SmSentryPoliciesAssignments(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  organization_id: Optional[pulumi.Input[str]] = None,
-                 parameters: Optional[pulumi.Input[pulumi.InputType['SmSentryPoliciesAssignmentsParametersArgs']]] = None,
+                 parameters: Optional[pulumi.Input[Union['SmSentryPoliciesAssignmentsParametersArgs', 'SmSentryPoliciesAssignmentsParametersArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -216,9 +216,9 @@ class SmSentryPoliciesAssignments(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            item: Optional[pulumi.Input[pulumi.InputType['SmSentryPoliciesAssignmentsItemArgs']]] = None,
+            item: Optional[pulumi.Input[Union['SmSentryPoliciesAssignmentsItemArgs', 'SmSentryPoliciesAssignmentsItemArgsDict']]] = None,
             organization_id: Optional[pulumi.Input[str]] = None,
-            parameters: Optional[pulumi.Input[pulumi.InputType['SmSentryPoliciesAssignmentsParametersArgs']]] = None) -> 'SmSentryPoliciesAssignments':
+            parameters: Optional[pulumi.Input[Union['SmSentryPoliciesAssignmentsParametersArgs', 'SmSentryPoliciesAssignmentsParametersArgsDict']]] = None) -> 'SmSentryPoliciesAssignments':
         """
         Get an existing SmSentryPoliciesAssignments resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

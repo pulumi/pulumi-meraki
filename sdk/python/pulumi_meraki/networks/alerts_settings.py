@@ -177,9 +177,9 @@ class AlertsSettings(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 alerts: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AlertsSettingsAlertArgs']]]]] = None,
-                 default_destinations: Optional[pulumi.Input[pulumi.InputType['AlertsSettingsDefaultDestinationsArgs']]] = None,
-                 muting: Optional[pulumi.Input[pulumi.InputType['AlertsSettingsMutingArgs']]] = None,
+                 alerts: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AlertsSettingsAlertArgs', 'AlertsSettingsAlertArgsDict']]]]] = None,
+                 default_destinations: Optional[pulumi.Input[Union['AlertsSettingsDefaultDestinationsArgs', 'AlertsSettingsDefaultDestinationsArgsDict']]] = None,
+                 muting: Optional[pulumi.Input[Union['AlertsSettingsMutingArgs', 'AlertsSettingsMutingArgsDict']]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
@@ -193,9 +193,9 @@ class AlertsSettings(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AlertsSettingsAlertArgs']]]] alerts: Alert-specific configuration for each type. Only alerts that pertain to the network can be updated.
-        :param pulumi.Input[pulumi.InputType['AlertsSettingsDefaultDestinationsArgs']] default_destinations: The network-wide destinations for all alerts on the network.
-        :param pulumi.Input[pulumi.InputType['AlertsSettingsMutingArgs']] muting: muting
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AlertsSettingsAlertArgs', 'AlertsSettingsAlertArgsDict']]]] alerts: Alert-specific configuration for each type. Only alerts that pertain to the network can be updated.
+        :param pulumi.Input[Union['AlertsSettingsDefaultDestinationsArgs', 'AlertsSettingsDefaultDestinationsArgsDict']] default_destinations: The network-wide destinations for all alerts on the network.
+        :param pulumi.Input[Union['AlertsSettingsMutingArgs', 'AlertsSettingsMutingArgsDict']] muting: muting
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         """
         ...
@@ -228,9 +228,9 @@ class AlertsSettings(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 alerts: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AlertsSettingsAlertArgs']]]]] = None,
-                 default_destinations: Optional[pulumi.Input[pulumi.InputType['AlertsSettingsDefaultDestinationsArgs']]] = None,
-                 muting: Optional[pulumi.Input[pulumi.InputType['AlertsSettingsMutingArgs']]] = None,
+                 alerts: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AlertsSettingsAlertArgs', 'AlertsSettingsAlertArgsDict']]]]] = None,
+                 default_destinations: Optional[pulumi.Input[Union['AlertsSettingsDefaultDestinationsArgs', 'AlertsSettingsDefaultDestinationsArgsDict']]] = None,
+                 muting: Optional[pulumi.Input[Union['AlertsSettingsMutingArgs', 'AlertsSettingsMutingArgsDict']]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -258,10 +258,10 @@ class AlertsSettings(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            alerts: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AlertsSettingsAlertArgs']]]]] = None,
-            alerts_responses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AlertsSettingsAlertsResponseArgs']]]]] = None,
-            default_destinations: Optional[pulumi.Input[pulumi.InputType['AlertsSettingsDefaultDestinationsArgs']]] = None,
-            muting: Optional[pulumi.Input[pulumi.InputType['AlertsSettingsMutingArgs']]] = None,
+            alerts: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AlertsSettingsAlertArgs', 'AlertsSettingsAlertArgsDict']]]]] = None,
+            alerts_responses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AlertsSettingsAlertsResponseArgs', 'AlertsSettingsAlertsResponseArgsDict']]]]] = None,
+            default_destinations: Optional[pulumi.Input[Union['AlertsSettingsDefaultDestinationsArgs', 'AlertsSettingsDefaultDestinationsArgsDict']]] = None,
+            muting: Optional[pulumi.Input[Union['AlertsSettingsMutingArgs', 'AlertsSettingsMutingArgsDict']]] = None,
             network_id: Optional[pulumi.Input[str]] = None) -> 'AlertsSettings':
         """
         Get an existing AlertsSettings resource's state with the given name, id, and optional extra
@@ -270,10 +270,10 @@ class AlertsSettings(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AlertsSettingsAlertArgs']]]] alerts: Alert-specific configuration for each type. Only alerts that pertain to the network can be updated.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AlertsSettingsAlertsResponseArgs']]]] alerts_responses: Alert-specific configuration for each type. Only alerts that pertain to the network can be updated.
-        :param pulumi.Input[pulumi.InputType['AlertsSettingsDefaultDestinationsArgs']] default_destinations: The network-wide destinations for all alerts on the network.
-        :param pulumi.Input[pulumi.InputType['AlertsSettingsMutingArgs']] muting: muting
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AlertsSettingsAlertArgs', 'AlertsSettingsAlertArgsDict']]]] alerts: Alert-specific configuration for each type. Only alerts that pertain to the network can be updated.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AlertsSettingsAlertsResponseArgs', 'AlertsSettingsAlertsResponseArgsDict']]]] alerts_responses: Alert-specific configuration for each type. Only alerts that pertain to the network can be updated.
+        :param pulumi.Input[Union['AlertsSettingsDefaultDestinationsArgs', 'AlertsSettingsDefaultDestinationsArgsDict']] default_destinations: The network-wide destinations for all alerts on the network.
+        :param pulumi.Input[Union['AlertsSettingsMutingArgs', 'AlertsSettingsMutingArgsDict']] muting: muting
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

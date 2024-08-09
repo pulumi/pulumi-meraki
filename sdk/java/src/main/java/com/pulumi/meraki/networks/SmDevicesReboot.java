@@ -108,7 +108,7 @@ public class SmDevicesReboot extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SmDevicesReboot(String name) {
+    public SmDevicesReboot(java.lang.String name) {
         this(name, SmDevicesRebootArgs.Empty);
     }
     /**
@@ -116,7 +116,7 @@ public class SmDevicesReboot extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SmDevicesReboot(String name, SmDevicesRebootArgs args) {
+    public SmDevicesReboot(java.lang.String name, SmDevicesRebootArgs args) {
         this(name, args, null);
     }
     /**
@@ -125,12 +125,12 @@ public class SmDevicesReboot extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SmDevicesReboot(String name, SmDevicesRebootArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/smDevicesReboot:SmDevicesReboot", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public SmDevicesReboot(java.lang.String name, SmDevicesRebootArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/smDevicesReboot:SmDevicesReboot", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SmDevicesReboot(String name, Output<String> id, @Nullable SmDevicesRebootState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/smDevicesReboot:SmDevicesReboot", name, state, makeResourceOptions(options, id));
+    private SmDevicesReboot(java.lang.String name, Output<java.lang.String> id, @Nullable SmDevicesRebootState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/smDevicesReboot:SmDevicesReboot", name, state, makeResourceOptions(options, id), false);
     }
 
     private static SmDevicesRebootArgs makeArgs(SmDevicesRebootArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -140,7 +140,7 @@ public class SmDevicesReboot extends com.pulumi.resources.CustomResource {
         return args == null ? SmDevicesRebootArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -156,7 +156,7 @@ public class SmDevicesReboot extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SmDevicesReboot get(String name, Output<String> id, @Nullable SmDevicesRebootState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SmDevicesReboot get(java.lang.String name, Output<java.lang.String> id, @Nullable SmDevicesRebootState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SmDevicesReboot(name, id, state, options);
     }
 }

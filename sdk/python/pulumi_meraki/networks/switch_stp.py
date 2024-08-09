@@ -147,7 +147,7 @@ class SwitchStp(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
                  rstp_enabled: Optional[pulumi.Input[bool]] = None,
-                 stp_bridge_priorities: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchStpStpBridgePriorityArgs']]]]] = None,
+                 stp_bridge_priorities: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchStpStpBridgePriorityArgs', 'SwitchStpStpBridgePriorityArgsDict']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -162,7 +162,7 @@ class SwitchStp(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[bool] rstp_enabled: The spanning tree protocol status in network
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchStpStpBridgePriorityArgs']]]] stp_bridge_priorities: STP bridge priority for switches/stacks or switch templates. An empty array will clear the STP bridge priority settings.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchStpStpBridgePriorityArgs', 'SwitchStpStpBridgePriorityArgsDict']]]] stp_bridge_priorities: STP bridge priority for switches/stacks or switch templates. An empty array will clear the STP bridge priority settings.
         """
         ...
     @overload
@@ -196,7 +196,7 @@ class SwitchStp(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
                  rstp_enabled: Optional[pulumi.Input[bool]] = None,
-                 stp_bridge_priorities: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchStpStpBridgePriorityArgs']]]]] = None,
+                 stp_bridge_priorities: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchStpStpBridgePriorityArgs', 'SwitchStpStpBridgePriorityArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -224,8 +224,8 @@ class SwitchStp(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             network_id: Optional[pulumi.Input[str]] = None,
             rstp_enabled: Optional[pulumi.Input[bool]] = None,
-            stp_bridge_priorities: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchStpStpBridgePriorityArgs']]]]] = None,
-            stp_bridge_priority_responses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchStpStpBridgePriorityResponseArgs']]]]] = None) -> 'SwitchStp':
+            stp_bridge_priorities: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchStpStpBridgePriorityArgs', 'SwitchStpStpBridgePriorityArgsDict']]]]] = None,
+            stp_bridge_priority_responses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchStpStpBridgePriorityResponseArgs', 'SwitchStpStpBridgePriorityResponseArgsDict']]]]] = None) -> 'SwitchStp':
         """
         Get an existing SwitchStp resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -235,8 +235,8 @@ class SwitchStp(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[bool] rstp_enabled: The spanning tree protocol status in network
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchStpStpBridgePriorityArgs']]]] stp_bridge_priorities: STP bridge priority for switches/stacks or switch templates. An empty array will clear the STP bridge priority settings.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchStpStpBridgePriorityResponseArgs']]]] stp_bridge_priority_responses: STP bridge priority for switches/stacks or switch templates. An empty array will clear the STP bridge priority settings.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchStpStpBridgePriorityArgs', 'SwitchStpStpBridgePriorityArgsDict']]]] stp_bridge_priorities: STP bridge priority for switches/stacks or switch templates. An empty array will clear the STP bridge priority settings.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchStpStpBridgePriorityResponseArgs', 'SwitchStpStpBridgePriorityResponseArgsDict']]]] stp_bridge_priority_responses: STP bridge priority for switches/stacks or switch templates. An empty array will clear the STP bridge priority settings.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

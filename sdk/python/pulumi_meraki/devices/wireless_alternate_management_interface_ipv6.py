@@ -100,7 +100,7 @@ class WirelessAlternateManagementInterfaceIpv6(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 parameters: Optional[pulumi.Input[pulumi.InputType['WirelessAlternateManagementInterfaceIpv6ParametersArgs']]] = None,
+                 parameters: Optional[pulumi.Input[Union['WirelessAlternateManagementInterfaceIpv6ParametersArgs', 'WirelessAlternateManagementInterfaceIpv6ParametersArgsDict']]] = None,
                  serial: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
@@ -115,21 +115,21 @@ class WirelessAlternateManagementInterfaceIpv6(pulumi.CustomResource):
 
         example = meraki.devices.WirelessAlternateManagementInterfaceIpv6("example",
             serial="string",
-            parameters=meraki.devices.WirelessAlternateManagementInterfaceIpv6ParametersArgs(
-                addresses=[meraki.devices.WirelessAlternateManagementInterfaceIpv6ParametersAddressArgs(
-                    address="2001:db8:3c4d:15::1",
-                    assignment_mode="static",
-                    gateway="fe80:db8:c15:c0:d0c::10ca:1d02",
-                    nameservers=meraki.devices.WirelessAlternateManagementInterfaceIpv6ParametersAddressNameserversArgs(
-                        addresses=[
+            parameters={
+                "addresses": [{
+                    "address": "2001:db8:3c4d:15::1",
+                    "assignment_mode": "static",
+                    "gateway": "fe80:db8:c15:c0:d0c::10ca:1d02",
+                    "nameservers": {
+                        "addresses": [
                             "2001:db8:3c4d:15::1",
                             "2001:db8:3c4d:15::1",
                         ],
-                    ),
-                    prefix="2001:db8:3c4d:15::/64",
-                    protocol="ipv6",
-                )],
-            ))
+                    },
+                    "prefix": "2001:db8:3c4d:15::/64",
+                    "protocol": "ipv6",
+                }],
+            })
         pulumi.export("merakiDevicesWirelessAlternateManagementInterfaceIpv6Example", example)
         ```
 
@@ -155,21 +155,21 @@ class WirelessAlternateManagementInterfaceIpv6(pulumi.CustomResource):
 
         example = meraki.devices.WirelessAlternateManagementInterfaceIpv6("example",
             serial="string",
-            parameters=meraki.devices.WirelessAlternateManagementInterfaceIpv6ParametersArgs(
-                addresses=[meraki.devices.WirelessAlternateManagementInterfaceIpv6ParametersAddressArgs(
-                    address="2001:db8:3c4d:15::1",
-                    assignment_mode="static",
-                    gateway="fe80:db8:c15:c0:d0c::10ca:1d02",
-                    nameservers=meraki.devices.WirelessAlternateManagementInterfaceIpv6ParametersAddressNameserversArgs(
-                        addresses=[
+            parameters={
+                "addresses": [{
+                    "address": "2001:db8:3c4d:15::1",
+                    "assignment_mode": "static",
+                    "gateway": "fe80:db8:c15:c0:d0c::10ca:1d02",
+                    "nameservers": {
+                        "addresses": [
                             "2001:db8:3c4d:15::1",
                             "2001:db8:3c4d:15::1",
                         ],
-                    ),
-                    prefix="2001:db8:3c4d:15::/64",
-                    protocol="ipv6",
-                )],
-            ))
+                    },
+                    "prefix": "2001:db8:3c4d:15::/64",
+                    "protocol": "ipv6",
+                }],
+            })
         pulumi.export("merakiDevicesWirelessAlternateManagementInterfaceIpv6Example", example)
         ```
 
@@ -188,7 +188,7 @@ class WirelessAlternateManagementInterfaceIpv6(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 parameters: Optional[pulumi.Input[pulumi.InputType['WirelessAlternateManagementInterfaceIpv6ParametersArgs']]] = None,
+                 parameters: Optional[pulumi.Input[Union['WirelessAlternateManagementInterfaceIpv6ParametersArgs', 'WirelessAlternateManagementInterfaceIpv6ParametersArgsDict']]] = None,
                  serial: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -216,8 +216,8 @@ class WirelessAlternateManagementInterfaceIpv6(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            item: Optional[pulumi.Input[pulumi.InputType['WirelessAlternateManagementInterfaceIpv6ItemArgs']]] = None,
-            parameters: Optional[pulumi.Input[pulumi.InputType['WirelessAlternateManagementInterfaceIpv6ParametersArgs']]] = None,
+            item: Optional[pulumi.Input[Union['WirelessAlternateManagementInterfaceIpv6ItemArgs', 'WirelessAlternateManagementInterfaceIpv6ItemArgsDict']]] = None,
+            parameters: Optional[pulumi.Input[Union['WirelessAlternateManagementInterfaceIpv6ParametersArgs', 'WirelessAlternateManagementInterfaceIpv6ParametersArgsDict']]] = None,
             serial: Optional[pulumi.Input[str]] = None) -> 'WirelessAlternateManagementInterfaceIpv6':
         """
         Get an existing WirelessAlternateManagementInterfaceIpv6 resource's state with the given name, id, and optional extra

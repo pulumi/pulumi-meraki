@@ -269,11 +269,11 @@ class BrandingPolicies(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 admin_settings: Optional[pulumi.Input[pulumi.InputType['BrandingPoliciesAdminSettingsArgs']]] = None,
+                 admin_settings: Optional[pulumi.Input[Union['BrandingPoliciesAdminSettingsArgs', 'BrandingPoliciesAdminSettingsArgsDict']]] = None,
                  branding_policy_id: Optional[pulumi.Input[str]] = None,
-                 custom_logo: Optional[pulumi.Input[pulumi.InputType['BrandingPoliciesCustomLogoArgs']]] = None,
+                 custom_logo: Optional[pulumi.Input[Union['BrandingPoliciesCustomLogoArgs', 'BrandingPoliciesCustomLogoArgsDict']]] = None,
                  enabled: Optional[pulumi.Input[bool]] = None,
-                 help_settings: Optional[pulumi.Input[pulumi.InputType['BrandingPoliciesHelpSettingsArgs']]] = None,
+                 help_settings: Optional[pulumi.Input[Union['BrandingPoliciesHelpSettingsArgs', 'BrandingPoliciesHelpSettingsArgsDict']]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  organization_id: Optional[pulumi.Input[str]] = None,
                  __props__=None):
@@ -288,11 +288,11 @@ class BrandingPolicies(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['BrandingPoliciesAdminSettingsArgs']] admin_settings: Settings for describing which kinds of admins this policy applies to.
+        :param pulumi.Input[Union['BrandingPoliciesAdminSettingsArgs', 'BrandingPoliciesAdminSettingsArgsDict']] admin_settings: Settings for describing which kinds of admins this policy applies to.
         :param pulumi.Input[str] branding_policy_id: brandingPolicyId path parameter. Branding policy ID
-        :param pulumi.Input[pulumi.InputType['BrandingPoliciesCustomLogoArgs']] custom_logo: Properties describing the custom logo attached to the branding policy.
+        :param pulumi.Input[Union['BrandingPoliciesCustomLogoArgs', 'BrandingPoliciesCustomLogoArgsDict']] custom_logo: Properties describing the custom logo attached to the branding policy.
         :param pulumi.Input[bool] enabled: Boolean indicating whether this policy is enabled.
-        :param pulumi.Input[pulumi.InputType['BrandingPoliciesHelpSettingsArgs']] help_settings: Settings for describing the modifications to various Help page features. Each property in this object accepts one of
+        :param pulumi.Input[Union['BrandingPoliciesHelpSettingsArgs', 'BrandingPoliciesHelpSettingsArgsDict']] help_settings: Settings for describing the modifications to various Help page features. Each property in this object accepts one of
                  'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
                  the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
                  Dashboard; see the documentation for each property to see the allowed values.
@@ -329,11 +329,11 @@ class BrandingPolicies(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 admin_settings: Optional[pulumi.Input[pulumi.InputType['BrandingPoliciesAdminSettingsArgs']]] = None,
+                 admin_settings: Optional[pulumi.Input[Union['BrandingPoliciesAdminSettingsArgs', 'BrandingPoliciesAdminSettingsArgsDict']]] = None,
                  branding_policy_id: Optional[pulumi.Input[str]] = None,
-                 custom_logo: Optional[pulumi.Input[pulumi.InputType['BrandingPoliciesCustomLogoArgs']]] = None,
+                 custom_logo: Optional[pulumi.Input[Union['BrandingPoliciesCustomLogoArgs', 'BrandingPoliciesCustomLogoArgsDict']]] = None,
                  enabled: Optional[pulumi.Input[bool]] = None,
-                 help_settings: Optional[pulumi.Input[pulumi.InputType['BrandingPoliciesHelpSettingsArgs']]] = None,
+                 help_settings: Optional[pulumi.Input[Union['BrandingPoliciesHelpSettingsArgs', 'BrandingPoliciesHelpSettingsArgsDict']]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  organization_id: Optional[pulumi.Input[str]] = None,
                  __props__=None):
@@ -364,11 +364,11 @@ class BrandingPolicies(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            admin_settings: Optional[pulumi.Input[pulumi.InputType['BrandingPoliciesAdminSettingsArgs']]] = None,
+            admin_settings: Optional[pulumi.Input[Union['BrandingPoliciesAdminSettingsArgs', 'BrandingPoliciesAdminSettingsArgsDict']]] = None,
             branding_policy_id: Optional[pulumi.Input[str]] = None,
-            custom_logo: Optional[pulumi.Input[pulumi.InputType['BrandingPoliciesCustomLogoArgs']]] = None,
+            custom_logo: Optional[pulumi.Input[Union['BrandingPoliciesCustomLogoArgs', 'BrandingPoliciesCustomLogoArgsDict']]] = None,
             enabled: Optional[pulumi.Input[bool]] = None,
-            help_settings: Optional[pulumi.Input[pulumi.InputType['BrandingPoliciesHelpSettingsArgs']]] = None,
+            help_settings: Optional[pulumi.Input[Union['BrandingPoliciesHelpSettingsArgs', 'BrandingPoliciesHelpSettingsArgsDict']]] = None,
             name: Optional[pulumi.Input[str]] = None,
             organization_id: Optional[pulumi.Input[str]] = None) -> 'BrandingPolicies':
         """
@@ -378,11 +378,11 @@ class BrandingPolicies(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['BrandingPoliciesAdminSettingsArgs']] admin_settings: Settings for describing which kinds of admins this policy applies to.
+        :param pulumi.Input[Union['BrandingPoliciesAdminSettingsArgs', 'BrandingPoliciesAdminSettingsArgsDict']] admin_settings: Settings for describing which kinds of admins this policy applies to.
         :param pulumi.Input[str] branding_policy_id: brandingPolicyId path parameter. Branding policy ID
-        :param pulumi.Input[pulumi.InputType['BrandingPoliciesCustomLogoArgs']] custom_logo: Properties describing the custom logo attached to the branding policy.
+        :param pulumi.Input[Union['BrandingPoliciesCustomLogoArgs', 'BrandingPoliciesCustomLogoArgsDict']] custom_logo: Properties describing the custom logo attached to the branding policy.
         :param pulumi.Input[bool] enabled: Boolean indicating whether this policy is enabled.
-        :param pulumi.Input[pulumi.InputType['BrandingPoliciesHelpSettingsArgs']] help_settings: Settings for describing the modifications to various Help page features. Each property in this object accepts one of
+        :param pulumi.Input[Union['BrandingPoliciesHelpSettingsArgs', 'BrandingPoliciesHelpSettingsArgsDict']] help_settings: Settings for describing the modifications to various Help page features. Each property in this object accepts one of
                  'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
                  the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
                  Dashboard; see the documentation for each property to see the allowed values.

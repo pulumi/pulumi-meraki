@@ -189,7 +189,7 @@ public class ApplianceTrafficShapingUplinkSelection extends com.pulumi.resources
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public ApplianceTrafficShapingUplinkSelection(String name) {
+    public ApplianceTrafficShapingUplinkSelection(java.lang.String name) {
         this(name, ApplianceTrafficShapingUplinkSelectionArgs.Empty);
     }
     /**
@@ -197,7 +197,7 @@ public class ApplianceTrafficShapingUplinkSelection extends com.pulumi.resources
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ApplianceTrafficShapingUplinkSelection(String name, ApplianceTrafficShapingUplinkSelectionArgs args) {
+    public ApplianceTrafficShapingUplinkSelection(java.lang.String name, ApplianceTrafficShapingUplinkSelectionArgs args) {
         this(name, args, null);
     }
     /**
@@ -206,12 +206,12 @@ public class ApplianceTrafficShapingUplinkSelection extends com.pulumi.resources
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ApplianceTrafficShapingUplinkSelection(String name, ApplianceTrafficShapingUplinkSelectionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/applianceTrafficShapingUplinkSelection:ApplianceTrafficShapingUplinkSelection", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public ApplianceTrafficShapingUplinkSelection(java.lang.String name, ApplianceTrafficShapingUplinkSelectionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/applianceTrafficShapingUplinkSelection:ApplianceTrafficShapingUplinkSelection", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private ApplianceTrafficShapingUplinkSelection(String name, Output<String> id, @Nullable ApplianceTrafficShapingUplinkSelectionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/applianceTrafficShapingUplinkSelection:ApplianceTrafficShapingUplinkSelection", name, state, makeResourceOptions(options, id));
+    private ApplianceTrafficShapingUplinkSelection(java.lang.String name, Output<java.lang.String> id, @Nullable ApplianceTrafficShapingUplinkSelectionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/applianceTrafficShapingUplinkSelection:ApplianceTrafficShapingUplinkSelection", name, state, makeResourceOptions(options, id), false);
     }
 
     private static ApplianceTrafficShapingUplinkSelectionArgs makeArgs(ApplianceTrafficShapingUplinkSelectionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -221,7 +221,7 @@ public class ApplianceTrafficShapingUplinkSelection extends com.pulumi.resources
         return args == null ? ApplianceTrafficShapingUplinkSelectionArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -237,7 +237,7 @@ public class ApplianceTrafficShapingUplinkSelection extends com.pulumi.resources
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ApplianceTrafficShapingUplinkSelection get(String name, Output<String> id, @Nullable ApplianceTrafficShapingUplinkSelectionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ApplianceTrafficShapingUplinkSelection get(java.lang.String name, Output<java.lang.String> id, @Nullable ApplianceTrafficShapingUplinkSelectionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new ApplianceTrafficShapingUplinkSelection(name, id, state, options);
     }
 }

@@ -257,7 +257,7 @@ class LiveToolsWakeOnLan(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 callback: Optional[pulumi.Input[pulumi.InputType['LiveToolsWakeOnLanCallbackArgs']]] = None,
+                 callback: Optional[pulumi.Input[Union['LiveToolsWakeOnLanCallbackArgs', 'LiveToolsWakeOnLanCallbackArgsDict']]] = None,
                  mac: Optional[pulumi.Input[str]] = None,
                  serial: Optional[pulumi.Input[str]] = None,
                  vlan_id: Optional[pulumi.Input[int]] = None,
@@ -274,7 +274,7 @@ class LiveToolsWakeOnLan(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['LiveToolsWakeOnLanCallbackArgs']] callback: Details for the callback. Please include either an httpServerId OR url and sharedSecret
+        :param pulumi.Input[Union['LiveToolsWakeOnLanCallbackArgs', 'LiveToolsWakeOnLanCallbackArgsDict']] callback: Details for the callback. Please include either an httpServerId OR url and sharedSecret
         :param pulumi.Input[str] mac: The target's MAC address
         :param pulumi.Input[str] serial: serial path parameter.
         :param pulumi.Input[int] vlan_id: The target's VLAN (1 to 4094)
@@ -310,7 +310,7 @@ class LiveToolsWakeOnLan(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 callback: Optional[pulumi.Input[pulumi.InputType['LiveToolsWakeOnLanCallbackArgs']]] = None,
+                 callback: Optional[pulumi.Input[Union['LiveToolsWakeOnLanCallbackArgs', 'LiveToolsWakeOnLanCallbackArgsDict']]] = None,
                  mac: Optional[pulumi.Input[str]] = None,
                  serial: Optional[pulumi.Input[str]] = None,
                  vlan_id: Optional[pulumi.Input[int]] = None,
@@ -345,10 +345,10 @@ class LiveToolsWakeOnLan(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            callback: Optional[pulumi.Input[pulumi.InputType['LiveToolsWakeOnLanCallbackArgs']]] = None,
+            callback: Optional[pulumi.Input[Union['LiveToolsWakeOnLanCallbackArgs', 'LiveToolsWakeOnLanCallbackArgsDict']]] = None,
             error: Optional[pulumi.Input[str]] = None,
             mac: Optional[pulumi.Input[str]] = None,
-            request: Optional[pulumi.Input[pulumi.InputType['LiveToolsWakeOnLanRequestArgs']]] = None,
+            request: Optional[pulumi.Input[Union['LiveToolsWakeOnLanRequestArgs', 'LiveToolsWakeOnLanRequestArgsDict']]] = None,
             serial: Optional[pulumi.Input[str]] = None,
             status: Optional[pulumi.Input[str]] = None,
             url: Optional[pulumi.Input[str]] = None,
@@ -361,10 +361,10 @@ class LiveToolsWakeOnLan(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['LiveToolsWakeOnLanCallbackArgs']] callback: Details for the callback. Please include either an httpServerId OR url and sharedSecret
+        :param pulumi.Input[Union['LiveToolsWakeOnLanCallbackArgs', 'LiveToolsWakeOnLanCallbackArgsDict']] callback: Details for the callback. Please include either an httpServerId OR url and sharedSecret
         :param pulumi.Input[str] error: An error message for a failed execution
         :param pulumi.Input[str] mac: The target's MAC address
-        :param pulumi.Input[pulumi.InputType['LiveToolsWakeOnLanRequestArgs']] request: The parameters of the Wake-on-LAN request
+        :param pulumi.Input[Union['LiveToolsWakeOnLanRequestArgs', 'LiveToolsWakeOnLanRequestArgsDict']] request: The parameters of the Wake-on-LAN request
         :param pulumi.Input[str] serial: serial path parameter.
         :param pulumi.Input[str] status: Status of the Wake-on-LAN request
         :param pulumi.Input[str] url: GET this url to check the status of your ping request

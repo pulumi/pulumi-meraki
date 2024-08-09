@@ -111,7 +111,7 @@ public class ApplianceTrafficShapingUplinkBandwidth extends com.pulumi.resources
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public ApplianceTrafficShapingUplinkBandwidth(String name) {
+    public ApplianceTrafficShapingUplinkBandwidth(java.lang.String name) {
         this(name, ApplianceTrafficShapingUplinkBandwidthArgs.Empty);
     }
     /**
@@ -119,7 +119,7 @@ public class ApplianceTrafficShapingUplinkBandwidth extends com.pulumi.resources
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ApplianceTrafficShapingUplinkBandwidth(String name, ApplianceTrafficShapingUplinkBandwidthArgs args) {
+    public ApplianceTrafficShapingUplinkBandwidth(java.lang.String name, ApplianceTrafficShapingUplinkBandwidthArgs args) {
         this(name, args, null);
     }
     /**
@@ -128,12 +128,12 @@ public class ApplianceTrafficShapingUplinkBandwidth extends com.pulumi.resources
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ApplianceTrafficShapingUplinkBandwidth(String name, ApplianceTrafficShapingUplinkBandwidthArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/applianceTrafficShapingUplinkBandwidth:ApplianceTrafficShapingUplinkBandwidth", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public ApplianceTrafficShapingUplinkBandwidth(java.lang.String name, ApplianceTrafficShapingUplinkBandwidthArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/applianceTrafficShapingUplinkBandwidth:ApplianceTrafficShapingUplinkBandwidth", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private ApplianceTrafficShapingUplinkBandwidth(String name, Output<String> id, @Nullable ApplianceTrafficShapingUplinkBandwidthState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/applianceTrafficShapingUplinkBandwidth:ApplianceTrafficShapingUplinkBandwidth", name, state, makeResourceOptions(options, id));
+    private ApplianceTrafficShapingUplinkBandwidth(java.lang.String name, Output<java.lang.String> id, @Nullable ApplianceTrafficShapingUplinkBandwidthState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/applianceTrafficShapingUplinkBandwidth:ApplianceTrafficShapingUplinkBandwidth", name, state, makeResourceOptions(options, id), false);
     }
 
     private static ApplianceTrafficShapingUplinkBandwidthArgs makeArgs(ApplianceTrafficShapingUplinkBandwidthArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -143,7 +143,7 @@ public class ApplianceTrafficShapingUplinkBandwidth extends com.pulumi.resources
         return args == null ? ApplianceTrafficShapingUplinkBandwidthArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -159,7 +159,7 @@ public class ApplianceTrafficShapingUplinkBandwidth extends com.pulumi.resources
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ApplianceTrafficShapingUplinkBandwidth get(String name, Output<String> id, @Nullable ApplianceTrafficShapingUplinkBandwidthState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ApplianceTrafficShapingUplinkBandwidth get(java.lang.String name, Output<java.lang.String> id, @Nullable ApplianceTrafficShapingUplinkBandwidthState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new ApplianceTrafficShapingUplinkBandwidth(name, id, state, options);
     }
 }

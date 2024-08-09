@@ -100,7 +100,7 @@ public class CellularGatewayConnectivityMonitoringDestinations extends com.pulum
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public CellularGatewayConnectivityMonitoringDestinations(String name) {
+    public CellularGatewayConnectivityMonitoringDestinations(java.lang.String name) {
         this(name, CellularGatewayConnectivityMonitoringDestinationsArgs.Empty);
     }
     /**
@@ -108,7 +108,7 @@ public class CellularGatewayConnectivityMonitoringDestinations extends com.pulum
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public CellularGatewayConnectivityMonitoringDestinations(String name, CellularGatewayConnectivityMonitoringDestinationsArgs args) {
+    public CellularGatewayConnectivityMonitoringDestinations(java.lang.String name, CellularGatewayConnectivityMonitoringDestinationsArgs args) {
         this(name, args, null);
     }
     /**
@@ -117,12 +117,12 @@ public class CellularGatewayConnectivityMonitoringDestinations extends com.pulum
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CellularGatewayConnectivityMonitoringDestinations(String name, CellularGatewayConnectivityMonitoringDestinationsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/cellularGatewayConnectivityMonitoringDestinations:CellularGatewayConnectivityMonitoringDestinations", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public CellularGatewayConnectivityMonitoringDestinations(java.lang.String name, CellularGatewayConnectivityMonitoringDestinationsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/cellularGatewayConnectivityMonitoringDestinations:CellularGatewayConnectivityMonitoringDestinations", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private CellularGatewayConnectivityMonitoringDestinations(String name, Output<String> id, @Nullable CellularGatewayConnectivityMonitoringDestinationsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/cellularGatewayConnectivityMonitoringDestinations:CellularGatewayConnectivityMonitoringDestinations", name, state, makeResourceOptions(options, id));
+    private CellularGatewayConnectivityMonitoringDestinations(java.lang.String name, Output<java.lang.String> id, @Nullable CellularGatewayConnectivityMonitoringDestinationsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/cellularGatewayConnectivityMonitoringDestinations:CellularGatewayConnectivityMonitoringDestinations", name, state, makeResourceOptions(options, id), false);
     }
 
     private static CellularGatewayConnectivityMonitoringDestinationsArgs makeArgs(CellularGatewayConnectivityMonitoringDestinationsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -132,7 +132,7 @@ public class CellularGatewayConnectivityMonitoringDestinations extends com.pulum
         return args == null ? CellularGatewayConnectivityMonitoringDestinationsArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -148,7 +148,7 @@ public class CellularGatewayConnectivityMonitoringDestinations extends com.pulum
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CellularGatewayConnectivityMonitoringDestinations get(String name, Output<String> id, @Nullable CellularGatewayConnectivityMonitoringDestinationsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static CellularGatewayConnectivityMonitoringDestinations get(java.lang.String name, Output<java.lang.String> id, @Nullable CellularGatewayConnectivityMonitoringDestinationsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new CellularGatewayConnectivityMonitoringDestinations(name, id, state, options);
     }
 }

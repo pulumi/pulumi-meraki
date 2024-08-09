@@ -99,7 +99,7 @@ public class FirmwareUpgradesRollbacks extends com.pulumi.resources.CustomResour
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public FirmwareUpgradesRollbacks(String name) {
+    public FirmwareUpgradesRollbacks(java.lang.String name) {
         this(name, FirmwareUpgradesRollbacksArgs.Empty);
     }
     /**
@@ -107,7 +107,7 @@ public class FirmwareUpgradesRollbacks extends com.pulumi.resources.CustomResour
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public FirmwareUpgradesRollbacks(String name, FirmwareUpgradesRollbacksArgs args) {
+    public FirmwareUpgradesRollbacks(java.lang.String name, FirmwareUpgradesRollbacksArgs args) {
         this(name, args, null);
     }
     /**
@@ -116,12 +116,12 @@ public class FirmwareUpgradesRollbacks extends com.pulumi.resources.CustomResour
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public FirmwareUpgradesRollbacks(String name, FirmwareUpgradesRollbacksArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/firmwareUpgradesRollbacks:FirmwareUpgradesRollbacks", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public FirmwareUpgradesRollbacks(java.lang.String name, FirmwareUpgradesRollbacksArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/firmwareUpgradesRollbacks:FirmwareUpgradesRollbacks", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private FirmwareUpgradesRollbacks(String name, Output<String> id, @Nullable FirmwareUpgradesRollbacksState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/firmwareUpgradesRollbacks:FirmwareUpgradesRollbacks", name, state, makeResourceOptions(options, id));
+    private FirmwareUpgradesRollbacks(java.lang.String name, Output<java.lang.String> id, @Nullable FirmwareUpgradesRollbacksState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/firmwareUpgradesRollbacks:FirmwareUpgradesRollbacks", name, state, makeResourceOptions(options, id), false);
     }
 
     private static FirmwareUpgradesRollbacksArgs makeArgs(FirmwareUpgradesRollbacksArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -131,7 +131,7 @@ public class FirmwareUpgradesRollbacks extends com.pulumi.resources.CustomResour
         return args == null ? FirmwareUpgradesRollbacksArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -147,7 +147,7 @@ public class FirmwareUpgradesRollbacks extends com.pulumi.resources.CustomResour
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FirmwareUpgradesRollbacks get(String name, Output<String> id, @Nullable FirmwareUpgradesRollbacksState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static FirmwareUpgradesRollbacks get(java.lang.String name, Output<java.lang.String> id, @Nullable FirmwareUpgradesRollbacksState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new FirmwareUpgradesRollbacks(name, id, state, options);
     }
 }

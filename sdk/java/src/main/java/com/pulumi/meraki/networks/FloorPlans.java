@@ -265,7 +265,7 @@ public class FloorPlans extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public FloorPlans(String name) {
+    public FloorPlans(java.lang.String name) {
         this(name, FloorPlansArgs.Empty);
     }
     /**
@@ -273,7 +273,7 @@ public class FloorPlans extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public FloorPlans(String name, FloorPlansArgs args) {
+    public FloorPlans(java.lang.String name, FloorPlansArgs args) {
         this(name, args, null);
     }
     /**
@@ -282,12 +282,12 @@ public class FloorPlans extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public FloorPlans(String name, FloorPlansArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/floorPlans:FloorPlans", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public FloorPlans(java.lang.String name, FloorPlansArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/floorPlans:FloorPlans", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private FloorPlans(String name, Output<String> id, @Nullable FloorPlansState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/floorPlans:FloorPlans", name, state, makeResourceOptions(options, id));
+    private FloorPlans(java.lang.String name, Output<java.lang.String> id, @Nullable FloorPlansState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/floorPlans:FloorPlans", name, state, makeResourceOptions(options, id), false);
     }
 
     private static FloorPlansArgs makeArgs(FloorPlansArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -297,7 +297,7 @@ public class FloorPlans extends com.pulumi.resources.CustomResource {
         return args == null ? FloorPlansArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -313,7 +313,7 @@ public class FloorPlans extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FloorPlans get(String name, Output<String> id, @Nullable FloorPlansState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static FloorPlans get(java.lang.String name, Output<java.lang.String> id, @Nullable FloorPlansState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new FloorPlans(name, id, state, options);
     }
 }

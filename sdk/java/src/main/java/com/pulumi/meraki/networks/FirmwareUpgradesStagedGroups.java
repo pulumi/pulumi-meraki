@@ -161,7 +161,7 @@ public class FirmwareUpgradesStagedGroups extends com.pulumi.resources.CustomRes
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public FirmwareUpgradesStagedGroups(String name) {
+    public FirmwareUpgradesStagedGroups(java.lang.String name) {
         this(name, FirmwareUpgradesStagedGroupsArgs.Empty);
     }
     /**
@@ -169,7 +169,7 @@ public class FirmwareUpgradesStagedGroups extends com.pulumi.resources.CustomRes
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public FirmwareUpgradesStagedGroups(String name, FirmwareUpgradesStagedGroupsArgs args) {
+    public FirmwareUpgradesStagedGroups(java.lang.String name, FirmwareUpgradesStagedGroupsArgs args) {
         this(name, args, null);
     }
     /**
@@ -178,12 +178,12 @@ public class FirmwareUpgradesStagedGroups extends com.pulumi.resources.CustomRes
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public FirmwareUpgradesStagedGroups(String name, FirmwareUpgradesStagedGroupsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/firmwareUpgradesStagedGroups:FirmwareUpgradesStagedGroups", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public FirmwareUpgradesStagedGroups(java.lang.String name, FirmwareUpgradesStagedGroupsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/firmwareUpgradesStagedGroups:FirmwareUpgradesStagedGroups", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private FirmwareUpgradesStagedGroups(String name, Output<String> id, @Nullable FirmwareUpgradesStagedGroupsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/firmwareUpgradesStagedGroups:FirmwareUpgradesStagedGroups", name, state, makeResourceOptions(options, id));
+    private FirmwareUpgradesStagedGroups(java.lang.String name, Output<java.lang.String> id, @Nullable FirmwareUpgradesStagedGroupsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/firmwareUpgradesStagedGroups:FirmwareUpgradesStagedGroups", name, state, makeResourceOptions(options, id), false);
     }
 
     private static FirmwareUpgradesStagedGroupsArgs makeArgs(FirmwareUpgradesStagedGroupsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -193,7 +193,7 @@ public class FirmwareUpgradesStagedGroups extends com.pulumi.resources.CustomRes
         return args == null ? FirmwareUpgradesStagedGroupsArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -209,7 +209,7 @@ public class FirmwareUpgradesStagedGroups extends com.pulumi.resources.CustomRes
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FirmwareUpgradesStagedGroups get(String name, Output<String> id, @Nullable FirmwareUpgradesStagedGroupsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static FirmwareUpgradesStagedGroups get(java.lang.String name, Output<java.lang.String> id, @Nullable FirmwareUpgradesStagedGroupsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new FirmwareUpgradesStagedGroups(name, id, state, options);
     }
 }

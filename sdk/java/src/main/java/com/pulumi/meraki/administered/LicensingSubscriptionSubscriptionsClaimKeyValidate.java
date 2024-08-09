@@ -77,7 +77,7 @@ public class LicensingSubscriptionSubscriptionsClaimKeyValidate extends com.pulu
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public LicensingSubscriptionSubscriptionsClaimKeyValidate(String name) {
+    public LicensingSubscriptionSubscriptionsClaimKeyValidate(java.lang.String name) {
         this(name, LicensingSubscriptionSubscriptionsClaimKeyValidateArgs.Empty);
     }
     /**
@@ -85,7 +85,7 @@ public class LicensingSubscriptionSubscriptionsClaimKeyValidate extends com.pulu
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public LicensingSubscriptionSubscriptionsClaimKeyValidate(String name, LicensingSubscriptionSubscriptionsClaimKeyValidateArgs args) {
+    public LicensingSubscriptionSubscriptionsClaimKeyValidate(java.lang.String name, LicensingSubscriptionSubscriptionsClaimKeyValidateArgs args) {
         this(name, args, null);
     }
     /**
@@ -94,12 +94,12 @@ public class LicensingSubscriptionSubscriptionsClaimKeyValidate extends com.pulu
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public LicensingSubscriptionSubscriptionsClaimKeyValidate(String name, LicensingSubscriptionSubscriptionsClaimKeyValidateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:administered/licensingSubscriptionSubscriptionsClaimKeyValidate:LicensingSubscriptionSubscriptionsClaimKeyValidate", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public LicensingSubscriptionSubscriptionsClaimKeyValidate(java.lang.String name, LicensingSubscriptionSubscriptionsClaimKeyValidateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:administered/licensingSubscriptionSubscriptionsClaimKeyValidate:LicensingSubscriptionSubscriptionsClaimKeyValidate", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private LicensingSubscriptionSubscriptionsClaimKeyValidate(String name, Output<String> id, @Nullable LicensingSubscriptionSubscriptionsClaimKeyValidateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:administered/licensingSubscriptionSubscriptionsClaimKeyValidate:LicensingSubscriptionSubscriptionsClaimKeyValidate", name, state, makeResourceOptions(options, id));
+    private LicensingSubscriptionSubscriptionsClaimKeyValidate(java.lang.String name, Output<java.lang.String> id, @Nullable LicensingSubscriptionSubscriptionsClaimKeyValidateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:administered/licensingSubscriptionSubscriptionsClaimKeyValidate:LicensingSubscriptionSubscriptionsClaimKeyValidate", name, state, makeResourceOptions(options, id), false);
     }
 
     private static LicensingSubscriptionSubscriptionsClaimKeyValidateArgs makeArgs(LicensingSubscriptionSubscriptionsClaimKeyValidateArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -109,7 +109,7 @@ public class LicensingSubscriptionSubscriptionsClaimKeyValidate extends com.pulu
         return args == null ? LicensingSubscriptionSubscriptionsClaimKeyValidateArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -125,7 +125,7 @@ public class LicensingSubscriptionSubscriptionsClaimKeyValidate extends com.pulu
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LicensingSubscriptionSubscriptionsClaimKeyValidate get(String name, Output<String> id, @Nullable LicensingSubscriptionSubscriptionsClaimKeyValidateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static LicensingSubscriptionSubscriptionsClaimKeyValidate get(java.lang.String name, Output<java.lang.String> id, @Nullable LicensingSubscriptionSubscriptionsClaimKeyValidateState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new LicensingSubscriptionSubscriptionsClaimKeyValidate(name, id, state, options);
     }
 }

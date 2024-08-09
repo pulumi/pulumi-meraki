@@ -130,7 +130,7 @@ class ApplianceVpnVpnFirewallRules(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  organization_id: Optional[pulumi.Input[str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceVpnVpnFirewallRulesRuleArgs']]]]] = None,
+                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVpnVpnFirewallRulesRuleArgs', 'ApplianceVpnVpnFirewallRulesRuleArgsDict']]]]] = None,
                  syslog_default_rule: Optional[pulumi.Input[bool]] = None,
                  __props__=None):
         """
@@ -145,7 +145,7 @@ class ApplianceVpnVpnFirewallRules(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] organization_id: organizationId path parameter. Organization ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceVpnVpnFirewallRulesRuleArgs']]]] rules: An ordered array of the firewall rules (not including the default rule)
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVpnVpnFirewallRulesRuleArgs', 'ApplianceVpnVpnFirewallRulesRuleArgsDict']]]] rules: An ordered array of the firewall rules (not including the default rule)
         :param pulumi.Input[bool] syslog_default_rule: Log the special default rule (boolean value - enable only if you've configured a syslog server) (optional)
         """
         ...
@@ -179,7 +179,7 @@ class ApplianceVpnVpnFirewallRules(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  organization_id: Optional[pulumi.Input[str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceVpnVpnFirewallRulesRuleArgs']]]]] = None,
+                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVpnVpnFirewallRulesRuleArgs', 'ApplianceVpnVpnFirewallRulesRuleArgsDict']]]]] = None,
                  syslog_default_rule: Optional[pulumi.Input[bool]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -206,7 +206,7 @@ class ApplianceVpnVpnFirewallRules(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             organization_id: Optional[pulumi.Input[str]] = None,
-            rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceVpnVpnFirewallRulesRuleArgs']]]]] = None,
+            rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVpnVpnFirewallRulesRuleArgs', 'ApplianceVpnVpnFirewallRulesRuleArgsDict']]]]] = None,
             syslog_default_rule: Optional[pulumi.Input[bool]] = None) -> 'ApplianceVpnVpnFirewallRules':
         """
         Get an existing ApplianceVpnVpnFirewallRules resource's state with the given name, id, and optional extra
@@ -216,7 +216,7 @@ class ApplianceVpnVpnFirewallRules(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] organization_id: organizationId path parameter. Organization ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceVpnVpnFirewallRulesRuleArgs']]]] rules: An ordered array of the firewall rules (not including the default rule)
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVpnVpnFirewallRulesRuleArgs', 'ApplianceVpnVpnFirewallRulesRuleArgsDict']]]] rules: An ordered array of the firewall rules (not including the default rule)
         :param pulumi.Input[bool] syslog_default_rule: Log the special default rule (boolean value - enable only if you've configured a syslog server) (optional)
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

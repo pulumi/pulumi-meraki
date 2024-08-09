@@ -193,7 +193,7 @@ class SwitchDhcpServerPolicyArpInspectionTrustedServers(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 ipv4: Optional[pulumi.Input[pulumi.InputType['SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args']]] = None,
+                 ipv4: Optional[pulumi.Input[Union['SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args', 'SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4ArgsDict']]] = None,
                  mac: Optional[pulumi.Input[str]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
                  trusted_server_id: Optional[pulumi.Input[str]] = None,
@@ -207,9 +207,9 @@ class SwitchDhcpServerPolicyArpInspectionTrustedServers(pulumi.CustomResource):
         import pulumi_meraki as meraki
 
         example = meraki.networks.SwitchDhcpServerPolicyArpInspectionTrustedServers("example",
-            ipv4=meraki.networks.SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args(
-                address="1.2.3.4",
-            ),
+            ipv4={
+                "address": "1.2.3.4",
+            },
             mac="00:11:22:33:44:55",
             network_id="string",
             vlan=100)
@@ -224,7 +224,7 @@ class SwitchDhcpServerPolicyArpInspectionTrustedServers(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args']] ipv4: IPv4 attributes of the trusted server.
+        :param pulumi.Input[Union['SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args', 'SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4ArgsDict']] ipv4: IPv4 attributes of the trusted server.
         :param pulumi.Input[str] mac: Mac address of the trusted server.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[str] trusted_server_id: ID of the trusted server.
@@ -244,9 +244,9 @@ class SwitchDhcpServerPolicyArpInspectionTrustedServers(pulumi.CustomResource):
         import pulumi_meraki as meraki
 
         example = meraki.networks.SwitchDhcpServerPolicyArpInspectionTrustedServers("example",
-            ipv4=meraki.networks.SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args(
-                address="1.2.3.4",
-            ),
+            ipv4={
+                "address": "1.2.3.4",
+            },
             mac="00:11:22:33:44:55",
             network_id="string",
             vlan=100)
@@ -274,7 +274,7 @@ class SwitchDhcpServerPolicyArpInspectionTrustedServers(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 ipv4: Optional[pulumi.Input[pulumi.InputType['SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args']]] = None,
+                 ipv4: Optional[pulumi.Input[Union['SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args', 'SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4ArgsDict']]] = None,
                  mac: Optional[pulumi.Input[str]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
                  trusted_server_id: Optional[pulumi.Input[str]] = None,
@@ -305,7 +305,7 @@ class SwitchDhcpServerPolicyArpInspectionTrustedServers(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            ipv4: Optional[pulumi.Input[pulumi.InputType['SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args']]] = None,
+            ipv4: Optional[pulumi.Input[Union['SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args', 'SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4ArgsDict']]] = None,
             mac: Optional[pulumi.Input[str]] = None,
             network_id: Optional[pulumi.Input[str]] = None,
             trusted_server_id: Optional[pulumi.Input[str]] = None,
@@ -317,7 +317,7 @@ class SwitchDhcpServerPolicyArpInspectionTrustedServers(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args']] ipv4: IPv4 attributes of the trusted server.
+        :param pulumi.Input[Union['SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args', 'SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4ArgsDict']] ipv4: IPv4 attributes of the trusted server.
         :param pulumi.Input[str] mac: Mac address of the trusted server.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[str] trusted_server_id: ID of the trusted server.

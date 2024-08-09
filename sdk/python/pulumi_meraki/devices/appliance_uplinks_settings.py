@@ -97,7 +97,7 @@ class ApplianceUplinksSettings(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 interfaces: Optional[pulumi.Input[pulumi.InputType['ApplianceUplinksSettingsInterfacesArgs']]] = None,
+                 interfaces: Optional[pulumi.Input[Union['ApplianceUplinksSettingsInterfacesArgs', 'ApplianceUplinksSettingsInterfacesArgsDict']]] = None,
                  serial: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
@@ -108,80 +108,80 @@ class ApplianceUplinksSettings(pulumi.CustomResource):
         import pulumi_meraki as meraki
 
         example = meraki.devices.ApplianceUplinksSettings("example",
-            interfaces=meraki.devices.ApplianceUplinksSettingsInterfacesArgs(
-                wan1=meraki.devices.ApplianceUplinksSettingsInterfacesWan1Args(
-                    enabled=True,
-                    pppoe=meraki.devices.ApplianceUplinksSettingsInterfacesWan1PppoeArgs(
-                        authentication=meraki.devices.ApplianceUplinksSettingsInterfacesWan1PppoeAuthenticationArgs(
-                            enabled=True,
-                            password="password",
-                            username="username",
-                        ),
-                        enabled=True,
-                    ),
-                    svis=meraki.devices.ApplianceUplinksSettingsInterfacesWan1SvisArgs(
-                        ipv4=meraki.devices.ApplianceUplinksSettingsInterfacesWan1SvisIpv4Args(
-                            address="9.10.11.10/16",
-                            assignment_mode="static",
-                            gateway="13.14.15.16",
-                            nameservers=meraki.devices.ApplianceUplinksSettingsInterfacesWan1SvisIpv4NameserversArgs(
-                                addresses=["1.2.3.4"],
-                            ),
-                        ),
-                        ipv6=meraki.devices.ApplianceUplinksSettingsInterfacesWan1SvisIpv6Args(
-                            address="1:2:3::4",
-                            assignment_mode="static",
-                            gateway="1:2:3::5",
-                            nameservers=meraki.devices.ApplianceUplinksSettingsInterfacesWan1SvisIpv6NameserversArgs(
-                                addresses=[
+            interfaces={
+                "wan1": {
+                    "enabled": True,
+                    "pppoe": {
+                        "authentication": {
+                            "enabled": True,
+                            "password": "password",
+                            "username": "username",
+                        },
+                        "enabled": True,
+                    },
+                    "svis": {
+                        "ipv4": {
+                            "address": "9.10.11.10/16",
+                            "assignment_mode": "static",
+                            "gateway": "13.14.15.16",
+                            "nameservers": {
+                                "addresses": ["1.2.3.4"],
+                            },
+                        },
+                        "ipv6": {
+                            "address": "1:2:3::4",
+                            "assignment_mode": "static",
+                            "gateway": "1:2:3::5",
+                            "nameservers": {
+                                "addresses": [
                                     "1001:4860:4860::8888",
                                     "1001:4860:4860::8844",
                                 ],
-                            ),
-                        ),
-                    ),
-                    vlan_tagging=meraki.devices.ApplianceUplinksSettingsInterfacesWan1VlanTaggingArgs(
-                        enabled=True,
-                        vlan_id=1,
-                    ),
-                ),
-                wan2=meraki.devices.ApplianceUplinksSettingsInterfacesWan2Args(
-                    enabled=True,
-                    pppoe=meraki.devices.ApplianceUplinksSettingsInterfacesWan2PppoeArgs(
-                        authentication=meraki.devices.ApplianceUplinksSettingsInterfacesWan2PppoeAuthenticationArgs(
-                            enabled=True,
-                            password="password",
-                            username="username",
-                        ),
-                        enabled=True,
-                    ),
-                    svis=meraki.devices.ApplianceUplinksSettingsInterfacesWan2SvisArgs(
-                        ipv4=meraki.devices.ApplianceUplinksSettingsInterfacesWan2SvisIpv4Args(
-                            address="9.10.11.10/16",
-                            assignment_mode="static",
-                            gateway="13.14.15.16",
-                            nameservers=meraki.devices.ApplianceUplinksSettingsInterfacesWan2SvisIpv4NameserversArgs(
-                                addresses=["1.2.3.4"],
-                            ),
-                        ),
-                        ipv6=meraki.devices.ApplianceUplinksSettingsInterfacesWan2SvisIpv6Args(
-                            address="1:2:3::4",
-                            assignment_mode="static",
-                            gateway="1:2:3::5",
-                            nameservers=meraki.devices.ApplianceUplinksSettingsInterfacesWan2SvisIpv6NameserversArgs(
-                                addresses=[
+                            },
+                        },
+                    },
+                    "vlan_tagging": {
+                        "enabled": True,
+                        "vlan_id": 1,
+                    },
+                },
+                "wan2": {
+                    "enabled": True,
+                    "pppoe": {
+                        "authentication": {
+                            "enabled": True,
+                            "password": "password",
+                            "username": "username",
+                        },
+                        "enabled": True,
+                    },
+                    "svis": {
+                        "ipv4": {
+                            "address": "9.10.11.10/16",
+                            "assignment_mode": "static",
+                            "gateway": "13.14.15.16",
+                            "nameservers": {
+                                "addresses": ["1.2.3.4"],
+                            },
+                        },
+                        "ipv6": {
+                            "address": "1:2:3::4",
+                            "assignment_mode": "static",
+                            "gateway": "1:2:3::5",
+                            "nameservers": {
+                                "addresses": [
                                     "1001:4860:4860::8888",
                                     "1001:4860:4860::8844",
                                 ],
-                            ),
-                        ),
-                    ),
-                    vlan_tagging=meraki.devices.ApplianceUplinksSettingsInterfacesWan2VlanTaggingArgs(
-                        enabled=True,
-                        vlan_id=1,
-                    ),
-                ),
-            ),
+                            },
+                        },
+                    },
+                    "vlan_tagging": {
+                        "enabled": True,
+                        "vlan_id": 1,
+                    },
+                },
+            },
             serial="string")
         pulumi.export("merakiDevicesApplianceUplinksSettingsExample", example)
         ```
@@ -194,7 +194,7 @@ class ApplianceUplinksSettings(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['ApplianceUplinksSettingsInterfacesArgs']] interfaces: Interface settings.
+        :param pulumi.Input[Union['ApplianceUplinksSettingsInterfacesArgs', 'ApplianceUplinksSettingsInterfacesArgsDict']] interfaces: Interface settings.
         :param pulumi.Input[str] serial: serial path parameter.
         """
         ...
@@ -211,80 +211,80 @@ class ApplianceUplinksSettings(pulumi.CustomResource):
         import pulumi_meraki as meraki
 
         example = meraki.devices.ApplianceUplinksSettings("example",
-            interfaces=meraki.devices.ApplianceUplinksSettingsInterfacesArgs(
-                wan1=meraki.devices.ApplianceUplinksSettingsInterfacesWan1Args(
-                    enabled=True,
-                    pppoe=meraki.devices.ApplianceUplinksSettingsInterfacesWan1PppoeArgs(
-                        authentication=meraki.devices.ApplianceUplinksSettingsInterfacesWan1PppoeAuthenticationArgs(
-                            enabled=True,
-                            password="password",
-                            username="username",
-                        ),
-                        enabled=True,
-                    ),
-                    svis=meraki.devices.ApplianceUplinksSettingsInterfacesWan1SvisArgs(
-                        ipv4=meraki.devices.ApplianceUplinksSettingsInterfacesWan1SvisIpv4Args(
-                            address="9.10.11.10/16",
-                            assignment_mode="static",
-                            gateway="13.14.15.16",
-                            nameservers=meraki.devices.ApplianceUplinksSettingsInterfacesWan1SvisIpv4NameserversArgs(
-                                addresses=["1.2.3.4"],
-                            ),
-                        ),
-                        ipv6=meraki.devices.ApplianceUplinksSettingsInterfacesWan1SvisIpv6Args(
-                            address="1:2:3::4",
-                            assignment_mode="static",
-                            gateway="1:2:3::5",
-                            nameservers=meraki.devices.ApplianceUplinksSettingsInterfacesWan1SvisIpv6NameserversArgs(
-                                addresses=[
+            interfaces={
+                "wan1": {
+                    "enabled": True,
+                    "pppoe": {
+                        "authentication": {
+                            "enabled": True,
+                            "password": "password",
+                            "username": "username",
+                        },
+                        "enabled": True,
+                    },
+                    "svis": {
+                        "ipv4": {
+                            "address": "9.10.11.10/16",
+                            "assignment_mode": "static",
+                            "gateway": "13.14.15.16",
+                            "nameservers": {
+                                "addresses": ["1.2.3.4"],
+                            },
+                        },
+                        "ipv6": {
+                            "address": "1:2:3::4",
+                            "assignment_mode": "static",
+                            "gateway": "1:2:3::5",
+                            "nameservers": {
+                                "addresses": [
                                     "1001:4860:4860::8888",
                                     "1001:4860:4860::8844",
                                 ],
-                            ),
-                        ),
-                    ),
-                    vlan_tagging=meraki.devices.ApplianceUplinksSettingsInterfacesWan1VlanTaggingArgs(
-                        enabled=True,
-                        vlan_id=1,
-                    ),
-                ),
-                wan2=meraki.devices.ApplianceUplinksSettingsInterfacesWan2Args(
-                    enabled=True,
-                    pppoe=meraki.devices.ApplianceUplinksSettingsInterfacesWan2PppoeArgs(
-                        authentication=meraki.devices.ApplianceUplinksSettingsInterfacesWan2PppoeAuthenticationArgs(
-                            enabled=True,
-                            password="password",
-                            username="username",
-                        ),
-                        enabled=True,
-                    ),
-                    svis=meraki.devices.ApplianceUplinksSettingsInterfacesWan2SvisArgs(
-                        ipv4=meraki.devices.ApplianceUplinksSettingsInterfacesWan2SvisIpv4Args(
-                            address="9.10.11.10/16",
-                            assignment_mode="static",
-                            gateway="13.14.15.16",
-                            nameservers=meraki.devices.ApplianceUplinksSettingsInterfacesWan2SvisIpv4NameserversArgs(
-                                addresses=["1.2.3.4"],
-                            ),
-                        ),
-                        ipv6=meraki.devices.ApplianceUplinksSettingsInterfacesWan2SvisIpv6Args(
-                            address="1:2:3::4",
-                            assignment_mode="static",
-                            gateway="1:2:3::5",
-                            nameservers=meraki.devices.ApplianceUplinksSettingsInterfacesWan2SvisIpv6NameserversArgs(
-                                addresses=[
+                            },
+                        },
+                    },
+                    "vlan_tagging": {
+                        "enabled": True,
+                        "vlan_id": 1,
+                    },
+                },
+                "wan2": {
+                    "enabled": True,
+                    "pppoe": {
+                        "authentication": {
+                            "enabled": True,
+                            "password": "password",
+                            "username": "username",
+                        },
+                        "enabled": True,
+                    },
+                    "svis": {
+                        "ipv4": {
+                            "address": "9.10.11.10/16",
+                            "assignment_mode": "static",
+                            "gateway": "13.14.15.16",
+                            "nameservers": {
+                                "addresses": ["1.2.3.4"],
+                            },
+                        },
+                        "ipv6": {
+                            "address": "1:2:3::4",
+                            "assignment_mode": "static",
+                            "gateway": "1:2:3::5",
+                            "nameservers": {
+                                "addresses": [
                                     "1001:4860:4860::8888",
                                     "1001:4860:4860::8844",
                                 ],
-                            ),
-                        ),
-                    ),
-                    vlan_tagging=meraki.devices.ApplianceUplinksSettingsInterfacesWan2VlanTaggingArgs(
-                        enabled=True,
-                        vlan_id=1,
-                    ),
-                ),
-            ),
+                            },
+                        },
+                    },
+                    "vlan_tagging": {
+                        "enabled": True,
+                        "vlan_id": 1,
+                    },
+                },
+            },
             serial="string")
         pulumi.export("merakiDevicesApplianceUplinksSettingsExample", example)
         ```
@@ -310,7 +310,7 @@ class ApplianceUplinksSettings(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 interfaces: Optional[pulumi.Input[pulumi.InputType['ApplianceUplinksSettingsInterfacesArgs']]] = None,
+                 interfaces: Optional[pulumi.Input[Union['ApplianceUplinksSettingsInterfacesArgs', 'ApplianceUplinksSettingsInterfacesArgsDict']]] = None,
                  serial: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -335,7 +335,7 @@ class ApplianceUplinksSettings(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            interfaces: Optional[pulumi.Input[pulumi.InputType['ApplianceUplinksSettingsInterfacesArgs']]] = None,
+            interfaces: Optional[pulumi.Input[Union['ApplianceUplinksSettingsInterfacesArgs', 'ApplianceUplinksSettingsInterfacesArgsDict']]] = None,
             serial: Optional[pulumi.Input[str]] = None) -> 'ApplianceUplinksSettings':
         """
         Get an existing ApplianceUplinksSettings resource's state with the given name, id, and optional extra
@@ -344,7 +344,7 @@ class ApplianceUplinksSettings(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['ApplianceUplinksSettingsInterfacesArgs']] interfaces: Interface settings.
+        :param pulumi.Input[Union['ApplianceUplinksSettingsInterfacesArgs', 'ApplianceUplinksSettingsInterfacesArgsDict']] interfaces: Interface settings.
         :param pulumi.Input[str] serial: serial path parameter.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

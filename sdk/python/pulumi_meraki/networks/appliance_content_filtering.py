@@ -336,7 +336,7 @@ class ApplianceContentFiltering(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             allowed_url_patterns: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
             blocked_url_categories: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-            blocked_url_categories_responses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceContentFilteringBlockedUrlCategoriesResponseArgs']]]]] = None,
+            blocked_url_categories_responses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceContentFilteringBlockedUrlCategoriesResponseArgs', 'ApplianceContentFilteringBlockedUrlCategoriesResponseArgsDict']]]]] = None,
             blocked_url_patterns: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
             network_id: Optional[pulumi.Input[str]] = None,
             url_category_list_size: Optional[pulumi.Input[str]] = None) -> 'ApplianceContentFiltering':

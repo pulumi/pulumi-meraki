@@ -134,7 +134,7 @@ public class WirelessRadioSettings extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public WirelessRadioSettings(String name) {
+    public WirelessRadioSettings(java.lang.String name) {
         this(name, WirelessRadioSettingsArgs.Empty);
     }
     /**
@@ -142,7 +142,7 @@ public class WirelessRadioSettings extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public WirelessRadioSettings(String name, WirelessRadioSettingsArgs args) {
+    public WirelessRadioSettings(java.lang.String name, WirelessRadioSettingsArgs args) {
         this(name, args, null);
     }
     /**
@@ -151,12 +151,12 @@ public class WirelessRadioSettings extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public WirelessRadioSettings(String name, WirelessRadioSettingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/wirelessRadioSettings:WirelessRadioSettings", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public WirelessRadioSettings(java.lang.String name, WirelessRadioSettingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/wirelessRadioSettings:WirelessRadioSettings", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private WirelessRadioSettings(String name, Output<String> id, @Nullable WirelessRadioSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/wirelessRadioSettings:WirelessRadioSettings", name, state, makeResourceOptions(options, id));
+    private WirelessRadioSettings(java.lang.String name, Output<java.lang.String> id, @Nullable WirelessRadioSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/wirelessRadioSettings:WirelessRadioSettings", name, state, makeResourceOptions(options, id), false);
     }
 
     private static WirelessRadioSettingsArgs makeArgs(WirelessRadioSettingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -166,7 +166,7 @@ public class WirelessRadioSettings extends com.pulumi.resources.CustomResource {
         return args == null ? WirelessRadioSettingsArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -182,7 +182,7 @@ public class WirelessRadioSettings extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WirelessRadioSettings get(String name, Output<String> id, @Nullable WirelessRadioSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static WirelessRadioSettings get(java.lang.String name, Output<java.lang.String> id, @Nullable WirelessRadioSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new WirelessRadioSettings(name, id, state, options);
     }
 }

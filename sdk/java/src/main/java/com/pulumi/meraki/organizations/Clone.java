@@ -93,7 +93,7 @@ public class Clone extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public Clone(String name) {
+    public Clone(java.lang.String name) {
         this(name, CloneArgs.Empty);
     }
     /**
@@ -101,7 +101,7 @@ public class Clone extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public Clone(String name, CloneArgs args) {
+    public Clone(java.lang.String name, CloneArgs args) {
         this(name, args, null);
     }
     /**
@@ -110,12 +110,12 @@ public class Clone extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Clone(String name, CloneArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/clone:Clone", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public Clone(java.lang.String name, CloneArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/clone:Clone", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private Clone(String name, Output<String> id, @Nullable CloneState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/clone:Clone", name, state, makeResourceOptions(options, id));
+    private Clone(java.lang.String name, Output<java.lang.String> id, @Nullable CloneState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/clone:Clone", name, state, makeResourceOptions(options, id), false);
     }
 
     private static CloneArgs makeArgs(CloneArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -125,7 +125,7 @@ public class Clone extends com.pulumi.resources.CustomResource {
         return args == null ? CloneArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -141,7 +141,7 @@ public class Clone extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Clone get(String name, Output<String> id, @Nullable CloneState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Clone get(java.lang.String name, Output<java.lang.String> id, @Nullable CloneState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new Clone(name, id, state, options);
     }
 }

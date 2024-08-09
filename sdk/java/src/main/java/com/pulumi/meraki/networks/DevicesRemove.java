@@ -86,7 +86,7 @@ public class DevicesRemove extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public DevicesRemove(String name) {
+    public DevicesRemove(java.lang.String name) {
         this(name, DevicesRemoveArgs.Empty);
     }
     /**
@@ -94,7 +94,7 @@ public class DevicesRemove extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public DevicesRemove(String name, DevicesRemoveArgs args) {
+    public DevicesRemove(java.lang.String name, DevicesRemoveArgs args) {
         this(name, args, null);
     }
     /**
@@ -103,12 +103,12 @@ public class DevicesRemove extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public DevicesRemove(String name, DevicesRemoveArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/devicesRemove:DevicesRemove", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public DevicesRemove(java.lang.String name, DevicesRemoveArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/devicesRemove:DevicesRemove", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private DevicesRemove(String name, Output<String> id, @Nullable DevicesRemoveState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/devicesRemove:DevicesRemove", name, state, makeResourceOptions(options, id));
+    private DevicesRemove(java.lang.String name, Output<java.lang.String> id, @Nullable DevicesRemoveState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/devicesRemove:DevicesRemove", name, state, makeResourceOptions(options, id), false);
     }
 
     private static DevicesRemoveArgs makeArgs(DevicesRemoveArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -118,7 +118,7 @@ public class DevicesRemove extends com.pulumi.resources.CustomResource {
         return args == null ? DevicesRemoveArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -134,7 +134,7 @@ public class DevicesRemove extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static DevicesRemove get(String name, Output<String> id, @Nullable DevicesRemoveState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static DevicesRemove get(java.lang.String name, Output<java.lang.String> id, @Nullable DevicesRemoveState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new DevicesRemove(name, id, state, options);
     }
 }

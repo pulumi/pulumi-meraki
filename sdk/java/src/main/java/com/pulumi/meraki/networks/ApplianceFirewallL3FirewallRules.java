@@ -136,7 +136,7 @@ public class ApplianceFirewallL3FirewallRules extends com.pulumi.resources.Custo
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public ApplianceFirewallL3FirewallRules(String name) {
+    public ApplianceFirewallL3FirewallRules(java.lang.String name) {
         this(name, ApplianceFirewallL3FirewallRulesArgs.Empty);
     }
     /**
@@ -144,7 +144,7 @@ public class ApplianceFirewallL3FirewallRules extends com.pulumi.resources.Custo
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ApplianceFirewallL3FirewallRules(String name, ApplianceFirewallL3FirewallRulesArgs args) {
+    public ApplianceFirewallL3FirewallRules(java.lang.String name, ApplianceFirewallL3FirewallRulesArgs args) {
         this(name, args, null);
     }
     /**
@@ -153,12 +153,12 @@ public class ApplianceFirewallL3FirewallRules extends com.pulumi.resources.Custo
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ApplianceFirewallL3FirewallRules(String name, ApplianceFirewallL3FirewallRulesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/applianceFirewallL3FirewallRules:ApplianceFirewallL3FirewallRules", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public ApplianceFirewallL3FirewallRules(java.lang.String name, ApplianceFirewallL3FirewallRulesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/applianceFirewallL3FirewallRules:ApplianceFirewallL3FirewallRules", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private ApplianceFirewallL3FirewallRules(String name, Output<String> id, @Nullable ApplianceFirewallL3FirewallRulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/applianceFirewallL3FirewallRules:ApplianceFirewallL3FirewallRules", name, state, makeResourceOptions(options, id));
+    private ApplianceFirewallL3FirewallRules(java.lang.String name, Output<java.lang.String> id, @Nullable ApplianceFirewallL3FirewallRulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/applianceFirewallL3FirewallRules:ApplianceFirewallL3FirewallRules", name, state, makeResourceOptions(options, id), false);
     }
 
     private static ApplianceFirewallL3FirewallRulesArgs makeArgs(ApplianceFirewallL3FirewallRulesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -168,7 +168,7 @@ public class ApplianceFirewallL3FirewallRules extends com.pulumi.resources.Custo
         return args == null ? ApplianceFirewallL3FirewallRulesArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -184,7 +184,7 @@ public class ApplianceFirewallL3FirewallRules extends com.pulumi.resources.Custo
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ApplianceFirewallL3FirewallRules get(String name, Output<String> id, @Nullable ApplianceFirewallL3FirewallRulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ApplianceFirewallL3FirewallRules get(java.lang.String name, Output<java.lang.String> id, @Nullable ApplianceFirewallL3FirewallRulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new ApplianceFirewallL3FirewallRules(name, id, state, options);
     }
 }

@@ -202,7 +202,7 @@ public class LiveToolsWakeOnLan extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public LiveToolsWakeOnLan(String name) {
+    public LiveToolsWakeOnLan(java.lang.String name) {
         this(name, LiveToolsWakeOnLanArgs.Empty);
     }
     /**
@@ -210,7 +210,7 @@ public class LiveToolsWakeOnLan extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public LiveToolsWakeOnLan(String name, LiveToolsWakeOnLanArgs args) {
+    public LiveToolsWakeOnLan(java.lang.String name, LiveToolsWakeOnLanArgs args) {
         this(name, args, null);
     }
     /**
@@ -219,12 +219,12 @@ public class LiveToolsWakeOnLan extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public LiveToolsWakeOnLan(String name, LiveToolsWakeOnLanArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/liveToolsWakeOnLan:LiveToolsWakeOnLan", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public LiveToolsWakeOnLan(java.lang.String name, LiveToolsWakeOnLanArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/liveToolsWakeOnLan:LiveToolsWakeOnLan", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private LiveToolsWakeOnLan(String name, Output<String> id, @Nullable LiveToolsWakeOnLanState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/liveToolsWakeOnLan:LiveToolsWakeOnLan", name, state, makeResourceOptions(options, id));
+    private LiveToolsWakeOnLan(java.lang.String name, Output<java.lang.String> id, @Nullable LiveToolsWakeOnLanState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/liveToolsWakeOnLan:LiveToolsWakeOnLan", name, state, makeResourceOptions(options, id), false);
     }
 
     private static LiveToolsWakeOnLanArgs makeArgs(LiveToolsWakeOnLanArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -234,7 +234,7 @@ public class LiveToolsWakeOnLan extends com.pulumi.resources.CustomResource {
         return args == null ? LiveToolsWakeOnLanArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -250,7 +250,7 @@ public class LiveToolsWakeOnLan extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LiveToolsWakeOnLan get(String name, Output<String> id, @Nullable LiveToolsWakeOnLanState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static LiveToolsWakeOnLan get(java.lang.String name, Output<java.lang.String> id, @Nullable LiveToolsWakeOnLanState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new LiveToolsWakeOnLan(name, id, state, options);
     }
 }

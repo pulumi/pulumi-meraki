@@ -90,7 +90,7 @@ public class PiiRequestsDelete extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public PiiRequestsDelete(String name) {
+    public PiiRequestsDelete(java.lang.String name) {
         this(name, PiiRequestsDeleteArgs.Empty);
     }
     /**
@@ -98,7 +98,7 @@ public class PiiRequestsDelete extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public PiiRequestsDelete(String name, PiiRequestsDeleteArgs args) {
+    public PiiRequestsDelete(java.lang.String name, PiiRequestsDeleteArgs args) {
         this(name, args, null);
     }
     /**
@@ -107,12 +107,12 @@ public class PiiRequestsDelete extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public PiiRequestsDelete(String name, PiiRequestsDeleteArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/piiRequestsDelete:PiiRequestsDelete", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public PiiRequestsDelete(java.lang.String name, PiiRequestsDeleteArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/piiRequestsDelete:PiiRequestsDelete", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private PiiRequestsDelete(String name, Output<String> id, @Nullable PiiRequestsDeleteState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/piiRequestsDelete:PiiRequestsDelete", name, state, makeResourceOptions(options, id));
+    private PiiRequestsDelete(java.lang.String name, Output<java.lang.String> id, @Nullable PiiRequestsDeleteState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/piiRequestsDelete:PiiRequestsDelete", name, state, makeResourceOptions(options, id), false);
     }
 
     private static PiiRequestsDeleteArgs makeArgs(PiiRequestsDeleteArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -122,7 +122,7 @@ public class PiiRequestsDelete extends com.pulumi.resources.CustomResource {
         return args == null ? PiiRequestsDeleteArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -138,7 +138,7 @@ public class PiiRequestsDelete extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static PiiRequestsDelete get(String name, Output<String> id, @Nullable PiiRequestsDeleteState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static PiiRequestsDelete get(java.lang.String name, Output<java.lang.String> id, @Nullable PiiRequestsDeleteState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new PiiRequestsDelete(name, id, state, options);
     }
 }

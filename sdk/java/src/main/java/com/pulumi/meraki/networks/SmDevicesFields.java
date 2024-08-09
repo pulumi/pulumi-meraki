@@ -105,7 +105,7 @@ public class SmDevicesFields extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SmDevicesFields(String name) {
+    public SmDevicesFields(java.lang.String name) {
         this(name, SmDevicesFieldsArgs.Empty);
     }
     /**
@@ -113,7 +113,7 @@ public class SmDevicesFields extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SmDevicesFields(String name, SmDevicesFieldsArgs args) {
+    public SmDevicesFields(java.lang.String name, SmDevicesFieldsArgs args) {
         this(name, args, null);
     }
     /**
@@ -122,12 +122,12 @@ public class SmDevicesFields extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SmDevicesFields(String name, SmDevicesFieldsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/smDevicesFields:SmDevicesFields", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public SmDevicesFields(java.lang.String name, SmDevicesFieldsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/smDevicesFields:SmDevicesFields", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SmDevicesFields(String name, Output<String> id, @Nullable SmDevicesFieldsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/smDevicesFields:SmDevicesFields", name, state, makeResourceOptions(options, id));
+    private SmDevicesFields(java.lang.String name, Output<java.lang.String> id, @Nullable SmDevicesFieldsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/smDevicesFields:SmDevicesFields", name, state, makeResourceOptions(options, id), false);
     }
 
     private static SmDevicesFieldsArgs makeArgs(SmDevicesFieldsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -137,7 +137,7 @@ public class SmDevicesFields extends com.pulumi.resources.CustomResource {
         return args == null ? SmDevicesFieldsArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -153,7 +153,7 @@ public class SmDevicesFields extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SmDevicesFields get(String name, Output<String> id, @Nullable SmDevicesFieldsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SmDevicesFields get(java.lang.String name, Output<java.lang.String> id, @Nullable SmDevicesFieldsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SmDevicesFields(name, id, state, options);
     }
 }

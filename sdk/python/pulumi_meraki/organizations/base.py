@@ -210,8 +210,8 @@ class Base(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 api: Optional[pulumi.Input[pulumi.InputType['BaseApiArgs']]] = None,
-                 management: Optional[pulumi.Input[pulumi.InputType['BaseManagementArgs']]] = None,
+                 api: Optional[pulumi.Input[Union['BaseApiArgs', 'BaseApiArgsDict']]] = None,
+                 management: Optional[pulumi.Input[Union['BaseManagementArgs', 'BaseManagementArgsDict']]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  organization_id: Optional[pulumi.Input[str]] = None,
                  __props__=None):
@@ -223,12 +223,12 @@ class Base(pulumi.CustomResource):
         import pulumi_meraki as meraki
 
         example = meraki.organizations.Base("example",
-            management=meraki.organizations.BaseManagementArgs(
-                details=[meraki.organizations.BaseManagementDetailArgs(
-                    name="MSP ID",
-                    value="123456",
-                )],
-            ),
+            management={
+                "details": [{
+                    "name": "MSP ID",
+                    "value": "123456",
+                }],
+            },
             name="My organization")
         pulumi.export("merakiOrganizationsExample", example)
         ```
@@ -241,8 +241,8 @@ class Base(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['BaseApiArgs']] api: API related settings
-        :param pulumi.Input[pulumi.InputType['BaseManagementArgs']] management: Information about the organization's management system
+        :param pulumi.Input[Union['BaseApiArgs', 'BaseApiArgsDict']] api: API related settings
+        :param pulumi.Input[Union['BaseManagementArgs', 'BaseManagementArgsDict']] management: Information about the organization's management system
         :param pulumi.Input[str] name: Organization name
         :param pulumi.Input[str] organization_id: organizationId path parameter. Organization ID
         """
@@ -260,12 +260,12 @@ class Base(pulumi.CustomResource):
         import pulumi_meraki as meraki
 
         example = meraki.organizations.Base("example",
-            management=meraki.organizations.BaseManagementArgs(
-                details=[meraki.organizations.BaseManagementDetailArgs(
-                    name="MSP ID",
-                    value="123456",
-                )],
-            ),
+            management={
+                "details": [{
+                    "name": "MSP ID",
+                    "value": "123456",
+                }],
+            },
             name="My organization")
         pulumi.export("merakiOrganizationsExample", example)
         ```
@@ -291,8 +291,8 @@ class Base(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 api: Optional[pulumi.Input[pulumi.InputType['BaseApiArgs']]] = None,
-                 management: Optional[pulumi.Input[pulumi.InputType['BaseManagementArgs']]] = None,
+                 api: Optional[pulumi.Input[Union['BaseApiArgs', 'BaseApiArgsDict']]] = None,
+                 management: Optional[pulumi.Input[Union['BaseManagementArgs', 'BaseManagementArgsDict']]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  organization_id: Optional[pulumi.Input[str]] = None,
                  __props__=None):
@@ -321,10 +321,10 @@ class Base(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            api: Optional[pulumi.Input[pulumi.InputType['BaseApiArgs']]] = None,
-            cloud: Optional[pulumi.Input[pulumi.InputType['BaseCloudArgs']]] = None,
-            licensing: Optional[pulumi.Input[pulumi.InputType['BaseLicensingArgs']]] = None,
-            management: Optional[pulumi.Input[pulumi.InputType['BaseManagementArgs']]] = None,
+            api: Optional[pulumi.Input[Union['BaseApiArgs', 'BaseApiArgsDict']]] = None,
+            cloud: Optional[pulumi.Input[Union['BaseCloudArgs', 'BaseCloudArgsDict']]] = None,
+            licensing: Optional[pulumi.Input[Union['BaseLicensingArgs', 'BaseLicensingArgsDict']]] = None,
+            management: Optional[pulumi.Input[Union['BaseManagementArgs', 'BaseManagementArgsDict']]] = None,
             name: Optional[pulumi.Input[str]] = None,
             organization_id: Optional[pulumi.Input[str]] = None,
             url: Optional[pulumi.Input[str]] = None) -> 'Base':
@@ -335,10 +335,10 @@ class Base(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['BaseApiArgs']] api: API related settings
-        :param pulumi.Input[pulumi.InputType['BaseCloudArgs']] cloud: Data for this organization
-        :param pulumi.Input[pulumi.InputType['BaseLicensingArgs']] licensing: Licensing related settings
-        :param pulumi.Input[pulumi.InputType['BaseManagementArgs']] management: Information about the organization's management system
+        :param pulumi.Input[Union['BaseApiArgs', 'BaseApiArgsDict']] api: API related settings
+        :param pulumi.Input[Union['BaseCloudArgs', 'BaseCloudArgsDict']] cloud: Data for this organization
+        :param pulumi.Input[Union['BaseLicensingArgs', 'BaseLicensingArgsDict']] licensing: Licensing related settings
+        :param pulumi.Input[Union['BaseManagementArgs', 'BaseManagementArgsDict']] management: Information about the organization's management system
         :param pulumi.Input[str] name: Organization name
         :param pulumi.Input[str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[str] url: Organization URL

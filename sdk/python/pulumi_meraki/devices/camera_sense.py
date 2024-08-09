@@ -205,7 +205,7 @@ class CameraSense(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 audio_detection: Optional[pulumi.Input[pulumi.InputType['CameraSenseAudioDetectionArgs']]] = None,
+                 audio_detection: Optional[pulumi.Input[Union['CameraSenseAudioDetectionArgs', 'CameraSenseAudioDetectionArgsDict']]] = None,
                  detection_model_id: Optional[pulumi.Input[str]] = None,
                  mqtt_broker_id: Optional[pulumi.Input[str]] = None,
                  sense_enabled: Optional[pulumi.Input[bool]] = None,
@@ -219,9 +219,9 @@ class CameraSense(pulumi.CustomResource):
         import pulumi_meraki as meraki
 
         example = meraki.devices.CameraSense("example",
-            audio_detection=meraki.devices.CameraSenseAudioDetectionArgs(
-                enabled=False,
-            ),
+            audio_detection={
+                "enabled": False,
+            },
             mqtt_broker_id="1234",
             sense_enabled=True,
             serial="string")
@@ -236,7 +236,7 @@ class CameraSense(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['CameraSenseAudioDetectionArgs']] audio_detection: The details of the audio detection config.
+        :param pulumi.Input[Union['CameraSenseAudioDetectionArgs', 'CameraSenseAudioDetectionArgsDict']] audio_detection: The details of the audio detection config.
         :param pulumi.Input[str] detection_model_id: The ID of the object detection model
         :param pulumi.Input[str] mqtt_broker_id: The ID of the MQTT broker to be enabled on the camera. A value of null will disable MQTT on the camera
         :param pulumi.Input[bool] sense_enabled: Boolean indicating if sense(license) is enabled(true) or disabled(false) on the camera
@@ -256,9 +256,9 @@ class CameraSense(pulumi.CustomResource):
         import pulumi_meraki as meraki
 
         example = meraki.devices.CameraSense("example",
-            audio_detection=meraki.devices.CameraSenseAudioDetectionArgs(
-                enabled=False,
-            ),
+            audio_detection={
+                "enabled": False,
+            },
             mqtt_broker_id="1234",
             sense_enabled=True,
             serial="string")
@@ -286,7 +286,7 @@ class CameraSense(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 audio_detection: Optional[pulumi.Input[pulumi.InputType['CameraSenseAudioDetectionArgs']]] = None,
+                 audio_detection: Optional[pulumi.Input[Union['CameraSenseAudioDetectionArgs', 'CameraSenseAudioDetectionArgsDict']]] = None,
                  detection_model_id: Optional[pulumi.Input[str]] = None,
                  mqtt_broker_id: Optional[pulumi.Input[str]] = None,
                  sense_enabled: Optional[pulumi.Input[bool]] = None,
@@ -318,7 +318,7 @@ class CameraSense(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            audio_detection: Optional[pulumi.Input[pulumi.InputType['CameraSenseAudioDetectionArgs']]] = None,
+            audio_detection: Optional[pulumi.Input[Union['CameraSenseAudioDetectionArgs', 'CameraSenseAudioDetectionArgsDict']]] = None,
             detection_model_id: Optional[pulumi.Input[str]] = None,
             mqtt_broker_id: Optional[pulumi.Input[str]] = None,
             mqtt_topics: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
@@ -331,7 +331,7 @@ class CameraSense(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['CameraSenseAudioDetectionArgs']] audio_detection: The details of the audio detection config.
+        :param pulumi.Input[Union['CameraSenseAudioDetectionArgs', 'CameraSenseAudioDetectionArgsDict']] audio_detection: The details of the audio detection config.
         :param pulumi.Input[str] detection_model_id: The ID of the object detection model
         :param pulumi.Input[str] mqtt_broker_id: The ID of the MQTT broker to be enabled on the camera. A value of null will disable MQTT on the camera
         :param pulumi.Input[bool] sense_enabled: Boolean indicating if sense(license) is enabled(true) or disabled(false) on the camera

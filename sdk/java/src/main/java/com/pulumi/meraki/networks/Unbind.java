@@ -93,7 +93,7 @@ public class Unbind extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public Unbind(String name) {
+    public Unbind(java.lang.String name) {
         this(name, UnbindArgs.Empty);
     }
     /**
@@ -101,7 +101,7 @@ public class Unbind extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public Unbind(String name, UnbindArgs args) {
+    public Unbind(java.lang.String name, UnbindArgs args) {
         this(name, args, null);
     }
     /**
@@ -110,12 +110,12 @@ public class Unbind extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Unbind(String name, UnbindArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/unbind:Unbind", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public Unbind(java.lang.String name, UnbindArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/unbind:Unbind", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private Unbind(String name, Output<String> id, @Nullable UnbindState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/unbind:Unbind", name, state, makeResourceOptions(options, id));
+    private Unbind(java.lang.String name, Output<java.lang.String> id, @Nullable UnbindState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/unbind:Unbind", name, state, makeResourceOptions(options, id), false);
     }
 
     private static UnbindArgs makeArgs(UnbindArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -125,7 +125,7 @@ public class Unbind extends com.pulumi.resources.CustomResource {
         return args == null ? UnbindArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -141,7 +141,7 @@ public class Unbind extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Unbind get(String name, Output<String> id, @Nullable UnbindState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Unbind get(java.lang.String name, Output<java.lang.String> id, @Nullable UnbindState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new Unbind(name, id, state, options);
     }
 }

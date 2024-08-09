@@ -131,7 +131,7 @@ class WirelessBilling(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  currency: Optional[pulumi.Input[str]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 plans: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['WirelessBillingPlanArgs']]]]] = None,
+                 plans: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessBillingPlanArgs', 'WirelessBillingPlanArgsDict']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -146,7 +146,7 @@ class WirelessBilling(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] currency: The currency code of this node group's billing plans
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['WirelessBillingPlanArgs']]]] plans: Array of billing plans in the node group. (Can configure a maximum of 5)
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessBillingPlanArgs', 'WirelessBillingPlanArgsDict']]]] plans: Array of billing plans in the node group. (Can configure a maximum of 5)
         """
         ...
     @overload
@@ -180,7 +180,7 @@ class WirelessBilling(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  currency: Optional[pulumi.Input[str]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 plans: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['WirelessBillingPlanArgs']]]]] = None,
+                 plans: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessBillingPlanArgs', 'WirelessBillingPlanArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -207,7 +207,7 @@ class WirelessBilling(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             currency: Optional[pulumi.Input[str]] = None,
             network_id: Optional[pulumi.Input[str]] = None,
-            plans: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['WirelessBillingPlanArgs']]]]] = None) -> 'WirelessBilling':
+            plans: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessBillingPlanArgs', 'WirelessBillingPlanArgsDict']]]]] = None) -> 'WirelessBilling':
         """
         Get an existing WirelessBilling resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -217,7 +217,7 @@ class WirelessBilling(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] currency: The currency code of this node group's billing plans
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['WirelessBillingPlanArgs']]]] plans: Array of billing plans in the node group. (Can configure a maximum of 5)
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessBillingPlanArgs', 'WirelessBillingPlanArgsDict']]]] plans: Array of billing plans in the node group. (Can configure a maximum of 5)
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

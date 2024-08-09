@@ -163,7 +163,7 @@ public class CellularGatewayLan extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public CellularGatewayLan(String name) {
+    public CellularGatewayLan(java.lang.String name) {
         this(name, CellularGatewayLanArgs.Empty);
     }
     /**
@@ -171,7 +171,7 @@ public class CellularGatewayLan extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public CellularGatewayLan(String name, CellularGatewayLanArgs args) {
+    public CellularGatewayLan(java.lang.String name, CellularGatewayLanArgs args) {
         this(name, args, null);
     }
     /**
@@ -180,12 +180,12 @@ public class CellularGatewayLan extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CellularGatewayLan(String name, CellularGatewayLanArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/cellularGatewayLan:CellularGatewayLan", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public CellularGatewayLan(java.lang.String name, CellularGatewayLanArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/cellularGatewayLan:CellularGatewayLan", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private CellularGatewayLan(String name, Output<String> id, @Nullable CellularGatewayLanState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/cellularGatewayLan:CellularGatewayLan", name, state, makeResourceOptions(options, id));
+    private CellularGatewayLan(java.lang.String name, Output<java.lang.String> id, @Nullable CellularGatewayLanState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/cellularGatewayLan:CellularGatewayLan", name, state, makeResourceOptions(options, id), false);
     }
 
     private static CellularGatewayLanArgs makeArgs(CellularGatewayLanArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -195,7 +195,7 @@ public class CellularGatewayLan extends com.pulumi.resources.CustomResource {
         return args == null ? CellularGatewayLanArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -211,7 +211,7 @@ public class CellularGatewayLan extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CellularGatewayLan get(String name, Output<String> id, @Nullable CellularGatewayLanState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static CellularGatewayLan get(java.lang.String name, Output<java.lang.String> id, @Nullable CellularGatewayLanState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new CellularGatewayLan(name, id, state, options);
     }
 }

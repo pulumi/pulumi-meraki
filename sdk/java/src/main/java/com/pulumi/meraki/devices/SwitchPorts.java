@@ -527,7 +527,7 @@ public class SwitchPorts extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SwitchPorts(String name) {
+    public SwitchPorts(java.lang.String name) {
         this(name, SwitchPortsArgs.Empty);
     }
     /**
@@ -535,7 +535,7 @@ public class SwitchPorts extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SwitchPorts(String name, SwitchPortsArgs args) {
+    public SwitchPorts(java.lang.String name, SwitchPortsArgs args) {
         this(name, args, null);
     }
     /**
@@ -544,12 +544,12 @@ public class SwitchPorts extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SwitchPorts(String name, SwitchPortsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/switchPorts:SwitchPorts", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public SwitchPorts(java.lang.String name, SwitchPortsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/switchPorts:SwitchPorts", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SwitchPorts(String name, Output<String> id, @Nullable SwitchPortsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/switchPorts:SwitchPorts", name, state, makeResourceOptions(options, id));
+    private SwitchPorts(java.lang.String name, Output<java.lang.String> id, @Nullable SwitchPortsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/switchPorts:SwitchPorts", name, state, makeResourceOptions(options, id), false);
     }
 
     private static SwitchPortsArgs makeArgs(SwitchPortsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -559,7 +559,7 @@ public class SwitchPorts extends com.pulumi.resources.CustomResource {
         return args == null ? SwitchPortsArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -575,7 +575,7 @@ public class SwitchPorts extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SwitchPorts get(String name, Output<String> id, @Nullable SwitchPortsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SwitchPorts get(java.lang.String name, Output<java.lang.String> id, @Nullable SwitchPortsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SwitchPorts(name, id, state, options);
     }
 }

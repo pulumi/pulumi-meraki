@@ -97,7 +97,7 @@ class CameraWirelessProfiles(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 ids: Optional[pulumi.Input[pulumi.InputType['CameraWirelessProfilesIdsArgs']]] = None,
+                 ids: Optional[pulumi.Input[Union['CameraWirelessProfilesIdsArgs', 'CameraWirelessProfilesIdsArgsDict']]] = None,
                  serial: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
@@ -108,11 +108,11 @@ class CameraWirelessProfiles(pulumi.CustomResource):
         import pulumi_meraki as meraki
 
         example = meraki.devices.CameraWirelessProfiles("example",
-            ids=meraki.devices.CameraWirelessProfilesIdsArgs(
-                backup="1",
-                primary="3",
-                secondary="2",
-            ),
+            ids={
+                "backup": "1",
+                "primary": "3",
+                "secondary": "2",
+            },
             serial="string")
         pulumi.export("merakiDevicesCameraWirelessProfilesExample", example)
         ```
@@ -125,7 +125,7 @@ class CameraWirelessProfiles(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['CameraWirelessProfilesIdsArgs']] ids: The ids of the wireless profile to assign to the given camera
+        :param pulumi.Input[Union['CameraWirelessProfilesIdsArgs', 'CameraWirelessProfilesIdsArgsDict']] ids: The ids of the wireless profile to assign to the given camera
         :param pulumi.Input[str] serial: serial path parameter.
         """
         ...
@@ -142,11 +142,11 @@ class CameraWirelessProfiles(pulumi.CustomResource):
         import pulumi_meraki as meraki
 
         example = meraki.devices.CameraWirelessProfiles("example",
-            ids=meraki.devices.CameraWirelessProfilesIdsArgs(
-                backup="1",
-                primary="3",
-                secondary="2",
-            ),
+            ids={
+                "backup": "1",
+                "primary": "3",
+                "secondary": "2",
+            },
             serial="string")
         pulumi.export("merakiDevicesCameraWirelessProfilesExample", example)
         ```
@@ -172,7 +172,7 @@ class CameraWirelessProfiles(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 ids: Optional[pulumi.Input[pulumi.InputType['CameraWirelessProfilesIdsArgs']]] = None,
+                 ids: Optional[pulumi.Input[Union['CameraWirelessProfilesIdsArgs', 'CameraWirelessProfilesIdsArgsDict']]] = None,
                  serial: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -197,7 +197,7 @@ class CameraWirelessProfiles(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            ids: Optional[pulumi.Input[pulumi.InputType['CameraWirelessProfilesIdsArgs']]] = None,
+            ids: Optional[pulumi.Input[Union['CameraWirelessProfilesIdsArgs', 'CameraWirelessProfilesIdsArgsDict']]] = None,
             serial: Optional[pulumi.Input[str]] = None) -> 'CameraWirelessProfiles':
         """
         Get an existing CameraWirelessProfiles resource's state with the given name, id, and optional extra
@@ -206,7 +206,7 @@ class CameraWirelessProfiles(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['CameraWirelessProfilesIdsArgs']] ids: The ids of the wireless profile to assign to the given camera
+        :param pulumi.Input[Union['CameraWirelessProfilesIdsArgs', 'CameraWirelessProfilesIdsArgsDict']] ids: The ids of the wireless profile to assign to the given camera
         :param pulumi.Input[str] serial: serial path parameter.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

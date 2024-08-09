@@ -104,7 +104,7 @@ public class SmSentryPoliciesAssignments extends com.pulumi.resources.CustomReso
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SmSentryPoliciesAssignments(String name) {
+    public SmSentryPoliciesAssignments(java.lang.String name) {
         this(name, SmSentryPoliciesAssignmentsArgs.Empty);
     }
     /**
@@ -112,7 +112,7 @@ public class SmSentryPoliciesAssignments extends com.pulumi.resources.CustomReso
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SmSentryPoliciesAssignments(String name, SmSentryPoliciesAssignmentsArgs args) {
+    public SmSentryPoliciesAssignments(java.lang.String name, SmSentryPoliciesAssignmentsArgs args) {
         this(name, args, null);
     }
     /**
@@ -121,12 +121,12 @@ public class SmSentryPoliciesAssignments extends com.pulumi.resources.CustomReso
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SmSentryPoliciesAssignments(String name, SmSentryPoliciesAssignmentsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/smSentryPoliciesAssignments:SmSentryPoliciesAssignments", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public SmSentryPoliciesAssignments(java.lang.String name, SmSentryPoliciesAssignmentsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/smSentryPoliciesAssignments:SmSentryPoliciesAssignments", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SmSentryPoliciesAssignments(String name, Output<String> id, @Nullable SmSentryPoliciesAssignmentsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/smSentryPoliciesAssignments:SmSentryPoliciesAssignments", name, state, makeResourceOptions(options, id));
+    private SmSentryPoliciesAssignments(java.lang.String name, Output<java.lang.String> id, @Nullable SmSentryPoliciesAssignmentsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/smSentryPoliciesAssignments:SmSentryPoliciesAssignments", name, state, makeResourceOptions(options, id), false);
     }
 
     private static SmSentryPoliciesAssignmentsArgs makeArgs(SmSentryPoliciesAssignmentsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -136,7 +136,7 @@ public class SmSentryPoliciesAssignments extends com.pulumi.resources.CustomReso
         return args == null ? SmSentryPoliciesAssignmentsArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -152,7 +152,7 @@ public class SmSentryPoliciesAssignments extends com.pulumi.resources.CustomReso
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SmSentryPoliciesAssignments get(String name, Output<String> id, @Nullable SmSentryPoliciesAssignmentsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SmSentryPoliciesAssignments get(java.lang.String name, Output<java.lang.String> id, @Nullable SmSentryPoliciesAssignmentsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SmSentryPoliciesAssignments(name, id, state, options);
     }
 }

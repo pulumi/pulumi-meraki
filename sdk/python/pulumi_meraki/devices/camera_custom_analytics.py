@@ -163,7 +163,7 @@ class CameraCustomAnalytics(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  artifact_id: Optional[pulumi.Input[str]] = None,
                  enabled: Optional[pulumi.Input[bool]] = None,
-                 parameters: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CameraCustomAnalyticsParameterArgs']]]]] = None,
+                 parameters: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CameraCustomAnalyticsParameterArgs', 'CameraCustomAnalyticsParameterArgsDict']]]]] = None,
                  serial: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
@@ -176,10 +176,10 @@ class CameraCustomAnalytics(pulumi.CustomResource):
         example = meraki.devices.CameraCustomAnalytics("example",
             artifact_id="1",
             enabled=True,
-            parameters=[meraki.devices.CameraCustomAnalyticsParameterArgs(
-                name="detection_threshold",
-                value=0.5,
-            )],
+            parameters=[{
+                "name": "detection_threshold",
+                "value": 0.5,
+            }],
             serial="string")
         pulumi.export("merakiDevicesCameraCustomAnalyticsExample", example)
         ```
@@ -194,7 +194,7 @@ class CameraCustomAnalytics(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] artifact_id: Custom analytics artifact ID
         :param pulumi.Input[bool] enabled: Whether custom analytics is enabled
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CameraCustomAnalyticsParameterArgs']]]] parameters: Parameters for the custom analytics workload
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CameraCustomAnalyticsParameterArgs', 'CameraCustomAnalyticsParameterArgsDict']]]] parameters: Parameters for the custom analytics workload
         :param pulumi.Input[str] serial: serial path parameter.
         """
         ...
@@ -213,10 +213,10 @@ class CameraCustomAnalytics(pulumi.CustomResource):
         example = meraki.devices.CameraCustomAnalytics("example",
             artifact_id="1",
             enabled=True,
-            parameters=[meraki.devices.CameraCustomAnalyticsParameterArgs(
-                name="detection_threshold",
-                value=0.5,
-            )],
+            parameters=[{
+                "name": "detection_threshold",
+                "value": 0.5,
+            }],
             serial="string")
         pulumi.export("merakiDevicesCameraCustomAnalyticsExample", example)
         ```
@@ -244,7 +244,7 @@ class CameraCustomAnalytics(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  artifact_id: Optional[pulumi.Input[str]] = None,
                  enabled: Optional[pulumi.Input[bool]] = None,
-                 parameters: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CameraCustomAnalyticsParameterArgs']]]]] = None,
+                 parameters: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CameraCustomAnalyticsParameterArgs', 'CameraCustomAnalyticsParameterArgsDict']]]]] = None,
                  serial: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -273,7 +273,7 @@ class CameraCustomAnalytics(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             artifact_id: Optional[pulumi.Input[str]] = None,
             enabled: Optional[pulumi.Input[bool]] = None,
-            parameters: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CameraCustomAnalyticsParameterArgs']]]]] = None,
+            parameters: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CameraCustomAnalyticsParameterArgs', 'CameraCustomAnalyticsParameterArgsDict']]]]] = None,
             serial: Optional[pulumi.Input[str]] = None) -> 'CameraCustomAnalytics':
         """
         Get an existing CameraCustomAnalytics resource's state with the given name, id, and optional extra
@@ -284,7 +284,7 @@ class CameraCustomAnalytics(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] artifact_id: Custom analytics artifact ID
         :param pulumi.Input[bool] enabled: Whether custom analytics is enabled
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CameraCustomAnalyticsParameterArgs']]]] parameters: Parameters for the custom analytics workload
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CameraCustomAnalyticsParameterArgs', 'CameraCustomAnalyticsParameterArgsDict']]]] parameters: Parameters for the custom analytics workload
         :param pulumi.Input[str] serial: serial path parameter.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

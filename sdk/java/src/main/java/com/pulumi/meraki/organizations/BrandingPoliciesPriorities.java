@@ -97,7 +97,7 @@ public class BrandingPoliciesPriorities extends com.pulumi.resources.CustomResou
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public BrandingPoliciesPriorities(String name) {
+    public BrandingPoliciesPriorities(java.lang.String name) {
         this(name, BrandingPoliciesPrioritiesArgs.Empty);
     }
     /**
@@ -105,7 +105,7 @@ public class BrandingPoliciesPriorities extends com.pulumi.resources.CustomResou
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public BrandingPoliciesPriorities(String name, BrandingPoliciesPrioritiesArgs args) {
+    public BrandingPoliciesPriorities(java.lang.String name, BrandingPoliciesPrioritiesArgs args) {
         this(name, args, null);
     }
     /**
@@ -114,12 +114,12 @@ public class BrandingPoliciesPriorities extends com.pulumi.resources.CustomResou
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public BrandingPoliciesPriorities(String name, BrandingPoliciesPrioritiesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/brandingPoliciesPriorities:BrandingPoliciesPriorities", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public BrandingPoliciesPriorities(java.lang.String name, BrandingPoliciesPrioritiesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/brandingPoliciesPriorities:BrandingPoliciesPriorities", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private BrandingPoliciesPriorities(String name, Output<String> id, @Nullable BrandingPoliciesPrioritiesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/brandingPoliciesPriorities:BrandingPoliciesPriorities", name, state, makeResourceOptions(options, id));
+    private BrandingPoliciesPriorities(java.lang.String name, Output<java.lang.String> id, @Nullable BrandingPoliciesPrioritiesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/brandingPoliciesPriorities:BrandingPoliciesPriorities", name, state, makeResourceOptions(options, id), false);
     }
 
     private static BrandingPoliciesPrioritiesArgs makeArgs(BrandingPoliciesPrioritiesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -129,7 +129,7 @@ public class BrandingPoliciesPriorities extends com.pulumi.resources.CustomResou
         return args == null ? BrandingPoliciesPrioritiesArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -145,7 +145,7 @@ public class BrandingPoliciesPriorities extends com.pulumi.resources.CustomResou
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static BrandingPoliciesPriorities get(String name, Output<String> id, @Nullable BrandingPoliciesPrioritiesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static BrandingPoliciesPriorities get(java.lang.String name, Output<java.lang.String> id, @Nullable BrandingPoliciesPrioritiesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new BrandingPoliciesPriorities(name, id, state, options);
     }
 }

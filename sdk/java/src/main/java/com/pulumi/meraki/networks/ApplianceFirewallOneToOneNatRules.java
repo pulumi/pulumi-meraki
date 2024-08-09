@@ -102,7 +102,7 @@ public class ApplianceFirewallOneToOneNatRules extends com.pulumi.resources.Cust
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public ApplianceFirewallOneToOneNatRules(String name) {
+    public ApplianceFirewallOneToOneNatRules(java.lang.String name) {
         this(name, ApplianceFirewallOneToOneNatRulesArgs.Empty);
     }
     /**
@@ -110,7 +110,7 @@ public class ApplianceFirewallOneToOneNatRules extends com.pulumi.resources.Cust
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ApplianceFirewallOneToOneNatRules(String name, ApplianceFirewallOneToOneNatRulesArgs args) {
+    public ApplianceFirewallOneToOneNatRules(java.lang.String name, ApplianceFirewallOneToOneNatRulesArgs args) {
         this(name, args, null);
     }
     /**
@@ -119,12 +119,12 @@ public class ApplianceFirewallOneToOneNatRules extends com.pulumi.resources.Cust
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ApplianceFirewallOneToOneNatRules(String name, ApplianceFirewallOneToOneNatRulesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/applianceFirewallOneToOneNatRules:ApplianceFirewallOneToOneNatRules", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public ApplianceFirewallOneToOneNatRules(java.lang.String name, ApplianceFirewallOneToOneNatRulesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/applianceFirewallOneToOneNatRules:ApplianceFirewallOneToOneNatRules", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private ApplianceFirewallOneToOneNatRules(String name, Output<String> id, @Nullable ApplianceFirewallOneToOneNatRulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/applianceFirewallOneToOneNatRules:ApplianceFirewallOneToOneNatRules", name, state, makeResourceOptions(options, id));
+    private ApplianceFirewallOneToOneNatRules(java.lang.String name, Output<java.lang.String> id, @Nullable ApplianceFirewallOneToOneNatRulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/applianceFirewallOneToOneNatRules:ApplianceFirewallOneToOneNatRules", name, state, makeResourceOptions(options, id), false);
     }
 
     private static ApplianceFirewallOneToOneNatRulesArgs makeArgs(ApplianceFirewallOneToOneNatRulesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -134,7 +134,7 @@ public class ApplianceFirewallOneToOneNatRules extends com.pulumi.resources.Cust
         return args == null ? ApplianceFirewallOneToOneNatRulesArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -150,7 +150,7 @@ public class ApplianceFirewallOneToOneNatRules extends com.pulumi.resources.Cust
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ApplianceFirewallOneToOneNatRules get(String name, Output<String> id, @Nullable ApplianceFirewallOneToOneNatRulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ApplianceFirewallOneToOneNatRules get(java.lang.String name, Output<java.lang.String> id, @Nullable ApplianceFirewallOneToOneNatRulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new ApplianceFirewallOneToOneNatRules(name, id, state, options);
     }
 }

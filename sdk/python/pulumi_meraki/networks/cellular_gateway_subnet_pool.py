@@ -257,7 +257,7 @@ class CellularGatewaySubnetPool(pulumi.CustomResource):
             deployment_mode: Optional[pulumi.Input[str]] = None,
             mask: Optional[pulumi.Input[int]] = None,
             network_id: Optional[pulumi.Input[str]] = None,
-            subnets: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CellularGatewaySubnetPoolSubnetArgs']]]]] = None) -> 'CellularGatewaySubnetPool':
+            subnets: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CellularGatewaySubnetPoolSubnetArgs', 'CellularGatewaySubnetPoolSubnetArgsDict']]]]] = None) -> 'CellularGatewaySubnetPool':
         """
         Get an existing CellularGatewaySubnetPool resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

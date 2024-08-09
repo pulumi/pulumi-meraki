@@ -282,7 +282,7 @@ public class LoginSecurity extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public LoginSecurity(String name) {
+    public LoginSecurity(java.lang.String name) {
         this(name, LoginSecurityArgs.Empty);
     }
     /**
@@ -290,7 +290,7 @@ public class LoginSecurity extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public LoginSecurity(String name, LoginSecurityArgs args) {
+    public LoginSecurity(java.lang.String name, LoginSecurityArgs args) {
         this(name, args, null);
     }
     /**
@@ -299,12 +299,12 @@ public class LoginSecurity extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public LoginSecurity(String name, LoginSecurityArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/loginSecurity:LoginSecurity", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public LoginSecurity(java.lang.String name, LoginSecurityArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/loginSecurity:LoginSecurity", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private LoginSecurity(String name, Output<String> id, @Nullable LoginSecurityState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/loginSecurity:LoginSecurity", name, state, makeResourceOptions(options, id));
+    private LoginSecurity(java.lang.String name, Output<java.lang.String> id, @Nullable LoginSecurityState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/loginSecurity:LoginSecurity", name, state, makeResourceOptions(options, id), false);
     }
 
     private static LoginSecurityArgs makeArgs(LoginSecurityArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -314,7 +314,7 @@ public class LoginSecurity extends com.pulumi.resources.CustomResource {
         return args == null ? LoginSecurityArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -330,7 +330,7 @@ public class LoginSecurity extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LoginSecurity get(String name, Output<String> id, @Nullable LoginSecurityState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static LoginSecurity get(java.lang.String name, Output<java.lang.String> id, @Nullable LoginSecurityState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new LoginSecurity(name, id, state, options);
     }
 }

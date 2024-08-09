@@ -96,7 +96,7 @@ public class InventoryOnboardingCloudMonitoringImports extends com.pulumi.resour
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public InventoryOnboardingCloudMonitoringImports(String name) {
+    public InventoryOnboardingCloudMonitoringImports(java.lang.String name) {
         this(name, InventoryOnboardingCloudMonitoringImportsArgs.Empty);
     }
     /**
@@ -104,7 +104,7 @@ public class InventoryOnboardingCloudMonitoringImports extends com.pulumi.resour
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public InventoryOnboardingCloudMonitoringImports(String name, InventoryOnboardingCloudMonitoringImportsArgs args) {
+    public InventoryOnboardingCloudMonitoringImports(java.lang.String name, InventoryOnboardingCloudMonitoringImportsArgs args) {
         this(name, args, null);
     }
     /**
@@ -113,12 +113,12 @@ public class InventoryOnboardingCloudMonitoringImports extends com.pulumi.resour
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public InventoryOnboardingCloudMonitoringImports(String name, InventoryOnboardingCloudMonitoringImportsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/inventoryOnboardingCloudMonitoringImports:InventoryOnboardingCloudMonitoringImports", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public InventoryOnboardingCloudMonitoringImports(java.lang.String name, InventoryOnboardingCloudMonitoringImportsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/inventoryOnboardingCloudMonitoringImports:InventoryOnboardingCloudMonitoringImports", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private InventoryOnboardingCloudMonitoringImports(String name, Output<String> id, @Nullable InventoryOnboardingCloudMonitoringImportsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/inventoryOnboardingCloudMonitoringImports:InventoryOnboardingCloudMonitoringImports", name, state, makeResourceOptions(options, id));
+    private InventoryOnboardingCloudMonitoringImports(java.lang.String name, Output<java.lang.String> id, @Nullable InventoryOnboardingCloudMonitoringImportsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/inventoryOnboardingCloudMonitoringImports:InventoryOnboardingCloudMonitoringImports", name, state, makeResourceOptions(options, id), false);
     }
 
     private static InventoryOnboardingCloudMonitoringImportsArgs makeArgs(InventoryOnboardingCloudMonitoringImportsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -128,7 +128,7 @@ public class InventoryOnboardingCloudMonitoringImports extends com.pulumi.resour
         return args == null ? InventoryOnboardingCloudMonitoringImportsArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -144,7 +144,7 @@ public class InventoryOnboardingCloudMonitoringImports extends com.pulumi.resour
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static InventoryOnboardingCloudMonitoringImports get(String name, Output<String> id, @Nullable InventoryOnboardingCloudMonitoringImportsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static InventoryOnboardingCloudMonitoringImports get(java.lang.String name, Output<java.lang.String> id, @Nullable InventoryOnboardingCloudMonitoringImportsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new InventoryOnboardingCloudMonitoringImports(name, id, state, options);
     }
 }

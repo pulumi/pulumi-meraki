@@ -97,7 +97,7 @@ public class SmDevicesUnenroll extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SmDevicesUnenroll(String name) {
+    public SmDevicesUnenroll(java.lang.String name) {
         this(name, SmDevicesUnenrollArgs.Empty);
     }
     /**
@@ -105,7 +105,7 @@ public class SmDevicesUnenroll extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SmDevicesUnenroll(String name, SmDevicesUnenrollArgs args) {
+    public SmDevicesUnenroll(java.lang.String name, SmDevicesUnenrollArgs args) {
         this(name, args, null);
     }
     /**
@@ -114,12 +114,12 @@ public class SmDevicesUnenroll extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SmDevicesUnenroll(String name, SmDevicesUnenrollArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/smDevicesUnenroll:SmDevicesUnenroll", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public SmDevicesUnenroll(java.lang.String name, SmDevicesUnenrollArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/smDevicesUnenroll:SmDevicesUnenroll", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SmDevicesUnenroll(String name, Output<String> id, @Nullable SmDevicesUnenrollState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/smDevicesUnenroll:SmDevicesUnenroll", name, state, makeResourceOptions(options, id));
+    private SmDevicesUnenroll(java.lang.String name, Output<java.lang.String> id, @Nullable SmDevicesUnenrollState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/smDevicesUnenroll:SmDevicesUnenroll", name, state, makeResourceOptions(options, id), false);
     }
 
     private static SmDevicesUnenrollArgs makeArgs(SmDevicesUnenrollArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -129,7 +129,7 @@ public class SmDevicesUnenroll extends com.pulumi.resources.CustomResource {
         return args == null ? SmDevicesUnenrollArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -145,7 +145,7 @@ public class SmDevicesUnenroll extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SmDevicesUnenroll get(String name, Output<String> id, @Nullable SmDevicesUnenrollState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SmDevicesUnenroll get(java.lang.String name, Output<java.lang.String> id, @Nullable SmDevicesUnenrollState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SmDevicesUnenroll(name, id, state, options);
     }
 }

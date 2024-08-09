@@ -195,7 +195,7 @@ public class WirelessSsidsIdentityPsks extends com.pulumi.resources.CustomResour
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public WirelessSsidsIdentityPsks(String name) {
+    public WirelessSsidsIdentityPsks(java.lang.String name) {
         this(name, WirelessSsidsIdentityPsksArgs.Empty);
     }
     /**
@@ -203,7 +203,7 @@ public class WirelessSsidsIdentityPsks extends com.pulumi.resources.CustomResour
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public WirelessSsidsIdentityPsks(String name, WirelessSsidsIdentityPsksArgs args) {
+    public WirelessSsidsIdentityPsks(java.lang.String name, WirelessSsidsIdentityPsksArgs args) {
         this(name, args, null);
     }
     /**
@@ -212,12 +212,12 @@ public class WirelessSsidsIdentityPsks extends com.pulumi.resources.CustomResour
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public WirelessSsidsIdentityPsks(String name, WirelessSsidsIdentityPsksArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/wirelessSsidsIdentityPsks:WirelessSsidsIdentityPsks", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public WirelessSsidsIdentityPsks(java.lang.String name, WirelessSsidsIdentityPsksArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/wirelessSsidsIdentityPsks:WirelessSsidsIdentityPsks", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private WirelessSsidsIdentityPsks(String name, Output<String> id, @Nullable WirelessSsidsIdentityPsksState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/wirelessSsidsIdentityPsks:WirelessSsidsIdentityPsks", name, state, makeResourceOptions(options, id));
+    private WirelessSsidsIdentityPsks(java.lang.String name, Output<java.lang.String> id, @Nullable WirelessSsidsIdentityPsksState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/wirelessSsidsIdentityPsks:WirelessSsidsIdentityPsks", name, state, makeResourceOptions(options, id), false);
     }
 
     private static WirelessSsidsIdentityPsksArgs makeArgs(WirelessSsidsIdentityPsksArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -227,7 +227,7 @@ public class WirelessSsidsIdentityPsks extends com.pulumi.resources.CustomResour
         return args == null ? WirelessSsidsIdentityPsksArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -243,7 +243,7 @@ public class WirelessSsidsIdentityPsks extends com.pulumi.resources.CustomResour
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WirelessSsidsIdentityPsks get(String name, Output<String> id, @Nullable WirelessSsidsIdentityPsksState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static WirelessSsidsIdentityPsks get(java.lang.String name, Output<java.lang.String> id, @Nullable WirelessSsidsIdentityPsksState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new WirelessSsidsIdentityPsks(name, id, state, options);
     }
 }

@@ -198,7 +198,7 @@ public class SwitchQosRulesOrder extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SwitchQosRulesOrder(String name) {
+    public SwitchQosRulesOrder(java.lang.String name) {
         this(name, SwitchQosRulesOrderArgs.Empty);
     }
     /**
@@ -206,7 +206,7 @@ public class SwitchQosRulesOrder extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SwitchQosRulesOrder(String name, SwitchQosRulesOrderArgs args) {
+    public SwitchQosRulesOrder(java.lang.String name, SwitchQosRulesOrderArgs args) {
         this(name, args, null);
     }
     /**
@@ -215,12 +215,12 @@ public class SwitchQosRulesOrder extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SwitchQosRulesOrder(String name, SwitchQosRulesOrderArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/switchQosRulesOrder:SwitchQosRulesOrder", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public SwitchQosRulesOrder(java.lang.String name, SwitchQosRulesOrderArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/switchQosRulesOrder:SwitchQosRulesOrder", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SwitchQosRulesOrder(String name, Output<String> id, @Nullable SwitchQosRulesOrderState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/switchQosRulesOrder:SwitchQosRulesOrder", name, state, makeResourceOptions(options, id));
+    private SwitchQosRulesOrder(java.lang.String name, Output<java.lang.String> id, @Nullable SwitchQosRulesOrderState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/switchQosRulesOrder:SwitchQosRulesOrder", name, state, makeResourceOptions(options, id), false);
     }
 
     private static SwitchQosRulesOrderArgs makeArgs(SwitchQosRulesOrderArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -230,7 +230,7 @@ public class SwitchQosRulesOrder extends com.pulumi.resources.CustomResource {
         return args == null ? SwitchQosRulesOrderArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -246,7 +246,7 @@ public class SwitchQosRulesOrder extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SwitchQosRulesOrder get(String name, Output<String> id, @Nullable SwitchQosRulesOrderState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SwitchQosRulesOrder get(java.lang.String name, Output<java.lang.String> id, @Nullable SwitchQosRulesOrderState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SwitchQosRulesOrder(name, id, state, options);
     }
 }

@@ -173,7 +173,7 @@ public class SwitchDhcpServerPolicy extends com.pulumi.resources.CustomResource 
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SwitchDhcpServerPolicy(String name) {
+    public SwitchDhcpServerPolicy(java.lang.String name) {
         this(name, SwitchDhcpServerPolicyArgs.Empty);
     }
     /**
@@ -181,7 +181,7 @@ public class SwitchDhcpServerPolicy extends com.pulumi.resources.CustomResource 
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SwitchDhcpServerPolicy(String name, SwitchDhcpServerPolicyArgs args) {
+    public SwitchDhcpServerPolicy(java.lang.String name, SwitchDhcpServerPolicyArgs args) {
         this(name, args, null);
     }
     /**
@@ -190,12 +190,12 @@ public class SwitchDhcpServerPolicy extends com.pulumi.resources.CustomResource 
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SwitchDhcpServerPolicy(String name, SwitchDhcpServerPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/switchDhcpServerPolicy:SwitchDhcpServerPolicy", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public SwitchDhcpServerPolicy(java.lang.String name, SwitchDhcpServerPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/switchDhcpServerPolicy:SwitchDhcpServerPolicy", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SwitchDhcpServerPolicy(String name, Output<String> id, @Nullable SwitchDhcpServerPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/switchDhcpServerPolicy:SwitchDhcpServerPolicy", name, state, makeResourceOptions(options, id));
+    private SwitchDhcpServerPolicy(java.lang.String name, Output<java.lang.String> id, @Nullable SwitchDhcpServerPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/switchDhcpServerPolicy:SwitchDhcpServerPolicy", name, state, makeResourceOptions(options, id), false);
     }
 
     private static SwitchDhcpServerPolicyArgs makeArgs(SwitchDhcpServerPolicyArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -205,7 +205,7 @@ public class SwitchDhcpServerPolicy extends com.pulumi.resources.CustomResource 
         return args == null ? SwitchDhcpServerPolicyArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -221,7 +221,7 @@ public class SwitchDhcpServerPolicy extends com.pulumi.resources.CustomResource 
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SwitchDhcpServerPolicy get(String name, Output<String> id, @Nullable SwitchDhcpServerPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SwitchDhcpServerPolicy get(java.lang.String name, Output<java.lang.String> id, @Nullable SwitchDhcpServerPolicyState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SwitchDhcpServerPolicy(name, id, state, options);
     }
 }

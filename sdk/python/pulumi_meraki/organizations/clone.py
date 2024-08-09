@@ -101,7 +101,7 @@ class Clone(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  organization_id: Optional[pulumi.Input[str]] = None,
-                 parameters: Optional[pulumi.Input[pulumi.InputType['CloneParametersArgs']]] = None,
+                 parameters: Optional[pulumi.Input[Union['CloneParametersArgs', 'CloneParametersArgsDict']]] = None,
                  __props__=None):
         """
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
@@ -115,9 +115,9 @@ class Clone(pulumi.CustomResource):
 
         example = meraki.organizations.Clone("example",
             organization_id="string",
-            parameters=meraki.organizations.CloneParametersArgs(
-                name="My organization",
-            ))
+            parameters={
+                "name": "My organization",
+            })
         pulumi.export("merakiOrganizationsCloneExample", example)
         ```
 
@@ -143,9 +143,9 @@ class Clone(pulumi.CustomResource):
 
         example = meraki.organizations.Clone("example",
             organization_id="string",
-            parameters=meraki.organizations.CloneParametersArgs(
-                name="My organization",
-            ))
+            parameters={
+                "name": "My organization",
+            })
         pulumi.export("merakiOrganizationsCloneExample", example)
         ```
 
@@ -165,7 +165,7 @@ class Clone(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  organization_id: Optional[pulumi.Input[str]] = None,
-                 parameters: Optional[pulumi.Input[pulumi.InputType['CloneParametersArgs']]] = None,
+                 parameters: Optional[pulumi.Input[Union['CloneParametersArgs', 'CloneParametersArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -192,9 +192,9 @@ class Clone(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            item: Optional[pulumi.Input[pulumi.InputType['CloneItemArgs']]] = None,
+            item: Optional[pulumi.Input[Union['CloneItemArgs', 'CloneItemArgsDict']]] = None,
             organization_id: Optional[pulumi.Input[str]] = None,
-            parameters: Optional[pulumi.Input[pulumi.InputType['CloneParametersArgs']]] = None) -> 'Clone':
+            parameters: Optional[pulumi.Input[Union['CloneParametersArgs', 'CloneParametersArgsDict']]] = None) -> 'Clone':
         """
         Get an existing Clone resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
