@@ -97,7 +97,7 @@ class ApplianceTrafficShapingUplinkBandwidth(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 bandwidth_limits: Optional[pulumi.Input[pulumi.InputType['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs']]] = None,
+                 bandwidth_limits: Optional[pulumi.Input[Union['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs', 'ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgsDict']]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
@@ -108,20 +108,20 @@ class ApplianceTrafficShapingUplinkBandwidth(pulumi.CustomResource):
         import pulumi_meraki as meraki
 
         example = meraki.networks.ApplianceTrafficShapingUplinkBandwidth("example",
-            bandwidth_limits=meraki.networks.ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs(
-                cellular=meraki.networks.ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellularArgs(
-                    limit_down=1000000,
-                    limit_up=1000000,
-                ),
-                wan1=meraki.networks.ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsWan1Args(
-                    limit_down=1000000,
-                    limit_up=1000000,
-                ),
-                wan2=meraki.networks.ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsWan2Args(
-                    limit_down=1000000,
-                    limit_up=1000000,
-                ),
-            ),
+            bandwidth_limits={
+                "cellular": {
+                    "limit_down": 1000000,
+                    "limit_up": 1000000,
+                },
+                "wan1": {
+                    "limit_down": 1000000,
+                    "limit_up": 1000000,
+                },
+                "wan2": {
+                    "limit_down": 1000000,
+                    "limit_up": 1000000,
+                },
+            },
             network_id="string")
         pulumi.export("merakiNetworksApplianceTrafficShapingUplinkBandwidthExample", example)
         ```
@@ -134,7 +134,7 @@ class ApplianceTrafficShapingUplinkBandwidth(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs']] bandwidth_limits: A hash uplink keys and their configured settings for the Appliance
+        :param pulumi.Input[Union['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs', 'ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgsDict']] bandwidth_limits: A hash uplink keys and their configured settings for the Appliance
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         """
         ...
@@ -151,20 +151,20 @@ class ApplianceTrafficShapingUplinkBandwidth(pulumi.CustomResource):
         import pulumi_meraki as meraki
 
         example = meraki.networks.ApplianceTrafficShapingUplinkBandwidth("example",
-            bandwidth_limits=meraki.networks.ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs(
-                cellular=meraki.networks.ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellularArgs(
-                    limit_down=1000000,
-                    limit_up=1000000,
-                ),
-                wan1=meraki.networks.ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsWan1Args(
-                    limit_down=1000000,
-                    limit_up=1000000,
-                ),
-                wan2=meraki.networks.ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsWan2Args(
-                    limit_down=1000000,
-                    limit_up=1000000,
-                ),
-            ),
+            bandwidth_limits={
+                "cellular": {
+                    "limit_down": 1000000,
+                    "limit_up": 1000000,
+                },
+                "wan1": {
+                    "limit_down": 1000000,
+                    "limit_up": 1000000,
+                },
+                "wan2": {
+                    "limit_down": 1000000,
+                    "limit_up": 1000000,
+                },
+            },
             network_id="string")
         pulumi.export("merakiNetworksApplianceTrafficShapingUplinkBandwidthExample", example)
         ```
@@ -190,7 +190,7 @@ class ApplianceTrafficShapingUplinkBandwidth(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 bandwidth_limits: Optional[pulumi.Input[pulumi.InputType['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs']]] = None,
+                 bandwidth_limits: Optional[pulumi.Input[Union['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs', 'ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgsDict']]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -215,7 +215,7 @@ class ApplianceTrafficShapingUplinkBandwidth(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            bandwidth_limits: Optional[pulumi.Input[pulumi.InputType['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs']]] = None,
+            bandwidth_limits: Optional[pulumi.Input[Union['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs', 'ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgsDict']]] = None,
             network_id: Optional[pulumi.Input[str]] = None) -> 'ApplianceTrafficShapingUplinkBandwidth':
         """
         Get an existing ApplianceTrafficShapingUplinkBandwidth resource's state with the given name, id, and optional extra
@@ -224,7 +224,7 @@ class ApplianceTrafficShapingUplinkBandwidth(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs']] bandwidth_limits: A hash uplink keys and their configured settings for the Appliance
+        :param pulumi.Input[Union['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs', 'ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgsDict']] bandwidth_limits: A hash uplink keys and their configured settings for the Appliance
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

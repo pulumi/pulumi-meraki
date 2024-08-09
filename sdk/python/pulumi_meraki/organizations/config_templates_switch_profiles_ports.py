@@ -957,7 +957,7 @@ class ConfigTemplatesSwitchProfilesPorts(pulumi.CustomResource):
                  poe_enabled: Optional[pulumi.Input[bool]] = None,
                  port_id: Optional[pulumi.Input[str]] = None,
                  port_schedule_id: Optional[pulumi.Input[str]] = None,
-                 profile: Optional[pulumi.Input[pulumi.InputType['ConfigTemplatesSwitchProfilesPortsProfileArgs']]] = None,
+                 profile: Optional[pulumi.Input[Union['ConfigTemplatesSwitchProfilesPortsProfileArgs', 'ConfigTemplatesSwitchProfilesPortsProfileArgsDict']]] = None,
                  profile_id: Optional[pulumi.Input[str]] = None,
                  rstp_enabled: Optional[pulumi.Input[bool]] = None,
                  sticky_mac_allow_list_limit: Optional[pulumi.Input[int]] = None,
@@ -996,11 +996,11 @@ class ConfigTemplatesSwitchProfilesPorts(pulumi.CustomResource):
             poe_enabled=True,
             port_id="string",
             port_schedule_id="1234",
-            profile=meraki.organizations.ConfigTemplatesSwitchProfilesPortsProfileArgs(
-                enabled=False,
-                id="1284392014819",
-                iname="iname",
-            ),
+            profile={
+                "enabled": False,
+                "id": "1284392014819",
+                "iname": "iname",
+            },
             profile_id="string",
             rstp_enabled=True,
             sticky_mac_allow_lists=[
@@ -1044,7 +1044,7 @@ class ConfigTemplatesSwitchProfilesPorts(pulumi.CustomResource):
         :param pulumi.Input[bool] poe_enabled: The PoE status of the switch template port.
         :param pulumi.Input[str] port_id: The identifier of the switch template port.
         :param pulumi.Input[str] port_schedule_id: The ID of the port schedule. A value of null will clear the port schedule.
-        :param pulumi.Input[pulumi.InputType['ConfigTemplatesSwitchProfilesPortsProfileArgs']] profile: Profile attributes
+        :param pulumi.Input[Union['ConfigTemplatesSwitchProfilesPortsProfileArgs', 'ConfigTemplatesSwitchProfilesPortsProfileArgsDict']] profile: Profile attributes
         :param pulumi.Input[str] profile_id: profileId path parameter. Profile ID
         :param pulumi.Input[bool] rstp_enabled: The rapid spanning tree protocol status.
         :param pulumi.Input[int] sticky_mac_allow_list_limit: The maximum number of MAC addresses for sticky MAC allow list. Only applicable when 'accessPolicyType' is 'Sticky MAC allow list'.
@@ -1089,11 +1089,11 @@ class ConfigTemplatesSwitchProfilesPorts(pulumi.CustomResource):
             poe_enabled=True,
             port_id="string",
             port_schedule_id="1234",
-            profile=meraki.organizations.ConfigTemplatesSwitchProfilesPortsProfileArgs(
-                enabled=False,
-                id="1284392014819",
-                iname="iname",
-            ),
+            profile={
+                "enabled": False,
+                "id": "1284392014819",
+                "iname": "iname",
+            },
             profile_id="string",
             rstp_enabled=True,
             sticky_mac_allow_lists=[
@@ -1150,7 +1150,7 @@ class ConfigTemplatesSwitchProfilesPorts(pulumi.CustomResource):
                  poe_enabled: Optional[pulumi.Input[bool]] = None,
                  port_id: Optional[pulumi.Input[str]] = None,
                  port_schedule_id: Optional[pulumi.Input[str]] = None,
-                 profile: Optional[pulumi.Input[pulumi.InputType['ConfigTemplatesSwitchProfilesPortsProfileArgs']]] = None,
+                 profile: Optional[pulumi.Input[Union['ConfigTemplatesSwitchProfilesPortsProfileArgs', 'ConfigTemplatesSwitchProfilesPortsProfileArgsDict']]] = None,
                  profile_id: Optional[pulumi.Input[str]] = None,
                  rstp_enabled: Optional[pulumi.Input[bool]] = None,
                  sticky_mac_allow_list_limit: Optional[pulumi.Input[int]] = None,
@@ -1230,14 +1230,14 @@ class ConfigTemplatesSwitchProfilesPorts(pulumi.CustomResource):
             link_negotiation: Optional[pulumi.Input[str]] = None,
             link_negotiation_capabilities: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
             mac_allow_lists: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-            mirror: Optional[pulumi.Input[pulumi.InputType['ConfigTemplatesSwitchProfilesPortsMirrorArgs']]] = None,
-            module: Optional[pulumi.Input[pulumi.InputType['ConfigTemplatesSwitchProfilesPortsModuleArgs']]] = None,
+            mirror: Optional[pulumi.Input[Union['ConfigTemplatesSwitchProfilesPortsMirrorArgs', 'ConfigTemplatesSwitchProfilesPortsMirrorArgsDict']]] = None,
+            module: Optional[pulumi.Input[Union['ConfigTemplatesSwitchProfilesPortsModuleArgs', 'ConfigTemplatesSwitchProfilesPortsModuleArgsDict']]] = None,
             name: Optional[pulumi.Input[str]] = None,
             organization_id: Optional[pulumi.Input[str]] = None,
             poe_enabled: Optional[pulumi.Input[bool]] = None,
             port_id: Optional[pulumi.Input[str]] = None,
             port_schedule_id: Optional[pulumi.Input[str]] = None,
-            profile: Optional[pulumi.Input[pulumi.InputType['ConfigTemplatesSwitchProfilesPortsProfileArgs']]] = None,
+            profile: Optional[pulumi.Input[Union['ConfigTemplatesSwitchProfilesPortsProfileArgs', 'ConfigTemplatesSwitchProfilesPortsProfileArgsDict']]] = None,
             profile_id: Optional[pulumi.Input[str]] = None,
             rstp_enabled: Optional[pulumi.Input[bool]] = None,
             sticky_mac_allow_list_limit: Optional[pulumi.Input[int]] = None,
@@ -1267,14 +1267,14 @@ class ConfigTemplatesSwitchProfilesPorts(pulumi.CustomResource):
         :param pulumi.Input[str] link_negotiation: The link speed for the switch template port.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] link_negotiation_capabilities: Available link speeds for the switch template port.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] mac_allow_lists: Only devices with MAC addresses specified in this list will have access to this port. Up to 20 MAC addresses can be defined. Only applicable when 'accessPolicyType' is 'MAC allow list'.
-        :param pulumi.Input[pulumi.InputType['ConfigTemplatesSwitchProfilesPortsMirrorArgs']] mirror: Port mirror
-        :param pulumi.Input[pulumi.InputType['ConfigTemplatesSwitchProfilesPortsModuleArgs']] module: Expansion module
+        :param pulumi.Input[Union['ConfigTemplatesSwitchProfilesPortsMirrorArgs', 'ConfigTemplatesSwitchProfilesPortsMirrorArgsDict']] mirror: Port mirror
+        :param pulumi.Input[Union['ConfigTemplatesSwitchProfilesPortsModuleArgs', 'ConfigTemplatesSwitchProfilesPortsModuleArgsDict']] module: Expansion module
         :param pulumi.Input[str] name: The name of the switch template port.
         :param pulumi.Input[str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[bool] poe_enabled: The PoE status of the switch template port.
         :param pulumi.Input[str] port_id: The identifier of the switch template port.
         :param pulumi.Input[str] port_schedule_id: The ID of the port schedule. A value of null will clear the port schedule.
-        :param pulumi.Input[pulumi.InputType['ConfigTemplatesSwitchProfilesPortsProfileArgs']] profile: Profile attributes
+        :param pulumi.Input[Union['ConfigTemplatesSwitchProfilesPortsProfileArgs', 'ConfigTemplatesSwitchProfilesPortsProfileArgsDict']] profile: Profile attributes
         :param pulumi.Input[str] profile_id: profileId path parameter. Profile ID
         :param pulumi.Input[bool] rstp_enabled: The rapid spanning tree protocol status.
         :param pulumi.Input[int] sticky_mac_allow_list_limit: The maximum number of MAC addresses for sticky MAC allow list. Only applicable when 'accessPolicyType' is 'Sticky MAC allow list'.

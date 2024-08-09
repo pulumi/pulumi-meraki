@@ -130,7 +130,7 @@ public class CameraCustomAnalytics extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public CameraCustomAnalytics(String name) {
+    public CameraCustomAnalytics(java.lang.String name) {
         this(name, CameraCustomAnalyticsArgs.Empty);
     }
     /**
@@ -138,7 +138,7 @@ public class CameraCustomAnalytics extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public CameraCustomAnalytics(String name, CameraCustomAnalyticsArgs args) {
+    public CameraCustomAnalytics(java.lang.String name, CameraCustomAnalyticsArgs args) {
         this(name, args, null);
     }
     /**
@@ -147,12 +147,12 @@ public class CameraCustomAnalytics extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CameraCustomAnalytics(String name, CameraCustomAnalyticsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/cameraCustomAnalytics:CameraCustomAnalytics", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public CameraCustomAnalytics(java.lang.String name, CameraCustomAnalyticsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/cameraCustomAnalytics:CameraCustomAnalytics", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private CameraCustomAnalytics(String name, Output<String> id, @Nullable CameraCustomAnalyticsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/cameraCustomAnalytics:CameraCustomAnalytics", name, state, makeResourceOptions(options, id));
+    private CameraCustomAnalytics(java.lang.String name, Output<java.lang.String> id, @Nullable CameraCustomAnalyticsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/cameraCustomAnalytics:CameraCustomAnalytics", name, state, makeResourceOptions(options, id), false);
     }
 
     private static CameraCustomAnalyticsArgs makeArgs(CameraCustomAnalyticsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -162,7 +162,7 @@ public class CameraCustomAnalytics extends com.pulumi.resources.CustomResource {
         return args == null ? CameraCustomAnalyticsArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -178,7 +178,7 @@ public class CameraCustomAnalytics extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CameraCustomAnalytics get(String name, Output<String> id, @Nullable CameraCustomAnalyticsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static CameraCustomAnalytics get(java.lang.String name, Output<java.lang.String> id, @Nullable CameraCustomAnalyticsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new CameraCustomAnalytics(name, id, state, options);
     }
 }

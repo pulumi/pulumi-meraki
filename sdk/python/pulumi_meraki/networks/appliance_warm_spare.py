@@ -387,8 +387,8 @@ class ApplianceWarmSpare(pulumi.CustomResource):
             uplink_mode: Optional[pulumi.Input[str]] = None,
             virtual_ip1: Optional[pulumi.Input[str]] = None,
             virtual_ip2: Optional[pulumi.Input[str]] = None,
-            wan1: Optional[pulumi.Input[pulumi.InputType['ApplianceWarmSpareWan1Args']]] = None,
-            wan2: Optional[pulumi.Input[pulumi.InputType['ApplianceWarmSpareWan2Args']]] = None) -> 'ApplianceWarmSpare':
+            wan1: Optional[pulumi.Input[Union['ApplianceWarmSpareWan1Args', 'ApplianceWarmSpareWan1ArgsDict']]] = None,
+            wan2: Optional[pulumi.Input[Union['ApplianceWarmSpareWan2Args', 'ApplianceWarmSpareWan2ArgsDict']]] = None) -> 'ApplianceWarmSpare':
         """
         Get an existing ApplianceWarmSpare resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

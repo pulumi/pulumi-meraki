@@ -177,8 +177,8 @@ class CellularGatewayLan(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 fixed_ip_assignments: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CellularGatewayLanFixedIpAssignmentArgs']]]]] = None,
-                 reserved_ip_ranges: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CellularGatewayLanReservedIpRangeArgs']]]]] = None,
+                 fixed_ip_assignments: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CellularGatewayLanFixedIpAssignmentArgs', 'CellularGatewayLanFixedIpAssignmentArgsDict']]]]] = None,
+                 reserved_ip_ranges: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CellularGatewayLanReservedIpRangeArgs', 'CellularGatewayLanReservedIpRangeArgsDict']]]]] = None,
                  serial: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
@@ -189,16 +189,16 @@ class CellularGatewayLan(pulumi.CustomResource):
         import pulumi_meraki as meraki
 
         example = meraki.devices.CellularGatewayLan("example",
-            fixed_ip_assignments=[meraki.devices.CellularGatewayLanFixedIpAssignmentArgs(
-                ip="192.168.0.10",
-                mac="0b:00:00:00:00:ac",
-                name="server 1",
-            )],
-            reserved_ip_ranges=[meraki.devices.CellularGatewayLanReservedIpRangeArgs(
-                comment="A reserved IP range",
-                end="192.168.1.1",
-                start="192.168.1.0",
-            )],
+            fixed_ip_assignments=[{
+                "ip": "192.168.0.10",
+                "mac": "0b:00:00:00:00:ac",
+                "name": "server 1",
+            }],
+            reserved_ip_ranges=[{
+                "comment": "A reserved IP range",
+                "end": "192.168.1.1",
+                "start": "192.168.1.0",
+            }],
             serial="string")
         pulumi.export("merakiDevicesCellularGatewayLanExample", example)
         ```
@@ -211,8 +211,8 @@ class CellularGatewayLan(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CellularGatewayLanFixedIpAssignmentArgs']]]] fixed_ip_assignments: list of all fixed IP assignments for a single MG
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CellularGatewayLanReservedIpRangeArgs']]]] reserved_ip_ranges: list of all reserved IP ranges for a single MG
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CellularGatewayLanFixedIpAssignmentArgs', 'CellularGatewayLanFixedIpAssignmentArgsDict']]]] fixed_ip_assignments: list of all fixed IP assignments for a single MG
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CellularGatewayLanReservedIpRangeArgs', 'CellularGatewayLanReservedIpRangeArgsDict']]]] reserved_ip_ranges: list of all reserved IP ranges for a single MG
         :param pulumi.Input[str] serial: serial path parameter.
         """
         ...
@@ -229,16 +229,16 @@ class CellularGatewayLan(pulumi.CustomResource):
         import pulumi_meraki as meraki
 
         example = meraki.devices.CellularGatewayLan("example",
-            fixed_ip_assignments=[meraki.devices.CellularGatewayLanFixedIpAssignmentArgs(
-                ip="192.168.0.10",
-                mac="0b:00:00:00:00:ac",
-                name="server 1",
-            )],
-            reserved_ip_ranges=[meraki.devices.CellularGatewayLanReservedIpRangeArgs(
-                comment="A reserved IP range",
-                end="192.168.1.1",
-                start="192.168.1.0",
-            )],
+            fixed_ip_assignments=[{
+                "ip": "192.168.0.10",
+                "mac": "0b:00:00:00:00:ac",
+                "name": "server 1",
+            }],
+            reserved_ip_ranges=[{
+                "comment": "A reserved IP range",
+                "end": "192.168.1.1",
+                "start": "192.168.1.0",
+            }],
             serial="string")
         pulumi.export("merakiDevicesCellularGatewayLanExample", example)
         ```
@@ -264,8 +264,8 @@ class CellularGatewayLan(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 fixed_ip_assignments: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CellularGatewayLanFixedIpAssignmentArgs']]]]] = None,
-                 reserved_ip_ranges: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CellularGatewayLanReservedIpRangeArgs']]]]] = None,
+                 fixed_ip_assignments: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CellularGatewayLanFixedIpAssignmentArgs', 'CellularGatewayLanFixedIpAssignmentArgsDict']]]]] = None,
+                 reserved_ip_ranges: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CellularGatewayLanReservedIpRangeArgs', 'CellularGatewayLanReservedIpRangeArgsDict']]]]] = None,
                  serial: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -297,8 +297,8 @@ class CellularGatewayLan(pulumi.CustomResource):
             device_lan_ip: Optional[pulumi.Input[str]] = None,
             device_name: Optional[pulumi.Input[str]] = None,
             device_subnet: Optional[pulumi.Input[str]] = None,
-            fixed_ip_assignments: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CellularGatewayLanFixedIpAssignmentArgs']]]]] = None,
-            reserved_ip_ranges: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CellularGatewayLanReservedIpRangeArgs']]]]] = None,
+            fixed_ip_assignments: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CellularGatewayLanFixedIpAssignmentArgs', 'CellularGatewayLanFixedIpAssignmentArgsDict']]]]] = None,
+            reserved_ip_ranges: Optional[pulumi.Input[Sequence[pulumi.Input[Union['CellularGatewayLanReservedIpRangeArgs', 'CellularGatewayLanReservedIpRangeArgsDict']]]]] = None,
             serial: Optional[pulumi.Input[str]] = None) -> 'CellularGatewayLan':
         """
         Get an existing CellularGatewayLan resource's state with the given name, id, and optional extra
@@ -310,8 +310,8 @@ class CellularGatewayLan(pulumi.CustomResource):
         :param pulumi.Input[str] device_lan_ip: Lan IP of the MG
         :param pulumi.Input[str] device_name: Name of the MG.
         :param pulumi.Input[str] device_subnet: Subnet configuration of the MG.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CellularGatewayLanFixedIpAssignmentArgs']]]] fixed_ip_assignments: list of all fixed IP assignments for a single MG
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['CellularGatewayLanReservedIpRangeArgs']]]] reserved_ip_ranges: list of all reserved IP ranges for a single MG
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CellularGatewayLanFixedIpAssignmentArgs', 'CellularGatewayLanFixedIpAssignmentArgsDict']]]] fixed_ip_assignments: list of all fixed IP assignments for a single MG
+        :param pulumi.Input[Sequence[pulumi.Input[Union['CellularGatewayLanReservedIpRangeArgs', 'CellularGatewayLanReservedIpRangeArgsDict']]]] reserved_ip_ranges: list of all reserved IP ranges for a single MG
         :param pulumi.Input[str] serial: serial path parameter.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

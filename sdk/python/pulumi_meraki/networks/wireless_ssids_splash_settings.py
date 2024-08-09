@@ -657,17 +657,17 @@ class WirelessSsidsSplashSettings(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  allow_simultaneous_logins: Optional[pulumi.Input[bool]] = None,
-                 billing: Optional[pulumi.Input[pulumi.InputType['WirelessSsidsSplashSettingsBillingArgs']]] = None,
+                 billing: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsBillingArgs', 'WirelessSsidsSplashSettingsBillingArgsDict']]] = None,
                  block_all_traffic_before_sign_on: Optional[pulumi.Input[bool]] = None,
                  controller_disconnection_behavior: Optional[pulumi.Input[str]] = None,
-                 guest_sponsorship: Optional[pulumi.Input[pulumi.InputType['WirelessSsidsSplashSettingsGuestSponsorshipArgs']]] = None,
+                 guest_sponsorship: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsGuestSponsorshipArgs', 'WirelessSsidsSplashSettingsGuestSponsorshipArgsDict']]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
                  number: Optional[pulumi.Input[str]] = None,
                  redirect_url: Optional[pulumi.Input[str]] = None,
-                 sentry_enrollment: Optional[pulumi.Input[pulumi.InputType['WirelessSsidsSplashSettingsSentryEnrollmentArgs']]] = None,
-                 splash_image: Optional[pulumi.Input[pulumi.InputType['WirelessSsidsSplashSettingsSplashImageArgs']]] = None,
-                 splash_logo: Optional[pulumi.Input[pulumi.InputType['WirelessSsidsSplashSettingsSplashLogoArgs']]] = None,
-                 splash_prepaid_front: Optional[pulumi.Input[pulumi.InputType['WirelessSsidsSplashSettingsSplashPrepaidFrontArgs']]] = None,
+                 sentry_enrollment: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsSentryEnrollmentArgs', 'WirelessSsidsSplashSettingsSentryEnrollmentArgsDict']]] = None,
+                 splash_image: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsSplashImageArgs', 'WirelessSsidsSplashSettingsSplashImageArgsDict']]] = None,
+                 splash_logo: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsSplashLogoArgs', 'WirelessSsidsSplashSettingsSplashLogoArgsDict']]] = None,
+                 splash_prepaid_front: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsSplashPrepaidFrontArgs', 'WirelessSsidsSplashSettingsSplashPrepaidFrontArgsDict']]] = None,
                  splash_timeout: Optional[pulumi.Input[int]] = None,
                  splash_url: Optional[pulumi.Input[str]] = None,
                  theme_id: Optional[pulumi.Input[str]] = None,
@@ -687,17 +687,17 @@ class WirelessSsidsSplashSettings(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[bool] allow_simultaneous_logins: Whether or not to allow simultaneous logins from different devices.
-        :param pulumi.Input[pulumi.InputType['WirelessSsidsSplashSettingsBillingArgs']] billing: Details associated with billing splash
+        :param pulumi.Input[Union['WirelessSsidsSplashSettingsBillingArgs', 'WirelessSsidsSplashSettingsBillingArgsDict']] billing: Details associated with billing splash
         :param pulumi.Input[bool] block_all_traffic_before_sign_on: How restricted allowing traffic should be. If true, all traffic types are blocked until the splash page is acknowledged. If false, all non-HTTP traffic is allowed before the splash page is acknowledged.
         :param pulumi.Input[str] controller_disconnection_behavior: How login attempts should be handled when the controller is unreachable.
-        :param pulumi.Input[pulumi.InputType['WirelessSsidsSplashSettingsGuestSponsorshipArgs']] guest_sponsorship: Details associated with guest sponsored splash
+        :param pulumi.Input[Union['WirelessSsidsSplashSettingsGuestSponsorshipArgs', 'WirelessSsidsSplashSettingsGuestSponsorshipArgsDict']] guest_sponsorship: Details associated with guest sponsored splash
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[str] number: number path parameter.
         :param pulumi.Input[str] redirect_url: The custom redirect URL where the users will go after the splash page.
-        :param pulumi.Input[pulumi.InputType['WirelessSsidsSplashSettingsSentryEnrollmentArgs']] sentry_enrollment: Systems Manager sentry enrollment splash settings.
-        :param pulumi.Input[pulumi.InputType['WirelessSsidsSplashSettingsSplashImageArgs']] splash_image: The image used in the splash page.
-        :param pulumi.Input[pulumi.InputType['WirelessSsidsSplashSettingsSplashLogoArgs']] splash_logo: The logo used in the splash page.
-        :param pulumi.Input[pulumi.InputType['WirelessSsidsSplashSettingsSplashPrepaidFrontArgs']] splash_prepaid_front: The prepaid front image used in the splash page.
+        :param pulumi.Input[Union['WirelessSsidsSplashSettingsSentryEnrollmentArgs', 'WirelessSsidsSplashSettingsSentryEnrollmentArgsDict']] sentry_enrollment: Systems Manager sentry enrollment splash settings.
+        :param pulumi.Input[Union['WirelessSsidsSplashSettingsSplashImageArgs', 'WirelessSsidsSplashSettingsSplashImageArgsDict']] splash_image: The image used in the splash page.
+        :param pulumi.Input[Union['WirelessSsidsSplashSettingsSplashLogoArgs', 'WirelessSsidsSplashSettingsSplashLogoArgsDict']] splash_logo: The logo used in the splash page.
+        :param pulumi.Input[Union['WirelessSsidsSplashSettingsSplashPrepaidFrontArgs', 'WirelessSsidsSplashSettingsSplashPrepaidFrontArgsDict']] splash_prepaid_front: The prepaid front image used in the splash page.
         :param pulumi.Input[int] splash_timeout: Splash timeout in minutes.
         :param pulumi.Input[str] splash_url: The custom splash URL of the click-through splash page.
         :param pulumi.Input[str] theme_id: The id of the selected splash theme.
@@ -736,17 +736,17 @@ class WirelessSsidsSplashSettings(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  allow_simultaneous_logins: Optional[pulumi.Input[bool]] = None,
-                 billing: Optional[pulumi.Input[pulumi.InputType['WirelessSsidsSplashSettingsBillingArgs']]] = None,
+                 billing: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsBillingArgs', 'WirelessSsidsSplashSettingsBillingArgsDict']]] = None,
                  block_all_traffic_before_sign_on: Optional[pulumi.Input[bool]] = None,
                  controller_disconnection_behavior: Optional[pulumi.Input[str]] = None,
-                 guest_sponsorship: Optional[pulumi.Input[pulumi.InputType['WirelessSsidsSplashSettingsGuestSponsorshipArgs']]] = None,
+                 guest_sponsorship: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsGuestSponsorshipArgs', 'WirelessSsidsSplashSettingsGuestSponsorshipArgsDict']]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
                  number: Optional[pulumi.Input[str]] = None,
                  redirect_url: Optional[pulumi.Input[str]] = None,
-                 sentry_enrollment: Optional[pulumi.Input[pulumi.InputType['WirelessSsidsSplashSettingsSentryEnrollmentArgs']]] = None,
-                 splash_image: Optional[pulumi.Input[pulumi.InputType['WirelessSsidsSplashSettingsSplashImageArgs']]] = None,
-                 splash_logo: Optional[pulumi.Input[pulumi.InputType['WirelessSsidsSplashSettingsSplashLogoArgs']]] = None,
-                 splash_prepaid_front: Optional[pulumi.Input[pulumi.InputType['WirelessSsidsSplashSettingsSplashPrepaidFrontArgs']]] = None,
+                 sentry_enrollment: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsSentryEnrollmentArgs', 'WirelessSsidsSplashSettingsSentryEnrollmentArgsDict']]] = None,
+                 splash_image: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsSplashImageArgs', 'WirelessSsidsSplashSettingsSplashImageArgsDict']]] = None,
+                 splash_logo: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsSplashLogoArgs', 'WirelessSsidsSplashSettingsSplashLogoArgsDict']]] = None,
+                 splash_prepaid_front: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsSplashPrepaidFrontArgs', 'WirelessSsidsSplashSettingsSplashPrepaidFrontArgsDict']]] = None,
                  splash_timeout: Optional[pulumi.Input[int]] = None,
                  splash_url: Optional[pulumi.Input[str]] = None,
                  theme_id: Optional[pulumi.Input[str]] = None,
@@ -798,19 +798,19 @@ class WirelessSsidsSplashSettings(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             allow_simultaneous_logins: Optional[pulumi.Input[bool]] = None,
-            billing: Optional[pulumi.Input[pulumi.InputType['WirelessSsidsSplashSettingsBillingArgs']]] = None,
+            billing: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsBillingArgs', 'WirelessSsidsSplashSettingsBillingArgsDict']]] = None,
             block_all_traffic_before_sign_on: Optional[pulumi.Input[bool]] = None,
             controller_disconnection_behavior: Optional[pulumi.Input[str]] = None,
-            guest_sponsorship: Optional[pulumi.Input[pulumi.InputType['WirelessSsidsSplashSettingsGuestSponsorshipArgs']]] = None,
+            guest_sponsorship: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsGuestSponsorshipArgs', 'WirelessSsidsSplashSettingsGuestSponsorshipArgsDict']]] = None,
             network_id: Optional[pulumi.Input[str]] = None,
             number: Optional[pulumi.Input[str]] = None,
             redirect_url: Optional[pulumi.Input[str]] = None,
-            self_registration: Optional[pulumi.Input[pulumi.InputType['WirelessSsidsSplashSettingsSelfRegistrationArgs']]] = None,
-            sentry_enrollment: Optional[pulumi.Input[pulumi.InputType['WirelessSsidsSplashSettingsSentryEnrollmentArgs']]] = None,
-            splash_image: Optional[pulumi.Input[pulumi.InputType['WirelessSsidsSplashSettingsSplashImageArgs']]] = None,
-            splash_logo: Optional[pulumi.Input[pulumi.InputType['WirelessSsidsSplashSettingsSplashLogoArgs']]] = None,
+            self_registration: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsSelfRegistrationArgs', 'WirelessSsidsSplashSettingsSelfRegistrationArgsDict']]] = None,
+            sentry_enrollment: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsSentryEnrollmentArgs', 'WirelessSsidsSplashSettingsSentryEnrollmentArgsDict']]] = None,
+            splash_image: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsSplashImageArgs', 'WirelessSsidsSplashSettingsSplashImageArgsDict']]] = None,
+            splash_logo: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsSplashLogoArgs', 'WirelessSsidsSplashSettingsSplashLogoArgsDict']]] = None,
             splash_page: Optional[pulumi.Input[str]] = None,
-            splash_prepaid_front: Optional[pulumi.Input[pulumi.InputType['WirelessSsidsSplashSettingsSplashPrepaidFrontArgs']]] = None,
+            splash_prepaid_front: Optional[pulumi.Input[Union['WirelessSsidsSplashSettingsSplashPrepaidFrontArgs', 'WirelessSsidsSplashSettingsSplashPrepaidFrontArgsDict']]] = None,
             splash_timeout: Optional[pulumi.Input[int]] = None,
             splash_url: Optional[pulumi.Input[str]] = None,
             ssid_number: Optional[pulumi.Input[int]] = None,
@@ -826,19 +826,19 @@ class WirelessSsidsSplashSettings(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[bool] allow_simultaneous_logins: Whether or not to allow simultaneous logins from different devices.
-        :param pulumi.Input[pulumi.InputType['WirelessSsidsSplashSettingsBillingArgs']] billing: Details associated with billing splash
+        :param pulumi.Input[Union['WirelessSsidsSplashSettingsBillingArgs', 'WirelessSsidsSplashSettingsBillingArgsDict']] billing: Details associated with billing splash
         :param pulumi.Input[bool] block_all_traffic_before_sign_on: How restricted allowing traffic should be. If true, all traffic types are blocked until the splash page is acknowledged. If false, all non-HTTP traffic is allowed before the splash page is acknowledged.
         :param pulumi.Input[str] controller_disconnection_behavior: How login attempts should be handled when the controller is unreachable.
-        :param pulumi.Input[pulumi.InputType['WirelessSsidsSplashSettingsGuestSponsorshipArgs']] guest_sponsorship: Details associated with guest sponsored splash
+        :param pulumi.Input[Union['WirelessSsidsSplashSettingsGuestSponsorshipArgs', 'WirelessSsidsSplashSettingsGuestSponsorshipArgsDict']] guest_sponsorship: Details associated with guest sponsored splash
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[str] number: number path parameter.
         :param pulumi.Input[str] redirect_url: The custom redirect URL where the users will go after the splash page.
-        :param pulumi.Input[pulumi.InputType['WirelessSsidsSplashSettingsSelfRegistrationArgs']] self_registration: Self-registration for splash with Meraki authentication.
-        :param pulumi.Input[pulumi.InputType['WirelessSsidsSplashSettingsSentryEnrollmentArgs']] sentry_enrollment: Systems Manager sentry enrollment splash settings.
-        :param pulumi.Input[pulumi.InputType['WirelessSsidsSplashSettingsSplashImageArgs']] splash_image: The image used in the splash page.
-        :param pulumi.Input[pulumi.InputType['WirelessSsidsSplashSettingsSplashLogoArgs']] splash_logo: The logo used in the splash page.
+        :param pulumi.Input[Union['WirelessSsidsSplashSettingsSelfRegistrationArgs', 'WirelessSsidsSplashSettingsSelfRegistrationArgsDict']] self_registration: Self-registration for splash with Meraki authentication.
+        :param pulumi.Input[Union['WirelessSsidsSplashSettingsSentryEnrollmentArgs', 'WirelessSsidsSplashSettingsSentryEnrollmentArgsDict']] sentry_enrollment: Systems Manager sentry enrollment splash settings.
+        :param pulumi.Input[Union['WirelessSsidsSplashSettingsSplashImageArgs', 'WirelessSsidsSplashSettingsSplashImageArgsDict']] splash_image: The image used in the splash page.
+        :param pulumi.Input[Union['WirelessSsidsSplashSettingsSplashLogoArgs', 'WirelessSsidsSplashSettingsSplashLogoArgsDict']] splash_logo: The logo used in the splash page.
         :param pulumi.Input[str] splash_page: The type of splash page for this SSID
-        :param pulumi.Input[pulumi.InputType['WirelessSsidsSplashSettingsSplashPrepaidFrontArgs']] splash_prepaid_front: The prepaid front image used in the splash page.
+        :param pulumi.Input[Union['WirelessSsidsSplashSettingsSplashPrepaidFrontArgs', 'WirelessSsidsSplashSettingsSplashPrepaidFrontArgsDict']] splash_prepaid_front: The prepaid front image used in the splash page.
         :param pulumi.Input[int] splash_timeout: Splash timeout in minutes.
         :param pulumi.Input[str] splash_url: The custom splash URL of the click-through splash page.
         :param pulumi.Input[int] ssid_number: SSID number

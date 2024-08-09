@@ -105,7 +105,7 @@ public class ApplianceFirewallCellularFirewallRules extends com.pulumi.resources
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public ApplianceFirewallCellularFirewallRules(String name) {
+    public ApplianceFirewallCellularFirewallRules(java.lang.String name) {
         this(name, ApplianceFirewallCellularFirewallRulesArgs.Empty);
     }
     /**
@@ -113,7 +113,7 @@ public class ApplianceFirewallCellularFirewallRules extends com.pulumi.resources
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ApplianceFirewallCellularFirewallRules(String name, ApplianceFirewallCellularFirewallRulesArgs args) {
+    public ApplianceFirewallCellularFirewallRules(java.lang.String name, ApplianceFirewallCellularFirewallRulesArgs args) {
         this(name, args, null);
     }
     /**
@@ -122,12 +122,12 @@ public class ApplianceFirewallCellularFirewallRules extends com.pulumi.resources
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ApplianceFirewallCellularFirewallRules(String name, ApplianceFirewallCellularFirewallRulesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/applianceFirewallCellularFirewallRules:ApplianceFirewallCellularFirewallRules", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public ApplianceFirewallCellularFirewallRules(java.lang.String name, ApplianceFirewallCellularFirewallRulesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/applianceFirewallCellularFirewallRules:ApplianceFirewallCellularFirewallRules", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private ApplianceFirewallCellularFirewallRules(String name, Output<String> id, @Nullable ApplianceFirewallCellularFirewallRulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/applianceFirewallCellularFirewallRules:ApplianceFirewallCellularFirewallRules", name, state, makeResourceOptions(options, id));
+    private ApplianceFirewallCellularFirewallRules(java.lang.String name, Output<java.lang.String> id, @Nullable ApplianceFirewallCellularFirewallRulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/applianceFirewallCellularFirewallRules:ApplianceFirewallCellularFirewallRules", name, state, makeResourceOptions(options, id), false);
     }
 
     private static ApplianceFirewallCellularFirewallRulesArgs makeArgs(ApplianceFirewallCellularFirewallRulesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -137,7 +137,7 @@ public class ApplianceFirewallCellularFirewallRules extends com.pulumi.resources
         return args == null ? ApplianceFirewallCellularFirewallRulesArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -153,7 +153,7 @@ public class ApplianceFirewallCellularFirewallRules extends com.pulumi.resources
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ApplianceFirewallCellularFirewallRules get(String name, Output<String> id, @Nullable ApplianceFirewallCellularFirewallRulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ApplianceFirewallCellularFirewallRules get(java.lang.String name, Output<java.lang.String> id, @Nullable ApplianceFirewallCellularFirewallRulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new ApplianceFirewallCellularFirewallRules(name, id, state, options);
     }
 }

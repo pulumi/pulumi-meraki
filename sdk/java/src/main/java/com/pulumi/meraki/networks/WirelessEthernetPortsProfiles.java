@@ -167,7 +167,7 @@ public class WirelessEthernetPortsProfiles extends com.pulumi.resources.CustomRe
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public WirelessEthernetPortsProfiles(String name) {
+    public WirelessEthernetPortsProfiles(java.lang.String name) {
         this(name, WirelessEthernetPortsProfilesArgs.Empty);
     }
     /**
@@ -175,7 +175,7 @@ public class WirelessEthernetPortsProfiles extends com.pulumi.resources.CustomRe
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public WirelessEthernetPortsProfiles(String name, WirelessEthernetPortsProfilesArgs args) {
+    public WirelessEthernetPortsProfiles(java.lang.String name, WirelessEthernetPortsProfilesArgs args) {
         this(name, args, null);
     }
     /**
@@ -184,12 +184,12 @@ public class WirelessEthernetPortsProfiles extends com.pulumi.resources.CustomRe
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public WirelessEthernetPortsProfiles(String name, WirelessEthernetPortsProfilesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/wirelessEthernetPortsProfiles:WirelessEthernetPortsProfiles", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public WirelessEthernetPortsProfiles(java.lang.String name, WirelessEthernetPortsProfilesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/wirelessEthernetPortsProfiles:WirelessEthernetPortsProfiles", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private WirelessEthernetPortsProfiles(String name, Output<String> id, @Nullable WirelessEthernetPortsProfilesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/wirelessEthernetPortsProfiles:WirelessEthernetPortsProfiles", name, state, makeResourceOptions(options, id));
+    private WirelessEthernetPortsProfiles(java.lang.String name, Output<java.lang.String> id, @Nullable WirelessEthernetPortsProfilesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/wirelessEthernetPortsProfiles:WirelessEthernetPortsProfiles", name, state, makeResourceOptions(options, id), false);
     }
 
     private static WirelessEthernetPortsProfilesArgs makeArgs(WirelessEthernetPortsProfilesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -199,7 +199,7 @@ public class WirelessEthernetPortsProfiles extends com.pulumi.resources.CustomRe
         return args == null ? WirelessEthernetPortsProfilesArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -215,7 +215,7 @@ public class WirelessEthernetPortsProfiles extends com.pulumi.resources.CustomRe
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WirelessEthernetPortsProfiles get(String name, Output<String> id, @Nullable WirelessEthernetPortsProfilesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static WirelessEthernetPortsProfiles get(java.lang.String name, Output<java.lang.String> id, @Nullable WirelessEthernetPortsProfilesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new WirelessEthernetPortsProfiles(name, id, state, options);
     }
 }

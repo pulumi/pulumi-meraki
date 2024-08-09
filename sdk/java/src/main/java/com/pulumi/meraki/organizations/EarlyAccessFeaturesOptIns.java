@@ -152,7 +152,7 @@ public class EarlyAccessFeaturesOptIns extends com.pulumi.resources.CustomResour
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public EarlyAccessFeaturesOptIns(String name) {
+    public EarlyAccessFeaturesOptIns(java.lang.String name) {
         this(name, EarlyAccessFeaturesOptInsArgs.Empty);
     }
     /**
@@ -160,7 +160,7 @@ public class EarlyAccessFeaturesOptIns extends com.pulumi.resources.CustomResour
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public EarlyAccessFeaturesOptIns(String name, EarlyAccessFeaturesOptInsArgs args) {
+    public EarlyAccessFeaturesOptIns(java.lang.String name, EarlyAccessFeaturesOptInsArgs args) {
         this(name, args, null);
     }
     /**
@@ -169,12 +169,12 @@ public class EarlyAccessFeaturesOptIns extends com.pulumi.resources.CustomResour
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public EarlyAccessFeaturesOptIns(String name, EarlyAccessFeaturesOptInsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/earlyAccessFeaturesOptIns:EarlyAccessFeaturesOptIns", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public EarlyAccessFeaturesOptIns(java.lang.String name, EarlyAccessFeaturesOptInsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/earlyAccessFeaturesOptIns:EarlyAccessFeaturesOptIns", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private EarlyAccessFeaturesOptIns(String name, Output<String> id, @Nullable EarlyAccessFeaturesOptInsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/earlyAccessFeaturesOptIns:EarlyAccessFeaturesOptIns", name, state, makeResourceOptions(options, id));
+    private EarlyAccessFeaturesOptIns(java.lang.String name, Output<java.lang.String> id, @Nullable EarlyAccessFeaturesOptInsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/earlyAccessFeaturesOptIns:EarlyAccessFeaturesOptIns", name, state, makeResourceOptions(options, id), false);
     }
 
     private static EarlyAccessFeaturesOptInsArgs makeArgs(EarlyAccessFeaturesOptInsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -184,7 +184,7 @@ public class EarlyAccessFeaturesOptIns extends com.pulumi.resources.CustomResour
         return args == null ? EarlyAccessFeaturesOptInsArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -200,7 +200,7 @@ public class EarlyAccessFeaturesOptIns extends com.pulumi.resources.CustomResour
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static EarlyAccessFeaturesOptIns get(String name, Output<String> id, @Nullable EarlyAccessFeaturesOptInsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static EarlyAccessFeaturesOptIns get(java.lang.String name, Output<java.lang.String> id, @Nullable EarlyAccessFeaturesOptInsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new EarlyAccessFeaturesOptIns(name, id, state, options);
     }
 }

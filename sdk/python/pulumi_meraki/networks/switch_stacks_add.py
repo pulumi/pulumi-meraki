@@ -132,7 +132,7 @@ class SwitchStacksAdd(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 parameters: Optional[pulumi.Input[pulumi.InputType['SwitchStacksAddParametersArgs']]] = None,
+                 parameters: Optional[pulumi.Input[Union['SwitchStacksAddParametersArgs', 'SwitchStacksAddParametersArgsDict']]] = None,
                  switch_stack_id: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
@@ -148,9 +148,9 @@ class SwitchStacksAdd(pulumi.CustomResource):
         example = meraki.networks.SwitchStacksAdd("example",
             network_id="string",
             switch_stack_id="string",
-            parameters=meraki.networks.SwitchStacksAddParametersArgs(
-                serial="QBZY-XWVU-TSRQ",
-            ))
+            parameters={
+                "serial": "QBZY-XWVU-TSRQ",
+            })
         pulumi.export("merakiNetworksSwitchStacksAddExample", example)
         ```
 
@@ -178,9 +178,9 @@ class SwitchStacksAdd(pulumi.CustomResource):
         example = meraki.networks.SwitchStacksAdd("example",
             network_id="string",
             switch_stack_id="string",
-            parameters=meraki.networks.SwitchStacksAddParametersArgs(
-                serial="QBZY-XWVU-TSRQ",
-            ))
+            parameters={
+                "serial": "QBZY-XWVU-TSRQ",
+            })
         pulumi.export("merakiNetworksSwitchStacksAddExample", example)
         ```
 
@@ -200,7 +200,7 @@ class SwitchStacksAdd(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 parameters: Optional[pulumi.Input[pulumi.InputType['SwitchStacksAddParametersArgs']]] = None,
+                 parameters: Optional[pulumi.Input[Union['SwitchStacksAddParametersArgs', 'SwitchStacksAddParametersArgsDict']]] = None,
                  switch_stack_id: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -231,9 +231,9 @@ class SwitchStacksAdd(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            item: Optional[pulumi.Input[pulumi.InputType['SwitchStacksAddItemArgs']]] = None,
+            item: Optional[pulumi.Input[Union['SwitchStacksAddItemArgs', 'SwitchStacksAddItemArgsDict']]] = None,
             network_id: Optional[pulumi.Input[str]] = None,
-            parameters: Optional[pulumi.Input[pulumi.InputType['SwitchStacksAddParametersArgs']]] = None,
+            parameters: Optional[pulumi.Input[Union['SwitchStacksAddParametersArgs', 'SwitchStacksAddParametersArgsDict']]] = None,
             switch_stack_id: Optional[pulumi.Input[str]] = None) -> 'SwitchStacksAdd':
         """
         Get an existing SwitchStacksAdd resource's state with the given name, id, and optional extra

@@ -185,7 +185,7 @@ public class CameraQualityAndRetention extends com.pulumi.resources.CustomResour
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public CameraQualityAndRetention(String name) {
+    public CameraQualityAndRetention(java.lang.String name) {
         this(name, CameraQualityAndRetentionArgs.Empty);
     }
     /**
@@ -193,7 +193,7 @@ public class CameraQualityAndRetention extends com.pulumi.resources.CustomResour
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public CameraQualityAndRetention(String name, CameraQualityAndRetentionArgs args) {
+    public CameraQualityAndRetention(java.lang.String name, CameraQualityAndRetentionArgs args) {
         this(name, args, null);
     }
     /**
@@ -202,12 +202,12 @@ public class CameraQualityAndRetention extends com.pulumi.resources.CustomResour
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CameraQualityAndRetention(String name, CameraQualityAndRetentionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/cameraQualityAndRetention:CameraQualityAndRetention", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public CameraQualityAndRetention(java.lang.String name, CameraQualityAndRetentionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/cameraQualityAndRetention:CameraQualityAndRetention", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private CameraQualityAndRetention(String name, Output<String> id, @Nullable CameraQualityAndRetentionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/cameraQualityAndRetention:CameraQualityAndRetention", name, state, makeResourceOptions(options, id));
+    private CameraQualityAndRetention(java.lang.String name, Output<java.lang.String> id, @Nullable CameraQualityAndRetentionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/cameraQualityAndRetention:CameraQualityAndRetention", name, state, makeResourceOptions(options, id), false);
     }
 
     private static CameraQualityAndRetentionArgs makeArgs(CameraQualityAndRetentionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -217,7 +217,7 @@ public class CameraQualityAndRetention extends com.pulumi.resources.CustomResour
         return args == null ? CameraQualityAndRetentionArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -233,7 +233,7 @@ public class CameraQualityAndRetention extends com.pulumi.resources.CustomResour
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CameraQualityAndRetention get(String name, Output<String> id, @Nullable CameraQualityAndRetentionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static CameraQualityAndRetention get(java.lang.String name, Output<java.lang.String> id, @Nullable CameraQualityAndRetentionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new CameraQualityAndRetention(name, id, state, options);
     }
 }

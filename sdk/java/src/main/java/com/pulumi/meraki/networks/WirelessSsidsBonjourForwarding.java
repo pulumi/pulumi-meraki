@@ -150,7 +150,7 @@ public class WirelessSsidsBonjourForwarding extends com.pulumi.resources.CustomR
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public WirelessSsidsBonjourForwarding(String name) {
+    public WirelessSsidsBonjourForwarding(java.lang.String name) {
         this(name, WirelessSsidsBonjourForwardingArgs.Empty);
     }
     /**
@@ -158,7 +158,7 @@ public class WirelessSsidsBonjourForwarding extends com.pulumi.resources.CustomR
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public WirelessSsidsBonjourForwarding(String name, WirelessSsidsBonjourForwardingArgs args) {
+    public WirelessSsidsBonjourForwarding(java.lang.String name, WirelessSsidsBonjourForwardingArgs args) {
         this(name, args, null);
     }
     /**
@@ -167,12 +167,12 @@ public class WirelessSsidsBonjourForwarding extends com.pulumi.resources.CustomR
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public WirelessSsidsBonjourForwarding(String name, WirelessSsidsBonjourForwardingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/wirelessSsidsBonjourForwarding:WirelessSsidsBonjourForwarding", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public WirelessSsidsBonjourForwarding(java.lang.String name, WirelessSsidsBonjourForwardingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/wirelessSsidsBonjourForwarding:WirelessSsidsBonjourForwarding", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private WirelessSsidsBonjourForwarding(String name, Output<String> id, @Nullable WirelessSsidsBonjourForwardingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/wirelessSsidsBonjourForwarding:WirelessSsidsBonjourForwarding", name, state, makeResourceOptions(options, id));
+    private WirelessSsidsBonjourForwarding(java.lang.String name, Output<java.lang.String> id, @Nullable WirelessSsidsBonjourForwardingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/wirelessSsidsBonjourForwarding:WirelessSsidsBonjourForwarding", name, state, makeResourceOptions(options, id), false);
     }
 
     private static WirelessSsidsBonjourForwardingArgs makeArgs(WirelessSsidsBonjourForwardingArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -182,7 +182,7 @@ public class WirelessSsidsBonjourForwarding extends com.pulumi.resources.CustomR
         return args == null ? WirelessSsidsBonjourForwardingArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -198,7 +198,7 @@ public class WirelessSsidsBonjourForwarding extends com.pulumi.resources.CustomR
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WirelessSsidsBonjourForwarding get(String name, Output<String> id, @Nullable WirelessSsidsBonjourForwardingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static WirelessSsidsBonjourForwarding get(java.lang.String name, Output<java.lang.String> id, @Nullable WirelessSsidsBonjourForwardingState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new WirelessSsidsBonjourForwarding(name, id, state, options);
     }
 }

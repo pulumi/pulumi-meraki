@@ -291,7 +291,7 @@ class WebhooksPayloadTemplates(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  body: Optional[pulumi.Input[str]] = None,
                  body_file: Optional[pulumi.Input[str]] = None,
-                 headers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['WebhooksPayloadTemplatesHeaderArgs']]]]] = None,
+                 headers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WebhooksPayloadTemplatesHeaderArgs', 'WebhooksPayloadTemplatesHeaderArgsDict']]]]] = None,
                  headers_file: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
@@ -307,10 +307,10 @@ class WebhooksPayloadTemplates(pulumi.CustomResource):
         example = meraki.networks.WebhooksPayloadTemplates("example",
             body="{'event_type':'{{alertTypeId}}','client_payload':{'text':'{{alertData}}'}}",
             body_file="Qm9keSBGaWxl",
-            headers=[meraki.networks.WebhooksPayloadTemplatesHeaderArgs(
-                name="Authorization",
-                template="Bearer {{sharedSecret}}",
-            )],
+            headers=[{
+                "name": "Authorization",
+                "template": "Bearer {{sharedSecret}}",
+            }],
             headers_file="SGVhZGVycyBGaWxl",
             name="Custom Template",
             network_id="string")
@@ -327,7 +327,7 @@ class WebhooksPayloadTemplates(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] body: The body of the payload template, in liquid template
         :param pulumi.Input[str] body_file: A file containing liquid template used for the body of the webhook message. Either *body* or *bodyFile* must be specified.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['WebhooksPayloadTemplatesHeaderArgs']]]] headers: The payload template headers, will be rendered as a key-value pair in the webhook.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WebhooksPayloadTemplatesHeaderArgs', 'WebhooksPayloadTemplatesHeaderArgsDict']]]] headers: The payload template headers, will be rendered as a key-value pair in the webhook.
         :param pulumi.Input[str] headers_file: A file containing the liquid template used with the webhook headers.
         :param pulumi.Input[str] name: The name of the payload template
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
@@ -349,10 +349,10 @@ class WebhooksPayloadTemplates(pulumi.CustomResource):
         example = meraki.networks.WebhooksPayloadTemplates("example",
             body="{'event_type':'{{alertTypeId}}','client_payload':{'text':'{{alertData}}'}}",
             body_file="Qm9keSBGaWxl",
-            headers=[meraki.networks.WebhooksPayloadTemplatesHeaderArgs(
-                name="Authorization",
-                template="Bearer {{sharedSecret}}",
-            )],
+            headers=[{
+                "name": "Authorization",
+                "template": "Bearer {{sharedSecret}}",
+            }],
             headers_file="SGVhZGVycyBGaWxl",
             name="Custom Template",
             network_id="string")
@@ -382,7 +382,7 @@ class WebhooksPayloadTemplates(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  body: Optional[pulumi.Input[str]] = None,
                  body_file: Optional[pulumi.Input[str]] = None,
-                 headers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['WebhooksPayloadTemplatesHeaderArgs']]]]] = None,
+                 headers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WebhooksPayloadTemplatesHeaderArgs', 'WebhooksPayloadTemplatesHeaderArgsDict']]]]] = None,
                  headers_file: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
@@ -419,12 +419,12 @@ class WebhooksPayloadTemplates(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             body: Optional[pulumi.Input[str]] = None,
             body_file: Optional[pulumi.Input[str]] = None,
-            headers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['WebhooksPayloadTemplatesHeaderArgs']]]]] = None,
+            headers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WebhooksPayloadTemplatesHeaderArgs', 'WebhooksPayloadTemplatesHeaderArgsDict']]]]] = None,
             headers_file: Optional[pulumi.Input[str]] = None,
             name: Optional[pulumi.Input[str]] = None,
             network_id: Optional[pulumi.Input[str]] = None,
             payload_template_id: Optional[pulumi.Input[str]] = None,
-            sharing: Optional[pulumi.Input[pulumi.InputType['WebhooksPayloadTemplatesSharingArgs']]] = None,
+            sharing: Optional[pulumi.Input[Union['WebhooksPayloadTemplatesSharingArgs', 'WebhooksPayloadTemplatesSharingArgsDict']]] = None,
             type: Optional[pulumi.Input[str]] = None) -> 'WebhooksPayloadTemplates':
         """
         Get an existing WebhooksPayloadTemplates resource's state with the given name, id, and optional extra
@@ -435,12 +435,12 @@ class WebhooksPayloadTemplates(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] body: The body of the payload template, in liquid template
         :param pulumi.Input[str] body_file: A file containing liquid template used for the body of the webhook message. Either *body* or *bodyFile* must be specified.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['WebhooksPayloadTemplatesHeaderArgs']]]] headers: The payload template headers, will be rendered as a key-value pair in the webhook.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WebhooksPayloadTemplatesHeaderArgs', 'WebhooksPayloadTemplatesHeaderArgsDict']]]] headers: The payload template headers, will be rendered as a key-value pair in the webhook.
         :param pulumi.Input[str] headers_file: A file containing the liquid template used with the webhook headers.
         :param pulumi.Input[str] name: The name of the payload template
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[str] payload_template_id: Webhook payload template Id
-        :param pulumi.Input[pulumi.InputType['WebhooksPayloadTemplatesSharingArgs']] sharing: Information on which entities have access to the template
+        :param pulumi.Input[Union['WebhooksPayloadTemplatesSharingArgs', 'WebhooksPayloadTemplatesSharingArgsDict']] sharing: Information on which entities have access to the template
         :param pulumi.Input[str] type: The type of the payload template
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

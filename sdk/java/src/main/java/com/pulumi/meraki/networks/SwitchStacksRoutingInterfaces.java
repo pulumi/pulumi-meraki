@@ -270,7 +270,7 @@ public class SwitchStacksRoutingInterfaces extends com.pulumi.resources.CustomRe
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SwitchStacksRoutingInterfaces(String name) {
+    public SwitchStacksRoutingInterfaces(java.lang.String name) {
         this(name, SwitchStacksRoutingInterfacesArgs.Empty);
     }
     /**
@@ -278,7 +278,7 @@ public class SwitchStacksRoutingInterfaces extends com.pulumi.resources.CustomRe
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SwitchStacksRoutingInterfaces(String name, SwitchStacksRoutingInterfacesArgs args) {
+    public SwitchStacksRoutingInterfaces(java.lang.String name, SwitchStacksRoutingInterfacesArgs args) {
         this(name, args, null);
     }
     /**
@@ -287,12 +287,12 @@ public class SwitchStacksRoutingInterfaces extends com.pulumi.resources.CustomRe
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SwitchStacksRoutingInterfaces(String name, SwitchStacksRoutingInterfacesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/switchStacksRoutingInterfaces:SwitchStacksRoutingInterfaces", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public SwitchStacksRoutingInterfaces(java.lang.String name, SwitchStacksRoutingInterfacesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/switchStacksRoutingInterfaces:SwitchStacksRoutingInterfaces", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SwitchStacksRoutingInterfaces(String name, Output<String> id, @Nullable SwitchStacksRoutingInterfacesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/switchStacksRoutingInterfaces:SwitchStacksRoutingInterfaces", name, state, makeResourceOptions(options, id));
+    private SwitchStacksRoutingInterfaces(java.lang.String name, Output<java.lang.String> id, @Nullable SwitchStacksRoutingInterfacesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/switchStacksRoutingInterfaces:SwitchStacksRoutingInterfaces", name, state, makeResourceOptions(options, id), false);
     }
 
     private static SwitchStacksRoutingInterfacesArgs makeArgs(SwitchStacksRoutingInterfacesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -302,7 +302,7 @@ public class SwitchStacksRoutingInterfaces extends com.pulumi.resources.CustomRe
         return args == null ? SwitchStacksRoutingInterfacesArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -318,7 +318,7 @@ public class SwitchStacksRoutingInterfaces extends com.pulumi.resources.CustomRe
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SwitchStacksRoutingInterfaces get(String name, Output<String> id, @Nullable SwitchStacksRoutingInterfacesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SwitchStacksRoutingInterfaces get(java.lang.String name, Output<java.lang.String> id, @Nullable SwitchStacksRoutingInterfacesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SwitchStacksRoutingInterfaces(name, id, state, options);
     }
 }

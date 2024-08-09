@@ -130,8 +130,8 @@ class SwitchAccessControlLists(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchAccessControlListsRuleArgs']]]]] = None,
-                 rules_responses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchAccessControlListsRulesResponseArgs']]]]] = None,
+                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchAccessControlListsRuleArgs', 'SwitchAccessControlListsRuleArgsDict']]]]] = None,
+                 rules_responses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchAccessControlListsRulesResponseArgs', 'SwitchAccessControlListsRulesResponseArgsDict']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -145,8 +145,8 @@ class SwitchAccessControlLists(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchAccessControlListsRuleArgs']]]] rules: An ordered array of the access control list rules
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchAccessControlListsRulesResponseArgs']]]] rules_responses: An ordered array of the access control list rules
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchAccessControlListsRuleArgs', 'SwitchAccessControlListsRuleArgsDict']]]] rules: An ordered array of the access control list rules
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchAccessControlListsRulesResponseArgs', 'SwitchAccessControlListsRulesResponseArgsDict']]]] rules_responses: An ordered array of the access control list rules
         """
         ...
     @overload
@@ -179,8 +179,8 @@ class SwitchAccessControlLists(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchAccessControlListsRuleArgs']]]]] = None,
-                 rules_responses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchAccessControlListsRulesResponseArgs']]]]] = None,
+                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchAccessControlListsRuleArgs', 'SwitchAccessControlListsRuleArgsDict']]]]] = None,
+                 rules_responses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchAccessControlListsRulesResponseArgs', 'SwitchAccessControlListsRulesResponseArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -206,8 +206,8 @@ class SwitchAccessControlLists(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             network_id: Optional[pulumi.Input[str]] = None,
-            rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchAccessControlListsRuleArgs']]]]] = None,
-            rules_responses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchAccessControlListsRulesResponseArgs']]]]] = None) -> 'SwitchAccessControlLists':
+            rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchAccessControlListsRuleArgs', 'SwitchAccessControlListsRuleArgsDict']]]]] = None,
+            rules_responses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchAccessControlListsRulesResponseArgs', 'SwitchAccessControlListsRulesResponseArgsDict']]]]] = None) -> 'SwitchAccessControlLists':
         """
         Get an existing SwitchAccessControlLists resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -216,8 +216,8 @@ class SwitchAccessControlLists(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchAccessControlListsRuleArgs']]]] rules: An ordered array of the access control list rules
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchAccessControlListsRulesResponseArgs']]]] rules_responses: An ordered array of the access control list rules
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchAccessControlListsRuleArgs', 'SwitchAccessControlListsRuleArgsDict']]]] rules: An ordered array of the access control list rules
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchAccessControlListsRulesResponseArgs', 'SwitchAccessControlListsRulesResponseArgsDict']]]] rules_responses: An ordered array of the access control list rules
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

@@ -187,7 +187,7 @@ public class LiveToolsArpTable extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public LiveToolsArpTable(String name) {
+    public LiveToolsArpTable(java.lang.String name) {
         this(name, LiveToolsArpTableArgs.Empty);
     }
     /**
@@ -195,7 +195,7 @@ public class LiveToolsArpTable extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public LiveToolsArpTable(String name, LiveToolsArpTableArgs args) {
+    public LiveToolsArpTable(java.lang.String name, LiveToolsArpTableArgs args) {
         this(name, args, null);
     }
     /**
@@ -204,12 +204,12 @@ public class LiveToolsArpTable extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public LiveToolsArpTable(String name, LiveToolsArpTableArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/liveToolsArpTable:LiveToolsArpTable", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public LiveToolsArpTable(java.lang.String name, LiveToolsArpTableArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/liveToolsArpTable:LiveToolsArpTable", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private LiveToolsArpTable(String name, Output<String> id, @Nullable LiveToolsArpTableState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/liveToolsArpTable:LiveToolsArpTable", name, state, makeResourceOptions(options, id));
+    private LiveToolsArpTable(java.lang.String name, Output<java.lang.String> id, @Nullable LiveToolsArpTableState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/liveToolsArpTable:LiveToolsArpTable", name, state, makeResourceOptions(options, id), false);
     }
 
     private static LiveToolsArpTableArgs makeArgs(LiveToolsArpTableArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -219,7 +219,7 @@ public class LiveToolsArpTable extends com.pulumi.resources.CustomResource {
         return args == null ? LiveToolsArpTableArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -235,7 +235,7 @@ public class LiveToolsArpTable extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LiveToolsArpTable get(String name, Output<String> id, @Nullable LiveToolsArpTableState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static LiveToolsArpTable get(java.lang.String name, Output<java.lang.String> id, @Nullable LiveToolsArpTableState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new LiveToolsArpTable(name, id, state, options);
     }
 }

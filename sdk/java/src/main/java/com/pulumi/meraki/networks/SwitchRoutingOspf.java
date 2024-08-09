@@ -208,7 +208,7 @@ public class SwitchRoutingOspf extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SwitchRoutingOspf(String name) {
+    public SwitchRoutingOspf(java.lang.String name) {
         this(name, SwitchRoutingOspfArgs.Empty);
     }
     /**
@@ -216,7 +216,7 @@ public class SwitchRoutingOspf extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SwitchRoutingOspf(String name, SwitchRoutingOspfArgs args) {
+    public SwitchRoutingOspf(java.lang.String name, SwitchRoutingOspfArgs args) {
         this(name, args, null);
     }
     /**
@@ -225,12 +225,12 @@ public class SwitchRoutingOspf extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SwitchRoutingOspf(String name, SwitchRoutingOspfArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/switchRoutingOspf:SwitchRoutingOspf", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public SwitchRoutingOspf(java.lang.String name, SwitchRoutingOspfArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/switchRoutingOspf:SwitchRoutingOspf", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SwitchRoutingOspf(String name, Output<String> id, @Nullable SwitchRoutingOspfState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/switchRoutingOspf:SwitchRoutingOspf", name, state, makeResourceOptions(options, id));
+    private SwitchRoutingOspf(java.lang.String name, Output<java.lang.String> id, @Nullable SwitchRoutingOspfState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/switchRoutingOspf:SwitchRoutingOspf", name, state, makeResourceOptions(options, id), false);
     }
 
     private static SwitchRoutingOspfArgs makeArgs(SwitchRoutingOspfArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -240,7 +240,7 @@ public class SwitchRoutingOspf extends com.pulumi.resources.CustomResource {
         return args == null ? SwitchRoutingOspfArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -256,7 +256,7 @@ public class SwitchRoutingOspf extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SwitchRoutingOspf get(String name, Output<String> id, @Nullable SwitchRoutingOspfState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SwitchRoutingOspf get(java.lang.String name, Output<java.lang.String> id, @Nullable SwitchRoutingOspfState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SwitchRoutingOspf(name, id, state, options);
     }
 }

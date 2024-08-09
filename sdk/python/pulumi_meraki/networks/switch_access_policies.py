@@ -691,19 +691,19 @@ class SwitchAccessPolicies(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  access_policy_number: Optional[pulumi.Input[str]] = None,
                  access_policy_type: Optional[pulumi.Input[str]] = None,
-                 dot1x: Optional[pulumi.Input[pulumi.InputType['SwitchAccessPoliciesDot1xArgs']]] = None,
+                 dot1x: Optional[pulumi.Input[Union['SwitchAccessPoliciesDot1xArgs', 'SwitchAccessPoliciesDot1xArgsDict']]] = None,
                  guest_port_bouncing: Optional[pulumi.Input[bool]] = None,
                  guest_vlan_id: Optional[pulumi.Input[int]] = None,
                  host_mode: Optional[pulumi.Input[str]] = None,
                  increase_access_speed: Optional[pulumi.Input[bool]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 radius: Optional[pulumi.Input[pulumi.InputType['SwitchAccessPoliciesRadiusArgs']]] = None,
+                 radius: Optional[pulumi.Input[Union['SwitchAccessPoliciesRadiusArgs', 'SwitchAccessPoliciesRadiusArgsDict']]] = None,
                  radius_accounting_enabled: Optional[pulumi.Input[bool]] = None,
-                 radius_accounting_servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchAccessPoliciesRadiusAccountingServerArgs']]]]] = None,
+                 radius_accounting_servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchAccessPoliciesRadiusAccountingServerArgs', 'SwitchAccessPoliciesRadiusAccountingServerArgsDict']]]]] = None,
                  radius_coa_support_enabled: Optional[pulumi.Input[bool]] = None,
                  radius_group_attribute: Optional[pulumi.Input[str]] = None,
-                 radius_servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchAccessPoliciesRadiusServerArgs']]]]] = None,
+                 radius_servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchAccessPoliciesRadiusServerArgs', 'SwitchAccessPoliciesRadiusServerArgsDict']]]]] = None,
                  radius_testing_enabled: Optional[pulumi.Input[bool]] = None,
                  url_redirect_walled_garden_enabled: Optional[pulumi.Input[bool]] = None,
                  url_redirect_walled_garden_ranges: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
@@ -722,19 +722,19 @@ class SwitchAccessPolicies(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] access_policy_number: accessPolicyNumber path parameter. Access policy number
         :param pulumi.Input[str] access_policy_type: Access Type of the policy. Automatically 'Hybrid authentication' when hostMode is 'Multi-Domain'.
-        :param pulumi.Input[pulumi.InputType['SwitchAccessPoliciesDot1xArgs']] dot1x: 802.1x Settings
+        :param pulumi.Input[Union['SwitchAccessPoliciesDot1xArgs', 'SwitchAccessPoliciesDot1xArgsDict']] dot1x: 802.1x Settings
         :param pulumi.Input[bool] guest_port_bouncing: If enabled, Meraki devices will periodically send access-request messages to these RADIUS servers
         :param pulumi.Input[int] guest_vlan_id: ID for the guest VLAN allow unauthorized devices access to limited network resources
         :param pulumi.Input[str] host_mode: Choose the Host Mode for the access policy.
         :param pulumi.Input[bool] increase_access_speed: Enabling this option will make switches execute 802.1X and MAC-bypass authentication simultaneously so that clients authenticate faster. Only required when accessPolicyType is 'Hybrid Authentication.
         :param pulumi.Input[str] name: Name of the access policy
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[pulumi.InputType['SwitchAccessPoliciesRadiusArgs']] radius: Object for RADIUS Settings
+        :param pulumi.Input[Union['SwitchAccessPoliciesRadiusArgs', 'SwitchAccessPoliciesRadiusArgsDict']] radius: Object for RADIUS Settings
         :param pulumi.Input[bool] radius_accounting_enabled: Enable to send start, interim-update and stop messages to a configured RADIUS accounting server for tracking connected clients
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchAccessPoliciesRadiusAccountingServerArgs']]]] radius_accounting_servers: List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchAccessPoliciesRadiusAccountingServerArgs', 'SwitchAccessPoliciesRadiusAccountingServerArgsDict']]]] radius_accounting_servers: List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
         :param pulumi.Input[bool] radius_coa_support_enabled: Change of authentication for RADIUS re-authentication and disconnection
         :param pulumi.Input[str] radius_group_attribute: Acceptable values are *""* for None, or *"11"* for Group Policies ACL
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchAccessPoliciesRadiusServerArgs']]]] radius_servers: List of RADIUS servers to require connecting devices to authenticate against before granting network access
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchAccessPoliciesRadiusServerArgs', 'SwitchAccessPoliciesRadiusServerArgsDict']]]] radius_servers: List of RADIUS servers to require connecting devices to authenticate against before granting network access
         :param pulumi.Input[bool] radius_testing_enabled: If enabled, Meraki devices will periodically send access-request messages to these RADIUS servers
         :param pulumi.Input[bool] url_redirect_walled_garden_enabled: Enable to restrict access for clients to a response_objectific set of IP addresses or hostnames prior to authentication
         :param pulumi.Input[Sequence[pulumi.Input[str]]] url_redirect_walled_garden_ranges: IP address ranges, in CIDR notation, to restrict access for clients to a specific set of IP addresses or hostnames prior to authentication
@@ -772,19 +772,19 @@ class SwitchAccessPolicies(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  access_policy_number: Optional[pulumi.Input[str]] = None,
                  access_policy_type: Optional[pulumi.Input[str]] = None,
-                 dot1x: Optional[pulumi.Input[pulumi.InputType['SwitchAccessPoliciesDot1xArgs']]] = None,
+                 dot1x: Optional[pulumi.Input[Union['SwitchAccessPoliciesDot1xArgs', 'SwitchAccessPoliciesDot1xArgsDict']]] = None,
                  guest_port_bouncing: Optional[pulumi.Input[bool]] = None,
                  guest_vlan_id: Optional[pulumi.Input[int]] = None,
                  host_mode: Optional[pulumi.Input[str]] = None,
                  increase_access_speed: Optional[pulumi.Input[bool]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 radius: Optional[pulumi.Input[pulumi.InputType['SwitchAccessPoliciesRadiusArgs']]] = None,
+                 radius: Optional[pulumi.Input[Union['SwitchAccessPoliciesRadiusArgs', 'SwitchAccessPoliciesRadiusArgsDict']]] = None,
                  radius_accounting_enabled: Optional[pulumi.Input[bool]] = None,
-                 radius_accounting_servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchAccessPoliciesRadiusAccountingServerArgs']]]]] = None,
+                 radius_accounting_servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchAccessPoliciesRadiusAccountingServerArgs', 'SwitchAccessPoliciesRadiusAccountingServerArgsDict']]]]] = None,
                  radius_coa_support_enabled: Optional[pulumi.Input[bool]] = None,
                  radius_group_attribute: Optional[pulumi.Input[str]] = None,
-                 radius_servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchAccessPoliciesRadiusServerArgs']]]]] = None,
+                 radius_servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchAccessPoliciesRadiusServerArgs', 'SwitchAccessPoliciesRadiusServerArgsDict']]]]] = None,
                  radius_testing_enabled: Optional[pulumi.Input[bool]] = None,
                  url_redirect_walled_garden_enabled: Optional[pulumi.Input[bool]] = None,
                  url_redirect_walled_garden_ranges: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
@@ -834,22 +834,22 @@ class SwitchAccessPolicies(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             access_policy_number: Optional[pulumi.Input[str]] = None,
             access_policy_type: Optional[pulumi.Input[str]] = None,
-            counts: Optional[pulumi.Input[pulumi.InputType['SwitchAccessPoliciesCountsArgs']]] = None,
-            dot1x: Optional[pulumi.Input[pulumi.InputType['SwitchAccessPoliciesDot1xArgs']]] = None,
+            counts: Optional[pulumi.Input[Union['SwitchAccessPoliciesCountsArgs', 'SwitchAccessPoliciesCountsArgsDict']]] = None,
+            dot1x: Optional[pulumi.Input[Union['SwitchAccessPoliciesDot1xArgs', 'SwitchAccessPoliciesDot1xArgsDict']]] = None,
             guest_port_bouncing: Optional[pulumi.Input[bool]] = None,
             guest_vlan_id: Optional[pulumi.Input[int]] = None,
             host_mode: Optional[pulumi.Input[str]] = None,
             increase_access_speed: Optional[pulumi.Input[bool]] = None,
             name: Optional[pulumi.Input[str]] = None,
             network_id: Optional[pulumi.Input[str]] = None,
-            radius: Optional[pulumi.Input[pulumi.InputType['SwitchAccessPoliciesRadiusArgs']]] = None,
+            radius: Optional[pulumi.Input[Union['SwitchAccessPoliciesRadiusArgs', 'SwitchAccessPoliciesRadiusArgsDict']]] = None,
             radius_accounting_enabled: Optional[pulumi.Input[bool]] = None,
-            radius_accounting_servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchAccessPoliciesRadiusAccountingServerArgs']]]]] = None,
-            radius_accounting_servers_responses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchAccessPoliciesRadiusAccountingServersResponseArgs']]]]] = None,
+            radius_accounting_servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchAccessPoliciesRadiusAccountingServerArgs', 'SwitchAccessPoliciesRadiusAccountingServerArgsDict']]]]] = None,
+            radius_accounting_servers_responses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchAccessPoliciesRadiusAccountingServersResponseArgs', 'SwitchAccessPoliciesRadiusAccountingServersResponseArgsDict']]]]] = None,
             radius_coa_support_enabled: Optional[pulumi.Input[bool]] = None,
             radius_group_attribute: Optional[pulumi.Input[str]] = None,
-            radius_servers: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchAccessPoliciesRadiusServerArgs']]]]] = None,
-            radius_servers_responses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchAccessPoliciesRadiusServersResponseArgs']]]]] = None,
+            radius_servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchAccessPoliciesRadiusServerArgs', 'SwitchAccessPoliciesRadiusServerArgsDict']]]]] = None,
+            radius_servers_responses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchAccessPoliciesRadiusServersResponseArgs', 'SwitchAccessPoliciesRadiusServersResponseArgsDict']]]]] = None,
             radius_testing_enabled: Optional[pulumi.Input[bool]] = None,
             url_redirect_walled_garden_enabled: Optional[pulumi.Input[bool]] = None,
             url_redirect_walled_garden_ranges: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
@@ -863,22 +863,22 @@ class SwitchAccessPolicies(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] access_policy_number: accessPolicyNumber path parameter. Access policy number
         :param pulumi.Input[str] access_policy_type: Access Type of the policy. Automatically 'Hybrid authentication' when hostMode is 'Multi-Domain'.
-        :param pulumi.Input[pulumi.InputType['SwitchAccessPoliciesCountsArgs']] counts: Counts associated with the access policy
-        :param pulumi.Input[pulumi.InputType['SwitchAccessPoliciesDot1xArgs']] dot1x: 802.1x Settings
+        :param pulumi.Input[Union['SwitchAccessPoliciesCountsArgs', 'SwitchAccessPoliciesCountsArgsDict']] counts: Counts associated with the access policy
+        :param pulumi.Input[Union['SwitchAccessPoliciesDot1xArgs', 'SwitchAccessPoliciesDot1xArgsDict']] dot1x: 802.1x Settings
         :param pulumi.Input[bool] guest_port_bouncing: If enabled, Meraki devices will periodically send access-request messages to these RADIUS servers
         :param pulumi.Input[int] guest_vlan_id: ID for the guest VLAN allow unauthorized devices access to limited network resources
         :param pulumi.Input[str] host_mode: Choose the Host Mode for the access policy.
         :param pulumi.Input[bool] increase_access_speed: Enabling this option will make switches execute 802.1X and MAC-bypass authentication simultaneously so that clients authenticate faster. Only required when accessPolicyType is 'Hybrid Authentication.
         :param pulumi.Input[str] name: Name of the access policy
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[pulumi.InputType['SwitchAccessPoliciesRadiusArgs']] radius: Object for RADIUS Settings
+        :param pulumi.Input[Union['SwitchAccessPoliciesRadiusArgs', 'SwitchAccessPoliciesRadiusArgsDict']] radius: Object for RADIUS Settings
         :param pulumi.Input[bool] radius_accounting_enabled: Enable to send start, interim-update and stop messages to a configured RADIUS accounting server for tracking connected clients
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchAccessPoliciesRadiusAccountingServerArgs']]]] radius_accounting_servers: List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchAccessPoliciesRadiusAccountingServersResponseArgs']]]] radius_accounting_servers_responses: List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchAccessPoliciesRadiusAccountingServerArgs', 'SwitchAccessPoliciesRadiusAccountingServerArgsDict']]]] radius_accounting_servers: List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchAccessPoliciesRadiusAccountingServersResponseArgs', 'SwitchAccessPoliciesRadiusAccountingServersResponseArgsDict']]]] radius_accounting_servers_responses: List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
         :param pulumi.Input[bool] radius_coa_support_enabled: Change of authentication for RADIUS re-authentication and disconnection
         :param pulumi.Input[str] radius_group_attribute: Acceptable values are *""* for None, or *"11"* for Group Policies ACL
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchAccessPoliciesRadiusServerArgs']]]] radius_servers: List of RADIUS servers to require connecting devices to authenticate against before granting network access
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchAccessPoliciesRadiusServersResponseArgs']]]] radius_servers_responses: List of RADIUS servers to require connecting devices to authenticate against before granting network access
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchAccessPoliciesRadiusServerArgs', 'SwitchAccessPoliciesRadiusServerArgsDict']]]] radius_servers: List of RADIUS servers to require connecting devices to authenticate against before granting network access
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchAccessPoliciesRadiusServersResponseArgs', 'SwitchAccessPoliciesRadiusServersResponseArgsDict']]]] radius_servers_responses: List of RADIUS servers to require connecting devices to authenticate against before granting network access
         :param pulumi.Input[bool] radius_testing_enabled: If enabled, Meraki devices will periodically send access-request messages to these RADIUS servers
         :param pulumi.Input[bool] url_redirect_walled_garden_enabled: Enable to restrict access for clients to a response_objectific set of IP addresses or hostnames prior to authentication
         :param pulumi.Input[Sequence[pulumi.Input[str]]] url_redirect_walled_garden_ranges: IP address ranges, in CIDR notation, to restrict access for clients to a specific set of IP addresses or hostnames prior to authentication

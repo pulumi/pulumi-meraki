@@ -109,7 +109,7 @@ public class CellularSims extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public CellularSims(String name) {
+    public CellularSims(java.lang.String name) {
         this(name, CellularSimsArgs.Empty);
     }
     /**
@@ -117,7 +117,7 @@ public class CellularSims extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public CellularSims(String name, CellularSimsArgs args) {
+    public CellularSims(java.lang.String name, CellularSimsArgs args) {
         this(name, args, null);
     }
     /**
@@ -126,12 +126,12 @@ public class CellularSims extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CellularSims(String name, CellularSimsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/cellularSims:CellularSims", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public CellularSims(java.lang.String name, CellularSimsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/cellularSims:CellularSims", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private CellularSims(String name, Output<String> id, @Nullable CellularSimsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/cellularSims:CellularSims", name, state, makeResourceOptions(options, id));
+    private CellularSims(java.lang.String name, Output<java.lang.String> id, @Nullable CellularSimsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/cellularSims:CellularSims", name, state, makeResourceOptions(options, id), false);
     }
 
     private static CellularSimsArgs makeArgs(CellularSimsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -141,7 +141,7 @@ public class CellularSims extends com.pulumi.resources.CustomResource {
         return args == null ? CellularSimsArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -157,7 +157,7 @@ public class CellularSims extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CellularSims get(String name, Output<String> id, @Nullable CellularSimsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static CellularSims get(java.lang.String name, Output<java.lang.String> id, @Nullable CellularSimsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new CellularSims(name, id, state, options);
     }
 }

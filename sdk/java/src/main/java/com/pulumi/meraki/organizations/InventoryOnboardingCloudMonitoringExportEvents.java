@@ -89,7 +89,7 @@ public class InventoryOnboardingCloudMonitoringExportEvents extends com.pulumi.r
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public InventoryOnboardingCloudMonitoringExportEvents(String name) {
+    public InventoryOnboardingCloudMonitoringExportEvents(java.lang.String name) {
         this(name, InventoryOnboardingCloudMonitoringExportEventsArgs.Empty);
     }
     /**
@@ -97,7 +97,7 @@ public class InventoryOnboardingCloudMonitoringExportEvents extends com.pulumi.r
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public InventoryOnboardingCloudMonitoringExportEvents(String name, InventoryOnboardingCloudMonitoringExportEventsArgs args) {
+    public InventoryOnboardingCloudMonitoringExportEvents(java.lang.String name, InventoryOnboardingCloudMonitoringExportEventsArgs args) {
         this(name, args, null);
     }
     /**
@@ -106,12 +106,12 @@ public class InventoryOnboardingCloudMonitoringExportEvents extends com.pulumi.r
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public InventoryOnboardingCloudMonitoringExportEvents(String name, InventoryOnboardingCloudMonitoringExportEventsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/inventoryOnboardingCloudMonitoringExportEvents:InventoryOnboardingCloudMonitoringExportEvents", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public InventoryOnboardingCloudMonitoringExportEvents(java.lang.String name, InventoryOnboardingCloudMonitoringExportEventsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/inventoryOnboardingCloudMonitoringExportEvents:InventoryOnboardingCloudMonitoringExportEvents", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private InventoryOnboardingCloudMonitoringExportEvents(String name, Output<String> id, @Nullable InventoryOnboardingCloudMonitoringExportEventsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/inventoryOnboardingCloudMonitoringExportEvents:InventoryOnboardingCloudMonitoringExportEvents", name, state, makeResourceOptions(options, id));
+    private InventoryOnboardingCloudMonitoringExportEvents(java.lang.String name, Output<java.lang.String> id, @Nullable InventoryOnboardingCloudMonitoringExportEventsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/inventoryOnboardingCloudMonitoringExportEvents:InventoryOnboardingCloudMonitoringExportEvents", name, state, makeResourceOptions(options, id), false);
     }
 
     private static InventoryOnboardingCloudMonitoringExportEventsArgs makeArgs(InventoryOnboardingCloudMonitoringExportEventsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -121,7 +121,7 @@ public class InventoryOnboardingCloudMonitoringExportEvents extends com.pulumi.r
         return args == null ? InventoryOnboardingCloudMonitoringExportEventsArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -137,7 +137,7 @@ public class InventoryOnboardingCloudMonitoringExportEvents extends com.pulumi.r
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static InventoryOnboardingCloudMonitoringExportEvents get(String name, Output<String> id, @Nullable InventoryOnboardingCloudMonitoringExportEventsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static InventoryOnboardingCloudMonitoringExportEvents get(java.lang.String name, Output<java.lang.String> id, @Nullable InventoryOnboardingCloudMonitoringExportEventsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new InventoryOnboardingCloudMonitoringExportEvents(name, id, state, options);
     }
 }
