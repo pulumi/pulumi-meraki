@@ -122,7 +122,7 @@ public class CameraCustomAnalyticsArtifacts extends com.pulumi.resources.CustomR
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public CameraCustomAnalyticsArtifacts(String name) {
+    public CameraCustomAnalyticsArtifacts(java.lang.String name) {
         this(name, CameraCustomAnalyticsArtifactsArgs.Empty);
     }
     /**
@@ -130,7 +130,7 @@ public class CameraCustomAnalyticsArtifacts extends com.pulumi.resources.CustomR
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public CameraCustomAnalyticsArtifacts(String name, CameraCustomAnalyticsArtifactsArgs args) {
+    public CameraCustomAnalyticsArtifacts(java.lang.String name, CameraCustomAnalyticsArtifactsArgs args) {
         this(name, args, null);
     }
     /**
@@ -139,12 +139,12 @@ public class CameraCustomAnalyticsArtifacts extends com.pulumi.resources.CustomR
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CameraCustomAnalyticsArtifacts(String name, CameraCustomAnalyticsArtifactsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/cameraCustomAnalyticsArtifacts:CameraCustomAnalyticsArtifacts", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public CameraCustomAnalyticsArtifacts(java.lang.String name, CameraCustomAnalyticsArtifactsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/cameraCustomAnalyticsArtifacts:CameraCustomAnalyticsArtifacts", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private CameraCustomAnalyticsArtifacts(String name, Output<String> id, @Nullable CameraCustomAnalyticsArtifactsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/cameraCustomAnalyticsArtifacts:CameraCustomAnalyticsArtifacts", name, state, makeResourceOptions(options, id));
+    private CameraCustomAnalyticsArtifacts(java.lang.String name, Output<java.lang.String> id, @Nullable CameraCustomAnalyticsArtifactsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/cameraCustomAnalyticsArtifacts:CameraCustomAnalyticsArtifacts", name, state, makeResourceOptions(options, id), false);
     }
 
     private static CameraCustomAnalyticsArtifactsArgs makeArgs(CameraCustomAnalyticsArtifactsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -154,7 +154,7 @@ public class CameraCustomAnalyticsArtifacts extends com.pulumi.resources.CustomR
         return args == null ? CameraCustomAnalyticsArtifactsArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -170,7 +170,7 @@ public class CameraCustomAnalyticsArtifacts extends com.pulumi.resources.CustomR
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CameraCustomAnalyticsArtifacts get(String name, Output<String> id, @Nullable CameraCustomAnalyticsArtifactsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static CameraCustomAnalyticsArtifacts get(java.lang.String name, Output<java.lang.String> id, @Nullable CameraCustomAnalyticsArtifactsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new CameraCustomAnalyticsArtifacts(name, id, state, options);
     }
 }

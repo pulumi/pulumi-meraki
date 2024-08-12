@@ -79,7 +79,7 @@ public class Split extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public Split(String name) {
+    public Split(java.lang.String name) {
         this(name, SplitArgs.Empty);
     }
     /**
@@ -87,7 +87,7 @@ public class Split extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public Split(String name, SplitArgs args) {
+    public Split(java.lang.String name, SplitArgs args) {
         this(name, args, null);
     }
     /**
@@ -96,12 +96,12 @@ public class Split extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Split(String name, SplitArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/split:Split", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public Split(java.lang.String name, SplitArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/split:Split", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private Split(String name, Output<String> id, @Nullable SplitState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/split:Split", name, state, makeResourceOptions(options, id));
+    private Split(java.lang.String name, Output<java.lang.String> id, @Nullable SplitState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/split:Split", name, state, makeResourceOptions(options, id), false);
     }
 
     private static SplitArgs makeArgs(SplitArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -111,7 +111,7 @@ public class Split extends com.pulumi.resources.CustomResource {
         return args == null ? SplitArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -127,7 +127,7 @@ public class Split extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Split get(String name, Output<String> id, @Nullable SplitState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Split get(java.lang.String name, Output<java.lang.String> id, @Nullable SplitState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new Split(name, id, state, options);
     }
 }

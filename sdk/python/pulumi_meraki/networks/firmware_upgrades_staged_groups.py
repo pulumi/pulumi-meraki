@@ -225,7 +225,7 @@ class FirmwareUpgradesStagedGroups(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 assigned_devices: Optional[pulumi.Input[pulumi.InputType['FirmwareUpgradesStagedGroupsAssignedDevicesArgs']]] = None,
+                 assigned_devices: Optional[pulumi.Input[Union['FirmwareUpgradesStagedGroupsAssignedDevicesArgs', 'FirmwareUpgradesStagedGroupsAssignedDevicesArgsDict']]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  group_id: Optional[pulumi.Input[str]] = None,
                  is_default: Optional[pulumi.Input[bool]] = None,
@@ -243,7 +243,7 @@ class FirmwareUpgradesStagedGroups(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['FirmwareUpgradesStagedGroupsAssignedDevicesArgs']] assigned_devices: The devices and Switch Stacks assigned to the Group
+        :param pulumi.Input[Union['FirmwareUpgradesStagedGroupsAssignedDevicesArgs', 'FirmwareUpgradesStagedGroupsAssignedDevicesArgsDict']] assigned_devices: The devices and Switch Stacks assigned to the Group
         :param pulumi.Input[str] description: Description of the Staged Upgrade Group
         :param pulumi.Input[str] group_id: Id of staged upgrade group
         :param pulumi.Input[bool] is_default: Boolean indicating the default Group. Any device that does not have a group explicitly assigned will upgrade with this group
@@ -280,7 +280,7 @@ class FirmwareUpgradesStagedGroups(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 assigned_devices: Optional[pulumi.Input[pulumi.InputType['FirmwareUpgradesStagedGroupsAssignedDevicesArgs']]] = None,
+                 assigned_devices: Optional[pulumi.Input[Union['FirmwareUpgradesStagedGroupsAssignedDevicesArgs', 'FirmwareUpgradesStagedGroupsAssignedDevicesArgsDict']]] = None,
                  description: Optional[pulumi.Input[str]] = None,
                  group_id: Optional[pulumi.Input[str]] = None,
                  is_default: Optional[pulumi.Input[bool]] = None,
@@ -313,7 +313,7 @@ class FirmwareUpgradesStagedGroups(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            assigned_devices: Optional[pulumi.Input[pulumi.InputType['FirmwareUpgradesStagedGroupsAssignedDevicesArgs']]] = None,
+            assigned_devices: Optional[pulumi.Input[Union['FirmwareUpgradesStagedGroupsAssignedDevicesArgs', 'FirmwareUpgradesStagedGroupsAssignedDevicesArgsDict']]] = None,
             description: Optional[pulumi.Input[str]] = None,
             group_id: Optional[pulumi.Input[str]] = None,
             is_default: Optional[pulumi.Input[bool]] = None,
@@ -326,7 +326,7 @@ class FirmwareUpgradesStagedGroups(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['FirmwareUpgradesStagedGroupsAssignedDevicesArgs']] assigned_devices: The devices and Switch Stacks assigned to the Group
+        :param pulumi.Input[Union['FirmwareUpgradesStagedGroupsAssignedDevicesArgs', 'FirmwareUpgradesStagedGroupsAssignedDevicesArgsDict']] assigned_devices: The devices and Switch Stacks assigned to the Group
         :param pulumi.Input[str] description: Description of the Staged Upgrade Group
         :param pulumi.Input[str] group_id: Id of staged upgrade group
         :param pulumi.Input[bool] is_default: Boolean indicating the default Group. Any device that does not have a group explicitly assigned will upgrade with this group

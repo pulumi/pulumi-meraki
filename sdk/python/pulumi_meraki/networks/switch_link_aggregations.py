@@ -163,8 +163,8 @@ class SwitchLinkAggregations(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  link_aggregation_id: Optional[pulumi.Input[str]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 switch_ports: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchLinkAggregationsSwitchPortArgs']]]]] = None,
-                 switch_profile_ports: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchLinkAggregationsSwitchProfilePortArgs']]]]] = None,
+                 switch_ports: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchLinkAggregationsSwitchPortArgs', 'SwitchLinkAggregationsSwitchPortArgsDict']]]]] = None,
+                 switch_profile_ports: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchLinkAggregationsSwitchProfilePortArgs', 'SwitchLinkAggregationsSwitchProfilePortArgsDict']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -179,8 +179,8 @@ class SwitchLinkAggregations(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] link_aggregation_id: linkAggregationId path parameter. Link aggregation ID
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchLinkAggregationsSwitchPortArgs']]]] switch_ports: Array of switch or stack ports for creating aggregation group. Minimum 2 and maximum 8 ports are supported.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchLinkAggregationsSwitchProfilePortArgs']]]] switch_profile_ports: Array of switch profile ports for creating aggregation group. Minimum 2 and maximum 8 ports are supported.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchLinkAggregationsSwitchPortArgs', 'SwitchLinkAggregationsSwitchPortArgsDict']]]] switch_ports: Array of switch or stack ports for creating aggregation group. Minimum 2 and maximum 8 ports are supported.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchLinkAggregationsSwitchProfilePortArgs', 'SwitchLinkAggregationsSwitchProfilePortArgsDict']]]] switch_profile_ports: Array of switch profile ports for creating aggregation group. Minimum 2 and maximum 8 ports are supported.
         """
         ...
     @overload
@@ -214,8 +214,8 @@ class SwitchLinkAggregations(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  link_aggregation_id: Optional[pulumi.Input[str]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 switch_ports: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchLinkAggregationsSwitchPortArgs']]]]] = None,
-                 switch_profile_ports: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchLinkAggregationsSwitchProfilePortArgs']]]]] = None,
+                 switch_ports: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchLinkAggregationsSwitchPortArgs', 'SwitchLinkAggregationsSwitchPortArgsDict']]]]] = None,
+                 switch_profile_ports: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchLinkAggregationsSwitchProfilePortArgs', 'SwitchLinkAggregationsSwitchProfilePortArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -243,8 +243,8 @@ class SwitchLinkAggregations(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             link_aggregation_id: Optional[pulumi.Input[str]] = None,
             network_id: Optional[pulumi.Input[str]] = None,
-            switch_ports: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchLinkAggregationsSwitchPortArgs']]]]] = None,
-            switch_profile_ports: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchLinkAggregationsSwitchProfilePortArgs']]]]] = None) -> 'SwitchLinkAggregations':
+            switch_ports: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchLinkAggregationsSwitchPortArgs', 'SwitchLinkAggregationsSwitchPortArgsDict']]]]] = None,
+            switch_profile_ports: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchLinkAggregationsSwitchProfilePortArgs', 'SwitchLinkAggregationsSwitchProfilePortArgsDict']]]]] = None) -> 'SwitchLinkAggregations':
         """
         Get an existing SwitchLinkAggregations resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -254,8 +254,8 @@ class SwitchLinkAggregations(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] link_aggregation_id: linkAggregationId path parameter. Link aggregation ID
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchLinkAggregationsSwitchPortArgs']]]] switch_ports: Array of switch or stack ports for creating aggregation group. Minimum 2 and maximum 8 ports are supported.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchLinkAggregationsSwitchProfilePortArgs']]]] switch_profile_ports: Array of switch profile ports for creating aggregation group. Minimum 2 and maximum 8 ports are supported.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchLinkAggregationsSwitchPortArgs', 'SwitchLinkAggregationsSwitchPortArgsDict']]]] switch_ports: Array of switch or stack ports for creating aggregation group. Minimum 2 and maximum 8 ports are supported.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchLinkAggregationsSwitchProfilePortArgs', 'SwitchLinkAggregationsSwitchProfilePortArgsDict']]]] switch_profile_ports: Array of switch profile ports for creating aggregation group. Minimum 2 and maximum 8 ports are supported.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

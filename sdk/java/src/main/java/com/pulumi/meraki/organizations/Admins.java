@@ -40,15 +40,15 @@ import javax.annotation.Nullable;
  * import java.nio.file.Files;
  * import java.nio.file.Paths;
  * 
- * public class App {
- *     public static void main(String[] args) {
+ * public class App }{{@code
+ *     public static void main(String[] args) }{{@code
  *         Pulumi.run(App::stack);
- *     }
+ *     }}{@code
  * 
- *     public static void stack(Context ctx) {
+ *     public static void stack(Context ctx) }{{@code
  *         var example = new Admins("example", AdminsArgs.builder()
  *             .authenticationMethod("Email")
- *             .email("miles{@literal @}meraki.com")
+ *             .email("miles}{@literal @}{@code meraki.com")
  *             .name("Miles Meraki")
  *             .networks(AdminsNetworkArgs.builder()
  *                 .access("full")
@@ -63,8 +63,8 @@ import javax.annotation.Nullable;
  *             .build());
  * 
  *         ctx.export("merakiOrganizationsAdminsExample", example);
- *     }
- * }
+ *     }}{@code
+ * }}{@code
  * }
  * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
@@ -251,7 +251,7 @@ public class Admins extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public Admins(String name) {
+    public Admins(java.lang.String name) {
         this(name, AdminsArgs.Empty);
     }
     /**
@@ -259,7 +259,7 @@ public class Admins extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public Admins(String name, AdminsArgs args) {
+    public Admins(java.lang.String name, AdminsArgs args) {
         this(name, args, null);
     }
     /**
@@ -268,12 +268,12 @@ public class Admins extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Admins(String name, AdminsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/admins:Admins", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public Admins(java.lang.String name, AdminsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/admins:Admins", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private Admins(String name, Output<String> id, @Nullable AdminsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/admins:Admins", name, state, makeResourceOptions(options, id));
+    private Admins(java.lang.String name, Output<java.lang.String> id, @Nullable AdminsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/admins:Admins", name, state, makeResourceOptions(options, id), false);
     }
 
     private static AdminsArgs makeArgs(AdminsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -283,7 +283,7 @@ public class Admins extends com.pulumi.resources.CustomResource {
         return args == null ? AdminsArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -299,7 +299,7 @@ public class Admins extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Admins get(String name, Output<String> id, @Nullable AdminsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Admins get(java.lang.String name, Output<java.lang.String> id, @Nullable AdminsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new Admins(name, id, state, options);
     }
 }

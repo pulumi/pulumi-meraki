@@ -104,7 +104,7 @@ public class ApplianceFirewallPortForwardingRules extends com.pulumi.resources.C
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public ApplianceFirewallPortForwardingRules(String name) {
+    public ApplianceFirewallPortForwardingRules(java.lang.String name) {
         this(name, ApplianceFirewallPortForwardingRulesArgs.Empty);
     }
     /**
@@ -112,7 +112,7 @@ public class ApplianceFirewallPortForwardingRules extends com.pulumi.resources.C
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ApplianceFirewallPortForwardingRules(String name, ApplianceFirewallPortForwardingRulesArgs args) {
+    public ApplianceFirewallPortForwardingRules(java.lang.String name, ApplianceFirewallPortForwardingRulesArgs args) {
         this(name, args, null);
     }
     /**
@@ -121,12 +121,12 @@ public class ApplianceFirewallPortForwardingRules extends com.pulumi.resources.C
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ApplianceFirewallPortForwardingRules(String name, ApplianceFirewallPortForwardingRulesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/applianceFirewallPortForwardingRules:ApplianceFirewallPortForwardingRules", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public ApplianceFirewallPortForwardingRules(java.lang.String name, ApplianceFirewallPortForwardingRulesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/applianceFirewallPortForwardingRules:ApplianceFirewallPortForwardingRules", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private ApplianceFirewallPortForwardingRules(String name, Output<String> id, @Nullable ApplianceFirewallPortForwardingRulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/applianceFirewallPortForwardingRules:ApplianceFirewallPortForwardingRules", name, state, makeResourceOptions(options, id));
+    private ApplianceFirewallPortForwardingRules(java.lang.String name, Output<java.lang.String> id, @Nullable ApplianceFirewallPortForwardingRulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/applianceFirewallPortForwardingRules:ApplianceFirewallPortForwardingRules", name, state, makeResourceOptions(options, id), false);
     }
 
     private static ApplianceFirewallPortForwardingRulesArgs makeArgs(ApplianceFirewallPortForwardingRulesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -136,7 +136,7 @@ public class ApplianceFirewallPortForwardingRules extends com.pulumi.resources.C
         return args == null ? ApplianceFirewallPortForwardingRulesArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -152,7 +152,7 @@ public class ApplianceFirewallPortForwardingRules extends com.pulumi.resources.C
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ApplianceFirewallPortForwardingRules get(String name, Output<String> id, @Nullable ApplianceFirewallPortForwardingRulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ApplianceFirewallPortForwardingRules get(java.lang.String name, Output<java.lang.String> id, @Nullable ApplianceFirewallPortForwardingRulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new ApplianceFirewallPortForwardingRules(name, id, state, options);
     }
 }

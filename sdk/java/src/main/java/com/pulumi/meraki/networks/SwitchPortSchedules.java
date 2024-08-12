@@ -171,7 +171,7 @@ public class SwitchPortSchedules extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SwitchPortSchedules(String name) {
+    public SwitchPortSchedules(java.lang.String name) {
         this(name, SwitchPortSchedulesArgs.Empty);
     }
     /**
@@ -179,7 +179,7 @@ public class SwitchPortSchedules extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SwitchPortSchedules(String name, SwitchPortSchedulesArgs args) {
+    public SwitchPortSchedules(java.lang.String name, SwitchPortSchedulesArgs args) {
         this(name, args, null);
     }
     /**
@@ -188,12 +188,12 @@ public class SwitchPortSchedules extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SwitchPortSchedules(String name, SwitchPortSchedulesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/switchPortSchedules:SwitchPortSchedules", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public SwitchPortSchedules(java.lang.String name, SwitchPortSchedulesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/switchPortSchedules:SwitchPortSchedules", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SwitchPortSchedules(String name, Output<String> id, @Nullable SwitchPortSchedulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/switchPortSchedules:SwitchPortSchedules", name, state, makeResourceOptions(options, id));
+    private SwitchPortSchedules(java.lang.String name, Output<java.lang.String> id, @Nullable SwitchPortSchedulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/switchPortSchedules:SwitchPortSchedules", name, state, makeResourceOptions(options, id), false);
     }
 
     private static SwitchPortSchedulesArgs makeArgs(SwitchPortSchedulesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -203,7 +203,7 @@ public class SwitchPortSchedules extends com.pulumi.resources.CustomResource {
         return args == null ? SwitchPortSchedulesArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -219,7 +219,7 @@ public class SwitchPortSchedules extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SwitchPortSchedules get(String name, Output<String> id, @Nullable SwitchPortSchedulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SwitchPortSchedules get(java.lang.String name, Output<java.lang.String> id, @Nullable SwitchPortSchedulesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SwitchPortSchedules(name, id, state, options);
     }
 }

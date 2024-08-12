@@ -38,33 +38,33 @@ import javax.annotation.Nullable;
  * import java.nio.file.Files;
  * import java.nio.file.Paths;
  * 
- * public class App {
- *     public static void main(String[] args) {
+ * public class App }{{@code
+ *     public static void main(String[] args) }{{@code
  *         Pulumi.run(App::stack);
- *     }
+ *     }}{@code
  * 
- *     public static void stack(Context ctx) {
+ *     public static void stack(Context ctx) }{{@code
  *         var example = new ApplianceVpnThirdPartyVpnpeers("example", ApplianceVpnThirdPartyVpnpeersArgs.builder()
  *             .organizationId("string")
  *             .peers(ApplianceVpnThirdPartyVpnpeersPeerArgs.builder()
  *                 .ike_version("2")
  *                 .ipsec_policies(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
  *                 .ipsec_policies_preset("default")
- *                 .local_id("myMXId{@literal @}meraki.com")
+ *                 .local_id("myMXId}{@literal @}{@code meraki.com")
  *                 .name("Peer Name")
  *                 .network_tags("none")
  *                 .private_subnets(                
  *                     "192.168.1.0/24",
  *                     "192.168.128.0/24")
  *                 .public_ip("123.123.123.1")
- *                 .remote_id("miles{@literal @}meraki.com")
+ *                 .remote_id("miles}{@literal @}{@code meraki.com")
  *                 .secret("Sample Password")
  *                 .build())
  *             .build());
  * 
  *         ctx.export("merakiOrganizationsApplianceVpnThirdPartyVpnpeersExample", example);
- *     }
- * }
+ *     }}{@code
+ * }}{@code
  * }
  * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
@@ -125,7 +125,7 @@ public class ApplianceVpnThirdPartyVpnpeers extends com.pulumi.resources.CustomR
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public ApplianceVpnThirdPartyVpnpeers(String name) {
+    public ApplianceVpnThirdPartyVpnpeers(java.lang.String name) {
         this(name, ApplianceVpnThirdPartyVpnpeersArgs.Empty);
     }
     /**
@@ -133,7 +133,7 @@ public class ApplianceVpnThirdPartyVpnpeers extends com.pulumi.resources.CustomR
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ApplianceVpnThirdPartyVpnpeers(String name, ApplianceVpnThirdPartyVpnpeersArgs args) {
+    public ApplianceVpnThirdPartyVpnpeers(java.lang.String name, ApplianceVpnThirdPartyVpnpeersArgs args) {
         this(name, args, null);
     }
     /**
@@ -142,12 +142,12 @@ public class ApplianceVpnThirdPartyVpnpeers extends com.pulumi.resources.CustomR
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ApplianceVpnThirdPartyVpnpeers(String name, ApplianceVpnThirdPartyVpnpeersArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/applianceVpnThirdPartyVpnpeers:ApplianceVpnThirdPartyVpnpeers", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public ApplianceVpnThirdPartyVpnpeers(java.lang.String name, ApplianceVpnThirdPartyVpnpeersArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/applianceVpnThirdPartyVpnpeers:ApplianceVpnThirdPartyVpnpeers", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private ApplianceVpnThirdPartyVpnpeers(String name, Output<String> id, @Nullable ApplianceVpnThirdPartyVpnpeersState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/applianceVpnThirdPartyVpnpeers:ApplianceVpnThirdPartyVpnpeers", name, state, makeResourceOptions(options, id));
+    private ApplianceVpnThirdPartyVpnpeers(java.lang.String name, Output<java.lang.String> id, @Nullable ApplianceVpnThirdPartyVpnpeersState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/applianceVpnThirdPartyVpnpeers:ApplianceVpnThirdPartyVpnpeers", name, state, makeResourceOptions(options, id), false);
     }
 
     private static ApplianceVpnThirdPartyVpnpeersArgs makeArgs(ApplianceVpnThirdPartyVpnpeersArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -157,7 +157,7 @@ public class ApplianceVpnThirdPartyVpnpeers extends com.pulumi.resources.CustomR
         return args == null ? ApplianceVpnThirdPartyVpnpeersArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -173,7 +173,7 @@ public class ApplianceVpnThirdPartyVpnpeers extends com.pulumi.resources.CustomR
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ApplianceVpnThirdPartyVpnpeers get(String name, Output<String> id, @Nullable ApplianceVpnThirdPartyVpnpeersState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ApplianceVpnThirdPartyVpnpeers get(java.lang.String name, Output<java.lang.String> id, @Nullable ApplianceVpnThirdPartyVpnpeersState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new ApplianceVpnThirdPartyVpnpeers(name, id, state, options);
     }
 }

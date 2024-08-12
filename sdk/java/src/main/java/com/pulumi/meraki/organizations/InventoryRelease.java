@@ -93,7 +93,7 @@ public class InventoryRelease extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public InventoryRelease(String name) {
+    public InventoryRelease(java.lang.String name) {
         this(name, InventoryReleaseArgs.Empty);
     }
     /**
@@ -101,7 +101,7 @@ public class InventoryRelease extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public InventoryRelease(String name, InventoryReleaseArgs args) {
+    public InventoryRelease(java.lang.String name, InventoryReleaseArgs args) {
         this(name, args, null);
     }
     /**
@@ -110,12 +110,12 @@ public class InventoryRelease extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public InventoryRelease(String name, InventoryReleaseArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/inventoryRelease:InventoryRelease", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public InventoryRelease(java.lang.String name, InventoryReleaseArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/inventoryRelease:InventoryRelease", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private InventoryRelease(String name, Output<String> id, @Nullable InventoryReleaseState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/inventoryRelease:InventoryRelease", name, state, makeResourceOptions(options, id));
+    private InventoryRelease(java.lang.String name, Output<java.lang.String> id, @Nullable InventoryReleaseState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/inventoryRelease:InventoryRelease", name, state, makeResourceOptions(options, id), false);
     }
 
     private static InventoryReleaseArgs makeArgs(InventoryReleaseArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -125,7 +125,7 @@ public class InventoryRelease extends com.pulumi.resources.CustomResource {
         return args == null ? InventoryReleaseArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -141,7 +141,7 @@ public class InventoryRelease extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static InventoryRelease get(String name, Output<String> id, @Nullable InventoryReleaseState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static InventoryRelease get(java.lang.String name, Output<java.lang.String> id, @Nullable InventoryReleaseState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new InventoryRelease(name, id, state, options);
     }
 }

@@ -156,7 +156,7 @@ class FirmwareUpgradesStagedEventsDefer(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            item: Optional[pulumi.Input[pulumi.InputType['FirmwareUpgradesStagedEventsDeferItemArgs']]] = None,
+            item: Optional[pulumi.Input[Union['FirmwareUpgradesStagedEventsDeferItemArgs', 'FirmwareUpgradesStagedEventsDeferItemArgsDict']]] = None,
             network_id: Optional[pulumi.Input[str]] = None) -> 'FirmwareUpgradesStagedEventsDefer':
         """
         Get an existing FirmwareUpgradesStagedEventsDefer resource's state with the given name, id, and optional extra

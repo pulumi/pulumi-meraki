@@ -224,8 +224,8 @@ class WirelessSsidsEapOverride(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 eapol_key: Optional[pulumi.Input[pulumi.InputType['WirelessSsidsEapOverrideEapolKeyArgs']]] = None,
-                 identity: Optional[pulumi.Input[pulumi.InputType['WirelessSsidsEapOverrideIdentityArgs']]] = None,
+                 eapol_key: Optional[pulumi.Input[Union['WirelessSsidsEapOverrideEapolKeyArgs', 'WirelessSsidsEapOverrideEapolKeyArgsDict']]] = None,
+                 identity: Optional[pulumi.Input[Union['WirelessSsidsEapOverrideIdentityArgs', 'WirelessSsidsEapOverrideIdentityArgsDict']]] = None,
                  max_retries: Optional[pulumi.Input[int]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
                  number: Optional[pulumi.Input[str]] = None,
@@ -242,8 +242,8 @@ class WirelessSsidsEapOverride(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['WirelessSsidsEapOverrideEapolKeyArgs']] eapol_key: EAPOL Key settings.
-        :param pulumi.Input[pulumi.InputType['WirelessSsidsEapOverrideIdentityArgs']] identity: EAP settings for identity requests.
+        :param pulumi.Input[Union['WirelessSsidsEapOverrideEapolKeyArgs', 'WirelessSsidsEapOverrideEapolKeyArgsDict']] eapol_key: EAPOL Key settings.
+        :param pulumi.Input[Union['WirelessSsidsEapOverrideIdentityArgs', 'WirelessSsidsEapOverrideIdentityArgsDict']] identity: EAP settings for identity requests.
         :param pulumi.Input[int] max_retries: Maximum number of general EAP retries.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[str] number: number path parameter.
@@ -279,8 +279,8 @@ class WirelessSsidsEapOverride(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 eapol_key: Optional[pulumi.Input[pulumi.InputType['WirelessSsidsEapOverrideEapolKeyArgs']]] = None,
-                 identity: Optional[pulumi.Input[pulumi.InputType['WirelessSsidsEapOverrideIdentityArgs']]] = None,
+                 eapol_key: Optional[pulumi.Input[Union['WirelessSsidsEapOverrideEapolKeyArgs', 'WirelessSsidsEapOverrideEapolKeyArgsDict']]] = None,
+                 identity: Optional[pulumi.Input[Union['WirelessSsidsEapOverrideIdentityArgs', 'WirelessSsidsEapOverrideIdentityArgsDict']]] = None,
                  max_retries: Optional[pulumi.Input[int]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
                  number: Optional[pulumi.Input[str]] = None,
@@ -314,8 +314,8 @@ class WirelessSsidsEapOverride(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            eapol_key: Optional[pulumi.Input[pulumi.InputType['WirelessSsidsEapOverrideEapolKeyArgs']]] = None,
-            identity: Optional[pulumi.Input[pulumi.InputType['WirelessSsidsEapOverrideIdentityArgs']]] = None,
+            eapol_key: Optional[pulumi.Input[Union['WirelessSsidsEapOverrideEapolKeyArgs', 'WirelessSsidsEapOverrideEapolKeyArgsDict']]] = None,
+            identity: Optional[pulumi.Input[Union['WirelessSsidsEapOverrideIdentityArgs', 'WirelessSsidsEapOverrideIdentityArgsDict']]] = None,
             max_retries: Optional[pulumi.Input[int]] = None,
             network_id: Optional[pulumi.Input[str]] = None,
             number: Optional[pulumi.Input[str]] = None,
@@ -327,8 +327,8 @@ class WirelessSsidsEapOverride(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['WirelessSsidsEapOverrideEapolKeyArgs']] eapol_key: EAPOL Key settings.
-        :param pulumi.Input[pulumi.InputType['WirelessSsidsEapOverrideIdentityArgs']] identity: EAP settings for identity requests.
+        :param pulumi.Input[Union['WirelessSsidsEapOverrideEapolKeyArgs', 'WirelessSsidsEapOverrideEapolKeyArgsDict']] eapol_key: EAPOL Key settings.
+        :param pulumi.Input[Union['WirelessSsidsEapOverrideIdentityArgs', 'WirelessSsidsEapOverrideIdentityArgsDict']] identity: EAP settings for identity requests.
         :param pulumi.Input[int] max_retries: Maximum number of general EAP retries.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[str] number: number path parameter.

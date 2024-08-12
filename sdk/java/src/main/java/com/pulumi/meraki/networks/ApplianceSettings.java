@@ -128,7 +128,7 @@ public class ApplianceSettings extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public ApplianceSettings(String name) {
+    public ApplianceSettings(java.lang.String name) {
         this(name, ApplianceSettingsArgs.Empty);
     }
     /**
@@ -136,7 +136,7 @@ public class ApplianceSettings extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ApplianceSettings(String name, ApplianceSettingsArgs args) {
+    public ApplianceSettings(java.lang.String name, ApplianceSettingsArgs args) {
         this(name, args, null);
     }
     /**
@@ -145,12 +145,12 @@ public class ApplianceSettings extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ApplianceSettings(String name, ApplianceSettingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/applianceSettings:ApplianceSettings", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public ApplianceSettings(java.lang.String name, ApplianceSettingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/applianceSettings:ApplianceSettings", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private ApplianceSettings(String name, Output<String> id, @Nullable ApplianceSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/applianceSettings:ApplianceSettings", name, state, makeResourceOptions(options, id));
+    private ApplianceSettings(java.lang.String name, Output<java.lang.String> id, @Nullable ApplianceSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/applianceSettings:ApplianceSettings", name, state, makeResourceOptions(options, id), false);
     }
 
     private static ApplianceSettingsArgs makeArgs(ApplianceSettingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -160,7 +160,7 @@ public class ApplianceSettings extends com.pulumi.resources.CustomResource {
         return args == null ? ApplianceSettingsArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -176,7 +176,7 @@ public class ApplianceSettings extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ApplianceSettings get(String name, Output<String> id, @Nullable ApplianceSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ApplianceSettings get(java.lang.String name, Output<java.lang.String> id, @Nullable ApplianceSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new ApplianceSettings(name, id, state, options);
     }
 }

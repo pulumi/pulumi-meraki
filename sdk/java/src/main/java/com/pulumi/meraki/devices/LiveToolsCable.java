@@ -150,7 +150,7 @@ public class LiveToolsCable extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public LiveToolsCable(String name) {
+    public LiveToolsCable(java.lang.String name) {
         this(name, LiveToolsCableArgs.Empty);
     }
     /**
@@ -158,7 +158,7 @@ public class LiveToolsCable extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public LiveToolsCable(String name, LiveToolsCableArgs args) {
+    public LiveToolsCable(java.lang.String name, LiveToolsCableArgs args) {
         this(name, args, null);
     }
     /**
@@ -167,12 +167,12 @@ public class LiveToolsCable extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public LiveToolsCable(String name, LiveToolsCableArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/liveToolsCable:LiveToolsCable", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public LiveToolsCable(java.lang.String name, LiveToolsCableArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/liveToolsCable:LiveToolsCable", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private LiveToolsCable(String name, Output<String> id, @Nullable LiveToolsCableState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/liveToolsCable:LiveToolsCable", name, state, makeResourceOptions(options, id));
+    private LiveToolsCable(java.lang.String name, Output<java.lang.String> id, @Nullable LiveToolsCableState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/liveToolsCable:LiveToolsCable", name, state, makeResourceOptions(options, id), false);
     }
 
     private static LiveToolsCableArgs makeArgs(LiveToolsCableArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -182,7 +182,7 @@ public class LiveToolsCable extends com.pulumi.resources.CustomResource {
         return args == null ? LiveToolsCableArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -198,7 +198,7 @@ public class LiveToolsCable extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LiveToolsCable get(String name, Output<String> id, @Nullable LiveToolsCableState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static LiveToolsCable get(java.lang.String name, Output<java.lang.String> id, @Nullable LiveToolsCableState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new LiveToolsCable(name, id, state, options);
     }
 }

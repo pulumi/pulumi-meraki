@@ -620,7 +620,7 @@ class Base(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             address: Optional[pulumi.Input[str]] = None,
-            details: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['BaseDetailArgs']]]]] = None,
+            details: Optional[pulumi.Input[Sequence[pulumi.Input[Union['BaseDetailArgs', 'BaseDetailArgsDict']]]]] = None,
             firmware: Optional[pulumi.Input[str]] = None,
             floor_plan_id: Optional[pulumi.Input[str]] = None,
             imei: Optional[pulumi.Input[str]] = None,
@@ -645,7 +645,7 @@ class Base(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] address: Physical address of the device
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['BaseDetailArgs']]]] details: Additional device information
+        :param pulumi.Input[Sequence[pulumi.Input[Union['BaseDetailArgs', 'BaseDetailArgsDict']]]] details: Additional device information
         :param pulumi.Input[str] firmware: Firmware version of the device
         :param pulumi.Input[str] floor_plan_id: The floor plan to associate to this device. null disassociates the device from the floorplan.
         :param pulumi.Input[str] imei: IMEI of the device, if applicable

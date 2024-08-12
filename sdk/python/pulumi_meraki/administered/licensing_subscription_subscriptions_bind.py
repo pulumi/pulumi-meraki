@@ -132,7 +132,7 @@ class LicensingSubscriptionSubscriptionsBind(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 parameters: Optional[pulumi.Input[pulumi.InputType['LicensingSubscriptionSubscriptionsBindParametersArgs']]] = None,
+                 parameters: Optional[pulumi.Input[Union['LicensingSubscriptionSubscriptionsBindParametersArgs', 'LicensingSubscriptionSubscriptionsBindParametersArgsDict']]] = None,
                  subscription_id: Optional[pulumi.Input[str]] = None,
                  validate: Optional[pulumi.Input[bool]] = None,
                  __props__=None):
@@ -170,7 +170,7 @@ class LicensingSubscriptionSubscriptionsBind(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 parameters: Optional[pulumi.Input[pulumi.InputType['LicensingSubscriptionSubscriptionsBindParametersArgs']]] = None,
+                 parameters: Optional[pulumi.Input[Union['LicensingSubscriptionSubscriptionsBindParametersArgs', 'LicensingSubscriptionSubscriptionsBindParametersArgsDict']]] = None,
                  subscription_id: Optional[pulumi.Input[str]] = None,
                  validate: Optional[pulumi.Input[bool]] = None,
                  __props__=None):
@@ -200,8 +200,8 @@ class LicensingSubscriptionSubscriptionsBind(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            item: Optional[pulumi.Input[pulumi.InputType['LicensingSubscriptionSubscriptionsBindItemArgs']]] = None,
-            parameters: Optional[pulumi.Input[pulumi.InputType['LicensingSubscriptionSubscriptionsBindParametersArgs']]] = None,
+            item: Optional[pulumi.Input[Union['LicensingSubscriptionSubscriptionsBindItemArgs', 'LicensingSubscriptionSubscriptionsBindItemArgsDict']]] = None,
+            parameters: Optional[pulumi.Input[Union['LicensingSubscriptionSubscriptionsBindParametersArgs', 'LicensingSubscriptionSubscriptionsBindParametersArgsDict']]] = None,
             subscription_id: Optional[pulumi.Input[str]] = None,
             validate: Optional[pulumi.Input[bool]] = None) -> 'LicensingSubscriptionSubscriptionsBind':
         """

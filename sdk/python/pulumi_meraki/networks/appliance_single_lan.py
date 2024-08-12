@@ -194,8 +194,8 @@ class ApplianceSingleLan(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  appliance_ip: Optional[pulumi.Input[str]] = None,
-                 ipv6: Optional[pulumi.Input[pulumi.InputType['ApplianceSingleLanIpv6Args']]] = None,
-                 mandatory_dhcp: Optional[pulumi.Input[pulumi.InputType['ApplianceSingleLanMandatoryDhcpArgs']]] = None,
+                 ipv6: Optional[pulumi.Input[Union['ApplianceSingleLanIpv6Args', 'ApplianceSingleLanIpv6ArgsDict']]] = None,
+                 mandatory_dhcp: Optional[pulumi.Input[Union['ApplianceSingleLanMandatoryDhcpArgs', 'ApplianceSingleLanMandatoryDhcpArgsDict']]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
                  subnet: Optional[pulumi.Input[str]] = None,
                  __props__=None):
@@ -211,8 +211,8 @@ class ApplianceSingleLan(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] appliance_ip: The local IP of the appliance on the single LAN
-        :param pulumi.Input[pulumi.InputType['ApplianceSingleLanIpv6Args']] ipv6: IPv6 configuration on the single LAN
-        :param pulumi.Input[pulumi.InputType['ApplianceSingleLanMandatoryDhcpArgs']] mandatory_dhcp: Mandatory DHCP will enforce that clients connecting to this single LAN must use the IP address assigned by the DHCP server. Clients who use a static IP address won't be able to associate. Only available on firmware versions 17.0 and above
+        :param pulumi.Input[Union['ApplianceSingleLanIpv6Args', 'ApplianceSingleLanIpv6ArgsDict']] ipv6: IPv6 configuration on the single LAN
+        :param pulumi.Input[Union['ApplianceSingleLanMandatoryDhcpArgs', 'ApplianceSingleLanMandatoryDhcpArgsDict']] mandatory_dhcp: Mandatory DHCP will enforce that clients connecting to this single LAN must use the IP address assigned by the DHCP server. Clients who use a static IP address won't be able to associate. Only available on firmware versions 17.0 and above
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[str] subnet: The subnet of the single LAN
         """
@@ -247,8 +247,8 @@ class ApplianceSingleLan(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  appliance_ip: Optional[pulumi.Input[str]] = None,
-                 ipv6: Optional[pulumi.Input[pulumi.InputType['ApplianceSingleLanIpv6Args']]] = None,
-                 mandatory_dhcp: Optional[pulumi.Input[pulumi.InputType['ApplianceSingleLanMandatoryDhcpArgs']]] = None,
+                 ipv6: Optional[pulumi.Input[Union['ApplianceSingleLanIpv6Args', 'ApplianceSingleLanIpv6ArgsDict']]] = None,
+                 mandatory_dhcp: Optional[pulumi.Input[Union['ApplianceSingleLanMandatoryDhcpArgs', 'ApplianceSingleLanMandatoryDhcpArgsDict']]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
                  subnet: Optional[pulumi.Input[str]] = None,
                  __props__=None):
@@ -278,8 +278,8 @@ class ApplianceSingleLan(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             appliance_ip: Optional[pulumi.Input[str]] = None,
-            ipv6: Optional[pulumi.Input[pulumi.InputType['ApplianceSingleLanIpv6Args']]] = None,
-            mandatory_dhcp: Optional[pulumi.Input[pulumi.InputType['ApplianceSingleLanMandatoryDhcpArgs']]] = None,
+            ipv6: Optional[pulumi.Input[Union['ApplianceSingleLanIpv6Args', 'ApplianceSingleLanIpv6ArgsDict']]] = None,
+            mandatory_dhcp: Optional[pulumi.Input[Union['ApplianceSingleLanMandatoryDhcpArgs', 'ApplianceSingleLanMandatoryDhcpArgsDict']]] = None,
             network_id: Optional[pulumi.Input[str]] = None,
             subnet: Optional[pulumi.Input[str]] = None) -> 'ApplianceSingleLan':
         """
@@ -290,8 +290,8 @@ class ApplianceSingleLan(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] appliance_ip: The local IP of the appliance on the single LAN
-        :param pulumi.Input[pulumi.InputType['ApplianceSingleLanIpv6Args']] ipv6: IPv6 configuration on the single LAN
-        :param pulumi.Input[pulumi.InputType['ApplianceSingleLanMandatoryDhcpArgs']] mandatory_dhcp: Mandatory DHCP will enforce that clients connecting to this single LAN must use the IP address assigned by the DHCP server. Clients who use a static IP address won't be able to associate. Only available on firmware versions 17.0 and above
+        :param pulumi.Input[Union['ApplianceSingleLanIpv6Args', 'ApplianceSingleLanIpv6ArgsDict']] ipv6: IPv6 configuration on the single LAN
+        :param pulumi.Input[Union['ApplianceSingleLanMandatoryDhcpArgs', 'ApplianceSingleLanMandatoryDhcpArgsDict']] mandatory_dhcp: Mandatory DHCP will enforce that clients connecting to this single LAN must use the IP address assigned by the DHCP server. Clients who use a static IP address won't be able to associate. Only available on firmware versions 17.0 and above
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[str] subnet: The subnet of the single LAN
         """

@@ -94,7 +94,7 @@ public class ApplianceTrafficShapingVpnExclusions extends com.pulumi.resources.C
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public ApplianceTrafficShapingVpnExclusions(String name) {
+    public ApplianceTrafficShapingVpnExclusions(java.lang.String name) {
         this(name, ApplianceTrafficShapingVpnExclusionsArgs.Empty);
     }
     /**
@@ -102,7 +102,7 @@ public class ApplianceTrafficShapingVpnExclusions extends com.pulumi.resources.C
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ApplianceTrafficShapingVpnExclusions(String name, ApplianceTrafficShapingVpnExclusionsArgs args) {
+    public ApplianceTrafficShapingVpnExclusions(java.lang.String name, ApplianceTrafficShapingVpnExclusionsArgs args) {
         this(name, args, null);
     }
     /**
@@ -111,12 +111,12 @@ public class ApplianceTrafficShapingVpnExclusions extends com.pulumi.resources.C
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ApplianceTrafficShapingVpnExclusions(String name, ApplianceTrafficShapingVpnExclusionsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/applianceTrafficShapingVpnExclusions:ApplianceTrafficShapingVpnExclusions", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public ApplianceTrafficShapingVpnExclusions(java.lang.String name, ApplianceTrafficShapingVpnExclusionsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/applianceTrafficShapingVpnExclusions:ApplianceTrafficShapingVpnExclusions", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private ApplianceTrafficShapingVpnExclusions(String name, Output<String> id, @Nullable ApplianceTrafficShapingVpnExclusionsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/applianceTrafficShapingVpnExclusions:ApplianceTrafficShapingVpnExclusions", name, state, makeResourceOptions(options, id));
+    private ApplianceTrafficShapingVpnExclusions(java.lang.String name, Output<java.lang.String> id, @Nullable ApplianceTrafficShapingVpnExclusionsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/applianceTrafficShapingVpnExclusions:ApplianceTrafficShapingVpnExclusions", name, state, makeResourceOptions(options, id), false);
     }
 
     private static ApplianceTrafficShapingVpnExclusionsArgs makeArgs(ApplianceTrafficShapingVpnExclusionsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -126,7 +126,7 @@ public class ApplianceTrafficShapingVpnExclusions extends com.pulumi.resources.C
         return args == null ? ApplianceTrafficShapingVpnExclusionsArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -142,7 +142,7 @@ public class ApplianceTrafficShapingVpnExclusions extends com.pulumi.resources.C
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ApplianceTrafficShapingVpnExclusions get(String name, Output<String> id, @Nullable ApplianceTrafficShapingVpnExclusionsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ApplianceTrafficShapingVpnExclusions get(java.lang.String name, Output<java.lang.String> id, @Nullable ApplianceTrafficShapingVpnExclusionsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new ApplianceTrafficShapingVpnExclusions(name, id, state, options);
     }
 }

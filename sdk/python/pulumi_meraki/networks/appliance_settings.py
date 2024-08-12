@@ -163,7 +163,7 @@ class ApplianceSettings(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  client_tracking_method: Optional[pulumi.Input[str]] = None,
                  deployment_mode: Optional[pulumi.Input[str]] = None,
-                 dynamic_dns: Optional[pulumi.Input[pulumi.InputType['ApplianceSettingsDynamicDnsArgs']]] = None,
+                 dynamic_dns: Optional[pulumi.Input[Union['ApplianceSettingsDynamicDnsArgs', 'ApplianceSettingsDynamicDnsArgsDict']]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
@@ -176,10 +176,10 @@ class ApplianceSettings(pulumi.CustomResource):
         example = meraki.networks.ApplianceSettings("example",
             client_tracking_method="MAC address",
             deployment_mode="routed",
-            dynamic_dns=meraki.networks.ApplianceSettingsDynamicDnsArgs(
-                enabled=True,
-                prefix="test",
-            ),
+            dynamic_dns={
+                "enabled": True,
+                "prefix": "test",
+            },
             network_id="string")
         pulumi.export("merakiNetworksApplianceSettingsExample", example)
         ```
@@ -194,7 +194,7 @@ class ApplianceSettings(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] client_tracking_method: Client tracking method of a network
         :param pulumi.Input[str] deployment_mode: Deployment mode of a network
-        :param pulumi.Input[pulumi.InputType['ApplianceSettingsDynamicDnsArgs']] dynamic_dns: Dynamic DNS settings for a network
+        :param pulumi.Input[Union['ApplianceSettingsDynamicDnsArgs', 'ApplianceSettingsDynamicDnsArgsDict']] dynamic_dns: Dynamic DNS settings for a network
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         """
         ...
@@ -213,10 +213,10 @@ class ApplianceSettings(pulumi.CustomResource):
         example = meraki.networks.ApplianceSettings("example",
             client_tracking_method="MAC address",
             deployment_mode="routed",
-            dynamic_dns=meraki.networks.ApplianceSettingsDynamicDnsArgs(
-                enabled=True,
-                prefix="test",
-            ),
+            dynamic_dns={
+                "enabled": True,
+                "prefix": "test",
+            },
             network_id="string")
         pulumi.export("merakiNetworksApplianceSettingsExample", example)
         ```
@@ -244,7 +244,7 @@ class ApplianceSettings(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  client_tracking_method: Optional[pulumi.Input[str]] = None,
                  deployment_mode: Optional[pulumi.Input[str]] = None,
-                 dynamic_dns: Optional[pulumi.Input[pulumi.InputType['ApplianceSettingsDynamicDnsArgs']]] = None,
+                 dynamic_dns: Optional[pulumi.Input[Union['ApplianceSettingsDynamicDnsArgs', 'ApplianceSettingsDynamicDnsArgsDict']]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -273,7 +273,7 @@ class ApplianceSettings(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             client_tracking_method: Optional[pulumi.Input[str]] = None,
             deployment_mode: Optional[pulumi.Input[str]] = None,
-            dynamic_dns: Optional[pulumi.Input[pulumi.InputType['ApplianceSettingsDynamicDnsArgs']]] = None,
+            dynamic_dns: Optional[pulumi.Input[Union['ApplianceSettingsDynamicDnsArgs', 'ApplianceSettingsDynamicDnsArgsDict']]] = None,
             network_id: Optional[pulumi.Input[str]] = None) -> 'ApplianceSettings':
         """
         Get an existing ApplianceSettings resource's state with the given name, id, and optional extra
@@ -284,7 +284,7 @@ class ApplianceSettings(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] client_tracking_method: Client tracking method of a network
         :param pulumi.Input[str] deployment_mode: Deployment mode of a network
-        :param pulumi.Input[pulumi.InputType['ApplianceSettingsDynamicDnsArgs']] dynamic_dns: Dynamic DNS settings for a network
+        :param pulumi.Input[Union['ApplianceSettingsDynamicDnsArgs', 'ApplianceSettingsDynamicDnsArgsDict']] dynamic_dns: Dynamic DNS settings for a network
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

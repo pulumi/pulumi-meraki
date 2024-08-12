@@ -104,7 +104,7 @@ public class WirelessAlternateManagementInterfaceIpv6 extends com.pulumi.resourc
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public WirelessAlternateManagementInterfaceIpv6(String name) {
+    public WirelessAlternateManagementInterfaceIpv6(java.lang.String name) {
         this(name, WirelessAlternateManagementInterfaceIpv6Args.Empty);
     }
     /**
@@ -112,7 +112,7 @@ public class WirelessAlternateManagementInterfaceIpv6 extends com.pulumi.resourc
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public WirelessAlternateManagementInterfaceIpv6(String name, WirelessAlternateManagementInterfaceIpv6Args args) {
+    public WirelessAlternateManagementInterfaceIpv6(java.lang.String name, WirelessAlternateManagementInterfaceIpv6Args args) {
         this(name, args, null);
     }
     /**
@@ -121,12 +121,12 @@ public class WirelessAlternateManagementInterfaceIpv6 extends com.pulumi.resourc
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public WirelessAlternateManagementInterfaceIpv6(String name, WirelessAlternateManagementInterfaceIpv6Args args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/wirelessAlternateManagementInterfaceIpv6:WirelessAlternateManagementInterfaceIpv6", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public WirelessAlternateManagementInterfaceIpv6(java.lang.String name, WirelessAlternateManagementInterfaceIpv6Args args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/wirelessAlternateManagementInterfaceIpv6:WirelessAlternateManagementInterfaceIpv6", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private WirelessAlternateManagementInterfaceIpv6(String name, Output<String> id, @Nullable WirelessAlternateManagementInterfaceIpv6State state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/wirelessAlternateManagementInterfaceIpv6:WirelessAlternateManagementInterfaceIpv6", name, state, makeResourceOptions(options, id));
+    private WirelessAlternateManagementInterfaceIpv6(java.lang.String name, Output<java.lang.String> id, @Nullable WirelessAlternateManagementInterfaceIpv6State state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/wirelessAlternateManagementInterfaceIpv6:WirelessAlternateManagementInterfaceIpv6", name, state, makeResourceOptions(options, id), false);
     }
 
     private static WirelessAlternateManagementInterfaceIpv6Args makeArgs(WirelessAlternateManagementInterfaceIpv6Args args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -136,7 +136,7 @@ public class WirelessAlternateManagementInterfaceIpv6 extends com.pulumi.resourc
         return args == null ? WirelessAlternateManagementInterfaceIpv6Args.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -152,7 +152,7 @@ public class WirelessAlternateManagementInterfaceIpv6 extends com.pulumi.resourc
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WirelessAlternateManagementInterfaceIpv6 get(String name, Output<String> id, @Nullable WirelessAlternateManagementInterfaceIpv6State state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static WirelessAlternateManagementInterfaceIpv6 get(java.lang.String name, Output<java.lang.String> id, @Nullable WirelessAlternateManagementInterfaceIpv6State state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new WirelessAlternateManagementInterfaceIpv6(name, id, state, options);
     }
 }

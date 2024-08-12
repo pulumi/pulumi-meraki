@@ -233,9 +233,9 @@ class SwitchDhcpServerPolicy(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 alerts: Optional[pulumi.Input[pulumi.InputType['SwitchDhcpServerPolicyAlertsArgs']]] = None,
+                 alerts: Optional[pulumi.Input[Union['SwitchDhcpServerPolicyAlertsArgs', 'SwitchDhcpServerPolicyAlertsArgsDict']]] = None,
                  allowed_servers: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 arp_inspection: Optional[pulumi.Input[pulumi.InputType['SwitchDhcpServerPolicyArpInspectionArgs']]] = None,
+                 arp_inspection: Optional[pulumi.Input[Union['SwitchDhcpServerPolicyArpInspectionArgs', 'SwitchDhcpServerPolicyArpInspectionArgsDict']]] = None,
                  blocked_servers: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  default_policy: Optional[pulumi.Input[str]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
@@ -248,18 +248,18 @@ class SwitchDhcpServerPolicy(pulumi.CustomResource):
         import pulumi_meraki as meraki
 
         example = meraki.networks.SwitchDhcpServerPolicy("example",
-            alerts=meraki.networks.SwitchDhcpServerPolicyAlertsArgs(
-                email=meraki.networks.SwitchDhcpServerPolicyAlertsEmailArgs(
-                    enabled=True,
-                ),
-            ),
+            alerts={
+                "email": {
+                    "enabled": True,
+                },
+            },
             allowed_servers=[
                 "00:50:56:00:00:01",
                 "00:50:56:00:00:02",
             ],
-            arp_inspection=meraki.networks.SwitchDhcpServerPolicyArpInspectionArgs(
-                enabled=True,
-            ),
+            arp_inspection={
+                "enabled": True,
+            },
             blocked_servers=[
                 "00:50:56:00:00:03",
                 "00:50:56:00:00:04",
@@ -277,10 +277,10 @@ class SwitchDhcpServerPolicy(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['SwitchDhcpServerPolicyAlertsArgs']] alerts: Email alert settings for DHCP servers
+        :param pulumi.Input[Union['SwitchDhcpServerPolicyAlertsArgs', 'SwitchDhcpServerPolicyAlertsArgsDict']] alerts: Email alert settings for DHCP servers
         :param pulumi.Input[Sequence[pulumi.Input[str]]] allowed_servers: List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
                  to block.An empty array will clear the entries.
-        :param pulumi.Input[pulumi.InputType['SwitchDhcpServerPolicyArpInspectionArgs']] arp_inspection: Dynamic ARP Inspection settings
+        :param pulumi.Input[Union['SwitchDhcpServerPolicyArpInspectionArgs', 'SwitchDhcpServerPolicyArpInspectionArgsDict']] arp_inspection: Dynamic ARP Inspection settings
         :param pulumi.Input[Sequence[pulumi.Input[str]]] blocked_servers: List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set
                  to allow.An empty array will clear the entries.
         :param pulumi.Input[str] default_policy: 'allow' or 'block' new DHCP servers. Default value is 'allow'.
@@ -300,18 +300,18 @@ class SwitchDhcpServerPolicy(pulumi.CustomResource):
         import pulumi_meraki as meraki
 
         example = meraki.networks.SwitchDhcpServerPolicy("example",
-            alerts=meraki.networks.SwitchDhcpServerPolicyAlertsArgs(
-                email=meraki.networks.SwitchDhcpServerPolicyAlertsEmailArgs(
-                    enabled=True,
-                ),
-            ),
+            alerts={
+                "email": {
+                    "enabled": True,
+                },
+            },
             allowed_servers=[
                 "00:50:56:00:00:01",
                 "00:50:56:00:00:02",
             ],
-            arp_inspection=meraki.networks.SwitchDhcpServerPolicyArpInspectionArgs(
-                enabled=True,
-            ),
+            arp_inspection={
+                "enabled": True,
+            },
             blocked_servers=[
                 "00:50:56:00:00:03",
                 "00:50:56:00:00:04",
@@ -342,9 +342,9 @@ class SwitchDhcpServerPolicy(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 alerts: Optional[pulumi.Input[pulumi.InputType['SwitchDhcpServerPolicyAlertsArgs']]] = None,
+                 alerts: Optional[pulumi.Input[Union['SwitchDhcpServerPolicyAlertsArgs', 'SwitchDhcpServerPolicyAlertsArgsDict']]] = None,
                  allowed_servers: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 arp_inspection: Optional[pulumi.Input[pulumi.InputType['SwitchDhcpServerPolicyArpInspectionArgs']]] = None,
+                 arp_inspection: Optional[pulumi.Input[Union['SwitchDhcpServerPolicyArpInspectionArgs', 'SwitchDhcpServerPolicyArpInspectionArgsDict']]] = None,
                  blocked_servers: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  default_policy: Optional[pulumi.Input[str]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
@@ -375,9 +375,9 @@ class SwitchDhcpServerPolicy(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            alerts: Optional[pulumi.Input[pulumi.InputType['SwitchDhcpServerPolicyAlertsArgs']]] = None,
+            alerts: Optional[pulumi.Input[Union['SwitchDhcpServerPolicyAlertsArgs', 'SwitchDhcpServerPolicyAlertsArgsDict']]] = None,
             allowed_servers: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-            arp_inspection: Optional[pulumi.Input[pulumi.InputType['SwitchDhcpServerPolicyArpInspectionArgs']]] = None,
+            arp_inspection: Optional[pulumi.Input[Union['SwitchDhcpServerPolicyArpInspectionArgs', 'SwitchDhcpServerPolicyArpInspectionArgsDict']]] = None,
             blocked_servers: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
             default_policy: Optional[pulumi.Input[str]] = None,
             network_id: Optional[pulumi.Input[str]] = None) -> 'SwitchDhcpServerPolicy':
@@ -388,10 +388,10 @@ class SwitchDhcpServerPolicy(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['SwitchDhcpServerPolicyAlertsArgs']] alerts: Email alert settings for DHCP servers
+        :param pulumi.Input[Union['SwitchDhcpServerPolicyAlertsArgs', 'SwitchDhcpServerPolicyAlertsArgsDict']] alerts: Email alert settings for DHCP servers
         :param pulumi.Input[Sequence[pulumi.Input[str]]] allowed_servers: List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
                  to block.An empty array will clear the entries.
-        :param pulumi.Input[pulumi.InputType['SwitchDhcpServerPolicyArpInspectionArgs']] arp_inspection: Dynamic ARP Inspection settings
+        :param pulumi.Input[Union['SwitchDhcpServerPolicyArpInspectionArgs', 'SwitchDhcpServerPolicyArpInspectionArgsDict']] arp_inspection: Dynamic ARP Inspection settings
         :param pulumi.Input[Sequence[pulumi.Input[str]]] blocked_servers: List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set
                  to allow.An empty array will clear the entries.
         :param pulumi.Input[str] default_policy: 'allow' or 'block' new DHCP servers. Default value is 'allow'.

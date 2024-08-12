@@ -101,7 +101,7 @@ class InventoryClaim(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  organization_id: Optional[pulumi.Input[str]] = None,
-                 parameters: Optional[pulumi.Input[pulumi.InputType['InventoryClaimParametersArgs']]] = None,
+                 parameters: Optional[pulumi.Input[Union['InventoryClaimParametersArgs', 'InventoryClaimParametersArgsDict']]] = None,
                  __props__=None):
         """
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
@@ -115,14 +115,14 @@ class InventoryClaim(pulumi.CustomResource):
 
         example = meraki.organizations.InventoryClaim("example",
             organization_id="string",
-            parameters=meraki.organizations.InventoryClaimParametersArgs(
-                licenses=[meraki.organizations.InventoryClaimParametersLicenseArgs(
-                    key="Z2XXXXXXXXXX",
-                    mode="addDevices",
-                )],
-                orders=["4CXXXXXXX"],
-                serials=["Q234-ABCD-5678"],
-            ))
+            parameters={
+                "licenses": [{
+                    "key": "Z2XXXXXXXXXX",
+                    "mode": "addDevices",
+                }],
+                "orders": ["4CXXXXXXX"],
+                "serials": ["Q234-ABCD-5678"],
+            })
         pulumi.export("merakiOrganizationsInventoryClaimExample", example)
         ```
 
@@ -148,14 +148,14 @@ class InventoryClaim(pulumi.CustomResource):
 
         example = meraki.organizations.InventoryClaim("example",
             organization_id="string",
-            parameters=meraki.organizations.InventoryClaimParametersArgs(
-                licenses=[meraki.organizations.InventoryClaimParametersLicenseArgs(
-                    key="Z2XXXXXXXXXX",
-                    mode="addDevices",
-                )],
-                orders=["4CXXXXXXX"],
-                serials=["Q234-ABCD-5678"],
-            ))
+            parameters={
+                "licenses": [{
+                    "key": "Z2XXXXXXXXXX",
+                    "mode": "addDevices",
+                }],
+                "orders": ["4CXXXXXXX"],
+                "serials": ["Q234-ABCD-5678"],
+            })
         pulumi.export("merakiOrganizationsInventoryClaimExample", example)
         ```
 
@@ -175,7 +175,7 @@ class InventoryClaim(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  organization_id: Optional[pulumi.Input[str]] = None,
-                 parameters: Optional[pulumi.Input[pulumi.InputType['InventoryClaimParametersArgs']]] = None,
+                 parameters: Optional[pulumi.Input[Union['InventoryClaimParametersArgs', 'InventoryClaimParametersArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -202,9 +202,9 @@ class InventoryClaim(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            item: Optional[pulumi.Input[pulumi.InputType['InventoryClaimItemArgs']]] = None,
+            item: Optional[pulumi.Input[Union['InventoryClaimItemArgs', 'InventoryClaimItemArgsDict']]] = None,
             organization_id: Optional[pulumi.Input[str]] = None,
-            parameters: Optional[pulumi.Input[pulumi.InputType['InventoryClaimParametersArgs']]] = None) -> 'InventoryClaim':
+            parameters: Optional[pulumi.Input[Union['InventoryClaimParametersArgs', 'InventoryClaimParametersArgsDict']]] = None) -> 'InventoryClaim':
         """
         Get an existing InventoryClaim resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

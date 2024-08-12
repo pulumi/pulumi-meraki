@@ -147,7 +147,7 @@ public class ManagementInterface extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public ManagementInterface(String name) {
+    public ManagementInterface(java.lang.String name) {
         this(name, ManagementInterfaceArgs.Empty);
     }
     /**
@@ -155,7 +155,7 @@ public class ManagementInterface extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ManagementInterface(String name, ManagementInterfaceArgs args) {
+    public ManagementInterface(java.lang.String name, ManagementInterfaceArgs args) {
         this(name, args, null);
     }
     /**
@@ -164,12 +164,12 @@ public class ManagementInterface extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ManagementInterface(String name, ManagementInterfaceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/managementInterface:ManagementInterface", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public ManagementInterface(java.lang.String name, ManagementInterfaceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/managementInterface:ManagementInterface", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private ManagementInterface(String name, Output<String> id, @Nullable ManagementInterfaceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/managementInterface:ManagementInterface", name, state, makeResourceOptions(options, id));
+    private ManagementInterface(java.lang.String name, Output<java.lang.String> id, @Nullable ManagementInterfaceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/managementInterface:ManagementInterface", name, state, makeResourceOptions(options, id), false);
     }
 
     private static ManagementInterfaceArgs makeArgs(ManagementInterfaceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -179,7 +179,7 @@ public class ManagementInterface extends com.pulumi.resources.CustomResource {
         return args == null ? ManagementInterfaceArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -195,7 +195,7 @@ public class ManagementInterface extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ManagementInterface get(String name, Output<String> id, @Nullable ManagementInterfaceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ManagementInterface get(java.lang.String name, Output<java.lang.String> id, @Nullable ManagementInterfaceState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new ManagementInterface(name, id, state, options);
     }
 }

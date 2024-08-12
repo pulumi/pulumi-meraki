@@ -100,7 +100,7 @@ public class ClientsProvision extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public ClientsProvision(String name) {
+    public ClientsProvision(java.lang.String name) {
         this(name, ClientsProvisionArgs.Empty);
     }
     /**
@@ -108,7 +108,7 @@ public class ClientsProvision extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ClientsProvision(String name, ClientsProvisionArgs args) {
+    public ClientsProvision(java.lang.String name, ClientsProvisionArgs args) {
         this(name, args, null);
     }
     /**
@@ -117,12 +117,12 @@ public class ClientsProvision extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ClientsProvision(String name, ClientsProvisionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/clientsProvision:ClientsProvision", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public ClientsProvision(java.lang.String name, ClientsProvisionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/clientsProvision:ClientsProvision", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private ClientsProvision(String name, Output<String> id, @Nullable ClientsProvisionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/clientsProvision:ClientsProvision", name, state, makeResourceOptions(options, id));
+    private ClientsProvision(java.lang.String name, Output<java.lang.String> id, @Nullable ClientsProvisionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/clientsProvision:ClientsProvision", name, state, makeResourceOptions(options, id), false);
     }
 
     private static ClientsProvisionArgs makeArgs(ClientsProvisionArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -132,7 +132,7 @@ public class ClientsProvision extends com.pulumi.resources.CustomResource {
         return args == null ? ClientsProvisionArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -148,7 +148,7 @@ public class ClientsProvision extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ClientsProvision get(String name, Output<String> id, @Nullable ClientsProvisionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ClientsProvision get(java.lang.String name, Output<java.lang.String> id, @Nullable ClientsProvisionState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new ClientsProvision(name, id, state, options);
     }
 }

@@ -95,7 +95,7 @@ public class VlanProfilesAssignmentsReassign extends com.pulumi.resources.Custom
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public VlanProfilesAssignmentsReassign(String name) {
+    public VlanProfilesAssignmentsReassign(java.lang.String name) {
         this(name, VlanProfilesAssignmentsReassignArgs.Empty);
     }
     /**
@@ -103,7 +103,7 @@ public class VlanProfilesAssignmentsReassign extends com.pulumi.resources.Custom
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public VlanProfilesAssignmentsReassign(String name, VlanProfilesAssignmentsReassignArgs args) {
+    public VlanProfilesAssignmentsReassign(java.lang.String name, VlanProfilesAssignmentsReassignArgs args) {
         this(name, args, null);
     }
     /**
@@ -112,12 +112,12 @@ public class VlanProfilesAssignmentsReassign extends com.pulumi.resources.Custom
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public VlanProfilesAssignmentsReassign(String name, VlanProfilesAssignmentsReassignArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/vlanProfilesAssignmentsReassign:VlanProfilesAssignmentsReassign", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public VlanProfilesAssignmentsReassign(java.lang.String name, VlanProfilesAssignmentsReassignArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/vlanProfilesAssignmentsReassign:VlanProfilesAssignmentsReassign", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private VlanProfilesAssignmentsReassign(String name, Output<String> id, @Nullable VlanProfilesAssignmentsReassignState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/vlanProfilesAssignmentsReassign:VlanProfilesAssignmentsReassign", name, state, makeResourceOptions(options, id));
+    private VlanProfilesAssignmentsReassign(java.lang.String name, Output<java.lang.String> id, @Nullable VlanProfilesAssignmentsReassignState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/vlanProfilesAssignmentsReassign:VlanProfilesAssignmentsReassign", name, state, makeResourceOptions(options, id), false);
     }
 
     private static VlanProfilesAssignmentsReassignArgs makeArgs(VlanProfilesAssignmentsReassignArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -127,7 +127,7 @@ public class VlanProfilesAssignmentsReassign extends com.pulumi.resources.Custom
         return args == null ? VlanProfilesAssignmentsReassignArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -143,7 +143,7 @@ public class VlanProfilesAssignmentsReassign extends com.pulumi.resources.Custom
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static VlanProfilesAssignmentsReassign get(String name, Output<String> id, @Nullable VlanProfilesAssignmentsReassignState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static VlanProfilesAssignmentsReassign get(java.lang.String name, Output<java.lang.String> id, @Nullable VlanProfilesAssignmentsReassignState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new VlanProfilesAssignmentsReassign(name, id, state, options);
     }
 }

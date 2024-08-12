@@ -139,7 +139,7 @@ class ApplianceTrafficShapingRules(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  default_rules_enabled: Optional[pulumi.Input[bool]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceTrafficShapingRulesRuleArgs']]]]] = None,
+                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceTrafficShapingRulesRuleArgs', 'ApplianceTrafficShapingRulesRuleArgsDict']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -154,7 +154,7 @@ class ApplianceTrafficShapingRules(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[bool] default_rules_enabled: Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network's traffic shaping page. Note that default rules count against the rule limit of 8.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceTrafficShapingRulesRuleArgs']]]] rules: An array of traffic shaping rules. Rules are applied in the order that
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceTrafficShapingRulesRuleArgs', 'ApplianceTrafficShapingRulesRuleArgsDict']]]] rules: An array of traffic shaping rules. Rules are applied in the order that
                they are specified in. An empty list (or null) means no rules. Note that
                you are allowed a maximum of 8 rules.
         """
@@ -190,7 +190,7 @@ class ApplianceTrafficShapingRules(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  default_rules_enabled: Optional[pulumi.Input[bool]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceTrafficShapingRulesRuleArgs']]]]] = None,
+                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceTrafficShapingRulesRuleArgs', 'ApplianceTrafficShapingRulesRuleArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -217,7 +217,7 @@ class ApplianceTrafficShapingRules(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             default_rules_enabled: Optional[pulumi.Input[bool]] = None,
             network_id: Optional[pulumi.Input[str]] = None,
-            rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceTrafficShapingRulesRuleArgs']]]]] = None) -> 'ApplianceTrafficShapingRules':
+            rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplianceTrafficShapingRulesRuleArgs', 'ApplianceTrafficShapingRulesRuleArgsDict']]]]] = None) -> 'ApplianceTrafficShapingRules':
         """
         Get an existing ApplianceTrafficShapingRules resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -227,7 +227,7 @@ class ApplianceTrafficShapingRules(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[bool] default_rules_enabled: Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network's traffic shaping page. Note that default rules count against the rule limit of 8.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ApplianceTrafficShapingRulesRuleArgs']]]] rules: An array of traffic shaping rules. Rules are applied in the order that
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceTrafficShapingRulesRuleArgs', 'ApplianceTrafficShapingRulesRuleArgsDict']]]] rules: An array of traffic shaping rules. Rules are applied in the order that
                they are specified in. An empty list (or null) means no rules. Note that
                you are allowed a maximum of 8 rules.
         """

@@ -130,7 +130,7 @@ class ClientsSplashAuthorizationStatus(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  client_id: Optional[pulumi.Input[str]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 ssids: Optional[pulumi.Input[pulumi.InputType['ClientsSplashAuthorizationStatusSsidsArgs']]] = None,
+                 ssids: Optional[pulumi.Input[Union['ClientsSplashAuthorizationStatusSsidsArgs', 'ClientsSplashAuthorizationStatusSsidsArgsDict']]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -145,7 +145,7 @@ class ClientsSplashAuthorizationStatus(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] client_id: clientId path parameter. Client ID
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[pulumi.InputType['ClientsSplashAuthorizationStatusSsidsArgs']] ssids: The target SSIDs. Each SSID must be enabled and must have Click-through splash enabled. For each SSID where isAuthorized is true, the expiration time will automatically be set according to the SSID's splash frequency. Not all networks support configuring all SSIDs
+        :param pulumi.Input[Union['ClientsSplashAuthorizationStatusSsidsArgs', 'ClientsSplashAuthorizationStatusSsidsArgsDict']] ssids: The target SSIDs. Each SSID must be enabled and must have Click-through splash enabled. For each SSID where isAuthorized is true, the expiration time will automatically be set according to the SSID's splash frequency. Not all networks support configuring all SSIDs
         """
         ...
     @overload
@@ -179,7 +179,7 @@ class ClientsSplashAuthorizationStatus(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  client_id: Optional[pulumi.Input[str]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 ssids: Optional[pulumi.Input[pulumi.InputType['ClientsSplashAuthorizationStatusSsidsArgs']]] = None,
+                 ssids: Optional[pulumi.Input[Union['ClientsSplashAuthorizationStatusSsidsArgs', 'ClientsSplashAuthorizationStatusSsidsArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -208,7 +208,7 @@ class ClientsSplashAuthorizationStatus(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             client_id: Optional[pulumi.Input[str]] = None,
             network_id: Optional[pulumi.Input[str]] = None,
-            ssids: Optional[pulumi.Input[pulumi.InputType['ClientsSplashAuthorizationStatusSsidsArgs']]] = None) -> 'ClientsSplashAuthorizationStatus':
+            ssids: Optional[pulumi.Input[Union['ClientsSplashAuthorizationStatusSsidsArgs', 'ClientsSplashAuthorizationStatusSsidsArgsDict']]] = None) -> 'ClientsSplashAuthorizationStatus':
         """
         Get an existing ClientsSplashAuthorizationStatus resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -218,7 +218,7 @@ class ClientsSplashAuthorizationStatus(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] client_id: clientId path parameter. Client ID
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[pulumi.InputType['ClientsSplashAuthorizationStatusSsidsArgs']] ssids: The target SSIDs. Each SSID must be enabled and must have Click-through splash enabled. For each SSID where isAuthorized is true, the expiration time will automatically be set according to the SSID's splash frequency. Not all networks support configuring all SSIDs
+        :param pulumi.Input[Union['ClientsSplashAuthorizationStatusSsidsArgs', 'ClientsSplashAuthorizationStatusSsidsArgsDict']] ssids: The target SSIDs. Each SSID must be enabled and must have Click-through splash enabled. For each SSID where isAuthorized is true, the expiration time will automatically be set according to the SSID's splash frequency. Not all networks support configuring all SSIDs
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
