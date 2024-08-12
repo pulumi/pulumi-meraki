@@ -97,7 +97,7 @@ public class WirelessEthernetPortsProfilesAssign extends com.pulumi.resources.Cu
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public WirelessEthernetPortsProfilesAssign(String name) {
+    public WirelessEthernetPortsProfilesAssign(java.lang.String name) {
         this(name, WirelessEthernetPortsProfilesAssignArgs.Empty);
     }
     /**
@@ -105,7 +105,7 @@ public class WirelessEthernetPortsProfilesAssign extends com.pulumi.resources.Cu
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public WirelessEthernetPortsProfilesAssign(String name, WirelessEthernetPortsProfilesAssignArgs args) {
+    public WirelessEthernetPortsProfilesAssign(java.lang.String name, WirelessEthernetPortsProfilesAssignArgs args) {
         this(name, args, null);
     }
     /**
@@ -114,12 +114,12 @@ public class WirelessEthernetPortsProfilesAssign extends com.pulumi.resources.Cu
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public WirelessEthernetPortsProfilesAssign(String name, WirelessEthernetPortsProfilesAssignArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/wirelessEthernetPortsProfilesAssign:WirelessEthernetPortsProfilesAssign", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public WirelessEthernetPortsProfilesAssign(java.lang.String name, WirelessEthernetPortsProfilesAssignArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/wirelessEthernetPortsProfilesAssign:WirelessEthernetPortsProfilesAssign", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private WirelessEthernetPortsProfilesAssign(String name, Output<String> id, @Nullable WirelessEthernetPortsProfilesAssignState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/wirelessEthernetPortsProfilesAssign:WirelessEthernetPortsProfilesAssign", name, state, makeResourceOptions(options, id));
+    private WirelessEthernetPortsProfilesAssign(java.lang.String name, Output<java.lang.String> id, @Nullable WirelessEthernetPortsProfilesAssignState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/wirelessEthernetPortsProfilesAssign:WirelessEthernetPortsProfilesAssign", name, state, makeResourceOptions(options, id), false);
     }
 
     private static WirelessEthernetPortsProfilesAssignArgs makeArgs(WirelessEthernetPortsProfilesAssignArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -129,7 +129,7 @@ public class WirelessEthernetPortsProfilesAssign extends com.pulumi.resources.Cu
         return args == null ? WirelessEthernetPortsProfilesAssignArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -145,7 +145,7 @@ public class WirelessEthernetPortsProfilesAssign extends com.pulumi.resources.Cu
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static WirelessEthernetPortsProfilesAssign get(String name, Output<String> id, @Nullable WirelessEthernetPortsProfilesAssignState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static WirelessEthernetPortsProfilesAssign get(java.lang.String name, Output<java.lang.String> id, @Nullable WirelessEthernetPortsProfilesAssignState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new WirelessEthernetPortsProfilesAssign(name, id, state, options);
     }
 }

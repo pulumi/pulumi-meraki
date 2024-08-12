@@ -242,8 +242,8 @@ class ActionBatches(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  action_batch_id: Optional[pulumi.Input[str]] = None,
-                 actions: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ActionBatchesActionArgs']]]]] = None,
-                 callback: Optional[pulumi.Input[pulumi.InputType['ActionBatchesCallbackArgs']]] = None,
+                 actions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ActionBatchesActionArgs', 'ActionBatchesActionArgsDict']]]]] = None,
+                 callback: Optional[pulumi.Input[Union['ActionBatchesCallbackArgs', 'ActionBatchesCallbackArgsDict']]] = None,
                  confirmed: Optional[pulumi.Input[bool]] = None,
                  organization_id: Optional[pulumi.Input[str]] = None,
                  synchronous: Optional[pulumi.Input[bool]] = None,
@@ -260,8 +260,8 @@ class ActionBatches(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] action_batch_id: actionBatchId path parameter. Action batch ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ActionBatchesActionArgs']]]] actions: A set of changes made as part of this action (\\n\\nmore details\\n\\n)
-        :param pulumi.Input[pulumi.InputType['ActionBatchesCallbackArgs']] callback: Information for callback used to send back results
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ActionBatchesActionArgs', 'ActionBatchesActionArgsDict']]]] actions: A set of changes made as part of this action (\\n\\nmore details\\n\\n)
+        :param pulumi.Input[Union['ActionBatchesCallbackArgs', 'ActionBatchesCallbackArgsDict']] callback: Information for callback used to send back results
         :param pulumi.Input[bool] confirmed: Flag describing whether the action should be previewed before executing or not
         :param pulumi.Input[str] organization_id: ID of the organization this action batch belongs to
         :param pulumi.Input[bool] synchronous: Flag describing whether actions should run synchronously or asynchronously
@@ -297,8 +297,8 @@ class ActionBatches(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  action_batch_id: Optional[pulumi.Input[str]] = None,
-                 actions: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ActionBatchesActionArgs']]]]] = None,
-                 callback: Optional[pulumi.Input[pulumi.InputType['ActionBatchesCallbackArgs']]] = None,
+                 actions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ActionBatchesActionArgs', 'ActionBatchesActionArgsDict']]]]] = None,
+                 callback: Optional[pulumi.Input[Union['ActionBatchesCallbackArgs', 'ActionBatchesCallbackArgsDict']]] = None,
                  confirmed: Optional[pulumi.Input[bool]] = None,
                  organization_id: Optional[pulumi.Input[str]] = None,
                  synchronous: Optional[pulumi.Input[bool]] = None,
@@ -331,11 +331,11 @@ class ActionBatches(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             action_batch_id: Optional[pulumi.Input[str]] = None,
-            actions: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ActionBatchesActionArgs']]]]] = None,
-            callback: Optional[pulumi.Input[pulumi.InputType['ActionBatchesCallbackArgs']]] = None,
+            actions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ActionBatchesActionArgs', 'ActionBatchesActionArgsDict']]]]] = None,
+            callback: Optional[pulumi.Input[Union['ActionBatchesCallbackArgs', 'ActionBatchesCallbackArgsDict']]] = None,
             confirmed: Optional[pulumi.Input[bool]] = None,
             organization_id: Optional[pulumi.Input[str]] = None,
-            status: Optional[pulumi.Input[pulumi.InputType['ActionBatchesStatusArgs']]] = None,
+            status: Optional[pulumi.Input[Union['ActionBatchesStatusArgs', 'ActionBatchesStatusArgsDict']]] = None,
             synchronous: Optional[pulumi.Input[bool]] = None) -> 'ActionBatches':
         """
         Get an existing ActionBatches resource's state with the given name, id, and optional extra
@@ -345,11 +345,11 @@ class ActionBatches(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] action_batch_id: actionBatchId path parameter. Action batch ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['ActionBatchesActionArgs']]]] actions: A set of changes made as part of this action (\\n\\nmore details\\n\\n)
-        :param pulumi.Input[pulumi.InputType['ActionBatchesCallbackArgs']] callback: Information for callback used to send back results
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ActionBatchesActionArgs', 'ActionBatchesActionArgsDict']]]] actions: A set of changes made as part of this action (\\n\\nmore details\\n\\n)
+        :param pulumi.Input[Union['ActionBatchesCallbackArgs', 'ActionBatchesCallbackArgsDict']] callback: Information for callback used to send back results
         :param pulumi.Input[bool] confirmed: Flag describing whether the action should be previewed before executing or not
         :param pulumi.Input[str] organization_id: ID of the organization this action batch belongs to
-        :param pulumi.Input[pulumi.InputType['ActionBatchesStatusArgs']] status: Status of action batch
+        :param pulumi.Input[Union['ActionBatchesStatusArgs', 'ActionBatchesStatusArgsDict']] status: Status of action batch
         :param pulumi.Input[bool] synchronous: Flag describing whether actions should run synchronously or asynchronously
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

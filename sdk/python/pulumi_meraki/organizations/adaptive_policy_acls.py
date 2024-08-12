@@ -262,7 +262,7 @@ class AdaptivePolicyAcls(pulumi.CustomResource):
                  ip_version: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  organization_id: Optional[pulumi.Input[str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AdaptivePolicyAclsRuleArgs']]]]] = None,
+                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AdaptivePolicyAclsRuleArgs', 'AdaptivePolicyAclsRuleArgsDict']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -280,7 +280,7 @@ class AdaptivePolicyAcls(pulumi.CustomResource):
         :param pulumi.Input[str] ip_version: IP version of adpative policy ACL
         :param pulumi.Input[str] name: Name of the adaptive policy ACL
         :param pulumi.Input[str] organization_id: organizationId path parameter. Organization ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AdaptivePolicyAclsRuleArgs']]]] rules: An ordered array of the adaptive policy ACL rules
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AdaptivePolicyAclsRuleArgs', 'AdaptivePolicyAclsRuleArgsDict']]]] rules: An ordered array of the adaptive policy ACL rules
         """
         ...
     @overload
@@ -317,7 +317,7 @@ class AdaptivePolicyAcls(pulumi.CustomResource):
                  ip_version: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  organization_id: Optional[pulumi.Input[str]] = None,
-                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AdaptivePolicyAclsRuleArgs']]]]] = None,
+                 rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AdaptivePolicyAclsRuleArgs', 'AdaptivePolicyAclsRuleArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -353,7 +353,7 @@ class AdaptivePolicyAcls(pulumi.CustomResource):
             ip_version: Optional[pulumi.Input[str]] = None,
             name: Optional[pulumi.Input[str]] = None,
             organization_id: Optional[pulumi.Input[str]] = None,
-            rules: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AdaptivePolicyAclsRuleArgs']]]]] = None,
+            rules: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AdaptivePolicyAclsRuleArgs', 'AdaptivePolicyAclsRuleArgsDict']]]]] = None,
             updated_at: Optional[pulumi.Input[str]] = None) -> 'AdaptivePolicyAcls':
         """
         Get an existing AdaptivePolicyAcls resource's state with the given name, id, and optional extra
@@ -368,7 +368,7 @@ class AdaptivePolicyAcls(pulumi.CustomResource):
         :param pulumi.Input[str] ip_version: IP version of adpative policy ACL
         :param pulumi.Input[str] name: Name of the adaptive policy ACL
         :param pulumi.Input[str] organization_id: organizationId path parameter. Organization ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['AdaptivePolicyAclsRuleArgs']]]] rules: An ordered array of the adaptive policy ACL rules
+        :param pulumi.Input[Sequence[pulumi.Input[Union['AdaptivePolicyAclsRuleArgs', 'AdaptivePolicyAclsRuleArgsDict']]]] rules: An ordered array of the adaptive policy ACL rules
         :param pulumi.Input[str] updated_at: When the adaptive policy ACL was last updated
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

@@ -171,7 +171,7 @@ class SwitchPortSchedules(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 port_schedule: Optional[pulumi.Input[pulumi.InputType['SwitchPortSchedulesPortScheduleArgs']]] = None,
+                 port_schedule: Optional[pulumi.Input[Union['SwitchPortSchedulesPortScheduleArgs', 'SwitchPortSchedulesPortScheduleArgsDict']]] = None,
                  port_schedule_id: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
@@ -184,43 +184,43 @@ class SwitchPortSchedules(pulumi.CustomResource):
         example = meraki.networks.SwitchPortSchedules("example",
             name="Weekdays schedule",
             network_id="string",
-            port_schedule=meraki.networks.SwitchPortSchedulesPortScheduleArgs(
-                friday=meraki.networks.SwitchPortSchedulesPortScheduleFridayArgs(
-                    active=True,
-                    from_="9:00",
-                    to="17:00",
-                ),
-                monday=meraki.networks.SwitchPortSchedulesPortScheduleMondayArgs(
-                    active=True,
-                    from_="9:00",
-                    to="17:00",
-                ),
-                saturday=meraki.networks.SwitchPortSchedulesPortScheduleSaturdayArgs(
-                    active=False,
-                    from_="0:00",
-                    to="24:00",
-                ),
-                sunday=meraki.networks.SwitchPortSchedulesPortScheduleSundayArgs(
-                    active=False,
-                    from_="0:00",
-                    to="24:00",
-                ),
-                thursday=meraki.networks.SwitchPortSchedulesPortScheduleThursdayArgs(
-                    active=True,
-                    from_="9:00",
-                    to="17:00",
-                ),
-                tuesday=meraki.networks.SwitchPortSchedulesPortScheduleTuesdayArgs(
-                    active=True,
-                    from_="9:00",
-                    to="17:00",
-                ),
-                wednesday=meraki.networks.SwitchPortSchedulesPortScheduleWednesdayArgs(
-                    active=True,
-                    from_="9:00",
-                    to="17:00",
-                ),
-            ))
+            port_schedule={
+                "friday": {
+                    "active": True,
+                    "from_": "9:00",
+                    "to": "17:00",
+                },
+                "monday": {
+                    "active": True,
+                    "from_": "9:00",
+                    "to": "17:00",
+                },
+                "saturday": {
+                    "active": False,
+                    "from_": "0:00",
+                    "to": "24:00",
+                },
+                "sunday": {
+                    "active": False,
+                    "from_": "0:00",
+                    "to": "24:00",
+                },
+                "thursday": {
+                    "active": True,
+                    "from_": "9:00",
+                    "to": "17:00",
+                },
+                "tuesday": {
+                    "active": True,
+                    "from_": "9:00",
+                    "to": "17:00",
+                },
+                "wednesday": {
+                    "active": True,
+                    "from_": "9:00",
+                    "to": "17:00",
+                },
+            })
         pulumi.export("merakiNetworksSwitchPortSchedulesExample", example)
         ```
 
@@ -234,7 +234,7 @@ class SwitchPortSchedules(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] name: The name for your port schedule. Required
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[pulumi.InputType['SwitchPortSchedulesPortScheduleArgs']] port_schedule: The schedule for switch port scheduling. Schedules are applied to days of the week.
+        :param pulumi.Input[Union['SwitchPortSchedulesPortScheduleArgs', 'SwitchPortSchedulesPortScheduleArgsDict']] port_schedule: The schedule for switch port scheduling. Schedules are applied to days of the week.
                When it's empty, default schedule with all days of a week are configured.
                Any unspecified day in the schedule is added as a default schedule configuration of the day.
         :param pulumi.Input[str] port_schedule_id: portScheduleId path parameter. Port schedule ID
@@ -255,43 +255,43 @@ class SwitchPortSchedules(pulumi.CustomResource):
         example = meraki.networks.SwitchPortSchedules("example",
             name="Weekdays schedule",
             network_id="string",
-            port_schedule=meraki.networks.SwitchPortSchedulesPortScheduleArgs(
-                friday=meraki.networks.SwitchPortSchedulesPortScheduleFridayArgs(
-                    active=True,
-                    from_="9:00",
-                    to="17:00",
-                ),
-                monday=meraki.networks.SwitchPortSchedulesPortScheduleMondayArgs(
-                    active=True,
-                    from_="9:00",
-                    to="17:00",
-                ),
-                saturday=meraki.networks.SwitchPortSchedulesPortScheduleSaturdayArgs(
-                    active=False,
-                    from_="0:00",
-                    to="24:00",
-                ),
-                sunday=meraki.networks.SwitchPortSchedulesPortScheduleSundayArgs(
-                    active=False,
-                    from_="0:00",
-                    to="24:00",
-                ),
-                thursday=meraki.networks.SwitchPortSchedulesPortScheduleThursdayArgs(
-                    active=True,
-                    from_="9:00",
-                    to="17:00",
-                ),
-                tuesday=meraki.networks.SwitchPortSchedulesPortScheduleTuesdayArgs(
-                    active=True,
-                    from_="9:00",
-                    to="17:00",
-                ),
-                wednesday=meraki.networks.SwitchPortSchedulesPortScheduleWednesdayArgs(
-                    active=True,
-                    from_="9:00",
-                    to="17:00",
-                ),
-            ))
+            port_schedule={
+                "friday": {
+                    "active": True,
+                    "from_": "9:00",
+                    "to": "17:00",
+                },
+                "monday": {
+                    "active": True,
+                    "from_": "9:00",
+                    "to": "17:00",
+                },
+                "saturday": {
+                    "active": False,
+                    "from_": "0:00",
+                    "to": "24:00",
+                },
+                "sunday": {
+                    "active": False,
+                    "from_": "0:00",
+                    "to": "24:00",
+                },
+                "thursday": {
+                    "active": True,
+                    "from_": "9:00",
+                    "to": "17:00",
+                },
+                "tuesday": {
+                    "active": True,
+                    "from_": "9:00",
+                    "to": "17:00",
+                },
+                "wednesday": {
+                    "active": True,
+                    "from_": "9:00",
+                    "to": "17:00",
+                },
+            })
         pulumi.export("merakiNetworksSwitchPortSchedulesExample", example)
         ```
 
@@ -318,7 +318,7 @@ class SwitchPortSchedules(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 port_schedule: Optional[pulumi.Input[pulumi.InputType['SwitchPortSchedulesPortScheduleArgs']]] = None,
+                 port_schedule: Optional[pulumi.Input[Union['SwitchPortSchedulesPortScheduleArgs', 'SwitchPortSchedulesPortScheduleArgsDict']]] = None,
                  port_schedule_id: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -347,7 +347,7 @@ class SwitchPortSchedules(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             name: Optional[pulumi.Input[str]] = None,
             network_id: Optional[pulumi.Input[str]] = None,
-            port_schedule: Optional[pulumi.Input[pulumi.InputType['SwitchPortSchedulesPortScheduleArgs']]] = None,
+            port_schedule: Optional[pulumi.Input[Union['SwitchPortSchedulesPortScheduleArgs', 'SwitchPortSchedulesPortScheduleArgsDict']]] = None,
             port_schedule_id: Optional[pulumi.Input[str]] = None) -> 'SwitchPortSchedules':
         """
         Get an existing SwitchPortSchedules resource's state with the given name, id, and optional extra
@@ -358,7 +358,7 @@ class SwitchPortSchedules(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[str] name: The name for your port schedule. Required
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[pulumi.InputType['SwitchPortSchedulesPortScheduleArgs']] port_schedule: The schedule for switch port scheduling. Schedules are applied to days of the week.
+        :param pulumi.Input[Union['SwitchPortSchedulesPortScheduleArgs', 'SwitchPortSchedulesPortScheduleArgsDict']] port_schedule: The schedule for switch port scheduling. Schedules are applied to days of the week.
                When it's empty, default schedule with all days of a week are configured.
                Any unspecified day in the schedule is added as a default schedule configuration of the day.
         :param pulumi.Input[str] port_schedule_id: portScheduleId path parameter. Port schedule ID

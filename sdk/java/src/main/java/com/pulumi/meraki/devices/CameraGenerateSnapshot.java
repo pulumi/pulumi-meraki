@@ -87,7 +87,7 @@ public class CameraGenerateSnapshot extends com.pulumi.resources.CustomResource 
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public CameraGenerateSnapshot(String name) {
+    public CameraGenerateSnapshot(java.lang.String name) {
         this(name, CameraGenerateSnapshotArgs.Empty);
     }
     /**
@@ -95,7 +95,7 @@ public class CameraGenerateSnapshot extends com.pulumi.resources.CustomResource 
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public CameraGenerateSnapshot(String name, CameraGenerateSnapshotArgs args) {
+    public CameraGenerateSnapshot(java.lang.String name, CameraGenerateSnapshotArgs args) {
         this(name, args, null);
     }
     /**
@@ -104,12 +104,12 @@ public class CameraGenerateSnapshot extends com.pulumi.resources.CustomResource 
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CameraGenerateSnapshot(String name, CameraGenerateSnapshotArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/cameraGenerateSnapshot:CameraGenerateSnapshot", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public CameraGenerateSnapshot(java.lang.String name, CameraGenerateSnapshotArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/cameraGenerateSnapshot:CameraGenerateSnapshot", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private CameraGenerateSnapshot(String name, Output<String> id, @Nullable CameraGenerateSnapshotState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/cameraGenerateSnapshot:CameraGenerateSnapshot", name, state, makeResourceOptions(options, id));
+    private CameraGenerateSnapshot(java.lang.String name, Output<java.lang.String> id, @Nullable CameraGenerateSnapshotState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/cameraGenerateSnapshot:CameraGenerateSnapshot", name, state, makeResourceOptions(options, id), false);
     }
 
     private static CameraGenerateSnapshotArgs makeArgs(CameraGenerateSnapshotArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -119,7 +119,7 @@ public class CameraGenerateSnapshot extends com.pulumi.resources.CustomResource 
         return args == null ? CameraGenerateSnapshotArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -135,7 +135,7 @@ public class CameraGenerateSnapshot extends com.pulumi.resources.CustomResource 
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CameraGenerateSnapshot get(String name, Output<String> id, @Nullable CameraGenerateSnapshotState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static CameraGenerateSnapshot get(java.lang.String name, Output<java.lang.String> id, @Nullable CameraGenerateSnapshotState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new CameraGenerateSnapshot(name, id, state, options);
     }
 }

@@ -101,7 +101,7 @@ class WirelessEthernetPortsProfilesAssign(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 parameters: Optional[pulumi.Input[pulumi.InputType['WirelessEthernetPortsProfilesAssignParametersArgs']]] = None,
+                 parameters: Optional[pulumi.Input[Union['WirelessEthernetPortsProfilesAssignParametersArgs', 'WirelessEthernetPortsProfilesAssignParametersArgsDict']]] = None,
                  __props__=None):
         """
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
@@ -137,7 +137,7 @@ class WirelessEthernetPortsProfilesAssign(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 parameters: Optional[pulumi.Input[pulumi.InputType['WirelessEthernetPortsProfilesAssignParametersArgs']]] = None,
+                 parameters: Optional[pulumi.Input[Union['WirelessEthernetPortsProfilesAssignParametersArgs', 'WirelessEthernetPortsProfilesAssignParametersArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -164,9 +164,9 @@ class WirelessEthernetPortsProfilesAssign(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            item: Optional[pulumi.Input[pulumi.InputType['WirelessEthernetPortsProfilesAssignItemArgs']]] = None,
+            item: Optional[pulumi.Input[Union['WirelessEthernetPortsProfilesAssignItemArgs', 'WirelessEthernetPortsProfilesAssignItemArgsDict']]] = None,
             network_id: Optional[pulumi.Input[str]] = None,
-            parameters: Optional[pulumi.Input[pulumi.InputType['WirelessEthernetPortsProfilesAssignParametersArgs']]] = None) -> 'WirelessEthernetPortsProfilesAssign':
+            parameters: Optional[pulumi.Input[Union['WirelessEthernetPortsProfilesAssignParametersArgs', 'WirelessEthernetPortsProfilesAssignParametersArgsDict']]] = None) -> 'WirelessEthernetPortsProfilesAssign':
         """
         Get an existing WirelessEthernetPortsProfilesAssign resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.

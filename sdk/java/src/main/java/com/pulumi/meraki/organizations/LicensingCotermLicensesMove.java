@@ -104,7 +104,7 @@ public class LicensingCotermLicensesMove extends com.pulumi.resources.CustomReso
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public LicensingCotermLicensesMove(String name) {
+    public LicensingCotermLicensesMove(java.lang.String name) {
         this(name, LicensingCotermLicensesMoveArgs.Empty);
     }
     /**
@@ -112,7 +112,7 @@ public class LicensingCotermLicensesMove extends com.pulumi.resources.CustomReso
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public LicensingCotermLicensesMove(String name, LicensingCotermLicensesMoveArgs args) {
+    public LicensingCotermLicensesMove(java.lang.String name, LicensingCotermLicensesMoveArgs args) {
         this(name, args, null);
     }
     /**
@@ -121,12 +121,12 @@ public class LicensingCotermLicensesMove extends com.pulumi.resources.CustomReso
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public LicensingCotermLicensesMove(String name, LicensingCotermLicensesMoveArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/licensingCotermLicensesMove:LicensingCotermLicensesMove", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public LicensingCotermLicensesMove(java.lang.String name, LicensingCotermLicensesMoveArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/licensingCotermLicensesMove:LicensingCotermLicensesMove", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private LicensingCotermLicensesMove(String name, Output<String> id, @Nullable LicensingCotermLicensesMoveState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/licensingCotermLicensesMove:LicensingCotermLicensesMove", name, state, makeResourceOptions(options, id));
+    private LicensingCotermLicensesMove(java.lang.String name, Output<java.lang.String> id, @Nullable LicensingCotermLicensesMoveState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/licensingCotermLicensesMove:LicensingCotermLicensesMove", name, state, makeResourceOptions(options, id), false);
     }
 
     private static LicensingCotermLicensesMoveArgs makeArgs(LicensingCotermLicensesMoveArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -136,7 +136,7 @@ public class LicensingCotermLicensesMove extends com.pulumi.resources.CustomReso
         return args == null ? LicensingCotermLicensesMoveArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -152,7 +152,7 @@ public class LicensingCotermLicensesMove extends com.pulumi.resources.CustomReso
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static LicensingCotermLicensesMove get(String name, Output<String> id, @Nullable LicensingCotermLicensesMoveState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static LicensingCotermLicensesMove get(java.lang.String name, Output<java.lang.String> id, @Nullable LicensingCotermLicensesMoveState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new LicensingCotermLicensesMove(name, id, state, options);
     }
 }

@@ -132,7 +132,7 @@ class SwitchStacksRemove(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 parameters: Optional[pulumi.Input[pulumi.InputType['SwitchStacksRemoveParametersArgs']]] = None,
+                 parameters: Optional[pulumi.Input[Union['SwitchStacksRemoveParametersArgs', 'SwitchStacksRemoveParametersArgsDict']]] = None,
                  switch_stack_id: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         """
@@ -148,9 +148,9 @@ class SwitchStacksRemove(pulumi.CustomResource):
         example = meraki.networks.SwitchStacksRemove("example",
             network_id="string",
             switch_stack_id="string",
-            parameters=meraki.networks.SwitchStacksRemoveParametersArgs(
-                serial="QBZY-XWVU-TSRQ",
-            ))
+            parameters={
+                "serial": "QBZY-XWVU-TSRQ",
+            })
         pulumi.export("merakiNetworksSwitchStacksRemoveExample", example)
         ```
 
@@ -178,9 +178,9 @@ class SwitchStacksRemove(pulumi.CustomResource):
         example = meraki.networks.SwitchStacksRemove("example",
             network_id="string",
             switch_stack_id="string",
-            parameters=meraki.networks.SwitchStacksRemoveParametersArgs(
-                serial="QBZY-XWVU-TSRQ",
-            ))
+            parameters={
+                "serial": "QBZY-XWVU-TSRQ",
+            })
         pulumi.export("merakiNetworksSwitchStacksRemoveExample", example)
         ```
 
@@ -200,7 +200,7 @@ class SwitchStacksRemove(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 parameters: Optional[pulumi.Input[pulumi.InputType['SwitchStacksRemoveParametersArgs']]] = None,
+                 parameters: Optional[pulumi.Input[Union['SwitchStacksRemoveParametersArgs', 'SwitchStacksRemoveParametersArgsDict']]] = None,
                  switch_stack_id: Optional[pulumi.Input[str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -231,9 +231,9 @@ class SwitchStacksRemove(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            item: Optional[pulumi.Input[pulumi.InputType['SwitchStacksRemoveItemArgs']]] = None,
+            item: Optional[pulumi.Input[Union['SwitchStacksRemoveItemArgs', 'SwitchStacksRemoveItemArgsDict']]] = None,
             network_id: Optional[pulumi.Input[str]] = None,
-            parameters: Optional[pulumi.Input[pulumi.InputType['SwitchStacksRemoveParametersArgs']]] = None,
+            parameters: Optional[pulumi.Input[Union['SwitchStacksRemoveParametersArgs', 'SwitchStacksRemoveParametersArgsDict']]] = None,
             switch_stack_id: Optional[pulumi.Input[str]] = None) -> 'SwitchStacksRemove':
         """
         Get an existing SwitchStacksRemove resource's state with the given name, id, and optional extra

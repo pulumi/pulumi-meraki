@@ -98,7 +98,7 @@ public class CellularGatewayUplink extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public CellularGatewayUplink(String name) {
+    public CellularGatewayUplink(java.lang.String name) {
         this(name, CellularGatewayUplinkArgs.Empty);
     }
     /**
@@ -106,7 +106,7 @@ public class CellularGatewayUplink extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public CellularGatewayUplink(String name, CellularGatewayUplinkArgs args) {
+    public CellularGatewayUplink(java.lang.String name, CellularGatewayUplinkArgs args) {
         this(name, args, null);
     }
     /**
@@ -115,12 +115,12 @@ public class CellularGatewayUplink extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public CellularGatewayUplink(String name, CellularGatewayUplinkArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/cellularGatewayUplink:CellularGatewayUplink", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public CellularGatewayUplink(java.lang.String name, CellularGatewayUplinkArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/cellularGatewayUplink:CellularGatewayUplink", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private CellularGatewayUplink(String name, Output<String> id, @Nullable CellularGatewayUplinkState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/cellularGatewayUplink:CellularGatewayUplink", name, state, makeResourceOptions(options, id));
+    private CellularGatewayUplink(java.lang.String name, Output<java.lang.String> id, @Nullable CellularGatewayUplinkState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/cellularGatewayUplink:CellularGatewayUplink", name, state, makeResourceOptions(options, id), false);
     }
 
     private static CellularGatewayUplinkArgs makeArgs(CellularGatewayUplinkArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -130,7 +130,7 @@ public class CellularGatewayUplink extends com.pulumi.resources.CustomResource {
         return args == null ? CellularGatewayUplinkArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -146,7 +146,7 @@ public class CellularGatewayUplink extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static CellularGatewayUplink get(String name, Output<String> id, @Nullable CellularGatewayUplinkState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static CellularGatewayUplink get(java.lang.String name, Output<java.lang.String> id, @Nullable CellularGatewayUplinkState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new CellularGatewayUplink(name, id, state, options);
     }
 }

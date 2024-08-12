@@ -354,14 +354,14 @@ class WirelessSsidsHotspot20(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  domains: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  enabled: Optional[pulumi.Input[bool]] = None,
-                 mcc_mncs: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['WirelessSsidsHotspot20MccMncArgs']]]]] = None,
-                 nai_realms: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['WirelessSsidsHotspot20NaiRealmArgs']]]]] = None,
+                 mcc_mncs: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsHotspot20MccMncArgs', 'WirelessSsidsHotspot20MccMncArgsDict']]]]] = None,
+                 nai_realms: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsHotspot20NaiRealmArgs', 'WirelessSsidsHotspot20NaiRealmArgsDict']]]]] = None,
                  network_access_type: Optional[pulumi.Input[str]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
                  number: Optional[pulumi.Input[str]] = None,
-                 operator: Optional[pulumi.Input[pulumi.InputType['WirelessSsidsHotspot20OperatorArgs']]] = None,
+                 operator: Optional[pulumi.Input[Union['WirelessSsidsHotspot20OperatorArgs', 'WirelessSsidsHotspot20OperatorArgsDict']]] = None,
                  roam_consort_ois: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 venue: Optional[pulumi.Input[pulumi.InputType['WirelessSsidsHotspot20VenueArgs']]] = None,
+                 venue: Optional[pulumi.Input[Union['WirelessSsidsHotspot20VenueArgs', 'WirelessSsidsHotspot20VenueArgsDict']]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -376,14 +376,14 @@ class WirelessSsidsHotspot20(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] domains: An array of domain names
         :param pulumi.Input[bool] enabled: Whether or not Hotspot 2.0 for this SSID is enabled
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['WirelessSsidsHotspot20MccMncArgs']]]] mcc_mncs: An array of MCC/MNC pairs
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['WirelessSsidsHotspot20NaiRealmArgs']]]] nai_realms: An array of NAI realms
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsHotspot20MccMncArgs', 'WirelessSsidsHotspot20MccMncArgsDict']]]] mcc_mncs: An array of MCC/MNC pairs
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsHotspot20NaiRealmArgs', 'WirelessSsidsHotspot20NaiRealmArgsDict']]]] nai_realms: An array of NAI realms
         :param pulumi.Input[str] network_access_type: The network type of this SSID ('Private network', 'Private network with guest access', 'Chargeable public network', 'Free public network', 'Personal device network', 'Emergency services only network', 'Test or experimental', 'Wildcard')
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[str] number: number path parameter.
-        :param pulumi.Input[pulumi.InputType['WirelessSsidsHotspot20OperatorArgs']] operator: Operator settings for this SSID
+        :param pulumi.Input[Union['WirelessSsidsHotspot20OperatorArgs', 'WirelessSsidsHotspot20OperatorArgsDict']] operator: Operator settings for this SSID
         :param pulumi.Input[Sequence[pulumi.Input[str]]] roam_consort_ois: An array of roaming consortium OIs (hexadecimal number 3-5 octets in length)
-        :param pulumi.Input[pulumi.InputType['WirelessSsidsHotspot20VenueArgs']] venue: Venue settings for this SSID
+        :param pulumi.Input[Union['WirelessSsidsHotspot20VenueArgs', 'WirelessSsidsHotspot20VenueArgsDict']] venue: Venue settings for this SSID
         """
         ...
     @overload
@@ -417,14 +417,14 @@ class WirelessSsidsHotspot20(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  domains: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  enabled: Optional[pulumi.Input[bool]] = None,
-                 mcc_mncs: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['WirelessSsidsHotspot20MccMncArgs']]]]] = None,
-                 nai_realms: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['WirelessSsidsHotspot20NaiRealmArgs']]]]] = None,
+                 mcc_mncs: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsHotspot20MccMncArgs', 'WirelessSsidsHotspot20MccMncArgsDict']]]]] = None,
+                 nai_realms: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsHotspot20NaiRealmArgs', 'WirelessSsidsHotspot20NaiRealmArgsDict']]]]] = None,
                  network_access_type: Optional[pulumi.Input[str]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
                  number: Optional[pulumi.Input[str]] = None,
-                 operator: Optional[pulumi.Input[pulumi.InputType['WirelessSsidsHotspot20OperatorArgs']]] = None,
+                 operator: Optional[pulumi.Input[Union['WirelessSsidsHotspot20OperatorArgs', 'WirelessSsidsHotspot20OperatorArgsDict']]] = None,
                  roam_consort_ois: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-                 venue: Optional[pulumi.Input[pulumi.InputType['WirelessSsidsHotspot20VenueArgs']]] = None,
+                 venue: Optional[pulumi.Input[Union['WirelessSsidsHotspot20VenueArgs', 'WirelessSsidsHotspot20VenueArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -460,14 +460,14 @@ class WirelessSsidsHotspot20(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             domains: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
             enabled: Optional[pulumi.Input[bool]] = None,
-            mcc_mncs: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['WirelessSsidsHotspot20MccMncArgs']]]]] = None,
-            nai_realms: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['WirelessSsidsHotspot20NaiRealmArgs']]]]] = None,
+            mcc_mncs: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsHotspot20MccMncArgs', 'WirelessSsidsHotspot20MccMncArgsDict']]]]] = None,
+            nai_realms: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsHotspot20NaiRealmArgs', 'WirelessSsidsHotspot20NaiRealmArgsDict']]]]] = None,
             network_access_type: Optional[pulumi.Input[str]] = None,
             network_id: Optional[pulumi.Input[str]] = None,
             number: Optional[pulumi.Input[str]] = None,
-            operator: Optional[pulumi.Input[pulumi.InputType['WirelessSsidsHotspot20OperatorArgs']]] = None,
+            operator: Optional[pulumi.Input[Union['WirelessSsidsHotspot20OperatorArgs', 'WirelessSsidsHotspot20OperatorArgsDict']]] = None,
             roam_consort_ois: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
-            venue: Optional[pulumi.Input[pulumi.InputType['WirelessSsidsHotspot20VenueArgs']]] = None) -> 'WirelessSsidsHotspot20':
+            venue: Optional[pulumi.Input[Union['WirelessSsidsHotspot20VenueArgs', 'WirelessSsidsHotspot20VenueArgsDict']]] = None) -> 'WirelessSsidsHotspot20':
         """
         Get an existing WirelessSsidsHotspot20 resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -477,14 +477,14 @@ class WirelessSsidsHotspot20(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] domains: An array of domain names
         :param pulumi.Input[bool] enabled: Whether or not Hotspot 2.0 for this SSID is enabled
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['WirelessSsidsHotspot20MccMncArgs']]]] mcc_mncs: An array of MCC/MNC pairs
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['WirelessSsidsHotspot20NaiRealmArgs']]]] nai_realms: An array of NAI realms
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsHotspot20MccMncArgs', 'WirelessSsidsHotspot20MccMncArgsDict']]]] mcc_mncs: An array of MCC/MNC pairs
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessSsidsHotspot20NaiRealmArgs', 'WirelessSsidsHotspot20NaiRealmArgsDict']]]] nai_realms: An array of NAI realms
         :param pulumi.Input[str] network_access_type: The network type of this SSID ('Private network', 'Private network with guest access', 'Chargeable public network', 'Free public network', 'Personal device network', 'Emergency services only network', 'Test or experimental', 'Wildcard')
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[str] number: number path parameter.
-        :param pulumi.Input[pulumi.InputType['WirelessSsidsHotspot20OperatorArgs']] operator: Operator settings for this SSID
+        :param pulumi.Input[Union['WirelessSsidsHotspot20OperatorArgs', 'WirelessSsidsHotspot20OperatorArgsDict']] operator: Operator settings for this SSID
         :param pulumi.Input[Sequence[pulumi.Input[str]]] roam_consort_ois: An array of roaming consortium OIs (hexadecimal number 3-5 octets in length)
-        :param pulumi.Input[pulumi.InputType['WirelessSsidsHotspot20VenueArgs']] venue: Venue settings for this SSID
+        :param pulumi.Input[Union['WirelessSsidsHotspot20VenueArgs', 'WirelessSsidsHotspot20VenueArgsDict']] venue: Venue settings for this SSID
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

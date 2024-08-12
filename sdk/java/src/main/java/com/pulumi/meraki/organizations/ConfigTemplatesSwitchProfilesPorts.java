@@ -527,7 +527,7 @@ public class ConfigTemplatesSwitchProfilesPorts extends com.pulumi.resources.Cus
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public ConfigTemplatesSwitchProfilesPorts(String name) {
+    public ConfigTemplatesSwitchProfilesPorts(java.lang.String name) {
         this(name, ConfigTemplatesSwitchProfilesPortsArgs.Empty);
     }
     /**
@@ -535,7 +535,7 @@ public class ConfigTemplatesSwitchProfilesPorts extends com.pulumi.resources.Cus
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ConfigTemplatesSwitchProfilesPorts(String name, ConfigTemplatesSwitchProfilesPortsArgs args) {
+    public ConfigTemplatesSwitchProfilesPorts(java.lang.String name, ConfigTemplatesSwitchProfilesPortsArgs args) {
         this(name, args, null);
     }
     /**
@@ -544,12 +544,12 @@ public class ConfigTemplatesSwitchProfilesPorts extends com.pulumi.resources.Cus
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ConfigTemplatesSwitchProfilesPorts(String name, ConfigTemplatesSwitchProfilesPortsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/configTemplatesSwitchProfilesPorts:ConfigTemplatesSwitchProfilesPorts", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public ConfigTemplatesSwitchProfilesPorts(java.lang.String name, ConfigTemplatesSwitchProfilesPortsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/configTemplatesSwitchProfilesPorts:ConfigTemplatesSwitchProfilesPorts", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private ConfigTemplatesSwitchProfilesPorts(String name, Output<String> id, @Nullable ConfigTemplatesSwitchProfilesPortsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/configTemplatesSwitchProfilesPorts:ConfigTemplatesSwitchProfilesPorts", name, state, makeResourceOptions(options, id));
+    private ConfigTemplatesSwitchProfilesPorts(java.lang.String name, Output<java.lang.String> id, @Nullable ConfigTemplatesSwitchProfilesPortsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/configTemplatesSwitchProfilesPorts:ConfigTemplatesSwitchProfilesPorts", name, state, makeResourceOptions(options, id), false);
     }
 
     private static ConfigTemplatesSwitchProfilesPortsArgs makeArgs(ConfigTemplatesSwitchProfilesPortsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -559,7 +559,7 @@ public class ConfigTemplatesSwitchProfilesPorts extends com.pulumi.resources.Cus
         return args == null ? ConfigTemplatesSwitchProfilesPortsArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -575,7 +575,7 @@ public class ConfigTemplatesSwitchProfilesPorts extends com.pulumi.resources.Cus
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ConfigTemplatesSwitchProfilesPorts get(String name, Output<String> id, @Nullable ConfigTemplatesSwitchProfilesPortsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ConfigTemplatesSwitchProfilesPorts get(java.lang.String name, Output<java.lang.String> id, @Nullable ConfigTemplatesSwitchProfilesPortsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new ConfigTemplatesSwitchProfilesPorts(name, id, state, options);
     }
 }

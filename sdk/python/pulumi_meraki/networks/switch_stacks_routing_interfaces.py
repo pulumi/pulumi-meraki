@@ -419,11 +419,11 @@ class SwitchStacksRoutingInterfaces(pulumi.CustomResource):
                  default_gateway: Optional[pulumi.Input[str]] = None,
                  interface_id: Optional[pulumi.Input[str]] = None,
                  interface_ip: Optional[pulumi.Input[str]] = None,
-                 ipv6: Optional[pulumi.Input[pulumi.InputType['SwitchStacksRoutingInterfacesIpv6Args']]] = None,
+                 ipv6: Optional[pulumi.Input[Union['SwitchStacksRoutingInterfacesIpv6Args', 'SwitchStacksRoutingInterfacesIpv6ArgsDict']]] = None,
                  multicast_routing: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 ospf_settings: Optional[pulumi.Input[pulumi.InputType['SwitchStacksRoutingInterfacesOspfSettingsArgs']]] = None,
+                 ospf_settings: Optional[pulumi.Input[Union['SwitchStacksRoutingInterfacesOspfSettingsArgs', 'SwitchStacksRoutingInterfacesOspfSettingsArgsDict']]] = None,
                  subnet: Optional[pulumi.Input[str]] = None,
                  switch_stack_id: Optional[pulumi.Input[str]] = None,
                  vlan_id: Optional[pulumi.Input[int]] = None,
@@ -442,11 +442,11 @@ class SwitchStacksRoutingInterfaces(pulumi.CustomResource):
         :param pulumi.Input[str] default_gateway: IPv4 default gateway
         :param pulumi.Input[str] interface_id: The id
         :param pulumi.Input[str] interface_ip: IPv4 address
-        :param pulumi.Input[pulumi.InputType['SwitchStacksRoutingInterfacesIpv6Args']] ipv6: IPv6 addressing
+        :param pulumi.Input[Union['SwitchStacksRoutingInterfacesIpv6Args', 'SwitchStacksRoutingInterfacesIpv6ArgsDict']] ipv6: IPv6 addressing
         :param pulumi.Input[str] multicast_routing: Multicast routing status
         :param pulumi.Input[str] name: The name
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[pulumi.InputType['SwitchStacksRoutingInterfacesOspfSettingsArgs']] ospf_settings: IPv4 OSPF Settings
+        :param pulumi.Input[Union['SwitchStacksRoutingInterfacesOspfSettingsArgs', 'SwitchStacksRoutingInterfacesOspfSettingsArgsDict']] ospf_settings: IPv4 OSPF Settings
         :param pulumi.Input[str] subnet: IPv4 subnet
         :param pulumi.Input[str] switch_stack_id: switchStackId path parameter. Switch stack ID
         :param pulumi.Input[int] vlan_id: VLAN id
@@ -484,11 +484,11 @@ class SwitchStacksRoutingInterfaces(pulumi.CustomResource):
                  default_gateway: Optional[pulumi.Input[str]] = None,
                  interface_id: Optional[pulumi.Input[str]] = None,
                  interface_ip: Optional[pulumi.Input[str]] = None,
-                 ipv6: Optional[pulumi.Input[pulumi.InputType['SwitchStacksRoutingInterfacesIpv6Args']]] = None,
+                 ipv6: Optional[pulumi.Input[Union['SwitchStacksRoutingInterfacesIpv6Args', 'SwitchStacksRoutingInterfacesIpv6ArgsDict']]] = None,
                  multicast_routing: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 ospf_settings: Optional[pulumi.Input[pulumi.InputType['SwitchStacksRoutingInterfacesOspfSettingsArgs']]] = None,
+                 ospf_settings: Optional[pulumi.Input[Union['SwitchStacksRoutingInterfacesOspfSettingsArgs', 'SwitchStacksRoutingInterfacesOspfSettingsArgsDict']]] = None,
                  subnet: Optional[pulumi.Input[str]] = None,
                  switch_stack_id: Optional[pulumi.Input[str]] = None,
                  vlan_id: Optional[pulumi.Input[int]] = None,
@@ -532,12 +532,12 @@ class SwitchStacksRoutingInterfaces(pulumi.CustomResource):
             default_gateway_response: Optional[pulumi.Input[str]] = None,
             interface_id: Optional[pulumi.Input[str]] = None,
             interface_ip: Optional[pulumi.Input[str]] = None,
-            ipv6: Optional[pulumi.Input[pulumi.InputType['SwitchStacksRoutingInterfacesIpv6Args']]] = None,
+            ipv6: Optional[pulumi.Input[Union['SwitchStacksRoutingInterfacesIpv6Args', 'SwitchStacksRoutingInterfacesIpv6ArgsDict']]] = None,
             multicast_routing: Optional[pulumi.Input[str]] = None,
             name: Optional[pulumi.Input[str]] = None,
             network_id: Optional[pulumi.Input[str]] = None,
-            ospf_settings: Optional[pulumi.Input[pulumi.InputType['SwitchStacksRoutingInterfacesOspfSettingsArgs']]] = None,
-            ospf_v3: Optional[pulumi.Input[pulumi.InputType['SwitchStacksRoutingInterfacesOspfV3Args']]] = None,
+            ospf_settings: Optional[pulumi.Input[Union['SwitchStacksRoutingInterfacesOspfSettingsArgs', 'SwitchStacksRoutingInterfacesOspfSettingsArgsDict']]] = None,
+            ospf_v3: Optional[pulumi.Input[Union['SwitchStacksRoutingInterfacesOspfV3Args', 'SwitchStacksRoutingInterfacesOspfV3ArgsDict']]] = None,
             subnet: Optional[pulumi.Input[str]] = None,
             switch_stack_id: Optional[pulumi.Input[str]] = None,
             vlan_id: Optional[pulumi.Input[int]] = None) -> 'SwitchStacksRoutingInterfaces':
@@ -552,12 +552,12 @@ class SwitchStacksRoutingInterfaces(pulumi.CustomResource):
         :param pulumi.Input[str] default_gateway_response: IPv4 default gateway
         :param pulumi.Input[str] interface_id: The id
         :param pulumi.Input[str] interface_ip: IPv4 address
-        :param pulumi.Input[pulumi.InputType['SwitchStacksRoutingInterfacesIpv6Args']] ipv6: IPv6 addressing
+        :param pulumi.Input[Union['SwitchStacksRoutingInterfacesIpv6Args', 'SwitchStacksRoutingInterfacesIpv6ArgsDict']] ipv6: IPv6 addressing
         :param pulumi.Input[str] multicast_routing: Multicast routing status
         :param pulumi.Input[str] name: The name
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[pulumi.InputType['SwitchStacksRoutingInterfacesOspfSettingsArgs']] ospf_settings: IPv4 OSPF Settings
-        :param pulumi.Input[pulumi.InputType['SwitchStacksRoutingInterfacesOspfV3Args']] ospf_v3: IPv6 OSPF Settings
+        :param pulumi.Input[Union['SwitchStacksRoutingInterfacesOspfSettingsArgs', 'SwitchStacksRoutingInterfacesOspfSettingsArgsDict']] ospf_settings: IPv4 OSPF Settings
+        :param pulumi.Input[Union['SwitchStacksRoutingInterfacesOspfV3Args', 'SwitchStacksRoutingInterfacesOspfV3ArgsDict']] ospf_v3: IPv6 OSPF Settings
         :param pulumi.Input[str] subnet: IPv4 subnet
         :param pulumi.Input[str] switch_stack_id: switchStackId path parameter. Switch stack ID
         :param pulumi.Input[int] vlan_id: VLAN id

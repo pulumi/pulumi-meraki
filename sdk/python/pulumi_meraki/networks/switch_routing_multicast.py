@@ -137,9 +137,9 @@ class SwitchRoutingMulticast(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 default_settings: Optional[pulumi.Input[pulumi.InputType['SwitchRoutingMulticastDefaultSettingsArgs']]] = None,
+                 default_settings: Optional[pulumi.Input[Union['SwitchRoutingMulticastDefaultSettingsArgs', 'SwitchRoutingMulticastDefaultSettingsArgsDict']]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 overrides: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchRoutingMulticastOverrideArgs']]]]] = None,
+                 overrides: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchRoutingMulticastOverrideArgs', 'SwitchRoutingMulticastOverrideArgsDict']]]]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -152,10 +152,10 @@ class SwitchRoutingMulticast(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['SwitchRoutingMulticastDefaultSettingsArgs']] default_settings: Default multicast setting for entire network. IGMP snooping and Flood unknown
+        :param pulumi.Input[Union['SwitchRoutingMulticastDefaultSettingsArgs', 'SwitchRoutingMulticastDefaultSettingsArgsDict']] default_settings: Default multicast setting for entire network. IGMP snooping and Flood unknown
                  multicast traffic settings are enabled by default.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchRoutingMulticastOverrideArgs']]]] overrides: Array of paired switches/stacks/profiles and corresponding multicast settings.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchRoutingMulticastOverrideArgs', 'SwitchRoutingMulticastOverrideArgsDict']]]] overrides: Array of paired switches/stacks/profiles and corresponding multicast settings.
                  An empty array will clear the multicast settings.
         """
         ...
@@ -188,9 +188,9 @@ class SwitchRoutingMulticast(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 default_settings: Optional[pulumi.Input[pulumi.InputType['SwitchRoutingMulticastDefaultSettingsArgs']]] = None,
+                 default_settings: Optional[pulumi.Input[Union['SwitchRoutingMulticastDefaultSettingsArgs', 'SwitchRoutingMulticastDefaultSettingsArgsDict']]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 overrides: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchRoutingMulticastOverrideArgs']]]]] = None,
+                 overrides: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchRoutingMulticastOverrideArgs', 'SwitchRoutingMulticastOverrideArgsDict']]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -215,9 +215,9 @@ class SwitchRoutingMulticast(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            default_settings: Optional[pulumi.Input[pulumi.InputType['SwitchRoutingMulticastDefaultSettingsArgs']]] = None,
+            default_settings: Optional[pulumi.Input[Union['SwitchRoutingMulticastDefaultSettingsArgs', 'SwitchRoutingMulticastDefaultSettingsArgsDict']]] = None,
             network_id: Optional[pulumi.Input[str]] = None,
-            overrides: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchRoutingMulticastOverrideArgs']]]]] = None) -> 'SwitchRoutingMulticast':
+            overrides: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SwitchRoutingMulticastOverrideArgs', 'SwitchRoutingMulticastOverrideArgsDict']]]]] = None) -> 'SwitchRoutingMulticast':
         """
         Get an existing SwitchRoutingMulticast resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -225,10 +225,10 @@ class SwitchRoutingMulticast(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['SwitchRoutingMulticastDefaultSettingsArgs']] default_settings: Default multicast setting for entire network. IGMP snooping and Flood unknown
+        :param pulumi.Input[Union['SwitchRoutingMulticastDefaultSettingsArgs', 'SwitchRoutingMulticastDefaultSettingsArgsDict']] default_settings: Default multicast setting for entire network. IGMP snooping and Flood unknown
                  multicast traffic settings are enabled by default.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SwitchRoutingMulticastOverrideArgs']]]] overrides: Array of paired switches/stacks/profiles and corresponding multicast settings.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchRoutingMulticastOverrideArgs', 'SwitchRoutingMulticastOverrideArgsDict']]]] overrides: Array of paired switches/stacks/profiles and corresponding multicast settings.
                  An empty array will clear the multicast settings.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

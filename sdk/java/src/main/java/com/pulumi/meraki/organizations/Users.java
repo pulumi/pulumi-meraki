@@ -90,7 +90,7 @@ public class Users extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public Users(String name) {
+    public Users(java.lang.String name) {
         this(name, UsersArgs.Empty);
     }
     /**
@@ -98,7 +98,7 @@ public class Users extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public Users(String name, UsersArgs args) {
+    public Users(java.lang.String name, UsersArgs args) {
         this(name, args, null);
     }
     /**
@@ -107,12 +107,12 @@ public class Users extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Users(String name, UsersArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/users:Users", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public Users(java.lang.String name, UsersArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/users:Users", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private Users(String name, Output<String> id, @Nullable UsersState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/users:Users", name, state, makeResourceOptions(options, id));
+    private Users(java.lang.String name, Output<java.lang.String> id, @Nullable UsersState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/users:Users", name, state, makeResourceOptions(options, id), false);
     }
 
     private static UsersArgs makeArgs(UsersArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -122,7 +122,7 @@ public class Users extends com.pulumi.resources.CustomResource {
         return args == null ? UsersArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -138,7 +138,7 @@ public class Users extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static Users get(String name, Output<String> id, @Nullable UsersState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static Users get(java.lang.String name, Output<java.lang.String> id, @Nullable UsersState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new Users(name, id, state, options);
     }
 }

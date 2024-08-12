@@ -42,12 +42,12 @@ import javax.annotation.Nullable;
  * import java.nio.file.Files;
  * import java.nio.file.Paths;
  * 
- * public class App {
- *     public static void main(String[] args) {
+ * public class App }{{@code
+ *     public static void main(String[] args) }{{@code
  *         Pulumi.run(App::stack);
- *     }
+ *     }}{@code
  * 
- *     public static void stack(Context ctx) {
+ *     public static void stack(Context ctx) }{{@code
  *         var example = new AlertsSettings("example", AlertsSettingsArgs.builder()
  *             .alerts(AlertsSettingsAlertArgs.builder()
  *                 .alert_destinations(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
@@ -59,7 +59,7 @@ import javax.annotation.Nullable;
  *                 .build())
  *             .defaultDestinations(AlertsSettingsDefaultDestinationsArgs.builder()
  *                 .all_admins(true)
- *                 .emails("miles{@literal @}meraki.com")
+ *                 .emails("miles}{@literal @}{@code meraki.com")
  *                 .http_server_ids("aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M=")
  *                 .snmp(true)
  *                 .build())
@@ -67,8 +67,8 @@ import javax.annotation.Nullable;
  *             .build());
  * 
  *         ctx.export("merakiNetworksAlertsSettingsExample", example);
- *     }
- * }
+ *     }}{@code
+ * }}{@code
  * }
  * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
@@ -157,7 +157,7 @@ public class AlertsSettings extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public AlertsSettings(String name) {
+    public AlertsSettings(java.lang.String name) {
         this(name, AlertsSettingsArgs.Empty);
     }
     /**
@@ -165,7 +165,7 @@ public class AlertsSettings extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AlertsSettings(String name, AlertsSettingsArgs args) {
+    public AlertsSettings(java.lang.String name, AlertsSettingsArgs args) {
         this(name, args, null);
     }
     /**
@@ -174,12 +174,12 @@ public class AlertsSettings extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AlertsSettings(String name, AlertsSettingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/alertsSettings:AlertsSettings", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public AlertsSettings(java.lang.String name, AlertsSettingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/alertsSettings:AlertsSettings", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private AlertsSettings(String name, Output<String> id, @Nullable AlertsSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/alertsSettings:AlertsSettings", name, state, makeResourceOptions(options, id));
+    private AlertsSettings(java.lang.String name, Output<java.lang.String> id, @Nullable AlertsSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/alertsSettings:AlertsSettings", name, state, makeResourceOptions(options, id), false);
     }
 
     private static AlertsSettingsArgs makeArgs(AlertsSettingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -189,7 +189,7 @@ public class AlertsSettings extends com.pulumi.resources.CustomResource {
         return args == null ? AlertsSettingsArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -205,7 +205,7 @@ public class AlertsSettings extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AlertsSettings get(String name, Output<String> id, @Nullable AlertsSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AlertsSettings get(java.lang.String name, Output<java.lang.String> id, @Nullable AlertsSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new AlertsSettings(name, id, state, options);
     }
 }

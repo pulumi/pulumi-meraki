@@ -95,7 +95,7 @@ public class BlinkLeds extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public BlinkLeds(String name) {
+    public BlinkLeds(java.lang.String name) {
         this(name, BlinkLedsArgs.Empty);
     }
     /**
@@ -103,7 +103,7 @@ public class BlinkLeds extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public BlinkLeds(String name, BlinkLedsArgs args) {
+    public BlinkLeds(java.lang.String name, BlinkLedsArgs args) {
         this(name, args, null);
     }
     /**
@@ -112,12 +112,12 @@ public class BlinkLeds extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public BlinkLeds(String name, BlinkLedsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/blinkLeds:BlinkLeds", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public BlinkLeds(java.lang.String name, BlinkLedsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/blinkLeds:BlinkLeds", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private BlinkLeds(String name, Output<String> id, @Nullable BlinkLedsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/blinkLeds:BlinkLeds", name, state, makeResourceOptions(options, id));
+    private BlinkLeds(java.lang.String name, Output<java.lang.String> id, @Nullable BlinkLedsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/blinkLeds:BlinkLeds", name, state, makeResourceOptions(options, id), false);
     }
 
     private static BlinkLedsArgs makeArgs(BlinkLedsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -127,7 +127,7 @@ public class BlinkLeds extends com.pulumi.resources.CustomResource {
         return args == null ? BlinkLedsArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -143,7 +143,7 @@ public class BlinkLeds extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static BlinkLeds get(String name, Output<String> id, @Nullable BlinkLedsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static BlinkLeds get(java.lang.String name, Output<java.lang.String> id, @Nullable BlinkLedsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new BlinkLeds(name, id, state, options);
     }
 }

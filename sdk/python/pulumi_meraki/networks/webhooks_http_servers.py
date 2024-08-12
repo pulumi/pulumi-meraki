@@ -228,7 +228,7 @@ class WebhooksHttpServers(pulumi.CustomResource):
                  http_server_id: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 payload_template: Optional[pulumi.Input[pulumi.InputType['WebhooksHttpServersPayloadTemplateArgs']]] = None,
+                 payload_template: Optional[pulumi.Input[Union['WebhooksHttpServersPayloadTemplateArgs', 'WebhooksHttpServersPayloadTemplateArgsDict']]] = None,
                  shared_secret: Optional[pulumi.Input[str]] = None,
                  url: Optional[pulumi.Input[str]] = None,
                  __props__=None):
@@ -246,7 +246,7 @@ class WebhooksHttpServers(pulumi.CustomResource):
         :param pulumi.Input[str] http_server_id: httpServerId path parameter. Http server ID
         :param pulumi.Input[str] name: A name for easy reference to the HTTP server
         :param pulumi.Input[str] network_id: A Meraki network ID.
-        :param pulumi.Input[pulumi.InputType['WebhooksHttpServersPayloadTemplateArgs']] payload_template: The payload template to use when posting data to the HTTP server.
+        :param pulumi.Input[Union['WebhooksHttpServersPayloadTemplateArgs', 'WebhooksHttpServersPayloadTemplateArgsDict']] payload_template: The payload template to use when posting data to the HTTP server.
         :param pulumi.Input[str] shared_secret: A shared secret that will be included in POSTs sent to the HTTP server. This secret can be used to verify that the request was sent by Meraki.
         :param pulumi.Input[str] url: The URL of the HTTP server.
         """
@@ -283,7 +283,7 @@ class WebhooksHttpServers(pulumi.CustomResource):
                  http_server_id: Optional[pulumi.Input[str]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 payload_template: Optional[pulumi.Input[pulumi.InputType['WebhooksHttpServersPayloadTemplateArgs']]] = None,
+                 payload_template: Optional[pulumi.Input[Union['WebhooksHttpServersPayloadTemplateArgs', 'WebhooksHttpServersPayloadTemplateArgsDict']]] = None,
                  shared_secret: Optional[pulumi.Input[str]] = None,
                  url: Optional[pulumi.Input[str]] = None,
                  __props__=None):
@@ -316,7 +316,7 @@ class WebhooksHttpServers(pulumi.CustomResource):
             http_server_id: Optional[pulumi.Input[str]] = None,
             name: Optional[pulumi.Input[str]] = None,
             network_id: Optional[pulumi.Input[str]] = None,
-            payload_template: Optional[pulumi.Input[pulumi.InputType['WebhooksHttpServersPayloadTemplateArgs']]] = None,
+            payload_template: Optional[pulumi.Input[Union['WebhooksHttpServersPayloadTemplateArgs', 'WebhooksHttpServersPayloadTemplateArgsDict']]] = None,
             shared_secret: Optional[pulumi.Input[str]] = None,
             url: Optional[pulumi.Input[str]] = None) -> 'WebhooksHttpServers':
         """
@@ -329,7 +329,7 @@ class WebhooksHttpServers(pulumi.CustomResource):
         :param pulumi.Input[str] http_server_id: httpServerId path parameter. Http server ID
         :param pulumi.Input[str] name: A name for easy reference to the HTTP server
         :param pulumi.Input[str] network_id: A Meraki network ID.
-        :param pulumi.Input[pulumi.InputType['WebhooksHttpServersPayloadTemplateArgs']] payload_template: The payload template to use when posting data to the HTTP server.
+        :param pulumi.Input[Union['WebhooksHttpServersPayloadTemplateArgs', 'WebhooksHttpServersPayloadTemplateArgsDict']] payload_template: The payload template to use when posting data to the HTTP server.
         :param pulumi.Input[str] shared_secret: A shared secret that will be included in POSTs sent to the HTTP server. This secret can be used to verify that the request was sent by Meraki.
         :param pulumi.Input[str] url: The URL of the HTTP server.
         """

@@ -124,7 +124,7 @@ public class SmBypassActivationLockAttempts extends com.pulumi.resources.CustomR
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SmBypassActivationLockAttempts(String name) {
+    public SmBypassActivationLockAttempts(java.lang.String name) {
         this(name, SmBypassActivationLockAttemptsArgs.Empty);
     }
     /**
@@ -132,7 +132,7 @@ public class SmBypassActivationLockAttempts extends com.pulumi.resources.CustomR
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SmBypassActivationLockAttempts(String name, SmBypassActivationLockAttemptsArgs args) {
+    public SmBypassActivationLockAttempts(java.lang.String name, SmBypassActivationLockAttemptsArgs args) {
         this(name, args, null);
     }
     /**
@@ -141,12 +141,12 @@ public class SmBypassActivationLockAttempts extends com.pulumi.resources.CustomR
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SmBypassActivationLockAttempts(String name, SmBypassActivationLockAttemptsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/smBypassActivationLockAttempts:SmBypassActivationLockAttempts", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public SmBypassActivationLockAttempts(java.lang.String name, SmBypassActivationLockAttemptsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/smBypassActivationLockAttempts:SmBypassActivationLockAttempts", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SmBypassActivationLockAttempts(String name, Output<String> id, @Nullable SmBypassActivationLockAttemptsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/smBypassActivationLockAttempts:SmBypassActivationLockAttempts", name, state, makeResourceOptions(options, id));
+    private SmBypassActivationLockAttempts(java.lang.String name, Output<java.lang.String> id, @Nullable SmBypassActivationLockAttemptsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/smBypassActivationLockAttempts:SmBypassActivationLockAttempts", name, state, makeResourceOptions(options, id), false);
     }
 
     private static SmBypassActivationLockAttemptsArgs makeArgs(SmBypassActivationLockAttemptsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -156,7 +156,7 @@ public class SmBypassActivationLockAttempts extends com.pulumi.resources.CustomR
         return args == null ? SmBypassActivationLockAttemptsArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -172,7 +172,7 @@ public class SmBypassActivationLockAttempts extends com.pulumi.resources.CustomR
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SmBypassActivationLockAttempts get(String name, Output<String> id, @Nullable SmBypassActivationLockAttemptsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SmBypassActivationLockAttempts get(java.lang.String name, Output<java.lang.String> id, @Nullable SmBypassActivationLockAttemptsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SmBypassActivationLockAttempts(name, id, state, options);
     }
 }

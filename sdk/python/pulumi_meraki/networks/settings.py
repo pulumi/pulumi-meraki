@@ -241,12 +241,12 @@ class Settings(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 local_status_page: Optional[pulumi.Input[pulumi.InputType['SettingsLocalStatusPageArgs']]] = None,
+                 local_status_page: Optional[pulumi.Input[Union['SettingsLocalStatusPageArgs', 'SettingsLocalStatusPageArgsDict']]] = None,
                  local_status_page_enabled: Optional[pulumi.Input[bool]] = None,
-                 named_vlans: Optional[pulumi.Input[pulumi.InputType['SettingsNamedVlansArgs']]] = None,
+                 named_vlans: Optional[pulumi.Input[Union['SettingsNamedVlansArgs', 'SettingsNamedVlansArgsDict']]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
                  remote_status_page_enabled: Optional[pulumi.Input[bool]] = None,
-                 secure_port: Optional[pulumi.Input[pulumi.InputType['SettingsSecurePortArgs']]] = None,
+                 secure_port: Optional[pulumi.Input[Union['SettingsSecurePortArgs', 'SettingsSecurePortArgsDict']]] = None,
                  __props__=None):
         """
         ## Example Usage
@@ -256,21 +256,21 @@ class Settings(pulumi.CustomResource):
         import pulumi_meraki as meraki
 
         example = meraki.networks.Settings("example",
-            local_status_page=meraki.networks.SettingsLocalStatusPageArgs(
-                authentication=meraki.networks.SettingsLocalStatusPageAuthenticationArgs(
-                    enabled=False,
-                    password="miles123",
-                ),
-            ),
+            local_status_page={
+                "authentication": {
+                    "enabled": False,
+                    "password": "miles123",
+                },
+            },
             local_status_page_enabled=True,
-            named_vlans=meraki.networks.SettingsNamedVlansArgs(
-                enabled=True,
-            ),
+            named_vlans={
+                "enabled": True,
+            },
             network_id="string",
             remote_status_page_enabled=True,
-            secure_port=meraki.networks.SettingsSecurePortArgs(
-                enabled=False,
-            ))
+            secure_port={
+                "enabled": False,
+            })
         pulumi.export("merakiNetworksSettingsExample", example)
         ```
 
@@ -282,12 +282,12 @@ class Settings(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['SettingsLocalStatusPageArgs']] local_status_page: A hash of Local Status page(s)' authentication options applied to the Network.
+        :param pulumi.Input[Union['SettingsLocalStatusPageArgs', 'SettingsLocalStatusPageArgsDict']] local_status_page: A hash of Local Status page(s)' authentication options applied to the Network.
         :param pulumi.Input[bool] local_status_page_enabled: Enables / disables the local device status pages (\\n\\nmy.meraki.com, \\n\\n\\n\\nap.meraki.com, \\n\\n\\n\\nswitch.meraki.com, \\n\\n\\n\\nwired.meraki.com\\n\\n). Optional (defaults to false)
-        :param pulumi.Input[pulumi.InputType['SettingsNamedVlansArgs']] named_vlans: A hash of Named VLANs options applied to the Network.
+        :param pulumi.Input[Union['SettingsNamedVlansArgs', 'SettingsNamedVlansArgsDict']] named_vlans: A hash of Named VLANs options applied to the Network.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[bool] remote_status_page_enabled: Enables / disables access to the device status page (\\n\\nhttp://[device's LAN IP])\\n\\n. Optional. Can only be set if localStatusPageEnabled is set to true
-        :param pulumi.Input[pulumi.InputType['SettingsSecurePortArgs']] secure_port: A hash of SecureConnect options applied to the Network.
+        :param pulumi.Input[Union['SettingsSecurePortArgs', 'SettingsSecurePortArgsDict']] secure_port: A hash of SecureConnect options applied to the Network.
         """
         ...
     @overload
@@ -303,21 +303,21 @@ class Settings(pulumi.CustomResource):
         import pulumi_meraki as meraki
 
         example = meraki.networks.Settings("example",
-            local_status_page=meraki.networks.SettingsLocalStatusPageArgs(
-                authentication=meraki.networks.SettingsLocalStatusPageAuthenticationArgs(
-                    enabled=False,
-                    password="miles123",
-                ),
-            ),
+            local_status_page={
+                "authentication": {
+                    "enabled": False,
+                    "password": "miles123",
+                },
+            },
             local_status_page_enabled=True,
-            named_vlans=meraki.networks.SettingsNamedVlansArgs(
-                enabled=True,
-            ),
+            named_vlans={
+                "enabled": True,
+            },
             network_id="string",
             remote_status_page_enabled=True,
-            secure_port=meraki.networks.SettingsSecurePortArgs(
-                enabled=False,
-            ))
+            secure_port={
+                "enabled": False,
+            })
         pulumi.export("merakiNetworksSettingsExample", example)
         ```
 
@@ -342,12 +342,12 @@ class Settings(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 local_status_page: Optional[pulumi.Input[pulumi.InputType['SettingsLocalStatusPageArgs']]] = None,
+                 local_status_page: Optional[pulumi.Input[Union['SettingsLocalStatusPageArgs', 'SettingsLocalStatusPageArgsDict']]] = None,
                  local_status_page_enabled: Optional[pulumi.Input[bool]] = None,
-                 named_vlans: Optional[pulumi.Input[pulumi.InputType['SettingsNamedVlansArgs']]] = None,
+                 named_vlans: Optional[pulumi.Input[Union['SettingsNamedVlansArgs', 'SettingsNamedVlansArgsDict']]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
                  remote_status_page_enabled: Optional[pulumi.Input[bool]] = None,
-                 secure_port: Optional[pulumi.Input[pulumi.InputType['SettingsSecurePortArgs']]] = None,
+                 secure_port: Optional[pulumi.Input[Union['SettingsSecurePortArgs', 'SettingsSecurePortArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -376,13 +376,13 @@ class Settings(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            fips: Optional[pulumi.Input[pulumi.InputType['SettingsFipsArgs']]] = None,
-            local_status_page: Optional[pulumi.Input[pulumi.InputType['SettingsLocalStatusPageArgs']]] = None,
+            fips: Optional[pulumi.Input[Union['SettingsFipsArgs', 'SettingsFipsArgsDict']]] = None,
+            local_status_page: Optional[pulumi.Input[Union['SettingsLocalStatusPageArgs', 'SettingsLocalStatusPageArgsDict']]] = None,
             local_status_page_enabled: Optional[pulumi.Input[bool]] = None,
-            named_vlans: Optional[pulumi.Input[pulumi.InputType['SettingsNamedVlansArgs']]] = None,
+            named_vlans: Optional[pulumi.Input[Union['SettingsNamedVlansArgs', 'SettingsNamedVlansArgsDict']]] = None,
             network_id: Optional[pulumi.Input[str]] = None,
             remote_status_page_enabled: Optional[pulumi.Input[bool]] = None,
-            secure_port: Optional[pulumi.Input[pulumi.InputType['SettingsSecurePortArgs']]] = None) -> 'Settings':
+            secure_port: Optional[pulumi.Input[Union['SettingsSecurePortArgs', 'SettingsSecurePortArgsDict']]] = None) -> 'Settings':
         """
         Get an existing Settings resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -390,13 +390,13 @@ class Settings(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[pulumi.InputType['SettingsFipsArgs']] fips: A hash of FIPS options applied to the Network
-        :param pulumi.Input[pulumi.InputType['SettingsLocalStatusPageArgs']] local_status_page: A hash of Local Status page(s)' authentication options applied to the Network.
+        :param pulumi.Input[Union['SettingsFipsArgs', 'SettingsFipsArgsDict']] fips: A hash of FIPS options applied to the Network
+        :param pulumi.Input[Union['SettingsLocalStatusPageArgs', 'SettingsLocalStatusPageArgsDict']] local_status_page: A hash of Local Status page(s)' authentication options applied to the Network.
         :param pulumi.Input[bool] local_status_page_enabled: Enables / disables the local device status pages (\\n\\nmy.meraki.com, \\n\\n\\n\\nap.meraki.com, \\n\\n\\n\\nswitch.meraki.com, \\n\\n\\n\\nwired.meraki.com\\n\\n). Optional (defaults to false)
-        :param pulumi.Input[pulumi.InputType['SettingsNamedVlansArgs']] named_vlans: A hash of Named VLANs options applied to the Network.
+        :param pulumi.Input[Union['SettingsNamedVlansArgs', 'SettingsNamedVlansArgsDict']] named_vlans: A hash of Named VLANs options applied to the Network.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[bool] remote_status_page_enabled: Enables / disables access to the device status page (\\n\\nhttp://[device's LAN IP])\\n\\n. Optional. Can only be set if localStatusPageEnabled is set to true
-        :param pulumi.Input[pulumi.InputType['SettingsSecurePortArgs']] secure_port: A hash of SecureConnect options applied to the Network.
+        :param pulumi.Input[Union['SettingsSecurePortArgs', 'SettingsSecurePortArgsDict']] secure_port: A hash of SecureConnect options applied to the Network.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 

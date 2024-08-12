@@ -113,7 +113,7 @@ public class ClientsSplashAuthorizationStatus extends com.pulumi.resources.Custo
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public ClientsSplashAuthorizationStatus(String name) {
+    public ClientsSplashAuthorizationStatus(java.lang.String name) {
         this(name, ClientsSplashAuthorizationStatusArgs.Empty);
     }
     /**
@@ -121,7 +121,7 @@ public class ClientsSplashAuthorizationStatus extends com.pulumi.resources.Custo
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ClientsSplashAuthorizationStatus(String name, ClientsSplashAuthorizationStatusArgs args) {
+    public ClientsSplashAuthorizationStatus(java.lang.String name, ClientsSplashAuthorizationStatusArgs args) {
         this(name, args, null);
     }
     /**
@@ -130,12 +130,12 @@ public class ClientsSplashAuthorizationStatus extends com.pulumi.resources.Custo
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ClientsSplashAuthorizationStatus(String name, ClientsSplashAuthorizationStatusArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/clientsSplashAuthorizationStatus:ClientsSplashAuthorizationStatus", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public ClientsSplashAuthorizationStatus(java.lang.String name, ClientsSplashAuthorizationStatusArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/clientsSplashAuthorizationStatus:ClientsSplashAuthorizationStatus", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private ClientsSplashAuthorizationStatus(String name, Output<String> id, @Nullable ClientsSplashAuthorizationStatusState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/clientsSplashAuthorizationStatus:ClientsSplashAuthorizationStatus", name, state, makeResourceOptions(options, id));
+    private ClientsSplashAuthorizationStatus(java.lang.String name, Output<java.lang.String> id, @Nullable ClientsSplashAuthorizationStatusState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/clientsSplashAuthorizationStatus:ClientsSplashAuthorizationStatus", name, state, makeResourceOptions(options, id), false);
     }
 
     private static ClientsSplashAuthorizationStatusArgs makeArgs(ClientsSplashAuthorizationStatusArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -145,7 +145,7 @@ public class ClientsSplashAuthorizationStatus extends com.pulumi.resources.Custo
         return args == null ? ClientsSplashAuthorizationStatusArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -161,7 +161,7 @@ public class ClientsSplashAuthorizationStatus extends com.pulumi.resources.Custo
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ClientsSplashAuthorizationStatus get(String name, Output<String> id, @Nullable ClientsSplashAuthorizationStatusState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ClientsSplashAuthorizationStatus get(java.lang.String name, Output<java.lang.String> id, @Nullable ClientsSplashAuthorizationStatusState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new ClientsSplashAuthorizationStatus(name, id, state, options);
     }
 }

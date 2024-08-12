@@ -104,7 +104,7 @@ public class FirmwareUpgradesStagedEventsRollbacks extends com.pulumi.resources.
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public FirmwareUpgradesStagedEventsRollbacks(String name) {
+    public FirmwareUpgradesStagedEventsRollbacks(java.lang.String name) {
         this(name, FirmwareUpgradesStagedEventsRollbacksArgs.Empty);
     }
     /**
@@ -112,7 +112,7 @@ public class FirmwareUpgradesStagedEventsRollbacks extends com.pulumi.resources.
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public FirmwareUpgradesStagedEventsRollbacks(String name, FirmwareUpgradesStagedEventsRollbacksArgs args) {
+    public FirmwareUpgradesStagedEventsRollbacks(java.lang.String name, FirmwareUpgradesStagedEventsRollbacksArgs args) {
         this(name, args, null);
     }
     /**
@@ -121,12 +121,12 @@ public class FirmwareUpgradesStagedEventsRollbacks extends com.pulumi.resources.
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public FirmwareUpgradesStagedEventsRollbacks(String name, FirmwareUpgradesStagedEventsRollbacksArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/firmwareUpgradesStagedEventsRollbacks:FirmwareUpgradesStagedEventsRollbacks", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public FirmwareUpgradesStagedEventsRollbacks(java.lang.String name, FirmwareUpgradesStagedEventsRollbacksArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/firmwareUpgradesStagedEventsRollbacks:FirmwareUpgradesStagedEventsRollbacks", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private FirmwareUpgradesStagedEventsRollbacks(String name, Output<String> id, @Nullable FirmwareUpgradesStagedEventsRollbacksState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/firmwareUpgradesStagedEventsRollbacks:FirmwareUpgradesStagedEventsRollbacks", name, state, makeResourceOptions(options, id));
+    private FirmwareUpgradesStagedEventsRollbacks(java.lang.String name, Output<java.lang.String> id, @Nullable FirmwareUpgradesStagedEventsRollbacksState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/firmwareUpgradesStagedEventsRollbacks:FirmwareUpgradesStagedEventsRollbacks", name, state, makeResourceOptions(options, id), false);
     }
 
     private static FirmwareUpgradesStagedEventsRollbacksArgs makeArgs(FirmwareUpgradesStagedEventsRollbacksArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -136,7 +136,7 @@ public class FirmwareUpgradesStagedEventsRollbacks extends com.pulumi.resources.
         return args == null ? FirmwareUpgradesStagedEventsRollbacksArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -152,7 +152,7 @@ public class FirmwareUpgradesStagedEventsRollbacks extends com.pulumi.resources.
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static FirmwareUpgradesStagedEventsRollbacks get(String name, Output<String> id, @Nullable FirmwareUpgradesStagedEventsRollbacksState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static FirmwareUpgradesStagedEventsRollbacks get(java.lang.String name, Output<java.lang.String> id, @Nullable FirmwareUpgradesStagedEventsRollbacksState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new FirmwareUpgradesStagedEventsRollbacks(name, id, state, options);
     }
 }

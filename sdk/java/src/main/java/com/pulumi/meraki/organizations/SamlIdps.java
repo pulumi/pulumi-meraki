@@ -136,7 +136,7 @@ public class SamlIdps extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SamlIdps(String name) {
+    public SamlIdps(java.lang.String name) {
         this(name, SamlIdpsArgs.Empty);
     }
     /**
@@ -144,7 +144,7 @@ public class SamlIdps extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SamlIdps(String name, SamlIdpsArgs args) {
+    public SamlIdps(java.lang.String name, SamlIdpsArgs args) {
         this(name, args, null);
     }
     /**
@@ -153,12 +153,12 @@ public class SamlIdps extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SamlIdps(String name, SamlIdpsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/samlIdps:SamlIdps", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public SamlIdps(java.lang.String name, SamlIdpsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/samlIdps:SamlIdps", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SamlIdps(String name, Output<String> id, @Nullable SamlIdpsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/samlIdps:SamlIdps", name, state, makeResourceOptions(options, id));
+    private SamlIdps(java.lang.String name, Output<java.lang.String> id, @Nullable SamlIdpsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/samlIdps:SamlIdps", name, state, makeResourceOptions(options, id), false);
     }
 
     private static SamlIdpsArgs makeArgs(SamlIdpsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -168,7 +168,7 @@ public class SamlIdps extends com.pulumi.resources.CustomResource {
         return args == null ? SamlIdpsArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -184,7 +184,7 @@ public class SamlIdps extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SamlIdps get(String name, Output<String> id, @Nullable SamlIdpsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SamlIdps get(java.lang.String name, Output<java.lang.String> id, @Nullable SamlIdpsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SamlIdps(name, id, state, options);
     }
 }

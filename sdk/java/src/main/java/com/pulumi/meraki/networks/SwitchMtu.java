@@ -120,7 +120,7 @@ public class SwitchMtu extends com.pulumi.resources.CustomResource {
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public SwitchMtu(String name) {
+    public SwitchMtu(java.lang.String name) {
         this(name, SwitchMtuArgs.Empty);
     }
     /**
@@ -128,7 +128,7 @@ public class SwitchMtu extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SwitchMtu(String name, SwitchMtuArgs args) {
+    public SwitchMtu(java.lang.String name, SwitchMtuArgs args) {
         this(name, args, null);
     }
     /**
@@ -137,12 +137,12 @@ public class SwitchMtu extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SwitchMtu(String name, SwitchMtuArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/switchMtu:SwitchMtu", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public SwitchMtu(java.lang.String name, SwitchMtuArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/switchMtu:SwitchMtu", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private SwitchMtu(String name, Output<String> id, @Nullable SwitchMtuState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:networks/switchMtu:SwitchMtu", name, state, makeResourceOptions(options, id));
+    private SwitchMtu(java.lang.String name, Output<java.lang.String> id, @Nullable SwitchMtuState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:networks/switchMtu:SwitchMtu", name, state, makeResourceOptions(options, id), false);
     }
 
     private static SwitchMtuArgs makeArgs(SwitchMtuArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -152,7 +152,7 @@ public class SwitchMtu extends com.pulumi.resources.CustomResource {
         return args == null ? SwitchMtuArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -168,7 +168,7 @@ public class SwitchMtu extends com.pulumi.resources.CustomResource {
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static SwitchMtu get(String name, Output<String> id, @Nullable SwitchMtuState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static SwitchMtu get(java.lang.String name, Output<java.lang.String> id, @Nullable SwitchMtuState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new SwitchMtu(name, id, state, options);
     }
 }

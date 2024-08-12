@@ -257,11 +257,11 @@ class SensorAlertsProfiles(pulumi.CustomResource):
     def __init__(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 conditions: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SensorAlertsProfilesConditionArgs']]]]] = None,
+                 conditions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SensorAlertsProfilesConditionArgs', 'SensorAlertsProfilesConditionArgsDict']]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 recipients: Optional[pulumi.Input[pulumi.InputType['SensorAlertsProfilesRecipientsArgs']]] = None,
-                 schedule: Optional[pulumi.Input[pulumi.InputType['SensorAlertsProfilesScheduleArgs']]] = None,
+                 recipients: Optional[pulumi.Input[Union['SensorAlertsProfilesRecipientsArgs', 'SensorAlertsProfilesRecipientsArgsDict']]] = None,
+                 schedule: Optional[pulumi.Input[Union['SensorAlertsProfilesScheduleArgs', 'SensorAlertsProfilesScheduleArgsDict']]] = None,
                  serials: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  __props__=None):
         """
@@ -275,11 +275,11 @@ class SensorAlertsProfiles(pulumi.CustomResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SensorAlertsProfilesConditionArgs']]]] conditions: List of conditions that will cause the profile to send an alert.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SensorAlertsProfilesConditionArgs', 'SensorAlertsProfilesConditionArgsDict']]]] conditions: List of conditions that will cause the profile to send an alert.
         :param pulumi.Input[str] name: Name of the sensor alert profile.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
-        :param pulumi.Input[pulumi.InputType['SensorAlertsProfilesRecipientsArgs']] recipients: List of recipients that will receive the alert.
-        :param pulumi.Input[pulumi.InputType['SensorAlertsProfilesScheduleArgs']] schedule: The sensor schedule to use with the alert profile.
+        :param pulumi.Input[Union['SensorAlertsProfilesRecipientsArgs', 'SensorAlertsProfilesRecipientsArgsDict']] recipients: List of recipients that will receive the alert.
+        :param pulumi.Input[Union['SensorAlertsProfilesScheduleArgs', 'SensorAlertsProfilesScheduleArgsDict']] schedule: The sensor schedule to use with the alert profile.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] serials: List of device serials assigned to this sensor alert profile.
         """
         ...
@@ -312,11 +312,11 @@ class SensorAlertsProfiles(pulumi.CustomResource):
     def _internal_init(__self__,
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
-                 conditions: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SensorAlertsProfilesConditionArgs']]]]] = None,
+                 conditions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SensorAlertsProfilesConditionArgs', 'SensorAlertsProfilesConditionArgsDict']]]]] = None,
                  name: Optional[pulumi.Input[str]] = None,
                  network_id: Optional[pulumi.Input[str]] = None,
-                 recipients: Optional[pulumi.Input[pulumi.InputType['SensorAlertsProfilesRecipientsArgs']]] = None,
-                 schedule: Optional[pulumi.Input[pulumi.InputType['SensorAlertsProfilesScheduleArgs']]] = None,
+                 recipients: Optional[pulumi.Input[Union['SensorAlertsProfilesRecipientsArgs', 'SensorAlertsProfilesRecipientsArgsDict']]] = None,
+                 schedule: Optional[pulumi.Input[Union['SensorAlertsProfilesScheduleArgs', 'SensorAlertsProfilesScheduleArgsDict']]] = None,
                  serials: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -347,13 +347,13 @@ class SensorAlertsProfiles(pulumi.CustomResource):
     def get(resource_name: str,
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
-            conditions: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SensorAlertsProfilesConditionArgs']]]]] = None,
-            conditions_responses: Optional[pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SensorAlertsProfilesConditionsResponseArgs']]]]] = None,
+            conditions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SensorAlertsProfilesConditionArgs', 'SensorAlertsProfilesConditionArgsDict']]]]] = None,
+            conditions_responses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SensorAlertsProfilesConditionsResponseArgs', 'SensorAlertsProfilesConditionsResponseArgsDict']]]]] = None,
             name: Optional[pulumi.Input[str]] = None,
             network_id: Optional[pulumi.Input[str]] = None,
             profile_id: Optional[pulumi.Input[str]] = None,
-            recipients: Optional[pulumi.Input[pulumi.InputType['SensorAlertsProfilesRecipientsArgs']]] = None,
-            schedule: Optional[pulumi.Input[pulumi.InputType['SensorAlertsProfilesScheduleArgs']]] = None,
+            recipients: Optional[pulumi.Input[Union['SensorAlertsProfilesRecipientsArgs', 'SensorAlertsProfilesRecipientsArgsDict']]] = None,
+            schedule: Optional[pulumi.Input[Union['SensorAlertsProfilesScheduleArgs', 'SensorAlertsProfilesScheduleArgsDict']]] = None,
             serials: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]] = None) -> 'SensorAlertsProfiles':
         """
         Get an existing SensorAlertsProfiles resource's state with the given name, id, and optional extra
@@ -362,13 +362,13 @@ class SensorAlertsProfiles(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SensorAlertsProfilesConditionArgs']]]] conditions: List of conditions that will cause the profile to send an alert.
-        :param pulumi.Input[Sequence[pulumi.Input[pulumi.InputType['SensorAlertsProfilesConditionsResponseArgs']]]] conditions_responses: List of conditions that will cause the profile to send an alert.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SensorAlertsProfilesConditionArgs', 'SensorAlertsProfilesConditionArgsDict']]]] conditions: List of conditions that will cause the profile to send an alert.
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SensorAlertsProfilesConditionsResponseArgs', 'SensorAlertsProfilesConditionsResponseArgsDict']]]] conditions_responses: List of conditions that will cause the profile to send an alert.
         :param pulumi.Input[str] name: Name of the sensor alert profile.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[str] profile_id: ID of the sensor alert profile.
-        :param pulumi.Input[pulumi.InputType['SensorAlertsProfilesRecipientsArgs']] recipients: List of recipients that will receive the alert.
-        :param pulumi.Input[pulumi.InputType['SensorAlertsProfilesScheduleArgs']] schedule: The sensor schedule to use with the alert profile.
+        :param pulumi.Input[Union['SensorAlertsProfilesRecipientsArgs', 'SensorAlertsProfilesRecipientsArgsDict']] recipients: List of recipients that will receive the alert.
+        :param pulumi.Input[Union['SensorAlertsProfilesScheduleArgs', 'SensorAlertsProfilesScheduleArgsDict']] schedule: The sensor schedule to use with the alert profile.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] serials: List of device serials assigned to this sensor alert profile.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))

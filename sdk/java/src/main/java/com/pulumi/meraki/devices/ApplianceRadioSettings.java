@@ -137,7 +137,7 @@ public class ApplianceRadioSettings extends com.pulumi.resources.CustomResource 
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public ApplianceRadioSettings(String name) {
+    public ApplianceRadioSettings(java.lang.String name) {
         this(name, ApplianceRadioSettingsArgs.Empty);
     }
     /**
@@ -145,7 +145,7 @@ public class ApplianceRadioSettings extends com.pulumi.resources.CustomResource 
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public ApplianceRadioSettings(String name, ApplianceRadioSettingsArgs args) {
+    public ApplianceRadioSettings(java.lang.String name, ApplianceRadioSettingsArgs args) {
         this(name, args, null);
     }
     /**
@@ -154,12 +154,12 @@ public class ApplianceRadioSettings extends com.pulumi.resources.CustomResource 
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public ApplianceRadioSettings(String name, ApplianceRadioSettingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/applianceRadioSettings:ApplianceRadioSettings", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public ApplianceRadioSettings(java.lang.String name, ApplianceRadioSettingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/applianceRadioSettings:ApplianceRadioSettings", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private ApplianceRadioSettings(String name, Output<String> id, @Nullable ApplianceRadioSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:devices/applianceRadioSettings:ApplianceRadioSettings", name, state, makeResourceOptions(options, id));
+    private ApplianceRadioSettings(java.lang.String name, Output<java.lang.String> id, @Nullable ApplianceRadioSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:devices/applianceRadioSettings:ApplianceRadioSettings", name, state, makeResourceOptions(options, id), false);
     }
 
     private static ApplianceRadioSettingsArgs makeArgs(ApplianceRadioSettingsArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -169,7 +169,7 @@ public class ApplianceRadioSettings extends com.pulumi.resources.CustomResource 
         return args == null ? ApplianceRadioSettingsArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -185,7 +185,7 @@ public class ApplianceRadioSettings extends com.pulumi.resources.CustomResource 
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static ApplianceRadioSettings get(String name, Output<String> id, @Nullable ApplianceRadioSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static ApplianceRadioSettings get(java.lang.String name, Output<java.lang.String> id, @Nullable ApplianceRadioSettingsState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new ApplianceRadioSettings(name, id, state, options);
     }
 }

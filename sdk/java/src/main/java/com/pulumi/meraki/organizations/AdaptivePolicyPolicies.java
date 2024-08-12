@@ -174,7 +174,7 @@ public class AdaptivePolicyPolicies extends com.pulumi.resources.CustomResource 
      *
      * @param name The _unique_ name of the resulting resource.
      */
-    public AdaptivePolicyPolicies(String name) {
+    public AdaptivePolicyPolicies(java.lang.String name) {
         this(name, AdaptivePolicyPoliciesArgs.Empty);
     }
     /**
@@ -182,7 +182,7 @@ public class AdaptivePolicyPolicies extends com.pulumi.resources.CustomResource 
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public AdaptivePolicyPolicies(String name, AdaptivePolicyPoliciesArgs args) {
+    public AdaptivePolicyPolicies(java.lang.String name, AdaptivePolicyPoliciesArgs args) {
         this(name, args, null);
     }
     /**
@@ -191,12 +191,12 @@ public class AdaptivePolicyPolicies extends com.pulumi.resources.CustomResource 
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public AdaptivePolicyPolicies(String name, AdaptivePolicyPoliciesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/adaptivePolicyPolicies:AdaptivePolicyPolicies", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()));
+    public AdaptivePolicyPolicies(java.lang.String name, AdaptivePolicyPoliciesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/adaptivePolicyPolicies:AdaptivePolicyPolicies", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
-    private AdaptivePolicyPolicies(String name, Output<String> id, @Nullable AdaptivePolicyPoliciesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
-        super("meraki:organizations/adaptivePolicyPolicies:AdaptivePolicyPolicies", name, state, makeResourceOptions(options, id));
+    private AdaptivePolicyPolicies(java.lang.String name, Output<java.lang.String> id, @Nullable AdaptivePolicyPoliciesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+        super("meraki:organizations/adaptivePolicyPolicies:AdaptivePolicyPolicies", name, state, makeResourceOptions(options, id), false);
     }
 
     private static AdaptivePolicyPoliciesArgs makeArgs(AdaptivePolicyPoliciesArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
@@ -206,7 +206,7 @@ public class AdaptivePolicyPolicies extends com.pulumi.resources.CustomResource 
         return args == null ? AdaptivePolicyPoliciesArgs.Empty : args;
     }
 
-    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {
+    private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .build();
@@ -222,7 +222,7 @@ public class AdaptivePolicyPolicies extends com.pulumi.resources.CustomResource 
      * @param state
      * @param options Optional settings to control the behavior of the CustomResource.
      */
-    public static AdaptivePolicyPolicies get(String name, Output<String> id, @Nullable AdaptivePolicyPoliciesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public static AdaptivePolicyPolicies get(java.lang.String name, Output<java.lang.String> id, @Nullable AdaptivePolicyPoliciesState state, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         return new AdaptivePolicyPolicies(name, id, state, options);
     }
 }
