@@ -158,9 +158,9 @@ public class BrandingPolicies extends com.pulumi.resources.CustomResource {
     }
     /**
      * Settings for describing the modifications to various Help page features. Each property in this object accepts one of
-     *   &#39;default or inherit&#39; (do not modify functionality), &#39;hide&#39; (remove the section from Dashboard), or &#39;show&#39; (always show
-     *   the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
-     *   Dashboard; see the documentation for each property to see the allowed values.
+     * &#39;default or inherit&#39; (do not modify functionality), &#39;hide&#39; (remove the section from Dashboard), or &#39;show&#39; (always show
+     * the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
+     * Dashboard; see the documentation for each property to see the allowed values.
      * 
      */
     @Export(name="helpSettings", refs={BrandingPoliciesHelpSettings.class}, tree="[0]")
@@ -168,9 +168,9 @@ public class BrandingPolicies extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Settings for describing the modifications to various Help page features. Each property in this object accepts one of
-     *   &#39;default or inherit&#39; (do not modify functionality), &#39;hide&#39; (remove the section from Dashboard), or &#39;show&#39; (always show
-     *   the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
-     *   Dashboard; see the documentation for each property to see the allowed values.
+     * &#39;default or inherit&#39; (do not modify functionality), &#39;hide&#39; (remove the section from Dashboard), or &#39;show&#39; (always show
+     * the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
+     * Dashboard; see the documentation for each property to see the allowed values.
      * 
      */
     public Output<BrandingPoliciesHelpSettings> helpSettings() {

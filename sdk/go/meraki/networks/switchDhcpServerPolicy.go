@@ -67,12 +67,12 @@ type SwitchDhcpServerPolicy struct {
 	// Email alert settings for DHCP servers
 	Alerts SwitchDhcpServerPolicyAlertsOutput `pulumi:"alerts"`
 	// List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
-	//   to block.An empty array will clear the entries.
+	// to block.An empty array will clear the entries.
 	AllowedServers pulumi.StringArrayOutput `pulumi:"allowedServers"`
 	// Dynamic ARP Inspection settings
 	ArpInspection SwitchDhcpServerPolicyArpInspectionOutput `pulumi:"arpInspection"`
 	// List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set
-	//   to allow.An empty array will clear the entries.
+	// to allow.An empty array will clear the entries.
 	BlockedServers pulumi.StringArrayOutput `pulumi:"blockedServers"`
 	// 'allow' or 'block' new DHCP servers. Default value is 'allow'.
 	DefaultPolicy pulumi.StringOutput `pulumi:"defaultPolicy"`
@@ -116,12 +116,12 @@ type switchDhcpServerPolicyState struct {
 	// Email alert settings for DHCP servers
 	Alerts *SwitchDhcpServerPolicyAlerts `pulumi:"alerts"`
 	// List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
-	//   to block.An empty array will clear the entries.
+	// to block.An empty array will clear the entries.
 	AllowedServers []string `pulumi:"allowedServers"`
 	// Dynamic ARP Inspection settings
 	ArpInspection *SwitchDhcpServerPolicyArpInspection `pulumi:"arpInspection"`
 	// List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set
-	//   to allow.An empty array will clear the entries.
+	// to allow.An empty array will clear the entries.
 	BlockedServers []string `pulumi:"blockedServers"`
 	// 'allow' or 'block' new DHCP servers. Default value is 'allow'.
 	DefaultPolicy *string `pulumi:"defaultPolicy"`
@@ -133,12 +133,12 @@ type SwitchDhcpServerPolicyState struct {
 	// Email alert settings for DHCP servers
 	Alerts SwitchDhcpServerPolicyAlertsPtrInput
 	// List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
-	//   to block.An empty array will clear the entries.
+	// to block.An empty array will clear the entries.
 	AllowedServers pulumi.StringArrayInput
 	// Dynamic ARP Inspection settings
 	ArpInspection SwitchDhcpServerPolicyArpInspectionPtrInput
 	// List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set
-	//   to allow.An empty array will clear the entries.
+	// to allow.An empty array will clear the entries.
 	BlockedServers pulumi.StringArrayInput
 	// 'allow' or 'block' new DHCP servers. Default value is 'allow'.
 	DefaultPolicy pulumi.StringPtrInput
@@ -154,12 +154,12 @@ type switchDhcpServerPolicyArgs struct {
 	// Email alert settings for DHCP servers
 	Alerts *SwitchDhcpServerPolicyAlerts `pulumi:"alerts"`
 	// List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
-	//   to block.An empty array will clear the entries.
+	// to block.An empty array will clear the entries.
 	AllowedServers []string `pulumi:"allowedServers"`
 	// Dynamic ARP Inspection settings
 	ArpInspection *SwitchDhcpServerPolicyArpInspection `pulumi:"arpInspection"`
 	// List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set
-	//   to allow.An empty array will clear the entries.
+	// to allow.An empty array will clear the entries.
 	BlockedServers []string `pulumi:"blockedServers"`
 	// 'allow' or 'block' new DHCP servers. Default value is 'allow'.
 	DefaultPolicy *string `pulumi:"defaultPolicy"`
@@ -172,12 +172,12 @@ type SwitchDhcpServerPolicyArgs struct {
 	// Email alert settings for DHCP servers
 	Alerts SwitchDhcpServerPolicyAlertsPtrInput
 	// List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
-	//   to block.An empty array will clear the entries.
+	// to block.An empty array will clear the entries.
 	AllowedServers pulumi.StringArrayInput
 	// Dynamic ARP Inspection settings
 	ArpInspection SwitchDhcpServerPolicyArpInspectionPtrInput
 	// List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set
-	//   to allow.An empty array will clear the entries.
+	// to allow.An empty array will clear the entries.
 	BlockedServers pulumi.StringArrayInput
 	// 'allow' or 'block' new DHCP servers. Default value is 'allow'.
 	DefaultPolicy pulumi.StringPtrInput
@@ -278,8 +278,7 @@ func (o SwitchDhcpServerPolicyOutput) Alerts() SwitchDhcpServerPolicyAlertsOutpu
 }
 
 // List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
-//
-//	to block.An empty array will clear the entries.
+// to block.An empty array will clear the entries.
 func (o SwitchDhcpServerPolicyOutput) AllowedServers() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *SwitchDhcpServerPolicy) pulumi.StringArrayOutput { return v.AllowedServers }).(pulumi.StringArrayOutput)
 }
@@ -290,8 +289,7 @@ func (o SwitchDhcpServerPolicyOutput) ArpInspection() SwitchDhcpServerPolicyArpI
 }
 
 // List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set
-//
-//	to allow.An empty array will clear the entries.
+// to allow.An empty array will clear the entries.
 func (o SwitchDhcpServerPolicyOutput) BlockedServers() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *SwitchDhcpServerPolicy) pulumi.StringArrayOutput { return v.BlockedServers }).(pulumi.StringArrayOutput)
 }

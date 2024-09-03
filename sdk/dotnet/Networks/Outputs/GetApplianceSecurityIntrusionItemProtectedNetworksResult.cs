@@ -22,7 +22,7 @@ namespace Pulumi.Meraki.Networks.Outputs
         /// </summary>
         public readonly ImmutableArray<string> IncludedCidrs;
         /// <summary>
-        /// Whether special IPv4 addresses should be used (see: https://tools.ietf.org/html/rfc5735)
+        /// Whether special IPv4 addresses should be used (see: [https://tools.ietf.org/html/rfc5735](https://tools.ietf.org/html/rfc5735))
         /// </summary>
         public readonly bool UseDefault;
 

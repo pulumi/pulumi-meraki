@@ -15,12 +15,12 @@ namespace Pulumi.Meraki.Organizations.Outputs
     {
         /// <summary>
         /// The 'Help &gt; API docs' subtab where a detailed description of the Dashboard API is listed. Can be one of
-        ///   'default or inherit', 'hide' or 'show'.
+        /// 'default or inherit', 'hide' or 'show'.
         /// </summary>
         public readonly string ApiDocsSubtab;
         /// <summary>
         /// The 'Help &gt; Cases' Dashboard subtab on which Cisco Meraki support cases for this organization can be managed. Can be one
-        ///   of 'default or inherit', 'hide' or 'show'.
+        /// of 'default or inherit', 'hide' or 'show'.
         /// </summary>
         public readonly string CasesSubtab;
         /// <summary>
@@ -33,18 +33,18 @@ namespace Pulumi.Meraki.Organizations.Outputs
         public readonly string CommunitySubtab;
         /// <summary>
         /// The 'Help &gt; Data protection requests' Dashboard subtab on which requests to delete, restrict, or export end-user data can
-        ///   be audited. Can be one of 'default or inherit', 'hide' or 'show'.
+        /// be audited. Can be one of 'default or inherit', 'hide' or 'show'.
         /// </summary>
         public readonly string DataProtectionRequestsSubtab;
         /// <summary>
         /// The 'Help &gt; Firewall info' subtab where necessary upstream firewall rules for communication to the Cisco Meraki cloud are
-        ///   listed. Can be one of 'default or inherit', 'hide' or 'show'.
+        /// listed. Can be one of 'default or inherit', 'hide' or 'show'.
         /// </summary>
         public readonly string FirewallInfoSubtab;
         /// <summary>
         /// The 'Help &gt; Get Help' subtab on which Cisco Meraki KB, Product Manuals, and Support/Case Information are displayed. Note
-        ///   that if this subtab is hidden, branding customizations for the KB on 'Get help', Cisco Meraki product documentation,
-        ///   and support contact info will not be visible. Can be one of 'default or inherit', 'hide' or 'show'.
+        /// that if this subtab is hidden, branding customizations for the KB on 'Get help', Cisco Meraki product documentation,
+        /// and support contact info will not be visible. Can be one of 'default or inherit', 'hide' or 'show'.
         /// </summary>
         public readonly string GetHelpSubtab;
         /// <summary>
@@ -53,17 +53,17 @@ namespace Pulumi.Meraki.Organizations.Outputs
         public readonly string GetHelpSubtabKnowledgeBaseSearch;
         /// <summary>
         /// The 'Help &gt; Replacement info' subtab where important information regarding device replacements is detailed. Can be one of
-        ///   'default or inherit', 'hide' or 'show'.
+        /// 'default or inherit', 'hide' or 'show'.
         /// </summary>
         public readonly string HardwareReplacementsSubtab;
         /// <summary>
         /// The Help tab, under which all support information resides. If this tab is hidden, no other 'Help' branding
-        ///   customizations will be visible. Can be one of 'default or inherit', 'hide' or 'show'.
+        /// customizations will be visible. Can be one of 'default or inherit', 'hide' or 'show'.
         /// </summary>
         public readonly string HelpTab;
         /// <summary>
         /// The 'Help Widget' is a support widget which provides access to live chat, documentation links, Sales contact info,
-        ///   and other contact avenues to reach Meraki Support. Can be one of 'default or inherit', 'hide' or 'show'.
+        /// and other contact avenues to reach Meraki Support. Can be one of 'default or inherit', 'hide' or 'show'.
         /// </summary>
         public readonly string HelpWidget;
         /// <summary>
@@ -72,7 +72,7 @@ namespace Pulumi.Meraki.Organizations.Outputs
         public readonly string NewFeaturesSubtab;
         /// <summary>
         /// The 'SM Forums' subtab which links to community-based support for Cisco Meraki Systems Manager. Only configurable for
-        ///   organizations that contain Systems Manager networks. Can be one of 'default or inherit', 'hide' or 'show'.
+        /// organizations that contain Systems Manager networks. Can be one of 'default or inherit', 'hide' or 'show'.
         /// </summary>
         public readonly string SmForums;
         /// <summary>
@@ -81,7 +81,7 @@ namespace Pulumi.Meraki.Organizations.Outputs
         public readonly string SupportContactInfo;
         /// <summary>
         /// The universal search box always visible on Dashboard will, by default, present results from the Meraki KB. This configures
-        ///   whether these Meraki KB results should be returned. Can be one of 'default or inherit', 'hide' or 'show'.
+        /// whether these Meraki KB results should be returned. Can be one of 'default or inherit', 'hide' or 'show'.
         /// </summary>
         public readonly string UniversalSearchKnowledgeBaseSearch;
 

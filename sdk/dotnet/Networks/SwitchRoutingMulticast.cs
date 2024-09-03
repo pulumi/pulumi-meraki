@@ -23,7 +23,7 @@ namespace Pulumi.Meraki.Networks
     {
         /// <summary>
         /// Default multicast setting for entire network. IGMP snooping and Flood unknown
-        ///   multicast traffic settings are enabled by default.
+        /// multicast traffic settings are enabled by default.
         /// </summary>
         [Output("defaultSettings")]
         public Output<Outputs.SwitchRoutingMulticastDefaultSettings> DefaultSettings { get; private set; } = null!;
@@ -36,7 +36,7 @@ namespace Pulumi.Meraki.Networks
 
         /// <summary>
         /// Array of paired switches/stacks/profiles and corresponding multicast settings.
-        ///   An empty array will clear the multicast settings.
+        /// An empty array will clear the multicast settings.
         /// </summary>
         [Output("overrides")]
         public Output<ImmutableArray<Outputs.SwitchRoutingMulticastOverride>> Overrides { get; private set; } = null!;
@@ -90,7 +90,7 @@ namespace Pulumi.Meraki.Networks
     {
         /// <summary>
         /// Default multicast setting for entire network. IGMP snooping and Flood unknown
-        ///   multicast traffic settings are enabled by default.
+        /// multicast traffic settings are enabled by default.
         /// </summary>
         [Input("defaultSettings")]
         public Input<Inputs.SwitchRoutingMulticastDefaultSettingsArgs>? DefaultSettings { get; set; }
@@ -106,7 +106,7 @@ namespace Pulumi.Meraki.Networks
 
         /// <summary>
         /// Array of paired switches/stacks/profiles and corresponding multicast settings.
-        ///   An empty array will clear the multicast settings.
+        /// An empty array will clear the multicast settings.
         /// </summary>
         public InputList<Inputs.SwitchRoutingMulticastOverrideArgs> Overrides
         {
@@ -124,7 +124,7 @@ namespace Pulumi.Meraki.Networks
     {
         /// <summary>
         /// Default multicast setting for entire network. IGMP snooping and Flood unknown
-        ///   multicast traffic settings are enabled by default.
+        /// multicast traffic settings are enabled by default.
         /// </summary>
         [Input("defaultSettings")]
         public Input<Inputs.SwitchRoutingMulticastDefaultSettingsGetArgs>? DefaultSettings { get; set; }
@@ -140,7 +140,7 @@ namespace Pulumi.Meraki.Networks
 
         /// <summary>
         /// Array of paired switches/stacks/profiles and corresponding multicast settings.
-        ///   An empty array will clear the multicast settings.
+        /// An empty array will clear the multicast settings.
         /// </summary>
         public InputList<Inputs.SwitchRoutingMulticastOverrideGetArgs> Overrides
         {

@@ -31,9 +31,9 @@ type BrandingPolicies struct {
 	// Boolean indicating whether this policy is enabled.
 	Enabled pulumi.BoolOutput `pulumi:"enabled"`
 	// Settings for describing the modifications to various Help page features. Each property in this object accepts one of
-	//   'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
-	//   the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
-	//   Dashboard; see the documentation for each property to see the allowed values.
+	// 'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
+	// the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
+	// Dashboard; see the documentation for each property to see the allowed values.
 	HelpSettings BrandingPoliciesHelpSettingsOutput `pulumi:"helpSettings"`
 	// Name of the Dashboard branding policy.
 	Name pulumi.StringOutput `pulumi:"name"`
@@ -83,9 +83,9 @@ type brandingPoliciesState struct {
 	// Boolean indicating whether this policy is enabled.
 	Enabled *bool `pulumi:"enabled"`
 	// Settings for describing the modifications to various Help page features. Each property in this object accepts one of
-	//   'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
-	//   the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
-	//   Dashboard; see the documentation for each property to see the allowed values.
+	// 'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
+	// the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
+	// Dashboard; see the documentation for each property to see the allowed values.
 	HelpSettings *BrandingPoliciesHelpSettings `pulumi:"helpSettings"`
 	// Name of the Dashboard branding policy.
 	Name *string `pulumi:"name"`
@@ -103,9 +103,9 @@ type BrandingPoliciesState struct {
 	// Boolean indicating whether this policy is enabled.
 	Enabled pulumi.BoolPtrInput
 	// Settings for describing the modifications to various Help page features. Each property in this object accepts one of
-	//   'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
-	//   the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
-	//   Dashboard; see the documentation for each property to see the allowed values.
+	// 'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
+	// the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
+	// Dashboard; see the documentation for each property to see the allowed values.
 	HelpSettings BrandingPoliciesHelpSettingsPtrInput
 	// Name of the Dashboard branding policy.
 	Name pulumi.StringPtrInput
@@ -127,9 +127,9 @@ type brandingPoliciesArgs struct {
 	// Boolean indicating whether this policy is enabled.
 	Enabled *bool `pulumi:"enabled"`
 	// Settings for describing the modifications to various Help page features. Each property in this object accepts one of
-	//   'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
-	//   the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
-	//   Dashboard; see the documentation for each property to see the allowed values.
+	// 'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
+	// the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
+	// Dashboard; see the documentation for each property to see the allowed values.
 	HelpSettings *BrandingPoliciesHelpSettings `pulumi:"helpSettings"`
 	// Name of the Dashboard branding policy.
 	Name *string `pulumi:"name"`
@@ -148,9 +148,9 @@ type BrandingPoliciesArgs struct {
 	// Boolean indicating whether this policy is enabled.
 	Enabled pulumi.BoolPtrInput
 	// Settings for describing the modifications to various Help page features. Each property in this object accepts one of
-	//   'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
-	//   the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
-	//   Dashboard; see the documentation for each property to see the allowed values.
+	// 'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
+	// the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
+	// Dashboard; see the documentation for each property to see the allowed values.
 	HelpSettings BrandingPoliciesHelpSettingsPtrInput
 	// Name of the Dashboard branding policy.
 	Name pulumi.StringPtrInput
@@ -266,10 +266,9 @@ func (o BrandingPoliciesOutput) Enabled() pulumi.BoolOutput {
 }
 
 // Settings for describing the modifications to various Help page features. Each property in this object accepts one of
-//
-//	'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
-//	the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
-//	Dashboard; see the documentation for each property to see the allowed values.
+// 'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
+// the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
+// Dashboard; see the documentation for each property to see the allowed values.
 func (o BrandingPoliciesOutput) HelpSettings() BrandingPoliciesHelpSettingsOutput {
 	return o.ApplyT(func(v *BrandingPolicies) BrandingPoliciesHelpSettingsOutput { return v.HelpSettings }).(BrandingPoliciesHelpSettingsOutput)
 }

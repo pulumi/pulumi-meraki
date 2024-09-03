@@ -19,7 +19,7 @@ public final class GetSwitchMtuItem {
     private Integer defaultMtuSize;
     /**
      * @return Override MTU size for individual switches or switch templates.
-     *   An empty array will clear overrides.
+     * An empty array will clear overrides.
      * 
      */
     private List<GetSwitchMtuItemOverride> overrides;
@@ -34,7 +34,7 @@ public final class GetSwitchMtuItem {
     }
     /**
      * @return Override MTU size for individual switches or switch templates.
-     *   An empty array will clear overrides.
+     * An empty array will clear overrides.
      * 
      */
     public List<GetSwitchMtuItemOverride> overrides() {

@@ -47,9 +47,9 @@ namespace Pulumi.Meraki.Organizations
 
         /// <summary>
         /// Settings for describing the modifications to various Help page features. Each property in this object accepts one of
-        ///   'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
-        ///   the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
-        ///   Dashboard; see the documentation for each property to see the allowed values.
+        /// 'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
+        /// the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
+        /// Dashboard; see the documentation for each property to see the allowed values.
         /// </summary>
         [Output("helpSettings")]
         public Output<Outputs.BrandingPoliciesHelpSettings> HelpSettings { get; private set; } = null!;
@@ -139,9 +139,9 @@ namespace Pulumi.Meraki.Organizations
 
         /// <summary>
         /// Settings for describing the modifications to various Help page features. Each property in this object accepts one of
-        ///   'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
-        ///   the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
-        ///   Dashboard; see the documentation for each property to see the allowed values.
+        /// 'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
+        /// the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
+        /// Dashboard; see the documentation for each property to see the allowed values.
         /// </summary>
         [Input("helpSettings")]
         public Input<Inputs.BrandingPoliciesHelpSettingsArgs>? HelpSettings { get; set; }
@@ -192,9 +192,9 @@ namespace Pulumi.Meraki.Organizations
 
         /// <summary>
         /// Settings for describing the modifications to various Help page features. Each property in this object accepts one of
-        ///   'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
-        ///   the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
-        ///   Dashboard; see the documentation for each property to see the allowed values.
+        /// 'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
+        /// the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
+        /// Dashboard; see the documentation for each property to see the allowed values.
         /// </summary>
         [Input("helpSettings")]
         public Input<Inputs.BrandingPoliciesHelpSettingsGetArgs>? HelpSettings { get; set; }

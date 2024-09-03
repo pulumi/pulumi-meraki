@@ -76,7 +76,7 @@ export class SwitchDhcpServerPolicy extends pulumi.CustomResource {
     public readonly alerts!: pulumi.Output<outputs.networks.SwitchDhcpServerPolicyAlerts>;
     /**
      * List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
-     *   to block.An empty array will clear the entries.
+     * to block.An empty array will clear the entries.
      */
     public readonly allowedServers!: pulumi.Output<string[]>;
     /**
@@ -85,7 +85,7 @@ export class SwitchDhcpServerPolicy extends pulumi.CustomResource {
     public readonly arpInspection!: pulumi.Output<outputs.networks.SwitchDhcpServerPolicyArpInspection>;
     /**
      * List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set
-     *   to allow.An empty array will clear the entries.
+     * to allow.An empty array will clear the entries.
      */
     public readonly blockedServers!: pulumi.Output<string[]>;
     /**
@@ -143,7 +143,7 @@ export interface SwitchDhcpServerPolicyState {
     alerts?: pulumi.Input<inputs.networks.SwitchDhcpServerPolicyAlerts>;
     /**
      * List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
-     *   to block.An empty array will clear the entries.
+     * to block.An empty array will clear the entries.
      */
     allowedServers?: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -152,7 +152,7 @@ export interface SwitchDhcpServerPolicyState {
     arpInspection?: pulumi.Input<inputs.networks.SwitchDhcpServerPolicyArpInspection>;
     /**
      * List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set
-     *   to allow.An empty array will clear the entries.
+     * to allow.An empty array will clear the entries.
      */
     blockedServers?: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -175,7 +175,7 @@ export interface SwitchDhcpServerPolicyArgs {
     alerts?: pulumi.Input<inputs.networks.SwitchDhcpServerPolicyAlerts>;
     /**
      * List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
-     *   to block.An empty array will clear the entries.
+     * to block.An empty array will clear the entries.
      */
     allowedServers?: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -184,7 +184,7 @@ export interface SwitchDhcpServerPolicyArgs {
     arpInspection?: pulumi.Input<inputs.networks.SwitchDhcpServerPolicyArpInspection>;
     /**
      * List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set
-     *   to allow.An empty array will clear the entries.
+     * to allow.An empty array will clear the entries.
      */
     blockedServers?: pulumi.Input<pulumi.Input<string>[]>;
     /**

@@ -50,7 +50,7 @@ public final class SwitchMtuState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * Override MTU size for individual switches or switch templates.
-     *   An empty array will clear overrides.
+     * An empty array will clear overrides.
      * 
      */
     @Import(name="overrides")
@@ -58,7 +58,7 @@ public final class SwitchMtuState extends com.pulumi.resources.ResourceArgs {
 
     /**
      * @return Override MTU size for individual switches or switch templates.
-     *   An empty array will clear overrides.
+     * An empty array will clear overrides.
      * 
      */
     public Optional<Output<List<SwitchMtuOverrideArgs>>> overrides() {
@@ -135,7 +135,7 @@ public final class SwitchMtuState extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param overrides Override MTU size for individual switches or switch templates.
-         *   An empty array will clear overrides.
+         * An empty array will clear overrides.
          * 
          * @return builder
          * 
@@ -147,7 +147,7 @@ public final class SwitchMtuState extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param overrides Override MTU size for individual switches or switch templates.
-         *   An empty array will clear overrides.
+         * An empty array will clear overrides.
          * 
          * @return builder
          * 
@@ -158,7 +158,7 @@ public final class SwitchMtuState extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param overrides Override MTU size for individual switches or switch templates.
-         *   An empty array will clear overrides.
+         * An empty array will clear overrides.
          * 
          * @return builder
          * 

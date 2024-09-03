@@ -53,7 +53,7 @@ export class SwitchMtu extends pulumi.CustomResource {
     public readonly networkId!: pulumi.Output<string>;
     /**
      * Override MTU size for individual switches or switch templates.
-     *   An empty array will clear overrides.
+     * An empty array will clear overrides.
      */
     public readonly overrides!: pulumi.Output<outputs.networks.SwitchMtuOverride[]>;
 
@@ -101,7 +101,7 @@ export interface SwitchMtuState {
     networkId?: pulumi.Input<string>;
     /**
      * Override MTU size for individual switches or switch templates.
-     *   An empty array will clear overrides.
+     * An empty array will clear overrides.
      */
     overrides?: pulumi.Input<pulumi.Input<inputs.networks.SwitchMtuOverride>[]>;
 }
@@ -120,7 +120,7 @@ export interface SwitchMtuArgs {
     networkId: pulumi.Input<string>;
     /**
      * Override MTU size for individual switches or switch templates.
-     *   An empty array will clear overrides.
+     * An empty array will clear overrides.
      */
     overrides?: pulumi.Input<pulumi.Input<inputs.networks.SwitchMtuOverride>[]>;
 }

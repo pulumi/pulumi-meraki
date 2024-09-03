@@ -15,12 +15,12 @@ namespace Pulumi.Meraki.Networks.Outputs
     {
         /// <summary>
         /// Default multicast setting for entire network. IGMP snooping and Flood unknown
-        ///   multicast traffic settings are enabled by default.
+        /// multicast traffic settings are enabled by default.
         /// </summary>
         public readonly Outputs.GetSwitchRoutingMulticastItemDefaultSettingsResult DefaultSettings;
         /// <summary>
         /// Array of paired switches/stacks/profiles and corresponding multicast settings.
-        ///   An empty array will clear the multicast settings.
+        /// An empty array will clear the multicast settings.
         /// </summary>
         public readonly ImmutableArray<Outputs.GetSwitchRoutingMulticastItemOverrideResult> Overrides;
 

@@ -4424,7 +4424,7 @@ export namespace networks {
          */
         includedCidrs: string[];
         /**
-         * Whether special IPv4 addresses should be used (see: https://tools.ietf.org/html/rfc5735)
+         * Whether special IPv4 addresses should be used (see: [https://tools.ietf.org/html/rfc5735](https://tools.ietf.org/html/rfc5735))
          */
         useDefault: boolean;
     }
@@ -4623,7 +4623,7 @@ export namespace networks {
          * a hostname (e.g. "somesite.com"), a port (e.g. 8080), or an IP range ("192.1.0.0",
          * "192.1.0.0/16", or "10.1.0.0/16:80"). 'localNet' also supports CIDR notation, excluding
          * custom ports.
-         *  If "type" is 'application' or 'applicationCategory', then "value" must be an object
+         * If "type" is 'application' or 'applicationCategory', then "value" must be an object
          * with the structure { "id": "meraki:layer7/..." }, where "id" is the application category or
          * application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
          * endpoint).
@@ -8315,7 +8315,7 @@ export namespace networks {
          */
         includedCidrs: string[];
         /**
-         * Whether special IPv4 addresses should be used (see: https://tools.ietf.org/html/rfc5735)
+         * Whether special IPv4 addresses should be used (see: [https://tools.ietf.org/html/rfc5735](https://tools.ietf.org/html/rfc5735))
          */
         useDefault: boolean;
     }
@@ -13343,7 +13343,7 @@ export namespace networks {
         alerts: outputs.networks.GetSwitchDhcpServerPolicyItemAlerts;
         /**
          * List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
-         *   to block.An empty array will clear the entries.
+         * to block.An empty array will clear the entries.
          */
         allowedServers: string[];
         /**
@@ -13352,7 +13352,7 @@ export namespace networks {
         arpInspection: outputs.networks.GetSwitchDhcpServerPolicyItemArpInspection;
         /**
          * List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set
-         *   to allow.An empty array will clear the entries.
+         * to allow.An empty array will clear the entries.
          */
         blockedServers: string[];
         /**
@@ -13763,7 +13763,7 @@ export namespace networks {
         defaultMtuSize: number;
         /**
          * Override MTU size for individual switches or switch templates.
-         *   An empty array will clear overrides.
+         * An empty array will clear overrides.
          */
         overrides: outputs.networks.GetSwitchMtuItemOverride[];
     }
@@ -13952,12 +13952,12 @@ export namespace networks {
     export interface GetSwitchRoutingMulticastItem {
         /**
          * Default multicast setting for entire network. IGMP snooping and Flood unknown
-         *   multicast traffic settings are enabled by default.
+         * multicast traffic settings are enabled by default.
          */
         defaultSettings: outputs.networks.GetSwitchRoutingMulticastItemDefaultSettings;
         /**
          * Array of paired switches/stacks/profiles and corresponding multicast settings.
-         *   An empty array will clear the multicast settings.
+         * An empty array will clear the multicast settings.
          */
         overrides: outputs.networks.GetSwitchRoutingMulticastItemOverride[];
     }
@@ -16490,7 +16490,7 @@ export namespace networks {
          * a hostname (e.g. "somesite.com"), a port (e.g. 8080), or an IP range ("192.1.0.0",
          * "192.1.0.0/16", or "10.1.0.0/16:80"). 'localNet' also supports CIDR notation, excluding
          * custom ports.
-         *  If "type" is 'application' or 'applicationCategory', then "value" must be an object
+         * If "type" is 'application' or 'applicationCategory', then "value" must be an object
          * with the structure { "id": "meraki:layer7/..." }, where "id" is the application category or
          * application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
          * endpoint).
@@ -16765,7 +16765,7 @@ export namespace networks {
          * a hostname (e.g. "somesite.com"), a port (e.g. 8080), or an IP range ("192.1.0.0",
          * "192.1.0.0/16", or "10.1.0.0/16:80"). 'localNet' also supports CIDR notation, excluding
          * custom ports.
-         *  If "type" is 'application' or 'applicationCategory', then "value" must be an object
+         * If "type" is 'application' or 'applicationCategory', then "value" must be an object
          * with the structure { "id": "meraki:layer7/..." }, where "id" is the application category or
          * application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
          * endpoint).
@@ -20492,7 +20492,7 @@ export namespace networks {
          * a hostname (e.g. "somesite.com"), a port (e.g. 8080), or an IP range ("192.1.0.0",
          * "192.1.0.0/16", or "10.1.0.0/16:80"). 'localNet' also supports CIDR notation, excluding
          * custom ports.
-         *  If "type" is 'application' or 'applicationCategory', then "value" must be an object
+         * If "type" is 'application' or 'applicationCategory', then "value" must be an object
          * with the structure { "id": "meraki:layer7/..." }, where "id" is the application category or
          * application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
          * endpoint).
@@ -20817,7 +20817,7 @@ export namespace organizations {
          */
         message: string;
         /**
-         * A rule identifier of the format meraki:intrusion/snort/GID/\n\n/SID/\n\n. gid and sid can be obtained from either https://www.snort.org/rule-docs or as ruleIds from the security events in /organization/[orgId]/securityEvents
+         * A rule identifier of the format meraki:intrusion/snort/GID/\n\n/SID/\n\n. gid and sid can be obtained from either [https://www.snort.org/rule-docs](https://www.snort.org/rule-docs) or as ruleIds from the security events in /organization/[orgId]/securityEvents
          */
         ruleId: string;
     }
@@ -21074,9 +21074,9 @@ export namespace organizations {
         appliesTo: string;
         /**
          * If 'appliesTo' is set to one of 'Specific admins...', 'All admins of networks...' or 'All admins of networks tagged...', then you must specify this 'values' property to provide the set of
-         *   entities to apply the branding policy to. For 'Specific admins...', specify an array of admin IDs. For 'All admins of
-         *   networks...', specify an array of network IDs and/or configuration template IDs. For 'All admins of networks tagged...',
-         *   specify an array of tag names.
+         * entities to apply the branding policy to. For 'Specific admins...', specify an array of admin IDs. For 'All admins of
+         * networks...', specify an array of network IDs and/or configuration template IDs. For 'All admins of networks tagged...',
+         * specify an array of tag names.
          */
         values: string[];
     }
@@ -21121,12 +21121,12 @@ export namespace organizations {
     export interface BrandingPoliciesHelpSettings {
         /**
          * The 'Help > API docs' subtab where a detailed description of the Dashboard API is listed. Can be one of
-         *   'default or inherit', 'hide' or 'show'.
+         * 'default or inherit', 'hide' or 'show'.
          */
         apiDocsSubtab: string;
         /**
          * The 'Help > Cases' Dashboard subtab on which Cisco Meraki support cases for this organization can be managed. Can be one
-         *   of 'default or inherit', 'hide' or 'show'.
+         * of 'default or inherit', 'hide' or 'show'.
          */
         casesSubtab: string;
         /**
@@ -21139,18 +21139,18 @@ export namespace organizations {
         communitySubtab: string;
         /**
          * The 'Help > Data protection requests' Dashboard subtab on which requests to delete, restrict, or export end-user data can
-         *   be audited. Can be one of 'default or inherit', 'hide' or 'show'.
+         * be audited. Can be one of 'default or inherit', 'hide' or 'show'.
          */
         dataProtectionRequestsSubtab: string;
         /**
          * The 'Help > Firewall info' subtab where necessary upstream firewall rules for communication to the Cisco Meraki cloud are
-         *   listed. Can be one of 'default or inherit', 'hide' or 'show'.
+         * listed. Can be one of 'default or inherit', 'hide' or 'show'.
          */
         firewallInfoSubtab: string;
         /**
          * The 'Help > Get Help' subtab on which Cisco Meraki KB, Product Manuals, and Support/Case Information are displayed. Note
-         *   that if this subtab is hidden, branding customizations for the KB on 'Get help', Cisco Meraki product documentation,
-         *   and support contact info will not be visible. Can be one of 'default or inherit', 'hide' or 'show'.
+         * that if this subtab is hidden, branding customizations for the KB on 'Get help', Cisco Meraki product documentation,
+         * and support contact info will not be visible. Can be one of 'default or inherit', 'hide' or 'show'.
          */
         getHelpSubtab: string;
         /**
@@ -21159,17 +21159,17 @@ export namespace organizations {
         getHelpSubtabKnowledgeBaseSearch: string;
         /**
          * The 'Help > Replacement info' subtab where important information regarding device replacements is detailed. Can be one of
-         *   'default or inherit', 'hide' or 'show'.
+         * 'default or inherit', 'hide' or 'show'.
          */
         hardwareReplacementsSubtab: string;
         /**
          * The Help tab, under which all support information resides. If this tab is hidden, no other 'Help' branding
-         *   customizations will be visible. Can be one of 'default or inherit', 'hide' or 'show'.
+         * customizations will be visible. Can be one of 'default or inherit', 'hide' or 'show'.
          */
         helpTab: string;
         /**
          * The 'Help Widget' is a support widget which provides access to live chat, documentation links, Sales contact info,
-         *   and other contact avenues to reach Meraki Support. Can be one of 'default or inherit', 'hide' or 'show'.
+         * and other contact avenues to reach Meraki Support. Can be one of 'default or inherit', 'hide' or 'show'.
          */
         helpWidget: string;
         /**
@@ -21178,7 +21178,7 @@ export namespace organizations {
         newFeaturesSubtab: string;
         /**
          * The 'SM Forums' subtab which links to community-based support for Cisco Meraki Systems Manager. Only configurable for
-         *   organizations that contain Systems Manager networks. Can be one of 'default or inherit', 'hide' or 'show'.
+         * organizations that contain Systems Manager networks. Can be one of 'default or inherit', 'hide' or 'show'.
          */
         smForums: string;
         /**
@@ -21187,7 +21187,7 @@ export namespace organizations {
         supportContactInfo: string;
         /**
          * The universal search box always visible on Dashboard will, by default, present results from the Meraki KB. This configures
-         *   whether these Meraki KB results should be returned. Can be one of 'default or inherit', 'hide' or 'show'.
+         * whether these Meraki KB results should be returned. Can be one of 'default or inherit', 'hide' or 'show'.
          */
         universalSearchKnowledgeBaseSearch: string;
     }
@@ -22378,9 +22378,9 @@ export namespace organizations {
         enabled: boolean;
         /**
          * Settings for describing the modifications to various Help page features. Each property in this object accepts one of
-         *   'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
-         *   the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
-         *   Dashboard; see the documentation for each property to see the allowed values.
+         * 'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
+         * the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
+         * Dashboard; see the documentation for each property to see the allowed values.
          */
         helpSettings: outputs.organizations.GetBrandingPoliciesItemHelpSettings;
         /**
@@ -22396,9 +22396,9 @@ export namespace organizations {
         appliesTo: string;
         /**
          * If 'appliesTo' is set to one of 'Specific admins...', 'All admins of networks...' or 'All admins of networks tagged...', then you must specify this 'values' property to provide the set of
-         *   entities to apply the branding policy to. For 'Specific admins...', specify an array of admin IDs. For 'All admins of
-         *   networks...', specify an array of network IDs and/or configuration template IDs. For 'All admins of networks tagged...',
-         *   specify an array of tag names.
+         * entities to apply the branding policy to. For 'Specific admins...', specify an array of admin IDs. For 'All admins of
+         * networks...', specify an array of network IDs and/or configuration template IDs. For 'All admins of networks tagged...',
+         * specify an array of tag names.
          */
         values: string[];
     }
@@ -22435,12 +22435,12 @@ export namespace organizations {
     export interface GetBrandingPoliciesItemHelpSettings {
         /**
          * The 'Help > API docs' subtab where a detailed description of the Dashboard API is listed. Can be one of
-         *   'default or inherit', 'hide' or 'show'.
+         * 'default or inherit', 'hide' or 'show'.
          */
         apiDocsSubtab: string;
         /**
          * The 'Help > Cases' Dashboard subtab on which Cisco Meraki support cases for this organization can be managed. Can be one
-         *   of 'default or inherit', 'hide' or 'show'.
+         * of 'default or inherit', 'hide' or 'show'.
          */
         casesSubtab: string;
         /**
@@ -22453,18 +22453,18 @@ export namespace organizations {
         communitySubtab: string;
         /**
          * The 'Help > Data protection requests' Dashboard subtab on which requests to delete, restrict, or export end-user data can
-         *   be audited. Can be one of 'default or inherit', 'hide' or 'show'.
+         * be audited. Can be one of 'default or inherit', 'hide' or 'show'.
          */
         dataProtectionRequestsSubtab: string;
         /**
          * The 'Help > Firewall info' subtab where necessary upstream firewall rules for communication to the Cisco Meraki cloud are
-         *   listed. Can be one of 'default or inherit', 'hide' or 'show'.
+         * listed. Can be one of 'default or inherit', 'hide' or 'show'.
          */
         firewallInfoSubtab: string;
         /**
          * The 'Help > Get Help' subtab on which Cisco Meraki KB, Product Manuals, and Support/Case Information are displayed. Note
-         *   that if this subtab is hidden, branding customizations for the KB on 'Get help', Cisco Meraki product documentation,
-         *   and support contact info will not be visible. Can be one of 'default or inherit', 'hide' or 'show'.
+         * that if this subtab is hidden, branding customizations for the KB on 'Get help', Cisco Meraki product documentation,
+         * and support contact info will not be visible. Can be one of 'default or inherit', 'hide' or 'show'.
          */
         getHelpSubtab: string;
         /**
@@ -22473,17 +22473,17 @@ export namespace organizations {
         getHelpSubtabKnowledgeBaseSearch: string;
         /**
          * The 'Help > Replacement info' subtab where important information regarding device replacements is detailed. Can be one of
-         *   'default or inherit', 'hide' or 'show'.
+         * 'default or inherit', 'hide' or 'show'.
          */
         hardwareReplacementsSubtab: string;
         /**
          * The Help tab, under which all support information resides. If this tab is hidden, no other 'Help' branding
-         *   customizations will be visible. Can be one of 'default or inherit', 'hide' or 'show'.
+         * customizations will be visible. Can be one of 'default or inherit', 'hide' or 'show'.
          */
         helpTab: string;
         /**
          * The 'Help Widget' is a support widget which provides access to live chat, documentation links, Sales contact info,
-         *   and other contact avenues to reach Meraki Support. Can be one of 'default or inherit', 'hide' or 'show'.
+         * and other contact avenues to reach Meraki Support. Can be one of 'default or inherit', 'hide' or 'show'.
          */
         helpWidget: string;
         /**
@@ -22492,7 +22492,7 @@ export namespace organizations {
         newFeaturesSubtab: string;
         /**
          * The 'SM Forums' subtab which links to community-based support for Cisco Meraki Systems Manager. Only configurable for
-         *   organizations that contain Systems Manager networks. Can be one of 'default or inherit', 'hide' or 'show'.
+         * organizations that contain Systems Manager networks. Can be one of 'default or inherit', 'hide' or 'show'.
          */
         smForums: string;
         /**
@@ -22501,7 +22501,7 @@ export namespace organizations {
         supportContactInfo: string;
         /**
          * The universal search box always visible on Dashboard will, by default, present results from the Meraki KB. This configures
-         *   whether these Meraki KB results should be returned. Can be one of 'default or inherit', 'hide' or 'show'.
+         * whether these Meraki KB results should be returned. Can be one of 'default or inherit', 'hide' or 'show'.
          */
         universalSearchKnowledgeBaseSearch: string;
     }

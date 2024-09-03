@@ -7676,7 +7676,7 @@ type GetWirelessSsidsTrafficShapingRulesItemRuleDefinition struct {
 	// a hostname (e.g. "somesite.com"), a port (e.g. 8080), or an IP range ("192.1.0.0",
 	// "192.1.0.0/16", or "10.1.0.0/16:80"). 'localNet' also supports CIDR notation, excluding
 	// custom ports.
-	//  If "type" is 'application' or 'applicationCategory', then "value" must be an object
+	// If "type" is 'application' or 'applicationCategory', then "value" must be an object
 	// with the structure { "id": "meraki:layer7/..." }, where "id" is the application category or
 	// application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
 	// endpoint).
@@ -7701,7 +7701,7 @@ type GetWirelessSsidsTrafficShapingRulesItemRuleDefinitionArgs struct {
 	// a hostname (e.g. "somesite.com"), a port (e.g. 8080), or an IP range ("192.1.0.0",
 	// "192.1.0.0/16", or "10.1.0.0/16:80"). 'localNet' also supports CIDR notation, excluding
 	// custom ports.
-	//  If "type" is 'application' or 'applicationCategory', then "value" must be an object
+	// If "type" is 'application' or 'applicationCategory', then "value" must be an object
 	// with the structure { "id": "meraki:layer7/..." }, where "id" is the application category or
 	// application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
 	// endpoint).
@@ -7768,9 +7768,7 @@ func (o GetWirelessSsidsTrafficShapingRulesItemRuleDefinitionOutput) Type() pulu
 // a hostname (e.g. "somesite.com"), a port (e.g. 8080), or an IP range ("192.1.0.0",
 // "192.1.0.0/16", or "10.1.0.0/16:80"). 'localNet' also supports CIDR notation, excluding
 // custom ports.
-//
-//	If "type" is 'application' or 'applicationCategory', then "value" must be an object
-//
+// If "type" is 'application' or 'applicationCategory', then "value" must be an object
 // with the structure { "id": "meraki:layer7/..." }, where "id" is the application category or
 // application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
 // endpoint).

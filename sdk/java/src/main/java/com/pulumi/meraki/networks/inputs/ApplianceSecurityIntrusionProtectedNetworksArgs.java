@@ -48,14 +48,14 @@ public final class ApplianceSecurityIntrusionProtectedNetworksArgs extends com.p
     }
 
     /**
-     * Whether special IPv4 addresses should be used (see: https://tools.ietf.org/html/rfc5735)
+     * Whether special IPv4 addresses should be used (see: [https://tools.ietf.org/html/rfc5735](https://tools.ietf.org/html/rfc5735))
      * 
      */
     @Import(name="useDefault")
     private @Nullable Output<Boolean> useDefault;
 
     /**
-     * @return Whether special IPv4 addresses should be used (see: https://tools.ietf.org/html/rfc5735)
+     * @return Whether special IPv4 addresses should be used (see: [https://tools.ietf.org/html/rfc5735](https://tools.ietf.org/html/rfc5735))
      * 
      */
     public Optional<Output<Boolean>> useDefault() {
@@ -151,7 +151,7 @@ public final class ApplianceSecurityIntrusionProtectedNetworksArgs extends com.p
         }
 
         /**
-         * @param useDefault Whether special IPv4 addresses should be used (see: https://tools.ietf.org/html/rfc5735)
+         * @param useDefault Whether special IPv4 addresses should be used (see: [https://tools.ietf.org/html/rfc5735](https://tools.ietf.org/html/rfc5735))
          * 
          * @return builder
          * 
@@ -162,7 +162,7 @@ public final class ApplianceSecurityIntrusionProtectedNetworksArgs extends com.p
         }
 
         /**
-         * @param useDefault Whether special IPv4 addresses should be used (see: https://tools.ietf.org/html/rfc5735)
+         * @param useDefault Whether special IPv4 addresses should be used (see: [https://tools.ietf.org/html/rfc5735](https://tools.ietf.org/html/rfc5735))
          * 
          * @return builder
          * 

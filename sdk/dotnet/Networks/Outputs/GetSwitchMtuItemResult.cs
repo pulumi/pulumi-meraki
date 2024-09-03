@@ -19,7 +19,7 @@ namespace Pulumi.Meraki.Networks.Outputs
         public readonly int DefaultMtuSize;
         /// <summary>
         /// Override MTU size for individual switches or switch templates.
-        ///   An empty array will clear overrides.
+        /// An empty array will clear overrides.
         /// </summary>
         public readonly ImmutableArray<Outputs.GetSwitchMtuItemOverrideResult> Overrides;
 

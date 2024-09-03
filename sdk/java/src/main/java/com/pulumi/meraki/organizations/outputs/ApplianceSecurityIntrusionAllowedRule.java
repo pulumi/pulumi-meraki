@@ -17,7 +17,7 @@ public final class ApplianceSecurityIntrusionAllowedRule {
      */
     private @Nullable String message;
     /**
-     * @return A rule identifier of the format meraki:intrusion/snort/GID/\n\n/SID/\n\n. gid and sid can be obtained from either https://www.snort.org/rule-docs or as ruleIds from the security events in /organization/[orgId]/securityEvents
+     * @return A rule identifier of the format meraki:intrusion/snort/GID/\n\n/SID/\n\n. gid and sid can be obtained from either [https://www.snort.org/rule-docs](https://www.snort.org/rule-docs) or as ruleIds from the security events in /organization/[orgId]/securityEvents
      * 
      */
     private @Nullable String ruleId;
@@ -31,7 +31,7 @@ public final class ApplianceSecurityIntrusionAllowedRule {
         return Optional.ofNullable(this.message);
     }
     /**
-     * @return A rule identifier of the format meraki:intrusion/snort/GID/\n\n/SID/\n\n. gid and sid can be obtained from either https://www.snort.org/rule-docs or as ruleIds from the security events in /organization/[orgId]/securityEvents
+     * @return A rule identifier of the format meraki:intrusion/snort/GID/\n\n/SID/\n\n. gid and sid can be obtained from either [https://www.snort.org/rule-docs](https://www.snort.org/rule-docs) or as ruleIds from the security events in /organization/[orgId]/securityEvents
      * 
      */
     public Optional<String> ruleId() {

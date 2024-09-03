@@ -24,7 +24,7 @@ public final class ApplianceSecurityIntrusionProtectedNetworks {
      */
     private @Nullable List<String> includedCidrs;
     /**
-     * @return Whether special IPv4 addresses should be used (see: https://tools.ietf.org/html/rfc5735)
+     * @return Whether special IPv4 addresses should be used (see: [https://tools.ietf.org/html/rfc5735](https://tools.ietf.org/html/rfc5735))
      * 
      */
     private @Nullable Boolean useDefault;
@@ -45,7 +45,7 @@ public final class ApplianceSecurityIntrusionProtectedNetworks {
         return this.includedCidrs == null ? List.of() : this.includedCidrs;
     }
     /**
-     * @return Whether special IPv4 addresses should be used (see: https://tools.ietf.org/html/rfc5735)
+     * @return Whether special IPv4 addresses should be used (see: [https://tools.ietf.org/html/rfc5735](https://tools.ietf.org/html/rfc5735))
      * 
      */
     public Optional<Boolean> useDefault() {

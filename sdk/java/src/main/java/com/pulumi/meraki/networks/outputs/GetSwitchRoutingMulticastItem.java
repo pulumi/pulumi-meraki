@@ -14,13 +14,13 @@ import java.util.Objects;
 public final class GetSwitchRoutingMulticastItem {
     /**
      * @return Default multicast setting for entire network. IGMP snooping and Flood unknown
-     *   multicast traffic settings are enabled by default.
+     * multicast traffic settings are enabled by default.
      * 
      */
     private GetSwitchRoutingMulticastItemDefaultSettings defaultSettings;
     /**
      * @return Array of paired switches/stacks/profiles and corresponding multicast settings.
-     *   An empty array will clear the multicast settings.
+     * An empty array will clear the multicast settings.
      * 
      */
     private List<GetSwitchRoutingMulticastItemOverride> overrides;
@@ -28,7 +28,7 @@ public final class GetSwitchRoutingMulticastItem {
     private GetSwitchRoutingMulticastItem() {}
     /**
      * @return Default multicast setting for entire network. IGMP snooping and Flood unknown
-     *   multicast traffic settings are enabled by default.
+     * multicast traffic settings are enabled by default.
      * 
      */
     public GetSwitchRoutingMulticastItemDefaultSettings defaultSettings() {
@@ -36,7 +36,7 @@ public final class GetSwitchRoutingMulticastItem {
     }
     /**
      * @return Array of paired switches/stacks/profiles and corresponding multicast settings.
-     *   An empty array will clear the multicast settings.
+     * An empty array will clear the multicast settings.
      * 
      */
     public List<GetSwitchRoutingMulticastItemOverride> overrides() {

@@ -27,9 +27,9 @@ namespace Pulumi.Meraki.Organizations.Outputs
         public readonly bool Enabled;
         /// <summary>
         /// Settings for describing the modifications to various Help page features. Each property in this object accepts one of
-        ///   'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
-        ///   the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
-        ///   Dashboard; see the documentation for each property to see the allowed values.
+        /// 'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
+        /// the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
+        /// Dashboard; see the documentation for each property to see the allowed values.
         /// </summary>
         public readonly Outputs.GetBrandingPoliciesItemHelpSettingsResult HelpSettings;
         /// <summary>

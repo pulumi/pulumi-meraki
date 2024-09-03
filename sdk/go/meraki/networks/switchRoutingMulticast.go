@@ -23,12 +23,12 @@ type SwitchRoutingMulticast struct {
 	pulumi.CustomResourceState
 
 	// Default multicast setting for entire network. IGMP snooping and Flood unknown
-	//   multicast traffic settings are enabled by default.
+	// multicast traffic settings are enabled by default.
 	DefaultSettings SwitchRoutingMulticastDefaultSettingsOutput `pulumi:"defaultSettings"`
 	// networkId path parameter. Network ID
 	NetworkId pulumi.StringOutput `pulumi:"networkId"`
 	// Array of paired switches/stacks/profiles and corresponding multicast settings.
-	//   An empty array will clear the multicast settings.
+	// An empty array will clear the multicast settings.
 	Overrides SwitchRoutingMulticastOverrideArrayOutput `pulumi:"overrides"`
 }
 
@@ -66,23 +66,23 @@ func GetSwitchRoutingMulticast(ctx *pulumi.Context,
 // Input properties used for looking up and filtering SwitchRoutingMulticast resources.
 type switchRoutingMulticastState struct {
 	// Default multicast setting for entire network. IGMP snooping and Flood unknown
-	//   multicast traffic settings are enabled by default.
+	// multicast traffic settings are enabled by default.
 	DefaultSettings *SwitchRoutingMulticastDefaultSettings `pulumi:"defaultSettings"`
 	// networkId path parameter. Network ID
 	NetworkId *string `pulumi:"networkId"`
 	// Array of paired switches/stacks/profiles and corresponding multicast settings.
-	//   An empty array will clear the multicast settings.
+	// An empty array will clear the multicast settings.
 	Overrides []SwitchRoutingMulticastOverride `pulumi:"overrides"`
 }
 
 type SwitchRoutingMulticastState struct {
 	// Default multicast setting for entire network. IGMP snooping and Flood unknown
-	//   multicast traffic settings are enabled by default.
+	// multicast traffic settings are enabled by default.
 	DefaultSettings SwitchRoutingMulticastDefaultSettingsPtrInput
 	// networkId path parameter. Network ID
 	NetworkId pulumi.StringPtrInput
 	// Array of paired switches/stacks/profiles and corresponding multicast settings.
-	//   An empty array will clear the multicast settings.
+	// An empty array will clear the multicast settings.
 	Overrides SwitchRoutingMulticastOverrideArrayInput
 }
 
@@ -92,24 +92,24 @@ func (SwitchRoutingMulticastState) ElementType() reflect.Type {
 
 type switchRoutingMulticastArgs struct {
 	// Default multicast setting for entire network. IGMP snooping and Flood unknown
-	//   multicast traffic settings are enabled by default.
+	// multicast traffic settings are enabled by default.
 	DefaultSettings *SwitchRoutingMulticastDefaultSettings `pulumi:"defaultSettings"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
 	// Array of paired switches/stacks/profiles and corresponding multicast settings.
-	//   An empty array will clear the multicast settings.
+	// An empty array will clear the multicast settings.
 	Overrides []SwitchRoutingMulticastOverride `pulumi:"overrides"`
 }
 
 // The set of arguments for constructing a SwitchRoutingMulticast resource.
 type SwitchRoutingMulticastArgs struct {
 	// Default multicast setting for entire network. IGMP snooping and Flood unknown
-	//   multicast traffic settings are enabled by default.
+	// multicast traffic settings are enabled by default.
 	DefaultSettings SwitchRoutingMulticastDefaultSettingsPtrInput
 	// networkId path parameter. Network ID
 	NetworkId pulumi.StringInput
 	// Array of paired switches/stacks/profiles and corresponding multicast settings.
-	//   An empty array will clear the multicast settings.
+	// An empty array will clear the multicast settings.
 	Overrides SwitchRoutingMulticastOverrideArrayInput
 }
 
@@ -201,8 +201,7 @@ func (o SwitchRoutingMulticastOutput) ToSwitchRoutingMulticastOutputWithContext(
 }
 
 // Default multicast setting for entire network. IGMP snooping and Flood unknown
-//
-//	multicast traffic settings are enabled by default.
+// multicast traffic settings are enabled by default.
 func (o SwitchRoutingMulticastOutput) DefaultSettings() SwitchRoutingMulticastDefaultSettingsOutput {
 	return o.ApplyT(func(v *SwitchRoutingMulticast) SwitchRoutingMulticastDefaultSettingsOutput { return v.DefaultSettings }).(SwitchRoutingMulticastDefaultSettingsOutput)
 }
@@ -213,8 +212,7 @@ func (o SwitchRoutingMulticastOutput) NetworkId() pulumi.StringOutput {
 }
 
 // Array of paired switches/stacks/profiles and corresponding multicast settings.
-//
-//	An empty array will clear the multicast settings.
+// An empty array will clear the multicast settings.
 func (o SwitchRoutingMulticastOutput) Overrides() SwitchRoutingMulticastOverrideArrayOutput {
 	return o.ApplyT(func(v *SwitchRoutingMulticast) SwitchRoutingMulticastOverrideArrayOutput { return v.Overrides }).(SwitchRoutingMulticastOverrideArrayOutput)
 }

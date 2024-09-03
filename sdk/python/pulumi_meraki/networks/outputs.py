@@ -3406,7 +3406,7 @@ class ApplianceSecurityIntrusionProtectedNetworks(dict):
         """
         :param Sequence[str] excluded_cidrs: List of IP addresses or subnets being excluded from protection
         :param Sequence[str] included_cidrs: List of IP addresses or subnets being protected
-        :param bool use_default: Whether special IPv4 addresses should be used (see: https://tools.ietf.org/html/rfc5735)
+        :param bool use_default: Whether special IPv4 addresses should be used (see: [https://tools.ietf.org/html/rfc5735](https://tools.ietf.org/html/rfc5735))
         """
         if excluded_cidrs is not None:
             pulumi.set(__self__, "excluded_cidrs", excluded_cidrs)
@@ -3435,7 +3435,7 @@ class ApplianceSecurityIntrusionProtectedNetworks(dict):
     @pulumi.getter(name="useDefault")
     def use_default(self) -> Optional[bool]:
         """
-        Whether special IPv4 addresses should be used (see: https://tools.ietf.org/html/rfc5735)
+        Whether special IPv4 addresses should be used (see: [https://tools.ietf.org/html/rfc5735](https://tools.ietf.org/html/rfc5735))
         """
         return pulumi.get(self, "use_default")
 
@@ -4089,7 +4089,7 @@ class ApplianceTrafficShapingRulesRuleDefinition(dict):
                a hostname (e.g. "somesite.com"), a port (e.g. 8080), or an IP range ("192.1.0.0",
                "192.1.0.0/16", or "10.1.0.0/16:80"). 'localNet' also supports CIDR notation, excluding
                custom ports.
-                If "type" is 'application' or 'applicationCategory', then "value" must be an object
+               If "type" is 'application' or 'applicationCategory', then "value" must be an object
                with the structure { "id": "meraki:layer7/..." }, where "id" is the application category or
                application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
                endpoint).
@@ -4121,7 +4121,7 @@ class ApplianceTrafficShapingRulesRuleDefinition(dict):
         a hostname (e.g. "somesite.com"), a port (e.g. 8080), or an IP range ("192.1.0.0",
         "192.1.0.0/16", or "10.1.0.0/16:80"). 'localNet' also supports CIDR notation, excluding
         custom ports.
-         If "type" is 'application' or 'applicationCategory', then "value" must be an object
+        If "type" is 'application' or 'applicationCategory', then "value" must be an object
         with the structure { "id": "meraki:layer7/..." }, where "id" is the application category or
         application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
         endpoint).
@@ -16365,7 +16365,7 @@ class GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleDefinition(dict):
                a hostname (e.g. "somesite.com"), a port (e.g. 8080), or an IP range ("192.1.0.0",
                "192.1.0.0/16", or "10.1.0.0/16:80"). 'localNet' also supports CIDR notation, excluding
                custom ports.
-                If "type" is 'application' or 'applicationCategory', then "value" must be an object
+               If "type" is 'application' or 'applicationCategory', then "value" must be an object
                with the structure { "id": "meraki:layer7/..." }, where "id" is the application category or
                application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
                endpoint).
@@ -16391,7 +16391,7 @@ class GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleDefinition(dict):
         a hostname (e.g. "somesite.com"), a port (e.g. 8080), or an IP range ("192.1.0.0",
         "192.1.0.0/16", or "10.1.0.0/16:80"). 'localNet' also supports CIDR notation, excluding
         custom ports.
-         If "type" is 'application' or 'applicationCategory', then "value" must be an object
+        If "type" is 'application' or 'applicationCategory', then "value" must be an object
         with the structure { "id": "meraki:layer7/..." }, where "id" is the application category or
         application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
         endpoint).
@@ -29595,7 +29595,7 @@ class WirelessSsidsTrafficShapingRulesRuleDefinition(dict):
                a hostname (e.g. "somesite.com"), a port (e.g. 8080), or an IP range ("192.1.0.0",
                "192.1.0.0/16", or "10.1.0.0/16:80"). 'localNet' also supports CIDR notation, excluding
                custom ports.
-                If "type" is 'application' or 'applicationCategory', then "value" must be an object
+               If "type" is 'application' or 'applicationCategory', then "value" must be an object
                with the structure { "id": "meraki:layer7/..." }, where "id" is the application category or
                application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
                endpoint).
@@ -29621,7 +29621,7 @@ class WirelessSsidsTrafficShapingRulesRuleDefinition(dict):
         a hostname (e.g. "somesite.com"), a port (e.g. 8080), or an IP range ("192.1.0.0",
         "192.1.0.0/16", or "10.1.0.0/16:80"). 'localNet' also supports CIDR notation, excluding
         custom ports.
-         If "type" is 'application' or 'applicationCategory', then "value" must be an object
+        If "type" is 'application' or 'applicationCategory', then "value" must be an object
         with the structure { "id": "meraki:layer7/..." }, where "id" is the application category or
         application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
         endpoint).
@@ -31664,7 +31664,7 @@ class GetApplianceSecurityIntrusionItemProtectedNetworksResult(dict):
         """
         :param Sequence[str] excluded_cidrs: List of IP addresses or subnets being excluded from protection
         :param Sequence[str] included_cidrs: List of IP addresses or subnets being protected
-        :param bool use_default: Whether special IPv4 addresses should be used (see: https://tools.ietf.org/html/rfc5735)
+        :param bool use_default: Whether special IPv4 addresses should be used (see: [https://tools.ietf.org/html/rfc5735](https://tools.ietf.org/html/rfc5735))
         """
         pulumi.set(__self__, "excluded_cidrs", excluded_cidrs)
         pulumi.set(__self__, "included_cidrs", included_cidrs)
@@ -31690,7 +31690,7 @@ class GetApplianceSecurityIntrusionItemProtectedNetworksResult(dict):
     @pulumi.getter(name="useDefault")
     def use_default(self) -> bool:
         """
-        Whether special IPv4 addresses should be used (see: https://tools.ietf.org/html/rfc5735)
+        Whether special IPv4 addresses should be used (see: [https://tools.ietf.org/html/rfc5735](https://tools.ietf.org/html/rfc5735))
         """
         return pulumi.get(self, "use_default")
 
@@ -45543,10 +45543,10 @@ class GetSwitchDhcpServerPolicyItemResult(dict):
         """
         :param 'GetSwitchDhcpServerPolicyItemAlertsArgs' alerts: Email alert settings for DHCP servers
         :param Sequence[str] allowed_servers: List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
-                 to block.An empty array will clear the entries.
+               to block.An empty array will clear the entries.
         :param 'GetSwitchDhcpServerPolicyItemArpInspectionArgs' arp_inspection: Dynamic ARP Inspection settings
         :param Sequence[str] blocked_servers: List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set
-                 to allow.An empty array will clear the entries.
+               to allow.An empty array will clear the entries.
         :param str default_policy: 'allow' or 'block' new DHCP servers. Default value is 'allow'.
         """
         pulumi.set(__self__, "alerts", alerts)
@@ -45568,7 +45568,7 @@ class GetSwitchDhcpServerPolicyItemResult(dict):
     def allowed_servers(self) -> Sequence[str]:
         """
         List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
-          to block.An empty array will clear the entries.
+        to block.An empty array will clear the entries.
         """
         return pulumi.get(self, "allowed_servers")
 
@@ -45585,7 +45585,7 @@ class GetSwitchDhcpServerPolicyItemResult(dict):
     def blocked_servers(self) -> Sequence[str]:
         """
         List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set
-          to allow.An empty array will clear the entries.
+        to allow.An empty array will clear the entries.
         """
         return pulumi.get(self, "blocked_servers")
 
@@ -46674,7 +46674,7 @@ class GetSwitchMtuItemResult(dict):
         """
         :param int default_mtu_size: MTU size for the entire network. Default value is 9578.
         :param Sequence['GetSwitchMtuItemOverrideArgs'] overrides: Override MTU size for individual switches or switch templates.
-                 An empty array will clear overrides.
+               An empty array will clear overrides.
         """
         pulumi.set(__self__, "default_mtu_size", default_mtu_size)
         pulumi.set(__self__, "overrides", overrides)
@@ -46692,7 +46692,7 @@ class GetSwitchMtuItemResult(dict):
     def overrides(self) -> Sequence['outputs.GetSwitchMtuItemOverrideResult']:
         """
         Override MTU size for individual switches or switch templates.
-          An empty array will clear overrides.
+        An empty array will clear overrides.
         """
         return pulumi.get(self, "overrides")
 
@@ -47220,9 +47220,9 @@ class GetSwitchRoutingMulticastItemResult(dict):
                  overrides: Sequence['outputs.GetSwitchRoutingMulticastItemOverrideResult']):
         """
         :param 'GetSwitchRoutingMulticastItemDefaultSettingsArgs' default_settings: Default multicast setting for entire network. IGMP snooping and Flood unknown
-                 multicast traffic settings are enabled by default.
+               multicast traffic settings are enabled by default.
         :param Sequence['GetSwitchRoutingMulticastItemOverrideArgs'] overrides: Array of paired switches/stacks/profiles and corresponding multicast settings.
-                 An empty array will clear the multicast settings.
+               An empty array will clear the multicast settings.
         """
         pulumi.set(__self__, "default_settings", default_settings)
         pulumi.set(__self__, "overrides", overrides)
@@ -47232,7 +47232,7 @@ class GetSwitchRoutingMulticastItemResult(dict):
     def default_settings(self) -> 'outputs.GetSwitchRoutingMulticastItemDefaultSettingsResult':
         """
         Default multicast setting for entire network. IGMP snooping and Flood unknown
-          multicast traffic settings are enabled by default.
+        multicast traffic settings are enabled by default.
         """
         return pulumi.get(self, "default_settings")
 
@@ -47241,7 +47241,7 @@ class GetSwitchRoutingMulticastItemResult(dict):
     def overrides(self) -> Sequence['outputs.GetSwitchRoutingMulticastItemOverrideResult']:
         """
         Array of paired switches/stacks/profiles and corresponding multicast settings.
-          An empty array will clear the multicast settings.
+        An empty array will clear the multicast settings.
         """
         return pulumi.get(self, "overrides")
 
@@ -54519,7 +54519,7 @@ class GetWirelessSsidsTrafficShapingRulesItemRuleDefinitionResult(dict):
                a hostname (e.g. "somesite.com"), a port (e.g. 8080), or an IP range ("192.1.0.0",
                "192.1.0.0/16", or "10.1.0.0/16:80"). 'localNet' also supports CIDR notation, excluding
                custom ports.
-                If "type" is 'application' or 'applicationCategory', then "value" must be an object
+               If "type" is 'application' or 'applicationCategory', then "value" must be an object
                with the structure { "id": "meraki:layer7/..." }, where "id" is the application category or
                application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
                endpoint).
@@ -54543,7 +54543,7 @@ class GetWirelessSsidsTrafficShapingRulesItemRuleDefinitionResult(dict):
         a hostname (e.g. "somesite.com"), a port (e.g. 8080), or an IP range ("192.1.0.0",
         "192.1.0.0/16", or "10.1.0.0/16:80"). 'localNet' also supports CIDR notation, excluding
         custom ports.
-         If "type" is 'application' or 'applicationCategory', then "value" must be an object
+        If "type" is 'application' or 'applicationCategory', then "value" must be an object
         with the structure { "id": "meraki:layer7/..." }, where "id" is the application category or
         application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
         endpoint).

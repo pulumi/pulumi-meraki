@@ -19,9 +19,9 @@ namespace Pulumi.Meraki.Organizations.Outputs
         public readonly string? AppliesTo;
         /// <summary>
         /// If 'appliesTo' is set to one of 'Specific admins...', 'All admins of networks...' or 'All admins of networks tagged...', then you must specify this 'values' property to provide the set of
-        ///   entities to apply the branding policy to. For 'Specific admins...', specify an array of admin IDs. For 'All admins of
-        ///   networks...', specify an array of network IDs and/or configuration template IDs. For 'All admins of networks tagged...',
-        ///   specify an array of tag names.
+        /// entities to apply the branding policy to. For 'Specific admins...', specify an array of admin IDs. For 'All admins of
+        /// networks...', specify an array of network IDs and/or configuration template IDs. For 'All admins of networks tagged...',
+        /// specify an array of tag names.
         /// </summary>
         public readonly ImmutableArray<string> Values;
 

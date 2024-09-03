@@ -17,7 +17,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
     /**
      * The &#39;Help &gt; API docs&#39; subtab where a detailed description of the Dashboard API is listed. Can be one of
-     *   &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     @Import(name="apiDocsSubtab")
@@ -25,7 +25,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
     /**
      * @return The &#39;Help &gt; API docs&#39; subtab where a detailed description of the Dashboard API is listed. Can be one of
-     *   &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     public Optional<Output<String>> apiDocsSubtab() {
@@ -34,7 +34,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
     /**
      * The &#39;Help &gt; Cases&#39; Dashboard subtab on which Cisco Meraki support cases for this organization can be managed. Can be one
-     *   of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     @Import(name="casesSubtab")
@@ -42,7 +42,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
     /**
      * @return The &#39;Help &gt; Cases&#39; Dashboard subtab on which Cisco Meraki support cases for this organization can be managed. Can be one
-     *   of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     public Optional<Output<String>> casesSubtab() {
@@ -81,7 +81,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
     /**
      * The &#39;Help &gt; Data protection requests&#39; Dashboard subtab on which requests to delete, restrict, or export end-user data can
-     *   be audited. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * be audited. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     @Import(name="dataProtectionRequestsSubtab")
@@ -89,7 +89,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
     /**
      * @return The &#39;Help &gt; Data protection requests&#39; Dashboard subtab on which requests to delete, restrict, or export end-user data can
-     *   be audited. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * be audited. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     public Optional<Output<String>> dataProtectionRequestsSubtab() {
@@ -98,7 +98,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
     /**
      * The &#39;Help &gt; Firewall info&#39; subtab where necessary upstream firewall rules for communication to the Cisco Meraki cloud are
-     *   listed. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * listed. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     @Import(name="firewallInfoSubtab")
@@ -106,7 +106,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
     /**
      * @return The &#39;Help &gt; Firewall info&#39; subtab where necessary upstream firewall rules for communication to the Cisco Meraki cloud are
-     *   listed. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * listed. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     public Optional<Output<String>> firewallInfoSubtab() {
@@ -115,8 +115,8 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
     /**
      * The &#39;Help &gt; Get Help&#39; subtab on which Cisco Meraki KB, Product Manuals, and Support/Case Information are displayed. Note
-     *   that if this subtab is hidden, branding customizations for the KB on &#39;Get help&#39;, Cisco Meraki product documentation,
-     *   and support contact info will not be visible. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * that if this subtab is hidden, branding customizations for the KB on &#39;Get help&#39;, Cisco Meraki product documentation,
+     * and support contact info will not be visible. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     @Import(name="getHelpSubtab")
@@ -124,8 +124,8 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
     /**
      * @return The &#39;Help &gt; Get Help&#39; subtab on which Cisco Meraki KB, Product Manuals, and Support/Case Information are displayed. Note
-     *   that if this subtab is hidden, branding customizations for the KB on &#39;Get help&#39;, Cisco Meraki product documentation,
-     *   and support contact info will not be visible. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * that if this subtab is hidden, branding customizations for the KB on &#39;Get help&#39;, Cisco Meraki product documentation,
+     * and support contact info will not be visible. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     public Optional<Output<String>> getHelpSubtab() {
@@ -149,7 +149,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
     /**
      * The &#39;Help &gt; Replacement info&#39; subtab where important information regarding device replacements is detailed. Can be one of
-     *   &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     @Import(name="hardwareReplacementsSubtab")
@@ -157,7 +157,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
     /**
      * @return The &#39;Help &gt; Replacement info&#39; subtab where important information regarding device replacements is detailed. Can be one of
-     *   &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     public Optional<Output<String>> hardwareReplacementsSubtab() {
@@ -166,7 +166,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
     /**
      * The Help tab, under which all support information resides. If this tab is hidden, no other &#39;Help&#39; branding
-     *   customizations will be visible. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * customizations will be visible. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     @Import(name="helpTab")
@@ -174,7 +174,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
     /**
      * @return The Help tab, under which all support information resides. If this tab is hidden, no other &#39;Help&#39; branding
-     *   customizations will be visible. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * customizations will be visible. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     public Optional<Output<String>> helpTab() {
@@ -183,7 +183,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
     /**
      * The &#39;Help Widget&#39; is a support widget which provides access to live chat, documentation links, Sales contact info,
-     *   and other contact avenues to reach Meraki Support. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * and other contact avenues to reach Meraki Support. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     @Import(name="helpWidget")
@@ -191,7 +191,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
     /**
      * @return The &#39;Help Widget&#39; is a support widget which provides access to live chat, documentation links, Sales contact info,
-     *   and other contact avenues to reach Meraki Support. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * and other contact avenues to reach Meraki Support. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     public Optional<Output<String>> helpWidget() {
@@ -215,7 +215,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
     /**
      * The &#39;SM Forums&#39; subtab which links to community-based support for Cisco Meraki Systems Manager. Only configurable for
-     *   organizations that contain Systems Manager networks. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * organizations that contain Systems Manager networks. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     @Import(name="smForums")
@@ -223,7 +223,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
     /**
      * @return The &#39;SM Forums&#39; subtab which links to community-based support for Cisco Meraki Systems Manager. Only configurable for
-     *   organizations that contain Systems Manager networks. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * organizations that contain Systems Manager networks. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     public Optional<Output<String>> smForums() {
@@ -247,7 +247,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
     /**
      * The universal search box always visible on Dashboard will, by default, present results from the Meraki KB. This configures
-     *   whether these Meraki KB results should be returned. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * whether these Meraki KB results should be returned. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     @Import(name="universalSearchKnowledgeBaseSearch")
@@ -255,7 +255,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
     /**
      * @return The universal search box always visible on Dashboard will, by default, present results from the Meraki KB. This configures
-     *   whether these Meraki KB results should be returned. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * whether these Meraki KB results should be returned. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     public Optional<Output<String>> universalSearchKnowledgeBaseSearch() {
@@ -302,7 +302,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
         /**
          * @param apiDocsSubtab The &#39;Help &gt; API docs&#39; subtab where a detailed description of the Dashboard API is listed. Can be one of
-         *   &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+         * &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
          * 
          * @return builder
          * 
@@ -314,7 +314,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
         /**
          * @param apiDocsSubtab The &#39;Help &gt; API docs&#39; subtab where a detailed description of the Dashboard API is listed. Can be one of
-         *   &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+         * &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
          * 
          * @return builder
          * 
@@ -325,7 +325,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
         /**
          * @param casesSubtab The &#39;Help &gt; Cases&#39; Dashboard subtab on which Cisco Meraki support cases for this organization can be managed. Can be one
-         *   of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+         * of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
          * 
          * @return builder
          * 
@@ -337,7 +337,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
         /**
          * @param casesSubtab The &#39;Help &gt; Cases&#39; Dashboard subtab on which Cisco Meraki support cases for this organization can be managed. Can be one
-         *   of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+         * of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
          * 
          * @return builder
          * 
@@ -390,7 +390,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
         /**
          * @param dataProtectionRequestsSubtab The &#39;Help &gt; Data protection requests&#39; Dashboard subtab on which requests to delete, restrict, or export end-user data can
-         *   be audited. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+         * be audited. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
          * 
          * @return builder
          * 
@@ -402,7 +402,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
         /**
          * @param dataProtectionRequestsSubtab The &#39;Help &gt; Data protection requests&#39; Dashboard subtab on which requests to delete, restrict, or export end-user data can
-         *   be audited. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+         * be audited. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
          * 
          * @return builder
          * 
@@ -413,7 +413,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
         /**
          * @param firewallInfoSubtab The &#39;Help &gt; Firewall info&#39; subtab where necessary upstream firewall rules for communication to the Cisco Meraki cloud are
-         *   listed. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+         * listed. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
          * 
          * @return builder
          * 
@@ -425,7 +425,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
         /**
          * @param firewallInfoSubtab The &#39;Help &gt; Firewall info&#39; subtab where necessary upstream firewall rules for communication to the Cisco Meraki cloud are
-         *   listed. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+         * listed. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
          * 
          * @return builder
          * 
@@ -436,8 +436,8 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
         /**
          * @param getHelpSubtab The &#39;Help &gt; Get Help&#39; subtab on which Cisco Meraki KB, Product Manuals, and Support/Case Information are displayed. Note
-         *   that if this subtab is hidden, branding customizations for the KB on &#39;Get help&#39;, Cisco Meraki product documentation,
-         *   and support contact info will not be visible. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+         * that if this subtab is hidden, branding customizations for the KB on &#39;Get help&#39;, Cisco Meraki product documentation,
+         * and support contact info will not be visible. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
          * 
          * @return builder
          * 
@@ -449,8 +449,8 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
         /**
          * @param getHelpSubtab The &#39;Help &gt; Get Help&#39; subtab on which Cisco Meraki KB, Product Manuals, and Support/Case Information are displayed. Note
-         *   that if this subtab is hidden, branding customizations for the KB on &#39;Get help&#39;, Cisco Meraki product documentation,
-         *   and support contact info will not be visible. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+         * that if this subtab is hidden, branding customizations for the KB on &#39;Get help&#39;, Cisco Meraki product documentation,
+         * and support contact info will not be visible. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
          * 
          * @return builder
          * 
@@ -482,7 +482,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
         /**
          * @param hardwareReplacementsSubtab The &#39;Help &gt; Replacement info&#39; subtab where important information regarding device replacements is detailed. Can be one of
-         *   &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+         * &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
          * 
          * @return builder
          * 
@@ -494,7 +494,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
         /**
          * @param hardwareReplacementsSubtab The &#39;Help &gt; Replacement info&#39; subtab where important information regarding device replacements is detailed. Can be one of
-         *   &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+         * &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
          * 
          * @return builder
          * 
@@ -505,7 +505,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
         /**
          * @param helpTab The Help tab, under which all support information resides. If this tab is hidden, no other &#39;Help&#39; branding
-         *   customizations will be visible. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+         * customizations will be visible. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
          * 
          * @return builder
          * 
@@ -517,7 +517,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
         /**
          * @param helpTab The Help tab, under which all support information resides. If this tab is hidden, no other &#39;Help&#39; branding
-         *   customizations will be visible. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+         * customizations will be visible. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
          * 
          * @return builder
          * 
@@ -528,7 +528,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
         /**
          * @param helpWidget The &#39;Help Widget&#39; is a support widget which provides access to live chat, documentation links, Sales contact info,
-         *   and other contact avenues to reach Meraki Support. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+         * and other contact avenues to reach Meraki Support. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
          * 
          * @return builder
          * 
@@ -540,7 +540,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
         /**
          * @param helpWidget The &#39;Help Widget&#39; is a support widget which provides access to live chat, documentation links, Sales contact info,
-         *   and other contact avenues to reach Meraki Support. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+         * and other contact avenues to reach Meraki Support. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
          * 
          * @return builder
          * 
@@ -572,7 +572,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
         /**
          * @param smForums The &#39;SM Forums&#39; subtab which links to community-based support for Cisco Meraki Systems Manager. Only configurable for
-         *   organizations that contain Systems Manager networks. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+         * organizations that contain Systems Manager networks. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
          * 
          * @return builder
          * 
@@ -584,7 +584,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
         /**
          * @param smForums The &#39;SM Forums&#39; subtab which links to community-based support for Cisco Meraki Systems Manager. Only configurable for
-         *   organizations that contain Systems Manager networks. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+         * organizations that contain Systems Manager networks. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
          * 
          * @return builder
          * 
@@ -616,7 +616,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
         /**
          * @param universalSearchKnowledgeBaseSearch The universal search box always visible on Dashboard will, by default, present results from the Meraki KB. This configures
-         *   whether these Meraki KB results should be returned. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+         * whether these Meraki KB results should be returned. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
          * 
          * @return builder
          * 
@@ -628,7 +628,7 @@ public final class BrandingPoliciesHelpSettingsArgs extends com.pulumi.resources
 
         /**
          * @param universalSearchKnowledgeBaseSearch The universal search box always visible on Dashboard will, by default, present results from the Meraki KB. This configures
-         *   whether these Meraki KB results should be returned. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+         * whether these Meraki KB results should be returned. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
          * 
          * @return builder
          * 

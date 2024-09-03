@@ -35,7 +35,7 @@ namespace Pulumi.Meraki.Networks
 
         /// <summary>
         /// Override MTU size for individual switches or switch templates.
-        ///   An empty array will clear overrides.
+        /// An empty array will clear overrides.
         /// </summary>
         [Output("overrides")]
         public Output<ImmutableArray<Outputs.SwitchMtuOverride>> Overrides { get; private set; } = null!;
@@ -104,7 +104,7 @@ namespace Pulumi.Meraki.Networks
 
         /// <summary>
         /// Override MTU size for individual switches or switch templates.
-        ///   An empty array will clear overrides.
+        /// An empty array will clear overrides.
         /// </summary>
         public InputList<Inputs.SwitchMtuOverrideArgs> Overrides
         {
@@ -137,7 +137,7 @@ namespace Pulumi.Meraki.Networks
 
         /// <summary>
         /// Override MTU size for individual switches or switch templates.
-        ///   An empty array will clear overrides.
+        /// An empty array will clear overrides.
         /// </summary>
         public InputList<Inputs.SwitchMtuOverrideGetArgs> Overrides
         {

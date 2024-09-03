@@ -24,7 +24,7 @@ class SwitchMtuArgs:
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[int] default_mtu_size: MTU size for the entire network. Default value is 9578.
         :param pulumi.Input[Sequence[pulumi.Input['SwitchMtuOverrideArgs']]] overrides: Override MTU size for individual switches or switch templates.
-                 An empty array will clear overrides.
+               An empty array will clear overrides.
         """
         pulumi.set(__self__, "network_id", network_id)
         if default_mtu_size is not None:
@@ -61,7 +61,7 @@ class SwitchMtuArgs:
     def overrides(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SwitchMtuOverrideArgs']]]]:
         """
         Override MTU size for individual switches or switch templates.
-          An empty array will clear overrides.
+        An empty array will clear overrides.
         """
         return pulumi.get(self, "overrides")
 
@@ -81,7 +81,7 @@ class _SwitchMtuState:
         :param pulumi.Input[int] default_mtu_size: MTU size for the entire network. Default value is 9578.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input['SwitchMtuOverrideArgs']]] overrides: Override MTU size for individual switches or switch templates.
-                 An empty array will clear overrides.
+               An empty array will clear overrides.
         """
         if default_mtu_size is not None:
             pulumi.set(__self__, "default_mtu_size", default_mtu_size)
@@ -119,7 +119,7 @@ class _SwitchMtuState:
     def overrides(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SwitchMtuOverrideArgs']]]]:
         """
         Override MTU size for individual switches or switch templates.
-          An empty array will clear overrides.
+        An empty array will clear overrides.
         """
         return pulumi.get(self, "overrides")
 
@@ -151,7 +151,7 @@ class SwitchMtu(pulumi.CustomResource):
         :param pulumi.Input[int] default_mtu_size: MTU size for the entire network. Default value is 9578.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchMtuOverrideArgs', 'SwitchMtuOverrideArgsDict']]]] overrides: Override MTU size for individual switches or switch templates.
-                 An empty array will clear overrides.
+               An empty array will clear overrides.
         """
         ...
     @overload
@@ -223,7 +223,7 @@ class SwitchMtu(pulumi.CustomResource):
         :param pulumi.Input[int] default_mtu_size: MTU size for the entire network. Default value is 9578.
         :param pulumi.Input[str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchMtuOverrideArgs', 'SwitchMtuOverrideArgsDict']]]] overrides: Override MTU size for individual switches or switch templates.
-                 An empty array will clear overrides.
+               An empty array will clear overrides.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -255,7 +255,7 @@ class SwitchMtu(pulumi.CustomResource):
     def overrides(self) -> pulumi.Output[Sequence['outputs.SwitchMtuOverride']]:
         """
         Override MTU size for individual switches or switch templates.
-          An empty array will clear overrides.
+        An empty array will clear overrides.
         """
         return pulumi.get(self, "overrides")
 

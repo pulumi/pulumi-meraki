@@ -12,13 +12,13 @@ import java.util.Objects;
 public final class GetBrandingPoliciesItemHelpSettings {
     /**
      * @return The &#39;Help &gt; API docs&#39; subtab where a detailed description of the Dashboard API is listed. Can be one of
-     *   &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     private String apiDocsSubtab;
     /**
      * @return The &#39;Help &gt; Cases&#39; Dashboard subtab on which Cisco Meraki support cases for this organization can be managed. Can be one
-     *   of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     private String casesSubtab;
@@ -34,20 +34,20 @@ public final class GetBrandingPoliciesItemHelpSettings {
     private String communitySubtab;
     /**
      * @return The &#39;Help &gt; Data protection requests&#39; Dashboard subtab on which requests to delete, restrict, or export end-user data can
-     *   be audited. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * be audited. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     private String dataProtectionRequestsSubtab;
     /**
      * @return The &#39;Help &gt; Firewall info&#39; subtab where necessary upstream firewall rules for communication to the Cisco Meraki cloud are
-     *   listed. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * listed. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     private String firewallInfoSubtab;
     /**
      * @return The &#39;Help &gt; Get Help&#39; subtab on which Cisco Meraki KB, Product Manuals, and Support/Case Information are displayed. Note
-     *   that if this subtab is hidden, branding customizations for the KB on &#39;Get help&#39;, Cisco Meraki product documentation,
-     *   and support contact info will not be visible. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * that if this subtab is hidden, branding customizations for the KB on &#39;Get help&#39;, Cisco Meraki product documentation,
+     * and support contact info will not be visible. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     private String getHelpSubtab;
@@ -58,19 +58,19 @@ public final class GetBrandingPoliciesItemHelpSettings {
     private String getHelpSubtabKnowledgeBaseSearch;
     /**
      * @return The &#39;Help &gt; Replacement info&#39; subtab where important information regarding device replacements is detailed. Can be one of
-     *   &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     private String hardwareReplacementsSubtab;
     /**
      * @return The Help tab, under which all support information resides. If this tab is hidden, no other &#39;Help&#39; branding
-     *   customizations will be visible. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * customizations will be visible. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     private String helpTab;
     /**
      * @return The &#39;Help Widget&#39; is a support widget which provides access to live chat, documentation links, Sales contact info,
-     *   and other contact avenues to reach Meraki Support. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * and other contact avenues to reach Meraki Support. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     private String helpWidget;
@@ -81,7 +81,7 @@ public final class GetBrandingPoliciesItemHelpSettings {
     private String newFeaturesSubtab;
     /**
      * @return The &#39;SM Forums&#39; subtab which links to community-based support for Cisco Meraki Systems Manager. Only configurable for
-     *   organizations that contain Systems Manager networks. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * organizations that contain Systems Manager networks. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     private String smForums;
@@ -92,7 +92,7 @@ public final class GetBrandingPoliciesItemHelpSettings {
     private String supportContactInfo;
     /**
      * @return The universal search box always visible on Dashboard will, by default, present results from the Meraki KB. This configures
-     *   whether these Meraki KB results should be returned. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * whether these Meraki KB results should be returned. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     private String universalSearchKnowledgeBaseSearch;
@@ -100,7 +100,7 @@ public final class GetBrandingPoliciesItemHelpSettings {
     private GetBrandingPoliciesItemHelpSettings() {}
     /**
      * @return The &#39;Help &gt; API docs&#39; subtab where a detailed description of the Dashboard API is listed. Can be one of
-     *   &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     public String apiDocsSubtab() {
@@ -108,7 +108,7 @@ public final class GetBrandingPoliciesItemHelpSettings {
     }
     /**
      * @return The &#39;Help &gt; Cases&#39; Dashboard subtab on which Cisco Meraki support cases for this organization can be managed. Can be one
-     *   of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     public String casesSubtab() {
@@ -130,7 +130,7 @@ public final class GetBrandingPoliciesItemHelpSettings {
     }
     /**
      * @return The &#39;Help &gt; Data protection requests&#39; Dashboard subtab on which requests to delete, restrict, or export end-user data can
-     *   be audited. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * be audited. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     public String dataProtectionRequestsSubtab() {
@@ -138,7 +138,7 @@ public final class GetBrandingPoliciesItemHelpSettings {
     }
     /**
      * @return The &#39;Help &gt; Firewall info&#39; subtab where necessary upstream firewall rules for communication to the Cisco Meraki cloud are
-     *   listed. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * listed. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     public String firewallInfoSubtab() {
@@ -146,8 +146,8 @@ public final class GetBrandingPoliciesItemHelpSettings {
     }
     /**
      * @return The &#39;Help &gt; Get Help&#39; subtab on which Cisco Meraki KB, Product Manuals, and Support/Case Information are displayed. Note
-     *   that if this subtab is hidden, branding customizations for the KB on &#39;Get help&#39;, Cisco Meraki product documentation,
-     *   and support contact info will not be visible. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * that if this subtab is hidden, branding customizations for the KB on &#39;Get help&#39;, Cisco Meraki product documentation,
+     * and support contact info will not be visible. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     public String getHelpSubtab() {
@@ -162,7 +162,7 @@ public final class GetBrandingPoliciesItemHelpSettings {
     }
     /**
      * @return The &#39;Help &gt; Replacement info&#39; subtab where important information regarding device replacements is detailed. Can be one of
-     *   &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     public String hardwareReplacementsSubtab() {
@@ -170,7 +170,7 @@ public final class GetBrandingPoliciesItemHelpSettings {
     }
     /**
      * @return The Help tab, under which all support information resides. If this tab is hidden, no other &#39;Help&#39; branding
-     *   customizations will be visible. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * customizations will be visible. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     public String helpTab() {
@@ -178,7 +178,7 @@ public final class GetBrandingPoliciesItemHelpSettings {
     }
     /**
      * @return The &#39;Help Widget&#39; is a support widget which provides access to live chat, documentation links, Sales contact info,
-     *   and other contact avenues to reach Meraki Support. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * and other contact avenues to reach Meraki Support. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     public String helpWidget() {
@@ -193,7 +193,7 @@ public final class GetBrandingPoliciesItemHelpSettings {
     }
     /**
      * @return The &#39;SM Forums&#39; subtab which links to community-based support for Cisco Meraki Systems Manager. Only configurable for
-     *   organizations that contain Systems Manager networks. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * organizations that contain Systems Manager networks. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     public String smForums() {
@@ -208,7 +208,7 @@ public final class GetBrandingPoliciesItemHelpSettings {
     }
     /**
      * @return The universal search box always visible on Dashboard will, by default, present results from the Meraki KB. This configures
-     *   whether these Meraki KB results should be returned. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
+     * whether these Meraki KB results should be returned. Can be one of &#39;default or inherit&#39;, &#39;hide&#39; or &#39;show&#39;.
      * 
      */
     public String universalSearchKnowledgeBaseSearch() {
