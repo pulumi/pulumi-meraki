@@ -35,7 +35,7 @@ public final class SwitchDhcpServerPolicyState extends com.pulumi.resources.Reso
 
     /**
      * List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
-     *   to block.An empty array will clear the entries.
+     * to block.An empty array will clear the entries.
      * 
      */
     @Import(name="allowedServers")
@@ -43,7 +43,7 @@ public final class SwitchDhcpServerPolicyState extends com.pulumi.resources.Reso
 
     /**
      * @return List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
-     *   to block.An empty array will clear the entries.
+     * to block.An empty array will clear the entries.
      * 
      */
     public Optional<Output<List<String>>> allowedServers() {
@@ -67,7 +67,7 @@ public final class SwitchDhcpServerPolicyState extends com.pulumi.resources.Reso
 
     /**
      * List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set
-     *   to allow.An empty array will clear the entries.
+     * to allow.An empty array will clear the entries.
      * 
      */
     @Import(name="blockedServers")
@@ -75,7 +75,7 @@ public final class SwitchDhcpServerPolicyState extends com.pulumi.resources.Reso
 
     /**
      * @return List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set
-     *   to allow.An empty array will clear the entries.
+     * to allow.An empty array will clear the entries.
      * 
      */
     public Optional<Output<List<String>>> blockedServers() {
@@ -164,7 +164,7 @@ public final class SwitchDhcpServerPolicyState extends com.pulumi.resources.Reso
 
         /**
          * @param allowedServers List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
-         *   to block.An empty array will clear the entries.
+         * to block.An empty array will clear the entries.
          * 
          * @return builder
          * 
@@ -176,7 +176,7 @@ public final class SwitchDhcpServerPolicyState extends com.pulumi.resources.Reso
 
         /**
          * @param allowedServers List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
-         *   to block.An empty array will clear the entries.
+         * to block.An empty array will clear the entries.
          * 
          * @return builder
          * 
@@ -187,7 +187,7 @@ public final class SwitchDhcpServerPolicyState extends com.pulumi.resources.Reso
 
         /**
          * @param allowedServers List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
-         *   to block.An empty array will clear the entries.
+         * to block.An empty array will clear the entries.
          * 
          * @return builder
          * 
@@ -219,7 +219,7 @@ public final class SwitchDhcpServerPolicyState extends com.pulumi.resources.Reso
 
         /**
          * @param blockedServers List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set
-         *   to allow.An empty array will clear the entries.
+         * to allow.An empty array will clear the entries.
          * 
          * @return builder
          * 
@@ -231,7 +231,7 @@ public final class SwitchDhcpServerPolicyState extends com.pulumi.resources.Reso
 
         /**
          * @param blockedServers List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set
-         *   to allow.An empty array will clear the entries.
+         * to allow.An empty array will clear the entries.
          * 
          * @return builder
          * 
@@ -242,7 +242,7 @@ public final class SwitchDhcpServerPolicyState extends com.pulumi.resources.Reso
 
         /**
          * @param blockedServers List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set
-         *   to allow.An empty array will clear the entries.
+         * to allow.An empty array will clear the entries.
          * 
          * @return builder
          * 

@@ -5333,7 +5333,7 @@ type WirelessSsidsTrafficShapingRulesRuleDefinition struct {
 	// a hostname (e.g. "somesite.com"), a port (e.g. 8080), or an IP range ("192.1.0.0",
 	// "192.1.0.0/16", or "10.1.0.0/16:80"). 'localNet' also supports CIDR notation, excluding
 	// custom ports.
-	//  If "type" is 'application' or 'applicationCategory', then "value" must be an object
+	// If "type" is 'application' or 'applicationCategory', then "value" must be an object
 	// with the structure { "id": "meraki:layer7/..." }, where "id" is the application category or
 	// application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
 	// endpoint).
@@ -5358,7 +5358,7 @@ type WirelessSsidsTrafficShapingRulesRuleDefinitionArgs struct {
 	// a hostname (e.g. "somesite.com"), a port (e.g. 8080), or an IP range ("192.1.0.0",
 	// "192.1.0.0/16", or "10.1.0.0/16:80"). 'localNet' also supports CIDR notation, excluding
 	// custom ports.
-	//  If "type" is 'application' or 'applicationCategory', then "value" must be an object
+	// If "type" is 'application' or 'applicationCategory', then "value" must be an object
 	// with the structure { "id": "meraki:layer7/..." }, where "id" is the application category or
 	// application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
 	// endpoint).
@@ -5425,9 +5425,7 @@ func (o WirelessSsidsTrafficShapingRulesRuleDefinitionOutput) Type() pulumi.Stri
 // a hostname (e.g. "somesite.com"), a port (e.g. 8080), or an IP range ("192.1.0.0",
 // "192.1.0.0/16", or "10.1.0.0/16:80"). 'localNet' also supports CIDR notation, excluding
 // custom ports.
-//
-//	If "type" is 'application' or 'applicationCategory', then "value" must be an object
-//
+// If "type" is 'application' or 'applicationCategory', then "value" must be an object
 // with the structure { "id": "meraki:layer7/..." }, where "id" is the application category or
 // application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
 // endpoint).
@@ -10704,7 +10702,7 @@ type GetApplianceSecurityIntrusionItemProtectedNetworks struct {
 	ExcludedCidrs []string `pulumi:"excludedCidrs"`
 	// List of IP addresses or subnets being protected
 	IncludedCidrs []string `pulumi:"includedCidrs"`
-	// Whether special IPv4 addresses should be used (see: https://tools.ietf.org/html/rfc5735)
+	// Whether special IPv4 addresses should be used (see: [https://tools.ietf.org/html/rfc5735](https://tools.ietf.org/html/rfc5735))
 	UseDefault bool `pulumi:"useDefault"`
 }
 
@@ -10724,7 +10722,7 @@ type GetApplianceSecurityIntrusionItemProtectedNetworksArgs struct {
 	ExcludedCidrs pulumi.StringArrayInput `pulumi:"excludedCidrs"`
 	// List of IP addresses or subnets being protected
 	IncludedCidrs pulumi.StringArrayInput `pulumi:"includedCidrs"`
-	// Whether special IPv4 addresses should be used (see: https://tools.ietf.org/html/rfc5735)
+	// Whether special IPv4 addresses should be used (see: [https://tools.ietf.org/html/rfc5735](https://tools.ietf.org/html/rfc5735))
 	UseDefault pulumi.BoolInput `pulumi:"useDefault"`
 }
 
@@ -10764,7 +10762,7 @@ func (o GetApplianceSecurityIntrusionItemProtectedNetworksOutput) IncludedCidrs(
 	return o.ApplyT(func(v GetApplianceSecurityIntrusionItemProtectedNetworks) []string { return v.IncludedCidrs }).(pulumi.StringArrayOutput)
 }
 
-// Whether special IPv4 addresses should be used (see: https://tools.ietf.org/html/rfc5735)
+// Whether special IPv4 addresses should be used (see: [https://tools.ietf.org/html/rfc5735](https://tools.ietf.org/html/rfc5735))
 func (o GetApplianceSecurityIntrusionItemProtectedNetworksOutput) UseDefault() pulumi.BoolOutput {
 	return o.ApplyT(func(v GetApplianceSecurityIntrusionItemProtectedNetworks) bool { return v.UseDefault }).(pulumi.BoolOutput)
 }
@@ -37449,12 +37447,12 @@ type GetSwitchDhcpServerPolicyItem struct {
 	// Email alert settings for DHCP servers
 	Alerts GetSwitchDhcpServerPolicyItemAlerts `pulumi:"alerts"`
 	// List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
-	//   to block.An empty array will clear the entries.
+	// to block.An empty array will clear the entries.
 	AllowedServers []string `pulumi:"allowedServers"`
 	// Dynamic ARP Inspection settings
 	ArpInspection GetSwitchDhcpServerPolicyItemArpInspection `pulumi:"arpInspection"`
 	// List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set
-	//   to allow.An empty array will clear the entries.
+	// to allow.An empty array will clear the entries.
 	BlockedServers []string `pulumi:"blockedServers"`
 	// 'allow' or 'block' new DHCP servers. Default value is 'allow'.
 	DefaultPolicy string `pulumi:"defaultPolicy"`
@@ -37475,12 +37473,12 @@ type GetSwitchDhcpServerPolicyItemArgs struct {
 	// Email alert settings for DHCP servers
 	Alerts GetSwitchDhcpServerPolicyItemAlertsInput `pulumi:"alerts"`
 	// List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
-	//   to block.An empty array will clear the entries.
+	// to block.An empty array will clear the entries.
 	AllowedServers pulumi.StringArrayInput `pulumi:"allowedServers"`
 	// Dynamic ARP Inspection settings
 	ArpInspection GetSwitchDhcpServerPolicyItemArpInspectionInput `pulumi:"arpInspection"`
 	// List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set
-	//   to allow.An empty array will clear the entries.
+	// to allow.An empty array will clear the entries.
 	BlockedServers pulumi.StringArrayInput `pulumi:"blockedServers"`
 	// 'allow' or 'block' new DHCP servers. Default value is 'allow'.
 	DefaultPolicy pulumi.StringInput `pulumi:"defaultPolicy"`
@@ -37518,8 +37516,7 @@ func (o GetSwitchDhcpServerPolicyItemOutput) Alerts() GetSwitchDhcpServerPolicyI
 }
 
 // List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
-//
-//	to block.An empty array will clear the entries.
+// to block.An empty array will clear the entries.
 func (o GetSwitchDhcpServerPolicyItemOutput) AllowedServers() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetSwitchDhcpServerPolicyItem) []string { return v.AllowedServers }).(pulumi.StringArrayOutput)
 }
@@ -37532,8 +37529,7 @@ func (o GetSwitchDhcpServerPolicyItemOutput) ArpInspection() GetSwitchDhcpServer
 }
 
 // List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set
-//
-//	to allow.An empty array will clear the entries.
+// to allow.An empty array will clear the entries.
 func (o GetSwitchDhcpServerPolicyItemOutput) BlockedServers() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetSwitchDhcpServerPolicyItem) []string { return v.BlockedServers }).(pulumi.StringArrayOutput)
 }
@@ -39649,7 +39645,7 @@ type GetSwitchMtuItem struct {
 	// MTU size for the entire network. Default value is 9578.
 	DefaultMtuSize int `pulumi:"defaultMtuSize"`
 	// Override MTU size for individual switches or switch templates.
-	//   An empty array will clear overrides.
+	// An empty array will clear overrides.
 	Overrides []GetSwitchMtuItemOverride `pulumi:"overrides"`
 }
 
@@ -39668,7 +39664,7 @@ type GetSwitchMtuItemArgs struct {
 	// MTU size for the entire network. Default value is 9578.
 	DefaultMtuSize pulumi.IntInput `pulumi:"defaultMtuSize"`
 	// Override MTU size for individual switches or switch templates.
-	//   An empty array will clear overrides.
+	// An empty array will clear overrides.
 	Overrides GetSwitchMtuItemOverrideArrayInput `pulumi:"overrides"`
 }
 
@@ -39704,8 +39700,7 @@ func (o GetSwitchMtuItemOutput) DefaultMtuSize() pulumi.IntOutput {
 }
 
 // Override MTU size for individual switches or switch templates.
-//
-//	An empty array will clear overrides.
+// An empty array will clear overrides.
 func (o GetSwitchMtuItemOutput) Overrides() GetSwitchMtuItemOverrideArrayOutput {
 	return o.ApplyT(func(v GetSwitchMtuItem) []GetSwitchMtuItemOverride { return v.Overrides }).(GetSwitchMtuItemOverrideArrayOutput)
 }
@@ -40697,10 +40692,10 @@ func (o GetSwitchQosRulesOrderItemArrayOutput) Index(i pulumi.IntInput) GetSwitc
 
 type GetSwitchRoutingMulticastItem struct {
 	// Default multicast setting for entire network. IGMP snooping and Flood unknown
-	//   multicast traffic settings are enabled by default.
+	// multicast traffic settings are enabled by default.
 	DefaultSettings GetSwitchRoutingMulticastItemDefaultSettings `pulumi:"defaultSettings"`
 	// Array of paired switches/stacks/profiles and corresponding multicast settings.
-	//   An empty array will clear the multicast settings.
+	// An empty array will clear the multicast settings.
 	Overrides []GetSwitchRoutingMulticastItemOverride `pulumi:"overrides"`
 }
 
@@ -40717,10 +40712,10 @@ type GetSwitchRoutingMulticastItemInput interface {
 
 type GetSwitchRoutingMulticastItemArgs struct {
 	// Default multicast setting for entire network. IGMP snooping and Flood unknown
-	//   multicast traffic settings are enabled by default.
+	// multicast traffic settings are enabled by default.
 	DefaultSettings GetSwitchRoutingMulticastItemDefaultSettingsInput `pulumi:"defaultSettings"`
 	// Array of paired switches/stacks/profiles and corresponding multicast settings.
-	//   An empty array will clear the multicast settings.
+	// An empty array will clear the multicast settings.
 	Overrides GetSwitchRoutingMulticastItemOverrideArrayInput `pulumi:"overrides"`
 }
 
@@ -40751,8 +40746,7 @@ func (o GetSwitchRoutingMulticastItemOutput) ToGetSwitchRoutingMulticastItemOutp
 }
 
 // Default multicast setting for entire network. IGMP snooping and Flood unknown
-//
-//	multicast traffic settings are enabled by default.
+// multicast traffic settings are enabled by default.
 func (o GetSwitchRoutingMulticastItemOutput) DefaultSettings() GetSwitchRoutingMulticastItemDefaultSettingsOutput {
 	return o.ApplyT(func(v GetSwitchRoutingMulticastItem) GetSwitchRoutingMulticastItemDefaultSettings {
 		return v.DefaultSettings
@@ -40760,8 +40754,7 @@ func (o GetSwitchRoutingMulticastItemOutput) DefaultSettings() GetSwitchRoutingM
 }
 
 // Array of paired switches/stacks/profiles and corresponding multicast settings.
-//
-//	An empty array will clear the multicast settings.
+// An empty array will clear the multicast settings.
 func (o GetSwitchRoutingMulticastItemOutput) Overrides() GetSwitchRoutingMulticastItemOverrideArrayOutput {
 	return o.ApplyT(func(v GetSwitchRoutingMulticastItem) []GetSwitchRoutingMulticastItemOverride { return v.Overrides }).(GetSwitchRoutingMulticastItemOverrideArrayOutput)
 }

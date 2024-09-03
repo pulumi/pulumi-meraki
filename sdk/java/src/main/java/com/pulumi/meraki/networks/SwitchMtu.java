@@ -101,7 +101,7 @@ public class SwitchMtu extends com.pulumi.resources.CustomResource {
     }
     /**
      * Override MTU size for individual switches or switch templates.
-     *   An empty array will clear overrides.
+     * An empty array will clear overrides.
      * 
      */
     @Export(name="overrides", refs={List.class,SwitchMtuOverride.class}, tree="[0,1]")
@@ -109,7 +109,7 @@ public class SwitchMtu extends com.pulumi.resources.CustomResource {
 
     /**
      * @return Override MTU size for individual switches or switch templates.
-     *   An empty array will clear overrides.
+     * An empty array will clear overrides.
      * 
      */
     public Output<List<SwitchMtuOverride>> overrides() {

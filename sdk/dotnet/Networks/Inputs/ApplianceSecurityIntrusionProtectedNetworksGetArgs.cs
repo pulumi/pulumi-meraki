@@ -37,7 +37,7 @@ namespace Pulumi.Meraki.Networks.Inputs
         }
 
         /// <summary>
-        /// Whether special IPv4 addresses should be used (see: https://tools.ietf.org/html/rfc5735)
+        /// Whether special IPv4 addresses should be used (see: [https://tools.ietf.org/html/rfc5735](https://tools.ietf.org/html/rfc5735))
         /// </summary>
         [Input("useDefault")]
         public Input<bool>? UseDefault { get; set; }

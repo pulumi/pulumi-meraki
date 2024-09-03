@@ -85,7 +85,7 @@ import javax.annotation.Nullable;
 public class SwitchRoutingMulticast extends com.pulumi.resources.CustomResource {
     /**
      * Default multicast setting for entire network. IGMP snooping and Flood unknown
-     *   multicast traffic settings are enabled by default.
+     * multicast traffic settings are enabled by default.
      * 
      */
     @Export(name="defaultSettings", refs={SwitchRoutingMulticastDefaultSettings.class}, tree="[0]")
@@ -93,7 +93,7 @@ public class SwitchRoutingMulticast extends com.pulumi.resources.CustomResource 
 
     /**
      * @return Default multicast setting for entire network. IGMP snooping and Flood unknown
-     *   multicast traffic settings are enabled by default.
+     * multicast traffic settings are enabled by default.
      * 
      */
     public Output<SwitchRoutingMulticastDefaultSettings> defaultSettings() {
@@ -115,7 +115,7 @@ public class SwitchRoutingMulticast extends com.pulumi.resources.CustomResource 
     }
     /**
      * Array of paired switches/stacks/profiles and corresponding multicast settings.
-     *   An empty array will clear the multicast settings.
+     * An empty array will clear the multicast settings.
      * 
      */
     @Export(name="overrides", refs={List.class,SwitchRoutingMulticastOverride.class}, tree="[0,1]")
@@ -123,7 +123,7 @@ public class SwitchRoutingMulticast extends com.pulumi.resources.CustomResource 
 
     /**
      * @return Array of paired switches/stacks/profiles and corresponding multicast settings.
-     *   An empty array will clear the multicast settings.
+     * An empty array will clear the multicast settings.
      * 
      */
     public Output<List<SwitchRoutingMulticastOverride>> overrides() {

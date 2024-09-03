@@ -35,7 +35,7 @@ public final class GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleDefin
      * a hostname (e.g. &#34;somesite.com&#34;), a port (e.g. 8080), or an IP range (&#34;192.1.0.0&#34;,
      * &#34;192.1.0.0/16&#34;, or &#34;10.1.0.0/16:80&#34;). &#39;localNet&#39; also supports CIDR notation, excluding
      * custom ports.
-     *  If &#34;type&#34; is &#39;application&#39; or &#39;applicationCategory&#39;, then &#34;value&#34; must be an object
+     * If &#34;type&#34; is &#39;application&#39; or &#39;applicationCategory&#39;, then &#34;value&#34; must be an object
      * with the structure { &#34;id&#34;: &#34;meraki:layer7/...&#34; }, where &#34;id&#34; is the application category or
      * application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
      * endpoint).
@@ -49,7 +49,7 @@ public final class GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleDefin
      * a hostname (e.g. &#34;somesite.com&#34;), a port (e.g. 8080), or an IP range (&#34;192.1.0.0&#34;,
      * &#34;192.1.0.0/16&#34;, or &#34;10.1.0.0/16:80&#34;). &#39;localNet&#39; also supports CIDR notation, excluding
      * custom ports.
-     *  If &#34;type&#34; is &#39;application&#39; or &#39;applicationCategory&#39;, then &#34;value&#34; must be an object
+     * If &#34;type&#34; is &#39;application&#39; or &#39;applicationCategory&#39;, then &#34;value&#34; must be an object
      * with the structure { &#34;id&#34;: &#34;meraki:layer7/...&#34; }, where &#34;id&#34; is the application category or
      * application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
      * endpoint).
@@ -110,7 +110,7 @@ public final class GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleDefin
          * a hostname (e.g. &#34;somesite.com&#34;), a port (e.g. 8080), or an IP range (&#34;192.1.0.0&#34;,
          * &#34;192.1.0.0/16&#34;, or &#34;10.1.0.0/16:80&#34;). &#39;localNet&#39; also supports CIDR notation, excluding
          * custom ports.
-         *  If &#34;type&#34; is &#39;application&#39; or &#39;applicationCategory&#39;, then &#34;value&#34; must be an object
+         * If &#34;type&#34; is &#39;application&#39; or &#39;applicationCategory&#39;, then &#34;value&#34; must be an object
          * with the structure { &#34;id&#34;: &#34;meraki:layer7/...&#34; }, where &#34;id&#34; is the application category or
          * application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
          * endpoint).
@@ -128,7 +128,7 @@ public final class GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleDefin
          * a hostname (e.g. &#34;somesite.com&#34;), a port (e.g. 8080), or an IP range (&#34;192.1.0.0&#34;,
          * &#34;192.1.0.0/16&#34;, or &#34;10.1.0.0/16:80&#34;). &#39;localNet&#39; also supports CIDR notation, excluding
          * custom ports.
-         *  If &#34;type&#34; is &#39;application&#39; or &#39;applicationCategory&#39;, then &#34;value&#34; must be an object
+         * If &#34;type&#34; is &#39;application&#39; or &#39;applicationCategory&#39;, then &#34;value&#34; must be an object
          * with the structure { &#34;id&#34;: &#34;meraki:layer7/...&#34; }, where &#34;id&#34; is the application category or
          * application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
          * endpoint).

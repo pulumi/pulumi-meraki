@@ -20,7 +20,7 @@ public final class SwitchRoutingMulticastState extends com.pulumi.resources.Reso
 
     /**
      * Default multicast setting for entire network. IGMP snooping and Flood unknown
-     *   multicast traffic settings are enabled by default.
+     * multicast traffic settings are enabled by default.
      * 
      */
     @Import(name="defaultSettings")
@@ -28,7 +28,7 @@ public final class SwitchRoutingMulticastState extends com.pulumi.resources.Reso
 
     /**
      * @return Default multicast setting for entire network. IGMP snooping and Flood unknown
-     *   multicast traffic settings are enabled by default.
+     * multicast traffic settings are enabled by default.
      * 
      */
     public Optional<Output<SwitchRoutingMulticastDefaultSettingsArgs>> defaultSettings() {
@@ -52,7 +52,7 @@ public final class SwitchRoutingMulticastState extends com.pulumi.resources.Reso
 
     /**
      * Array of paired switches/stacks/profiles and corresponding multicast settings.
-     *   An empty array will clear the multicast settings.
+     * An empty array will clear the multicast settings.
      * 
      */
     @Import(name="overrides")
@@ -60,7 +60,7 @@ public final class SwitchRoutingMulticastState extends com.pulumi.resources.Reso
 
     /**
      * @return Array of paired switches/stacks/profiles and corresponding multicast settings.
-     *   An empty array will clear the multicast settings.
+     * An empty array will clear the multicast settings.
      * 
      */
     public Optional<Output<List<SwitchRoutingMulticastOverrideArgs>>> overrides() {
@@ -95,7 +95,7 @@ public final class SwitchRoutingMulticastState extends com.pulumi.resources.Reso
 
         /**
          * @param defaultSettings Default multicast setting for entire network. IGMP snooping and Flood unknown
-         *   multicast traffic settings are enabled by default.
+         * multicast traffic settings are enabled by default.
          * 
          * @return builder
          * 
@@ -107,7 +107,7 @@ public final class SwitchRoutingMulticastState extends com.pulumi.resources.Reso
 
         /**
          * @param defaultSettings Default multicast setting for entire network. IGMP snooping and Flood unknown
-         *   multicast traffic settings are enabled by default.
+         * multicast traffic settings are enabled by default.
          * 
          * @return builder
          * 
@@ -139,7 +139,7 @@ public final class SwitchRoutingMulticastState extends com.pulumi.resources.Reso
 
         /**
          * @param overrides Array of paired switches/stacks/profiles and corresponding multicast settings.
-         *   An empty array will clear the multicast settings.
+         * An empty array will clear the multicast settings.
          * 
          * @return builder
          * 
@@ -151,7 +151,7 @@ public final class SwitchRoutingMulticastState extends com.pulumi.resources.Reso
 
         /**
          * @param overrides Array of paired switches/stacks/profiles and corresponding multicast settings.
-         *   An empty array will clear the multicast settings.
+         * An empty array will clear the multicast settings.
          * 
          * @return builder
          * 
@@ -162,7 +162,7 @@ public final class SwitchRoutingMulticastState extends com.pulumi.resources.Reso
 
         /**
          * @param overrides Array of paired switches/stacks/profiles and corresponding multicast settings.
-         *   An empty array will clear the multicast settings.
+         * An empty array will clear the multicast settings.
          * 
          * @return builder
          * 

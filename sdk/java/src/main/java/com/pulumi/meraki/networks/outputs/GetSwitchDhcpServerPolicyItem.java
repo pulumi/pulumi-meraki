@@ -20,7 +20,7 @@ public final class GetSwitchDhcpServerPolicyItem {
     private GetSwitchDhcpServerPolicyItemAlerts alerts;
     /**
      * @return List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
-     *   to block.An empty array will clear the entries.
+     * to block.An empty array will clear the entries.
      * 
      */
     private List<String> allowedServers;
@@ -31,7 +31,7 @@ public final class GetSwitchDhcpServerPolicyItem {
     private GetSwitchDhcpServerPolicyItemArpInspection arpInspection;
     /**
      * @return List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set
-     *   to allow.An empty array will clear the entries.
+     * to allow.An empty array will clear the entries.
      * 
      */
     private List<String> blockedServers;
@@ -51,7 +51,7 @@ public final class GetSwitchDhcpServerPolicyItem {
     }
     /**
      * @return List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
-     *   to block.An empty array will clear the entries.
+     * to block.An empty array will clear the entries.
      * 
      */
     public List<String> allowedServers() {
@@ -66,7 +66,7 @@ public final class GetSwitchDhcpServerPolicyItem {
     }
     /**
      * @return List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set
-     *   to allow.An empty array will clear the entries.
+     * to allow.An empty array will clear the entries.
      * 
      */
     public List<String> blockedServers() {

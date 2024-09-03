@@ -2846,7 +2846,7 @@ class ApplianceSecurityIntrusionProtectedNetworksArgs:
         """
         :param pulumi.Input[Sequence[pulumi.Input[str]]] excluded_cidrs: List of IP addresses or subnets being excluded from protection
         :param pulumi.Input[Sequence[pulumi.Input[str]]] included_cidrs: List of IP addresses or subnets being protected
-        :param pulumi.Input[bool] use_default: Whether special IPv4 addresses should be used (see: https://tools.ietf.org/html/rfc5735)
+        :param pulumi.Input[bool] use_default: Whether special IPv4 addresses should be used (see: [https://tools.ietf.org/html/rfc5735](https://tools.ietf.org/html/rfc5735))
         """
         if excluded_cidrs is not None:
             pulumi.set(__self__, "excluded_cidrs", excluded_cidrs)
@@ -2883,7 +2883,7 @@ class ApplianceSecurityIntrusionProtectedNetworksArgs:
     @pulumi.getter(name="useDefault")
     def use_default(self) -> Optional[pulumi.Input[bool]]:
         """
-        Whether special IPv4 addresses should be used (see: https://tools.ietf.org/html/rfc5735)
+        Whether special IPv4 addresses should be used (see: [https://tools.ietf.org/html/rfc5735](https://tools.ietf.org/html/rfc5735))
         """
         return pulumi.get(self, "use_default")
 
@@ -3567,7 +3567,7 @@ class ApplianceTrafficShapingRulesRuleDefinitionArgs:
                a hostname (e.g. "somesite.com"), a port (e.g. 8080), or an IP range ("192.1.0.0",
                "192.1.0.0/16", or "10.1.0.0/16:80"). 'localNet' also supports CIDR notation, excluding
                custom ports.
-                If "type" is 'application' or 'applicationCategory', then "value" must be an object
+               If "type" is 'application' or 'applicationCategory', then "value" must be an object
                with the structure { "id": "meraki:layer7/..." }, where "id" is the application category or
                application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
                endpoint).
@@ -3603,7 +3603,7 @@ class ApplianceTrafficShapingRulesRuleDefinitionArgs:
         a hostname (e.g. "somesite.com"), a port (e.g. 8080), or an IP range ("192.1.0.0",
         "192.1.0.0/16", or "10.1.0.0/16:80"). 'localNet' also supports CIDR notation, excluding
         custom ports.
-         If "type" is 'application' or 'applicationCategory', then "value" must be an object
+        If "type" is 'application' or 'applicationCategory', then "value" must be an object
         with the structure { "id": "meraki:layer7/..." }, where "id" is the application category or
         application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
         endpoint).
@@ -15871,7 +15871,7 @@ class GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleDefinitionArgs:
                a hostname (e.g. "somesite.com"), a port (e.g. 8080), or an IP range ("192.1.0.0",
                "192.1.0.0/16", or "10.1.0.0/16:80"). 'localNet' also supports CIDR notation, excluding
                custom ports.
-                If "type" is 'application' or 'applicationCategory', then "value" must be an object
+               If "type" is 'application' or 'applicationCategory', then "value" must be an object
                with the structure { "id": "meraki:layer7/..." }, where "id" is the application category or
                application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
                endpoint).
@@ -15901,7 +15901,7 @@ class GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleDefinitionArgs:
         a hostname (e.g. "somesite.com"), a port (e.g. 8080), or an IP range ("192.1.0.0",
         "192.1.0.0/16", or "10.1.0.0/16:80"). 'localNet' also supports CIDR notation, excluding
         custom ports.
-         If "type" is 'application' or 'applicationCategory', then "value" must be an object
+        If "type" is 'application' or 'applicationCategory', then "value" must be an object
         with the structure { "id": "meraki:layer7/..." }, where "id" is the application category or
         application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
         endpoint).
@@ -29530,7 +29530,7 @@ class WirelessSsidsTrafficShapingRulesRuleDefinitionArgs:
                a hostname (e.g. "somesite.com"), a port (e.g. 8080), or an IP range ("192.1.0.0",
                "192.1.0.0/16", or "10.1.0.0/16:80"). 'localNet' also supports CIDR notation, excluding
                custom ports.
-                If "type" is 'application' or 'applicationCategory', then "value" must be an object
+               If "type" is 'application' or 'applicationCategory', then "value" must be an object
                with the structure { "id": "meraki:layer7/..." }, where "id" is the application category or
                application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
                endpoint).
@@ -29560,7 +29560,7 @@ class WirelessSsidsTrafficShapingRulesRuleDefinitionArgs:
         a hostname (e.g. "somesite.com"), a port (e.g. 8080), or an IP range ("192.1.0.0",
         "192.1.0.0/16", or "10.1.0.0/16:80"). 'localNet' also supports CIDR notation, excluding
         custom ports.
-         If "type" is 'application' or 'applicationCategory', then "value" must be an object
+        If "type" is 'application' or 'applicationCategory', then "value" must be an object
         with the structure { "id": "meraki:layer7/..." }, where "id" is the application category or
         application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
         endpoint).

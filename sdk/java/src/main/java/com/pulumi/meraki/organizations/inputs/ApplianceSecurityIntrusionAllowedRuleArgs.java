@@ -31,14 +31,14 @@ public final class ApplianceSecurityIntrusionAllowedRuleArgs extends com.pulumi.
     }
 
     /**
-     * A rule identifier of the format meraki:intrusion/snort/GID/\n\n/SID/\n\n. gid and sid can be obtained from either https://www.snort.org/rule-docs or as ruleIds from the security events in /organization/[orgId]/securityEvents
+     * A rule identifier of the format meraki:intrusion/snort/GID/\n\n/SID/\n\n. gid and sid can be obtained from either [https://www.snort.org/rule-docs](https://www.snort.org/rule-docs) or as ruleIds from the security events in /organization/[orgId]/securityEvents
      * 
      */
     @Import(name="ruleId")
     private @Nullable Output<String> ruleId;
 
     /**
-     * @return A rule identifier of the format meraki:intrusion/snort/GID/\n\n/SID/\n\n. gid and sid can be obtained from either https://www.snort.org/rule-docs or as ruleIds from the security events in /organization/[orgId]/securityEvents
+     * @return A rule identifier of the format meraki:intrusion/snort/GID/\n\n/SID/\n\n. gid and sid can be obtained from either [https://www.snort.org/rule-docs](https://www.snort.org/rule-docs) or as ruleIds from the security events in /organization/[orgId]/securityEvents
      * 
      */
     public Optional<Output<String>> ruleId() {
@@ -92,7 +92,7 @@ public final class ApplianceSecurityIntrusionAllowedRuleArgs extends com.pulumi.
         }
 
         /**
-         * @param ruleId A rule identifier of the format meraki:intrusion/snort/GID/\n\n/SID/\n\n. gid and sid can be obtained from either https://www.snort.org/rule-docs or as ruleIds from the security events in /organization/[orgId]/securityEvents
+         * @param ruleId A rule identifier of the format meraki:intrusion/snort/GID/\n\n/SID/\n\n. gid and sid can be obtained from either [https://www.snort.org/rule-docs](https://www.snort.org/rule-docs) or as ruleIds from the security events in /organization/[orgId]/securityEvents
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class ApplianceSecurityIntrusionAllowedRuleArgs extends com.pulumi.
         }
 
         /**
-         * @param ruleId A rule identifier of the format meraki:intrusion/snort/GID/\n\n/SID/\n\n. gid and sid can be obtained from either https://www.snort.org/rule-docs or as ruleIds from the security events in /organization/[orgId]/securityEvents
+         * @param ruleId A rule identifier of the format meraki:intrusion/snort/GID/\n\n/SID/\n\n. gid and sid can be obtained from either [https://www.snort.org/rule-docs](https://www.snort.org/rule-docs) or as ruleIds from the security events in /organization/[orgId]/securityEvents
          * 
          * @return builder
          * 

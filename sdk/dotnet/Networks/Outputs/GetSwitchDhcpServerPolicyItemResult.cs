@@ -19,7 +19,7 @@ namespace Pulumi.Meraki.Networks.Outputs
         public readonly Outputs.GetSwitchDhcpServerPolicyItemAlertsResult Alerts;
         /// <summary>
         /// List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
-        ///   to block.An empty array will clear the entries.
+        /// to block.An empty array will clear the entries.
         /// </summary>
         public readonly ImmutableArray<string> AllowedServers;
         /// <summary>
@@ -28,7 +28,7 @@ namespace Pulumi.Meraki.Networks.Outputs
         public readonly Outputs.GetSwitchDhcpServerPolicyItemArpInspectionResult ArpInspection;
         /// <summary>
         /// List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set
-        ///   to allow.An empty array will clear the entries.
+        /// to allow.An empty array will clear the entries.
         /// </summary>
         public readonly ImmutableArray<string> BlockedServers;
         /// <summary>

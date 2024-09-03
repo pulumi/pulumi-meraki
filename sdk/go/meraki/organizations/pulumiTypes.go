@@ -2261,7 +2261,7 @@ func (o AlertsProfilesRecipientsPtrOutput) HttpServerIds() pulumi.StringArrayOut
 type ApplianceSecurityIntrusionAllowedRule struct {
 	// Message is optional and is ignored on a PUT call. It is allowed in order for PUT to be compatible with GET
 	Message *string `pulumi:"message"`
-	// A rule identifier of the format meraki:intrusion/snort/GID/\n\n/SID/\n\n. gid and sid can be obtained from either https://www.snort.org/rule-docs or as ruleIds from the security events in /organization/[orgId]/securityEvents
+	// A rule identifier of the format meraki:intrusion/snort/GID/\n\n/SID/\n\n. gid and sid can be obtained from either [https://www.snort.org/rule-docs](https://www.snort.org/rule-docs) or as ruleIds from the security events in /organization/[orgId]/securityEvents
 	RuleId *string `pulumi:"ruleId"`
 }
 
@@ -2279,7 +2279,7 @@ type ApplianceSecurityIntrusionAllowedRuleInput interface {
 type ApplianceSecurityIntrusionAllowedRuleArgs struct {
 	// Message is optional and is ignored on a PUT call. It is allowed in order for PUT to be compatible with GET
 	Message pulumi.StringPtrInput `pulumi:"message"`
-	// A rule identifier of the format meraki:intrusion/snort/GID/\n\n/SID/\n\n. gid and sid can be obtained from either https://www.snort.org/rule-docs or as ruleIds from the security events in /organization/[orgId]/securityEvents
+	// A rule identifier of the format meraki:intrusion/snort/GID/\n\n/SID/\n\n. gid and sid can be obtained from either [https://www.snort.org/rule-docs](https://www.snort.org/rule-docs) or as ruleIds from the security events in /organization/[orgId]/securityEvents
 	RuleId pulumi.StringPtrInput `pulumi:"ruleId"`
 }
 
@@ -2339,7 +2339,7 @@ func (o ApplianceSecurityIntrusionAllowedRuleOutput) Message() pulumi.StringPtrO
 	return o.ApplyT(func(v ApplianceSecurityIntrusionAllowedRule) *string { return v.Message }).(pulumi.StringPtrOutput)
 }
 
-// A rule identifier of the format meraki:intrusion/snort/GID/\n\n/SID/\n\n. gid and sid can be obtained from either https://www.snort.org/rule-docs or as ruleIds from the security events in /organization/[orgId]/securityEvents
+// A rule identifier of the format meraki:intrusion/snort/GID/\n\n/SID/\n\n. gid and sid can be obtained from either [https://www.snort.org/rule-docs](https://www.snort.org/rule-docs) or as ruleIds from the security events in /organization/[orgId]/securityEvents
 func (o ApplianceSecurityIntrusionAllowedRuleOutput) RuleId() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ApplianceSecurityIntrusionAllowedRule) *string { return v.RuleId }).(pulumi.StringPtrOutput)
 }
@@ -3468,9 +3468,9 @@ type BrandingPoliciesAdminSettings struct {
 	// Which kinds of admins this policy applies to. Can be one of 'All organization admins', 'All enterprise admins', 'All network admins', 'All admins of networks...', 'All admins of networks tagged...', 'Specific admins...', 'All admins' or 'All SAML admins'.
 	AppliesTo *string `pulumi:"appliesTo"`
 	// If 'appliesTo' is set to one of 'Specific admins...', 'All admins of networks...' or 'All admins of networks tagged...', then you must specify this 'values' property to provide the set of
-	//   entities to apply the branding policy to. For 'Specific admins...', specify an array of admin IDs. For 'All admins of
-	//   networks...', specify an array of network IDs and/or configuration template IDs. For 'All admins of networks tagged...',
-	//   specify an array of tag names.
+	// entities to apply the branding policy to. For 'Specific admins...', specify an array of admin IDs. For 'All admins of
+	// networks...', specify an array of network IDs and/or configuration template IDs. For 'All admins of networks tagged...',
+	// specify an array of tag names.
 	Values []string `pulumi:"values"`
 }
 
@@ -3489,9 +3489,9 @@ type BrandingPoliciesAdminSettingsArgs struct {
 	// Which kinds of admins this policy applies to. Can be one of 'All organization admins', 'All enterprise admins', 'All network admins', 'All admins of networks...', 'All admins of networks tagged...', 'Specific admins...', 'All admins' or 'All SAML admins'.
 	AppliesTo pulumi.StringPtrInput `pulumi:"appliesTo"`
 	// If 'appliesTo' is set to one of 'Specific admins...', 'All admins of networks...' or 'All admins of networks tagged...', then you must specify this 'values' property to provide the set of
-	//   entities to apply the branding policy to. For 'Specific admins...', specify an array of admin IDs. For 'All admins of
-	//   networks...', specify an array of network IDs and/or configuration template IDs. For 'All admins of networks tagged...',
-	//   specify an array of tag names.
+	// entities to apply the branding policy to. For 'Specific admins...', specify an array of admin IDs. For 'All admins of
+	// networks...', specify an array of network IDs and/or configuration template IDs. For 'All admins of networks tagged...',
+	// specify an array of tag names.
 	Values pulumi.StringArrayInput `pulumi:"values"`
 }
 
@@ -3578,10 +3578,9 @@ func (o BrandingPoliciesAdminSettingsOutput) AppliesTo() pulumi.StringPtrOutput 
 }
 
 // If 'appliesTo' is set to one of 'Specific admins...', 'All admins of networks...' or 'All admins of networks tagged...', then you must specify this 'values' property to provide the set of
-//
-//	entities to apply the branding policy to. For 'Specific admins...', specify an array of admin IDs. For 'All admins of
-//	networks...', specify an array of network IDs and/or configuration template IDs. For 'All admins of networks tagged...',
-//	specify an array of tag names.
+// entities to apply the branding policy to. For 'Specific admins...', specify an array of admin IDs. For 'All admins of
+// networks...', specify an array of network IDs and/or configuration template IDs. For 'All admins of networks tagged...',
+// specify an array of tag names.
 func (o BrandingPoliciesAdminSettingsOutput) Values() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v BrandingPoliciesAdminSettings) []string { return v.Values }).(pulumi.StringArrayOutput)
 }
@@ -3621,10 +3620,9 @@ func (o BrandingPoliciesAdminSettingsPtrOutput) AppliesTo() pulumi.StringPtrOutp
 }
 
 // If 'appliesTo' is set to one of 'Specific admins...', 'All admins of networks...' or 'All admins of networks tagged...', then you must specify this 'values' property to provide the set of
-//
-//	entities to apply the branding policy to. For 'Specific admins...', specify an array of admin IDs. For 'All admins of
-//	networks...', specify an array of network IDs and/or configuration template IDs. For 'All admins of networks tagged...',
-//	specify an array of tag names.
+// entities to apply the branding policy to. For 'Specific admins...', specify an array of admin IDs. For 'All admins of
+// networks...', specify an array of network IDs and/or configuration template IDs. For 'All admins of networks tagged...',
+// specify an array of tag names.
 func (o BrandingPoliciesAdminSettingsPtrOutput) Values() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *BrandingPoliciesAdminSettings) []string {
 		if v == nil {
@@ -4123,45 +4121,45 @@ func (o BrandingPoliciesCustomLogoImagePreviewPtrOutput) Url() pulumi.StringPtrO
 
 type BrandingPoliciesHelpSettings struct {
 	// The 'Help > API docs' subtab where a detailed description of the Dashboard API is listed. Can be one of
-	//   'default or inherit', 'hide' or 'show'.
+	// 'default or inherit', 'hide' or 'show'.
 	ApiDocsSubtab *string `pulumi:"apiDocsSubtab"`
 	// The 'Help > Cases' Dashboard subtab on which Cisco Meraki support cases for this organization can be managed. Can be one
-	//   of 'default or inherit', 'hide' or 'show'.
+	// of 'default or inherit', 'hide' or 'show'.
 	CasesSubtab *string `pulumi:"casesSubtab"`
 	// The 'Product Manuals' section of the 'Help > Get Help' subtab. Can be one of 'default or inherit', 'hide', 'show', or a replacement custom HTML string.
 	CiscoMerakiProductDocumentation *string `pulumi:"ciscoMerakiProductDocumentation"`
 	// The 'Help > Community' subtab which provides a link to Meraki Community. Can be one of 'default or inherit', 'hide' or 'show'.
 	CommunitySubtab *string `pulumi:"communitySubtab"`
 	// The 'Help > Data protection requests' Dashboard subtab on which requests to delete, restrict, or export end-user data can
-	//   be audited. Can be one of 'default or inherit', 'hide' or 'show'.
+	// be audited. Can be one of 'default or inherit', 'hide' or 'show'.
 	DataProtectionRequestsSubtab *string `pulumi:"dataProtectionRequestsSubtab"`
 	// The 'Help > Firewall info' subtab where necessary upstream firewall rules for communication to the Cisco Meraki cloud are
-	//   listed. Can be one of 'default or inherit', 'hide' or 'show'.
+	// listed. Can be one of 'default or inherit', 'hide' or 'show'.
 	FirewallInfoSubtab *string `pulumi:"firewallInfoSubtab"`
 	// The 'Help > Get Help' subtab on which Cisco Meraki KB, Product Manuals, and Support/Case Information are displayed. Note
-	//   that if this subtab is hidden, branding customizations for the KB on 'Get help', Cisco Meraki product documentation,
-	//   and support contact info will not be visible. Can be one of 'default or inherit', 'hide' or 'show'.
+	// that if this subtab is hidden, branding customizations for the KB on 'Get help', Cisco Meraki product documentation,
+	// and support contact info will not be visible. Can be one of 'default or inherit', 'hide' or 'show'.
 	GetHelpSubtab *string `pulumi:"getHelpSubtab"`
 	// The KB search box which appears on the Help page. Can be one of 'default or inherit', 'hide', 'show', or a replacement custom HTML string.
 	GetHelpSubtabKnowledgeBaseSearch *string `pulumi:"getHelpSubtabKnowledgeBaseSearch"`
 	// The 'Help > Replacement info' subtab where important information regarding device replacements is detailed. Can be one of
-	//   'default or inherit', 'hide' or 'show'.
+	// 'default or inherit', 'hide' or 'show'.
 	HardwareReplacementsSubtab *string `pulumi:"hardwareReplacementsSubtab"`
 	// The Help tab, under which all support information resides. If this tab is hidden, no other 'Help' branding
-	//   customizations will be visible. Can be one of 'default or inherit', 'hide' or 'show'.
+	// customizations will be visible. Can be one of 'default or inherit', 'hide' or 'show'.
 	HelpTab *string `pulumi:"helpTab"`
 	// The 'Help Widget' is a support widget which provides access to live chat, documentation links, Sales contact info,
-	//   and other contact avenues to reach Meraki Support. Can be one of 'default or inherit', 'hide' or 'show'.
+	// and other contact avenues to reach Meraki Support. Can be one of 'default or inherit', 'hide' or 'show'.
 	HelpWidget *string `pulumi:"helpWidget"`
 	// The 'Help > New features' subtab where new Dashboard features are detailed. Can be one of 'default or inherit', 'hide' or 'show'.
 	NewFeaturesSubtab *string `pulumi:"newFeaturesSubtab"`
 	// The 'SM Forums' subtab which links to community-based support for Cisco Meraki Systems Manager. Only configurable for
-	//   organizations that contain Systems Manager networks. Can be one of 'default or inherit', 'hide' or 'show'.
+	// organizations that contain Systems Manager networks. Can be one of 'default or inherit', 'hide' or 'show'.
 	SmForums *string `pulumi:"smForums"`
 	// The 'Contact Meraki Support' section of the 'Help > Get Help' subtab. Can be one of 'default or inherit', 'hide', 'show', or a replacement custom HTML string.
 	SupportContactInfo *string `pulumi:"supportContactInfo"`
 	// The universal search box always visible on Dashboard will, by default, present results from the Meraki KB. This configures
-	//   whether these Meraki KB results should be returned. Can be one of 'default or inherit', 'hide' or 'show'.
+	// whether these Meraki KB results should be returned. Can be one of 'default or inherit', 'hide' or 'show'.
 	UniversalSearchKnowledgeBaseSearch *string `pulumi:"universalSearchKnowledgeBaseSearch"`
 }
 
@@ -4178,45 +4176,45 @@ type BrandingPoliciesHelpSettingsInput interface {
 
 type BrandingPoliciesHelpSettingsArgs struct {
 	// The 'Help > API docs' subtab where a detailed description of the Dashboard API is listed. Can be one of
-	//   'default or inherit', 'hide' or 'show'.
+	// 'default or inherit', 'hide' or 'show'.
 	ApiDocsSubtab pulumi.StringPtrInput `pulumi:"apiDocsSubtab"`
 	// The 'Help > Cases' Dashboard subtab on which Cisco Meraki support cases for this organization can be managed. Can be one
-	//   of 'default or inherit', 'hide' or 'show'.
+	// of 'default or inherit', 'hide' or 'show'.
 	CasesSubtab pulumi.StringPtrInput `pulumi:"casesSubtab"`
 	// The 'Product Manuals' section of the 'Help > Get Help' subtab. Can be one of 'default or inherit', 'hide', 'show', or a replacement custom HTML string.
 	CiscoMerakiProductDocumentation pulumi.StringPtrInput `pulumi:"ciscoMerakiProductDocumentation"`
 	// The 'Help > Community' subtab which provides a link to Meraki Community. Can be one of 'default or inherit', 'hide' or 'show'.
 	CommunitySubtab pulumi.StringPtrInput `pulumi:"communitySubtab"`
 	// The 'Help > Data protection requests' Dashboard subtab on which requests to delete, restrict, or export end-user data can
-	//   be audited. Can be one of 'default or inherit', 'hide' or 'show'.
+	// be audited. Can be one of 'default or inherit', 'hide' or 'show'.
 	DataProtectionRequestsSubtab pulumi.StringPtrInput `pulumi:"dataProtectionRequestsSubtab"`
 	// The 'Help > Firewall info' subtab where necessary upstream firewall rules for communication to the Cisco Meraki cloud are
-	//   listed. Can be one of 'default or inherit', 'hide' or 'show'.
+	// listed. Can be one of 'default or inherit', 'hide' or 'show'.
 	FirewallInfoSubtab pulumi.StringPtrInput `pulumi:"firewallInfoSubtab"`
 	// The 'Help > Get Help' subtab on which Cisco Meraki KB, Product Manuals, and Support/Case Information are displayed. Note
-	//   that if this subtab is hidden, branding customizations for the KB on 'Get help', Cisco Meraki product documentation,
-	//   and support contact info will not be visible. Can be one of 'default or inherit', 'hide' or 'show'.
+	// that if this subtab is hidden, branding customizations for the KB on 'Get help', Cisco Meraki product documentation,
+	// and support contact info will not be visible. Can be one of 'default or inherit', 'hide' or 'show'.
 	GetHelpSubtab pulumi.StringPtrInput `pulumi:"getHelpSubtab"`
 	// The KB search box which appears on the Help page. Can be one of 'default or inherit', 'hide', 'show', or a replacement custom HTML string.
 	GetHelpSubtabKnowledgeBaseSearch pulumi.StringPtrInput `pulumi:"getHelpSubtabKnowledgeBaseSearch"`
 	// The 'Help > Replacement info' subtab where important information regarding device replacements is detailed. Can be one of
-	//   'default or inherit', 'hide' or 'show'.
+	// 'default or inherit', 'hide' or 'show'.
 	HardwareReplacementsSubtab pulumi.StringPtrInput `pulumi:"hardwareReplacementsSubtab"`
 	// The Help tab, under which all support information resides. If this tab is hidden, no other 'Help' branding
-	//   customizations will be visible. Can be one of 'default or inherit', 'hide' or 'show'.
+	// customizations will be visible. Can be one of 'default or inherit', 'hide' or 'show'.
 	HelpTab pulumi.StringPtrInput `pulumi:"helpTab"`
 	// The 'Help Widget' is a support widget which provides access to live chat, documentation links, Sales contact info,
-	//   and other contact avenues to reach Meraki Support. Can be one of 'default or inherit', 'hide' or 'show'.
+	// and other contact avenues to reach Meraki Support. Can be one of 'default or inherit', 'hide' or 'show'.
 	HelpWidget pulumi.StringPtrInput `pulumi:"helpWidget"`
 	// The 'Help > New features' subtab where new Dashboard features are detailed. Can be one of 'default or inherit', 'hide' or 'show'.
 	NewFeaturesSubtab pulumi.StringPtrInput `pulumi:"newFeaturesSubtab"`
 	// The 'SM Forums' subtab which links to community-based support for Cisco Meraki Systems Manager. Only configurable for
-	//   organizations that contain Systems Manager networks. Can be one of 'default or inherit', 'hide' or 'show'.
+	// organizations that contain Systems Manager networks. Can be one of 'default or inherit', 'hide' or 'show'.
 	SmForums pulumi.StringPtrInput `pulumi:"smForums"`
 	// The 'Contact Meraki Support' section of the 'Help > Get Help' subtab. Can be one of 'default or inherit', 'hide', 'show', or a replacement custom HTML string.
 	SupportContactInfo pulumi.StringPtrInput `pulumi:"supportContactInfo"`
 	// The universal search box always visible on Dashboard will, by default, present results from the Meraki KB. This configures
-	//   whether these Meraki KB results should be returned. Can be one of 'default or inherit', 'hide' or 'show'.
+	// whether these Meraki KB results should be returned. Can be one of 'default or inherit', 'hide' or 'show'.
 	UniversalSearchKnowledgeBaseSearch pulumi.StringPtrInput `pulumi:"universalSearchKnowledgeBaseSearch"`
 }
 
@@ -4298,15 +4296,13 @@ func (o BrandingPoliciesHelpSettingsOutput) ToBrandingPoliciesHelpSettingsPtrOut
 }
 
 // The 'Help > API docs' subtab where a detailed description of the Dashboard API is listed. Can be one of
-//
-//	'default or inherit', 'hide' or 'show'.
+// 'default or inherit', 'hide' or 'show'.
 func (o BrandingPoliciesHelpSettingsOutput) ApiDocsSubtab() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BrandingPoliciesHelpSettings) *string { return v.ApiDocsSubtab }).(pulumi.StringPtrOutput)
 }
 
 // The 'Help > Cases' Dashboard subtab on which Cisco Meraki support cases for this organization can be managed. Can be one
-//
-//	of 'default or inherit', 'hide' or 'show'.
+// of 'default or inherit', 'hide' or 'show'.
 func (o BrandingPoliciesHelpSettingsOutput) CasesSubtab() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BrandingPoliciesHelpSettings) *string { return v.CasesSubtab }).(pulumi.StringPtrOutput)
 }
@@ -4322,23 +4318,20 @@ func (o BrandingPoliciesHelpSettingsOutput) CommunitySubtab() pulumi.StringPtrOu
 }
 
 // The 'Help > Data protection requests' Dashboard subtab on which requests to delete, restrict, or export end-user data can
-//
-//	be audited. Can be one of 'default or inherit', 'hide' or 'show'.
+// be audited. Can be one of 'default or inherit', 'hide' or 'show'.
 func (o BrandingPoliciesHelpSettingsOutput) DataProtectionRequestsSubtab() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BrandingPoliciesHelpSettings) *string { return v.DataProtectionRequestsSubtab }).(pulumi.StringPtrOutput)
 }
 
 // The 'Help > Firewall info' subtab where necessary upstream firewall rules for communication to the Cisco Meraki cloud are
-//
-//	listed. Can be one of 'default or inherit', 'hide' or 'show'.
+// listed. Can be one of 'default or inherit', 'hide' or 'show'.
 func (o BrandingPoliciesHelpSettingsOutput) FirewallInfoSubtab() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BrandingPoliciesHelpSettings) *string { return v.FirewallInfoSubtab }).(pulumi.StringPtrOutput)
 }
 
 // The 'Help > Get Help' subtab on which Cisco Meraki KB, Product Manuals, and Support/Case Information are displayed. Note
-//
-//	that if this subtab is hidden, branding customizations for the KB on 'Get help', Cisco Meraki product documentation,
-//	and support contact info will not be visible. Can be one of 'default or inherit', 'hide' or 'show'.
+// that if this subtab is hidden, branding customizations for the KB on 'Get help', Cisco Meraki product documentation,
+// and support contact info will not be visible. Can be one of 'default or inherit', 'hide' or 'show'.
 func (o BrandingPoliciesHelpSettingsOutput) GetHelpSubtab() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BrandingPoliciesHelpSettings) *string { return v.GetHelpSubtab }).(pulumi.StringPtrOutput)
 }
@@ -4349,22 +4342,19 @@ func (o BrandingPoliciesHelpSettingsOutput) GetHelpSubtabKnowledgeBaseSearch() p
 }
 
 // The 'Help > Replacement info' subtab where important information regarding device replacements is detailed. Can be one of
-//
-//	'default or inherit', 'hide' or 'show'.
+// 'default or inherit', 'hide' or 'show'.
 func (o BrandingPoliciesHelpSettingsOutput) HardwareReplacementsSubtab() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BrandingPoliciesHelpSettings) *string { return v.HardwareReplacementsSubtab }).(pulumi.StringPtrOutput)
 }
 
 // The Help tab, under which all support information resides. If this tab is hidden, no other 'Help' branding
-//
-//	customizations will be visible. Can be one of 'default or inherit', 'hide' or 'show'.
+// customizations will be visible. Can be one of 'default or inherit', 'hide' or 'show'.
 func (o BrandingPoliciesHelpSettingsOutput) HelpTab() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BrandingPoliciesHelpSettings) *string { return v.HelpTab }).(pulumi.StringPtrOutput)
 }
 
 // The 'Help Widget' is a support widget which provides access to live chat, documentation links, Sales contact info,
-//
-//	and other contact avenues to reach Meraki Support. Can be one of 'default or inherit', 'hide' or 'show'.
+// and other contact avenues to reach Meraki Support. Can be one of 'default or inherit', 'hide' or 'show'.
 func (o BrandingPoliciesHelpSettingsOutput) HelpWidget() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BrandingPoliciesHelpSettings) *string { return v.HelpWidget }).(pulumi.StringPtrOutput)
 }
@@ -4375,8 +4365,7 @@ func (o BrandingPoliciesHelpSettingsOutput) NewFeaturesSubtab() pulumi.StringPtr
 }
 
 // The 'SM Forums' subtab which links to community-based support for Cisco Meraki Systems Manager. Only configurable for
-//
-//	organizations that contain Systems Manager networks. Can be one of 'default or inherit', 'hide' or 'show'.
+// organizations that contain Systems Manager networks. Can be one of 'default or inherit', 'hide' or 'show'.
 func (o BrandingPoliciesHelpSettingsOutput) SmForums() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BrandingPoliciesHelpSettings) *string { return v.SmForums }).(pulumi.StringPtrOutput)
 }
@@ -4387,8 +4376,7 @@ func (o BrandingPoliciesHelpSettingsOutput) SupportContactInfo() pulumi.StringPt
 }
 
 // The universal search box always visible on Dashboard will, by default, present results from the Meraki KB. This configures
-//
-//	whether these Meraki KB results should be returned. Can be one of 'default or inherit', 'hide' or 'show'.
+// whether these Meraki KB results should be returned. Can be one of 'default or inherit', 'hide' or 'show'.
 func (o BrandingPoliciesHelpSettingsOutput) UniversalSearchKnowledgeBaseSearch() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BrandingPoliciesHelpSettings) *string { return v.UniversalSearchKnowledgeBaseSearch }).(pulumi.StringPtrOutput)
 }
@@ -4418,8 +4406,7 @@ func (o BrandingPoliciesHelpSettingsPtrOutput) Elem() BrandingPoliciesHelpSettin
 }
 
 // The 'Help > API docs' subtab where a detailed description of the Dashboard API is listed. Can be one of
-//
-//	'default or inherit', 'hide' or 'show'.
+// 'default or inherit', 'hide' or 'show'.
 func (o BrandingPoliciesHelpSettingsPtrOutput) ApiDocsSubtab() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BrandingPoliciesHelpSettings) *string {
 		if v == nil {
@@ -4430,8 +4417,7 @@ func (o BrandingPoliciesHelpSettingsPtrOutput) ApiDocsSubtab() pulumi.StringPtrO
 }
 
 // The 'Help > Cases' Dashboard subtab on which Cisco Meraki support cases for this organization can be managed. Can be one
-//
-//	of 'default or inherit', 'hide' or 'show'.
+// of 'default or inherit', 'hide' or 'show'.
 func (o BrandingPoliciesHelpSettingsPtrOutput) CasesSubtab() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BrandingPoliciesHelpSettings) *string {
 		if v == nil {
@@ -4462,8 +4448,7 @@ func (o BrandingPoliciesHelpSettingsPtrOutput) CommunitySubtab() pulumi.StringPt
 }
 
 // The 'Help > Data protection requests' Dashboard subtab on which requests to delete, restrict, or export end-user data can
-//
-//	be audited. Can be one of 'default or inherit', 'hide' or 'show'.
+// be audited. Can be one of 'default or inherit', 'hide' or 'show'.
 func (o BrandingPoliciesHelpSettingsPtrOutput) DataProtectionRequestsSubtab() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BrandingPoliciesHelpSettings) *string {
 		if v == nil {
@@ -4474,8 +4459,7 @@ func (o BrandingPoliciesHelpSettingsPtrOutput) DataProtectionRequestsSubtab() pu
 }
 
 // The 'Help > Firewall info' subtab where necessary upstream firewall rules for communication to the Cisco Meraki cloud are
-//
-//	listed. Can be one of 'default or inherit', 'hide' or 'show'.
+// listed. Can be one of 'default or inherit', 'hide' or 'show'.
 func (o BrandingPoliciesHelpSettingsPtrOutput) FirewallInfoSubtab() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BrandingPoliciesHelpSettings) *string {
 		if v == nil {
@@ -4486,9 +4470,8 @@ func (o BrandingPoliciesHelpSettingsPtrOutput) FirewallInfoSubtab() pulumi.Strin
 }
 
 // The 'Help > Get Help' subtab on which Cisco Meraki KB, Product Manuals, and Support/Case Information are displayed. Note
-//
-//	that if this subtab is hidden, branding customizations for the KB on 'Get help', Cisco Meraki product documentation,
-//	and support contact info will not be visible. Can be one of 'default or inherit', 'hide' or 'show'.
+// that if this subtab is hidden, branding customizations for the KB on 'Get help', Cisco Meraki product documentation,
+// and support contact info will not be visible. Can be one of 'default or inherit', 'hide' or 'show'.
 func (o BrandingPoliciesHelpSettingsPtrOutput) GetHelpSubtab() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BrandingPoliciesHelpSettings) *string {
 		if v == nil {
@@ -4509,8 +4492,7 @@ func (o BrandingPoliciesHelpSettingsPtrOutput) GetHelpSubtabKnowledgeBaseSearch(
 }
 
 // The 'Help > Replacement info' subtab where important information regarding device replacements is detailed. Can be one of
-//
-//	'default or inherit', 'hide' or 'show'.
+// 'default or inherit', 'hide' or 'show'.
 func (o BrandingPoliciesHelpSettingsPtrOutput) HardwareReplacementsSubtab() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BrandingPoliciesHelpSettings) *string {
 		if v == nil {
@@ -4521,8 +4503,7 @@ func (o BrandingPoliciesHelpSettingsPtrOutput) HardwareReplacementsSubtab() pulu
 }
 
 // The Help tab, under which all support information resides. If this tab is hidden, no other 'Help' branding
-//
-//	customizations will be visible. Can be one of 'default or inherit', 'hide' or 'show'.
+// customizations will be visible. Can be one of 'default or inherit', 'hide' or 'show'.
 func (o BrandingPoliciesHelpSettingsPtrOutput) HelpTab() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BrandingPoliciesHelpSettings) *string {
 		if v == nil {
@@ -4533,8 +4514,7 @@ func (o BrandingPoliciesHelpSettingsPtrOutput) HelpTab() pulumi.StringPtrOutput 
 }
 
 // The 'Help Widget' is a support widget which provides access to live chat, documentation links, Sales contact info,
-//
-//	and other contact avenues to reach Meraki Support. Can be one of 'default or inherit', 'hide' or 'show'.
+// and other contact avenues to reach Meraki Support. Can be one of 'default or inherit', 'hide' or 'show'.
 func (o BrandingPoliciesHelpSettingsPtrOutput) HelpWidget() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BrandingPoliciesHelpSettings) *string {
 		if v == nil {
@@ -4555,8 +4535,7 @@ func (o BrandingPoliciesHelpSettingsPtrOutput) NewFeaturesSubtab() pulumi.String
 }
 
 // The 'SM Forums' subtab which links to community-based support for Cisco Meraki Systems Manager. Only configurable for
-//
-//	organizations that contain Systems Manager networks. Can be one of 'default or inherit', 'hide' or 'show'.
+// organizations that contain Systems Manager networks. Can be one of 'default or inherit', 'hide' or 'show'.
 func (o BrandingPoliciesHelpSettingsPtrOutput) SmForums() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BrandingPoliciesHelpSettings) *string {
 		if v == nil {
@@ -4577,8 +4556,7 @@ func (o BrandingPoliciesHelpSettingsPtrOutput) SupportContactInfo() pulumi.Strin
 }
 
 // The universal search box always visible on Dashboard will, by default, present results from the Meraki KB. This configures
-//
-//	whether these Meraki KB results should be returned. Can be one of 'default or inherit', 'hide' or 'show'.
+// whether these Meraki KB results should be returned. Can be one of 'default or inherit', 'hide' or 'show'.
 func (o BrandingPoliciesHelpSettingsPtrOutput) UniversalSearchKnowledgeBaseSearch() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BrandingPoliciesHelpSettings) *string {
 		if v == nil {
@@ -23243,9 +23221,9 @@ type GetBrandingPoliciesItem struct {
 	// Boolean indicating whether this policy is enabled.
 	Enabled bool `pulumi:"enabled"`
 	// Settings for describing the modifications to various Help page features. Each property in this object accepts one of
-	//   'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
-	//   the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
-	//   Dashboard; see the documentation for each property to see the allowed values.
+	// 'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
+	// the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
+	// Dashboard; see the documentation for each property to see the allowed values.
 	HelpSettings GetBrandingPoliciesItemHelpSettings `pulumi:"helpSettings"`
 	// Name of the Dashboard branding policy.
 	Name string `pulumi:"name"`
@@ -23270,9 +23248,9 @@ type GetBrandingPoliciesItemArgs struct {
 	// Boolean indicating whether this policy is enabled.
 	Enabled pulumi.BoolInput `pulumi:"enabled"`
 	// Settings for describing the modifications to various Help page features. Each property in this object accepts one of
-	//   'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
-	//   the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
-	//   Dashboard; see the documentation for each property to see the allowed values.
+	// 'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
+	// the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
+	// Dashboard; see the documentation for each property to see the allowed values.
 	HelpSettings GetBrandingPoliciesItemHelpSettingsInput `pulumi:"helpSettings"`
 	// Name of the Dashboard branding policy.
 	Name pulumi.StringInput `pulumi:"name"`
@@ -23345,10 +23323,9 @@ func (o GetBrandingPoliciesItemOutput) Enabled() pulumi.BoolOutput {
 }
 
 // Settings for describing the modifications to various Help page features. Each property in this object accepts one of
-//
-//	'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
-//	the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
-//	Dashboard; see the documentation for each property to see the allowed values.
+// 'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
+// the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
+// Dashboard; see the documentation for each property to see the allowed values.
 func (o GetBrandingPoliciesItemOutput) HelpSettings() GetBrandingPoliciesItemHelpSettingsOutput {
 	return o.ApplyT(func(v GetBrandingPoliciesItem) GetBrandingPoliciesItemHelpSettings { return v.HelpSettings }).(GetBrandingPoliciesItemHelpSettingsOutput)
 }
@@ -23382,9 +23359,9 @@ type GetBrandingPoliciesItemAdminSettings struct {
 	// Which kinds of admins this policy applies to. Can be one of 'All organization admins', 'All enterprise admins', 'All network admins', 'All admins of networks...', 'All admins of networks tagged...', 'Specific admins...', 'All admins' or 'All SAML admins'.
 	AppliesTo string `pulumi:"appliesTo"`
 	// If 'appliesTo' is set to one of 'Specific admins...', 'All admins of networks...' or 'All admins of networks tagged...', then you must specify this 'values' property to provide the set of
-	//   entities to apply the branding policy to. For 'Specific admins...', specify an array of admin IDs. For 'All admins of
-	//   networks...', specify an array of network IDs and/or configuration template IDs. For 'All admins of networks tagged...',
-	//   specify an array of tag names.
+	// entities to apply the branding policy to. For 'Specific admins...', specify an array of admin IDs. For 'All admins of
+	// networks...', specify an array of network IDs and/or configuration template IDs. For 'All admins of networks tagged...',
+	// specify an array of tag names.
 	Values []string `pulumi:"values"`
 }
 
@@ -23403,9 +23380,9 @@ type GetBrandingPoliciesItemAdminSettingsArgs struct {
 	// Which kinds of admins this policy applies to. Can be one of 'All organization admins', 'All enterprise admins', 'All network admins', 'All admins of networks...', 'All admins of networks tagged...', 'Specific admins...', 'All admins' or 'All SAML admins'.
 	AppliesTo pulumi.StringInput `pulumi:"appliesTo"`
 	// If 'appliesTo' is set to one of 'Specific admins...', 'All admins of networks...' or 'All admins of networks tagged...', then you must specify this 'values' property to provide the set of
-	//   entities to apply the branding policy to. For 'Specific admins...', specify an array of admin IDs. For 'All admins of
-	//   networks...', specify an array of network IDs and/or configuration template IDs. For 'All admins of networks tagged...',
-	//   specify an array of tag names.
+	// entities to apply the branding policy to. For 'Specific admins...', specify an array of admin IDs. For 'All admins of
+	// networks...', specify an array of network IDs and/or configuration template IDs. For 'All admins of networks tagged...',
+	// specify an array of tag names.
 	Values pulumi.StringArrayInput `pulumi:"values"`
 }
 
@@ -23441,10 +23418,9 @@ func (o GetBrandingPoliciesItemAdminSettingsOutput) AppliesTo() pulumi.StringOut
 }
 
 // If 'appliesTo' is set to one of 'Specific admins...', 'All admins of networks...' or 'All admins of networks tagged...', then you must specify this 'values' property to provide the set of
-//
-//	entities to apply the branding policy to. For 'Specific admins...', specify an array of admin IDs. For 'All admins of
-//	networks...', specify an array of network IDs and/or configuration template IDs. For 'All admins of networks tagged...',
-//	specify an array of tag names.
+// entities to apply the branding policy to. For 'Specific admins...', specify an array of admin IDs. For 'All admins of
+// networks...', specify an array of network IDs and/or configuration template IDs. For 'All admins of networks tagged...',
+// specify an array of tag names.
 func (o GetBrandingPoliciesItemAdminSettingsOutput) Values() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v GetBrandingPoliciesItemAdminSettings) []string { return v.Values }).(pulumi.StringArrayOutput)
 }
@@ -23627,45 +23603,45 @@ func (o GetBrandingPoliciesItemCustomLogoImagePreviewOutput) Url() pulumi.String
 
 type GetBrandingPoliciesItemHelpSettings struct {
 	// The 'Help > API docs' subtab where a detailed description of the Dashboard API is listed. Can be one of
-	//   'default or inherit', 'hide' or 'show'.
+	// 'default or inherit', 'hide' or 'show'.
 	ApiDocsSubtab string `pulumi:"apiDocsSubtab"`
 	// The 'Help > Cases' Dashboard subtab on which Cisco Meraki support cases for this organization can be managed. Can be one
-	//   of 'default or inherit', 'hide' or 'show'.
+	// of 'default or inherit', 'hide' or 'show'.
 	CasesSubtab string `pulumi:"casesSubtab"`
 	// The 'Product Manuals' section of the 'Help > Get Help' subtab. Can be one of 'default or inherit', 'hide', 'show', or a replacement custom HTML string.
 	CiscoMerakiProductDocumentation string `pulumi:"ciscoMerakiProductDocumentation"`
 	// The 'Help > Community' subtab which provides a link to Meraki Community. Can be one of 'default or inherit', 'hide' or 'show'.
 	CommunitySubtab string `pulumi:"communitySubtab"`
 	// The 'Help > Data protection requests' Dashboard subtab on which requests to delete, restrict, or export end-user data can
-	//   be audited. Can be one of 'default or inherit', 'hide' or 'show'.
+	// be audited. Can be one of 'default or inherit', 'hide' or 'show'.
 	DataProtectionRequestsSubtab string `pulumi:"dataProtectionRequestsSubtab"`
 	// The 'Help > Firewall info' subtab where necessary upstream firewall rules for communication to the Cisco Meraki cloud are
-	//   listed. Can be one of 'default or inherit', 'hide' or 'show'.
+	// listed. Can be one of 'default or inherit', 'hide' or 'show'.
 	FirewallInfoSubtab string `pulumi:"firewallInfoSubtab"`
 	// The 'Help > Get Help' subtab on which Cisco Meraki KB, Product Manuals, and Support/Case Information are displayed. Note
-	//   that if this subtab is hidden, branding customizations for the KB on 'Get help', Cisco Meraki product documentation,
-	//   and support contact info will not be visible. Can be one of 'default or inherit', 'hide' or 'show'.
+	// that if this subtab is hidden, branding customizations for the KB on 'Get help', Cisco Meraki product documentation,
+	// and support contact info will not be visible. Can be one of 'default or inherit', 'hide' or 'show'.
 	GetHelpSubtab string `pulumi:"getHelpSubtab"`
 	// The KB search box which appears on the Help page. Can be one of 'default or inherit', 'hide', 'show', or a replacement custom HTML string.
 	GetHelpSubtabKnowledgeBaseSearch string `pulumi:"getHelpSubtabKnowledgeBaseSearch"`
 	// The 'Help > Replacement info' subtab where important information regarding device replacements is detailed. Can be one of
-	//   'default or inherit', 'hide' or 'show'.
+	// 'default or inherit', 'hide' or 'show'.
 	HardwareReplacementsSubtab string `pulumi:"hardwareReplacementsSubtab"`
 	// The Help tab, under which all support information resides. If this tab is hidden, no other 'Help' branding
-	//   customizations will be visible. Can be one of 'default or inherit', 'hide' or 'show'.
+	// customizations will be visible. Can be one of 'default or inherit', 'hide' or 'show'.
 	HelpTab string `pulumi:"helpTab"`
 	// The 'Help Widget' is a support widget which provides access to live chat, documentation links, Sales contact info,
-	//   and other contact avenues to reach Meraki Support. Can be one of 'default or inherit', 'hide' or 'show'.
+	// and other contact avenues to reach Meraki Support. Can be one of 'default or inherit', 'hide' or 'show'.
 	HelpWidget string `pulumi:"helpWidget"`
 	// The 'Help > New features' subtab where new Dashboard features are detailed. Can be one of 'default or inherit', 'hide' or 'show'.
 	NewFeaturesSubtab string `pulumi:"newFeaturesSubtab"`
 	// The 'SM Forums' subtab which links to community-based support for Cisco Meraki Systems Manager. Only configurable for
-	//   organizations that contain Systems Manager networks. Can be one of 'default or inherit', 'hide' or 'show'.
+	// organizations that contain Systems Manager networks. Can be one of 'default or inherit', 'hide' or 'show'.
 	SmForums string `pulumi:"smForums"`
 	// The 'Contact Meraki Support' section of the 'Help > Get Help' subtab. Can be one of 'default or inherit', 'hide', 'show', or a replacement custom HTML string.
 	SupportContactInfo string `pulumi:"supportContactInfo"`
 	// The universal search box always visible on Dashboard will, by default, present results from the Meraki KB. This configures
-	//   whether these Meraki KB results should be returned. Can be one of 'default or inherit', 'hide' or 'show'.
+	// whether these Meraki KB results should be returned. Can be one of 'default or inherit', 'hide' or 'show'.
 	UniversalSearchKnowledgeBaseSearch string `pulumi:"universalSearchKnowledgeBaseSearch"`
 }
 
@@ -23682,45 +23658,45 @@ type GetBrandingPoliciesItemHelpSettingsInput interface {
 
 type GetBrandingPoliciesItemHelpSettingsArgs struct {
 	// The 'Help > API docs' subtab where a detailed description of the Dashboard API is listed. Can be one of
-	//   'default or inherit', 'hide' or 'show'.
+	// 'default or inherit', 'hide' or 'show'.
 	ApiDocsSubtab pulumi.StringInput `pulumi:"apiDocsSubtab"`
 	// The 'Help > Cases' Dashboard subtab on which Cisco Meraki support cases for this organization can be managed. Can be one
-	//   of 'default or inherit', 'hide' or 'show'.
+	// of 'default or inherit', 'hide' or 'show'.
 	CasesSubtab pulumi.StringInput `pulumi:"casesSubtab"`
 	// The 'Product Manuals' section of the 'Help > Get Help' subtab. Can be one of 'default or inherit', 'hide', 'show', or a replacement custom HTML string.
 	CiscoMerakiProductDocumentation pulumi.StringInput `pulumi:"ciscoMerakiProductDocumentation"`
 	// The 'Help > Community' subtab which provides a link to Meraki Community. Can be one of 'default or inherit', 'hide' or 'show'.
 	CommunitySubtab pulumi.StringInput `pulumi:"communitySubtab"`
 	// The 'Help > Data protection requests' Dashboard subtab on which requests to delete, restrict, or export end-user data can
-	//   be audited. Can be one of 'default or inherit', 'hide' or 'show'.
+	// be audited. Can be one of 'default or inherit', 'hide' or 'show'.
 	DataProtectionRequestsSubtab pulumi.StringInput `pulumi:"dataProtectionRequestsSubtab"`
 	// The 'Help > Firewall info' subtab where necessary upstream firewall rules for communication to the Cisco Meraki cloud are
-	//   listed. Can be one of 'default or inherit', 'hide' or 'show'.
+	// listed. Can be one of 'default or inherit', 'hide' or 'show'.
 	FirewallInfoSubtab pulumi.StringInput `pulumi:"firewallInfoSubtab"`
 	// The 'Help > Get Help' subtab on which Cisco Meraki KB, Product Manuals, and Support/Case Information are displayed. Note
-	//   that if this subtab is hidden, branding customizations for the KB on 'Get help', Cisco Meraki product documentation,
-	//   and support contact info will not be visible. Can be one of 'default or inherit', 'hide' or 'show'.
+	// that if this subtab is hidden, branding customizations for the KB on 'Get help', Cisco Meraki product documentation,
+	// and support contact info will not be visible. Can be one of 'default or inherit', 'hide' or 'show'.
 	GetHelpSubtab pulumi.StringInput `pulumi:"getHelpSubtab"`
 	// The KB search box which appears on the Help page. Can be one of 'default or inherit', 'hide', 'show', or a replacement custom HTML string.
 	GetHelpSubtabKnowledgeBaseSearch pulumi.StringInput `pulumi:"getHelpSubtabKnowledgeBaseSearch"`
 	// The 'Help > Replacement info' subtab where important information regarding device replacements is detailed. Can be one of
-	//   'default or inherit', 'hide' or 'show'.
+	// 'default or inherit', 'hide' or 'show'.
 	HardwareReplacementsSubtab pulumi.StringInput `pulumi:"hardwareReplacementsSubtab"`
 	// The Help tab, under which all support information resides. If this tab is hidden, no other 'Help' branding
-	//   customizations will be visible. Can be one of 'default or inherit', 'hide' or 'show'.
+	// customizations will be visible. Can be one of 'default or inherit', 'hide' or 'show'.
 	HelpTab pulumi.StringInput `pulumi:"helpTab"`
 	// The 'Help Widget' is a support widget which provides access to live chat, documentation links, Sales contact info,
-	//   and other contact avenues to reach Meraki Support. Can be one of 'default or inherit', 'hide' or 'show'.
+	// and other contact avenues to reach Meraki Support. Can be one of 'default or inherit', 'hide' or 'show'.
 	HelpWidget pulumi.StringInput `pulumi:"helpWidget"`
 	// The 'Help > New features' subtab where new Dashboard features are detailed. Can be one of 'default or inherit', 'hide' or 'show'.
 	NewFeaturesSubtab pulumi.StringInput `pulumi:"newFeaturesSubtab"`
 	// The 'SM Forums' subtab which links to community-based support for Cisco Meraki Systems Manager. Only configurable for
-	//   organizations that contain Systems Manager networks. Can be one of 'default or inherit', 'hide' or 'show'.
+	// organizations that contain Systems Manager networks. Can be one of 'default or inherit', 'hide' or 'show'.
 	SmForums pulumi.StringInput `pulumi:"smForums"`
 	// The 'Contact Meraki Support' section of the 'Help > Get Help' subtab. Can be one of 'default or inherit', 'hide', 'show', or a replacement custom HTML string.
 	SupportContactInfo pulumi.StringInput `pulumi:"supportContactInfo"`
 	// The universal search box always visible on Dashboard will, by default, present results from the Meraki KB. This configures
-	//   whether these Meraki KB results should be returned. Can be one of 'default or inherit', 'hide' or 'show'.
+	// whether these Meraki KB results should be returned. Can be one of 'default or inherit', 'hide' or 'show'.
 	UniversalSearchKnowledgeBaseSearch pulumi.StringInput `pulumi:"universalSearchKnowledgeBaseSearch"`
 }
 
@@ -23751,15 +23727,13 @@ func (o GetBrandingPoliciesItemHelpSettingsOutput) ToGetBrandingPoliciesItemHelp
 }
 
 // The 'Help > API docs' subtab where a detailed description of the Dashboard API is listed. Can be one of
-//
-//	'default or inherit', 'hide' or 'show'.
+// 'default or inherit', 'hide' or 'show'.
 func (o GetBrandingPoliciesItemHelpSettingsOutput) ApiDocsSubtab() pulumi.StringOutput {
 	return o.ApplyT(func(v GetBrandingPoliciesItemHelpSettings) string { return v.ApiDocsSubtab }).(pulumi.StringOutput)
 }
 
 // The 'Help > Cases' Dashboard subtab on which Cisco Meraki support cases for this organization can be managed. Can be one
-//
-//	of 'default or inherit', 'hide' or 'show'.
+// of 'default or inherit', 'hide' or 'show'.
 func (o GetBrandingPoliciesItemHelpSettingsOutput) CasesSubtab() pulumi.StringOutput {
 	return o.ApplyT(func(v GetBrandingPoliciesItemHelpSettings) string { return v.CasesSubtab }).(pulumi.StringOutput)
 }
@@ -23775,23 +23749,20 @@ func (o GetBrandingPoliciesItemHelpSettingsOutput) CommunitySubtab() pulumi.Stri
 }
 
 // The 'Help > Data protection requests' Dashboard subtab on which requests to delete, restrict, or export end-user data can
-//
-//	be audited. Can be one of 'default or inherit', 'hide' or 'show'.
+// be audited. Can be one of 'default or inherit', 'hide' or 'show'.
 func (o GetBrandingPoliciesItemHelpSettingsOutput) DataProtectionRequestsSubtab() pulumi.StringOutput {
 	return o.ApplyT(func(v GetBrandingPoliciesItemHelpSettings) string { return v.DataProtectionRequestsSubtab }).(pulumi.StringOutput)
 }
 
 // The 'Help > Firewall info' subtab where necessary upstream firewall rules for communication to the Cisco Meraki cloud are
-//
-//	listed. Can be one of 'default or inherit', 'hide' or 'show'.
+// listed. Can be one of 'default or inherit', 'hide' or 'show'.
 func (o GetBrandingPoliciesItemHelpSettingsOutput) FirewallInfoSubtab() pulumi.StringOutput {
 	return o.ApplyT(func(v GetBrandingPoliciesItemHelpSettings) string { return v.FirewallInfoSubtab }).(pulumi.StringOutput)
 }
 
 // The 'Help > Get Help' subtab on which Cisco Meraki KB, Product Manuals, and Support/Case Information are displayed. Note
-//
-//	that if this subtab is hidden, branding customizations for the KB on 'Get help', Cisco Meraki product documentation,
-//	and support contact info will not be visible. Can be one of 'default or inherit', 'hide' or 'show'.
+// that if this subtab is hidden, branding customizations for the KB on 'Get help', Cisco Meraki product documentation,
+// and support contact info will not be visible. Can be one of 'default or inherit', 'hide' or 'show'.
 func (o GetBrandingPoliciesItemHelpSettingsOutput) GetHelpSubtab() pulumi.StringOutput {
 	return o.ApplyT(func(v GetBrandingPoliciesItemHelpSettings) string { return v.GetHelpSubtab }).(pulumi.StringOutput)
 }
@@ -23802,22 +23773,19 @@ func (o GetBrandingPoliciesItemHelpSettingsOutput) GetHelpSubtabKnowledgeBaseSea
 }
 
 // The 'Help > Replacement info' subtab where important information regarding device replacements is detailed. Can be one of
-//
-//	'default or inherit', 'hide' or 'show'.
+// 'default or inherit', 'hide' or 'show'.
 func (o GetBrandingPoliciesItemHelpSettingsOutput) HardwareReplacementsSubtab() pulumi.StringOutput {
 	return o.ApplyT(func(v GetBrandingPoliciesItemHelpSettings) string { return v.HardwareReplacementsSubtab }).(pulumi.StringOutput)
 }
 
 // The Help tab, under which all support information resides. If this tab is hidden, no other 'Help' branding
-//
-//	customizations will be visible. Can be one of 'default or inherit', 'hide' or 'show'.
+// customizations will be visible. Can be one of 'default or inherit', 'hide' or 'show'.
 func (o GetBrandingPoliciesItemHelpSettingsOutput) HelpTab() pulumi.StringOutput {
 	return o.ApplyT(func(v GetBrandingPoliciesItemHelpSettings) string { return v.HelpTab }).(pulumi.StringOutput)
 }
 
 // The 'Help Widget' is a support widget which provides access to live chat, documentation links, Sales contact info,
-//
-//	and other contact avenues to reach Meraki Support. Can be one of 'default or inherit', 'hide' or 'show'.
+// and other contact avenues to reach Meraki Support. Can be one of 'default or inherit', 'hide' or 'show'.
 func (o GetBrandingPoliciesItemHelpSettingsOutput) HelpWidget() pulumi.StringOutput {
 	return o.ApplyT(func(v GetBrandingPoliciesItemHelpSettings) string { return v.HelpWidget }).(pulumi.StringOutput)
 }
@@ -23828,8 +23796,7 @@ func (o GetBrandingPoliciesItemHelpSettingsOutput) NewFeaturesSubtab() pulumi.St
 }
 
 // The 'SM Forums' subtab which links to community-based support for Cisco Meraki Systems Manager. Only configurable for
-//
-//	organizations that contain Systems Manager networks. Can be one of 'default or inherit', 'hide' or 'show'.
+// organizations that contain Systems Manager networks. Can be one of 'default or inherit', 'hide' or 'show'.
 func (o GetBrandingPoliciesItemHelpSettingsOutput) SmForums() pulumi.StringOutput {
 	return o.ApplyT(func(v GetBrandingPoliciesItemHelpSettings) string { return v.SmForums }).(pulumi.StringOutput)
 }
@@ -23840,8 +23807,7 @@ func (o GetBrandingPoliciesItemHelpSettingsOutput) SupportContactInfo() pulumi.S
 }
 
 // The universal search box always visible on Dashboard will, by default, present results from the Meraki KB. This configures
-//
-//	whether these Meraki KB results should be returned. Can be one of 'default or inherit', 'hide' or 'show'.
+// whether these Meraki KB results should be returned. Can be one of 'default or inherit', 'hide' or 'show'.
 func (o GetBrandingPoliciesItemHelpSettingsOutput) UniversalSearchKnowledgeBaseSearch() pulumi.StringOutput {
 	return o.ApplyT(func(v GetBrandingPoliciesItemHelpSettings) string { return v.UniversalSearchKnowledgeBaseSearch }).(pulumi.StringOutput)
 }

@@ -963,7 +963,7 @@ class ApplianceSecurityIntrusionAllowedRuleArgs:
                  rule_id: Optional[pulumi.Input[str]] = None):
         """
         :param pulumi.Input[str] message: Message is optional and is ignored on a PUT call. It is allowed in order for PUT to be compatible with GET
-        :param pulumi.Input[str] rule_id: A rule identifier of the format meraki:intrusion/snort/GID/\\n\\n/SID/\\n\\n. gid and sid can be obtained from either https://www.snort.org/rule-docs or as ruleIds from the security events in /organization/[orgId]/securityEvents
+        :param pulumi.Input[str] rule_id: A rule identifier of the format meraki:intrusion/snort/GID/\\n\\n/SID/\\n\\n. gid and sid can be obtained from either [https://www.snort.org/rule-docs](https://www.snort.org/rule-docs) or as ruleIds from the security events in /organization/[orgId]/securityEvents
         """
         if message is not None:
             pulumi.set(__self__, "message", message)
@@ -986,7 +986,7 @@ class ApplianceSecurityIntrusionAllowedRuleArgs:
     @pulumi.getter(name="ruleId")
     def rule_id(self) -> Optional[pulumi.Input[str]]:
         """
-        A rule identifier of the format meraki:intrusion/snort/GID/\\n\\n/SID/\\n\\n. gid and sid can be obtained from either https://www.snort.org/rule-docs or as ruleIds from the security events in /organization/[orgId]/securityEvents
+        A rule identifier of the format meraki:intrusion/snort/GID/\\n\\n/SID/\\n\\n. gid and sid can be obtained from either [https://www.snort.org/rule-docs](https://www.snort.org/rule-docs) or as ruleIds from the security events in /organization/[orgId]/securityEvents
         """
         return pulumi.get(self, "rule_id")
 
@@ -1774,9 +1774,9 @@ class BrandingPoliciesAdminSettingsArgs:
         """
         :param pulumi.Input[str] applies_to: Which kinds of admins this policy applies to. Can be one of 'All organization admins', 'All enterprise admins', 'All network admins', 'All admins of networks...', 'All admins of networks tagged...', 'Specific admins...', 'All admins' or 'All SAML admins'.
         :param pulumi.Input[Sequence[pulumi.Input[str]]] values: If 'appliesTo' is set to one of 'Specific admins...', 'All admins of networks...' or 'All admins of networks tagged...', then you must specify this 'values' property to provide the set of
-                 entities to apply the branding policy to. For 'Specific admins...', specify an array of admin IDs. For 'All admins of
-                 networks...', specify an array of network IDs and/or configuration template IDs. For 'All admins of networks tagged...',
-                 specify an array of tag names.
+               entities to apply the branding policy to. For 'Specific admins...', specify an array of admin IDs. For 'All admins of
+               networks...', specify an array of network IDs and/or configuration template IDs. For 'All admins of networks tagged...',
+               specify an array of tag names.
         """
         if applies_to is not None:
             pulumi.set(__self__, "applies_to", applies_to)
@@ -1800,9 +1800,9 @@ class BrandingPoliciesAdminSettingsArgs:
     def values(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]:
         """
         If 'appliesTo' is set to one of 'Specific admins...', 'All admins of networks...' or 'All admins of networks tagged...', then you must specify this 'values' property to provide the set of
-          entities to apply the branding policy to. For 'Specific admins...', specify an array of admin IDs. For 'All admins of
-          networks...', specify an array of network IDs and/or configuration template IDs. For 'All admins of networks tagged...',
-          specify an array of tag names.
+        entities to apply the branding policy to. For 'Specific admins...', specify an array of admin IDs. For 'All admins of
+        networks...', specify an array of network IDs and/or configuration template IDs. For 'All admins of networks tagged...',
+        specify an array of tag names.
         """
         return pulumi.get(self, "values")
 
@@ -1964,31 +1964,31 @@ class BrandingPoliciesHelpSettingsArgs:
                  universal_search_knowledge_base_search: Optional[pulumi.Input[str]] = None):
         """
         :param pulumi.Input[str] api_docs_subtab: The 'Help > API docs' subtab where a detailed description of the Dashboard API is listed. Can be one of
-                 'default or inherit', 'hide' or 'show'.
+               'default or inherit', 'hide' or 'show'.
         :param pulumi.Input[str] cases_subtab: The 'Help > Cases' Dashboard subtab on which Cisco Meraki support cases for this organization can be managed. Can be one
-                 of 'default or inherit', 'hide' or 'show'.
+               of 'default or inherit', 'hide' or 'show'.
         :param pulumi.Input[str] cisco_meraki_product_documentation: The 'Product Manuals' section of the 'Help > Get Help' subtab. Can be one of 'default or inherit', 'hide', 'show', or a replacement custom HTML string.
         :param pulumi.Input[str] community_subtab: The 'Help > Community' subtab which provides a link to Meraki Community. Can be one of 'default or inherit', 'hide' or 'show'.
         :param pulumi.Input[str] data_protection_requests_subtab: The 'Help > Data protection requests' Dashboard subtab on which requests to delete, restrict, or export end-user data can
-                 be audited. Can be one of 'default or inherit', 'hide' or 'show'.
+               be audited. Can be one of 'default or inherit', 'hide' or 'show'.
         :param pulumi.Input[str] firewall_info_subtab: The 'Help > Firewall info' subtab where necessary upstream firewall rules for communication to the Cisco Meraki cloud are
-                 listed. Can be one of 'default or inherit', 'hide' or 'show'.
+               listed. Can be one of 'default or inherit', 'hide' or 'show'.
         :param pulumi.Input[str] get_help_subtab: The 'Help > Get Help' subtab on which Cisco Meraki KB, Product Manuals, and Support/Case Information are displayed. Note
-                 that if this subtab is hidden, branding customizations for the KB on 'Get help', Cisco Meraki product documentation,
-                 and support contact info will not be visible. Can be one of 'default or inherit', 'hide' or 'show'.
+               that if this subtab is hidden, branding customizations for the KB on 'Get help', Cisco Meraki product documentation,
+               and support contact info will not be visible. Can be one of 'default or inherit', 'hide' or 'show'.
         :param pulumi.Input[str] get_help_subtab_knowledge_base_search: The KB search box which appears on the Help page. Can be one of 'default or inherit', 'hide', 'show', or a replacement custom HTML string.
         :param pulumi.Input[str] hardware_replacements_subtab: The 'Help > Replacement info' subtab where important information regarding device replacements is detailed. Can be one of
-                 'default or inherit', 'hide' or 'show'.
+               'default or inherit', 'hide' or 'show'.
         :param pulumi.Input[str] help_tab: The Help tab, under which all support information resides. If this tab is hidden, no other 'Help' branding
-                 customizations will be visible. Can be one of 'default or inherit', 'hide' or 'show'.
+               customizations will be visible. Can be one of 'default or inherit', 'hide' or 'show'.
         :param pulumi.Input[str] help_widget: The 'Help Widget' is a support widget which provides access to live chat, documentation links, Sales contact info,
-                 and other contact avenues to reach Meraki Support. Can be one of 'default or inherit', 'hide' or 'show'.
+               and other contact avenues to reach Meraki Support. Can be one of 'default or inherit', 'hide' or 'show'.
         :param pulumi.Input[str] new_features_subtab: The 'Help > New features' subtab where new Dashboard features are detailed. Can be one of 'default or inherit', 'hide' or 'show'.
         :param pulumi.Input[str] sm_forums: The 'SM Forums' subtab which links to community-based support for Cisco Meraki Systems Manager. Only configurable for
-                 organizations that contain Systems Manager networks. Can be one of 'default or inherit', 'hide' or 'show'.
+               organizations that contain Systems Manager networks. Can be one of 'default or inherit', 'hide' or 'show'.
         :param pulumi.Input[str] support_contact_info: The 'Contact Meraki Support' section of the 'Help > Get Help' subtab. Can be one of 'default or inherit', 'hide', 'show', or a replacement custom HTML string.
         :param pulumi.Input[str] universal_search_knowledge_base_search: The universal search box always visible on Dashboard will, by default, present results from the Meraki KB. This configures
-                 whether these Meraki KB results should be returned. Can be one of 'default or inherit', 'hide' or 'show'.
+               whether these Meraki KB results should be returned. Can be one of 'default or inherit', 'hide' or 'show'.
         """
         if api_docs_subtab is not None:
             pulumi.set(__self__, "api_docs_subtab", api_docs_subtab)
@@ -2026,7 +2026,7 @@ class BrandingPoliciesHelpSettingsArgs:
     def api_docs_subtab(self) -> Optional[pulumi.Input[str]]:
         """
         The 'Help > API docs' subtab where a detailed description of the Dashboard API is listed. Can be one of
-          'default or inherit', 'hide' or 'show'.
+        'default or inherit', 'hide' or 'show'.
         """
         return pulumi.get(self, "api_docs_subtab")
 
@@ -2039,7 +2039,7 @@ class BrandingPoliciesHelpSettingsArgs:
     def cases_subtab(self) -> Optional[pulumi.Input[str]]:
         """
         The 'Help > Cases' Dashboard subtab on which Cisco Meraki support cases for this organization can be managed. Can be one
-          of 'default or inherit', 'hide' or 'show'.
+        of 'default or inherit', 'hide' or 'show'.
         """
         return pulumi.get(self, "cases_subtab")
 
@@ -2076,7 +2076,7 @@ class BrandingPoliciesHelpSettingsArgs:
     def data_protection_requests_subtab(self) -> Optional[pulumi.Input[str]]:
         """
         The 'Help > Data protection requests' Dashboard subtab on which requests to delete, restrict, or export end-user data can
-          be audited. Can be one of 'default or inherit', 'hide' or 'show'.
+        be audited. Can be one of 'default or inherit', 'hide' or 'show'.
         """
         return pulumi.get(self, "data_protection_requests_subtab")
 
@@ -2089,7 +2089,7 @@ class BrandingPoliciesHelpSettingsArgs:
     def firewall_info_subtab(self) -> Optional[pulumi.Input[str]]:
         """
         The 'Help > Firewall info' subtab where necessary upstream firewall rules for communication to the Cisco Meraki cloud are
-          listed. Can be one of 'default or inherit', 'hide' or 'show'.
+        listed. Can be one of 'default or inherit', 'hide' or 'show'.
         """
         return pulumi.get(self, "firewall_info_subtab")
 
@@ -2102,8 +2102,8 @@ class BrandingPoliciesHelpSettingsArgs:
     def get_help_subtab(self) -> Optional[pulumi.Input[str]]:
         """
         The 'Help > Get Help' subtab on which Cisco Meraki KB, Product Manuals, and Support/Case Information are displayed. Note
-          that if this subtab is hidden, branding customizations for the KB on 'Get help', Cisco Meraki product documentation,
-          and support contact info will not be visible. Can be one of 'default or inherit', 'hide' or 'show'.
+        that if this subtab is hidden, branding customizations for the KB on 'Get help', Cisco Meraki product documentation,
+        and support contact info will not be visible. Can be one of 'default or inherit', 'hide' or 'show'.
         """
         return pulumi.get(self, "get_help_subtab")
 
@@ -2128,7 +2128,7 @@ class BrandingPoliciesHelpSettingsArgs:
     def hardware_replacements_subtab(self) -> Optional[pulumi.Input[str]]:
         """
         The 'Help > Replacement info' subtab where important information regarding device replacements is detailed. Can be one of
-          'default or inherit', 'hide' or 'show'.
+        'default or inherit', 'hide' or 'show'.
         """
         return pulumi.get(self, "hardware_replacements_subtab")
 
@@ -2141,7 +2141,7 @@ class BrandingPoliciesHelpSettingsArgs:
     def help_tab(self) -> Optional[pulumi.Input[str]]:
         """
         The Help tab, under which all support information resides. If this tab is hidden, no other 'Help' branding
-          customizations will be visible. Can be one of 'default or inherit', 'hide' or 'show'.
+        customizations will be visible. Can be one of 'default or inherit', 'hide' or 'show'.
         """
         return pulumi.get(self, "help_tab")
 
@@ -2154,7 +2154,7 @@ class BrandingPoliciesHelpSettingsArgs:
     def help_widget(self) -> Optional[pulumi.Input[str]]:
         """
         The 'Help Widget' is a support widget which provides access to live chat, documentation links, Sales contact info,
-          and other contact avenues to reach Meraki Support. Can be one of 'default or inherit', 'hide' or 'show'.
+        and other contact avenues to reach Meraki Support. Can be one of 'default or inherit', 'hide' or 'show'.
         """
         return pulumi.get(self, "help_widget")
 
@@ -2179,7 +2179,7 @@ class BrandingPoliciesHelpSettingsArgs:
     def sm_forums(self) -> Optional[pulumi.Input[str]]:
         """
         The 'SM Forums' subtab which links to community-based support for Cisco Meraki Systems Manager. Only configurable for
-          organizations that contain Systems Manager networks. Can be one of 'default or inherit', 'hide' or 'show'.
+        organizations that contain Systems Manager networks. Can be one of 'default or inherit', 'hide' or 'show'.
         """
         return pulumi.get(self, "sm_forums")
 
@@ -2204,7 +2204,7 @@ class BrandingPoliciesHelpSettingsArgs:
     def universal_search_knowledge_base_search(self) -> Optional[pulumi.Input[str]]:
         """
         The universal search box always visible on Dashboard will, by default, present results from the Meraki KB. This configures
-          whether these Meraki KB results should be returned. Can be one of 'default or inherit', 'hide' or 'show'.
+        whether these Meraki KB results should be returned. Can be one of 'default or inherit', 'hide' or 'show'.
         """
         return pulumi.get(self, "universal_search_knowledge_base_search")
 

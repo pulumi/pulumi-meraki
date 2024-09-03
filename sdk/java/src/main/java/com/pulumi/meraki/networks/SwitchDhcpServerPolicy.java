@@ -96,7 +96,7 @@ public class SwitchDhcpServerPolicy extends com.pulumi.resources.CustomResource 
     }
     /**
      * List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
-     *   to block.An empty array will clear the entries.
+     * to block.An empty array will clear the entries.
      * 
      */
     @Export(name="allowedServers", refs={List.class,String.class}, tree="[0,1]")
@@ -104,7 +104,7 @@ public class SwitchDhcpServerPolicy extends com.pulumi.resources.CustomResource 
 
     /**
      * @return List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
-     *   to block.An empty array will clear the entries.
+     * to block.An empty array will clear the entries.
      * 
      */
     public Output<List<String>> allowedServers() {
@@ -126,7 +126,7 @@ public class SwitchDhcpServerPolicy extends com.pulumi.resources.CustomResource 
     }
     /**
      * List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set
-     *   to allow.An empty array will clear the entries.
+     * to allow.An empty array will clear the entries.
      * 
      */
     @Export(name="blockedServers", refs={List.class,String.class}, tree="[0,1]")
@@ -134,7 +134,7 @@ public class SwitchDhcpServerPolicy extends com.pulumi.resources.CustomResource 
 
     /**
      * @return List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set
-     *   to allow.An empty array will clear the entries.
+     * to allow.An empty array will clear the entries.
      * 
      */
     public Output<List<String>> blockedServers() {

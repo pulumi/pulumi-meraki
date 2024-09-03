@@ -61,9 +61,9 @@ export class BrandingPolicies extends pulumi.CustomResource {
     public readonly enabled!: pulumi.Output<boolean>;
     /**
      * Settings for describing the modifications to various Help page features. Each property in this object accepts one of
-     *   'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
-     *   the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
-     *   Dashboard; see the documentation for each property to see the allowed values.
+     * 'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
+     * the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
+     * Dashboard; see the documentation for each property to see the allowed values.
      */
     public readonly helpSettings!: pulumi.Output<outputs.organizations.BrandingPoliciesHelpSettings>;
     /**
@@ -135,9 +135,9 @@ export interface BrandingPoliciesState {
     enabled?: pulumi.Input<boolean>;
     /**
      * Settings for describing the modifications to various Help page features. Each property in this object accepts one of
-     *   'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
-     *   the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
-     *   Dashboard; see the documentation for each property to see the allowed values.
+     * 'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
+     * the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
+     * Dashboard; see the documentation for each property to see the allowed values.
      */
     helpSettings?: pulumi.Input<inputs.organizations.BrandingPoliciesHelpSettings>;
     /**
@@ -172,9 +172,9 @@ export interface BrandingPoliciesArgs {
     enabled?: pulumi.Input<boolean>;
     /**
      * Settings for describing the modifications to various Help page features. Each property in this object accepts one of
-     *   'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
-     *   the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
-     *   Dashboard; see the documentation for each property to see the allowed values.
+     * 'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
+     * the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
+     * Dashboard; see the documentation for each property to see the allowed values.
      */
     helpSettings?: pulumi.Input<inputs.organizations.BrandingPoliciesHelpSettings>;
     /**

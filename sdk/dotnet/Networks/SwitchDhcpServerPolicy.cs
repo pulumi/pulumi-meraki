@@ -71,7 +71,7 @@ namespace Pulumi.Meraki.Networks
 
         /// <summary>
         /// List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
-        ///   to block.An empty array will clear the entries.
+        /// to block.An empty array will clear the entries.
         /// </summary>
         [Output("allowedServers")]
         public Output<ImmutableArray<string>> AllowedServers { get; private set; } = null!;
@@ -84,7 +84,7 @@ namespace Pulumi.Meraki.Networks
 
         /// <summary>
         /// List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set
-        ///   to allow.An empty array will clear the entries.
+        /// to allow.An empty array will clear the entries.
         /// </summary>
         [Output("blockedServers")]
         public Output<ImmutableArray<string>> BlockedServers { get; private set; } = null!;
@@ -159,7 +159,7 @@ namespace Pulumi.Meraki.Networks
 
         /// <summary>
         /// List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
-        ///   to block.An empty array will clear the entries.
+        /// to block.An empty array will clear the entries.
         /// </summary>
         public InputList<string> AllowedServers
         {
@@ -178,7 +178,7 @@ namespace Pulumi.Meraki.Networks
 
         /// <summary>
         /// List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set
-        ///   to allow.An empty array will clear the entries.
+        /// to allow.An empty array will clear the entries.
         /// </summary>
         public InputList<string> BlockedServers
         {
@@ -217,7 +217,7 @@ namespace Pulumi.Meraki.Networks
 
         /// <summary>
         /// List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
-        ///   to block.An empty array will clear the entries.
+        /// to block.An empty array will clear the entries.
         /// </summary>
         public InputList<string> AllowedServers
         {
@@ -236,7 +236,7 @@ namespace Pulumi.Meraki.Networks
 
         /// <summary>
         /// List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set
-        ///   to allow.An empty array will clear the entries.
+        /// to allow.An empty array will clear the entries.
         /// </summary>
         public InputList<string> BlockedServers
         {

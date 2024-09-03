@@ -18,7 +18,7 @@ namespace Pulumi.Meraki.Organizations.Outputs
         /// </summary>
         public readonly string? Message;
         /// <summary>
-        /// A rule identifier of the format meraki:intrusion/snort/GID/\n\n/SID/\n\n. gid and sid can be obtained from either https://www.snort.org/rule-docs or as ruleIds from the security events in /organization/[orgId]/securityEvents
+        /// A rule identifier of the format meraki:intrusion/snort/GID/\n\n/SID/\n\n. gid and sid can be obtained from either [https://www.snort.org/rule-docs](https://www.snort.org/rule-docs) or as ruleIds from the security events in /organization/[orgId]/securityEvents
         /// </summary>
         public readonly string? RuleId;
 

@@ -31,9 +31,9 @@ public final class GetBrandingPoliciesItem {
     private Boolean enabled;
     /**
      * @return Settings for describing the modifications to various Help page features. Each property in this object accepts one of
-     *   &#39;default or inherit&#39; (do not modify functionality), &#39;hide&#39; (remove the section from Dashboard), or &#39;show&#39; (always show
-     *   the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
-     *   Dashboard; see the documentation for each property to see the allowed values.
+     * &#39;default or inherit&#39; (do not modify functionality), &#39;hide&#39; (remove the section from Dashboard), or &#39;show&#39; (always show
+     * the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
+     * Dashboard; see the documentation for each property to see the allowed values.
      * 
      */
     private GetBrandingPoliciesItemHelpSettings helpSettings;
@@ -67,9 +67,9 @@ public final class GetBrandingPoliciesItem {
     }
     /**
      * @return Settings for describing the modifications to various Help page features. Each property in this object accepts one of
-     *   &#39;default or inherit&#39; (do not modify functionality), &#39;hide&#39; (remove the section from Dashboard), or &#39;show&#39; (always show
-     *   the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
-     *   Dashboard; see the documentation for each property to see the allowed values.
+     * &#39;default or inherit&#39; (do not modify functionality), &#39;hide&#39; (remove the section from Dashboard), or &#39;show&#39; (always show
+     * the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
+     * Dashboard; see the documentation for each property to see the allowed values.
      * 
      */
     public GetBrandingPoliciesItemHelpSettings helpSettings() {

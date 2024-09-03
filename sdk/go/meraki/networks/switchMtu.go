@@ -27,7 +27,7 @@ type SwitchMtu struct {
 	// networkId path parameter. Network ID
 	NetworkId pulumi.StringOutput `pulumi:"networkId"`
 	// Override MTU size for individual switches or switch templates.
-	//   An empty array will clear overrides.
+	// An empty array will clear overrides.
 	Overrides SwitchMtuOverrideArrayOutput `pulumi:"overrides"`
 }
 
@@ -69,7 +69,7 @@ type switchMtuState struct {
 	// networkId path parameter. Network ID
 	NetworkId *string `pulumi:"networkId"`
 	// Override MTU size for individual switches or switch templates.
-	//   An empty array will clear overrides.
+	// An empty array will clear overrides.
 	Overrides []SwitchMtuOverride `pulumi:"overrides"`
 }
 
@@ -79,7 +79,7 @@ type SwitchMtuState struct {
 	// networkId path parameter. Network ID
 	NetworkId pulumi.StringPtrInput
 	// Override MTU size for individual switches or switch templates.
-	//   An empty array will clear overrides.
+	// An empty array will clear overrides.
 	Overrides SwitchMtuOverrideArrayInput
 }
 
@@ -93,7 +93,7 @@ type switchMtuArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
 	// Override MTU size for individual switches or switch templates.
-	//   An empty array will clear overrides.
+	// An empty array will clear overrides.
 	Overrides []SwitchMtuOverride `pulumi:"overrides"`
 }
 
@@ -104,7 +104,7 @@ type SwitchMtuArgs struct {
 	// networkId path parameter. Network ID
 	NetworkId pulumi.StringInput
 	// Override MTU size for individual switches or switch templates.
-	//   An empty array will clear overrides.
+	// An empty array will clear overrides.
 	Overrides SwitchMtuOverrideArrayInput
 }
 
@@ -206,8 +206,7 @@ func (o SwitchMtuOutput) NetworkId() pulumi.StringOutput {
 }
 
 // Override MTU size for individual switches or switch templates.
-//
-//	An empty array will clear overrides.
+// An empty array will clear overrides.
 func (o SwitchMtuOutput) Overrides() SwitchMtuOverrideArrayOutput {
 	return o.ApplyT(func(v *SwitchMtu) SwitchMtuOverrideArrayOutput { return v.Overrides }).(SwitchMtuOverrideArrayOutput)
 }

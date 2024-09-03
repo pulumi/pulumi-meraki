@@ -31,9 +31,9 @@ class BrandingPoliciesArgs:
         :param pulumi.Input['BrandingPoliciesCustomLogoArgs'] custom_logo: Properties describing the custom logo attached to the branding policy.
         :param pulumi.Input[bool] enabled: Boolean indicating whether this policy is enabled.
         :param pulumi.Input['BrandingPoliciesHelpSettingsArgs'] help_settings: Settings for describing the modifications to various Help page features. Each property in this object accepts one of
-                 'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
-                 the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
-                 Dashboard; see the documentation for each property to see the allowed values.
+               'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
+               the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
+               Dashboard; see the documentation for each property to see the allowed values.
         :param pulumi.Input[str] name: Name of the Dashboard branding policy.
         """
         pulumi.set(__self__, "organization_id", organization_id)
@@ -115,9 +115,9 @@ class BrandingPoliciesArgs:
     def help_settings(self) -> Optional[pulumi.Input['BrandingPoliciesHelpSettingsArgs']]:
         """
         Settings for describing the modifications to various Help page features. Each property in this object accepts one of
-          'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
-          the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
-          Dashboard; see the documentation for each property to see the allowed values.
+        'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
+        the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
+        Dashboard; see the documentation for each property to see the allowed values.
         """
         return pulumi.get(self, "help_settings")
 
@@ -155,9 +155,9 @@ class _BrandingPoliciesState:
         :param pulumi.Input['BrandingPoliciesCustomLogoArgs'] custom_logo: Properties describing the custom logo attached to the branding policy.
         :param pulumi.Input[bool] enabled: Boolean indicating whether this policy is enabled.
         :param pulumi.Input['BrandingPoliciesHelpSettingsArgs'] help_settings: Settings for describing the modifications to various Help page features. Each property in this object accepts one of
-                 'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
-                 the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
-                 Dashboard; see the documentation for each property to see the allowed values.
+               'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
+               the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
+               Dashboard; see the documentation for each property to see the allowed values.
         :param pulumi.Input[str] name: Name of the Dashboard branding policy.
         :param pulumi.Input[str] organization_id: organizationId path parameter. Organization ID
         """
@@ -229,9 +229,9 @@ class _BrandingPoliciesState:
     def help_settings(self) -> Optional[pulumi.Input['BrandingPoliciesHelpSettingsArgs']]:
         """
         Settings for describing the modifications to various Help page features. Each property in this object accepts one of
-          'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
-          the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
-          Dashboard; see the documentation for each property to see the allowed values.
+        'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
+        the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
+        Dashboard; see the documentation for each property to see the allowed values.
         """
         return pulumi.get(self, "help_settings")
 
@@ -293,9 +293,9 @@ class BrandingPolicies(pulumi.CustomResource):
         :param pulumi.Input[Union['BrandingPoliciesCustomLogoArgs', 'BrandingPoliciesCustomLogoArgsDict']] custom_logo: Properties describing the custom logo attached to the branding policy.
         :param pulumi.Input[bool] enabled: Boolean indicating whether this policy is enabled.
         :param pulumi.Input[Union['BrandingPoliciesHelpSettingsArgs', 'BrandingPoliciesHelpSettingsArgsDict']] help_settings: Settings for describing the modifications to various Help page features. Each property in this object accepts one of
-                 'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
-                 the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
-                 Dashboard; see the documentation for each property to see the allowed values.
+               'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
+               the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
+               Dashboard; see the documentation for each property to see the allowed values.
         :param pulumi.Input[str] name: Name of the Dashboard branding policy.
         :param pulumi.Input[str] organization_id: organizationId path parameter. Organization ID
         """
@@ -383,9 +383,9 @@ class BrandingPolicies(pulumi.CustomResource):
         :param pulumi.Input[Union['BrandingPoliciesCustomLogoArgs', 'BrandingPoliciesCustomLogoArgsDict']] custom_logo: Properties describing the custom logo attached to the branding policy.
         :param pulumi.Input[bool] enabled: Boolean indicating whether this policy is enabled.
         :param pulumi.Input[Union['BrandingPoliciesHelpSettingsArgs', 'BrandingPoliciesHelpSettingsArgsDict']] help_settings: Settings for describing the modifications to various Help page features. Each property in this object accepts one of
-                 'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
-                 the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
-                 Dashboard; see the documentation for each property to see the allowed values.
+               'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
+               the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
+               Dashboard; see the documentation for each property to see the allowed values.
         :param pulumi.Input[str] name: Name of the Dashboard branding policy.
         :param pulumi.Input[str] organization_id: organizationId path parameter. Organization ID
         """
@@ -439,9 +439,9 @@ class BrandingPolicies(pulumi.CustomResource):
     def help_settings(self) -> pulumi.Output['outputs.BrandingPoliciesHelpSettings']:
         """
         Settings for describing the modifications to various Help page features. Each property in this object accepts one of
-          'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
-          the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
-          Dashboard; see the documentation for each property to see the allowed values.
+        'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
+        the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
+        Dashboard; see the documentation for each property to see the allowed values.
         """
         return pulumi.get(self, "help_settings")
 

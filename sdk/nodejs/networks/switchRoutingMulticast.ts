@@ -45,7 +45,7 @@ export class SwitchRoutingMulticast extends pulumi.CustomResource {
 
     /**
      * Default multicast setting for entire network. IGMP snooping and Flood unknown
-     *   multicast traffic settings are enabled by default.
+     * multicast traffic settings are enabled by default.
      */
     public readonly defaultSettings!: pulumi.Output<outputs.networks.SwitchRoutingMulticastDefaultSettings>;
     /**
@@ -54,7 +54,7 @@ export class SwitchRoutingMulticast extends pulumi.CustomResource {
     public readonly networkId!: pulumi.Output<string>;
     /**
      * Array of paired switches/stacks/profiles and corresponding multicast settings.
-     *   An empty array will clear the multicast settings.
+     * An empty array will clear the multicast settings.
      */
     public readonly overrides!: pulumi.Output<outputs.networks.SwitchRoutingMulticastOverride[]>;
 
@@ -94,7 +94,7 @@ export class SwitchRoutingMulticast extends pulumi.CustomResource {
 export interface SwitchRoutingMulticastState {
     /**
      * Default multicast setting for entire network. IGMP snooping and Flood unknown
-     *   multicast traffic settings are enabled by default.
+     * multicast traffic settings are enabled by default.
      */
     defaultSettings?: pulumi.Input<inputs.networks.SwitchRoutingMulticastDefaultSettings>;
     /**
@@ -103,7 +103,7 @@ export interface SwitchRoutingMulticastState {
     networkId?: pulumi.Input<string>;
     /**
      * Array of paired switches/stacks/profiles and corresponding multicast settings.
-     *   An empty array will clear the multicast settings.
+     * An empty array will clear the multicast settings.
      */
     overrides?: pulumi.Input<pulumi.Input<inputs.networks.SwitchRoutingMulticastOverride>[]>;
 }
@@ -114,7 +114,7 @@ export interface SwitchRoutingMulticastState {
 export interface SwitchRoutingMulticastArgs {
     /**
      * Default multicast setting for entire network. IGMP snooping and Flood unknown
-     *   multicast traffic settings are enabled by default.
+     * multicast traffic settings are enabled by default.
      */
     defaultSettings?: pulumi.Input<inputs.networks.SwitchRoutingMulticastDefaultSettings>;
     /**
@@ -123,7 +123,7 @@ export interface SwitchRoutingMulticastArgs {
     networkId: pulumi.Input<string>;
     /**
      * Array of paired switches/stacks/profiles and corresponding multicast settings.
-     *   An empty array will clear the multicast settings.
+     * An empty array will clear the multicast settings.
      */
     overrides?: pulumi.Input<pulumi.Input<inputs.networks.SwitchRoutingMulticastOverride>[]>;
 }
