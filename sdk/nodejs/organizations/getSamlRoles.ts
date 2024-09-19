@@ -11,7 +11,6 @@ import * as utilities from "../utilities";
  */
 export function getSamlRoles(args?: GetSamlRolesArgs, opts?: pulumi.InvokeOptions): Promise<GetSamlRolesResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getSamlRoles:getSamlRoles", {
         "organizationId": args.organizationId,
@@ -59,7 +58,12 @@ export interface GetSamlRolesResult {
  * ## Example Usage
  */
 export function getSamlRolesOutput(args?: GetSamlRolesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSamlRolesResult> {
-    return pulumi.output(args).apply((a: any) => getSamlRoles(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getSamlRoles:getSamlRoles", {
+        "organizationId": args.organizationId,
+        "samlRoleId": args.samlRoleId,
+    }, opts);
 }
 
 /**

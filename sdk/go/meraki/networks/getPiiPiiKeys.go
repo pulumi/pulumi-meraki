@@ -94,14 +94,20 @@ type GetPiiPiiKeysResult struct {
 
 func GetPiiPiiKeysOutput(ctx *pulumi.Context, args GetPiiPiiKeysOutputArgs, opts ...pulumi.InvokeOption) GetPiiPiiKeysResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetPiiPiiKeysResult, error) {
+		ApplyT(func(v interface{}) (GetPiiPiiKeysResultOutput, error) {
 			args := v.(GetPiiPiiKeysArgs)
-			r, err := GetPiiPiiKeys(ctx, &args, opts...)
-			var s GetPiiPiiKeysResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetPiiPiiKeysResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getPiiPiiKeys:getPiiPiiKeys", args, &rv, "", opts...)
+			if err != nil {
+				return GetPiiPiiKeysResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetPiiPiiKeysResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetPiiPiiKeysResultOutput), nil
+			}
+			return output, nil
 		}).(GetPiiPiiKeysResultOutput)
 }
 

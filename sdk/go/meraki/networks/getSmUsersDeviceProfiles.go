@@ -70,14 +70,20 @@ type GetSmUsersDeviceProfilesResult struct {
 
 func GetSmUsersDeviceProfilesOutput(ctx *pulumi.Context, args GetSmUsersDeviceProfilesOutputArgs, opts ...pulumi.InvokeOption) GetSmUsersDeviceProfilesResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetSmUsersDeviceProfilesResult, error) {
+		ApplyT(func(v interface{}) (GetSmUsersDeviceProfilesResultOutput, error) {
 			args := v.(GetSmUsersDeviceProfilesArgs)
-			r, err := GetSmUsersDeviceProfiles(ctx, &args, opts...)
-			var s GetSmUsersDeviceProfilesResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetSmUsersDeviceProfilesResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getSmUsersDeviceProfiles:getSmUsersDeviceProfiles", args, &rv, "", opts...)
+			if err != nil {
+				return GetSmUsersDeviceProfilesResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetSmUsersDeviceProfilesResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetSmUsersDeviceProfilesResultOutput), nil
+			}
+			return output, nil
 		}).(GetSmUsersDeviceProfilesResultOutput)
 }
 

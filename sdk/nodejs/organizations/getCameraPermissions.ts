@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getCameraPermissions(args: GetCameraPermissionsArgs, opts?: pulumi.InvokeOptions): Promise<GetCameraPermissionsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getCameraPermissions:getCameraPermissions", {
         "organizationId": args.organizationId,
@@ -76,7 +75,11 @@ export interface GetCameraPermissionsResult {
  * ```
  */
 export function getCameraPermissionsOutput(args: GetCameraPermissionsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCameraPermissionsResult> {
-    return pulumi.output(args).apply((a: any) => getCameraPermissions(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getCameraPermissions:getCameraPermissions", {
+        "organizationId": args.organizationId,
+        "permissionScopeId": args.permissionScopeId,
+    }, opts);
 }
 
 /**

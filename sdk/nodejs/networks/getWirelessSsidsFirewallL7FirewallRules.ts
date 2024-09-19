@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getWirelessSsidsFirewallL7FirewallRules(args: GetWirelessSsidsFirewallL7FirewallRulesArgs, opts?: pulumi.InvokeOptions): Promise<GetWirelessSsidsFirewallL7FirewallRulesResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getWirelessSsidsFirewallL7FirewallRules:getWirelessSsidsFirewallL7FirewallRules", {
         "networkId": args.networkId,
@@ -76,7 +75,11 @@ export interface GetWirelessSsidsFirewallL7FirewallRulesResult {
  * ```
  */
 export function getWirelessSsidsFirewallL7FirewallRulesOutput(args: GetWirelessSsidsFirewallL7FirewallRulesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessSsidsFirewallL7FirewallRulesResult> {
-    return pulumi.output(args).apply((a: any) => getWirelessSsidsFirewallL7FirewallRules(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getWirelessSsidsFirewallL7FirewallRules:getWirelessSsidsFirewallL7FirewallRules", {
+        "networkId": args.networkId,
+        "number": args.number,
+    }, opts);
 }
 
 /**

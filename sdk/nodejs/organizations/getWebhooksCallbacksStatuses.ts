@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getWebhooksCallbacksStatuses(args: GetWebhooksCallbacksStatusesArgs, opts?: pulumi.InvokeOptions): Promise<GetWebhooksCallbacksStatusesResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getWebhooksCallbacksStatuses:getWebhooksCallbacksStatuses", {
         "callbackId": args.callbackId,
@@ -76,7 +75,11 @@ export interface GetWebhooksCallbacksStatusesResult {
  * ```
  */
 export function getWebhooksCallbacksStatusesOutput(args: GetWebhooksCallbacksStatusesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWebhooksCallbacksStatusesResult> {
-    return pulumi.output(args).apply((a: any) => getWebhooksCallbacksStatuses(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getWebhooksCallbacksStatuses:getWebhooksCallbacksStatuses", {
+        "callbackId": args.callbackId,
+        "organizationId": args.organizationId,
+    }, opts);
 }
 
 /**

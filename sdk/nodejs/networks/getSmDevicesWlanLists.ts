@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSmDevicesWlanLists(args: GetSmDevicesWlanListsArgs, opts?: pulumi.InvokeOptions): Promise<GetSmDevicesWlanListsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSmDevicesWlanLists:getSmDevicesWlanLists", {
         "deviceId": args.deviceId,
@@ -79,7 +78,11 @@ export interface GetSmDevicesWlanListsResult {
  * ```
  */
 export function getSmDevicesWlanListsOutput(args: GetSmDevicesWlanListsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmDevicesWlanListsResult> {
-    return pulumi.output(args).apply((a: any) => getSmDevicesWlanLists(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSmDevicesWlanLists:getSmDevicesWlanLists", {
+        "deviceId": args.deviceId,
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

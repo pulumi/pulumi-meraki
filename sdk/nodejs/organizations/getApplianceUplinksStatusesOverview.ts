@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getApplianceUplinksStatusesOverview(args: GetApplianceUplinksStatusesOverviewArgs, opts?: pulumi.InvokeOptions): Promise<GetApplianceUplinksStatusesOverviewResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getApplianceUplinksStatusesOverview:getApplianceUplinksStatusesOverview", {
         "organizationId": args.organizationId,
@@ -65,7 +64,10 @@ export interface GetApplianceUplinksStatusesOverviewResult {
  * ```
  */
 export function getApplianceUplinksStatusesOverviewOutput(args: GetApplianceUplinksStatusesOverviewOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceUplinksStatusesOverviewResult> {
-    return pulumi.output(args).apply((a: any) => getApplianceUplinksStatusesOverview(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getApplianceUplinksStatusesOverview:getApplianceUplinksStatusesOverview", {
+        "organizationId": args.organizationId,
+    }, opts);
 }
 
 /**

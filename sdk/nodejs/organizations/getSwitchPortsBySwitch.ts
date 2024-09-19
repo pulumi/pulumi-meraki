@@ -31,7 +31,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSwitchPortsBySwitch(args: GetSwitchPortsBySwitchArgs, opts?: pulumi.InvokeOptions): Promise<GetSwitchPortsBySwitchResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getSwitchPortsBySwitch:getSwitchPortsBySwitch", {
         "configurationUpdatedAfter": args.configurationUpdatedAfter,
@@ -189,7 +188,21 @@ export interface GetSwitchPortsBySwitchResult {
  * ```
  */
 export function getSwitchPortsBySwitchOutput(args: GetSwitchPortsBySwitchOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchPortsBySwitchResult> {
-    return pulumi.output(args).apply((a: any) => getSwitchPortsBySwitch(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getSwitchPortsBySwitch:getSwitchPortsBySwitch", {
+        "configurationUpdatedAfter": args.configurationUpdatedAfter,
+        "endingBefore": args.endingBefore,
+        "mac": args.mac,
+        "macs": args.macs,
+        "name": args.name,
+        "networkIds": args.networkIds,
+        "organizationId": args.organizationId,
+        "perPage": args.perPage,
+        "portProfileIds": args.portProfileIds,
+        "serial": args.serial,
+        "serials": args.serials,
+        "startingAfter": args.startingAfter,
+    }, opts);
 }
 
 /**

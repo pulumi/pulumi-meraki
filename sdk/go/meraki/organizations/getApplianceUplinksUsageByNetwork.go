@@ -80,14 +80,20 @@ type GetApplianceUplinksUsageByNetworkResult struct {
 
 func GetApplianceUplinksUsageByNetworkOutput(ctx *pulumi.Context, args GetApplianceUplinksUsageByNetworkOutputArgs, opts ...pulumi.InvokeOption) GetApplianceUplinksUsageByNetworkResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetApplianceUplinksUsageByNetworkResult, error) {
+		ApplyT(func(v interface{}) (GetApplianceUplinksUsageByNetworkResultOutput, error) {
 			args := v.(GetApplianceUplinksUsageByNetworkArgs)
-			r, err := GetApplianceUplinksUsageByNetwork(ctx, &args, opts...)
-			var s GetApplianceUplinksUsageByNetworkResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetApplianceUplinksUsageByNetworkResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getApplianceUplinksUsageByNetwork:getApplianceUplinksUsageByNetwork", args, &rv, "", opts...)
+			if err != nil {
+				return GetApplianceUplinksUsageByNetworkResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetApplianceUplinksUsageByNetworkResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetApplianceUplinksUsageByNetworkResultOutput), nil
+			}
+			return output, nil
 		}).(GetApplianceUplinksUsageByNetworkResultOutput)
 }
 

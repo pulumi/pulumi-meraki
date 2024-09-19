@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getApplianceSingleLan(args: GetApplianceSingleLanArgs, opts?: pulumi.InvokeOptions): Promise<GetApplianceSingleLanResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getApplianceSingleLan:getApplianceSingleLan", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetApplianceSingleLanResult {
  * ```
  */
 export function getApplianceSingleLanOutput(args: GetApplianceSingleLanOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceSingleLanResult> {
-    return pulumi.output(args).apply((a: any) => getApplianceSingleLan(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getApplianceSingleLan:getApplianceSingleLan", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

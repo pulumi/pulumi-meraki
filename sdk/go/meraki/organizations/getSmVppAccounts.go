@@ -45,14 +45,20 @@ type GetSmVppAccountsResult struct {
 
 func GetSmVppAccountsOutput(ctx *pulumi.Context, args GetSmVppAccountsOutputArgs, opts ...pulumi.InvokeOption) GetSmVppAccountsResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetSmVppAccountsResult, error) {
+		ApplyT(func(v interface{}) (GetSmVppAccountsResultOutput, error) {
 			args := v.(GetSmVppAccountsArgs)
-			r, err := GetSmVppAccounts(ctx, &args, opts...)
-			var s GetSmVppAccountsResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetSmVppAccountsResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getSmVppAccounts:getSmVppAccounts", args, &rv, "", opts...)
+			if err != nil {
+				return GetSmVppAccountsResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetSmVppAccountsResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetSmVppAccountsResultOutput), nil
+			}
+			return output, nil
 		}).(GetSmVppAccountsResultOutput)
 }
 

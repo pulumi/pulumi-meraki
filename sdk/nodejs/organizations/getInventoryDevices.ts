@@ -11,7 +11,6 @@ import * as utilities from "../utilities";
  */
 export function getInventoryDevices(args?: GetInventoryDevicesArgs, opts?: pulumi.InvokeOptions): Promise<GetInventoryDevicesResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getInventoryDevices:getInventoryDevices", {
         "endingBefore": args.endingBefore,
@@ -176,7 +175,25 @@ export interface GetInventoryDevicesResult {
  * ## Example Usage
  */
 export function getInventoryDevicesOutput(args?: GetInventoryDevicesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetInventoryDevicesResult> {
-    return pulumi.output(args).apply((a: any) => getInventoryDevices(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getInventoryDevices:getInventoryDevices", {
+        "endingBefore": args.endingBefore,
+        "macs": args.macs,
+        "models": args.models,
+        "networkIds": args.networkIds,
+        "orderNumbers": args.orderNumbers,
+        "organizationId": args.organizationId,
+        "perPage": args.perPage,
+        "productTypes": args.productTypes,
+        "search": args.search,
+        "serial": args.serial,
+        "serials": args.serials,
+        "startingAfter": args.startingAfter,
+        "tags": args.tags,
+        "tagsFilterType": args.tagsFilterType,
+        "usedState": args.usedState,
+    }, opts);
 }
 
 /**

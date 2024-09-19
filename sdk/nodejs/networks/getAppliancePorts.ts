@@ -11,7 +11,6 @@ import * as utilities from "../utilities";
  */
 export function getAppliancePorts(args?: GetAppliancePortsArgs, opts?: pulumi.InvokeOptions): Promise<GetAppliancePortsResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getAppliancePorts:getAppliancePorts", {
         "networkId": args.networkId,
@@ -59,7 +58,12 @@ export interface GetAppliancePortsResult {
  * ## Example Usage
  */
 export function getAppliancePortsOutput(args?: GetAppliancePortsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAppliancePortsResult> {
-    return pulumi.output(args).apply((a: any) => getAppliancePorts(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getAppliancePorts:getAppliancePorts", {
+        "networkId": args.networkId,
+        "portId": args.portId,
+    }, opts);
 }
 
 /**

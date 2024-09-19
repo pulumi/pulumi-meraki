@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSmDevicesCellularUsageHistory(args: GetSmDevicesCellularUsageHistoryArgs, opts?: pulumi.InvokeOptions): Promise<GetSmDevicesCellularUsageHistoryResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSmDevicesCellularUsageHistory:getSmDevicesCellularUsageHistory", {
         "deviceId": args.deviceId,
@@ -79,7 +78,11 @@ export interface GetSmDevicesCellularUsageHistoryResult {
  * ```
  */
 export function getSmDevicesCellularUsageHistoryOutput(args: GetSmDevicesCellularUsageHistoryOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmDevicesCellularUsageHistoryResult> {
-    return pulumi.output(args).apply((a: any) => getSmDevicesCellularUsageHistory(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSmDevicesCellularUsageHistory:getSmDevicesCellularUsageHistory", {
+        "deviceId": args.deviceId,
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

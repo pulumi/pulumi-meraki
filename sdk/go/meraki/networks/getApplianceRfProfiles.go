@@ -68,14 +68,20 @@ type LookupApplianceRfProfilesResult struct {
 
 func LookupApplianceRfProfilesOutput(ctx *pulumi.Context, args LookupApplianceRfProfilesOutputArgs, opts ...pulumi.InvokeOption) LookupApplianceRfProfilesResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupApplianceRfProfilesResult, error) {
+		ApplyT(func(v interface{}) (LookupApplianceRfProfilesResultOutput, error) {
 			args := v.(LookupApplianceRfProfilesArgs)
-			r, err := LookupApplianceRfProfiles(ctx, &args, opts...)
-			var s LookupApplianceRfProfilesResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupApplianceRfProfilesResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getApplianceRfProfiles:getApplianceRfProfiles", args, &rv, "", opts...)
+			if err != nil {
+				return LookupApplianceRfProfilesResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupApplianceRfProfilesResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupApplianceRfProfilesResultOutput), nil
+			}
+			return output, nil
 		}).(LookupApplianceRfProfilesResultOutput)
 }
 

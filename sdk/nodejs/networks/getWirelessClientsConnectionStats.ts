@@ -28,7 +28,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getWirelessClientsConnectionStats(args: GetWirelessClientsConnectionStatsArgs, opts?: pulumi.InvokeOptions): Promise<GetWirelessClientsConnectionStatsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getWirelessClientsConnectionStats:getWirelessClientsConnectionStats", {
         "apTag": args.apTag,
@@ -153,7 +152,18 @@ export interface GetWirelessClientsConnectionStatsResult {
  * ```
  */
 export function getWirelessClientsConnectionStatsOutput(args: GetWirelessClientsConnectionStatsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessClientsConnectionStatsResult> {
-    return pulumi.output(args).apply((a: any) => getWirelessClientsConnectionStats(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getWirelessClientsConnectionStats:getWirelessClientsConnectionStats", {
+        "apTag": args.apTag,
+        "band": args.band,
+        "clientId": args.clientId,
+        "networkId": args.networkId,
+        "ssid": args.ssid,
+        "t0": args.t0,
+        "t1": args.t1,
+        "timespan": args.timespan,
+        "vlan": args.vlan,
+    }, opts);
 }
 
 /**

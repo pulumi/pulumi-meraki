@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getApplianceSecurityIntrusion(args: GetApplianceSecurityIntrusionArgs, opts?: pulumi.InvokeOptions): Promise<GetApplianceSecurityIntrusionResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getApplianceSecurityIntrusion:getApplianceSecurityIntrusion", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetApplianceSecurityIntrusionResult {
  * ```
  */
 export function getApplianceSecurityIntrusionOutput(args: GetApplianceSecurityIntrusionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceSecurityIntrusionResult> {
-    return pulumi.output(args).apply((a: any) => getApplianceSecurityIntrusion(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getApplianceSecurityIntrusion:getApplianceSecurityIntrusion", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

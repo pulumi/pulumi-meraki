@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSwitchStp(args: GetSwitchStpArgs, opts?: pulumi.InvokeOptions): Promise<GetSwitchStpResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSwitchStp:getSwitchStp", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetSwitchStpResult {
  * ```
  */
 export function getSwitchStpOutput(args: GetSwitchStpOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchStpResult> {
-    return pulumi.output(args).apply((a: any) => getSwitchStp(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSwitchStp:getSwitchStp", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

@@ -79,14 +79,20 @@ type GetApiRequestsOverviewResult struct {
 
 func GetApiRequestsOverviewOutput(ctx *pulumi.Context, args GetApiRequestsOverviewOutputArgs, opts ...pulumi.InvokeOption) GetApiRequestsOverviewResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetApiRequestsOverviewResult, error) {
+		ApplyT(func(v interface{}) (GetApiRequestsOverviewResultOutput, error) {
 			args := v.(GetApiRequestsOverviewArgs)
-			r, err := GetApiRequestsOverview(ctx, &args, opts...)
-			var s GetApiRequestsOverviewResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetApiRequestsOverviewResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getApiRequestsOverview:getApiRequestsOverview", args, &rv, "", opts...)
+			if err != nil {
+				return GetApiRequestsOverviewResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetApiRequestsOverviewResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetApiRequestsOverviewResultOutput), nil
+			}
+			return output, nil
 		}).(GetApiRequestsOverviewResultOutput)
 }
 

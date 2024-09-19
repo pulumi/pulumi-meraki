@@ -45,14 +45,20 @@ type LookupSwitchAccessPoliciesResult struct {
 
 func LookupSwitchAccessPoliciesOutput(ctx *pulumi.Context, args LookupSwitchAccessPoliciesOutputArgs, opts ...pulumi.InvokeOption) LookupSwitchAccessPoliciesResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupSwitchAccessPoliciesResult, error) {
+		ApplyT(func(v interface{}) (LookupSwitchAccessPoliciesResultOutput, error) {
 			args := v.(LookupSwitchAccessPoliciesArgs)
-			r, err := LookupSwitchAccessPolicies(ctx, &args, opts...)
-			var s LookupSwitchAccessPoliciesResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupSwitchAccessPoliciesResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getSwitchAccessPolicies:getSwitchAccessPolicies", args, &rv, "", opts...)
+			if err != nil {
+				return LookupSwitchAccessPoliciesResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupSwitchAccessPoliciesResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupSwitchAccessPoliciesResultOutput), nil
+			}
+			return output, nil
 		}).(LookupSwitchAccessPoliciesResultOutput)
 }
 

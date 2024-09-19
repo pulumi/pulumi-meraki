@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSwitchDhcpServerPolicy(args: GetSwitchDhcpServerPolicyArgs, opts?: pulumi.InvokeOptions): Promise<GetSwitchDhcpServerPolicyResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSwitchDhcpServerPolicy:getSwitchDhcpServerPolicy", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetSwitchDhcpServerPolicyResult {
  * ```
  */
 export function getSwitchDhcpServerPolicyOutput(args: GetSwitchDhcpServerPolicyOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchDhcpServerPolicyResult> {
-    return pulumi.output(args).apply((a: any) => getSwitchDhcpServerPolicy(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSwitchDhcpServerPolicy:getSwitchDhcpServerPolicy", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

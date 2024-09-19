@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getCellularGatewayLan(args: GetCellularGatewayLanArgs, opts?: pulumi.InvokeOptions): Promise<GetCellularGatewayLanResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:devices/getCellularGatewayLan:getCellularGatewayLan", {
         "serial": args.serial,
@@ -65,7 +64,10 @@ export interface GetCellularGatewayLanResult {
  * ```
  */
 export function getCellularGatewayLanOutput(args: GetCellularGatewayLanOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCellularGatewayLanResult> {
-    return pulumi.output(args).apply((a: any) => getCellularGatewayLan(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:devices/getCellularGatewayLan:getCellularGatewayLan", {
+        "serial": args.serial,
+    }, opts);
 }
 
 /**

@@ -64,14 +64,20 @@ type LookupSettingsResult struct {
 
 func LookupSettingsOutput(ctx *pulumi.Context, args LookupSettingsOutputArgs, opts ...pulumi.InvokeOption) LookupSettingsResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupSettingsResult, error) {
+		ApplyT(func(v interface{}) (LookupSettingsResultOutput, error) {
 			args := v.(LookupSettingsArgs)
-			r, err := LookupSettings(ctx, &args, opts...)
-			var s LookupSettingsResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupSettingsResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getSettings:getSettings", args, &rv, "", opts...)
+			if err != nil {
+				return LookupSettingsResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupSettingsResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupSettingsResultOutput), nil
+			}
+			return output, nil
 		}).(LookupSettingsResultOutput)
 }
 

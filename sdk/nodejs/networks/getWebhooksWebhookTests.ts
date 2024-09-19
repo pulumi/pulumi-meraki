@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getWebhooksWebhookTests(args: GetWebhooksWebhookTestsArgs, opts?: pulumi.InvokeOptions): Promise<GetWebhooksWebhookTestsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getWebhooksWebhookTests:getWebhooksWebhookTests", {
         "networkId": args.networkId,
@@ -76,7 +75,11 @@ export interface GetWebhooksWebhookTestsResult {
  * ```
  */
 export function getWebhooksWebhookTestsOutput(args: GetWebhooksWebhookTestsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWebhooksWebhookTestsResult> {
-    return pulumi.output(args).apply((a: any) => getWebhooksWebhookTests(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getWebhooksWebhookTests:getWebhooksWebhookTests", {
+        "networkId": args.networkId,
+        "webhookTestId": args.webhookTestId,
+    }, opts);
 }
 
 /**

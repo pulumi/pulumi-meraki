@@ -24,7 +24,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSmDevicesPerformanceHistory(args: GetSmDevicesPerformanceHistoryArgs, opts?: pulumi.InvokeOptions): Promise<GetSmDevicesPerformanceHistoryResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSmDevicesPerformanceHistory:getSmDevicesPerformanceHistory", {
         "deviceId": args.deviceId,
@@ -112,7 +111,14 @@ export interface GetSmDevicesPerformanceHistoryResult {
  * ```
  */
 export function getSmDevicesPerformanceHistoryOutput(args: GetSmDevicesPerformanceHistoryOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmDevicesPerformanceHistoryResult> {
-    return pulumi.output(args).apply((a: any) => getSmDevicesPerformanceHistory(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSmDevicesPerformanceHistory:getSmDevicesPerformanceHistory", {
+        "deviceId": args.deviceId,
+        "endingBefore": args.endingBefore,
+        "networkId": args.networkId,
+        "perPage": args.perPage,
+        "startingAfter": args.startingAfter,
+    }, opts);
 }
 
 /**

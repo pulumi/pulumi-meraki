@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getApplianceVpnVpnFirewallRules(args: GetApplianceVpnVpnFirewallRulesArgs, opts?: pulumi.InvokeOptions): Promise<GetApplianceVpnVpnFirewallRulesResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getApplianceVpnVpnFirewallRules:getApplianceVpnVpnFirewallRules", {
         "organizationId": args.organizationId,
@@ -65,7 +64,10 @@ export interface GetApplianceVpnVpnFirewallRulesResult {
  * ```
  */
 export function getApplianceVpnVpnFirewallRulesOutput(args: GetApplianceVpnVpnFirewallRulesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceVpnVpnFirewallRulesResult> {
-    return pulumi.output(args).apply((a: any) => getApplianceVpnVpnFirewallRules(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getApplianceVpnVpnFirewallRules:getApplianceVpnVpnFirewallRules", {
+        "organizationId": args.organizationId,
+    }, opts);
 }
 
 /**

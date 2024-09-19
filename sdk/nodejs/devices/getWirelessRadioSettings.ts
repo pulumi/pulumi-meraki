@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getWirelessRadioSettings(args: GetWirelessRadioSettingsArgs, opts?: pulumi.InvokeOptions): Promise<GetWirelessRadioSettingsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:devices/getWirelessRadioSettings:getWirelessRadioSettings", {
         "serial": args.serial,
@@ -65,7 +64,10 @@ export interface GetWirelessRadioSettingsResult {
  * ```
  */
 export function getWirelessRadioSettingsOutput(args: GetWirelessRadioSettingsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessRadioSettingsResult> {
-    return pulumi.output(args).apply((a: any) => getWirelessRadioSettings(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:devices/getWirelessRadioSettings:getWirelessRadioSettings", {
+        "serial": args.serial,
+    }, opts);
 }
 
 /**

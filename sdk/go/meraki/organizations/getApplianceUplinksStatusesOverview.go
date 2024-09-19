@@ -64,14 +64,20 @@ type GetApplianceUplinksStatusesOverviewResult struct {
 
 func GetApplianceUplinksStatusesOverviewOutput(ctx *pulumi.Context, args GetApplianceUplinksStatusesOverviewOutputArgs, opts ...pulumi.InvokeOption) GetApplianceUplinksStatusesOverviewResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetApplianceUplinksStatusesOverviewResult, error) {
+		ApplyT(func(v interface{}) (GetApplianceUplinksStatusesOverviewResultOutput, error) {
 			args := v.(GetApplianceUplinksStatusesOverviewArgs)
-			r, err := GetApplianceUplinksStatusesOverview(ctx, &args, opts...)
-			var s GetApplianceUplinksStatusesOverviewResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetApplianceUplinksStatusesOverviewResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getApplianceUplinksStatusesOverview:getApplianceUplinksStatusesOverview", args, &rv, "", opts...)
+			if err != nil {
+				return GetApplianceUplinksStatusesOverviewResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetApplianceUplinksStatusesOverviewResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetApplianceUplinksStatusesOverviewResultOutput), nil
+			}
+			return output, nil
 		}).(GetApplianceUplinksStatusesOverviewResultOutput)
 }
 

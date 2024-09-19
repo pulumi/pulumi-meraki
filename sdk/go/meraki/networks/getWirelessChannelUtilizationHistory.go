@@ -110,14 +110,20 @@ type GetWirelessChannelUtilizationHistoryResult struct {
 
 func GetWirelessChannelUtilizationHistoryOutput(ctx *pulumi.Context, args GetWirelessChannelUtilizationHistoryOutputArgs, opts ...pulumi.InvokeOption) GetWirelessChannelUtilizationHistoryResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetWirelessChannelUtilizationHistoryResult, error) {
+		ApplyT(func(v interface{}) (GetWirelessChannelUtilizationHistoryResultOutput, error) {
 			args := v.(GetWirelessChannelUtilizationHistoryArgs)
-			r, err := GetWirelessChannelUtilizationHistory(ctx, &args, opts...)
-			var s GetWirelessChannelUtilizationHistoryResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetWirelessChannelUtilizationHistoryResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getWirelessChannelUtilizationHistory:getWirelessChannelUtilizationHistory", args, &rv, "", opts...)
+			if err != nil {
+				return GetWirelessChannelUtilizationHistoryResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetWirelessChannelUtilizationHistoryResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetWirelessChannelUtilizationHistoryResultOutput), nil
+			}
+			return output, nil
 		}).(GetWirelessChannelUtilizationHistoryResultOutput)
 }
 

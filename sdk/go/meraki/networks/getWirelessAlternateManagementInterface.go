@@ -64,14 +64,20 @@ type LookupWirelessAlternateManagementInterfaceResult struct {
 
 func LookupWirelessAlternateManagementInterfaceOutput(ctx *pulumi.Context, args LookupWirelessAlternateManagementInterfaceOutputArgs, opts ...pulumi.InvokeOption) LookupWirelessAlternateManagementInterfaceResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupWirelessAlternateManagementInterfaceResult, error) {
+		ApplyT(func(v interface{}) (LookupWirelessAlternateManagementInterfaceResultOutput, error) {
 			args := v.(LookupWirelessAlternateManagementInterfaceArgs)
-			r, err := LookupWirelessAlternateManagementInterface(ctx, &args, opts...)
-			var s LookupWirelessAlternateManagementInterfaceResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupWirelessAlternateManagementInterfaceResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getWirelessAlternateManagementInterface:getWirelessAlternateManagementInterface", args, &rv, "", opts...)
+			if err != nil {
+				return LookupWirelessAlternateManagementInterfaceResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupWirelessAlternateManagementInterfaceResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupWirelessAlternateManagementInterfaceResultOutput), nil
+			}
+			return output, nil
 		}).(LookupWirelessAlternateManagementInterfaceResultOutput)
 }
 

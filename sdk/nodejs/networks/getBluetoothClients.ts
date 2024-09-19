@@ -23,7 +23,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getBluetoothClients(args: GetBluetoothClientsArgs, opts?: pulumi.InvokeOptions): Promise<GetBluetoothClientsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getBluetoothClients:getBluetoothClients", {
         "bluetoothClientId": args.bluetoothClientId,
@@ -98,7 +97,13 @@ export interface GetBluetoothClientsResult {
  * ```
  */
 export function getBluetoothClientsOutput(args: GetBluetoothClientsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetBluetoothClientsResult> {
-    return pulumi.output(args).apply((a: any) => getBluetoothClients(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getBluetoothClients:getBluetoothClients", {
+        "bluetoothClientId": args.bluetoothClientId,
+        "connectivityHistoryTimespan": args.connectivityHistoryTimespan,
+        "includeConnectivityHistory": args.includeConnectivityHistory,
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

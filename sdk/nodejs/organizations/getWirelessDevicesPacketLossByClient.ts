@@ -30,7 +30,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getWirelessDevicesPacketLossByClient(args: GetWirelessDevicesPacketLossByClientArgs, opts?: pulumi.InvokeOptions): Promise<GetWirelessDevicesPacketLossByClientResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getWirelessDevicesPacketLossByClient:getWirelessDevicesPacketLossByClient", {
         "bands": args.bands,
@@ -178,7 +177,20 @@ export interface GetWirelessDevicesPacketLossByClientResult {
  * ```
  */
 export function getWirelessDevicesPacketLossByClientOutput(args: GetWirelessDevicesPacketLossByClientOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessDevicesPacketLossByClientResult> {
-    return pulumi.output(args).apply((a: any) => getWirelessDevicesPacketLossByClient(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getWirelessDevicesPacketLossByClient:getWirelessDevicesPacketLossByClient", {
+        "bands": args.bands,
+        "endingBefore": args.endingBefore,
+        "macs": args.macs,
+        "networkIds": args.networkIds,
+        "organizationId": args.organizationId,
+        "perPage": args.perPage,
+        "ssids": args.ssids,
+        "startingAfter": args.startingAfter,
+        "t0": args.t0,
+        "t1": args.t1,
+        "timespan": args.timespan,
+    }, opts);
 }
 
 /**

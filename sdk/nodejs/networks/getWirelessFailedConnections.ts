@@ -29,7 +29,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getWirelessFailedConnections(args: GetWirelessFailedConnectionsArgs, opts?: pulumi.InvokeOptions): Promise<GetWirelessFailedConnectionsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getWirelessFailedConnections:getWirelessFailedConnections", {
         "apTag": args.apTag,
@@ -167,7 +166,19 @@ export interface GetWirelessFailedConnectionsResult {
  * ```
  */
 export function getWirelessFailedConnectionsOutput(args: GetWirelessFailedConnectionsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessFailedConnectionsResult> {
-    return pulumi.output(args).apply((a: any) => getWirelessFailedConnections(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getWirelessFailedConnections:getWirelessFailedConnections", {
+        "apTag": args.apTag,
+        "band": args.band,
+        "clientId": args.clientId,
+        "networkId": args.networkId,
+        "serial": args.serial,
+        "ssid": args.ssid,
+        "t0": args.t0,
+        "t1": args.t1,
+        "timespan": args.timespan,
+        "vlan": args.vlan,
+    }, opts);
 }
 
 /**

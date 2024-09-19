@@ -28,7 +28,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getDevicesPowerModulesStatusesByDevice(args: GetDevicesPowerModulesStatusesByDeviceArgs, opts?: pulumi.InvokeOptions): Promise<GetDevicesPowerModulesStatusesByDeviceResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getDevicesPowerModulesStatusesByDevice:getDevicesPowerModulesStatusesByDevice", {
         "endingBefore": args.endingBefore,
@@ -156,7 +155,18 @@ export interface GetDevicesPowerModulesStatusesByDeviceResult {
  * ```
  */
 export function getDevicesPowerModulesStatusesByDeviceOutput(args: GetDevicesPowerModulesStatusesByDeviceOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDevicesPowerModulesStatusesByDeviceResult> {
-    return pulumi.output(args).apply((a: any) => getDevicesPowerModulesStatusesByDevice(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getDevicesPowerModulesStatusesByDevice:getDevicesPowerModulesStatusesByDevice", {
+        "endingBefore": args.endingBefore,
+        "networkIds": args.networkIds,
+        "organizationId": args.organizationId,
+        "perPage": args.perPage,
+        "productTypes": args.productTypes,
+        "serials": args.serials,
+        "startingAfter": args.startingAfter,
+        "tags": args.tags,
+        "tagsFilterType": args.tagsFilterType,
+    }, opts);
 }
 
 /**

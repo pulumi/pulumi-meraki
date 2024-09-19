@@ -64,14 +64,20 @@ type LookupSnmpResult struct {
 
 func LookupSnmpOutput(ctx *pulumi.Context, args LookupSnmpOutputArgs, opts ...pulumi.InvokeOption) LookupSnmpResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupSnmpResult, error) {
+		ApplyT(func(v interface{}) (LookupSnmpResultOutput, error) {
 			args := v.(LookupSnmpArgs)
-			r, err := LookupSnmp(ctx, &args, opts...)
-			var s LookupSnmpResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupSnmpResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getSnmp:getSnmp", args, &rv, "", opts...)
+			if err != nil {
+				return LookupSnmpResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupSnmpResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupSnmpResultOutput), nil
+			}
+			return output, nil
 		}).(LookupSnmpResultOutput)
 }
 

@@ -85,14 +85,20 @@ type GetSmDevicesDesktopLogsResult struct {
 
 func GetSmDevicesDesktopLogsOutput(ctx *pulumi.Context, args GetSmDevicesDesktopLogsOutputArgs, opts ...pulumi.InvokeOption) GetSmDevicesDesktopLogsResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetSmDevicesDesktopLogsResult, error) {
+		ApplyT(func(v interface{}) (GetSmDevicesDesktopLogsResultOutput, error) {
 			args := v.(GetSmDevicesDesktopLogsArgs)
-			r, err := GetSmDevicesDesktopLogs(ctx, &args, opts...)
-			var s GetSmDevicesDesktopLogsResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetSmDevicesDesktopLogsResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getSmDevicesDesktopLogs:getSmDevicesDesktopLogs", args, &rv, "", opts...)
+			if err != nil {
+				return GetSmDevicesDesktopLogsResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetSmDevicesDesktopLogsResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetSmDevicesDesktopLogsResultOutput), nil
+			}
+			return output, nil
 		}).(GetSmDevicesDesktopLogsResultOutput)
 }
 

@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getCameraCustomAnalytics(args: GetCameraCustomAnalyticsArgs, opts?: pulumi.InvokeOptions): Promise<GetCameraCustomAnalyticsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:devices/getCameraCustomAnalytics:getCameraCustomAnalytics", {
         "serial": args.serial,
@@ -65,7 +64,10 @@ export interface GetCameraCustomAnalyticsResult {
  * ```
  */
 export function getCameraCustomAnalyticsOutput(args: GetCameraCustomAnalyticsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCameraCustomAnalyticsResult> {
-    return pulumi.output(args).apply((a: any) => getCameraCustomAnalytics(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:devices/getCameraCustomAnalytics:getCameraCustomAnalytics", {
+        "serial": args.serial,
+    }, opts);
 }
 
 /**

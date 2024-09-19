@@ -65,14 +65,20 @@ type GetHealthAlertsResult struct {
 
 func GetHealthAlertsOutput(ctx *pulumi.Context, args GetHealthAlertsOutputArgs, opts ...pulumi.InvokeOption) GetHealthAlertsResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetHealthAlertsResult, error) {
+		ApplyT(func(v interface{}) (GetHealthAlertsResultOutput, error) {
 			args := v.(GetHealthAlertsArgs)
-			r, err := GetHealthAlerts(ctx, &args, opts...)
-			var s GetHealthAlertsResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetHealthAlertsResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getHealthAlerts:getHealthAlerts", args, &rv, "", opts...)
+			if err != nil {
+				return GetHealthAlertsResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetHealthAlertsResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetHealthAlertsResultOutput), nil
+			}
+			return output, nil
 		}).(GetHealthAlertsResultOutput)
 }
 

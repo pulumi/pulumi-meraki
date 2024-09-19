@@ -90,14 +90,20 @@ type GetSwitchDhcpV4ServersSeenResult struct {
 
 func GetSwitchDhcpV4ServersSeenOutput(ctx *pulumi.Context, args GetSwitchDhcpV4ServersSeenOutputArgs, opts ...pulumi.InvokeOption) GetSwitchDhcpV4ServersSeenResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetSwitchDhcpV4ServersSeenResult, error) {
+		ApplyT(func(v interface{}) (GetSwitchDhcpV4ServersSeenResultOutput, error) {
 			args := v.(GetSwitchDhcpV4ServersSeenArgs)
-			r, err := GetSwitchDhcpV4ServersSeen(ctx, &args, opts...)
-			var s GetSwitchDhcpV4ServersSeenResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetSwitchDhcpV4ServersSeenResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getSwitchDhcpV4ServersSeen:getSwitchDhcpV4ServersSeen", args, &rv, "", opts...)
+			if err != nil {
+				return GetSwitchDhcpV4ServersSeenResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetSwitchDhcpV4ServersSeenResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetSwitchDhcpV4ServersSeenResultOutput), nil
+			}
+			return output, nil
 		}).(GetSwitchDhcpV4ServersSeenResultOutput)
 }
 

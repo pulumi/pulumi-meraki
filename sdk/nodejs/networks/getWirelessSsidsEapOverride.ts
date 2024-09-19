@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getWirelessSsidsEapOverride(args: GetWirelessSsidsEapOverrideArgs, opts?: pulumi.InvokeOptions): Promise<GetWirelessSsidsEapOverrideResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getWirelessSsidsEapOverride:getWirelessSsidsEapOverride", {
         "networkId": args.networkId,
@@ -76,7 +75,11 @@ export interface GetWirelessSsidsEapOverrideResult {
  * ```
  */
 export function getWirelessSsidsEapOverrideOutput(args: GetWirelessSsidsEapOverrideOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessSsidsEapOverrideResult> {
-    return pulumi.output(args).apply((a: any) => getWirelessSsidsEapOverride(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getWirelessSsidsEapOverride:getWirelessSsidsEapOverride", {
+        "networkId": args.networkId,
+        "number": args.number,
+    }, opts);
 }
 
 /**

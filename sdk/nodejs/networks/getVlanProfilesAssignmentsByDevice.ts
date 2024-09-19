@@ -26,7 +26,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getVlanProfilesAssignmentsByDevice(args: GetVlanProfilesAssignmentsByDeviceArgs, opts?: pulumi.InvokeOptions): Promise<GetVlanProfilesAssignmentsByDeviceResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getVlanProfilesAssignmentsByDevice:getVlanProfilesAssignmentsByDevice", {
         "endingBefore": args.endingBefore,
@@ -134,7 +133,16 @@ export interface GetVlanProfilesAssignmentsByDeviceResult {
  * ```
  */
 export function getVlanProfilesAssignmentsByDeviceOutput(args: GetVlanProfilesAssignmentsByDeviceOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetVlanProfilesAssignmentsByDeviceResult> {
-    return pulumi.output(args).apply((a: any) => getVlanProfilesAssignmentsByDevice(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getVlanProfilesAssignmentsByDevice:getVlanProfilesAssignmentsByDevice", {
+        "endingBefore": args.endingBefore,
+        "networkId": args.networkId,
+        "perPage": args.perPage,
+        "productTypes": args.productTypes,
+        "serials": args.serials,
+        "stackIds": args.stackIds,
+        "startingAfter": args.startingAfter,
+    }, opts);
 }
 
 /**

@@ -25,7 +25,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getFirmwareUpgrades(args: GetFirmwareUpgradesArgs, opts?: pulumi.InvokeOptions): Promise<GetFirmwareUpgradesResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getFirmwareUpgrades:getFirmwareUpgrades", {
         "endingBefore": args.endingBefore,
@@ -123,7 +122,15 @@ export interface GetFirmwareUpgradesResult {
  * ```
  */
 export function getFirmwareUpgradesOutput(args: GetFirmwareUpgradesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetFirmwareUpgradesResult> {
-    return pulumi.output(args).apply((a: any) => getFirmwareUpgrades(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getFirmwareUpgrades:getFirmwareUpgrades", {
+        "endingBefore": args.endingBefore,
+        "organizationId": args.organizationId,
+        "perPage": args.perPage,
+        "productTypes": args.productTypes,
+        "startingAfter": args.startingAfter,
+        "statuses": args.statuses,
+    }, opts);
 }
 
 /**

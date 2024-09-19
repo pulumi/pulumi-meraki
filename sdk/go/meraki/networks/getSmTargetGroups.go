@@ -49,14 +49,20 @@ type LookupSmTargetGroupsResult struct {
 
 func LookupSmTargetGroupsOutput(ctx *pulumi.Context, args LookupSmTargetGroupsOutputArgs, opts ...pulumi.InvokeOption) LookupSmTargetGroupsResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupSmTargetGroupsResult, error) {
+		ApplyT(func(v interface{}) (LookupSmTargetGroupsResultOutput, error) {
 			args := v.(LookupSmTargetGroupsArgs)
-			r, err := LookupSmTargetGroups(ctx, &args, opts...)
-			var s LookupSmTargetGroupsResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupSmTargetGroupsResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getSmTargetGroups:getSmTargetGroups", args, &rv, "", opts...)
+			if err != nil {
+				return LookupSmTargetGroupsResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupSmTargetGroupsResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupSmTargetGroupsResultOutput), nil
+			}
+			return output, nil
 		}).(LookupSmTargetGroupsResultOutput)
 }
 

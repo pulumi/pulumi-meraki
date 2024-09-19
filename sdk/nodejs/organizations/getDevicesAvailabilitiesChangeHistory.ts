@@ -30,7 +30,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getDevicesAvailabilitiesChangeHistory(args: GetDevicesAvailabilitiesChangeHistoryArgs, opts?: pulumi.InvokeOptions): Promise<GetDevicesAvailabilitiesChangeHistoryResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getDevicesAvailabilitiesChangeHistory:getDevicesAvailabilitiesChangeHistory", {
         "endingBefore": args.endingBefore,
@@ -178,7 +177,20 @@ export interface GetDevicesAvailabilitiesChangeHistoryResult {
  * ```
  */
 export function getDevicesAvailabilitiesChangeHistoryOutput(args: GetDevicesAvailabilitiesChangeHistoryOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDevicesAvailabilitiesChangeHistoryResult> {
-    return pulumi.output(args).apply((a: any) => getDevicesAvailabilitiesChangeHistory(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getDevicesAvailabilitiesChangeHistory:getDevicesAvailabilitiesChangeHistory", {
+        "endingBefore": args.endingBefore,
+        "networkIds": args.networkIds,
+        "organizationId": args.organizationId,
+        "perPage": args.perPage,
+        "productTypes": args.productTypes,
+        "serials": args.serials,
+        "startingAfter": args.startingAfter,
+        "statuses": args.statuses,
+        "t0": args.t0,
+        "t1": args.t1,
+        "timespan": args.timespan,
+    }, opts);
 }
 
 /**

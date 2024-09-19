@@ -80,14 +80,20 @@ type GetSmTrustedAccessConfigsResult struct {
 
 func GetSmTrustedAccessConfigsOutput(ctx *pulumi.Context, args GetSmTrustedAccessConfigsOutputArgs, opts ...pulumi.InvokeOption) GetSmTrustedAccessConfigsResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetSmTrustedAccessConfigsResult, error) {
+		ApplyT(func(v interface{}) (GetSmTrustedAccessConfigsResultOutput, error) {
 			args := v.(GetSmTrustedAccessConfigsArgs)
-			r, err := GetSmTrustedAccessConfigs(ctx, &args, opts...)
-			var s GetSmTrustedAccessConfigsResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetSmTrustedAccessConfigsResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getSmTrustedAccessConfigs:getSmTrustedAccessConfigs", args, &rv, "", opts...)
+			if err != nil {
+				return GetSmTrustedAccessConfigsResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetSmTrustedAccessConfigsResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetSmTrustedAccessConfigsResultOutput), nil
+			}
+			return output, nil
 		}).(GetSmTrustedAccessConfigsResultOutput)
 }
 

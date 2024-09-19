@@ -27,7 +27,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getWebhooksLogs(args: GetWebhooksLogsArgs, opts?: pulumi.InvokeOptions): Promise<GetWebhooksLogsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getWebhooksLogs:getWebhooksLogs", {
         "endingBefore": args.endingBefore,
@@ -145,7 +144,17 @@ export interface GetWebhooksLogsResult {
  * ```
  */
 export function getWebhooksLogsOutput(args: GetWebhooksLogsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWebhooksLogsResult> {
-    return pulumi.output(args).apply((a: any) => getWebhooksLogs(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getWebhooksLogs:getWebhooksLogs", {
+        "endingBefore": args.endingBefore,
+        "organizationId": args.organizationId,
+        "perPage": args.perPage,
+        "startingAfter": args.startingAfter,
+        "t0": args.t0,
+        "t1": args.t1,
+        "timespan": args.timespan,
+        "url": args.url,
+    }, opts);
 }
 
 /**

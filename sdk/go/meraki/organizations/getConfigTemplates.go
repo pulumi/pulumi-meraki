@@ -45,14 +45,20 @@ type LookupConfigTemplatesResult struct {
 
 func LookupConfigTemplatesOutput(ctx *pulumi.Context, args LookupConfigTemplatesOutputArgs, opts ...pulumi.InvokeOption) LookupConfigTemplatesResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupConfigTemplatesResult, error) {
+		ApplyT(func(v interface{}) (LookupConfigTemplatesResultOutput, error) {
 			args := v.(LookupConfigTemplatesArgs)
-			r, err := LookupConfigTemplates(ctx, &args, opts...)
-			var s LookupConfigTemplatesResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupConfigTemplatesResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getConfigTemplates:getConfigTemplates", args, &rv, "", opts...)
+			if err != nil {
+				return LookupConfigTemplatesResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupConfigTemplatesResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupConfigTemplatesResultOutput), nil
+			}
+			return output, nil
 		}).(LookupConfigTemplatesResultOutput)
 }
 

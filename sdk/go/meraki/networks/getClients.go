@@ -69,14 +69,20 @@ type GetClientsResult struct {
 
 func GetClientsOutput(ctx *pulumi.Context, args GetClientsOutputArgs, opts ...pulumi.InvokeOption) GetClientsResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetClientsResult, error) {
+		ApplyT(func(v interface{}) (GetClientsResultOutput, error) {
 			args := v.(GetClientsArgs)
-			r, err := GetClients(ctx, &args, opts...)
-			var s GetClientsResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetClientsResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getClients:getClients", args, &rv, "", opts...)
+			if err != nil {
+				return GetClientsResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetClientsResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetClientsResultOutput), nil
+			}
+			return output, nil
 		}).(GetClientsResultOutput)
 }
 

@@ -11,7 +11,6 @@ import * as utilities from "../utilities";
  */
 export function getSensorMqttBrokers(args?: GetSensorMqttBrokersArgs, opts?: pulumi.InvokeOptions): Promise<GetSensorMqttBrokersResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSensorMqttBrokers:getSensorMqttBrokers", {
         "mqttBrokerId": args.mqttBrokerId,
@@ -59,7 +58,12 @@ export interface GetSensorMqttBrokersResult {
  * ## Example Usage
  */
 export function getSensorMqttBrokersOutput(args?: GetSensorMqttBrokersOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSensorMqttBrokersResult> {
-    return pulumi.output(args).apply((a: any) => getSensorMqttBrokers(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSensorMqttBrokers:getSensorMqttBrokers", {
+        "mqttBrokerId": args.mqttBrokerId,
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

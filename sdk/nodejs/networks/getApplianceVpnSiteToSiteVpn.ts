@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getApplianceVpnSiteToSiteVpn(args: GetApplianceVpnSiteToSiteVpnArgs, opts?: pulumi.InvokeOptions): Promise<GetApplianceVpnSiteToSiteVpnResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getApplianceVpnSiteToSiteVpn:getApplianceVpnSiteToSiteVpn", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetApplianceVpnSiteToSiteVpnResult {
  * ```
  */
 export function getApplianceVpnSiteToSiteVpnOutput(args: GetApplianceVpnSiteToSiteVpnOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceVpnSiteToSiteVpnResult> {
-    return pulumi.output(args).apply((a: any) => getApplianceVpnSiteToSiteVpn(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getApplianceVpnSiteToSiteVpn:getApplianceVpnSiteToSiteVpn", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

@@ -23,7 +23,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getAlertsHistory(args: GetAlertsHistoryArgs, opts?: pulumi.InvokeOptions): Promise<GetAlertsHistoryResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getAlertsHistory:getAlertsHistory", {
         "endingBefore": args.endingBefore,
@@ -101,7 +100,13 @@ export interface GetAlertsHistoryResult {
  * ```
  */
 export function getAlertsHistoryOutput(args: GetAlertsHistoryOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAlertsHistoryResult> {
-    return pulumi.output(args).apply((a: any) => getAlertsHistory(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getAlertsHistory:getAlertsHistory", {
+        "endingBefore": args.endingBefore,
+        "networkId": args.networkId,
+        "perPage": args.perPage,
+        "startingAfter": args.startingAfter,
+    }, opts);
 }
 
 /**

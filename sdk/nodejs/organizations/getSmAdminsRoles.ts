@@ -24,7 +24,6 @@ import * as utilities from "../utilities";
  */
 export function getSmAdminsRoles(args?: GetSmAdminsRolesArgs, opts?: pulumi.InvokeOptions): Promise<GetSmAdminsRolesResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getSmAdminsRoles:getSmAdminsRoles", {
         "endingBefore": args.endingBefore,
@@ -108,7 +107,15 @@ export interface GetSmAdminsRolesResult {
  * ```
  */
 export function getSmAdminsRolesOutput(args?: GetSmAdminsRolesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmAdminsRolesResult> {
-    return pulumi.output(args).apply((a: any) => getSmAdminsRoles(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getSmAdminsRoles:getSmAdminsRoles", {
+        "endingBefore": args.endingBefore,
+        "organizationId": args.organizationId,
+        "perPage": args.perPage,
+        "roleId": args.roleId,
+        "startingAfter": args.startingAfter,
+    }, opts);
 }
 
 /**

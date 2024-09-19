@@ -64,14 +64,20 @@ type LookupManagementInterfaceResult struct {
 
 func LookupManagementInterfaceOutput(ctx *pulumi.Context, args LookupManagementInterfaceOutputArgs, opts ...pulumi.InvokeOption) LookupManagementInterfaceResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupManagementInterfaceResult, error) {
+		ApplyT(func(v interface{}) (LookupManagementInterfaceResultOutput, error) {
 			args := v.(LookupManagementInterfaceArgs)
-			r, err := LookupManagementInterface(ctx, &args, opts...)
-			var s LookupManagementInterfaceResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupManagementInterfaceResult
+			secret, err := ctx.InvokePackageRaw("meraki:devices/getManagementInterface:getManagementInterface", args, &rv, "", opts...)
+			if err != nil {
+				return LookupManagementInterfaceResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupManagementInterfaceResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupManagementInterfaceResultOutput), nil
+			}
+			return output, nil
 		}).(LookupManagementInterfaceResultOutput)
 }
 

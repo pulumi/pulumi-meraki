@@ -26,7 +26,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSensorReadingsLatest(args: GetSensorReadingsLatestArgs, opts?: pulumi.InvokeOptions): Promise<GetSensorReadingsLatestResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getSensorReadingsLatest:getSensorReadingsLatest", {
         "endingBefore": args.endingBefore,
@@ -134,7 +133,16 @@ export interface GetSensorReadingsLatestResult {
  * ```
  */
 export function getSensorReadingsLatestOutput(args: GetSensorReadingsLatestOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSensorReadingsLatestResult> {
-    return pulumi.output(args).apply((a: any) => getSensorReadingsLatest(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getSensorReadingsLatest:getSensorReadingsLatest", {
+        "endingBefore": args.endingBefore,
+        "metrics": args.metrics,
+        "networkIds": args.networkIds,
+        "organizationId": args.organizationId,
+        "perPage": args.perPage,
+        "serials": args.serials,
+        "startingAfter": args.startingAfter,
+    }, opts);
 }
 
 /**

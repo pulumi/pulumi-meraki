@@ -30,7 +30,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getWirelessClientCountHistory(args: GetWirelessClientCountHistoryArgs, opts?: pulumi.InvokeOptions): Promise<GetWirelessClientCountHistoryResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getWirelessClientCountHistory:getWirelessClientCountHistory", {
         "apTag": args.apTag,
@@ -178,7 +177,20 @@ export interface GetWirelessClientCountHistoryResult {
  * ```
  */
 export function getWirelessClientCountHistoryOutput(args: GetWirelessClientCountHistoryOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessClientCountHistoryResult> {
-    return pulumi.output(args).apply((a: any) => getWirelessClientCountHistory(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getWirelessClientCountHistory:getWirelessClientCountHistory", {
+        "apTag": args.apTag,
+        "autoResolution": args.autoResolution,
+        "band": args.band,
+        "clientId": args.clientId,
+        "deviceSerial": args.deviceSerial,
+        "networkId": args.networkId,
+        "resolution": args.resolution,
+        "ssid": args.ssid,
+        "t0": args.t0,
+        "t1": args.t1,
+        "timespan": args.timespan,
+    }, opts);
 }
 
 /**

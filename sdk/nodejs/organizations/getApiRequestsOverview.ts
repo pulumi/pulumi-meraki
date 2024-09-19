@@ -23,7 +23,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getApiRequestsOverview(args: GetApiRequestsOverviewArgs, opts?: pulumi.InvokeOptions): Promise<GetApiRequestsOverviewResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getApiRequestsOverview:getApiRequestsOverview", {
         "organizationId": args.organizationId,
@@ -98,7 +97,13 @@ export interface GetApiRequestsOverviewResult {
  * ```
  */
 export function getApiRequestsOverviewOutput(args: GetApiRequestsOverviewOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApiRequestsOverviewResult> {
-    return pulumi.output(args).apply((a: any) => getApiRequestsOverview(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getApiRequestsOverview:getApiRequestsOverview", {
+        "organizationId": args.organizationId,
+        "t0": args.t0,
+        "t1": args.t1,
+        "timespan": args.timespan,
+    }, opts);
 }
 
 /**

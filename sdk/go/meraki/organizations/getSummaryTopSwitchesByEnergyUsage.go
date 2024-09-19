@@ -80,14 +80,20 @@ type GetSummaryTopSwitchesByEnergyUsageResult struct {
 
 func GetSummaryTopSwitchesByEnergyUsageOutput(ctx *pulumi.Context, args GetSummaryTopSwitchesByEnergyUsageOutputArgs, opts ...pulumi.InvokeOption) GetSummaryTopSwitchesByEnergyUsageResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetSummaryTopSwitchesByEnergyUsageResult, error) {
+		ApplyT(func(v interface{}) (GetSummaryTopSwitchesByEnergyUsageResultOutput, error) {
 			args := v.(GetSummaryTopSwitchesByEnergyUsageArgs)
-			r, err := GetSummaryTopSwitchesByEnergyUsage(ctx, &args, opts...)
-			var s GetSummaryTopSwitchesByEnergyUsageResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetSummaryTopSwitchesByEnergyUsageResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getSummaryTopSwitchesByEnergyUsage:getSummaryTopSwitchesByEnergyUsage", args, &rv, "", opts...)
+			if err != nil {
+				return GetSummaryTopSwitchesByEnergyUsageResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetSummaryTopSwitchesByEnergyUsageResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetSummaryTopSwitchesByEnergyUsageResultOutput), nil
+			}
+			return output, nil
 		}).(GetSummaryTopSwitchesByEnergyUsageResultOutput)
 }
 

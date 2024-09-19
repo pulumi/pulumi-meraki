@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  */
 export function getApplianceRfProfiles(args?: GetApplianceRfProfilesArgs, opts?: pulumi.InvokeOptions): Promise<GetApplianceRfProfilesResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getApplianceRfProfiles:getApplianceRfProfiles", {
         "networkId": args.networkId,
@@ -75,7 +74,12 @@ export interface GetApplianceRfProfilesResult {
  * ```
  */
 export function getApplianceRfProfilesOutput(args?: GetApplianceRfProfilesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceRfProfilesResult> {
-    return pulumi.output(args).apply((a: any) => getApplianceRfProfiles(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getApplianceRfProfiles:getApplianceRfProfiles", {
+        "networkId": args.networkId,
+        "rfProfileId": args.rfProfileId,
+    }, opts);
 }
 
 /**

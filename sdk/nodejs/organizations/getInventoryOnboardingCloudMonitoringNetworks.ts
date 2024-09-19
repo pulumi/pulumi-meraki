@@ -25,7 +25,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getInventoryOnboardingCloudMonitoringNetworks(args: GetInventoryOnboardingCloudMonitoringNetworksArgs, opts?: pulumi.InvokeOptions): Promise<GetInventoryOnboardingCloudMonitoringNetworksResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getInventoryOnboardingCloudMonitoringNetworks:getInventoryOnboardingCloudMonitoringNetworks", {
         "deviceType": args.deviceType,
@@ -123,7 +122,15 @@ export interface GetInventoryOnboardingCloudMonitoringNetworksResult {
  * ```
  */
 export function getInventoryOnboardingCloudMonitoringNetworksOutput(args: GetInventoryOnboardingCloudMonitoringNetworksOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetInventoryOnboardingCloudMonitoringNetworksResult> {
-    return pulumi.output(args).apply((a: any) => getInventoryOnboardingCloudMonitoringNetworks(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getInventoryOnboardingCloudMonitoringNetworks:getInventoryOnboardingCloudMonitoringNetworks", {
+        "deviceType": args.deviceType,
+        "endingBefore": args.endingBefore,
+        "organizationId": args.organizationId,
+        "perPage": args.perPage,
+        "search": args.search,
+        "startingAfter": args.startingAfter,
+    }, opts);
 }
 
 /**

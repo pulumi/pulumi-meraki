@@ -11,7 +11,6 @@ import * as utilities from "../utilities";
  */
 export function getMerakiAuthUsers(args?: GetMerakiAuthUsersArgs, opts?: pulumi.InvokeOptions): Promise<GetMerakiAuthUsersResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getMerakiAuthUsers:getMerakiAuthUsers", {
         "merakiAuthUserId": args.merakiAuthUserId,
@@ -59,7 +58,12 @@ export interface GetMerakiAuthUsersResult {
  * ## Example Usage
  */
 export function getMerakiAuthUsersOutput(args?: GetMerakiAuthUsersOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetMerakiAuthUsersResult> {
-    return pulumi.output(args).apply((a: any) => getMerakiAuthUsers(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getMerakiAuthUsers:getMerakiAuthUsers", {
+        "merakiAuthUserId": args.merakiAuthUserId,
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

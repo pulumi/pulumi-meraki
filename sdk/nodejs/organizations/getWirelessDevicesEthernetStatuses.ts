@@ -24,7 +24,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getWirelessDevicesEthernetStatuses(args: GetWirelessDevicesEthernetStatusesArgs, opts?: pulumi.InvokeOptions): Promise<GetWirelessDevicesEthernetStatusesResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getWirelessDevicesEthernetStatuses:getWirelessDevicesEthernetStatuses", {
         "endingBefore": args.endingBefore,
@@ -112,7 +111,14 @@ export interface GetWirelessDevicesEthernetStatusesResult {
  * ```
  */
 export function getWirelessDevicesEthernetStatusesOutput(args: GetWirelessDevicesEthernetStatusesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessDevicesEthernetStatusesResult> {
-    return pulumi.output(args).apply((a: any) => getWirelessDevicesEthernetStatuses(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getWirelessDevicesEthernetStatuses:getWirelessDevicesEthernetStatuses", {
+        "endingBefore": args.endingBefore,
+        "networkIds": args.networkIds,
+        "organizationId": args.organizationId,
+        "perPage": args.perPage,
+        "startingAfter": args.startingAfter,
+    }, opts);
 }
 
 /**

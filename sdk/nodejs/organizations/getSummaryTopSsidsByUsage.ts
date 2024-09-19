@@ -23,7 +23,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSummaryTopSsidsByUsage(args: GetSummaryTopSsidsByUsageArgs, opts?: pulumi.InvokeOptions): Promise<GetSummaryTopSsidsByUsageResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getSummaryTopSsidsByUsage:getSummaryTopSsidsByUsage", {
         "organizationId": args.organizationId,
@@ -101,7 +100,13 @@ export interface GetSummaryTopSsidsByUsageResult {
  * ```
  */
 export function getSummaryTopSsidsByUsageOutput(args: GetSummaryTopSsidsByUsageOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSummaryTopSsidsByUsageResult> {
-    return pulumi.output(args).apply((a: any) => getSummaryTopSsidsByUsage(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getSummaryTopSsidsByUsage:getSummaryTopSsidsByUsage", {
+        "organizationId": args.organizationId,
+        "t0": args.t0,
+        "t1": args.t1,
+        "timespan": args.timespan,
+    }, opts);
 }
 
 /**

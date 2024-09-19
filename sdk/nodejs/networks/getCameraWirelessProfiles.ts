@@ -11,7 +11,6 @@ import * as utilities from "../utilities";
  */
 export function getCameraWirelessProfiles(args?: GetCameraWirelessProfilesArgs, opts?: pulumi.InvokeOptions): Promise<GetCameraWirelessProfilesResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getCameraWirelessProfiles:getCameraWirelessProfiles", {
         "networkId": args.networkId,
@@ -59,7 +58,12 @@ export interface GetCameraWirelessProfilesResult {
  * ## Example Usage
  */
 export function getCameraWirelessProfilesOutput(args?: GetCameraWirelessProfilesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCameraWirelessProfilesResult> {
-    return pulumi.output(args).apply((a: any) => getCameraWirelessProfiles(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getCameraWirelessProfiles:getCameraWirelessProfiles", {
+        "networkId": args.networkId,
+        "wirelessProfileId": args.wirelessProfileId,
+    }, opts);
 }
 
 /**

@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getApplianceFirewallL7FirewallRules(args: GetApplianceFirewallL7FirewallRulesArgs, opts?: pulumi.InvokeOptions): Promise<GetApplianceFirewallL7FirewallRulesResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getApplianceFirewallL7FirewallRules:getApplianceFirewallL7FirewallRules", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetApplianceFirewallL7FirewallRulesResult {
  * ```
  */
 export function getApplianceFirewallL7FirewallRulesOutput(args: GetApplianceFirewallL7FirewallRulesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceFirewallL7FirewallRulesResult> {
-    return pulumi.output(args).apply((a: any) => getApplianceFirewallL7FirewallRules(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getApplianceFirewallL7FirewallRules:getApplianceFirewallL7FirewallRules", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

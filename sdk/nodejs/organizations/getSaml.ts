@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSaml(args: GetSamlArgs, opts?: pulumi.InvokeOptions): Promise<GetSamlResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getSaml:getSaml", {
         "organizationId": args.organizationId,
@@ -65,7 +64,10 @@ export interface GetSamlResult {
  * ```
  */
 export function getSamlOutput(args: GetSamlOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSamlResult> {
-    return pulumi.output(args).apply((a: any) => getSaml(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getSaml:getSaml", {
+        "organizationId": args.organizationId,
+    }, opts);
 }
 
 /**

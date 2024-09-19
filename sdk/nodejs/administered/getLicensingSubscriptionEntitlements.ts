@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  */
 export function getLicensingSubscriptionEntitlements(args?: GetLicensingSubscriptionEntitlementsArgs, opts?: pulumi.InvokeOptions): Promise<GetLicensingSubscriptionEntitlementsResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:administered/getLicensingSubscriptionEntitlements:getLicensingSubscriptionEntitlements", {
         "skuses": args.skuses,
@@ -66,7 +65,11 @@ export interface GetLicensingSubscriptionEntitlementsResult {
  * ```
  */
 export function getLicensingSubscriptionEntitlementsOutput(args?: GetLicensingSubscriptionEntitlementsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLicensingSubscriptionEntitlementsResult> {
-    return pulumi.output(args).apply((a: any) => getLicensingSubscriptionEntitlements(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:administered/getLicensingSubscriptionEntitlements:getLicensingSubscriptionEntitlements", {
+        "skuses": args.skuses,
+    }, opts);
 }
 
 /**

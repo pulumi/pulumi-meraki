@@ -23,7 +23,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSummaryTopSwitchesByEnergyUsage(args: GetSummaryTopSwitchesByEnergyUsageArgs, opts?: pulumi.InvokeOptions): Promise<GetSummaryTopSwitchesByEnergyUsageResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getSummaryTopSwitchesByEnergyUsage:getSummaryTopSwitchesByEnergyUsage", {
         "organizationId": args.organizationId,
@@ -101,7 +100,13 @@ export interface GetSummaryTopSwitchesByEnergyUsageResult {
  * ```
  */
 export function getSummaryTopSwitchesByEnergyUsageOutput(args: GetSummaryTopSwitchesByEnergyUsageOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSummaryTopSwitchesByEnergyUsageResult> {
-    return pulumi.output(args).apply((a: any) => getSummaryTopSwitchesByEnergyUsage(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getSummaryTopSwitchesByEnergyUsage:getSummaryTopSwitchesByEnergyUsage", {
+        "organizationId": args.organizationId,
+        "t0": args.t0,
+        "t1": args.t1,
+        "timespan": args.timespan,
+    }, opts);
 }
 
 /**

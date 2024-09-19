@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSmDevicesNetworkAdapters(args: GetSmDevicesNetworkAdaptersArgs, opts?: pulumi.InvokeOptions): Promise<GetSmDevicesNetworkAdaptersResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSmDevicesNetworkAdapters:getSmDevicesNetworkAdapters", {
         "deviceId": args.deviceId,
@@ -79,7 +78,11 @@ export interface GetSmDevicesNetworkAdaptersResult {
  * ```
  */
 export function getSmDevicesNetworkAdaptersOutput(args: GetSmDevicesNetworkAdaptersOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmDevicesNetworkAdaptersResult> {
-    return pulumi.output(args).apply((a: any) => getSmDevicesNetworkAdapters(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSmDevicesNetworkAdapters:getSmDevicesNetworkAdapters", {
+        "deviceId": args.deviceId,
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

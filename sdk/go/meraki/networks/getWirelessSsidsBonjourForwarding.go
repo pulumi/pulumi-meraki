@@ -69,14 +69,20 @@ type LookupWirelessSsidsBonjourForwardingResult struct {
 
 func LookupWirelessSsidsBonjourForwardingOutput(ctx *pulumi.Context, args LookupWirelessSsidsBonjourForwardingOutputArgs, opts ...pulumi.InvokeOption) LookupWirelessSsidsBonjourForwardingResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupWirelessSsidsBonjourForwardingResult, error) {
+		ApplyT(func(v interface{}) (LookupWirelessSsidsBonjourForwardingResultOutput, error) {
 			args := v.(LookupWirelessSsidsBonjourForwardingArgs)
-			r, err := LookupWirelessSsidsBonjourForwarding(ctx, &args, opts...)
-			var s LookupWirelessSsidsBonjourForwardingResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupWirelessSsidsBonjourForwardingResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getWirelessSsidsBonjourForwarding:getWirelessSsidsBonjourForwarding", args, &rv, "", opts...)
+			if err != nil {
+				return LookupWirelessSsidsBonjourForwardingResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupWirelessSsidsBonjourForwardingResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupWirelessSsidsBonjourForwardingResultOutput), nil
+			}
+			return output, nil
 		}).(LookupWirelessSsidsBonjourForwardingResultOutput)
 }
 

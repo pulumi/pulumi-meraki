@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getFirmwareUpgrades(args: GetFirmwareUpgradesArgs, opts?: pulumi.InvokeOptions): Promise<GetFirmwareUpgradesResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getFirmwareUpgrades:getFirmwareUpgrades", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetFirmwareUpgradesResult {
  * ```
  */
 export function getFirmwareUpgradesOutput(args: GetFirmwareUpgradesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetFirmwareUpgradesResult> {
-    return pulumi.output(args).apply((a: any) => getFirmwareUpgrades(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getFirmwareUpgrades:getFirmwareUpgrades", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

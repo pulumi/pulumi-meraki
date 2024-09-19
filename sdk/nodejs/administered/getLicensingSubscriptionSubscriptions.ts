@@ -29,7 +29,6 @@ import * as utilities from "../utilities";
  */
 export function getLicensingSubscriptionSubscriptions(args?: GetLicensingSubscriptionSubscriptionsArgs, opts?: pulumi.InvokeOptions): Promise<GetLicensingSubscriptionSubscriptionsResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:administered/getLicensingSubscriptionSubscriptions:getLicensingSubscriptionSubscriptions", {
         "endDate": args.endDate,
@@ -161,7 +160,19 @@ export interface GetLicensingSubscriptionSubscriptionsResult {
  * ```
  */
 export function getLicensingSubscriptionSubscriptionsOutput(args?: GetLicensingSubscriptionSubscriptionsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLicensingSubscriptionSubscriptionsResult> {
-    return pulumi.output(args).apply((a: any) => getLicensingSubscriptionSubscriptions(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:administered/getLicensingSubscriptionSubscriptions:getLicensingSubscriptionSubscriptions", {
+        "endDate": args.endDate,
+        "endingBefore": args.endingBefore,
+        "organizationIds": args.organizationIds,
+        "perPage": args.perPage,
+        "productTypes": args.productTypes,
+        "startDate": args.startDate,
+        "startingAfter": args.startingAfter,
+        "statuses": args.statuses,
+        "subscriptionIds": args.subscriptionIds,
+    }, opts);
 }
 
 /**

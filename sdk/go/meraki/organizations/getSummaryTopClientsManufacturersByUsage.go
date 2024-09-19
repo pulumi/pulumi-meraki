@@ -80,14 +80,20 @@ type GetSummaryTopClientsManufacturersByUsageResult struct {
 
 func GetSummaryTopClientsManufacturersByUsageOutput(ctx *pulumi.Context, args GetSummaryTopClientsManufacturersByUsageOutputArgs, opts ...pulumi.InvokeOption) GetSummaryTopClientsManufacturersByUsageResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetSummaryTopClientsManufacturersByUsageResult, error) {
+		ApplyT(func(v interface{}) (GetSummaryTopClientsManufacturersByUsageResultOutput, error) {
 			args := v.(GetSummaryTopClientsManufacturersByUsageArgs)
-			r, err := GetSummaryTopClientsManufacturersByUsage(ctx, &args, opts...)
-			var s GetSummaryTopClientsManufacturersByUsageResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetSummaryTopClientsManufacturersByUsageResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getSummaryTopClientsManufacturersByUsage:getSummaryTopClientsManufacturersByUsage", args, &rv, "", opts...)
+			if err != nil {
+				return GetSummaryTopClientsManufacturersByUsageResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetSummaryTopClientsManufacturersByUsageResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetSummaryTopClientsManufacturersByUsageResultOutput), nil
+			}
+			return output, nil
 		}).(GetSummaryTopClientsManufacturersByUsageResultOutput)
 }
 

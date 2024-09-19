@@ -45,14 +45,20 @@ type LookupSamlIdpsResult struct {
 
 func LookupSamlIdpsOutput(ctx *pulumi.Context, args LookupSamlIdpsOutputArgs, opts ...pulumi.InvokeOption) LookupSamlIdpsResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupSamlIdpsResult, error) {
+		ApplyT(func(v interface{}) (LookupSamlIdpsResultOutput, error) {
 			args := v.(LookupSamlIdpsArgs)
-			r, err := LookupSamlIdps(ctx, &args, opts...)
-			var s LookupSamlIdpsResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupSamlIdpsResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getSamlIdps:getSamlIdps", args, &rv, "", opts...)
+			if err != nil {
+				return LookupSamlIdpsResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupSamlIdpsResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupSamlIdpsResultOutput), nil
+			}
+			return output, nil
 		}).(LookupSamlIdpsResultOutput)
 }
 

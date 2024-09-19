@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSwitchMtu(args: GetSwitchMtuArgs, opts?: pulumi.InvokeOptions): Promise<GetSwitchMtuResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSwitchMtu:getSwitchMtu", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetSwitchMtuResult {
  * ```
  */
 export function getSwitchMtuOutput(args: GetSwitchMtuOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchMtuResult> {
-    return pulumi.output(args).apply((a: any) => getSwitchMtu(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSwitchMtu:getSwitchMtu", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

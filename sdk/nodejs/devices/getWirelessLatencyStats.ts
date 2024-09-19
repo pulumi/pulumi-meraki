@@ -28,7 +28,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getWirelessLatencyStats(args: GetWirelessLatencyStatsArgs, opts?: pulumi.InvokeOptions): Promise<GetWirelessLatencyStatsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:devices/getWirelessLatencyStats:getWirelessLatencyStats", {
         "apTag": args.apTag,
@@ -153,7 +152,18 @@ export interface GetWirelessLatencyStatsResult {
  * ```
  */
 export function getWirelessLatencyStatsOutput(args: GetWirelessLatencyStatsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessLatencyStatsResult> {
-    return pulumi.output(args).apply((a: any) => getWirelessLatencyStats(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:devices/getWirelessLatencyStats:getWirelessLatencyStats", {
+        "apTag": args.apTag,
+        "band": args.band,
+        "fields": args.fields,
+        "serial": args.serial,
+        "ssid": args.ssid,
+        "t0": args.t0,
+        "t1": args.t1,
+        "timespan": args.timespan,
+        "vlan": args.vlan,
+    }, opts);
 }
 
 /**

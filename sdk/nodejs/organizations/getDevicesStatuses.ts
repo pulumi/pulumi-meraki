@@ -30,7 +30,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getDevicesStatuses(args: GetDevicesStatusesArgs, opts?: pulumi.InvokeOptions): Promise<GetDevicesStatusesResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getDevicesStatuses:getDevicesStatuses", {
         "endingBefore": args.endingBefore,
@@ -178,7 +177,20 @@ export interface GetDevicesStatusesResult {
  * ```
  */
 export function getDevicesStatusesOutput(args: GetDevicesStatusesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDevicesStatusesResult> {
-    return pulumi.output(args).apply((a: any) => getDevicesStatuses(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getDevicesStatuses:getDevicesStatuses", {
+        "endingBefore": args.endingBefore,
+        "models": args.models,
+        "networkIds": args.networkIds,
+        "organizationId": args.organizationId,
+        "perPage": args.perPage,
+        "productTypes": args.productTypes,
+        "serials": args.serials,
+        "startingAfter": args.startingAfter,
+        "statuses": args.statuses,
+        "tags": args.tags,
+        "tagsFilterType": args.tagsFilterType,
+    }, opts);
 }
 
 /**

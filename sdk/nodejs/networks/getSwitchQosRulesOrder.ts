@@ -11,7 +11,6 @@ import * as utilities from "../utilities";
  */
 export function getSwitchQosRulesOrder(args?: GetSwitchQosRulesOrderArgs, opts?: pulumi.InvokeOptions): Promise<GetSwitchQosRulesOrderResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSwitchQosRulesOrder:getSwitchQosRulesOrder", {
         "networkId": args.networkId,
@@ -59,7 +58,12 @@ export interface GetSwitchQosRulesOrderResult {
  * ## Example Usage
  */
 export function getSwitchQosRulesOrderOutput(args?: GetSwitchQosRulesOrderOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchQosRulesOrderResult> {
-    return pulumi.output(args).apply((a: any) => getSwitchQosRulesOrder(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSwitchQosRulesOrder:getSwitchQosRulesOrder", {
+        "networkId": args.networkId,
+        "qosRuleId": args.qosRuleId,
+    }, opts);
 }
 
 /**

@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSwitchStormControl(args: GetSwitchStormControlArgs, opts?: pulumi.InvokeOptions): Promise<GetSwitchStormControlResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSwitchStormControl:getSwitchStormControl", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetSwitchStormControlResult {
  * ```
  */
 export function getSwitchStormControlOutput(args: GetSwitchStormControlOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchStormControlResult> {
-    return pulumi.output(args).apply((a: any) => getSwitchStormControl(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSwitchStormControl:getSwitchStormControl", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

@@ -28,7 +28,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getFirmwareUpgradesByDevice(args: GetFirmwareUpgradesByDeviceArgs, opts?: pulumi.InvokeOptions): Promise<GetFirmwareUpgradesByDeviceResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getFirmwareUpgradesByDevice:getFirmwareUpgradesByDevice", {
         "endingBefore": args.endingBefore,
@@ -156,7 +155,18 @@ export interface GetFirmwareUpgradesByDeviceResult {
  * ```
  */
 export function getFirmwareUpgradesByDeviceOutput(args: GetFirmwareUpgradesByDeviceOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetFirmwareUpgradesByDeviceResult> {
-    return pulumi.output(args).apply((a: any) => getFirmwareUpgradesByDevice(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getFirmwareUpgradesByDevice:getFirmwareUpgradesByDevice", {
+        "endingBefore": args.endingBefore,
+        "firmwareUpgradeBatchIds": args.firmwareUpgradeBatchIds,
+        "macs": args.macs,
+        "networkIds": args.networkIds,
+        "organizationId": args.organizationId,
+        "perPage": args.perPage,
+        "serials": args.serials,
+        "startingAfter": args.startingAfter,
+        "upgradestatuses": args.upgradestatuses,
+    }, opts);
 }
 
 /**

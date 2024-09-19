@@ -64,14 +64,20 @@ type LookupCellularGatewayPortForwardingRulesResult struct {
 
 func LookupCellularGatewayPortForwardingRulesOutput(ctx *pulumi.Context, args LookupCellularGatewayPortForwardingRulesOutputArgs, opts ...pulumi.InvokeOption) LookupCellularGatewayPortForwardingRulesResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupCellularGatewayPortForwardingRulesResult, error) {
+		ApplyT(func(v interface{}) (LookupCellularGatewayPortForwardingRulesResultOutput, error) {
 			args := v.(LookupCellularGatewayPortForwardingRulesArgs)
-			r, err := LookupCellularGatewayPortForwardingRules(ctx, &args, opts...)
-			var s LookupCellularGatewayPortForwardingRulesResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupCellularGatewayPortForwardingRulesResult
+			secret, err := ctx.InvokePackageRaw("meraki:devices/getCellularGatewayPortForwardingRules:getCellularGatewayPortForwardingRules", args, &rv, "", opts...)
+			if err != nil {
+				return LookupCellularGatewayPortForwardingRulesResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupCellularGatewayPortForwardingRulesResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupCellularGatewayPortForwardingRulesResultOutput), nil
+			}
+			return output, nil
 		}).(LookupCellularGatewayPortForwardingRulesResultOutput)
 }
 

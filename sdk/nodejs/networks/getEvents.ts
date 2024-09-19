@@ -34,7 +34,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getEvents(args: GetEventsArgs, opts?: pulumi.InvokeOptions): Promise<GetEventsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getEvents:getEvents", {
         "clientIp": args.clientIp,
@@ -219,7 +218,24 @@ export interface GetEventsResult {
  * ```
  */
 export function getEventsOutput(args: GetEventsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetEventsResult> {
-    return pulumi.output(args).apply((a: any) => getEvents(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getEvents:getEvents", {
+        "clientIp": args.clientIp,
+        "clientMac": args.clientMac,
+        "clientName": args.clientName,
+        "deviceMac": args.deviceMac,
+        "deviceName": args.deviceName,
+        "deviceSerial": args.deviceSerial,
+        "endingBefore": args.endingBefore,
+        "excludedEventTypes": args.excludedEventTypes,
+        "includedEventTypes": args.includedEventTypes,
+        "networkId": args.networkId,
+        "perPage": args.perPage,
+        "productType": args.productType,
+        "smDeviceMac": args.smDeviceMac,
+        "smDeviceName": args.smDeviceName,
+        "startingAfter": args.startingAfter,
+    }, opts);
 }
 
 /**

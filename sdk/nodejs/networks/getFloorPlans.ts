@@ -11,7 +11,6 @@ import * as utilities from "../utilities";
  */
 export function getFloorPlans(args?: GetFloorPlansArgs, opts?: pulumi.InvokeOptions): Promise<GetFloorPlansResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getFloorPlans:getFloorPlans", {
         "floorPlanId": args.floorPlanId,
@@ -59,7 +58,12 @@ export interface GetFloorPlansResult {
  * ## Example Usage
  */
 export function getFloorPlansOutput(args?: GetFloorPlansOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetFloorPlansResult> {
-    return pulumi.output(args).apply((a: any) => getFloorPlans(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getFloorPlans:getFloorPlans", {
+        "floorPlanId": args.floorPlanId,
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

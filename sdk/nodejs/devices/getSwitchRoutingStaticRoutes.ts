@@ -11,7 +11,6 @@ import * as utilities from "../utilities";
  */
 export function getSwitchRoutingStaticRoutes(args?: GetSwitchRoutingStaticRoutesArgs, opts?: pulumi.InvokeOptions): Promise<GetSwitchRoutingStaticRoutesResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:devices/getSwitchRoutingStaticRoutes:getSwitchRoutingStaticRoutes", {
         "serial": args.serial,
@@ -59,7 +58,12 @@ export interface GetSwitchRoutingStaticRoutesResult {
  * ## Example Usage
  */
 export function getSwitchRoutingStaticRoutesOutput(args?: GetSwitchRoutingStaticRoutesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchRoutingStaticRoutesResult> {
-    return pulumi.output(args).apply((a: any) => getSwitchRoutingStaticRoutes(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:devices/getSwitchRoutingStaticRoutes:getSwitchRoutingStaticRoutes", {
+        "serial": args.serial,
+        "staticRouteId": args.staticRouteId,
+    }, opts);
 }
 
 /**

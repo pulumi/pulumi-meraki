@@ -64,14 +64,20 @@ type LookupSwitchDhcpServerPolicyResult struct {
 
 func LookupSwitchDhcpServerPolicyOutput(ctx *pulumi.Context, args LookupSwitchDhcpServerPolicyOutputArgs, opts ...pulumi.InvokeOption) LookupSwitchDhcpServerPolicyResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupSwitchDhcpServerPolicyResult, error) {
+		ApplyT(func(v interface{}) (LookupSwitchDhcpServerPolicyResultOutput, error) {
 			args := v.(LookupSwitchDhcpServerPolicyArgs)
-			r, err := LookupSwitchDhcpServerPolicy(ctx, &args, opts...)
-			var s LookupSwitchDhcpServerPolicyResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupSwitchDhcpServerPolicyResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getSwitchDhcpServerPolicy:getSwitchDhcpServerPolicy", args, &rv, "", opts...)
+			if err != nil {
+				return LookupSwitchDhcpServerPolicyResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupSwitchDhcpServerPolicyResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupSwitchDhcpServerPolicyResultOutput), nil
+			}
+			return output, nil
 		}).(LookupSwitchDhcpServerPolicyResultOutput)
 }
 

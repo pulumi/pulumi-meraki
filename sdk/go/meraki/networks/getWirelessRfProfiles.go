@@ -73,14 +73,20 @@ type LookupWirelessRfProfilesResult struct {
 
 func LookupWirelessRfProfilesOutput(ctx *pulumi.Context, args LookupWirelessRfProfilesOutputArgs, opts ...pulumi.InvokeOption) LookupWirelessRfProfilesResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupWirelessRfProfilesResult, error) {
+		ApplyT(func(v interface{}) (LookupWirelessRfProfilesResultOutput, error) {
 			args := v.(LookupWirelessRfProfilesArgs)
-			r, err := LookupWirelessRfProfiles(ctx, &args, opts...)
-			var s LookupWirelessRfProfilesResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupWirelessRfProfilesResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getWirelessRfProfiles:getWirelessRfProfiles", args, &rv, "", opts...)
+			if err != nil {
+				return LookupWirelessRfProfilesResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupWirelessRfProfilesResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupWirelessRfProfilesResultOutput), nil
+			}
+			return output, nil
 		}).(LookupWirelessRfProfilesResultOutput)
 }
 

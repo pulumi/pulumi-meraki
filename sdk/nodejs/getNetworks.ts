@@ -11,7 +11,6 @@ import * as utilities from "./utilities";
  */
 export function getNetworks(args?: GetNetworksArgs, opts?: pulumi.InvokeOptions): Promise<GetNetworksResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:index/getNetworks:getNetworks", {
         "configTemplateId": args.configTemplateId,
@@ -122,7 +121,19 @@ export interface GetNetworksResult {
  * ## Example Usage
  */
 export function getNetworksOutput(args?: GetNetworksOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetNetworksResult> {
-    return pulumi.output(args).apply((a: any) => getNetworks(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:index/getNetworks:getNetworks", {
+        "configTemplateId": args.configTemplateId,
+        "endingBefore": args.endingBefore,
+        "isBoundToConfigTemplate": args.isBoundToConfigTemplate,
+        "networkId": args.networkId,
+        "organizationId": args.organizationId,
+        "perPage": args.perPage,
+        "startingAfter": args.startingAfter,
+        "tags": args.tags,
+        "tagsFilterType": args.tagsFilterType,
+    }, opts);
 }
 
 /**

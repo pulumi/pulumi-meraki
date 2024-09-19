@@ -100,14 +100,20 @@ type GetWebhooksLogsResult struct {
 
 func GetWebhooksLogsOutput(ctx *pulumi.Context, args GetWebhooksLogsOutputArgs, opts ...pulumi.InvokeOption) GetWebhooksLogsResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetWebhooksLogsResult, error) {
+		ApplyT(func(v interface{}) (GetWebhooksLogsResultOutput, error) {
 			args := v.(GetWebhooksLogsArgs)
-			r, err := GetWebhooksLogs(ctx, &args, opts...)
-			var s GetWebhooksLogsResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetWebhooksLogsResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getWebhooksLogs:getWebhooksLogs", args, &rv, "", opts...)
+			if err != nil {
+				return GetWebhooksLogsResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetWebhooksLogsResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetWebhooksLogsResultOutput), nil
+			}
+			return output, nil
 		}).(GetWebhooksLogsResultOutput)
 }
 

@@ -115,14 +115,20 @@ type GetWirelessClientCountHistoryResult struct {
 
 func GetWirelessClientCountHistoryOutput(ctx *pulumi.Context, args GetWirelessClientCountHistoryOutputArgs, opts ...pulumi.InvokeOption) GetWirelessClientCountHistoryResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetWirelessClientCountHistoryResult, error) {
+		ApplyT(func(v interface{}) (GetWirelessClientCountHistoryResultOutput, error) {
 			args := v.(GetWirelessClientCountHistoryArgs)
-			r, err := GetWirelessClientCountHistory(ctx, &args, opts...)
-			var s GetWirelessClientCountHistoryResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetWirelessClientCountHistoryResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getWirelessClientCountHistory:getWirelessClientCountHistory", args, &rv, "", opts...)
+			if err != nil {
+				return GetWirelessClientCountHistoryResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetWirelessClientCountHistoryResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetWirelessClientCountHistoryResultOutput), nil
+			}
+			return output, nil
 		}).(GetWirelessClientCountHistoryResultOutput)
 }
 

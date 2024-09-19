@@ -29,7 +29,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getWirelessChannelUtilizationHistory(args: GetWirelessChannelUtilizationHistoryArgs, opts?: pulumi.InvokeOptions): Promise<GetWirelessChannelUtilizationHistoryResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getWirelessChannelUtilizationHistory:getWirelessChannelUtilizationHistory", {
         "apTag": args.apTag,
@@ -167,7 +166,19 @@ export interface GetWirelessChannelUtilizationHistoryResult {
  * ```
  */
 export function getWirelessChannelUtilizationHistoryOutput(args: GetWirelessChannelUtilizationHistoryOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessChannelUtilizationHistoryResult> {
-    return pulumi.output(args).apply((a: any) => getWirelessChannelUtilizationHistory(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getWirelessChannelUtilizationHistory:getWirelessChannelUtilizationHistory", {
+        "apTag": args.apTag,
+        "autoResolution": args.autoResolution,
+        "band": args.band,
+        "clientId": args.clientId,
+        "deviceSerial": args.deviceSerial,
+        "networkId": args.networkId,
+        "resolution": args.resolution,
+        "t0": args.t0,
+        "t1": args.t1,
+        "timespan": args.timespan,
+    }, opts);
 }
 
 /**

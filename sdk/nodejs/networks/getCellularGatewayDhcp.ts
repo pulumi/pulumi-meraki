@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getCellularGatewayDhcp(args: GetCellularGatewayDhcpArgs, opts?: pulumi.InvokeOptions): Promise<GetCellularGatewayDhcpResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getCellularGatewayDhcp:getCellularGatewayDhcp", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetCellularGatewayDhcpResult {
  * ```
  */
 export function getCellularGatewayDhcpOutput(args: GetCellularGatewayDhcpOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCellularGatewayDhcpResult> {
-    return pulumi.output(args).apply((a: any) => getCellularGatewayDhcp(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getCellularGatewayDhcp:getCellularGatewayDhcp", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

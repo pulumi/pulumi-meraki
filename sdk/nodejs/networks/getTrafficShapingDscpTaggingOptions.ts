@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getTrafficShapingDscpTaggingOptions(args: GetTrafficShapingDscpTaggingOptionsArgs, opts?: pulumi.InvokeOptions): Promise<GetTrafficShapingDscpTaggingOptionsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getTrafficShapingDscpTaggingOptions:getTrafficShapingDscpTaggingOptions", {
         "networkId": args.networkId,
@@ -68,7 +67,10 @@ export interface GetTrafficShapingDscpTaggingOptionsResult {
  * ```
  */
 export function getTrafficShapingDscpTaggingOptionsOutput(args: GetTrafficShapingDscpTaggingOptionsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTrafficShapingDscpTaggingOptionsResult> {
-    return pulumi.output(args).apply((a: any) => getTrafficShapingDscpTaggingOptions(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getTrafficShapingDscpTaggingOptions:getTrafficShapingDscpTaggingOptions", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

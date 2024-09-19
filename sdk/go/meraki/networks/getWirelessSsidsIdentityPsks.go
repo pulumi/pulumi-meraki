@@ -49,14 +49,20 @@ type LookupWirelessSsidsIdentityPsksResult struct {
 
 func LookupWirelessSsidsIdentityPsksOutput(ctx *pulumi.Context, args LookupWirelessSsidsIdentityPsksOutputArgs, opts ...pulumi.InvokeOption) LookupWirelessSsidsIdentityPsksResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupWirelessSsidsIdentityPsksResult, error) {
+		ApplyT(func(v interface{}) (LookupWirelessSsidsIdentityPsksResultOutput, error) {
 			args := v.(LookupWirelessSsidsIdentityPsksArgs)
-			r, err := LookupWirelessSsidsIdentityPsks(ctx, &args, opts...)
-			var s LookupWirelessSsidsIdentityPsksResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupWirelessSsidsIdentityPsksResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getWirelessSsidsIdentityPsks:getWirelessSsidsIdentityPsks", args, &rv, "", opts...)
+			if err != nil {
+				return LookupWirelessSsidsIdentityPsksResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupWirelessSsidsIdentityPsksResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupWirelessSsidsIdentityPsksResultOutput), nil
+			}
+			return output, nil
 		}).(LookupWirelessSsidsIdentityPsksResultOutput)
 }
 

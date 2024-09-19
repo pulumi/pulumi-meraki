@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getHealthAlerts(args: GetHealthAlertsArgs, opts?: pulumi.InvokeOptions): Promise<GetHealthAlertsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getHealthAlerts:getHealthAlerts", {
         "networkId": args.networkId,
@@ -68,7 +67,10 @@ export interface GetHealthAlertsResult {
  * ```
  */
 export function getHealthAlertsOutput(args: GetHealthAlertsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetHealthAlertsResult> {
-    return pulumi.output(args).apply((a: any) => getHealthAlerts(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getHealthAlerts:getHealthAlerts", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getCameraAnalyticsLive(args: GetCameraAnalyticsLiveArgs, opts?: pulumi.InvokeOptions): Promise<GetCameraAnalyticsLiveResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:devices/getCameraAnalyticsLive:getCameraAnalyticsLive", {
         "serial": args.serial,
@@ -65,7 +64,10 @@ export interface GetCameraAnalyticsLiveResult {
  * ```
  */
 export function getCameraAnalyticsLiveOutput(args: GetCameraAnalyticsLiveOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCameraAnalyticsLiveResult> {
-    return pulumi.output(args).apply((a: any) => getCameraAnalyticsLive(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:devices/getCameraAnalyticsLive:getCameraAnalyticsLive", {
+        "serial": args.serial,
+    }, opts);
 }
 
 /**

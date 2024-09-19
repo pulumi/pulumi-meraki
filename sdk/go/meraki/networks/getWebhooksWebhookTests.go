@@ -69,14 +69,20 @@ type GetWebhooksWebhookTestsResult struct {
 
 func GetWebhooksWebhookTestsOutput(ctx *pulumi.Context, args GetWebhooksWebhookTestsOutputArgs, opts ...pulumi.InvokeOption) GetWebhooksWebhookTestsResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetWebhooksWebhookTestsResult, error) {
+		ApplyT(func(v interface{}) (GetWebhooksWebhookTestsResultOutput, error) {
 			args := v.(GetWebhooksWebhookTestsArgs)
-			r, err := GetWebhooksWebhookTests(ctx, &args, opts...)
-			var s GetWebhooksWebhookTestsResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetWebhooksWebhookTestsResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getWebhooksWebhookTests:getWebhooksWebhookTests", args, &rv, "", opts...)
+			if err != nil {
+				return GetWebhooksWebhookTestsResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetWebhooksWebhookTestsResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetWebhooksWebhookTestsResultOutput), nil
+			}
+			return output, nil
 		}).(GetWebhooksWebhookTestsResultOutput)
 }
 

@@ -11,7 +11,6 @@ import * as utilities from "../utilities";
  */
 export function getConfigTemplates(args?: GetConfigTemplatesArgs, opts?: pulumi.InvokeOptions): Promise<GetConfigTemplatesResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getConfigTemplates:getConfigTemplates", {
         "configTemplateId": args.configTemplateId,
@@ -59,7 +58,12 @@ export interface GetConfigTemplatesResult {
  * ## Example Usage
  */
 export function getConfigTemplatesOutput(args?: GetConfigTemplatesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetConfigTemplatesResult> {
-    return pulumi.output(args).apply((a: any) => getConfigTemplates(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getConfigTemplates:getConfigTemplates", {
+        "configTemplateId": args.configTemplateId,
+        "organizationId": args.organizationId,
+    }, opts);
 }
 
 /**

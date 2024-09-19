@@ -49,14 +49,20 @@ type LookupActionBatchesResult struct {
 
 func LookupActionBatchesOutput(ctx *pulumi.Context, args LookupActionBatchesOutputArgs, opts ...pulumi.InvokeOption) LookupActionBatchesResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupActionBatchesResult, error) {
+		ApplyT(func(v interface{}) (LookupActionBatchesResultOutput, error) {
 			args := v.(LookupActionBatchesArgs)
-			r, err := LookupActionBatches(ctx, &args, opts...)
-			var s LookupActionBatchesResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupActionBatchesResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getActionBatches:getActionBatches", args, &rv, "", opts...)
+			if err != nil {
+				return LookupActionBatchesResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupActionBatchesResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupActionBatchesResultOutput), nil
+			}
+			return output, nil
 		}).(LookupActionBatchesResultOutput)
 }
 

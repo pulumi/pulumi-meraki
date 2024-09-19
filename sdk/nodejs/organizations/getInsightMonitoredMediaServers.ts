@@ -11,7 +11,6 @@ import * as utilities from "../utilities";
  */
 export function getInsightMonitoredMediaServers(args?: GetInsightMonitoredMediaServersArgs, opts?: pulumi.InvokeOptions): Promise<GetInsightMonitoredMediaServersResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getInsightMonitoredMediaServers:getInsightMonitoredMediaServers", {
         "monitoredMediaServerId": args.monitoredMediaServerId,
@@ -59,7 +58,12 @@ export interface GetInsightMonitoredMediaServersResult {
  * ## Example Usage
  */
 export function getInsightMonitoredMediaServersOutput(args?: GetInsightMonitoredMediaServersOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetInsightMonitoredMediaServersResult> {
-    return pulumi.output(args).apply((a: any) => getInsightMonitoredMediaServers(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getInsightMonitoredMediaServers:getInsightMonitoredMediaServers", {
+        "monitoredMediaServerId": args.monitoredMediaServerId,
+        "organizationId": args.organizationId,
+    }, opts);
 }
 
 /**

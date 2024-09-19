@@ -69,14 +69,20 @@ type LookupVlanProfilesResult struct {
 
 func LookupVlanProfilesOutput(ctx *pulumi.Context, args LookupVlanProfilesOutputArgs, opts ...pulumi.InvokeOption) LookupVlanProfilesResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupVlanProfilesResult, error) {
+		ApplyT(func(v interface{}) (LookupVlanProfilesResultOutput, error) {
 			args := v.(LookupVlanProfilesArgs)
-			r, err := LookupVlanProfiles(ctx, &args, opts...)
-			var s LookupVlanProfilesResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupVlanProfilesResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getVlanProfiles:getVlanProfiles", args, &rv, "", opts...)
+			if err != nil {
+				return LookupVlanProfilesResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupVlanProfilesResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupVlanProfilesResultOutput), nil
+			}
+			return output, nil
 		}).(LookupVlanProfilesResultOutput)
 }
 

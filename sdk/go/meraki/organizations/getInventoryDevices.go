@@ -97,14 +97,20 @@ type GetInventoryDevicesResult struct {
 
 func GetInventoryDevicesOutput(ctx *pulumi.Context, args GetInventoryDevicesOutputArgs, opts ...pulumi.InvokeOption) GetInventoryDevicesResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetInventoryDevicesResult, error) {
+		ApplyT(func(v interface{}) (GetInventoryDevicesResultOutput, error) {
 			args := v.(GetInventoryDevicesArgs)
-			r, err := GetInventoryDevices(ctx, &args, opts...)
-			var s GetInventoryDevicesResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetInventoryDevicesResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getInventoryDevices:getInventoryDevices", args, &rv, "", opts...)
+			if err != nil {
+				return GetInventoryDevicesResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetInventoryDevicesResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetInventoryDevicesResultOutput), nil
+			}
+			return output, nil
 		}).(GetInventoryDevicesResultOutput)
 }
 

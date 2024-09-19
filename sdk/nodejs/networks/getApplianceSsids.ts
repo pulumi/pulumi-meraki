@@ -11,7 +11,6 @@ import * as utilities from "../utilities";
  */
 export function getApplianceSsids(args?: GetApplianceSsidsArgs, opts?: pulumi.InvokeOptions): Promise<GetApplianceSsidsResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getApplianceSsids:getApplianceSsids", {
         "networkId": args.networkId,
@@ -59,7 +58,12 @@ export interface GetApplianceSsidsResult {
  * ## Example Usage
  */
 export function getApplianceSsidsOutput(args?: GetApplianceSsidsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceSsidsResult> {
-    return pulumi.output(args).apply((a: any) => getApplianceSsids(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getApplianceSsids:getApplianceSsids", {
+        "networkId": args.networkId,
+        "number": args.number,
+    }, opts);
 }
 
 /**

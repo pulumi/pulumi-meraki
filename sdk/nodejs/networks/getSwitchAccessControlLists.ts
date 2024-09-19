@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSwitchAccessControlLists(args: GetSwitchAccessControlListsArgs, opts?: pulumi.InvokeOptions): Promise<GetSwitchAccessControlListsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSwitchAccessControlLists:getSwitchAccessControlLists", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetSwitchAccessControlListsResult {
  * ```
  */
 export function getSwitchAccessControlListsOutput(args: GetSwitchAccessControlListsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchAccessControlListsResult> {
-    return pulumi.output(args).apply((a: any) => getSwitchAccessControlLists(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSwitchAccessControlLists:getSwitchAccessControlLists", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

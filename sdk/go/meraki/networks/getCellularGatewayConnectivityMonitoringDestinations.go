@@ -64,14 +64,20 @@ type LookupCellularGatewayConnectivityMonitoringDestinationsResult struct {
 
 func LookupCellularGatewayConnectivityMonitoringDestinationsOutput(ctx *pulumi.Context, args LookupCellularGatewayConnectivityMonitoringDestinationsOutputArgs, opts ...pulumi.InvokeOption) LookupCellularGatewayConnectivityMonitoringDestinationsResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupCellularGatewayConnectivityMonitoringDestinationsResult, error) {
+		ApplyT(func(v interface{}) (LookupCellularGatewayConnectivityMonitoringDestinationsResultOutput, error) {
 			args := v.(LookupCellularGatewayConnectivityMonitoringDestinationsArgs)
-			r, err := LookupCellularGatewayConnectivityMonitoringDestinations(ctx, &args, opts...)
-			var s LookupCellularGatewayConnectivityMonitoringDestinationsResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupCellularGatewayConnectivityMonitoringDestinationsResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getCellularGatewayConnectivityMonitoringDestinations:getCellularGatewayConnectivityMonitoringDestinations", args, &rv, "", opts...)
+			if err != nil {
+				return LookupCellularGatewayConnectivityMonitoringDestinationsResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupCellularGatewayConnectivityMonitoringDestinationsResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupCellularGatewayConnectivityMonitoringDestinationsResultOutput), nil
+			}
+			return output, nil
 		}).(LookupCellularGatewayConnectivityMonitoringDestinationsResultOutput)
 }
 

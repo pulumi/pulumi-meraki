@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getCellularGatewayPortForwardingRules(args: GetCellularGatewayPortForwardingRulesArgs, opts?: pulumi.InvokeOptions): Promise<GetCellularGatewayPortForwardingRulesResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:devices/getCellularGatewayPortForwardingRules:getCellularGatewayPortForwardingRules", {
         "serial": args.serial,
@@ -65,7 +64,10 @@ export interface GetCellularGatewayPortForwardingRulesResult {
  * ```
  */
 export function getCellularGatewayPortForwardingRulesOutput(args: GetCellularGatewayPortForwardingRulesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCellularGatewayPortForwardingRulesResult> {
-    return pulumi.output(args).apply((a: any) => getCellularGatewayPortForwardingRules(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:devices/getCellularGatewayPortForwardingRules:getCellularGatewayPortForwardingRules", {
+        "serial": args.serial,
+    }, opts);
 }
 
 /**
