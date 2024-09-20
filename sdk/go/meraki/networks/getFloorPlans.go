@@ -45,14 +45,20 @@ type LookupFloorPlansResult struct {
 
 func LookupFloorPlansOutput(ctx *pulumi.Context, args LookupFloorPlansOutputArgs, opts ...pulumi.InvokeOption) LookupFloorPlansResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupFloorPlansResult, error) {
+		ApplyT(func(v interface{}) (LookupFloorPlansResultOutput, error) {
 			args := v.(LookupFloorPlansArgs)
-			r, err := LookupFloorPlans(ctx, &args, opts...)
-			var s LookupFloorPlansResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupFloorPlansResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getFloorPlans:getFloorPlans", args, &rv, "", opts...)
+			if err != nil {
+				return LookupFloorPlansResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupFloorPlansResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupFloorPlansResultOutput), nil
+			}
+			return output, nil
 		}).(LookupFloorPlansResultOutput)
 }
 

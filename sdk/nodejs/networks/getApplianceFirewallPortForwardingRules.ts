@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getApplianceFirewallPortForwardingRules(args: GetApplianceFirewallPortForwardingRulesArgs, opts?: pulumi.InvokeOptions): Promise<GetApplianceFirewallPortForwardingRulesResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getApplianceFirewallPortForwardingRules:getApplianceFirewallPortForwardingRules", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetApplianceFirewallPortForwardingRulesResult {
  * ```
  */
 export function getApplianceFirewallPortForwardingRulesOutput(args: GetApplianceFirewallPortForwardingRulesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceFirewallPortForwardingRulesResult> {
-    return pulumi.output(args).apply((a: any) => getApplianceFirewallPortForwardingRules(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getApplianceFirewallPortForwardingRules:getApplianceFirewallPortForwardingRules", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

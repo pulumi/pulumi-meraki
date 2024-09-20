@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getApplianceWarmSpare(args: GetApplianceWarmSpareArgs, opts?: pulumi.InvokeOptions): Promise<GetApplianceWarmSpareResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getApplianceWarmSpare:getApplianceWarmSpare", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetApplianceWarmSpareResult {
  * ```
  */
 export function getApplianceWarmSpareOutput(args: GetApplianceWarmSpareOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceWarmSpareResult> {
-    return pulumi.output(args).apply((a: any) => getApplianceWarmSpare(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getApplianceWarmSpare:getApplianceWarmSpare", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

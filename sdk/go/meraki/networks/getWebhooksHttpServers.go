@@ -45,14 +45,20 @@ type LookupWebhooksHttpServersResult struct {
 
 func LookupWebhooksHttpServersOutput(ctx *pulumi.Context, args LookupWebhooksHttpServersOutputArgs, opts ...pulumi.InvokeOption) LookupWebhooksHttpServersResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupWebhooksHttpServersResult, error) {
+		ApplyT(func(v interface{}) (LookupWebhooksHttpServersResultOutput, error) {
 			args := v.(LookupWebhooksHttpServersArgs)
-			r, err := LookupWebhooksHttpServers(ctx, &args, opts...)
-			var s LookupWebhooksHttpServersResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupWebhooksHttpServersResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getWebhooksHttpServers:getWebhooksHttpServers", args, &rv, "", opts...)
+			if err != nil {
+				return LookupWebhooksHttpServersResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupWebhooksHttpServersResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupWebhooksHttpServersResultOutput), nil
+			}
+			return output, nil
 		}).(LookupWebhooksHttpServersResultOutput)
 }
 

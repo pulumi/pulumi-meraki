@@ -24,7 +24,6 @@ import * as utilities from "../utilities";
  */
 export function getPolicyObjectsGroups(args?: GetPolicyObjectsGroupsArgs, opts?: pulumi.InvokeOptions): Promise<GetPolicyObjectsGroupsResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getPolicyObjectsGroups:getPolicyObjectsGroups", {
         "endingBefore": args.endingBefore,
@@ -108,7 +107,15 @@ export interface GetPolicyObjectsGroupsResult {
  * ```
  */
 export function getPolicyObjectsGroupsOutput(args?: GetPolicyObjectsGroupsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetPolicyObjectsGroupsResult> {
-    return pulumi.output(args).apply((a: any) => getPolicyObjectsGroups(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getPolicyObjectsGroups:getPolicyObjectsGroups", {
+        "endingBefore": args.endingBefore,
+        "organizationId": args.organizationId,
+        "perPage": args.perPage,
+        "policyObjectGroupId": args.policyObjectGroupId,
+        "startingAfter": args.startingAfter,
+    }, opts);
 }
 
 /**

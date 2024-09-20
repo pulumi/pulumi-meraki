@@ -23,7 +23,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getApplianceUplinksUsageByNetwork(args: GetApplianceUplinksUsageByNetworkArgs, opts?: pulumi.InvokeOptions): Promise<GetApplianceUplinksUsageByNetworkResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getApplianceUplinksUsageByNetwork:getApplianceUplinksUsageByNetwork", {
         "organizationId": args.organizationId,
@@ -101,7 +100,13 @@ export interface GetApplianceUplinksUsageByNetworkResult {
  * ```
  */
 export function getApplianceUplinksUsageByNetworkOutput(args: GetApplianceUplinksUsageByNetworkOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceUplinksUsageByNetworkResult> {
-    return pulumi.output(args).apply((a: any) => getApplianceUplinksUsageByNetwork(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getApplianceUplinksUsageByNetwork:getApplianceUplinksUsageByNetwork", {
+        "organizationId": args.organizationId,
+        "t0": args.t0,
+        "t1": args.t1,
+        "timespan": args.timespan,
+    }, opts);
 }
 
 /**

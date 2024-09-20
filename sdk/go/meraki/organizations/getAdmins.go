@@ -65,14 +65,20 @@ type LookupAdminsResult struct {
 
 func LookupAdminsOutput(ctx *pulumi.Context, args LookupAdminsOutputArgs, opts ...pulumi.InvokeOption) LookupAdminsResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupAdminsResult, error) {
+		ApplyT(func(v interface{}) (LookupAdminsResultOutput, error) {
 			args := v.(LookupAdminsArgs)
-			r, err := LookupAdmins(ctx, &args, opts...)
-			var s LookupAdminsResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupAdminsResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getAdmins:getAdmins", args, &rv, "", opts...)
+			if err != nil {
+				return LookupAdminsResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupAdminsResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupAdminsResultOutput), nil
+			}
+			return output, nil
 		}).(LookupAdminsResultOutput)
 }
 

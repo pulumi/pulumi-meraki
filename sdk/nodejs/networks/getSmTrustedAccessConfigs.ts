@@ -23,7 +23,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSmTrustedAccessConfigs(args: GetSmTrustedAccessConfigsArgs, opts?: pulumi.InvokeOptions): Promise<GetSmTrustedAccessConfigsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSmTrustedAccessConfigs:getSmTrustedAccessConfigs", {
         "endingBefore": args.endingBefore,
@@ -101,7 +100,13 @@ export interface GetSmTrustedAccessConfigsResult {
  * ```
  */
 export function getSmTrustedAccessConfigsOutput(args: GetSmTrustedAccessConfigsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmTrustedAccessConfigsResult> {
-    return pulumi.output(args).apply((a: any) => getSmTrustedAccessConfigs(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSmTrustedAccessConfigs:getSmTrustedAccessConfigs", {
+        "endingBefore": args.endingBefore,
+        "networkId": args.networkId,
+        "perPage": args.perPage,
+        "startingAfter": args.startingAfter,
+    }, opts);
 }
 
 /**

@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getCameraSense(args: GetCameraSenseArgs, opts?: pulumi.InvokeOptions): Promise<GetCameraSenseResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:devices/getCameraSense:getCameraSense", {
         "serial": args.serial,
@@ -65,7 +64,10 @@ export interface GetCameraSenseResult {
  * ```
  */
 export function getCameraSenseOutput(args: GetCameraSenseOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCameraSenseResult> {
-    return pulumi.output(args).apply((a: any) => getCameraSense(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:devices/getCameraSense:getCameraSense", {
+        "serial": args.serial,
+    }, opts);
 }
 
 /**

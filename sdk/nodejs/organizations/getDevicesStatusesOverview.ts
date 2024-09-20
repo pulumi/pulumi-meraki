@@ -22,7 +22,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getDevicesStatusesOverview(args: GetDevicesStatusesOverviewArgs, opts?: pulumi.InvokeOptions): Promise<GetDevicesStatusesOverviewResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getDevicesStatusesOverview:getDevicesStatusesOverview", {
         "networkIds": args.networkIds,
@@ -87,7 +86,12 @@ export interface GetDevicesStatusesOverviewResult {
  * ```
  */
 export function getDevicesStatusesOverviewOutput(args: GetDevicesStatusesOverviewOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDevicesStatusesOverviewResult> {
-    return pulumi.output(args).apply((a: any) => getDevicesStatusesOverview(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getDevicesStatusesOverview:getDevicesStatusesOverview", {
+        "networkIds": args.networkIds,
+        "organizationId": args.organizationId,
+        "productTypes": args.productTypes,
+    }, opts);
 }
 
 /**

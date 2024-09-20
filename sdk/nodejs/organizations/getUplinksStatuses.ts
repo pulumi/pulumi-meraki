@@ -26,7 +26,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getUplinksStatuses(args: GetUplinksStatusesArgs, opts?: pulumi.InvokeOptions): Promise<GetUplinksStatusesResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getUplinksStatuses:getUplinksStatuses", {
         "endingBefore": args.endingBefore,
@@ -134,7 +133,16 @@ export interface GetUplinksStatusesResult {
  * ```
  */
 export function getUplinksStatusesOutput(args: GetUplinksStatusesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetUplinksStatusesResult> {
-    return pulumi.output(args).apply((a: any) => getUplinksStatuses(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getUplinksStatuses:getUplinksStatuses", {
+        "endingBefore": args.endingBefore,
+        "iccids": args.iccids,
+        "networkIds": args.networkIds,
+        "organizationId": args.organizationId,
+        "perPage": args.perPage,
+        "serials": args.serials,
+        "startingAfter": args.startingAfter,
+    }, opts);
 }
 
 /**

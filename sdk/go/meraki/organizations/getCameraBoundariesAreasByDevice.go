@@ -72,14 +72,20 @@ type GetCameraBoundariesAreasByDeviceResult struct {
 
 func GetCameraBoundariesAreasByDeviceOutput(ctx *pulumi.Context, args GetCameraBoundariesAreasByDeviceOutputArgs, opts ...pulumi.InvokeOption) GetCameraBoundariesAreasByDeviceResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetCameraBoundariesAreasByDeviceResult, error) {
+		ApplyT(func(v interface{}) (GetCameraBoundariesAreasByDeviceResultOutput, error) {
 			args := v.(GetCameraBoundariesAreasByDeviceArgs)
-			r, err := GetCameraBoundariesAreasByDevice(ctx, &args, opts...)
-			var s GetCameraBoundariesAreasByDeviceResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetCameraBoundariesAreasByDeviceResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getCameraBoundariesAreasByDevice:getCameraBoundariesAreasByDevice", args, &rv, "", opts...)
+			if err != nil {
+				return GetCameraBoundariesAreasByDeviceResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetCameraBoundariesAreasByDeviceResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetCameraBoundariesAreasByDeviceResultOutput), nil
+			}
+			return output, nil
 		}).(GetCameraBoundariesAreasByDeviceResultOutput)
 }
 

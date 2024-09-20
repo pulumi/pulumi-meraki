@@ -64,14 +64,20 @@ type LookupWirelessBillingResult struct {
 
 func LookupWirelessBillingOutput(ctx *pulumi.Context, args LookupWirelessBillingOutputArgs, opts ...pulumi.InvokeOption) LookupWirelessBillingResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupWirelessBillingResult, error) {
+		ApplyT(func(v interface{}) (LookupWirelessBillingResultOutput, error) {
 			args := v.(LookupWirelessBillingArgs)
-			r, err := LookupWirelessBilling(ctx, &args, opts...)
-			var s LookupWirelessBillingResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupWirelessBillingResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getWirelessBilling:getWirelessBilling", args, &rv, "", opts...)
+			if err != nil {
+				return LookupWirelessBillingResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupWirelessBillingResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupWirelessBillingResultOutput), nil
+			}
+			return output, nil
 		}).(LookupWirelessBillingResultOutput)
 }
 

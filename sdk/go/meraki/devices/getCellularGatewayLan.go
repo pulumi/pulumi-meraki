@@ -64,14 +64,20 @@ type LookupCellularGatewayLanResult struct {
 
 func LookupCellularGatewayLanOutput(ctx *pulumi.Context, args LookupCellularGatewayLanOutputArgs, opts ...pulumi.InvokeOption) LookupCellularGatewayLanResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupCellularGatewayLanResult, error) {
+		ApplyT(func(v interface{}) (LookupCellularGatewayLanResultOutput, error) {
 			args := v.(LookupCellularGatewayLanArgs)
-			r, err := LookupCellularGatewayLan(ctx, &args, opts...)
-			var s LookupCellularGatewayLanResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupCellularGatewayLanResult
+			secret, err := ctx.InvokePackageRaw("meraki:devices/getCellularGatewayLan:getCellularGatewayLan", args, &rv, "", opts...)
+			if err != nil {
+				return LookupCellularGatewayLanResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupCellularGatewayLanResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupCellularGatewayLanResultOutput), nil
+			}
+			return output, nil
 		}).(LookupCellularGatewayLanResultOutput)
 }
 

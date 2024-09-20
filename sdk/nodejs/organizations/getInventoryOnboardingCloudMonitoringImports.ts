@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getInventoryOnboardingCloudMonitoringImports(args: GetInventoryOnboardingCloudMonitoringImportsArgs, opts?: pulumi.InvokeOptions): Promise<GetInventoryOnboardingCloudMonitoringImportsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getInventoryOnboardingCloudMonitoringImports:getInventoryOnboardingCloudMonitoringImports", {
         "importIds": args.importIds,
@@ -79,7 +78,11 @@ export interface GetInventoryOnboardingCloudMonitoringImportsResult {
  * ```
  */
 export function getInventoryOnboardingCloudMonitoringImportsOutput(args: GetInventoryOnboardingCloudMonitoringImportsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetInventoryOnboardingCloudMonitoringImportsResult> {
-    return pulumi.output(args).apply((a: any) => getInventoryOnboardingCloudMonitoringImports(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getInventoryOnboardingCloudMonitoringImports:getInventoryOnboardingCloudMonitoringImports", {
+        "importIds": args.importIds,
+        "organizationId": args.organizationId,
+    }, opts);
 }
 
 /**

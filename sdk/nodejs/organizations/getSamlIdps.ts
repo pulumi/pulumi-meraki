@@ -11,7 +11,6 @@ import * as utilities from "../utilities";
  */
 export function getSamlIdps(args?: GetSamlIdpsArgs, opts?: pulumi.InvokeOptions): Promise<GetSamlIdpsResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getSamlIdps:getSamlIdps", {
         "idpId": args.idpId,
@@ -59,7 +58,12 @@ export interface GetSamlIdpsResult {
  * ## Example Usage
  */
 export function getSamlIdpsOutput(args?: GetSamlIdpsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSamlIdpsResult> {
-    return pulumi.output(args).apply((a: any) => getSamlIdps(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getSamlIdps:getSamlIdps", {
+        "idpId": args.idpId,
+        "organizationId": args.organizationId,
+    }, opts);
 }
 
 /**

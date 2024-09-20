@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getWirelessBilling(args: GetWirelessBillingArgs, opts?: pulumi.InvokeOptions): Promise<GetWirelessBillingResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getWirelessBilling:getWirelessBilling", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetWirelessBillingResult {
  * ```
  */
 export function getWirelessBillingOutput(args: GetWirelessBillingOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessBillingResult> {
-    return pulumi.output(args).apply((a: any) => getWirelessBilling(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getWirelessBilling:getWirelessBilling", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

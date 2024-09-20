@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSwitchPortSchedules(args: GetSwitchPortSchedulesArgs, opts?: pulumi.InvokeOptions): Promise<GetSwitchPortSchedulesResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSwitchPortSchedules:getSwitchPortSchedules", {
         "networkId": args.networkId,
@@ -68,7 +67,10 @@ export interface GetSwitchPortSchedulesResult {
  * ```
  */
 export function getSwitchPortSchedulesOutput(args: GetSwitchPortSchedulesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchPortSchedulesResult> {
-    return pulumi.output(args).apply((a: any) => getSwitchPortSchedules(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSwitchPortSchedules:getSwitchPortSchedules", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

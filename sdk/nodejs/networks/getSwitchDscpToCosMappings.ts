@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSwitchDscpToCosMappings(args: GetSwitchDscpToCosMappingsArgs, opts?: pulumi.InvokeOptions): Promise<GetSwitchDscpToCosMappingsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSwitchDscpToCosMappings:getSwitchDscpToCosMappings", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetSwitchDscpToCosMappingsResult {
  * ```
  */
 export function getSwitchDscpToCosMappingsOutput(args: GetSwitchDscpToCosMappingsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchDscpToCosMappingsResult> {
-    return pulumi.output(args).apply((a: any) => getSwitchDscpToCosMappings(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSwitchDscpToCosMappings:getSwitchDscpToCosMappings", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

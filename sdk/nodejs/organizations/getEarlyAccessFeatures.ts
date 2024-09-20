@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getEarlyAccessFeatures(args: GetEarlyAccessFeaturesArgs, opts?: pulumi.InvokeOptions): Promise<GetEarlyAccessFeaturesResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getEarlyAccessFeatures:getEarlyAccessFeatures", {
         "organizationId": args.organizationId,
@@ -68,7 +67,10 @@ export interface GetEarlyAccessFeaturesResult {
  * ```
  */
 export function getEarlyAccessFeaturesOutput(args: GetEarlyAccessFeaturesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetEarlyAccessFeaturesResult> {
-    return pulumi.output(args).apply((a: any) => getEarlyAccessFeatures(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getEarlyAccessFeatures:getEarlyAccessFeatures", {
+        "organizationId": args.organizationId,
+    }, opts);
 }
 
 /**

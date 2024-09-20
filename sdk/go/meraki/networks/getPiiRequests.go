@@ -45,14 +45,20 @@ type GetPiiRequestsResult struct {
 
 func GetPiiRequestsOutput(ctx *pulumi.Context, args GetPiiRequestsOutputArgs, opts ...pulumi.InvokeOption) GetPiiRequestsResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetPiiRequestsResult, error) {
+		ApplyT(func(v interface{}) (GetPiiRequestsResultOutput, error) {
 			args := v.(GetPiiRequestsArgs)
-			r, err := GetPiiRequests(ctx, &args, opts...)
-			var s GetPiiRequestsResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetPiiRequestsResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getPiiRequests:getPiiRequests", args, &rv, "", opts...)
+			if err != nil {
+				return GetPiiRequestsResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetPiiRequestsResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetPiiRequestsResultOutput), nil
+			}
+			return output, nil
 		}).(GetPiiRequestsResultOutput)
 }
 

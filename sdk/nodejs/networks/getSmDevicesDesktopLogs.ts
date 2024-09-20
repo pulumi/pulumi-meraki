@@ -24,7 +24,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSmDevicesDesktopLogs(args: GetSmDevicesDesktopLogsArgs, opts?: pulumi.InvokeOptions): Promise<GetSmDevicesDesktopLogsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSmDevicesDesktopLogs:getSmDevicesDesktopLogs", {
         "deviceId": args.deviceId,
@@ -112,7 +111,14 @@ export interface GetSmDevicesDesktopLogsResult {
  * ```
  */
 export function getSmDevicesDesktopLogsOutput(args: GetSmDevicesDesktopLogsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmDevicesDesktopLogsResult> {
-    return pulumi.output(args).apply((a: any) => getSmDevicesDesktopLogs(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSmDevicesDesktopLogs:getSmDevicesDesktopLogs", {
+        "deviceId": args.deviceId,
+        "endingBefore": args.endingBefore,
+        "networkId": args.networkId,
+        "perPage": args.perPage,
+        "startingAfter": args.startingAfter,
+    }, opts);
 }
 
 /**

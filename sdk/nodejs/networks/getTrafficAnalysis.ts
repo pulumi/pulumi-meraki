@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getTrafficAnalysis(args: GetTrafficAnalysisArgs, opts?: pulumi.InvokeOptions): Promise<GetTrafficAnalysisResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getTrafficAnalysis:getTrafficAnalysis", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetTrafficAnalysisResult {
  * ```
  */
 export function getTrafficAnalysisOutput(args: GetTrafficAnalysisOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTrafficAnalysisResult> {
-    return pulumi.output(args).apply((a: any) => getTrafficAnalysis(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getTrafficAnalysis:getTrafficAnalysis", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

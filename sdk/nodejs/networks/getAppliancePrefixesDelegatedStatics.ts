@@ -11,7 +11,6 @@ import * as utilities from "../utilities";
  */
 export function getAppliancePrefixesDelegatedStatics(args?: GetAppliancePrefixesDelegatedStaticsArgs, opts?: pulumi.InvokeOptions): Promise<GetAppliancePrefixesDelegatedStaticsResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getAppliancePrefixesDelegatedStatics:getAppliancePrefixesDelegatedStatics", {
         "networkId": args.networkId,
@@ -59,7 +58,12 @@ export interface GetAppliancePrefixesDelegatedStaticsResult {
  * ## Example Usage
  */
 export function getAppliancePrefixesDelegatedStaticsOutput(args?: GetAppliancePrefixesDelegatedStaticsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAppliancePrefixesDelegatedStaticsResult> {
-    return pulumi.output(args).apply((a: any) => getAppliancePrefixesDelegatedStatics(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getAppliancePrefixesDelegatedStatics:getAppliancePrefixesDelegatedStatics", {
+        "networkId": args.networkId,
+        "staticDelegatedPrefixId": args.staticDelegatedPrefixId,
+    }, opts);
 }
 
 /**

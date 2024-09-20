@@ -24,7 +24,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSensorAlertsOverviewByMetric(args: GetSensorAlertsOverviewByMetricArgs, opts?: pulumi.InvokeOptions): Promise<GetSensorAlertsOverviewByMetricResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSensorAlertsOverviewByMetric:getSensorAlertsOverviewByMetric", {
         "interval": args.interval,
@@ -112,7 +111,14 @@ export interface GetSensorAlertsOverviewByMetricResult {
  * ```
  */
 export function getSensorAlertsOverviewByMetricOutput(args: GetSensorAlertsOverviewByMetricOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSensorAlertsOverviewByMetricResult> {
-    return pulumi.output(args).apply((a: any) => getSensorAlertsOverviewByMetric(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSensorAlertsOverviewByMetric:getSensorAlertsOverviewByMetric", {
+        "interval": args.interval,
+        "networkId": args.networkId,
+        "t0": args.t0,
+        "t1": args.t1,
+        "timespan": args.timespan,
+    }, opts);
 }
 
 /**

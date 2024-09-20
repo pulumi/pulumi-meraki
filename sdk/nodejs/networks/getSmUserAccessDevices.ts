@@ -23,7 +23,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSmUserAccessDevices(args: GetSmUserAccessDevicesArgs, opts?: pulumi.InvokeOptions): Promise<GetSmUserAccessDevicesResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSmUserAccessDevices:getSmUserAccessDevices", {
         "endingBefore": args.endingBefore,
@@ -101,7 +100,13 @@ export interface GetSmUserAccessDevicesResult {
  * ```
  */
 export function getSmUserAccessDevicesOutput(args: GetSmUserAccessDevicesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmUserAccessDevicesResult> {
-    return pulumi.output(args).apply((a: any) => getSmUserAccessDevices(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSmUserAccessDevices:getSmUserAccessDevices", {
+        "endingBefore": args.endingBefore,
+        "networkId": args.networkId,
+        "perPage": args.perPage,
+        "startingAfter": args.startingAfter,
+    }, opts);
 }
 
 /**

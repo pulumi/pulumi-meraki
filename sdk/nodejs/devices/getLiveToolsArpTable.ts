@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getLiveToolsArpTable(args: GetLiveToolsArpTableArgs, opts?: pulumi.InvokeOptions): Promise<GetLiveToolsArpTableResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:devices/getLiveToolsArpTable:getLiveToolsArpTable", {
         "arpTableId": args.arpTableId,
@@ -76,7 +75,11 @@ export interface GetLiveToolsArpTableResult {
  * ```
  */
 export function getLiveToolsArpTableOutput(args: GetLiveToolsArpTableOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLiveToolsArpTableResult> {
-    return pulumi.output(args).apply((a: any) => getLiveToolsArpTable(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:devices/getLiveToolsArpTable:getLiveToolsArpTable", {
+        "arpTableId": args.arpTableId,
+        "serial": args.serial,
+    }, opts);
 }
 
 /**

@@ -70,14 +70,20 @@ type GetSmDevicesNetworkAdaptersResult struct {
 
 func GetSmDevicesNetworkAdaptersOutput(ctx *pulumi.Context, args GetSmDevicesNetworkAdaptersOutputArgs, opts ...pulumi.InvokeOption) GetSmDevicesNetworkAdaptersResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetSmDevicesNetworkAdaptersResult, error) {
+		ApplyT(func(v interface{}) (GetSmDevicesNetworkAdaptersResultOutput, error) {
 			args := v.(GetSmDevicesNetworkAdaptersArgs)
-			r, err := GetSmDevicesNetworkAdapters(ctx, &args, opts...)
-			var s GetSmDevicesNetworkAdaptersResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetSmDevicesNetworkAdaptersResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getSmDevicesNetworkAdapters:getSmDevicesNetworkAdapters", args, &rv, "", opts...)
+			if err != nil {
+				return GetSmDevicesNetworkAdaptersResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetSmDevicesNetworkAdaptersResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetSmDevicesNetworkAdaptersResultOutput), nil
+			}
+			return output, nil
 		}).(GetSmDevicesNetworkAdaptersResultOutput)
 }
 

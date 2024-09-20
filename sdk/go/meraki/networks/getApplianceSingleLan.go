@@ -64,14 +64,20 @@ type LookupApplianceSingleLanResult struct {
 
 func LookupApplianceSingleLanOutput(ctx *pulumi.Context, args LookupApplianceSingleLanOutputArgs, opts ...pulumi.InvokeOption) LookupApplianceSingleLanResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupApplianceSingleLanResult, error) {
+		ApplyT(func(v interface{}) (LookupApplianceSingleLanResultOutput, error) {
 			args := v.(LookupApplianceSingleLanArgs)
-			r, err := LookupApplianceSingleLan(ctx, &args, opts...)
-			var s LookupApplianceSingleLanResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupApplianceSingleLanResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getApplianceSingleLan:getApplianceSingleLan", args, &rv, "", opts...)
+			if err != nil {
+				return LookupApplianceSingleLanResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupApplianceSingleLanResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupApplianceSingleLanResultOutput), nil
+			}
+			return output, nil
 		}).(LookupApplianceSingleLanResultOutput)
 }
 

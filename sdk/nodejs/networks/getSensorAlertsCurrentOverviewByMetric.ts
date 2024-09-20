@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSensorAlertsCurrentOverviewByMetric(args: GetSensorAlertsCurrentOverviewByMetricArgs, opts?: pulumi.InvokeOptions): Promise<GetSensorAlertsCurrentOverviewByMetricResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSensorAlertsCurrentOverviewByMetric:getSensorAlertsCurrentOverviewByMetric", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetSensorAlertsCurrentOverviewByMetricResult {
  * ```
  */
 export function getSensorAlertsCurrentOverviewByMetricOutput(args: GetSensorAlertsCurrentOverviewByMetricOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSensorAlertsCurrentOverviewByMetricResult> {
-    return pulumi.output(args).apply((a: any) => getSensorAlertsCurrentOverviewByMetric(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSensorAlertsCurrentOverviewByMetric:getSensorAlertsCurrentOverviewByMetric", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

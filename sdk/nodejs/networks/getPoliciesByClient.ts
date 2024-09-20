@@ -25,7 +25,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getPoliciesByClient(args: GetPoliciesByClientArgs, opts?: pulumi.InvokeOptions): Promise<GetPoliciesByClientResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getPoliciesByClient:getPoliciesByClient", {
         "endingBefore": args.endingBefore,
@@ -123,7 +122,15 @@ export interface GetPoliciesByClientResult {
  * ```
  */
 export function getPoliciesByClientOutput(args: GetPoliciesByClientOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetPoliciesByClientResult> {
-    return pulumi.output(args).apply((a: any) => getPoliciesByClient(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getPoliciesByClient:getPoliciesByClient", {
+        "endingBefore": args.endingBefore,
+        "networkId": args.networkId,
+        "perPage": args.perPage,
+        "startingAfter": args.startingAfter,
+        "t0": args.t0,
+        "timespan": args.timespan,
+    }, opts);
 }
 
 /**

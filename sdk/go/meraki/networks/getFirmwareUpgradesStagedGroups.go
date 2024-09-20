@@ -45,14 +45,20 @@ type LookupFirmwareUpgradesStagedGroupsResult struct {
 
 func LookupFirmwareUpgradesStagedGroupsOutput(ctx *pulumi.Context, args LookupFirmwareUpgradesStagedGroupsOutputArgs, opts ...pulumi.InvokeOption) LookupFirmwareUpgradesStagedGroupsResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupFirmwareUpgradesStagedGroupsResult, error) {
+		ApplyT(func(v interface{}) (LookupFirmwareUpgradesStagedGroupsResultOutput, error) {
 			args := v.(LookupFirmwareUpgradesStagedGroupsArgs)
-			r, err := LookupFirmwareUpgradesStagedGroups(ctx, &args, opts...)
-			var s LookupFirmwareUpgradesStagedGroupsResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupFirmwareUpgradesStagedGroupsResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getFirmwareUpgradesStagedGroups:getFirmwareUpgradesStagedGroups", args, &rv, "", opts...)
+			if err != nil {
+				return LookupFirmwareUpgradesStagedGroupsResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupFirmwareUpgradesStagedGroupsResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupFirmwareUpgradesStagedGroupsResultOutput), nil
+			}
+			return output, nil
 		}).(LookupFirmwareUpgradesStagedGroupsResultOutput)
 }
 

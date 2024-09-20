@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getWirelessSsidsTrafficShapingRules(args: GetWirelessSsidsTrafficShapingRulesArgs, opts?: pulumi.InvokeOptions): Promise<GetWirelessSsidsTrafficShapingRulesResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getWirelessSsidsTrafficShapingRules:getWirelessSsidsTrafficShapingRules", {
         "networkId": args.networkId,
@@ -76,7 +75,11 @@ export interface GetWirelessSsidsTrafficShapingRulesResult {
  * ```
  */
 export function getWirelessSsidsTrafficShapingRulesOutput(args: GetWirelessSsidsTrafficShapingRulesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessSsidsTrafficShapingRulesResult> {
-    return pulumi.output(args).apply((a: any) => getWirelessSsidsTrafficShapingRules(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getWirelessSsidsTrafficShapingRules:getWirelessSsidsTrafficShapingRules", {
+        "networkId": args.networkId,
+        "number": args.number,
+    }, opts);
 }
 
 /**

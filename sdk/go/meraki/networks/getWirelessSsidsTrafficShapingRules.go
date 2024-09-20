@@ -69,14 +69,20 @@ type LookupWirelessSsidsTrafficShapingRulesResult struct {
 
 func LookupWirelessSsidsTrafficShapingRulesOutput(ctx *pulumi.Context, args LookupWirelessSsidsTrafficShapingRulesOutputArgs, opts ...pulumi.InvokeOption) LookupWirelessSsidsTrafficShapingRulesResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupWirelessSsidsTrafficShapingRulesResult, error) {
+		ApplyT(func(v interface{}) (LookupWirelessSsidsTrafficShapingRulesResultOutput, error) {
 			args := v.(LookupWirelessSsidsTrafficShapingRulesArgs)
-			r, err := LookupWirelessSsidsTrafficShapingRules(ctx, &args, opts...)
-			var s LookupWirelessSsidsTrafficShapingRulesResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupWirelessSsidsTrafficShapingRulesResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getWirelessSsidsTrafficShapingRules:getWirelessSsidsTrafficShapingRules", args, &rv, "", opts...)
+			if err != nil {
+				return LookupWirelessSsidsTrafficShapingRulesResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupWirelessSsidsTrafficShapingRulesResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupWirelessSsidsTrafficShapingRulesResultOutput), nil
+			}
+			return output, nil
 		}).(LookupWirelessSsidsTrafficShapingRulesResultOutput)
 }
 

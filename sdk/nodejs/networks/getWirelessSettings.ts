@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getWirelessSettings(args: GetWirelessSettingsArgs, opts?: pulumi.InvokeOptions): Promise<GetWirelessSettingsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getWirelessSettings:getWirelessSettings", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetWirelessSettingsResult {
  * ```
  */
 export function getWirelessSettingsOutput(args: GetWirelessSettingsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessSettingsResult> {
-    return pulumi.output(args).apply((a: any) => getWirelessSettings(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getWirelessSettings:getWirelessSettings", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

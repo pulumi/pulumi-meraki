@@ -25,7 +25,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getInsightApplicationsHealthByTime(args: GetInsightApplicationsHealthByTimeArgs, opts?: pulumi.InvokeOptions): Promise<GetInsightApplicationsHealthByTimeResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getInsightApplicationsHealthByTime:getInsightApplicationsHealthByTime", {
         "applicationId": args.applicationId,
@@ -123,7 +122,15 @@ export interface GetInsightApplicationsHealthByTimeResult {
  * ```
  */
 export function getInsightApplicationsHealthByTimeOutput(args: GetInsightApplicationsHealthByTimeOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetInsightApplicationsHealthByTimeResult> {
-    return pulumi.output(args).apply((a: any) => getInsightApplicationsHealthByTime(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getInsightApplicationsHealthByTime:getInsightApplicationsHealthByTime", {
+        "applicationId": args.applicationId,
+        "networkId": args.networkId,
+        "resolution": args.resolution,
+        "t0": args.t0,
+        "t1": args.t1,
+        "timespan": args.timespan,
+    }, opts);
 }
 
 /**

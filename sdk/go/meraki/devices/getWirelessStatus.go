@@ -64,14 +64,20 @@ type GetWirelessStatusResult struct {
 
 func GetWirelessStatusOutput(ctx *pulumi.Context, args GetWirelessStatusOutputArgs, opts ...pulumi.InvokeOption) GetWirelessStatusResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetWirelessStatusResult, error) {
+		ApplyT(func(v interface{}) (GetWirelessStatusResultOutput, error) {
 			args := v.(GetWirelessStatusArgs)
-			r, err := GetWirelessStatus(ctx, &args, opts...)
-			var s GetWirelessStatusResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetWirelessStatusResult
+			secret, err := ctx.InvokePackageRaw("meraki:devices/getWirelessStatus:getWirelessStatus", args, &rv, "", opts...)
+			if err != nil {
+				return GetWirelessStatusResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetWirelessStatusResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetWirelessStatusResultOutput), nil
+			}
+			return output, nil
 		}).(GetWirelessStatusResultOutput)
 }
 

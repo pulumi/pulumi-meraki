@@ -11,7 +11,6 @@ import * as utilities from "../utilities";
  */
 export function getSwitchStacks(args?: GetSwitchStacksArgs, opts?: pulumi.InvokeOptions): Promise<GetSwitchStacksResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSwitchStacks:getSwitchStacks", {
         "networkId": args.networkId,
@@ -59,7 +58,12 @@ export interface GetSwitchStacksResult {
  * ## Example Usage
  */
 export function getSwitchStacksOutput(args?: GetSwitchStacksOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchStacksResult> {
-    return pulumi.output(args).apply((a: any) => getSwitchStacks(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSwitchStacks:getSwitchStacks", {
+        "networkId": args.networkId,
+        "switchStackId": args.switchStackId,
+    }, opts);
 }
 
 /**

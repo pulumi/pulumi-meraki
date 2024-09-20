@@ -75,14 +75,20 @@ type GetSwitchPortsStatusesResult struct {
 
 func GetSwitchPortsStatusesOutput(ctx *pulumi.Context, args GetSwitchPortsStatusesOutputArgs, opts ...pulumi.InvokeOption) GetSwitchPortsStatusesResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetSwitchPortsStatusesResult, error) {
+		ApplyT(func(v interface{}) (GetSwitchPortsStatusesResultOutput, error) {
 			args := v.(GetSwitchPortsStatusesArgs)
-			r, err := GetSwitchPortsStatuses(ctx, &args, opts...)
-			var s GetSwitchPortsStatusesResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetSwitchPortsStatusesResult
+			secret, err := ctx.InvokePackageRaw("meraki:devices/getSwitchPortsStatuses:getSwitchPortsStatuses", args, &rv, "", opts...)
+			if err != nil {
+				return GetSwitchPortsStatusesResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetSwitchPortsStatusesResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetSwitchPortsStatusesResultOutput), nil
+			}
+			return output, nil
 		}).(GetSwitchPortsStatusesResultOutput)
 }
 

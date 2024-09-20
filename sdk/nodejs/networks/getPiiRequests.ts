@@ -11,7 +11,6 @@ import * as utilities from "../utilities";
  */
 export function getPiiRequests(args?: GetPiiRequestsArgs, opts?: pulumi.InvokeOptions): Promise<GetPiiRequestsResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getPiiRequests:getPiiRequests", {
         "networkId": args.networkId,
@@ -59,7 +58,12 @@ export interface GetPiiRequestsResult {
  * ## Example Usage
  */
 export function getPiiRequestsOutput(args?: GetPiiRequestsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetPiiRequestsResult> {
-    return pulumi.output(args).apply((a: any) => getPiiRequests(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getPiiRequests:getPiiRequests", {
+        "networkId": args.networkId,
+        "requestId": args.requestId,
+    }, opts);
 }
 
 /**

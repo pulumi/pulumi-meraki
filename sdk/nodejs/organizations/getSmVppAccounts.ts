@@ -11,7 +11,6 @@ import * as utilities from "../utilities";
  */
 export function getSmVppAccounts(args?: GetSmVppAccountsArgs, opts?: pulumi.InvokeOptions): Promise<GetSmVppAccountsResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getSmVppAccounts:getSmVppAccounts", {
         "organizationId": args.organizationId,
@@ -59,7 +58,12 @@ export interface GetSmVppAccountsResult {
  * ## Example Usage
  */
 export function getSmVppAccountsOutput(args?: GetSmVppAccountsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmVppAccountsResult> {
-    return pulumi.output(args).apply((a: any) => getSmVppAccounts(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getSmVppAccounts:getSmVppAccounts", {
+        "organizationId": args.organizationId,
+        "vppAccountId": args.vppAccountId,
+    }, opts);
 }
 
 /**

@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getAdmins(args: GetAdminsArgs, opts?: pulumi.InvokeOptions): Promise<GetAdminsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getAdmins:getAdmins", {
         "organizationId": args.organizationId,
@@ -68,7 +67,10 @@ export interface GetAdminsResult {
  * ```
  */
 export function getAdminsOutput(args: GetAdminsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAdminsResult> {
-    return pulumi.output(args).apply((a: any) => getAdmins(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getAdmins:getAdmins", {
+        "organizationId": args.organizationId,
+    }, opts);
 }
 
 /**

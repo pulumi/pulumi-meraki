@@ -53,13 +53,19 @@ type GetIdentitiesMeResult struct {
 }
 
 func GetIdentitiesMeOutput(ctx *pulumi.Context, opts ...pulumi.InvokeOption) GetIdentitiesMeResultOutput {
-	return pulumi.ToOutput(0).ApplyT(func(int) (GetIdentitiesMeResult, error) {
-		r, err := GetIdentitiesMe(ctx, opts...)
-		var s GetIdentitiesMeResult
-		if r != nil {
-			s = *r
+	return pulumi.ToOutput(0).ApplyT(func(int) (GetIdentitiesMeResultOutput, error) {
+		opts = internal.PkgInvokeDefaultOpts(opts)
+		var rv GetIdentitiesMeResult
+		secret, err := ctx.InvokePackageRaw("meraki:administered/getIdentitiesMe:getIdentitiesMe", nil, &rv, "", opts...)
+		if err != nil {
+			return GetIdentitiesMeResultOutput{}, err
 		}
-		return s, err
+
+		output := pulumi.ToOutput(rv).(GetIdentitiesMeResultOutput)
+		if secret {
+			return pulumi.ToSecret(output).(GetIdentitiesMeResultOutput), nil
+		}
+		return output, nil
 	}).(GetIdentitiesMeResultOutput)
 }
 

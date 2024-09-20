@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getCellularGatewayConnectivityMonitoringDestinations(args: GetCellularGatewayConnectivityMonitoringDestinationsArgs, opts?: pulumi.InvokeOptions): Promise<GetCellularGatewayConnectivityMonitoringDestinationsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getCellularGatewayConnectivityMonitoringDestinations:getCellularGatewayConnectivityMonitoringDestinations", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetCellularGatewayConnectivityMonitoringDestinationsResult {
  * ```
  */
 export function getCellularGatewayConnectivityMonitoringDestinationsOutput(args: GetCellularGatewayConnectivityMonitoringDestinationsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCellularGatewayConnectivityMonitoringDestinationsResult> {
-    return pulumi.output(args).apply((a: any) => getCellularGatewayConnectivityMonitoringDestinations(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getCellularGatewayConnectivityMonitoringDestinations:getCellularGatewayConnectivityMonitoringDestinations", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

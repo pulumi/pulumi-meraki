@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSwitchRoutingOspf(args: GetSwitchRoutingOspfArgs, opts?: pulumi.InvokeOptions): Promise<GetSwitchRoutingOspfResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSwitchRoutingOspf:getSwitchRoutingOspf", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetSwitchRoutingOspfResult {
  * ```
  */
 export function getSwitchRoutingOspfOutput(args: GetSwitchRoutingOspfOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchRoutingOspfResult> {
-    return pulumi.output(args).apply((a: any) => getSwitchRoutingOspf(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSwitchRoutingOspf:getSwitchRoutingOspf", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

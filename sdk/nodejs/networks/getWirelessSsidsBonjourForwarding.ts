@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getWirelessSsidsBonjourForwarding(args: GetWirelessSsidsBonjourForwardingArgs, opts?: pulumi.InvokeOptions): Promise<GetWirelessSsidsBonjourForwardingResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getWirelessSsidsBonjourForwarding:getWirelessSsidsBonjourForwarding", {
         "networkId": args.networkId,
@@ -76,7 +75,11 @@ export interface GetWirelessSsidsBonjourForwardingResult {
  * ```
  */
 export function getWirelessSsidsBonjourForwardingOutput(args: GetWirelessSsidsBonjourForwardingOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessSsidsBonjourForwardingResult> {
-    return pulumi.output(args).apply((a: any) => getWirelessSsidsBonjourForwarding(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getWirelessSsidsBonjourForwarding:getWirelessSsidsBonjourForwarding", {
+        "networkId": args.networkId,
+        "number": args.number,
+    }, opts);
 }
 
 /**

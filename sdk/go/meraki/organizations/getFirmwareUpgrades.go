@@ -94,14 +94,20 @@ type GetFirmwareUpgradesResult struct {
 
 func GetFirmwareUpgradesOutput(ctx *pulumi.Context, args GetFirmwareUpgradesOutputArgs, opts ...pulumi.InvokeOption) GetFirmwareUpgradesResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetFirmwareUpgradesResult, error) {
+		ApplyT(func(v interface{}) (GetFirmwareUpgradesResultOutput, error) {
 			args := v.(GetFirmwareUpgradesArgs)
-			r, err := GetFirmwareUpgrades(ctx, &args, opts...)
-			var s GetFirmwareUpgradesResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetFirmwareUpgradesResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getFirmwareUpgrades:getFirmwareUpgrades", args, &rv, "", opts...)
+			if err != nil {
+				return GetFirmwareUpgradesResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetFirmwareUpgradesResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetFirmwareUpgradesResultOutput), nil
+			}
+			return output, nil
 		}).(GetFirmwareUpgradesResultOutput)
 }
 

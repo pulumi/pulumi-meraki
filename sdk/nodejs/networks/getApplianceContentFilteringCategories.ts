@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getApplianceContentFilteringCategories(args: GetApplianceContentFilteringCategoriesArgs, opts?: pulumi.InvokeOptions): Promise<GetApplianceContentFilteringCategoriesResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getApplianceContentFilteringCategories:getApplianceContentFilteringCategories", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetApplianceContentFilteringCategoriesResult {
  * ```
  */
 export function getApplianceContentFilteringCategoriesOutput(args: GetApplianceContentFilteringCategoriesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceContentFilteringCategoriesResult> {
-    return pulumi.output(args).apply((a: any) => getApplianceContentFilteringCategories(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getApplianceContentFilteringCategories:getApplianceContentFilteringCategories", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

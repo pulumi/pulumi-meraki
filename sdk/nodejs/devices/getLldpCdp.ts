@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getLldpCdp(args: GetLldpCdpArgs, opts?: pulumi.InvokeOptions): Promise<GetLldpCdpResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:devices/getLldpCdp:getLldpCdp", {
         "serial": args.serial,
@@ -65,7 +64,10 @@ export interface GetLldpCdpResult {
  * ```
  */
 export function getLldpCdpOutput(args: GetLldpCdpOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLldpCdpResult> {
-    return pulumi.output(args).apply((a: any) => getLldpCdp(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:devices/getLldpCdp:getLldpCdp", {
+        "serial": args.serial,
+    }, opts);
 }
 
 /**

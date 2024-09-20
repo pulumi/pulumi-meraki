@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getCellularSims(args: GetCellularSimsArgs, opts?: pulumi.InvokeOptions): Promise<GetCellularSimsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:devices/getCellularSims:getCellularSims", {
         "serial": args.serial,
@@ -65,7 +64,10 @@ export interface GetCellularSimsResult {
  * ```
  */
 export function getCellularSimsOutput(args: GetCellularSimsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCellularSimsResult> {
-    return pulumi.output(args).apply((a: any) => getCellularSims(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:devices/getCellularSims:getCellularSims", {
+        "serial": args.serial,
+    }, opts);
 }
 
 /**

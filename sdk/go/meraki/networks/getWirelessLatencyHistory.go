@@ -120,14 +120,20 @@ type GetWirelessLatencyHistoryResult struct {
 
 func GetWirelessLatencyHistoryOutput(ctx *pulumi.Context, args GetWirelessLatencyHistoryOutputArgs, opts ...pulumi.InvokeOption) GetWirelessLatencyHistoryResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetWirelessLatencyHistoryResult, error) {
+		ApplyT(func(v interface{}) (GetWirelessLatencyHistoryResultOutput, error) {
 			args := v.(GetWirelessLatencyHistoryArgs)
-			r, err := GetWirelessLatencyHistory(ctx, &args, opts...)
-			var s GetWirelessLatencyHistoryResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetWirelessLatencyHistoryResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getWirelessLatencyHistory:getWirelessLatencyHistory", args, &rv, "", opts...)
+			if err != nil {
+				return GetWirelessLatencyHistoryResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetWirelessLatencyHistoryResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetWirelessLatencyHistoryResultOutput), nil
+			}
+			return output, nil
 		}).(GetWirelessLatencyHistoryResultOutput)
 }
 

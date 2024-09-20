@@ -26,7 +26,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getCellularGatewayUplinkStatuses(args: GetCellularGatewayUplinkStatusesArgs, opts?: pulumi.InvokeOptions): Promise<GetCellularGatewayUplinkStatusesResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getCellularGatewayUplinkStatuses:getCellularGatewayUplinkStatuses", {
         "endingBefore": args.endingBefore,
@@ -134,7 +133,16 @@ export interface GetCellularGatewayUplinkStatusesResult {
  * ```
  */
 export function getCellularGatewayUplinkStatusesOutput(args: GetCellularGatewayUplinkStatusesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCellularGatewayUplinkStatusesResult> {
-    return pulumi.output(args).apply((a: any) => getCellularGatewayUplinkStatuses(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getCellularGatewayUplinkStatuses:getCellularGatewayUplinkStatuses", {
+        "endingBefore": args.endingBefore,
+        "iccids": args.iccids,
+        "networkIds": args.networkIds,
+        "organizationId": args.organizationId,
+        "perPage": args.perPage,
+        "serials": args.serials,
+        "startingAfter": args.startingAfter,
+    }, opts);
 }
 
 /**

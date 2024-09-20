@@ -34,7 +34,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getApiRequests(args: GetApiRequestsArgs, opts?: pulumi.InvokeOptions): Promise<GetApiRequestsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getApiRequests:getApiRequests", {
         "adminId": args.adminId,
@@ -222,7 +221,24 @@ export interface GetApiRequestsResult {
  * ```
  */
 export function getApiRequestsOutput(args: GetApiRequestsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApiRequestsResult> {
-    return pulumi.output(args).apply((a: any) => getApiRequests(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getApiRequests:getApiRequests", {
+        "adminId": args.adminId,
+        "endingBefore": args.endingBefore,
+        "method": args.method,
+        "operationIds": args.operationIds,
+        "organizationId": args.organizationId,
+        "path": args.path,
+        "perPage": args.perPage,
+        "responseCode": args.responseCode,
+        "sourceIp": args.sourceIp,
+        "startingAfter": args.startingAfter,
+        "t0": args.t0,
+        "t1": args.t1,
+        "timespan": args.timespan,
+        "userAgent": args.userAgent,
+        "version": args.version,
+    }, opts);
 }
 
 /**

@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSmUsersSoftwares(args: GetSmUsersSoftwaresArgs, opts?: pulumi.InvokeOptions): Promise<GetSmUsersSoftwaresResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSmUsersSoftwares:getSmUsersSoftwares", {
         "networkId": args.networkId,
@@ -79,7 +78,11 @@ export interface GetSmUsersSoftwaresResult {
  * ```
  */
 export function getSmUsersSoftwaresOutput(args: GetSmUsersSoftwaresOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmUsersSoftwaresResult> {
-    return pulumi.output(args).apply((a: any) => getSmUsersSoftwares(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSmUsersSoftwares:getSmUsersSoftwares", {
+        "networkId": args.networkId,
+        "userId": args.userId,
+    }, opts);
 }
 
 /**

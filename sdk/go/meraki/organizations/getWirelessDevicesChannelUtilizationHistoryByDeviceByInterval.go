@@ -114,14 +114,20 @@ type GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult struct 
 
 func GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalOutput(ctx *pulumi.Context, args GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalOutputArgs, opts ...pulumi.InvokeOption) GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult, error) {
+		ApplyT(func(v interface{}) (GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResultOutput, error) {
 			args := v.(GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalArgs)
-			r, err := GetWirelessDevicesChannelUtilizationHistoryByDeviceByInterval(ctx, &args, opts...)
-			var s GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getWirelessDevicesChannelUtilizationHistoryByDeviceByInterval:getWirelessDevicesChannelUtilizationHistoryByDeviceByInterval", args, &rv, "", opts...)
+			if err != nil {
+				return GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResultOutput), nil
+			}
+			return output, nil
 		}).(GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResultOutput)
 }
 

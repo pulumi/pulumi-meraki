@@ -45,14 +45,20 @@ type LookupCameraCustomAnalyticsArtifactsResult struct {
 
 func LookupCameraCustomAnalyticsArtifactsOutput(ctx *pulumi.Context, args LookupCameraCustomAnalyticsArtifactsOutputArgs, opts ...pulumi.InvokeOption) LookupCameraCustomAnalyticsArtifactsResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupCameraCustomAnalyticsArtifactsResult, error) {
+		ApplyT(func(v interface{}) (LookupCameraCustomAnalyticsArtifactsResultOutput, error) {
 			args := v.(LookupCameraCustomAnalyticsArtifactsArgs)
-			r, err := LookupCameraCustomAnalyticsArtifacts(ctx, &args, opts...)
-			var s LookupCameraCustomAnalyticsArtifactsResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupCameraCustomAnalyticsArtifactsResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getCameraCustomAnalyticsArtifacts:getCameraCustomAnalyticsArtifacts", args, &rv, "", opts...)
+			if err != nil {
+				return LookupCameraCustomAnalyticsArtifactsResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupCameraCustomAnalyticsArtifactsResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupCameraCustomAnalyticsArtifactsResultOutput), nil
+			}
+			return output, nil
 		}).(LookupCameraCustomAnalyticsArtifactsResultOutput)
 }
 

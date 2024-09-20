@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getVlanProfiles(args: GetVlanProfilesArgs, opts?: pulumi.InvokeOptions): Promise<GetVlanProfilesResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getVlanProfiles:getVlanProfiles", {
         "iname": args.iname,
@@ -76,7 +75,11 @@ export interface GetVlanProfilesResult {
  * ```
  */
 export function getVlanProfilesOutput(args: GetVlanProfilesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetVlanProfilesResult> {
-    return pulumi.output(args).apply((a: any) => getVlanProfiles(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getVlanProfiles:getVlanProfiles", {
+        "iname": args.iname,
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

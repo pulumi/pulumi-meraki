@@ -23,7 +23,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSwitchDhcpServerPolicyArpInspectionTrustedServers(args: GetSwitchDhcpServerPolicyArpInspectionTrustedServersArgs, opts?: pulumi.InvokeOptions): Promise<GetSwitchDhcpServerPolicyArpInspectionTrustedServersResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSwitchDhcpServerPolicyArpInspectionTrustedServers:getSwitchDhcpServerPolicyArpInspectionTrustedServers", {
         "endingBefore": args.endingBefore,
@@ -101,7 +100,13 @@ export interface GetSwitchDhcpServerPolicyArpInspectionTrustedServersResult {
  * ```
  */
 export function getSwitchDhcpServerPolicyArpInspectionTrustedServersOutput(args: GetSwitchDhcpServerPolicyArpInspectionTrustedServersOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchDhcpServerPolicyArpInspectionTrustedServersResult> {
-    return pulumi.output(args).apply((a: any) => getSwitchDhcpServerPolicyArpInspectionTrustedServers(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSwitchDhcpServerPolicyArpInspectionTrustedServers:getSwitchDhcpServerPolicyArpInspectionTrustedServers", {
+        "endingBefore": args.endingBefore,
+        "networkId": args.networkId,
+        "perPage": args.perPage,
+        "startingAfter": args.startingAfter,
+    }, opts);
 }
 
 /**

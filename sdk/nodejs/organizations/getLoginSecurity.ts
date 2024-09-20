@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getLoginSecurity(args: GetLoginSecurityArgs, opts?: pulumi.InvokeOptions): Promise<GetLoginSecurityResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getLoginSecurity:getLoginSecurity", {
         "organizationId": args.organizationId,
@@ -65,7 +64,10 @@ export interface GetLoginSecurityResult {
  * ```
  */
 export function getLoginSecurityOutput(args: GetLoginSecurityOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLoginSecurityResult> {
-    return pulumi.output(args).apply((a: any) => getLoginSecurity(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getLoginSecurity:getLoginSecurity", {
+        "organizationId": args.organizationId,
+    }, opts);
 }
 
 /**

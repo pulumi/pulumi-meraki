@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getTopologyLinkLayer(args: GetTopologyLinkLayerArgs, opts?: pulumi.InvokeOptions): Promise<GetTopologyLinkLayerResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getTopologyLinkLayer:getTopologyLinkLayer", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetTopologyLinkLayerResult {
  * ```
  */
 export function getTopologyLinkLayerOutput(args: GetTopologyLinkLayerOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTopologyLinkLayerResult> {
-    return pulumi.output(args).apply((a: any) => getTopologyLinkLayer(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getTopologyLinkLayer:getTopologyLinkLayer", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

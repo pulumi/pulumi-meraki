@@ -11,7 +11,6 @@ import * as utilities from "../utilities";
  */
 export function getSwitchAccessPolicies(args?: GetSwitchAccessPoliciesArgs, opts?: pulumi.InvokeOptions): Promise<GetSwitchAccessPoliciesResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSwitchAccessPolicies:getSwitchAccessPolicies", {
         "accessPolicyNumber": args.accessPolicyNumber,
@@ -59,7 +58,12 @@ export interface GetSwitchAccessPoliciesResult {
  * ## Example Usage
  */
 export function getSwitchAccessPoliciesOutput(args?: GetSwitchAccessPoliciesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchAccessPoliciesResult> {
-    return pulumi.output(args).apply((a: any) => getSwitchAccessPolicies(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSwitchAccessPolicies:getSwitchAccessPolicies", {
+        "accessPolicyNumber": args.accessPolicyNumber,
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

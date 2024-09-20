@@ -65,14 +65,20 @@ type LookupAlertsProfilesResult struct {
 
 func LookupAlertsProfilesOutput(ctx *pulumi.Context, args LookupAlertsProfilesOutputArgs, opts ...pulumi.InvokeOption) LookupAlertsProfilesResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupAlertsProfilesResult, error) {
+		ApplyT(func(v interface{}) (LookupAlertsProfilesResultOutput, error) {
 			args := v.(LookupAlertsProfilesArgs)
-			r, err := LookupAlertsProfiles(ctx, &args, opts...)
-			var s LookupAlertsProfilesResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupAlertsProfilesResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getAlertsProfiles:getAlertsProfiles", args, &rv, "", opts...)
+			if err != nil {
+				return LookupAlertsProfilesResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupAlertsProfilesResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupAlertsProfilesResultOutput), nil
+			}
+			return output, nil
 		}).(LookupAlertsProfilesResultOutput)
 }
 

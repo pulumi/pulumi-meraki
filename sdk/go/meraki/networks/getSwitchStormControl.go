@@ -64,14 +64,20 @@ type LookupSwitchStormControlResult struct {
 
 func LookupSwitchStormControlOutput(ctx *pulumi.Context, args LookupSwitchStormControlOutputArgs, opts ...pulumi.InvokeOption) LookupSwitchStormControlResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupSwitchStormControlResult, error) {
+		ApplyT(func(v interface{}) (LookupSwitchStormControlResultOutput, error) {
 			args := v.(LookupSwitchStormControlArgs)
-			r, err := LookupSwitchStormControl(ctx, &args, opts...)
-			var s LookupSwitchStormControlResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupSwitchStormControlResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getSwitchStormControl:getSwitchStormControl", args, &rv, "", opts...)
+			if err != nil {
+				return LookupSwitchStormControlResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupSwitchStormControlResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupSwitchStormControlResultOutput), nil
+			}
+			return output, nil
 		}).(LookupSwitchStormControlResultOutput)
 }
 

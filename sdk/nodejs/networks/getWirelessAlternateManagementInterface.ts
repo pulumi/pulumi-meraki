@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getWirelessAlternateManagementInterface(args: GetWirelessAlternateManagementInterfaceArgs, opts?: pulumi.InvokeOptions): Promise<GetWirelessAlternateManagementInterfaceResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getWirelessAlternateManagementInterface:getWirelessAlternateManagementInterface", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetWirelessAlternateManagementInterfaceResult {
  * ```
  */
 export function getWirelessAlternateManagementInterfaceOutput(args: GetWirelessAlternateManagementInterfaceOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessAlternateManagementInterfaceResult> {
-    return pulumi.output(args).apply((a: any) => getWirelessAlternateManagementInterface(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getWirelessAlternateManagementInterface:getWirelessAlternateManagementInterface", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

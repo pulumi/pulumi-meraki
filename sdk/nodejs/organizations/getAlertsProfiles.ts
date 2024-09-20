@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getAlertsProfiles(args: GetAlertsProfilesArgs, opts?: pulumi.InvokeOptions): Promise<GetAlertsProfilesResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getAlertsProfiles:getAlertsProfiles", {
         "organizationId": args.organizationId,
@@ -68,7 +67,10 @@ export interface GetAlertsProfilesResult {
  * ```
  */
 export function getAlertsProfilesOutput(args: GetAlertsProfilesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAlertsProfilesResult> {
-    return pulumi.output(args).apply((a: any) => getAlertsProfiles(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getAlertsProfiles:getAlertsProfiles", {
+        "organizationId": args.organizationId,
+    }, opts);
 }
 
 /**

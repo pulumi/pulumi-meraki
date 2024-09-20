@@ -45,14 +45,20 @@ type LookupCameraRolesResult struct {
 
 func LookupCameraRolesOutput(ctx *pulumi.Context, args LookupCameraRolesOutputArgs, opts ...pulumi.InvokeOption) LookupCameraRolesResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupCameraRolesResult, error) {
+		ApplyT(func(v interface{}) (LookupCameraRolesResultOutput, error) {
 			args := v.(LookupCameraRolesArgs)
-			r, err := LookupCameraRoles(ctx, &args, opts...)
-			var s LookupCameraRolesResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupCameraRolesResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getCameraRoles:getCameraRoles", args, &rv, "", opts...)
+			if err != nil {
+				return LookupCameraRolesResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupCameraRolesResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupCameraRolesResultOutput), nil
+			}
+			return output, nil
 		}).(LookupCameraRolesResultOutput)
 }
 

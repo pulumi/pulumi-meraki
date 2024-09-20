@@ -29,7 +29,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getDevicesProvisioningStatuses(args: GetDevicesProvisioningStatusesArgs, opts?: pulumi.InvokeOptions): Promise<GetDevicesProvisioningStatusesResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getDevicesProvisioningStatuses:getDevicesProvisioningStatuses", {
         "endingBefore": args.endingBefore,
@@ -167,7 +166,19 @@ export interface GetDevicesProvisioningStatusesResult {
  * ```
  */
 export function getDevicesProvisioningStatusesOutput(args: GetDevicesProvisioningStatusesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDevicesProvisioningStatusesResult> {
-    return pulumi.output(args).apply((a: any) => getDevicesProvisioningStatuses(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getDevicesProvisioningStatuses:getDevicesProvisioningStatuses", {
+        "endingBefore": args.endingBefore,
+        "networkIds": args.networkIds,
+        "organizationId": args.organizationId,
+        "perPage": args.perPage,
+        "productTypes": args.productTypes,
+        "serials": args.serials,
+        "startingAfter": args.startingAfter,
+        "status": args.status,
+        "tags": args.tags,
+        "tagsFilterType": args.tagsFilterType,
+    }, opts);
 }
 
 /**

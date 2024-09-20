@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSnmp(args: GetSnmpArgs, opts?: pulumi.InvokeOptions): Promise<GetSnmpResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSnmp:getSnmp", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetSnmpResult {
  * ```
  */
 export function getSnmpOutput(args: GetSnmpOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSnmpResult> {
-    return pulumi.output(args).apply((a: any) => getSnmp(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSnmp:getSnmp", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

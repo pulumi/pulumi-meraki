@@ -83,14 +83,20 @@ type LookupSmAdminsRolesResult struct {
 
 func LookupSmAdminsRolesOutput(ctx *pulumi.Context, args LookupSmAdminsRolesOutputArgs, opts ...pulumi.InvokeOption) LookupSmAdminsRolesResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupSmAdminsRolesResult, error) {
+		ApplyT(func(v interface{}) (LookupSmAdminsRolesResultOutput, error) {
 			args := v.(LookupSmAdminsRolesArgs)
-			r, err := LookupSmAdminsRoles(ctx, &args, opts...)
-			var s LookupSmAdminsRolesResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupSmAdminsRolesResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getSmAdminsRoles:getSmAdminsRoles", args, &rv, "", opts...)
+			if err != nil {
+				return LookupSmAdminsRolesResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupSmAdminsRolesResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupSmAdminsRolesResultOutput), nil
+			}
+			return output, nil
 		}).(LookupSmAdminsRolesResultOutput)
 }
 

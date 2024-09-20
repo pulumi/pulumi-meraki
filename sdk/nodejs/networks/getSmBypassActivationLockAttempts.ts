@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSmBypassActivationLockAttempts(args: GetSmBypassActivationLockAttemptsArgs, opts?: pulumi.InvokeOptions): Promise<GetSmBypassActivationLockAttemptsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSmBypassActivationLockAttempts:getSmBypassActivationLockAttempts", {
         "attemptId": args.attemptId,
@@ -76,7 +75,11 @@ export interface GetSmBypassActivationLockAttemptsResult {
  * ```
  */
 export function getSmBypassActivationLockAttemptsOutput(args: GetSmBypassActivationLockAttemptsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmBypassActivationLockAttemptsResult> {
-    return pulumi.output(args).apply((a: any) => getSmBypassActivationLockAttempts(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSmBypassActivationLockAttempts:getSmBypassActivationLockAttempts", {
+        "attemptId": args.attemptId,
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

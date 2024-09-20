@@ -70,14 +70,20 @@ type GetSmDevicesSecurityCentersResult struct {
 
 func GetSmDevicesSecurityCentersOutput(ctx *pulumi.Context, args GetSmDevicesSecurityCentersOutputArgs, opts ...pulumi.InvokeOption) GetSmDevicesSecurityCentersResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetSmDevicesSecurityCentersResult, error) {
+		ApplyT(func(v interface{}) (GetSmDevicesSecurityCentersResultOutput, error) {
 			args := v.(GetSmDevicesSecurityCentersArgs)
-			r, err := GetSmDevicesSecurityCenters(ctx, &args, opts...)
-			var s GetSmDevicesSecurityCentersResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetSmDevicesSecurityCentersResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getSmDevicesSecurityCenters:getSmDevicesSecurityCenters", args, &rv, "", opts...)
+			if err != nil {
+				return GetSmDevicesSecurityCentersResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetSmDevicesSecurityCentersResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetSmDevicesSecurityCentersResultOutput), nil
+			}
+			return output, nil
 		}).(GetSmDevicesSecurityCentersResultOutput)
 }
 

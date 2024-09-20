@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getCameraVideoSettings(args: GetCameraVideoSettingsArgs, opts?: pulumi.InvokeOptions): Promise<GetCameraVideoSettingsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:devices/getCameraVideoSettings:getCameraVideoSettings", {
         "serial": args.serial,
@@ -65,7 +64,10 @@ export interface GetCameraVideoSettingsResult {
  * ```
  */
 export function getCameraVideoSettingsOutput(args: GetCameraVideoSettingsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCameraVideoSettingsResult> {
-    return pulumi.output(args).apply((a: any) => getCameraVideoSettings(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:devices/getCameraVideoSettings:getCameraVideoSettings", {
+        "serial": args.serial,
+    }, opts);
 }
 
 /**

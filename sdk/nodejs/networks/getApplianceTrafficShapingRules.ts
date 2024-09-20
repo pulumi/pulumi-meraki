@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getApplianceTrafficShapingRules(args: GetApplianceTrafficShapingRulesArgs, opts?: pulumi.InvokeOptions): Promise<GetApplianceTrafficShapingRulesResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getApplianceTrafficShapingRules:getApplianceTrafficShapingRules", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetApplianceTrafficShapingRulesResult {
  * ```
  */
 export function getApplianceTrafficShapingRulesOutput(args: GetApplianceTrafficShapingRulesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceTrafficShapingRulesResult> {
-    return pulumi.output(args).apply((a: any) => getApplianceTrafficShapingRules(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getApplianceTrafficShapingRules:getApplianceTrafficShapingRules", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

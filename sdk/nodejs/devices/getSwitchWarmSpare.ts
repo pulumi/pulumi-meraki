@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSwitchWarmSpare(args: GetSwitchWarmSpareArgs, opts?: pulumi.InvokeOptions): Promise<GetSwitchWarmSpareResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:devices/getSwitchWarmSpare:getSwitchWarmSpare", {
         "serial": args.serial,
@@ -65,7 +64,10 @@ export interface GetSwitchWarmSpareResult {
  * ```
  */
 export function getSwitchWarmSpareOutput(args: GetSwitchWarmSpareOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchWarmSpareResult> {
-    return pulumi.output(args).apply((a: any) => getSwitchWarmSpare(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:devices/getSwitchWarmSpare:getSwitchWarmSpare", {
+        "serial": args.serial,
+    }, opts);
 }
 
 /**

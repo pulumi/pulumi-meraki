@@ -101,14 +101,20 @@ type GetUplinksStatusesResult struct {
 
 func GetUplinksStatusesOutput(ctx *pulumi.Context, args GetUplinksStatusesOutputArgs, opts ...pulumi.InvokeOption) GetUplinksStatusesResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetUplinksStatusesResult, error) {
+		ApplyT(func(v interface{}) (GetUplinksStatusesResultOutput, error) {
 			args := v.(GetUplinksStatusesArgs)
-			r, err := GetUplinksStatuses(ctx, &args, opts...)
-			var s GetUplinksStatusesResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetUplinksStatusesResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getUplinksStatuses:getUplinksStatuses", args, &rv, "", opts...)
+			if err != nil {
+				return GetUplinksStatusesResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetUplinksStatusesResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetUplinksStatusesResultOutput), nil
+			}
+			return output, nil
 		}).(GetUplinksStatusesResultOutput)
 }
 

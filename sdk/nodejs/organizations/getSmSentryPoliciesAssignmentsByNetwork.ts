@@ -24,7 +24,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSmSentryPoliciesAssignmentsByNetwork(args: GetSmSentryPoliciesAssignmentsByNetworkArgs, opts?: pulumi.InvokeOptions): Promise<GetSmSentryPoliciesAssignmentsByNetworkResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getSmSentryPoliciesAssignmentsByNetwork:getSmSentryPoliciesAssignmentsByNetwork", {
         "endingBefore": args.endingBefore,
@@ -112,7 +111,14 @@ export interface GetSmSentryPoliciesAssignmentsByNetworkResult {
  * ```
  */
 export function getSmSentryPoliciesAssignmentsByNetworkOutput(args: GetSmSentryPoliciesAssignmentsByNetworkOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmSentryPoliciesAssignmentsByNetworkResult> {
-    return pulumi.output(args).apply((a: any) => getSmSentryPoliciesAssignmentsByNetwork(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getSmSentryPoliciesAssignmentsByNetwork:getSmSentryPoliciesAssignmentsByNetwork", {
+        "endingBefore": args.endingBefore,
+        "networkIds": args.networkIds,
+        "organizationId": args.organizationId,
+        "perPage": args.perPage,
+        "startingAfter": args.startingAfter,
+    }, opts);
 }
 
 /**

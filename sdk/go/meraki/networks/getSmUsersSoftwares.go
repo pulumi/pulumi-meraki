@@ -70,14 +70,20 @@ type GetSmUsersSoftwaresResult struct {
 
 func GetSmUsersSoftwaresOutput(ctx *pulumi.Context, args GetSmUsersSoftwaresOutputArgs, opts ...pulumi.InvokeOption) GetSmUsersSoftwaresResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetSmUsersSoftwaresResult, error) {
+		ApplyT(func(v interface{}) (GetSmUsersSoftwaresResultOutput, error) {
 			args := v.(GetSmUsersSoftwaresArgs)
-			r, err := GetSmUsersSoftwares(ctx, &args, opts...)
-			var s GetSmUsersSoftwaresResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetSmUsersSoftwaresResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getSmUsersSoftwares:getSmUsersSoftwares", args, &rv, "", opts...)
+			if err != nil {
+				return GetSmUsersSoftwaresResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetSmUsersSoftwaresResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetSmUsersSoftwaresResultOutput), nil
+			}
+			return output, nil
 		}).(GetSmUsersSoftwaresResultOutput)
 }
 

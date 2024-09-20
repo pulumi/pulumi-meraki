@@ -29,7 +29,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getApiRequestsOverviewResponseCodesByInterval(args: GetApiRequestsOverviewResponseCodesByIntervalArgs, opts?: pulumi.InvokeOptions): Promise<GetApiRequestsOverviewResponseCodesByIntervalResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getApiRequestsOverviewResponseCodesByInterval:getApiRequestsOverviewResponseCodesByInterval", {
         "adminIds": args.adminIds,
@@ -167,7 +166,19 @@ export interface GetApiRequestsOverviewResponseCodesByIntervalResult {
  * ```
  */
 export function getApiRequestsOverviewResponseCodesByIntervalOutput(args: GetApiRequestsOverviewResponseCodesByIntervalOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApiRequestsOverviewResponseCodesByIntervalResult> {
-    return pulumi.output(args).apply((a: any) => getApiRequestsOverviewResponseCodesByInterval(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getApiRequestsOverviewResponseCodesByInterval:getApiRequestsOverviewResponseCodesByInterval", {
+        "adminIds": args.adminIds,
+        "interval": args.interval,
+        "operationIds": args.operationIds,
+        "organizationId": args.organizationId,
+        "sourceIps": args.sourceIps,
+        "t0": args.t0,
+        "t1": args.t1,
+        "timespan": args.timespan,
+        "userAgent": args.userAgent,
+        "version": args.version,
+    }, opts);
 }
 
 /**

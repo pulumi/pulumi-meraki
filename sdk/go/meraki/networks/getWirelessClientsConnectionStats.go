@@ -104,14 +104,20 @@ type GetWirelessClientsConnectionStatsResult struct {
 
 func GetWirelessClientsConnectionStatsOutput(ctx *pulumi.Context, args GetWirelessClientsConnectionStatsOutputArgs, opts ...pulumi.InvokeOption) GetWirelessClientsConnectionStatsResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetWirelessClientsConnectionStatsResult, error) {
+		ApplyT(func(v interface{}) (GetWirelessClientsConnectionStatsResultOutput, error) {
 			args := v.(GetWirelessClientsConnectionStatsArgs)
-			r, err := GetWirelessClientsConnectionStats(ctx, &args, opts...)
-			var s GetWirelessClientsConnectionStatsResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetWirelessClientsConnectionStatsResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getWirelessClientsConnectionStats:getWirelessClientsConnectionStats", args, &rv, "", opts...)
+			if err != nil {
+				return GetWirelessClientsConnectionStatsResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetWirelessClientsConnectionStatsResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetWirelessClientsConnectionStatsResultOutput), nil
+			}
+			return output, nil
 		}).(GetWirelessClientsConnectionStatsResultOutput)
 }
 

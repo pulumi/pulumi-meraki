@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getCellularGatewayUplink(args: GetCellularGatewayUplinkArgs, opts?: pulumi.InvokeOptions): Promise<GetCellularGatewayUplinkResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getCellularGatewayUplink:getCellularGatewayUplink", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetCellularGatewayUplinkResult {
  * ```
  */
 export function getCellularGatewayUplinkOutput(args: GetCellularGatewayUplinkOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCellularGatewayUplinkResult> {
-    return pulumi.output(args).apply((a: any) => getCellularGatewayUplink(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getCellularGatewayUplink:getCellularGatewayUplink", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

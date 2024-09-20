@@ -22,7 +22,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSwitchPortsStatuses(args: GetSwitchPortsStatusesArgs, opts?: pulumi.InvokeOptions): Promise<GetSwitchPortsStatusesResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:devices/getSwitchPortsStatuses:getSwitchPortsStatuses", {
         "serial": args.serial,
@@ -90,7 +89,12 @@ export interface GetSwitchPortsStatusesResult {
  * ```
  */
 export function getSwitchPortsStatusesOutput(args: GetSwitchPortsStatusesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchPortsStatusesResult> {
-    return pulumi.output(args).apply((a: any) => getSwitchPortsStatuses(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:devices/getSwitchPortsStatuses:getSwitchPortsStatuses", {
+        "serial": args.serial,
+        "t0": args.t0,
+        "timespan": args.timespan,
+    }, opts);
 }
 
 /**

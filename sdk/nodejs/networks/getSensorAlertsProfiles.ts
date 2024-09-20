@@ -11,7 +11,6 @@ import * as utilities from "../utilities";
  */
 export function getSensorAlertsProfiles(args?: GetSensorAlertsProfilesArgs, opts?: pulumi.InvokeOptions): Promise<GetSensorAlertsProfilesResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSensorAlertsProfiles:getSensorAlertsProfiles", {
         "id": args.id,
@@ -55,7 +54,12 @@ export interface GetSensorAlertsProfilesResult {
  * ## Example Usage
  */
 export function getSensorAlertsProfilesOutput(args?: GetSensorAlertsProfilesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSensorAlertsProfilesResult> {
-    return pulumi.output(args).apply((a: any) => getSensorAlertsProfiles(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSensorAlertsProfiles:getSensorAlertsProfiles", {
+        "id": args.id,
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

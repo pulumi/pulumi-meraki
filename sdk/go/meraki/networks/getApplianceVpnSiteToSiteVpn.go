@@ -64,14 +64,20 @@ type LookupApplianceVpnSiteToSiteVpnResult struct {
 
 func LookupApplianceVpnSiteToSiteVpnOutput(ctx *pulumi.Context, args LookupApplianceVpnSiteToSiteVpnOutputArgs, opts ...pulumi.InvokeOption) LookupApplianceVpnSiteToSiteVpnResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupApplianceVpnSiteToSiteVpnResult, error) {
+		ApplyT(func(v interface{}) (LookupApplianceVpnSiteToSiteVpnResultOutput, error) {
 			args := v.(LookupApplianceVpnSiteToSiteVpnArgs)
-			r, err := LookupApplianceVpnSiteToSiteVpn(ctx, &args, opts...)
-			var s LookupApplianceVpnSiteToSiteVpnResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupApplianceVpnSiteToSiteVpnResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getApplianceVpnSiteToSiteVpn:getApplianceVpnSiteToSiteVpn", args, &rv, "", opts...)
+			if err != nil {
+				return LookupApplianceVpnSiteToSiteVpnResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupApplianceVpnSiteToSiteVpnResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupApplianceVpnSiteToSiteVpnResultOutput), nil
+			}
+			return output, nil
 		}).(LookupApplianceVpnSiteToSiteVpnResultOutput)
 }
 

@@ -11,7 +11,6 @@ import * as utilities from "../utilities";
  */
 export function getSwitchRoutingMulticastRendezvousPoints(args?: GetSwitchRoutingMulticastRendezvousPointsArgs, opts?: pulumi.InvokeOptions): Promise<GetSwitchRoutingMulticastRendezvousPointsResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSwitchRoutingMulticastRendezvousPoints:getSwitchRoutingMulticastRendezvousPoints", {
         "networkId": args.networkId,
@@ -59,7 +58,12 @@ export interface GetSwitchRoutingMulticastRendezvousPointsResult {
  * ## Example Usage
  */
 export function getSwitchRoutingMulticastRendezvousPointsOutput(args?: GetSwitchRoutingMulticastRendezvousPointsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchRoutingMulticastRendezvousPointsResult> {
-    return pulumi.output(args).apply((a: any) => getSwitchRoutingMulticastRendezvousPoints(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSwitchRoutingMulticastRendezvousPoints:getSwitchRoutingMulticastRendezvousPoints", {
+        "networkId": args.networkId,
+        "rendezvousPointId": args.rendezvousPointId,
+    }, opts);
 }
 
 /**

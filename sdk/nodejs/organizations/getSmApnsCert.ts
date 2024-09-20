@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSmApnsCert(args: GetSmApnsCertArgs, opts?: pulumi.InvokeOptions): Promise<GetSmApnsCertResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getSmApnsCert:getSmApnsCert", {
         "organizationId": args.organizationId,
@@ -65,7 +64,10 @@ export interface GetSmApnsCertResult {
  * ```
  */
 export function getSmApnsCertOutput(args: GetSmApnsCertOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmApnsCertResult> {
-    return pulumi.output(args).apply((a: any) => getSmApnsCert(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getSmApnsCert:getSmApnsCert", {
+        "organizationId": args.organizationId,
+    }, opts);
 }
 
 /**

@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSensorRelationships(args: GetSensorRelationshipsArgs, opts?: pulumi.InvokeOptions): Promise<GetSensorRelationshipsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:devices/getSensorRelationships:getSensorRelationships", {
         "serial": args.serial,
@@ -65,7 +64,10 @@ export interface GetSensorRelationshipsResult {
  * ```
  */
 export function getSensorRelationshipsOutput(args: GetSensorRelationshipsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSensorRelationshipsResult> {
-    return pulumi.output(args).apply((a: any) => getSensorRelationships(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:devices/getSensorRelationships:getSensorRelationships", {
+        "serial": args.serial,
+    }, opts);
 }
 
 /**

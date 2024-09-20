@@ -18,7 +18,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getIdentitiesMe(opts?: pulumi.InvokeOptions): Promise<GetIdentitiesMeResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:administered/getIdentitiesMe:getIdentitiesMe", {
     }, opts);
@@ -46,5 +45,7 @@ export interface GetIdentitiesMeResult {
  * ```
  */
 export function getIdentitiesMeOutput(opts?: pulumi.InvokeOptions): pulumi.Output<GetIdentitiesMeResult> {
-    return pulumi.output(getIdentitiesMe(opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:administered/getIdentitiesMe:getIdentitiesMe", {
+    }, opts);
 }

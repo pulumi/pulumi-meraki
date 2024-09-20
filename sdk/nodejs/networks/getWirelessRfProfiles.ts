@@ -22,7 +22,6 @@ import * as utilities from "../utilities";
  */
 export function getWirelessRfProfiles(args?: GetWirelessRfProfilesArgs, opts?: pulumi.InvokeOptions): Promise<GetWirelessRfProfilesResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getWirelessRfProfiles:getWirelessRfProfiles", {
         "includeTemplateProfiles": args.includeTemplateProfiles,
@@ -86,7 +85,13 @@ export interface GetWirelessRfProfilesResult {
  * ```
  */
 export function getWirelessRfProfilesOutput(args?: GetWirelessRfProfilesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessRfProfilesResult> {
-    return pulumi.output(args).apply((a: any) => getWirelessRfProfiles(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getWirelessRfProfiles:getWirelessRfProfiles", {
+        "includeTemplateProfiles": args.includeTemplateProfiles,
+        "networkId": args.networkId,
+        "rfProfileId": args.rfProfileId,
+    }, opts);
 }
 
 /**

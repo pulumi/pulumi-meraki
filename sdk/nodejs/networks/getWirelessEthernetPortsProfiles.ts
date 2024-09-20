@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getWirelessEthernetPortsProfiles(args: GetWirelessEthernetPortsProfilesArgs, opts?: pulumi.InvokeOptions): Promise<GetWirelessEthernetPortsProfilesResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getWirelessEthernetPortsProfiles:getWirelessEthernetPortsProfiles", {
         "networkId": args.networkId,
@@ -76,7 +75,11 @@ export interface GetWirelessEthernetPortsProfilesResult {
  * ```
  */
 export function getWirelessEthernetPortsProfilesOutput(args: GetWirelessEthernetPortsProfilesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessEthernetPortsProfilesResult> {
-    return pulumi.output(args).apply((a: any) => getWirelessEthernetPortsProfiles(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getWirelessEthernetPortsProfiles:getWirelessEthernetPortsProfiles", {
+        "networkId": args.networkId,
+        "profileId": args.profileId,
+    }, opts);
 }
 
 /**

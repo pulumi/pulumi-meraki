@@ -80,14 +80,20 @@ type GetClientsBandwidthUsageHistoryResult struct {
 
 func GetClientsBandwidthUsageHistoryOutput(ctx *pulumi.Context, args GetClientsBandwidthUsageHistoryOutputArgs, opts ...pulumi.InvokeOption) GetClientsBandwidthUsageHistoryResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetClientsBandwidthUsageHistoryResult, error) {
+		ApplyT(func(v interface{}) (GetClientsBandwidthUsageHistoryResultOutput, error) {
 			args := v.(GetClientsBandwidthUsageHistoryArgs)
-			r, err := GetClientsBandwidthUsageHistory(ctx, &args, opts...)
-			var s GetClientsBandwidthUsageHistoryResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetClientsBandwidthUsageHistoryResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getClientsBandwidthUsageHistory:getClientsBandwidthUsageHistory", args, &rv, "", opts...)
+			if err != nil {
+				return GetClientsBandwidthUsageHistoryResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetClientsBandwidthUsageHistoryResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetClientsBandwidthUsageHistoryResultOutput), nil
+			}
+			return output, nil
 		}).(GetClientsBandwidthUsageHistoryResultOutput)
 }
 

@@ -123,14 +123,20 @@ type GetWirelessDevicesPacketLossByClientResult struct {
 
 func GetWirelessDevicesPacketLossByClientOutput(ctx *pulumi.Context, args GetWirelessDevicesPacketLossByClientOutputArgs, opts ...pulumi.InvokeOption) GetWirelessDevicesPacketLossByClientResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetWirelessDevicesPacketLossByClientResult, error) {
+		ApplyT(func(v interface{}) (GetWirelessDevicesPacketLossByClientResultOutput, error) {
 			args := v.(GetWirelessDevicesPacketLossByClientArgs)
-			r, err := GetWirelessDevicesPacketLossByClient(ctx, &args, opts...)
-			var s GetWirelessDevicesPacketLossByClientResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetWirelessDevicesPacketLossByClientResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getWirelessDevicesPacketLossByClient:getWirelessDevicesPacketLossByClient", args, &rv, "", opts...)
+			if err != nil {
+				return GetWirelessDevicesPacketLossByClientResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetWirelessDevicesPacketLossByClientResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetWirelessDevicesPacketLossByClientResultOutput), nil
+			}
+			return output, nil
 		}).(GetWirelessDevicesPacketLossByClientResultOutput)
 }
 

@@ -45,14 +45,20 @@ type LookupGroupPoliciesResult struct {
 
 func LookupGroupPoliciesOutput(ctx *pulumi.Context, args LookupGroupPoliciesOutputArgs, opts ...pulumi.InvokeOption) LookupGroupPoliciesResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupGroupPoliciesResult, error) {
+		ApplyT(func(v interface{}) (LookupGroupPoliciesResultOutput, error) {
 			args := v.(LookupGroupPoliciesArgs)
-			r, err := LookupGroupPolicies(ctx, &args, opts...)
-			var s LookupGroupPoliciesResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupGroupPoliciesResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getGroupPolicies:getGroupPolicies", args, &rv, "", opts...)
+			if err != nil {
+				return LookupGroupPoliciesResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupGroupPoliciesResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupGroupPoliciesResultOutput), nil
+			}
+			return output, nil
 		}).(LookupGroupPoliciesResultOutput)
 }
 

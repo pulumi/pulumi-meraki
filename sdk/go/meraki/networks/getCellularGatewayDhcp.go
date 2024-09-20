@@ -64,14 +64,20 @@ type LookupCellularGatewayDhcpResult struct {
 
 func LookupCellularGatewayDhcpOutput(ctx *pulumi.Context, args LookupCellularGatewayDhcpOutputArgs, opts ...pulumi.InvokeOption) LookupCellularGatewayDhcpResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupCellularGatewayDhcpResult, error) {
+		ApplyT(func(v interface{}) (LookupCellularGatewayDhcpResultOutput, error) {
 			args := v.(LookupCellularGatewayDhcpArgs)
-			r, err := LookupCellularGatewayDhcp(ctx, &args, opts...)
-			var s LookupCellularGatewayDhcpResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupCellularGatewayDhcpResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getCellularGatewayDhcp:getCellularGatewayDhcp", args, &rv, "", opts...)
+			if err != nil {
+				return LookupCellularGatewayDhcpResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupCellularGatewayDhcpResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupCellularGatewayDhcpResultOutput), nil
+			}
+			return output, nil
 		}).(LookupCellularGatewayDhcpResultOutput)
 }
 

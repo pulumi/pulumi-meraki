@@ -11,7 +11,6 @@ import * as utilities from "../utilities";
  */
 export function getWebhooksHttpServers(args?: GetWebhooksHttpServersArgs, opts?: pulumi.InvokeOptions): Promise<GetWebhooksHttpServersResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getWebhooksHttpServers:getWebhooksHttpServers", {
         "httpServerId": args.httpServerId,
@@ -59,7 +58,12 @@ export interface GetWebhooksHttpServersResult {
  * ## Example Usage
  */
 export function getWebhooksHttpServersOutput(args?: GetWebhooksHttpServersOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWebhooksHttpServersResult> {
-    return pulumi.output(args).apply((a: any) => getWebhooksHttpServers(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getWebhooksHttpServers:getWebhooksHttpServers", {
+        "httpServerId": args.httpServerId,
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

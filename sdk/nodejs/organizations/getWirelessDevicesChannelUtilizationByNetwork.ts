@@ -29,7 +29,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getWirelessDevicesChannelUtilizationByNetwork(args: GetWirelessDevicesChannelUtilizationByNetworkArgs, opts?: pulumi.InvokeOptions): Promise<GetWirelessDevicesChannelUtilizationByNetworkResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getWirelessDevicesChannelUtilizationByNetwork:getWirelessDevicesChannelUtilizationByNetwork", {
         "endingBefore": args.endingBefore,
@@ -167,7 +166,19 @@ export interface GetWirelessDevicesChannelUtilizationByNetworkResult {
  * ```
  */
 export function getWirelessDevicesChannelUtilizationByNetworkOutput(args: GetWirelessDevicesChannelUtilizationByNetworkOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessDevicesChannelUtilizationByNetworkResult> {
-    return pulumi.output(args).apply((a: any) => getWirelessDevicesChannelUtilizationByNetwork(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getWirelessDevicesChannelUtilizationByNetwork:getWirelessDevicesChannelUtilizationByNetwork", {
+        "endingBefore": args.endingBefore,
+        "interval": args.interval,
+        "networkIds": args.networkIds,
+        "organizationId": args.organizationId,
+        "perPage": args.perPage,
+        "serials": args.serials,
+        "startingAfter": args.startingAfter,
+        "t0": args.t0,
+        "t1": args.t1,
+        "timespan": args.timespan,
+    }, opts);
 }
 
 /**

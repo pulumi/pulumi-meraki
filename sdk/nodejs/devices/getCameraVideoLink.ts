@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getCameraVideoLink(args: GetCameraVideoLinkArgs, opts?: pulumi.InvokeOptions): Promise<GetCameraVideoLinkResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:devices/getCameraVideoLink:getCameraVideoLink", {
         "serial": args.serial,
@@ -76,7 +75,11 @@ export interface GetCameraVideoLinkResult {
  * ```
  */
 export function getCameraVideoLinkOutput(args: GetCameraVideoLinkOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCameraVideoLinkResult> {
-    return pulumi.output(args).apply((a: any) => getCameraVideoLink(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:devices/getCameraVideoLink:getCameraVideoLink", {
+        "serial": args.serial,
+        "timestamp": args.timestamp,
+    }, opts);
 }
 
 /**

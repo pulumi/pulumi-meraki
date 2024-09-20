@@ -11,7 +11,6 @@ import * as utilities from "../utilities";
  */
 export function getSwitchStacksRoutingInterfaces(args?: GetSwitchStacksRoutingInterfacesArgs, opts?: pulumi.InvokeOptions): Promise<GetSwitchStacksRoutingInterfacesResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSwitchStacksRoutingInterfaces:getSwitchStacksRoutingInterfaces", {
         "interfaceId": args.interfaceId,
@@ -68,7 +67,13 @@ export interface GetSwitchStacksRoutingInterfacesResult {
  * ## Example Usage
  */
 export function getSwitchStacksRoutingInterfacesOutput(args?: GetSwitchStacksRoutingInterfacesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchStacksRoutingInterfacesResult> {
-    return pulumi.output(args).apply((a: any) => getSwitchStacksRoutingInterfaces(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSwitchStacksRoutingInterfaces:getSwitchStacksRoutingInterfaces", {
+        "interfaceId": args.interfaceId,
+        "networkId": args.networkId,
+        "switchStackId": args.switchStackId,
+    }, opts);
 }
 
 /**

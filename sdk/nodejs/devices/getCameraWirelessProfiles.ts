@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getCameraWirelessProfiles(args: GetCameraWirelessProfilesArgs, opts?: pulumi.InvokeOptions): Promise<GetCameraWirelessProfilesResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:devices/getCameraWirelessProfiles:getCameraWirelessProfiles", {
         "serial": args.serial,
@@ -65,7 +64,10 @@ export interface GetCameraWirelessProfilesResult {
  * ```
  */
 export function getCameraWirelessProfilesOutput(args: GetCameraWirelessProfilesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCameraWirelessProfilesResult> {
-    return pulumi.output(args).apply((a: any) => getCameraWirelessProfiles(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:devices/getCameraWirelessProfiles:getCameraWirelessProfiles", {
+        "serial": args.serial,
+    }, opts);
 }
 
 /**

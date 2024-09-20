@@ -29,7 +29,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getWirelessDevicesChannelUtilizationHistoryByDeviceByInterval(args: GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalArgs, opts?: pulumi.InvokeOptions): Promise<GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getWirelessDevicesChannelUtilizationHistoryByDeviceByInterval:getWirelessDevicesChannelUtilizationHistoryByDeviceByInterval", {
         "endingBefore": args.endingBefore,
@@ -167,7 +166,19 @@ export interface GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalRe
  * ```
  */
 export function getWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalOutput(args: GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult> {
-    return pulumi.output(args).apply((a: any) => getWirelessDevicesChannelUtilizationHistoryByDeviceByInterval(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getWirelessDevicesChannelUtilizationHistoryByDeviceByInterval:getWirelessDevicesChannelUtilizationHistoryByDeviceByInterval", {
+        "endingBefore": args.endingBefore,
+        "interval": args.interval,
+        "networkIds": args.networkIds,
+        "organizationId": args.organizationId,
+        "perPage": args.perPage,
+        "serials": args.serials,
+        "startingAfter": args.startingAfter,
+        "t0": args.t0,
+        "t1": args.t1,
+        "timespan": args.timespan,
+    }, opts);
 }
 
 /**

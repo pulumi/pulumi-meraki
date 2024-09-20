@@ -11,7 +11,6 @@ import * as utilities from "../utilities";
  */
 export function getCameraCustomAnalyticsArtifacts(args?: GetCameraCustomAnalyticsArtifactsArgs, opts?: pulumi.InvokeOptions): Promise<GetCameraCustomAnalyticsArtifactsResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getCameraCustomAnalyticsArtifacts:getCameraCustomAnalyticsArtifacts", {
         "artifactId": args.artifactId,
@@ -59,7 +58,12 @@ export interface GetCameraCustomAnalyticsArtifactsResult {
  * ## Example Usage
  */
 export function getCameraCustomAnalyticsArtifactsOutput(args?: GetCameraCustomAnalyticsArtifactsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCameraCustomAnalyticsArtifactsResult> {
-    return pulumi.output(args).apply((a: any) => getCameraCustomAnalyticsArtifacts(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getCameraCustomAnalyticsArtifacts:getCameraCustomAnalyticsArtifacts", {
+        "artifactId": args.artifactId,
+        "organizationId": args.organizationId,
+    }, opts);
 }
 
 /**

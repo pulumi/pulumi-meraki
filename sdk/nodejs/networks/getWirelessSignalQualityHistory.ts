@@ -30,7 +30,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getWirelessSignalQualityHistory(args: GetWirelessSignalQualityHistoryArgs, opts?: pulumi.InvokeOptions): Promise<GetWirelessSignalQualityHistoryResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getWirelessSignalQualityHistory:getWirelessSignalQualityHistory", {
         "apTag": args.apTag,
@@ -178,7 +177,20 @@ export interface GetWirelessSignalQualityHistoryResult {
  * ```
  */
 export function getWirelessSignalQualityHistoryOutput(args: GetWirelessSignalQualityHistoryOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessSignalQualityHistoryResult> {
-    return pulumi.output(args).apply((a: any) => getWirelessSignalQualityHistory(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getWirelessSignalQualityHistory:getWirelessSignalQualityHistory", {
+        "apTag": args.apTag,
+        "autoResolution": args.autoResolution,
+        "band": args.band,
+        "clientId": args.clientId,
+        "deviceSerial": args.deviceSerial,
+        "networkId": args.networkId,
+        "resolution": args.resolution,
+        "ssid": args.ssid,
+        "t0": args.t0,
+        "t1": args.t1,
+        "timespan": args.timespan,
+    }, opts);
 }
 
 /**

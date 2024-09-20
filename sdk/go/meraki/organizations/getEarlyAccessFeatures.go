@@ -65,14 +65,20 @@ type GetEarlyAccessFeaturesResult struct {
 
 func GetEarlyAccessFeaturesOutput(ctx *pulumi.Context, args GetEarlyAccessFeaturesOutputArgs, opts ...pulumi.InvokeOption) GetEarlyAccessFeaturesResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetEarlyAccessFeaturesResult, error) {
+		ApplyT(func(v interface{}) (GetEarlyAccessFeaturesResultOutput, error) {
 			args := v.(GetEarlyAccessFeaturesArgs)
-			r, err := GetEarlyAccessFeatures(ctx, &args, opts...)
-			var s GetEarlyAccessFeaturesResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetEarlyAccessFeaturesResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getEarlyAccessFeatures:getEarlyAccessFeatures", args, &rv, "", opts...)
+			if err != nil {
+				return GetEarlyAccessFeaturesResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetEarlyAccessFeaturesResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetEarlyAccessFeaturesResultOutput), nil
+			}
+			return output, nil
 		}).(GetEarlyAccessFeaturesResultOutput)
 }
 
