@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getLiveToolsWakeOnLan(args: GetLiveToolsWakeOnLanArgs, opts?: pulumi.InvokeOptions): Promise<GetLiveToolsWakeOnLanResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:devices/getLiveToolsWakeOnLan:getLiveToolsWakeOnLan", {
         "serial": args.serial,
@@ -76,7 +75,11 @@ export interface GetLiveToolsWakeOnLanResult {
  * ```
  */
 export function getLiveToolsWakeOnLanOutput(args: GetLiveToolsWakeOnLanOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLiveToolsWakeOnLanResult> {
-    return pulumi.output(args).apply((a: any) => getLiveToolsWakeOnLan(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:devices/getLiveToolsWakeOnLan:getLiveToolsWakeOnLan", {
+        "serial": args.serial,
+        "wakeOnLanId": args.wakeOnLanId,
+    }, opts);
 }
 
 /**

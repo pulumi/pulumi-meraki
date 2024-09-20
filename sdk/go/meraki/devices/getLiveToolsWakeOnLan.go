@@ -69,14 +69,20 @@ type LookupLiveToolsWakeOnLanResult struct {
 
 func LookupLiveToolsWakeOnLanOutput(ctx *pulumi.Context, args LookupLiveToolsWakeOnLanOutputArgs, opts ...pulumi.InvokeOption) LookupLiveToolsWakeOnLanResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupLiveToolsWakeOnLanResult, error) {
+		ApplyT(func(v interface{}) (LookupLiveToolsWakeOnLanResultOutput, error) {
 			args := v.(LookupLiveToolsWakeOnLanArgs)
-			r, err := LookupLiveToolsWakeOnLan(ctx, &args, opts...)
-			var s LookupLiveToolsWakeOnLanResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupLiveToolsWakeOnLanResult
+			secret, err := ctx.InvokePackageRaw("meraki:devices/getLiveToolsWakeOnLan:getLiveToolsWakeOnLan", args, &rv, "", opts...)
+			if err != nil {
+				return LookupLiveToolsWakeOnLanResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupLiveToolsWakeOnLanResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupLiveToolsWakeOnLanResultOutput), nil
+			}
+			return output, nil
 		}).(LookupLiveToolsWakeOnLanResultOutput)
 }
 

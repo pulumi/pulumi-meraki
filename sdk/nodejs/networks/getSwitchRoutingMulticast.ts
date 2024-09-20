@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSwitchRoutingMulticast(args: GetSwitchRoutingMulticastArgs, opts?: pulumi.InvokeOptions): Promise<GetSwitchRoutingMulticastResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSwitchRoutingMulticast:getSwitchRoutingMulticast", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetSwitchRoutingMulticastResult {
  * ```
  */
 export function getSwitchRoutingMulticastOutput(args: GetSwitchRoutingMulticastOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchRoutingMulticastResult> {
-    return pulumi.output(args).apply((a: any) => getSwitchRoutingMulticast(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSwitchRoutingMulticast:getSwitchRoutingMulticast", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

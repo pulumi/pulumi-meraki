@@ -11,7 +11,6 @@ import * as utilities from "../utilities";
  */
 export function getCameraRoles(args?: GetCameraRolesArgs, opts?: pulumi.InvokeOptions): Promise<GetCameraRolesResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getCameraRoles:getCameraRoles", {
         "organizationId": args.organizationId,
@@ -59,7 +58,12 @@ export interface GetCameraRolesResult {
  * ## Example Usage
  */
 export function getCameraRolesOutput(args?: GetCameraRolesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCameraRolesResult> {
-    return pulumi.output(args).apply((a: any) => getCameraRoles(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getCameraRoles:getCameraRoles", {
+        "organizationId": args.organizationId,
+        "roleId": args.roleId,
+    }, opts);
 }
 
 /**

@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getApplianceVlansSettings(args: GetApplianceVlansSettingsArgs, opts?: pulumi.InvokeOptions): Promise<GetApplianceVlansSettingsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getApplianceVlansSettings:getApplianceVlansSettings", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetApplianceVlansSettingsResult {
  * ```
  */
 export function getApplianceVlansSettingsOutput(args: GetApplianceVlansSettingsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceVlansSettingsResult> {
-    return pulumi.output(args).apply((a: any) => getApplianceVlansSettings(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getApplianceVlansSettings:getApplianceVlansSettings", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

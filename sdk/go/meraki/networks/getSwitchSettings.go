@@ -64,14 +64,20 @@ type LookupSwitchSettingsResult struct {
 
 func LookupSwitchSettingsOutput(ctx *pulumi.Context, args LookupSwitchSettingsOutputArgs, opts ...pulumi.InvokeOption) LookupSwitchSettingsResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupSwitchSettingsResult, error) {
+		ApplyT(func(v interface{}) (LookupSwitchSettingsResultOutput, error) {
 			args := v.(LookupSwitchSettingsArgs)
-			r, err := LookupSwitchSettings(ctx, &args, opts...)
-			var s LookupSwitchSettingsResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupSwitchSettingsResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getSwitchSettings:getSwitchSettings", args, &rv, "", opts...)
+			if err != nil {
+				return LookupSwitchSettingsResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupSwitchSettingsResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupSwitchSettingsResultOutput), nil
+			}
+			return output, nil
 		}).(LookupSwitchSettingsResultOutput)
 }
 

@@ -26,7 +26,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getPiiSmDevicesForKey(args: GetPiiSmDevicesForKeyArgs, opts?: pulumi.InvokeOptions): Promise<GetPiiSmDevicesForKeyResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getPiiSmDevicesForKey:getPiiSmDevicesForKey", {
         "bluetoothMac": args.bluetoothMac,
@@ -131,7 +130,16 @@ export interface GetPiiSmDevicesForKeyResult {
  * ```
  */
 export function getPiiSmDevicesForKeyOutput(args: GetPiiSmDevicesForKeyOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetPiiSmDevicesForKeyResult> {
-    return pulumi.output(args).apply((a: any) => getPiiSmDevicesForKey(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getPiiSmDevicesForKey:getPiiSmDevicesForKey", {
+        "bluetoothMac": args.bluetoothMac,
+        "email": args.email,
+        "imei": args.imei,
+        "mac": args.mac,
+        "networkId": args.networkId,
+        "serial": args.serial,
+        "username": args.username,
+    }, opts);
 }
 
 /**

@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getLicenses(args: GetLicensesArgs, opts?: pulumi.InvokeOptions): Promise<GetLicensesResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getLicenses:getLicenses", {
         "licenseId": args.licenseId,
@@ -76,7 +75,11 @@ export interface GetLicensesResult {
  * ```
  */
 export function getLicensesOutput(args: GetLicensesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLicensesResult> {
-    return pulumi.output(args).apply((a: any) => getLicenses(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getLicenses:getLicenses", {
+        "licenseId": args.licenseId,
+        "organizationId": args.organizationId,
+    }, opts);
 }
 
 /**

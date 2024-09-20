@@ -11,7 +11,6 @@ import * as utilities from "../utilities";
  */
 export function getWirelessSsidsIdentityPsks(args?: GetWirelessSsidsIdentityPsksArgs, opts?: pulumi.InvokeOptions): Promise<GetWirelessSsidsIdentityPsksResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getWirelessSsidsIdentityPsks:getWirelessSsidsIdentityPsks", {
         "identityPskId": args.identityPskId,
@@ -68,7 +67,13 @@ export interface GetWirelessSsidsIdentityPsksResult {
  * ## Example Usage
  */
 export function getWirelessSsidsIdentityPsksOutput(args?: GetWirelessSsidsIdentityPsksOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessSsidsIdentityPsksResult> {
-    return pulumi.output(args).apply((a: any) => getWirelessSsidsIdentityPsks(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getWirelessSsidsIdentityPsks:getWirelessSsidsIdentityPsks", {
+        "identityPskId": args.identityPskId,
+        "networkId": args.networkId,
+        "number": args.number,
+    }, opts);
 }
 
 /**

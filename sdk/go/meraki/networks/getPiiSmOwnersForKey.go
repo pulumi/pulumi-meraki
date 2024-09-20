@@ -94,14 +94,20 @@ type GetPiiSmOwnersForKeyResult struct {
 
 func GetPiiSmOwnersForKeyOutput(ctx *pulumi.Context, args GetPiiSmOwnersForKeyOutputArgs, opts ...pulumi.InvokeOption) GetPiiSmOwnersForKeyResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetPiiSmOwnersForKeyResult, error) {
+		ApplyT(func(v interface{}) (GetPiiSmOwnersForKeyResultOutput, error) {
 			args := v.(GetPiiSmOwnersForKeyArgs)
-			r, err := GetPiiSmOwnersForKey(ctx, &args, opts...)
-			var s GetPiiSmOwnersForKeyResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetPiiSmOwnersForKeyResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getPiiSmOwnersForKey:getPiiSmOwnersForKey", args, &rv, "", opts...)
+			if err != nil {
+				return GetPiiSmOwnersForKeyResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetPiiSmOwnersForKeyResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetPiiSmOwnersForKeyResultOutput), nil
+			}
+			return output, nil
 		}).(GetPiiSmOwnersForKeyResultOutput)
 }
 

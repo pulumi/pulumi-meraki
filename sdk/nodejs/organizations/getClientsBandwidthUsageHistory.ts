@@ -23,7 +23,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getClientsBandwidthUsageHistory(args: GetClientsBandwidthUsageHistoryArgs, opts?: pulumi.InvokeOptions): Promise<GetClientsBandwidthUsageHistoryResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getClientsBandwidthUsageHistory:getClientsBandwidthUsageHistory", {
         "organizationId": args.organizationId,
@@ -101,7 +100,13 @@ export interface GetClientsBandwidthUsageHistoryResult {
  * ```
  */
 export function getClientsBandwidthUsageHistoryOutput(args: GetClientsBandwidthUsageHistoryOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetClientsBandwidthUsageHistoryResult> {
-    return pulumi.output(args).apply((a: any) => getClientsBandwidthUsageHistory(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getClientsBandwidthUsageHistory:getClientsBandwidthUsageHistory", {
+        "organizationId": args.organizationId,
+        "t0": args.t0,
+        "t1": args.t1,
+        "timespan": args.timespan,
+    }, opts);
 }
 
 /**

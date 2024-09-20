@@ -27,7 +27,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getWirelessDevicesConnectionStats(args: GetWirelessDevicesConnectionStatsArgs, opts?: pulumi.InvokeOptions): Promise<GetWirelessDevicesConnectionStatsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getWirelessDevicesConnectionStats:getWirelessDevicesConnectionStats", {
         "apTag": args.apTag,
@@ -145,7 +144,17 @@ export interface GetWirelessDevicesConnectionStatsResult {
  * ```
  */
 export function getWirelessDevicesConnectionStatsOutput(args: GetWirelessDevicesConnectionStatsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessDevicesConnectionStatsResult> {
-    return pulumi.output(args).apply((a: any) => getWirelessDevicesConnectionStats(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getWirelessDevicesConnectionStats:getWirelessDevicesConnectionStats", {
+        "apTag": args.apTag,
+        "band": args.band,
+        "networkId": args.networkId,
+        "ssid": args.ssid,
+        "t0": args.t0,
+        "t1": args.t1,
+        "timespan": args.timespan,
+        "vlan": args.vlan,
+    }, opts);
 }
 
 /**

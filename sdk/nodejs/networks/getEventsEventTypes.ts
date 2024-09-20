@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getEventsEventTypes(args: GetEventsEventTypesArgs, opts?: pulumi.InvokeOptions): Promise<GetEventsEventTypesResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getEventsEventTypes:getEventsEventTypes", {
         "networkId": args.networkId,
@@ -68,7 +67,10 @@ export interface GetEventsEventTypesResult {
  * ```
  */
 export function getEventsEventTypesOutput(args: GetEventsEventTypesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetEventsEventTypesResult> {
-    return pulumi.output(args).apply((a: any) => getEventsEventTypes(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getEventsEventTypes:getEventsEventTypes", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

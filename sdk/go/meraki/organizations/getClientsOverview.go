@@ -79,14 +79,20 @@ type GetClientsOverviewResult struct {
 
 func GetClientsOverviewOutput(ctx *pulumi.Context, args GetClientsOverviewOutputArgs, opts ...pulumi.InvokeOption) GetClientsOverviewResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetClientsOverviewResult, error) {
+		ApplyT(func(v interface{}) (GetClientsOverviewResultOutput, error) {
 			args := v.(GetClientsOverviewArgs)
-			r, err := GetClientsOverview(ctx, &args, opts...)
-			var s GetClientsOverviewResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetClientsOverviewResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getClientsOverview:getClientsOverview", args, &rv, "", opts...)
+			if err != nil {
+				return GetClientsOverviewResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetClientsOverviewResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetClientsOverviewResultOutput), nil
+			}
+			return output, nil
 		}).(GetClientsOverviewResultOutput)
 }
 

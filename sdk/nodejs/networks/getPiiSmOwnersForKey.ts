@@ -26,7 +26,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getPiiSmOwnersForKey(args: GetPiiSmOwnersForKeyArgs, opts?: pulumi.InvokeOptions): Promise<GetPiiSmOwnersForKeyResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getPiiSmOwnersForKey:getPiiSmOwnersForKey", {
         "bluetoothMac": args.bluetoothMac,
@@ -131,7 +130,16 @@ export interface GetPiiSmOwnersForKeyResult {
  * ```
  */
 export function getPiiSmOwnersForKeyOutput(args: GetPiiSmOwnersForKeyOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetPiiSmOwnersForKeyResult> {
-    return pulumi.output(args).apply((a: any) => getPiiSmOwnersForKey(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getPiiSmOwnersForKey:getPiiSmOwnersForKey", {
+        "bluetoothMac": args.bluetoothMac,
+        "email": args.email,
+        "imei": args.imei,
+        "mac": args.mac,
+        "networkId": args.networkId,
+        "serial": args.serial,
+        "username": args.username,
+    }, opts);
 }
 
 /**

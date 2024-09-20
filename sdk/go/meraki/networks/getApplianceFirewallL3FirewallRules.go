@@ -64,14 +64,20 @@ type LookupApplianceFirewallL3FirewallRulesResult struct {
 
 func LookupApplianceFirewallL3FirewallRulesOutput(ctx *pulumi.Context, args LookupApplianceFirewallL3FirewallRulesOutputArgs, opts ...pulumi.InvokeOption) LookupApplianceFirewallL3FirewallRulesResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupApplianceFirewallL3FirewallRulesResult, error) {
+		ApplyT(func(v interface{}) (LookupApplianceFirewallL3FirewallRulesResultOutput, error) {
 			args := v.(LookupApplianceFirewallL3FirewallRulesArgs)
-			r, err := LookupApplianceFirewallL3FirewallRules(ctx, &args, opts...)
-			var s LookupApplianceFirewallL3FirewallRulesResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupApplianceFirewallL3FirewallRulesResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getApplianceFirewallL3FirewallRules:getApplianceFirewallL3FirewallRules", args, &rv, "", opts...)
+			if err != nil {
+				return LookupApplianceFirewallL3FirewallRulesResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupApplianceFirewallL3FirewallRulesResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupApplianceFirewallL3FirewallRulesResultOutput), nil
+			}
+			return output, nil
 		}).(LookupApplianceFirewallL3FirewallRulesResultOutput)
 }
 

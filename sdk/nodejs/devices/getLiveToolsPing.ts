@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getLiveToolsPing(args: GetLiveToolsPingArgs, opts?: pulumi.InvokeOptions): Promise<GetLiveToolsPingResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:devices/getLiveToolsPing:getLiveToolsPing", {
         "id": args.id,
@@ -72,7 +71,11 @@ export interface GetLiveToolsPingResult {
  * ```
  */
 export function getLiveToolsPingOutput(args: GetLiveToolsPingOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLiveToolsPingResult> {
-    return pulumi.output(args).apply((a: any) => getLiveToolsPing(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:devices/getLiveToolsPing:getLiveToolsPing", {
+        "id": args.id,
+        "serial": args.serial,
+    }, opts);
 }
 
 /**

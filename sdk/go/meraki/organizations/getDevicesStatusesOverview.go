@@ -78,14 +78,20 @@ type GetDevicesStatusesOverviewResult struct {
 
 func GetDevicesStatusesOverviewOutput(ctx *pulumi.Context, args GetDevicesStatusesOverviewOutputArgs, opts ...pulumi.InvokeOption) GetDevicesStatusesOverviewResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetDevicesStatusesOverviewResult, error) {
+		ApplyT(func(v interface{}) (GetDevicesStatusesOverviewResultOutput, error) {
 			args := v.(GetDevicesStatusesOverviewArgs)
-			r, err := GetDevicesStatusesOverview(ctx, &args, opts...)
-			var s GetDevicesStatusesOverviewResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetDevicesStatusesOverviewResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getDevicesStatusesOverview:getDevicesStatusesOverview", args, &rv, "", opts...)
+			if err != nil {
+				return GetDevicesStatusesOverviewResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetDevicesStatusesOverviewResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetDevicesStatusesOverviewResultOutput), nil
+			}
+			return output, nil
 		}).(GetDevicesStatusesOverviewResultOutput)
 }
 

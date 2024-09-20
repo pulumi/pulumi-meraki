@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getCameraBoundariesLinesByDevice(args: GetCameraBoundariesLinesByDeviceArgs, opts?: pulumi.InvokeOptions): Promise<GetCameraBoundariesLinesByDeviceResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getCameraBoundariesLinesByDevice:getCameraBoundariesLinesByDevice", {
         "organizationId": args.organizationId,
@@ -79,7 +78,11 @@ export interface GetCameraBoundariesLinesByDeviceResult {
  * ```
  */
 export function getCameraBoundariesLinesByDeviceOutput(args: GetCameraBoundariesLinesByDeviceOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCameraBoundariesLinesByDeviceResult> {
-    return pulumi.output(args).apply((a: any) => getCameraBoundariesLinesByDevice(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getCameraBoundariesLinesByDevice:getCameraBoundariesLinesByDevice", {
+        "organizationId": args.organizationId,
+        "serials": args.serials,
+    }, opts);
 }
 
 /**

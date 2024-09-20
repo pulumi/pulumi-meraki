@@ -64,14 +64,20 @@ type LookupApplianceSecurityIntrusionResult struct {
 
 func LookupApplianceSecurityIntrusionOutput(ctx *pulumi.Context, args LookupApplianceSecurityIntrusionOutputArgs, opts ...pulumi.InvokeOption) LookupApplianceSecurityIntrusionResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupApplianceSecurityIntrusionResult, error) {
+		ApplyT(func(v interface{}) (LookupApplianceSecurityIntrusionResultOutput, error) {
 			args := v.(LookupApplianceSecurityIntrusionArgs)
-			r, err := LookupApplianceSecurityIntrusion(ctx, &args, opts...)
-			var s LookupApplianceSecurityIntrusionResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupApplianceSecurityIntrusionResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getApplianceSecurityIntrusion:getApplianceSecurityIntrusion", args, &rv, "", opts...)
+			if err != nil {
+				return LookupApplianceSecurityIntrusionResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupApplianceSecurityIntrusionResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupApplianceSecurityIntrusionResultOutput), nil
+			}
+			return output, nil
 		}).(LookupApplianceSecurityIntrusionResultOutput)
 }
 

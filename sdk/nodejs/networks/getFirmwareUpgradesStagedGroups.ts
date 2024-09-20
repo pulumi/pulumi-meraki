@@ -11,7 +11,6 @@ import * as utilities from "../utilities";
  */
 export function getFirmwareUpgradesStagedGroups(args?: GetFirmwareUpgradesStagedGroupsArgs, opts?: pulumi.InvokeOptions): Promise<GetFirmwareUpgradesStagedGroupsResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getFirmwareUpgradesStagedGroups:getFirmwareUpgradesStagedGroups", {
         "groupId": args.groupId,
@@ -59,7 +58,12 @@ export interface GetFirmwareUpgradesStagedGroupsResult {
  * ## Example Usage
  */
 export function getFirmwareUpgradesStagedGroupsOutput(args?: GetFirmwareUpgradesStagedGroupsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetFirmwareUpgradesStagedGroupsResult> {
-    return pulumi.output(args).apply((a: any) => getFirmwareUpgradesStagedGroups(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getFirmwareUpgradesStagedGroups:getFirmwareUpgradesStagedGroups", {
+        "groupId": args.groupId,
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

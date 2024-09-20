@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getWirelessSsidsHotspot20(args: GetWirelessSsidsHotspot20Args, opts?: pulumi.InvokeOptions): Promise<GetWirelessSsidsHotspot20Result> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getWirelessSsidsHotspot20:getWirelessSsidsHotspot20", {
         "networkId": args.networkId,
@@ -76,7 +75,11 @@ export interface GetWirelessSsidsHotspot20Result {
  * ```
  */
 export function getWirelessSsidsHotspot20Output(args: GetWirelessSsidsHotspot20OutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessSsidsHotspot20Result> {
-    return pulumi.output(args).apply((a: any) => getWirelessSsidsHotspot20(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getWirelessSsidsHotspot20:getWirelessSsidsHotspot20", {
+        "networkId": args.networkId,
+        "number": args.number,
+    }, opts);
 }
 
 /**

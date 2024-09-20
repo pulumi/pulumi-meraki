@@ -65,14 +65,20 @@ type GetEventsEventTypesResult struct {
 
 func GetEventsEventTypesOutput(ctx *pulumi.Context, args GetEventsEventTypesOutputArgs, opts ...pulumi.InvokeOption) GetEventsEventTypesResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetEventsEventTypesResult, error) {
+		ApplyT(func(v interface{}) (GetEventsEventTypesResultOutput, error) {
 			args := v.(GetEventsEventTypesArgs)
-			r, err := GetEventsEventTypes(ctx, &args, opts...)
-			var s GetEventsEventTypesResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetEventsEventTypesResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getEventsEventTypes:getEventsEventTypes", args, &rv, "", opts...)
+			if err != nil {
+				return GetEventsEventTypesResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetEventsEventTypesResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetEventsEventTypesResultOutput), nil
+			}
+			return output, nil
 		}).(GetEventsEventTypesResultOutput)
 }
 

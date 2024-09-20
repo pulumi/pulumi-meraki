@@ -64,14 +64,20 @@ type LookupSwitchRoutingOspfResult struct {
 
 func LookupSwitchRoutingOspfOutput(ctx *pulumi.Context, args LookupSwitchRoutingOspfOutputArgs, opts ...pulumi.InvokeOption) LookupSwitchRoutingOspfResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupSwitchRoutingOspfResult, error) {
+		ApplyT(func(v interface{}) (LookupSwitchRoutingOspfResultOutput, error) {
 			args := v.(LookupSwitchRoutingOspfArgs)
-			r, err := LookupSwitchRoutingOspf(ctx, &args, opts...)
-			var s LookupSwitchRoutingOspfResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupSwitchRoutingOspfResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getSwitchRoutingOspf:getSwitchRoutingOspf", args, &rv, "", opts...)
+			if err != nil {
+				return LookupSwitchRoutingOspfResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupSwitchRoutingOspfResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupSwitchRoutingOspfResultOutput), nil
+			}
+			return output, nil
 		}).(LookupSwitchRoutingOspfResultOutput)
 }
 

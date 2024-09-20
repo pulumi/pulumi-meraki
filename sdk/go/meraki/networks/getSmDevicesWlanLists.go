@@ -70,14 +70,20 @@ type GetSmDevicesWlanListsResult struct {
 
 func GetSmDevicesWlanListsOutput(ctx *pulumi.Context, args GetSmDevicesWlanListsOutputArgs, opts ...pulumi.InvokeOption) GetSmDevicesWlanListsResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetSmDevicesWlanListsResult, error) {
+		ApplyT(func(v interface{}) (GetSmDevicesWlanListsResultOutput, error) {
 			args := v.(GetSmDevicesWlanListsArgs)
-			r, err := GetSmDevicesWlanLists(ctx, &args, opts...)
-			var s GetSmDevicesWlanListsResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetSmDevicesWlanListsResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getSmDevicesWlanLists:getSmDevicesWlanLists", args, &rv, "", opts...)
+			if err != nil {
+				return GetSmDevicesWlanListsResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetSmDevicesWlanListsResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetSmDevicesWlanListsResultOutput), nil
+			}
+			return output, nil
 		}).(GetSmDevicesWlanListsResultOutput)
 }
 

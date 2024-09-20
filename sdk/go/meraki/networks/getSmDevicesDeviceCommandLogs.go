@@ -85,14 +85,20 @@ type GetSmDevicesDeviceCommandLogsResult struct {
 
 func GetSmDevicesDeviceCommandLogsOutput(ctx *pulumi.Context, args GetSmDevicesDeviceCommandLogsOutputArgs, opts ...pulumi.InvokeOption) GetSmDevicesDeviceCommandLogsResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetSmDevicesDeviceCommandLogsResult, error) {
+		ApplyT(func(v interface{}) (GetSmDevicesDeviceCommandLogsResultOutput, error) {
 			args := v.(GetSmDevicesDeviceCommandLogsArgs)
-			r, err := GetSmDevicesDeviceCommandLogs(ctx, &args, opts...)
-			var s GetSmDevicesDeviceCommandLogsResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetSmDevicesDeviceCommandLogsResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getSmDevicesDeviceCommandLogs:getSmDevicesDeviceCommandLogs", args, &rv, "", opts...)
+			if err != nil {
+				return GetSmDevicesDeviceCommandLogsResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetSmDevicesDeviceCommandLogsResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetSmDevicesDeviceCommandLogsResultOutput), nil
+			}
+			return output, nil
 		}).(GetSmDevicesDeviceCommandLogsResultOutput)
 }
 

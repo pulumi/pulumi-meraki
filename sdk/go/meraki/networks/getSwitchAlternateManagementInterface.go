@@ -64,14 +64,20 @@ type LookupSwitchAlternateManagementInterfaceResult struct {
 
 func LookupSwitchAlternateManagementInterfaceOutput(ctx *pulumi.Context, args LookupSwitchAlternateManagementInterfaceOutputArgs, opts ...pulumi.InvokeOption) LookupSwitchAlternateManagementInterfaceResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupSwitchAlternateManagementInterfaceResult, error) {
+		ApplyT(func(v interface{}) (LookupSwitchAlternateManagementInterfaceResultOutput, error) {
 			args := v.(LookupSwitchAlternateManagementInterfaceArgs)
-			r, err := LookupSwitchAlternateManagementInterface(ctx, &args, opts...)
-			var s LookupSwitchAlternateManagementInterfaceResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupSwitchAlternateManagementInterfaceResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getSwitchAlternateManagementInterface:getSwitchAlternateManagementInterface", args, &rv, "", opts...)
+			if err != nil {
+				return LookupSwitchAlternateManagementInterfaceResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupSwitchAlternateManagementInterfaceResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupSwitchAlternateManagementInterfaceResultOutput), nil
+			}
+			return output, nil
 		}).(LookupSwitchAlternateManagementInterfaceResultOutput)
 }
 

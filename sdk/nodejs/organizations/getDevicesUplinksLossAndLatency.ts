@@ -25,7 +25,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getDevicesUplinksLossAndLatency(args: GetDevicesUplinksLossAndLatencyArgs, opts?: pulumi.InvokeOptions): Promise<GetDevicesUplinksLossAndLatencyResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getDevicesUplinksLossAndLatency:getDevicesUplinksLossAndLatency", {
         "ip": args.ip,
@@ -123,7 +122,15 @@ export interface GetDevicesUplinksLossAndLatencyResult {
  * ```
  */
 export function getDevicesUplinksLossAndLatencyOutput(args: GetDevicesUplinksLossAndLatencyOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDevicesUplinksLossAndLatencyResult> {
-    return pulumi.output(args).apply((a: any) => getDevicesUplinksLossAndLatency(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getDevicesUplinksLossAndLatency:getDevicesUplinksLossAndLatency", {
+        "ip": args.ip,
+        "organizationId": args.organizationId,
+        "t0": args.t0,
+        "t1": args.t1,
+        "timespan": args.timespan,
+        "uplink": args.uplink,
+    }, opts);
 }
 
 /**

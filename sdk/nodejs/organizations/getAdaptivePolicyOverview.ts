@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getAdaptivePolicyOverview(args: GetAdaptivePolicyOverviewArgs, opts?: pulumi.InvokeOptions): Promise<GetAdaptivePolicyOverviewResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getAdaptivePolicyOverview:getAdaptivePolicyOverview", {
         "organizationId": args.organizationId,
@@ -65,7 +64,10 @@ export interface GetAdaptivePolicyOverviewResult {
  * ```
  */
 export function getAdaptivePolicyOverviewOutput(args: GetAdaptivePolicyOverviewOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAdaptivePolicyOverviewResult> {
-    return pulumi.output(args).apply((a: any) => getAdaptivePolicyOverview(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getAdaptivePolicyOverview:getAdaptivePolicyOverview", {
+        "organizationId": args.organizationId,
+    }, opts);
 }
 
 /**

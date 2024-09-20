@@ -64,14 +64,20 @@ type LookupCameraQualityAndRetentionResult struct {
 
 func LookupCameraQualityAndRetentionOutput(ctx *pulumi.Context, args LookupCameraQualityAndRetentionOutputArgs, opts ...pulumi.InvokeOption) LookupCameraQualityAndRetentionResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupCameraQualityAndRetentionResult, error) {
+		ApplyT(func(v interface{}) (LookupCameraQualityAndRetentionResultOutput, error) {
 			args := v.(LookupCameraQualityAndRetentionArgs)
-			r, err := LookupCameraQualityAndRetention(ctx, &args, opts...)
-			var s LookupCameraQualityAndRetentionResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupCameraQualityAndRetentionResult
+			secret, err := ctx.InvokePackageRaw("meraki:devices/getCameraQualityAndRetention:getCameraQualityAndRetention", args, &rv, "", opts...)
+			if err != nil {
+				return LookupCameraQualityAndRetentionResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupCameraQualityAndRetentionResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupCameraQualityAndRetentionResultOutput), nil
+			}
+			return output, nil
 		}).(LookupCameraQualityAndRetentionResultOutput)
 }
 

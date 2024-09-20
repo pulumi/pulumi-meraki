@@ -64,14 +64,20 @@ type GetTrafficShapingApplicationCategoriesResult struct {
 
 func GetTrafficShapingApplicationCategoriesOutput(ctx *pulumi.Context, args GetTrafficShapingApplicationCategoriesOutputArgs, opts ...pulumi.InvokeOption) GetTrafficShapingApplicationCategoriesResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetTrafficShapingApplicationCategoriesResult, error) {
+		ApplyT(func(v interface{}) (GetTrafficShapingApplicationCategoriesResultOutput, error) {
 			args := v.(GetTrafficShapingApplicationCategoriesArgs)
-			r, err := GetTrafficShapingApplicationCategories(ctx, &args, opts...)
-			var s GetTrafficShapingApplicationCategoriesResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetTrafficShapingApplicationCategoriesResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getTrafficShapingApplicationCategories:getTrafficShapingApplicationCategories", args, &rv, "", opts...)
+			if err != nil {
+				return GetTrafficShapingApplicationCategoriesResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetTrafficShapingApplicationCategoriesResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetTrafficShapingApplicationCategoriesResultOutput), nil
+			}
+			return output, nil
 		}).(GetTrafficShapingApplicationCategoriesResultOutput)
 }
 

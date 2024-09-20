@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getClients(args: GetClientsArgs, opts?: pulumi.InvokeOptions): Promise<GetClientsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getClients:getClients", {
         "clientId": args.clientId,
@@ -76,7 +75,11 @@ export interface GetClientsResult {
  * ```
  */
 export function getClientsOutput(args: GetClientsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetClientsResult> {
-    return pulumi.output(args).apply((a: any) => getClients(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getClients:getClients", {
+        "clientId": args.clientId,
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

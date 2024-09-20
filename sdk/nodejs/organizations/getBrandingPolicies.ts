@@ -11,7 +11,6 @@ import * as utilities from "../utilities";
  */
 export function getBrandingPolicies(args?: GetBrandingPoliciesArgs, opts?: pulumi.InvokeOptions): Promise<GetBrandingPoliciesResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getBrandingPolicies:getBrandingPolicies", {
         "brandingPolicyId": args.brandingPolicyId,
@@ -59,7 +58,12 @@ export interface GetBrandingPoliciesResult {
  * ## Example Usage
  */
 export function getBrandingPoliciesOutput(args?: GetBrandingPoliciesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetBrandingPoliciesResult> {
-    return pulumi.output(args).apply((a: any) => getBrandingPolicies(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getBrandingPolicies:getBrandingPolicies", {
+        "brandingPolicyId": args.brandingPolicyId,
+        "organizationId": args.organizationId,
+    }, opts);
 }
 
 /**

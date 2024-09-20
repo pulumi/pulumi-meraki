@@ -94,14 +94,20 @@ type GetPiiSmDevicesForKeyResult struct {
 
 func GetPiiSmDevicesForKeyOutput(ctx *pulumi.Context, args GetPiiSmDevicesForKeyOutputArgs, opts ...pulumi.InvokeOption) GetPiiSmDevicesForKeyResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetPiiSmDevicesForKeyResult, error) {
+		ApplyT(func(v interface{}) (GetPiiSmDevicesForKeyResultOutput, error) {
 			args := v.(GetPiiSmDevicesForKeyArgs)
-			r, err := GetPiiSmDevicesForKey(ctx, &args, opts...)
-			var s GetPiiSmDevicesForKeyResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetPiiSmDevicesForKeyResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getPiiSmDevicesForKey:getPiiSmDevicesForKey", args, &rv, "", opts...)
+			if err != nil {
+				return GetPiiSmDevicesForKeyResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetPiiSmDevicesForKeyResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetPiiSmDevicesForKeyResultOutput), nil
+			}
+			return output, nil
 		}).(GetPiiSmDevicesForKeyResultOutput)
 }
 

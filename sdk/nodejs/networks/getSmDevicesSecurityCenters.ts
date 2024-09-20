@@ -22,7 +22,6 @@ import * as utilities from "../utilities";
  */
 export function getSmDevicesSecurityCenters(args?: GetSmDevicesSecurityCentersArgs, opts?: pulumi.InvokeOptions): Promise<GetSmDevicesSecurityCentersResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSmDevicesSecurityCenters:getSmDevicesSecurityCenters", {
         "deviceId": args.deviceId,
@@ -80,7 +79,12 @@ export interface GetSmDevicesSecurityCentersResult {
  * ```
  */
 export function getSmDevicesSecurityCentersOutput(args?: GetSmDevicesSecurityCentersOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmDevicesSecurityCentersResult> {
-    return pulumi.output(args).apply((a: any) => getSmDevicesSecurityCenters(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSmDevicesSecurityCenters:getSmDevicesSecurityCenters", {
+        "deviceId": args.deviceId,
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

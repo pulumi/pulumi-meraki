@@ -64,14 +64,20 @@ type GetTopologyLinkLayerResult struct {
 
 func GetTopologyLinkLayerOutput(ctx *pulumi.Context, args GetTopologyLinkLayerOutputArgs, opts ...pulumi.InvokeOption) GetTopologyLinkLayerResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetTopologyLinkLayerResult, error) {
+		ApplyT(func(v interface{}) (GetTopologyLinkLayerResultOutput, error) {
 			args := v.(GetTopologyLinkLayerArgs)
-			r, err := GetTopologyLinkLayer(ctx, &args, opts...)
-			var s GetTopologyLinkLayerResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetTopologyLinkLayerResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getTopologyLinkLayer:getTopologyLinkLayer", args, &rv, "", opts...)
+			if err != nil {
+				return GetTopologyLinkLayerResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetTopologyLinkLayerResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetTopologyLinkLayerResultOutput), nil
+			}
+			return output, nil
 		}).(GetTopologyLinkLayerResultOutput)
 }
 

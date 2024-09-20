@@ -25,7 +25,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSwitchDhcpV4ServersSeen(args: GetSwitchDhcpV4ServersSeenArgs, opts?: pulumi.InvokeOptions): Promise<GetSwitchDhcpV4ServersSeenResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSwitchDhcpV4ServersSeen:getSwitchDhcpV4ServersSeen", {
         "endingBefore": args.endingBefore,
@@ -123,7 +122,15 @@ export interface GetSwitchDhcpV4ServersSeenResult {
  * ```
  */
 export function getSwitchDhcpV4ServersSeenOutput(args: GetSwitchDhcpV4ServersSeenOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchDhcpV4ServersSeenResult> {
-    return pulumi.output(args).apply((a: any) => getSwitchDhcpV4ServersSeen(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSwitchDhcpV4ServersSeen:getSwitchDhcpV4ServersSeen", {
+        "endingBefore": args.endingBefore,
+        "networkId": args.networkId,
+        "perPage": args.perPage,
+        "startingAfter": args.startingAfter,
+        "t0": args.t0,
+        "timespan": args.timespan,
+    }, opts);
 }
 
 /**

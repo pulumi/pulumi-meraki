@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getLiveToolsThroughputTest(args: GetLiveToolsThroughputTestArgs, opts?: pulumi.InvokeOptions): Promise<GetLiveToolsThroughputTestResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:devices/getLiveToolsThroughputTest:getLiveToolsThroughputTest", {
         "serial": args.serial,
@@ -76,7 +75,11 @@ export interface GetLiveToolsThroughputTestResult {
  * ```
  */
 export function getLiveToolsThroughputTestOutput(args: GetLiveToolsThroughputTestOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLiveToolsThroughputTestResult> {
-    return pulumi.output(args).apply((a: any) => getLiveToolsThroughputTest(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:devices/getLiveToolsThroughputTest:getLiveToolsThroughputTest", {
+        "serial": args.serial,
+        "throughputTestId": args.throughputTestId,
+    }, opts);
 }
 
 /**

@@ -25,7 +25,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getCameraDetectionsHistoryByBoundaryByInterval(args: GetCameraDetectionsHistoryByBoundaryByIntervalArgs, opts?: pulumi.InvokeOptions): Promise<GetCameraDetectionsHistoryByBoundaryByIntervalResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getCameraDetectionsHistoryByBoundaryByInterval:getCameraDetectionsHistoryByBoundaryByInterval", {
         "boundaryIds": args.boundaryIds,
@@ -123,7 +122,15 @@ export interface GetCameraDetectionsHistoryByBoundaryByIntervalResult {
  * ```
  */
 export function getCameraDetectionsHistoryByBoundaryByIntervalOutput(args: GetCameraDetectionsHistoryByBoundaryByIntervalOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCameraDetectionsHistoryByBoundaryByIntervalResult> {
-    return pulumi.output(args).apply((a: any) => getCameraDetectionsHistoryByBoundaryByInterval(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getCameraDetectionsHistoryByBoundaryByInterval:getCameraDetectionsHistoryByBoundaryByInterval", {
+        "boundaryIds": args.boundaryIds,
+        "boundaryTypes": args.boundaryTypes,
+        "duration": args.duration,
+        "organizationId": args.organizationId,
+        "perPage": args.perPage,
+        "ranges": args.ranges,
+    }, opts);
 }
 
 /**

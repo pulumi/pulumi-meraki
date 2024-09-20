@@ -64,14 +64,20 @@ type LookupSyslogServersResult struct {
 
 func LookupSyslogServersOutput(ctx *pulumi.Context, args LookupSyslogServersOutputArgs, opts ...pulumi.InvokeOption) LookupSyslogServersResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupSyslogServersResult, error) {
+		ApplyT(func(v interface{}) (LookupSyslogServersResultOutput, error) {
 			args := v.(LookupSyslogServersArgs)
-			r, err := LookupSyslogServers(ctx, &args, opts...)
-			var s LookupSyslogServersResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupSyslogServersResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getSyslogServers:getSyslogServers", args, &rv, "", opts...)
+			if err != nil {
+				return LookupSyslogServersResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupSyslogServersResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupSyslogServersResultOutput), nil
+			}
+			return output, nil
 		}).(LookupSyslogServersResultOutput)
 }
 

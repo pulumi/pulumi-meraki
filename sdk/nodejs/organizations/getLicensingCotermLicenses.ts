@@ -25,7 +25,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getLicensingCotermLicenses(args: GetLicensingCotermLicensesArgs, opts?: pulumi.InvokeOptions): Promise<GetLicensingCotermLicensesResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getLicensingCotermLicenses:getLicensingCotermLicenses", {
         "endingBefore": args.endingBefore,
@@ -123,7 +122,15 @@ export interface GetLicensingCotermLicensesResult {
  * ```
  */
 export function getLicensingCotermLicensesOutput(args: GetLicensingCotermLicensesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLicensingCotermLicensesResult> {
-    return pulumi.output(args).apply((a: any) => getLicensingCotermLicenses(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getLicensingCotermLicenses:getLicensingCotermLicenses", {
+        "endingBefore": args.endingBefore,
+        "expired": args.expired,
+        "invalidated": args.invalidated,
+        "organizationId": args.organizationId,
+        "perPage": args.perPage,
+        "startingAfter": args.startingAfter,
+    }, opts);
 }
 
 /**

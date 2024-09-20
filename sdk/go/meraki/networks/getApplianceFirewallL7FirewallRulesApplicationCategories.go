@@ -64,14 +64,20 @@ type GetApplianceFirewallL7FirewallRulesApplicationCategoriesResult struct {
 
 func GetApplianceFirewallL7FirewallRulesApplicationCategoriesOutput(ctx *pulumi.Context, args GetApplianceFirewallL7FirewallRulesApplicationCategoriesOutputArgs, opts ...pulumi.InvokeOption) GetApplianceFirewallL7FirewallRulesApplicationCategoriesResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetApplianceFirewallL7FirewallRulesApplicationCategoriesResult, error) {
+		ApplyT(func(v interface{}) (GetApplianceFirewallL7FirewallRulesApplicationCategoriesResultOutput, error) {
 			args := v.(GetApplianceFirewallL7FirewallRulesApplicationCategoriesArgs)
-			r, err := GetApplianceFirewallL7FirewallRulesApplicationCategories(ctx, &args, opts...)
-			var s GetApplianceFirewallL7FirewallRulesApplicationCategoriesResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetApplianceFirewallL7FirewallRulesApplicationCategoriesResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getApplianceFirewallL7FirewallRulesApplicationCategories:getApplianceFirewallL7FirewallRulesApplicationCategories", args, &rv, "", opts...)
+			if err != nil {
+				return GetApplianceFirewallL7FirewallRulesApplicationCategoriesResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetApplianceFirewallL7FirewallRulesApplicationCategoriesResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetApplianceFirewallL7FirewallRulesApplicationCategoriesResultOutput), nil
+			}
+			return output, nil
 		}).(GetApplianceFirewallL7FirewallRulesApplicationCategoriesResultOutput)
 }
 

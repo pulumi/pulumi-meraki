@@ -24,7 +24,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getClientsSearch(args: GetClientsSearchArgs, opts?: pulumi.InvokeOptions): Promise<GetClientsSearchResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getClientsSearch:getClientsSearch", {
         "endingBefore": args.endingBefore,
@@ -109,7 +108,14 @@ export interface GetClientsSearchResult {
  * ```
  */
 export function getClientsSearchOutput(args: GetClientsSearchOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetClientsSearchResult> {
-    return pulumi.output(args).apply((a: any) => getClientsSearch(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getClientsSearch:getClientsSearch", {
+        "endingBefore": args.endingBefore,
+        "mac": args.mac,
+        "organizationId": args.organizationId,
+        "perPage": args.perPage,
+        "startingAfter": args.startingAfter,
+    }, opts);
 }
 
 /**

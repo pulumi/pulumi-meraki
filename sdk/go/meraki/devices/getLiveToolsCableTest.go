@@ -67,14 +67,20 @@ type GetLiveToolsCableTestResult struct {
 
 func GetLiveToolsCableTestOutput(ctx *pulumi.Context, args GetLiveToolsCableTestOutputArgs, opts ...pulumi.InvokeOption) GetLiveToolsCableTestResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetLiveToolsCableTestResult, error) {
+		ApplyT(func(v interface{}) (GetLiveToolsCableTestResultOutput, error) {
 			args := v.(GetLiveToolsCableTestArgs)
-			r, err := GetLiveToolsCableTest(ctx, &args, opts...)
-			var s GetLiveToolsCableTestResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetLiveToolsCableTestResult
+			secret, err := ctx.InvokePackageRaw("meraki:devices/getLiveToolsCableTest:getLiveToolsCableTest", args, &rv, "", opts...)
+			if err != nil {
+				return GetLiveToolsCableTestResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetLiveToolsCableTestResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetLiveToolsCableTestResultOutput), nil
+			}
+			return output, nil
 		}).(GetLiveToolsCableTestResultOutput)
 }
 

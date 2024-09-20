@@ -68,14 +68,20 @@ type LookupEarlyAccessFeaturesOptInsResult struct {
 
 func LookupEarlyAccessFeaturesOptInsOutput(ctx *pulumi.Context, args LookupEarlyAccessFeaturesOptInsOutputArgs, opts ...pulumi.InvokeOption) LookupEarlyAccessFeaturesOptInsResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupEarlyAccessFeaturesOptInsResult, error) {
+		ApplyT(func(v interface{}) (LookupEarlyAccessFeaturesOptInsResultOutput, error) {
 			args := v.(LookupEarlyAccessFeaturesOptInsArgs)
-			r, err := LookupEarlyAccessFeaturesOptIns(ctx, &args, opts...)
-			var s LookupEarlyAccessFeaturesOptInsResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupEarlyAccessFeaturesOptInsResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getEarlyAccessFeaturesOptIns:getEarlyAccessFeaturesOptIns", args, &rv, "", opts...)
+			if err != nil {
+				return LookupEarlyAccessFeaturesOptInsResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupEarlyAccessFeaturesOptInsResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupEarlyAccessFeaturesOptInsResultOutput), nil
+			}
+			return output, nil
 		}).(LookupEarlyAccessFeaturesOptInsResultOutput)
 }
 

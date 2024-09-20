@@ -45,14 +45,20 @@ type LookupSwitchQosRulesOrderResult struct {
 
 func LookupSwitchQosRulesOrderOutput(ctx *pulumi.Context, args LookupSwitchQosRulesOrderOutputArgs, opts ...pulumi.InvokeOption) LookupSwitchQosRulesOrderResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupSwitchQosRulesOrderResult, error) {
+		ApplyT(func(v interface{}) (LookupSwitchQosRulesOrderResultOutput, error) {
 			args := v.(LookupSwitchQosRulesOrderArgs)
-			r, err := LookupSwitchQosRulesOrder(ctx, &args, opts...)
-			var s LookupSwitchQosRulesOrderResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupSwitchQosRulesOrderResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getSwitchQosRulesOrder:getSwitchQosRulesOrder", args, &rv, "", opts...)
+			if err != nil {
+				return LookupSwitchQosRulesOrderResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupSwitchQosRulesOrderResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupSwitchQosRulesOrderResultOutput), nil
+			}
+			return output, nil
 		}).(LookupSwitchQosRulesOrderResultOutput)
 }
 

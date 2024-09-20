@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getApplianceFirewallFirewalledServices(args: GetApplianceFirewallFirewalledServicesArgs, opts?: pulumi.InvokeOptions): Promise<GetApplianceFirewallFirewalledServicesResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getApplianceFirewallFirewalledServices:getApplianceFirewallFirewalledServices", {
         "networkId": args.networkId,
@@ -76,7 +75,11 @@ export interface GetApplianceFirewallFirewalledServicesResult {
  * ```
  */
 export function getApplianceFirewallFirewalledServicesOutput(args: GetApplianceFirewallFirewalledServicesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceFirewallFirewalledServicesResult> {
-    return pulumi.output(args).apply((a: any) => getApplianceFirewallFirewalledServices(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getApplianceFirewallFirewalledServices:getApplianceFirewallFirewalledServices", {
+        "networkId": args.networkId,
+        "service": args.service,
+    }, opts);
 }
 
 /**

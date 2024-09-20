@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getApplianceFirewallSettings(args: GetApplianceFirewallSettingsArgs, opts?: pulumi.InvokeOptions): Promise<GetApplianceFirewallSettingsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getApplianceFirewallSettings:getApplianceFirewallSettings", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetApplianceFirewallSettingsResult {
  * ```
  */
 export function getApplianceFirewallSettingsOutput(args: GetApplianceFirewallSettingsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceFirewallSettingsResult> {
-    return pulumi.output(args).apply((a: any) => getApplianceFirewallSettings(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getApplianceFirewallSettings:getApplianceFirewallSettings", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

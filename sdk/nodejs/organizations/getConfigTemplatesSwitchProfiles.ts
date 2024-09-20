@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getConfigTemplatesSwitchProfiles(args: GetConfigTemplatesSwitchProfilesArgs, opts?: pulumi.InvokeOptions): Promise<GetConfigTemplatesSwitchProfilesResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getConfigTemplatesSwitchProfiles:getConfigTemplatesSwitchProfiles", {
         "configTemplateId": args.configTemplateId,
@@ -79,7 +78,11 @@ export interface GetConfigTemplatesSwitchProfilesResult {
  * ```
  */
 export function getConfigTemplatesSwitchProfilesOutput(args: GetConfigTemplatesSwitchProfilesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetConfigTemplatesSwitchProfilesResult> {
-    return pulumi.output(args).apply((a: any) => getConfigTemplatesSwitchProfiles(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getConfigTemplatesSwitchProfiles:getConfigTemplatesSwitchProfiles", {
+        "configTemplateId": args.configTemplateId,
+        "organizationId": args.organizationId,
+    }, opts);
 }
 
 /**

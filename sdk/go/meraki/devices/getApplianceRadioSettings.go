@@ -64,14 +64,20 @@ type LookupApplianceRadioSettingsResult struct {
 
 func LookupApplianceRadioSettingsOutput(ctx *pulumi.Context, args LookupApplianceRadioSettingsOutputArgs, opts ...pulumi.InvokeOption) LookupApplianceRadioSettingsResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupApplianceRadioSettingsResult, error) {
+		ApplyT(func(v interface{}) (LookupApplianceRadioSettingsResultOutput, error) {
 			args := v.(LookupApplianceRadioSettingsArgs)
-			r, err := LookupApplianceRadioSettings(ctx, &args, opts...)
-			var s LookupApplianceRadioSettingsResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupApplianceRadioSettingsResult
+			secret, err := ctx.InvokePackageRaw("meraki:devices/getApplianceRadioSettings:getApplianceRadioSettings", args, &rv, "", opts...)
+			if err != nil {
+				return LookupApplianceRadioSettingsResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupApplianceRadioSettingsResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupApplianceRadioSettingsResultOutput), nil
+			}
+			return output, nil
 		}).(LookupApplianceRadioSettingsResultOutput)
 }
 

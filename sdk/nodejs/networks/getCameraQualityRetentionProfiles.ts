@@ -11,7 +11,6 @@ import * as utilities from "../utilities";
  */
 export function getCameraQualityRetentionProfiles(args?: GetCameraQualityRetentionProfilesArgs, opts?: pulumi.InvokeOptions): Promise<GetCameraQualityRetentionProfilesResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getCameraQualityRetentionProfiles:getCameraQualityRetentionProfiles", {
         "networkId": args.networkId,
@@ -59,7 +58,12 @@ export interface GetCameraQualityRetentionProfilesResult {
  * ## Example Usage
  */
 export function getCameraQualityRetentionProfilesOutput(args?: GetCameraQualityRetentionProfilesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCameraQualityRetentionProfilesResult> {
-    return pulumi.output(args).apply((a: any) => getCameraQualityRetentionProfiles(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getCameraQualityRetentionProfiles:getCameraQualityRetentionProfiles", {
+        "networkId": args.networkId,
+        "qualityRetentionProfileId": args.qualityRetentionProfileId,
+    }, opts);
 }
 
 /**

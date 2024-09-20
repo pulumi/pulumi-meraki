@@ -84,14 +84,20 @@ type GetClientsSearchResult struct {
 
 func GetClientsSearchOutput(ctx *pulumi.Context, args GetClientsSearchOutputArgs, opts ...pulumi.InvokeOption) GetClientsSearchResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetClientsSearchResult, error) {
+		ApplyT(func(v interface{}) (GetClientsSearchResultOutput, error) {
 			args := v.(GetClientsSearchArgs)
-			r, err := GetClientsSearch(ctx, &args, opts...)
-			var s GetClientsSearchResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetClientsSearchResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getClientsSearch:getClientsSearch", args, &rv, "", opts...)
+			if err != nil {
+				return GetClientsSearchResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetClientsSearchResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetClientsSearchResultOutput), nil
+			}
+			return output, nil
 		}).(GetClientsSearchResultOutput)
 }
 

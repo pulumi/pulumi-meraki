@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getAppliancePerformance(args: GetAppliancePerformanceArgs, opts?: pulumi.InvokeOptions): Promise<GetAppliancePerformanceResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:devices/getAppliancePerformance:getAppliancePerformance", {
         "serial": args.serial,
@@ -65,7 +64,10 @@ export interface GetAppliancePerformanceResult {
  * ```
  */
 export function getAppliancePerformanceOutput(args: GetAppliancePerformanceOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAppliancePerformanceResult> {
-    return pulumi.output(args).apply((a: any) => getAppliancePerformance(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:devices/getAppliancePerformance:getAppliancePerformance", {
+        "serial": args.serial,
+    }, opts);
 }
 
 /**

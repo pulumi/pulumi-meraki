@@ -83,14 +83,20 @@ type LookupPolicyObjectsResult struct {
 
 func LookupPolicyObjectsOutput(ctx *pulumi.Context, args LookupPolicyObjectsOutputArgs, opts ...pulumi.InvokeOption) LookupPolicyObjectsResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupPolicyObjectsResult, error) {
+		ApplyT(func(v interface{}) (LookupPolicyObjectsResultOutput, error) {
 			args := v.(LookupPolicyObjectsArgs)
-			r, err := LookupPolicyObjects(ctx, &args, opts...)
-			var s LookupPolicyObjectsResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupPolicyObjectsResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getPolicyObjects:getPolicyObjects", args, &rv, "", opts...)
+			if err != nil {
+				return LookupPolicyObjectsResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupPolicyObjectsResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupPolicyObjectsResultOutput), nil
+			}
+			return output, nil
 		}).(LookupPolicyObjectsResultOutput)
 }
 

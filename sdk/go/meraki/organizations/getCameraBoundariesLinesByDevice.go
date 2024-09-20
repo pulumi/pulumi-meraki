@@ -72,14 +72,20 @@ type GetCameraBoundariesLinesByDeviceResult struct {
 
 func GetCameraBoundariesLinesByDeviceOutput(ctx *pulumi.Context, args GetCameraBoundariesLinesByDeviceOutputArgs, opts ...pulumi.InvokeOption) GetCameraBoundariesLinesByDeviceResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetCameraBoundariesLinesByDeviceResult, error) {
+		ApplyT(func(v interface{}) (GetCameraBoundariesLinesByDeviceResultOutput, error) {
 			args := v.(GetCameraBoundariesLinesByDeviceArgs)
-			r, err := GetCameraBoundariesLinesByDevice(ctx, &args, opts...)
-			var s GetCameraBoundariesLinesByDeviceResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetCameraBoundariesLinesByDeviceResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getCameraBoundariesLinesByDevice:getCameraBoundariesLinesByDevice", args, &rv, "", opts...)
+			if err != nil {
+				return GetCameraBoundariesLinesByDeviceResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetCameraBoundariesLinesByDeviceResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetCameraBoundariesLinesByDeviceResultOutput), nil
+			}
+			return output, nil
 		}).(GetCameraBoundariesLinesByDeviceResultOutput)
 }
 

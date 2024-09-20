@@ -11,7 +11,6 @@ import * as utilities from "../utilities";
  */
 export function getWebhooksPayloadTemplates(args?: GetWebhooksPayloadTemplatesArgs, opts?: pulumi.InvokeOptions): Promise<GetWebhooksPayloadTemplatesResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getWebhooksPayloadTemplates:getWebhooksPayloadTemplates", {
         "networkId": args.networkId,
@@ -59,7 +58,12 @@ export interface GetWebhooksPayloadTemplatesResult {
  * ## Example Usage
  */
 export function getWebhooksPayloadTemplatesOutput(args?: GetWebhooksPayloadTemplatesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWebhooksPayloadTemplatesResult> {
-    return pulumi.output(args).apply((a: any) => getWebhooksPayloadTemplates(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getWebhooksPayloadTemplates:getWebhooksPayloadTemplates", {
+        "networkId": args.networkId,
+        "payloadTemplateId": args.payloadTemplateId,
+    }, opts);
 }
 
 /**

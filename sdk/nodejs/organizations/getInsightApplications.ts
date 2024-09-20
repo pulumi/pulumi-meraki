@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getInsightApplications(args: GetInsightApplicationsArgs, opts?: pulumi.InvokeOptions): Promise<GetInsightApplicationsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getInsightApplications:getInsightApplications", {
         "organizationId": args.organizationId,
@@ -68,7 +67,10 @@ export interface GetInsightApplicationsResult {
  * ```
  */
 export function getInsightApplicationsOutput(args: GetInsightApplicationsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetInsightApplicationsResult> {
-    return pulumi.output(args).apply((a: any) => getInsightApplications(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getInsightApplications:getInsightApplications", {
+        "organizationId": args.organizationId,
+    }, opts);
 }
 
 /**

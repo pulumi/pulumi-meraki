@@ -64,14 +64,20 @@ type LookupTrafficAnalysisResult struct {
 
 func LookupTrafficAnalysisOutput(ctx *pulumi.Context, args LookupTrafficAnalysisOutputArgs, opts ...pulumi.InvokeOption) LookupTrafficAnalysisResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupTrafficAnalysisResult, error) {
+		ApplyT(func(v interface{}) (LookupTrafficAnalysisResultOutput, error) {
 			args := v.(LookupTrafficAnalysisArgs)
-			r, err := LookupTrafficAnalysis(ctx, &args, opts...)
-			var s LookupTrafficAnalysisResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupTrafficAnalysisResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getTrafficAnalysis:getTrafficAnalysis", args, &rv, "", opts...)
+			if err != nil {
+				return LookupTrafficAnalysisResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupTrafficAnalysisResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupTrafficAnalysisResultOutput), nil
+			}
+			return output, nil
 		}).(LookupTrafficAnalysisResultOutput)
 }
 

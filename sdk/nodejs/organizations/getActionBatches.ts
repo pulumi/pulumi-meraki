@@ -11,7 +11,6 @@ import * as utilities from "../utilities";
  */
 export function getActionBatches(args?: GetActionBatchesArgs, opts?: pulumi.InvokeOptions): Promise<GetActionBatchesResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getActionBatches:getActionBatches", {
         "actionBatchId": args.actionBatchId,
@@ -68,7 +67,13 @@ export interface GetActionBatchesResult {
  * ## Example Usage
  */
 export function getActionBatchesOutput(args?: GetActionBatchesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetActionBatchesResult> {
-    return pulumi.output(args).apply((a: any) => getActionBatches(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getActionBatches:getActionBatches", {
+        "actionBatchId": args.actionBatchId,
+        "organizationId": args.organizationId,
+        "status": args.status,
+    }, opts);
 }
 
 /**

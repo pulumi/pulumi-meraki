@@ -11,7 +11,6 @@ import * as utilities from "./utilities";
  */
 export function getDevices(args?: GetDevicesArgs, opts?: pulumi.InvokeOptions): Promise<GetDevicesResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:index/getDevices:getDevices", {
         "configurationUpdatedAfter": args.configurationUpdatedAfter,
@@ -203,7 +202,28 @@ export interface GetDevicesResult {
  * ## Example Usage
  */
 export function getDevicesOutput(args?: GetDevicesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDevicesResult> {
-    return pulumi.output(args).apply((a: any) => getDevices(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:index/getDevices:getDevices", {
+        "configurationUpdatedAfter": args.configurationUpdatedAfter,
+        "endingBefore": args.endingBefore,
+        "mac": args.mac,
+        "macs": args.macs,
+        "model": args.model,
+        "models": args.models,
+        "name": args.name,
+        "networkIds": args.networkIds,
+        "organizationId": args.organizationId,
+        "perPage": args.perPage,
+        "productTypes": args.productTypes,
+        "sensorAlertProfileIds": args.sensorAlertProfileIds,
+        "sensorMetrics": args.sensorMetrics,
+        "serial": args.serial,
+        "serials": args.serials,
+        "startingAfter": args.startingAfter,
+        "tags": args.tags,
+        "tagsFilterType": args.tagsFilterType,
+    }, opts);
 }
 
 /**

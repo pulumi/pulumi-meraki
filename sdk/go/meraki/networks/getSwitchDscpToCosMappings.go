@@ -64,14 +64,20 @@ type LookupSwitchDscpToCosMappingsResult struct {
 
 func LookupSwitchDscpToCosMappingsOutput(ctx *pulumi.Context, args LookupSwitchDscpToCosMappingsOutputArgs, opts ...pulumi.InvokeOption) LookupSwitchDscpToCosMappingsResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupSwitchDscpToCosMappingsResult, error) {
+		ApplyT(func(v interface{}) (LookupSwitchDscpToCosMappingsResultOutput, error) {
 			args := v.(LookupSwitchDscpToCosMappingsArgs)
-			r, err := LookupSwitchDscpToCosMappings(ctx, &args, opts...)
-			var s LookupSwitchDscpToCosMappingsResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupSwitchDscpToCosMappingsResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getSwitchDscpToCosMappings:getSwitchDscpToCosMappings", args, &rv, "", opts...)
+			if err != nil {
+				return LookupSwitchDscpToCosMappingsResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupSwitchDscpToCosMappingsResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupSwitchDscpToCosMappingsResultOutput), nil
+			}
+			return output, nil
 		}).(LookupSwitchDscpToCosMappingsResultOutput)
 }
 

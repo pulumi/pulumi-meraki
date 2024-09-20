@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSwitchAlternateManagementInterface(args: GetSwitchAlternateManagementInterfaceArgs, opts?: pulumi.InvokeOptions): Promise<GetSwitchAlternateManagementInterfaceResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSwitchAlternateManagementInterface:getSwitchAlternateManagementInterface", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetSwitchAlternateManagementInterfaceResult {
  * ```
  */
 export function getSwitchAlternateManagementInterfaceOutput(args: GetSwitchAlternateManagementInterfaceOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchAlternateManagementInterfaceResult> {
-    return pulumi.output(args).apply((a: any) => getSwitchAlternateManagementInterface(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSwitchAlternateManagementInterface:getSwitchAlternateManagementInterface", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

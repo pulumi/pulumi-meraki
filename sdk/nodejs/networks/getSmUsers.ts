@@ -24,7 +24,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSmUsers(args: GetSmUsersArgs, opts?: pulumi.InvokeOptions): Promise<GetSmUsersResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSmUsers:getSmUsers", {
         "emails": args.emails,
@@ -112,7 +111,14 @@ export interface GetSmUsersResult {
  * ```
  */
 export function getSmUsersOutput(args: GetSmUsersOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmUsersResult> {
-    return pulumi.output(args).apply((a: any) => getSmUsers(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSmUsers:getSmUsers", {
+        "emails": args.emails,
+        "ids": args.ids,
+        "networkId": args.networkId,
+        "scopes": args.scopes,
+        "usernames": args.usernames,
+    }, opts);
 }
 
 /**

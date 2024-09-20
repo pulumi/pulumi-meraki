@@ -23,7 +23,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSummaryTopAppliancesByUtilization(args: GetSummaryTopAppliancesByUtilizationArgs, opts?: pulumi.InvokeOptions): Promise<GetSummaryTopAppliancesByUtilizationResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getSummaryTopAppliancesByUtilization:getSummaryTopAppliancesByUtilization", {
         "organizationId": args.organizationId,
@@ -101,7 +100,13 @@ export interface GetSummaryTopAppliancesByUtilizationResult {
  * ```
  */
 export function getSummaryTopAppliancesByUtilizationOutput(args: GetSummaryTopAppliancesByUtilizationOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSummaryTopAppliancesByUtilizationResult> {
-    return pulumi.output(args).apply((a: any) => getSummaryTopAppliancesByUtilization(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getSummaryTopAppliancesByUtilization:getSummaryTopAppliancesByUtilization", {
+        "organizationId": args.organizationId,
+        "t0": args.t0,
+        "t1": args.t1,
+        "timespan": args.timespan,
+    }, opts);
 }
 
 /**

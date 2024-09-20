@@ -53,14 +53,20 @@ type LookupConfigTemplatesSwitchProfilesPortsResult struct {
 
 func LookupConfigTemplatesSwitchProfilesPortsOutput(ctx *pulumi.Context, args LookupConfigTemplatesSwitchProfilesPortsOutputArgs, opts ...pulumi.InvokeOption) LookupConfigTemplatesSwitchProfilesPortsResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupConfigTemplatesSwitchProfilesPortsResult, error) {
+		ApplyT(func(v interface{}) (LookupConfigTemplatesSwitchProfilesPortsResultOutput, error) {
 			args := v.(LookupConfigTemplatesSwitchProfilesPortsArgs)
-			r, err := LookupConfigTemplatesSwitchProfilesPorts(ctx, &args, opts...)
-			var s LookupConfigTemplatesSwitchProfilesPortsResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupConfigTemplatesSwitchProfilesPortsResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getConfigTemplatesSwitchProfilesPorts:getConfigTemplatesSwitchProfilesPorts", args, &rv, "", opts...)
+			if err != nil {
+				return LookupConfigTemplatesSwitchProfilesPortsResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupConfigTemplatesSwitchProfilesPortsResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupConfigTemplatesSwitchProfilesPortsResultOutput), nil
+			}
+			return output, nil
 		}).(LookupConfigTemplatesSwitchProfilesPortsResultOutput)
 }
 

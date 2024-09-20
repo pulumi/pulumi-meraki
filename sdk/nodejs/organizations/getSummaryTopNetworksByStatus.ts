@@ -23,7 +23,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSummaryTopNetworksByStatus(args: GetSummaryTopNetworksByStatusArgs, opts?: pulumi.InvokeOptions): Promise<GetSummaryTopNetworksByStatusResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getSummaryTopNetworksByStatus:getSummaryTopNetworksByStatus", {
         "endingBefore": args.endingBefore,
@@ -101,7 +100,13 @@ export interface GetSummaryTopNetworksByStatusResult {
  * ```
  */
 export function getSummaryTopNetworksByStatusOutput(args: GetSummaryTopNetworksByStatusOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSummaryTopNetworksByStatusResult> {
-    return pulumi.output(args).apply((a: any) => getSummaryTopNetworksByStatus(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getSummaryTopNetworksByStatus:getSummaryTopNetworksByStatus", {
+        "endingBefore": args.endingBefore,
+        "organizationId": args.organizationId,
+        "perPage": args.perPage,
+        "startingAfter": args.startingAfter,
+    }, opts);
 }
 
 /**

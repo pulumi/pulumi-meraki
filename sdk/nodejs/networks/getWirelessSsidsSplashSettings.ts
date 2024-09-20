@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getWirelessSsidsSplashSettings(args: GetWirelessSsidsSplashSettingsArgs, opts?: pulumi.InvokeOptions): Promise<GetWirelessSsidsSplashSettingsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getWirelessSsidsSplashSettings:getWirelessSsidsSplashSettings", {
         "networkId": args.networkId,
@@ -76,7 +75,11 @@ export interface GetWirelessSsidsSplashSettingsResult {
  * ```
  */
 export function getWirelessSsidsSplashSettingsOutput(args: GetWirelessSsidsSplashSettingsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessSsidsSplashSettingsResult> {
-    return pulumi.output(args).apply((a: any) => getWirelessSsidsSplashSettings(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getWirelessSsidsSplashSettings:getWirelessSsidsSplashSettings", {
+        "networkId": args.networkId,
+        "number": args.number,
+    }, opts);
 }
 
 /**

@@ -45,14 +45,20 @@ type LookupSwitchPortsResult struct {
 
 func LookupSwitchPortsOutput(ctx *pulumi.Context, args LookupSwitchPortsOutputArgs, opts ...pulumi.InvokeOption) LookupSwitchPortsResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupSwitchPortsResult, error) {
+		ApplyT(func(v interface{}) (LookupSwitchPortsResultOutput, error) {
 			args := v.(LookupSwitchPortsArgs)
-			r, err := LookupSwitchPorts(ctx, &args, opts...)
-			var s LookupSwitchPortsResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupSwitchPortsResult
+			secret, err := ctx.InvokePackageRaw("meraki:devices/getSwitchPorts:getSwitchPorts", args, &rv, "", opts...)
+			if err != nil {
+				return LookupSwitchPortsResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupSwitchPortsResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupSwitchPortsResultOutput), nil
+			}
+			return output, nil
 		}).(LookupSwitchPortsResultOutput)
 }
 

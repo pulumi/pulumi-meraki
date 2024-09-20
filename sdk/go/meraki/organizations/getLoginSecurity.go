@@ -64,14 +64,20 @@ type LookupLoginSecurityResult struct {
 
 func LookupLoginSecurityOutput(ctx *pulumi.Context, args LookupLoginSecurityOutputArgs, opts ...pulumi.InvokeOption) LookupLoginSecurityResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupLoginSecurityResult, error) {
+		ApplyT(func(v interface{}) (LookupLoginSecurityResultOutput, error) {
 			args := v.(LookupLoginSecurityArgs)
-			r, err := LookupLoginSecurity(ctx, &args, opts...)
-			var s LookupLoginSecurityResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupLoginSecurityResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getLoginSecurity:getLoginSecurity", args, &rv, "", opts...)
+			if err != nil {
+				return LookupLoginSecurityResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupLoginSecurityResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupLoginSecurityResultOutput), nil
+			}
+			return output, nil
 		}).(LookupLoginSecurityResultOutput)
 }
 

@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getAlertsSettings(args: GetAlertsSettingsArgs, opts?: pulumi.InvokeOptions): Promise<GetAlertsSettingsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getAlertsSettings:getAlertsSettings", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetAlertsSettingsResult {
  * ```
  */
 export function getAlertsSettingsOutput(args: GetAlertsSettingsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAlertsSettingsResult> {
-    return pulumi.output(args).apply((a: any) => getAlertsSettings(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getAlertsSettings:getAlertsSettings", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

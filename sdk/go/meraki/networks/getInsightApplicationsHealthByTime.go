@@ -90,14 +90,20 @@ type GetInsightApplicationsHealthByTimeResult struct {
 
 func GetInsightApplicationsHealthByTimeOutput(ctx *pulumi.Context, args GetInsightApplicationsHealthByTimeOutputArgs, opts ...pulumi.InvokeOption) GetInsightApplicationsHealthByTimeResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetInsightApplicationsHealthByTimeResult, error) {
+		ApplyT(func(v interface{}) (GetInsightApplicationsHealthByTimeResultOutput, error) {
 			args := v.(GetInsightApplicationsHealthByTimeArgs)
-			r, err := GetInsightApplicationsHealthByTime(ctx, &args, opts...)
-			var s GetInsightApplicationsHealthByTimeResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetInsightApplicationsHealthByTimeResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getInsightApplicationsHealthByTime:getInsightApplicationsHealthByTime", args, &rv, "", opts...)
+			if err != nil {
+				return GetInsightApplicationsHealthByTimeResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetInsightApplicationsHealthByTimeResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetInsightApplicationsHealthByTimeResultOutput), nil
+			}
+			return output, nil
 		}).(GetInsightApplicationsHealthByTimeResultOutput)
 }
 

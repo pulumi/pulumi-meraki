@@ -30,7 +30,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSmDevices(args: GetSmDevicesArgs, opts?: pulumi.InvokeOptions): Promise<GetSmDevicesResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSmDevices:getSmDevices", {
         "endingBefore": args.endingBefore,
@@ -190,7 +189,20 @@ export interface GetSmDevicesResult {
  * ```
  */
 export function getSmDevicesOutput(args: GetSmDevicesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmDevicesResult> {
-    return pulumi.output(args).apply((a: any) => getSmDevices(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSmDevices:getSmDevices", {
+        "endingBefore": args.endingBefore,
+        "fields": args.fields,
+        "ids": args.ids,
+        "networkId": args.networkId,
+        "perPage": args.perPage,
+        "scopes": args.scopes,
+        "serials": args.serials,
+        "startingAfter": args.startingAfter,
+        "systemTypes": args.systemTypes,
+        "uuids": args.uuids,
+        "wifiMacs": args.wifiMacs,
+    }, opts);
 }
 
 /**

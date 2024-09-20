@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getWirelessSsidsDeviceTypeGroupPolicies(args: GetWirelessSsidsDeviceTypeGroupPoliciesArgs, opts?: pulumi.InvokeOptions): Promise<GetWirelessSsidsDeviceTypeGroupPoliciesResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getWirelessSsidsDeviceTypeGroupPolicies:getWirelessSsidsDeviceTypeGroupPolicies", {
         "networkId": args.networkId,
@@ -76,7 +75,11 @@ export interface GetWirelessSsidsDeviceTypeGroupPoliciesResult {
  * ```
  */
 export function getWirelessSsidsDeviceTypeGroupPoliciesOutput(args: GetWirelessSsidsDeviceTypeGroupPoliciesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessSsidsDeviceTypeGroupPoliciesResult> {
-    return pulumi.output(args).apply((a: any) => getWirelessSsidsDeviceTypeGroupPolicies(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getWirelessSsidsDeviceTypeGroupPolicies:getWirelessSsidsDeviceTypeGroupPolicies", {
+        "networkId": args.networkId,
+        "number": args.number,
+    }, opts);
 }
 
 /**

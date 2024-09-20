@@ -69,14 +69,20 @@ type LookupClientsPolicyResult struct {
 
 func LookupClientsPolicyOutput(ctx *pulumi.Context, args LookupClientsPolicyOutputArgs, opts ...pulumi.InvokeOption) LookupClientsPolicyResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupClientsPolicyResult, error) {
+		ApplyT(func(v interface{}) (LookupClientsPolicyResultOutput, error) {
 			args := v.(LookupClientsPolicyArgs)
-			r, err := LookupClientsPolicy(ctx, &args, opts...)
-			var s LookupClientsPolicyResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupClientsPolicyResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getClientsPolicy:getClientsPolicy", args, &rv, "", opts...)
+			if err != nil {
+				return LookupClientsPolicyResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupClientsPolicyResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupClientsPolicyResultOutput), nil
+			}
+			return output, nil
 		}).(LookupClientsPolicyResultOutput)
 }
 

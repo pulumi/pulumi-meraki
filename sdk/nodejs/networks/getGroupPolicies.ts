@@ -11,7 +11,6 @@ import * as utilities from "../utilities";
  */
 export function getGroupPolicies(args?: GetGroupPoliciesArgs, opts?: pulumi.InvokeOptions): Promise<GetGroupPoliciesResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getGroupPolicies:getGroupPolicies", {
         "groupPolicyId": args.groupPolicyId,
@@ -59,7 +58,12 @@ export interface GetGroupPoliciesResult {
  * ## Example Usage
  */
 export function getGroupPoliciesOutput(args?: GetGroupPoliciesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetGroupPoliciesResult> {
-    return pulumi.output(args).apply((a: any) => getGroupPolicies(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getGroupPolicies:getGroupPolicies", {
+        "groupPolicyId": args.groupPolicyId,
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

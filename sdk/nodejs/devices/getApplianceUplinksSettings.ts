@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getApplianceUplinksSettings(args: GetApplianceUplinksSettingsArgs, opts?: pulumi.InvokeOptions): Promise<GetApplianceUplinksSettingsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:devices/getApplianceUplinksSettings:getApplianceUplinksSettings", {
         "serial": args.serial,
@@ -65,7 +64,10 @@ export interface GetApplianceUplinksSettingsResult {
  * ```
  */
 export function getApplianceUplinksSettingsOutput(args: GetApplianceUplinksSettingsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceUplinksSettingsResult> {
-    return pulumi.output(args).apply((a: any) => getApplianceUplinksSettings(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:devices/getApplianceUplinksSettings:getApplianceUplinksSettings", {
+        "serial": args.serial,
+    }, opts);
 }
 
 /**

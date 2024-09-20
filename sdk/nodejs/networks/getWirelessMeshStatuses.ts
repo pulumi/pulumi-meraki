@@ -23,7 +23,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getWirelessMeshStatuses(args: GetWirelessMeshStatusesArgs, opts?: pulumi.InvokeOptions): Promise<GetWirelessMeshStatusesResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getWirelessMeshStatuses:getWirelessMeshStatuses", {
         "endingBefore": args.endingBefore,
@@ -101,7 +100,13 @@ export interface GetWirelessMeshStatusesResult {
  * ```
  */
 export function getWirelessMeshStatusesOutput(args: GetWirelessMeshStatusesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessMeshStatusesResult> {
-    return pulumi.output(args).apply((a: any) => getWirelessMeshStatuses(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getWirelessMeshStatuses:getWirelessMeshStatuses", {
+        "endingBefore": args.endingBefore,
+        "networkId": args.networkId,
+        "perPage": args.perPage,
+        "startingAfter": args.startingAfter,
+    }, opts);
 }
 
 /**

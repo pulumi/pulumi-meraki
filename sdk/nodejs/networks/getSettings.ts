@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSettings(args: GetSettingsArgs, opts?: pulumi.InvokeOptions): Promise<GetSettingsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSettings:getSettings", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetSettingsResult {
  * ```
  */
 export function getSettingsOutput(args: GetSettingsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSettingsResult> {
-    return pulumi.output(args).apply((a: any) => getSettings(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSettings:getSettings", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

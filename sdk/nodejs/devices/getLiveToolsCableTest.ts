@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getLiveToolsCableTest(args: GetLiveToolsCableTestArgs, opts?: pulumi.InvokeOptions): Promise<GetLiveToolsCableTestResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:devices/getLiveToolsCableTest:getLiveToolsCableTest", {
         "id": args.id,
@@ -72,7 +71,11 @@ export interface GetLiveToolsCableTestResult {
  * ```
  */
 export function getLiveToolsCableTestOutput(args: GetLiveToolsCableTestOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLiveToolsCableTestResult> {
-    return pulumi.output(args).apply((a: any) => getLiveToolsCableTest(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:devices/getLiveToolsCableTest:getLiveToolsCableTest", {
+        "id": args.id,
+        "serial": args.serial,
+    }, opts);
 }
 
 /**

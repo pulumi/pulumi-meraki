@@ -64,14 +64,20 @@ type GetAdaptivePolicyOverviewResult struct {
 
 func GetAdaptivePolicyOverviewOutput(ctx *pulumi.Context, args GetAdaptivePolicyOverviewOutputArgs, opts ...pulumi.InvokeOption) GetAdaptivePolicyOverviewResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetAdaptivePolicyOverviewResult, error) {
+		ApplyT(func(v interface{}) (GetAdaptivePolicyOverviewResultOutput, error) {
 			args := v.(GetAdaptivePolicyOverviewArgs)
-			r, err := GetAdaptivePolicyOverview(ctx, &args, opts...)
-			var s GetAdaptivePolicyOverviewResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetAdaptivePolicyOverviewResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getAdaptivePolicyOverview:getAdaptivePolicyOverview", args, &rv, "", opts...)
+			if err != nil {
+				return GetAdaptivePolicyOverviewResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetAdaptivePolicyOverviewResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetAdaptivePolicyOverviewResultOutput), nil
+			}
+			return output, nil
 		}).(GetAdaptivePolicyOverviewResultOutput)
 }
 

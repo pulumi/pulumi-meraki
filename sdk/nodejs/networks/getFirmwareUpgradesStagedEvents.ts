@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getFirmwareUpgradesStagedEvents(args: GetFirmwareUpgradesStagedEventsArgs, opts?: pulumi.InvokeOptions): Promise<GetFirmwareUpgradesStagedEventsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getFirmwareUpgradesStagedEvents:getFirmwareUpgradesStagedEvents", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetFirmwareUpgradesStagedEventsResult {
  * ```
  */
 export function getFirmwareUpgradesStagedEventsOutput(args: GetFirmwareUpgradesStagedEventsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetFirmwareUpgradesStagedEventsResult> {
-    return pulumi.output(args).apply((a: any) => getFirmwareUpgradesStagedEvents(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getFirmwareUpgradesStagedEvents:getFirmwareUpgradesStagedEvents", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

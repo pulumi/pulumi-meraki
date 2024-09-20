@@ -69,14 +69,20 @@ type GetCameraVideoLinkResult struct {
 
 func GetCameraVideoLinkOutput(ctx *pulumi.Context, args GetCameraVideoLinkOutputArgs, opts ...pulumi.InvokeOption) GetCameraVideoLinkResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetCameraVideoLinkResult, error) {
+		ApplyT(func(v interface{}) (GetCameraVideoLinkResultOutput, error) {
 			args := v.(GetCameraVideoLinkArgs)
-			r, err := GetCameraVideoLink(ctx, &args, opts...)
-			var s GetCameraVideoLinkResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetCameraVideoLinkResult
+			secret, err := ctx.InvokePackageRaw("meraki:devices/getCameraVideoLink:getCameraVideoLink", args, &rv, "", opts...)
+			if err != nil {
+				return GetCameraVideoLinkResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetCameraVideoLinkResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetCameraVideoLinkResultOutput), nil
+			}
+			return output, nil
 		}).(GetCameraVideoLinkResultOutput)
 }
 

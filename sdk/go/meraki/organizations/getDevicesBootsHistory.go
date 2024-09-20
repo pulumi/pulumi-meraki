@@ -112,14 +112,20 @@ type GetDevicesBootsHistoryResult struct {
 
 func GetDevicesBootsHistoryOutput(ctx *pulumi.Context, args GetDevicesBootsHistoryOutputArgs, opts ...pulumi.InvokeOption) GetDevicesBootsHistoryResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetDevicesBootsHistoryResult, error) {
+		ApplyT(func(v interface{}) (GetDevicesBootsHistoryResultOutput, error) {
 			args := v.(GetDevicesBootsHistoryArgs)
-			r, err := GetDevicesBootsHistory(ctx, &args, opts...)
-			var s GetDevicesBootsHistoryResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetDevicesBootsHistoryResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getDevicesBootsHistory:getDevicesBootsHistory", args, &rv, "", opts...)
+			if err != nil {
+				return GetDevicesBootsHistoryResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetDevicesBootsHistoryResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetDevicesBootsHistoryResultOutput), nil
+			}
+			return output, nil
 		}).(GetDevicesBootsHistoryResultOutput)
 }
 

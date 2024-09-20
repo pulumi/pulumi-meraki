@@ -101,14 +101,20 @@ type GetSensorReadingsLatestResult struct {
 
 func GetSensorReadingsLatestOutput(ctx *pulumi.Context, args GetSensorReadingsLatestOutputArgs, opts ...pulumi.InvokeOption) GetSensorReadingsLatestResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetSensorReadingsLatestResult, error) {
+		ApplyT(func(v interface{}) (GetSensorReadingsLatestResultOutput, error) {
 			args := v.(GetSensorReadingsLatestArgs)
-			r, err := GetSensorReadingsLatest(ctx, &args, opts...)
-			var s GetSensorReadingsLatestResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetSensorReadingsLatestResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getSensorReadingsLatest:getSensorReadingsLatest", args, &rv, "", opts...)
+			if err != nil {
+				return GetSensorReadingsLatestResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetSensorReadingsLatestResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetSensorReadingsLatestResultOutput), nil
+			}
+			return output, nil
 		}).(GetSensorReadingsLatestResultOutput)
 }
 

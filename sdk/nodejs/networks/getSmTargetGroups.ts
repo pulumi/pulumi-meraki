@@ -11,7 +11,6 @@ import * as utilities from "../utilities";
  */
 export function getSmTargetGroups(args?: GetSmTargetGroupsArgs, opts?: pulumi.InvokeOptions): Promise<GetSmTargetGroupsResult> {
     args = args || {};
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSmTargetGroups:getSmTargetGroups", {
         "networkId": args.networkId,
@@ -68,7 +67,13 @@ export interface GetSmTargetGroupsResult {
  * ## Example Usage
  */
 export function getSmTargetGroupsOutput(args?: GetSmTargetGroupsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmTargetGroupsResult> {
-    return pulumi.output(args).apply((a: any) => getSmTargetGroups(a, opts))
+    args = args || {};
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSmTargetGroups:getSmTargetGroups", {
+        "networkId": args.networkId,
+        "targetGroupId": args.targetGroupId,
+        "withDetails": args.withDetails,
+    }, opts);
 }
 
 /**

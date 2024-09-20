@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getNetflow(args: GetNetflowArgs, opts?: pulumi.InvokeOptions): Promise<GetNetflowResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getNetflow:getNetflow", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetNetflowResult {
  * ```
  */
 export function getNetflowOutput(args: GetNetflowOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetNetflowResult> {
-    return pulumi.output(args).apply((a: any) => getNetflow(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getNetflow:getNetflow", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

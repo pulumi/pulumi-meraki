@@ -74,14 +74,20 @@ type LookupSwitchStacksRoutingInterfacesDhcpResult struct {
 
 func LookupSwitchStacksRoutingInterfacesDhcpOutput(ctx *pulumi.Context, args LookupSwitchStacksRoutingInterfacesDhcpOutputArgs, opts ...pulumi.InvokeOption) LookupSwitchStacksRoutingInterfacesDhcpResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupSwitchStacksRoutingInterfacesDhcpResult, error) {
+		ApplyT(func(v interface{}) (LookupSwitchStacksRoutingInterfacesDhcpResultOutput, error) {
 			args := v.(LookupSwitchStacksRoutingInterfacesDhcpArgs)
-			r, err := LookupSwitchStacksRoutingInterfacesDhcp(ctx, &args, opts...)
-			var s LookupSwitchStacksRoutingInterfacesDhcpResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupSwitchStacksRoutingInterfacesDhcpResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getSwitchStacksRoutingInterfacesDhcp:getSwitchStacksRoutingInterfacesDhcp", args, &rv, "", opts...)
+			if err != nil {
+				return LookupSwitchStacksRoutingInterfacesDhcpResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupSwitchStacksRoutingInterfacesDhcpResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupSwitchStacksRoutingInterfacesDhcpResultOutput), nil
+			}
+			return output, nil
 		}).(LookupSwitchStacksRoutingInterfacesDhcpResultOutput)
 }
 

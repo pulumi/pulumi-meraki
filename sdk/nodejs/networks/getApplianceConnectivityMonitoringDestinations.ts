@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getApplianceConnectivityMonitoringDestinations(args: GetApplianceConnectivityMonitoringDestinationsArgs, opts?: pulumi.InvokeOptions): Promise<GetApplianceConnectivityMonitoringDestinationsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getApplianceConnectivityMonitoringDestinations:getApplianceConnectivityMonitoringDestinations", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetApplianceConnectivityMonitoringDestinationsResult {
  * ```
  */
 export function getApplianceConnectivityMonitoringDestinationsOutput(args: GetApplianceConnectivityMonitoringDestinationsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceConnectivityMonitoringDestinationsResult> {
-    return pulumi.output(args).apply((a: any) => getApplianceConnectivityMonitoringDestinations(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getApplianceConnectivityMonitoringDestinations:getApplianceConnectivityMonitoringDestinations", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

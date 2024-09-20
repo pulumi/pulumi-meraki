@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getClientsPolicy(args: GetClientsPolicyArgs, opts?: pulumi.InvokeOptions): Promise<GetClientsPolicyResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getClientsPolicy:getClientsPolicy", {
         "clientId": args.clientId,
@@ -76,7 +75,11 @@ export interface GetClientsPolicyResult {
  * ```
  */
 export function getClientsPolicyOutput(args: GetClientsPolicyOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetClientsPolicyResult> {
-    return pulumi.output(args).apply((a: any) => getClientsPolicy(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getClientsPolicy:getClientsPolicy", {
+        "clientId": args.clientId,
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

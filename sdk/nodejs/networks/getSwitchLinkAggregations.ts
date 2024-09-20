@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSwitchLinkAggregations(args: GetSwitchLinkAggregationsArgs, opts?: pulumi.InvokeOptions): Promise<GetSwitchLinkAggregationsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSwitchLinkAggregations:getSwitchLinkAggregations", {
         "networkId": args.networkId,
@@ -68,7 +67,10 @@ export interface GetSwitchLinkAggregationsResult {
  * ```
  */
 export function getSwitchLinkAggregationsOutput(args: GetSwitchLinkAggregationsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchLinkAggregationsResult> {
-    return pulumi.output(args).apply((a: any) => getSwitchLinkAggregations(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSwitchLinkAggregations:getSwitchLinkAggregations", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

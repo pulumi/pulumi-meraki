@@ -90,14 +90,20 @@ type GetLicensingCotermLicensesResult struct {
 
 func GetLicensingCotermLicensesOutput(ctx *pulumi.Context, args GetLicensingCotermLicensesOutputArgs, opts ...pulumi.InvokeOption) GetLicensingCotermLicensesResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetLicensingCotermLicensesResult, error) {
+		ApplyT(func(v interface{}) (GetLicensingCotermLicensesResultOutput, error) {
 			args := v.(GetLicensingCotermLicensesArgs)
-			r, err := GetLicensingCotermLicenses(ctx, &args, opts...)
-			var s GetLicensingCotermLicensesResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetLicensingCotermLicensesResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getLicensingCotermLicenses:getLicensingCotermLicenses", args, &rv, "", opts...)
+			if err != nil {
+				return GetLicensingCotermLicensesResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetLicensingCotermLicensesResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetLicensingCotermLicensesResultOutput), nil
+			}
+			return output, nil
 		}).(GetLicensingCotermLicensesResultOutput)
 }
 

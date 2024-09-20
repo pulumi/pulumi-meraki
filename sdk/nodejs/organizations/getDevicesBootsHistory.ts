@@ -29,7 +29,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getDevicesBootsHistory(args: GetDevicesBootsHistoryArgs, opts?: pulumi.InvokeOptions): Promise<GetDevicesBootsHistoryResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getDevicesBootsHistory:getDevicesBootsHistory", {
         "endingBefore": args.endingBefore,
@@ -167,7 +166,19 @@ export interface GetDevicesBootsHistoryResult {
  * ```
  */
 export function getDevicesBootsHistoryOutput(args: GetDevicesBootsHistoryOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDevicesBootsHistoryResult> {
-    return pulumi.output(args).apply((a: any) => getDevicesBootsHistory(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getDevicesBootsHistory:getDevicesBootsHistory", {
+        "endingBefore": args.endingBefore,
+        "mostRecentPerDevice": args.mostRecentPerDevice,
+        "organizationId": args.organizationId,
+        "perPage": args.perPage,
+        "serials": args.serials,
+        "sortOrder": args.sortOrder,
+        "startingAfter": args.startingAfter,
+        "t0": args.t0,
+        "t1": args.t1,
+        "timespan": args.timespan,
+    }, opts);
 }
 
 /**

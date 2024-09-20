@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSyslogServers(args: GetSyslogServersArgs, opts?: pulumi.InvokeOptions): Promise<GetSyslogServersResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSyslogServers:getSyslogServers", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetSyslogServersResult {
  * ```
  */
 export function getSyslogServersOutput(args: GetSyslogServersOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSyslogServersResult> {
-    return pulumi.output(args).apply((a: any) => getSyslogServers(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSyslogServers:getSyslogServers", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

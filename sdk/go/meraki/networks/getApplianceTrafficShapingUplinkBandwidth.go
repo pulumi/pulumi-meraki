@@ -64,14 +64,20 @@ type LookupApplianceTrafficShapingUplinkBandwidthResult struct {
 
 func LookupApplianceTrafficShapingUplinkBandwidthOutput(ctx *pulumi.Context, args LookupApplianceTrafficShapingUplinkBandwidthOutputArgs, opts ...pulumi.InvokeOption) LookupApplianceTrafficShapingUplinkBandwidthResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupApplianceTrafficShapingUplinkBandwidthResult, error) {
+		ApplyT(func(v interface{}) (LookupApplianceTrafficShapingUplinkBandwidthResultOutput, error) {
 			args := v.(LookupApplianceTrafficShapingUplinkBandwidthArgs)
-			r, err := LookupApplianceTrafficShapingUplinkBandwidth(ctx, &args, opts...)
-			var s LookupApplianceTrafficShapingUplinkBandwidthResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupApplianceTrafficShapingUplinkBandwidthResult
+			secret, err := ctx.InvokePackageRaw("meraki:networks/getApplianceTrafficShapingUplinkBandwidth:getApplianceTrafficShapingUplinkBandwidth", args, &rv, "", opts...)
+			if err != nil {
+				return LookupApplianceTrafficShapingUplinkBandwidthResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupApplianceTrafficShapingUplinkBandwidthResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupApplianceTrafficShapingUplinkBandwidthResultOutput), nil
+			}
+			return output, nil
 		}).(LookupApplianceTrafficShapingUplinkBandwidthResultOutput)
 }
 

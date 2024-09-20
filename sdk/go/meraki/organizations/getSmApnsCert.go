@@ -64,14 +64,20 @@ type GetSmApnsCertResult struct {
 
 func GetSmApnsCertOutput(ctx *pulumi.Context, args GetSmApnsCertOutputArgs, opts ...pulumi.InvokeOption) GetSmApnsCertResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetSmApnsCertResult, error) {
+		ApplyT(func(v interface{}) (GetSmApnsCertResultOutput, error) {
 			args := v.(GetSmApnsCertArgs)
-			r, err := GetSmApnsCert(ctx, &args, opts...)
-			var s GetSmApnsCertResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetSmApnsCertResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getSmApnsCert:getSmApnsCert", args, &rv, "", opts...)
+			if err != nil {
+				return GetSmApnsCertResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetSmApnsCertResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetSmApnsCertResultOutput), nil
+			}
+			return output, nil
 		}).(GetSmApnsCertResultOutput)
 }
 

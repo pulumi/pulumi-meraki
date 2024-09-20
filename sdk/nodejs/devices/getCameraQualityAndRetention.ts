@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getCameraQualityAndRetention(args: GetCameraQualityAndRetentionArgs, opts?: pulumi.InvokeOptions): Promise<GetCameraQualityAndRetentionResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:devices/getCameraQualityAndRetention:getCameraQualityAndRetention", {
         "serial": args.serial,
@@ -65,7 +64,10 @@ export interface GetCameraQualityAndRetentionResult {
  * ```
  */
 export function getCameraQualityAndRetentionOutput(args: GetCameraQualityAndRetentionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCameraQualityAndRetentionResult> {
-    return pulumi.output(args).apply((a: any) => getCameraQualityAndRetention(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:devices/getCameraQualityAndRetention:getCameraQualityAndRetention", {
+        "serial": args.serial,
+    }, opts);
 }
 
 /**

@@ -24,7 +24,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getApplianceTrafficShapingVpnExclusionsByNetwork(args: GetApplianceTrafficShapingVpnExclusionsByNetworkArgs, opts?: pulumi.InvokeOptions): Promise<GetApplianceTrafficShapingVpnExclusionsByNetworkResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:organizations/getApplianceTrafficShapingVpnExclusionsByNetwork:getApplianceTrafficShapingVpnExclusionsByNetwork", {
         "endingBefore": args.endingBefore,
@@ -109,7 +108,14 @@ export interface GetApplianceTrafficShapingVpnExclusionsByNetworkResult {
  * ```
  */
 export function getApplianceTrafficShapingVpnExclusionsByNetworkOutput(args: GetApplianceTrafficShapingVpnExclusionsByNetworkOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceTrafficShapingVpnExclusionsByNetworkResult> {
-    return pulumi.output(args).apply((a: any) => getApplianceTrafficShapingVpnExclusionsByNetwork(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:organizations/getApplianceTrafficShapingVpnExclusionsByNetwork:getApplianceTrafficShapingVpnExclusionsByNetwork", {
+        "endingBefore": args.endingBefore,
+        "networkIds": args.networkIds,
+        "organizationId": args.organizationId,
+        "perPage": args.perPage,
+        "startingAfter": args.startingAfter,
+    }, opts);
 }
 
 /**

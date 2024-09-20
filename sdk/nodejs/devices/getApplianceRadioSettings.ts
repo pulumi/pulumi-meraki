@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getApplianceRadioSettings(args: GetApplianceRadioSettingsArgs, opts?: pulumi.InvokeOptions): Promise<GetApplianceRadioSettingsResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:devices/getApplianceRadioSettings:getApplianceRadioSettings", {
         "serial": args.serial,
@@ -65,7 +64,10 @@ export interface GetApplianceRadioSettingsResult {
  * ```
  */
 export function getApplianceRadioSettingsOutput(args: GetApplianceRadioSettingsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceRadioSettingsResult> {
-    return pulumi.output(args).apply((a: any) => getApplianceRadioSettings(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:devices/getApplianceRadioSettings:getApplianceRadioSettings", {
+        "serial": args.serial,
+    }, opts);
 }
 
 /**

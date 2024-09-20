@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getManagementInterface(args: GetManagementInterfaceArgs, opts?: pulumi.InvokeOptions): Promise<GetManagementInterfaceResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:devices/getManagementInterface:getManagementInterface", {
         "serial": args.serial,
@@ -65,7 +64,10 @@ export interface GetManagementInterfaceResult {
  * ```
  */
 export function getManagementInterfaceOutput(args: GetManagementInterfaceOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetManagementInterfaceResult> {
-    return pulumi.output(args).apply((a: any) => getManagementInterface(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:devices/getManagementInterface:getManagementInterface", {
+        "serial": args.serial,
+    }, opts);
 }
 
 /**

@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getClientsSplashAuthorizationStatus(args: GetClientsSplashAuthorizationStatusArgs, opts?: pulumi.InvokeOptions): Promise<GetClientsSplashAuthorizationStatusResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getClientsSplashAuthorizationStatus:getClientsSplashAuthorizationStatus", {
         "clientId": args.clientId,
@@ -76,7 +75,11 @@ export interface GetClientsSplashAuthorizationStatusResult {
  * ```
  */
 export function getClientsSplashAuthorizationStatusOutput(args: GetClientsSplashAuthorizationStatusOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetClientsSplashAuthorizationStatusResult> {
-    return pulumi.output(args).apply((a: any) => getClientsSplashAuthorizationStatus(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getClientsSplashAuthorizationStatus:getClientsSplashAuthorizationStatus", {
+        "clientId": args.clientId,
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

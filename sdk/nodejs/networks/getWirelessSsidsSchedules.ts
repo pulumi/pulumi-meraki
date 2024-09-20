@@ -21,7 +21,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getWirelessSsidsSchedules(args: GetWirelessSsidsSchedulesArgs, opts?: pulumi.InvokeOptions): Promise<GetWirelessSsidsSchedulesResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getWirelessSsidsSchedules:getWirelessSsidsSchedules", {
         "networkId": args.networkId,
@@ -76,7 +75,11 @@ export interface GetWirelessSsidsSchedulesResult {
  * ```
  */
 export function getWirelessSsidsSchedulesOutput(args: GetWirelessSsidsSchedulesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessSsidsSchedulesResult> {
-    return pulumi.output(args).apply((a: any) => getWirelessSsidsSchedules(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getWirelessSsidsSchedules:getWirelessSsidsSchedules", {
+        "networkId": args.networkId,
+        "number": args.number,
+    }, opts);
 }
 
 /**

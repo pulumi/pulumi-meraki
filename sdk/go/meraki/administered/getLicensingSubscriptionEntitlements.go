@@ -66,14 +66,20 @@ type GetLicensingSubscriptionEntitlementsResult struct {
 
 func GetLicensingSubscriptionEntitlementsOutput(ctx *pulumi.Context, args GetLicensingSubscriptionEntitlementsOutputArgs, opts ...pulumi.InvokeOption) GetLicensingSubscriptionEntitlementsResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (GetLicensingSubscriptionEntitlementsResult, error) {
+		ApplyT(func(v interface{}) (GetLicensingSubscriptionEntitlementsResultOutput, error) {
 			args := v.(GetLicensingSubscriptionEntitlementsArgs)
-			r, err := GetLicensingSubscriptionEntitlements(ctx, &args, opts...)
-			var s GetLicensingSubscriptionEntitlementsResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv GetLicensingSubscriptionEntitlementsResult
+			secret, err := ctx.InvokePackageRaw("meraki:administered/getLicensingSubscriptionEntitlements:getLicensingSubscriptionEntitlements", args, &rv, "", opts...)
+			if err != nil {
+				return GetLicensingSubscriptionEntitlementsResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(GetLicensingSubscriptionEntitlementsResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(GetLicensingSubscriptionEntitlementsResultOutput), nil
+			}
+			return output, nil
 		}).(GetLicensingSubscriptionEntitlementsResultOutput)
 }
 

@@ -20,7 +20,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getApplianceVpnBgp(args: GetApplianceVpnBgpArgs, opts?: pulumi.InvokeOptions): Promise<GetApplianceVpnBgpResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getApplianceVpnBgp:getApplianceVpnBgp", {
         "networkId": args.networkId,
@@ -65,7 +64,10 @@ export interface GetApplianceVpnBgpResult {
  * ```
  */
 export function getApplianceVpnBgpOutput(args: GetApplianceVpnBgpOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceVpnBgpResult> {
-    return pulumi.output(args).apply((a: any) => getApplianceVpnBgp(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getApplianceVpnBgp:getApplianceVpnBgp", {
+        "networkId": args.networkId,
+    }, opts);
 }
 
 /**

@@ -23,7 +23,6 @@ import * as utilities from "../utilities";
  * ```
  */
 export function getSwitchDhcpServerPolicyArpInspectionWarningsByDevice(args: GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceArgs, opts?: pulumi.InvokeOptions): Promise<GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult> {
-
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("meraki:networks/getSwitchDhcpServerPolicyArpInspectionWarningsByDevice:getSwitchDhcpServerPolicyArpInspectionWarningsByDevice", {
         "endingBefore": args.endingBefore,
@@ -101,7 +100,13 @@ export interface GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult {
  * ```
  */
 export function getSwitchDhcpServerPolicyArpInspectionWarningsByDeviceOutput(args: GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult> {
-    return pulumi.output(args).apply((a: any) => getSwitchDhcpServerPolicyArpInspectionWarningsByDevice(a, opts))
+    opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
+    return pulumi.runtime.invokeOutput("meraki:networks/getSwitchDhcpServerPolicyArpInspectionWarningsByDevice:getSwitchDhcpServerPolicyArpInspectionWarningsByDevice", {
+        "endingBefore": args.endingBefore,
+        "networkId": args.networkId,
+        "perPage": args.perPage,
+        "startingAfter": args.startingAfter,
+    }, opts);
 }
 
 /**

@@ -43,14 +43,20 @@ type LookupAdaptivePolicyGroupsResult struct {
 
 func LookupAdaptivePolicyGroupsOutput(ctx *pulumi.Context, args LookupAdaptivePolicyGroupsOutputArgs, opts ...pulumi.InvokeOption) LookupAdaptivePolicyGroupsResultOutput {
 	return pulumi.ToOutputWithContext(context.Background(), args).
-		ApplyT(func(v interface{}) (LookupAdaptivePolicyGroupsResult, error) {
+		ApplyT(func(v interface{}) (LookupAdaptivePolicyGroupsResultOutput, error) {
 			args := v.(LookupAdaptivePolicyGroupsArgs)
-			r, err := LookupAdaptivePolicyGroups(ctx, &args, opts...)
-			var s LookupAdaptivePolicyGroupsResult
-			if r != nil {
-				s = *r
+			opts = internal.PkgInvokeDefaultOpts(opts)
+			var rv LookupAdaptivePolicyGroupsResult
+			secret, err := ctx.InvokePackageRaw("meraki:organizations/getAdaptivePolicyGroups:getAdaptivePolicyGroups", args, &rv, "", opts...)
+			if err != nil {
+				return LookupAdaptivePolicyGroupsResultOutput{}, err
 			}
-			return s, err
+
+			output := pulumi.ToOutput(rv).(LookupAdaptivePolicyGroupsResultOutput)
+			if secret {
+				return pulumi.ToSecret(output).(LookupAdaptivePolicyGroupsResultOutput), nil
+			}
+			return output, nil
 		}).(LookupAdaptivePolicyGroupsResultOutput)
 }
 
