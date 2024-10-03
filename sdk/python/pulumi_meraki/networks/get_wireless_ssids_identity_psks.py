@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -128,9 +133,6 @@ def get_wireless_ssids_identity_psks(identity_psk_id: Optional[str] = None,
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'),
         number=pulumi.get(__ret__, 'number'))
-
-
-@_utilities.lift_output_func(get_wireless_ssids_identity_psks)
 def get_wireless_ssids_identity_psks_output(identity_psk_id: Optional[pulumi.Input[Optional[str]]] = None,
                                             network_id: Optional[pulumi.Input[Optional[str]]] = None,
                                             number: Optional[pulumi.Input[Optional[str]]] = None,
@@ -143,4 +145,16 @@ def get_wireless_ssids_identity_psks_output(identity_psk_id: Optional[pulumi.Inp
     :param str network_id: networkId path parameter. Network ID
     :param str number: number path parameter.
     """
-    ...
+    __args__ = dict()
+    __args__['identityPskId'] = identity_psk_id
+    __args__['networkId'] = network_id
+    __args__['number'] = number
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:networks/getWirelessSsidsIdentityPsks:getWirelessSsidsIdentityPsks', __args__, opts=opts, typ=GetWirelessSsidsIdentityPsksResult)
+    return __ret__.apply(lambda __response__: GetWirelessSsidsIdentityPsksResult(
+        id=pulumi.get(__response__, 'id'),
+        identity_psk_id=pulumi.get(__response__, 'identity_psk_id'),
+        item=pulumi.get(__response__, 'item'),
+        items=pulumi.get(__response__, 'items'),
+        network_id=pulumi.get(__response__, 'network_id'),
+        number=pulumi.get(__response__, 'number')))

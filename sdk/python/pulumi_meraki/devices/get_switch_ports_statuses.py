@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -128,9 +133,6 @@ def get_switch_ports_statuses(serial: Optional[str] = None,
         serial=pulumi.get(__ret__, 'serial'),
         t0=pulumi.get(__ret__, 't0'),
         timespan=pulumi.get(__ret__, 'timespan'))
-
-
-@_utilities.lift_output_func(get_switch_ports_statuses)
 def get_switch_ports_statuses_output(serial: Optional[pulumi.Input[str]] = None,
                                      t0: Optional[pulumi.Input[Optional[str]]] = None,
                                      timespan: Optional[pulumi.Input[Optional[float]]] = None,
@@ -153,4 +155,15 @@ def get_switch_ports_statuses_output(serial: Optional[pulumi.Input[str]] = None,
     :param str t0: t0 query parameter. The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
     :param float timespan: timespan query parameter. The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
     """
-    ...
+    __args__ = dict()
+    __args__['serial'] = serial
+    __args__['t0'] = t0
+    __args__['timespan'] = timespan
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:devices/getSwitchPortsStatuses:getSwitchPortsStatuses', __args__, opts=opts, typ=GetSwitchPortsStatusesResult)
+    return __ret__.apply(lambda __response__: GetSwitchPortsStatusesResult(
+        id=pulumi.get(__response__, 'id'),
+        items=pulumi.get(__response__, 'items'),
+        serial=pulumi.get(__response__, 'serial'),
+        t0=pulumi.get(__response__, 't0'),
+        timespan=pulumi.get(__response__, 'timespan')))

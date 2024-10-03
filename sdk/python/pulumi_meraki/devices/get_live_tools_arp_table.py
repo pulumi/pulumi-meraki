@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -108,9 +113,6 @@ def get_live_tools_arp_table(arp_table_id: Optional[str] = None,
         id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         serial=pulumi.get(__ret__, 'serial'))
-
-
-@_utilities.lift_output_func(get_live_tools_arp_table)
 def get_live_tools_arp_table_output(arp_table_id: Optional[pulumi.Input[str]] = None,
                                     serial: Optional[pulumi.Input[str]] = None,
                                     opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetLiveToolsArpTableResult]:
@@ -130,4 +132,13 @@ def get_live_tools_arp_table_output(arp_table_id: Optional[pulumi.Input[str]] = 
     :param str arp_table_id: arpTableId path parameter. Arp table ID
     :param str serial: serial path parameter.
     """
-    ...
+    __args__ = dict()
+    __args__['arpTableId'] = arp_table_id
+    __args__['serial'] = serial
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:devices/getLiveToolsArpTable:getLiveToolsArpTable', __args__, opts=opts, typ=GetLiveToolsArpTableResult)
+    return __ret__.apply(lambda __response__: GetLiveToolsArpTableResult(
+        arp_table_id=pulumi.get(__response__, 'arp_table_id'),
+        id=pulumi.get(__response__, 'id'),
+        item=pulumi.get(__response__, 'item'),
+        serial=pulumi.get(__response__, 'serial')))

@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -112,9 +117,6 @@ def get_switch_routing_multicast_rendezvous_points(network_id: Optional[str] = N
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'),
         rendezvous_point_id=pulumi.get(__ret__, 'rendezvous_point_id'))
-
-
-@_utilities.lift_output_func(get_switch_routing_multicast_rendezvous_points)
 def get_switch_routing_multicast_rendezvous_points_output(network_id: Optional[pulumi.Input[Optional[str]]] = None,
                                                           rendezvous_point_id: Optional[pulumi.Input[Optional[str]]] = None,
                                                           opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSwitchRoutingMulticastRendezvousPointsResult]:
@@ -125,4 +127,14 @@ def get_switch_routing_multicast_rendezvous_points_output(network_id: Optional[p
     :param str network_id: networkId path parameter. Network ID
     :param str rendezvous_point_id: rendezvousPointId path parameter. Rendezvous point ID
     """
-    ...
+    __args__ = dict()
+    __args__['networkId'] = network_id
+    __args__['rendezvousPointId'] = rendezvous_point_id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSwitchRoutingMulticastRendezvousPoints:getSwitchRoutingMulticastRendezvousPoints', __args__, opts=opts, typ=GetSwitchRoutingMulticastRendezvousPointsResult)
+    return __ret__.apply(lambda __response__: GetSwitchRoutingMulticastRendezvousPointsResult(
+        id=pulumi.get(__response__, 'id'),
+        item=pulumi.get(__response__, 'item'),
+        items=pulumi.get(__response__, 'items'),
+        network_id=pulumi.get(__response__, 'network_id'),
+        rendezvous_point_id=pulumi.get(__response__, 'rendezvous_point_id')))
