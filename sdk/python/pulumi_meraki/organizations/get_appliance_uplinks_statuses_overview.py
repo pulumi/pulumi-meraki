@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -91,9 +96,6 @@ def get_appliance_uplinks_statuses_overview(organization_id: Optional[str] = Non
         id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         organization_id=pulumi.get(__ret__, 'organization_id'))
-
-
-@_utilities.lift_output_func(get_appliance_uplinks_statuses_overview)
 def get_appliance_uplinks_statuses_overview_output(organization_id: Optional[pulumi.Input[str]] = None,
                                                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetApplianceUplinksStatusesOverviewResult]:
     """
@@ -110,4 +112,11 @@ def get_appliance_uplinks_statuses_overview_output(organization_id: Optional[pul
 
     :param str organization_id: organizationId path parameter. Organization ID
     """
-    ...
+    __args__ = dict()
+    __args__['organizationId'] = organization_id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getApplianceUplinksStatusesOverview:getApplianceUplinksStatusesOverview', __args__, opts=opts, typ=GetApplianceUplinksStatusesOverviewResult)
+    return __ret__.apply(lambda __response__: GetApplianceUplinksStatusesOverviewResult(
+        id=pulumi.get(__response__, 'id'),
+        item=pulumi.get(__response__, 'item'),
+        organization_id=pulumi.get(__response__, 'organization_id')))

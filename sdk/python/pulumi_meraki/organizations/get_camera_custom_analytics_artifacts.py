@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -112,9 +117,6 @@ def get_camera_custom_analytics_artifacts(artifact_id: Optional[str] = None,
         item=pulumi.get(__ret__, 'item'),
         items=pulumi.get(__ret__, 'items'),
         organization_id=pulumi.get(__ret__, 'organization_id'))
-
-
-@_utilities.lift_output_func(get_camera_custom_analytics_artifacts)
 def get_camera_custom_analytics_artifacts_output(artifact_id: Optional[pulumi.Input[Optional[str]]] = None,
                                                  organization_id: Optional[pulumi.Input[Optional[str]]] = None,
                                                  opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCameraCustomAnalyticsArtifactsResult]:
@@ -125,4 +127,14 @@ def get_camera_custom_analytics_artifacts_output(artifact_id: Optional[pulumi.In
     :param str artifact_id: artifactId path parameter. Artifact ID
     :param str organization_id: organizationId path parameter. Organization ID
     """
-    ...
+    __args__ = dict()
+    __args__['artifactId'] = artifact_id
+    __args__['organizationId'] = organization_id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getCameraCustomAnalyticsArtifacts:getCameraCustomAnalyticsArtifacts', __args__, opts=opts, typ=GetCameraCustomAnalyticsArtifactsResult)
+    return __ret__.apply(lambda __response__: GetCameraCustomAnalyticsArtifactsResult(
+        artifact_id=pulumi.get(__response__, 'artifact_id'),
+        id=pulumi.get(__response__, 'id'),
+        item=pulumi.get(__response__, 'item'),
+        items=pulumi.get(__response__, 'items'),
+        organization_id=pulumi.get(__response__, 'organization_id')))

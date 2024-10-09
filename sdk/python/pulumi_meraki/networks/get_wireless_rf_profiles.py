@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -124,9 +129,6 @@ def get_wireless_rf_profiles(include_template_profiles: Optional[bool] = None,
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'),
         rf_profile_id=pulumi.get(__ret__, 'rf_profile_id'))
-
-
-@_utilities.lift_output_func(get_wireless_rf_profiles)
 def get_wireless_rf_profiles_output(include_template_profiles: Optional[pulumi.Input[Optional[bool]]] = None,
                                     network_id: Optional[pulumi.Input[Optional[str]]] = None,
                                     rf_profile_id: Optional[pulumi.Input[Optional[str]]] = None,
@@ -148,4 +150,15 @@ def get_wireless_rf_profiles_output(include_template_profiles: Optional[pulumi.I
     :param str network_id: networkId path parameter. Network ID
     :param str rf_profile_id: rfProfileId path parameter. Rf profile ID
     """
-    ...
+    __args__ = dict()
+    __args__['includeTemplateProfiles'] = include_template_profiles
+    __args__['networkId'] = network_id
+    __args__['rfProfileId'] = rf_profile_id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:networks/getWirelessRfProfiles:getWirelessRfProfiles', __args__, opts=opts, typ=GetWirelessRfProfilesResult)
+    return __ret__.apply(lambda __response__: GetWirelessRfProfilesResult(
+        id=pulumi.get(__response__, 'id'),
+        include_template_profiles=pulumi.get(__response__, 'include_template_profiles'),
+        item=pulumi.get(__response__, 'item'),
+        network_id=pulumi.get(__response__, 'network_id'),
+        rf_profile_id=pulumi.get(__response__, 'rf_profile_id')))

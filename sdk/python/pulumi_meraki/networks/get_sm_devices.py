@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -276,9 +281,6 @@ def get_sm_devices(ending_before: Optional[str] = None,
         system_types=pulumi.get(__ret__, 'system_types'),
         uuids=pulumi.get(__ret__, 'uuids'),
         wifi_macs=pulumi.get(__ret__, 'wifi_macs'))
-
-
-@_utilities.lift_output_func(get_sm_devices)
 def get_sm_devices_output(ending_before: Optional[pulumi.Input[Optional[str]]] = None,
                           fields: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
                           ids: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
@@ -331,4 +333,31 @@ def get_sm_devices_output(ending_before: Optional[pulumi.Input[Optional[str]]] =
     :param Sequence[str] uuids: uuids query parameter. Filter devices by uuid(s).
     :param Sequence[str] wifi_macs: wifiMacs query parameter. Filter devices by wifi mac(s).
     """
-    ...
+    __args__ = dict()
+    __args__['endingBefore'] = ending_before
+    __args__['fields'] = fields
+    __args__['ids'] = ids
+    __args__['networkId'] = network_id
+    __args__['perPage'] = per_page
+    __args__['scopes'] = scopes
+    __args__['serials'] = serials
+    __args__['startingAfter'] = starting_after
+    __args__['systemTypes'] = system_types
+    __args__['uuids'] = uuids
+    __args__['wifiMacs'] = wifi_macs
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSmDevices:getSmDevices', __args__, opts=opts, typ=GetSmDevicesResult)
+    return __ret__.apply(lambda __response__: GetSmDevicesResult(
+        ending_before=pulumi.get(__response__, 'ending_before'),
+        fields=pulumi.get(__response__, 'fields'),
+        id=pulumi.get(__response__, 'id'),
+        ids=pulumi.get(__response__, 'ids'),
+        items=pulumi.get(__response__, 'items'),
+        network_id=pulumi.get(__response__, 'network_id'),
+        per_page=pulumi.get(__response__, 'per_page'),
+        scopes=pulumi.get(__response__, 'scopes'),
+        serials=pulumi.get(__response__, 'serials'),
+        starting_after=pulumi.get(__response__, 'starting_after'),
+        system_types=pulumi.get(__response__, 'system_types'),
+        uuids=pulumi.get(__response__, 'uuids'),
+        wifi_macs=pulumi.get(__response__, 'wifi_macs')))

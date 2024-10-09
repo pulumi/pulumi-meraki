@@ -25,7 +25,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			example, err := administered.GetIdentitiesMe(ctx, nil, nil)
+//			example, err := administered.GetIdentitiesMe(ctx, map[string]interface{}{}, nil)
 //			if err != nil {
 //				return err
 //			}

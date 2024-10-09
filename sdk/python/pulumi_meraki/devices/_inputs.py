@@ -4,110 +4,231 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 
 __all__ = [
     'ApplianceRadioSettingsFiveGhzSettingsArgs',
+    'ApplianceRadioSettingsFiveGhzSettingsArgsDict',
     'ApplianceRadioSettingsTwoFourGhzSettingsArgs',
+    'ApplianceRadioSettingsTwoFourGhzSettingsArgsDict',
     'ApplianceUplinksSettingsInterfacesArgs',
+    'ApplianceUplinksSettingsInterfacesArgsDict',
     'ApplianceUplinksSettingsInterfacesWan1Args',
+    'ApplianceUplinksSettingsInterfacesWan1ArgsDict',
     'ApplianceUplinksSettingsInterfacesWan1PppoeArgs',
+    'ApplianceUplinksSettingsInterfacesWan1PppoeArgsDict',
     'ApplianceUplinksSettingsInterfacesWan1PppoeAuthenticationArgs',
+    'ApplianceUplinksSettingsInterfacesWan1PppoeAuthenticationArgsDict',
     'ApplianceUplinksSettingsInterfacesWan1SvisArgs',
+    'ApplianceUplinksSettingsInterfacesWan1SvisArgsDict',
     'ApplianceUplinksSettingsInterfacesWan1SvisIpv4Args',
+    'ApplianceUplinksSettingsInterfacesWan1SvisIpv4ArgsDict',
     'ApplianceUplinksSettingsInterfacesWan1SvisIpv4NameserversArgs',
+    'ApplianceUplinksSettingsInterfacesWan1SvisIpv4NameserversArgsDict',
     'ApplianceUplinksSettingsInterfacesWan1SvisIpv6Args',
+    'ApplianceUplinksSettingsInterfacesWan1SvisIpv6ArgsDict',
     'ApplianceUplinksSettingsInterfacesWan1SvisIpv6NameserversArgs',
+    'ApplianceUplinksSettingsInterfacesWan1SvisIpv6NameserversArgsDict',
     'ApplianceUplinksSettingsInterfacesWan1VlanTaggingArgs',
+    'ApplianceUplinksSettingsInterfacesWan1VlanTaggingArgsDict',
     'ApplianceUplinksSettingsInterfacesWan2Args',
+    'ApplianceUplinksSettingsInterfacesWan2ArgsDict',
     'ApplianceUplinksSettingsInterfacesWan2PppoeArgs',
+    'ApplianceUplinksSettingsInterfacesWan2PppoeArgsDict',
     'ApplianceUplinksSettingsInterfacesWan2PppoeAuthenticationArgs',
+    'ApplianceUplinksSettingsInterfacesWan2PppoeAuthenticationArgsDict',
     'ApplianceUplinksSettingsInterfacesWan2SvisArgs',
+    'ApplianceUplinksSettingsInterfacesWan2SvisArgsDict',
     'ApplianceUplinksSettingsInterfacesWan2SvisIpv4Args',
+    'ApplianceUplinksSettingsInterfacesWan2SvisIpv4ArgsDict',
     'ApplianceUplinksSettingsInterfacesWan2SvisIpv4NameserversArgs',
+    'ApplianceUplinksSettingsInterfacesWan2SvisIpv4NameserversArgsDict',
     'ApplianceUplinksSettingsInterfacesWan2SvisIpv6Args',
+    'ApplianceUplinksSettingsInterfacesWan2SvisIpv6ArgsDict',
     'ApplianceUplinksSettingsInterfacesWan2SvisIpv6NameserversArgs',
+    'ApplianceUplinksSettingsInterfacesWan2SvisIpv6NameserversArgsDict',
     'ApplianceUplinksSettingsInterfacesWan2VlanTaggingArgs',
+    'ApplianceUplinksSettingsInterfacesWan2VlanTaggingArgsDict',
     'ApplianceVmxAuthenticationTokenItemArgs',
+    'ApplianceVmxAuthenticationTokenItemArgsDict',
     'BlinkLedsItemArgs',
+    'BlinkLedsItemArgsDict',
     'BlinkLedsParametersArgs',
+    'BlinkLedsParametersArgsDict',
     'CameraCustomAnalyticsParameterArgs',
+    'CameraCustomAnalyticsParameterArgsDict',
     'CameraGenerateSnapshotParametersArgs',
+    'CameraGenerateSnapshotParametersArgsDict',
     'CameraSenseAudioDetectionArgs',
+    'CameraSenseAudioDetectionArgsDict',
     'CameraWirelessProfilesIdsArgs',
+    'CameraWirelessProfilesIdsArgsDict',
     'CellularGatewayLanFixedIpAssignmentArgs',
+    'CellularGatewayLanFixedIpAssignmentArgsDict',
     'CellularGatewayLanReservedIpRangeArgs',
+    'CellularGatewayLanReservedIpRangeArgsDict',
     'CellularGatewayPortForwardingRulesRuleArgs',
+    'CellularGatewayPortForwardingRulesRuleArgsDict',
     'CellularSimsSimArgs',
+    'CellularSimsSimArgsDict',
     'CellularSimsSimApnArgs',
+    'CellularSimsSimApnArgsDict',
     'CellularSimsSimApnAuthenticationArgs',
+    'CellularSimsSimApnAuthenticationArgsDict',
     'CellularSimsSimFailoverArgs',
+    'CellularSimsSimFailoverArgsDict',
     'LiveToolsArpTableCallbackArgs',
+    'LiveToolsArpTableCallbackArgsDict',
     'LiveToolsArpTableCallbackHttpServerArgs',
+    'LiveToolsArpTableCallbackHttpServerArgsDict',
     'LiveToolsArpTableCallbackPayloadTemplateArgs',
+    'LiveToolsArpTableCallbackPayloadTemplateArgsDict',
     'LiveToolsArpTableEntryArgs',
+    'LiveToolsArpTableEntryArgsDict',
     'LiveToolsArpTableRequestArgs',
+    'LiveToolsArpTableRequestArgsDict',
     'LiveToolsCableCallbackArgs',
+    'LiveToolsCableCallbackArgsDict',
     'LiveToolsCableCallbackHttpServerArgs',
+    'LiveToolsCableCallbackHttpServerArgsDict',
     'LiveToolsCableCallbackPayloadTemplateArgs',
+    'LiveToolsCableCallbackPayloadTemplateArgsDict',
     'LiveToolsCableRequestArgs',
+    'LiveToolsCableRequestArgsDict',
     'LiveToolsCableResultArgs',
+    'LiveToolsCableResultArgsDict',
     'LiveToolsCableResultPairArgs',
+    'LiveToolsCableResultPairArgsDict',
     'LiveToolsPingDeviceItemArgs',
+    'LiveToolsPingDeviceItemArgsDict',
     'LiveToolsPingDeviceItemCallbackArgs',
+    'LiveToolsPingDeviceItemCallbackArgsDict',
     'LiveToolsPingDeviceItemRequestArgs',
+    'LiveToolsPingDeviceItemRequestArgsDict',
     'LiveToolsPingDeviceParametersArgs',
+    'LiveToolsPingDeviceParametersArgsDict',
     'LiveToolsPingDeviceParametersCallbackArgs',
+    'LiveToolsPingDeviceParametersCallbackArgsDict',
     'LiveToolsPingDeviceParametersCallbackHttpServerArgs',
+    'LiveToolsPingDeviceParametersCallbackHttpServerArgsDict',
     'LiveToolsPingDeviceParametersCallbackPayloadTemplateArgs',
+    'LiveToolsPingDeviceParametersCallbackPayloadTemplateArgsDict',
     'LiveToolsPingItemArgs',
+    'LiveToolsPingItemArgsDict',
     'LiveToolsPingItemCallbackArgs',
+    'LiveToolsPingItemCallbackArgsDict',
     'LiveToolsPingItemRequestArgs',
+    'LiveToolsPingItemRequestArgsDict',
     'LiveToolsPingParametersArgs',
+    'LiveToolsPingParametersArgsDict',
     'LiveToolsPingParametersCallbackArgs',
+    'LiveToolsPingParametersCallbackArgsDict',
     'LiveToolsPingParametersCallbackHttpServerArgs',
+    'LiveToolsPingParametersCallbackHttpServerArgsDict',
     'LiveToolsPingParametersCallbackPayloadTemplateArgs',
+    'LiveToolsPingParametersCallbackPayloadTemplateArgsDict',
     'LiveToolsThroughputTestCallbackArgs',
+    'LiveToolsThroughputTestCallbackArgsDict',
     'LiveToolsThroughputTestCallbackHttpServerArgs',
+    'LiveToolsThroughputTestCallbackHttpServerArgsDict',
     'LiveToolsThroughputTestCallbackPayloadTemplateArgs',
+    'LiveToolsThroughputTestCallbackPayloadTemplateArgsDict',
     'LiveToolsThroughputTestRequestArgs',
+    'LiveToolsThroughputTestRequestArgsDict',
     'LiveToolsThroughputTestResultArgs',
+    'LiveToolsThroughputTestResultArgsDict',
     'LiveToolsThroughputTestResultSpeedsArgs',
+    'LiveToolsThroughputTestResultSpeedsArgsDict',
     'LiveToolsWakeOnLanCallbackArgs',
+    'LiveToolsWakeOnLanCallbackArgsDict',
     'LiveToolsWakeOnLanCallbackHttpServerArgs',
+    'LiveToolsWakeOnLanCallbackHttpServerArgsDict',
     'LiveToolsWakeOnLanCallbackPayloadTemplateArgs',
+    'LiveToolsWakeOnLanCallbackPayloadTemplateArgsDict',
     'LiveToolsWakeOnLanRequestArgs',
+    'LiveToolsWakeOnLanRequestArgsDict',
     'ManagementInterfaceDdnsHostnamesArgs',
+    'ManagementInterfaceDdnsHostnamesArgsDict',
     'ManagementInterfaceWan1Args',
+    'ManagementInterfaceWan1ArgsDict',
     'ManagementInterfaceWan2Args',
+    'ManagementInterfaceWan2ArgsDict',
     'SensorRelationshipsLivestreamArgs',
+    'SensorRelationshipsLivestreamArgsDict',
     'SensorRelationshipsLivestreamRelatedDeviceArgs',
+    'SensorRelationshipsLivestreamRelatedDeviceArgsDict',
     'SensorRelationshipsLivestreamRequestArgs',
+    'SensorRelationshipsLivestreamRequestArgsDict',
     'SensorRelationshipsLivestreamRequestRelatedDeviceArgs',
+    'SensorRelationshipsLivestreamRequestRelatedDeviceArgsDict',
     'SwitchPortsCycleItemArgs',
+    'SwitchPortsCycleItemArgsDict',
     'SwitchPortsCycleParametersArgs',
+    'SwitchPortsCycleParametersArgsDict',
     'SwitchPortsMirrorArgs',
+    'SwitchPortsMirrorArgsDict',
     'SwitchPortsModuleArgs',
+    'SwitchPortsModuleArgsDict',
     'SwitchPortsProfileArgs',
+    'SwitchPortsProfileArgsDict',
     'SwitchRoutingInterfacesDhcpDhcpOptionArgs',
+    'SwitchRoutingInterfacesDhcpDhcpOptionArgsDict',
     'SwitchRoutingInterfacesDhcpFixedIpAssignmentArgs',
+    'SwitchRoutingInterfacesDhcpFixedIpAssignmentArgsDict',
     'SwitchRoutingInterfacesDhcpReservedIpRangeArgs',
+    'SwitchRoutingInterfacesDhcpReservedIpRangeArgsDict',
     'SwitchRoutingInterfacesIpv6Args',
+    'SwitchRoutingInterfacesIpv6ArgsDict',
     'SwitchRoutingInterfacesOspfSettingsArgs',
+    'SwitchRoutingInterfacesOspfSettingsArgsDict',
     'SwitchRoutingInterfacesOspfV3Args',
+    'SwitchRoutingInterfacesOspfV3ArgsDict',
     'WirelessAlternateManagementInterfaceIpv6ItemArgs',
+    'WirelessAlternateManagementInterfaceIpv6ItemArgsDict',
     'WirelessAlternateManagementInterfaceIpv6ItemAddressArgs',
+    'WirelessAlternateManagementInterfaceIpv6ItemAddressArgsDict',
     'WirelessAlternateManagementInterfaceIpv6ItemAddressNameserversArgs',
+    'WirelessAlternateManagementInterfaceIpv6ItemAddressNameserversArgsDict',
     'WirelessAlternateManagementInterfaceIpv6ParametersArgs',
+    'WirelessAlternateManagementInterfaceIpv6ParametersArgsDict',
     'WirelessAlternateManagementInterfaceIpv6ParametersAddressArgs',
+    'WirelessAlternateManagementInterfaceIpv6ParametersAddressArgsDict',
     'WirelessAlternateManagementInterfaceIpv6ParametersAddressNameserversArgs',
+    'WirelessAlternateManagementInterfaceIpv6ParametersAddressNameserversArgsDict',
     'WirelessRadioSettingsFiveGhzSettingsArgs',
+    'WirelessRadioSettingsFiveGhzSettingsArgsDict',
     'WirelessRadioSettingsTwoFourGhzSettingsArgs',
+    'WirelessRadioSettingsTwoFourGhzSettingsArgsDict',
     'BaseDetailArgs',
+    'BaseDetailArgsDict',
 ]
+
+MYPY = False
+
+if not MYPY:
+    class ApplianceRadioSettingsFiveGhzSettingsArgsDict(TypedDict):
+        channel: NotRequired[pulumi.Input[int]]
+        """
+        Manual channel for 5 GHz
+        """
+        channel_width: NotRequired[pulumi.Input[int]]
+        """
+        Manual channel width for 5 GHz
+        """
+        target_power: NotRequired[pulumi.Input[int]]
+        """
+        Manual target power for 5 GHz
+        """
+elif False:
+    ApplianceRadioSettingsFiveGhzSettingsArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ApplianceRadioSettingsFiveGhzSettingsArgs:
@@ -164,6 +285,19 @@ class ApplianceRadioSettingsFiveGhzSettingsArgs:
         pulumi.set(self, "target_power", value)
 
 
+if not MYPY:
+    class ApplianceRadioSettingsTwoFourGhzSettingsArgsDict(TypedDict):
+        channel: NotRequired[pulumi.Input[int]]
+        """
+        Manual channel for 2.4 GHz
+        """
+        target_power: NotRequired[pulumi.Input[int]]
+        """
+        Manual target power for 2.4 GHz
+        """
+elif False:
+    ApplianceRadioSettingsTwoFourGhzSettingsArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ApplianceRadioSettingsTwoFourGhzSettingsArgs:
     def __init__(__self__, *,
@@ -203,6 +337,19 @@ class ApplianceRadioSettingsTwoFourGhzSettingsArgs:
         pulumi.set(self, "target_power", value)
 
 
+if not MYPY:
+    class ApplianceUplinksSettingsInterfacesArgsDict(TypedDict):
+        wan1: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1ArgsDict']]
+        """
+        WAN 1 settings.
+        """
+        wan2: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2ArgsDict']]
+        """
+        WAN 2 settings.
+        """
+elif False:
+    ApplianceUplinksSettingsInterfacesArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesArgs:
     def __init__(__self__, *,
@@ -241,6 +388,27 @@ class ApplianceUplinksSettingsInterfacesArgs:
     def wan2(self, value: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2Args']]):
         pulumi.set(self, "wan2", value)
 
+
+if not MYPY:
+    class ApplianceUplinksSettingsInterfacesWan1ArgsDict(TypedDict):
+        enabled: NotRequired[pulumi.Input[bool]]
+        """
+        Enable or disable the interface.
+        """
+        pppoe: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1PppoeArgsDict']]
+        """
+        Configuration options for PPPoE.
+        """
+        svis: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1SvisArgsDict']]
+        """
+        SVI settings by protocol.
+        """
+        vlan_tagging: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1VlanTaggingArgsDict']]
+        """
+        VLAN tagging settings.
+        """
+elif False:
+    ApplianceUplinksSettingsInterfacesWan1ArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan1Args:
@@ -313,6 +481,19 @@ class ApplianceUplinksSettingsInterfacesWan1Args:
         pulumi.set(self, "vlan_tagging", value)
 
 
+if not MYPY:
+    class ApplianceUplinksSettingsInterfacesWan1PppoeArgsDict(TypedDict):
+        authentication: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1PppoeAuthenticationArgsDict']]
+        """
+        Settings for PPPoE Authentication.
+        """
+        enabled: NotRequired[pulumi.Input[bool]]
+        """
+        Whether PPPoE is enabled.
+        """
+elif False:
+    ApplianceUplinksSettingsInterfacesWan1PppoeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan1PppoeArgs:
     def __init__(__self__, *,
@@ -351,6 +532,23 @@ class ApplianceUplinksSettingsInterfacesWan1PppoeArgs:
     def enabled(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "enabled", value)
 
+
+if not MYPY:
+    class ApplianceUplinksSettingsInterfacesWan1PppoeAuthenticationArgsDict(TypedDict):
+        enabled: NotRequired[pulumi.Input[bool]]
+        """
+        Whether PPPoE authentication is enabled.
+        """
+        password: NotRequired[pulumi.Input[str]]
+        """
+        Password for PPPoE authentication. This parameter is not returned.
+        """
+        username: NotRequired[pulumi.Input[str]]
+        """
+        Username for PPPoE authentication.
+        """
+elif False:
+    ApplianceUplinksSettingsInterfacesWan1PppoeAuthenticationArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan1PppoeAuthenticationArgs:
@@ -407,6 +605,19 @@ class ApplianceUplinksSettingsInterfacesWan1PppoeAuthenticationArgs:
         pulumi.set(self, "username", value)
 
 
+if not MYPY:
+    class ApplianceUplinksSettingsInterfacesWan1SvisArgsDict(TypedDict):
+        ipv4: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1SvisIpv4ArgsDict']]
+        """
+        IPv4 settings for static/dynamic mode.
+        """
+        ipv6: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1SvisIpv6ArgsDict']]
+        """
+        IPv6 settings for static/dynamic mode.
+        """
+elif False:
+    ApplianceUplinksSettingsInterfacesWan1SvisArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan1SvisArgs:
     def __init__(__self__, *,
@@ -445,6 +656,27 @@ class ApplianceUplinksSettingsInterfacesWan1SvisArgs:
     def ipv6(self, value: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1SvisIpv6Args']]):
         pulumi.set(self, "ipv6", value)
 
+
+if not MYPY:
+    class ApplianceUplinksSettingsInterfacesWan1SvisIpv4ArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        IP address and subnet mask when in static mode.
+        """
+        assignment_mode: NotRequired[pulumi.Input[str]]
+        """
+        The assignment mode for this SVI. Applies only when PPPoE is disabled.
+        """
+        gateway: NotRequired[pulumi.Input[str]]
+        """
+        Gateway IP address when in static mode.
+        """
+        nameservers: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1SvisIpv4NameserversArgsDict']]
+        """
+        The nameserver settings for this SVI.
+        """
+elif False:
+    ApplianceUplinksSettingsInterfacesWan1SvisIpv4ArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan1SvisIpv4Args:
@@ -517,6 +749,15 @@ class ApplianceUplinksSettingsInterfacesWan1SvisIpv4Args:
         pulumi.set(self, "nameservers", value)
 
 
+if not MYPY:
+    class ApplianceUplinksSettingsInterfacesWan1SvisIpv4NameserversArgsDict(TypedDict):
+        addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Up to 2 nameserver addresses to use, ordered in priority from highest to lowest priority.
+        """
+elif False:
+    ApplianceUplinksSettingsInterfacesWan1SvisIpv4NameserversArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan1SvisIpv4NameserversArgs:
     def __init__(__self__, *,
@@ -539,6 +780,27 @@ class ApplianceUplinksSettingsInterfacesWan1SvisIpv4NameserversArgs:
     def addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
         pulumi.set(self, "addresses", value)
 
+
+if not MYPY:
+    class ApplianceUplinksSettingsInterfacesWan1SvisIpv6ArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        Static address that will override the one(s) received by SLAAC.
+        """
+        assignment_mode: NotRequired[pulumi.Input[str]]
+        """
+        The assignment mode for this SVI. Applies only when PPPoE is disabled.
+        """
+        gateway: NotRequired[pulumi.Input[str]]
+        """
+        Static gateway that will override the one received by autoconf.
+        """
+        nameservers: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan1SvisIpv6NameserversArgsDict']]
+        """
+        The nameserver settings for this SVI.
+        """
+elif False:
+    ApplianceUplinksSettingsInterfacesWan1SvisIpv6ArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan1SvisIpv6Args:
@@ -611,6 +873,15 @@ class ApplianceUplinksSettingsInterfacesWan1SvisIpv6Args:
         pulumi.set(self, "nameservers", value)
 
 
+if not MYPY:
+    class ApplianceUplinksSettingsInterfacesWan1SvisIpv6NameserversArgsDict(TypedDict):
+        addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Up to 2 nameserver addresses to use, ordered in priority from highest to lowest priority.
+        """
+elif False:
+    ApplianceUplinksSettingsInterfacesWan1SvisIpv6NameserversArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan1SvisIpv6NameserversArgs:
     def __init__(__self__, *,
@@ -633,6 +904,19 @@ class ApplianceUplinksSettingsInterfacesWan1SvisIpv6NameserversArgs:
     def addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
         pulumi.set(self, "addresses", value)
 
+
+if not MYPY:
+    class ApplianceUplinksSettingsInterfacesWan1VlanTaggingArgsDict(TypedDict):
+        enabled: NotRequired[pulumi.Input[bool]]
+        """
+        Whether VLAN tagging is enabled.
+        """
+        vlan_id: NotRequired[pulumi.Input[int]]
+        """
+        The ID of the VLAN to use for VLAN tagging.
+        """
+elif False:
+    ApplianceUplinksSettingsInterfacesWan1VlanTaggingArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan1VlanTaggingArgs:
@@ -672,6 +956,27 @@ class ApplianceUplinksSettingsInterfacesWan1VlanTaggingArgs:
     def vlan_id(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "vlan_id", value)
 
+
+if not MYPY:
+    class ApplianceUplinksSettingsInterfacesWan2ArgsDict(TypedDict):
+        enabled: NotRequired[pulumi.Input[bool]]
+        """
+        Enable or disable the interface.
+        """
+        pppoe: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2PppoeArgsDict']]
+        """
+        Configuration options for PPPoE.
+        """
+        svis: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2SvisArgsDict']]
+        """
+        SVI settings by protocol.
+        """
+        vlan_tagging: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2VlanTaggingArgsDict']]
+        """
+        VLAN tagging settings.
+        """
+elif False:
+    ApplianceUplinksSettingsInterfacesWan2ArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan2Args:
@@ -744,6 +1049,19 @@ class ApplianceUplinksSettingsInterfacesWan2Args:
         pulumi.set(self, "vlan_tagging", value)
 
 
+if not MYPY:
+    class ApplianceUplinksSettingsInterfacesWan2PppoeArgsDict(TypedDict):
+        authentication: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2PppoeAuthenticationArgsDict']]
+        """
+        Settings for PPPoE Authentication.
+        """
+        enabled: NotRequired[pulumi.Input[bool]]
+        """
+        Whether PPPoE is enabled.
+        """
+elif False:
+    ApplianceUplinksSettingsInterfacesWan2PppoeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan2PppoeArgs:
     def __init__(__self__, *,
@@ -782,6 +1100,23 @@ class ApplianceUplinksSettingsInterfacesWan2PppoeArgs:
     def enabled(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "enabled", value)
 
+
+if not MYPY:
+    class ApplianceUplinksSettingsInterfacesWan2PppoeAuthenticationArgsDict(TypedDict):
+        enabled: NotRequired[pulumi.Input[bool]]
+        """
+        Whether PPPoE authentication is enabled.
+        """
+        password: NotRequired[pulumi.Input[str]]
+        """
+        Password for PPPoE authentication. This parameter is not returned.
+        """
+        username: NotRequired[pulumi.Input[str]]
+        """
+        Username for PPPoE authentication.
+        """
+elif False:
+    ApplianceUplinksSettingsInterfacesWan2PppoeAuthenticationArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan2PppoeAuthenticationArgs:
@@ -838,6 +1173,19 @@ class ApplianceUplinksSettingsInterfacesWan2PppoeAuthenticationArgs:
         pulumi.set(self, "username", value)
 
 
+if not MYPY:
+    class ApplianceUplinksSettingsInterfacesWan2SvisArgsDict(TypedDict):
+        ipv4: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2SvisIpv4ArgsDict']]
+        """
+        IPv4 settings for static/dynamic mode.
+        """
+        ipv6: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2SvisIpv6ArgsDict']]
+        """
+        IPv6 settings for static/dynamic mode.
+        """
+elif False:
+    ApplianceUplinksSettingsInterfacesWan2SvisArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan2SvisArgs:
     def __init__(__self__, *,
@@ -876,6 +1224,27 @@ class ApplianceUplinksSettingsInterfacesWan2SvisArgs:
     def ipv6(self, value: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2SvisIpv6Args']]):
         pulumi.set(self, "ipv6", value)
 
+
+if not MYPY:
+    class ApplianceUplinksSettingsInterfacesWan2SvisIpv4ArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        IP address and subnet mask when in static mode.
+        """
+        assignment_mode: NotRequired[pulumi.Input[str]]
+        """
+        The assignment mode for this SVI. Applies only when PPPoE is disabled.
+        """
+        gateway: NotRequired[pulumi.Input[str]]
+        """
+        Gateway IP address when in static mode.
+        """
+        nameservers: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2SvisIpv4NameserversArgsDict']]
+        """
+        The nameserver settings for this SVI.
+        """
+elif False:
+    ApplianceUplinksSettingsInterfacesWan2SvisIpv4ArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan2SvisIpv4Args:
@@ -948,6 +1317,15 @@ class ApplianceUplinksSettingsInterfacesWan2SvisIpv4Args:
         pulumi.set(self, "nameservers", value)
 
 
+if not MYPY:
+    class ApplianceUplinksSettingsInterfacesWan2SvisIpv4NameserversArgsDict(TypedDict):
+        addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Up to 2 nameserver addresses to use, ordered in priority from highest to lowest priority.
+        """
+elif False:
+    ApplianceUplinksSettingsInterfacesWan2SvisIpv4NameserversArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan2SvisIpv4NameserversArgs:
     def __init__(__self__, *,
@@ -970,6 +1348,27 @@ class ApplianceUplinksSettingsInterfacesWan2SvisIpv4NameserversArgs:
     def addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
         pulumi.set(self, "addresses", value)
 
+
+if not MYPY:
+    class ApplianceUplinksSettingsInterfacesWan2SvisIpv6ArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        Static address that will override the one(s) received by SLAAC.
+        """
+        assignment_mode: NotRequired[pulumi.Input[str]]
+        """
+        The assignment mode for this SVI. Applies only when PPPoE is disabled.
+        """
+        gateway: NotRequired[pulumi.Input[str]]
+        """
+        Static gateway that will override the one received by autoconf.
+        """
+        nameservers: NotRequired[pulumi.Input['ApplianceUplinksSettingsInterfacesWan2SvisIpv6NameserversArgsDict']]
+        """
+        The nameserver settings for this SVI.
+        """
+elif False:
+    ApplianceUplinksSettingsInterfacesWan2SvisIpv6ArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan2SvisIpv6Args:
@@ -1042,6 +1441,15 @@ class ApplianceUplinksSettingsInterfacesWan2SvisIpv6Args:
         pulumi.set(self, "nameservers", value)
 
 
+if not MYPY:
+    class ApplianceUplinksSettingsInterfacesWan2SvisIpv6NameserversArgsDict(TypedDict):
+        addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Up to 2 nameserver addresses to use, ordered in priority from highest to lowest priority.
+        """
+elif False:
+    ApplianceUplinksSettingsInterfacesWan2SvisIpv6NameserversArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan2SvisIpv6NameserversArgs:
     def __init__(__self__, *,
@@ -1064,6 +1472,19 @@ class ApplianceUplinksSettingsInterfacesWan2SvisIpv6NameserversArgs:
     def addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
         pulumi.set(self, "addresses", value)
 
+
+if not MYPY:
+    class ApplianceUplinksSettingsInterfacesWan2VlanTaggingArgsDict(TypedDict):
+        enabled: NotRequired[pulumi.Input[bool]]
+        """
+        Whether VLAN tagging is enabled.
+        """
+        vlan_id: NotRequired[pulumi.Input[int]]
+        """
+        The ID of the VLAN to use for VLAN tagging.
+        """
+elif False:
+    ApplianceUplinksSettingsInterfacesWan2VlanTaggingArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ApplianceUplinksSettingsInterfacesWan2VlanTaggingArgs:
@@ -1104,6 +1525,19 @@ class ApplianceUplinksSettingsInterfacesWan2VlanTaggingArgs:
         pulumi.set(self, "vlan_id", value)
 
 
+if not MYPY:
+    class ApplianceVmxAuthenticationTokenItemArgsDict(TypedDict):
+        expires_at: NotRequired[pulumi.Input[str]]
+        """
+        The expiration time for the token, in ISO 8601 format
+        """
+        token: NotRequired[pulumi.Input[str]]
+        """
+        The newly generated authentication token for the vMX instance
+        """
+elif False:
+    ApplianceVmxAuthenticationTokenItemArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ApplianceVmxAuthenticationTokenItemArgs:
     def __init__(__self__, *,
@@ -1142,6 +1576,23 @@ class ApplianceVmxAuthenticationTokenItemArgs:
     def token(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "token", value)
 
+
+if not MYPY:
+    class BlinkLedsItemArgsDict(TypedDict):
+        duration: NotRequired[pulumi.Input[int]]
+        """
+        The duration in seconds. Will be between 5 and 120. Default is 20 seconds
+        """
+        duty: NotRequired[pulumi.Input[int]]
+        """
+        The duty cycle as the percent active. Will be between 10 and 90. Default is 50
+        """
+        period: NotRequired[pulumi.Input[int]]
+        """
+        The period in milliseconds. Will be between 100 and 1000. Default is 160 milliseconds
+        """
+elif False:
+    BlinkLedsItemArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class BlinkLedsItemArgs:
@@ -1198,6 +1649,23 @@ class BlinkLedsItemArgs:
         pulumi.set(self, "period", value)
 
 
+if not MYPY:
+    class BlinkLedsParametersArgsDict(TypedDict):
+        duration: NotRequired[pulumi.Input[int]]
+        """
+        The duration in seconds. Must be between 5 and 120. Default is 20 seconds
+        """
+        duty: NotRequired[pulumi.Input[int]]
+        """
+        The duty cycle as the percent active. Must be between 10 and 90. Default is 50.
+        """
+        period: NotRequired[pulumi.Input[int]]
+        """
+        The period in milliseconds. Must be between 100 and 1000. Default is 160 milliseconds
+        """
+elif False:
+    BlinkLedsParametersArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class BlinkLedsParametersArgs:
     def __init__(__self__, *,
@@ -1253,6 +1721,19 @@ class BlinkLedsParametersArgs:
         pulumi.set(self, "period", value)
 
 
+if not MYPY:
+    class CameraCustomAnalyticsParameterArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Name of the parameter
+        """
+        value: NotRequired[pulumi.Input[float]]
+        """
+        Value of the parameter
+        """
+elif False:
+    CameraCustomAnalyticsParameterArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CameraCustomAnalyticsParameterArgs:
     def __init__(__self__, *,
@@ -1291,6 +1772,19 @@ class CameraCustomAnalyticsParameterArgs:
     def value(self, value: Optional[pulumi.Input[float]]):
         pulumi.set(self, "value", value)
 
+
+if not MYPY:
+    class CameraGenerateSnapshotParametersArgsDict(TypedDict):
+        fullframe: NotRequired[pulumi.Input[bool]]
+        """
+        [optional] If set to "true" the snapshot will be taken at full sensor resolution. This will error if used with timestamp.
+        """
+        timestamp: NotRequired[pulumi.Input[str]]
+        """
+        [optional] The snapshot will be taken from this time on the camera. The timestamp is expected to be in ISO 8601 format. If no timestamp is specified, we will assume current time.
+        """
+elif False:
+    CameraGenerateSnapshotParametersArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CameraGenerateSnapshotParametersArgs:
@@ -1331,6 +1825,15 @@ class CameraGenerateSnapshotParametersArgs:
         pulumi.set(self, "timestamp", value)
 
 
+if not MYPY:
+    class CameraSenseAudioDetectionArgsDict(TypedDict):
+        enabled: NotRequired[pulumi.Input[bool]]
+        """
+        Boolean indicating if audio detection is enabled(true) or disabled(false) on the camera
+        """
+elif False:
+    CameraSenseAudioDetectionArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CameraSenseAudioDetectionArgs:
     def __init__(__self__, *,
@@ -1353,6 +1856,23 @@ class CameraSenseAudioDetectionArgs:
     def enabled(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "enabled", value)
 
+
+if not MYPY:
+    class CameraWirelessProfilesIdsArgsDict(TypedDict):
+        backup: NotRequired[pulumi.Input[str]]
+        """
+        The id of the backup wireless profile
+        """
+        primary: NotRequired[pulumi.Input[str]]
+        """
+        The id of the primary wireless profile
+        """
+        secondary: NotRequired[pulumi.Input[str]]
+        """
+        The id of the secondary wireless profile
+        """
+elif False:
+    CameraWirelessProfilesIdsArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CameraWirelessProfilesIdsArgs:
@@ -1409,6 +1929,23 @@ class CameraWirelessProfilesIdsArgs:
         pulumi.set(self, "secondary", value)
 
 
+if not MYPY:
+    class CellularGatewayLanFixedIpAssignmentArgsDict(TypedDict):
+        ip: NotRequired[pulumi.Input[str]]
+        """
+        The IP address you want to assign to a specific server or device
+        """
+        mac: NotRequired[pulumi.Input[str]]
+        """
+        The MAC address of the server or device that hosts the internal resource that you wish to receive the specified IP address
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        A descriptive name of the assignment
+        """
+elif False:
+    CellularGatewayLanFixedIpAssignmentArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CellularGatewayLanFixedIpAssignmentArgs:
     def __init__(__self__, *,
@@ -1464,6 +2001,23 @@ class CellularGatewayLanFixedIpAssignmentArgs:
         pulumi.set(self, "name", value)
 
 
+if not MYPY:
+    class CellularGatewayLanReservedIpRangeArgsDict(TypedDict):
+        comment: NotRequired[pulumi.Input[str]]
+        """
+        Comment explaining the reserved IP range
+        """
+        end: NotRequired[pulumi.Input[str]]
+        """
+        Ending IP included in the reserved range of IPs
+        """
+        start: NotRequired[pulumi.Input[str]]
+        """
+        Starting IP included in the reserved range of IPs
+        """
+elif False:
+    CellularGatewayLanReservedIpRangeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CellularGatewayLanReservedIpRangeArgs:
     def __init__(__self__, *,
@@ -1518,6 +2072,40 @@ class CellularGatewayLanReservedIpRangeArgs:
     def start(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "start", value)
 
+
+if not MYPY:
+    class CellularGatewayPortForwardingRulesRuleArgsDict(TypedDict):
+        access: NotRequired[pulumi.Input[str]]
+        """
+        *any* or *restricted*. Specify the right to make inbound connections on the specified ports or port ranges. If *restricted*, a list of allowed IPs is mandatory.
+        """
+        allowed_ips: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        An array of ranges of WAN IP addresses that are allowed to make inbound connections on the specified ports or port ranges.
+        """
+        lan_ip: NotRequired[pulumi.Input[str]]
+        """
+        The IP address of the server or device that hosts the internal resource that you wish to make available on the WAN
+        """
+        local_port: NotRequired[pulumi.Input[str]]
+        """
+        A port or port ranges that will receive the forwarded traffic from the WAN
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        A descriptive name for the rule
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        TCP or UDP
+        """
+        public_port: NotRequired[pulumi.Input[str]]
+        """
+        A port or port ranges that will be forwarded to the host on the LAN
+        """
+        uplink: NotRequired[pulumi.Input[str]]
+elif False:
+    CellularGatewayPortForwardingRulesRuleArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CellularGatewayPortForwardingRulesRuleArgs:
@@ -1650,6 +2238,23 @@ class CellularGatewayPortForwardingRulesRuleArgs:
         pulumi.set(self, "uplink", value)
 
 
+if not MYPY:
+    class CellularSimsSimArgsDict(TypedDict):
+        apns: NotRequired[pulumi.Input[Sequence[pulumi.Input['CellularSimsSimApnArgsDict']]]]
+        """
+        APN configurations. If empty, the default APN will be used.
+        """
+        is_primary: NotRequired[pulumi.Input[bool]]
+        """
+        If true, this SIM is used for boot. Must be true on single-sim devices.
+        """
+        slot: NotRequired[pulumi.Input[str]]
+        """
+        SIM slot being configured. Must be 'sim1' on single-sim devices.
+        """
+elif False:
+    CellularSimsSimArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CellularSimsSimArgs:
     def __init__(__self__, *,
@@ -1704,6 +2309,23 @@ class CellularSimsSimArgs:
     def slot(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "slot", value)
 
+
+if not MYPY:
+    class CellularSimsSimApnArgsDict(TypedDict):
+        allowed_ip_types: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        IP versions to support (permitted values include 'ipv4', 'ipv6').
+        """
+        authentication: NotRequired[pulumi.Input['CellularSimsSimApnAuthenticationArgsDict']]
+        """
+        APN authentication configurations.
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        APN name.
+        """
+elif False:
+    CellularSimsSimApnArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CellularSimsSimApnArgs:
@@ -1760,6 +2382,23 @@ class CellularSimsSimApnArgs:
         pulumi.set(self, "name", value)
 
 
+if not MYPY:
+    class CellularSimsSimApnAuthenticationArgsDict(TypedDict):
+        password: NotRequired[pulumi.Input[str]]
+        """
+        APN password, if type is set (if APN password is not supplied, the password is left unchanged).
+        """
+        type: NotRequired[pulumi.Input[str]]
+        """
+        APN auth type.
+        """
+        username: NotRequired[pulumi.Input[str]]
+        """
+        APN username, if type is set.
+        """
+elif False:
+    CellularSimsSimApnAuthenticationArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CellularSimsSimApnAuthenticationArgs:
     def __init__(__self__, *,
@@ -1815,6 +2454,19 @@ class CellularSimsSimApnAuthenticationArgs:
         pulumi.set(self, "username", value)
 
 
+if not MYPY:
+    class CellularSimsSimFailoverArgsDict(TypedDict):
+        enabled: NotRequired[pulumi.Input[bool]]
+        """
+        Failover to secondary SIM (optional)
+        """
+        timeout: NotRequired[pulumi.Input[int]]
+        """
+        Failover timeout in seconds (optional)
+        """
+elif False:
+    CellularSimsSimFailoverArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CellularSimsSimFailoverArgs:
     def __init__(__self__, *,
@@ -1853,6 +2505,27 @@ class CellularSimsSimFailoverArgs:
     def timeout(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "timeout", value)
 
+
+if not MYPY:
+    class LiveToolsArpTableCallbackArgsDict(TypedDict):
+        http_server: NotRequired[pulumi.Input['LiveToolsArpTableCallbackHttpServerArgsDict']]
+        """
+        The webhook receiver used for the callback webhook.
+        """
+        payload_template: NotRequired[pulumi.Input['LiveToolsArpTableCallbackPayloadTemplateArgsDict']]
+        """
+        The payload template of the webhook used for the callback
+        """
+        shared_secret: NotRequired[pulumi.Input[str]]
+        """
+        A shared secret that will be included in the requests sent to the callback URL. It can be used to verify that the request was sent by Meraki. If using this field, please also specify an url.
+        """
+        url: NotRequired[pulumi.Input[str]]
+        """
+        The callback URL for the webhook target. If using this field, please also specify a sharedSecret.
+        """
+elif False:
+    LiveToolsArpTableCallbackArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LiveToolsArpTableCallbackArgs:
@@ -1925,6 +2598,15 @@ class LiveToolsArpTableCallbackArgs:
         pulumi.set(self, "url", value)
 
 
+if not MYPY:
+    class LiveToolsArpTableCallbackHttpServerArgsDict(TypedDict):
+        id: NotRequired[pulumi.Input[str]]
+        """
+        The webhook receiver ID that will receive information. If specifying this, please leave the url and sharedSecret fields blank.
+        """
+elif False:
+    LiveToolsArpTableCallbackHttpServerArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LiveToolsArpTableCallbackHttpServerArgs:
     def __init__(__self__, *,
@@ -1948,6 +2630,15 @@ class LiveToolsArpTableCallbackHttpServerArgs:
         pulumi.set(self, "id", value)
 
 
+if not MYPY:
+    class LiveToolsArpTableCallbackPayloadTemplateArgsDict(TypedDict):
+        id: NotRequired[pulumi.Input[str]]
+        """
+        The ID of the payload template. Defaults to 'wpt_00005' for the Callback (included) template.
+        """
+elif False:
+    LiveToolsArpTableCallbackPayloadTemplateArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LiveToolsArpTableCallbackPayloadTemplateArgs:
     def __init__(__self__, *,
@@ -1970,6 +2661,27 @@ class LiveToolsArpTableCallbackPayloadTemplateArgs:
     def id(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "id", value)
 
+
+if not MYPY:
+    class LiveToolsArpTableEntryArgsDict(TypedDict):
+        ip: NotRequired[pulumi.Input[str]]
+        """
+        The IP address of the ARP table entry
+        """
+        last_updated_at: NotRequired[pulumi.Input[str]]
+        """
+        Time of the last update of the ARP table entry
+        """
+        mac: NotRequired[pulumi.Input[str]]
+        """
+        The MAC address of the ARP table entry
+        """
+        vlan_id: NotRequired[pulumi.Input[int]]
+        """
+        The VLAN ID of the ARP table entry
+        """
+elif False:
+    LiveToolsArpTableEntryArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LiveToolsArpTableEntryArgs:
@@ -2042,6 +2754,15 @@ class LiveToolsArpTableEntryArgs:
         pulumi.set(self, "vlan_id", value)
 
 
+if not MYPY:
+    class LiveToolsArpTableRequestArgsDict(TypedDict):
+        serial: NotRequired[pulumi.Input[str]]
+        """
+        Device serial number
+        """
+elif False:
+    LiveToolsArpTableRequestArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LiveToolsArpTableRequestArgs:
     def __init__(__self__, *,
@@ -2064,6 +2785,27 @@ class LiveToolsArpTableRequestArgs:
     def serial(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "serial", value)
 
+
+if not MYPY:
+    class LiveToolsCableCallbackArgsDict(TypedDict):
+        http_server: NotRequired[pulumi.Input['LiveToolsCableCallbackHttpServerArgsDict']]
+        """
+        The webhook receiver used for the callback webhook.
+        """
+        payload_template: NotRequired[pulumi.Input['LiveToolsCableCallbackPayloadTemplateArgsDict']]
+        """
+        The payload template of the webhook used for the callback
+        """
+        shared_secret: NotRequired[pulumi.Input[str]]
+        """
+        A shared secret that will be included in the requests sent to the callback URL. It can be used to verify that the request was sent by Meraki. If using this field, please also specify an url.
+        """
+        url: NotRequired[pulumi.Input[str]]
+        """
+        The callback URL for the webhook target. If using this field, please also specify a sharedSecret.
+        """
+elif False:
+    LiveToolsCableCallbackArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LiveToolsCableCallbackArgs:
@@ -2136,6 +2878,15 @@ class LiveToolsCableCallbackArgs:
         pulumi.set(self, "url", value)
 
 
+if not MYPY:
+    class LiveToolsCableCallbackHttpServerArgsDict(TypedDict):
+        id: NotRequired[pulumi.Input[str]]
+        """
+        The webhook receiver ID that will receive information. If specifying this, please leave the url and sharedSecret fields blank.
+        """
+elif False:
+    LiveToolsCableCallbackHttpServerArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LiveToolsCableCallbackHttpServerArgs:
     def __init__(__self__, *,
@@ -2159,6 +2910,15 @@ class LiveToolsCableCallbackHttpServerArgs:
         pulumi.set(self, "id", value)
 
 
+if not MYPY:
+    class LiveToolsCableCallbackPayloadTemplateArgsDict(TypedDict):
+        id: NotRequired[pulumi.Input[str]]
+        """
+        The ID of the payload template. Defaults to 'wpt_00005' for the Callback (included) template.
+        """
+elif False:
+    LiveToolsCableCallbackPayloadTemplateArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LiveToolsCableCallbackPayloadTemplateArgs:
     def __init__(__self__, *,
@@ -2181,6 +2941,19 @@ class LiveToolsCableCallbackPayloadTemplateArgs:
     def id(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "id", value)
 
+
+if not MYPY:
+    class LiveToolsCableRequestArgsDict(TypedDict):
+        ports: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        A list of ports for which to perform the cable test.
+        """
+        serial: NotRequired[pulumi.Input[str]]
+        """
+        Device serial number
+        """
+elif False:
+    LiveToolsCableRequestArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LiveToolsCableRequestArgs:
@@ -2220,6 +2993,31 @@ class LiveToolsCableRequestArgs:
     def serial(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "serial", value)
 
+
+if not MYPY:
+    class LiveToolsCableResultArgsDict(TypedDict):
+        error: NotRequired[pulumi.Input[str]]
+        """
+        If an error occurred during the cable test, the error message will be populated here.
+        """
+        pairs: NotRequired[pulumi.Input[Sequence[pulumi.Input['LiveToolsCableResultPairArgsDict']]]]
+        """
+        Results for each twisted pair within the cable.
+        """
+        port: NotRequired[pulumi.Input[str]]
+        """
+        The port for which the test was performed.
+        """
+        speed_mbps: NotRequired[pulumi.Input[int]]
+        """
+        Speed in Mbps.  A speed of 0 indicates the port is down or the port speed is automatic.
+        """
+        status: NotRequired[pulumi.Input[str]]
+        """
+        The current status of the port. If the cable test is still being performed on the port, "in-progress" is used. If an error occurred during the cable test, "error" is used and the error property will be populated.
+        """
+elif False:
+    LiveToolsCableResultArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LiveToolsCableResultArgs:
@@ -2308,6 +3106,23 @@ class LiveToolsCableResultArgs:
         pulumi.set(self, "status", value)
 
 
+if not MYPY:
+    class LiveToolsCableResultPairArgsDict(TypedDict):
+        index: NotRequired[pulumi.Input[int]]
+        """
+        The index of the twisted pair tested.
+        """
+        length_meters: NotRequired[pulumi.Input[int]]
+        """
+        The detected length of the twisted pair.
+        """
+        status: NotRequired[pulumi.Input[str]]
+        """
+        The test result of the twisted pair tested.
+        """
+elif False:
+    LiveToolsCableResultPairArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LiveToolsCableResultPairArgs:
     def __init__(__self__, *,
@@ -2362,6 +3177,31 @@ class LiveToolsCableResultPairArgs:
     def status(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "status", value)
 
+
+if not MYPY:
+    class LiveToolsPingDeviceItemArgsDict(TypedDict):
+        callback: NotRequired[pulumi.Input['LiveToolsPingDeviceItemCallbackArgsDict']]
+        """
+        Information for callback used to send back results
+        """
+        ping_id: NotRequired[pulumi.Input[str]]
+        """
+        Id to check the status of your ping request.
+        """
+        request: NotRequired[pulumi.Input['LiveToolsPingDeviceItemRequestArgsDict']]
+        """
+        Ping request parameters
+        """
+        status: NotRequired[pulumi.Input[str]]
+        """
+        Status of the ping request.
+        """
+        url: NotRequired[pulumi.Input[str]]
+        """
+        GET this url to check the status of your ping request.
+        """
+elif False:
+    LiveToolsPingDeviceItemArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LiveToolsPingDeviceItemArgs:
@@ -2450,6 +3290,23 @@ class LiveToolsPingDeviceItemArgs:
         pulumi.set(self, "url", value)
 
 
+if not MYPY:
+    class LiveToolsPingDeviceItemCallbackArgsDict(TypedDict):
+        id: NotRequired[pulumi.Input[str]]
+        """
+        The ID of the callback. To check the status of the callback, use this ID in a request to /webhooks/callbacks/statuses/{id}
+        """
+        status: NotRequired[pulumi.Input[str]]
+        """
+        The status of the callback
+        """
+        url: NotRequired[pulumi.Input[str]]
+        """
+        The callback URL for the webhook target. This was either provided in the original request or comes from a configured webhook receiver
+        """
+elif False:
+    LiveToolsPingDeviceItemCallbackArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LiveToolsPingDeviceItemCallbackArgs:
     def __init__(__self__, *,
@@ -2504,6 +3361,23 @@ class LiveToolsPingDeviceItemCallbackArgs:
     def url(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "url", value)
 
+
+if not MYPY:
+    class LiveToolsPingDeviceItemRequestArgsDict(TypedDict):
+        count: NotRequired[pulumi.Input[int]]
+        """
+        Number of pings to send
+        """
+        serial: NotRequired[pulumi.Input[str]]
+        """
+        Device serial number
+        """
+        target: NotRequired[pulumi.Input[str]]
+        """
+        IP address or FQDN to ping
+        """
+elif False:
+    LiveToolsPingDeviceItemRequestArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LiveToolsPingDeviceItemRequestArgs:
@@ -2560,6 +3434,19 @@ class LiveToolsPingDeviceItemRequestArgs:
         pulumi.set(self, "target", value)
 
 
+if not MYPY:
+    class LiveToolsPingDeviceParametersArgsDict(TypedDict):
+        callback: NotRequired[pulumi.Input['LiveToolsPingDeviceParametersCallbackArgsDict']]
+        """
+        Details for the callback. Please include either an httpServerId OR url and sharedSecret
+        """
+        count: NotRequired[pulumi.Input[int]]
+        """
+        Count parameter to pass to ping. [1..5], default 5
+        """
+elif False:
+    LiveToolsPingDeviceParametersArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LiveToolsPingDeviceParametersArgs:
     def __init__(__self__, *,
@@ -2598,6 +3485,27 @@ class LiveToolsPingDeviceParametersArgs:
     def count(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "count", value)
 
+
+if not MYPY:
+    class LiveToolsPingDeviceParametersCallbackArgsDict(TypedDict):
+        http_server: NotRequired[pulumi.Input['LiveToolsPingDeviceParametersCallbackHttpServerArgsDict']]
+        """
+        The webhook receiver used for the callback webhook.
+        """
+        payload_template: NotRequired[pulumi.Input['LiveToolsPingDeviceParametersCallbackPayloadTemplateArgsDict']]
+        """
+        The payload template of the webhook used for the callback
+        """
+        shared_secret: NotRequired[pulumi.Input[str]]
+        """
+        A shared secret that will be included in the requests sent to the callback URL. It can be used to verify that the request was sent by Meraki. If using this field, please also specify an url.
+        """
+        url: NotRequired[pulumi.Input[str]]
+        """
+        The callback URL for the webhook target. If using this field, please also specify a sharedSecret.
+        """
+elif False:
+    LiveToolsPingDeviceParametersCallbackArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LiveToolsPingDeviceParametersCallbackArgs:
@@ -2670,6 +3578,15 @@ class LiveToolsPingDeviceParametersCallbackArgs:
         pulumi.set(self, "url", value)
 
 
+if not MYPY:
+    class LiveToolsPingDeviceParametersCallbackHttpServerArgsDict(TypedDict):
+        id: NotRequired[pulumi.Input[str]]
+        """
+        The webhook receiver ID that will receive information. If specifying this, please leave the url and sharedSecret fields blank.
+        """
+elif False:
+    LiveToolsPingDeviceParametersCallbackHttpServerArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LiveToolsPingDeviceParametersCallbackHttpServerArgs:
     def __init__(__self__, *,
@@ -2693,6 +3610,15 @@ class LiveToolsPingDeviceParametersCallbackHttpServerArgs:
         pulumi.set(self, "id", value)
 
 
+if not MYPY:
+    class LiveToolsPingDeviceParametersCallbackPayloadTemplateArgsDict(TypedDict):
+        id: NotRequired[pulumi.Input[str]]
+        """
+        The ID of the payload template. Defaults to 'wpt_00005' for the Callback (included) template.
+        """
+elif False:
+    LiveToolsPingDeviceParametersCallbackPayloadTemplateArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LiveToolsPingDeviceParametersCallbackPayloadTemplateArgs:
     def __init__(__self__, *,
@@ -2715,6 +3641,31 @@ class LiveToolsPingDeviceParametersCallbackPayloadTemplateArgs:
     def id(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "id", value)
 
+
+if not MYPY:
+    class LiveToolsPingItemArgsDict(TypedDict):
+        callback: NotRequired[pulumi.Input['LiveToolsPingItemCallbackArgsDict']]
+        """
+        Information for callback used to send back results
+        """
+        ping_id: NotRequired[pulumi.Input[str]]
+        """
+        Id to check the status of your ping request.
+        """
+        request: NotRequired[pulumi.Input['LiveToolsPingItemRequestArgsDict']]
+        """
+        Ping request parameters
+        """
+        status: NotRequired[pulumi.Input[str]]
+        """
+        Status of the ping request.
+        """
+        url: NotRequired[pulumi.Input[str]]
+        """
+        GET this url to check the status of your ping request.
+        """
+elif False:
+    LiveToolsPingItemArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LiveToolsPingItemArgs:
@@ -2803,6 +3754,23 @@ class LiveToolsPingItemArgs:
         pulumi.set(self, "url", value)
 
 
+if not MYPY:
+    class LiveToolsPingItemCallbackArgsDict(TypedDict):
+        id: NotRequired[pulumi.Input[str]]
+        """
+        The ID of the callback. To check the status of the callback, use this ID in a request to /webhooks/callbacks/statuses/{id}
+        """
+        status: NotRequired[pulumi.Input[str]]
+        """
+        The status of the callback
+        """
+        url: NotRequired[pulumi.Input[str]]
+        """
+        The callback URL for the webhook target. This was either provided in the original request or comes from a configured webhook receiver
+        """
+elif False:
+    LiveToolsPingItemCallbackArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LiveToolsPingItemCallbackArgs:
     def __init__(__self__, *,
@@ -2857,6 +3825,23 @@ class LiveToolsPingItemCallbackArgs:
     def url(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "url", value)
 
+
+if not MYPY:
+    class LiveToolsPingItemRequestArgsDict(TypedDict):
+        count: NotRequired[pulumi.Input[int]]
+        """
+        Number of pings to send
+        """
+        serial: NotRequired[pulumi.Input[str]]
+        """
+        Device serial number
+        """
+        target: NotRequired[pulumi.Input[str]]
+        """
+        IP address or FQDN to ping
+        """
+elif False:
+    LiveToolsPingItemRequestArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LiveToolsPingItemRequestArgs:
@@ -2913,6 +3898,23 @@ class LiveToolsPingItemRequestArgs:
         pulumi.set(self, "target", value)
 
 
+if not MYPY:
+    class LiveToolsPingParametersArgsDict(TypedDict):
+        callback: NotRequired[pulumi.Input['LiveToolsPingParametersCallbackArgsDict']]
+        """
+        Details for the callback. Please include either an httpServerId OR url and sharedSecret
+        """
+        count: NotRequired[pulumi.Input[int]]
+        """
+        Count parameter to pass to ping. [1..5], default 5
+        """
+        target: NotRequired[pulumi.Input[str]]
+        """
+        FQDN, IPv4 or IPv6 address
+        """
+elif False:
+    LiveToolsPingParametersArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LiveToolsPingParametersArgs:
     def __init__(__self__, *,
@@ -2967,6 +3969,27 @@ class LiveToolsPingParametersArgs:
     def target(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "target", value)
 
+
+if not MYPY:
+    class LiveToolsPingParametersCallbackArgsDict(TypedDict):
+        http_server: NotRequired[pulumi.Input['LiveToolsPingParametersCallbackHttpServerArgsDict']]
+        """
+        The webhook receiver used for the callback webhook.
+        """
+        payload_template: NotRequired[pulumi.Input['LiveToolsPingParametersCallbackPayloadTemplateArgsDict']]
+        """
+        The payload template of the webhook used for the callback
+        """
+        shared_secret: NotRequired[pulumi.Input[str]]
+        """
+        A shared secret that will be included in the requests sent to the callback URL. It can be used to verify that the request was sent by Meraki. If using this field, please also specify an url.
+        """
+        url: NotRequired[pulumi.Input[str]]
+        """
+        The callback URL for the webhook target. If using this field, please also specify a sharedSecret.
+        """
+elif False:
+    LiveToolsPingParametersCallbackArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LiveToolsPingParametersCallbackArgs:
@@ -3039,6 +4062,15 @@ class LiveToolsPingParametersCallbackArgs:
         pulumi.set(self, "url", value)
 
 
+if not MYPY:
+    class LiveToolsPingParametersCallbackHttpServerArgsDict(TypedDict):
+        id: NotRequired[pulumi.Input[str]]
+        """
+        The webhook receiver ID that will receive information. If specifying this, please leave the url and sharedSecret fields blank.
+        """
+elif False:
+    LiveToolsPingParametersCallbackHttpServerArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LiveToolsPingParametersCallbackHttpServerArgs:
     def __init__(__self__, *,
@@ -3062,6 +4094,15 @@ class LiveToolsPingParametersCallbackHttpServerArgs:
         pulumi.set(self, "id", value)
 
 
+if not MYPY:
+    class LiveToolsPingParametersCallbackPayloadTemplateArgsDict(TypedDict):
+        id: NotRequired[pulumi.Input[str]]
+        """
+        The ID of the payload template. Defaults to 'wpt_00005' for the Callback (included) template.
+        """
+elif False:
+    LiveToolsPingParametersCallbackPayloadTemplateArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LiveToolsPingParametersCallbackPayloadTemplateArgs:
     def __init__(__self__, *,
@@ -3084,6 +4125,27 @@ class LiveToolsPingParametersCallbackPayloadTemplateArgs:
     def id(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "id", value)
 
+
+if not MYPY:
+    class LiveToolsThroughputTestCallbackArgsDict(TypedDict):
+        http_server: NotRequired[pulumi.Input['LiveToolsThroughputTestCallbackHttpServerArgsDict']]
+        """
+        The webhook receiver used for the callback webhook.
+        """
+        payload_template: NotRequired[pulumi.Input['LiveToolsThroughputTestCallbackPayloadTemplateArgsDict']]
+        """
+        The payload template of the webhook used for the callback
+        """
+        shared_secret: NotRequired[pulumi.Input[str]]
+        """
+        A shared secret that will be included in the requests sent to the callback URL. It can be used to verify that the request was sent by Meraki. If using this field, please also specify an url.
+        """
+        url: NotRequired[pulumi.Input[str]]
+        """
+        The callback URL for the webhook target. If using this field, please also specify a sharedSecret.
+        """
+elif False:
+    LiveToolsThroughputTestCallbackArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LiveToolsThroughputTestCallbackArgs:
@@ -3156,6 +4218,15 @@ class LiveToolsThroughputTestCallbackArgs:
         pulumi.set(self, "url", value)
 
 
+if not MYPY:
+    class LiveToolsThroughputTestCallbackHttpServerArgsDict(TypedDict):
+        id: NotRequired[pulumi.Input[str]]
+        """
+        The webhook receiver ID that will receive information. If specifying this, please leave the url and sharedSecret fields blank.
+        """
+elif False:
+    LiveToolsThroughputTestCallbackHttpServerArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LiveToolsThroughputTestCallbackHttpServerArgs:
     def __init__(__self__, *,
@@ -3178,6 +4249,15 @@ class LiveToolsThroughputTestCallbackHttpServerArgs:
     def id(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "id", value)
 
+
+if not MYPY:
+    class LiveToolsThroughputTestCallbackPayloadTemplateArgsDict(TypedDict):
+        id: NotRequired[pulumi.Input[str]]
+        """
+        The ID of the payload template. Defaults to 'wpt_00005' for the Callback (included) template.
+        """
+elif False:
+    LiveToolsThroughputTestCallbackPayloadTemplateArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LiveToolsThroughputTestCallbackPayloadTemplateArgs:
@@ -3202,6 +4282,15 @@ class LiveToolsThroughputTestCallbackPayloadTemplateArgs:
         pulumi.set(self, "id", value)
 
 
+if not MYPY:
+    class LiveToolsThroughputTestRequestArgsDict(TypedDict):
+        serial: NotRequired[pulumi.Input[str]]
+        """
+        Device serial number
+        """
+elif False:
+    LiveToolsThroughputTestRequestArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LiveToolsThroughputTestRequestArgs:
     def __init__(__self__, *,
@@ -3224,6 +4313,15 @@ class LiveToolsThroughputTestRequestArgs:
     def serial(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "serial", value)
 
+
+if not MYPY:
+    class LiveToolsThroughputTestResultArgsDict(TypedDict):
+        speeds: NotRequired[pulumi.Input['LiveToolsThroughputTestResultSpeedsArgsDict']]
+        """
+        Shows the speeds (Mbps)
+        """
+elif False:
+    LiveToolsThroughputTestResultArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LiveToolsThroughputTestResultArgs:
@@ -3248,6 +4346,15 @@ class LiveToolsThroughputTestResultArgs:
         pulumi.set(self, "speeds", value)
 
 
+if not MYPY:
+    class LiveToolsThroughputTestResultSpeedsArgsDict(TypedDict):
+        downstream: NotRequired[pulumi.Input[int]]
+        """
+        Shows the download speed from shard (Mbps)
+        """
+elif False:
+    LiveToolsThroughputTestResultSpeedsArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LiveToolsThroughputTestResultSpeedsArgs:
     def __init__(__self__, *,
@@ -3270,6 +4377,27 @@ class LiveToolsThroughputTestResultSpeedsArgs:
     def downstream(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "downstream", value)
 
+
+if not MYPY:
+    class LiveToolsWakeOnLanCallbackArgsDict(TypedDict):
+        http_server: NotRequired[pulumi.Input['LiveToolsWakeOnLanCallbackHttpServerArgsDict']]
+        """
+        The webhook receiver used for the callback webhook.
+        """
+        payload_template: NotRequired[pulumi.Input['LiveToolsWakeOnLanCallbackPayloadTemplateArgsDict']]
+        """
+        The payload template of the webhook used for the callback
+        """
+        shared_secret: NotRequired[pulumi.Input[str]]
+        """
+        A shared secret that will be included in the requests sent to the callback URL. It can be used to verify that the request was sent by Meraki. If using this field, please also specify an url.
+        """
+        url: NotRequired[pulumi.Input[str]]
+        """
+        The callback URL for the webhook target. If using this field, please also specify a sharedSecret.
+        """
+elif False:
+    LiveToolsWakeOnLanCallbackArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LiveToolsWakeOnLanCallbackArgs:
@@ -3342,6 +4470,15 @@ class LiveToolsWakeOnLanCallbackArgs:
         pulumi.set(self, "url", value)
 
 
+if not MYPY:
+    class LiveToolsWakeOnLanCallbackHttpServerArgsDict(TypedDict):
+        id: NotRequired[pulumi.Input[str]]
+        """
+        The webhook receiver ID that will receive information. If specifying this, please leave the url and sharedSecret fields blank.
+        """
+elif False:
+    LiveToolsWakeOnLanCallbackHttpServerArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LiveToolsWakeOnLanCallbackHttpServerArgs:
     def __init__(__self__, *,
@@ -3365,6 +4502,15 @@ class LiveToolsWakeOnLanCallbackHttpServerArgs:
         pulumi.set(self, "id", value)
 
 
+if not MYPY:
+    class LiveToolsWakeOnLanCallbackPayloadTemplateArgsDict(TypedDict):
+        id: NotRequired[pulumi.Input[str]]
+        """
+        The ID of the payload template. Defaults to 'wpt_00005' for the Callback (included) template.
+        """
+elif False:
+    LiveToolsWakeOnLanCallbackPayloadTemplateArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LiveToolsWakeOnLanCallbackPayloadTemplateArgs:
     def __init__(__self__, *,
@@ -3387,6 +4533,23 @@ class LiveToolsWakeOnLanCallbackPayloadTemplateArgs:
     def id(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "id", value)
 
+
+if not MYPY:
+    class LiveToolsWakeOnLanRequestArgsDict(TypedDict):
+        mac: NotRequired[pulumi.Input[str]]
+        """
+        The target's MAC address
+        """
+        serial: NotRequired[pulumi.Input[str]]
+        """
+        Device serial number
+        """
+        vlan_id: NotRequired[pulumi.Input[int]]
+        """
+        The target's VLAN (1 to 4094)
+        """
+elif False:
+    LiveToolsWakeOnLanRequestArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LiveToolsWakeOnLanRequestArgs:
@@ -3443,6 +4606,23 @@ class LiveToolsWakeOnLanRequestArgs:
         pulumi.set(self, "vlan_id", value)
 
 
+if not MYPY:
+    class ManagementInterfaceDdnsHostnamesArgsDict(TypedDict):
+        active_ddns_hostname: NotRequired[pulumi.Input[str]]
+        """
+        Active dynamic DNS hostname.
+        """
+        ddns_hostname_wan1: NotRequired[pulumi.Input[str]]
+        """
+        WAN 1 dynamic DNS hostname.
+        """
+        ddns_hostname_wan2: NotRequired[pulumi.Input[str]]
+        """
+        WAN 2 dynamic DNS hostname.
+        """
+elif False:
+    ManagementInterfaceDdnsHostnamesArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ManagementInterfaceDdnsHostnamesArgs:
     def __init__(__self__, *,
@@ -3497,6 +4677,39 @@ class ManagementInterfaceDdnsHostnamesArgs:
     def ddns_hostname_wan2(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "ddns_hostname_wan2", value)
 
+
+if not MYPY:
+    class ManagementInterfaceWan1ArgsDict(TypedDict):
+        static_dns: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Up to two DNS IPs.
+        """
+        static_gateway_ip: NotRequired[pulumi.Input[str]]
+        """
+        The IP of the gateway on the WAN.
+        """
+        static_ip: NotRequired[pulumi.Input[str]]
+        """
+        The IP the device should use on the WAN.
+        """
+        static_subnet_mask: NotRequired[pulumi.Input[str]]
+        """
+        The subnet mask for the WAN.
+        """
+        using_static_ip: NotRequired[pulumi.Input[bool]]
+        """
+        Configure the interface to have static IP settings or use DHCP.
+        """
+        vlan: NotRequired[pulumi.Input[int]]
+        """
+        The VLAN that management traffic should be tagged with. Applies whether usingStaticIp is true or false.
+        """
+        wan_enabled: NotRequired[pulumi.Input[str]]
+        """
+        Enable or disable the interface (only for MX devices). Valid values are 'enabled', 'disabled', and 'not configured'.
+        """
+elif False:
+    ManagementInterfaceWan1ArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ManagementInterfaceWan1Args:
@@ -3617,6 +4830,39 @@ class ManagementInterfaceWan1Args:
         pulumi.set(self, "wan_enabled", value)
 
 
+if not MYPY:
+    class ManagementInterfaceWan2ArgsDict(TypedDict):
+        static_dns: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Up to two DNS IPs.
+        """
+        static_gateway_ip: NotRequired[pulumi.Input[str]]
+        """
+        The IP of the gateway on the WAN.
+        """
+        static_ip: NotRequired[pulumi.Input[str]]
+        """
+        The IP the device should use on the WAN.
+        """
+        static_subnet_mask: NotRequired[pulumi.Input[str]]
+        """
+        The subnet mask for the WAN.
+        """
+        using_static_ip: NotRequired[pulumi.Input[bool]]
+        """
+        Configure the interface to have static IP settings or use DHCP.
+        """
+        vlan: NotRequired[pulumi.Input[int]]
+        """
+        The VLAN that management traffic should be tagged with. Applies whether usingStaticIp is true or false.
+        """
+        wan_enabled: NotRequired[pulumi.Input[str]]
+        """
+        Enable or disable the interface (only for MX devices). Valid values are 'enabled', 'disabled', and 'not configured'.
+        """
+elif False:
+    ManagementInterfaceWan2ArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ManagementInterfaceWan2Args:
     def __init__(__self__, *,
@@ -3736,6 +4982,15 @@ class ManagementInterfaceWan2Args:
         pulumi.set(self, "wan_enabled", value)
 
 
+if not MYPY:
+    class SensorRelationshipsLivestreamArgsDict(TypedDict):
+        related_devices: NotRequired[pulumi.Input[Sequence[pulumi.Input['SensorRelationshipsLivestreamRelatedDeviceArgsDict']]]]
+        """
+        An array of the related devices for the role
+        """
+elif False:
+    SensorRelationshipsLivestreamArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class SensorRelationshipsLivestreamArgs:
     def __init__(__self__, *,
@@ -3758,6 +5013,19 @@ class SensorRelationshipsLivestreamArgs:
     def related_devices(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SensorRelationshipsLivestreamRelatedDeviceArgs']]]]):
         pulumi.set(self, "related_devices", value)
 
+
+if not MYPY:
+    class SensorRelationshipsLivestreamRelatedDeviceArgsDict(TypedDict):
+        product_type: NotRequired[pulumi.Input[str]]
+        """
+        The product type of the related device
+        """
+        serial: NotRequired[pulumi.Input[str]]
+        """
+        The serial of the related device
+        """
+elif False:
+    SensorRelationshipsLivestreamRelatedDeviceArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class SensorRelationshipsLivestreamRelatedDeviceArgs:
@@ -3798,6 +5066,15 @@ class SensorRelationshipsLivestreamRelatedDeviceArgs:
         pulumi.set(self, "serial", value)
 
 
+if not MYPY:
+    class SensorRelationshipsLivestreamRequestArgsDict(TypedDict):
+        related_devices: NotRequired[pulumi.Input[Sequence[pulumi.Input['SensorRelationshipsLivestreamRequestRelatedDeviceArgsDict']]]]
+        """
+        An array of the related devices for the role
+        """
+elif False:
+    SensorRelationshipsLivestreamRequestArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class SensorRelationshipsLivestreamRequestArgs:
     def __init__(__self__, *,
@@ -3820,6 +5097,19 @@ class SensorRelationshipsLivestreamRequestArgs:
     def related_devices(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SensorRelationshipsLivestreamRequestRelatedDeviceArgs']]]]):
         pulumi.set(self, "related_devices", value)
 
+
+if not MYPY:
+    class SensorRelationshipsLivestreamRequestRelatedDeviceArgsDict(TypedDict):
+        product_type: NotRequired[pulumi.Input[str]]
+        """
+        The product type of the related device
+        """
+        serial: NotRequired[pulumi.Input[str]]
+        """
+        The serial of the related device
+        """
+elif False:
+    SensorRelationshipsLivestreamRequestRelatedDeviceArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class SensorRelationshipsLivestreamRequestRelatedDeviceArgs:
@@ -3860,6 +5150,15 @@ class SensorRelationshipsLivestreamRequestRelatedDeviceArgs:
         pulumi.set(self, "serial", value)
 
 
+if not MYPY:
+    class SwitchPortsCycleItemArgsDict(TypedDict):
+        ports: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        List of switch ports
+        """
+elif False:
+    SwitchPortsCycleItemArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class SwitchPortsCycleItemArgs:
     def __init__(__self__, *,
@@ -3882,6 +5181,15 @@ class SwitchPortsCycleItemArgs:
     def ports(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
         pulumi.set(self, "ports", value)
 
+
+if not MYPY:
+    class SwitchPortsCycleParametersArgsDict(TypedDict):
+        ports: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        List of switch ports
+        """
+elif False:
+    SwitchPortsCycleParametersArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class SwitchPortsCycleParametersArgs:
@@ -3906,6 +5214,15 @@ class SwitchPortsCycleParametersArgs:
         pulumi.set(self, "ports", value)
 
 
+if not MYPY:
+    class SwitchPortsMirrorArgsDict(TypedDict):
+        mode: NotRequired[pulumi.Input[str]]
+        """
+        The port mirror mode. Can be one of ('Destination port', 'Source port' or 'Not mirroring traffic').
+        """
+elif False:
+    SwitchPortsMirrorArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class SwitchPortsMirrorArgs:
     def __init__(__self__, *,
@@ -3929,6 +5246,15 @@ class SwitchPortsMirrorArgs:
         pulumi.set(self, "mode", value)
 
 
+if not MYPY:
+    class SwitchPortsModuleArgsDict(TypedDict):
+        model: NotRequired[pulumi.Input[str]]
+        """
+        The model of the expansion module.
+        """
+elif False:
+    SwitchPortsModuleArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class SwitchPortsModuleArgs:
     def __init__(__self__, *,
@@ -3951,6 +5277,23 @@ class SwitchPortsModuleArgs:
     def model(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "model", value)
 
+
+if not MYPY:
+    class SwitchPortsProfileArgsDict(TypedDict):
+        enabled: NotRequired[pulumi.Input[bool]]
+        """
+        When enabled, override this port's configuration with a port profile.
+        """
+        id: NotRequired[pulumi.Input[str]]
+        """
+        When enabled, the ID of the port profile used to override the port's configuration.
+        """
+        iname: NotRequired[pulumi.Input[str]]
+        """
+        When enabled, the IName of the profile.
+        """
+elif False:
+    SwitchPortsProfileArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class SwitchPortsProfileArgs:
@@ -4007,6 +5350,23 @@ class SwitchPortsProfileArgs:
         pulumi.set(self, "iname", value)
 
 
+if not MYPY:
+    class SwitchRoutingInterfacesDhcpDhcpOptionArgsDict(TypedDict):
+        code: NotRequired[pulumi.Input[str]]
+        """
+        The code for DHCP option which should be from 2 to 254
+        """
+        type: NotRequired[pulumi.Input[str]]
+        """
+        The type of the DHCP option which should be one of ('text', 'ip', 'integer' or 'hex')
+        """
+        value: NotRequired[pulumi.Input[str]]
+        """
+        The value of the DHCP option
+        """
+elif False:
+    SwitchRoutingInterfacesDhcpDhcpOptionArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class SwitchRoutingInterfacesDhcpDhcpOptionArgs:
     def __init__(__self__, *,
@@ -4061,6 +5421,23 @@ class SwitchRoutingInterfacesDhcpDhcpOptionArgs:
     def value(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "value", value)
 
+
+if not MYPY:
+    class SwitchRoutingInterfacesDhcpFixedIpAssignmentArgsDict(TypedDict):
+        ip: NotRequired[pulumi.Input[str]]
+        """
+        The IP address of the client which has fixed IP address assigned to it
+        """
+        mac: NotRequired[pulumi.Input[str]]
+        """
+        The MAC address of the client which has fixed IP address
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The name of the client which has fixed IP address
+        """
+elif False:
+    SwitchRoutingInterfacesDhcpFixedIpAssignmentArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class SwitchRoutingInterfacesDhcpFixedIpAssignmentArgs:
@@ -4117,6 +5494,23 @@ class SwitchRoutingInterfacesDhcpFixedIpAssignmentArgs:
         pulumi.set(self, "name", value)
 
 
+if not MYPY:
+    class SwitchRoutingInterfacesDhcpReservedIpRangeArgsDict(TypedDict):
+        comment: NotRequired[pulumi.Input[str]]
+        """
+        The comment for the reserved IP range
+        """
+        end: NotRequired[pulumi.Input[str]]
+        """
+        The ending IP address of the reserved IP range
+        """
+        start: NotRequired[pulumi.Input[str]]
+        """
+        The starting IP address of the reserved IP range
+        """
+elif False:
+    SwitchRoutingInterfacesDhcpReservedIpRangeArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class SwitchRoutingInterfacesDhcpReservedIpRangeArgs:
     def __init__(__self__, *,
@@ -4171,6 +5565,27 @@ class SwitchRoutingInterfacesDhcpReservedIpRangeArgs:
     def start(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "start", value)
 
+
+if not MYPY:
+    class SwitchRoutingInterfacesIpv6ArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        IPv6 address
+        """
+        assignment_mode: NotRequired[pulumi.Input[str]]
+        """
+        Assignment mode
+        """
+        gateway: NotRequired[pulumi.Input[str]]
+        """
+        IPv6 gateway
+        """
+        prefix: NotRequired[pulumi.Input[str]]
+        """
+        IPv6 subnet
+        """
+elif False:
+    SwitchRoutingInterfacesIpv6ArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class SwitchRoutingInterfacesIpv6Args:
@@ -4243,6 +5658,23 @@ class SwitchRoutingInterfacesIpv6Args:
         pulumi.set(self, "prefix", value)
 
 
+if not MYPY:
+    class SwitchRoutingInterfacesOspfSettingsArgsDict(TypedDict):
+        area: NotRequired[pulumi.Input[str]]
+        """
+        Area id
+        """
+        cost: NotRequired[pulumi.Input[int]]
+        """
+        OSPF Cost
+        """
+        is_passive_enabled: NotRequired[pulumi.Input[bool]]
+        """
+        Disable sending Hello packets on this interface's IPv4 area
+        """
+elif False:
+    SwitchRoutingInterfacesOspfSettingsArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class SwitchRoutingInterfacesOspfSettingsArgs:
     def __init__(__self__, *,
@@ -4297,6 +5729,23 @@ class SwitchRoutingInterfacesOspfSettingsArgs:
     def is_passive_enabled(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "is_passive_enabled", value)
 
+
+if not MYPY:
+    class SwitchRoutingInterfacesOspfV3ArgsDict(TypedDict):
+        area: NotRequired[pulumi.Input[str]]
+        """
+        Area id
+        """
+        cost: NotRequired[pulumi.Input[int]]
+        """
+        OSPF Cost
+        """
+        is_passive_enabled: NotRequired[pulumi.Input[bool]]
+        """
+        Disable sending Hello packets on this interface's IPv6 area
+        """
+elif False:
+    SwitchRoutingInterfacesOspfV3ArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class SwitchRoutingInterfacesOspfV3Args:
@@ -4353,6 +5802,15 @@ class SwitchRoutingInterfacesOspfV3Args:
         pulumi.set(self, "is_passive_enabled", value)
 
 
+if not MYPY:
+    class WirelessAlternateManagementInterfaceIpv6ItemArgsDict(TypedDict):
+        addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ItemAddressArgsDict']]]]
+        """
+        configured alternate management interface addresses
+        """
+elif False:
+    WirelessAlternateManagementInterfaceIpv6ItemArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class WirelessAlternateManagementInterfaceIpv6ItemArgs:
     def __init__(__self__, *,
@@ -4375,6 +5833,35 @@ class WirelessAlternateManagementInterfaceIpv6ItemArgs:
     def addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ItemAddressArgs']]]]):
         pulumi.set(self, "addresses", value)
 
+
+if not MYPY:
+    class WirelessAlternateManagementInterfaceIpv6ItemAddressArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        The IP address configured for the alternate management interface
+        """
+        assignment_mode: NotRequired[pulumi.Input[str]]
+        """
+        The type of address assignment. Either static or dynamic.
+        """
+        gateway: NotRequired[pulumi.Input[str]]
+        """
+        The gateway address configured for the alternate managment interface
+        """
+        nameservers: NotRequired[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ItemAddressNameserversArgsDict']]
+        """
+        The DNS servers settings for this address.
+        """
+        prefix: NotRequired[pulumi.Input[str]]
+        """
+        The IPv6 prefix of the interface. Required if IPv6 object is included.
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        The IP protocol used for the address
+        """
+elif False:
+    WirelessAlternateManagementInterfaceIpv6ItemAddressArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class WirelessAlternateManagementInterfaceIpv6ItemAddressArgs:
@@ -4479,6 +5966,15 @@ class WirelessAlternateManagementInterfaceIpv6ItemAddressArgs:
         pulumi.set(self, "protocol", value)
 
 
+if not MYPY:
+    class WirelessAlternateManagementInterfaceIpv6ItemAddressNameserversArgsDict(TypedDict):
+        addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Up to 2 nameserver addresses to use, ordered in priority from highest to lowest priority.
+        """
+elif False:
+    WirelessAlternateManagementInterfaceIpv6ItemAddressNameserversArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class WirelessAlternateManagementInterfaceIpv6ItemAddressNameserversArgs:
     def __init__(__self__, *,
@@ -4502,6 +5998,15 @@ class WirelessAlternateManagementInterfaceIpv6ItemAddressNameserversArgs:
         pulumi.set(self, "addresses", value)
 
 
+if not MYPY:
+    class WirelessAlternateManagementInterfaceIpv6ParametersArgsDict(TypedDict):
+        addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ParametersAddressArgsDict']]]]
+        """
+        configured alternate management interface addresses
+        """
+elif False:
+    WirelessAlternateManagementInterfaceIpv6ParametersArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class WirelessAlternateManagementInterfaceIpv6ParametersArgs:
     def __init__(__self__, *,
@@ -4524,6 +6029,35 @@ class WirelessAlternateManagementInterfaceIpv6ParametersArgs:
     def addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ParametersAddressArgs']]]]):
         pulumi.set(self, "addresses", value)
 
+
+if not MYPY:
+    class WirelessAlternateManagementInterfaceIpv6ParametersAddressArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[str]]
+        """
+        The IP address configured for the alternate management interface
+        """
+        assignment_mode: NotRequired[pulumi.Input[str]]
+        """
+        The type of address assignment. Either static or dynamic.
+        """
+        gateway: NotRequired[pulumi.Input[str]]
+        """
+        The gateway address configured for the alternate managment interface
+        """
+        nameservers: NotRequired[pulumi.Input['WirelessAlternateManagementInterfaceIpv6ParametersAddressNameserversArgsDict']]
+        """
+        The DNS servers settings for this address.
+        """
+        prefix: NotRequired[pulumi.Input[str]]
+        """
+        The IPv6 prefix length of the IPv6 interface. Required if IPv6 object is included.
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        The IP protocol used for the address
+        """
+elif False:
+    WirelessAlternateManagementInterfaceIpv6ParametersAddressArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class WirelessAlternateManagementInterfaceIpv6ParametersAddressArgs:
@@ -4628,6 +6162,15 @@ class WirelessAlternateManagementInterfaceIpv6ParametersAddressArgs:
         pulumi.set(self, "protocol", value)
 
 
+if not MYPY:
+    class WirelessAlternateManagementInterfaceIpv6ParametersAddressNameserversArgsDict(TypedDict):
+        addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Up to 2 nameserver addresses to use, ordered in priority from highest to lowest priority.
+        """
+elif False:
+    WirelessAlternateManagementInterfaceIpv6ParametersAddressNameserversArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class WirelessAlternateManagementInterfaceIpv6ParametersAddressNameserversArgs:
     def __init__(__self__, *,
@@ -4650,6 +6193,23 @@ class WirelessAlternateManagementInterfaceIpv6ParametersAddressNameserversArgs:
     def addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
         pulumi.set(self, "addresses", value)
 
+
+if not MYPY:
+    class WirelessRadioSettingsFiveGhzSettingsArgsDict(TypedDict):
+        channel: NotRequired[pulumi.Input[int]]
+        """
+        Sets a manual channel for 5 GHz. Can be '36', '40', '44', '48', '52', '56', '60', '64', '100', '104', '108', '112', '116', '120', '124', '128', '132', '136', '140', '144', '149', '153', '157', '161', '165', '169', '173' or '177' or null for using auto channel.
+        """
+        channel_width: NotRequired[pulumi.Input[str]]
+        """
+        Sets a manual channel for 5 GHz. Can be '0', '20', '40', '80' or '160' or null for using auto channel width.
+        """
+        target_power: NotRequired[pulumi.Input[int]]
+        """
+        Set a manual target power for 5 GHz. Can be between '8' or '30' or null for using auto power range.
+        """
+elif False:
+    WirelessRadioSettingsFiveGhzSettingsArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class WirelessRadioSettingsFiveGhzSettingsArgs:
@@ -4706,6 +6266,19 @@ class WirelessRadioSettingsFiveGhzSettingsArgs:
         pulumi.set(self, "target_power", value)
 
 
+if not MYPY:
+    class WirelessRadioSettingsTwoFourGhzSettingsArgsDict(TypedDict):
+        channel: NotRequired[pulumi.Input[int]]
+        """
+        Sets a manual channel for 2.4 GHz. Can be '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13' or '14' or null for using auto channel.
+        """
+        target_power: NotRequired[pulumi.Input[int]]
+        """
+        Set a manual target power for 2.4 GHz. Can be between '5' or '30' or null for using auto power range.
+        """
+elif False:
+    WirelessRadioSettingsTwoFourGhzSettingsArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class WirelessRadioSettingsTwoFourGhzSettingsArgs:
     def __init__(__self__, *,
@@ -4744,6 +6317,19 @@ class WirelessRadioSettingsTwoFourGhzSettingsArgs:
     def target_power(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "target_power", value)
 
+
+if not MYPY:
+    class BaseDetailArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Additional property name
+        """
+        value: NotRequired[pulumi.Input[str]]
+        """
+        Additional property value
+        """
+elif False:
+    BaseDetailArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class BaseDetailArgs:

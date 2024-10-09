@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -247,9 +252,6 @@ def get_sensor_readings_history(ending_before: Optional[str] = None,
         t0=pulumi.get(__ret__, 't0'),
         t1=pulumi.get(__ret__, 't1'),
         timespan=pulumi.get(__ret__, 'timespan'))
-
-
-@_utilities.lift_output_func(get_sensor_readings_history)
 def get_sensor_readings_history_output(ending_before: Optional[pulumi.Input[Optional[str]]] = None,
                                        metrics: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
                                        network_ids: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
@@ -293,4 +295,29 @@ def get_sensor_readings_history_output(ending_before: Optional[pulumi.Input[Opti
     :param str t1: t1 query parameter. The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
     :param float timespan: timespan query parameter. The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. The default is 2 hours.
     """
-    ...
+    __args__ = dict()
+    __args__['endingBefore'] = ending_before
+    __args__['metrics'] = metrics
+    __args__['networkIds'] = network_ids
+    __args__['organizationId'] = organization_id
+    __args__['perPage'] = per_page
+    __args__['serials'] = serials
+    __args__['startingAfter'] = starting_after
+    __args__['t0'] = t0
+    __args__['t1'] = t1
+    __args__['timespan'] = timespan
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getSensorReadingsHistory:getSensorReadingsHistory', __args__, opts=opts, typ=GetSensorReadingsHistoryResult)
+    return __ret__.apply(lambda __response__: GetSensorReadingsHistoryResult(
+        ending_before=pulumi.get(__response__, 'ending_before'),
+        id=pulumi.get(__response__, 'id'),
+        items=pulumi.get(__response__, 'items'),
+        metrics=pulumi.get(__response__, 'metrics'),
+        network_ids=pulumi.get(__response__, 'network_ids'),
+        organization_id=pulumi.get(__response__, 'organization_id'),
+        per_page=pulumi.get(__response__, 'per_page'),
+        serials=pulumi.get(__response__, 'serials'),
+        starting_after=pulumi.get(__response__, 'starting_after'),
+        t0=pulumi.get(__response__, 't0'),
+        t1=pulumi.get(__response__, 't1'),
+        timespan=pulumi.get(__response__, 'timespan')))

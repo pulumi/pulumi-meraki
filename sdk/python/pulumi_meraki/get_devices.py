@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -368,9 +373,6 @@ def get_devices(configuration_updated_after: Optional[str] = None,
         starting_after=pulumi.get(__ret__, 'starting_after'),
         tags=pulumi.get(__ret__, 'tags'),
         tags_filter_type=pulumi.get(__ret__, 'tags_filter_type'))
-
-
-@_utilities.lift_output_func(get_devices)
 def get_devices_output(configuration_updated_after: Optional[pulumi.Input[Optional[str]]] = None,
                        ending_before: Optional[pulumi.Input[Optional[str]]] = None,
                        mac: Optional[pulumi.Input[Optional[str]]] = None,
@@ -413,4 +415,46 @@ def get_devices_output(configuration_updated_after: Optional[pulumi.Input[Option
     :param Sequence[str] tags: tags query parameter. Optional parameter to filter devices by tags.
     :param str tags_filter_type: tagsFilterType query parameter. Optional parameter of value 'withAnyTags' or 'withAllTags' to indicate whether to return networks which contain ANY or ALL of the included tags. If no type is included, 'withAnyTags' will be selected.
     """
-    ...
+    __args__ = dict()
+    __args__['configurationUpdatedAfter'] = configuration_updated_after
+    __args__['endingBefore'] = ending_before
+    __args__['mac'] = mac
+    __args__['macs'] = macs
+    __args__['model'] = model
+    __args__['models'] = models
+    __args__['name'] = name
+    __args__['networkIds'] = network_ids
+    __args__['organizationId'] = organization_id
+    __args__['perPage'] = per_page
+    __args__['productTypes'] = product_types
+    __args__['sensorAlertProfileIds'] = sensor_alert_profile_ids
+    __args__['sensorMetrics'] = sensor_metrics
+    __args__['serial'] = serial
+    __args__['serials'] = serials
+    __args__['startingAfter'] = starting_after
+    __args__['tags'] = tags
+    __args__['tagsFilterType'] = tags_filter_type
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:index/getDevices:getDevices', __args__, opts=opts, typ=GetDevicesResult)
+    return __ret__.apply(lambda __response__: GetDevicesResult(
+        configuration_updated_after=pulumi.get(__response__, 'configuration_updated_after'),
+        ending_before=pulumi.get(__response__, 'ending_before'),
+        id=pulumi.get(__response__, 'id'),
+        item=pulumi.get(__response__, 'item'),
+        items=pulumi.get(__response__, 'items'),
+        mac=pulumi.get(__response__, 'mac'),
+        macs=pulumi.get(__response__, 'macs'),
+        model=pulumi.get(__response__, 'model'),
+        models=pulumi.get(__response__, 'models'),
+        name=pulumi.get(__response__, 'name'),
+        network_ids=pulumi.get(__response__, 'network_ids'),
+        organization_id=pulumi.get(__response__, 'organization_id'),
+        per_page=pulumi.get(__response__, 'per_page'),
+        product_types=pulumi.get(__response__, 'product_types'),
+        sensor_alert_profile_ids=pulumi.get(__response__, 'sensor_alert_profile_ids'),
+        sensor_metrics=pulumi.get(__response__, 'sensor_metrics'),
+        serial=pulumi.get(__response__, 'serial'),
+        serials=pulumi.get(__response__, 'serials'),
+        starting_after=pulumi.get(__response__, 'starting_after'),
+        tags=pulumi.get(__response__, 'tags'),
+        tags_filter_type=pulumi.get(__response__, 'tags_filter_type')))
