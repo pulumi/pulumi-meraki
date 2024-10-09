@@ -4,29 +4,73 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 
 __all__ = [
     'LicensingSubscriptionSubscriptionsBindItemArgs',
+    'LicensingSubscriptionSubscriptionsBindItemArgsDict',
     'LicensingSubscriptionSubscriptionsBindItemInsufficientEntitlementArgs',
+    'LicensingSubscriptionSubscriptionsBindItemInsufficientEntitlementArgsDict',
     'LicensingSubscriptionSubscriptionsBindItemNetworkArgs',
+    'LicensingSubscriptionSubscriptionsBindItemNetworkArgsDict',
     'LicensingSubscriptionSubscriptionsBindParametersArgs',
+    'LicensingSubscriptionSubscriptionsBindParametersArgsDict',
     'LicensingSubscriptionSubscriptionsClaimItemArgs',
+    'LicensingSubscriptionSubscriptionsClaimItemArgsDict',
     'LicensingSubscriptionSubscriptionsClaimItemCountsArgs',
+    'LicensingSubscriptionSubscriptionsClaimItemCountsArgsDict',
     'LicensingSubscriptionSubscriptionsClaimItemCountsSeatsArgs',
+    'LicensingSubscriptionSubscriptionsClaimItemCountsSeatsArgsDict',
     'LicensingSubscriptionSubscriptionsClaimItemEntitlementArgs',
+    'LicensingSubscriptionSubscriptionsClaimItemEntitlementArgsDict',
     'LicensingSubscriptionSubscriptionsClaimItemEntitlementSeatsArgs',
+    'LicensingSubscriptionSubscriptionsClaimItemEntitlementSeatsArgsDict',
     'LicensingSubscriptionSubscriptionsClaimKeyValidateItemArgs',
+    'LicensingSubscriptionSubscriptionsClaimKeyValidateItemArgsDict',
     'LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsArgs',
+    'LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsArgsDict',
     'LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsSeatsArgs',
+    'LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsSeatsArgsDict',
     'LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementArgs',
+    'LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementArgsDict',
     'LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementSeatsArgs',
+    'LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementSeatsArgsDict',
     'LicensingSubscriptionSubscriptionsClaimKeyValidateParametersArgs',
+    'LicensingSubscriptionSubscriptionsClaimKeyValidateParametersArgsDict',
     'LicensingSubscriptionSubscriptionsClaimParametersArgs',
+    'LicensingSubscriptionSubscriptionsClaimParametersArgsDict',
 ]
+
+MYPY = False
+
+if not MYPY:
+    class LicensingSubscriptionSubscriptionsBindItemArgsDict(TypedDict):
+        errors: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Array of errors if failed
+        """
+        insufficient_entitlements: NotRequired[pulumi.Input[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsBindItemInsufficientEntitlementArgsDict']]]]
+        """
+        A list of entitlements required to successfully bind the networks to the subscription
+        """
+        networks: NotRequired[pulumi.Input[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsBindItemNetworkArgsDict']]]]
+        """
+        Unbound networks
+        """
+        subscription_id: NotRequired[pulumi.Input[str]]
+        """
+        Subscription ID
+        """
+elif False:
+    LicensingSubscriptionSubscriptionsBindItemArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LicensingSubscriptionSubscriptionsBindItemArgs:
@@ -99,6 +143,19 @@ class LicensingSubscriptionSubscriptionsBindItemArgs:
         pulumi.set(self, "subscription_id", value)
 
 
+if not MYPY:
+    class LicensingSubscriptionSubscriptionsBindItemInsufficientEntitlementArgsDict(TypedDict):
+        quantity: NotRequired[pulumi.Input[int]]
+        """
+        Number required
+        """
+        sku: NotRequired[pulumi.Input[str]]
+        """
+        SKU of the required product
+        """
+elif False:
+    LicensingSubscriptionSubscriptionsBindItemInsufficientEntitlementArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LicensingSubscriptionSubscriptionsBindItemInsufficientEntitlementArgs:
     def __init__(__self__, *,
@@ -137,6 +194,19 @@ class LicensingSubscriptionSubscriptionsBindItemInsufficientEntitlementArgs:
     def sku(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "sku", value)
 
+
+if not MYPY:
+    class LicensingSubscriptionSubscriptionsBindItemNetworkArgsDict(TypedDict):
+        id: NotRequired[pulumi.Input[str]]
+        """
+        Network ID
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Network name
+        """
+elif False:
+    LicensingSubscriptionSubscriptionsBindItemNetworkArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LicensingSubscriptionSubscriptionsBindItemNetworkArgs:
@@ -177,6 +247,15 @@ class LicensingSubscriptionSubscriptionsBindItemNetworkArgs:
         pulumi.set(self, "name", value)
 
 
+if not MYPY:
+    class LicensingSubscriptionSubscriptionsBindParametersArgsDict(TypedDict):
+        network_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        List of network ids to bind to the subscription
+        """
+elif False:
+    LicensingSubscriptionSubscriptionsBindParametersArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LicensingSubscriptionSubscriptionsBindParametersArgs:
     def __init__(__self__, *,
@@ -199,6 +278,51 @@ class LicensingSubscriptionSubscriptionsBindParametersArgs:
     def network_ids(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
         pulumi.set(self, "network_ids", value)
 
+
+if not MYPY:
+    class LicensingSubscriptionSubscriptionsClaimItemArgsDict(TypedDict):
+        counts: NotRequired[pulumi.Input['LicensingSubscriptionSubscriptionsClaimItemCountsArgsDict']]
+        """
+        Numeric breakdown of network and entitlement counts
+        """
+        description: NotRequired[pulumi.Input[str]]
+        """
+        Subscription description
+        """
+        end_date: NotRequired[pulumi.Input[str]]
+        """
+        Subscription expiration date
+        """
+        entitlements: NotRequired[pulumi.Input[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsClaimItemEntitlementArgsDict']]]]
+        """
+        Entitlement info
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Subscription name
+        """
+        product_types: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Products the subscription has entitlements for
+        """
+        start_date: NotRequired[pulumi.Input[str]]
+        """
+        Subscription start date
+        """
+        status: NotRequired[pulumi.Input[str]]
+        """
+        Subscription status
+        """
+        subscription_id: NotRequired[pulumi.Input[str]]
+        """
+        Subscription's ID
+        """
+        web_order_id: NotRequired[pulumi.Input[str]]
+        """
+        Web order id
+        """
+elif False:
+    LicensingSubscriptionSubscriptionsClaimItemArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LicensingSubscriptionSubscriptionsClaimItemArgs:
@@ -367,6 +491,19 @@ class LicensingSubscriptionSubscriptionsClaimItemArgs:
         pulumi.set(self, "web_order_id", value)
 
 
+if not MYPY:
+    class LicensingSubscriptionSubscriptionsClaimItemCountsArgsDict(TypedDict):
+        networks: NotRequired[pulumi.Input[int]]
+        """
+        Number of networks bound to this subscription
+        """
+        seats: NotRequired[pulumi.Input['LicensingSubscriptionSubscriptionsClaimItemCountsSeatsArgsDict']]
+        """
+        Seat distribution
+        """
+elif False:
+    LicensingSubscriptionSubscriptionsClaimItemCountsArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LicensingSubscriptionSubscriptionsClaimItemCountsArgs:
     def __init__(__self__, *,
@@ -405,6 +542,23 @@ class LicensingSubscriptionSubscriptionsClaimItemCountsArgs:
     def seats(self, value: Optional[pulumi.Input['LicensingSubscriptionSubscriptionsClaimItemCountsSeatsArgs']]):
         pulumi.set(self, "seats", value)
 
+
+if not MYPY:
+    class LicensingSubscriptionSubscriptionsClaimItemCountsSeatsArgsDict(TypedDict):
+        assigned: NotRequired[pulumi.Input[int]]
+        """
+        Number of seats in use
+        """
+        available: NotRequired[pulumi.Input[int]]
+        """
+        Number of seats available for use
+        """
+        limit: NotRequired[pulumi.Input[int]]
+        """
+        Total number of seats provided by this subscription
+        """
+elif False:
+    LicensingSubscriptionSubscriptionsClaimItemCountsSeatsArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LicensingSubscriptionSubscriptionsClaimItemCountsSeatsArgs:
@@ -461,6 +615,19 @@ class LicensingSubscriptionSubscriptionsClaimItemCountsSeatsArgs:
         pulumi.set(self, "limit", value)
 
 
+if not MYPY:
+    class LicensingSubscriptionSubscriptionsClaimItemEntitlementArgsDict(TypedDict):
+        seats: NotRequired[pulumi.Input['LicensingSubscriptionSubscriptionsClaimItemEntitlementSeatsArgsDict']]
+        """
+        Seat distribution
+        """
+        sku: NotRequired[pulumi.Input[str]]
+        """
+        SKU of the required product
+        """
+elif False:
+    LicensingSubscriptionSubscriptionsClaimItemEntitlementArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LicensingSubscriptionSubscriptionsClaimItemEntitlementArgs:
     def __init__(__self__, *,
@@ -499,6 +666,23 @@ class LicensingSubscriptionSubscriptionsClaimItemEntitlementArgs:
     def sku(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "sku", value)
 
+
+if not MYPY:
+    class LicensingSubscriptionSubscriptionsClaimItemEntitlementSeatsArgsDict(TypedDict):
+        assigned: NotRequired[pulumi.Input[int]]
+        """
+        Number of seats in use
+        """
+        available: NotRequired[pulumi.Input[int]]
+        """
+        Number of seats available for use
+        """
+        limit: NotRequired[pulumi.Input[int]]
+        """
+        Total number of seats provided by this subscription for this sku
+        """
+elif False:
+    LicensingSubscriptionSubscriptionsClaimItemEntitlementSeatsArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LicensingSubscriptionSubscriptionsClaimItemEntitlementSeatsArgs:
@@ -554,6 +738,51 @@ class LicensingSubscriptionSubscriptionsClaimItemEntitlementSeatsArgs:
     def limit(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "limit", value)
 
+
+if not MYPY:
+    class LicensingSubscriptionSubscriptionsClaimKeyValidateItemArgsDict(TypedDict):
+        counts: NotRequired[pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsArgsDict']]
+        """
+        Numeric breakdown of network and entitlement counts
+        """
+        description: NotRequired[pulumi.Input[str]]
+        """
+        Subscription description
+        """
+        end_date: NotRequired[pulumi.Input[str]]
+        """
+        Subscription expiration date
+        """
+        entitlements: NotRequired[pulumi.Input[Sequence[pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementArgsDict']]]]
+        """
+        Entitlement info
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Subscription name
+        """
+        product_types: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Products the subscription has entitlements for
+        """
+        start_date: NotRequired[pulumi.Input[str]]
+        """
+        Subscription start date
+        """
+        status: NotRequired[pulumi.Input[str]]
+        """
+        Subscription status
+        """
+        subscription_id: NotRequired[pulumi.Input[str]]
+        """
+        Subscription's ID
+        """
+        web_order_id: NotRequired[pulumi.Input[str]]
+        """
+        Web order id
+        """
+elif False:
+    LicensingSubscriptionSubscriptionsClaimKeyValidateItemArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LicensingSubscriptionSubscriptionsClaimKeyValidateItemArgs:
@@ -722,6 +951,19 @@ class LicensingSubscriptionSubscriptionsClaimKeyValidateItemArgs:
         pulumi.set(self, "web_order_id", value)
 
 
+if not MYPY:
+    class LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsArgsDict(TypedDict):
+        networks: NotRequired[pulumi.Input[int]]
+        """
+        Number of networks bound to this subscription
+        """
+        seats: NotRequired[pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsSeatsArgsDict']]
+        """
+        Seat distribution
+        """
+elif False:
+    LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsArgs:
     def __init__(__self__, *,
@@ -760,6 +1002,23 @@ class LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsArgs:
     def seats(self, value: Optional[pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsSeatsArgs']]):
         pulumi.set(self, "seats", value)
 
+
+if not MYPY:
+    class LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsSeatsArgsDict(TypedDict):
+        assigned: NotRequired[pulumi.Input[int]]
+        """
+        Number of seats in use
+        """
+        available: NotRequired[pulumi.Input[int]]
+        """
+        Number of seats available for use
+        """
+        limit: NotRequired[pulumi.Input[int]]
+        """
+        Total number of seats provided by this subscription
+        """
+elif False:
+    LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsSeatsArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsSeatsArgs:
@@ -816,6 +1075,19 @@ class LicensingSubscriptionSubscriptionsClaimKeyValidateItemCountsSeatsArgs:
         pulumi.set(self, "limit", value)
 
 
+if not MYPY:
+    class LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementArgsDict(TypedDict):
+        seats: NotRequired[pulumi.Input['LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementSeatsArgsDict']]
+        """
+        Seat distribution
+        """
+        sku: NotRequired[pulumi.Input[str]]
+        """
+        SKU of the required product
+        """
+elif False:
+    LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementArgs:
     def __init__(__self__, *,
@@ -854,6 +1126,23 @@ class LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementArgs:
     def sku(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "sku", value)
 
+
+if not MYPY:
+    class LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementSeatsArgsDict(TypedDict):
+        assigned: NotRequired[pulumi.Input[int]]
+        """
+        Number of seats in use
+        """
+        available: NotRequired[pulumi.Input[int]]
+        """
+        Number of seats available for use
+        """
+        limit: NotRequired[pulumi.Input[int]]
+        """
+        Total number of seats provided by this subscription for this sku
+        """
+elif False:
+    LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementSeatsArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementSeatsArgs:
@@ -910,6 +1199,15 @@ class LicensingSubscriptionSubscriptionsClaimKeyValidateItemEntitlementSeatsArgs
         pulumi.set(self, "limit", value)
 
 
+if not MYPY:
+    class LicensingSubscriptionSubscriptionsClaimKeyValidateParametersArgsDict(TypedDict):
+        claim_key: NotRequired[pulumi.Input[str]]
+        """
+        The subscription's claim key
+        """
+elif False:
+    LicensingSubscriptionSubscriptionsClaimKeyValidateParametersArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LicensingSubscriptionSubscriptionsClaimKeyValidateParametersArgs:
     def __init__(__self__, *,
@@ -932,6 +1230,27 @@ class LicensingSubscriptionSubscriptionsClaimKeyValidateParametersArgs:
     def claim_key(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "claim_key", value)
 
+
+if not MYPY:
+    class LicensingSubscriptionSubscriptionsClaimParametersArgsDict(TypedDict):
+        claim_key: NotRequired[pulumi.Input[str]]
+        """
+        The subscription's claim key
+        """
+        description: NotRequired[pulumi.Input[str]]
+        """
+        Extra details or notes about the subscription
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Friendly name to identify the subscription
+        """
+        organization_id: NotRequired[pulumi.Input[str]]
+        """
+        The id of the organization claiming the subscription
+        """
+elif False:
+    LicensingSubscriptionSubscriptionsClaimParametersArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LicensingSubscriptionSubscriptionsClaimParametersArgs:

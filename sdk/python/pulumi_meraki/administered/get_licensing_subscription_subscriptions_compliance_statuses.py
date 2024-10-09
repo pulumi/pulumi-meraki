@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -111,9 +116,6 @@ def get_licensing_subscription_subscriptions_compliance_statuses(organization_id
         items=pulumi.get(__ret__, 'items'),
         organization_ids=pulumi.get(__ret__, 'organization_ids'),
         subscription_ids=pulumi.get(__ret__, 'subscription_ids'))
-
-
-@_utilities.lift_output_func(get_licensing_subscription_subscriptions_compliance_statuses)
 def get_licensing_subscription_subscriptions_compliance_statuses_output(organization_ids: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
                                                                         subscription_ids: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
                                                                         opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetLicensingSubscriptionSubscriptionsComplianceStatusesResult]:
@@ -133,4 +135,13 @@ def get_licensing_subscription_subscriptions_compliance_statuses_output(organiza
     :param Sequence[str] organization_ids: organizationIds query parameter. Organizations to get subscription compliance information for
     :param Sequence[str] subscription_ids: subscriptionIds query parameter. Subscription ids
     """
-    ...
+    __args__ = dict()
+    __args__['organizationIds'] = organization_ids
+    __args__['subscriptionIds'] = subscription_ids
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:administered/getLicensingSubscriptionSubscriptionsComplianceStatuses:getLicensingSubscriptionSubscriptionsComplianceStatuses', __args__, opts=opts, typ=GetLicensingSubscriptionSubscriptionsComplianceStatusesResult)
+    return __ret__.apply(lambda __response__: GetLicensingSubscriptionSubscriptionsComplianceStatusesResult(
+        id=pulumi.get(__response__, 'id'),
+        items=pulumi.get(__response__, 'items'),
+        organization_ids=pulumi.get(__response__, 'organization_ids'),
+        subscription_ids=pulumi.get(__response__, 'subscription_ids')))

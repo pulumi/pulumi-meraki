@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -196,9 +201,6 @@ def get_uplinks_statuses(ending_before: Optional[str] = None,
         per_page=pulumi.get(__ret__, 'per_page'),
         serials=pulumi.get(__ret__, 'serials'),
         starting_after=pulumi.get(__ret__, 'starting_after'))
-
-
-@_utilities.lift_output_func(get_uplinks_statuses)
 def get_uplinks_statuses_output(ending_before: Optional[pulumi.Input[Optional[str]]] = None,
                                 iccids: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
                                 network_ids: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
@@ -233,4 +235,23 @@ def get_uplinks_statuses_output(ending_before: Optional[pulumi.Input[Optional[st
     :param Sequence[str] serials: serials query parameter. A list of serial numbers. The returned devices will be filtered to only include these serials.
     :param str starting_after: startingAfter query parameter. A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
     """
-    ...
+    __args__ = dict()
+    __args__['endingBefore'] = ending_before
+    __args__['iccids'] = iccids
+    __args__['networkIds'] = network_ids
+    __args__['organizationId'] = organization_id
+    __args__['perPage'] = per_page
+    __args__['serials'] = serials
+    __args__['startingAfter'] = starting_after
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getUplinksStatuses:getUplinksStatuses', __args__, opts=opts, typ=GetUplinksStatusesResult)
+    return __ret__.apply(lambda __response__: GetUplinksStatusesResult(
+        ending_before=pulumi.get(__response__, 'ending_before'),
+        iccids=pulumi.get(__response__, 'iccids'),
+        id=pulumi.get(__response__, 'id'),
+        items=pulumi.get(__response__, 'items'),
+        network_ids=pulumi.get(__response__, 'network_ids'),
+        organization_id=pulumi.get(__response__, 'organization_id'),
+        per_page=pulumi.get(__response__, 'per_page'),
+        serials=pulumi.get(__response__, 'serials'),
+        starting_after=pulumi.get(__response__, 'starting_after')))

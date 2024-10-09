@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -247,9 +252,6 @@ def get_api_requests_overview_response_codes_by_interval(admin_ids: Optional[Seq
         timespan=pulumi.get(__ret__, 'timespan'),
         user_agent=pulumi.get(__ret__, 'user_agent'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_api_requests_overview_response_codes_by_interval)
 def get_api_requests_overview_response_codes_by_interval_output(admin_ids: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
                                                                 interval: Optional[pulumi.Input[Optional[int]]] = None,
                                                                 operation_ids: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
@@ -293,4 +295,29 @@ def get_api_requests_overview_response_codes_by_interval_output(admin_ids: Optio
     :param str user_agent: userAgent query parameter. Filter by user agent string for API request. This will filter by a complete or partial match.
     :param int version: version query parameter. Filter by API version of the endpoint. Allowable values are: [0, 1]
     """
-    ...
+    __args__ = dict()
+    __args__['adminIds'] = admin_ids
+    __args__['interval'] = interval
+    __args__['operationIds'] = operation_ids
+    __args__['organizationId'] = organization_id
+    __args__['sourceIps'] = source_ips
+    __args__['t0'] = t0
+    __args__['t1'] = t1
+    __args__['timespan'] = timespan
+    __args__['userAgent'] = user_agent
+    __args__['version'] = version
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getApiRequestsOverviewResponseCodesByInterval:getApiRequestsOverviewResponseCodesByInterval', __args__, opts=opts, typ=GetApiRequestsOverviewResponseCodesByIntervalResult)
+    return __ret__.apply(lambda __response__: GetApiRequestsOverviewResponseCodesByIntervalResult(
+        admin_ids=pulumi.get(__response__, 'admin_ids'),
+        id=pulumi.get(__response__, 'id'),
+        interval=pulumi.get(__response__, 'interval'),
+        items=pulumi.get(__response__, 'items'),
+        operation_ids=pulumi.get(__response__, 'operation_ids'),
+        organization_id=pulumi.get(__response__, 'organization_id'),
+        source_ips=pulumi.get(__response__, 'source_ips'),
+        t0=pulumi.get(__response__, 't0'),
+        t1=pulumi.get(__response__, 't1'),
+        timespan=pulumi.get(__response__, 'timespan'),
+        user_agent=pulumi.get(__response__, 'user_agent'),
+        version=pulumi.get(__response__, 'version')))

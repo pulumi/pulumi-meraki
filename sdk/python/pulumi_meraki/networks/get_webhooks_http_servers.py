@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -112,9 +117,6 @@ def get_webhooks_http_servers(http_server_id: Optional[str] = None,
         item=pulumi.get(__ret__, 'item'),
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'))
-
-
-@_utilities.lift_output_func(get_webhooks_http_servers)
 def get_webhooks_http_servers_output(http_server_id: Optional[pulumi.Input[Optional[str]]] = None,
                                      network_id: Optional[pulumi.Input[Optional[str]]] = None,
                                      opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetWebhooksHttpServersResult]:
@@ -125,4 +127,14 @@ def get_webhooks_http_servers_output(http_server_id: Optional[pulumi.Input[Optio
     :param str http_server_id: httpServerId path parameter. Http server ID
     :param str network_id: networkId path parameter. Network ID
     """
-    ...
+    __args__ = dict()
+    __args__['httpServerId'] = http_server_id
+    __args__['networkId'] = network_id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:networks/getWebhooksHttpServers:getWebhooksHttpServers', __args__, opts=opts, typ=GetWebhooksHttpServersResult)
+    return __ret__.apply(lambda __response__: GetWebhooksHttpServersResult(
+        http_server_id=pulumi.get(__response__, 'http_server_id'),
+        id=pulumi.get(__response__, 'id'),
+        item=pulumi.get(__response__, 'item'),
+        items=pulumi.get(__response__, 'items'),
+        network_id=pulumi.get(__response__, 'network_id')))

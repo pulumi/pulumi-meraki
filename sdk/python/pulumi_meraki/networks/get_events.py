@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -329,9 +334,6 @@ def get_events(client_ip: Optional[str] = None,
         sm_device_mac=pulumi.get(__ret__, 'sm_device_mac'),
         sm_device_name=pulumi.get(__ret__, 'sm_device_name'),
         starting_after=pulumi.get(__ret__, 'starting_after'))
-
-
-@_utilities.lift_output_func(get_events)
 def get_events_output(client_ip: Optional[pulumi.Input[Optional[str]]] = None,
                       client_mac: Optional[pulumi.Input[Optional[str]]] = None,
                       client_name: Optional[pulumi.Input[Optional[str]]] = None,
@@ -390,4 +392,39 @@ def get_events_output(client_ip: Optional[pulumi.Input[Optional[str]]] = None,
     :param str sm_device_name: smDeviceName query parameter. The name of the Systems Manager device which the list of events will be filtered with
     :param str starting_after: startingAfter query parameter. A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
     """
-    ...
+    __args__ = dict()
+    __args__['clientIp'] = client_ip
+    __args__['clientMac'] = client_mac
+    __args__['clientName'] = client_name
+    __args__['deviceMac'] = device_mac
+    __args__['deviceName'] = device_name
+    __args__['deviceSerial'] = device_serial
+    __args__['endingBefore'] = ending_before
+    __args__['excludedEventTypes'] = excluded_event_types
+    __args__['includedEventTypes'] = included_event_types
+    __args__['networkId'] = network_id
+    __args__['perPage'] = per_page
+    __args__['productType'] = product_type
+    __args__['smDeviceMac'] = sm_device_mac
+    __args__['smDeviceName'] = sm_device_name
+    __args__['startingAfter'] = starting_after
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:networks/getEvents:getEvents', __args__, opts=opts, typ=GetEventsResult)
+    return __ret__.apply(lambda __response__: GetEventsResult(
+        client_ip=pulumi.get(__response__, 'client_ip'),
+        client_mac=pulumi.get(__response__, 'client_mac'),
+        client_name=pulumi.get(__response__, 'client_name'),
+        device_mac=pulumi.get(__response__, 'device_mac'),
+        device_name=pulumi.get(__response__, 'device_name'),
+        device_serial=pulumi.get(__response__, 'device_serial'),
+        ending_before=pulumi.get(__response__, 'ending_before'),
+        excluded_event_types=pulumi.get(__response__, 'excluded_event_types'),
+        id=pulumi.get(__response__, 'id'),
+        included_event_types=pulumi.get(__response__, 'included_event_types'),
+        item=pulumi.get(__response__, 'item'),
+        network_id=pulumi.get(__response__, 'network_id'),
+        per_page=pulumi.get(__response__, 'per_page'),
+        product_type=pulumi.get(__response__, 'product_type'),
+        sm_device_mac=pulumi.get(__response__, 'sm_device_mac'),
+        sm_device_name=pulumi.get(__response__, 'sm_device_name'),
+        starting_after=pulumi.get(__response__, 'starting_after')))

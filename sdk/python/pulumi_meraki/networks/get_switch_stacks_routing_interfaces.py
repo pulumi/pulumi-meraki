@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -128,9 +133,6 @@ def get_switch_stacks_routing_interfaces(interface_id: Optional[str] = None,
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'),
         switch_stack_id=pulumi.get(__ret__, 'switch_stack_id'))
-
-
-@_utilities.lift_output_func(get_switch_stacks_routing_interfaces)
 def get_switch_stacks_routing_interfaces_output(interface_id: Optional[pulumi.Input[Optional[str]]] = None,
                                                 network_id: Optional[pulumi.Input[Optional[str]]] = None,
                                                 switch_stack_id: Optional[pulumi.Input[Optional[str]]] = None,
@@ -143,4 +145,16 @@ def get_switch_stacks_routing_interfaces_output(interface_id: Optional[pulumi.In
     :param str network_id: networkId path parameter. Network ID
     :param str switch_stack_id: switchStackId path parameter. Switch stack ID
     """
-    ...
+    __args__ = dict()
+    __args__['interfaceId'] = interface_id
+    __args__['networkId'] = network_id
+    __args__['switchStackId'] = switch_stack_id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSwitchStacksRoutingInterfaces:getSwitchStacksRoutingInterfaces', __args__, opts=opts, typ=GetSwitchStacksRoutingInterfacesResult)
+    return __ret__.apply(lambda __response__: GetSwitchStacksRoutingInterfacesResult(
+        id=pulumi.get(__response__, 'id'),
+        interface_id=pulumi.get(__response__, 'interface_id'),
+        item=pulumi.get(__response__, 'item'),
+        items=pulumi.get(__response__, 'items'),
+        network_id=pulumi.get(__response__, 'network_id'),
+        switch_stack_id=pulumi.get(__response__, 'switch_stack_id')))

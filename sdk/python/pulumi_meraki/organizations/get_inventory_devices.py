@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -320,9 +325,6 @@ def get_inventory_devices(ending_before: Optional[str] = None,
         tags=pulumi.get(__ret__, 'tags'),
         tags_filter_type=pulumi.get(__ret__, 'tags_filter_type'),
         used_state=pulumi.get(__ret__, 'used_state'))
-
-
-@_utilities.lift_output_func(get_inventory_devices)
 def get_inventory_devices_output(ending_before: Optional[pulumi.Input[Optional[str]]] = None,
                                  macs: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
                                  models: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
@@ -359,4 +361,40 @@ def get_inventory_devices_output(ending_before: Optional[pulumi.Input[Optional[s
     :param str tags_filter_type: tagsFilterType query parameter. To use with 'tags' parameter, to filter devices which contain ANY or ALL given tags. Accepted values are 'withAnyTags' or 'withAllTags', default is 'withAnyTags'.
     :param str used_state: usedState query parameter. Filter results by used or unused inventory. Accepted values are 'used' or 'unused'.
     """
-    ...
+    __args__ = dict()
+    __args__['endingBefore'] = ending_before
+    __args__['macs'] = macs
+    __args__['models'] = models
+    __args__['networkIds'] = network_ids
+    __args__['orderNumbers'] = order_numbers
+    __args__['organizationId'] = organization_id
+    __args__['perPage'] = per_page
+    __args__['productTypes'] = product_types
+    __args__['search'] = search
+    __args__['serial'] = serial
+    __args__['serials'] = serials
+    __args__['startingAfter'] = starting_after
+    __args__['tags'] = tags
+    __args__['tagsFilterType'] = tags_filter_type
+    __args__['usedState'] = used_state
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getInventoryDevices:getInventoryDevices', __args__, opts=opts, typ=GetInventoryDevicesResult)
+    return __ret__.apply(lambda __response__: GetInventoryDevicesResult(
+        ending_before=pulumi.get(__response__, 'ending_before'),
+        id=pulumi.get(__response__, 'id'),
+        item=pulumi.get(__response__, 'item'),
+        items=pulumi.get(__response__, 'items'),
+        macs=pulumi.get(__response__, 'macs'),
+        models=pulumi.get(__response__, 'models'),
+        network_ids=pulumi.get(__response__, 'network_ids'),
+        order_numbers=pulumi.get(__response__, 'order_numbers'),
+        organization_id=pulumi.get(__response__, 'organization_id'),
+        per_page=pulumi.get(__response__, 'per_page'),
+        product_types=pulumi.get(__response__, 'product_types'),
+        search=pulumi.get(__response__, 'search'),
+        serial=pulumi.get(__response__, 'serial'),
+        serials=pulumi.get(__response__, 'serials'),
+        starting_after=pulumi.get(__response__, 'starting_after'),
+        tags=pulumi.get(__response__, 'tags'),
+        tags_filter_type=pulumi.get(__response__, 'tags_filter_type'),
+        used_state=pulumi.get(__response__, 'used_state')))

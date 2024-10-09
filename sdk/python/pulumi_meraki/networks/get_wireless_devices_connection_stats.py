@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -213,9 +218,6 @@ def get_wireless_devices_connection_stats(ap_tag: Optional[str] = None,
         t1=pulumi.get(__ret__, 't1'),
         timespan=pulumi.get(__ret__, 'timespan'),
         vlan=pulumi.get(__ret__, 'vlan'))
-
-
-@_utilities.lift_output_func(get_wireless_devices_connection_stats)
 def get_wireless_devices_connection_stats_output(ap_tag: Optional[pulumi.Input[Optional[str]]] = None,
                                                  band: Optional[pulumi.Input[Optional[str]]] = None,
                                                  network_id: Optional[pulumi.Input[str]] = None,
@@ -253,4 +255,25 @@ def get_wireless_devices_connection_stats_output(ap_tag: Optional[pulumi.Input[O
     :param float timespan: timespan query parameter. The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days.
     :param int vlan: vlan query parameter. Filter results by VLAN
     """
-    ...
+    __args__ = dict()
+    __args__['apTag'] = ap_tag
+    __args__['band'] = band
+    __args__['networkId'] = network_id
+    __args__['ssid'] = ssid
+    __args__['t0'] = t0
+    __args__['t1'] = t1
+    __args__['timespan'] = timespan
+    __args__['vlan'] = vlan
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:networks/getWirelessDevicesConnectionStats:getWirelessDevicesConnectionStats', __args__, opts=opts, typ=GetWirelessDevicesConnectionStatsResult)
+    return __ret__.apply(lambda __response__: GetWirelessDevicesConnectionStatsResult(
+        ap_tag=pulumi.get(__response__, 'ap_tag'),
+        band=pulumi.get(__response__, 'band'),
+        id=pulumi.get(__response__, 'id'),
+        items=pulumi.get(__response__, 'items'),
+        network_id=pulumi.get(__response__, 'network_id'),
+        ssid=pulumi.get(__response__, 'ssid'),
+        t0=pulumi.get(__response__, 't0'),
+        t1=pulumi.get(__response__, 't1'),
+        timespan=pulumi.get(__response__, 'timespan'),
+        vlan=pulumi.get(__response__, 'vlan')))

@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -91,9 +96,6 @@ def get_licensing_subscription_entitlements(skuses: Optional[Sequence[str]] = No
         id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         skuses=pulumi.get(__ret__, 'skuses'))
-
-
-@_utilities.lift_output_func(get_licensing_subscription_entitlements)
 def get_licensing_subscription_entitlements_output(skuses: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
                                                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetLicensingSubscriptionEntitlementsResult]:
     """
@@ -110,4 +112,11 @@ def get_licensing_subscription_entitlements_output(skuses: Optional[pulumi.Input
 
     :param Sequence[str] skuses: skus query parameter. Filter to entitlements with the specified SKUs
     """
-    ...
+    __args__ = dict()
+    __args__['skuses'] = skuses
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:administered/getLicensingSubscriptionEntitlements:getLicensingSubscriptionEntitlements', __args__, opts=opts, typ=GetLicensingSubscriptionEntitlementsResult)
+    return __ret__.apply(lambda __response__: GetLicensingSubscriptionEntitlementsResult(
+        id=pulumi.get(__response__, 'id'),
+        item=pulumi.get(__response__, 'item'),
+        skuses=pulumi.get(__response__, 'skuses')))

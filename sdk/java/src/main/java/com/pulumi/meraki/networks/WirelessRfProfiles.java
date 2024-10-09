@@ -26,6 +26,192 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.WirelessRfProfiles;
+ * import com.pulumi.meraki.networks.WirelessRfProfilesArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesApBandSettingsArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesApBandSettingsBandsArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesFiveGhzSettingsArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesFlexRadiosArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesPerSsidSettingsArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesSixGhzSettingsArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesTransmissionArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesTwoFourGhzSettingsArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new WirelessRfProfiles("example", WirelessRfProfilesArgs.builder()
+ *             .apBandSettings(WirelessRfProfilesApBandSettingsArgs.builder()
+ *                 .band_operation_mode("dual")
+ *                 .band_steering_enabled(true)
+ *                 .bands(WirelessRfProfilesApBandSettingsBandsArgs.builder()
+ *                     .enabled(                    
+ *                         "2.4",
+ *                         "5")
+ *                     .build())
+ *                 .build())
+ *             .bandSelectionType("ap")
+ *             .clientBalancingEnabled(true)
+ *             .fiveGhzSettings(WirelessRfProfilesFiveGhzSettingsArgs.builder()
+ *                 .channel_width("auto")
+ *                 .max_power(30)
+ *                 .min_bitrate(12)
+ *                 .min_power(8)
+ *                 .rxsop(-95)
+ *                 .valid_auto_channels(                
+ *                     36,
+ *                     40,
+ *                     44,
+ *                     48,
+ *                     52,
+ *                     56,
+ *                     60,
+ *                     64,
+ *                     100,
+ *                     104,
+ *                     108,
+ *                     112,
+ *                     116,
+ *                     120,
+ *                     124,
+ *                     128,
+ *                     132,
+ *                     136,
+ *                     140,
+ *                     144,
+ *                     149,
+ *                     153,
+ *                     157,
+ *                     161,
+ *                     165)
+ *                 .build())
+ *             .flexRadios(WirelessRfProfilesFlexRadiosArgs.builder()
+ *                 .by_model(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
+ *                 .build())
+ *             .minBitrateType("band")
+ *             .name("Main Office")
+ *             .networkId("string")
+ *             .perSsidSettings(WirelessRfProfilesPerSsidSettingsArgs.builder()
+ *                 .status_0(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
+ *                 .status_1(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
+ *                 .status_10(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
+ *                 .status_11(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
+ *                 .status_12(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
+ *                 .status_13(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
+ *                 .status_14(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
+ *                 .status_2(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
+ *                 .status_3(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
+ *                 .status_4(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
+ *                 .status_5(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
+ *                 .status_6(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
+ *                 .status_7(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
+ *                 .status_8(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
+ *                 .status_9(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
+ *                 .build())
+ *             .sixGhzSettings(WirelessRfProfilesSixGhzSettingsArgs.builder()
+ *                 .channel_width("auto")
+ *                 .max_power(30)
+ *                 .min_bitrate(12)
+ *                 .min_power(8)
+ *                 .rxsop(-95)
+ *                 .valid_auto_channels(                
+ *                     1,
+ *                     5,
+ *                     9,
+ *                     13,
+ *                     17,
+ *                     21,
+ *                     25,
+ *                     29,
+ *                     33,
+ *                     37,
+ *                     41,
+ *                     45,
+ *                     49,
+ *                     53,
+ *                     57,
+ *                     61,
+ *                     65,
+ *                     69,
+ *                     73,
+ *                     77,
+ *                     81,
+ *                     85,
+ *                     89,
+ *                     93,
+ *                     97,
+ *                     101,
+ *                     105,
+ *                     109,
+ *                     113,
+ *                     117,
+ *                     121,
+ *                     125,
+ *                     129,
+ *                     133,
+ *                     137,
+ *                     141,
+ *                     145,
+ *                     149,
+ *                     153,
+ *                     157,
+ *                     161,
+ *                     165,
+ *                     169,
+ *                     173,
+ *                     177,
+ *                     181,
+ *                     185,
+ *                     189,
+ *                     193,
+ *                     197,
+ *                     201,
+ *                     205,
+ *                     209,
+ *                     213,
+ *                     217,
+ *                     221,
+ *                     225,
+ *                     229,
+ *                     233)
+ *                 .build())
+ *             .transmission(WirelessRfProfilesTransmissionArgs.builder()
+ *                 .enabled(true)
+ *                 .build())
+ *             .twoFourGhzSettings(WirelessRfProfilesTwoFourGhzSettingsArgs.builder()
+ *                 .ax_enabled(true)
+ *                 .max_power(30)
+ *                 .min_bitrate(11)
+ *                 .min_power(5)
+ *                 .rxsop(-95)
+ *                 .valid_auto_channels(                
+ *                     1,
+ *                     6,
+ *                     11)
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksWirelessRfProfilesExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

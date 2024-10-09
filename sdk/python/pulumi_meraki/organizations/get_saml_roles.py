@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -112,9 +117,6 @@ def get_saml_roles(organization_id: Optional[str] = None,
         items=pulumi.get(__ret__, 'items'),
         organization_id=pulumi.get(__ret__, 'organization_id'),
         saml_role_id=pulumi.get(__ret__, 'saml_role_id'))
-
-
-@_utilities.lift_output_func(get_saml_roles)
 def get_saml_roles_output(organization_id: Optional[pulumi.Input[Optional[str]]] = None,
                           saml_role_id: Optional[pulumi.Input[Optional[str]]] = None,
                           opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSamlRolesResult]:
@@ -125,4 +127,14 @@ def get_saml_roles_output(organization_id: Optional[pulumi.Input[Optional[str]]]
     :param str organization_id: organizationId path parameter. Organization ID
     :param str saml_role_id: samlRoleId path parameter. Saml role ID
     """
-    ...
+    __args__ = dict()
+    __args__['organizationId'] = organization_id
+    __args__['samlRoleId'] = saml_role_id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getSamlRoles:getSamlRoles', __args__, opts=opts, typ=GetSamlRolesResult)
+    return __ret__.apply(lambda __response__: GetSamlRolesResult(
+        id=pulumi.get(__response__, 'id'),
+        item=pulumi.get(__response__, 'item'),
+        items=pulumi.get(__response__, 'items'),
+        organization_id=pulumi.get(__response__, 'organization_id'),
+        saml_role_id=pulumi.get(__response__, 'saml_role_id')))

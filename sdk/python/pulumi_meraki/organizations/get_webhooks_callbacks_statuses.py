@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -108,9 +113,6 @@ def get_webhooks_callbacks_statuses(callback_id: Optional[str] = None,
         id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         organization_id=pulumi.get(__ret__, 'organization_id'))
-
-
-@_utilities.lift_output_func(get_webhooks_callbacks_statuses)
 def get_webhooks_callbacks_statuses_output(callback_id: Optional[pulumi.Input[str]] = None,
                                            organization_id: Optional[pulumi.Input[str]] = None,
                                            opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetWebhooksCallbacksStatusesResult]:
@@ -130,4 +132,13 @@ def get_webhooks_callbacks_statuses_output(callback_id: Optional[pulumi.Input[st
     :param str callback_id: callbackId path parameter. Callback ID
     :param str organization_id: organizationId path parameter. Organization ID
     """
-    ...
+    __args__ = dict()
+    __args__['callbackId'] = callback_id
+    __args__['organizationId'] = organization_id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getWebhooksCallbacksStatuses:getWebhooksCallbacksStatuses', __args__, opts=opts, typ=GetWebhooksCallbacksStatusesResult)
+    return __ret__.apply(lambda __response__: GetWebhooksCallbacksStatusesResult(
+        callback_id=pulumi.get(__response__, 'callback_id'),
+        id=pulumi.get(__response__, 'id'),
+        item=pulumi.get(__response__, 'item'),
+        organization_id=pulumi.get(__response__, 'organization_id')))

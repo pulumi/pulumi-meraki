@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -91,9 +96,6 @@ def get_appliance_traffic_shaping_uplink_selection(network_id: Optional[str] = N
         id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'))
-
-
-@_utilities.lift_output_func(get_appliance_traffic_shaping_uplink_selection)
 def get_appliance_traffic_shaping_uplink_selection_output(network_id: Optional[pulumi.Input[str]] = None,
                                                           opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetApplianceTrafficShapingUplinkSelectionResult]:
     """
@@ -110,4 +112,11 @@ def get_appliance_traffic_shaping_uplink_selection_output(network_id: Optional[p
 
     :param str network_id: networkId path parameter. Network ID
     """
-    ...
+    __args__ = dict()
+    __args__['networkId'] = network_id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:networks/getApplianceTrafficShapingUplinkSelection:getApplianceTrafficShapingUplinkSelection', __args__, opts=opts, typ=GetApplianceTrafficShapingUplinkSelectionResult)
+    return __ret__.apply(lambda __response__: GetApplianceTrafficShapingUplinkSelectionResult(
+        id=pulumi.get(__response__, 'id'),
+        item=pulumi.get(__response__, 'item'),
+        network_id=pulumi.get(__response__, 'network_id')))

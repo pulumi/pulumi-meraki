@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -112,9 +117,6 @@ def get_insight_monitored_media_servers(monitored_media_server_id: Optional[str]
         items=pulumi.get(__ret__, 'items'),
         monitored_media_server_id=pulumi.get(__ret__, 'monitored_media_server_id'),
         organization_id=pulumi.get(__ret__, 'organization_id'))
-
-
-@_utilities.lift_output_func(get_insight_monitored_media_servers)
 def get_insight_monitored_media_servers_output(monitored_media_server_id: Optional[pulumi.Input[Optional[str]]] = None,
                                                organization_id: Optional[pulumi.Input[Optional[str]]] = None,
                                                opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetInsightMonitoredMediaServersResult]:
@@ -125,4 +127,14 @@ def get_insight_monitored_media_servers_output(monitored_media_server_id: Option
     :param str monitored_media_server_id: monitoredMediaServerId path parameter. Monitored media server ID
     :param str organization_id: organizationId path parameter. Organization ID
     """
-    ...
+    __args__ = dict()
+    __args__['monitoredMediaServerId'] = monitored_media_server_id
+    __args__['organizationId'] = organization_id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getInsightMonitoredMediaServers:getInsightMonitoredMediaServers', __args__, opts=opts, typ=GetInsightMonitoredMediaServersResult)
+    return __ret__.apply(lambda __response__: GetInsightMonitoredMediaServersResult(
+        id=pulumi.get(__response__, 'id'),
+        item=pulumi.get(__response__, 'item'),
+        items=pulumi.get(__response__, 'items'),
+        monitored_media_server_id=pulumi.get(__response__, 'monitored_media_server_id'),
+        organization_id=pulumi.get(__response__, 'organization_id')))
