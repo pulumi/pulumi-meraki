@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -179,9 +184,6 @@ def get_insight_applications_health_by_time(application_id: Optional[str] = None
         t0=pulumi.get(__ret__, 't0'),
         t1=pulumi.get(__ret__, 't1'),
         timespan=pulumi.get(__ret__, 'timespan'))
-
-
-@_utilities.lift_output_func(get_insight_applications_health_by_time)
 def get_insight_applications_health_by_time_output(application_id: Optional[pulumi.Input[str]] = None,
                                                    network_id: Optional[pulumi.Input[str]] = None,
                                                    resolution: Optional[pulumi.Input[Optional[int]]] = None,
@@ -213,4 +215,21 @@ def get_insight_applications_health_by_time_output(application_id: Optional[pulu
     :param str t1: t1 query parameter. The end of the timespan for the data. t1 can be a maximum of 7 days after t0.
     :param float timespan: timespan query parameter. The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 7 days. The default is 2 hours.
     """
-    ...
+    __args__ = dict()
+    __args__['applicationId'] = application_id
+    __args__['networkId'] = network_id
+    __args__['resolution'] = resolution
+    __args__['t0'] = t0
+    __args__['t1'] = t1
+    __args__['timespan'] = timespan
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:networks/getInsightApplicationsHealthByTime:getInsightApplicationsHealthByTime', __args__, opts=opts, typ=GetInsightApplicationsHealthByTimeResult)
+    return __ret__.apply(lambda __response__: GetInsightApplicationsHealthByTimeResult(
+        application_id=pulumi.get(__response__, 'application_id'),
+        id=pulumi.get(__response__, 'id'),
+        items=pulumi.get(__response__, 'items'),
+        network_id=pulumi.get(__response__, 'network_id'),
+        resolution=pulumi.get(__response__, 'resolution'),
+        t0=pulumi.get(__response__, 't0'),
+        t1=pulumi.get(__response__, 't1'),
+        timespan=pulumi.get(__response__, 'timespan')))

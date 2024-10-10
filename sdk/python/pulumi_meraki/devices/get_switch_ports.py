@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -112,9 +117,6 @@ def get_switch_ports(port_id: Optional[str] = None,
         items=pulumi.get(__ret__, 'items'),
         port_id=pulumi.get(__ret__, 'port_id'),
         serial=pulumi.get(__ret__, 'serial'))
-
-
-@_utilities.lift_output_func(get_switch_ports)
 def get_switch_ports_output(port_id: Optional[pulumi.Input[Optional[str]]] = None,
                             serial: Optional[pulumi.Input[Optional[str]]] = None,
                             opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSwitchPortsResult]:
@@ -125,4 +127,14 @@ def get_switch_ports_output(port_id: Optional[pulumi.Input[Optional[str]]] = Non
     :param str port_id: portId path parameter. Port ID
     :param str serial: serial path parameter.
     """
-    ...
+    __args__ = dict()
+    __args__['portId'] = port_id
+    __args__['serial'] = serial
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:devices/getSwitchPorts:getSwitchPorts', __args__, opts=opts, typ=GetSwitchPortsResult)
+    return __ret__.apply(lambda __response__: GetSwitchPortsResult(
+        id=pulumi.get(__response__, 'id'),
+        item=pulumi.get(__response__, 'item'),
+        items=pulumi.get(__response__, 'items'),
+        port_id=pulumi.get(__response__, 'port_id'),
+        serial=pulumi.get(__response__, 'serial')))

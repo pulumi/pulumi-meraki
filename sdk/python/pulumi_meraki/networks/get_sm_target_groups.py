@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -128,9 +133,6 @@ def get_sm_target_groups(network_id: Optional[str] = None,
         network_id=pulumi.get(__ret__, 'network_id'),
         target_group_id=pulumi.get(__ret__, 'target_group_id'),
         with_details=pulumi.get(__ret__, 'with_details'))
-
-
-@_utilities.lift_output_func(get_sm_target_groups)
 def get_sm_target_groups_output(network_id: Optional[pulumi.Input[Optional[str]]] = None,
                                 target_group_id: Optional[pulumi.Input[Optional[str]]] = None,
                                 with_details: Optional[pulumi.Input[Optional[bool]]] = None,
@@ -143,4 +145,16 @@ def get_sm_target_groups_output(network_id: Optional[pulumi.Input[Optional[str]]
     :param str target_group_id: targetGroupId path parameter. Target group ID
     :param bool with_details: withDetails query parameter. Boolean indicating if the the ids of the devices or users scoped by the target group should be included in the response
     """
-    ...
+    __args__ = dict()
+    __args__['networkId'] = network_id
+    __args__['targetGroupId'] = target_group_id
+    __args__['withDetails'] = with_details
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSmTargetGroups:getSmTargetGroups', __args__, opts=opts, typ=GetSmTargetGroupsResult)
+    return __ret__.apply(lambda __response__: GetSmTargetGroupsResult(
+        id=pulumi.get(__response__, 'id'),
+        item=pulumi.get(__response__, 'item'),
+        items=pulumi.get(__response__, 'items'),
+        network_id=pulumi.get(__response__, 'network_id'),
+        target_group_id=pulumi.get(__response__, 'target_group_id'),
+        with_details=pulumi.get(__response__, 'with_details')))

@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -108,9 +113,6 @@ def get_vlan_profiles(iname: Optional[str] = None,
         iname=pulumi.get(__ret__, 'iname'),
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'))
-
-
-@_utilities.lift_output_func(get_vlan_profiles)
 def get_vlan_profiles_output(iname: Optional[pulumi.Input[str]] = None,
                              network_id: Optional[pulumi.Input[str]] = None,
                              opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetVlanProfilesResult]:
@@ -130,4 +132,13 @@ def get_vlan_profiles_output(iname: Optional[pulumi.Input[str]] = None,
     :param str iname: iname path parameter.
     :param str network_id: networkId path parameter. Network ID
     """
-    ...
+    __args__ = dict()
+    __args__['iname'] = iname
+    __args__['networkId'] = network_id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:networks/getVlanProfiles:getVlanProfiles', __args__, opts=opts, typ=GetVlanProfilesResult)
+    return __ret__.apply(lambda __response__: GetVlanProfilesResult(
+        id=pulumi.get(__response__, 'id'),
+        iname=pulumi.get(__response__, 'iname'),
+        item=pulumi.get(__response__, 'item'),
+        network_id=pulumi.get(__response__, 'network_id')))

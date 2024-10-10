@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -179,9 +184,6 @@ def get_switch_dhcp_v4_servers_seen(ending_before: Optional[str] = None,
         starting_after=pulumi.get(__ret__, 'starting_after'),
         t0=pulumi.get(__ret__, 't0'),
         timespan=pulumi.get(__ret__, 'timespan'))
-
-
-@_utilities.lift_output_func(get_switch_dhcp_v4_servers_seen)
 def get_switch_dhcp_v4_servers_seen_output(ending_before: Optional[pulumi.Input[Optional[str]]] = None,
                                            network_id: Optional[pulumi.Input[str]] = None,
                                            per_page: Optional[pulumi.Input[Optional[int]]] = None,
@@ -213,4 +215,21 @@ def get_switch_dhcp_v4_servers_seen_output(ending_before: Optional[pulumi.Input[
     :param str t0: t0 query parameter. The beginning of the timespan for the data. The maximum lookback period is 31 days from today.
     :param float timespan: timespan query parameter. The timespan for which the information will be fetched. If specifying timespan, do not specify parameter t0. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
     """
-    ...
+    __args__ = dict()
+    __args__['endingBefore'] = ending_before
+    __args__['networkId'] = network_id
+    __args__['perPage'] = per_page
+    __args__['startingAfter'] = starting_after
+    __args__['t0'] = t0
+    __args__['timespan'] = timespan
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSwitchDhcpV4ServersSeen:getSwitchDhcpV4ServersSeen', __args__, opts=opts, typ=GetSwitchDhcpV4ServersSeenResult)
+    return __ret__.apply(lambda __response__: GetSwitchDhcpV4ServersSeenResult(
+        ending_before=pulumi.get(__response__, 'ending_before'),
+        id=pulumi.get(__response__, 'id'),
+        items=pulumi.get(__response__, 'items'),
+        network_id=pulumi.get(__response__, 'network_id'),
+        per_page=pulumi.get(__response__, 'per_page'),
+        starting_after=pulumi.get(__response__, 'starting_after'),
+        t0=pulumi.get(__response__, 't0'),
+        timespan=pulumi.get(__response__, 'timespan')))
