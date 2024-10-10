@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -281,9 +286,6 @@ def get_wireless_latency_history(access_category: Optional[str] = None,
         t0=pulumi.get(__ret__, 't0'),
         t1=pulumi.get(__ret__, 't1'),
         timespan=pulumi.get(__ret__, 'timespan'))
-
-
-@_utilities.lift_output_func(get_wireless_latency_history)
 def get_wireless_latency_history_output(access_category: Optional[pulumi.Input[Optional[str]]] = None,
                                         ap_tag: Optional[pulumi.Input[Optional[str]]] = None,
                                         auto_resolution: Optional[pulumi.Input[Optional[bool]]] = None,
@@ -333,4 +335,33 @@ def get_wireless_latency_history_output(access_category: Optional[pulumi.Input[O
     :param str t1: t1 query parameter. The end of the timespan for the data. t1 can be a maximum of 31 days after t0.
     :param float timespan: timespan query parameter. The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 7 days.
     """
-    ...
+    __args__ = dict()
+    __args__['accessCategory'] = access_category
+    __args__['apTag'] = ap_tag
+    __args__['autoResolution'] = auto_resolution
+    __args__['band'] = band
+    __args__['clientId'] = client_id
+    __args__['deviceSerial'] = device_serial
+    __args__['networkId'] = network_id
+    __args__['resolution'] = resolution
+    __args__['ssid'] = ssid
+    __args__['t0'] = t0
+    __args__['t1'] = t1
+    __args__['timespan'] = timespan
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:networks/getWirelessLatencyHistory:getWirelessLatencyHistory', __args__, opts=opts, typ=GetWirelessLatencyHistoryResult)
+    return __ret__.apply(lambda __response__: GetWirelessLatencyHistoryResult(
+        access_category=pulumi.get(__response__, 'access_category'),
+        ap_tag=pulumi.get(__response__, 'ap_tag'),
+        auto_resolution=pulumi.get(__response__, 'auto_resolution'),
+        band=pulumi.get(__response__, 'band'),
+        client_id=pulumi.get(__response__, 'client_id'),
+        device_serial=pulumi.get(__response__, 'device_serial'),
+        id=pulumi.get(__response__, 'id'),
+        items=pulumi.get(__response__, 'items'),
+        network_id=pulumi.get(__response__, 'network_id'),
+        resolution=pulumi.get(__response__, 'resolution'),
+        ssid=pulumi.get(__response__, 'ssid'),
+        t0=pulumi.get(__response__, 't0'),
+        t1=pulumi.get(__response__, 't1'),
+        timespan=pulumi.get(__response__, 'timespan')))

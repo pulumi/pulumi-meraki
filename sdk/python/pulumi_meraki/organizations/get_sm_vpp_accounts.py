@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -112,9 +117,6 @@ def get_sm_vpp_accounts(organization_id: Optional[str] = None,
         items=pulumi.get(__ret__, 'items'),
         organization_id=pulumi.get(__ret__, 'organization_id'),
         vpp_account_id=pulumi.get(__ret__, 'vpp_account_id'))
-
-
-@_utilities.lift_output_func(get_sm_vpp_accounts)
 def get_sm_vpp_accounts_output(organization_id: Optional[pulumi.Input[Optional[str]]] = None,
                                vpp_account_id: Optional[pulumi.Input[Optional[str]]] = None,
                                opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSmVppAccountsResult]:
@@ -125,4 +127,14 @@ def get_sm_vpp_accounts_output(organization_id: Optional[pulumi.Input[Optional[s
     :param str organization_id: organizationId path parameter. Organization ID
     :param str vpp_account_id: vppAccountId path parameter. Vpp account ID
     """
-    ...
+    __args__ = dict()
+    __args__['organizationId'] = organization_id
+    __args__['vppAccountId'] = vpp_account_id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getSmVppAccounts:getSmVppAccounts', __args__, opts=opts, typ=GetSmVppAccountsResult)
+    return __ret__.apply(lambda __response__: GetSmVppAccountsResult(
+        id=pulumi.get(__response__, 'id'),
+        item=pulumi.get(__response__, 'item'),
+        items=pulumi.get(__response__, 'items'),
+        organization_id=pulumi.get(__response__, 'organization_id'),
+        vpp_account_id=pulumi.get(__response__, 'vpp_account_id')))

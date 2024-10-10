@@ -25,6 +25,64 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.FloorPlans;
+ * import com.pulumi.meraki.networks.FloorPlansArgs;
+ * import com.pulumi.meraki.networks.inputs.FloorPlansBottomLeftCornerArgs;
+ * import com.pulumi.meraki.networks.inputs.FloorPlansBottomRightCornerArgs;
+ * import com.pulumi.meraki.networks.inputs.FloorPlansCenterArgs;
+ * import com.pulumi.meraki.networks.inputs.FloorPlansTopLeftCornerArgs;
+ * import com.pulumi.meraki.networks.inputs.FloorPlansTopRightCornerArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new FloorPlans("example", FloorPlansArgs.builder()
+ *             .bottomLeftCorner(FloorPlansBottomLeftCornerArgs.builder()
+ *                 .lat(37.770040510499996)
+ *                 .lng(-122.38714009525)
+ *                 .build())
+ *             .bottomRightCorner(FloorPlansBottomRightCornerArgs.builder()
+ *                 .lat(37.770040510499996)
+ *                 .lng(-122.38714009525)
+ *                 .build())
+ *             .center(FloorPlansCenterArgs.builder()
+ *                 .lat(37.770040510499996)
+ *                 .lng(-122.38714009525)
+ *                 .build())
+ *             .imageContents("2a9edd3f4ffd80130c647d13eacb59f3")
+ *             .name("HQ Floor Plan")
+ *             .networkId("string")
+ *             .topLeftCorner(FloorPlansTopLeftCornerArgs.builder()
+ *                 .lat(37.770040510499996)
+ *                 .lng(-122.38714009525)
+ *                 .build())
+ *             .topRightCorner(FloorPlansTopRightCornerArgs.builder()
+ *                 .lat(37.770040510499996)
+ *                 .lng(-122.38714009525)
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksFloorPlansExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

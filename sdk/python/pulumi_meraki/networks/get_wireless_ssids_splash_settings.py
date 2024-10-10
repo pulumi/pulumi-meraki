@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -108,9 +113,6 @@ def get_wireless_ssids_splash_settings(network_id: Optional[str] = None,
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'),
         number=pulumi.get(__ret__, 'number'))
-
-
-@_utilities.lift_output_func(get_wireless_ssids_splash_settings)
 def get_wireless_ssids_splash_settings_output(network_id: Optional[pulumi.Input[str]] = None,
                                               number: Optional[pulumi.Input[str]] = None,
                                               opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetWirelessSsidsSplashSettingsResult]:
@@ -130,4 +132,13 @@ def get_wireless_ssids_splash_settings_output(network_id: Optional[pulumi.Input[
     :param str network_id: networkId path parameter. Network ID
     :param str number: number path parameter.
     """
-    ...
+    __args__ = dict()
+    __args__['networkId'] = network_id
+    __args__['number'] = number
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:networks/getWirelessSsidsSplashSettings:getWirelessSsidsSplashSettings', __args__, opts=opts, typ=GetWirelessSsidsSplashSettingsResult)
+    return __ret__.apply(lambda __response__: GetWirelessSsidsSplashSettingsResult(
+        id=pulumi.get(__response__, 'id'),
+        item=pulumi.get(__response__, 'item'),
+        network_id=pulumi.get(__response__, 'network_id'),
+        number=pulumi.get(__response__, 'number')))

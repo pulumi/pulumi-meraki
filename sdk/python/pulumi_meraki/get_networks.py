@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
 from . import outputs
 
@@ -224,9 +229,6 @@ def get_networks(config_template_id: Optional[str] = None,
         starting_after=pulumi.get(__ret__, 'starting_after'),
         tags=pulumi.get(__ret__, 'tags'),
         tags_filter_type=pulumi.get(__ret__, 'tags_filter_type'))
-
-
-@_utilities.lift_output_func(get_networks)
 def get_networks_output(config_template_id: Optional[pulumi.Input[Optional[str]]] = None,
                         ending_before: Optional[pulumi.Input[Optional[str]]] = None,
                         is_bound_to_config_template: Optional[pulumi.Input[Optional[bool]]] = None,
@@ -251,4 +253,28 @@ def get_networks_output(config_template_id: Optional[pulumi.Input[Optional[str]]
     :param Sequence[str] tags: tags query parameter. An optional parameter to filter networks by tags. The filtering is case-sensitive. If tags are included, 'tagsFilterType' should also be included (see below).
     :param str tags_filter_type: tagsFilterType query parameter. An optional parameter of value 'withAnyTags' or 'withAllTags' to indicate whether to return networks which contain ANY or ALL of the included tags. If no type is included, 'withAnyTags' will be selected.
     """
-    ...
+    __args__ = dict()
+    __args__['configTemplateId'] = config_template_id
+    __args__['endingBefore'] = ending_before
+    __args__['isBoundToConfigTemplate'] = is_bound_to_config_template
+    __args__['networkId'] = network_id
+    __args__['organizationId'] = organization_id
+    __args__['perPage'] = per_page
+    __args__['startingAfter'] = starting_after
+    __args__['tags'] = tags
+    __args__['tagsFilterType'] = tags_filter_type
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:index/getNetworks:getNetworks', __args__, opts=opts, typ=GetNetworksResult)
+    return __ret__.apply(lambda __response__: GetNetworksResult(
+        config_template_id=pulumi.get(__response__, 'config_template_id'),
+        ending_before=pulumi.get(__response__, 'ending_before'),
+        id=pulumi.get(__response__, 'id'),
+        is_bound_to_config_template=pulumi.get(__response__, 'is_bound_to_config_template'),
+        item=pulumi.get(__response__, 'item'),
+        items=pulumi.get(__response__, 'items'),
+        network_id=pulumi.get(__response__, 'network_id'),
+        organization_id=pulumi.get(__response__, 'organization_id'),
+        per_page=pulumi.get(__response__, 'per_page'),
+        starting_after=pulumi.get(__response__, 'starting_after'),
+        tags=pulumi.get(__response__, 'tags'),
+        tags_filter_type=pulumi.get(__response__, 'tags_filter_type')))

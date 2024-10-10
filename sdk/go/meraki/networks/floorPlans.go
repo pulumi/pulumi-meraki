@@ -29,26 +29,26 @@ import (
 //			example, err := networks.NewFloorPlans(ctx, "example", &networks.FloorPlansArgs{
 //				BottomLeftCorner: &networks.FloorPlansBottomLeftCornerArgs{
 //					Lat: pulumi.Float64(37.770040510499996),
-//					Lng: -122.38714009525,
+//					Lng: pulumi.Float64(-122.38714009525),
 //				},
 //				BottomRightCorner: &networks.FloorPlansBottomRightCornerArgs{
 //					Lat: pulumi.Float64(37.770040510499996),
-//					Lng: -122.38714009525,
+//					Lng: pulumi.Float64(-122.38714009525),
 //				},
 //				Center: &networks.FloorPlansCenterArgs{
 //					Lat: pulumi.Float64(37.770040510499996),
-//					Lng: -122.38714009525,
+//					Lng: pulumi.Float64(-122.38714009525),
 //				},
 //				ImageContents: pulumi.String("2a9edd3f4ffd80130c647d13eacb59f3"),
 //				Name:          pulumi.String("HQ Floor Plan"),
 //				NetworkId:     pulumi.String("string"),
 //				TopLeftCorner: &networks.FloorPlansTopLeftCornerArgs{
 //					Lat: pulumi.Float64(37.770040510499996),
-//					Lng: -122.38714009525,
+//					Lng: pulumi.Float64(-122.38714009525),
 //				},
 //				TopRightCorner: &networks.FloorPlansTopRightCornerArgs{
 //					Lat: pulumi.Float64(37.770040510499996),
-//					Lng: -122.38714009525,
+//					Lng: pulumi.Float64(-122.38714009525),
 //				},
 //			})
 //			if err != nil {

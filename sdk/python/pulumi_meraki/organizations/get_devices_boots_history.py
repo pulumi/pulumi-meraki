@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -247,9 +252,6 @@ def get_devices_boots_history(ending_before: Optional[str] = None,
         t0=pulumi.get(__ret__, 't0'),
         t1=pulumi.get(__ret__, 't1'),
         timespan=pulumi.get(__ret__, 'timespan'))
-
-
-@_utilities.lift_output_func(get_devices_boots_history)
 def get_devices_boots_history_output(ending_before: Optional[pulumi.Input[Optional[str]]] = None,
                                      most_recent_per_device: Optional[pulumi.Input[Optional[bool]]] = None,
                                      organization_id: Optional[pulumi.Input[str]] = None,
@@ -293,4 +295,29 @@ def get_devices_boots_history_output(ending_before: Optional[pulumi.Input[Option
     :param str t1: t1 query parameter. The end of the timespan for the data. t1 can be a maximum of 730 days after t0.
     :param float timespan: timespan query parameter. The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 730 days.
     """
-    ...
+    __args__ = dict()
+    __args__['endingBefore'] = ending_before
+    __args__['mostRecentPerDevice'] = most_recent_per_device
+    __args__['organizationId'] = organization_id
+    __args__['perPage'] = per_page
+    __args__['serials'] = serials
+    __args__['sortOrder'] = sort_order
+    __args__['startingAfter'] = starting_after
+    __args__['t0'] = t0
+    __args__['t1'] = t1
+    __args__['timespan'] = timespan
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getDevicesBootsHistory:getDevicesBootsHistory', __args__, opts=opts, typ=GetDevicesBootsHistoryResult)
+    return __ret__.apply(lambda __response__: GetDevicesBootsHistoryResult(
+        ending_before=pulumi.get(__response__, 'ending_before'),
+        id=pulumi.get(__response__, 'id'),
+        items=pulumi.get(__response__, 'items'),
+        most_recent_per_device=pulumi.get(__response__, 'most_recent_per_device'),
+        organization_id=pulumi.get(__response__, 'organization_id'),
+        per_page=pulumi.get(__response__, 'per_page'),
+        serials=pulumi.get(__response__, 'serials'),
+        sort_order=pulumi.get(__response__, 'sort_order'),
+        starting_after=pulumi.get(__response__, 'starting_after'),
+        t0=pulumi.get(__response__, 't0'),
+        t1=pulumi.get(__response__, 't1'),
+        timespan=pulumi.get(__response__, 'timespan')))

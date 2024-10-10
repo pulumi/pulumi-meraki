@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -332,9 +337,6 @@ def get_api_requests(admin_id: Optional[str] = None,
         timespan=pulumi.get(__ret__, 'timespan'),
         user_agent=pulumi.get(__ret__, 'user_agent'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_api_requests)
 def get_api_requests_output(admin_id: Optional[pulumi.Input[Optional[str]]] = None,
                             ending_before: Optional[pulumi.Input[Optional[str]]] = None,
                             method: Optional[pulumi.Input[Optional[str]]] = None,
@@ -393,4 +395,39 @@ def get_api_requests_output(admin_id: Optional[pulumi.Input[Optional[str]]] = No
     :param str user_agent: userAgent query parameter. Filter the results by the user agent string of the API request
     :param int version: version query parameter. Filter the results by the API version of the API request
     """
-    ...
+    __args__ = dict()
+    __args__['adminId'] = admin_id
+    __args__['endingBefore'] = ending_before
+    __args__['method'] = method
+    __args__['operationIds'] = operation_ids
+    __args__['organizationId'] = organization_id
+    __args__['path'] = path
+    __args__['perPage'] = per_page
+    __args__['responseCode'] = response_code
+    __args__['sourceIp'] = source_ip
+    __args__['startingAfter'] = starting_after
+    __args__['t0'] = t0
+    __args__['t1'] = t1
+    __args__['timespan'] = timespan
+    __args__['userAgent'] = user_agent
+    __args__['version'] = version
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getApiRequests:getApiRequests', __args__, opts=opts, typ=GetApiRequestsResult)
+    return __ret__.apply(lambda __response__: GetApiRequestsResult(
+        admin_id=pulumi.get(__response__, 'admin_id'),
+        ending_before=pulumi.get(__response__, 'ending_before'),
+        id=pulumi.get(__response__, 'id'),
+        items=pulumi.get(__response__, 'items'),
+        method=pulumi.get(__response__, 'method'),
+        operation_ids=pulumi.get(__response__, 'operation_ids'),
+        organization_id=pulumi.get(__response__, 'organization_id'),
+        path=pulumi.get(__response__, 'path'),
+        per_page=pulumi.get(__response__, 'per_page'),
+        response_code=pulumi.get(__response__, 'response_code'),
+        source_ip=pulumi.get(__response__, 'source_ip'),
+        starting_after=pulumi.get(__response__, 'starting_after'),
+        t0=pulumi.get(__response__, 't0'),
+        t1=pulumi.get(__response__, 't1'),
+        timespan=pulumi.get(__response__, 'timespan'),
+        user_agent=pulumi.get(__response__, 'user_agent'),
+        version=pulumi.get(__response__, 'version')))

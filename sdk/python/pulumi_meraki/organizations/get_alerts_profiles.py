@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -94,9 +99,6 @@ def get_alerts_profiles(organization_id: Optional[str] = None,
         id=pulumi.get(__ret__, 'id'),
         items=pulumi.get(__ret__, 'items'),
         organization_id=pulumi.get(__ret__, 'organization_id'))
-
-
-@_utilities.lift_output_func(get_alerts_profiles)
 def get_alerts_profiles_output(organization_id: Optional[pulumi.Input[str]] = None,
                                opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetAlertsProfilesResult]:
     """
@@ -113,4 +115,11 @@ def get_alerts_profiles_output(organization_id: Optional[pulumi.Input[str]] = No
 
     :param str organization_id: organizationId path parameter. Organization ID
     """
-    ...
+    __args__ = dict()
+    __args__['organizationId'] = organization_id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getAlertsProfiles:getAlertsProfiles', __args__, opts=opts, typ=GetAlertsProfilesResult)
+    return __ret__.apply(lambda __response__: GetAlertsProfilesResult(
+        id=pulumi.get(__response__, 'id'),
+        items=pulumi.get(__response__, 'items'),
+        organization_id=pulumi.get(__response__, 'organization_id')))

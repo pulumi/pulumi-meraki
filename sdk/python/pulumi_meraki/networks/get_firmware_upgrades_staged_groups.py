@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -112,9 +117,6 @@ def get_firmware_upgrades_staged_groups(group_id: Optional[str] = None,
         item=pulumi.get(__ret__, 'item'),
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'))
-
-
-@_utilities.lift_output_func(get_firmware_upgrades_staged_groups)
 def get_firmware_upgrades_staged_groups_output(group_id: Optional[pulumi.Input[Optional[str]]] = None,
                                                network_id: Optional[pulumi.Input[Optional[str]]] = None,
                                                opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetFirmwareUpgradesStagedGroupsResult]:
@@ -125,4 +127,14 @@ def get_firmware_upgrades_staged_groups_output(group_id: Optional[pulumi.Input[O
     :param str group_id: groupId path parameter. Group ID
     :param str network_id: networkId path parameter. Network ID
     """
-    ...
+    __args__ = dict()
+    __args__['groupId'] = group_id
+    __args__['networkId'] = network_id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:networks/getFirmwareUpgradesStagedGroups:getFirmwareUpgradesStagedGroups', __args__, opts=opts, typ=GetFirmwareUpgradesStagedGroupsResult)
+    return __ret__.apply(lambda __response__: GetFirmwareUpgradesStagedGroupsResult(
+        group_id=pulumi.get(__response__, 'group_id'),
+        id=pulumi.get(__response__, 'id'),
+        item=pulumi.get(__response__, 'item'),
+        items=pulumi.get(__response__, 'items'),
+        network_id=pulumi.get(__response__, 'network_id')))

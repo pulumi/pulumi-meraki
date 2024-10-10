@@ -21,6 +21,41 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.devices.base;
+ * import com.pulumi.meraki.devices.BaseArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Base("example", BaseArgs.builder()
+ *             .lat(37.4180951010362)
+ *             .lng(-122.098531723022)
+ *             .name("My AP")
+ *             .serial("string")
+ *             .tags("recently-added")
+ *             .build());
+ * 
+ *         ctx.export("merakiDevicesExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

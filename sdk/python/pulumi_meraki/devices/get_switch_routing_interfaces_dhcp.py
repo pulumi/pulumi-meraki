@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -108,9 +113,6 @@ def get_switch_routing_interfaces_dhcp(interface_id: Optional[str] = None,
         interface_id=pulumi.get(__ret__, 'interface_id'),
         item=pulumi.get(__ret__, 'item'),
         serial=pulumi.get(__ret__, 'serial'))
-
-
-@_utilities.lift_output_func(get_switch_routing_interfaces_dhcp)
 def get_switch_routing_interfaces_dhcp_output(interface_id: Optional[pulumi.Input[str]] = None,
                                               serial: Optional[pulumi.Input[str]] = None,
                                               opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSwitchRoutingInterfacesDhcpResult]:
@@ -130,4 +132,13 @@ def get_switch_routing_interfaces_dhcp_output(interface_id: Optional[pulumi.Inpu
     :param str interface_id: interfaceId path parameter. Interface ID
     :param str serial: serial path parameter.
     """
-    ...
+    __args__ = dict()
+    __args__['interfaceId'] = interface_id
+    __args__['serial'] = serial
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:devices/getSwitchRoutingInterfacesDhcp:getSwitchRoutingInterfacesDhcp', __args__, opts=opts, typ=GetSwitchRoutingInterfacesDhcpResult)
+    return __ret__.apply(lambda __response__: GetSwitchRoutingInterfacesDhcpResult(
+        id=pulumi.get(__response__, 'id'),
+        interface_id=pulumi.get(__response__, 'interface_id'),
+        item=pulumi.get(__response__, 'item'),
+        serial=pulumi.get(__response__, 'serial')))

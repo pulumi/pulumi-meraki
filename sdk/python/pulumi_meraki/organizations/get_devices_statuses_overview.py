@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -125,9 +130,6 @@ def get_devices_statuses_overview(network_ids: Optional[Sequence[str]] = None,
         network_ids=pulumi.get(__ret__, 'network_ids'),
         organization_id=pulumi.get(__ret__, 'organization_id'),
         product_types=pulumi.get(__ret__, 'product_types'))
-
-
-@_utilities.lift_output_func(get_devices_statuses_overview)
 def get_devices_statuses_overview_output(network_ids: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
                                          organization_id: Optional[pulumi.Input[str]] = None,
                                          product_types: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
@@ -150,4 +152,15 @@ def get_devices_statuses_overview_output(network_ids: Optional[pulumi.Input[Opti
     :param str organization_id: organizationId path parameter. Organization ID
     :param Sequence[str] product_types: productTypes query parameter. An optional parameter to filter device statuses by product type. Valid types are wireless, appliance, switch, systemsManager, camera, cellularGateway, and sensor.
     """
-    ...
+    __args__ = dict()
+    __args__['networkIds'] = network_ids
+    __args__['organizationId'] = organization_id
+    __args__['productTypes'] = product_types
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getDevicesStatusesOverview:getDevicesStatusesOverview', __args__, opts=opts, typ=GetDevicesStatusesOverviewResult)
+    return __ret__.apply(lambda __response__: GetDevicesStatusesOverviewResult(
+        id=pulumi.get(__response__, 'id'),
+        item=pulumi.get(__response__, 'item'),
+        network_ids=pulumi.get(__response__, 'network_ids'),
+        organization_id=pulumi.get(__response__, 'organization_id'),
+        product_types=pulumi.get(__response__, 'product_types')))

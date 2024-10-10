@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -179,9 +184,6 @@ def get_devices_uplinks_loss_and_latency(ip: Optional[str] = None,
         t1=pulumi.get(__ret__, 't1'),
         timespan=pulumi.get(__ret__, 'timespan'),
         uplink=pulumi.get(__ret__, 'uplink'))
-
-
-@_utilities.lift_output_func(get_devices_uplinks_loss_and_latency)
 def get_devices_uplinks_loss_and_latency_output(ip: Optional[pulumi.Input[Optional[str]]] = None,
                                                 organization_id: Optional[pulumi.Input[str]] = None,
                                                 t0: Optional[pulumi.Input[Optional[str]]] = None,
@@ -213,4 +215,21 @@ def get_devices_uplinks_loss_and_latency_output(ip: Optional[pulumi.Input[Option
     :param float timespan: timespan query parameter. The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 5 minutes. The default is 5 minutes.
     :param str uplink: uplink query parameter. Optional filter for a specific WAN uplink. Valid uplinks are wan1, wan2, wan3, cellular. Default will return all uplinks.
     """
-    ...
+    __args__ = dict()
+    __args__['ip'] = ip
+    __args__['organizationId'] = organization_id
+    __args__['t0'] = t0
+    __args__['t1'] = t1
+    __args__['timespan'] = timespan
+    __args__['uplink'] = uplink
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getDevicesUplinksLossAndLatency:getDevicesUplinksLossAndLatency', __args__, opts=opts, typ=GetDevicesUplinksLossAndLatencyResult)
+    return __ret__.apply(lambda __response__: GetDevicesUplinksLossAndLatencyResult(
+        id=pulumi.get(__response__, 'id'),
+        ip=pulumi.get(__response__, 'ip'),
+        items=pulumi.get(__response__, 'items'),
+        organization_id=pulumi.get(__response__, 'organization_id'),
+        t0=pulumi.get(__response__, 't0'),
+        t1=pulumi.get(__response__, 't1'),
+        timespan=pulumi.get(__response__, 'timespan'),
+        uplink=pulumi.get(__response__, 'uplink')))

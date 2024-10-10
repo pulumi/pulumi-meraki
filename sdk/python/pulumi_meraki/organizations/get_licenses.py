@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -108,9 +113,6 @@ def get_licenses(license_id: Optional[str] = None,
         item=pulumi.get(__ret__, 'item'),
         license_id=pulumi.get(__ret__, 'license_id'),
         organization_id=pulumi.get(__ret__, 'organization_id'))
-
-
-@_utilities.lift_output_func(get_licenses)
 def get_licenses_output(license_id: Optional[pulumi.Input[str]] = None,
                         organization_id: Optional[pulumi.Input[str]] = None,
                         opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetLicensesResult]:
@@ -130,4 +132,13 @@ def get_licenses_output(license_id: Optional[pulumi.Input[str]] = None,
     :param str license_id: licenseId path parameter. License ID
     :param str organization_id: organizationId path parameter. Organization ID
     """
-    ...
+    __args__ = dict()
+    __args__['licenseId'] = license_id
+    __args__['organizationId'] = organization_id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getLicenses:getLicenses', __args__, opts=opts, typ=GetLicensesResult)
+    return __ret__.apply(lambda __response__: GetLicensesResult(
+        id=pulumi.get(__response__, 'id'),
+        item=pulumi.get(__response__, 'item'),
+        license_id=pulumi.get(__response__, 'license_id'),
+        organization_id=pulumi.get(__response__, 'organization_id')))

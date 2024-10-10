@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -281,9 +286,6 @@ def get_switch_ports_by_switch(configuration_updated_after: Optional[str] = None
         serial=pulumi.get(__ret__, 'serial'),
         serials=pulumi.get(__ret__, 'serials'),
         starting_after=pulumi.get(__ret__, 'starting_after'))
-
-
-@_utilities.lift_output_func(get_switch_ports_by_switch)
 def get_switch_ports_by_switch_output(configuration_updated_after: Optional[pulumi.Input[Optional[str]]] = None,
                                       ending_before: Optional[pulumi.Input[Optional[str]]] = None,
                                       mac: Optional[pulumi.Input[Optional[str]]] = None,
@@ -333,4 +335,33 @@ def get_switch_ports_by_switch_output(configuration_updated_after: Optional[pulu
     :param Sequence[str] serials: serials query parameter. Optional parameter to filter switchports belonging to switches with one or more serial numbers. All switchports returned belong to serial numbers of switches that are an exact match.
     :param str starting_after: startingAfter query parameter. A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
     """
-    ...
+    __args__ = dict()
+    __args__['configurationUpdatedAfter'] = configuration_updated_after
+    __args__['endingBefore'] = ending_before
+    __args__['mac'] = mac
+    __args__['macs'] = macs
+    __args__['name'] = name
+    __args__['networkIds'] = network_ids
+    __args__['organizationId'] = organization_id
+    __args__['perPage'] = per_page
+    __args__['portProfileIds'] = port_profile_ids
+    __args__['serial'] = serial
+    __args__['serials'] = serials
+    __args__['startingAfter'] = starting_after
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getSwitchPortsBySwitch:getSwitchPortsBySwitch', __args__, opts=opts, typ=GetSwitchPortsBySwitchResult)
+    return __ret__.apply(lambda __response__: GetSwitchPortsBySwitchResult(
+        configuration_updated_after=pulumi.get(__response__, 'configuration_updated_after'),
+        ending_before=pulumi.get(__response__, 'ending_before'),
+        id=pulumi.get(__response__, 'id'),
+        items=pulumi.get(__response__, 'items'),
+        mac=pulumi.get(__response__, 'mac'),
+        macs=pulumi.get(__response__, 'macs'),
+        name=pulumi.get(__response__, 'name'),
+        network_ids=pulumi.get(__response__, 'network_ids'),
+        organization_id=pulumi.get(__response__, 'organization_id'),
+        per_page=pulumi.get(__response__, 'per_page'),
+        port_profile_ids=pulumi.get(__response__, 'port_profile_ids'),
+        serial=pulumi.get(__response__, 'serial'),
+        serials=pulumi.get(__response__, 'serials'),
+        starting_after=pulumi.get(__response__, 'starting_after')))

@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -108,9 +113,6 @@ def get_live_tools_throughput_test(serial: Optional[str] = None,
         item=pulumi.get(__ret__, 'item'),
         serial=pulumi.get(__ret__, 'serial'),
         throughput_test_id=pulumi.get(__ret__, 'throughput_test_id'))
-
-
-@_utilities.lift_output_func(get_live_tools_throughput_test)
 def get_live_tools_throughput_test_output(serial: Optional[pulumi.Input[str]] = None,
                                           throughput_test_id: Optional[pulumi.Input[str]] = None,
                                           opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetLiveToolsThroughputTestResult]:
@@ -130,4 +132,13 @@ def get_live_tools_throughput_test_output(serial: Optional[pulumi.Input[str]] = 
     :param str serial: serial path parameter.
     :param str throughput_test_id: throughputTestId path parameter. Throughput test ID
     """
-    ...
+    __args__ = dict()
+    __args__['serial'] = serial
+    __args__['throughputTestId'] = throughput_test_id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:devices/getLiveToolsThroughputTest:getLiveToolsThroughputTest', __args__, opts=opts, typ=GetLiveToolsThroughputTestResult)
+    return __ret__.apply(lambda __response__: GetLiveToolsThroughputTestResult(
+        id=pulumi.get(__response__, 'id'),
+        item=pulumi.get(__response__, 'item'),
+        serial=pulumi.get(__response__, 'serial'),
+        throughput_test_id=pulumi.get(__response__, 'throughput_test_id')))

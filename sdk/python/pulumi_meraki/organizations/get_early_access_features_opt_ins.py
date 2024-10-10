@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -107,9 +112,6 @@ def get_early_access_features_opt_ins(opt_in_id: Optional[str] = None,
         item=pulumi.get(__ret__, 'item'),
         opt_in_id=pulumi.get(__ret__, 'opt_in_id'),
         organization_id=pulumi.get(__ret__, 'organization_id'))
-
-
-@_utilities.lift_output_func(get_early_access_features_opt_ins)
 def get_early_access_features_opt_ins_output(opt_in_id: Optional[pulumi.Input[Optional[str]]] = None,
                                              organization_id: Optional[pulumi.Input[Optional[str]]] = None,
                                              opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetEarlyAccessFeaturesOptInsResult]:
@@ -128,4 +130,13 @@ def get_early_access_features_opt_ins_output(opt_in_id: Optional[pulumi.Input[Op
     :param str opt_in_id: optInId path parameter. Opt in ID
     :param str organization_id: organizationId path parameter. Organization ID
     """
-    ...
+    __args__ = dict()
+    __args__['optInId'] = opt_in_id
+    __args__['organizationId'] = organization_id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getEarlyAccessFeaturesOptIns:getEarlyAccessFeaturesOptIns', __args__, opts=opts, typ=GetEarlyAccessFeaturesOptInsResult)
+    return __ret__.apply(lambda __response__: GetEarlyAccessFeaturesOptInsResult(
+        id=pulumi.get(__response__, 'id'),
+        item=pulumi.get(__response__, 'item'),
+        opt_in_id=pulumi.get(__response__, 'opt_in_id'),
+        organization_id=pulumi.get(__response__, 'organization_id')))

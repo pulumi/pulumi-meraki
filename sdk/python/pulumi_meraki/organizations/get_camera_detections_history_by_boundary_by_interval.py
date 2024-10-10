@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -179,9 +184,6 @@ def get_camera_detections_history_by_boundary_by_interval(boundary_ids: Optional
         organization_id=pulumi.get(__ret__, 'organization_id'),
         per_page=pulumi.get(__ret__, 'per_page'),
         ranges=pulumi.get(__ret__, 'ranges'))
-
-
-@_utilities.lift_output_func(get_camera_detections_history_by_boundary_by_interval)
 def get_camera_detections_history_by_boundary_by_interval_output(boundary_ids: Optional[pulumi.Input[Sequence[str]]] = None,
                                                                  boundary_types: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
                                                                  duration: Optional[pulumi.Input[Optional[int]]] = None,
@@ -213,4 +215,21 @@ def get_camera_detections_history_by_boundary_by_interval_output(boundary_ids: O
     :param int per_page: perPage query parameter. The number of entries per page returned. Acceptable range is 1 1000. Defaults to 1000.
     :param Sequence[str] ranges: ranges query parameter. A list of time ranges with intervals
     """
-    ...
+    __args__ = dict()
+    __args__['boundaryIds'] = boundary_ids
+    __args__['boundaryTypes'] = boundary_types
+    __args__['duration'] = duration
+    __args__['organizationId'] = organization_id
+    __args__['perPage'] = per_page
+    __args__['ranges'] = ranges
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getCameraDetectionsHistoryByBoundaryByInterval:getCameraDetectionsHistoryByBoundaryByInterval', __args__, opts=opts, typ=GetCameraDetectionsHistoryByBoundaryByIntervalResult)
+    return __ret__.apply(lambda __response__: GetCameraDetectionsHistoryByBoundaryByIntervalResult(
+        boundary_ids=pulumi.get(__response__, 'boundary_ids'),
+        boundary_types=pulumi.get(__response__, 'boundary_types'),
+        duration=pulumi.get(__response__, 'duration'),
+        id=pulumi.get(__response__, 'id'),
+        items=pulumi.get(__response__, 'items'),
+        organization_id=pulumi.get(__response__, 'organization_id'),
+        per_page=pulumi.get(__response__, 'per_page'),
+        ranges=pulumi.get(__response__, 'ranges')))
