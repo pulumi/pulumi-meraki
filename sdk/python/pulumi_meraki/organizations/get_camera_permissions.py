@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -108,9 +113,6 @@ def get_camera_permissions(organization_id: Optional[str] = None,
         item=pulumi.get(__ret__, 'item'),
         organization_id=pulumi.get(__ret__, 'organization_id'),
         permission_scope_id=pulumi.get(__ret__, 'permission_scope_id'))
-
-
-@_utilities.lift_output_func(get_camera_permissions)
 def get_camera_permissions_output(organization_id: Optional[pulumi.Input[str]] = None,
                                   permission_scope_id: Optional[pulumi.Input[str]] = None,
                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCameraPermissionsResult]:
@@ -130,4 +132,13 @@ def get_camera_permissions_output(organization_id: Optional[pulumi.Input[str]] =
     :param str organization_id: organizationId path parameter. Organization ID
     :param str permission_scope_id: permissionScopeId path parameter. Permission scope ID
     """
-    ...
+    __args__ = dict()
+    __args__['organizationId'] = organization_id
+    __args__['permissionScopeId'] = permission_scope_id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getCameraPermissions:getCameraPermissions', __args__, opts=opts, typ=GetCameraPermissionsResult)
+    return __ret__.apply(lambda __response__: GetCameraPermissionsResult(
+        id=pulumi.get(__response__, 'id'),
+        item=pulumi.get(__response__, 'item'),
+        organization_id=pulumi.get(__response__, 'organization_id'),
+        permission_scope_id=pulumi.get(__response__, 'permission_scope_id')))

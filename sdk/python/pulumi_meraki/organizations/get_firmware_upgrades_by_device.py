@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -230,9 +235,6 @@ def get_firmware_upgrades_by_device(ending_before: Optional[str] = None,
         serials=pulumi.get(__ret__, 'serials'),
         starting_after=pulumi.get(__ret__, 'starting_after'),
         upgradestatuses=pulumi.get(__ret__, 'upgradestatuses'))
-
-
-@_utilities.lift_output_func(get_firmware_upgrades_by_device)
 def get_firmware_upgrades_by_device_output(ending_before: Optional[pulumi.Input[Optional[str]]] = None,
                                            firmware_upgrade_batch_ids: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
                                            macs: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
@@ -273,4 +275,27 @@ def get_firmware_upgrades_by_device_output(ending_before: Optional[pulumi.Input[
     :param str starting_after: startingAfter query parameter. A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
     :param Sequence[str] upgradestatuses: upgradeStatuses query parameter. Optional parameter to filter by firmware upgrade statuses.
     """
-    ...
+    __args__ = dict()
+    __args__['endingBefore'] = ending_before
+    __args__['firmwareUpgradeBatchIds'] = firmware_upgrade_batch_ids
+    __args__['macs'] = macs
+    __args__['networkIds'] = network_ids
+    __args__['organizationId'] = organization_id
+    __args__['perPage'] = per_page
+    __args__['serials'] = serials
+    __args__['startingAfter'] = starting_after
+    __args__['upgradestatuses'] = upgradestatuses
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getFirmwareUpgradesByDevice:getFirmwareUpgradesByDevice', __args__, opts=opts, typ=GetFirmwareUpgradesByDeviceResult)
+    return __ret__.apply(lambda __response__: GetFirmwareUpgradesByDeviceResult(
+        ending_before=pulumi.get(__response__, 'ending_before'),
+        firmware_upgrade_batch_ids=pulumi.get(__response__, 'firmware_upgrade_batch_ids'),
+        id=pulumi.get(__response__, 'id'),
+        items=pulumi.get(__response__, 'items'),
+        macs=pulumi.get(__response__, 'macs'),
+        network_ids=pulumi.get(__response__, 'network_ids'),
+        organization_id=pulumi.get(__response__, 'organization_id'),
+        per_page=pulumi.get(__response__, 'per_page'),
+        serials=pulumi.get(__response__, 'serials'),
+        starting_after=pulumi.get(__response__, 'starting_after'),
+        upgradestatuses=pulumi.get(__response__, 'upgradestatuses')))

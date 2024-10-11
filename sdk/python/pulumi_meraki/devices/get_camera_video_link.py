@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -108,9 +113,6 @@ def get_camera_video_link(serial: Optional[str] = None,
         item=pulumi.get(__ret__, 'item'),
         serial=pulumi.get(__ret__, 'serial'),
         timestamp=pulumi.get(__ret__, 'timestamp'))
-
-
-@_utilities.lift_output_func(get_camera_video_link)
 def get_camera_video_link_output(serial: Optional[pulumi.Input[str]] = None,
                                  timestamp: Optional[pulumi.Input[Optional[str]]] = None,
                                  opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCameraVideoLinkResult]:
@@ -130,4 +132,13 @@ def get_camera_video_link_output(serial: Optional[pulumi.Input[str]] = None,
     :param str serial: serial path parameter.
     :param str timestamp: timestamp query parameter. [optional] The video link will start at this time. The timestamp should be a string in ISO8601 format. If no timestamp is specified, we will assume current time.
     """
-    ...
+    __args__ = dict()
+    __args__['serial'] = serial
+    __args__['timestamp'] = timestamp
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:devices/getCameraVideoLink:getCameraVideoLink', __args__, opts=opts, typ=GetCameraVideoLinkResult)
+    return __ret__.apply(lambda __response__: GetCameraVideoLinkResult(
+        id=pulumi.get(__response__, 'id'),
+        item=pulumi.get(__response__, 'item'),
+        serial=pulumi.get(__response__, 'serial'),
+        timestamp=pulumi.get(__response__, 'timestamp')))

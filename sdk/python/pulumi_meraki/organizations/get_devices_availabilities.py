@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -230,9 +235,6 @@ def get_devices_availabilities(ending_before: Optional[str] = None,
         starting_after=pulumi.get(__ret__, 'starting_after'),
         tags=pulumi.get(__ret__, 'tags'),
         tags_filter_type=pulumi.get(__ret__, 'tags_filter_type'))
-
-
-@_utilities.lift_output_func(get_devices_availabilities)
 def get_devices_availabilities_output(ending_before: Optional[pulumi.Input[Optional[str]]] = None,
                                       network_ids: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
                                       organization_id: Optional[pulumi.Input[str]] = None,
@@ -273,4 +275,27 @@ def get_devices_availabilities_output(ending_before: Optional[pulumi.Input[Optio
     :param Sequence[str] tags: tags query parameter. An optional parameter to filter devices by tags. The filtering is case-sensitive. If tags are included, 'tagsFilterType' should also be included (see below). This filter uses multiple exact matches.
     :param str tags_filter_type: tagsFilterType query parameter. An optional parameter of value 'withAnyTags' or 'withAllTags' to indicate whether to return devices which contain ANY or ALL of the included tags. If no type is included, 'withAnyTags' will be selected.
     """
-    ...
+    __args__ = dict()
+    __args__['endingBefore'] = ending_before
+    __args__['networkIds'] = network_ids
+    __args__['organizationId'] = organization_id
+    __args__['perPage'] = per_page
+    __args__['productTypes'] = product_types
+    __args__['serials'] = serials
+    __args__['startingAfter'] = starting_after
+    __args__['tags'] = tags
+    __args__['tagsFilterType'] = tags_filter_type
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getDevicesAvailabilities:getDevicesAvailabilities', __args__, opts=opts, typ=GetDevicesAvailabilitiesResult)
+    return __ret__.apply(lambda __response__: GetDevicesAvailabilitiesResult(
+        ending_before=pulumi.get(__response__, 'ending_before'),
+        id=pulumi.get(__response__, 'id'),
+        items=pulumi.get(__response__, 'items'),
+        network_ids=pulumi.get(__response__, 'network_ids'),
+        organization_id=pulumi.get(__response__, 'organization_id'),
+        per_page=pulumi.get(__response__, 'per_page'),
+        product_types=pulumi.get(__response__, 'product_types'),
+        serials=pulumi.get(__response__, 'serials'),
+        starting_after=pulumi.get(__response__, 'starting_after'),
+        tags=pulumi.get(__response__, 'tags'),
+        tags_filter_type=pulumi.get(__response__, 'tags_filter_type')))
