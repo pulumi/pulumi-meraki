@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -108,9 +113,6 @@ def get_openapi_spec(organization_id: Optional[str] = None,
         item=pulumi.get(__ret__, 'item'),
         organization_id=pulumi.get(__ret__, 'organization_id'),
         version=pulumi.get(__ret__, 'version'))
-
-
-@_utilities.lift_output_func(get_openapi_spec)
 def get_openapi_spec_output(organization_id: Optional[pulumi.Input[str]] = None,
                             version: Optional[pulumi.Input[Optional[int]]] = None,
                             opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetOpenapiSpecResult]:
@@ -130,4 +132,13 @@ def get_openapi_spec_output(organization_id: Optional[pulumi.Input[str]] = None,
     :param str organization_id: organizationId path parameter. Organization ID
     :param int version: version query parameter. OpenAPI Specification version to return. Default is 2
     """
-    ...
+    __args__ = dict()
+    __args__['organizationId'] = organization_id
+    __args__['version'] = version
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getOpenapiSpec:getOpenapiSpec', __args__, opts=opts, typ=GetOpenapiSpecResult)
+    return __ret__.apply(lambda __response__: GetOpenapiSpecResult(
+        id=pulumi.get(__response__, 'id'),
+        item=pulumi.get(__response__, 'item'),
+        organization_id=pulumi.get(__response__, 'organization_id'),
+        version=pulumi.get(__response__, 'version')))

@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -111,9 +116,6 @@ def get_sm_profiles(network_id: Optional[str] = None,
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'),
         payload_types=pulumi.get(__ret__, 'payload_types'))
-
-
-@_utilities.lift_output_func(get_sm_profiles)
 def get_sm_profiles_output(network_id: Optional[pulumi.Input[str]] = None,
                            payload_types: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
                            opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSmProfilesResult]:
@@ -133,4 +135,13 @@ def get_sm_profiles_output(network_id: Optional[pulumi.Input[str]] = None,
     :param str network_id: networkId path parameter. Network ID
     :param Sequence[str] payload_types: payloadTypes query parameter. Filter by payload types
     """
-    ...
+    __args__ = dict()
+    __args__['networkId'] = network_id
+    __args__['payloadTypes'] = payload_types
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSmProfiles:getSmProfiles', __args__, opts=opts, typ=GetSmProfilesResult)
+    return __ret__.apply(lambda __response__: GetSmProfilesResult(
+        id=pulumi.get(__response__, 'id'),
+        items=pulumi.get(__response__, 'items'),
+        network_id=pulumi.get(__response__, 'network_id'),
+        payload_types=pulumi.get(__response__, 'payload_types')))

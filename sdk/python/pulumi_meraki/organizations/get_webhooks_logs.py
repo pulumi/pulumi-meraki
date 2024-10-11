@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -213,9 +218,6 @@ def get_webhooks_logs(ending_before: Optional[str] = None,
         t1=pulumi.get(__ret__, 't1'),
         timespan=pulumi.get(__ret__, 'timespan'),
         url=pulumi.get(__ret__, 'url'))
-
-
-@_utilities.lift_output_func(get_webhooks_logs)
 def get_webhooks_logs_output(ending_before: Optional[pulumi.Input[Optional[str]]] = None,
                              organization_id: Optional[pulumi.Input[str]] = None,
                              per_page: Optional[pulumi.Input[Optional[int]]] = None,
@@ -253,4 +255,25 @@ def get_webhooks_logs_output(ending_before: Optional[pulumi.Input[Optional[str]]
     :param float timespan: timespan query parameter. The timespan for which the information will be fetched. If specifying timespan, do not specify parameters t0 and t1. The value must be in seconds and be less than or equal to 31 days. The default is 1 day.
     :param str url: url query parameter. The URL the webhook was sent to
     """
-    ...
+    __args__ = dict()
+    __args__['endingBefore'] = ending_before
+    __args__['organizationId'] = organization_id
+    __args__['perPage'] = per_page
+    __args__['startingAfter'] = starting_after
+    __args__['t0'] = t0
+    __args__['t1'] = t1
+    __args__['timespan'] = timespan
+    __args__['url'] = url
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getWebhooksLogs:getWebhooksLogs', __args__, opts=opts, typ=GetWebhooksLogsResult)
+    return __ret__.apply(lambda __response__: GetWebhooksLogsResult(
+        ending_before=pulumi.get(__response__, 'ending_before'),
+        id=pulumi.get(__response__, 'id'),
+        items=pulumi.get(__response__, 'items'),
+        organization_id=pulumi.get(__response__, 'organization_id'),
+        per_page=pulumi.get(__response__, 'per_page'),
+        starting_after=pulumi.get(__response__, 'starting_after'),
+        t0=pulumi.get(__response__, 't0'),
+        t1=pulumi.get(__response__, 't1'),
+        timespan=pulumi.get(__response__, 'timespan'),
+        url=pulumi.get(__response__, 'url')))

@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -111,9 +116,6 @@ def get_camera_boundaries_lines_by_device(organization_id: Optional[str] = None,
         items=pulumi.get(__ret__, 'items'),
         organization_id=pulumi.get(__ret__, 'organization_id'),
         serials=pulumi.get(__ret__, 'serials'))
-
-
-@_utilities.lift_output_func(get_camera_boundaries_lines_by_device)
 def get_camera_boundaries_lines_by_device_output(organization_id: Optional[pulumi.Input[str]] = None,
                                                  serials: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
                                                  opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCameraBoundariesLinesByDeviceResult]:
@@ -133,4 +135,13 @@ def get_camera_boundaries_lines_by_device_output(organization_id: Optional[pulum
     :param str organization_id: organizationId path parameter. Organization ID
     :param Sequence[str] serials: serials query parameter. A list of serial numbers. The returned cameras will be filtered to only include these serials.
     """
-    ...
+    __args__ = dict()
+    __args__['organizationId'] = organization_id
+    __args__['serials'] = serials
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getCameraBoundariesLinesByDevice:getCameraBoundariesLinesByDevice', __args__, opts=opts, typ=GetCameraBoundariesLinesByDeviceResult)
+    return __ret__.apply(lambda __response__: GetCameraBoundariesLinesByDeviceResult(
+        id=pulumi.get(__response__, 'id'),
+        items=pulumi.get(__response__, 'items'),
+        organization_id=pulumi.get(__response__, 'organization_id'),
+        serials=pulumi.get(__response__, 'serials')))

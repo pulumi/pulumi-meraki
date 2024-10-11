@@ -28,7 +28,7 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			example, err := devices.Newbase(ctx, "example", &devices.baseArgs{
 //				Lat:    pulumi.Float64(37.4180951010362),
-//				Lng:    -122.098531723022,
+//				Lng:    pulumi.Float64(-122.098531723022),
 //				Name:   pulumi.String("My AP"),
 //				Serial: pulumi.String("string"),
 //				Tags: pulumi.StringArray{

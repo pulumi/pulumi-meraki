@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -111,9 +116,6 @@ def get_inventory_onboarding_cloud_monitoring_imports(import_ids: Optional[Seque
         import_ids=pulumi.get(__ret__, 'import_ids'),
         items=pulumi.get(__ret__, 'items'),
         organization_id=pulumi.get(__ret__, 'organization_id'))
-
-
-@_utilities.lift_output_func(get_inventory_onboarding_cloud_monitoring_imports)
 def get_inventory_onboarding_cloud_monitoring_imports_output(import_ids: Optional[pulumi.Input[Sequence[str]]] = None,
                                                              organization_id: Optional[pulumi.Input[str]] = None,
                                                              opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetInventoryOnboardingCloudMonitoringImportsResult]:
@@ -133,4 +135,13 @@ def get_inventory_onboarding_cloud_monitoring_imports_output(import_ids: Optiona
     :param Sequence[str] import_ids: importIds query parameter. import ids from an imports
     :param str organization_id: organizationId path parameter. Organization ID
     """
-    ...
+    __args__ = dict()
+    __args__['importIds'] = import_ids
+    __args__['organizationId'] = organization_id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getInventoryOnboardingCloudMonitoringImports:getInventoryOnboardingCloudMonitoringImports', __args__, opts=opts, typ=GetInventoryOnboardingCloudMonitoringImportsResult)
+    return __ret__.apply(lambda __response__: GetInventoryOnboardingCloudMonitoringImportsResult(
+        id=pulumi.get(__response__, 'id'),
+        import_ids=pulumi.get(__response__, 'import_ids'),
+        items=pulumi.get(__response__, 'items'),
+        organization_id=pulumi.get(__response__, 'organization_id')))

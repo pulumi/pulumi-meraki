@@ -4,132 +4,275 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 
 __all__ = [
     'ActionBatchesActionArgs',
+    'ActionBatchesActionArgsDict',
     'ActionBatchesCallbackArgs',
+    'ActionBatchesCallbackArgsDict',
     'ActionBatchesCallbackHttpServerArgs',
+    'ActionBatchesCallbackHttpServerArgsDict',
     'ActionBatchesCallbackPayloadTemplateArgs',
+    'ActionBatchesCallbackPayloadTemplateArgsDict',
     'ActionBatchesStatusArgs',
+    'ActionBatchesStatusArgsDict',
     'ActionBatchesStatusCreatedResourceArgs',
+    'ActionBatchesStatusCreatedResourceArgsDict',
     'AdaptivePolicyAclsRuleArgs',
+    'AdaptivePolicyAclsRuleArgsDict',
     'AdaptivePolicyGroupsPolicyObjectArgs',
+    'AdaptivePolicyGroupsPolicyObjectArgsDict',
     'AdaptivePolicyPoliciesAclArgs',
+    'AdaptivePolicyPoliciesAclArgsDict',
     'AdaptivePolicyPoliciesDestinationGroupArgs',
+    'AdaptivePolicyPoliciesDestinationGroupArgsDict',
     'AdaptivePolicyPoliciesSourceGroupArgs',
+    'AdaptivePolicyPoliciesSourceGroupArgsDict',
     'AdminsNetworkArgs',
+    'AdminsNetworkArgsDict',
     'AdminsTagArgs',
+    'AdminsTagArgsDict',
     'AlertsProfilesAlertConditionArgs',
+    'AlertsProfilesAlertConditionArgsDict',
     'AlertsProfilesRecipientsArgs',
+    'AlertsProfilesRecipientsArgsDict',
     'ApplianceSecurityIntrusionAllowedRuleArgs',
+    'ApplianceSecurityIntrusionAllowedRuleArgsDict',
     'ApplianceVpnThirdPartyVpnpeersPeerArgs',
+    'ApplianceVpnThirdPartyVpnpeersPeerArgsDict',
     'ApplianceVpnThirdPartyVpnpeersPeerIpsecPoliciesArgs',
+    'ApplianceVpnThirdPartyVpnpeersPeerIpsecPoliciesArgsDict',
     'ApplianceVpnThirdPartyVpnpeersPeersResponseArgs',
+    'ApplianceVpnThirdPartyVpnpeersPeersResponseArgsDict',
     'ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgs',
+    'ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgsDict',
     'ApplianceVpnVpnFirewallRulesRuleArgs',
+    'ApplianceVpnVpnFirewallRulesRuleArgsDict',
     'BrandingPoliciesAdminSettingsArgs',
+    'BrandingPoliciesAdminSettingsArgsDict',
     'BrandingPoliciesCustomLogoArgs',
+    'BrandingPoliciesCustomLogoArgsDict',
     'BrandingPoliciesCustomLogoImageArgs',
+    'BrandingPoliciesCustomLogoImageArgsDict',
     'BrandingPoliciesCustomLogoImagePreviewArgs',
+    'BrandingPoliciesCustomLogoImagePreviewArgsDict',
     'BrandingPoliciesHelpSettingsArgs',
+    'BrandingPoliciesHelpSettingsArgsDict',
     'CameraCustomAnalyticsArtifactsStatusArgs',
+    'CameraCustomAnalyticsArtifactsStatusArgsDict',
     'CameraRolesAppliedOnDeviceArgs',
+    'CameraRolesAppliedOnDeviceArgsDict',
     'CameraRolesAppliedOnNetworkArgs',
+    'CameraRolesAppliedOnNetworkArgsDict',
     'CameraRolesAppliedOrgWideArgs',
+    'CameraRolesAppliedOrgWideArgsDict',
     'ClaimItemArgs',
+    'ClaimItemArgsDict',
     'ClaimItemLicenseArgs',
+    'ClaimItemLicenseArgsDict',
     'ClaimParametersArgs',
+    'ClaimParametersArgsDict',
     'ClaimParametersLicenseArgs',
+    'ClaimParametersLicenseArgsDict',
     'CloneItemArgs',
+    'CloneItemArgsDict',
     'CloneItemApiArgs',
+    'CloneItemApiArgsDict',
     'CloneItemCloudArgs',
+    'CloneItemCloudArgsDict',
     'CloneItemCloudRegionArgs',
+    'CloneItemCloudRegionArgsDict',
     'CloneItemLicensingArgs',
+    'CloneItemLicensingArgsDict',
     'CloneItemManagementArgs',
+    'CloneItemManagementArgsDict',
     'CloneItemManagementDetailArgs',
+    'CloneItemManagementDetailArgsDict',
     'CloneParametersArgs',
+    'CloneParametersArgsDict',
     'ConfigTemplatesSwitchProfilesPortsMirrorArgs',
+    'ConfigTemplatesSwitchProfilesPortsMirrorArgsDict',
     'ConfigTemplatesSwitchProfilesPortsModuleArgs',
+    'ConfigTemplatesSwitchProfilesPortsModuleArgsDict',
     'ConfigTemplatesSwitchProfilesPortsProfileArgs',
+    'ConfigTemplatesSwitchProfilesPortsProfileArgsDict',
     'InventoryClaimItemArgs',
+    'InventoryClaimItemArgsDict',
     'InventoryClaimItemLicenseArgs',
+    'InventoryClaimItemLicenseArgsDict',
     'InventoryClaimParametersArgs',
+    'InventoryClaimParametersArgsDict',
     'InventoryClaimParametersLicenseArgs',
+    'InventoryClaimParametersLicenseArgsDict',
     'InventoryOnboardingCloudMonitoringExportEventsParametersArgs',
+    'InventoryOnboardingCloudMonitoringExportEventsParametersArgsDict',
     'InventoryOnboardingCloudMonitoringImportsParametersArgs',
+    'InventoryOnboardingCloudMonitoringImportsParametersArgsDict',
     'InventoryOnboardingCloudMonitoringImportsParametersDeviceArgs',
+    'InventoryOnboardingCloudMonitoringImportsParametersDeviceArgsDict',
     'InventoryOnboardingCloudMonitoringImportsParametersItemArgs',
+    'InventoryOnboardingCloudMonitoringImportsParametersItemArgsDict',
     'InventoryOnboardingCloudMonitoringImportsParametersItemItemArgs',
+    'InventoryOnboardingCloudMonitoringImportsParametersItemItemArgsDict',
     'InventoryOnboardingCloudMonitoringPrepareItemArgs',
+    'InventoryOnboardingCloudMonitoringPrepareItemArgsDict',
     'InventoryOnboardingCloudMonitoringPrepareItemConfigParamsArgs',
+    'InventoryOnboardingCloudMonitoringPrepareItemConfigParamsArgsDict',
     'InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelArgs',
+    'InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelArgsDict',
     'InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelRootCertificateArgs',
+    'InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelRootCertificateArgsDict',
     'InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserArgs',
+    'InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserArgsDict',
     'InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserSecretArgs',
+    'InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserSecretArgsDict',
     'InventoryOnboardingCloudMonitoringPrepareParametersArgs',
+    'InventoryOnboardingCloudMonitoringPrepareParametersArgsDict',
     'InventoryOnboardingCloudMonitoringPrepareParametersDeviceArgs',
+    'InventoryOnboardingCloudMonitoringPrepareParametersDeviceArgsDict',
     'InventoryOnboardingCloudMonitoringPrepareParametersDeviceTunnelArgs',
+    'InventoryOnboardingCloudMonitoringPrepareParametersDeviceTunnelArgsDict',
     'InventoryOnboardingCloudMonitoringPrepareParametersDeviceUserArgs',
+    'InventoryOnboardingCloudMonitoringPrepareParametersDeviceUserArgsDict',
     'InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyArgs',
+    'InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyArgsDict',
     'InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListArgs',
+    'InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListArgsDict',
     'InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyInArgs',
+    'InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyInArgsDict',
     'InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyOutArgs',
+    'InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyOutArgsDict',
     'InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationArgs',
+    'InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationArgsDict',
     'InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationGroupArgs',
+    'InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationGroupArgsDict',
     'InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationArgs',
+    'InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationArgsDict',
     'InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationGroupArgs',
+    'InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationGroupArgsDict',
     'InventoryReleaseItemArgs',
+    'InventoryReleaseItemArgsDict',
     'InventoryReleaseParametersArgs',
+    'InventoryReleaseParametersArgsDict',
     'LicensesAssignSeatsItemArgs',
+    'LicensesAssignSeatsItemArgsDict',
     'LicensesAssignSeatsItemResultingLicenseArgs',
+    'LicensesAssignSeatsItemResultingLicenseArgsDict',
     'LicensesAssignSeatsItemResultingLicensePermanentlyQueuedLicenseArgs',
+    'LicensesAssignSeatsItemResultingLicensePermanentlyQueuedLicenseArgsDict',
     'LicensesAssignSeatsParametersArgs',
+    'LicensesAssignSeatsParametersArgsDict',
     'LicensesMoveItemArgs',
+    'LicensesMoveItemArgsDict',
     'LicensesMoveParametersArgs',
+    'LicensesMoveParametersArgsDict',
     'LicensesMoveSeatsItemArgs',
+    'LicensesMoveSeatsItemArgsDict',
     'LicensesMoveSeatsParametersArgs',
+    'LicensesMoveSeatsParametersArgsDict',
     'LicensesPermanentlyQueuedLicenseArgs',
+    'LicensesPermanentlyQueuedLicenseArgsDict',
     'LicensesRenewSeatsItemArgs',
+    'LicensesRenewSeatsItemArgsDict',
     'LicensesRenewSeatsItemResultingLicenseArgs',
+    'LicensesRenewSeatsItemResultingLicenseArgsDict',
     'LicensesRenewSeatsItemResultingLicensePermanentlyQueuedLicenseArgs',
+    'LicensesRenewSeatsItemResultingLicensePermanentlyQueuedLicenseArgsDict',
     'LicensesRenewSeatsParametersArgs',
+    'LicensesRenewSeatsParametersArgsDict',
     'LicensingCotermLicensesMoveItemArgs',
+    'LicensingCotermLicensesMoveItemArgsDict',
     'LicensingCotermLicensesMoveItemMovedLicenseArgs',
+    'LicensingCotermLicensesMoveItemMovedLicenseArgsDict',
     'LicensingCotermLicensesMoveItemMovedLicenseCountArgs',
+    'LicensingCotermLicensesMoveItemMovedLicenseCountArgsDict',
     'LicensingCotermLicensesMoveItemMovedLicenseEditionArgs',
+    'LicensingCotermLicensesMoveItemMovedLicenseEditionArgsDict',
     'LicensingCotermLicensesMoveItemRemainderLicenseArgs',
+    'LicensingCotermLicensesMoveItemRemainderLicenseArgsDict',
     'LicensingCotermLicensesMoveItemRemainderLicenseCountArgs',
+    'LicensingCotermLicensesMoveItemRemainderLicenseCountArgsDict',
     'LicensingCotermLicensesMoveItemRemainderLicenseEditionArgs',
+    'LicensingCotermLicensesMoveItemRemainderLicenseEditionArgsDict',
     'LicensingCotermLicensesMoveParametersArgs',
+    'LicensingCotermLicensesMoveParametersArgsDict',
     'LicensingCotermLicensesMoveParametersDestinationArgs',
+    'LicensingCotermLicensesMoveParametersDestinationArgsDict',
     'LicensingCotermLicensesMoveParametersLicenseArgs',
+    'LicensingCotermLicensesMoveParametersLicenseArgsDict',
     'LicensingCotermLicensesMoveParametersLicenseCountArgs',
+    'LicensingCotermLicensesMoveParametersLicenseCountArgsDict',
     'LoginSecurityApiAuthenticationArgs',
+    'LoginSecurityApiAuthenticationArgsDict',
     'LoginSecurityApiAuthenticationIpRestrictionsForKeysArgs',
+    'LoginSecurityApiAuthenticationIpRestrictionsForKeysArgsDict',
     'NetworksCombineItemArgs',
+    'NetworksCombineItemArgsDict',
     'NetworksCombineItemResultingNetworkArgs',
+    'NetworksCombineItemResultingNetworkArgsDict',
     'NetworksCombineParametersArgs',
+    'NetworksCombineParametersArgsDict',
     'SamlRolesCameraArgs',
+    'SamlRolesCameraArgsDict',
     'SamlRolesNetworkArgs',
+    'SamlRolesNetworkArgsDict',
     'SamlRolesTagArgs',
+    'SamlRolesTagArgsDict',
     'SmSentryPoliciesAssignmentsItemArgs',
+    'SmSentryPoliciesAssignmentsItemArgsDict',
     'SmSentryPoliciesAssignmentsItemItemArgs',
+    'SmSentryPoliciesAssignmentsItemItemArgsDict',
     'SmSentryPoliciesAssignmentsItemItemPolicyArgs',
+    'SmSentryPoliciesAssignmentsItemItemPolicyArgsDict',
     'SmSentryPoliciesAssignmentsParametersArgs',
+    'SmSentryPoliciesAssignmentsParametersArgsDict',
     'SmSentryPoliciesAssignmentsParametersItemArgs',
+    'SmSentryPoliciesAssignmentsParametersItemArgsDict',
     'SmSentryPoliciesAssignmentsParametersItemPolicyArgs',
+    'SmSentryPoliciesAssignmentsParametersItemPolicyArgsDict',
     'SwitchDevicesCloneParametersArgs',
+    'SwitchDevicesCloneParametersArgsDict',
     'BaseApiArgs',
+    'BaseApiArgsDict',
     'BaseCloudArgs',
+    'BaseCloudArgsDict',
     'BaseCloudRegionArgs',
+    'BaseCloudRegionArgsDict',
     'BaseLicensingArgs',
+    'BaseLicensingArgsDict',
     'BaseManagementArgs',
+    'BaseManagementArgsDict',
     'BaseManagementDetailArgs',
+    'BaseManagementDetailArgsDict',
 ]
+
+MYPY = False
+
+if not MYPY:
+    class ActionBatchesActionArgsDict(TypedDict):
+        body: NotRequired[pulumi.Input[str]]
+        """
+        Data provided in the body of the Action. Contents depend on the Action type
+        """
+        operation: NotRequired[pulumi.Input[str]]
+        """
+        The operation to be used by this action
+        """
+        resource: NotRequired[pulumi.Input[str]]
+        """
+        Unique identifier for the resource to be acted on
+        """
+elif False:
+    ActionBatchesActionArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ActionBatchesActionArgs:
@@ -185,6 +328,35 @@ class ActionBatchesActionArgs:
     def resource(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "resource", value)
 
+
+if not MYPY:
+    class ActionBatchesCallbackArgsDict(TypedDict):
+        http_server: NotRequired[pulumi.Input['ActionBatchesCallbackHttpServerArgsDict']]
+        """
+        The webhook receiver used for the callback webhook.
+        """
+        id: NotRequired[pulumi.Input[str]]
+        """
+        The ID of the callback. To check the status of the callback, use this ID in a request to /webhooks/callbacks/statuses/{id}
+        """
+        payload_template: NotRequired[pulumi.Input['ActionBatchesCallbackPayloadTemplateArgsDict']]
+        """
+        The payload template of the webhook used for the callback
+        """
+        shared_secret: NotRequired[pulumi.Input[str]]
+        """
+        A shared secret that will be included in the requests sent to the callback URL. It can be used to verify that the request was sent by Meraki. If using this field, please also specify an url.
+        """
+        status: NotRequired[pulumi.Input[str]]
+        """
+        The status of the callback
+        """
+        url: NotRequired[pulumi.Input[str]]
+        """
+        The callback URL for the webhook target. This was either provided in the original request or comes from a configured webhook receiver
+        """
+elif False:
+    ActionBatchesCallbackArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ActionBatchesCallbackArgs:
@@ -289,6 +461,15 @@ class ActionBatchesCallbackArgs:
         pulumi.set(self, "url", value)
 
 
+if not MYPY:
+    class ActionBatchesCallbackHttpServerArgsDict(TypedDict):
+        id: NotRequired[pulumi.Input[str]]
+        """
+        The webhook receiver ID that will receive information. If specifying this, please leave the url and sharedSecret fields blank.
+        """
+elif False:
+    ActionBatchesCallbackHttpServerArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ActionBatchesCallbackHttpServerArgs:
     def __init__(__self__, *,
@@ -312,6 +493,15 @@ class ActionBatchesCallbackHttpServerArgs:
         pulumi.set(self, "id", value)
 
 
+if not MYPY:
+    class ActionBatchesCallbackPayloadTemplateArgsDict(TypedDict):
+        id: NotRequired[pulumi.Input[str]]
+        """
+        The ID of the payload template. Defaults to 'wpt_00005' for the Callback (included) template.
+        """
+elif False:
+    ActionBatchesCallbackPayloadTemplateArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ActionBatchesCallbackPayloadTemplateArgs:
     def __init__(__self__, *,
@@ -334,6 +524,27 @@ class ActionBatchesCallbackPayloadTemplateArgs:
     def id(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "id", value)
 
+
+if not MYPY:
+    class ActionBatchesStatusArgsDict(TypedDict):
+        completed: NotRequired[pulumi.Input[bool]]
+        """
+        Flag describing whether all actions in the action batch have completed
+        """
+        created_resources: NotRequired[pulumi.Input[Sequence[pulumi.Input['ActionBatchesStatusCreatedResourceArgsDict']]]]
+        """
+        Resources created as a result of this action batch
+        """
+        errors: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        List of errors encountered when running actions in the action batch
+        """
+        failed: NotRequired[pulumi.Input[bool]]
+        """
+        Flag describing whether any actions in the action batch failed
+        """
+elif False:
+    ActionBatchesStatusArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ActionBatchesStatusArgs:
@@ -406,6 +617,19 @@ class ActionBatchesStatusArgs:
         pulumi.set(self, "failed", value)
 
 
+if not MYPY:
+    class ActionBatchesStatusCreatedResourceArgsDict(TypedDict):
+        id: NotRequired[pulumi.Input[str]]
+        """
+        ID of the created resource
+        """
+        uri: NotRequired[pulumi.Input[str]]
+        """
+        URI, not including base, of the created resource
+        """
+elif False:
+    ActionBatchesStatusCreatedResourceArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ActionBatchesStatusCreatedResourceArgs:
     def __init__(__self__, *,
@@ -444,6 +668,27 @@ class ActionBatchesStatusCreatedResourceArgs:
     def uri(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "uri", value)
 
+
+if not MYPY:
+    class AdaptivePolicyAclsRuleArgsDict(TypedDict):
+        dst_port: NotRequired[pulumi.Input[str]]
+        """
+        Destination port
+        """
+        policy: NotRequired[pulumi.Input[str]]
+        """
+        'allow' or 'deny' traffic specified by this rule
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        The type of protocol
+        """
+        src_port: NotRequired[pulumi.Input[str]]
+        """
+        Source port
+        """
+elif False:
+    AdaptivePolicyAclsRuleArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class AdaptivePolicyAclsRuleArgs:
@@ -516,6 +761,19 @@ class AdaptivePolicyAclsRuleArgs:
         pulumi.set(self, "src_port", value)
 
 
+if not MYPY:
+    class AdaptivePolicyGroupsPolicyObjectArgsDict(TypedDict):
+        id: NotRequired[pulumi.Input[str]]
+        """
+        The ID of the policy object
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The name of the policy object
+        """
+elif False:
+    AdaptivePolicyGroupsPolicyObjectArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class AdaptivePolicyGroupsPolicyObjectArgs:
     def __init__(__self__, *,
@@ -555,6 +813,19 @@ class AdaptivePolicyGroupsPolicyObjectArgs:
         pulumi.set(self, "name", value)
 
 
+if not MYPY:
+    class AdaptivePolicyPoliciesAclArgsDict(TypedDict):
+        id: NotRequired[pulumi.Input[str]]
+        """
+        The ID of the adaptive policy ACL
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The name of the adaptive policy ACL
+        """
+elif False:
+    AdaptivePolicyPoliciesAclArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class AdaptivePolicyPoliciesAclArgs:
     def __init__(__self__, *,
@@ -593,6 +864,23 @@ class AdaptivePolicyPoliciesAclArgs:
     def name(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "name", value)
 
+
+if not MYPY:
+    class AdaptivePolicyPoliciesDestinationGroupArgsDict(TypedDict):
+        id: NotRequired[pulumi.Input[str]]
+        """
+        The ID of the destination adaptive policy group
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The name of the destination adaptive policy group
+        """
+        sgt: NotRequired[pulumi.Input[int]]
+        """
+        The SGT of the destination adaptive policy group
+        """
+elif False:
+    AdaptivePolicyPoliciesDestinationGroupArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class AdaptivePolicyPoliciesDestinationGroupArgs:
@@ -649,6 +937,23 @@ class AdaptivePolicyPoliciesDestinationGroupArgs:
         pulumi.set(self, "sgt", value)
 
 
+if not MYPY:
+    class AdaptivePolicyPoliciesSourceGroupArgsDict(TypedDict):
+        id: NotRequired[pulumi.Input[str]]
+        """
+        The ID of the source adaptive policy group
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The name of the source adaptive policy group
+        """
+        sgt: NotRequired[pulumi.Input[int]]
+        """
+        The SGT of the source adaptive policy group
+        """
+elif False:
+    AdaptivePolicyPoliciesSourceGroupArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class AdaptivePolicyPoliciesSourceGroupArgs:
     def __init__(__self__, *,
@@ -704,6 +1009,19 @@ class AdaptivePolicyPoliciesSourceGroupArgs:
         pulumi.set(self, "sgt", value)
 
 
+if not MYPY:
+    class AdminsNetworkArgsDict(TypedDict):
+        access: NotRequired[pulumi.Input[str]]
+        """
+        Admin's level of access to the network
+        """
+        id: NotRequired[pulumi.Input[str]]
+        """
+        Network ID
+        """
+elif False:
+    AdminsNetworkArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class AdminsNetworkArgs:
     def __init__(__self__, *,
@@ -743,6 +1061,19 @@ class AdminsNetworkArgs:
         pulumi.set(self, "id", value)
 
 
+if not MYPY:
+    class AdminsTagArgsDict(TypedDict):
+        access: NotRequired[pulumi.Input[str]]
+        """
+        Access level for the tag
+        """
+        tag: NotRequired[pulumi.Input[str]]
+        """
+        Tag value
+        """
+elif False:
+    AdminsTagArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class AdminsTagArgs:
     def __init__(__self__, *,
@@ -781,6 +1112,43 @@ class AdminsTagArgs:
     def tag(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "tag", value)
 
+
+if not MYPY:
+    class AlertsProfilesAlertConditionArgsDict(TypedDict):
+        bit_rate_bps: NotRequired[pulumi.Input[int]]
+        """
+        The threshold the metric must cross to be valid for alerting. Used only for WAN Utilization alerts.
+        """
+        duration: NotRequired[pulumi.Input[int]]
+        """
+        The total duration in seconds that the threshold should be crossed before alerting
+        """
+        interface: NotRequired[pulumi.Input[str]]
+        """
+        The uplink observed for the alert
+        """
+        jitter_ms: NotRequired[pulumi.Input[int]]
+        """
+        The threshold the metric must cross to be valid for alerting. Used only for VoIP Jitter alerts.
+        """
+        latency_ms: NotRequired[pulumi.Input[int]]
+        """
+        The threshold the metric must cross to be valid for alerting. Used only for WAN Latency alerts.
+        """
+        loss_ratio: NotRequired[pulumi.Input[float]]
+        """
+        The threshold the metric must cross to be valid for alerting. Used only for Packet Loss alerts.
+        """
+        mos: NotRequired[pulumi.Input[float]]
+        """
+        The threshold the metric must drop below to be valid for alerting. Used only for VoIP MOS alerts.
+        """
+        window: NotRequired[pulumi.Input[int]]
+        """
+        The look back period in seconds for sensing the alert
+        """
+elif False:
+    AlertsProfilesAlertConditionArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class AlertsProfilesAlertConditionArgs:
@@ -917,6 +1285,19 @@ class AlertsProfilesAlertConditionArgs:
         pulumi.set(self, "window", value)
 
 
+if not MYPY:
+    class AlertsProfilesRecipientsArgsDict(TypedDict):
+        emails: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        A list of emails that will receive information about the alert
+        """
+        http_server_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        A list base64 encoded urls of webhook endpoints that will receive information about the alert
+        """
+elif False:
+    AlertsProfilesRecipientsArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class AlertsProfilesRecipientsArgs:
     def __init__(__self__, *,
@@ -956,6 +1337,19 @@ class AlertsProfilesRecipientsArgs:
         pulumi.set(self, "http_server_ids", value)
 
 
+if not MYPY:
+    class ApplianceSecurityIntrusionAllowedRuleArgsDict(TypedDict):
+        message: NotRequired[pulumi.Input[str]]
+        """
+        Message is optional and is ignored on a PUT call. It is allowed in order for PUT to be compatible with GET
+        """
+        rule_id: NotRequired[pulumi.Input[str]]
+        """
+        A rule identifier of the format meraki:intrusion/snort/GID/\\n\\n/SID/\\n\\n. gid and sid can be obtained from either https://www.snort.org/rule-docs or as ruleIds from the security events in /organization/[orgId]/securityEvents
+        """
+elif False:
+    ApplianceSecurityIntrusionAllowedRuleArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ApplianceSecurityIntrusionAllowedRuleArgs:
     def __init__(__self__, *,
@@ -994,6 +1388,51 @@ class ApplianceSecurityIntrusionAllowedRuleArgs:
     def rule_id(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "rule_id", value)
 
+
+if not MYPY:
+    class ApplianceVpnThirdPartyVpnpeersPeerArgsDict(TypedDict):
+        ike_version: NotRequired[pulumi.Input[str]]
+        """
+        [optional] The IKE version to be used for the IPsec VPN peer configuration. Defaults to '1' when omitted.
+        """
+        ipsec_policies: NotRequired[pulumi.Input['ApplianceVpnThirdPartyVpnpeersPeerIpsecPoliciesArgsDict']]
+        """
+        Custom IPSec policies for the VPN peer. If not included and a preset has not been chosen, the default preset for IPSec policies will be used.
+        """
+        ipsec_policies_preset: NotRequired[pulumi.Input[str]]
+        """
+        One of the following available presets: 'default', 'aws', 'azure'. If this is provided, the 'ipsecPolicies' parameter is ignored.
+        """
+        local_id: NotRequired[pulumi.Input[str]]
+        """
+        [optional] The local ID is used to identify the MX to the peer. This will apply to all MXs this peer applies to.
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The name of the VPN peer
+        """
+        network_tags: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        A list of network tags that will connect with this peer. Use ['all'] for all networks. Use ['none'] for no networks. If not included, the default is ['all'].
+        """
+        private_subnets: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The list of the private subnets of the VPN peer
+        """
+        public_ip: NotRequired[pulumi.Input[str]]
+        """
+        [optional] The public IP of the VPN peer
+        """
+        remote_id: NotRequired[pulumi.Input[str]]
+        """
+        [optional] The remote ID is used to identify the connecting VPN peer. This can either be a valid IPv4 Address, FQDN or User FQDN.
+        """
+        secret: NotRequired[pulumi.Input[str]]
+        """
+        The shared secret with the VPN peer
+        """
+elif False:
+    ApplianceVpnThirdPartyVpnpeersPeerArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ApplianceVpnThirdPartyVpnpeersPeerArgs:
@@ -1162,6 +1601,47 @@ class ApplianceVpnThirdPartyVpnpeersPeerArgs:
         pulumi.set(self, "secret", value)
 
 
+if not MYPY:
+    class ApplianceVpnThirdPartyVpnpeersPeerIpsecPoliciesArgsDict(TypedDict):
+        child_auth_algos: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        This is the authentication algorithms to be used in Phase 2. The value should be an array with one of the following algorithms: 'sha256', 'sha1', 'md5'
+        """
+        child_cipher_algos: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        This is the cipher algorithms to be used in Phase 2. The value should be an array with one or more of the following algorithms: 'aes256', 'aes192', 'aes128', 'tripledes', 'des', 'null'
+        """
+        child_lifetime: NotRequired[pulumi.Input[int]]
+        """
+        The lifetime of the Phase 2 SA in seconds.
+        """
+        child_pfs_groups: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        This is the Diffie-Hellman group to be used for Perfect Forward Secrecy in Phase 2. The value should be an array with one of the following values: 'disabled','group14', 'group5', 'group2', 'group1'
+        """
+        ike_auth_algos: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        This is the authentication algorithm to be used in Phase 1. The value should be an array with one of the following algorithms: 'sha256', 'sha1', 'md5'
+        """
+        ike_cipher_algos: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        This is the cipher algorithm to be used in Phase 1. The value should be an array with one of the following algorithms: 'aes256', 'aes192', 'aes128', 'tripledes', 'des'
+        """
+        ike_diffie_hellman_groups: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        This is the Diffie-Hellman group to be used in Phase 1. The value should be an array with one of the following algorithms: 'group14', 'group5', 'group2', 'group1'
+        """
+        ike_lifetime: NotRequired[pulumi.Input[int]]
+        """
+        The lifetime of the Phase 1 SA in seconds.
+        """
+        ike_prf_algos: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        [optional] This is the pseudo-random function to be used in IKE_SA. The value should be an array with one of the following algorithms: 'prfsha256', 'prfsha1', 'prfmd5', 'default'. The 'default' option can be used to default to the Authentication algorithm.
+        """
+elif False:
+    ApplianceVpnThirdPartyVpnpeersPeerIpsecPoliciesArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ApplianceVpnThirdPartyVpnpeersPeerIpsecPoliciesArgs:
     def __init__(__self__, *,
@@ -1312,6 +1792,51 @@ class ApplianceVpnThirdPartyVpnpeersPeerIpsecPoliciesArgs:
     def ike_prf_algos(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
         pulumi.set(self, "ike_prf_algos", value)
 
+
+if not MYPY:
+    class ApplianceVpnThirdPartyVpnpeersPeersResponseArgsDict(TypedDict):
+        ike_version: NotRequired[pulumi.Input[str]]
+        """
+        [optional] The IKE version to be used for the IPsec VPN peer configuration. Defaults to '1' when omitted.
+        """
+        ipsec_policies: NotRequired[pulumi.Input['ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgsDict']]
+        """
+        Custom IPSec policies for the VPN peer. If not included and a preset has not been chosen, the default preset for IPSec policies will be used.
+        """
+        ipsec_policies_preset: NotRequired[pulumi.Input[str]]
+        """
+        One of the following available presets: 'default', 'aws', 'azure'. If this is provided, the 'ipsecPolicies' parameter is ignored.
+        """
+        local_id: NotRequired[pulumi.Input[str]]
+        """
+        [optional] The local ID is used to identify the MX to the peer. This will apply to all MXs this peer applies to.
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The name of the VPN peer
+        """
+        network_tags: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        A list of network tags that will connect with this peer. Use ['all'] for all networks. Use ['none'] for no networks. If not included, the default is ['all'].
+        """
+        private_subnets: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The list of the private subnets of the VPN peer
+        """
+        public_ip: NotRequired[pulumi.Input[str]]
+        """
+        [optional] The public IP of the VPN peer
+        """
+        remote_id: NotRequired[pulumi.Input[str]]
+        """
+        [optional] The remote ID is used to identify the connecting VPN peer. This can either be a valid IPv4 Address, FQDN or User FQDN.
+        """
+        secret: NotRequired[pulumi.Input[str]]
+        """
+        The shared secret with the VPN peer
+        """
+elif False:
+    ApplianceVpnThirdPartyVpnpeersPeersResponseArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ApplianceVpnThirdPartyVpnpeersPeersResponseArgs:
@@ -1480,6 +2005,47 @@ class ApplianceVpnThirdPartyVpnpeersPeersResponseArgs:
         pulumi.set(self, "secret", value)
 
 
+if not MYPY:
+    class ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgsDict(TypedDict):
+        child_auth_algos: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        This is the authentication algorithms to be used in Phase 2. The value should be an array with one of the following algorithms: 'sha256', 'sha1', 'md5'
+        """
+        child_cipher_algos: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        This is the cipher algorithms to be used in Phase 2. The value should be an array with one or more of the following algorithms: 'aes256', 'aes192', 'aes128', 'tripledes', 'des', 'null'
+        """
+        child_lifetime: NotRequired[pulumi.Input[int]]
+        """
+        The lifetime of the Phase 2 SA in seconds.
+        """
+        child_pfs_groups: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        This is the Diffie-Hellman group to be used for Perfect Forward Secrecy in Phase 2. The value should be an array with one of the following values: 'disabled','group14', 'group5', 'group2', 'group1'
+        """
+        ike_auth_algos: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        This is the authentication algorithm to be used in Phase 1. The value should be an array with one of the following algorithms: 'sha256', 'sha1', 'md5'
+        """
+        ike_cipher_algos: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        This is the cipher algorithm to be used in Phase 1. The value should be an array with one of the following algorithms: 'aes256', 'aes192', 'aes128', 'tripledes', 'des'
+        """
+        ike_diffie_hellman_groups: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        This is the Diffie-Hellman group to be used in Phase 1. The value should be an array with one of the following algorithms: 'group14', 'group5', 'group2', 'group1'
+        """
+        ike_lifetime: NotRequired[pulumi.Input[int]]
+        """
+        The lifetime of the Phase 1 SA in seconds.
+        """
+        ike_prf_algos: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        [optional] This is the pseudo-random function to be used in IKE_SA. The value should be an array with one of the following algorithms: 'prfsha256', 'prfsha1', 'prfmd5', 'default'. The 'default' option can be used to default to the Authentication algorithm.
+        """
+elif False:
+    ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgs:
     def __init__(__self__, *,
@@ -1631,6 +2197,43 @@ class ApplianceVpnThirdPartyVpnpeersPeersResponseIpsecPoliciesArgs:
         pulumi.set(self, "ike_prf_algos", value)
 
 
+if not MYPY:
+    class ApplianceVpnVpnFirewallRulesRuleArgsDict(TypedDict):
+        comment: NotRequired[pulumi.Input[str]]
+        """
+        Description of the rule (optional)
+        """
+        dest_cidr: NotRequired[pulumi.Input[str]]
+        """
+        Comma-separated list of destination IP address(es) (in IP or CIDR notation), fully-qualified domain names (FQDN) or 'any'
+        """
+        dest_port: NotRequired[pulumi.Input[str]]
+        """
+        Comma-separated list of destination port(s) (integer in the range 1-65535), or 'any'
+        """
+        policy: NotRequired[pulumi.Input[str]]
+        """
+        'allow' or 'deny' traffic specified by this rule
+        """
+        protocol: NotRequired[pulumi.Input[str]]
+        """
+        The type of protocol (must be 'tcp', 'udp', 'icmp', 'icmp6' or 'any')
+        """
+        src_cidr: NotRequired[pulumi.Input[str]]
+        """
+        Comma-separated list of source IP address(es) (in IP or CIDR notation), or 'any' (note: FQDN not supported for source addresses)
+        """
+        src_port: NotRequired[pulumi.Input[str]]
+        """
+        Comma-separated list of source port(s) (integer in the range 1-65535), or 'any'
+        """
+        syslog_enabled: NotRequired[pulumi.Input[bool]]
+        """
+        Log this rule to syslog (true or false, boolean value) - only applicable if a syslog has been configured (optional)
+        """
+elif False:
+    ApplianceVpnVpnFirewallRulesRuleArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ApplianceVpnVpnFirewallRulesRuleArgs:
     def __init__(__self__, *,
@@ -1766,6 +2369,22 @@ class ApplianceVpnVpnFirewallRulesRuleArgs:
         pulumi.set(self, "syslog_enabled", value)
 
 
+if not MYPY:
+    class BrandingPoliciesAdminSettingsArgsDict(TypedDict):
+        applies_to: NotRequired[pulumi.Input[str]]
+        """
+        Which kinds of admins this policy applies to. Can be one of 'All organization admins', 'All enterprise admins', 'All network admins', 'All admins of networks...', 'All admins of networks tagged...', 'Specific admins...', 'All admins' or 'All SAML admins'.
+        """
+        values: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        If 'appliesTo' is set to one of 'Specific admins...', 'All admins of networks...' or 'All admins of networks tagged...', then you must specify this 'values' property to provide the set of
+          entities to apply the branding policy to. For 'Specific admins...', specify an array of admin IDs. For 'All admins of
+          networks...', specify an array of network IDs and/or configuration template IDs. For 'All admins of networks tagged...',
+          specify an array of tag names.
+        """
+elif False:
+    BrandingPoliciesAdminSettingsArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class BrandingPoliciesAdminSettingsArgs:
     def __init__(__self__, *,
@@ -1811,6 +2430,19 @@ class BrandingPoliciesAdminSettingsArgs:
         pulumi.set(self, "values", value)
 
 
+if not MYPY:
+    class BrandingPoliciesCustomLogoArgsDict(TypedDict):
+        enabled: NotRequired[pulumi.Input[bool]]
+        """
+        Whether or not there is a custom logo enabled.
+        """
+        image: NotRequired[pulumi.Input['BrandingPoliciesCustomLogoImageArgsDict']]
+        """
+        Properties of the image.
+        """
+elif False:
+    BrandingPoliciesCustomLogoArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class BrandingPoliciesCustomLogoArgs:
     def __init__(__self__, *,
@@ -1849,6 +2481,23 @@ class BrandingPoliciesCustomLogoArgs:
     def image(self, value: Optional[pulumi.Input['BrandingPoliciesCustomLogoImageArgs']]):
         pulumi.set(self, "image", value)
 
+
+if not MYPY:
+    class BrandingPoliciesCustomLogoImageArgsDict(TypedDict):
+        contents: NotRequired[pulumi.Input[str]]
+        """
+        The file contents (a base 64 encoded string) of your new logo.
+        """
+        format: NotRequired[pulumi.Input[str]]
+        """
+        The format of the encoded contents.  Supported formats are 'png', 'gif', and jpg'.
+        """
+        preview: NotRequired[pulumi.Input['BrandingPoliciesCustomLogoImagePreviewArgsDict']]
+        """
+        Preview of the image
+        """
+elif False:
+    BrandingPoliciesCustomLogoImageArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class BrandingPoliciesCustomLogoImageArgs:
@@ -1905,6 +2554,19 @@ class BrandingPoliciesCustomLogoImageArgs:
         pulumi.set(self, "preview", value)
 
 
+if not MYPY:
+    class BrandingPoliciesCustomLogoImagePreviewArgsDict(TypedDict):
+        expires_at: NotRequired[pulumi.Input[str]]
+        """
+        Timestamp of the preview image
+        """
+        url: NotRequired[pulumi.Input[str]]
+        """
+        Url of the preview image
+        """
+elif False:
+    BrandingPoliciesCustomLogoImagePreviewArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class BrandingPoliciesCustomLogoImagePreviewArgs:
     def __init__(__self__, *,
@@ -1943,6 +2605,82 @@ class BrandingPoliciesCustomLogoImagePreviewArgs:
     def url(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "url", value)
 
+
+if not MYPY:
+    class BrandingPoliciesHelpSettingsArgsDict(TypedDict):
+        api_docs_subtab: NotRequired[pulumi.Input[str]]
+        """
+        The 'Help > API docs' subtab where a detailed description of the Dashboard API is listed. Can be one of
+          'default or inherit', 'hide' or 'show'.
+        """
+        cases_subtab: NotRequired[pulumi.Input[str]]
+        """
+        The 'Help > Cases' Dashboard subtab on which Cisco Meraki support cases for this organization can be managed. Can be one
+          of 'default or inherit', 'hide' or 'show'.
+        """
+        cisco_meraki_product_documentation: NotRequired[pulumi.Input[str]]
+        """
+        The 'Product Manuals' section of the 'Help > Get Help' subtab. Can be one of 'default or inherit', 'hide', 'show', or a replacement custom HTML string.
+        """
+        community_subtab: NotRequired[pulumi.Input[str]]
+        """
+        The 'Help > Community' subtab which provides a link to Meraki Community. Can be one of 'default or inherit', 'hide' or 'show'.
+        """
+        data_protection_requests_subtab: NotRequired[pulumi.Input[str]]
+        """
+        The 'Help > Data protection requests' Dashboard subtab on which requests to delete, restrict, or export end-user data can
+          be audited. Can be one of 'default or inherit', 'hide' or 'show'.
+        """
+        firewall_info_subtab: NotRequired[pulumi.Input[str]]
+        """
+        The 'Help > Firewall info' subtab where necessary upstream firewall rules for communication to the Cisco Meraki cloud are
+          listed. Can be one of 'default or inherit', 'hide' or 'show'.
+        """
+        get_help_subtab: NotRequired[pulumi.Input[str]]
+        """
+        The 'Help > Get Help' subtab on which Cisco Meraki KB, Product Manuals, and Support/Case Information are displayed. Note
+          that if this subtab is hidden, branding customizations for the KB on 'Get help', Cisco Meraki product documentation,
+          and support contact info will not be visible. Can be one of 'default or inherit', 'hide' or 'show'.
+        """
+        get_help_subtab_knowledge_base_search: NotRequired[pulumi.Input[str]]
+        """
+        The KB search box which appears on the Help page. Can be one of 'default or inherit', 'hide', 'show', or a replacement custom HTML string.
+        """
+        hardware_replacements_subtab: NotRequired[pulumi.Input[str]]
+        """
+        The 'Help > Replacement info' subtab where important information regarding device replacements is detailed. Can be one of
+          'default or inherit', 'hide' or 'show'.
+        """
+        help_tab: NotRequired[pulumi.Input[str]]
+        """
+        The Help tab, under which all support information resides. If this tab is hidden, no other 'Help' branding
+          customizations will be visible. Can be one of 'default or inherit', 'hide' or 'show'.
+        """
+        help_widget: NotRequired[pulumi.Input[str]]
+        """
+        The 'Help Widget' is a support widget which provides access to live chat, documentation links, Sales contact info,
+          and other contact avenues to reach Meraki Support. Can be one of 'default or inherit', 'hide' or 'show'.
+        """
+        new_features_subtab: NotRequired[pulumi.Input[str]]
+        """
+        The 'Help > New features' subtab where new Dashboard features are detailed. Can be one of 'default or inherit', 'hide' or 'show'.
+        """
+        sm_forums: NotRequired[pulumi.Input[str]]
+        """
+        The 'SM Forums' subtab which links to community-based support for Cisco Meraki Systems Manager. Only configurable for
+          organizations that contain Systems Manager networks. Can be one of 'default or inherit', 'hide' or 'show'.
+        """
+        support_contact_info: NotRequired[pulumi.Input[str]]
+        """
+        The 'Contact Meraki Support' section of the 'Help > Get Help' subtab. Can be one of 'default or inherit', 'hide', 'show', or a replacement custom HTML string.
+        """
+        universal_search_knowledge_base_search: NotRequired[pulumi.Input[str]]
+        """
+        The universal search box always visible on Dashboard will, by default, present results from the Meraki KB. This configures
+          whether these Meraki KB results should be returned. Can be one of 'default or inherit', 'hide' or 'show'.
+        """
+elif False:
+    BrandingPoliciesHelpSettingsArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class BrandingPoliciesHelpSettingsArgs:
@@ -2213,6 +2951,19 @@ class BrandingPoliciesHelpSettingsArgs:
         pulumi.set(self, "universal_search_knowledge_base_search", value)
 
 
+if not MYPY:
+    class CameraCustomAnalyticsArtifactsStatusArgsDict(TypedDict):
+        message: NotRequired[pulumi.Input[str]]
+        """
+        Status message
+        """
+        type: NotRequired[pulumi.Input[str]]
+        """
+        Status type
+        """
+elif False:
+    CameraCustomAnalyticsArtifactsStatusArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CameraCustomAnalyticsArtifactsStatusArgs:
     def __init__(__self__, *,
@@ -2251,6 +3002,33 @@ class CameraCustomAnalyticsArtifactsStatusArgs:
     def type(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "type", value)
 
+
+if not MYPY:
+    class CameraRolesAppliedOnDeviceArgsDict(TypedDict):
+        id: NotRequired[pulumi.Input[str]]
+        """
+        Device id.
+        """
+        in_networks_with_id: NotRequired[pulumi.Input[str]]
+        """
+        Network id scope
+        """
+        in_networks_with_tag: NotRequired[pulumi.Input[str]]
+        """
+        Network tag scope
+        """
+        permission_level: NotRequired[pulumi.Input[str]]
+        permission_scope: NotRequired[pulumi.Input[str]]
+        permission_scope_id: NotRequired[pulumi.Input[str]]
+        """
+        Permission scope id
+        """
+        tag: NotRequired[pulumi.Input[str]]
+        """
+        Device tag.
+        """
+elif False:
+    CameraRolesAppliedOnDeviceArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CameraRolesAppliedOnDeviceArgs:
@@ -2363,6 +3141,25 @@ class CameraRolesAppliedOnDeviceArgs:
         pulumi.set(self, "tag", value)
 
 
+if not MYPY:
+    class CameraRolesAppliedOnNetworkArgsDict(TypedDict):
+        id: NotRequired[pulumi.Input[str]]
+        """
+        Network id.
+        """
+        permission_level: NotRequired[pulumi.Input[str]]
+        permission_scope: NotRequired[pulumi.Input[str]]
+        permission_scope_id: NotRequired[pulumi.Input[str]]
+        """
+        Permission scope id
+        """
+        tag: NotRequired[pulumi.Input[str]]
+        """
+        Network tag
+        """
+elif False:
+    CameraRolesAppliedOnNetworkArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CameraRolesAppliedOnNetworkArgs:
     def __init__(__self__, *,
@@ -2442,6 +3239,18 @@ class CameraRolesAppliedOnNetworkArgs:
         pulumi.set(self, "tag", value)
 
 
+if not MYPY:
+    class CameraRolesAppliedOrgWideArgsDict(TypedDict):
+        permission_level: NotRequired[pulumi.Input[str]]
+        permission_scope: NotRequired[pulumi.Input[str]]
+        permission_scope_id: NotRequired[pulumi.Input[str]]
+        """
+        Permission scope id
+        """
+        tag: NotRequired[pulumi.Input[str]]
+elif False:
+    CameraRolesAppliedOrgWideArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CameraRolesAppliedOrgWideArgs:
     def __init__(__self__, *,
@@ -2501,6 +3310,23 @@ class CameraRolesAppliedOrgWideArgs:
         pulumi.set(self, "tag", value)
 
 
+if not MYPY:
+    class ClaimItemArgsDict(TypedDict):
+        licenses: NotRequired[pulumi.Input[Sequence[pulumi.Input['ClaimItemLicenseArgsDict']]]]
+        """
+        The licenses claimed
+        """
+        orders: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The numbers of the orders claimed
+        """
+        serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The serials of the devices claimed
+        """
+elif False:
+    ClaimItemArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ClaimItemArgs:
     def __init__(__self__, *,
@@ -2556,6 +3382,19 @@ class ClaimItemArgs:
         pulumi.set(self, "serials", value)
 
 
+if not MYPY:
+    class ClaimItemLicenseArgsDict(TypedDict):
+        key: NotRequired[pulumi.Input[str]]
+        """
+        The key of the license
+        """
+        mode: NotRequired[pulumi.Input[str]]
+        """
+        The mode of the license
+        """
+elif False:
+    ClaimItemLicenseArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ClaimItemLicenseArgs:
     def __init__(__self__, *,
@@ -2594,6 +3433,23 @@ class ClaimItemLicenseArgs:
     def mode(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "mode", value)
 
+
+if not MYPY:
+    class ClaimParametersArgsDict(TypedDict):
+        licenses: NotRequired[pulumi.Input[Sequence[pulumi.Input['ClaimParametersLicenseArgsDict']]]]
+        """
+        The licenses that should be claimed
+        """
+        orders: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The numbers of the orders that should be claimed
+        """
+        serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The serials of the devices that should be claimed
+        """
+elif False:
+    ClaimParametersArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ClaimParametersArgs:
@@ -2650,6 +3506,19 @@ class ClaimParametersArgs:
         pulumi.set(self, "serials", value)
 
 
+if not MYPY:
+    class ClaimParametersLicenseArgsDict(TypedDict):
+        key: NotRequired[pulumi.Input[str]]
+        """
+        The key of the license
+        """
+        mode: NotRequired[pulumi.Input[str]]
+        """
+        Either 'renew' or 'addDevices'. 'addDevices' will increase the license limit, while 'renew' will extend the amount of time until expiration. Defaults to 'addDevices'. All licenses must be claimed with the same mode, and at most one renewal can be claimed at a time. This parameter is legacy and does not apply to organizations with per-device licensing enabled.
+        """
+elif False:
+    ClaimParametersLicenseArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ClaimParametersLicenseArgs:
     def __init__(__self__, *,
@@ -2688,6 +3557,39 @@ class ClaimParametersLicenseArgs:
     def mode(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "mode", value)
 
+
+if not MYPY:
+    class CloneItemArgsDict(TypedDict):
+        api: NotRequired[pulumi.Input['CloneItemApiArgsDict']]
+        """
+        API related settings
+        """
+        cloud: NotRequired[pulumi.Input['CloneItemCloudArgsDict']]
+        """
+        Data for this organization
+        """
+        id: NotRequired[pulumi.Input[str]]
+        """
+        Organization ID
+        """
+        licensing: NotRequired[pulumi.Input['CloneItemLicensingArgsDict']]
+        """
+        Licensing related settings
+        """
+        management: NotRequired[pulumi.Input['CloneItemManagementArgsDict']]
+        """
+        Information about the organization's management system
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Organization name
+        """
+        url: NotRequired[pulumi.Input[str]]
+        """
+        Organization URL
+        """
+elif False:
+    CloneItemArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CloneItemArgs:
@@ -2808,6 +3710,15 @@ class CloneItemArgs:
         pulumi.set(self, "url", value)
 
 
+if not MYPY:
+    class CloneItemApiArgsDict(TypedDict):
+        enabled: NotRequired[pulumi.Input[bool]]
+        """
+        Enable API access
+        """
+elif False:
+    CloneItemApiArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CloneItemApiArgs:
     def __init__(__self__, *,
@@ -2830,6 +3741,15 @@ class CloneItemApiArgs:
     def enabled(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "enabled", value)
 
+
+if not MYPY:
+    class CloneItemCloudArgsDict(TypedDict):
+        region: NotRequired[pulumi.Input['CloneItemCloudRegionArgsDict']]
+        """
+        Region info
+        """
+elif False:
+    CloneItemCloudArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CloneItemCloudArgs:
@@ -2854,6 +3774,15 @@ class CloneItemCloudArgs:
         pulumi.set(self, "region", value)
 
 
+if not MYPY:
+    class CloneItemCloudRegionArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Name of region
+        """
+elif False:
+    CloneItemCloudRegionArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CloneItemCloudRegionArgs:
     def __init__(__self__, *,
@@ -2876,6 +3805,15 @@ class CloneItemCloudRegionArgs:
     def name(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "name", value)
 
+
+if not MYPY:
+    class CloneItemLicensingArgsDict(TypedDict):
+        model: NotRequired[pulumi.Input[str]]
+        """
+        Organization licensing model. Can be 'co-term', 'per-device', or 'subscription'.
+        """
+elif False:
+    CloneItemLicensingArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CloneItemLicensingArgs:
@@ -2900,6 +3838,15 @@ class CloneItemLicensingArgs:
         pulumi.set(self, "model", value)
 
 
+if not MYPY:
+    class CloneItemManagementArgsDict(TypedDict):
+        details: NotRequired[pulumi.Input[Sequence[pulumi.Input['CloneItemManagementDetailArgsDict']]]]
+        """
+        Details related to organization management, possibly empty. Details may be named 'MSP ID', 'IP restriction mode for API', or 'IP restriction mode for dashboard', if the organization admin has configured any.
+        """
+elif False:
+    CloneItemManagementArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CloneItemManagementArgs:
     def __init__(__self__, *,
@@ -2922,6 +3869,19 @@ class CloneItemManagementArgs:
     def details(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['CloneItemManagementDetailArgs']]]]):
         pulumi.set(self, "details", value)
 
+
+if not MYPY:
+    class CloneItemManagementDetailArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Name of management data
+        """
+        value: NotRequired[pulumi.Input[str]]
+        """
+        Value of management data
+        """
+elif False:
+    CloneItemManagementDetailArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class CloneItemManagementDetailArgs:
@@ -2962,6 +3922,15 @@ class CloneItemManagementDetailArgs:
         pulumi.set(self, "value", value)
 
 
+if not MYPY:
+    class CloneParametersArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The name of the new organization
+        """
+elif False:
+    CloneParametersArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class CloneParametersArgs:
     def __init__(__self__, *,
@@ -2984,6 +3953,15 @@ class CloneParametersArgs:
     def name(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "name", value)
 
+
+if not MYPY:
+    class ConfigTemplatesSwitchProfilesPortsMirrorArgsDict(TypedDict):
+        mode: NotRequired[pulumi.Input[str]]
+        """
+        The port mirror mode. Can be one of ('Destination port', 'Source port' or 'Not mirroring traffic').
+        """
+elif False:
+    ConfigTemplatesSwitchProfilesPortsMirrorArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ConfigTemplatesSwitchProfilesPortsMirrorArgs:
@@ -3008,6 +3986,15 @@ class ConfigTemplatesSwitchProfilesPortsMirrorArgs:
         pulumi.set(self, "mode", value)
 
 
+if not MYPY:
+    class ConfigTemplatesSwitchProfilesPortsModuleArgsDict(TypedDict):
+        model: NotRequired[pulumi.Input[str]]
+        """
+        The model of the expansion module.
+        """
+elif False:
+    ConfigTemplatesSwitchProfilesPortsModuleArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class ConfigTemplatesSwitchProfilesPortsModuleArgs:
     def __init__(__self__, *,
@@ -3030,6 +4017,23 @@ class ConfigTemplatesSwitchProfilesPortsModuleArgs:
     def model(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "model", value)
 
+
+if not MYPY:
+    class ConfigTemplatesSwitchProfilesPortsProfileArgsDict(TypedDict):
+        enabled: NotRequired[pulumi.Input[bool]]
+        """
+        When enabled, override this port's configuration with a port profile.
+        """
+        id: NotRequired[pulumi.Input[str]]
+        """
+        When enabled, the ID of the port profile used to override the port's configuration.
+        """
+        iname: NotRequired[pulumi.Input[str]]
+        """
+        When enabled, the IName of the profile.
+        """
+elif False:
+    ConfigTemplatesSwitchProfilesPortsProfileArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ConfigTemplatesSwitchProfilesPortsProfileArgs:
@@ -3086,6 +4090,23 @@ class ConfigTemplatesSwitchProfilesPortsProfileArgs:
         pulumi.set(self, "iname", value)
 
 
+if not MYPY:
+    class InventoryClaimItemArgsDict(TypedDict):
+        licenses: NotRequired[pulumi.Input[Sequence[pulumi.Input['InventoryClaimItemLicenseArgsDict']]]]
+        """
+        The licenses claimed
+        """
+        orders: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The numbers of the orders claimed
+        """
+        serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The serials of the devices claimed
+        """
+elif False:
+    InventoryClaimItemArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class InventoryClaimItemArgs:
     def __init__(__self__, *,
@@ -3141,6 +4162,19 @@ class InventoryClaimItemArgs:
         pulumi.set(self, "serials", value)
 
 
+if not MYPY:
+    class InventoryClaimItemLicenseArgsDict(TypedDict):
+        key: NotRequired[pulumi.Input[str]]
+        """
+        The key of the license
+        """
+        mode: NotRequired[pulumi.Input[str]]
+        """
+        The mode of the license
+        """
+elif False:
+    InventoryClaimItemLicenseArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class InventoryClaimItemLicenseArgs:
     def __init__(__self__, *,
@@ -3179,6 +4213,23 @@ class InventoryClaimItemLicenseArgs:
     def mode(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "mode", value)
 
+
+if not MYPY:
+    class InventoryClaimParametersArgsDict(TypedDict):
+        licenses: NotRequired[pulumi.Input[Sequence[pulumi.Input['InventoryClaimParametersLicenseArgsDict']]]]
+        """
+        The licenses that should be claimed
+        """
+        orders: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The numbers of the orders that should be claimed
+        """
+        serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The serials of the devices that should be claimed
+        """
+elif False:
+    InventoryClaimParametersArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class InventoryClaimParametersArgs:
@@ -3235,6 +4286,19 @@ class InventoryClaimParametersArgs:
         pulumi.set(self, "serials", value)
 
 
+if not MYPY:
+    class InventoryClaimParametersLicenseArgsDict(TypedDict):
+        key: NotRequired[pulumi.Input[str]]
+        """
+        The key of the license
+        """
+        mode: NotRequired[pulumi.Input[str]]
+        """
+        Co-term licensing only: either 'renew' or 'addDevices'. 'addDevices' will increase the license limit, while 'renew' will extend the amount of time until expiration. Defaults to 'addDevices'. All licenses must be claimed with the same mode, and at most one renewal can be claimed at a time. Does not apply to organizations using per-device licensing model.
+        """
+elif False:
+    InventoryClaimParametersLicenseArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class InventoryClaimParametersLicenseArgs:
     def __init__(__self__, *,
@@ -3273,6 +4337,27 @@ class InventoryClaimParametersLicenseArgs:
     def mode(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "mode", value)
 
+
+if not MYPY:
+    class InventoryOnboardingCloudMonitoringExportEventsParametersArgsDict(TypedDict):
+        log_event: NotRequired[pulumi.Input[str]]
+        """
+        The type of log event this is recording, e.g. download or opening a banner
+        """
+        request: NotRequired[pulumi.Input[str]]
+        """
+        Used to describe if this event was the result of a redirect. E.g. a query param if an info banner is being used
+        """
+        target_os: NotRequired[pulumi.Input[str]]
+        """
+        The name of the onboarding distro being downloaded
+        """
+        timestamp: NotRequired[pulumi.Input[int]]
+        """
+        A JavaScript UTC datetime stamp for when the even occurred
+        """
+elif False:
+    InventoryOnboardingCloudMonitoringExportEventsParametersArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringExportEventsParametersArgs:
@@ -3345,6 +4430,16 @@ class InventoryOnboardingCloudMonitoringExportEventsParametersArgs:
         pulumi.set(self, "timestamp", value)
 
 
+if not MYPY:
+    class InventoryOnboardingCloudMonitoringImportsParametersArgsDict(TypedDict):
+        devices: NotRequired[pulumi.Input[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersDeviceArgsDict']]]]
+        """
+        A set of device imports to commit
+        """
+        items: NotRequired[pulumi.Input[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersItemArgsDict']]]]
+elif False:
+    InventoryOnboardingCloudMonitoringImportsParametersArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringImportsParametersArgs:
     def __init__(__self__, *,
@@ -3379,6 +4474,23 @@ class InventoryOnboardingCloudMonitoringImportsParametersArgs:
     def items(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersItemArgs']]]]):
         pulumi.set(self, "items", value)
 
+
+if not MYPY:
+    class InventoryOnboardingCloudMonitoringImportsParametersDeviceArgsDict(TypedDict):
+        device_id: NotRequired[pulumi.Input[str]]
+        """
+        Import ID from the Import operation
+        """
+        network_id: NotRequired[pulumi.Input[str]]
+        """
+        Network Id
+        """
+        udi: NotRequired[pulumi.Input[str]]
+        """
+        Device UDI certificate
+        """
+elif False:
+    InventoryOnboardingCloudMonitoringImportsParametersDeviceArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringImportsParametersDeviceArgs:
@@ -3435,6 +4547,15 @@ class InventoryOnboardingCloudMonitoringImportsParametersDeviceArgs:
         pulumi.set(self, "udi", value)
 
 
+if not MYPY:
+    class InventoryOnboardingCloudMonitoringImportsParametersItemArgsDict(TypedDict):
+        items: NotRequired[pulumi.Input[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersItemItemArgsDict']]]]
+        """
+        Array of ResponseOrganizationsCreateOrganizationInventoryOnboardingCloudMonitoringImport
+        """
+elif False:
+    InventoryOnboardingCloudMonitoringImportsParametersItemArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringImportsParametersItemArgs:
     def __init__(__self__, *,
@@ -3457,6 +4578,23 @@ class InventoryOnboardingCloudMonitoringImportsParametersItemArgs:
     def items(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringImportsParametersItemItemArgs']]]]):
         pulumi.set(self, "items", value)
 
+
+if not MYPY:
+    class InventoryOnboardingCloudMonitoringImportsParametersItemItemArgsDict(TypedDict):
+        import_id: NotRequired[pulumi.Input[str]]
+        """
+        Unique id associated with the import of the device
+        """
+        message: NotRequired[pulumi.Input[str]]
+        """
+        Response method
+        """
+        status: NotRequired[pulumi.Input[str]]
+        """
+        Cloud monitor import status
+        """
+elif False:
+    InventoryOnboardingCloudMonitoringImportsParametersItemItemArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringImportsParametersItemItemArgs:
@@ -3512,6 +4650,31 @@ class InventoryOnboardingCloudMonitoringImportsParametersItemItemArgs:
     def status(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "status", value)
 
+
+if not MYPY:
+    class InventoryOnboardingCloudMonitoringPrepareItemArgsDict(TypedDict):
+        config_params: NotRequired[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsArgsDict']]
+        """
+        Params used in order to connect to the device
+        """
+        device_id: NotRequired[pulumi.Input[str]]
+        """
+        Import ID from the Import operation
+        """
+        message: NotRequired[pulumi.Input[str]]
+        """
+        Message related to whether or not the device was found and can be imported.
+        """
+        status: NotRequired[pulumi.Input[str]]
+        """
+        The import status of the device
+        """
+        udi: NotRequired[pulumi.Input[str]]
+        """
+        Device UDI certificate
+        """
+elif False:
+    InventoryOnboardingCloudMonitoringPrepareItemArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareItemArgs:
@@ -3600,6 +4763,23 @@ class InventoryOnboardingCloudMonitoringPrepareItemArgs:
         pulumi.set(self, "udi", value)
 
 
+if not MYPY:
+    class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsArgsDict(TypedDict):
+        cloud_static_ip: NotRequired[pulumi.Input[str]]
+        """
+        Static IP Address used to connect to the device
+        """
+        tunnel: NotRequired[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelArgsDict']]
+        """
+        Configuration options used to connect to the device
+        """
+        user: NotRequired[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserArgsDict']]
+        """
+        User credentials used to connect to the device
+        """
+elif False:
+    InventoryOnboardingCloudMonitoringPrepareItemConfigParamsArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsArgs:
     def __init__(__self__, *,
@@ -3654,6 +4834,28 @@ class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsArgs:
     def user(self, value: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserArgs']]):
         pulumi.set(self, "user", value)
 
+
+if not MYPY:
+    class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelArgsDict(TypedDict):
+        host: NotRequired[pulumi.Input[str]]
+        """
+        SSH tunnel URL used to connect to the device
+        """
+        mode: NotRequired[pulumi.Input[str]]
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The name of the tunnel we are attempting to connect to
+        """
+        port: NotRequired[pulumi.Input[str]]
+        """
+        The port used for the ssh tunnel.
+        """
+        root_certificate: NotRequired[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelRootCertificateArgsDict']]
+        """
+        Root certificate information
+        """
+elif False:
+    InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelArgs:
@@ -3738,6 +4940,19 @@ class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelArgs:
         pulumi.set(self, "root_certificate", value)
 
 
+if not MYPY:
+    class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelRootCertificateArgsDict(TypedDict):
+        content: NotRequired[pulumi.Input[str]]
+        """
+        Public certificate value
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The name of the server protected by the certificate
+        """
+elif False:
+    InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelRootCertificateArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelRootCertificateArgs:
     def __init__(__self__, *,
@@ -3776,6 +4991,23 @@ class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsTunnelRootCertifi
     def name(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "name", value)
 
+
+if not MYPY:
+    class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserArgsDict(TypedDict):
+        public_key: NotRequired[pulumi.Input[str]]
+        """
+        The public key for the registered user
+        """
+        secret: NotRequired[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserSecretArgsDict']]
+        """
+        Stores the user secret hash
+        """
+        username: NotRequired[pulumi.Input[str]]
+        """
+        The username added to Catalyst device
+        """
+elif False:
+    InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserArgs:
@@ -3832,6 +5064,15 @@ class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserArgs:
         pulumi.set(self, "username", value)
 
 
+if not MYPY:
+    class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserSecretArgsDict(TypedDict):
+        hash: NotRequired[pulumi.Input[str]]
+        """
+        The hashed secret
+        """
+elif False:
+    InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserSecretArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserSecretArgs:
     def __init__(__self__, *,
@@ -3855,6 +5096,15 @@ class InventoryOnboardingCloudMonitoringPrepareItemConfigParamsUserSecretArgs:
         pulumi.set(self, "hash", value)
 
 
+if not MYPY:
+    class InventoryOnboardingCloudMonitoringPrepareParametersArgsDict(TypedDict):
+        devices: NotRequired[pulumi.Input[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceArgsDict']]]]
+        """
+        A set of devices to import (or update)
+        """
+elif False:
+    InventoryOnboardingCloudMonitoringPrepareParametersArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareParametersArgs:
     def __init__(__self__, *,
@@ -3877,6 +5127,27 @@ class InventoryOnboardingCloudMonitoringPrepareParametersArgs:
     def devices(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceArgs']]]]):
         pulumi.set(self, "devices", value)
 
+
+if not MYPY:
+    class InventoryOnboardingCloudMonitoringPrepareParametersDeviceArgsDict(TypedDict):
+        sudi: NotRequired[pulumi.Input[str]]
+        """
+        Device SUDI certificate
+        """
+        tunnel: NotRequired[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceTunnelArgsDict']]
+        """
+        TLS Related Parameters
+        """
+        user: NotRequired[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceUserArgsDict']]
+        """
+        User parameters
+        """
+        vty: NotRequired[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyArgsDict']]
+        """
+        VTY Related Parameters
+        """
+elif False:
+    InventoryOnboardingCloudMonitoringPrepareParametersDeviceArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceArgs:
@@ -3949,6 +5220,27 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceArgs:
         pulumi.set(self, "vty", value)
 
 
+if not MYPY:
+    class InventoryOnboardingCloudMonitoringPrepareParametersDeviceTunnelArgsDict(TypedDict):
+        certificate_name: NotRequired[pulumi.Input[str]]
+        """
+        Name of the configured TLS certificate
+        """
+        local_interface: NotRequired[pulumi.Input[int]]
+        """
+        Number of the vlan expected to be used to connect to the cloud
+        """
+        loopback_number: NotRequired[pulumi.Input[int]]
+        """
+        Number of the configured Loopback Interface used for TLS overlay
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Name of the configured TLS tunnel
+        """
+elif False:
+    InventoryOnboardingCloudMonitoringPrepareParametersDeviceTunnelArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceTunnelArgs:
     def __init__(__self__, *,
@@ -4020,6 +5312,15 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceTunnelArgs:
         pulumi.set(self, "name", value)
 
 
+if not MYPY:
+    class InventoryOnboardingCloudMonitoringPrepareParametersDeviceUserArgsDict(TypedDict):
+        username: NotRequired[pulumi.Input[str]]
+        """
+        The name of the device user for Meraki monitoring
+        """
+elif False:
+    InventoryOnboardingCloudMonitoringPrepareParametersDeviceUserArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceUserArgs:
     def __init__(__self__, *,
@@ -4042,6 +5343,35 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceUserArgs:
     def username(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "username", value)
 
+
+if not MYPY:
+    class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyArgsDict(TypedDict):
+        access_list: NotRequired[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListArgsDict']]
+        """
+        AccessList details
+        """
+        authentication: NotRequired[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationArgsDict']]
+        """
+        VTY AAA authentication
+        """
+        authorization: NotRequired[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationArgsDict']]
+        """
+        VTY AAA authorization
+        """
+        end_line_number: NotRequired[pulumi.Input[int]]
+        """
+        Ending line VTY number
+        """
+        rotary_number: NotRequired[pulumi.Input[int]]
+        """
+        SSH rotary number
+        """
+        start_line_number: NotRequired[pulumi.Input[int]]
+        """
+        Starting line VTY number
+        """
+elif False:
+    InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyArgs:
@@ -4146,6 +5476,19 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyArgs:
         pulumi.set(self, "start_line_number", value)
 
 
+if not MYPY:
+    class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListArgsDict(TypedDict):
+        vty_in: NotRequired[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyInArgsDict']]
+        """
+        VTY in ACL
+        """
+        vty_out: NotRequired[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyOutArgsDict']]
+        """
+        VTY out ACL
+        """
+elif False:
+    InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListArgs:
     def __init__(__self__, *,
@@ -4185,6 +5528,15 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListArgs
         pulumi.set(self, "vty_out", value)
 
 
+if not MYPY:
+    class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyInArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Name
+        """
+elif False:
+    InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyInArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyInArgs:
     def __init__(__self__, *,
@@ -4207,6 +5559,15 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyI
     def name(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "name", value)
 
+
+if not MYPY:
+    class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyOutArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Name
+        """
+elif False:
+    InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyOutArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyOutArgs:
@@ -4231,6 +5592,15 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAccessListVtyO
         pulumi.set(self, "name", value)
 
 
+if not MYPY:
+    class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationArgsDict(TypedDict):
+        group: NotRequired[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationGroupArgsDict']]
+        """
+        Group Details
+        """
+elif False:
+    InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationArgs:
     def __init__(__self__, *,
@@ -4253,6 +5623,15 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthentication
     def group(self, value: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationGroupArgs']]):
         pulumi.set(self, "group", value)
 
+
+if not MYPY:
+    class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationGroupArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Group Name
+        """
+elif False:
+    InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationGroupArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthenticationGroupArgs:
@@ -4277,6 +5656,15 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthentication
         pulumi.set(self, "name", value)
 
 
+if not MYPY:
+    class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationArgsDict(TypedDict):
+        group: NotRequired[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationGroupArgsDict']]
+        """
+        Group Details
+        """
+elif False:
+    InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationArgs:
     def __init__(__self__, *,
@@ -4299,6 +5687,15 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationA
     def group(self, value: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationGroupArgs']]):
         pulumi.set(self, "group", value)
 
+
+if not MYPY:
+    class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationGroupArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Group Name
+        """
+elif False:
+    InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationGroupArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationGroupArgs:
@@ -4323,6 +5720,15 @@ class InventoryOnboardingCloudMonitoringPrepareParametersDeviceVtyAuthorizationG
         pulumi.set(self, "name", value)
 
 
+if not MYPY:
+    class InventoryReleaseItemArgsDict(TypedDict):
+        serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Serials of the devices that were released
+        """
+elif False:
+    InventoryReleaseItemArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class InventoryReleaseItemArgs:
     def __init__(__self__, *,
@@ -4345,6 +5751,15 @@ class InventoryReleaseItemArgs:
     def serials(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
         pulumi.set(self, "serials", value)
 
+
+if not MYPY:
+    class InventoryReleaseParametersArgsDict(TypedDict):
+        serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Serials of the devices that should be released
+        """
+elif False:
+    InventoryReleaseParametersArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class InventoryReleaseParametersArgs:
@@ -4369,6 +5784,15 @@ class InventoryReleaseParametersArgs:
         pulumi.set(self, "serials", value)
 
 
+if not MYPY:
+    class LicensesAssignSeatsItemArgsDict(TypedDict):
+        resulting_licenses: NotRequired[pulumi.Input[Sequence[pulumi.Input['LicensesAssignSeatsItemResultingLicenseArgsDict']]]]
+        """
+        Resulting licenses from the move
+        """
+elif False:
+    LicensesAssignSeatsItemArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LicensesAssignSeatsItemArgs:
     def __init__(__self__, *,
@@ -4391,6 +5815,71 @@ class LicensesAssignSeatsItemArgs:
     def resulting_licenses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['LicensesAssignSeatsItemResultingLicenseArgs']]]]):
         pulumi.set(self, "resulting_licenses", value)
 
+
+if not MYPY:
+    class LicensesAssignSeatsItemResultingLicenseArgsDict(TypedDict):
+        activation_date: NotRequired[pulumi.Input[str]]
+        """
+        The date the license started burning
+        """
+        claim_date: NotRequired[pulumi.Input[str]]
+        """
+        The date the license was claimed into the organization
+        """
+        device_serial: NotRequired[pulumi.Input[str]]
+        """
+        Serial number of the device the license is assigned to
+        """
+        duration_in_days: NotRequired[pulumi.Input[int]]
+        """
+        The duration of the individual license
+        """
+        expiration_date: NotRequired[pulumi.Input[str]]
+        """
+        The date the license will expire
+        """
+        head_license_id: NotRequired[pulumi.Input[str]]
+        """
+        The id of the head license this license is queued behind. If there is no head license, it returns nil.
+        """
+        id: NotRequired[pulumi.Input[str]]
+        """
+        License ID
+        """
+        license_key: NotRequired[pulumi.Input[str]]
+        """
+        License key
+        """
+        license_type: NotRequired[pulumi.Input[str]]
+        """
+        License type
+        """
+        network_id: NotRequired[pulumi.Input[str]]
+        """
+        ID of the network the license is assigned to
+        """
+        order_number: NotRequired[pulumi.Input[str]]
+        """
+        Order number
+        """
+        permanently_queued_licenses: NotRequired[pulumi.Input[Sequence[pulumi.Input['LicensesAssignSeatsItemResultingLicensePermanentlyQueuedLicenseArgsDict']]]]
+        """
+        DEPRECATED List of permanently queued licenses attached to the license. Instead, use /organizations/{organizationId}/licenses?deviceSerial= to retrieved queued licenses for a given device.
+        """
+        seat_count: NotRequired[pulumi.Input[int]]
+        """
+        The number of seats of the license. Only applicable to SM licenses.
+        """
+        state: NotRequired[pulumi.Input[str]]
+        """
+        The state of the license. All queued licenses have a status of *recentlyQueued*.
+        """
+        total_duration_in_days: NotRequired[pulumi.Input[int]]
+        """
+        The duration of the license plus all permanently queued licenses associated with it
+        """
+elif False:
+    LicensesAssignSeatsItemResultingLicenseArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LicensesAssignSeatsItemResultingLicenseArgs:
@@ -4639,6 +6128,31 @@ class LicensesAssignSeatsItemResultingLicenseArgs:
         pulumi.set(self, "total_duration_in_days", value)
 
 
+if not MYPY:
+    class LicensesAssignSeatsItemResultingLicensePermanentlyQueuedLicenseArgsDict(TypedDict):
+        duration_in_days: NotRequired[pulumi.Input[int]]
+        """
+        The duration of the individual license
+        """
+        id: NotRequired[pulumi.Input[str]]
+        """
+        Permanently queued license ID
+        """
+        license_key: NotRequired[pulumi.Input[str]]
+        """
+        License key
+        """
+        license_type: NotRequired[pulumi.Input[str]]
+        """
+        License type
+        """
+        order_number: NotRequired[pulumi.Input[str]]
+        """
+        Order number
+        """
+elif False:
+    LicensesAssignSeatsItemResultingLicensePermanentlyQueuedLicenseArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LicensesAssignSeatsItemResultingLicensePermanentlyQueuedLicenseArgs:
     def __init__(__self__, *,
@@ -4726,6 +6240,23 @@ class LicensesAssignSeatsItemResultingLicensePermanentlyQueuedLicenseArgs:
         pulumi.set(self, "order_number", value)
 
 
+if not MYPY:
+    class LicensesAssignSeatsParametersArgsDict(TypedDict):
+        license_id: NotRequired[pulumi.Input[str]]
+        """
+        The ID of the SM license to assign seats from
+        """
+        network_id: NotRequired[pulumi.Input[str]]
+        """
+        The ID of the SM network to assign the seats to
+        """
+        seat_count: NotRequired[pulumi.Input[int]]
+        """
+        The number of seats to assign to the SM network. Must be less than or equal to the total number of seats of the license
+        """
+elif False:
+    LicensesAssignSeatsParametersArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LicensesAssignSeatsParametersArgs:
     def __init__(__self__, *,
@@ -4781,6 +6312,19 @@ class LicensesAssignSeatsParametersArgs:
         pulumi.set(self, "seat_count", value)
 
 
+if not MYPY:
+    class LicensesMoveItemArgsDict(TypedDict):
+        dest_organization_id: NotRequired[pulumi.Input[str]]
+        """
+        The ID of the organization to move the licenses to
+        """
+        license_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        A list of IDs of licenses to move to the new organization
+        """
+elif False:
+    LicensesMoveItemArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LicensesMoveItemArgs:
     def __init__(__self__, *,
@@ -4820,6 +6364,19 @@ class LicensesMoveItemArgs:
         pulumi.set(self, "license_ids", value)
 
 
+if not MYPY:
+    class LicensesMoveParametersArgsDict(TypedDict):
+        dest_organization_id: NotRequired[pulumi.Input[str]]
+        """
+        The ID of the organization to move the licenses to
+        """
+        license_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        A list of IDs of licenses to move to the new organization
+        """
+elif False:
+    LicensesMoveParametersArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LicensesMoveParametersArgs:
     def __init__(__self__, *,
@@ -4858,6 +6415,23 @@ class LicensesMoveParametersArgs:
     def license_ids(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[str]]]]):
         pulumi.set(self, "license_ids", value)
 
+
+if not MYPY:
+    class LicensesMoveSeatsItemArgsDict(TypedDict):
+        dest_organization_id: NotRequired[pulumi.Input[str]]
+        """
+        The ID of the organization to move the SM seats to
+        """
+        license_id: NotRequired[pulumi.Input[str]]
+        """
+        The ID of the SM license to move the seats from
+        """
+        seat_count: NotRequired[pulumi.Input[int]]
+        """
+        The number of seats to move to the new organization. Must be less than or equal to the total number of seats of the license
+        """
+elif False:
+    LicensesMoveSeatsItemArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LicensesMoveSeatsItemArgs:
@@ -4914,6 +6488,23 @@ class LicensesMoveSeatsItemArgs:
         pulumi.set(self, "seat_count", value)
 
 
+if not MYPY:
+    class LicensesMoveSeatsParametersArgsDict(TypedDict):
+        dest_organization_id: NotRequired[pulumi.Input[str]]
+        """
+        The ID of the organization to move the SM seats to
+        """
+        license_id: NotRequired[pulumi.Input[str]]
+        """
+        The ID of the SM license to move the seats from
+        """
+        seat_count: NotRequired[pulumi.Input[int]]
+        """
+        The number of seats to move to the new organization. Must be less than or equal to the total number of seats of the license
+        """
+elif False:
+    LicensesMoveSeatsParametersArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LicensesMoveSeatsParametersArgs:
     def __init__(__self__, *,
@@ -4968,6 +6559,31 @@ class LicensesMoveSeatsParametersArgs:
     def seat_count(self, value: Optional[pulumi.Input[int]]):
         pulumi.set(self, "seat_count", value)
 
+
+if not MYPY:
+    class LicensesPermanentlyQueuedLicenseArgsDict(TypedDict):
+        duration_in_days: NotRequired[pulumi.Input[int]]
+        """
+        The duration of the individual license
+        """
+        id: NotRequired[pulumi.Input[str]]
+        """
+        Permanently queued license ID
+        """
+        license_key: NotRequired[pulumi.Input[str]]
+        """
+        License key
+        """
+        license_type: NotRequired[pulumi.Input[str]]
+        """
+        License type
+        """
+        order_number: NotRequired[pulumi.Input[str]]
+        """
+        Order number
+        """
+elif False:
+    LicensesPermanentlyQueuedLicenseArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LicensesPermanentlyQueuedLicenseArgs:
@@ -5056,6 +6672,15 @@ class LicensesPermanentlyQueuedLicenseArgs:
         pulumi.set(self, "order_number", value)
 
 
+if not MYPY:
+    class LicensesRenewSeatsItemArgsDict(TypedDict):
+        resulting_licenses: NotRequired[pulumi.Input[Sequence[pulumi.Input['LicensesRenewSeatsItemResultingLicenseArgsDict']]]]
+        """
+        Resulting licenses from the move
+        """
+elif False:
+    LicensesRenewSeatsItemArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LicensesRenewSeatsItemArgs:
     def __init__(__self__, *,
@@ -5078,6 +6703,71 @@ class LicensesRenewSeatsItemArgs:
     def resulting_licenses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['LicensesRenewSeatsItemResultingLicenseArgs']]]]):
         pulumi.set(self, "resulting_licenses", value)
 
+
+if not MYPY:
+    class LicensesRenewSeatsItemResultingLicenseArgsDict(TypedDict):
+        activation_date: NotRequired[pulumi.Input[str]]
+        """
+        The date the license started burning
+        """
+        claim_date: NotRequired[pulumi.Input[str]]
+        """
+        The date the license was claimed into the organization
+        """
+        device_serial: NotRequired[pulumi.Input[str]]
+        """
+        Serial number of the device the license is assigned to
+        """
+        duration_in_days: NotRequired[pulumi.Input[int]]
+        """
+        The duration of the individual license
+        """
+        expiration_date: NotRequired[pulumi.Input[str]]
+        """
+        The date the license will expire
+        """
+        head_license_id: NotRequired[pulumi.Input[str]]
+        """
+        The id of the head license this license is queued behind. If there is no head license, it returns nil.
+        """
+        id: NotRequired[pulumi.Input[str]]
+        """
+        License ID
+        """
+        license_key: NotRequired[pulumi.Input[str]]
+        """
+        License key
+        """
+        license_type: NotRequired[pulumi.Input[str]]
+        """
+        License type
+        """
+        network_id: NotRequired[pulumi.Input[str]]
+        """
+        ID of the network the license is assigned to
+        """
+        order_number: NotRequired[pulumi.Input[str]]
+        """
+        Order number
+        """
+        permanently_queued_licenses: NotRequired[pulumi.Input[Sequence[pulumi.Input['LicensesRenewSeatsItemResultingLicensePermanentlyQueuedLicenseArgsDict']]]]
+        """
+        DEPRECATED List of permanently queued licenses attached to the license. Instead, use /organizations/{organizationId}/licenses?deviceSerial= to retrieved queued licenses for a given device.
+        """
+        seat_count: NotRequired[pulumi.Input[int]]
+        """
+        The number of seats of the license. Only applicable to SM licenses.
+        """
+        state: NotRequired[pulumi.Input[str]]
+        """
+        The state of the license. All queued licenses have a status of *recentlyQueued*.
+        """
+        total_duration_in_days: NotRequired[pulumi.Input[int]]
+        """
+        The duration of the license plus all permanently queued licenses associated with it
+        """
+elif False:
+    LicensesRenewSeatsItemResultingLicenseArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LicensesRenewSeatsItemResultingLicenseArgs:
@@ -5326,6 +7016,31 @@ class LicensesRenewSeatsItemResultingLicenseArgs:
         pulumi.set(self, "total_duration_in_days", value)
 
 
+if not MYPY:
+    class LicensesRenewSeatsItemResultingLicensePermanentlyQueuedLicenseArgsDict(TypedDict):
+        duration_in_days: NotRequired[pulumi.Input[int]]
+        """
+        The duration of the individual license
+        """
+        id: NotRequired[pulumi.Input[str]]
+        """
+        Permanently queued license ID
+        """
+        license_key: NotRequired[pulumi.Input[str]]
+        """
+        License key
+        """
+        license_type: NotRequired[pulumi.Input[str]]
+        """
+        License type
+        """
+        order_number: NotRequired[pulumi.Input[str]]
+        """
+        Order number
+        """
+elif False:
+    LicensesRenewSeatsItemResultingLicensePermanentlyQueuedLicenseArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LicensesRenewSeatsItemResultingLicensePermanentlyQueuedLicenseArgs:
     def __init__(__self__, *,
@@ -5413,6 +7128,19 @@ class LicensesRenewSeatsItemResultingLicensePermanentlyQueuedLicenseArgs:
         pulumi.set(self, "order_number", value)
 
 
+if not MYPY:
+    class LicensesRenewSeatsParametersArgsDict(TypedDict):
+        license_id_to_renew: NotRequired[pulumi.Input[str]]
+        """
+        The ID of the SM license to renew. This license must already be assigned to an SM network
+        """
+        unused_license_id: NotRequired[pulumi.Input[str]]
+        """
+        The SM license to use to renew the seats on 'licenseIdToRenew'. This license must have at least as many seats available as there are seats on 'licenseIdToRenew'
+        """
+elif False:
+    LicensesRenewSeatsParametersArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LicensesRenewSeatsParametersArgs:
     def __init__(__self__, *,
@@ -5452,6 +7180,19 @@ class LicensesRenewSeatsParametersArgs:
         pulumi.set(self, "unused_license_id", value)
 
 
+if not MYPY:
+    class LicensingCotermLicensesMoveItemArgsDict(TypedDict):
+        moved_licenses: NotRequired[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemMovedLicenseArgsDict']]]]
+        """
+        Newly moved licenses created in the destination organization of the license move operation
+        """
+        remainder_licenses: NotRequired[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseArgsDict']]]]
+        """
+        Remainder licenses created in the source organization as a result of moving a subset of the counts of a license
+        """
+elif False:
+    LicensingCotermLicensesMoveItemArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LicensingCotermLicensesMoveItemArgs:
     def __init__(__self__, *,
@@ -5490,6 +7231,55 @@ class LicensingCotermLicensesMoveItemArgs:
     def remainder_licenses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseArgs']]]]):
         pulumi.set(self, "remainder_licenses", value)
 
+
+if not MYPY:
+    class LicensingCotermLicensesMoveItemMovedLicenseArgsDict(TypedDict):
+        claimed_at: NotRequired[pulumi.Input[str]]
+        """
+        When the license was claimed into the organization
+        """
+        counts: NotRequired[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemMovedLicenseCountArgsDict']]]]
+        """
+        The counts of the license by model type
+        """
+        duration: NotRequired[pulumi.Input[int]]
+        """
+        The duration (term length) of the license, measured in days
+        """
+        editions: NotRequired[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemMovedLicenseEditionArgsDict']]]]
+        """
+        The editions of the license for each relevant product type
+        """
+        expired: NotRequired[pulumi.Input[bool]]
+        """
+        Flag to indicate if the license is expired
+        """
+        invalidated: NotRequired[pulumi.Input[bool]]
+        """
+        Flag to indicated that the license is invalidated
+        """
+        invalidated_at: NotRequired[pulumi.Input[str]]
+        """
+        When the license was invalidated. Will be null for active licenses
+        """
+        key: NotRequired[pulumi.Input[str]]
+        """
+        The key of the license
+        """
+        mode: NotRequired[pulumi.Input[str]]
+        """
+        The operation mode of the license when it was claimed
+        """
+        organization_id: NotRequired[pulumi.Input[str]]
+        """
+        The ID of the organization that the license is claimed in
+        """
+        started_at: NotRequired[pulumi.Input[str]]
+        """
+        When the license's term began (approximately the date when the license was created)
+        """
+elif False:
+    LicensingCotermLicensesMoveItemMovedLicenseArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LicensingCotermLicensesMoveItemMovedLicenseArgs:
@@ -5674,6 +7464,19 @@ class LicensingCotermLicensesMoveItemMovedLicenseArgs:
         pulumi.set(self, "started_at", value)
 
 
+if not MYPY:
+    class LicensingCotermLicensesMoveItemMovedLicenseCountArgsDict(TypedDict):
+        count: NotRequired[pulumi.Input[int]]
+        """
+        The number of counts the license contains of this model
+        """
+        model: NotRequired[pulumi.Input[str]]
+        """
+        The license model type
+        """
+elif False:
+    LicensingCotermLicensesMoveItemMovedLicenseCountArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LicensingCotermLicensesMoveItemMovedLicenseCountArgs:
     def __init__(__self__, *,
@@ -5713,6 +7516,19 @@ class LicensingCotermLicensesMoveItemMovedLicenseCountArgs:
         pulumi.set(self, "model", value)
 
 
+if not MYPY:
+    class LicensingCotermLicensesMoveItemMovedLicenseEditionArgsDict(TypedDict):
+        edition: NotRequired[pulumi.Input[str]]
+        """
+        The name of the license edition
+        """
+        product_type: NotRequired[pulumi.Input[str]]
+        """
+        The product type of the license edition
+        """
+elif False:
+    LicensingCotermLicensesMoveItemMovedLicenseEditionArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LicensingCotermLicensesMoveItemMovedLicenseEditionArgs:
     def __init__(__self__, *,
@@ -5751,6 +7567,55 @@ class LicensingCotermLicensesMoveItemMovedLicenseEditionArgs:
     def product_type(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "product_type", value)
 
+
+if not MYPY:
+    class LicensingCotermLicensesMoveItemRemainderLicenseArgsDict(TypedDict):
+        claimed_at: NotRequired[pulumi.Input[str]]
+        """
+        When the license was claimed into the organization
+        """
+        counts: NotRequired[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseCountArgsDict']]]]
+        """
+        The counts of the license by model type
+        """
+        duration: NotRequired[pulumi.Input[int]]
+        """
+        The duration (term length) of the license, measured in days
+        """
+        editions: NotRequired[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveItemRemainderLicenseEditionArgsDict']]]]
+        """
+        The editions of the license for each relevant product type
+        """
+        expired: NotRequired[pulumi.Input[bool]]
+        """
+        Flag to indicate if the license is expired
+        """
+        invalidated: NotRequired[pulumi.Input[bool]]
+        """
+        Flag to indicated that the license is invalidated
+        """
+        invalidated_at: NotRequired[pulumi.Input[str]]
+        """
+        When the license was invalidated. Will be null for active licenses
+        """
+        key: NotRequired[pulumi.Input[str]]
+        """
+        The key of the license
+        """
+        mode: NotRequired[pulumi.Input[str]]
+        """
+        The operation mode of the license when it was claimed
+        """
+        organization_id: NotRequired[pulumi.Input[str]]
+        """
+        The ID of the organization that the license is claimed in
+        """
+        started_at: NotRequired[pulumi.Input[str]]
+        """
+        When the license's term began (approximately the date when the license was created)
+        """
+elif False:
+    LicensingCotermLicensesMoveItemRemainderLicenseArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LicensingCotermLicensesMoveItemRemainderLicenseArgs:
@@ -5935,6 +7800,19 @@ class LicensingCotermLicensesMoveItemRemainderLicenseArgs:
         pulumi.set(self, "started_at", value)
 
 
+if not MYPY:
+    class LicensingCotermLicensesMoveItemRemainderLicenseCountArgsDict(TypedDict):
+        count: NotRequired[pulumi.Input[int]]
+        """
+        The number of counts the license contains of this model
+        """
+        model: NotRequired[pulumi.Input[str]]
+        """
+        The license model type
+        """
+elif False:
+    LicensingCotermLicensesMoveItemRemainderLicenseCountArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LicensingCotermLicensesMoveItemRemainderLicenseCountArgs:
     def __init__(__self__, *,
@@ -5973,6 +7851,19 @@ class LicensingCotermLicensesMoveItemRemainderLicenseCountArgs:
     def model(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "model", value)
 
+
+if not MYPY:
+    class LicensingCotermLicensesMoveItemRemainderLicenseEditionArgsDict(TypedDict):
+        edition: NotRequired[pulumi.Input[str]]
+        """
+        The name of the license edition
+        """
+        product_type: NotRequired[pulumi.Input[str]]
+        """
+        The product type of the license edition
+        """
+elif False:
+    LicensingCotermLicensesMoveItemRemainderLicenseEditionArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LicensingCotermLicensesMoveItemRemainderLicenseEditionArgs:
@@ -6013,6 +7904,19 @@ class LicensingCotermLicensesMoveItemRemainderLicenseEditionArgs:
         pulumi.set(self, "product_type", value)
 
 
+if not MYPY:
+    class LicensingCotermLicensesMoveParametersArgsDict(TypedDict):
+        destination: NotRequired[pulumi.Input['LicensingCotermLicensesMoveParametersDestinationArgsDict']]
+        """
+        Destination data for the license move
+        """
+        licenses: NotRequired[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveParametersLicenseArgsDict']]]]
+        """
+        The list of licenses to move
+        """
+elif False:
+    LicensingCotermLicensesMoveParametersArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LicensingCotermLicensesMoveParametersArgs:
     def __init__(__self__, *,
@@ -6051,6 +7955,19 @@ class LicensingCotermLicensesMoveParametersArgs:
     def licenses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveParametersLicenseArgs']]]]):
         pulumi.set(self, "licenses", value)
 
+
+if not MYPY:
+    class LicensingCotermLicensesMoveParametersDestinationArgsDict(TypedDict):
+        mode: NotRequired[pulumi.Input[str]]
+        """
+        The claim mode of the moved license
+        """
+        organization_id: NotRequired[pulumi.Input[str]]
+        """
+        The organization to move the license to
+        """
+elif False:
+    LicensingCotermLicensesMoveParametersDestinationArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LicensingCotermLicensesMoveParametersDestinationArgs:
@@ -6091,6 +8008,19 @@ class LicensingCotermLicensesMoveParametersDestinationArgs:
         pulumi.set(self, "organization_id", value)
 
 
+if not MYPY:
+    class LicensingCotermLicensesMoveParametersLicenseArgsDict(TypedDict):
+        counts: NotRequired[pulumi.Input[Sequence[pulumi.Input['LicensingCotermLicensesMoveParametersLicenseCountArgsDict']]]]
+        """
+        The counts to move from the license by model type
+        """
+        key: NotRequired[pulumi.Input[str]]
+        """
+        The license key to move counts from
+        """
+elif False:
+    LicensingCotermLicensesMoveParametersLicenseArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LicensingCotermLicensesMoveParametersLicenseArgs:
     def __init__(__self__, *,
@@ -6129,6 +8059,19 @@ class LicensingCotermLicensesMoveParametersLicenseArgs:
     def key(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "key", value)
 
+
+if not MYPY:
+    class LicensingCotermLicensesMoveParametersLicenseCountArgsDict(TypedDict):
+        count: NotRequired[pulumi.Input[int]]
+        """
+        The number of counts to move
+        """
+        model: NotRequired[pulumi.Input[str]]
+        """
+        The license model type to move counts of
+        """
+elif False:
+    LicensingCotermLicensesMoveParametersLicenseCountArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LicensingCotermLicensesMoveParametersLicenseCountArgs:
@@ -6169,6 +8112,15 @@ class LicensingCotermLicensesMoveParametersLicenseCountArgs:
         pulumi.set(self, "model", value)
 
 
+if not MYPY:
+    class LoginSecurityApiAuthenticationArgsDict(TypedDict):
+        ip_restrictions_for_keys: NotRequired[pulumi.Input['LoginSecurityApiAuthenticationIpRestrictionsForKeysArgsDict']]
+        """
+        Details for API-only IP restrictions.
+        """
+elif False:
+    LoginSecurityApiAuthenticationArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class LoginSecurityApiAuthenticationArgs:
     def __init__(__self__, *,
@@ -6191,6 +8143,19 @@ class LoginSecurityApiAuthenticationArgs:
     def ip_restrictions_for_keys(self, value: Optional[pulumi.Input['LoginSecurityApiAuthenticationIpRestrictionsForKeysArgs']]):
         pulumi.set(self, "ip_restrictions_for_keys", value)
 
+
+if not MYPY:
+    class LoginSecurityApiAuthenticationIpRestrictionsForKeysArgsDict(TypedDict):
+        enabled: NotRequired[pulumi.Input[bool]]
+        """
+        Boolean indicating whether the organization will restrict API key (not Dashboard GUI) usage to a specific list of IP addresses or CIDR ranges.
+        """
+        ranges: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        List of acceptable IP ranges. Entries can be single IP addresses, IP address ranges, and CIDR subnets.
+        """
+elif False:
+    LoginSecurityApiAuthenticationIpRestrictionsForKeysArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class LoginSecurityApiAuthenticationIpRestrictionsForKeysArgs:
@@ -6231,6 +8196,15 @@ class LoginSecurityApiAuthenticationIpRestrictionsForKeysArgs:
         pulumi.set(self, "ranges", value)
 
 
+if not MYPY:
+    class NetworksCombineItemArgsDict(TypedDict):
+        resulting_network: NotRequired[pulumi.Input['NetworksCombineItemResultingNetworkArgsDict']]
+        """
+        Network after the combination
+        """
+elif False:
+    NetworksCombineItemArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class NetworksCombineItemArgs:
     def __init__(__self__, *,
@@ -6253,6 +8227,51 @@ class NetworksCombineItemArgs:
     def resulting_network(self, value: Optional[pulumi.Input['NetworksCombineItemResultingNetworkArgs']]):
         pulumi.set(self, "resulting_network", value)
 
+
+if not MYPY:
+    class NetworksCombineItemResultingNetworkArgsDict(TypedDict):
+        enrollment_string: NotRequired[pulumi.Input[str]]
+        """
+        Enrollment string for the network
+        """
+        id: NotRequired[pulumi.Input[str]]
+        """
+        Network ID
+        """
+        is_bound_to_config_template: NotRequired[pulumi.Input[bool]]
+        """
+        If the network is bound to a config template
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Network name
+        """
+        notes: NotRequired[pulumi.Input[str]]
+        """
+        Notes for the network
+        """
+        organization_id: NotRequired[pulumi.Input[str]]
+        """
+        Organization ID
+        """
+        product_types: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        List of the product types that the network supports
+        """
+        tags: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Network tags
+        """
+        time_zone: NotRequired[pulumi.Input[str]]
+        """
+        Timezone of the network
+        """
+        url: NotRequired[pulumi.Input[str]]
+        """
+        URL to the network Dashboard UI
+        """
+elif False:
+    NetworksCombineItemResultingNetworkArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class NetworksCombineItemResultingNetworkArgs:
@@ -6421,6 +8440,23 @@ class NetworksCombineItemResultingNetworkArgs:
         pulumi.set(self, "url", value)
 
 
+if not MYPY:
+    class NetworksCombineParametersArgsDict(TypedDict):
+        enrollment_string: NotRequired[pulumi.Input[str]]
+        """
+        A unique identifier which can be used for device enrollment or easy access through the Meraki SM Registration page or the Self Service Portal. Please note that changing this field may cause existing bookmarks to break. All networks that are part of this combined network will have their enrollment string appended by '-network_type'. If left empty, all exisitng enrollment strings will be deleted.
+        """
+        name: NotRequired[pulumi.Input[str]]
+        """
+        The name of the combined network
+        """
+        network_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        A list of the network IDs that will be combined. If an ID of a combined network is included in this list, the other networks in the list will be grouped into that network
+        """
+elif False:
+    NetworksCombineParametersArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class NetworksCombineParametersArgs:
     def __init__(__self__, *,
@@ -6476,6 +8512,19 @@ class NetworksCombineParametersArgs:
         pulumi.set(self, "network_ids", value)
 
 
+if not MYPY:
+    class SamlRolesCameraArgsDict(TypedDict):
+        access: NotRequired[pulumi.Input[str]]
+        """
+        Camera access ability
+        """
+        org_wide: NotRequired[pulumi.Input[bool]]
+        """
+        Whether or not SAML administrator has org-wide access
+        """
+elif False:
+    SamlRolesCameraArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class SamlRolesCameraArgs:
     def __init__(__self__, *,
@@ -6514,6 +8563,19 @@ class SamlRolesCameraArgs:
     def org_wide(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "org_wide", value)
 
+
+if not MYPY:
+    class SamlRolesNetworkArgsDict(TypedDict):
+        access: NotRequired[pulumi.Input[str]]
+        """
+        The privilege of the SAML administrator on the network
+        """
+        id: NotRequired[pulumi.Input[str]]
+        """
+        The network ID
+        """
+elif False:
+    SamlRolesNetworkArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class SamlRolesNetworkArgs:
@@ -6554,6 +8616,19 @@ class SamlRolesNetworkArgs:
         pulumi.set(self, "id", value)
 
 
+if not MYPY:
+    class SamlRolesTagArgsDict(TypedDict):
+        access: NotRequired[pulumi.Input[str]]
+        """
+        The privilege of the SAML administrator on the tag
+        """
+        tag: NotRequired[pulumi.Input[str]]
+        """
+        The name of the tag
+        """
+elif False:
+    SamlRolesTagArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class SamlRolesTagArgs:
     def __init__(__self__, *,
@@ -6593,6 +8668,15 @@ class SamlRolesTagArgs:
         pulumi.set(self, "tag", value)
 
 
+if not MYPY:
+    class SmSentryPoliciesAssignmentsItemArgsDict(TypedDict):
+        items: NotRequired[pulumi.Input[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsItemItemArgsDict']]]]
+        """
+        Sentry Group Policies for the Organization keyed by Network Id
+        """
+elif False:
+    SmSentryPoliciesAssignmentsItemArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class SmSentryPoliciesAssignmentsItemArgs:
     def __init__(__self__, *,
@@ -6615,6 +8699,19 @@ class SmSentryPoliciesAssignmentsItemArgs:
     def items(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsItemItemArgs']]]]):
         pulumi.set(self, "items", value)
 
+
+if not MYPY:
+    class SmSentryPoliciesAssignmentsItemItemArgsDict(TypedDict):
+        network_id: NotRequired[pulumi.Input[str]]
+        """
+        The Id of the Network
+        """
+        policies: NotRequired[pulumi.Input[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsItemItemPolicyArgsDict']]]]
+        """
+        Array of Sentry Group Policies for the Network
+        """
+elif False:
+    SmSentryPoliciesAssignmentsItemItemArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class SmSentryPoliciesAssignmentsItemItemArgs:
@@ -6654,6 +8751,51 @@ class SmSentryPoliciesAssignmentsItemItemArgs:
     def policies(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsItemItemPolicyArgs']]]]):
         pulumi.set(self, "policies", value)
 
+
+if not MYPY:
+    class SmSentryPoliciesAssignmentsItemItemPolicyArgsDict(TypedDict):
+        created_at: NotRequired[pulumi.Input[str]]
+        """
+        The creation time of the Sentry Policy
+        """
+        group_number: NotRequired[pulumi.Input[str]]
+        """
+        The number of the Group Policy
+        """
+        group_policy_id: NotRequired[pulumi.Input[str]]
+        """
+        The Id of the Group Policy. This is associated with the network specified by the networkId.
+        """
+        last_updated_at: NotRequired[pulumi.Input[str]]
+        """
+        The last update time of the Sentry Policy
+        """
+        network_id: NotRequired[pulumi.Input[str]]
+        """
+        The Id of the Network the Sentry Policy is associated with. In a locale, this should be the Wireless Group if present, otherwise the Wired Group.
+        """
+        policy_id: NotRequired[pulumi.Input[str]]
+        """
+        The Id of the Sentry Policy
+        """
+        priority: NotRequired[pulumi.Input[str]]
+        """
+        The priority of the Sentry Policy
+        """
+        scope: NotRequired[pulumi.Input[str]]
+        """
+        The scope of the Sentry Policy
+        """
+        sm_network_id: NotRequired[pulumi.Input[str]]
+        """
+        The Id of the Systems Manager Network the Sentry Policy is assigned to
+        """
+        tags: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The tags of the Sentry Policy
+        """
+elif False:
+    SmSentryPoliciesAssignmentsItemItemPolicyArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class SmSentryPoliciesAssignmentsItemItemPolicyArgs:
@@ -6822,6 +8964,15 @@ class SmSentryPoliciesAssignmentsItemItemPolicyArgs:
         pulumi.set(self, "tags", value)
 
 
+if not MYPY:
+    class SmSentryPoliciesAssignmentsParametersArgsDict(TypedDict):
+        items: NotRequired[pulumi.Input[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsParametersItemArgsDict']]]]
+        """
+        Sentry Group Policies for the Organization keyed by Network Id
+        """
+elif False:
+    SmSentryPoliciesAssignmentsParametersArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class SmSentryPoliciesAssignmentsParametersArgs:
     def __init__(__self__, *,
@@ -6844,6 +8995,19 @@ class SmSentryPoliciesAssignmentsParametersArgs:
     def items(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsParametersItemArgs']]]]):
         pulumi.set(self, "items", value)
 
+
+if not MYPY:
+    class SmSentryPoliciesAssignmentsParametersItemArgsDict(TypedDict):
+        network_id: NotRequired[pulumi.Input[str]]
+        """
+        The Id of the Network
+        """
+        policies: NotRequired[pulumi.Input[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsParametersItemPolicyArgsDict']]]]
+        """
+        Array of Sentry Group Policies for the Network
+        """
+elif False:
+    SmSentryPoliciesAssignmentsParametersItemArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class SmSentryPoliciesAssignmentsParametersItemArgs:
@@ -6883,6 +9047,31 @@ class SmSentryPoliciesAssignmentsParametersItemArgs:
     def policies(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SmSentryPoliciesAssignmentsParametersItemPolicyArgs']]]]):
         pulumi.set(self, "policies", value)
 
+
+if not MYPY:
+    class SmSentryPoliciesAssignmentsParametersItemPolicyArgsDict(TypedDict):
+        group_policy_id: NotRequired[pulumi.Input[str]]
+        """
+        The Group Policy Id
+        """
+        policy_id: NotRequired[pulumi.Input[str]]
+        """
+        The Sentry Policy Id, if updating an existing Sentry Policy
+        """
+        scope: NotRequired[pulumi.Input[str]]
+        """
+        The scope of the Sentry Policy
+        """
+        sm_network_id: NotRequired[pulumi.Input[str]]
+        """
+        The Id of the Systems Manager Network
+        """
+        tags: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        The tags for the Sentry Policy
+        """
+elif False:
+    SmSentryPoliciesAssignmentsParametersItemPolicyArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class SmSentryPoliciesAssignmentsParametersItemPolicyArgs:
@@ -6971,6 +9160,19 @@ class SmSentryPoliciesAssignmentsParametersItemPolicyArgs:
         pulumi.set(self, "tags", value)
 
 
+if not MYPY:
+    class SwitchDevicesCloneParametersArgsDict(TypedDict):
+        source_serial: NotRequired[pulumi.Input[str]]
+        """
+        Serial number of the source switch (must be on a network not bound to a template)
+        """
+        target_serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[str]]]]
+        """
+        Array of serial numbers of one or more target switches (must be on a network not bound to a template)
+        """
+elif False:
+    SwitchDevicesCloneParametersArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class SwitchDevicesCloneParametersArgs:
     def __init__(__self__, *,
@@ -7010,6 +9212,15 @@ class SwitchDevicesCloneParametersArgs:
         pulumi.set(self, "target_serials", value)
 
 
+if not MYPY:
+    class BaseApiArgsDict(TypedDict):
+        enabled: NotRequired[pulumi.Input[bool]]
+        """
+        Enable API access
+        """
+elif False:
+    BaseApiArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class BaseApiArgs:
     def __init__(__self__, *,
@@ -7032,6 +9243,15 @@ class BaseApiArgs:
     def enabled(self, value: Optional[pulumi.Input[bool]]):
         pulumi.set(self, "enabled", value)
 
+
+if not MYPY:
+    class BaseCloudArgsDict(TypedDict):
+        region: NotRequired[pulumi.Input['BaseCloudRegionArgsDict']]
+        """
+        Region info
+        """
+elif False:
+    BaseCloudArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class BaseCloudArgs:
@@ -7056,6 +9276,15 @@ class BaseCloudArgs:
         pulumi.set(self, "region", value)
 
 
+if not MYPY:
+    class BaseCloudRegionArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Name of region
+        """
+elif False:
+    BaseCloudRegionArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class BaseCloudRegionArgs:
     def __init__(__self__, *,
@@ -7078,6 +9307,15 @@ class BaseCloudRegionArgs:
     def name(self, value: Optional[pulumi.Input[str]]):
         pulumi.set(self, "name", value)
 
+
+if not MYPY:
+    class BaseLicensingArgsDict(TypedDict):
+        model: NotRequired[pulumi.Input[str]]
+        """
+        Organization licensing model. Can be 'co-term', 'per-device', or 'subscription'.
+        """
+elif False:
+    BaseLicensingArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class BaseLicensingArgs:
@@ -7102,6 +9340,15 @@ class BaseLicensingArgs:
         pulumi.set(self, "model", value)
 
 
+if not MYPY:
+    class BaseManagementArgsDict(TypedDict):
+        details: NotRequired[pulumi.Input[Sequence[pulumi.Input['BaseManagementDetailArgsDict']]]]
+        """
+        Details related to organization management, possibly empty. Details may be named 'MSP ID', 'IP restriction mode for API', or 'IP restriction mode for dashboard', if the organization admin has configured any.
+        """
+elif False:
+    BaseManagementArgsDict: TypeAlias = Mapping[str, Any]
+
 @pulumi.input_type
 class BaseManagementArgs:
     def __init__(__self__, *,
@@ -7124,6 +9371,19 @@ class BaseManagementArgs:
     def details(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['BaseManagementDetailArgs']]]]):
         pulumi.set(self, "details", value)
 
+
+if not MYPY:
+    class BaseManagementDetailArgsDict(TypedDict):
+        name: NotRequired[pulumi.Input[str]]
+        """
+        Name of management data
+        """
+        value: NotRequired[pulumi.Input[str]]
+        """
+        Value of management data
+        """
+elif False:
+    BaseManagementDetailArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class BaseManagementDetailArgs:

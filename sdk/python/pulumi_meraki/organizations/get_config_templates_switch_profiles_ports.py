@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -144,9 +149,6 @@ def get_config_templates_switch_profiles_ports(config_template_id: Optional[str]
         organization_id=pulumi.get(__ret__, 'organization_id'),
         port_id=pulumi.get(__ret__, 'port_id'),
         profile_id=pulumi.get(__ret__, 'profile_id'))
-
-
-@_utilities.lift_output_func(get_config_templates_switch_profiles_ports)
 def get_config_templates_switch_profiles_ports_output(config_template_id: Optional[pulumi.Input[Optional[str]]] = None,
                                                       organization_id: Optional[pulumi.Input[Optional[str]]] = None,
                                                       port_id: Optional[pulumi.Input[Optional[str]]] = None,
@@ -161,4 +163,18 @@ def get_config_templates_switch_profiles_ports_output(config_template_id: Option
     :param str port_id: portId path parameter. Port ID
     :param str profile_id: profileId path parameter. Profile ID
     """
-    ...
+    __args__ = dict()
+    __args__['configTemplateId'] = config_template_id
+    __args__['organizationId'] = organization_id
+    __args__['portId'] = port_id
+    __args__['profileId'] = profile_id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getConfigTemplatesSwitchProfilesPorts:getConfigTemplatesSwitchProfilesPorts', __args__, opts=opts, typ=GetConfigTemplatesSwitchProfilesPortsResult)
+    return __ret__.apply(lambda __response__: GetConfigTemplatesSwitchProfilesPortsResult(
+        config_template_id=pulumi.get(__response__, 'config_template_id'),
+        id=pulumi.get(__response__, 'id'),
+        item=pulumi.get(__response__, 'item'),
+        items=pulumi.get(__response__, 'items'),
+        organization_id=pulumi.get(__response__, 'organization_id'),
+        port_id=pulumi.get(__response__, 'port_id'),
+        profile_id=pulumi.get(__response__, 'profile_id')))

@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -91,9 +96,6 @@ def get_appliance_uplinks_settings(serial: Optional[str] = None,
         id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         serial=pulumi.get(__ret__, 'serial'))
-
-
-@_utilities.lift_output_func(get_appliance_uplinks_settings)
 def get_appliance_uplinks_settings_output(serial: Optional[pulumi.Input[str]] = None,
                                           opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetApplianceUplinksSettingsResult]:
     """
@@ -110,4 +112,11 @@ def get_appliance_uplinks_settings_output(serial: Optional[pulumi.Input[str]] = 
 
     :param str serial: serial path parameter.
     """
-    ...
+    __args__ = dict()
+    __args__['serial'] = serial
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:devices/getApplianceUplinksSettings:getApplianceUplinksSettings', __args__, opts=opts, typ=GetApplianceUplinksSettingsResult)
+    return __ret__.apply(lambda __response__: GetApplianceUplinksSettingsResult(
+        id=pulumi.get(__response__, 'id'),
+        item=pulumi.get(__response__, 'item'),
+        serial=pulumi.get(__response__, 'serial')))

@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -99,9 +104,6 @@ def get_adaptive_policy_groups(id: Optional[str] = None,
         item=pulumi.get(__ret__, 'item'),
         items=pulumi.get(__ret__, 'items'),
         organization_id=pulumi.get(__ret__, 'organization_id'))
-
-
-@_utilities.lift_output_func(get_adaptive_policy_groups)
 def get_adaptive_policy_groups_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                       organization_id: Optional[pulumi.Input[Optional[str]]] = None,
                                       opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetAdaptivePolicyGroupsResult]:
@@ -112,4 +114,13 @@ def get_adaptive_policy_groups_output(id: Optional[pulumi.Input[Optional[str]]] 
     :param str id: id path parameter.
     :param str organization_id: organizationId path parameter. Organization ID
     """
-    ...
+    __args__ = dict()
+    __args__['id'] = id
+    __args__['organizationId'] = organization_id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getAdaptivePolicyGroups:getAdaptivePolicyGroups', __args__, opts=opts, typ=GetAdaptivePolicyGroupsResult)
+    return __ret__.apply(lambda __response__: GetAdaptivePolicyGroupsResult(
+        id=pulumi.get(__response__, 'id'),
+        item=pulumi.get(__response__, 'item'),
+        items=pulumi.get(__response__, 'items'),
+        organization_id=pulumi.get(__response__, 'organization_id')))

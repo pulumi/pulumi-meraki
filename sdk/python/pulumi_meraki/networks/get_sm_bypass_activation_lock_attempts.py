@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -108,9 +113,6 @@ def get_sm_bypass_activation_lock_attempts(attempt_id: Optional[str] = None,
         id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'))
-
-
-@_utilities.lift_output_func(get_sm_bypass_activation_lock_attempts)
 def get_sm_bypass_activation_lock_attempts_output(attempt_id: Optional[pulumi.Input[str]] = None,
                                                   network_id: Optional[pulumi.Input[str]] = None,
                                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSmBypassActivationLockAttemptsResult]:
@@ -130,4 +132,13 @@ def get_sm_bypass_activation_lock_attempts_output(attempt_id: Optional[pulumi.In
     :param str attempt_id: attemptId path parameter. Attempt ID
     :param str network_id: networkId path parameter. Network ID
     """
-    ...
+    __args__ = dict()
+    __args__['attemptId'] = attempt_id
+    __args__['networkId'] = network_id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSmBypassActivationLockAttempts:getSmBypassActivationLockAttempts', __args__, opts=opts, typ=GetSmBypassActivationLockAttemptsResult)
+    return __ret__.apply(lambda __response__: GetSmBypassActivationLockAttemptsResult(
+        attempt_id=pulumi.get(__response__, 'attempt_id'),
+        id=pulumi.get(__response__, 'id'),
+        item=pulumi.get(__response__, 'item'),
+        network_id=pulumi.get(__response__, 'network_id')))
