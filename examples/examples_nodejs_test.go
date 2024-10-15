@@ -14,7 +14,7 @@ import (
 )
 
 func TestGetDevicesTs(t *testing.T) {
-	t.Skip("Skipping Pulumi Test as this currently doesn't work. See https://github.com/pulumi/pulumi-meraki/issues/188 for more details")
+	t.Skip("Skipping Pulumi Test as this currently doesn't work. See https://github.com/pulumi/pulumi-meraki/issues/134 for more details")
 	checkBaseEnvVars(t)
 	test := pulumitest.NewPulumiTest(t, "get-devices-ts",
 		opttest.LocalProviderPath("meraki", filepath.Join(getCwd(t), "..", "bin")),
@@ -23,60 +23,55 @@ func TestGetDevicesTs(t *testing.T) {
 	test.Preview()
 }
 func TestNetworkBaseTs(t *testing.T) {
-	t.Skip("Skipping Pulumi Test as this currently doesn't work. See https://github.com/pulumi/pulumi-meraki/issues/188 for more details")
 	checkBaseEnvVars(t)
 	test := pulumitest.NewPulumiTest(t, "network-base-ts",
 		opttest.LocalProviderPath("meraki", filepath.Join(getCwd(t), "..", "bin")),
 		opttest.YarnLink("@pulumi/meraki"),
 	)
 	test.SetConfig("organizationId", os.Getenv(EnvMerakiOrgID))
-	test.SetConfig("networkName", "Pulumi Base Test Network_"+randomString(6))
+	test.SetConfig("networkName", "Pulumi Base Test Network_" + randomString(6))
 	test.Up()
 }
 
 func TestNetworkSettingsTs(t *testing.T) {
-	t.Skip("Skipping Pulumi Test as this currently doesn't work. See https://github.com/pulumi/pulumi-meraki/issues/188 for more details")
 	checkBaseEnvVars(t)
 	test := pulumitest.NewPulumiTest(t, "network-settings-ts",
 		opttest.LocalProviderPath("meraki", filepath.Join(getCwd(t), "..", "bin")),
 		opttest.YarnLink("@pulumi/meraki"),
 	)
 	test.SetConfig("organizationId", os.Getenv(EnvMerakiOrgID))
-	test.SetConfig("networkName", "Pulumi Base Test Network_"+randomString(6))
+	test.SetConfig("networkName", "Pulumi Base Test Network_" + randomString(6))
 	test.Up()
 }
 
 func TestApplianceVlansTs(t *testing.T) {
-	t.Skip("Skipping Pulumi Test as this currently doesn't work. See https://github.com/pulumi/pulumi-meraki/issues/188 for more details")
 	checkBaseEnvVars(t)
 	test := pulumitest.NewPulumiTest(t, "network-appliance-vlans-ts",
 		opttest.LocalProviderPath("meraki", filepath.Join(getCwd(t), "..", "bin")),
 		opttest.YarnLink("@pulumi/meraki"),
 	)
 	test.SetConfig("organizationId", os.Getenv(EnvMerakiOrgID))
-	test.SetConfig("networkName", "Pulumi Base Test Network_"+randomString(6))
+	test.SetConfig("networkName", "Pulumi Base Test Network_" + randomString(6))
 	test.Up()
 }
 
 func TestAlertSettingsTs(t *testing.T) {
-	t.Skip("Skipping Pulumi Test as this currently doesn't work. See https://github.com/pulumi/pulumi-meraki/issues/188 for more details")
 	checkBaseEnvVars(t)
 	test := pulumitest.NewPulumiTest(t, "network-alert-settings-ts",
 		opttest.LocalProviderPath("meraki", filepath.Join(getCwd(t), "..", "bin")),
 		opttest.YarnLink("@pulumi/meraki"),
 	)
 	test.SetConfig("organizationId", os.Getenv(EnvMerakiOrgID))
-	test.SetConfig("networkName", "Pulumi Base Test Network_"+randomString(6))
+	test.SetConfig("networkName", "Pulumi Base Test Network_" + randomString(6))
 	test.Up()
 }
 func TestApplianceContentFilterTs(t *testing.T) {
-	t.Skip("Skipping Pulumi Test as this currently doesn't work. See https://github.com/pulumi/pulumi-meraki/issues/188 for more details")
 	checkBaseEnvVars(t)
 	test := pulumitest.NewPulumiTest(t, "network-appliance-content-filtering-ts",
 		opttest.LocalProviderPath("meraki", filepath.Join(getCwd(t), "..", "bin")),
 		opttest.YarnLink("@pulumi/meraki"),
 	)
 	test.SetConfig("organizationId", os.Getenv(EnvMerakiOrgID))
-	test.SetConfig("networkName", "Pulumi Base Test Network_"+randomString(6))
+	test.SetConfig("networkName", "Pulumi Base Test Network_" + randomString(6))
 	test.Up()
 }
