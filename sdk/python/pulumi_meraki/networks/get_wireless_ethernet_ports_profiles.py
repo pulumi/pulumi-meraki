@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -108,9 +113,6 @@ def get_wireless_ethernet_ports_profiles(network_id: Optional[str] = None,
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'),
         profile_id=pulumi.get(__ret__, 'profile_id'))
-
-
-@_utilities.lift_output_func(get_wireless_ethernet_ports_profiles)
 def get_wireless_ethernet_ports_profiles_output(network_id: Optional[pulumi.Input[str]] = None,
                                                 profile_id: Optional[pulumi.Input[str]] = None,
                                                 opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetWirelessEthernetPortsProfilesResult]:
@@ -130,4 +132,13 @@ def get_wireless_ethernet_ports_profiles_output(network_id: Optional[pulumi.Inpu
     :param str network_id: networkId path parameter. Network ID
     :param str profile_id: profileId path parameter. Profile ID
     """
-    ...
+    __args__ = dict()
+    __args__['networkId'] = network_id
+    __args__['profileId'] = profile_id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:networks/getWirelessEthernetPortsProfiles:getWirelessEthernetPortsProfiles', __args__, opts=opts, typ=GetWirelessEthernetPortsProfilesResult)
+    return __ret__.apply(lambda __response__: GetWirelessEthernetPortsProfilesResult(
+        id=pulumi.get(__response__, 'id'),
+        item=pulumi.get(__response__, 'item'),
+        network_id=pulumi.get(__response__, 'network_id'),
+        profile_id=pulumi.get(__response__, 'profile_id')))

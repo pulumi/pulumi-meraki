@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -142,9 +147,6 @@ def get_bluetooth_clients(bluetooth_client_id: Optional[str] = None,
         include_connectivity_history=pulumi.get(__ret__, 'include_connectivity_history'),
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'))
-
-
-@_utilities.lift_output_func(get_bluetooth_clients)
 def get_bluetooth_clients_output(bluetooth_client_id: Optional[pulumi.Input[str]] = None,
                                  connectivity_history_timespan: Optional[pulumi.Input[Optional[int]]] = None,
                                  include_connectivity_history: Optional[pulumi.Input[Optional[bool]]] = None,
@@ -170,4 +172,17 @@ def get_bluetooth_clients_output(bluetooth_client_id: Optional[pulumi.Input[str]
     :param bool include_connectivity_history: includeConnectivityHistory query parameter. Include the connectivity history for this client
     :param str network_id: networkId path parameter. Network ID
     """
-    ...
+    __args__ = dict()
+    __args__['bluetoothClientId'] = bluetooth_client_id
+    __args__['connectivityHistoryTimespan'] = connectivity_history_timespan
+    __args__['includeConnectivityHistory'] = include_connectivity_history
+    __args__['networkId'] = network_id
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:networks/getBluetoothClients:getBluetoothClients', __args__, opts=opts, typ=GetBluetoothClientsResult)
+    return __ret__.apply(lambda __response__: GetBluetoothClientsResult(
+        bluetooth_client_id=pulumi.get(__response__, 'bluetooth_client_id'),
+        connectivity_history_timespan=pulumi.get(__response__, 'connectivity_history_timespan'),
+        id=pulumi.get(__response__, 'id'),
+        include_connectivity_history=pulumi.get(__response__, 'include_connectivity_history'),
+        item=pulumi.get(__response__, 'item'),
+        network_id=pulumi.get(__response__, 'network_id')))

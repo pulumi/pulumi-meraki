@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -158,9 +163,6 @@ def get_sm_admins_roles(ending_before: Optional[str] = None,
         per_page=pulumi.get(__ret__, 'per_page'),
         role_id=pulumi.get(__ret__, 'role_id'),
         starting_after=pulumi.get(__ret__, 'starting_after'))
-
-
-@_utilities.lift_output_func(get_sm_admins_roles)
 def get_sm_admins_roles_output(ending_before: Optional[pulumi.Input[Optional[str]]] = None,
                                organization_id: Optional[pulumi.Input[Optional[str]]] = None,
                                per_page: Optional[pulumi.Input[Optional[int]]] = None,
@@ -188,4 +190,19 @@ def get_sm_admins_roles_output(ending_before: Optional[pulumi.Input[Optional[str
     :param str role_id: roleId path parameter. Role ID
     :param str starting_after: startingAfter query parameter. A token used by the server to indicate the start of the page. Often this is a timestamp or an ID but it is not limited to those. This parameter should not be defined by client applications. The link for the first, last, prev, or next page in the HTTP Link header should define it.
     """
-    ...
+    __args__ = dict()
+    __args__['endingBefore'] = ending_before
+    __args__['organizationId'] = organization_id
+    __args__['perPage'] = per_page
+    __args__['roleId'] = role_id
+    __args__['startingAfter'] = starting_after
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getSmAdminsRoles:getSmAdminsRoles', __args__, opts=opts, typ=GetSmAdminsRolesResult)
+    return __ret__.apply(lambda __response__: GetSmAdminsRolesResult(
+        ending_before=pulumi.get(__response__, 'ending_before'),
+        id=pulumi.get(__response__, 'id'),
+        item=pulumi.get(__response__, 'item'),
+        organization_id=pulumi.get(__response__, 'organization_id'),
+        per_page=pulumi.get(__response__, 'per_page'),
+        role_id=pulumi.get(__response__, 'role_id'),
+        starting_after=pulumi.get(__response__, 'starting_after')))

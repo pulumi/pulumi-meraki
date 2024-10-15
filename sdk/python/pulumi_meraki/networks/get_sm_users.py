@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -162,9 +167,6 @@ def get_sm_users(emails: Optional[Sequence[str]] = None,
         network_id=pulumi.get(__ret__, 'network_id'),
         scopes=pulumi.get(__ret__, 'scopes'),
         usernames=pulumi.get(__ret__, 'usernames'))
-
-
-@_utilities.lift_output_func(get_sm_users)
 def get_sm_users_output(emails: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
                         ids: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
                         network_id: Optional[pulumi.Input[str]] = None,
@@ -193,4 +195,19 @@ def get_sm_users_output(emails: Optional[pulumi.Input[Optional[Sequence[str]]]] 
     :param Sequence[str] scopes: scope query parameter. Specifiy a scope (one of all, none, withAny, withAll, withoutAny, withoutAll) and a set of tags.
     :param Sequence[str] usernames: usernames query parameter. Filter users by username(s).
     """
-    ...
+    __args__ = dict()
+    __args__['emails'] = emails
+    __args__['ids'] = ids
+    __args__['networkId'] = network_id
+    __args__['scopes'] = scopes
+    __args__['usernames'] = usernames
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSmUsers:getSmUsers', __args__, opts=opts, typ=GetSmUsersResult)
+    return __ret__.apply(lambda __response__: GetSmUsersResult(
+        emails=pulumi.get(__response__, 'emails'),
+        id=pulumi.get(__response__, 'id'),
+        ids=pulumi.get(__response__, 'ids'),
+        items=pulumi.get(__response__, 'items'),
+        network_id=pulumi.get(__response__, 'network_id'),
+        scopes=pulumi.get(__response__, 'scopes'),
+        usernames=pulumi.get(__response__, 'usernames')))

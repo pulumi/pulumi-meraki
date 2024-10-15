@@ -4,9 +4,14 @@
 
 import copy
 import warnings
+import sys
 import pulumi
 import pulumi.runtime
 from typing import Any, Mapping, Optional, Sequence, Union, overload
+if sys.version_info >= (3, 11):
+    from typing import NotRequired, TypedDict, TypeAlias
+else:
+    from typing_extensions import NotRequired, TypedDict, TypeAlias
 from .. import _utilities
 from . import outputs
 
@@ -234,9 +239,6 @@ def get_licensing_subscription_subscriptions(end_date: Optional[str] = None,
         starting_after=pulumi.get(__ret__, 'starting_after'),
         statuses=pulumi.get(__ret__, 'statuses'),
         subscription_ids=pulumi.get(__ret__, 'subscription_ids'))
-
-
-@_utilities.lift_output_func(get_licensing_subscription_subscriptions)
 def get_licensing_subscription_subscriptions_output(end_date: Optional[pulumi.Input[Optional[str]]] = None,
                                                     ending_before: Optional[pulumi.Input[Optional[str]]] = None,
                                                     organization_ids: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
@@ -279,4 +281,27 @@ def get_licensing_subscription_subscriptions_output(end_date: Optional[pulumi.In
     :param Sequence[str] statuses: statuses query parameter. List of statuses that returned subscriptions can have
     :param Sequence[str] subscription_ids: subscriptionIds query parameter. List of subscription ids to fetch
     """
-    ...
+    __args__ = dict()
+    __args__['endDate'] = end_date
+    __args__['endingBefore'] = ending_before
+    __args__['organizationIds'] = organization_ids
+    __args__['perPage'] = per_page
+    __args__['productTypes'] = product_types
+    __args__['startDate'] = start_date
+    __args__['startingAfter'] = starting_after
+    __args__['statuses'] = statuses
+    __args__['subscriptionIds'] = subscription_ids
+    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    __ret__ = pulumi.runtime.invoke_output('meraki:administered/getLicensingSubscriptionSubscriptions:getLicensingSubscriptionSubscriptions', __args__, opts=opts, typ=GetLicensingSubscriptionSubscriptionsResult)
+    return __ret__.apply(lambda __response__: GetLicensingSubscriptionSubscriptionsResult(
+        end_date=pulumi.get(__response__, 'end_date'),
+        ending_before=pulumi.get(__response__, 'ending_before'),
+        id=pulumi.get(__response__, 'id'),
+        items=pulumi.get(__response__, 'items'),
+        organization_ids=pulumi.get(__response__, 'organization_ids'),
+        per_page=pulumi.get(__response__, 'per_page'),
+        product_types=pulumi.get(__response__, 'product_types'),
+        start_date=pulumi.get(__response__, 'start_date'),
+        starting_after=pulumi.get(__response__, 'starting_after'),
+        statuses=pulumi.get(__response__, 'statuses'),
+        subscription_ids=pulumi.get(__response__, 'subscription_ids')))
