@@ -36,3 +36,7 @@ sdk/dotnet/logo.png
 
 go.work
 go.work.sum
+
+
+# Ignore local build tracking directory
+.make
