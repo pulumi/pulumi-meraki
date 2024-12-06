@@ -66,7 +66,7 @@ export interface GetHealthAlertsResult {
  * export const merakiNetworksHealthAlertsExample = example.then(example => example.items);
  * ```
  */
-export function getHealthAlertsOutput(args: GetHealthAlertsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetHealthAlertsResult> {
+export function getHealthAlertsOutput(args: GetHealthAlertsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetHealthAlertsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getHealthAlerts:getHealthAlerts", {
         "networkId": args.networkId,

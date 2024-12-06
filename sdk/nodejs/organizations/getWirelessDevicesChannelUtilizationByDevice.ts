@@ -165,7 +165,7 @@ export interface GetWirelessDevicesChannelUtilizationByDeviceResult {
  * export const merakiOrganizationsWirelessDevicesChannelUtilizationByDeviceExample = example.then(example => example.items);
  * ```
  */
-export function getWirelessDevicesChannelUtilizationByDeviceOutput(args: GetWirelessDevicesChannelUtilizationByDeviceOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessDevicesChannelUtilizationByDeviceResult> {
+export function getWirelessDevicesChannelUtilizationByDeviceOutput(args: GetWirelessDevicesChannelUtilizationByDeviceOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWirelessDevicesChannelUtilizationByDeviceResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getWirelessDevicesChannelUtilizationByDevice:getWirelessDevicesChannelUtilizationByDevice", {
         "endingBefore": args.endingBefore,

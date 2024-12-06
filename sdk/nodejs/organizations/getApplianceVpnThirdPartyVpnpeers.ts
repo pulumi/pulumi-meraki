@@ -63,7 +63,7 @@ export interface GetApplianceVpnThirdPartyVpnpeersResult {
  * export const merakiOrganizationsApplianceVpnThirdPartyVpnpeersExample = example.then(example => example.item);
  * ```
  */
-export function getApplianceVpnThirdPartyVpnpeersOutput(args: GetApplianceVpnThirdPartyVpnpeersOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceVpnThirdPartyVpnpeersResult> {
+export function getApplianceVpnThirdPartyVpnpeersOutput(args: GetApplianceVpnThirdPartyVpnpeersOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplianceVpnThirdPartyVpnpeersResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getApplianceVpnThirdPartyVpnpeers:getApplianceVpnThirdPartyVpnpeers", {
         "organizationId": args.organizationId,

@@ -190,7 +190,7 @@ def get_devices_uplinks_loss_and_latency_output(ip: Optional[pulumi.Input[Option
                                                 t1: Optional[pulumi.Input[Optional[str]]] = None,
                                                 timespan: Optional[pulumi.Input[Optional[float]]] = None,
                                                 uplink: Optional[pulumi.Input[Optional[str]]] = None,
-                                                opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetDevicesUplinksLossAndLatencyResult]:
+                                                opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetDevicesUplinksLossAndLatencyResult]:
     """
     ## Example Usage
 
@@ -222,7 +222,7 @@ def get_devices_uplinks_loss_and_latency_output(ip: Optional[pulumi.Input[Option
     __args__['t1'] = t1
     __args__['timespan'] = timespan
     __args__['uplink'] = uplink
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getDevicesUplinksLossAndLatency:getDevicesUplinksLossAndLatency', __args__, opts=opts, typ=GetDevicesUplinksLossAndLatencyResult)
     return __ret__.apply(lambda __response__: GetDevicesUplinksLossAndLatencyResult(
         id=pulumi.get(__response__, 'id'),

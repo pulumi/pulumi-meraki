@@ -57,7 +57,7 @@ export interface GetSwitchAccessPoliciesResult {
 /**
  * ## Example Usage
  */
-export function getSwitchAccessPoliciesOutput(args?: GetSwitchAccessPoliciesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchAccessPoliciesResult> {
+export function getSwitchAccessPoliciesOutput(args?: GetSwitchAccessPoliciesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSwitchAccessPoliciesResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSwitchAccessPolicies:getSwitchAccessPolicies", {

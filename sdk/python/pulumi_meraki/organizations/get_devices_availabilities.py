@@ -244,7 +244,7 @@ def get_devices_availabilities_output(ending_before: Optional[pulumi.Input[Optio
                                       starting_after: Optional[pulumi.Input[Optional[str]]] = None,
                                       tags: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
                                       tags_filter_type: Optional[pulumi.Input[Optional[str]]] = None,
-                                      opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetDevicesAvailabilitiesResult]:
+                                      opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetDevicesAvailabilitiesResult]:
     """
     ## Example Usage
 
@@ -285,7 +285,7 @@ def get_devices_availabilities_output(ending_before: Optional[pulumi.Input[Optio
     __args__['startingAfter'] = starting_after
     __args__['tags'] = tags
     __args__['tagsFilterType'] = tags_filter_type
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getDevicesAvailabilities:getDevicesAvailabilities', __args__, opts=opts, typ=GetDevicesAvailabilitiesResult)
     return __ret__.apply(lambda __response__: GetDevicesAvailabilitiesResult(
         ending_before=pulumi.get(__response__, 'ending_before'),

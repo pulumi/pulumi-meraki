@@ -187,7 +187,7 @@ export interface GetWirelessLatencyHistoryResult {
  * export const merakiNetworksWirelessLatencyHistoryExample = example.then(example => example.items);
  * ```
  */
-export function getWirelessLatencyHistoryOutput(args: GetWirelessLatencyHistoryOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessLatencyHistoryResult> {
+export function getWirelessLatencyHistoryOutput(args: GetWirelessLatencyHistoryOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWirelessLatencyHistoryResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getWirelessLatencyHistory:getWirelessLatencyHistory", {
         "accessCategory": args.accessCategory,

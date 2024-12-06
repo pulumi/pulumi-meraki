@@ -63,7 +63,7 @@ export interface GetWirelessAlternateManagementInterfaceResult {
  * export const merakiNetworksWirelessAlternateManagementInterfaceExample = example.then(example => example.item);
  * ```
  */
-export function getWirelessAlternateManagementInterfaceOutput(args: GetWirelessAlternateManagementInterfaceOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessAlternateManagementInterfaceResult> {
+export function getWirelessAlternateManagementInterfaceOutput(args: GetWirelessAlternateManagementInterfaceOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWirelessAlternateManagementInterfaceResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getWirelessAlternateManagementInterface:getWirelessAlternateManagementInterface", {
         "networkId": args.networkId,

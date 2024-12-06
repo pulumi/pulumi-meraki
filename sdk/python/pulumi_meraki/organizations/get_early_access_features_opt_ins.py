@@ -114,7 +114,7 @@ def get_early_access_features_opt_ins(opt_in_id: Optional[str] = None,
         organization_id=pulumi.get(__ret__, 'organization_id'))
 def get_early_access_features_opt_ins_output(opt_in_id: Optional[pulumi.Input[Optional[str]]] = None,
                                              organization_id: Optional[pulumi.Input[Optional[str]]] = None,
-                                             opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetEarlyAccessFeaturesOptInsResult]:
+                                             opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetEarlyAccessFeaturesOptInsResult]:
     """
     ## Example Usage
 
@@ -133,7 +133,7 @@ def get_early_access_features_opt_ins_output(opt_in_id: Optional[pulumi.Input[Op
     __args__ = dict()
     __args__['optInId'] = opt_in_id
     __args__['organizationId'] = organization_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getEarlyAccessFeaturesOptIns:getEarlyAccessFeaturesOptIns', __args__, opts=opts, typ=GetEarlyAccessFeaturesOptInsResult)
     return __ret__.apply(lambda __response__: GetEarlyAccessFeaturesOptInsResult(
         id=pulumi.get(__response__, 'id'),

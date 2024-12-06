@@ -99,7 +99,7 @@ export interface GetSummaryTopNetworksByStatusResult {
  * export const merakiOrganizationsSummaryTopNetworksByStatusExample = example.then(example => example.items);
  * ```
  */
-export function getSummaryTopNetworksByStatusOutput(args: GetSummaryTopNetworksByStatusOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSummaryTopNetworksByStatusResult> {
+export function getSummaryTopNetworksByStatusOutput(args: GetSummaryTopNetworksByStatusOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSummaryTopNetworksByStatusResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getSummaryTopNetworksByStatus:getSummaryTopNetworksByStatus", {
         "endingBefore": args.endingBefore,

@@ -57,7 +57,7 @@ export interface GetSwitchQosRulesOrderResult {
 /**
  * ## Example Usage
  */
-export function getSwitchQosRulesOrderOutput(args?: GetSwitchQosRulesOrderOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchQosRulesOrderResult> {
+export function getSwitchQosRulesOrderOutput(args?: GetSwitchQosRulesOrderOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSwitchQosRulesOrderResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSwitchQosRulesOrder:getSwitchQosRulesOrder", {

@@ -63,7 +63,7 @@ export interface GetWirelessStatusResult {
  * export const merakiDevicesWirelessStatusExample = example.then(example => example.item);
  * ```
  */
-export function getWirelessStatusOutput(args: GetWirelessStatusOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessStatusResult> {
+export function getWirelessStatusOutput(args: GetWirelessStatusOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWirelessStatusResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:devices/getWirelessStatus:getWirelessStatus", {
         "serial": args.serial,

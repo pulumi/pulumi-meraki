@@ -132,7 +132,7 @@ def get_wireless_rf_profiles(include_template_profiles: Optional[bool] = None,
 def get_wireless_rf_profiles_output(include_template_profiles: Optional[pulumi.Input[Optional[bool]]] = None,
                                     network_id: Optional[pulumi.Input[Optional[str]]] = None,
                                     rf_profile_id: Optional[pulumi.Input[Optional[str]]] = None,
-                                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetWirelessRfProfilesResult]:
+                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetWirelessRfProfilesResult]:
     """
     ## Example Usage
 
@@ -154,7 +154,7 @@ def get_wireless_rf_profiles_output(include_template_profiles: Optional[pulumi.I
     __args__['includeTemplateProfiles'] = include_template_profiles
     __args__['networkId'] = network_id
     __args__['rfProfileId'] = rf_profile_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getWirelessRfProfiles:getWirelessRfProfiles', __args__, opts=opts, typ=GetWirelessRfProfilesResult)
     return __ret__.apply(lambda __response__: GetWirelessRfProfilesResult(
         id=pulumi.get(__response__, 'id'),

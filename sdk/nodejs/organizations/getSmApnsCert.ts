@@ -63,7 +63,7 @@ export interface GetSmApnsCertResult {
  * export const merakiOrganizationsSmApnsCertExample = example.then(example => example.item);
  * ```
  */
-export function getSmApnsCertOutput(args: GetSmApnsCertOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmApnsCertResult> {
+export function getSmApnsCertOutput(args: GetSmApnsCertOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSmApnsCertResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getSmApnsCert:getSmApnsCert", {
         "organizationId": args.organizationId,

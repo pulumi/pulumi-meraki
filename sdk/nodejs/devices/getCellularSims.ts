@@ -63,7 +63,7 @@ export interface GetCellularSimsResult {
  * export const merakiDevicesCellularSimsExample = example.then(example => example.item);
  * ```
  */
-export function getCellularSimsOutput(args: GetCellularSimsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCellularSimsResult> {
+export function getCellularSimsOutput(args: GetCellularSimsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCellularSimsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:devices/getCellularSims:getCellularSims", {
         "serial": args.serial,

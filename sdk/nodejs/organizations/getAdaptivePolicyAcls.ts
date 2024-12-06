@@ -57,7 +57,7 @@ export interface GetAdaptivePolicyAclsResult {
 /**
  * ## Example Usage
  */
-export function getAdaptivePolicyAclsOutput(args?: GetAdaptivePolicyAclsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAdaptivePolicyAclsResult> {
+export function getAdaptivePolicyAclsOutput(args?: GetAdaptivePolicyAclsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAdaptivePolicyAclsResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getAdaptivePolicyAcls:getAdaptivePolicyAcls", {

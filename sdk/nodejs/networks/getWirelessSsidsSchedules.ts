@@ -74,7 +74,7 @@ export interface GetWirelessSsidsSchedulesResult {
  * export const merakiNetworksWirelessSsidsSchedulesExample = example.then(example => example.item);
  * ```
  */
-export function getWirelessSsidsSchedulesOutput(args: GetWirelessSsidsSchedulesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessSsidsSchedulesResult> {
+export function getWirelessSsidsSchedulesOutput(args: GetWirelessSsidsSchedulesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWirelessSsidsSchedulesResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getWirelessSsidsSchedules:getWirelessSsidsSchedules", {
         "networkId": args.networkId,

@@ -298,7 +298,7 @@ def get_switch_ports_by_switch_output(configuration_updated_after: Optional[pulu
                                       serial: Optional[pulumi.Input[Optional[str]]] = None,
                                       serials: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
                                       starting_after: Optional[pulumi.Input[Optional[str]]] = None,
-                                      opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSwitchPortsBySwitchResult]:
+                                      opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSwitchPortsBySwitchResult]:
     """
     ## Example Usage
 
@@ -348,7 +348,7 @@ def get_switch_ports_by_switch_output(configuration_updated_after: Optional[pulu
     __args__['serial'] = serial
     __args__['serials'] = serials
     __args__['startingAfter'] = starting_after
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getSwitchPortsBySwitch:getSwitchPortsBySwitch', __args__, opts=opts, typ=GetSwitchPortsBySwitchResult)
     return __ret__.apply(lambda __response__: GetSwitchPortsBySwitchResult(
         configuration_updated_after=pulumi.get(__response__, 'configuration_updated_after'),

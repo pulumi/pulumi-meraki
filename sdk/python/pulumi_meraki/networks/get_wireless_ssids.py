@@ -119,7 +119,7 @@ def get_wireless_ssids(network_id: Optional[str] = None,
         number=pulumi.get(__ret__, 'number'))
 def get_wireless_ssids_output(network_id: Optional[pulumi.Input[Optional[str]]] = None,
                               number: Optional[pulumi.Input[Optional[str]]] = None,
-                              opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetWirelessSsidsResult]:
+                              opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetWirelessSsidsResult]:
     """
     ## Example Usage
 
@@ -130,7 +130,7 @@ def get_wireless_ssids_output(network_id: Optional[pulumi.Input[Optional[str]]] 
     __args__ = dict()
     __args__['networkId'] = network_id
     __args__['number'] = number
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getWirelessSsids:getWirelessSsids', __args__, opts=opts, typ=GetWirelessSsidsResult)
     return __ret__.apply(lambda __response__: GetWirelessSsidsResult(
         id=pulumi.get(__response__, 'id'),

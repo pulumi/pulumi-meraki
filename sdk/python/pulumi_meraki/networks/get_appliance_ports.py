@@ -119,7 +119,7 @@ def get_appliance_ports(network_id: Optional[str] = None,
         port_id=pulumi.get(__ret__, 'port_id'))
 def get_appliance_ports_output(network_id: Optional[pulumi.Input[Optional[str]]] = None,
                                port_id: Optional[pulumi.Input[Optional[str]]] = None,
-                               opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetAppliancePortsResult]:
+                               opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAppliancePortsResult]:
     """
     ## Example Usage
 
@@ -130,7 +130,7 @@ def get_appliance_ports_output(network_id: Optional[pulumi.Input[Optional[str]]]
     __args__ = dict()
     __args__['networkId'] = network_id
     __args__['portId'] = port_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getAppliancePorts:getAppliancePorts', __args__, opts=opts, typ=GetAppliancePortsResult)
     return __ret__.apply(lambda __response__: GetAppliancePortsResult(
         id=pulumi.get(__response__, 'id'),

@@ -151,7 +151,7 @@ def get_bluetooth_clients_output(bluetooth_client_id: Optional[pulumi.Input[str]
                                  connectivity_history_timespan: Optional[pulumi.Input[Optional[int]]] = None,
                                  include_connectivity_history: Optional[pulumi.Input[Optional[bool]]] = None,
                                  network_id: Optional[pulumi.Input[str]] = None,
-                                 opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetBluetoothClientsResult]:
+                                 opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetBluetoothClientsResult]:
     """
     ## Example Usage
 
@@ -177,7 +177,7 @@ def get_bluetooth_clients_output(bluetooth_client_id: Optional[pulumi.Input[str]
     __args__['connectivityHistoryTimespan'] = connectivity_history_timespan
     __args__['includeConnectivityHistory'] = include_connectivity_history
     __args__['networkId'] = network_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getBluetoothClients:getBluetoothClients', __args__, opts=opts, typ=GetBluetoothClientsResult)
     return __ret__.apply(lambda __response__: GetBluetoothClientsResult(
         bluetooth_client_id=pulumi.get(__response__, 'bluetooth_client_id'),

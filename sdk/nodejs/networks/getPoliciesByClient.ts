@@ -121,7 +121,7 @@ export interface GetPoliciesByClientResult {
  * export const merakiNetworksPoliciesByClientExample = example.then(example => example.items);
  * ```
  */
-export function getPoliciesByClientOutput(args: GetPoliciesByClientOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetPoliciesByClientResult> {
+export function getPoliciesByClientOutput(args: GetPoliciesByClientOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetPoliciesByClientResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getPoliciesByClient:getPoliciesByClient", {
         "endingBefore": args.endingBefore,

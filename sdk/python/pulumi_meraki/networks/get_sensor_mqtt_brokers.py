@@ -119,7 +119,7 @@ def get_sensor_mqtt_brokers(mqtt_broker_id: Optional[str] = None,
         network_id=pulumi.get(__ret__, 'network_id'))
 def get_sensor_mqtt_brokers_output(mqtt_broker_id: Optional[pulumi.Input[Optional[str]]] = None,
                                    network_id: Optional[pulumi.Input[Optional[str]]] = None,
-                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSensorMqttBrokersResult]:
+                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSensorMqttBrokersResult]:
     """
     ## Example Usage
 
@@ -130,7 +130,7 @@ def get_sensor_mqtt_brokers_output(mqtt_broker_id: Optional[pulumi.Input[Optiona
     __args__ = dict()
     __args__['mqttBrokerId'] = mqtt_broker_id
     __args__['networkId'] = network_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSensorMqttBrokers:getSensorMqttBrokers', __args__, opts=opts, typ=GetSensorMqttBrokersResult)
     return __ret__.apply(lambda __response__: GetSensorMqttBrokersResult(
         id=pulumi.get(__response__, 'id'),

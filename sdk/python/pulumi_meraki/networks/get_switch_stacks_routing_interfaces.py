@@ -136,7 +136,7 @@ def get_switch_stacks_routing_interfaces(interface_id: Optional[str] = None,
 def get_switch_stacks_routing_interfaces_output(interface_id: Optional[pulumi.Input[Optional[str]]] = None,
                                                 network_id: Optional[pulumi.Input[Optional[str]]] = None,
                                                 switch_stack_id: Optional[pulumi.Input[Optional[str]]] = None,
-                                                opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSwitchStacksRoutingInterfacesResult]:
+                                                opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSwitchStacksRoutingInterfacesResult]:
     """
     ## Example Usage
 
@@ -149,7 +149,7 @@ def get_switch_stacks_routing_interfaces_output(interface_id: Optional[pulumi.In
     __args__['interfaceId'] = interface_id
     __args__['networkId'] = network_id
     __args__['switchStackId'] = switch_stack_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSwitchStacksRoutingInterfaces:getSwitchStacksRoutingInterfaces', __args__, opts=opts, typ=GetSwitchStacksRoutingInterfacesResult)
     return __ret__.apply(lambda __response__: GetSwitchStacksRoutingInterfacesResult(
         id=pulumi.get(__response__, 'id'),

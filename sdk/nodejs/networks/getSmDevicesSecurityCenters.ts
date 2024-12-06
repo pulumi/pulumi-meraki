@@ -78,7 +78,7 @@ export interface GetSmDevicesSecurityCentersResult {
  * export const merakiNetworksSmDevicesSecurityCentersExample = example.then(example => example.items);
  * ```
  */
-export function getSmDevicesSecurityCentersOutput(args?: GetSmDevicesSecurityCentersOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmDevicesSecurityCentersResult> {
+export function getSmDevicesSecurityCentersOutput(args?: GetSmDevicesSecurityCentersOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSmDevicesSecurityCentersResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSmDevicesSecurityCenters:getSmDevicesSecurityCenters", {

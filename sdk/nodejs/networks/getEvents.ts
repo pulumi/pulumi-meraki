@@ -217,7 +217,7 @@ export interface GetEventsResult {
  * export const merakiNetworksEventsExample = example.then(example => example.item);
  * ```
  */
-export function getEventsOutput(args: GetEventsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetEventsResult> {
+export function getEventsOutput(args: GetEventsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetEventsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getEvents:getEvents", {
         "clientIp": args.clientIp,

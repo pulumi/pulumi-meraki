@@ -292,7 +292,7 @@ def get_sm_devices_output(ending_before: Optional[pulumi.Input[Optional[str]]] =
                           system_types: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
                           uuids: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
                           wifi_macs: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
-                          opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSmDevicesResult]:
+                          opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSmDevicesResult]:
     """
     ## Example Usage
 
@@ -345,7 +345,7 @@ def get_sm_devices_output(ending_before: Optional[pulumi.Input[Optional[str]]] =
     __args__['systemTypes'] = system_types
     __args__['uuids'] = uuids
     __args__['wifiMacs'] = wifi_macs
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSmDevices:getSmDevices', __args__, opts=opts, typ=GetSmDevicesResult)
     return __ret__.apply(lambda __response__: GetSmDevicesResult(
         ending_before=pulumi.get(__response__, 'ending_before'),

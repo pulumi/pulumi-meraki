@@ -162,7 +162,7 @@ export interface GetWirelessClientsLatencyStatsResult {
  * export const merakiNetworksWirelessClientsLatencyStatsExample = example.then(example => example.item);
  * ```
  */
-export function getWirelessClientsLatencyStatsOutput(args: GetWirelessClientsLatencyStatsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessClientsLatencyStatsResult> {
+export function getWirelessClientsLatencyStatsOutput(args: GetWirelessClientsLatencyStatsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWirelessClientsLatencyStatsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getWirelessClientsLatencyStats:getWirelessClientsLatencyStats", {
         "apTag": args.apTag,

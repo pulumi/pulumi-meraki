@@ -63,7 +63,7 @@ export interface GetSwitchDhcpServerPolicyResult {
  * export const merakiNetworksSwitchDhcpServerPolicyExample = example.then(example => example.item);
  * ```
  */
-export function getSwitchDhcpServerPolicyOutput(args: GetSwitchDhcpServerPolicyOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchDhcpServerPolicyResult> {
+export function getSwitchDhcpServerPolicyOutput(args: GetSwitchDhcpServerPolicyOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSwitchDhcpServerPolicyResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSwitchDhcpServerPolicy:getSwitchDhcpServerPolicy", {
         "networkId": args.networkId,

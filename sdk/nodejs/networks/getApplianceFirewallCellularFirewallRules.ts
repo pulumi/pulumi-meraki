@@ -63,7 +63,7 @@ export interface GetApplianceFirewallCellularFirewallRulesResult {
  * export const merakiNetworksApplianceFirewallCellularFirewallRulesExample = example.then(example => example.item);
  * ```
  */
-export function getApplianceFirewallCellularFirewallRulesOutput(args: GetApplianceFirewallCellularFirewallRulesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceFirewallCellularFirewallRulesResult> {
+export function getApplianceFirewallCellularFirewallRulesOutput(args: GetApplianceFirewallCellularFirewallRulesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplianceFirewallCellularFirewallRulesResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getApplianceFirewallCellularFirewallRules:getApplianceFirewallCellularFirewallRules", {
         "networkId": args.networkId,

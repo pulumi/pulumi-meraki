@@ -132,7 +132,7 @@ export interface GetUplinksStatusesResult {
  * export const merakiOrganizationsUplinksStatusesExample = example.then(example => example.items);
  * ```
  */
-export function getUplinksStatusesOutput(args: GetUplinksStatusesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetUplinksStatusesResult> {
+export function getUplinksStatusesOutput(args: GetUplinksStatusesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetUplinksStatusesResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getUplinksStatuses:getUplinksStatuses", {
         "endingBefore": args.endingBefore,

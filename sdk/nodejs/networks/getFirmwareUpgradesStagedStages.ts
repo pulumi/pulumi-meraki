@@ -66,7 +66,7 @@ export interface GetFirmwareUpgradesStagedStagesResult {
  * export const merakiNetworksFirmwareUpgradesStagedStagesExample = example.then(example => example.items);
  * ```
  */
-export function getFirmwareUpgradesStagedStagesOutput(args: GetFirmwareUpgradesStagedStagesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetFirmwareUpgradesStagedStagesResult> {
+export function getFirmwareUpgradesStagedStagesOutput(args: GetFirmwareUpgradesStagedStagesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetFirmwareUpgradesStagedStagesResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getFirmwareUpgradesStagedStages:getFirmwareUpgradesStagedStages", {
         "networkId": args.networkId,

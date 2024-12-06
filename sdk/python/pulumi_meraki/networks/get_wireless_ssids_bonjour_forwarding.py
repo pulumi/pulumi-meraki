@@ -115,7 +115,7 @@ def get_wireless_ssids_bonjour_forwarding(network_id: Optional[str] = None,
         number=pulumi.get(__ret__, 'number'))
 def get_wireless_ssids_bonjour_forwarding_output(network_id: Optional[pulumi.Input[str]] = None,
                                                  number: Optional[pulumi.Input[str]] = None,
-                                                 opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetWirelessSsidsBonjourForwardingResult]:
+                                                 opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetWirelessSsidsBonjourForwardingResult]:
     """
     ## Example Usage
 
@@ -135,7 +135,7 @@ def get_wireless_ssids_bonjour_forwarding_output(network_id: Optional[pulumi.Inp
     __args__ = dict()
     __args__['networkId'] = network_id
     __args__['number'] = number
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getWirelessSsidsBonjourForwarding:getWirelessSsidsBonjourForwarding', __args__, opts=opts, typ=GetWirelessSsidsBonjourForwardingResult)
     return __ret__.apply(lambda __response__: GetWirelessSsidsBonjourForwardingResult(
         id=pulumi.get(__response__, 'id'),

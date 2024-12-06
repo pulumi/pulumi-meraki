@@ -97,7 +97,7 @@ def get_appliance_uplinks_statuses_overview(organization_id: Optional[str] = Non
         item=pulumi.get(__ret__, 'item'),
         organization_id=pulumi.get(__ret__, 'organization_id'))
 def get_appliance_uplinks_statuses_overview_output(organization_id: Optional[pulumi.Input[str]] = None,
-                                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetApplianceUplinksStatusesOverviewResult]:
+                                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetApplianceUplinksStatusesOverviewResult]:
     """
     ## Example Usage
 
@@ -114,7 +114,7 @@ def get_appliance_uplinks_statuses_overview_output(organization_id: Optional[pul
     """
     __args__ = dict()
     __args__['organizationId'] = organization_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getApplianceUplinksStatusesOverview:getApplianceUplinksStatusesOverview', __args__, opts=opts, typ=GetApplianceUplinksStatusesOverviewResult)
     return __ret__.apply(lambda __response__: GetApplianceUplinksStatusesOverviewResult(
         id=pulumi.get(__response__, 'id'),

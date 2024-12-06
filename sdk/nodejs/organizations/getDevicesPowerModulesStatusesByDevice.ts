@@ -154,7 +154,7 @@ export interface GetDevicesPowerModulesStatusesByDeviceResult {
  * export const merakiOrganizationsDevicesPowerModulesStatusesByDeviceExample = example.then(example => example.items);
  * ```
  */
-export function getDevicesPowerModulesStatusesByDeviceOutput(args: GetDevicesPowerModulesStatusesByDeviceOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDevicesPowerModulesStatusesByDeviceResult> {
+export function getDevicesPowerModulesStatusesByDeviceOutput(args: GetDevicesPowerModulesStatusesByDeviceOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDevicesPowerModulesStatusesByDeviceResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getDevicesPowerModulesStatusesByDevice:getDevicesPowerModulesStatusesByDevice", {
         "endingBefore": args.endingBefore,

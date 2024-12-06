@@ -99,7 +99,7 @@ export interface GetApplianceUplinksUsageByNetworkResult {
  * export const merakiOrganizationsApplianceUplinksUsageByNetworkExample = example.then(example => example.items);
  * ```
  */
-export function getApplianceUplinksUsageByNetworkOutput(args: GetApplianceUplinksUsageByNetworkOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceUplinksUsageByNetworkResult> {
+export function getApplianceUplinksUsageByNetworkOutput(args: GetApplianceUplinksUsageByNetworkOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplianceUplinksUsageByNetworkResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getApplianceUplinksUsageByNetwork:getApplianceUplinksUsageByNetwork", {
         "organizationId": args.organizationId,

@@ -85,7 +85,7 @@ export interface GetSwitchStacksRoutingInterfacesDhcpResult {
  * export const merakiNetworksSwitchStacksRoutingInterfacesDhcpExample = example.then(example => example.item);
  * ```
  */
-export function getSwitchStacksRoutingInterfacesDhcpOutput(args: GetSwitchStacksRoutingInterfacesDhcpOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchStacksRoutingInterfacesDhcpResult> {
+export function getSwitchStacksRoutingInterfacesDhcpOutput(args: GetSwitchStacksRoutingInterfacesDhcpOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSwitchStacksRoutingInterfacesDhcpResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSwitchStacksRoutingInterfacesDhcp:getSwitchStacksRoutingInterfacesDhcp", {
         "interfaceId": args.interfaceId,

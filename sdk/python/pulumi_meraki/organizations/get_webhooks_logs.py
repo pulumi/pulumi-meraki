@@ -226,7 +226,7 @@ def get_webhooks_logs_output(ending_before: Optional[pulumi.Input[Optional[str]]
                              t1: Optional[pulumi.Input[Optional[str]]] = None,
                              timespan: Optional[pulumi.Input[Optional[float]]] = None,
                              url: Optional[pulumi.Input[Optional[str]]] = None,
-                             opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetWebhooksLogsResult]:
+                             opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetWebhooksLogsResult]:
     """
     ## Example Usage
 
@@ -264,7 +264,7 @@ def get_webhooks_logs_output(ending_before: Optional[pulumi.Input[Optional[str]]
     __args__['t1'] = t1
     __args__['timespan'] = timespan
     __args__['url'] = url
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getWebhooksLogs:getWebhooksLogs', __args__, opts=opts, typ=GetWebhooksLogsResult)
     return __ret__.apply(lambda __response__: GetWebhooksLogsResult(
         ending_before=pulumi.get(__response__, 'ending_before'),

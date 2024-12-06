@@ -63,7 +63,7 @@ export interface GetApplianceWarmSpareResult {
  * export const merakiNetworksApplianceWarmSpareExample = example.then(example => example.item);
  * ```
  */
-export function getApplianceWarmSpareOutput(args: GetApplianceWarmSpareOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceWarmSpareResult> {
+export function getApplianceWarmSpareOutput(args: GetApplianceWarmSpareOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplianceWarmSpareResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getApplianceWarmSpare:getApplianceWarmSpare", {
         "networkId": args.networkId,

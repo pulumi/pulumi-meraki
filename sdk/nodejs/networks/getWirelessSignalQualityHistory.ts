@@ -176,7 +176,7 @@ export interface GetWirelessSignalQualityHistoryResult {
  * export const merakiNetworksWirelessSignalQualityHistoryExample = example.then(example => example.items);
  * ```
  */
-export function getWirelessSignalQualityHistoryOutput(args: GetWirelessSignalQualityHistoryOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessSignalQualityHistoryResult> {
+export function getWirelessSignalQualityHistoryOutput(args: GetWirelessSignalQualityHistoryOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWirelessSignalQualityHistoryResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getWirelessSignalQualityHistory:getWirelessSignalQualityHistory", {
         "apTag": args.apTag,

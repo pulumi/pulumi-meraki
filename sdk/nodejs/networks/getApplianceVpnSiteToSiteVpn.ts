@@ -63,7 +63,7 @@ export interface GetApplianceVpnSiteToSiteVpnResult {
  * export const merakiNetworksApplianceVpnSiteToSiteVpnExample = example.then(example => example.item);
  * ```
  */
-export function getApplianceVpnSiteToSiteVpnOutput(args: GetApplianceVpnSiteToSiteVpnOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceVpnSiteToSiteVpnResult> {
+export function getApplianceVpnSiteToSiteVpnOutput(args: GetApplianceVpnSiteToSiteVpnOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplianceVpnSiteToSiteVpnResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getApplianceVpnSiteToSiteVpn:getApplianceVpnSiteToSiteVpn", {
         "networkId": args.networkId,

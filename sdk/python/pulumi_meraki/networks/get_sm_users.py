@@ -172,7 +172,7 @@ def get_sm_users_output(emails: Optional[pulumi.Input[Optional[Sequence[str]]]] 
                         network_id: Optional[pulumi.Input[str]] = None,
                         scopes: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
                         usernames: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
-                        opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSmUsersResult]:
+                        opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSmUsersResult]:
     """
     ## Example Usage
 
@@ -201,7 +201,7 @@ def get_sm_users_output(emails: Optional[pulumi.Input[Optional[Sequence[str]]]] 
     __args__['networkId'] = network_id
     __args__['scopes'] = scopes
     __args__['usernames'] = usernames
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSmUsers:getSmUsers', __args__, opts=opts, typ=GetSmUsersResult)
     return __ret__.apply(lambda __response__: GetSmUsersResult(
         emails=pulumi.get(__response__, 'emails'),

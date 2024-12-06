@@ -66,7 +66,7 @@ export interface GetAlertsProfilesResult {
  * export const merakiOrganizationsAlertsProfilesExample = example.then(example => example.items);
  * ```
  */
-export function getAlertsProfilesOutput(args: GetAlertsProfilesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAlertsProfilesResult> {
+export function getAlertsProfilesOutput(args: GetAlertsProfilesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAlertsProfilesResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getAlertsProfiles:getAlertsProfiles", {
         "organizationId": args.organizationId,

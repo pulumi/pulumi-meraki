@@ -174,7 +174,7 @@ export interface GetInventoryDevicesResult {
 /**
  * ## Example Usage
  */
-export function getInventoryDevicesOutput(args?: GetInventoryDevicesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetInventoryDevicesResult> {
+export function getInventoryDevicesOutput(args?: GetInventoryDevicesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetInventoryDevicesResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getInventoryDevices:getInventoryDevices", {

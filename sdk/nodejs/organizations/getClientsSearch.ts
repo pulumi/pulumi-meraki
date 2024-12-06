@@ -107,7 +107,7 @@ export interface GetClientsSearchResult {
  * export const merakiOrganizationsClientsSearchExample = example.then(example => example.item);
  * ```
  */
-export function getClientsSearchOutput(args: GetClientsSearchOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetClientsSearchResult> {
+export function getClientsSearchOutput(args: GetClientsSearchOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetClientsSearchResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getClientsSearch:getClientsSearch", {
         "endingBefore": args.endingBefore,

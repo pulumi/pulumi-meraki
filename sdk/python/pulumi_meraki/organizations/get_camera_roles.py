@@ -119,7 +119,7 @@ def get_camera_roles(organization_id: Optional[str] = None,
         role_id=pulumi.get(__ret__, 'role_id'))
 def get_camera_roles_output(organization_id: Optional[pulumi.Input[Optional[str]]] = None,
                             role_id: Optional[pulumi.Input[Optional[str]]] = None,
-                            opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCameraRolesResult]:
+                            opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCameraRolesResult]:
     """
     ## Example Usage
 
@@ -130,7 +130,7 @@ def get_camera_roles_output(organization_id: Optional[pulumi.Input[Optional[str]
     __args__ = dict()
     __args__['organizationId'] = organization_id
     __args__['roleId'] = role_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getCameraRoles:getCameraRoles', __args__, opts=opts, typ=GetCameraRolesResult)
     return __ret__.apply(lambda __response__: GetCameraRolesResult(
         id=pulumi.get(__response__, 'id'),

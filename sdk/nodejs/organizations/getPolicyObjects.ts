@@ -106,7 +106,7 @@ export interface GetPolicyObjectsResult {
  * export const merakiOrganizationsPolicyObjectsExample = example.then(example => example.item);
  * ```
  */
-export function getPolicyObjectsOutput(args?: GetPolicyObjectsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetPolicyObjectsResult> {
+export function getPolicyObjectsOutput(args?: GetPolicyObjectsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetPolicyObjectsResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getPolicyObjects:getPolicyObjects", {

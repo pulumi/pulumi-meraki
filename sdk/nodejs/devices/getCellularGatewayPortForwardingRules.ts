@@ -63,7 +63,7 @@ export interface GetCellularGatewayPortForwardingRulesResult {
  * export const merakiDevicesCellularGatewayPortForwardingRulesExample = example.then(example => example.item);
  * ```
  */
-export function getCellularGatewayPortForwardingRulesOutput(args: GetCellularGatewayPortForwardingRulesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCellularGatewayPortForwardingRulesResult> {
+export function getCellularGatewayPortForwardingRulesOutput(args: GetCellularGatewayPortForwardingRulesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCellularGatewayPortForwardingRulesResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:devices/getCellularGatewayPortForwardingRules:getCellularGatewayPortForwardingRules", {
         "serial": args.serial,

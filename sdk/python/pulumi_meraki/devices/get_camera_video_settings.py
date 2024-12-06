@@ -97,7 +97,7 @@ def get_camera_video_settings(serial: Optional[str] = None,
         item=pulumi.get(__ret__, 'item'),
         serial=pulumi.get(__ret__, 'serial'))
 def get_camera_video_settings_output(serial: Optional[pulumi.Input[str]] = None,
-                                     opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCameraVideoSettingsResult]:
+                                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCameraVideoSettingsResult]:
     """
     ## Example Usage
 
@@ -114,7 +114,7 @@ def get_camera_video_settings_output(serial: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['serial'] = serial
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:devices/getCameraVideoSettings:getCameraVideoSettings', __args__, opts=opts, typ=GetCameraVideoSettingsResult)
     return __ret__.apply(lambda __response__: GetCameraVideoSettingsResult(
         id=pulumi.get(__response__, 'id'),

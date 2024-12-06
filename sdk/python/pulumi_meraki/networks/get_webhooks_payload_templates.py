@@ -119,7 +119,7 @@ def get_webhooks_payload_templates(network_id: Optional[str] = None,
         payload_template_id=pulumi.get(__ret__, 'payload_template_id'))
 def get_webhooks_payload_templates_output(network_id: Optional[pulumi.Input[Optional[str]]] = None,
                                           payload_template_id: Optional[pulumi.Input[Optional[str]]] = None,
-                                          opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetWebhooksPayloadTemplatesResult]:
+                                          opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetWebhooksPayloadTemplatesResult]:
     """
     ## Example Usage
 
@@ -130,7 +130,7 @@ def get_webhooks_payload_templates_output(network_id: Optional[pulumi.Input[Opti
     __args__ = dict()
     __args__['networkId'] = network_id
     __args__['payloadTemplateId'] = payload_template_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getWebhooksPayloadTemplates:getWebhooksPayloadTemplates', __args__, opts=opts, typ=GetWebhooksPayloadTemplatesResult)
     return __ret__.apply(lambda __response__: GetWebhooksPayloadTemplatesResult(
         id=pulumi.get(__response__, 'id'),

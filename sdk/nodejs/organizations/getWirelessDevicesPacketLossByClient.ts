@@ -176,7 +176,7 @@ export interface GetWirelessDevicesPacketLossByClientResult {
  * export const merakiOrganizationsWirelessDevicesPacketLossByClientExample = example.then(example => example.items);
  * ```
  */
-export function getWirelessDevicesPacketLossByClientOutput(args: GetWirelessDevicesPacketLossByClientOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessDevicesPacketLossByClientResult> {
+export function getWirelessDevicesPacketLossByClientOutput(args: GetWirelessDevicesPacketLossByClientOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWirelessDevicesPacketLossByClientResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getWirelessDevicesPacketLossByClient:getWirelessDevicesPacketLossByClient", {
         "bands": args.bands,

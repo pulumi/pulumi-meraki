@@ -63,7 +63,7 @@ export interface GetApplianceSingleLanResult {
  * export const merakiNetworksApplianceSingleLanExample = example.then(example => example.item);
  * ```
  */
-export function getApplianceSingleLanOutput(args: GetApplianceSingleLanOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceSingleLanResult> {
+export function getApplianceSingleLanOutput(args: GetApplianceSingleLanOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplianceSingleLanResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getApplianceSingleLan:getApplianceSingleLan", {
         "networkId": args.networkId,

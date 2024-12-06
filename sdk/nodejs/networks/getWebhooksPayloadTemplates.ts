@@ -57,7 +57,7 @@ export interface GetWebhooksPayloadTemplatesResult {
 /**
  * ## Example Usage
  */
-export function getWebhooksPayloadTemplatesOutput(args?: GetWebhooksPayloadTemplatesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWebhooksPayloadTemplatesResult> {
+export function getWebhooksPayloadTemplatesOutput(args?: GetWebhooksPayloadTemplatesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWebhooksPayloadTemplatesResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getWebhooksPayloadTemplates:getWebhooksPayloadTemplates", {

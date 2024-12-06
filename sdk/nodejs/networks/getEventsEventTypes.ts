@@ -66,7 +66,7 @@ export interface GetEventsEventTypesResult {
  * export const merakiNetworksEventsEventTypesExample = example.then(example => example.items);
  * ```
  */
-export function getEventsEventTypesOutput(args: GetEventsEventTypesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetEventsEventTypesResult> {
+export function getEventsEventTypesOutput(args: GetEventsEventTypesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetEventsEventTypesResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getEventsEventTypes:getEventsEventTypes", {
         "networkId": args.networkId,

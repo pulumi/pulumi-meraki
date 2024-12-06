@@ -57,7 +57,7 @@ export interface GetAppliancePortsResult {
 /**
  * ## Example Usage
  */
-export function getAppliancePortsOutput(args?: GetAppliancePortsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAppliancePortsResult> {
+export function getAppliancePortsOutput(args?: GetAppliancePortsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAppliancePortsResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getAppliancePorts:getAppliancePorts", {

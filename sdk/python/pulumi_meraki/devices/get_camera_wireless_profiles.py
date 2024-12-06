@@ -97,7 +97,7 @@ def get_camera_wireless_profiles(serial: Optional[str] = None,
         item=pulumi.get(__ret__, 'item'),
         serial=pulumi.get(__ret__, 'serial'))
 def get_camera_wireless_profiles_output(serial: Optional[pulumi.Input[str]] = None,
-                                        opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCameraWirelessProfilesResult]:
+                                        opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCameraWirelessProfilesResult]:
     """
     ## Example Usage
 
@@ -114,7 +114,7 @@ def get_camera_wireless_profiles_output(serial: Optional[pulumi.Input[str]] = No
     """
     __args__ = dict()
     __args__['serial'] = serial
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:devices/getCameraWirelessProfiles:getCameraWirelessProfiles', __args__, opts=opts, typ=GetCameraWirelessProfilesResult)
     return __ret__.apply(lambda __response__: GetCameraWirelessProfilesResult(
         id=pulumi.get(__response__, 'id'),

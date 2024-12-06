@@ -63,7 +63,7 @@ export interface GetWirelessBillingResult {
  * export const merakiNetworksWirelessBillingExample = example.then(example => example.item);
  * ```
  */
-export function getWirelessBillingOutput(args: GetWirelessBillingOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessBillingResult> {
+export function getWirelessBillingOutput(args: GetWirelessBillingOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWirelessBillingResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getWirelessBilling:getWirelessBilling", {
         "networkId": args.networkId,

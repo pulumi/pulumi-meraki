@@ -110,7 +110,7 @@ export interface GetSmDevicesConnectivityResult {
  * export const merakiNetworksSmDevicesConnectivityExample = example.then(example => example.items);
  * ```
  */
-export function getSmDevicesConnectivityOutput(args: GetSmDevicesConnectivityOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmDevicesConnectivityResult> {
+export function getSmDevicesConnectivityOutput(args: GetSmDevicesConnectivityOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSmDevicesConnectivityResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSmDevicesConnectivity:getSmDevicesConnectivity", {
         "deviceId": args.deviceId,
