@@ -66,7 +66,7 @@ export interface GetSmTargetGroupsResult {
 /**
  * ## Example Usage
  */
-export function getSmTargetGroupsOutput(args?: GetSmTargetGroupsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmTargetGroupsResult> {
+export function getSmTargetGroupsOutput(args?: GetSmTargetGroupsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSmTargetGroupsResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSmTargetGroups:getSmTargetGroups", {

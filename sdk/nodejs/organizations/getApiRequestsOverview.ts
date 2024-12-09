@@ -96,7 +96,7 @@ export interface GetApiRequestsOverviewResult {
  * export const merakiOrganizationsApiRequestsOverviewExample = example.then(example => example.item);
  * ```
  */
-export function getApiRequestsOverviewOutput(args: GetApiRequestsOverviewOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApiRequestsOverviewResult> {
+export function getApiRequestsOverviewOutput(args: GetApiRequestsOverviewOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApiRequestsOverviewResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getApiRequestsOverview:getApiRequestsOverview", {
         "organizationId": args.organizationId,

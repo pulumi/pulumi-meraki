@@ -115,7 +115,7 @@ def get_live_tools_throughput_test(serial: Optional[str] = None,
         throughput_test_id=pulumi.get(__ret__, 'throughput_test_id'))
 def get_live_tools_throughput_test_output(serial: Optional[pulumi.Input[str]] = None,
                                           throughput_test_id: Optional[pulumi.Input[str]] = None,
-                                          opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetLiveToolsThroughputTestResult]:
+                                          opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetLiveToolsThroughputTestResult]:
     """
     ## Example Usage
 
@@ -135,7 +135,7 @@ def get_live_tools_throughput_test_output(serial: Optional[pulumi.Input[str]] = 
     __args__ = dict()
     __args__['serial'] = serial
     __args__['throughputTestId'] = throughput_test_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:devices/getLiveToolsThroughputTest:getLiveToolsThroughputTest', __args__, opts=opts, typ=GetLiveToolsThroughputTestResult)
     return __ret__.apply(lambda __response__: GetLiveToolsThroughputTestResult(
         id=pulumi.get(__response__, 'id'),

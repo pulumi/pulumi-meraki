@@ -77,7 +77,7 @@ export interface GetSmDevicesCertsResult {
  * export const merakiNetworksSmDevicesCertsExample = example.then(example => example.items);
  * ```
  */
-export function getSmDevicesCertsOutput(args: GetSmDevicesCertsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmDevicesCertsResult> {
+export function getSmDevicesCertsOutput(args: GetSmDevicesCertsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSmDevicesCertsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSmDevicesCerts:getSmDevicesCerts", {
         "deviceId": args.deviceId,

@@ -244,7 +244,7 @@ def get_devices_uplinks_addresses_by_device_output(ending_before: Optional[pulum
                                                    starting_after: Optional[pulumi.Input[Optional[str]]] = None,
                                                    tags: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
                                                    tags_filter_type: Optional[pulumi.Input[Optional[str]]] = None,
-                                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetDevicesUplinksAddressesByDeviceResult]:
+                                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetDevicesUplinksAddressesByDeviceResult]:
     """
     ## Example Usage
 
@@ -285,7 +285,7 @@ def get_devices_uplinks_addresses_by_device_output(ending_before: Optional[pulum
     __args__['startingAfter'] = starting_after
     __args__['tags'] = tags
     __args__['tagsFilterType'] = tags_filter_type
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getDevicesUplinksAddressesByDevice:getDevicesUplinksAddressesByDevice', __args__, opts=opts, typ=GetDevicesUplinksAddressesByDeviceResult)
     return __ret__.apply(lambda __response__: GetDevicesUplinksAddressesByDeviceResult(
         ending_before=pulumi.get(__response__, 'ending_before'),

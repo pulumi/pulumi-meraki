@@ -154,7 +154,7 @@ export interface GetDevicesAvailabilitiesResult {
  * export const merakiOrganizationsDevicesAvailabilitiesExample = example.then(example => example.items);
  * ```
  */
-export function getDevicesAvailabilitiesOutput(args: GetDevicesAvailabilitiesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDevicesAvailabilitiesResult> {
+export function getDevicesAvailabilitiesOutput(args: GetDevicesAvailabilitiesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDevicesAvailabilitiesResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getDevicesAvailabilities:getDevicesAvailabilities", {
         "endingBefore": args.endingBefore,

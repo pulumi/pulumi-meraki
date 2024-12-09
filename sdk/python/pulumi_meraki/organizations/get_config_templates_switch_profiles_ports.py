@@ -153,7 +153,7 @@ def get_config_templates_switch_profiles_ports_output(config_template_id: Option
                                                       organization_id: Optional[pulumi.Input[Optional[str]]] = None,
                                                       port_id: Optional[pulumi.Input[Optional[str]]] = None,
                                                       profile_id: Optional[pulumi.Input[Optional[str]]] = None,
-                                                      opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetConfigTemplatesSwitchProfilesPortsResult]:
+                                                      opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetConfigTemplatesSwitchProfilesPortsResult]:
     """
     ## Example Usage
 
@@ -168,7 +168,7 @@ def get_config_templates_switch_profiles_ports_output(config_template_id: Option
     __args__['organizationId'] = organization_id
     __args__['portId'] = port_id
     __args__['profileId'] = profile_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getConfigTemplatesSwitchProfilesPorts:getConfigTemplatesSwitchProfilesPorts', __args__, opts=opts, typ=GetConfigTemplatesSwitchProfilesPortsResult)
     return __ret__.apply(lambda __response__: GetConfigTemplatesSwitchProfilesPortsResult(
         config_template_id=pulumi.get(__response__, 'config_template_id'),

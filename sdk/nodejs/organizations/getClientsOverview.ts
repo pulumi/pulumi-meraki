@@ -96,7 +96,7 @@ export interface GetClientsOverviewResult {
  * export const merakiOrganizationsClientsOverviewExample = example.then(example => example.item);
  * ```
  */
-export function getClientsOverviewOutput(args: GetClientsOverviewOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetClientsOverviewResult> {
+export function getClientsOverviewOutput(args: GetClientsOverviewOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetClientsOverviewResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getClientsOverview:getClientsOverview", {
         "organizationId": args.organizationId,

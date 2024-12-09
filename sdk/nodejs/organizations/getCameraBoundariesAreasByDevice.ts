@@ -77,7 +77,7 @@ export interface GetCameraBoundariesAreasByDeviceResult {
  * export const merakiOrganizationsCameraBoundariesAreasByDeviceExample = example.then(example => example.items);
  * ```
  */
-export function getCameraBoundariesAreasByDeviceOutput(args: GetCameraBoundariesAreasByDeviceOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCameraBoundariesAreasByDeviceResult> {
+export function getCameraBoundariesAreasByDeviceOutput(args: GetCameraBoundariesAreasByDeviceOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCameraBoundariesAreasByDeviceResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getCameraBoundariesAreasByDevice:getCameraBoundariesAreasByDevice", {
         "organizationId": args.organizationId,

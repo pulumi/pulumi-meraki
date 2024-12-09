@@ -57,7 +57,7 @@ export interface GetInsightMonitoredMediaServersResult {
 /**
  * ## Example Usage
  */
-export function getInsightMonitoredMediaServersOutput(args?: GetInsightMonitoredMediaServersOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetInsightMonitoredMediaServersResult> {
+export function getInsightMonitoredMediaServersOutput(args?: GetInsightMonitoredMediaServersOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetInsightMonitoredMediaServersResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getInsightMonitoredMediaServers:getInsightMonitoredMediaServers", {

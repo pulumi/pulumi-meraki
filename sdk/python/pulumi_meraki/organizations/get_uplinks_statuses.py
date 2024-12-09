@@ -208,7 +208,7 @@ def get_uplinks_statuses_output(ending_before: Optional[pulumi.Input[Optional[st
                                 per_page: Optional[pulumi.Input[Optional[int]]] = None,
                                 serials: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
                                 starting_after: Optional[pulumi.Input[Optional[str]]] = None,
-                                opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetUplinksStatusesResult]:
+                                opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetUplinksStatusesResult]:
     """
     ## Example Usage
 
@@ -243,7 +243,7 @@ def get_uplinks_statuses_output(ending_before: Optional[pulumi.Input[Optional[st
     __args__['perPage'] = per_page
     __args__['serials'] = serials
     __args__['startingAfter'] = starting_after
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getUplinksStatuses:getUplinksStatuses', __args__, opts=opts, typ=GetUplinksStatusesResult)
     return __ret__.apply(lambda __response__: GetUplinksStatusesResult(
         ending_before=pulumi.get(__response__, 'ending_before'),

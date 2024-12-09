@@ -97,7 +97,7 @@ def get_appliance_settings(network_id: Optional[str] = None,
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'))
 def get_appliance_settings_output(network_id: Optional[pulumi.Input[str]] = None,
-                                  opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetApplianceSettingsResult]:
+                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetApplianceSettingsResult]:
     """
     ## Example Usage
 
@@ -114,7 +114,7 @@ def get_appliance_settings_output(network_id: Optional[pulumi.Input[str]] = None
     """
     __args__ = dict()
     __args__['networkId'] = network_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getApplianceSettings:getApplianceSettings', __args__, opts=opts, typ=GetApplianceSettingsResult)
     return __ret__.apply(lambda __response__: GetApplianceSettingsResult(
         id=pulumi.get(__response__, 'id'),

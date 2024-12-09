@@ -57,7 +57,7 @@ export interface GetWirelessSsidsResult {
 /**
  * ## Example Usage
  */
-export function getWirelessSsidsOutput(args?: GetWirelessSsidsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessSsidsResult> {
+export function getWirelessSsidsOutput(args?: GetWirelessSsidsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWirelessSsidsResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getWirelessSsids:getWirelessSsids", {

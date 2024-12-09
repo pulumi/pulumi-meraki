@@ -63,7 +63,7 @@ export interface GetCameraWirelessProfilesResult {
  * export const merakiDevicesCameraWirelessProfilesExample = example.then(example => example.item);
  * ```
  */
-export function getCameraWirelessProfilesOutput(args: GetCameraWirelessProfilesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCameraWirelessProfilesResult> {
+export function getCameraWirelessProfilesOutput(args: GetCameraWirelessProfilesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCameraWirelessProfilesResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:devices/getCameraWirelessProfiles:getCameraWirelessProfiles", {
         "serial": args.serial,

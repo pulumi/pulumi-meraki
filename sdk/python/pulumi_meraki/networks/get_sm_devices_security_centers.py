@@ -118,7 +118,7 @@ def get_sm_devices_security_centers(device_id: Optional[str] = None,
         network_id=pulumi.get(__ret__, 'network_id'))
 def get_sm_devices_security_centers_output(device_id: Optional[pulumi.Input[Optional[str]]] = None,
                                            network_id: Optional[pulumi.Input[Optional[str]]] = None,
-                                           opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSmDevicesSecurityCentersResult]:
+                                           opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSmDevicesSecurityCentersResult]:
     """
     ## Example Usage
 
@@ -138,7 +138,7 @@ def get_sm_devices_security_centers_output(device_id: Optional[pulumi.Input[Opti
     __args__ = dict()
     __args__['deviceId'] = device_id
     __args__['networkId'] = network_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSmDevicesSecurityCenters:getSmDevicesSecurityCenters', __args__, opts=opts, typ=GetSmDevicesSecurityCentersResult)
     return __ret__.apply(lambda __response__: GetSmDevicesSecurityCentersResult(
         device_id=pulumi.get(__response__, 'device_id'),

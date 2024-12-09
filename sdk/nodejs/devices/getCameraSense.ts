@@ -63,7 +63,7 @@ export interface GetCameraSenseResult {
  * export const merakiDevicesCameraSenseExample = example.then(example => example.item);
  * ```
  */
-export function getCameraSenseOutput(args: GetCameraSenseOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCameraSenseResult> {
+export function getCameraSenseOutput(args: GetCameraSenseOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCameraSenseResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:devices/getCameraSense:getCameraSense", {
         "serial": args.serial,

@@ -190,7 +190,7 @@ def get_inventory_onboarding_cloud_monitoring_networks_output(device_type: Optio
                                                               per_page: Optional[pulumi.Input[Optional[int]]] = None,
                                                               search: Optional[pulumi.Input[Optional[str]]] = None,
                                                               starting_after: Optional[pulumi.Input[Optional[str]]] = None,
-                                                              opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetInventoryOnboardingCloudMonitoringNetworksResult]:
+                                                              opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetInventoryOnboardingCloudMonitoringNetworksResult]:
     """
     ## Example Usage
 
@@ -222,7 +222,7 @@ def get_inventory_onboarding_cloud_monitoring_networks_output(device_type: Optio
     __args__['perPage'] = per_page
     __args__['search'] = search
     __args__['startingAfter'] = starting_after
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getInventoryOnboardingCloudMonitoringNetworks:getInventoryOnboardingCloudMonitoringNetworks', __args__, opts=opts, typ=GetInventoryOnboardingCloudMonitoringNetworksResult)
     return __ret__.apply(lambda __response__: GetInventoryOnboardingCloudMonitoringNetworksResult(
         device_type=pulumi.get(__response__, 'device_type'),

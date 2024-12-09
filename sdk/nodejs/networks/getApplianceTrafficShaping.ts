@@ -63,7 +63,7 @@ export interface GetApplianceTrafficShapingResult {
  * export const merakiNetworksApplianceTrafficShapingExample = example.then(example => example.item);
  * ```
  */
-export function getApplianceTrafficShapingOutput(args: GetApplianceTrafficShapingOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceTrafficShapingResult> {
+export function getApplianceTrafficShapingOutput(args: GetApplianceTrafficShapingOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplianceTrafficShapingResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getApplianceTrafficShaping:getApplianceTrafficShaping", {
         "networkId": args.networkId,

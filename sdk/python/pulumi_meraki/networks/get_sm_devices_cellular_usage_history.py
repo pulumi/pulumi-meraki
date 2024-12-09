@@ -118,7 +118,7 @@ def get_sm_devices_cellular_usage_history(device_id: Optional[str] = None,
         network_id=pulumi.get(__ret__, 'network_id'))
 def get_sm_devices_cellular_usage_history_output(device_id: Optional[pulumi.Input[str]] = None,
                                                  network_id: Optional[pulumi.Input[str]] = None,
-                                                 opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSmDevicesCellularUsageHistoryResult]:
+                                                 opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSmDevicesCellularUsageHistoryResult]:
     """
     ## Example Usage
 
@@ -138,7 +138,7 @@ def get_sm_devices_cellular_usage_history_output(device_id: Optional[pulumi.Inpu
     __args__ = dict()
     __args__['deviceId'] = device_id
     __args__['networkId'] = network_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSmDevicesCellularUsageHistory:getSmDevicesCellularUsageHistory', __args__, opts=opts, typ=GetSmDevicesCellularUsageHistoryResult)
     return __ret__.apply(lambda __response__: GetSmDevicesCellularUsageHistoryResult(
         device_id=pulumi.get(__response__, 'device_id'),

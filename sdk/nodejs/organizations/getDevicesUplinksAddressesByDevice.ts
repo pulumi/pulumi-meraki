@@ -154,7 +154,7 @@ export interface GetDevicesUplinksAddressesByDeviceResult {
  * export const merakiOrganizationsDevicesUplinksAddressesByDeviceExample = example.then(example => example.items);
  * ```
  */
-export function getDevicesUplinksAddressesByDeviceOutput(args: GetDevicesUplinksAddressesByDeviceOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDevicesUplinksAddressesByDeviceResult> {
+export function getDevicesUplinksAddressesByDeviceOutput(args: GetDevicesUplinksAddressesByDeviceOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDevicesUplinksAddressesByDeviceResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getDevicesUplinksAddressesByDevice:getDevicesUplinksAddressesByDevice", {
         "endingBefore": args.endingBefore,

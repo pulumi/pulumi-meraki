@@ -115,7 +115,7 @@ def get_live_tools_arp_table(arp_table_id: Optional[str] = None,
         serial=pulumi.get(__ret__, 'serial'))
 def get_live_tools_arp_table_output(arp_table_id: Optional[pulumi.Input[str]] = None,
                                     serial: Optional[pulumi.Input[str]] = None,
-                                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetLiveToolsArpTableResult]:
+                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetLiveToolsArpTableResult]:
     """
     ## Example Usage
 
@@ -135,7 +135,7 @@ def get_live_tools_arp_table_output(arp_table_id: Optional[pulumi.Input[str]] = 
     __args__ = dict()
     __args__['arpTableId'] = arp_table_id
     __args__['serial'] = serial
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:devices/getLiveToolsArpTable:getLiveToolsArpTable', __args__, opts=opts, typ=GetLiveToolsArpTableResult)
     return __ret__.apply(lambda __response__: GetLiveToolsArpTableResult(
         arp_table_id=pulumi.get(__response__, 'arp_table_id'),

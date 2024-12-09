@@ -63,7 +63,7 @@ export interface GetFirmwareUpgradesStagedEventsResult {
  * export const merakiNetworksFirmwareUpgradesStagedEventsExample = example.then(example => example.item);
  * ```
  */
-export function getFirmwareUpgradesStagedEventsOutput(args: GetFirmwareUpgradesStagedEventsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetFirmwareUpgradesStagedEventsResult> {
+export function getFirmwareUpgradesStagedEventsOutput(args: GetFirmwareUpgradesStagedEventsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetFirmwareUpgradesStagedEventsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getFirmwareUpgradesStagedEvents:getFirmwareUpgradesStagedEvents", {
         "networkId": args.networkId,

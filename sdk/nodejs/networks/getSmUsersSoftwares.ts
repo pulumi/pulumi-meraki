@@ -77,7 +77,7 @@ export interface GetSmUsersSoftwaresResult {
  * export const merakiNetworksSmUsersSoftwaresExample = example.then(example => example.items);
  * ```
  */
-export function getSmUsersSoftwaresOutput(args: GetSmUsersSoftwaresOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmUsersSoftwaresResult> {
+export function getSmUsersSoftwaresOutput(args: GetSmUsersSoftwaresOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSmUsersSoftwaresResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSmUsersSoftwares:getSmUsersSoftwares", {
         "networkId": args.networkId,

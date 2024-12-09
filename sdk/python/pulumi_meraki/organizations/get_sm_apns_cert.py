@@ -97,7 +97,7 @@ def get_sm_apns_cert(organization_id: Optional[str] = None,
         item=pulumi.get(__ret__, 'item'),
         organization_id=pulumi.get(__ret__, 'organization_id'))
 def get_sm_apns_cert_output(organization_id: Optional[pulumi.Input[str]] = None,
-                            opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSmApnsCertResult]:
+                            opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSmApnsCertResult]:
     """
     ## Example Usage
 
@@ -114,7 +114,7 @@ def get_sm_apns_cert_output(organization_id: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['organizationId'] = organization_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getSmApnsCert:getSmApnsCert', __args__, opts=opts, typ=GetSmApnsCertResult)
     return __ret__.apply(lambda __response__: GetSmApnsCertResult(
         id=pulumi.get(__response__, 'id'),

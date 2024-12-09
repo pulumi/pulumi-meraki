@@ -57,7 +57,7 @@ export interface GetSwitchStacksResult {
 /**
  * ## Example Usage
  */
-export function getSwitchStacksOutput(args?: GetSwitchStacksOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchStacksResult> {
+export function getSwitchStacksOutput(args?: GetSwitchStacksOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSwitchStacksResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSwitchStacks:getSwitchStacks", {

@@ -201,7 +201,7 @@ export interface GetDevicesResult {
 /**
  * ## Example Usage
  */
-export function getDevicesOutput(args?: GetDevicesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDevicesResult> {
+export function getDevicesOutput(args?: GetDevicesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDevicesResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:index/getDevices:getDevices", {

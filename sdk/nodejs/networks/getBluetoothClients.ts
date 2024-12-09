@@ -96,7 +96,7 @@ export interface GetBluetoothClientsResult {
  * export const merakiNetworksBluetoothClientsExample = example.then(example => example.item);
  * ```
  */
-export function getBluetoothClientsOutput(args: GetBluetoothClientsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetBluetoothClientsResult> {
+export function getBluetoothClientsOutput(args: GetBluetoothClientsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetBluetoothClientsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getBluetoothClients:getBluetoothClients", {
         "bluetoothClientId": args.bluetoothClientId,

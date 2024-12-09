@@ -115,7 +115,7 @@ def get_wireless_ssids_vpn(network_id: Optional[str] = None,
         number=pulumi.get(__ret__, 'number'))
 def get_wireless_ssids_vpn_output(network_id: Optional[pulumi.Input[str]] = None,
                                   number: Optional[pulumi.Input[str]] = None,
-                                  opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetWirelessSsidsVpnResult]:
+                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetWirelessSsidsVpnResult]:
     """
     ## Example Usage
 
@@ -135,7 +135,7 @@ def get_wireless_ssids_vpn_output(network_id: Optional[pulumi.Input[str]] = None
     __args__ = dict()
     __args__['networkId'] = network_id
     __args__['number'] = number
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getWirelessSsidsVpn:getWirelessSsidsVpn', __args__, opts=opts, typ=GetWirelessSsidsVpnResult)
     return __ret__.apply(lambda __response__: GetWirelessSsidsVpnResult(
         id=pulumi.get(__response__, 'id'),

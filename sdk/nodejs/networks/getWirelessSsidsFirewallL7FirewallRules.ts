@@ -74,7 +74,7 @@ export interface GetWirelessSsidsFirewallL7FirewallRulesResult {
  * export const merakiNetworksWirelessSsidsFirewallL7FirewallRulesExample = example.then(example => example.item);
  * ```
  */
-export function getWirelessSsidsFirewallL7FirewallRulesOutput(args: GetWirelessSsidsFirewallL7FirewallRulesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessSsidsFirewallL7FirewallRulesResult> {
+export function getWirelessSsidsFirewallL7FirewallRulesOutput(args: GetWirelessSsidsFirewallL7FirewallRulesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWirelessSsidsFirewallL7FirewallRulesResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getWirelessSsidsFirewallL7FirewallRules:getWirelessSsidsFirewallL7FirewallRules", {
         "networkId": args.networkId,

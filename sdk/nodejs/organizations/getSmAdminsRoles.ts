@@ -106,7 +106,7 @@ export interface GetSmAdminsRolesResult {
  * export const merakiOrganizationsSmAdminsRolesExample = example.then(example => example.item);
  * ```
  */
-export function getSmAdminsRolesOutput(args?: GetSmAdminsRolesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmAdminsRolesResult> {
+export function getSmAdminsRolesOutput(args?: GetSmAdminsRolesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSmAdminsRolesResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getSmAdminsRoles:getSmAdminsRoles", {

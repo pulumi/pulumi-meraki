@@ -63,7 +63,7 @@ export interface GetSyslogServersResult {
  * export const merakiNetworksSyslogServersExample = example.then(example => example.item);
  * ```
  */
-export function getSyslogServersOutput(args: GetSyslogServersOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSyslogServersResult> {
+export function getSyslogServersOutput(args: GetSyslogServersOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSyslogServersResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSyslogServers:getSyslogServers", {
         "networkId": args.networkId,

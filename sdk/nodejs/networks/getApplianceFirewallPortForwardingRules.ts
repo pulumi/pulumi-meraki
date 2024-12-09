@@ -63,7 +63,7 @@ export interface GetApplianceFirewallPortForwardingRulesResult {
  * export const merakiNetworksApplianceFirewallPortForwardingRulesExample = example.then(example => example.item);
  * ```
  */
-export function getApplianceFirewallPortForwardingRulesOutput(args: GetApplianceFirewallPortForwardingRulesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceFirewallPortForwardingRulesResult> {
+export function getApplianceFirewallPortForwardingRulesOutput(args: GetApplianceFirewallPortForwardingRulesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplianceFirewallPortForwardingRulesResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getApplianceFirewallPortForwardingRules:getApplianceFirewallPortForwardingRules", {
         "networkId": args.networkId,

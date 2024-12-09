@@ -100,7 +100,7 @@ def get_switch_port_schedules(network_id: Optional[str] = None,
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'))
 def get_switch_port_schedules_output(network_id: Optional[pulumi.Input[str]] = None,
-                                     opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSwitchPortSchedulesResult]:
+                                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSwitchPortSchedulesResult]:
     """
     ## Example Usage
 
@@ -117,7 +117,7 @@ def get_switch_port_schedules_output(network_id: Optional[pulumi.Input[str]] = N
     """
     __args__ = dict()
     __args__['networkId'] = network_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSwitchPortSchedules:getSwitchPortSchedules', __args__, opts=opts, typ=GetSwitchPortSchedulesResult)
     return __ret__.apply(lambda __response__: GetSwitchPortSchedulesResult(
         id=pulumi.get(__response__, 'id'),

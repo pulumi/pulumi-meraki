@@ -74,7 +74,7 @@ export interface GetApplianceFirewallFirewalledServicesResult {
  * export const merakiNetworksApplianceFirewallFirewalledServicesExample = example.then(example => example.item);
  * ```
  */
-export function getApplianceFirewallFirewalledServicesOutput(args: GetApplianceFirewallFirewalledServicesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceFirewallFirewalledServicesResult> {
+export function getApplianceFirewallFirewalledServicesOutput(args: GetApplianceFirewallFirewalledServicesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplianceFirewallFirewalledServicesResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getApplianceFirewallFirewalledServices:getApplianceFirewallFirewalledServices", {
         "networkId": args.networkId,

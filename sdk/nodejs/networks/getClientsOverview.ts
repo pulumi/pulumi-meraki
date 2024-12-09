@@ -107,7 +107,7 @@ export interface GetClientsOverviewResult {
  * export const merakiNetworksClientsOverviewExample = example.then(example => example.item);
  * ```
  */
-export function getClientsOverviewOutput(args: GetClientsOverviewOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetClientsOverviewResult> {
+export function getClientsOverviewOutput(args: GetClientsOverviewOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetClientsOverviewResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getClientsOverview:getClientsOverview", {
         "networkId": args.networkId,

@@ -118,7 +118,7 @@ def get_sm_devices_certs(device_id: Optional[str] = None,
         network_id=pulumi.get(__ret__, 'network_id'))
 def get_sm_devices_certs_output(device_id: Optional[pulumi.Input[str]] = None,
                                 network_id: Optional[pulumi.Input[str]] = None,
-                                opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSmDevicesCertsResult]:
+                                opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSmDevicesCertsResult]:
     """
     ## Example Usage
 
@@ -138,7 +138,7 @@ def get_sm_devices_certs_output(device_id: Optional[pulumi.Input[str]] = None,
     __args__ = dict()
     __args__['deviceId'] = device_id
     __args__['networkId'] = network_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSmDevicesCerts:getSmDevicesCerts', __args__, opts=opts, typ=GetSmDevicesCertsResult)
     return __ret__.apply(lambda __response__: GetSmDevicesCertsResult(
         device_id=pulumi.get(__response__, 'device_id'),

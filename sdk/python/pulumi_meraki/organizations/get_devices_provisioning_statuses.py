@@ -262,7 +262,7 @@ def get_devices_provisioning_statuses_output(ending_before: Optional[pulumi.Inpu
                                              status: Optional[pulumi.Input[Optional[str]]] = None,
                                              tags: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
                                              tags_filter_type: Optional[pulumi.Input[Optional[str]]] = None,
-                                             opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetDevicesProvisioningStatusesResult]:
+                                             opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetDevicesProvisioningStatusesResult]:
     """
     ## Example Usage
 
@@ -306,7 +306,7 @@ def get_devices_provisioning_statuses_output(ending_before: Optional[pulumi.Inpu
     __args__['status'] = status
     __args__['tags'] = tags
     __args__['tagsFilterType'] = tags_filter_type
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getDevicesProvisioningStatuses:getDevicesProvisioningStatuses', __args__, opts=opts, typ=GetDevicesProvisioningStatusesResult)
     return __ret__.apply(lambda __response__: GetDevicesProvisioningStatusesResult(
         ending_before=pulumi.get(__response__, 'ending_before'),

@@ -121,7 +121,7 @@ export interface GetInsightApplicationsHealthByTimeResult {
  * export const merakiNetworksInsightApplicationsHealthByTimeExample = example.then(example => example.items);
  * ```
  */
-export function getInsightApplicationsHealthByTimeOutput(args: GetInsightApplicationsHealthByTimeOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetInsightApplicationsHealthByTimeResult> {
+export function getInsightApplicationsHealthByTimeOutput(args: GetInsightApplicationsHealthByTimeOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetInsightApplicationsHealthByTimeResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getInsightApplicationsHealthByTime:getInsightApplicationsHealthByTime", {
         "applicationId": args.applicationId,

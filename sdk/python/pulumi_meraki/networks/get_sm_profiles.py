@@ -118,7 +118,7 @@ def get_sm_profiles(network_id: Optional[str] = None,
         payload_types=pulumi.get(__ret__, 'payload_types'))
 def get_sm_profiles_output(network_id: Optional[pulumi.Input[str]] = None,
                            payload_types: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
-                           opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSmProfilesResult]:
+                           opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSmProfilesResult]:
     """
     ## Example Usage
 
@@ -138,7 +138,7 @@ def get_sm_profiles_output(network_id: Optional[pulumi.Input[str]] = None,
     __args__ = dict()
     __args__['networkId'] = network_id
     __args__['payloadTypes'] = payload_types
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSmProfiles:getSmProfiles', __args__, opts=opts, typ=GetSmProfilesResult)
     return __ret__.apply(lambda __response__: GetSmProfilesResult(
         id=pulumi.get(__response__, 'id'),

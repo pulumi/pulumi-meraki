@@ -176,7 +176,7 @@ export interface GetDevicesAvailabilitiesChangeHistoryResult {
  * export const merakiOrganizationsDevicesAvailabilitiesChangeHistoryExample = example.then(example => example.items);
  * ```
  */
-export function getDevicesAvailabilitiesChangeHistoryOutput(args: GetDevicesAvailabilitiesChangeHistoryOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDevicesAvailabilitiesChangeHistoryResult> {
+export function getDevicesAvailabilitiesChangeHistoryOutput(args: GetDevicesAvailabilitiesChangeHistoryOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDevicesAvailabilitiesChangeHistoryResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getDevicesAvailabilitiesChangeHistory:getDevicesAvailabilitiesChangeHistory", {
         "endingBefore": args.endingBefore,

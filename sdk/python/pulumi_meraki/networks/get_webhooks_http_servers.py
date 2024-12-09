@@ -119,7 +119,7 @@ def get_webhooks_http_servers(http_server_id: Optional[str] = None,
         network_id=pulumi.get(__ret__, 'network_id'))
 def get_webhooks_http_servers_output(http_server_id: Optional[pulumi.Input[Optional[str]]] = None,
                                      network_id: Optional[pulumi.Input[Optional[str]]] = None,
-                                     opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetWebhooksHttpServersResult]:
+                                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetWebhooksHttpServersResult]:
     """
     ## Example Usage
 
@@ -130,7 +130,7 @@ def get_webhooks_http_servers_output(http_server_id: Optional[pulumi.Input[Optio
     __args__ = dict()
     __args__['httpServerId'] = http_server_id
     __args__['networkId'] = network_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getWebhooksHttpServers:getWebhooksHttpServers', __args__, opts=opts, typ=GetWebhooksHttpServersResult)
     return __ret__.apply(lambda __response__: GetWebhooksHttpServersResult(
         http_server_id=pulumi.get(__response__, 'http_server_id'),

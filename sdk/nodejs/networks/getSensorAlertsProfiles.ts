@@ -53,7 +53,7 @@ export interface GetSensorAlertsProfilesResult {
 /**
  * ## Example Usage
  */
-export function getSensorAlertsProfilesOutput(args?: GetSensorAlertsProfilesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSensorAlertsProfilesResult> {
+export function getSensorAlertsProfilesOutput(args?: GetSensorAlertsProfilesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSensorAlertsProfilesResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSensorAlertsProfiles:getSensorAlertsProfiles", {

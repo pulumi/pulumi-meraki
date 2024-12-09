@@ -57,7 +57,7 @@ export interface GetCameraRolesResult {
 /**
  * ## Example Usage
  */
-export function getCameraRolesOutput(args?: GetCameraRolesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCameraRolesResult> {
+export function getCameraRolesOutput(args?: GetCameraRolesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCameraRolesResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getCameraRoles:getCameraRoles", {

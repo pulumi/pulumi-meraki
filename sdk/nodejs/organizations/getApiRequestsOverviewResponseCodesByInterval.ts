@@ -165,7 +165,7 @@ export interface GetApiRequestsOverviewResponseCodesByIntervalResult {
  * export const merakiOrganizationsApiRequestsOverviewResponseCodesByIntervalExample = example.then(example => example.items);
  * ```
  */
-export function getApiRequestsOverviewResponseCodesByIntervalOutput(args: GetApiRequestsOverviewResponseCodesByIntervalOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApiRequestsOverviewResponseCodesByIntervalResult> {
+export function getApiRequestsOverviewResponseCodesByIntervalOutput(args: GetApiRequestsOverviewResponseCodesByIntervalOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApiRequestsOverviewResponseCodesByIntervalResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getApiRequestsOverviewResponseCodesByInterval:getApiRequestsOverviewResponseCodesByInterval", {
         "adminIds": args.adminIds,

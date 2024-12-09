@@ -99,7 +99,7 @@ export interface GetSmUserAccessDevicesResult {
  * export const merakiNetworksSmUserAccessDevicesExample = example.then(example => example.items);
  * ```
  */
-export function getSmUserAccessDevicesOutput(args: GetSmUserAccessDevicesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmUserAccessDevicesResult> {
+export function getSmUserAccessDevicesOutput(args: GetSmUserAccessDevicesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSmUserAccessDevicesResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSmUserAccessDevices:getSmUserAccessDevices", {
         "endingBefore": args.endingBefore,

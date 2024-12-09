@@ -63,7 +63,7 @@ export interface GetSwitchAccessControlListsResult {
  * export const merakiNetworksSwitchAccessControlListsExample = example.then(example => example.item);
  * ```
  */
-export function getSwitchAccessControlListsOutput(args: GetSwitchAccessControlListsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchAccessControlListsResult> {
+export function getSwitchAccessControlListsOutput(args: GetSwitchAccessControlListsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSwitchAccessControlListsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSwitchAccessControlLists:getSwitchAccessControlLists", {
         "networkId": args.networkId,

@@ -74,7 +74,7 @@ export interface GetWirelessSsidsSplashSettingsResult {
  * export const merakiNetworksWirelessSsidsSplashSettingsExample = example.then(example => example.item);
  * ```
  */
-export function getWirelessSsidsSplashSettingsOutput(args: GetWirelessSsidsSplashSettingsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessSsidsSplashSettingsResult> {
+export function getWirelessSsidsSplashSettingsOutput(args: GetWirelessSsidsSplashSettingsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWirelessSsidsSplashSettingsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getWirelessSsidsSplashSettings:getWirelessSsidsSplashSettings", {
         "networkId": args.networkId,

@@ -208,7 +208,7 @@ def get_vlan_profiles_assignments_by_device_output(ending_before: Optional[pulum
                                                    serials: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
                                                    stack_ids: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
                                                    starting_after: Optional[pulumi.Input[Optional[str]]] = None,
-                                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetVlanProfilesAssignmentsByDeviceResult]:
+                                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetVlanProfilesAssignmentsByDeviceResult]:
     """
     ## Example Usage
 
@@ -243,7 +243,7 @@ def get_vlan_profiles_assignments_by_device_output(ending_before: Optional[pulum
     __args__['serials'] = serials
     __args__['stackIds'] = stack_ids
     __args__['startingAfter'] = starting_after
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getVlanProfilesAssignmentsByDevice:getVlanProfilesAssignmentsByDevice', __args__, opts=opts, typ=GetVlanProfilesAssignmentsByDeviceResult)
     return __ret__.apply(lambda __response__: GetVlanProfilesAssignmentsByDeviceResult(
         ending_before=pulumi.get(__response__, 'ending_before'),

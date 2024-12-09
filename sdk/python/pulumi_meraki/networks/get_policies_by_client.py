@@ -190,7 +190,7 @@ def get_policies_by_client_output(ending_before: Optional[pulumi.Input[Optional[
                                   starting_after: Optional[pulumi.Input[Optional[str]]] = None,
                                   t0: Optional[pulumi.Input[Optional[str]]] = None,
                                   timespan: Optional[pulumi.Input[Optional[float]]] = None,
-                                  opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetPoliciesByClientResult]:
+                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetPoliciesByClientResult]:
     """
     ## Example Usage
 
@@ -222,7 +222,7 @@ def get_policies_by_client_output(ending_before: Optional[pulumi.Input[Optional[
     __args__['startingAfter'] = starting_after
     __args__['t0'] = t0
     __args__['timespan'] = timespan
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getPoliciesByClient:getPoliciesByClient', __args__, opts=opts, typ=GetPoliciesByClientResult)
     return __ret__.apply(lambda __response__: GetPoliciesByClientResult(
         ending_before=pulumi.get(__response__, 'ending_before'),

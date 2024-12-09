@@ -57,7 +57,7 @@ export interface GetCameraQualityRetentionProfilesResult {
 /**
  * ## Example Usage
  */
-export function getCameraQualityRetentionProfilesOutput(args?: GetCameraQualityRetentionProfilesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCameraQualityRetentionProfilesResult> {
+export function getCameraQualityRetentionProfilesOutput(args?: GetCameraQualityRetentionProfilesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCameraQualityRetentionProfilesResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getCameraQualityRetentionProfiles:getCameraQualityRetentionProfiles", {

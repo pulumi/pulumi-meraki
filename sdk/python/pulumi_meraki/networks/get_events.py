@@ -349,7 +349,7 @@ def get_events_output(client_ip: Optional[pulumi.Input[Optional[str]]] = None,
                       sm_device_mac: Optional[pulumi.Input[Optional[str]]] = None,
                       sm_device_name: Optional[pulumi.Input[Optional[str]]] = None,
                       starting_after: Optional[pulumi.Input[Optional[str]]] = None,
-                      opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetEventsResult]:
+                      opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetEventsResult]:
     """
     ## Example Usage
 
@@ -408,7 +408,7 @@ def get_events_output(client_ip: Optional[pulumi.Input[Optional[str]]] = None,
     __args__['smDeviceMac'] = sm_device_mac
     __args__['smDeviceName'] = sm_device_name
     __args__['startingAfter'] = starting_after
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getEvents:getEvents', __args__, opts=opts, typ=GetEventsResult)
     return __ret__.apply(lambda __response__: GetEventsResult(
         client_ip=pulumi.get(__response__, 'client_ip'),

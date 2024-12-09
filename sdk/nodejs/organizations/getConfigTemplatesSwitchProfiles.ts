@@ -77,7 +77,7 @@ export interface GetConfigTemplatesSwitchProfilesResult {
  * export const merakiOrganizationsConfigTemplatesSwitchProfilesExample = example.then(example => example.items);
  * ```
  */
-export function getConfigTemplatesSwitchProfilesOutput(args: GetConfigTemplatesSwitchProfilesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetConfigTemplatesSwitchProfilesResult> {
+export function getConfigTemplatesSwitchProfilesOutput(args: GetConfigTemplatesSwitchProfilesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetConfigTemplatesSwitchProfilesResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getConfigTemplatesSwitchProfiles:getConfigTemplatesSwitchProfiles", {
         "configTemplateId": args.configTemplateId,

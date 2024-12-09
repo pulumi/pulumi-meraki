@@ -115,7 +115,7 @@ def get_webhooks_webhook_tests(network_id: Optional[str] = None,
         webhook_test_id=pulumi.get(__ret__, 'webhook_test_id'))
 def get_webhooks_webhook_tests_output(network_id: Optional[pulumi.Input[str]] = None,
                                       webhook_test_id: Optional[pulumi.Input[str]] = None,
-                                      opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetWebhooksWebhookTestsResult]:
+                                      opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetWebhooksWebhookTestsResult]:
     """
     ## Example Usage
 
@@ -135,7 +135,7 @@ def get_webhooks_webhook_tests_output(network_id: Optional[pulumi.Input[str]] = 
     __args__ = dict()
     __args__['networkId'] = network_id
     __args__['webhookTestId'] = webhook_test_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getWebhooksWebhookTests:getWebhooksWebhookTests', __args__, opts=opts, typ=GetWebhooksWebhookTestsResult)
     return __ret__.apply(lambda __response__: GetWebhooksWebhookTestsResult(
         id=pulumi.get(__response__, 'id'),

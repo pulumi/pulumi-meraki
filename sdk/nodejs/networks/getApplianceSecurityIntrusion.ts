@@ -63,7 +63,7 @@ export interface GetApplianceSecurityIntrusionResult {
  * export const merakiNetworksApplianceSecurityIntrusionExample = example.then(example => example.item);
  * ```
  */
-export function getApplianceSecurityIntrusionOutput(args: GetApplianceSecurityIntrusionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceSecurityIntrusionResult> {
+export function getApplianceSecurityIntrusionOutput(args: GetApplianceSecurityIntrusionOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplianceSecurityIntrusionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getApplianceSecurityIntrusion:getApplianceSecurityIntrusion", {
         "networkId": args.networkId,

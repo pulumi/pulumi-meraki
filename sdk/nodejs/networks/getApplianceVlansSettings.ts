@@ -63,7 +63,7 @@ export interface GetApplianceVlansSettingsResult {
  * export const merakiNetworksApplianceVlansSettingsExample = example.then(example => example.item);
  * ```
  */
-export function getApplianceVlansSettingsOutput(args: GetApplianceVlansSettingsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceVlansSettingsResult> {
+export function getApplianceVlansSettingsOutput(args: GetApplianceVlansSettingsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplianceVlansSettingsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getApplianceVlansSettings:getApplianceVlansSettings", {
         "networkId": args.networkId,

@@ -190,7 +190,7 @@ def get_switch_dhcp_v4_servers_seen_output(ending_before: Optional[pulumi.Input[
                                            starting_after: Optional[pulumi.Input[Optional[str]]] = None,
                                            t0: Optional[pulumi.Input[Optional[str]]] = None,
                                            timespan: Optional[pulumi.Input[Optional[float]]] = None,
-                                           opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSwitchDhcpV4ServersSeenResult]:
+                                           opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSwitchDhcpV4ServersSeenResult]:
     """
     ## Example Usage
 
@@ -222,7 +222,7 @@ def get_switch_dhcp_v4_servers_seen_output(ending_before: Optional[pulumi.Input[
     __args__['startingAfter'] = starting_after
     __args__['t0'] = t0
     __args__['timespan'] = timespan
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSwitchDhcpV4ServersSeen:getSwitchDhcpV4ServersSeen', __args__, opts=opts, typ=GetSwitchDhcpV4ServersSeenResult)
     return __ret__.apply(lambda __response__: GetSwitchDhcpV4ServersSeenResult(
         ending_before=pulumi.get(__response__, 'ending_before'),

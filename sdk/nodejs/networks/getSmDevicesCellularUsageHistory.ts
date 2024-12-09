@@ -77,7 +77,7 @@ export interface GetSmDevicesCellularUsageHistoryResult {
  * export const merakiNetworksSmDevicesCellularUsageHistoryExample = example.then(example => example.items);
  * ```
  */
-export function getSmDevicesCellularUsageHistoryOutput(args: GetSmDevicesCellularUsageHistoryOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmDevicesCellularUsageHistoryResult> {
+export function getSmDevicesCellularUsageHistoryOutput(args: GetSmDevicesCellularUsageHistoryOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSmDevicesCellularUsageHistoryResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSmDevicesCellularUsageHistory:getSmDevicesCellularUsageHistory", {
         "deviceId": args.deviceId,

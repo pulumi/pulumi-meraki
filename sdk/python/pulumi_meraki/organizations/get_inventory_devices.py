@@ -340,7 +340,7 @@ def get_inventory_devices_output(ending_before: Optional[pulumi.Input[Optional[s
                                  tags: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
                                  tags_filter_type: Optional[pulumi.Input[Optional[str]]] = None,
                                  used_state: Optional[pulumi.Input[Optional[str]]] = None,
-                                 opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetInventoryDevicesResult]:
+                                 opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetInventoryDevicesResult]:
     """
     ## Example Usage
 
@@ -377,7 +377,7 @@ def get_inventory_devices_output(ending_before: Optional[pulumi.Input[Optional[s
     __args__['tags'] = tags
     __args__['tagsFilterType'] = tags_filter_type
     __args__['usedState'] = used_state
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getInventoryDevices:getInventoryDevices', __args__, opts=opts, typ=GetInventoryDevicesResult)
     return __ret__.apply(lambda __response__: GetInventoryDevicesResult(
         ending_before=pulumi.get(__response__, 'ending_before'),

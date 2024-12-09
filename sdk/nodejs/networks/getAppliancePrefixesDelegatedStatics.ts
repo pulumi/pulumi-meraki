@@ -57,7 +57,7 @@ export interface GetAppliancePrefixesDelegatedStaticsResult {
 /**
  * ## Example Usage
  */
-export function getAppliancePrefixesDelegatedStaticsOutput(args?: GetAppliancePrefixesDelegatedStaticsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAppliancePrefixesDelegatedStaticsResult> {
+export function getAppliancePrefixesDelegatedStaticsOutput(args?: GetAppliancePrefixesDelegatedStaticsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAppliancePrefixesDelegatedStaticsResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getAppliancePrefixesDelegatedStatics:getAppliancePrefixesDelegatedStatics", {

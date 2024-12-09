@@ -136,7 +136,7 @@ def get_sm_target_groups(network_id: Optional[str] = None,
 def get_sm_target_groups_output(network_id: Optional[pulumi.Input[Optional[str]]] = None,
                                 target_group_id: Optional[pulumi.Input[Optional[str]]] = None,
                                 with_details: Optional[pulumi.Input[Optional[bool]]] = None,
-                                opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSmTargetGroupsResult]:
+                                opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSmTargetGroupsResult]:
     """
     ## Example Usage
 
@@ -149,7 +149,7 @@ def get_sm_target_groups_output(network_id: Optional[pulumi.Input[Optional[str]]
     __args__['networkId'] = network_id
     __args__['targetGroupId'] = target_group_id
     __args__['withDetails'] = with_details
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSmTargetGroups:getSmTargetGroups', __args__, opts=opts, typ=GetSmTargetGroupsResult)
     return __ret__.apply(lambda __response__: GetSmTargetGroupsResult(
         id=pulumi.get(__response__, 'id'),

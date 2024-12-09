@@ -132,7 +132,7 @@ export interface GetSensorReadingsLatestResult {
  * export const merakiOrganizationsSensorReadingsLatestExample = example.then(example => example.items);
  * ```
  */
-export function getSensorReadingsLatestOutput(args: GetSensorReadingsLatestOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSensorReadingsLatestResult> {
+export function getSensorReadingsLatestOutput(args: GetSensorReadingsLatestOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSensorReadingsLatestResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getSensorReadingsLatest:getSensorReadingsLatest", {
         "endingBefore": args.endingBefore,

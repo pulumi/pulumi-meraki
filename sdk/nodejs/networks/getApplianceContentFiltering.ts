@@ -63,7 +63,7 @@ export interface GetApplianceContentFilteringResult {
  * export const merakiNetworksApplianceContentFilteringExample = example.then(example => example.item);
  * ```
  */
-export function getApplianceContentFilteringOutput(args: GetApplianceContentFilteringOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceContentFilteringResult> {
+export function getApplianceContentFilteringOutput(args: GetApplianceContentFilteringOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplianceContentFilteringResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getApplianceContentFiltering:getApplianceContentFiltering", {
         "networkId": args.networkId,
