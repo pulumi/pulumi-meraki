@@ -57,7 +57,7 @@ export interface GetWebhooksHttpServersResult {
 /**
  * ## Example Usage
  */
-export function getWebhooksHttpServersOutput(args?: GetWebhooksHttpServersOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWebhooksHttpServersResult> {
+export function getWebhooksHttpServersOutput(args?: GetWebhooksHttpServersOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWebhooksHttpServersResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getWebhooksHttpServers:getWebhooksHttpServers", {

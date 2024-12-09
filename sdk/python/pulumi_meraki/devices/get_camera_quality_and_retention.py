@@ -97,7 +97,7 @@ def get_camera_quality_and_retention(serial: Optional[str] = None,
         item=pulumi.get(__ret__, 'item'),
         serial=pulumi.get(__ret__, 'serial'))
 def get_camera_quality_and_retention_output(serial: Optional[pulumi.Input[str]] = None,
-                                            opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCameraQualityAndRetentionResult]:
+                                            opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCameraQualityAndRetentionResult]:
     """
     ## Example Usage
 
@@ -114,7 +114,7 @@ def get_camera_quality_and_retention_output(serial: Optional[pulumi.Input[str]] 
     """
     __args__ = dict()
     __args__['serial'] = serial
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:devices/getCameraQualityAndRetention:getCameraQualityAndRetention', __args__, opts=opts, typ=GetCameraQualityAndRetentionResult)
     return __ret__.apply(lambda __response__: GetCameraQualityAndRetentionResult(
         id=pulumi.get(__response__, 'id'),

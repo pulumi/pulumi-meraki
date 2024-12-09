@@ -99,7 +99,7 @@ export interface GetSummaryTopAppliancesByUtilizationResult {
  * export const merakiOrganizationsSummaryTopAppliancesByUtilizationExample = example.then(example => example.items);
  * ```
  */
-export function getSummaryTopAppliancesByUtilizationOutput(args: GetSummaryTopAppliancesByUtilizationOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSummaryTopAppliancesByUtilizationResult> {
+export function getSummaryTopAppliancesByUtilizationOutput(args: GetSummaryTopAppliancesByUtilizationOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSummaryTopAppliancesByUtilizationResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getSummaryTopAppliancesByUtilization:getSummaryTopAppliancesByUtilization", {
         "organizationId": args.organizationId,

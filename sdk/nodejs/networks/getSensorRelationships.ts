@@ -66,7 +66,7 @@ export interface GetSensorRelationshipsResult {
  * export const merakiNetworksSensorRelationshipsExample = example.then(example => example.items);
  * ```
  */
-export function getSensorRelationshipsOutput(args: GetSensorRelationshipsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSensorRelationshipsResult> {
+export function getSensorRelationshipsOutput(args: GetSensorRelationshipsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSensorRelationshipsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSensorRelationships:getSensorRelationships", {
         "networkId": args.networkId,

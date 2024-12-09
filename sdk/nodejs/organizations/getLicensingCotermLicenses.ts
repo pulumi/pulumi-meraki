@@ -121,7 +121,7 @@ export interface GetLicensingCotermLicensesResult {
  * export const merakiOrganizationsLicensingCotermLicensesExample = example.then(example => example.items);
  * ```
  */
-export function getLicensingCotermLicensesOutput(args: GetLicensingCotermLicensesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLicensingCotermLicensesResult> {
+export function getLicensingCotermLicensesOutput(args: GetLicensingCotermLicensesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLicensingCotermLicensesResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getLicensingCotermLicenses:getLicensingCotermLicenses", {
         "endingBefore": args.endingBefore,

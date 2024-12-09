@@ -100,7 +100,7 @@ def get_firmware_upgrades_staged_stages(network_id: Optional[str] = None,
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'))
 def get_firmware_upgrades_staged_stages_output(network_id: Optional[pulumi.Input[str]] = None,
-                                               opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetFirmwareUpgradesStagedStagesResult]:
+                                               opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetFirmwareUpgradesStagedStagesResult]:
     """
     ## Example Usage
 
@@ -117,7 +117,7 @@ def get_firmware_upgrades_staged_stages_output(network_id: Optional[pulumi.Input
     """
     __args__ = dict()
     __args__['networkId'] = network_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getFirmwareUpgradesStagedStages:getFirmwareUpgradesStagedStages', __args__, opts=opts, typ=GetFirmwareUpgradesStagedStagesResult)
     return __ret__.apply(lambda __response__: GetFirmwareUpgradesStagedStagesResult(
         id=pulumi.get(__response__, 'id'),

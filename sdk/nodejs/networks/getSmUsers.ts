@@ -110,7 +110,7 @@ export interface GetSmUsersResult {
  * export const merakiNetworksSmUsersExample = example.then(example => example.items);
  * ```
  */
-export function getSmUsersOutput(args: GetSmUsersOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmUsersResult> {
+export function getSmUsersOutput(args: GetSmUsersOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSmUsersResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSmUsers:getSmUsers", {
         "emails": args.emails,

@@ -115,7 +115,7 @@ def get_vlan_profiles(iname: Optional[str] = None,
         network_id=pulumi.get(__ret__, 'network_id'))
 def get_vlan_profiles_output(iname: Optional[pulumi.Input[str]] = None,
                              network_id: Optional[pulumi.Input[str]] = None,
-                             opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetVlanProfilesResult]:
+                             opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetVlanProfilesResult]:
     """
     ## Example Usage
 
@@ -135,7 +135,7 @@ def get_vlan_profiles_output(iname: Optional[pulumi.Input[str]] = None,
     __args__ = dict()
     __args__['iname'] = iname
     __args__['networkId'] = network_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getVlanProfiles:getVlanProfiles', __args__, opts=opts, typ=GetVlanProfilesResult)
     return __ret__.apply(lambda __response__: GetVlanProfilesResult(
         id=pulumi.get(__response__, 'id'),

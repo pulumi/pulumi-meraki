@@ -57,7 +57,7 @@ export interface GetSamlIdpsResult {
 /**
  * ## Example Usage
  */
-export function getSamlIdpsOutput(args?: GetSamlIdpsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSamlIdpsResult> {
+export function getSamlIdpsOutput(args?: GetSamlIdpsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSamlIdpsResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getSamlIdps:getSamlIdps", {

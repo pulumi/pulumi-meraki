@@ -63,7 +63,7 @@ export interface GetWirelessBluetoothSettingsResult {
  * export const merakiDevicesWirelessBluetoothSettingsExample = example.then(example => example.item);
  * ```
  */
-export function getWirelessBluetoothSettingsOutput(args: GetWirelessBluetoothSettingsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessBluetoothSettingsResult> {
+export function getWirelessBluetoothSettingsOutput(args: GetWirelessBluetoothSettingsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWirelessBluetoothSettingsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:devices/getWirelessBluetoothSettings:getWirelessBluetoothSettings", {
         "serial": args.serial,

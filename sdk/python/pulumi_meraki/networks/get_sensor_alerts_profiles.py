@@ -106,7 +106,7 @@ def get_sensor_alerts_profiles(id: Optional[str] = None,
         network_id=pulumi.get(__ret__, 'network_id'))
 def get_sensor_alerts_profiles_output(id: Optional[pulumi.Input[Optional[str]]] = None,
                                       network_id: Optional[pulumi.Input[Optional[str]]] = None,
-                                      opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSensorAlertsProfilesResult]:
+                                      opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSensorAlertsProfilesResult]:
     """
     ## Example Usage
 
@@ -117,7 +117,7 @@ def get_sensor_alerts_profiles_output(id: Optional[pulumi.Input[Optional[str]]] 
     __args__ = dict()
     __args__['id'] = id
     __args__['networkId'] = network_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSensorAlertsProfiles:getSensorAlertsProfiles', __args__, opts=opts, typ=GetSensorAlertsProfilesResult)
     return __ret__.apply(lambda __response__: GetSensorAlertsProfilesResult(
         id=pulumi.get(__response__, 'id'),

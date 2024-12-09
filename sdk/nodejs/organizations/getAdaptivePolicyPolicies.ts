@@ -53,7 +53,7 @@ export interface GetAdaptivePolicyPoliciesResult {
 /**
  * ## Example Usage
  */
-export function getAdaptivePolicyPoliciesOutput(args?: GetAdaptivePolicyPoliciesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAdaptivePolicyPoliciesResult> {
+export function getAdaptivePolicyPoliciesOutput(args?: GetAdaptivePolicyPoliciesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAdaptivePolicyPoliciesResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getAdaptivePolicyPolicies:getAdaptivePolicyPolicies", {

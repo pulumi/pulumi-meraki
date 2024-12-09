@@ -73,7 +73,7 @@ export interface GetApplianceRfProfilesResult {
  * export const merakiNetworksApplianceRfProfilesExample = example.then(example => example.item);
  * ```
  */
-export function getApplianceRfProfilesOutput(args?: GetApplianceRfProfilesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceRfProfilesResult> {
+export function getApplianceRfProfilesOutput(args?: GetApplianceRfProfilesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplianceRfProfilesResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getApplianceRfProfiles:getApplianceRfProfiles", {

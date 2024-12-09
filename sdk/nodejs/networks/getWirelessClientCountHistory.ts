@@ -176,7 +176,7 @@ export interface GetWirelessClientCountHistoryResult {
  * export const merakiNetworksWirelessClientCountHistoryExample = example.then(example => example.items);
  * ```
  */
-export function getWirelessClientCountHistoryOutput(args: GetWirelessClientCountHistoryOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessClientCountHistoryResult> {
+export function getWirelessClientCountHistoryOutput(args: GetWirelessClientCountHistoryOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWirelessClientCountHistoryResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getWirelessClientCountHistory:getWirelessClientCountHistory", {
         "apTag": args.apTag,

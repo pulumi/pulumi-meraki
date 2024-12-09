@@ -102,7 +102,7 @@ def get_live_tools_cable_test(id: Optional[str] = None,
         serial=pulumi.get(__ret__, 'serial'))
 def get_live_tools_cable_test_output(id: Optional[pulumi.Input[str]] = None,
                                      serial: Optional[pulumi.Input[str]] = None,
-                                     opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetLiveToolsCableTestResult]:
+                                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetLiveToolsCableTestResult]:
     """
     ## Example Usage
 
@@ -122,7 +122,7 @@ def get_live_tools_cable_test_output(id: Optional[pulumi.Input[str]] = None,
     __args__ = dict()
     __args__['id'] = id
     __args__['serial'] = serial
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:devices/getLiveToolsCableTest:getLiveToolsCableTest', __args__, opts=opts, typ=GetLiveToolsCableTestResult)
     return __ret__.apply(lambda __response__: GetLiveToolsCableTestResult(
         id=pulumi.get(__response__, 'id'),

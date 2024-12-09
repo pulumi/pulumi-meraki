@@ -99,7 +99,7 @@ export interface GetAlertsHistoryResult {
  * export const merakiNetworksAlertsHistoryExample = example.then(example => example.items);
  * ```
  */
-export function getAlertsHistoryOutput(args: GetAlertsHistoryOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAlertsHistoryResult> {
+export function getAlertsHistoryOutput(args: GetAlertsHistoryOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAlertsHistoryResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getAlertsHistory:getAlertsHistory", {
         "endingBefore": args.endingBefore,

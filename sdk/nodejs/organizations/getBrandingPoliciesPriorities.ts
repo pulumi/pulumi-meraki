@@ -63,7 +63,7 @@ export interface GetBrandingPoliciesPrioritiesResult {
  * export const merakiOrganizationsBrandingPoliciesPrioritiesExample = example.then(example => example.item);
  * ```
  */
-export function getBrandingPoliciesPrioritiesOutput(args: GetBrandingPoliciesPrioritiesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetBrandingPoliciesPrioritiesResult> {
+export function getBrandingPoliciesPrioritiesOutput(args: GetBrandingPoliciesPrioritiesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetBrandingPoliciesPrioritiesResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getBrandingPoliciesPriorities:getBrandingPoliciesPriorities", {
         "organizationId": args.organizationId,

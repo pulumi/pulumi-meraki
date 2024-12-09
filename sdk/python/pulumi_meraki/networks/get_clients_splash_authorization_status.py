@@ -115,7 +115,7 @@ def get_clients_splash_authorization_status(client_id: Optional[str] = None,
         network_id=pulumi.get(__ret__, 'network_id'))
 def get_clients_splash_authorization_status_output(client_id: Optional[pulumi.Input[str]] = None,
                                                    network_id: Optional[pulumi.Input[str]] = None,
-                                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetClientsSplashAuthorizationStatusResult]:
+                                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetClientsSplashAuthorizationStatusResult]:
     """
     ## Example Usage
 
@@ -135,7 +135,7 @@ def get_clients_splash_authorization_status_output(client_id: Optional[pulumi.In
     __args__ = dict()
     __args__['clientId'] = client_id
     __args__['networkId'] = network_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getClientsSplashAuthorizationStatus:getClientsSplashAuthorizationStatus', __args__, opts=opts, typ=GetClientsSplashAuthorizationStatusResult)
     return __ret__.apply(lambda __response__: GetClientsSplashAuthorizationStatusResult(
         client_id=pulumi.get(__response__, 'client_id'),

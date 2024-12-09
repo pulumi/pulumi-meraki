@@ -63,7 +63,7 @@ export interface GetAdaptivePolicyOverviewResult {
  * export const merakiOrganizationsAdaptivePolicyOverviewExample = example.then(example => example.item);
  * ```
  */
-export function getAdaptivePolicyOverviewOutput(args: GetAdaptivePolicyOverviewOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAdaptivePolicyOverviewResult> {
+export function getAdaptivePolicyOverviewOutput(args: GetAdaptivePolicyOverviewOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAdaptivePolicyOverviewResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getAdaptivePolicyOverview:getAdaptivePolicyOverview", {
         "organizationId": args.organizationId,

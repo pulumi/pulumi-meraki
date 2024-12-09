@@ -154,7 +154,7 @@ def get_summary_top_ssids_by_usage_output(organization_id: Optional[pulumi.Input
                                           t0: Optional[pulumi.Input[Optional[str]]] = None,
                                           t1: Optional[pulumi.Input[Optional[str]]] = None,
                                           timespan: Optional[pulumi.Input[Optional[float]]] = None,
-                                          opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSummaryTopSsidsByUsageResult]:
+                                          opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSummaryTopSsidsByUsageResult]:
     """
     ## Example Usage
 
@@ -180,7 +180,7 @@ def get_summary_top_ssids_by_usage_output(organization_id: Optional[pulumi.Input
     __args__['t0'] = t0
     __args__['t1'] = t1
     __args__['timespan'] = timespan
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getSummaryTopSsidsByUsage:getSummaryTopSsidsByUsage', __args__, opts=opts, typ=GetSummaryTopSsidsByUsageResult)
     return __ret__.apply(lambda __response__: GetSummaryTopSsidsByUsageResult(
         id=pulumi.get(__response__, 'id'),

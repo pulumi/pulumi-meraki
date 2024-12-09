@@ -119,7 +119,7 @@ def get_saml_roles(organization_id: Optional[str] = None,
         saml_role_id=pulumi.get(__ret__, 'saml_role_id'))
 def get_saml_roles_output(organization_id: Optional[pulumi.Input[Optional[str]]] = None,
                           saml_role_id: Optional[pulumi.Input[Optional[str]]] = None,
-                          opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSamlRolesResult]:
+                          opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSamlRolesResult]:
     """
     ## Example Usage
 
@@ -130,7 +130,7 @@ def get_saml_roles_output(organization_id: Optional[pulumi.Input[Optional[str]]]
     __args__ = dict()
     __args__['organizationId'] = organization_id
     __args__['samlRoleId'] = saml_role_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getSamlRoles:getSamlRoles', __args__, opts=opts, typ=GetSamlRolesResult)
     return __ret__.apply(lambda __response__: GetSamlRolesResult(
         id=pulumi.get(__response__, 'id'),

@@ -63,7 +63,7 @@ export interface GetWirelessRadioSettingsResult {
  * export const merakiDevicesWirelessRadioSettingsExample = example.then(example => example.item);
  * ```
  */
-export function getWirelessRadioSettingsOutput(args: GetWirelessRadioSettingsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessRadioSettingsResult> {
+export function getWirelessRadioSettingsOutput(args: GetWirelessRadioSettingsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWirelessRadioSettingsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:devices/getWirelessRadioSettings:getWirelessRadioSettings", {
         "serial": args.serial,

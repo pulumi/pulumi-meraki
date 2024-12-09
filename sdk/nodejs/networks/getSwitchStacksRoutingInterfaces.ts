@@ -66,7 +66,7 @@ export interface GetSwitchStacksRoutingInterfacesResult {
 /**
  * ## Example Usage
  */
-export function getSwitchStacksRoutingInterfacesOutput(args?: GetSwitchStacksRoutingInterfacesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchStacksRoutingInterfacesResult> {
+export function getSwitchStacksRoutingInterfacesOutput(args?: GetSwitchStacksRoutingInterfacesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSwitchStacksRoutingInterfacesResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSwitchStacksRoutingInterfaces:getSwitchStacksRoutingInterfaces", {

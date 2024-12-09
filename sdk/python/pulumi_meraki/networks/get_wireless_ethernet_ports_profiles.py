@@ -115,7 +115,7 @@ def get_wireless_ethernet_ports_profiles(network_id: Optional[str] = None,
         profile_id=pulumi.get(__ret__, 'profile_id'))
 def get_wireless_ethernet_ports_profiles_output(network_id: Optional[pulumi.Input[str]] = None,
                                                 profile_id: Optional[pulumi.Input[str]] = None,
-                                                opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetWirelessEthernetPortsProfilesResult]:
+                                                opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetWirelessEthernetPortsProfilesResult]:
     """
     ## Example Usage
 
@@ -135,7 +135,7 @@ def get_wireless_ethernet_ports_profiles_output(network_id: Optional[pulumi.Inpu
     __args__ = dict()
     __args__['networkId'] = network_id
     __args__['profileId'] = profile_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getWirelessEthernetPortsProfiles:getWirelessEthernetPortsProfiles', __args__, opts=opts, typ=GetWirelessEthernetPortsProfilesResult)
     return __ret__.apply(lambda __response__: GetWirelessEthernetPortsProfilesResult(
         id=pulumi.get(__response__, 'id'),

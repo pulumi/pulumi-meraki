@@ -143,7 +143,7 @@ export interface GetWebhooksLogsResult {
  * export const merakiOrganizationsWebhooksLogsExample = example.then(example => example.items);
  * ```
  */
-export function getWebhooksLogsOutput(args: GetWebhooksLogsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWebhooksLogsResult> {
+export function getWebhooksLogsOutput(args: GetWebhooksLogsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWebhooksLogsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getWebhooksLogs:getWebhooksLogs", {
         "endingBefore": args.endingBefore,

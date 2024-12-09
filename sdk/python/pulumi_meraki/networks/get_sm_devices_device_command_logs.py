@@ -172,7 +172,7 @@ def get_sm_devices_device_command_logs_output(device_id: Optional[pulumi.Input[s
                                               network_id: Optional[pulumi.Input[str]] = None,
                                               per_page: Optional[pulumi.Input[Optional[int]]] = None,
                                               starting_after: Optional[pulumi.Input[Optional[str]]] = None,
-                                              opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSmDevicesDeviceCommandLogsResult]:
+                                              opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSmDevicesDeviceCommandLogsResult]:
     """
     ## Example Usage
 
@@ -201,7 +201,7 @@ def get_sm_devices_device_command_logs_output(device_id: Optional[pulumi.Input[s
     __args__['networkId'] = network_id
     __args__['perPage'] = per_page
     __args__['startingAfter'] = starting_after
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSmDevicesDeviceCommandLogs:getSmDevicesDeviceCommandLogs', __args__, opts=opts, typ=GetSmDevicesDeviceCommandLogsResult)
     return __ret__.apply(lambda __response__: GetSmDevicesDeviceCommandLogsResult(
         device_id=pulumi.get(__response__, 'device_id'),

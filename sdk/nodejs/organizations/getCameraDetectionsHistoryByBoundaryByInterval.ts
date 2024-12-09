@@ -121,7 +121,7 @@ export interface GetCameraDetectionsHistoryByBoundaryByIntervalResult {
  * export const merakiOrganizationsCameraDetectionsHistoryByBoundaryByIntervalExample = example.then(example => example.items);
  * ```
  */
-export function getCameraDetectionsHistoryByBoundaryByIntervalOutput(args: GetCameraDetectionsHistoryByBoundaryByIntervalOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCameraDetectionsHistoryByBoundaryByIntervalResult> {
+export function getCameraDetectionsHistoryByBoundaryByIntervalOutput(args: GetCameraDetectionsHistoryByBoundaryByIntervalOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCameraDetectionsHistoryByBoundaryByIntervalResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getCameraDetectionsHistoryByBoundaryByInterval:getCameraDetectionsHistoryByBoundaryByInterval", {
         "boundaryIds": args.boundaryIds,

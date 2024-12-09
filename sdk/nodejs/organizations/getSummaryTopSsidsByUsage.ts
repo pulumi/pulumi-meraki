@@ -99,7 +99,7 @@ export interface GetSummaryTopSsidsByUsageResult {
  * export const merakiOrganizationsSummaryTopSsidsByUsageExample = example.then(example => example.items);
  * ```
  */
-export function getSummaryTopSsidsByUsageOutput(args: GetSummaryTopSsidsByUsageOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSummaryTopSsidsByUsageResult> {
+export function getSummaryTopSsidsByUsageOutput(args: GetSummaryTopSsidsByUsageOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSummaryTopSsidsByUsageResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getSummaryTopSsidsByUsage:getSummaryTopSsidsByUsage", {
         "organizationId": args.organizationId,

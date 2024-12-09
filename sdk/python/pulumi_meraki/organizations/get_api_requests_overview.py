@@ -151,7 +151,7 @@ def get_api_requests_overview_output(organization_id: Optional[pulumi.Input[str]
                                      t0: Optional[pulumi.Input[Optional[str]]] = None,
                                      t1: Optional[pulumi.Input[Optional[str]]] = None,
                                      timespan: Optional[pulumi.Input[Optional[float]]] = None,
-                                     opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetApiRequestsOverviewResult]:
+                                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetApiRequestsOverviewResult]:
     """
     ## Example Usage
 
@@ -177,7 +177,7 @@ def get_api_requests_overview_output(organization_id: Optional[pulumi.Input[str]
     __args__['t0'] = t0
     __args__['t1'] = t1
     __args__['timespan'] = timespan
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getApiRequestsOverview:getApiRequestsOverview', __args__, opts=opts, typ=GetApiRequestsOverviewResult)
     return __ret__.apply(lambda __response__: GetApiRequestsOverviewResult(
         id=pulumi.get(__response__, 'id'),

@@ -66,7 +66,7 @@ export interface GetWirelessSsidsIdentityPsksResult {
 /**
  * ## Example Usage
  */
-export function getWirelessSsidsIdentityPsksOutput(args?: GetWirelessSsidsIdentityPsksOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessSsidsIdentityPsksResult> {
+export function getWirelessSsidsIdentityPsksOutput(args?: GetWirelessSsidsIdentityPsksOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWirelessSsidsIdentityPsksResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getWirelessSsidsIdentityPsks:getWirelessSsidsIdentityPsks", {

@@ -63,7 +63,7 @@ export interface GetApplianceRadioSettingsResult {
  * export const merakiDevicesApplianceRadioSettingsExample = example.then(example => example.item);
  * ```
  */
-export function getApplianceRadioSettingsOutput(args: GetApplianceRadioSettingsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceRadioSettingsResult> {
+export function getApplianceRadioSettingsOutput(args: GetApplianceRadioSettingsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplianceRadioSettingsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:devices/getApplianceRadioSettings:getApplianceRadioSettings", {
         "serial": args.serial,

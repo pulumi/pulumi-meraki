@@ -244,7 +244,7 @@ def get_firmware_upgrades_by_device_output(ending_before: Optional[pulumi.Input[
                                            serials: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
                                            starting_after: Optional[pulumi.Input[Optional[str]]] = None,
                                            upgradestatuses: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
-                                           opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetFirmwareUpgradesByDeviceResult]:
+                                           opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetFirmwareUpgradesByDeviceResult]:
     """
     ## Example Usage
 
@@ -285,7 +285,7 @@ def get_firmware_upgrades_by_device_output(ending_before: Optional[pulumi.Input[
     __args__['serials'] = serials
     __args__['startingAfter'] = starting_after
     __args__['upgradestatuses'] = upgradestatuses
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getFirmwareUpgradesByDevice:getFirmwareUpgradesByDevice', __args__, opts=opts, typ=GetFirmwareUpgradesByDeviceResult)
     return __ret__.apply(lambda __response__: GetFirmwareUpgradesByDeviceResult(
         ending_before=pulumi.get(__response__, 'ending_before'),

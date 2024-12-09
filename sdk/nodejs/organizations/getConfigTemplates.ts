@@ -57,7 +57,7 @@ export interface GetConfigTemplatesResult {
 /**
  * ## Example Usage
  */
-export function getConfigTemplatesOutput(args?: GetConfigTemplatesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetConfigTemplatesResult> {
+export function getConfigTemplatesOutput(args?: GetConfigTemplatesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetConfigTemplatesResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getConfigTemplates:getConfigTemplates", {

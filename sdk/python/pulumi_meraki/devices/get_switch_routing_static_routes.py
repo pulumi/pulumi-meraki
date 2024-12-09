@@ -119,7 +119,7 @@ def get_switch_routing_static_routes(serial: Optional[str] = None,
         static_route_id=pulumi.get(__ret__, 'static_route_id'))
 def get_switch_routing_static_routes_output(serial: Optional[pulumi.Input[Optional[str]]] = None,
                                             static_route_id: Optional[pulumi.Input[Optional[str]]] = None,
-                                            opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSwitchRoutingStaticRoutesResult]:
+                                            opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSwitchRoutingStaticRoutesResult]:
     """
     ## Example Usage
 
@@ -130,7 +130,7 @@ def get_switch_routing_static_routes_output(serial: Optional[pulumi.Input[Option
     __args__ = dict()
     __args__['serial'] = serial
     __args__['staticRouteId'] = static_route_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:devices/getSwitchRoutingStaticRoutes:getSwitchRoutingStaticRoutes', __args__, opts=opts, typ=GetSwitchRoutingStaticRoutesResult)
     return __ret__.apply(lambda __response__: GetSwitchRoutingStaticRoutesResult(
         id=pulumi.get(__response__, 'id'),

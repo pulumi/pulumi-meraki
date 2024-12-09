@@ -77,7 +77,7 @@ export interface GetInventoryOnboardingCloudMonitoringImportsResult {
  * export const merakiOrganizationsInventoryOnboardingCloudMonitoringImportsExample = example.then(example => example.items);
  * ```
  */
-export function getInventoryOnboardingCloudMonitoringImportsOutput(args: GetInventoryOnboardingCloudMonitoringImportsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetInventoryOnboardingCloudMonitoringImportsResult> {
+export function getInventoryOnboardingCloudMonitoringImportsOutput(args: GetInventoryOnboardingCloudMonitoringImportsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetInventoryOnboardingCloudMonitoringImportsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getInventoryOnboardingCloudMonitoringImports:getInventoryOnboardingCloudMonitoringImports", {
         "importIds": args.importIds,

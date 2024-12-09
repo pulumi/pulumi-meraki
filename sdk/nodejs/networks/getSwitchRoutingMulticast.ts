@@ -63,7 +63,7 @@ export interface GetSwitchRoutingMulticastResult {
  * export const merakiNetworksSwitchRoutingMulticastExample = example.then(example => example.item);
  * ```
  */
-export function getSwitchRoutingMulticastOutput(args: GetSwitchRoutingMulticastOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchRoutingMulticastResult> {
+export function getSwitchRoutingMulticastOutput(args: GetSwitchRoutingMulticastOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSwitchRoutingMulticastResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSwitchRoutingMulticast:getSwitchRoutingMulticast", {
         "networkId": args.networkId,

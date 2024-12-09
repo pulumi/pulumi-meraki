@@ -63,7 +63,7 @@ export interface GetCellularGatewaySubnetPoolResult {
  * export const merakiNetworksCellularGatewaySubnetPoolExample = example.then(example => example.item);
  * ```
  */
-export function getCellularGatewaySubnetPoolOutput(args: GetCellularGatewaySubnetPoolOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCellularGatewaySubnetPoolResult> {
+export function getCellularGatewaySubnetPoolOutput(args: GetCellularGatewaySubnetPoolOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCellularGatewaySubnetPoolResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getCellularGatewaySubnetPool:getCellularGatewaySubnetPool", {
         "networkId": args.networkId,

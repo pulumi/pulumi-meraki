@@ -176,7 +176,7 @@ export interface GetDevicesStatusesResult {
  * export const merakiOrganizationsDevicesStatusesExample = example.then(example => example.items);
  * ```
  */
-export function getDevicesStatusesOutput(args: GetDevicesStatusesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDevicesStatusesResult> {
+export function getDevicesStatusesOutput(args: GetDevicesStatusesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDevicesStatusesResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getDevicesStatuses:getDevicesStatuses", {
         "endingBefore": args.endingBefore,

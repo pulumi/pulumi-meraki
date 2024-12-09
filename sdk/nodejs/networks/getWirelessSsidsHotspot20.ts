@@ -74,7 +74,7 @@ export interface GetWirelessSsidsHotspot20Result {
  * export const merakiNetworksWirelessSsidsHotspot20Example = example.then(example => example.item);
  * ```
  */
-export function getWirelessSsidsHotspot20Output(args: GetWirelessSsidsHotspot20OutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessSsidsHotspot20Result> {
+export function getWirelessSsidsHotspot20Output(args: GetWirelessSsidsHotspot20OutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWirelessSsidsHotspot20Result> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getWirelessSsidsHotspot20:getWirelessSsidsHotspot20", {
         "networkId": args.networkId,

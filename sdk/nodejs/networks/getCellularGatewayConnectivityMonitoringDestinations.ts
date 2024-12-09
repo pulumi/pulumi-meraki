@@ -63,7 +63,7 @@ export interface GetCellularGatewayConnectivityMonitoringDestinationsResult {
  * export const merakiNetworksCellularGatewayConnectivityMonitoringDestinationsExample = example.then(example => example.item);
  * ```
  */
-export function getCellularGatewayConnectivityMonitoringDestinationsOutput(args: GetCellularGatewayConnectivityMonitoringDestinationsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCellularGatewayConnectivityMonitoringDestinationsResult> {
+export function getCellularGatewayConnectivityMonitoringDestinationsOutput(args: GetCellularGatewayConnectivityMonitoringDestinationsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCellularGatewayConnectivityMonitoringDestinationsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getCellularGatewayConnectivityMonitoringDestinations:getCellularGatewayConnectivityMonitoringDestinations", {
         "networkId": args.networkId,

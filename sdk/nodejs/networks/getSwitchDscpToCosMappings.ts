@@ -63,7 +63,7 @@ export interface GetSwitchDscpToCosMappingsResult {
  * export const merakiNetworksSwitchDscpToCosMappingsExample = example.then(example => example.item);
  * ```
  */
-export function getSwitchDscpToCosMappingsOutput(args: GetSwitchDscpToCosMappingsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchDscpToCosMappingsResult> {
+export function getSwitchDscpToCosMappingsOutput(args: GetSwitchDscpToCosMappingsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSwitchDscpToCosMappingsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSwitchDscpToCosMappings:getSwitchDscpToCosMappings", {
         "networkId": args.networkId,

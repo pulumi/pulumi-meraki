@@ -119,7 +119,7 @@ def get_switch_qos_rules_order(network_id: Optional[str] = None,
         qos_rule_id=pulumi.get(__ret__, 'qos_rule_id'))
 def get_switch_qos_rules_order_output(network_id: Optional[pulumi.Input[Optional[str]]] = None,
                                       qos_rule_id: Optional[pulumi.Input[Optional[str]]] = None,
-                                      opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSwitchQosRulesOrderResult]:
+                                      opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSwitchQosRulesOrderResult]:
     """
     ## Example Usage
 
@@ -130,7 +130,7 @@ def get_switch_qos_rules_order_output(network_id: Optional[pulumi.Input[Optional
     __args__ = dict()
     __args__['networkId'] = network_id
     __args__['qosRuleId'] = qos_rule_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSwitchQosRulesOrder:getSwitchQosRulesOrder', __args__, opts=opts, typ=GetSwitchQosRulesOrderResult)
     return __ret__.apply(lambda __response__: GetSwitchQosRulesOrderResult(
         id=pulumi.get(__response__, 'id'),

@@ -110,7 +110,7 @@ export interface GetSmSentryPoliciesAssignmentsByNetworkResult {
  * export const merakiOrganizationsSmSentryPoliciesAssignmentsByNetworkExample = example.then(example => example.items);
  * ```
  */
-export function getSmSentryPoliciesAssignmentsByNetworkOutput(args: GetSmSentryPoliciesAssignmentsByNetworkOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmSentryPoliciesAssignmentsByNetworkResult> {
+export function getSmSentryPoliciesAssignmentsByNetworkOutput(args: GetSmSentryPoliciesAssignmentsByNetworkOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSmSentryPoliciesAssignmentsByNetworkResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getSmSentryPoliciesAssignmentsByNetwork:getSmSentryPoliciesAssignmentsByNetwork", {
         "endingBefore": args.endingBefore,

@@ -57,7 +57,7 @@ export interface GetGroupPoliciesResult {
 /**
  * ## Example Usage
  */
-export function getGroupPoliciesOutput(args?: GetGroupPoliciesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetGroupPoliciesResult> {
+export function getGroupPoliciesOutput(args?: GetGroupPoliciesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetGroupPoliciesResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getGroupPolicies:getGroupPolicies", {

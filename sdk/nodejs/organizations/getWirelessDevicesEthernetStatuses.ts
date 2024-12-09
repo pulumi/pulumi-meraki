@@ -110,7 +110,7 @@ export interface GetWirelessDevicesEthernetStatusesResult {
  * export const merakiOrganizationsWirelessDevicesEthernetStatusesExample = example.then(example => example.items);
  * ```
  */
-export function getWirelessDevicesEthernetStatusesOutput(args: GetWirelessDevicesEthernetStatusesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessDevicesEthernetStatusesResult> {
+export function getWirelessDevicesEthernetStatusesOutput(args: GetWirelessDevicesEthernetStatusesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWirelessDevicesEthernetStatusesResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getWirelessDevicesEthernetStatuses:getWirelessDevicesEthernetStatuses", {
         "endingBefore": args.endingBefore,

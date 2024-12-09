@@ -115,7 +115,7 @@ def get_live_tools_wake_on_lan(serial: Optional[str] = None,
         wake_on_lan_id=pulumi.get(__ret__, 'wake_on_lan_id'))
 def get_live_tools_wake_on_lan_output(serial: Optional[pulumi.Input[str]] = None,
                                       wake_on_lan_id: Optional[pulumi.Input[str]] = None,
-                                      opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetLiveToolsWakeOnLanResult]:
+                                      opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetLiveToolsWakeOnLanResult]:
     """
     ## Example Usage
 
@@ -135,7 +135,7 @@ def get_live_tools_wake_on_lan_output(serial: Optional[pulumi.Input[str]] = None
     __args__ = dict()
     __args__['serial'] = serial
     __args__['wakeOnLanId'] = wake_on_lan_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:devices/getLiveToolsWakeOnLan:getLiveToolsWakeOnLan', __args__, opts=opts, typ=GetLiveToolsWakeOnLanResult)
     return __ret__.apply(lambda __response__: GetLiveToolsWakeOnLanResult(
         id=pulumi.get(__response__, 'id'),

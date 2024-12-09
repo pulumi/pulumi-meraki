@@ -262,7 +262,7 @@ def get_api_requests_overview_response_codes_by_interval_output(admin_ids: Optio
                                                                 timespan: Optional[pulumi.Input[Optional[float]]] = None,
                                                                 user_agent: Optional[pulumi.Input[Optional[str]]] = None,
                                                                 version: Optional[pulumi.Input[Optional[int]]] = None,
-                                                                opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetApiRequestsOverviewResponseCodesByIntervalResult]:
+                                                                opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetApiRequestsOverviewResponseCodesByIntervalResult]:
     """
     ## Example Usage
 
@@ -306,7 +306,7 @@ def get_api_requests_overview_response_codes_by_interval_output(admin_ids: Optio
     __args__['timespan'] = timespan
     __args__['userAgent'] = user_agent
     __args__['version'] = version
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getApiRequestsOverviewResponseCodesByInterval:getApiRequestsOverviewResponseCodesByInterval', __args__, opts=opts, typ=GetApiRequestsOverviewResponseCodesByIntervalResult)
     return __ret__.apply(lambda __response__: GetApiRequestsOverviewResponseCodesByIntervalResult(
         admin_ids=pulumi.get(__response__, 'admin_ids'),

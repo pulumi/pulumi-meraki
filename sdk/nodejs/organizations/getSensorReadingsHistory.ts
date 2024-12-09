@@ -165,7 +165,7 @@ export interface GetSensorReadingsHistoryResult {
  * export const merakiOrganizationsSensorReadingsHistoryExample = example.then(example => example.items);
  * ```
  */
-export function getSensorReadingsHistoryOutput(args: GetSensorReadingsHistoryOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSensorReadingsHistoryResult> {
+export function getSensorReadingsHistoryOutput(args: GetSensorReadingsHistoryOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSensorReadingsHistoryResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getSensorReadingsHistory:getSensorReadingsHistory", {
         "endingBefore": args.endingBefore,

@@ -262,7 +262,7 @@ def get_devices_boots_history_output(ending_before: Optional[pulumi.Input[Option
                                      t0: Optional[pulumi.Input[Optional[str]]] = None,
                                      t1: Optional[pulumi.Input[Optional[str]]] = None,
                                      timespan: Optional[pulumi.Input[Optional[float]]] = None,
-                                     opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetDevicesBootsHistoryResult]:
+                                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetDevicesBootsHistoryResult]:
     """
     ## Example Usage
 
@@ -306,7 +306,7 @@ def get_devices_boots_history_output(ending_before: Optional[pulumi.Input[Option
     __args__['t0'] = t0
     __args__['t1'] = t1
     __args__['timespan'] = timespan
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getDevicesBootsHistory:getDevicesBootsHistory', __args__, opts=opts, typ=GetDevicesBootsHistoryResult)
     return __ret__.apply(lambda __response__: GetDevicesBootsHistoryResult(
         ending_before=pulumi.get(__response__, 'ending_before'),

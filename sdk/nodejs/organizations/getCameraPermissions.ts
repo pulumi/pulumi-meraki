@@ -74,7 +74,7 @@ export interface GetCameraPermissionsResult {
  * export const merakiOrganizationsCameraPermissionsExample = example.then(example => example.item);
  * ```
  */
-export function getCameraPermissionsOutput(args: GetCameraPermissionsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCameraPermissionsResult> {
+export function getCameraPermissionsOutput(args: GetCameraPermissionsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCameraPermissionsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getCameraPermissions:getCameraPermissions", {
         "organizationId": args.organizationId,

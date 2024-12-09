@@ -97,7 +97,7 @@ def get_lldp_cdp(serial: Optional[str] = None,
         item=pulumi.get(__ret__, 'item'),
         serial=pulumi.get(__ret__, 'serial'))
 def get_lldp_cdp_output(serial: Optional[pulumi.Input[str]] = None,
-                        opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetLldpCdpResult]:
+                        opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetLldpCdpResult]:
     """
     ## Example Usage
 
@@ -114,7 +114,7 @@ def get_lldp_cdp_output(serial: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['serial'] = serial
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:devices/getLldpCdp:getLldpCdp', __args__, opts=opts, typ=GetLldpCdpResult)
     return __ret__.apply(lambda __response__: GetLldpCdpResult(
         id=pulumi.get(__response__, 'id'),

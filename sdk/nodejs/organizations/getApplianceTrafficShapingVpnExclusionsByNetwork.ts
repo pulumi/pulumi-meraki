@@ -107,7 +107,7 @@ export interface GetApplianceTrafficShapingVpnExclusionsByNetworkResult {
  * export const merakiOrganizationsApplianceTrafficShapingVpnExclusionsByNetworkExample = example.then(example => example.item);
  * ```
  */
-export function getApplianceTrafficShapingVpnExclusionsByNetworkOutput(args: GetApplianceTrafficShapingVpnExclusionsByNetworkOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceTrafficShapingVpnExclusionsByNetworkResult> {
+export function getApplianceTrafficShapingVpnExclusionsByNetworkOutput(args: GetApplianceTrafficShapingVpnExclusionsByNetworkOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplianceTrafficShapingVpnExclusionsByNetworkResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getApplianceTrafficShapingVpnExclusionsByNetwork:getApplianceTrafficShapingVpnExclusionsByNetwork", {
         "endingBefore": args.endingBefore,

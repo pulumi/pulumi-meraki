@@ -97,7 +97,7 @@ def get_appliance_firewall_one_to_one_nat_rules(network_id: Optional[str] = None
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'))
 def get_appliance_firewall_one_to_one_nat_rules_output(network_id: Optional[pulumi.Input[str]] = None,
-                                                       opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetApplianceFirewallOneToOneNatRulesResult]:
+                                                       opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetApplianceFirewallOneToOneNatRulesResult]:
     """
     ## Example Usage
 
@@ -114,7 +114,7 @@ def get_appliance_firewall_one_to_one_nat_rules_output(network_id: Optional[pulu
     """
     __args__ = dict()
     __args__['networkId'] = network_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getApplianceFirewallOneToOneNatRules:getApplianceFirewallOneToOneNatRules', __args__, opts=opts, typ=GetApplianceFirewallOneToOneNatRulesResult)
     return __ret__.apply(lambda __response__: GetApplianceFirewallOneToOneNatRulesResult(
         id=pulumi.get(__response__, 'id'),

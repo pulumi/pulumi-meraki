@@ -63,7 +63,7 @@ export interface GetLldpCdpResult {
  * export const merakiDevicesLldpCdpExample = example.then(example => example.item);
  * ```
  */
-export function getLldpCdpOutput(args: GetLldpCdpOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLldpCdpResult> {
+export function getLldpCdpOutput(args: GetLldpCdpOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLldpCdpResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:devices/getLldpCdp:getLldpCdp", {
         "serial": args.serial,

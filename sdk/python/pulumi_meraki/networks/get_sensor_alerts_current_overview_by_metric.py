@@ -97,7 +97,7 @@ def get_sensor_alerts_current_overview_by_metric(network_id: Optional[str] = Non
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'))
 def get_sensor_alerts_current_overview_by_metric_output(network_id: Optional[pulumi.Input[str]] = None,
-                                                        opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSensorAlertsCurrentOverviewByMetricResult]:
+                                                        opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSensorAlertsCurrentOverviewByMetricResult]:
     """
     ## Example Usage
 
@@ -114,7 +114,7 @@ def get_sensor_alerts_current_overview_by_metric_output(network_id: Optional[pul
     """
     __args__ = dict()
     __args__['networkId'] = network_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSensorAlertsCurrentOverviewByMetric:getSensorAlertsCurrentOverviewByMetric', __args__, opts=opts, typ=GetSensorAlertsCurrentOverviewByMetricResult)
     return __ret__.apply(lambda __response__: GetSensorAlertsCurrentOverviewByMetricResult(
         id=pulumi.get(__response__, 'id'),

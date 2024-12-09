@@ -220,7 +220,7 @@ export interface GetApiRequestsResult {
  * export const merakiOrganizationsApiRequestsExample = example.then(example => example.items);
  * ```
  */
-export function getApiRequestsOutput(args: GetApiRequestsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApiRequestsResult> {
+export function getApiRequestsOutput(args: GetApiRequestsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApiRequestsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getApiRequests:getApiRequests", {
         "adminId": args.adminId,

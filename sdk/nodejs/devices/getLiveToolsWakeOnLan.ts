@@ -74,7 +74,7 @@ export interface GetLiveToolsWakeOnLanResult {
  * export const merakiDevicesLiveToolsWakeOnLanExample = example.then(example => example.item);
  * ```
  */
-export function getLiveToolsWakeOnLanOutput(args: GetLiveToolsWakeOnLanOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLiveToolsWakeOnLanResult> {
+export function getLiveToolsWakeOnLanOutput(args: GetLiveToolsWakeOnLanOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLiveToolsWakeOnLanResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:devices/getLiveToolsWakeOnLan:getLiveToolsWakeOnLan", {
         "serial": args.serial,

@@ -119,7 +119,7 @@ def get_switch_ports(port_id: Optional[str] = None,
         serial=pulumi.get(__ret__, 'serial'))
 def get_switch_ports_output(port_id: Optional[pulumi.Input[Optional[str]]] = None,
                             serial: Optional[pulumi.Input[Optional[str]]] = None,
-                            opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSwitchPortsResult]:
+                            opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSwitchPortsResult]:
     """
     ## Example Usage
 
@@ -130,7 +130,7 @@ def get_switch_ports_output(port_id: Optional[pulumi.Input[Optional[str]]] = Non
     __args__ = dict()
     __args__['portId'] = port_id
     __args__['serial'] = serial
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:devices/getSwitchPorts:getSwitchPorts', __args__, opts=opts, typ=GetSwitchPortsResult)
     return __ret__.apply(lambda __response__: GetSwitchPortsResult(
         id=pulumi.get(__response__, 'id'),

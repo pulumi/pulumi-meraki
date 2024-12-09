@@ -74,7 +74,7 @@ export interface GetSmBypassActivationLockAttemptsResult {
  * export const merakiNetworksSmBypassActivationLockAttemptsExample = example.then(example => example.item);
  * ```
  */
-export function getSmBypassActivationLockAttemptsOutput(args: GetSmBypassActivationLockAttemptsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmBypassActivationLockAttemptsResult> {
+export function getSmBypassActivationLockAttemptsOutput(args: GetSmBypassActivationLockAttemptsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSmBypassActivationLockAttemptsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSmBypassActivationLockAttempts:getSmBypassActivationLockAttempts", {
         "attemptId": args.attemptId,

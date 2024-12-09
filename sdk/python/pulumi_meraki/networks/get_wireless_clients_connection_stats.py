@@ -241,7 +241,7 @@ def get_wireless_clients_connection_stats_output(ap_tag: Optional[pulumi.Input[O
                                                  t1: Optional[pulumi.Input[Optional[str]]] = None,
                                                  timespan: Optional[pulumi.Input[Optional[float]]] = None,
                                                  vlan: Optional[pulumi.Input[Optional[int]]] = None,
-                                                 opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetWirelessClientsConnectionStatsResult]:
+                                                 opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetWirelessClientsConnectionStatsResult]:
     """
     ## Example Usage
 
@@ -282,7 +282,7 @@ def get_wireless_clients_connection_stats_output(ap_tag: Optional[pulumi.Input[O
     __args__['t1'] = t1
     __args__['timespan'] = timespan
     __args__['vlan'] = vlan
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getWirelessClientsConnectionStats:getWirelessClientsConnectionStats', __args__, opts=opts, typ=GetWirelessClientsConnectionStatsResult)
     return __ret__.apply(lambda __response__: GetWirelessClientsConnectionStatsResult(
         ap_tag=pulumi.get(__response__, 'ap_tag'),
