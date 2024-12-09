@@ -114,7 +114,7 @@ def get_appliance_rf_profiles(network_id: Optional[str] = None,
         rf_profile_id=pulumi.get(__ret__, 'rf_profile_id'))
 def get_appliance_rf_profiles_output(network_id: Optional[pulumi.Input[Optional[str]]] = None,
                                      rf_profile_id: Optional[pulumi.Input[Optional[str]]] = None,
-                                     opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetApplianceRfProfilesResult]:
+                                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetApplianceRfProfilesResult]:
     """
     ## Example Usage
 
@@ -133,7 +133,7 @@ def get_appliance_rf_profiles_output(network_id: Optional[pulumi.Input[Optional[
     __args__ = dict()
     __args__['networkId'] = network_id
     __args__['rfProfileId'] = rf_profile_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getApplianceRfProfiles:getApplianceRfProfiles', __args__, opts=opts, typ=GetApplianceRfProfilesResult)
     return __ret__.apply(lambda __response__: GetApplianceRfProfilesResult(
         id=pulumi.get(__response__, 'id'),

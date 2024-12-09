@@ -74,7 +74,7 @@ export interface GetWirelessSsidsVpnResult {
  * export const merakiNetworksWirelessSsidsVpnExample = example.then(example => example.item);
  * ```
  */
-export function getWirelessSsidsVpnOutput(args: GetWirelessSsidsVpnOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessSsidsVpnResult> {
+export function getWirelessSsidsVpnOutput(args: GetWirelessSsidsVpnOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWirelessSsidsVpnResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getWirelessSsidsVpn:getWirelessSsidsVpn", {
         "networkId": args.networkId,

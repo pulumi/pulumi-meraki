@@ -165,7 +165,7 @@ export interface GetDevicesBootsHistoryResult {
  * export const merakiOrganizationsDevicesBootsHistoryExample = example.then(example => example.items);
  * ```
  */
-export function getDevicesBootsHistoryOutput(args: GetDevicesBootsHistoryOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDevicesBootsHistoryResult> {
+export function getDevicesBootsHistoryOutput(args: GetDevicesBootsHistoryOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDevicesBootsHistoryResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getDevicesBootsHistory:getDevicesBootsHistory", {
         "endingBefore": args.endingBefore,

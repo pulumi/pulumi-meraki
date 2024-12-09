@@ -63,7 +63,7 @@ export interface GetNetflowResult {
  * export const merakiNetworksNetflowExample = example.then(example => example.item);
  * ```
  */
-export function getNetflowOutput(args: GetNetflowOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetNetflowResult> {
+export function getNetflowOutput(args: GetNetflowOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetNetflowResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getNetflow:getNetflow", {
         "networkId": args.networkId,

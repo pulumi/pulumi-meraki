@@ -44,7 +44,7 @@ export interface GetIdentitiesMeResult {
  * export const merakiAdministeredIdentitiesMeExample = example.then(example => example.item);
  * ```
  */
-export function getIdentitiesMeOutput(opts?: pulumi.InvokeOptions): pulumi.Output<GetIdentitiesMeResult> {
+export function getIdentitiesMeOutput(opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetIdentitiesMeResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:administered/getIdentitiesMe:getIdentitiesMe", {
     }, opts);

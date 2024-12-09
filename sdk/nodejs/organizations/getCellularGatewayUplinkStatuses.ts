@@ -132,7 +132,7 @@ export interface GetCellularGatewayUplinkStatusesResult {
  * export const merakiOrganizationsCellularGatewayUplinkStatusesExample = example.then(example => example.items);
  * ```
  */
-export function getCellularGatewayUplinkStatusesOutput(args: GetCellularGatewayUplinkStatusesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCellularGatewayUplinkStatusesResult> {
+export function getCellularGatewayUplinkStatusesOutput(args: GetCellularGatewayUplinkStatusesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCellularGatewayUplinkStatusesResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getCellularGatewayUplinkStatuses:getCellularGatewayUplinkStatuses", {
         "endingBefore": args.endingBefore,

@@ -119,7 +119,7 @@ def get_group_policies(group_policy_id: Optional[str] = None,
         network_id=pulumi.get(__ret__, 'network_id'))
 def get_group_policies_output(group_policy_id: Optional[pulumi.Input[Optional[str]]] = None,
                               network_id: Optional[pulumi.Input[Optional[str]]] = None,
-                              opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetGroupPoliciesResult]:
+                              opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetGroupPoliciesResult]:
     """
     ## Example Usage
 
@@ -130,7 +130,7 @@ def get_group_policies_output(group_policy_id: Optional[pulumi.Input[Optional[st
     __args__ = dict()
     __args__['groupPolicyId'] = group_policy_id
     __args__['networkId'] = network_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getGroupPolicies:getGroupPolicies', __args__, opts=opts, typ=GetGroupPoliciesResult)
     return __ret__.apply(lambda __response__: GetGroupPoliciesResult(
         group_policy_id=pulumi.get(__response__, 'group_policy_id'),

@@ -63,7 +63,7 @@ export interface GetLoginSecurityResult {
  * export const merakiOrganizationsLoginSecurityExample = example.then(example => example.item);
  * ```
  */
-export function getLoginSecurityOutput(args: GetLoginSecurityOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLoginSecurityResult> {
+export function getLoginSecurityOutput(args: GetLoginSecurityOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLoginSecurityResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getLoginSecurity:getLoginSecurity", {
         "organizationId": args.organizationId,

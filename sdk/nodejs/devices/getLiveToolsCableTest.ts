@@ -70,7 +70,7 @@ export interface GetLiveToolsCableTestResult {
  * export const merakiDevicesLiveToolsCableTestExample = example.then(example => example.item);
  * ```
  */
-export function getLiveToolsCableTestOutput(args: GetLiveToolsCableTestOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLiveToolsCableTestResult> {
+export function getLiveToolsCableTestOutput(args: GetLiveToolsCableTestOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLiveToolsCableTestResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:devices/getLiveToolsCableTest:getLiveToolsCableTest", {
         "id": args.id,

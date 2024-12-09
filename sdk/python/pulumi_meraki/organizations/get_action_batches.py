@@ -136,7 +136,7 @@ def get_action_batches(action_batch_id: Optional[str] = None,
 def get_action_batches_output(action_batch_id: Optional[pulumi.Input[Optional[str]]] = None,
                               organization_id: Optional[pulumi.Input[Optional[str]]] = None,
                               status: Optional[pulumi.Input[Optional[str]]] = None,
-                              opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetActionBatchesResult]:
+                              opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetActionBatchesResult]:
     """
     ## Example Usage
 
@@ -149,7 +149,7 @@ def get_action_batches_output(action_batch_id: Optional[pulumi.Input[Optional[st
     __args__['actionBatchId'] = action_batch_id
     __args__['organizationId'] = organization_id
     __args__['status'] = status
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getActionBatches:getActionBatches', __args__, opts=opts, typ=GetActionBatchesResult)
     return __ret__.apply(lambda __response__: GetActionBatchesResult(
         action_batch_id=pulumi.get(__response__, 'action_batch_id'),

@@ -100,7 +100,7 @@ def get_sensor_relationships(network_id: Optional[str] = None,
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'))
 def get_sensor_relationships_output(network_id: Optional[pulumi.Input[str]] = None,
-                                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSensorRelationshipsResult]:
+                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSensorRelationshipsResult]:
     """
     ## Example Usage
 
@@ -117,7 +117,7 @@ def get_sensor_relationships_output(network_id: Optional[pulumi.Input[str]] = No
     """
     __args__ = dict()
     __args__['networkId'] = network_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSensorRelationships:getSensorRelationships', __args__, opts=opts, typ=GetSensorRelationshipsResult)
     return __ret__.apply(lambda __response__: GetSensorRelationshipsResult(
         id=pulumi.get(__response__, 'id'),

@@ -132,7 +132,7 @@ export interface GetVlanProfilesAssignmentsByDeviceResult {
  * export const merakiNetworksVlanProfilesAssignmentsByDeviceExample = example.then(example => example.items);
  * ```
  */
-export function getVlanProfilesAssignmentsByDeviceOutput(args: GetVlanProfilesAssignmentsByDeviceOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetVlanProfilesAssignmentsByDeviceResult> {
+export function getVlanProfilesAssignmentsByDeviceOutput(args: GetVlanProfilesAssignmentsByDeviceOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetVlanProfilesAssignmentsByDeviceResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getVlanProfilesAssignmentsByDevice:getVlanProfilesAssignmentsByDevice", {
         "endingBefore": args.endingBefore,

@@ -119,7 +119,7 @@ def get_camera_quality_retention_profiles(network_id: Optional[str] = None,
         quality_retention_profile_id=pulumi.get(__ret__, 'quality_retention_profile_id'))
 def get_camera_quality_retention_profiles_output(network_id: Optional[pulumi.Input[Optional[str]]] = None,
                                                  quality_retention_profile_id: Optional[pulumi.Input[Optional[str]]] = None,
-                                                 opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCameraQualityRetentionProfilesResult]:
+                                                 opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCameraQualityRetentionProfilesResult]:
     """
     ## Example Usage
 
@@ -130,7 +130,7 @@ def get_camera_quality_retention_profiles_output(network_id: Optional[pulumi.Inp
     __args__ = dict()
     __args__['networkId'] = network_id
     __args__['qualityRetentionProfileId'] = quality_retention_profile_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getCameraQualityRetentionProfiles:getCameraQualityRetentionProfiles', __args__, opts=opts, typ=GetCameraQualityRetentionProfilesResult)
     return __ret__.apply(lambda __response__: GetCameraQualityRetentionProfilesResult(
         id=pulumi.get(__response__, 'id'),

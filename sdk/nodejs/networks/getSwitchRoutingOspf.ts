@@ -63,7 +63,7 @@ export interface GetSwitchRoutingOspfResult {
  * export const merakiNetworksSwitchRoutingOspfExample = example.then(example => example.item);
  * ```
  */
-export function getSwitchRoutingOspfOutput(args: GetSwitchRoutingOspfOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchRoutingOspfResult> {
+export function getSwitchRoutingOspfOutput(args: GetSwitchRoutingOspfOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSwitchRoutingOspfResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSwitchRoutingOspf:getSwitchRoutingOspf", {
         "networkId": args.networkId,

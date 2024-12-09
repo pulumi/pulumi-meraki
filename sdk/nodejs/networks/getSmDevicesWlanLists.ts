@@ -77,7 +77,7 @@ export interface GetSmDevicesWlanListsResult {
  * export const merakiNetworksSmDevicesWlanListsExample = example.then(example => example.items);
  * ```
  */
-export function getSmDevicesWlanListsOutput(args: GetSmDevicesWlanListsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmDevicesWlanListsResult> {
+export function getSmDevicesWlanListsOutput(args: GetSmDevicesWlanListsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSmDevicesWlanListsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSmDevicesWlanLists:getSmDevicesWlanLists", {
         "deviceId": args.deviceId,

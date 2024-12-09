@@ -66,7 +66,7 @@ export interface GetAdminsResult {
  * export const merakiOrganizationsAdminsExample = example.then(example => example.items);
  * ```
  */
-export function getAdminsOutput(args: GetAdminsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAdminsResult> {
+export function getAdminsOutput(args: GetAdminsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAdminsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getAdmins:getAdmins", {
         "organizationId": args.organizationId,

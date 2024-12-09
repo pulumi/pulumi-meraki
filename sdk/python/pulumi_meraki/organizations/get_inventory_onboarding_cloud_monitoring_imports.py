@@ -118,7 +118,7 @@ def get_inventory_onboarding_cloud_monitoring_imports(import_ids: Optional[Seque
         organization_id=pulumi.get(__ret__, 'organization_id'))
 def get_inventory_onboarding_cloud_monitoring_imports_output(import_ids: Optional[pulumi.Input[Sequence[str]]] = None,
                                                              organization_id: Optional[pulumi.Input[str]] = None,
-                                                             opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetInventoryOnboardingCloudMonitoringImportsResult]:
+                                                             opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetInventoryOnboardingCloudMonitoringImportsResult]:
     """
     ## Example Usage
 
@@ -138,7 +138,7 @@ def get_inventory_onboarding_cloud_monitoring_imports_output(import_ids: Optiona
     __args__ = dict()
     __args__['importIds'] = import_ids
     __args__['organizationId'] = organization_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getInventoryOnboardingCloudMonitoringImports:getInventoryOnboardingCloudMonitoringImports', __args__, opts=opts, typ=GetInventoryOnboardingCloudMonitoringImportsResult)
     return __ret__.apply(lambda __response__: GetInventoryOnboardingCloudMonitoringImportsResult(
         id=pulumi.get(__response__, 'id'),

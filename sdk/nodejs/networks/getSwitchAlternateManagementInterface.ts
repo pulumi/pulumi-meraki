@@ -63,7 +63,7 @@ export interface GetSwitchAlternateManagementInterfaceResult {
  * export const merakiNetworksSwitchAlternateManagementInterfaceExample = example.then(example => example.item);
  * ```
  */
-export function getSwitchAlternateManagementInterfaceOutput(args: GetSwitchAlternateManagementInterfaceOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchAlternateManagementInterfaceResult> {
+export function getSwitchAlternateManagementInterfaceOutput(args: GetSwitchAlternateManagementInterfaceOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSwitchAlternateManagementInterfaceResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSwitchAlternateManagementInterface:getSwitchAlternateManagementInterface", {
         "networkId": args.networkId,

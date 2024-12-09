@@ -190,7 +190,7 @@ def get_camera_detections_history_by_boundary_by_interval_output(boundary_ids: O
                                                                  organization_id: Optional[pulumi.Input[str]] = None,
                                                                  per_page: Optional[pulumi.Input[Optional[int]]] = None,
                                                                  ranges: Optional[pulumi.Input[Sequence[str]]] = None,
-                                                                 opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCameraDetectionsHistoryByBoundaryByIntervalResult]:
+                                                                 opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCameraDetectionsHistoryByBoundaryByIntervalResult]:
     """
     ## Example Usage
 
@@ -222,7 +222,7 @@ def get_camera_detections_history_by_boundary_by_interval_output(boundary_ids: O
     __args__['organizationId'] = organization_id
     __args__['perPage'] = per_page
     __args__['ranges'] = ranges
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getCameraDetectionsHistoryByBoundaryByInterval:getCameraDetectionsHistoryByBoundaryByInterval', __args__, opts=opts, typ=GetCameraDetectionsHistoryByBoundaryByIntervalResult)
     return __ret__.apply(lambda __response__: GetCameraDetectionsHistoryByBoundaryByIntervalResult(
         boundary_ids=pulumi.get(__response__, 'boundary_ids'),

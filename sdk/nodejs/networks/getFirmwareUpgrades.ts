@@ -63,7 +63,7 @@ export interface GetFirmwareUpgradesResult {
  * export const merakiNetworksFirmwareUpgradesExample = example.then(example => example.item);
  * ```
  */
-export function getFirmwareUpgradesOutput(args: GetFirmwareUpgradesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetFirmwareUpgradesResult> {
+export function getFirmwareUpgradesOutput(args: GetFirmwareUpgradesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetFirmwareUpgradesResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getFirmwareUpgrades:getFirmwareUpgrades", {
         "networkId": args.networkId,

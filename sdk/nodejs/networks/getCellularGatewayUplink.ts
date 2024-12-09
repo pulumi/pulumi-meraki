@@ -63,7 +63,7 @@ export interface GetCellularGatewayUplinkResult {
  * export const merakiNetworksCellularGatewayUplinkExample = example.then(example => example.item);
  * ```
  */
-export function getCellularGatewayUplinkOutput(args: GetCellularGatewayUplinkOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCellularGatewayUplinkResult> {
+export function getCellularGatewayUplinkOutput(args: GetCellularGatewayUplinkOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCellularGatewayUplinkResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getCellularGatewayUplink:getCellularGatewayUplink", {
         "networkId": args.networkId,

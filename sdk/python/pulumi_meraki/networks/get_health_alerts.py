@@ -100,7 +100,7 @@ def get_health_alerts(network_id: Optional[str] = None,
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'))
 def get_health_alerts_output(network_id: Optional[pulumi.Input[str]] = None,
-                             opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetHealthAlertsResult]:
+                             opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetHealthAlertsResult]:
     """
     ## Example Usage
 
@@ -117,7 +117,7 @@ def get_health_alerts_output(network_id: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['networkId'] = network_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getHealthAlerts:getHealthAlerts', __args__, opts=opts, typ=GetHealthAlertsResult)
     return __ret__.apply(lambda __response__: GetHealthAlertsResult(
         id=pulumi.get(__response__, 'id'),

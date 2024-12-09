@@ -119,7 +119,7 @@ def get_switch_access_policies(access_policy_number: Optional[str] = None,
         network_id=pulumi.get(__ret__, 'network_id'))
 def get_switch_access_policies_output(access_policy_number: Optional[pulumi.Input[Optional[str]]] = None,
                                       network_id: Optional[pulumi.Input[Optional[str]]] = None,
-                                      opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSwitchAccessPoliciesResult]:
+                                      opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSwitchAccessPoliciesResult]:
     """
     ## Example Usage
 
@@ -130,7 +130,7 @@ def get_switch_access_policies_output(access_policy_number: Optional[pulumi.Inpu
     __args__ = dict()
     __args__['accessPolicyNumber'] = access_policy_number
     __args__['networkId'] = network_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSwitchAccessPolicies:getSwitchAccessPolicies', __args__, opts=opts, typ=GetSwitchAccessPoliciesResult)
     return __ret__.apply(lambda __response__: GetSwitchAccessPoliciesResult(
         access_policy_number=pulumi.get(__response__, 'access_policy_number'),

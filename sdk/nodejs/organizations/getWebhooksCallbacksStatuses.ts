@@ -74,7 +74,7 @@ export interface GetWebhooksCallbacksStatusesResult {
  * export const merakiOrganizationsWebhooksCallbacksStatusesExample = example.then(example => example.item);
  * ```
  */
-export function getWebhooksCallbacksStatusesOutput(args: GetWebhooksCallbacksStatusesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWebhooksCallbacksStatusesResult> {
+export function getWebhooksCallbacksStatusesOutput(args: GetWebhooksCallbacksStatusesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWebhooksCallbacksStatusesResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getWebhooksCallbacksStatuses:getWebhooksCallbacksStatuses", {
         "callbackId": args.callbackId,

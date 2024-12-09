@@ -129,7 +129,7 @@ export interface GetPiiSmDevicesForKeyResult {
  * export const merakiNetworksPiiSmDevicesForKeyExample = example.then(example => example.item);
  * ```
  */
-export function getPiiSmDevicesForKeyOutput(args: GetPiiSmDevicesForKeyOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetPiiSmDevicesForKeyResult> {
+export function getPiiSmDevicesForKeyOutput(args: GetPiiSmDevicesForKeyOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetPiiSmDevicesForKeyResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getPiiSmDevicesForKey:getPiiSmDevicesForKey", {
         "bluetoothMac": args.bluetoothMac,

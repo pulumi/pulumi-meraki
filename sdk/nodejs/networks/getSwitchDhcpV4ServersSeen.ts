@@ -121,7 +121,7 @@ export interface GetSwitchDhcpV4ServersSeenResult {
  * export const merakiNetworksSwitchDhcpV4ServersSeenExample = example.then(example => example.items);
  * ```
  */
-export function getSwitchDhcpV4ServersSeenOutput(args: GetSwitchDhcpV4ServersSeenOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchDhcpV4ServersSeenResult> {
+export function getSwitchDhcpV4ServersSeenOutput(args: GetSwitchDhcpV4ServersSeenOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSwitchDhcpV4ServersSeenResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSwitchDhcpV4ServersSeen:getSwitchDhcpV4ServersSeen", {
         "endingBefore": args.endingBefore,

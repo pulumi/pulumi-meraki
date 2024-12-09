@@ -63,7 +63,7 @@ export interface GetSnmpResult {
  * export const merakiNetworksSnmpExample = example.then(example => example.item);
  * ```
  */
-export function getSnmpOutput(args: GetSnmpOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSnmpResult> {
+export function getSnmpOutput(args: GetSnmpOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSnmpResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSnmp:getSnmp", {
         "networkId": args.networkId,

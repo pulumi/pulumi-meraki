@@ -57,7 +57,7 @@ export interface GetFirmwareUpgradesStagedGroupsResult {
 /**
  * ## Example Usage
  */
-export function getFirmwareUpgradesStagedGroupsOutput(args?: GetFirmwareUpgradesStagedGroupsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetFirmwareUpgradesStagedGroupsResult> {
+export function getFirmwareUpgradesStagedGroupsOutput(args?: GetFirmwareUpgradesStagedGroupsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetFirmwareUpgradesStagedGroupsResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getFirmwareUpgradesStagedGroups:getFirmwareUpgradesStagedGroups", {

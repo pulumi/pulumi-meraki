@@ -57,7 +57,7 @@ export interface GetPiiRequestsResult {
 /**
  * ## Example Usage
  */
-export function getPiiRequestsOutput(args?: GetPiiRequestsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetPiiRequestsResult> {
+export function getPiiRequestsOutput(args?: GetPiiRequestsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetPiiRequestsResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getPiiRequests:getPiiRequests", {

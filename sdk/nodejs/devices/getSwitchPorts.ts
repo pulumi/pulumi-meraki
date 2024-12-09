@@ -57,7 +57,7 @@ export interface GetSwitchPortsResult {
 /**
  * ## Example Usage
  */
-export function getSwitchPortsOutput(args?: GetSwitchPortsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchPortsResult> {
+export function getSwitchPortsOutput(args?: GetSwitchPortsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSwitchPortsResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:devices/getSwitchPorts:getSwitchPorts", {

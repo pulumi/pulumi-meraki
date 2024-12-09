@@ -119,7 +119,7 @@ def get_firmware_upgrades_staged_groups(group_id: Optional[str] = None,
         network_id=pulumi.get(__ret__, 'network_id'))
 def get_firmware_upgrades_staged_groups_output(group_id: Optional[pulumi.Input[Optional[str]]] = None,
                                                network_id: Optional[pulumi.Input[Optional[str]]] = None,
-                                               opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetFirmwareUpgradesStagedGroupsResult]:
+                                               opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetFirmwareUpgradesStagedGroupsResult]:
     """
     ## Example Usage
 
@@ -130,7 +130,7 @@ def get_firmware_upgrades_staged_groups_output(group_id: Optional[pulumi.Input[O
     __args__ = dict()
     __args__['groupId'] = group_id
     __args__['networkId'] = network_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getFirmwareUpgradesStagedGroups:getFirmwareUpgradesStagedGroups', __args__, opts=opts, typ=GetFirmwareUpgradesStagedGroupsResult)
     return __ret__.apply(lambda __response__: GetFirmwareUpgradesStagedGroupsResult(
         group_id=pulumi.get(__response__, 'group_id'),

@@ -165,7 +165,7 @@ export interface GetWirelessFailedConnectionsResult {
  * export const merakiNetworksWirelessFailedConnectionsExample = example.then(example => example.items);
  * ```
  */
-export function getWirelessFailedConnectionsOutput(args: GetWirelessFailedConnectionsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessFailedConnectionsResult> {
+export function getWirelessFailedConnectionsOutput(args: GetWirelessFailedConnectionsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWirelessFailedConnectionsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getWirelessFailedConnections:getWirelessFailedConnections", {
         "apTag": args.apTag,

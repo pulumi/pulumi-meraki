@@ -70,7 +70,7 @@ export interface GetLiveToolsPingResult {
  * export const merakiDevicesLiveToolsPingExample = example.then(example => example.item);
  * ```
  */
-export function getLiveToolsPingOutput(args: GetLiveToolsPingOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLiveToolsPingResult> {
+export function getLiveToolsPingOutput(args: GetLiveToolsPingOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLiveToolsPingResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:devices/getLiveToolsPing:getLiveToolsPing", {
         "id": args.id,

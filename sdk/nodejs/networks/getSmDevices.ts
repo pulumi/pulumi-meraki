@@ -188,7 +188,7 @@ export interface GetSmDevicesResult {
  * export const merakiNetworksSmDevicesExample = example.then(example => example.items);
  * ```
  */
-export function getSmDevicesOutput(args: GetSmDevicesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmDevicesResult> {
+export function getSmDevicesOutput(args: GetSmDevicesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSmDevicesResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSmDevices:getSmDevices", {
         "endingBefore": args.endingBefore,

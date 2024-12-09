@@ -154,7 +154,7 @@ def get_wireless_mesh_statuses_output(ending_before: Optional[pulumi.Input[Optio
                                       network_id: Optional[pulumi.Input[str]] = None,
                                       per_page: Optional[pulumi.Input[Optional[int]]] = None,
                                       starting_after: Optional[pulumi.Input[Optional[str]]] = None,
-                                      opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetWirelessMeshStatusesResult]:
+                                      opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetWirelessMeshStatusesResult]:
     """
     ## Example Usage
 
@@ -180,7 +180,7 @@ def get_wireless_mesh_statuses_output(ending_before: Optional[pulumi.Input[Optio
     __args__['networkId'] = network_id
     __args__['perPage'] = per_page
     __args__['startingAfter'] = starting_after
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getWirelessMeshStatuses:getWirelessMeshStatuses', __args__, opts=opts, typ=GetWirelessMeshStatusesResult)
     return __ret__.apply(lambda __response__: GetWirelessMeshStatusesResult(
         ending_before=pulumi.get(__response__, 'ending_before'),

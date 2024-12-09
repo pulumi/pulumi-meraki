@@ -63,7 +63,7 @@ export interface GetCellularGatewayDhcpResult {
  * export const merakiNetworksCellularGatewayDhcpExample = example.then(example => example.item);
  * ```
  */
-export function getCellularGatewayDhcpOutput(args: GetCellularGatewayDhcpOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCellularGatewayDhcpResult> {
+export function getCellularGatewayDhcpOutput(args: GetCellularGatewayDhcpOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCellularGatewayDhcpResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getCellularGatewayDhcp:getCellularGatewayDhcp", {
         "networkId": args.networkId,

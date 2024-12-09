@@ -99,7 +99,7 @@ export interface GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult {
  * export const merakiNetworksSwitchDhcpServerPolicyArpInspectionWarningsByDeviceExample = example.then(example => example.items);
  * ```
  */
-export function getSwitchDhcpServerPolicyArpInspectionWarningsByDeviceOutput(args: GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult> {
+export function getSwitchDhcpServerPolicyArpInspectionWarningsByDeviceOutput(args: GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSwitchDhcpServerPolicyArpInspectionWarningsByDevice:getSwitchDhcpServerPolicyArpInspectionWarningsByDevice", {
         "endingBefore": args.endingBefore,

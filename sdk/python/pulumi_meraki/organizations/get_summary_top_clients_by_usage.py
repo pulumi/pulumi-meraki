@@ -154,7 +154,7 @@ def get_summary_top_clients_by_usage_output(organization_id: Optional[pulumi.Inp
                                             t0: Optional[pulumi.Input[Optional[str]]] = None,
                                             t1: Optional[pulumi.Input[Optional[str]]] = None,
                                             timespan: Optional[pulumi.Input[Optional[float]]] = None,
-                                            opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSummaryTopClientsByUsageResult]:
+                                            opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSummaryTopClientsByUsageResult]:
     """
     ## Example Usage
 
@@ -180,7 +180,7 @@ def get_summary_top_clients_by_usage_output(organization_id: Optional[pulumi.Inp
     __args__['t0'] = t0
     __args__['t1'] = t1
     __args__['timespan'] = timespan
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getSummaryTopClientsByUsage:getSummaryTopClientsByUsage', __args__, opts=opts, typ=GetSummaryTopClientsByUsageResult)
     return __ret__.apply(lambda __response__: GetSummaryTopClientsByUsageResult(
         id=pulumi.get(__response__, 'id'),

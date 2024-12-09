@@ -73,7 +73,7 @@ export interface GetEarlyAccessFeaturesOptInsResult {
  * export const merakiOrganizationsEarlyAccessFeaturesOptInsExample = example.then(example => example.item);
  * ```
  */
-export function getEarlyAccessFeaturesOptInsOutput(args?: GetEarlyAccessFeaturesOptInsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetEarlyAccessFeaturesOptInsResult> {
+export function getEarlyAccessFeaturesOptInsOutput(args?: GetEarlyAccessFeaturesOptInsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetEarlyAccessFeaturesOptInsResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getEarlyAccessFeaturesOptIns:getEarlyAccessFeaturesOptIns", {

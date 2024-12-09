@@ -119,7 +119,7 @@ def get_floor_plans(floor_plan_id: Optional[str] = None,
         network_id=pulumi.get(__ret__, 'network_id'))
 def get_floor_plans_output(floor_plan_id: Optional[pulumi.Input[Optional[str]]] = None,
                            network_id: Optional[pulumi.Input[Optional[str]]] = None,
-                           opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetFloorPlansResult]:
+                           opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetFloorPlansResult]:
     """
     ## Example Usage
 
@@ -130,7 +130,7 @@ def get_floor_plans_output(floor_plan_id: Optional[pulumi.Input[Optional[str]]] 
     __args__ = dict()
     __args__['floorPlanId'] = floor_plan_id
     __args__['networkId'] = network_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getFloorPlans:getFloorPlans', __args__, opts=opts, typ=GetFloorPlansResult)
     return __ret__.apply(lambda __response__: GetFloorPlansResult(
         floor_plan_id=pulumi.get(__response__, 'floor_plan_id'),

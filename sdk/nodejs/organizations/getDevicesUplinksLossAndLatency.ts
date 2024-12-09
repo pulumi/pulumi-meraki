@@ -121,7 +121,7 @@ export interface GetDevicesUplinksLossAndLatencyResult {
  * export const merakiOrganizationsDevicesUplinksLossAndLatencyExample = example.then(example => example.items);
  * ```
  */
-export function getDevicesUplinksLossAndLatencyOutput(args: GetDevicesUplinksLossAndLatencyOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDevicesUplinksLossAndLatencyResult> {
+export function getDevicesUplinksLossAndLatencyOutput(args: GetDevicesUplinksLossAndLatencyOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDevicesUplinksLossAndLatencyResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getDevicesUplinksLossAndLatency:getDevicesUplinksLossAndLatency", {
         "ip": args.ip,

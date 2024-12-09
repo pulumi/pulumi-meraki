@@ -63,7 +63,7 @@ export interface GetApplianceUplinksStatusesOverviewResult {
  * export const merakiOrganizationsApplianceUplinksStatusesOverviewExample = example.then(example => example.item);
  * ```
  */
-export function getApplianceUplinksStatusesOverviewOutput(args: GetApplianceUplinksStatusesOverviewOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceUplinksStatusesOverviewResult> {
+export function getApplianceUplinksStatusesOverviewOutput(args: GetApplianceUplinksStatusesOverviewOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplianceUplinksStatusesOverviewResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getApplianceUplinksStatusesOverview:getApplianceUplinksStatusesOverview", {
         "organizationId": args.organizationId,

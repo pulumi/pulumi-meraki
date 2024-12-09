@@ -97,7 +97,7 @@ def get_camera_sense(serial: Optional[str] = None,
         item=pulumi.get(__ret__, 'item'),
         serial=pulumi.get(__ret__, 'serial'))
 def get_camera_sense_output(serial: Optional[pulumi.Input[str]] = None,
-                            opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCameraSenseResult]:
+                            opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCameraSenseResult]:
     """
     ## Example Usage
 
@@ -114,7 +114,7 @@ def get_camera_sense_output(serial: Optional[pulumi.Input[str]] = None,
     """
     __args__ = dict()
     __args__['serial'] = serial
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:devices/getCameraSense:getCameraSense', __args__, opts=opts, typ=GetCameraSenseResult)
     return __ret__.apply(lambda __response__: GetCameraSenseResult(
         id=pulumi.get(__response__, 'id'),

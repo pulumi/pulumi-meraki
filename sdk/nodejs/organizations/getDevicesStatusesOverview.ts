@@ -85,7 +85,7 @@ export interface GetDevicesStatusesOverviewResult {
  * export const merakiOrganizationsDevicesStatusesOverviewExample = example.then(example => example.item);
  * ```
  */
-export function getDevicesStatusesOverviewOutput(args: GetDevicesStatusesOverviewOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetDevicesStatusesOverviewResult> {
+export function getDevicesStatusesOverviewOutput(args: GetDevicesStatusesOverviewOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDevicesStatusesOverviewResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getDevicesStatusesOverview:getDevicesStatusesOverview", {
         "networkIds": args.networkIds,

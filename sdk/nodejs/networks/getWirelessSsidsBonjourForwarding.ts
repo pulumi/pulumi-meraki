@@ -74,7 +74,7 @@ export interface GetWirelessSsidsBonjourForwardingResult {
  * export const merakiNetworksWirelessSsidsBonjourForwardingExample = example.then(example => example.item);
  * ```
  */
-export function getWirelessSsidsBonjourForwardingOutput(args: GetWirelessSsidsBonjourForwardingOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessSsidsBonjourForwardingResult> {
+export function getWirelessSsidsBonjourForwardingOutput(args: GetWirelessSsidsBonjourForwardingOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWirelessSsidsBonjourForwardingResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getWirelessSsidsBonjourForwarding:getWirelessSsidsBonjourForwarding", {
         "networkId": args.networkId,

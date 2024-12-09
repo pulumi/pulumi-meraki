@@ -121,7 +121,7 @@ export interface GetFirmwareUpgradesResult {
  * export const merakiOrganizationsFirmwareUpgradesExample = example.then(example => example.items);
  * ```
  */
-export function getFirmwareUpgradesOutput(args: GetFirmwareUpgradesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetFirmwareUpgradesResult> {
+export function getFirmwareUpgradesOutput(args: GetFirmwareUpgradesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetFirmwareUpgradesResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getFirmwareUpgrades:getFirmwareUpgrades", {
         "endingBefore": args.endingBefore,
