@@ -63,7 +63,7 @@ export interface GetManagementInterfaceResult {
  * export const merakiDevicesManagementInterfaceExample = example.then(example => example.item);
  * ```
  */
-export function getManagementInterfaceOutput(args: GetManagementInterfaceOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetManagementInterfaceResult> {
+export function getManagementInterfaceOutput(args: GetManagementInterfaceOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetManagementInterfaceResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:devices/getManagementInterface:getManagementInterface", {
         "serial": args.serial,

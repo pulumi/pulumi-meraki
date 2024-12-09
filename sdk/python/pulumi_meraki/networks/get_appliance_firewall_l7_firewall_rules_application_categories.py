@@ -97,7 +97,7 @@ def get_appliance_firewall_l7_firewall_rules_application_categories(network_id: 
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'))
 def get_appliance_firewall_l7_firewall_rules_application_categories_output(network_id: Optional[pulumi.Input[str]] = None,
-                                                                           opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetApplianceFirewallL7FirewallRulesApplicationCategoriesResult]:
+                                                                           opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetApplianceFirewallL7FirewallRulesApplicationCategoriesResult]:
     """
     ## Example Usage
 
@@ -114,7 +114,7 @@ def get_appliance_firewall_l7_firewall_rules_application_categories_output(netwo
     """
     __args__ = dict()
     __args__['networkId'] = network_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getApplianceFirewallL7FirewallRulesApplicationCategories:getApplianceFirewallL7FirewallRulesApplicationCategories', __args__, opts=opts, typ=GetApplianceFirewallL7FirewallRulesApplicationCategoriesResult)
     return __ret__.apply(lambda __response__: GetApplianceFirewallL7FirewallRulesApplicationCategoriesResult(
         id=pulumi.get(__response__, 'id'),

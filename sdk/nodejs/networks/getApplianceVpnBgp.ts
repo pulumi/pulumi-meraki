@@ -63,7 +63,7 @@ export interface GetApplianceVpnBgpResult {
  * export const merakiNetworksApplianceVpnBgpExample = example.then(example => example.item);
  * ```
  */
-export function getApplianceVpnBgpOutput(args: GetApplianceVpnBgpOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceVpnBgpResult> {
+export function getApplianceVpnBgpOutput(args: GetApplianceVpnBgpOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplianceVpnBgpResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getApplianceVpnBgp:getApplianceVpnBgp", {
         "networkId": args.networkId,

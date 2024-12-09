@@ -63,7 +63,7 @@ export interface GetCameraQualityAndRetentionResult {
  * export const merakiDevicesCameraQualityAndRetentionExample = example.then(example => example.item);
  * ```
  */
-export function getCameraQualityAndRetentionOutput(args: GetCameraQualityAndRetentionOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCameraQualityAndRetentionResult> {
+export function getCameraQualityAndRetentionOutput(args: GetCameraQualityAndRetentionOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCameraQualityAndRetentionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:devices/getCameraQualityAndRetention:getCameraQualityAndRetention", {
         "serial": args.serial,

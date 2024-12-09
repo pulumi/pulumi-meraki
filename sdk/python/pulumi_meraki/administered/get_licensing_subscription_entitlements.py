@@ -97,7 +97,7 @@ def get_licensing_subscription_entitlements(skuses: Optional[Sequence[str]] = No
         item=pulumi.get(__ret__, 'item'),
         skuses=pulumi.get(__ret__, 'skuses'))
 def get_licensing_subscription_entitlements_output(skuses: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
-                                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetLicensingSubscriptionEntitlementsResult]:
+                                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetLicensingSubscriptionEntitlementsResult]:
     """
     ## Example Usage
 
@@ -114,7 +114,7 @@ def get_licensing_subscription_entitlements_output(skuses: Optional[pulumi.Input
     """
     __args__ = dict()
     __args__['skuses'] = skuses
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:administered/getLicensingSubscriptionEntitlements:getLicensingSubscriptionEntitlements', __args__, opts=opts, typ=GetLicensingSubscriptionEntitlementsResult)
     return __ret__.apply(lambda __response__: GetLicensingSubscriptionEntitlementsResult(
         id=pulumi.get(__response__, 'id'),

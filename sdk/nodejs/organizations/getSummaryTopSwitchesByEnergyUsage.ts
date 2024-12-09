@@ -99,7 +99,7 @@ export interface GetSummaryTopSwitchesByEnergyUsageResult {
  * export const merakiOrganizationsSummaryTopSwitchesByEnergyUsageExample = example.then(example => example.items);
  * ```
  */
-export function getSummaryTopSwitchesByEnergyUsageOutput(args: GetSummaryTopSwitchesByEnergyUsageOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSummaryTopSwitchesByEnergyUsageResult> {
+export function getSummaryTopSwitchesByEnergyUsageOutput(args: GetSummaryTopSwitchesByEnergyUsageOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSummaryTopSwitchesByEnergyUsageResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getSummaryTopSwitchesByEnergyUsage:getSummaryTopSwitchesByEnergyUsage", {
         "organizationId": args.organizationId,

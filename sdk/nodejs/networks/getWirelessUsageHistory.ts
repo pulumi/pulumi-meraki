@@ -176,7 +176,7 @@ export interface GetWirelessUsageHistoryResult {
  * export const merakiNetworksWirelessUsageHistoryExample = example.then(example => example.items);
  * ```
  */
-export function getWirelessUsageHistoryOutput(args: GetWirelessUsageHistoryOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessUsageHistoryResult> {
+export function getWirelessUsageHistoryOutput(args: GetWirelessUsageHistoryOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWirelessUsageHistoryResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getWirelessUsageHistory:getWirelessUsageHistory", {
         "apTag": args.apTag,

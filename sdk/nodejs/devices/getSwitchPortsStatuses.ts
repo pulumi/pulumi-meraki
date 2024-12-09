@@ -88,7 +88,7 @@ export interface GetSwitchPortsStatusesResult {
  * export const merakiDevicesSwitchPortsStatusesExample = example.then(example => example.items);
  * ```
  */
-export function getSwitchPortsStatusesOutput(args: GetSwitchPortsStatusesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchPortsStatusesResult> {
+export function getSwitchPortsStatusesOutput(args: GetSwitchPortsStatusesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSwitchPortsStatusesResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:devices/getSwitchPortsStatuses:getSwitchPortsStatuses", {
         "serial": args.serial,

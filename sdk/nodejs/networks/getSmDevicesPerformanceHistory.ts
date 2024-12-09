@@ -110,7 +110,7 @@ export interface GetSmDevicesPerformanceHistoryResult {
  * export const merakiNetworksSmDevicesPerformanceHistoryExample = example.then(example => example.items);
  * ```
  */
-export function getSmDevicesPerformanceHistoryOutput(args: GetSmDevicesPerformanceHistoryOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmDevicesPerformanceHistoryResult> {
+export function getSmDevicesPerformanceHistoryOutput(args: GetSmDevicesPerformanceHistoryOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSmDevicesPerformanceHistoryResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSmDevicesPerformanceHistory:getSmDevicesPerformanceHistory", {
         "deviceId": args.deviceId,

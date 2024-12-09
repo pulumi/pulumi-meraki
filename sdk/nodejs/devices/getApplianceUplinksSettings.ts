@@ -63,7 +63,7 @@ export interface GetApplianceUplinksSettingsResult {
  * export const merakiDevicesApplianceUplinksSettingsExample = example.then(example => example.item);
  * ```
  */
-export function getApplianceUplinksSettingsOutput(args: GetApplianceUplinksSettingsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceUplinksSettingsResult> {
+export function getApplianceUplinksSettingsOutput(args: GetApplianceUplinksSettingsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplianceUplinksSettingsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:devices/getApplianceUplinksSettings:getApplianceUplinksSettings", {
         "serial": args.serial,

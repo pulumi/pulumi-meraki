@@ -280,7 +280,7 @@ def get_wireless_devices_packet_loss_by_network_output(bands: Optional[pulumi.In
                                                        t0: Optional[pulumi.Input[Optional[str]]] = None,
                                                        t1: Optional[pulumi.Input[Optional[str]]] = None,
                                                        timespan: Optional[pulumi.Input[Optional[float]]] = None,
-                                                       opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetWirelessDevicesPacketLossByNetworkResult]:
+                                                       opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetWirelessDevicesPacketLossByNetworkResult]:
     """
     ## Example Usage
 
@@ -327,7 +327,7 @@ def get_wireless_devices_packet_loss_by_network_output(bands: Optional[pulumi.In
     __args__['t0'] = t0
     __args__['t1'] = t1
     __args__['timespan'] = timespan
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getWirelessDevicesPacketLossByNetwork:getWirelessDevicesPacketLossByNetwork', __args__, opts=opts, typ=GetWirelessDevicesPacketLossByNetworkResult)
     return __ret__.apply(lambda __response__: GetWirelessDevicesPacketLossByNetworkResult(
         bands=pulumi.get(__response__, 'bands'),

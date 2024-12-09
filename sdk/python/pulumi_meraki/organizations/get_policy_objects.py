@@ -168,7 +168,7 @@ def get_policy_objects_output(ending_before: Optional[pulumi.Input[Optional[str]
                               per_page: Optional[pulumi.Input[Optional[int]]] = None,
                               policy_object_id: Optional[pulumi.Input[Optional[str]]] = None,
                               starting_after: Optional[pulumi.Input[Optional[str]]] = None,
-                              opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetPolicyObjectsResult]:
+                              opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetPolicyObjectsResult]:
     """
     ## Example Usage
 
@@ -196,7 +196,7 @@ def get_policy_objects_output(ending_before: Optional[pulumi.Input[Optional[str]
     __args__['perPage'] = per_page
     __args__['policyObjectId'] = policy_object_id
     __args__['startingAfter'] = starting_after
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getPolicyObjects:getPolicyObjects', __args__, opts=opts, typ=GetPolicyObjectsResult)
     return __ret__.apply(lambda __response__: GetPolicyObjectsResult(
         ending_before=pulumi.get(__response__, 'ending_before'),

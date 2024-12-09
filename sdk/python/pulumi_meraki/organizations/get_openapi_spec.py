@@ -115,7 +115,7 @@ def get_openapi_spec(organization_id: Optional[str] = None,
         version=pulumi.get(__ret__, 'version'))
 def get_openapi_spec_output(organization_id: Optional[pulumi.Input[str]] = None,
                             version: Optional[pulumi.Input[Optional[int]]] = None,
-                            opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetOpenapiSpecResult]:
+                            opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetOpenapiSpecResult]:
     """
     ## Example Usage
 
@@ -135,7 +135,7 @@ def get_openapi_spec_output(organization_id: Optional[pulumi.Input[str]] = None,
     __args__ = dict()
     __args__['organizationId'] = organization_id
     __args__['version'] = version
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getOpenapiSpec:getOpenapiSpec', __args__, opts=opts, typ=GetOpenapiSpecResult)
     return __ret__.apply(lambda __response__: GetOpenapiSpecResult(
         id=pulumi.get(__response__, 'id'),

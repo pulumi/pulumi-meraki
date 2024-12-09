@@ -100,7 +100,7 @@ def get_switch_link_aggregations(network_id: Optional[str] = None,
         items=pulumi.get(__ret__, 'items'),
         network_id=pulumi.get(__ret__, 'network_id'))
 def get_switch_link_aggregations_output(network_id: Optional[pulumi.Input[str]] = None,
-                                        opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSwitchLinkAggregationsResult]:
+                                        opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSwitchLinkAggregationsResult]:
     """
     ## Example Usage
 
@@ -117,7 +117,7 @@ def get_switch_link_aggregations_output(network_id: Optional[pulumi.Input[str]] 
     """
     __args__ = dict()
     __args__['networkId'] = network_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSwitchLinkAggregations:getSwitchLinkAggregations', __args__, opts=opts, typ=GetSwitchLinkAggregationsResult)
     return __ret__.apply(lambda __response__: GetSwitchLinkAggregationsResult(
         id=pulumi.get(__response__, 'id'),

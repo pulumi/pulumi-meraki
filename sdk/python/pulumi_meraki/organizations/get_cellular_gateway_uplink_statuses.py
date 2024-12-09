@@ -208,7 +208,7 @@ def get_cellular_gateway_uplink_statuses_output(ending_before: Optional[pulumi.I
                                                 per_page: Optional[pulumi.Input[Optional[int]]] = None,
                                                 serials: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
                                                 starting_after: Optional[pulumi.Input[Optional[str]]] = None,
-                                                opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCellularGatewayUplinkStatusesResult]:
+                                                opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCellularGatewayUplinkStatusesResult]:
     """
     ## Example Usage
 
@@ -243,7 +243,7 @@ def get_cellular_gateway_uplink_statuses_output(ending_before: Optional[pulumi.I
     __args__['perPage'] = per_page
     __args__['serials'] = serials
     __args__['startingAfter'] = starting_after
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getCellularGatewayUplinkStatuses:getCellularGatewayUplinkStatuses', __args__, opts=opts, typ=GetCellularGatewayUplinkStatusesResult)
     return __ret__.apply(lambda __response__: GetCellularGatewayUplinkStatusesResult(
         ending_before=pulumi.get(__response__, 'ending_before'),

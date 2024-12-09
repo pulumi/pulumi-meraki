@@ -84,7 +84,7 @@ export interface GetWirelessRfProfilesResult {
  * export const merakiNetworksWirelessRfProfilesExample = example.then(example => example.item);
  * ```
  */
-export function getWirelessRfProfilesOutput(args?: GetWirelessRfProfilesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessRfProfilesResult> {
+export function getWirelessRfProfilesOutput(args?: GetWirelessRfProfilesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWirelessRfProfilesResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getWirelessRfProfiles:getWirelessRfProfiles", {

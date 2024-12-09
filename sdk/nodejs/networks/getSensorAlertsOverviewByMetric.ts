@@ -110,7 +110,7 @@ export interface GetSensorAlertsOverviewByMetricResult {
  * export const merakiNetworksSensorAlertsOverviewByMetricExample = example.then(example => example.items);
  * ```
  */
-export function getSensorAlertsOverviewByMetricOutput(args: GetSensorAlertsOverviewByMetricOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSensorAlertsOverviewByMetricResult> {
+export function getSensorAlertsOverviewByMetricOutput(args: GetSensorAlertsOverviewByMetricOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSensorAlertsOverviewByMetricResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSensorAlertsOverviewByMetric:getSensorAlertsOverviewByMetric", {
         "interval": args.interval,

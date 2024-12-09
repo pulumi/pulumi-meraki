@@ -63,7 +63,7 @@ export interface GetApplianceSettingsResult {
  * export const merakiNetworksApplianceSettingsExample = example.then(example => example.item);
  * ```
  */
-export function getApplianceSettingsOutput(args: GetApplianceSettingsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceSettingsResult> {
+export function getApplianceSettingsOutput(args: GetApplianceSettingsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplianceSettingsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getApplianceSettings:getApplianceSettings", {
         "networkId": args.networkId,

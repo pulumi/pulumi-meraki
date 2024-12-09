@@ -168,7 +168,7 @@ def get_sm_admins_roles_output(ending_before: Optional[pulumi.Input[Optional[str
                                per_page: Optional[pulumi.Input[Optional[int]]] = None,
                                role_id: Optional[pulumi.Input[Optional[str]]] = None,
                                starting_after: Optional[pulumi.Input[Optional[str]]] = None,
-                               opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSmAdminsRolesResult]:
+                               opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSmAdminsRolesResult]:
     """
     ## Example Usage
 
@@ -196,7 +196,7 @@ def get_sm_admins_roles_output(ending_before: Optional[pulumi.Input[Optional[str
     __args__['perPage'] = per_page
     __args__['roleId'] = role_id
     __args__['startingAfter'] = starting_after
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getSmAdminsRoles:getSmAdminsRoles', __args__, opts=opts, typ=GetSmAdminsRolesResult)
     return __ret__.apply(lambda __response__: GetSmAdminsRolesResult(
         ending_before=pulumi.get(__response__, 'ending_before'),

@@ -74,7 +74,7 @@ export interface GetWirelessEthernetPortsProfilesResult {
  * export const merakiNetworksWirelessEthernetPortsProfilesExample = example.then(example => example.item);
  * ```
  */
-export function getWirelessEthernetPortsProfilesOutput(args: GetWirelessEthernetPortsProfilesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessEthernetPortsProfilesResult> {
+export function getWirelessEthernetPortsProfilesOutput(args: GetWirelessEthernetPortsProfilesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWirelessEthernetPortsProfilesResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getWirelessEthernetPortsProfiles:getWirelessEthernetPortsProfiles", {
         "networkId": args.networkId,

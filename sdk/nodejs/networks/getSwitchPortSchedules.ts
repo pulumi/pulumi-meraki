@@ -66,7 +66,7 @@ export interface GetSwitchPortSchedulesResult {
  * export const merakiNetworksSwitchPortSchedulesExample = example.then(example => example.items);
  * ```
  */
-export function getSwitchPortSchedulesOutput(args: GetSwitchPortSchedulesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchPortSchedulesResult> {
+export function getSwitchPortSchedulesOutput(args: GetSwitchPortSchedulesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSwitchPortSchedulesResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSwitchPortSchedules:getSwitchPortSchedules", {
         "networkId": args.networkId,

@@ -99,7 +99,7 @@ export interface GetWirelessMeshStatusesResult {
  * export const merakiNetworksWirelessMeshStatusesExample = example.then(example => example.items);
  * ```
  */
-export function getWirelessMeshStatusesOutput(args: GetWirelessMeshStatusesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessMeshStatusesResult> {
+export function getWirelessMeshStatusesOutput(args: GetWirelessMeshStatusesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWirelessMeshStatusesResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getWirelessMeshStatuses:getWirelessMeshStatuses", {
         "endingBefore": args.endingBefore,

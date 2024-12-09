@@ -176,7 +176,7 @@ export interface GetWirelessDataRateHistoryResult {
  * export const merakiNetworksWirelessDataRateHistoryExample = example.then(example => example.items);
  * ```
  */
-export function getWirelessDataRateHistoryOutput(args: GetWirelessDataRateHistoryOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessDataRateHistoryResult> {
+export function getWirelessDataRateHistoryOutput(args: GetWirelessDataRateHistoryOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWirelessDataRateHistoryResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getWirelessDataRateHistory:getWirelessDataRateHistory", {
         "apTag": args.apTag,

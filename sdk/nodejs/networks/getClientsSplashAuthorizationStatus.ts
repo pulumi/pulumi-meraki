@@ -74,7 +74,7 @@ export interface GetClientsSplashAuthorizationStatusResult {
  * export const merakiNetworksClientsSplashAuthorizationStatusExample = example.then(example => example.item);
  * ```
  */
-export function getClientsSplashAuthorizationStatusOutput(args: GetClientsSplashAuthorizationStatusOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetClientsSplashAuthorizationStatusResult> {
+export function getClientsSplashAuthorizationStatusOutput(args: GetClientsSplashAuthorizationStatusOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetClientsSplashAuthorizationStatusResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getClientsSplashAuthorizationStatus:getClientsSplashAuthorizationStatus", {
         "clientId": args.clientId,

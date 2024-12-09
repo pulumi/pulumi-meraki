@@ -63,7 +63,7 @@ export interface GetAppliancePerformanceResult {
  * export const merakiDevicesAppliancePerformanceExample = example.then(example => example.item);
  * ```
  */
-export function getAppliancePerformanceOutput(args: GetAppliancePerformanceOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAppliancePerformanceResult> {
+export function getAppliancePerformanceOutput(args: GetAppliancePerformanceOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAppliancePerformanceResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:devices/getAppliancePerformance:getAppliancePerformance", {
         "serial": args.serial,

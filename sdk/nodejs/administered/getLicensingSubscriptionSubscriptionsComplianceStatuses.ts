@@ -78,7 +78,7 @@ export interface GetLicensingSubscriptionSubscriptionsComplianceStatusesResult {
  * export const merakiAdministeredLicensingSubscriptionSubscriptionsComplianceStatusesExample = example.then(example => example.items);
  * ```
  */
-export function getLicensingSubscriptionSubscriptionsComplianceStatusesOutput(args?: GetLicensingSubscriptionSubscriptionsComplianceStatusesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLicensingSubscriptionSubscriptionsComplianceStatusesResult> {
+export function getLicensingSubscriptionSubscriptionsComplianceStatusesOutput(args?: GetLicensingSubscriptionSubscriptionsComplianceStatusesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLicensingSubscriptionSubscriptionsComplianceStatusesResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:administered/getLicensingSubscriptionSubscriptionsComplianceStatuses:getLicensingSubscriptionSubscriptionsComplianceStatuses", {

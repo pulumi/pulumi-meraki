@@ -97,7 +97,7 @@ def get_switch_dscp_to_cos_mappings(network_id: Optional[str] = None,
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'))
 def get_switch_dscp_to_cos_mappings_output(network_id: Optional[pulumi.Input[str]] = None,
-                                           opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSwitchDscpToCosMappingsResult]:
+                                           opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSwitchDscpToCosMappingsResult]:
     """
     ## Example Usage
 
@@ -114,7 +114,7 @@ def get_switch_dscp_to_cos_mappings_output(network_id: Optional[pulumi.Input[str
     """
     __args__ = dict()
     __args__['networkId'] = network_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSwitchDscpToCosMappings:getSwitchDscpToCosMappings', __args__, opts=opts, typ=GetSwitchDscpToCosMappingsResult)
     return __ret__.apply(lambda __response__: GetSwitchDscpToCosMappingsResult(
         id=pulumi.get(__response__, 'id'),

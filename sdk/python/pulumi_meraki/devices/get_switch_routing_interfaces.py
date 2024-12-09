@@ -119,7 +119,7 @@ def get_switch_routing_interfaces(interface_id: Optional[str] = None,
         serial=pulumi.get(__ret__, 'serial'))
 def get_switch_routing_interfaces_output(interface_id: Optional[pulumi.Input[Optional[str]]] = None,
                                          serial: Optional[pulumi.Input[Optional[str]]] = None,
-                                         opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSwitchRoutingInterfacesResult]:
+                                         opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSwitchRoutingInterfacesResult]:
     """
     ## Example Usage
 
@@ -130,7 +130,7 @@ def get_switch_routing_interfaces_output(interface_id: Optional[pulumi.Input[Opt
     __args__ = dict()
     __args__['interfaceId'] = interface_id
     __args__['serial'] = serial
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:devices/getSwitchRoutingInterfaces:getSwitchRoutingInterfaces', __args__, opts=opts, typ=GetSwitchRoutingInterfacesResult)
     return __ret__.apply(lambda __response__: GetSwitchRoutingInterfacesResult(
         id=pulumi.get(__response__, 'id'),

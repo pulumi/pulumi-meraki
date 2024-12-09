@@ -63,7 +63,7 @@ export interface GetTopologyLinkLayerResult {
  * export const merakiNetworksTopologyLinkLayerExample = example.then(example => example.item);
  * ```
  */
-export function getTopologyLinkLayerOutput(args: GetTopologyLinkLayerOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTopologyLinkLayerResult> {
+export function getTopologyLinkLayerOutput(args: GetTopologyLinkLayerOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTopologyLinkLayerResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getTopologyLinkLayer:getTopologyLinkLayer", {
         "networkId": args.networkId,

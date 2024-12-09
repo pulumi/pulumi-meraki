@@ -74,7 +74,7 @@ export interface GetWirelessSsidsTrafficShapingRulesResult {
  * export const merakiNetworksWirelessSsidsTrafficShapingRulesExample = example.then(example => example.item);
  * ```
  */
-export function getWirelessSsidsTrafficShapingRulesOutput(args: GetWirelessSsidsTrafficShapingRulesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessSsidsTrafficShapingRulesResult> {
+export function getWirelessSsidsTrafficShapingRulesOutput(args: GetWirelessSsidsTrafficShapingRulesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWirelessSsidsTrafficShapingRulesResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getWirelessSsidsTrafficShapingRules:getWirelessSsidsTrafficShapingRules", {
         "networkId": args.networkId,

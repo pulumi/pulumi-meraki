@@ -115,7 +115,7 @@ def get_camera_permissions(organization_id: Optional[str] = None,
         permission_scope_id=pulumi.get(__ret__, 'permission_scope_id'))
 def get_camera_permissions_output(organization_id: Optional[pulumi.Input[str]] = None,
                                   permission_scope_id: Optional[pulumi.Input[str]] = None,
-                                  opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCameraPermissionsResult]:
+                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCameraPermissionsResult]:
     """
     ## Example Usage
 
@@ -135,7 +135,7 @@ def get_camera_permissions_output(organization_id: Optional[pulumi.Input[str]] =
     __args__ = dict()
     __args__['organizationId'] = organization_id
     __args__['permissionScopeId'] = permission_scope_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getCameraPermissions:getCameraPermissions', __args__, opts=opts, typ=GetCameraPermissionsResult)
     return __ret__.apply(lambda __response__: GetCameraPermissionsResult(
         id=pulumi.get(__response__, 'id'),

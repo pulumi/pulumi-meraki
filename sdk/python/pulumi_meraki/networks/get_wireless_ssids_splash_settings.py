@@ -115,7 +115,7 @@ def get_wireless_ssids_splash_settings(network_id: Optional[str] = None,
         number=pulumi.get(__ret__, 'number'))
 def get_wireless_ssids_splash_settings_output(network_id: Optional[pulumi.Input[str]] = None,
                                               number: Optional[pulumi.Input[str]] = None,
-                                              opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetWirelessSsidsSplashSettingsResult]:
+                                              opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetWirelessSsidsSplashSettingsResult]:
     """
     ## Example Usage
 
@@ -135,7 +135,7 @@ def get_wireless_ssids_splash_settings_output(network_id: Optional[pulumi.Input[
     __args__ = dict()
     __args__['networkId'] = network_id
     __args__['number'] = number
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getWirelessSsidsSplashSettings:getWirelessSsidsSplashSettings', __args__, opts=opts, typ=GetWirelessSsidsSplashSettingsResult)
     return __ret__.apply(lambda __response__: GetWirelessSsidsSplashSettingsResult(
         id=pulumi.get(__response__, 'id'),

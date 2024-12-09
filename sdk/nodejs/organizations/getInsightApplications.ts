@@ -66,7 +66,7 @@ export interface GetInsightApplicationsResult {
  * export const merakiOrganizationsInsightApplicationsExample = example.then(example => example.items);
  * ```
  */
-export function getInsightApplicationsOutput(args: GetInsightApplicationsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetInsightApplicationsResult> {
+export function getInsightApplicationsOutput(args: GetInsightApplicationsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetInsightApplicationsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getInsightApplications:getInsightApplications", {
         "organizationId": args.organizationId,

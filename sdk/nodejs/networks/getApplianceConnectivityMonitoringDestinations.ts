@@ -63,7 +63,7 @@ export interface GetApplianceConnectivityMonitoringDestinationsResult {
  * export const merakiNetworksApplianceConnectivityMonitoringDestinationsExample = example.then(example => example.item);
  * ```
  */
-export function getApplianceConnectivityMonitoringDestinationsOutput(args: GetApplianceConnectivityMonitoringDestinationsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceConnectivityMonitoringDestinationsResult> {
+export function getApplianceConnectivityMonitoringDestinationsOutput(args: GetApplianceConnectivityMonitoringDestinationsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplianceConnectivityMonitoringDestinationsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getApplianceConnectivityMonitoringDestinations:getApplianceConnectivityMonitoringDestinations", {
         "networkId": args.networkId,

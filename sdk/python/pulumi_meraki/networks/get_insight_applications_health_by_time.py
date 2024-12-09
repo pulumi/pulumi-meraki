@@ -190,7 +190,7 @@ def get_insight_applications_health_by_time_output(application_id: Optional[pulu
                                                    t0: Optional[pulumi.Input[Optional[str]]] = None,
                                                    t1: Optional[pulumi.Input[Optional[str]]] = None,
                                                    timespan: Optional[pulumi.Input[Optional[float]]] = None,
-                                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetInsightApplicationsHealthByTimeResult]:
+                                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetInsightApplicationsHealthByTimeResult]:
     """
     ## Example Usage
 
@@ -222,7 +222,7 @@ def get_insight_applications_health_by_time_output(application_id: Optional[pulu
     __args__['t0'] = t0
     __args__['t1'] = t1
     __args__['timespan'] = timespan
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getInsightApplicationsHealthByTime:getInsightApplicationsHealthByTime', __args__, opts=opts, typ=GetInsightApplicationsHealthByTimeResult)
     return __ret__.apply(lambda __response__: GetInsightApplicationsHealthByTimeResult(
         application_id=pulumi.get(__response__, 'application_id'),

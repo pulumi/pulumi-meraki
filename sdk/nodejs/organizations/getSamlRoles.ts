@@ -57,7 +57,7 @@ export interface GetSamlRolesResult {
 /**
  * ## Example Usage
  */
-export function getSamlRolesOutput(args?: GetSamlRolesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSamlRolesResult> {
+export function getSamlRolesOutput(args?: GetSamlRolesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSamlRolesResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getSamlRoles:getSamlRoles", {

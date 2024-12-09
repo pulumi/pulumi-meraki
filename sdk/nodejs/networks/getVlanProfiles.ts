@@ -74,7 +74,7 @@ export interface GetVlanProfilesResult {
  * export const merakiNetworksVlanProfilesExample = example.then(example => example.item);
  * ```
  */
-export function getVlanProfilesOutput(args: GetVlanProfilesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetVlanProfilesResult> {
+export function getVlanProfilesOutput(args: GetVlanProfilesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetVlanProfilesResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getVlanProfiles:getVlanProfiles", {
         "iname": args.iname,

@@ -133,7 +133,7 @@ def get_devices_statuses_overview(network_ids: Optional[Sequence[str]] = None,
 def get_devices_statuses_overview_output(network_ids: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
                                          organization_id: Optional[pulumi.Input[str]] = None,
                                          product_types: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
-                                         opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetDevicesStatusesOverviewResult]:
+                                         opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetDevicesStatusesOverviewResult]:
     """
     ## Example Usage
 
@@ -156,7 +156,7 @@ def get_devices_statuses_overview_output(network_ids: Optional[pulumi.Input[Opti
     __args__['networkIds'] = network_ids
     __args__['organizationId'] = organization_id
     __args__['productTypes'] = product_types
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getDevicesStatusesOverview:getDevicesStatusesOverview', __args__, opts=opts, typ=GetDevicesStatusesOverviewResult)
     return __ret__.apply(lambda __response__: GetDevicesStatusesOverviewResult(
         id=pulumi.get(__response__, 'id'),

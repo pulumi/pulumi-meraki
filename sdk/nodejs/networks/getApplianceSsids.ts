@@ -57,7 +57,7 @@ export interface GetApplianceSsidsResult {
 /**
  * ## Example Usage
  */
-export function getApplianceSsidsOutput(args?: GetApplianceSsidsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceSsidsResult> {
+export function getApplianceSsidsOutput(args?: GetApplianceSsidsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplianceSsidsResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getApplianceSsids:getApplianceSsids", {

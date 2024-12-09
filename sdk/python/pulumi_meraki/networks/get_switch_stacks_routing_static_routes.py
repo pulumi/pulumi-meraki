@@ -136,7 +136,7 @@ def get_switch_stacks_routing_static_routes(network_id: Optional[str] = None,
 def get_switch_stacks_routing_static_routes_output(network_id: Optional[pulumi.Input[Optional[str]]] = None,
                                                    static_route_id: Optional[pulumi.Input[Optional[str]]] = None,
                                                    switch_stack_id: Optional[pulumi.Input[Optional[str]]] = None,
-                                                   opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSwitchStacksRoutingStaticRoutesResult]:
+                                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSwitchStacksRoutingStaticRoutesResult]:
     """
     ## Example Usage
 
@@ -149,7 +149,7 @@ def get_switch_stacks_routing_static_routes_output(network_id: Optional[pulumi.I
     __args__['networkId'] = network_id
     __args__['staticRouteId'] = static_route_id
     __args__['switchStackId'] = switch_stack_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSwitchStacksRoutingStaticRoutes:getSwitchStacksRoutingStaticRoutes', __args__, opts=opts, typ=GetSwitchStacksRoutingStaticRoutesResult)
     return __ret__.apply(lambda __response__: GetSwitchStacksRoutingStaticRoutesResult(
         id=pulumi.get(__response__, 'id'),

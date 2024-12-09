@@ -66,7 +66,7 @@ export interface GetTrafficShapingDscpTaggingOptionsResult {
  * export const merakiNetworksTrafficShapingDscpTaggingOptionsExample = example.then(example => example.items);
  * ```
  */
-export function getTrafficShapingDscpTaggingOptionsOutput(args: GetTrafficShapingDscpTaggingOptionsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTrafficShapingDscpTaggingOptionsResult> {
+export function getTrafficShapingDscpTaggingOptionsOutput(args: GetTrafficShapingDscpTaggingOptionsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTrafficShapingDscpTaggingOptionsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getTrafficShapingDscpTaggingOptions:getTrafficShapingDscpTaggingOptions", {
         "networkId": args.networkId,

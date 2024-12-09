@@ -63,7 +63,7 @@ export interface GetCellularGatewayLanResult {
  * export const merakiDevicesCellularGatewayLanExample = example.then(example => example.item);
  * ```
  */
-export function getCellularGatewayLanOutput(args: GetCellularGatewayLanOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCellularGatewayLanResult> {
+export function getCellularGatewayLanOutput(args: GetCellularGatewayLanOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCellularGatewayLanResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:devices/getCellularGatewayLan:getCellularGatewayLan", {
         "serial": args.serial,

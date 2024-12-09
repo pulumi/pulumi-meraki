@@ -74,7 +74,7 @@ export interface GetLiveToolsArpTableResult {
  * export const merakiDevicesLiveToolsArpTableExample = example.then(example => example.item);
  * ```
  */
-export function getLiveToolsArpTableOutput(args: GetLiveToolsArpTableOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLiveToolsArpTableResult> {
+export function getLiveToolsArpTableOutput(args: GetLiveToolsArpTableOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLiveToolsArpTableResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:devices/getLiveToolsArpTable:getLiveToolsArpTable", {
         "arpTableId": args.arpTableId,

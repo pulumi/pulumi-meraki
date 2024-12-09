@@ -115,7 +115,7 @@ def get_wireless_ssids_firewall_l7_firewall_rules(network_id: Optional[str] = No
         number=pulumi.get(__ret__, 'number'))
 def get_wireless_ssids_firewall_l7_firewall_rules_output(network_id: Optional[pulumi.Input[str]] = None,
                                                          number: Optional[pulumi.Input[str]] = None,
-                                                         opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetWirelessSsidsFirewallL7FirewallRulesResult]:
+                                                         opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetWirelessSsidsFirewallL7FirewallRulesResult]:
     """
     ## Example Usage
 
@@ -135,7 +135,7 @@ def get_wireless_ssids_firewall_l7_firewall_rules_output(network_id: Optional[pu
     __args__ = dict()
     __args__['networkId'] = network_id
     __args__['number'] = number
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getWirelessSsidsFirewallL7FirewallRules:getWirelessSsidsFirewallL7FirewallRules', __args__, opts=opts, typ=GetWirelessSsidsFirewallL7FirewallRulesResult)
     return __ret__.apply(lambda __response__: GetWirelessSsidsFirewallL7FirewallRulesResult(
         id=pulumi.get(__response__, 'id'),

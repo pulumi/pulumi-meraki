@@ -121,7 +121,7 @@ export interface GetInventoryOnboardingCloudMonitoringNetworksResult {
  * export const merakiOrganizationsInventoryOnboardingCloudMonitoringNetworksExample = example.then(example => example.items);
  * ```
  */
-export function getInventoryOnboardingCloudMonitoringNetworksOutput(args: GetInventoryOnboardingCloudMonitoringNetworksOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetInventoryOnboardingCloudMonitoringNetworksResult> {
+export function getInventoryOnboardingCloudMonitoringNetworksOutput(args: GetInventoryOnboardingCloudMonitoringNetworksOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetInventoryOnboardingCloudMonitoringNetworksResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getInventoryOnboardingCloudMonitoringNetworks:getInventoryOnboardingCloudMonitoringNetworks", {
         "deviceType": args.deviceType,

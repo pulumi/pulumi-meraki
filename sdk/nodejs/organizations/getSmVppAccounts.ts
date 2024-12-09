@@ -57,7 +57,7 @@ export interface GetSmVppAccountsResult {
 /**
  * ## Example Usage
  */
-export function getSmVppAccountsOutput(args?: GetSmVppAccountsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmVppAccountsResult> {
+export function getSmVppAccountsOutput(args?: GetSmVppAccountsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSmVppAccountsResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getSmVppAccounts:getSmVppAccounts", {

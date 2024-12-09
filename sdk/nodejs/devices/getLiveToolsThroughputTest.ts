@@ -74,7 +74,7 @@ export interface GetLiveToolsThroughputTestResult {
  * export const merakiDevicesLiveToolsThroughputTestExample = example.then(example => example.item);
  * ```
  */
-export function getLiveToolsThroughputTestOutput(args: GetLiveToolsThroughputTestOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLiveToolsThroughputTestResult> {
+export function getLiveToolsThroughputTestOutput(args: GetLiveToolsThroughputTestOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLiveToolsThroughputTestResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:devices/getLiveToolsThroughputTest:getLiveToolsThroughputTest", {
         "serial": args.serial,

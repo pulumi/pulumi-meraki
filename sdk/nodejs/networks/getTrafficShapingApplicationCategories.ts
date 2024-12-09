@@ -63,7 +63,7 @@ export interface GetTrafficShapingApplicationCategoriesResult {
  * export const merakiNetworksTrafficShapingApplicationCategoriesExample = example.then(example => example.item);
  * ```
  */
-export function getTrafficShapingApplicationCategoriesOutput(args: GetTrafficShapingApplicationCategoriesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTrafficShapingApplicationCategoriesResult> {
+export function getTrafficShapingApplicationCategoriesOutput(args: GetTrafficShapingApplicationCategoriesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTrafficShapingApplicationCategoriesResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getTrafficShapingApplicationCategories:getTrafficShapingApplicationCategories", {
         "networkId": args.networkId,
