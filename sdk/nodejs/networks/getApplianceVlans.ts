@@ -57,7 +57,7 @@ export interface GetApplianceVlansResult {
 /**
  * ## Example Usage
  */
-export function getApplianceVlansOutput(args?: GetApplianceVlansOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceVlansResult> {
+export function getApplianceVlansOutput(args?: GetApplianceVlansOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplianceVlansResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getApplianceVlans:getApplianceVlans", {

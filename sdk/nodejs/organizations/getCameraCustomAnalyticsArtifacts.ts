@@ -57,7 +57,7 @@ export interface GetCameraCustomAnalyticsArtifactsResult {
 /**
  * ## Example Usage
  */
-export function getCameraCustomAnalyticsArtifactsOutput(args?: GetCameraCustomAnalyticsArtifactsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCameraCustomAnalyticsArtifactsResult> {
+export function getCameraCustomAnalyticsArtifactsOutput(args?: GetCameraCustomAnalyticsArtifactsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCameraCustomAnalyticsArtifactsResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getCameraCustomAnalyticsArtifacts:getCameraCustomAnalyticsArtifacts", {

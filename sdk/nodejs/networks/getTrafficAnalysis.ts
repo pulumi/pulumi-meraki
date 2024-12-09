@@ -63,7 +63,7 @@ export interface GetTrafficAnalysisResult {
  * export const merakiNetworksTrafficAnalysisExample = example.then(example => example.item);
  * ```
  */
-export function getTrafficAnalysisOutput(args: GetTrafficAnalysisOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetTrafficAnalysisResult> {
+export function getTrafficAnalysisOutput(args: GetTrafficAnalysisOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTrafficAnalysisResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getTrafficAnalysis:getTrafficAnalysis", {
         "networkId": args.networkId,

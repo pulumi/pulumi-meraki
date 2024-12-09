@@ -118,7 +118,7 @@ def get_camera_boundaries_lines_by_device(organization_id: Optional[str] = None,
         serials=pulumi.get(__ret__, 'serials'))
 def get_camera_boundaries_lines_by_device_output(organization_id: Optional[pulumi.Input[str]] = None,
                                                  serials: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
-                                                 opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetCameraBoundariesLinesByDeviceResult]:
+                                                 opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCameraBoundariesLinesByDeviceResult]:
     """
     ## Example Usage
 
@@ -138,7 +138,7 @@ def get_camera_boundaries_lines_by_device_output(organization_id: Optional[pulum
     __args__ = dict()
     __args__['organizationId'] = organization_id
     __args__['serials'] = serials
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getCameraBoundariesLinesByDevice:getCameraBoundariesLinesByDevice', __args__, opts=opts, typ=GetCameraBoundariesLinesByDeviceResult)
     return __ret__.apply(lambda __response__: GetCameraBoundariesLinesByDeviceResult(
         id=pulumi.get(__response__, 'id'),

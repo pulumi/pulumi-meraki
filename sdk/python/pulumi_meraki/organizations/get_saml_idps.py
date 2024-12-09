@@ -119,7 +119,7 @@ def get_saml_idps(idp_id: Optional[str] = None,
         organization_id=pulumi.get(__ret__, 'organization_id'))
 def get_saml_idps_output(idp_id: Optional[pulumi.Input[Optional[str]]] = None,
                          organization_id: Optional[pulumi.Input[Optional[str]]] = None,
-                         opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSamlIdpsResult]:
+                         opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSamlIdpsResult]:
     """
     ## Example Usage
 
@@ -130,7 +130,7 @@ def get_saml_idps_output(idp_id: Optional[pulumi.Input[Optional[str]]] = None,
     __args__ = dict()
     __args__['idpId'] = idp_id
     __args__['organizationId'] = organization_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getSamlIdps:getSamlIdps', __args__, opts=opts, typ=GetSamlIdpsResult)
     return __ret__.apply(lambda __response__: GetSamlIdpsResult(
         id=pulumi.get(__response__, 'id'),

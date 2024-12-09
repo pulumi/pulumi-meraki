@@ -63,7 +63,7 @@ export interface GetAlertsSettingsResult {
  * export const merakiNetworksAlertsSettingsExample = example.then(example => example.item);
  * ```
  */
-export function getAlertsSettingsOutput(args: GetAlertsSettingsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetAlertsSettingsResult> {
+export function getAlertsSettingsOutput(args: GetAlertsSettingsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAlertsSettingsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getAlertsSettings:getAlertsSettings", {
         "networkId": args.networkId,

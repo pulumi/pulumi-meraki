@@ -57,7 +57,7 @@ export interface GetFloorPlansResult {
 /**
  * ## Example Usage
  */
-export function getFloorPlansOutput(args?: GetFloorPlansOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetFloorPlansResult> {
+export function getFloorPlansOutput(args?: GetFloorPlansOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetFloorPlansResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getFloorPlans:getFloorPlans", {

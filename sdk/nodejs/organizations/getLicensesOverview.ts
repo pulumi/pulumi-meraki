@@ -63,7 +63,7 @@ export interface GetLicensesOverviewResult {
  * export const merakiOrganizationsLicensesOverviewExample = example.then(example => example.item);
  * ```
  */
-export function getLicensesOverviewOutput(args: GetLicensesOverviewOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLicensesOverviewResult> {
+export function getLicensesOverviewOutput(args: GetLicensesOverviewOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLicensesOverviewResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getLicensesOverview:getLicensesOverview", {
         "organizationId": args.organizationId,

@@ -63,7 +63,7 @@ export interface GetApplianceFirewallOneToOneNatRulesResult {
  * export const merakiNetworksApplianceFirewallOneToOneNatRulesExample = example.then(example => example.item);
  * ```
  */
-export function getApplianceFirewallOneToOneNatRulesOutput(args: GetApplianceFirewallOneToOneNatRulesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceFirewallOneToOneNatRulesResult> {
+export function getApplianceFirewallOneToOneNatRulesOutput(args: GetApplianceFirewallOneToOneNatRulesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplianceFirewallOneToOneNatRulesResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getApplianceFirewallOneToOneNatRules:getApplianceFirewallOneToOneNatRules", {
         "networkId": args.networkId,

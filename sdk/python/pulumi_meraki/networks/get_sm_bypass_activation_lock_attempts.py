@@ -115,7 +115,7 @@ def get_sm_bypass_activation_lock_attempts(attempt_id: Optional[str] = None,
         network_id=pulumi.get(__ret__, 'network_id'))
 def get_sm_bypass_activation_lock_attempts_output(attempt_id: Optional[pulumi.Input[str]] = None,
                                                   network_id: Optional[pulumi.Input[str]] = None,
-                                                  opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSmBypassActivationLockAttemptsResult]:
+                                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSmBypassActivationLockAttemptsResult]:
     """
     ## Example Usage
 
@@ -135,7 +135,7 @@ def get_sm_bypass_activation_lock_attempts_output(attempt_id: Optional[pulumi.In
     __args__ = dict()
     __args__['attemptId'] = attempt_id
     __args__['networkId'] = network_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSmBypassActivationLockAttempts:getSmBypassActivationLockAttempts', __args__, opts=opts, typ=GetSmBypassActivationLockAttemptsResult)
     return __ret__.apply(lambda __response__: GetSmBypassActivationLockAttemptsResult(
         attempt_id=pulumi.get(__response__, 'attempt_id'),

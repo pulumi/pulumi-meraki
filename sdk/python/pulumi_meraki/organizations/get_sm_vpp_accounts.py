@@ -119,7 +119,7 @@ def get_sm_vpp_accounts(organization_id: Optional[str] = None,
         vpp_account_id=pulumi.get(__ret__, 'vpp_account_id'))
 def get_sm_vpp_accounts_output(organization_id: Optional[pulumi.Input[Optional[str]]] = None,
                                vpp_account_id: Optional[pulumi.Input[Optional[str]]] = None,
-                               opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSmVppAccountsResult]:
+                               opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSmVppAccountsResult]:
     """
     ## Example Usage
 
@@ -130,7 +130,7 @@ def get_sm_vpp_accounts_output(organization_id: Optional[pulumi.Input[Optional[s
     __args__ = dict()
     __args__['organizationId'] = organization_id
     __args__['vppAccountId'] = vpp_account_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getSmVppAccounts:getSmVppAccounts', __args__, opts=opts, typ=GetSmVppAccountsResult)
     return __ret__.apply(lambda __response__: GetSmVppAccountsResult(
         id=pulumi.get(__response__, 'id'),

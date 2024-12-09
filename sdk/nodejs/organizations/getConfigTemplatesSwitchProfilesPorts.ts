@@ -75,7 +75,7 @@ export interface GetConfigTemplatesSwitchProfilesPortsResult {
 /**
  * ## Example Usage
  */
-export function getConfigTemplatesSwitchProfilesPortsOutput(args?: GetConfigTemplatesSwitchProfilesPortsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetConfigTemplatesSwitchProfilesPortsResult> {
+export function getConfigTemplatesSwitchProfilesPortsOutput(args?: GetConfigTemplatesSwitchProfilesPortsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetConfigTemplatesSwitchProfilesPortsResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getConfigTemplatesSwitchProfilesPorts:getConfigTemplatesSwitchProfilesPorts", {

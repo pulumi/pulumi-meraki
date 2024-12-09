@@ -168,7 +168,7 @@ def get_policy_objects_groups_output(ending_before: Optional[pulumi.Input[Option
                                      per_page: Optional[pulumi.Input[Optional[int]]] = None,
                                      policy_object_group_id: Optional[pulumi.Input[Optional[str]]] = None,
                                      starting_after: Optional[pulumi.Input[Optional[str]]] = None,
-                                     opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetPolicyObjectsGroupsResult]:
+                                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetPolicyObjectsGroupsResult]:
     """
     ## Example Usage
 
@@ -196,7 +196,7 @@ def get_policy_objects_groups_output(ending_before: Optional[pulumi.Input[Option
     __args__['perPage'] = per_page
     __args__['policyObjectGroupId'] = policy_object_group_id
     __args__['startingAfter'] = starting_after
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getPolicyObjectsGroups:getPolicyObjectsGroups', __args__, opts=opts, typ=GetPolicyObjectsGroupsResult)
     return __ret__.apply(lambda __response__: GetPolicyObjectsGroupsResult(
         ending_before=pulumi.get(__response__, 'ending_before'),

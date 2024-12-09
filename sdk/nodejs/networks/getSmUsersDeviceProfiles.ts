@@ -77,7 +77,7 @@ export interface GetSmUsersDeviceProfilesResult {
  * export const merakiNetworksSmUsersDeviceProfilesExample = example.then(example => example.items);
  * ```
  */
-export function getSmUsersDeviceProfilesOutput(args: GetSmUsersDeviceProfilesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmUsersDeviceProfilesResult> {
+export function getSmUsersDeviceProfilesOutput(args: GetSmUsersDeviceProfilesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSmUsersDeviceProfilesResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSmUsersDeviceProfiles:getSmUsersDeviceProfiles", {
         "networkId": args.networkId,

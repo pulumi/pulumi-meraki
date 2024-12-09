@@ -99,7 +99,7 @@ export interface GetSummaryTopClientsManufacturersByUsageResult {
  * export const merakiOrganizationsSummaryTopClientsManufacturersByUsageExample = example.then(example => example.items);
  * ```
  */
-export function getSummaryTopClientsManufacturersByUsageOutput(args: GetSummaryTopClientsManufacturersByUsageOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSummaryTopClientsManufacturersByUsageResult> {
+export function getSummaryTopClientsManufacturersByUsageOutput(args: GetSummaryTopClientsManufacturersByUsageOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSummaryTopClientsManufacturersByUsageResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getSummaryTopClientsManufacturersByUsage:getSummaryTopClientsManufacturersByUsage", {
         "organizationId": args.organizationId,

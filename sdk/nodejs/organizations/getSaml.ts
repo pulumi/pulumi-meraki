@@ -63,7 +63,7 @@ export interface GetSamlResult {
  * export const merakiOrganizationsSamlExample = example.then(example => example.item);
  * ```
  */
-export function getSamlOutput(args: GetSamlOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSamlResult> {
+export function getSamlOutput(args: GetSamlOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSamlResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getSaml:getSaml", {
         "organizationId": args.organizationId,

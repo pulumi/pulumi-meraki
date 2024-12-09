@@ -66,7 +66,7 @@ export interface GetSwitchLinkAggregationsResult {
  * export const merakiNetworksSwitchLinkAggregationsExample = example.then(example => example.items);
  * ```
  */
-export function getSwitchLinkAggregationsOutput(args: GetSwitchLinkAggregationsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchLinkAggregationsResult> {
+export function getSwitchLinkAggregationsOutput(args: GetSwitchLinkAggregationsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSwitchLinkAggregationsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSwitchLinkAggregations:getSwitchLinkAggregations", {
         "networkId": args.networkId,

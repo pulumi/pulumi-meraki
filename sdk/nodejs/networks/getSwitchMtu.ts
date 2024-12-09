@@ -63,7 +63,7 @@ export interface GetSwitchMtuResult {
  * export const merakiNetworksSwitchMtuExample = example.then(example => example.item);
  * ```
  */
-export function getSwitchMtuOutput(args: GetSwitchMtuOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchMtuResult> {
+export function getSwitchMtuOutput(args: GetSwitchMtuOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSwitchMtuResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSwitchMtu:getSwitchMtu", {
         "networkId": args.networkId,

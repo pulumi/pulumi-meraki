@@ -190,7 +190,7 @@ def get_firmware_upgrades_output(ending_before: Optional[pulumi.Input[Optional[s
                                  product_types: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
                                  starting_after: Optional[pulumi.Input[Optional[str]]] = None,
                                  statuses: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
-                                 opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetFirmwareUpgradesResult]:
+                                 opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetFirmwareUpgradesResult]:
     """
     ## Example Usage
 
@@ -222,7 +222,7 @@ def get_firmware_upgrades_output(ending_before: Optional[pulumi.Input[Optional[s
     __args__['productTypes'] = product_types
     __args__['startingAfter'] = starting_after
     __args__['statuses'] = statuses
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getFirmwareUpgrades:getFirmwareUpgrades', __args__, opts=opts, typ=GetFirmwareUpgradesResult)
     return __ret__.apply(lambda __response__: GetFirmwareUpgradesResult(
         ending_before=pulumi.get(__response__, 'ending_before'),

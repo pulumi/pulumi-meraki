@@ -110,7 +110,7 @@ export interface GetSmDevicesDesktopLogsResult {
  * export const merakiNetworksSmDevicesDesktopLogsExample = example.then(example => example.items);
  * ```
  */
-export function getSmDevicesDesktopLogsOutput(args: GetSmDevicesDesktopLogsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmDevicesDesktopLogsResult> {
+export function getSmDevicesDesktopLogsOutput(args: GetSmDevicesDesktopLogsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSmDevicesDesktopLogsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSmDevicesDesktopLogs:getSmDevicesDesktopLogs", {
         "deviceId": args.deviceId,

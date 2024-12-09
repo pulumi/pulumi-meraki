@@ -63,7 +63,7 @@ export interface GetApplianceTrafficShapingUplinkBandwidthResult {
  * export const merakiNetworksApplianceTrafficShapingUplinkBandwidthExample = example.then(example => example.item);
  * ```
  */
-export function getApplianceTrafficShapingUplinkBandwidthOutput(args: GetApplianceTrafficShapingUplinkBandwidthOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceTrafficShapingUplinkBandwidthResult> {
+export function getApplianceTrafficShapingUplinkBandwidthOutput(args: GetApplianceTrafficShapingUplinkBandwidthOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplianceTrafficShapingUplinkBandwidthResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getApplianceTrafficShapingUplinkBandwidth:getApplianceTrafficShapingUplinkBandwidth", {
         "networkId": args.networkId,

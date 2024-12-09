@@ -262,7 +262,7 @@ def get_wireless_channel_utilization_history_output(ap_tag: Optional[pulumi.Inpu
                                                     t0: Optional[pulumi.Input[Optional[str]]] = None,
                                                     t1: Optional[pulumi.Input[Optional[str]]] = None,
                                                     timespan: Optional[pulumi.Input[Optional[float]]] = None,
-                                                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetWirelessChannelUtilizationHistoryResult]:
+                                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetWirelessChannelUtilizationHistoryResult]:
     """
     ## Example Usage
 
@@ -306,7 +306,7 @@ def get_wireless_channel_utilization_history_output(ap_tag: Optional[pulumi.Inpu
     __args__['t0'] = t0
     __args__['t1'] = t1
     __args__['timespan'] = timespan
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getWirelessChannelUtilizationHistory:getWirelessChannelUtilizationHistory', __args__, opts=opts, typ=GetWirelessChannelUtilizationHistoryResult)
     return __ret__.apply(lambda __response__: GetWirelessChannelUtilizationHistoryResult(
         ap_tag=pulumi.get(__response__, 'ap_tag'),

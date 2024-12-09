@@ -119,7 +119,7 @@ def get_switch_stacks(network_id: Optional[str] = None,
         switch_stack_id=pulumi.get(__ret__, 'switch_stack_id'))
 def get_switch_stacks_output(network_id: Optional[pulumi.Input[Optional[str]]] = None,
                              switch_stack_id: Optional[pulumi.Input[Optional[str]]] = None,
-                             opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSwitchStacksResult]:
+                             opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSwitchStacksResult]:
     """
     ## Example Usage
 
@@ -130,7 +130,7 @@ def get_switch_stacks_output(network_id: Optional[pulumi.Input[Optional[str]]] =
     __args__ = dict()
     __args__['networkId'] = network_id
     __args__['switchStackId'] = switch_stack_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSwitchStacks:getSwitchStacks', __args__, opts=opts, typ=GetSwitchStacksResult)
     return __ret__.apply(lambda __response__: GetSwitchStacksResult(
         id=pulumi.get(__response__, 'id'),

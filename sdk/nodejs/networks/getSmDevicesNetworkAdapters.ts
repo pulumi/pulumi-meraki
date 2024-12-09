@@ -77,7 +77,7 @@ export interface GetSmDevicesNetworkAdaptersResult {
  * export const merakiNetworksSmDevicesNetworkAdaptersExample = example.then(example => example.items);
  * ```
  */
-export function getSmDevicesNetworkAdaptersOutput(args: GetSmDevicesNetworkAdaptersOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmDevicesNetworkAdaptersResult> {
+export function getSmDevicesNetworkAdaptersOutput(args: GetSmDevicesNetworkAdaptersOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSmDevicesNetworkAdaptersResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSmDevicesNetworkAdapters:getSmDevicesNetworkAdapters", {
         "deviceId": args.deviceId,

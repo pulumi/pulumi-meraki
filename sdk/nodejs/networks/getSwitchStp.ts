@@ -63,7 +63,7 @@ export interface GetSwitchStpResult {
  * export const merakiNetworksSwitchStpExample = example.then(example => example.item);
  * ```
  */
-export function getSwitchStpOutput(args: GetSwitchStpOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchStpResult> {
+export function getSwitchStpOutput(args: GetSwitchStpOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSwitchStpResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSwitchStp:getSwitchStp", {
         "networkId": args.networkId,

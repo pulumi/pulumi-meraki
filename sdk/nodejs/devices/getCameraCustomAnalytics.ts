@@ -63,7 +63,7 @@ export interface GetCameraCustomAnalyticsResult {
  * export const merakiDevicesCameraCustomAnalyticsExample = example.then(example => example.item);
  * ```
  */
-export function getCameraCustomAnalyticsOutput(args: GetCameraCustomAnalyticsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCameraCustomAnalyticsResult> {
+export function getCameraCustomAnalyticsOutput(args: GetCameraCustomAnalyticsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCameraCustomAnalyticsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:devices/getCameraCustomAnalytics:getCameraCustomAnalytics", {
         "serial": args.serial,

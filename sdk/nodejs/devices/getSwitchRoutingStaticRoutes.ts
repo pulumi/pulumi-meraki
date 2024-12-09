@@ -57,7 +57,7 @@ export interface GetSwitchRoutingStaticRoutesResult {
 /**
  * ## Example Usage
  */
-export function getSwitchRoutingStaticRoutesOutput(args?: GetSwitchRoutingStaticRoutesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchRoutingStaticRoutesResult> {
+export function getSwitchRoutingStaticRoutesOutput(args?: GetSwitchRoutingStaticRoutesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSwitchRoutingStaticRoutesResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:devices/getSwitchRoutingStaticRoutes:getSwitchRoutingStaticRoutes", {

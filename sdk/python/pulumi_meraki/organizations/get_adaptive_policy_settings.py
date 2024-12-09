@@ -97,7 +97,7 @@ def get_adaptive_policy_settings(organization_id: Optional[str] = None,
         item=pulumi.get(__ret__, 'item'),
         organization_id=pulumi.get(__ret__, 'organization_id'))
 def get_adaptive_policy_settings_output(organization_id: Optional[pulumi.Input[str]] = None,
-                                        opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetAdaptivePolicySettingsResult]:
+                                        opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAdaptivePolicySettingsResult]:
     """
     ## Example Usage
 
@@ -114,7 +114,7 @@ def get_adaptive_policy_settings_output(organization_id: Optional[pulumi.Input[s
     """
     __args__ = dict()
     __args__['organizationId'] = organization_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getAdaptivePolicySettings:getAdaptivePolicySettings', __args__, opts=opts, typ=GetAdaptivePolicySettingsResult)
     return __ret__.apply(lambda __response__: GetAdaptivePolicySettingsResult(
         id=pulumi.get(__response__, 'id'),

@@ -63,7 +63,7 @@ export interface GetApplianceFirewallL3FirewallRulesResult {
  * export const merakiNetworksApplianceFirewallL3FirewallRulesExample = example.then(example => example.item);
  * ```
  */
-export function getApplianceFirewallL3FirewallRulesOutput(args: GetApplianceFirewallL3FirewallRulesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceFirewallL3FirewallRulesResult> {
+export function getApplianceFirewallL3FirewallRulesOutput(args: GetApplianceFirewallL3FirewallRulesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplianceFirewallL3FirewallRulesResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getApplianceFirewallL3FirewallRules:getApplianceFirewallL3FirewallRules", {
         "networkId": args.networkId,

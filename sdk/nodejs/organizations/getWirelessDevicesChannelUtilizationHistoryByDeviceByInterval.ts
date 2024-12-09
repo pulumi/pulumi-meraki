@@ -165,7 +165,7 @@ export interface GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalRe
  * export const merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalExample = example.then(example => example.items);
  * ```
  */
-export function getWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalOutput(args: GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult> {
+export function getWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalOutput(args: GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getWirelessDevicesChannelUtilizationHistoryByDeviceByInterval:getWirelessDevicesChannelUtilizationHistoryByDeviceByInterval", {
         "endingBefore": args.endingBefore,

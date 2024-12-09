@@ -63,7 +63,7 @@ export interface GetWirelessSettingsResult {
  * export const merakiNetworksWirelessSettingsExample = example.then(example => example.item);
  * ```
  */
-export function getWirelessSettingsOutput(args: GetWirelessSettingsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessSettingsResult> {
+export function getWirelessSettingsOutput(args: GetWirelessSettingsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWirelessSettingsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getWirelessSettings:getWirelessSettings", {
         "networkId": args.networkId,

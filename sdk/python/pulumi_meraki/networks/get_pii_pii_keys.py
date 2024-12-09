@@ -205,7 +205,7 @@ def get_pii_pii_keys_output(bluetooth_mac: Optional[pulumi.Input[Optional[str]]]
                             network_id: Optional[pulumi.Input[str]] = None,
                             serial: Optional[pulumi.Input[Optional[str]]] = None,
                             username: Optional[pulumi.Input[Optional[str]]] = None,
-                            opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetPiiPiiKeysResult]:
+                            opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetPiiPiiKeysResult]:
     """
     ## Example Usage
 
@@ -240,7 +240,7 @@ def get_pii_pii_keys_output(bluetooth_mac: Optional[pulumi.Input[Optional[str]]]
     __args__['networkId'] = network_id
     __args__['serial'] = serial
     __args__['username'] = username
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getPiiPiiKeys:getPiiPiiKeys', __args__, opts=opts, typ=GetPiiPiiKeysResult)
     return __ret__.apply(lambda __response__: GetPiiPiiKeysResult(
         bluetooth_mac=pulumi.get(__response__, 'bluetooth_mac'),

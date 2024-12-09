@@ -57,7 +57,7 @@ export interface GetSensorMqttBrokersResult {
 /**
  * ## Example Usage
  */
-export function getSensorMqttBrokersOutput(args?: GetSensorMqttBrokersOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSensorMqttBrokersResult> {
+export function getSensorMqttBrokersOutput(args?: GetSensorMqttBrokersOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSensorMqttBrokersResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSensorMqttBrokers:getSensorMqttBrokers", {

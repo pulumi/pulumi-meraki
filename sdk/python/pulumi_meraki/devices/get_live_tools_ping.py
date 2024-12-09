@@ -102,7 +102,7 @@ def get_live_tools_ping(id: Optional[str] = None,
         serial=pulumi.get(__ret__, 'serial'))
 def get_live_tools_ping_output(id: Optional[pulumi.Input[str]] = None,
                                serial: Optional[pulumi.Input[str]] = None,
-                               opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetLiveToolsPingResult]:
+                               opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetLiveToolsPingResult]:
     """
     ## Example Usage
 
@@ -122,7 +122,7 @@ def get_live_tools_ping_output(id: Optional[pulumi.Input[str]] = None,
     __args__ = dict()
     __args__['id'] = id
     __args__['serial'] = serial
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:devices/getLiveToolsPing:getLiveToolsPing', __args__, opts=opts, typ=GetLiveToolsPingResult)
     return __ret__.apply(lambda __response__: GetLiveToolsPingResult(
         id=pulumi.get(__response__, 'id'),

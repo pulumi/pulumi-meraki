@@ -57,7 +57,7 @@ export interface GetSwitchRoutingMulticastRendezvousPointsResult {
 /**
  * ## Example Usage
  */
-export function getSwitchRoutingMulticastRendezvousPointsOutput(args?: GetSwitchRoutingMulticastRendezvousPointsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchRoutingMulticastRendezvousPointsResult> {
+export function getSwitchRoutingMulticastRendezvousPointsOutput(args?: GetSwitchRoutingMulticastRendezvousPointsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSwitchRoutingMulticastRendezvousPointsResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSwitchRoutingMulticastRendezvousPoints:getSwitchRoutingMulticastRendezvousPoints", {

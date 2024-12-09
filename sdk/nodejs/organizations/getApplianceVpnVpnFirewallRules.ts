@@ -63,7 +63,7 @@ export interface GetApplianceVpnVpnFirewallRulesResult {
  * export const merakiOrganizationsApplianceVpnVpnFirewallRulesExample = example.then(example => example.item);
  * ```
  */
-export function getApplianceVpnVpnFirewallRulesOutput(args: GetApplianceVpnVpnFirewallRulesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetApplianceVpnVpnFirewallRulesResult> {
+export function getApplianceVpnVpnFirewallRulesOutput(args: GetApplianceVpnVpnFirewallRulesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplianceVpnVpnFirewallRulesResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getApplianceVpnVpnFirewallRules:getApplianceVpnVpnFirewallRules", {
         "organizationId": args.organizationId,

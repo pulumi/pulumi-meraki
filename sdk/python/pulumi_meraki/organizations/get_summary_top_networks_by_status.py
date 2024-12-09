@@ -154,7 +154,7 @@ def get_summary_top_networks_by_status_output(ending_before: Optional[pulumi.Inp
                                               organization_id: Optional[pulumi.Input[str]] = None,
                                               per_page: Optional[pulumi.Input[Optional[int]]] = None,
                                               starting_after: Optional[pulumi.Input[Optional[str]]] = None,
-                                              opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSummaryTopNetworksByStatusResult]:
+                                              opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSummaryTopNetworksByStatusResult]:
     """
     ## Example Usage
 
@@ -180,7 +180,7 @@ def get_summary_top_networks_by_status_output(ending_before: Optional[pulumi.Inp
     __args__['organizationId'] = organization_id
     __args__['perPage'] = per_page
     __args__['startingAfter'] = starting_after
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getSummaryTopNetworksByStatus:getSummaryTopNetworksByStatus', __args__, opts=opts, typ=GetSummaryTopNetworksByStatusResult)
     return __ret__.apply(lambda __response__: GetSummaryTopNetworksByStatusResult(
         ending_before=pulumi.get(__response__, 'ending_before'),

@@ -57,7 +57,7 @@ export interface GetBrandingPoliciesResult {
 /**
  * ## Example Usage
  */
-export function getBrandingPoliciesOutput(args?: GetBrandingPoliciesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetBrandingPoliciesResult> {
+export function getBrandingPoliciesOutput(args?: GetBrandingPoliciesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetBrandingPoliciesResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getBrandingPolicies:getBrandingPolicies", {

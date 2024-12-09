@@ -187,7 +187,7 @@ export interface GetSwitchPortsBySwitchResult {
  * export const merakiOrganizationsSwitchPortsBySwitchExample = example.then(example => example.items);
  * ```
  */
-export function getSwitchPortsBySwitchOutput(args: GetSwitchPortsBySwitchOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchPortsBySwitchResult> {
+export function getSwitchPortsBySwitchOutput(args: GetSwitchPortsBySwitchOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSwitchPortsBySwitchResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getSwitchPortsBySwitch:getSwitchPortsBySwitch", {
         "configurationUpdatedAfter": args.configurationUpdatedAfter,

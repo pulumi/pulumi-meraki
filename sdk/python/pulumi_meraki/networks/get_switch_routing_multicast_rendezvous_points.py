@@ -119,7 +119,7 @@ def get_switch_routing_multicast_rendezvous_points(network_id: Optional[str] = N
         rendezvous_point_id=pulumi.get(__ret__, 'rendezvous_point_id'))
 def get_switch_routing_multicast_rendezvous_points_output(network_id: Optional[pulumi.Input[Optional[str]]] = None,
                                                           rendezvous_point_id: Optional[pulumi.Input[Optional[str]]] = None,
-                                                          opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSwitchRoutingMulticastRendezvousPointsResult]:
+                                                          opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSwitchRoutingMulticastRendezvousPointsResult]:
     """
     ## Example Usage
 
@@ -130,7 +130,7 @@ def get_switch_routing_multicast_rendezvous_points_output(network_id: Optional[p
     __args__ = dict()
     __args__['networkId'] = network_id
     __args__['rendezvousPointId'] = rendezvous_point_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSwitchRoutingMulticastRendezvousPoints:getSwitchRoutingMulticastRendezvousPoints', __args__, opts=opts, typ=GetSwitchRoutingMulticastRendezvousPointsResult)
     return __ret__.apply(lambda __response__: GetSwitchRoutingMulticastRendezvousPointsResult(
         id=pulumi.get(__response__, 'id'),

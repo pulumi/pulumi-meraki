@@ -172,7 +172,7 @@ def get_sensor_alerts_overview_by_metric_output(interval: Optional[pulumi.Input[
                                                 t0: Optional[pulumi.Input[Optional[str]]] = None,
                                                 t1: Optional[pulumi.Input[Optional[str]]] = None,
                                                 timespan: Optional[pulumi.Input[Optional[float]]] = None,
-                                                opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetSensorAlertsOverviewByMetricResult]:
+                                                opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSensorAlertsOverviewByMetricResult]:
     """
     ## Example Usage
 
@@ -201,7 +201,7 @@ def get_sensor_alerts_overview_by_metric_output(interval: Optional[pulumi.Input[
     __args__['t0'] = t0
     __args__['t1'] = t1
     __args__['timespan'] = timespan
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getSensorAlertsOverviewByMetric:getSensorAlertsOverviewByMetric', __args__, opts=opts, typ=GetSensorAlertsOverviewByMetricResult)
     return __ret__.apply(lambda __response__: GetSensorAlertsOverviewByMetricResult(
         id=pulumi.get(__response__, 'id'),

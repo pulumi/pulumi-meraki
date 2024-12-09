@@ -74,7 +74,7 @@ export interface GetWebhooksWebhookTestsResult {
  * export const merakiNetworksWebhooksWebhookTestsExample = example.then(example => example.item);
  * ```
  */
-export function getWebhooksWebhookTestsOutput(args: GetWebhooksWebhookTestsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWebhooksWebhookTestsResult> {
+export function getWebhooksWebhookTestsOutput(args: GetWebhooksWebhookTestsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWebhooksWebhookTestsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getWebhooksWebhookTests:getWebhooksWebhookTests", {
         "networkId": args.networkId,

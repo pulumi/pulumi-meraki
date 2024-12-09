@@ -115,7 +115,7 @@ def get_webhooks_callbacks_statuses(callback_id: Optional[str] = None,
         organization_id=pulumi.get(__ret__, 'organization_id'))
 def get_webhooks_callbacks_statuses_output(callback_id: Optional[pulumi.Input[str]] = None,
                                            organization_id: Optional[pulumi.Input[str]] = None,
-                                           opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetWebhooksCallbacksStatusesResult]:
+                                           opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetWebhooksCallbacksStatusesResult]:
     """
     ## Example Usage
 
@@ -135,7 +135,7 @@ def get_webhooks_callbacks_statuses_output(callback_id: Optional[pulumi.Input[st
     __args__ = dict()
     __args__['callbackId'] = callback_id
     __args__['organizationId'] = organization_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getWebhooksCallbacksStatuses:getWebhooksCallbacksStatuses', __args__, opts=opts, typ=GetWebhooksCallbacksStatusesResult)
     return __ret__.apply(lambda __response__: GetWebhooksCallbacksStatusesResult(
         callback_id=pulumi.get(__response__, 'callback_id'),

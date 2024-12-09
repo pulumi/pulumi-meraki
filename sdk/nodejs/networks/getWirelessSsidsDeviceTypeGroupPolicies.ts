@@ -74,7 +74,7 @@ export interface GetWirelessSsidsDeviceTypeGroupPoliciesResult {
  * export const merakiNetworksWirelessSsidsDeviceTypeGroupPoliciesExample = example.then(example => example.item);
  * ```
  */
-export function getWirelessSsidsDeviceTypeGroupPoliciesOutput(args: GetWirelessSsidsDeviceTypeGroupPoliciesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessSsidsDeviceTypeGroupPoliciesResult> {
+export function getWirelessSsidsDeviceTypeGroupPoliciesOutput(args: GetWirelessSsidsDeviceTypeGroupPoliciesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWirelessSsidsDeviceTypeGroupPoliciesResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getWirelessSsidsDeviceTypeGroupPolicies:getWirelessSsidsDeviceTypeGroupPolicies", {
         "networkId": args.networkId,

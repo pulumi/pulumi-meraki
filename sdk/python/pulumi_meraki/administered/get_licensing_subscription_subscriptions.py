@@ -248,7 +248,7 @@ def get_licensing_subscription_subscriptions_output(end_date: Optional[pulumi.In
                                                     starting_after: Optional[pulumi.Input[Optional[str]]] = None,
                                                     statuses: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
                                                     subscription_ids: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
-                                                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetLicensingSubscriptionSubscriptionsResult]:
+                                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetLicensingSubscriptionSubscriptionsResult]:
     """
     ## Example Usage
 
@@ -291,7 +291,7 @@ def get_licensing_subscription_subscriptions_output(end_date: Optional[pulumi.In
     __args__['startingAfter'] = starting_after
     __args__['statuses'] = statuses
     __args__['subscriptionIds'] = subscription_ids
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:administered/getLicensingSubscriptionSubscriptions:getLicensingSubscriptionSubscriptions', __args__, opts=opts, typ=GetLicensingSubscriptionSubscriptionsResult)
     return __ret__.apply(lambda __response__: GetLicensingSubscriptionSubscriptionsResult(
         end_date=pulumi.get(__response__, 'end_date'),

@@ -63,7 +63,7 @@ export interface GetSwitchWarmSpareResult {
  * export const merakiDevicesSwitchWarmSpareExample = example.then(example => example.item);
  * ```
  */
-export function getSwitchWarmSpareOutput(args: GetSwitchWarmSpareOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchWarmSpareResult> {
+export function getSwitchWarmSpareOutput(args: GetSwitchWarmSpareOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSwitchWarmSpareResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:devices/getSwitchWarmSpare:getSwitchWarmSpare", {
         "serial": args.serial,

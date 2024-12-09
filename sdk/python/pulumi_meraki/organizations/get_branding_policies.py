@@ -119,7 +119,7 @@ def get_branding_policies(branding_policy_id: Optional[str] = None,
         organization_id=pulumi.get(__ret__, 'organization_id'))
 def get_branding_policies_output(branding_policy_id: Optional[pulumi.Input[Optional[str]]] = None,
                                  organization_id: Optional[pulumi.Input[Optional[str]]] = None,
-                                 opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetBrandingPoliciesResult]:
+                                 opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetBrandingPoliciesResult]:
     """
     ## Example Usage
 
@@ -130,7 +130,7 @@ def get_branding_policies_output(branding_policy_id: Optional[pulumi.Input[Optio
     __args__ = dict()
     __args__['brandingPolicyId'] = branding_policy_id
     __args__['organizationId'] = organization_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getBrandingPolicies:getBrandingPolicies', __args__, opts=opts, typ=GetBrandingPoliciesResult)
     return __ret__.apply(lambda __response__: GetBrandingPoliciesResult(
         branding_policy_id=pulumi.get(__response__, 'branding_policy_id'),

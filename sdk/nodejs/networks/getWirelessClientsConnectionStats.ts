@@ -151,7 +151,7 @@ export interface GetWirelessClientsConnectionStatsResult {
  * export const merakiNetworksWirelessClientsConnectionStatsExample = example.then(example => example.item);
  * ```
  */
-export function getWirelessClientsConnectionStatsOutput(args: GetWirelessClientsConnectionStatsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetWirelessClientsConnectionStatsResult> {
+export function getWirelessClientsConnectionStatsOutput(args: GetWirelessClientsConnectionStatsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWirelessClientsConnectionStatsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getWirelessClientsConnectionStats:getWirelessClientsConnectionStats", {
         "apTag": args.apTag,

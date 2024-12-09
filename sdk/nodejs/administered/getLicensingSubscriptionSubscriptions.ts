@@ -159,7 +159,7 @@ export interface GetLicensingSubscriptionSubscriptionsResult {
  * export const merakiAdministeredLicensingSubscriptionSubscriptionsExample = example.then(example => example.items);
  * ```
  */
-export function getLicensingSubscriptionSubscriptionsOutput(args?: GetLicensingSubscriptionSubscriptionsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetLicensingSubscriptionSubscriptionsResult> {
+export function getLicensingSubscriptionSubscriptionsOutput(args?: GetLicensingSubscriptionSubscriptionsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLicensingSubscriptionSubscriptionsResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:administered/getLicensingSubscriptionSubscriptions:getLicensingSubscriptionSubscriptions", {

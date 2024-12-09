@@ -63,7 +63,7 @@ export interface GetSwitchStormControlResult {
  * export const merakiNetworksSwitchStormControlExample = example.then(example => example.item);
  * ```
  */
-export function getSwitchStormControlOutput(args: GetSwitchStormControlOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchStormControlResult> {
+export function getSwitchStormControlOutput(args: GetSwitchStormControlOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSwitchStormControlResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSwitchStormControl:getSwitchStormControl", {
         "networkId": args.networkId,

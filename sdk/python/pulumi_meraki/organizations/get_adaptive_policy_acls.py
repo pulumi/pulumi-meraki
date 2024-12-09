@@ -119,7 +119,7 @@ def get_adaptive_policy_acls(acl_id: Optional[str] = None,
         organization_id=pulumi.get(__ret__, 'organization_id'))
 def get_adaptive_policy_acls_output(acl_id: Optional[pulumi.Input[Optional[str]]] = None,
                                     organization_id: Optional[pulumi.Input[Optional[str]]] = None,
-                                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetAdaptivePolicyAclsResult]:
+                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAdaptivePolicyAclsResult]:
     """
     ## Example Usage
 
@@ -130,7 +130,7 @@ def get_adaptive_policy_acls_output(acl_id: Optional[pulumi.Input[Optional[str]]
     __args__ = dict()
     __args__['aclId'] = acl_id
     __args__['organizationId'] = organization_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:organizations/getAdaptivePolicyAcls:getAdaptivePolicyAcls', __args__, opts=opts, typ=GetAdaptivePolicyAclsResult)
     return __ret__.apply(lambda __response__: GetAdaptivePolicyAclsResult(
         acl_id=pulumi.get(__response__, 'acl_id'),

@@ -99,7 +99,7 @@ export interface GetSwitchDhcpServerPolicyArpInspectionTrustedServersResult {
  * export const merakiNetworksSwitchDhcpServerPolicyArpInspectionTrustedServersExample = example.then(example => example.items);
  * ```
  */
-export function getSwitchDhcpServerPolicyArpInspectionTrustedServersOutput(args: GetSwitchDhcpServerPolicyArpInspectionTrustedServersOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSwitchDhcpServerPolicyArpInspectionTrustedServersResult> {
+export function getSwitchDhcpServerPolicyArpInspectionTrustedServersOutput(args: GetSwitchDhcpServerPolicyArpInspectionTrustedServersOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSwitchDhcpServerPolicyArpInspectionTrustedServersResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSwitchDhcpServerPolicyArpInspectionTrustedServers:getSwitchDhcpServerPolicyArpInspectionTrustedServers", {
         "endingBefore": args.endingBefore,

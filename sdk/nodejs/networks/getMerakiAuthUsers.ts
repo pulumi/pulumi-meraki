@@ -57,7 +57,7 @@ export interface GetMerakiAuthUsersResult {
 /**
  * ## Example Usage
  */
-export function getMerakiAuthUsersOutput(args?: GetMerakiAuthUsersOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetMerakiAuthUsersResult> {
+export function getMerakiAuthUsersOutput(args?: GetMerakiAuthUsersOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetMerakiAuthUsersResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getMerakiAuthUsers:getMerakiAuthUsers", {

@@ -78,7 +78,7 @@ def get_identities_me(opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableG
     return AwaitableGetIdentitiesMeResult(
         id=pulumi.get(__ret__, 'id'),
         item=pulumi.get(__ret__, 'item'))
-def get_identities_me_output(opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetIdentitiesMeResult]:
+def get_identities_me_output(opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetIdentitiesMeResult]:
     """
     ## Example Usage
 
@@ -91,7 +91,7 @@ def get_identities_me_output(opts: Optional[pulumi.InvokeOptions] = None) -> pul
     ```
     """
     __args__ = dict()
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:administered/getIdentitiesMe:getIdentitiesMe', __args__, opts=opts, typ=GetIdentitiesMeResult)
     return __ret__.apply(lambda __response__: GetIdentitiesMeResult(
         id=pulumi.get(__response__, 'id'),

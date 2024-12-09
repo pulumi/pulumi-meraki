@@ -57,7 +57,7 @@ export interface GetCameraWirelessProfilesResult {
 /**
  * ## Example Usage
  */
-export function getCameraWirelessProfilesOutput(args?: GetCameraWirelessProfilesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetCameraWirelessProfilesResult> {
+export function getCameraWirelessProfilesOutput(args?: GetCameraWirelessProfilesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCameraWirelessProfilesResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getCameraWirelessProfiles:getCameraWirelessProfiles", {

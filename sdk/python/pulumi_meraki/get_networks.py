@@ -238,7 +238,7 @@ def get_networks_output(config_template_id: Optional[pulumi.Input[Optional[str]]
                         starting_after: Optional[pulumi.Input[Optional[str]]] = None,
                         tags: Optional[pulumi.Input[Optional[Sequence[str]]]] = None,
                         tags_filter_type: Optional[pulumi.Input[Optional[str]]] = None,
-                        opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetNetworksResult]:
+                        opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetNetworksResult]:
     """
     ## Example Usage
 
@@ -263,7 +263,7 @@ def get_networks_output(config_template_id: Optional[pulumi.Input[Optional[str]]
     __args__['startingAfter'] = starting_after
     __args__['tags'] = tags
     __args__['tagsFilterType'] = tags_filter_type
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:index/getNetworks:getNetworks', __args__, opts=opts, typ=GetNetworksResult)
     return __ret__.apply(lambda __response__: GetNetworksResult(
         config_template_id=pulumi.get(__response__, 'config_template_id'),

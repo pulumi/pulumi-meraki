@@ -97,7 +97,7 @@ def get_appliance_firewall_l3_firewall_rules(network_id: Optional[str] = None,
         item=pulumi.get(__ret__, 'item'),
         network_id=pulumi.get(__ret__, 'network_id'))
 def get_appliance_firewall_l3_firewall_rules_output(network_id: Optional[pulumi.Input[str]] = None,
-                                                    opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetApplianceFirewallL3FirewallRulesResult]:
+                                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetApplianceFirewallL3FirewallRulesResult]:
     """
     ## Example Usage
 
@@ -114,7 +114,7 @@ def get_appliance_firewall_l3_firewall_rules_output(network_id: Optional[pulumi.
     """
     __args__ = dict()
     __args__['networkId'] = network_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getApplianceFirewallL3FirewallRules:getApplianceFirewallL3FirewallRules', __args__, opts=opts, typ=GetApplianceFirewallL3FirewallRulesResult)
     return __ret__.apply(lambda __response__: GetApplianceFirewallL3FirewallRulesResult(
         id=pulumi.get(__response__, 'id'),

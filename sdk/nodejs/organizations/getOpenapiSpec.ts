@@ -74,7 +74,7 @@ export interface GetOpenapiSpecResult {
  * export const merakiOrganizationsOpenapiSpecExample = example.then(example => example.item);
  * ```
  */
-export function getOpenapiSpecOutput(args: GetOpenapiSpecOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetOpenapiSpecResult> {
+export function getOpenapiSpecOutput(args: GetOpenapiSpecOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetOpenapiSpecResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getOpenapiSpec:getOpenapiSpec", {
         "organizationId": args.organizationId,

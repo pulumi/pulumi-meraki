@@ -99,7 +99,7 @@ export interface GetSmTrustedAccessConfigsResult {
  * export const merakiNetworksSmTrustedAccessConfigsExample = example.then(example => example.items);
  * ```
  */
-export function getSmTrustedAccessConfigsOutput(args: GetSmTrustedAccessConfigsOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetSmTrustedAccessConfigsResult> {
+export function getSmTrustedAccessConfigsOutput(args: GetSmTrustedAccessConfigsOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSmTrustedAccessConfigsResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:networks/getSmTrustedAccessConfigs:getSmTrustedAccessConfigs", {
         "endingBefore": args.endingBefore,

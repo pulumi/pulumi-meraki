@@ -66,7 +66,7 @@ export interface GetActionBatchesResult {
 /**
  * ## Example Usage
  */
-export function getActionBatchesOutput(args?: GetActionBatchesOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetActionBatchesResult> {
+export function getActionBatchesOutput(args?: GetActionBatchesOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetActionBatchesResult> {
     args = args || {};
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getActionBatches:getActionBatches", {

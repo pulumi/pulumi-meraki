@@ -99,7 +99,7 @@ export interface GetClientsBandwidthUsageHistoryResult {
  * export const merakiOrganizationsClientsBandwidthUsageHistoryExample = example.then(example => example.items);
  * ```
  */
-export function getClientsBandwidthUsageHistoryOutput(args: GetClientsBandwidthUsageHistoryOutputArgs, opts?: pulumi.InvokeOptions): pulumi.Output<GetClientsBandwidthUsageHistoryResult> {
+export function getClientsBandwidthUsageHistoryOutput(args: GetClientsBandwidthUsageHistoryOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetClientsBandwidthUsageHistoryResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("meraki:organizations/getClientsBandwidthUsageHistory:getClientsBandwidthUsageHistory", {
         "organizationId": args.organizationId,

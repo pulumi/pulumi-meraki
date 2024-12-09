@@ -119,7 +119,7 @@ def get_appliance_vlans(network_id: Optional[str] = None,
         vlan_id=pulumi.get(__ret__, 'vlan_id'))
 def get_appliance_vlans_output(network_id: Optional[pulumi.Input[Optional[str]]] = None,
                                vlan_id: Optional[pulumi.Input[Optional[str]]] = None,
-                               opts: Optional[pulumi.InvokeOptions] = None) -> pulumi.Output[GetApplianceVlansResult]:
+                               opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetApplianceVlansResult]:
     """
     ## Example Usage
 
@@ -130,7 +130,7 @@ def get_appliance_vlans_output(network_id: Optional[pulumi.Input[Optional[str]]]
     __args__ = dict()
     __args__['networkId'] = network_id
     __args__['vlanId'] = vlan_id
-    opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
+    opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('meraki:networks/getApplianceVlans:getApplianceVlans', __args__, opts=opts, typ=GetApplianceVlansResult)
     return __ret__.apply(lambda __response__: GetApplianceVlansResult(
         id=pulumi.get(__response__, 'id'),
