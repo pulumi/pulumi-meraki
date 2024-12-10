@@ -6,7 +6,7 @@ toolchain go1.22.3
 
 require (
 	github.com/cisco-open/terraform-provider-meraki v0.2.3-alpha
-	github.com/pulumi/pulumi-terraform-bridge/v3 v3.97.0
+	github.com/pulumi/pulumi-terraform-bridge/v3 v3.97.1-0.20241210133859-dc9754666f03
 	github.com/pulumi/pulumi/sdk/v3 v3.142.0
 )
 
