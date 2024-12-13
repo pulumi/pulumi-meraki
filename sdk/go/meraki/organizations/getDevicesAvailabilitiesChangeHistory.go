@@ -122,21 +122,11 @@ type GetDevicesAvailabilitiesChangeHistoryResult struct {
 }
 
 func GetDevicesAvailabilitiesChangeHistoryOutput(ctx *pulumi.Context, args GetDevicesAvailabilitiesChangeHistoryOutputArgs, opts ...pulumi.InvokeOption) GetDevicesAvailabilitiesChangeHistoryResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetDevicesAvailabilitiesChangeHistoryResultOutput, error) {
 			args := v.(GetDevicesAvailabilitiesChangeHistoryArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetDevicesAvailabilitiesChangeHistoryResult
-			secret, err := ctx.InvokePackageRaw("meraki:organizations/getDevicesAvailabilitiesChangeHistory:getDevicesAvailabilitiesChangeHistory", args, &rv, "", opts...)
-			if err != nil {
-				return GetDevicesAvailabilitiesChangeHistoryResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetDevicesAvailabilitiesChangeHistoryResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetDevicesAvailabilitiesChangeHistoryResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:organizations/getDevicesAvailabilitiesChangeHistory:getDevicesAvailabilitiesChangeHistory", args, GetDevicesAvailabilitiesChangeHistoryResultOutput{}, options).(GetDevicesAvailabilitiesChangeHistoryResultOutput), nil
 		}).(GetDevicesAvailabilitiesChangeHistoryResultOutput)
 }
 

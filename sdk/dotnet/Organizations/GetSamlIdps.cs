@@ -22,6 +22,12 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetSamlIdpsResult> Invoke(GetSamlIdpsInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSamlIdpsResult>("meraki:organizations/getSamlIdps:getSamlIdps", args ?? new GetSamlIdpsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetSamlIdpsResult> Invoke(GetSamlIdpsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSamlIdpsResult>("meraki:organizations/getSamlIdps:getSamlIdps", args ?? new GetSamlIdpsInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -63,21 +63,11 @@ type LookupApplianceVpnThirdPartyVpnpeersResult struct {
 }
 
 func LookupApplianceVpnThirdPartyVpnpeersOutput(ctx *pulumi.Context, args LookupApplianceVpnThirdPartyVpnpeersOutputArgs, opts ...pulumi.InvokeOption) LookupApplianceVpnThirdPartyVpnpeersResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupApplianceVpnThirdPartyVpnpeersResultOutput, error) {
 			args := v.(LookupApplianceVpnThirdPartyVpnpeersArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupApplianceVpnThirdPartyVpnpeersResult
-			secret, err := ctx.InvokePackageRaw("meraki:organizations/getApplianceVpnThirdPartyVpnpeers:getApplianceVpnThirdPartyVpnpeers", args, &rv, "", opts...)
-			if err != nil {
-				return LookupApplianceVpnThirdPartyVpnpeersResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupApplianceVpnThirdPartyVpnpeersResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupApplianceVpnThirdPartyVpnpeersResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:organizations/getApplianceVpnThirdPartyVpnpeers:getApplianceVpnThirdPartyVpnpeers", args, LookupApplianceVpnThirdPartyVpnpeersResultOutput{}, options).(LookupApplianceVpnThirdPartyVpnpeersResultOutput), nil
 		}).(LookupApplianceVpnThirdPartyVpnpeersResultOutput)
 }
 

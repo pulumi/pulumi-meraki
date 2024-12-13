@@ -72,6 +72,37 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetSwitchDhcpV4ServersSeenResult> Invoke(GetSwitchDhcpV4ServersSeenInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSwitchDhcpV4ServersSeenResult>("meraki:networks/getSwitchDhcpV4ServersSeen:getSwitchDhcpV4ServersSeen", args ?? new GetSwitchDhcpV4ServersSeenInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetSwitchDhcpV4ServersSeen.Invoke(new()
+        ///     {
+        ///         EndingBefore = "string",
+        ///         NetworkId = "string",
+        ///         PerPage = 1,
+        ///         StartingAfter = "string",
+        ///         T0 = "string",
+        ///         Timespan = 1,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksSwitchDhcpV4ServersSeenExample"] = example.Apply(getSwitchDhcpV4ServersSeenResult =&gt; getSwitchDhcpV4ServersSeenResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSwitchDhcpV4ServersSeenResult> Invoke(GetSwitchDhcpV4ServersSeenInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSwitchDhcpV4ServersSeenResult>("meraki:networks/getSwitchDhcpV4ServersSeen:getSwitchDhcpV4ServersSeen", args ?? new GetSwitchDhcpV4ServersSeenInvokeArgs(), options.WithDefaults());
     }
 
 

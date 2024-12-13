@@ -63,21 +63,11 @@ type GetLldpCdpResult struct {
 }
 
 func GetLldpCdpOutput(ctx *pulumi.Context, args GetLldpCdpOutputArgs, opts ...pulumi.InvokeOption) GetLldpCdpResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetLldpCdpResultOutput, error) {
 			args := v.(GetLldpCdpArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetLldpCdpResult
-			secret, err := ctx.InvokePackageRaw("meraki:devices/getLldpCdp:getLldpCdp", args, &rv, "", opts...)
-			if err != nil {
-				return GetLldpCdpResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetLldpCdpResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetLldpCdpResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:devices/getLldpCdp:getLldpCdp", args, GetLldpCdpResultOutput{}, options).(GetLldpCdpResultOutput), nil
 		}).(GetLldpCdpResultOutput)
 }
 

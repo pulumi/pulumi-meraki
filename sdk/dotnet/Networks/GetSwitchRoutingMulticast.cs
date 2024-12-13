@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetSwitchRoutingMulticastResult> Invoke(GetSwitchRoutingMulticastInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSwitchRoutingMulticastResult>("meraki:networks/getSwitchRoutingMulticast:getSwitchRoutingMulticast", args ?? new GetSwitchRoutingMulticastInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetSwitchRoutingMulticast.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksSwitchRoutingMulticastExample"] = example.Apply(getSwitchRoutingMulticastResult =&gt; getSwitchRoutingMulticastResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSwitchRoutingMulticastResult> Invoke(GetSwitchRoutingMulticastInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSwitchRoutingMulticastResult>("meraki:networks/getSwitchRoutingMulticast:getSwitchRoutingMulticast", args ?? new GetSwitchRoutingMulticastInvokeArgs(), options.WithDefaults());
     }
 
 

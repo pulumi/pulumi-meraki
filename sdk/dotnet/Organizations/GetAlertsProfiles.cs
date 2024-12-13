@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetAlertsProfilesResult> Invoke(GetAlertsProfilesInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetAlertsProfilesResult>("meraki:organizations/getAlertsProfiles:getAlertsProfiles", args ?? new GetAlertsProfilesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetAlertsProfiles.Invoke(new()
+        ///     {
+        ///         OrganizationId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsAlertsProfilesExample"] = example.Apply(getAlertsProfilesResult =&gt; getAlertsProfilesResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetAlertsProfilesResult> Invoke(GetAlertsProfilesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetAlertsProfilesResult>("meraki:organizations/getAlertsProfiles:getAlertsProfiles", args ?? new GetAlertsProfilesInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -22,6 +22,12 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetSmTargetGroupsResult> Invoke(GetSmTargetGroupsInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSmTargetGroupsResult>("meraki:networks/getSmTargetGroups:getSmTargetGroups", args ?? new GetSmTargetGroupsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetSmTargetGroupsResult> Invoke(GetSmTargetGroupsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSmTargetGroupsResult>("meraki:networks/getSmTargetGroups:getSmTargetGroups", args ?? new GetSmTargetGroupsInvokeArgs(), options.WithDefaults());
     }
 
 

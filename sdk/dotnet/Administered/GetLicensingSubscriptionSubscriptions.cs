@@ -102,6 +102,52 @@ namespace Pulumi.Meraki.Administered
         /// </summary>
         public static Output<GetLicensingSubscriptionSubscriptionsResult> Invoke(GetLicensingSubscriptionSubscriptionsInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetLicensingSubscriptionSubscriptionsResult>("meraki:administered/getLicensingSubscriptionSubscriptions:getLicensingSubscriptionSubscriptions", args ?? new GetLicensingSubscriptionSubscriptionsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Administered.GetLicensingSubscriptionSubscriptions.Invoke(new()
+        ///     {
+        ///         EndDate = "string",
+        ///         EndingBefore = "string",
+        ///         OrganizationIds = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         PerPage = 1,
+        ///         ProductTypes = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         StartDate = "string",
+        ///         StartingAfter = "string",
+        ///         Statuses = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         SubscriptionIds = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiAdministeredLicensingSubscriptionSubscriptionsExample"] = example.Apply(getLicensingSubscriptionSubscriptionsResult =&gt; getLicensingSubscriptionSubscriptionsResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetLicensingSubscriptionSubscriptionsResult> Invoke(GetLicensingSubscriptionSubscriptionsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetLicensingSubscriptionSubscriptionsResult>("meraki:administered/getLicensingSubscriptionSubscriptions:getLicensingSubscriptionSubscriptions", args ?? new GetLicensingSubscriptionSubscriptionsInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -63,21 +63,11 @@ type LookupAdaptivePolicySettingsResult struct {
 }
 
 func LookupAdaptivePolicySettingsOutput(ctx *pulumi.Context, args LookupAdaptivePolicySettingsOutputArgs, opts ...pulumi.InvokeOption) LookupAdaptivePolicySettingsResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupAdaptivePolicySettingsResultOutput, error) {
 			args := v.(LookupAdaptivePolicySettingsArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupAdaptivePolicySettingsResult
-			secret, err := ctx.InvokePackageRaw("meraki:organizations/getAdaptivePolicySettings:getAdaptivePolicySettings", args, &rv, "", opts...)
-			if err != nil {
-				return LookupAdaptivePolicySettingsResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupAdaptivePolicySettingsResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupAdaptivePolicySettingsResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:organizations/getAdaptivePolicySettings:getAdaptivePolicySettings", args, LookupAdaptivePolicySettingsResultOutput{}, options).(LookupAdaptivePolicySettingsResultOutput), nil
 		}).(LookupAdaptivePolicySettingsResultOutput)
 }
 

@@ -98,6 +98,50 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetApiRequestsOverviewResponseCodesByIntervalResult> Invoke(GetApiRequestsOverviewResponseCodesByIntervalInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetApiRequestsOverviewResponseCodesByIntervalResult>("meraki:organizations/getApiRequestsOverviewResponseCodesByInterval:getApiRequestsOverviewResponseCodesByInterval", args ?? new GetApiRequestsOverviewResponseCodesByIntervalInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetApiRequestsOverviewResponseCodesByInterval.Invoke(new()
+        ///     {
+        ///         AdminIds = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         Interval = 1,
+        ///         OperationIds = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         OrganizationId = "string",
+        ///         SourceIps = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         T0 = "string",
+        ///         T1 = "string",
+        ///         Timespan = 1,
+        ///         UserAgent = "string",
+        ///         Version = 1,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsApiRequestsOverviewResponseCodesByIntervalExample"] = example.Apply(getApiRequestsOverviewResponseCodesByIntervalResult =&gt; getApiRequestsOverviewResponseCodesByIntervalResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetApiRequestsOverviewResponseCodesByIntervalResult> Invoke(GetApiRequestsOverviewResponseCodesByIntervalInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetApiRequestsOverviewResponseCodesByIntervalResult>("meraki:organizations/getApiRequestsOverviewResponseCodesByInterval:getApiRequestsOverviewResponseCodesByInterval", args ?? new GetApiRequestsOverviewResponseCodesByIntervalInvokeArgs(), options.WithDefaults());
     }
 
 

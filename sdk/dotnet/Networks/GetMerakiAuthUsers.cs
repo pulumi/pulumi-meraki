@@ -22,6 +22,12 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetMerakiAuthUsersResult> Invoke(GetMerakiAuthUsersInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetMerakiAuthUsersResult>("meraki:networks/getMerakiAuthUsers:getMerakiAuthUsers", args ?? new GetMerakiAuthUsersInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetMerakiAuthUsersResult> Invoke(GetMerakiAuthUsersInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetMerakiAuthUsersResult>("meraki:networks/getMerakiAuthUsers:getMerakiAuthUsers", args ?? new GetMerakiAuthUsersInvokeArgs(), options.WithDefaults());
     }
 
 

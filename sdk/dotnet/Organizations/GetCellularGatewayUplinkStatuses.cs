@@ -92,6 +92,47 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetCellularGatewayUplinkStatusesResult> Invoke(GetCellularGatewayUplinkStatusesInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetCellularGatewayUplinkStatusesResult>("meraki:organizations/getCellularGatewayUplinkStatuses:getCellularGatewayUplinkStatuses", args ?? new GetCellularGatewayUplinkStatusesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetCellularGatewayUplinkStatuses.Invoke(new()
+        ///     {
+        ///         EndingBefore = "string",
+        ///         Iccids = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         NetworkIds = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         OrganizationId = "string",
+        ///         PerPage = 1,
+        ///         Serials = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         StartingAfter = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsCellularGatewayUplinkStatusesExample"] = example.Apply(getCellularGatewayUplinkStatusesResult =&gt; getCellularGatewayUplinkStatusesResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetCellularGatewayUplinkStatusesResult> Invoke(GetCellularGatewayUplinkStatusesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetCellularGatewayUplinkStatusesResult>("meraki:organizations/getCellularGatewayUplinkStatuses:getCellularGatewayUplinkStatuses", args ?? new GetCellularGatewayUplinkStatusesInvokeArgs(), options.WithDefaults());
     }
 
 

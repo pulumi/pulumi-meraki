@@ -64,6 +64,33 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetWirelessEthernetPortsProfilesResult> Invoke(GetWirelessEthernetPortsProfilesInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetWirelessEthernetPortsProfilesResult>("meraki:networks/getWirelessEthernetPortsProfiles:getWirelessEthernetPortsProfiles", args ?? new GetWirelessEthernetPortsProfilesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetWirelessEthernetPortsProfiles.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///         ProfileId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksWirelessEthernetPortsProfilesExample"] = example.Apply(getWirelessEthernetPortsProfilesResult =&gt; getWirelessEthernetPortsProfilesResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetWirelessEthernetPortsProfilesResult> Invoke(GetWirelessEthernetPortsProfilesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetWirelessEthernetPortsProfilesResult>("meraki:networks/getWirelessEthernetPortsProfiles:getWirelessEthernetPortsProfiles", args ?? new GetWirelessEthernetPortsProfilesInvokeArgs(), options.WithDefaults());
     }
 
 

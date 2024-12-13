@@ -22,6 +22,12 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetFirmwareUpgradesStagedGroupsResult> Invoke(GetFirmwareUpgradesStagedGroupsInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetFirmwareUpgradesStagedGroupsResult>("meraki:networks/getFirmwareUpgradesStagedGroups:getFirmwareUpgradesStagedGroups", args ?? new GetFirmwareUpgradesStagedGroupsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetFirmwareUpgradesStagedGroupsResult> Invoke(GetFirmwareUpgradesStagedGroupsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetFirmwareUpgradesStagedGroupsResult>("meraki:networks/getFirmwareUpgradesStagedGroups:getFirmwareUpgradesStagedGroups", args ?? new GetFirmwareUpgradesStagedGroupsInvokeArgs(), options.WithDefaults());
     }
 
 

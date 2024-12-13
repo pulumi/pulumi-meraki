@@ -22,6 +22,12 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetSmVppAccountsResult> Invoke(GetSmVppAccountsInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSmVppAccountsResult>("meraki:organizations/getSmVppAccounts:getSmVppAccounts", args ?? new GetSmVppAccountsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetSmVppAccountsResult> Invoke(GetSmVppAccountsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSmVppAccountsResult>("meraki:organizations/getSmVppAccounts:getSmVppAccounts", args ?? new GetSmVppAccountsInvokeArgs(), options.WithDefaults());
     }
 
 

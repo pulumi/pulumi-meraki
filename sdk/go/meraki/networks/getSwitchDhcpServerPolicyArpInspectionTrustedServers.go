@@ -79,21 +79,11 @@ type LookupSwitchDhcpServerPolicyArpInspectionTrustedServersResult struct {
 }
 
 func LookupSwitchDhcpServerPolicyArpInspectionTrustedServersOutput(ctx *pulumi.Context, args LookupSwitchDhcpServerPolicyArpInspectionTrustedServersOutputArgs, opts ...pulumi.InvokeOption) LookupSwitchDhcpServerPolicyArpInspectionTrustedServersResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupSwitchDhcpServerPolicyArpInspectionTrustedServersResultOutput, error) {
 			args := v.(LookupSwitchDhcpServerPolicyArpInspectionTrustedServersArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupSwitchDhcpServerPolicyArpInspectionTrustedServersResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getSwitchDhcpServerPolicyArpInspectionTrustedServers:getSwitchDhcpServerPolicyArpInspectionTrustedServers", args, &rv, "", opts...)
-			if err != nil {
-				return LookupSwitchDhcpServerPolicyArpInspectionTrustedServersResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupSwitchDhcpServerPolicyArpInspectionTrustedServersResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupSwitchDhcpServerPolicyArpInspectionTrustedServersResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getSwitchDhcpServerPolicyArpInspectionTrustedServers:getSwitchDhcpServerPolicyArpInspectionTrustedServers", args, LookupSwitchDhcpServerPolicyArpInspectionTrustedServersResultOutput{}, options).(LookupSwitchDhcpServerPolicyArpInspectionTrustedServersResultOutput), nil
 		}).(LookupSwitchDhcpServerPolicyArpInspectionTrustedServersResultOutput)
 }
 

@@ -80,6 +80,41 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetWirelessClientsLatencyStatsResult> Invoke(GetWirelessClientsLatencyStatsInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetWirelessClientsLatencyStatsResult>("meraki:networks/getWirelessClientsLatencyStats:getWirelessClientsLatencyStats", args ?? new GetWirelessClientsLatencyStatsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetWirelessClientsLatencyStats.Invoke(new()
+        ///     {
+        ///         ApTag = "string",
+        ///         Band = "string",
+        ///         ClientId = "string",
+        ///         Fields = "string",
+        ///         NetworkId = "string",
+        ///         Ssid = 1,
+        ///         T0 = "string",
+        ///         T1 = "string",
+        ///         Timespan = 1,
+        ///         Vlan = 1,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksWirelessClientsLatencyStatsExample"] = example.Apply(getWirelessClientsLatencyStatsResult =&gt; getWirelessClientsLatencyStatsResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetWirelessClientsLatencyStatsResult> Invoke(GetWirelessClientsLatencyStatsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetWirelessClientsLatencyStatsResult>("meraki:networks/getWirelessClientsLatencyStats:getWirelessClientsLatencyStats", args ?? new GetWirelessClientsLatencyStatsInvokeArgs(), options.WithDefaults());
     }
 
 

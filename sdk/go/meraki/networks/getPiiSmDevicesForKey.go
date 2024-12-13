@@ -93,21 +93,11 @@ type GetPiiSmDevicesForKeyResult struct {
 }
 
 func GetPiiSmDevicesForKeyOutput(ctx *pulumi.Context, args GetPiiSmDevicesForKeyOutputArgs, opts ...pulumi.InvokeOption) GetPiiSmDevicesForKeyResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetPiiSmDevicesForKeyResultOutput, error) {
 			args := v.(GetPiiSmDevicesForKeyArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetPiiSmDevicesForKeyResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getPiiSmDevicesForKey:getPiiSmDevicesForKey", args, &rv, "", opts...)
-			if err != nil {
-				return GetPiiSmDevicesForKeyResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetPiiSmDevicesForKeyResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetPiiSmDevicesForKeyResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getPiiSmDevicesForKey:getPiiSmDevicesForKey", args, GetPiiSmDevicesForKeyResultOutput{}, options).(GetPiiSmDevicesForKeyResultOutput), nil
 		}).(GetPiiSmDevicesForKeyResultOutput)
 }
 

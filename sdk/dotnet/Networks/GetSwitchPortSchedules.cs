@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetSwitchPortSchedulesResult> Invoke(GetSwitchPortSchedulesInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSwitchPortSchedulesResult>("meraki:networks/getSwitchPortSchedules:getSwitchPortSchedules", args ?? new GetSwitchPortSchedulesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetSwitchPortSchedules.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksSwitchPortSchedulesExample"] = example.Apply(getSwitchPortSchedulesResult =&gt; getSwitchPortSchedulesResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSwitchPortSchedulesResult> Invoke(GetSwitchPortSchedulesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSwitchPortSchedulesResult>("meraki:networks/getSwitchPortSchedules:getSwitchPortSchedules", args ?? new GetSwitchPortSchedulesInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -80,6 +80,41 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetWirelessChannelUtilizationHistoryResult> Invoke(GetWirelessChannelUtilizationHistoryInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetWirelessChannelUtilizationHistoryResult>("meraki:networks/getWirelessChannelUtilizationHistory:getWirelessChannelUtilizationHistory", args ?? new GetWirelessChannelUtilizationHistoryInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetWirelessChannelUtilizationHistory.Invoke(new()
+        ///     {
+        ///         ApTag = "string",
+        ///         AutoResolution = false,
+        ///         Band = "string",
+        ///         ClientId = "string",
+        ///         DeviceSerial = "string",
+        ///         NetworkId = "string",
+        ///         Resolution = 1,
+        ///         T0 = "string",
+        ///         T1 = "string",
+        ///         Timespan = 1,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksWirelessChannelUtilizationHistoryExample"] = example.Apply(getWirelessChannelUtilizationHistoryResult =&gt; getWirelessChannelUtilizationHistoryResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetWirelessChannelUtilizationHistoryResult> Invoke(GetWirelessChannelUtilizationHistoryInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetWirelessChannelUtilizationHistoryResult>("meraki:networks/getWirelessChannelUtilizationHistory:getWirelessChannelUtilizationHistory", args ?? new GetWirelessChannelUtilizationHistoryInvokeArgs(), options.WithDefaults());
     }
 
 

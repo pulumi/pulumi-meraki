@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Devices
         /// </summary>
         public static Output<GetApplianceUplinksSettingsResult> Invoke(GetApplianceUplinksSettingsInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetApplianceUplinksSettingsResult>("meraki:devices/getApplianceUplinksSettings:getApplianceUplinksSettings", args ?? new GetApplianceUplinksSettingsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Devices.GetApplianceUplinksSettings.Invoke(new()
+        ///     {
+        ///         Serial = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiDevicesApplianceUplinksSettingsExample"] = example.Apply(getApplianceUplinksSettingsResult =&gt; getApplianceUplinksSettingsResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetApplianceUplinksSettingsResult> Invoke(GetApplianceUplinksSettingsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetApplianceUplinksSettingsResult>("meraki:devices/getApplianceUplinksSettings:getApplianceUplinksSettings", args ?? new GetApplianceUplinksSettingsInvokeArgs(), options.WithDefaults());
     }
 
 

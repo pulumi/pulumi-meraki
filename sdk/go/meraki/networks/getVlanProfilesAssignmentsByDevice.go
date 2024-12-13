@@ -100,21 +100,11 @@ type GetVlanProfilesAssignmentsByDeviceResult struct {
 }
 
 func GetVlanProfilesAssignmentsByDeviceOutput(ctx *pulumi.Context, args GetVlanProfilesAssignmentsByDeviceOutputArgs, opts ...pulumi.InvokeOption) GetVlanProfilesAssignmentsByDeviceResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetVlanProfilesAssignmentsByDeviceResultOutput, error) {
 			args := v.(GetVlanProfilesAssignmentsByDeviceArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetVlanProfilesAssignmentsByDeviceResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getVlanProfilesAssignmentsByDevice:getVlanProfilesAssignmentsByDevice", args, &rv, "", opts...)
-			if err != nil {
-				return GetVlanProfilesAssignmentsByDeviceResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetVlanProfilesAssignmentsByDeviceResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetVlanProfilesAssignmentsByDeviceResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getVlanProfilesAssignmentsByDevice:getVlanProfilesAssignmentsByDevice", args, GetVlanProfilesAssignmentsByDeviceResultOutput{}, options).(GetVlanProfilesAssignmentsByDeviceResultOutput), nil
 		}).(GetVlanProfilesAssignmentsByDeviceResultOutput)
 }
 

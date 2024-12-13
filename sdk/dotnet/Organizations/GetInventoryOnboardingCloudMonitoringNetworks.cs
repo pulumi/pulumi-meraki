@@ -72,6 +72,37 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetInventoryOnboardingCloudMonitoringNetworksResult> Invoke(GetInventoryOnboardingCloudMonitoringNetworksInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetInventoryOnboardingCloudMonitoringNetworksResult>("meraki:organizations/getInventoryOnboardingCloudMonitoringNetworks:getInventoryOnboardingCloudMonitoringNetworks", args ?? new GetInventoryOnboardingCloudMonitoringNetworksInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetInventoryOnboardingCloudMonitoringNetworks.Invoke(new()
+        ///     {
+        ///         DeviceType = "string",
+        ///         EndingBefore = "string",
+        ///         OrganizationId = "string",
+        ///         PerPage = 1,
+        ///         Search = "string",
+        ///         StartingAfter = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsInventoryOnboardingCloudMonitoringNetworksExample"] = example.Apply(getInventoryOnboardingCloudMonitoringNetworksResult =&gt; getInventoryOnboardingCloudMonitoringNetworksResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetInventoryOnboardingCloudMonitoringNetworksResult> Invoke(GetInventoryOnboardingCloudMonitoringNetworksInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetInventoryOnboardingCloudMonitoringNetworksResult>("meraki:organizations/getInventoryOnboardingCloudMonitoringNetworks:getInventoryOnboardingCloudMonitoringNetworks", args ?? new GetInventoryOnboardingCloudMonitoringNetworksInvokeArgs(), options.WithDefaults());
     }
 
 

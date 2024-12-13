@@ -68,6 +68,35 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetAlertsHistoryResult> Invoke(GetAlertsHistoryInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetAlertsHistoryResult>("meraki:networks/getAlertsHistory:getAlertsHistory", args ?? new GetAlertsHistoryInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetAlertsHistory.Invoke(new()
+        ///     {
+        ///         EndingBefore = "string",
+        ///         NetworkId = "string",
+        ///         PerPage = 1,
+        ///         StartingAfter = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksAlertsHistoryExample"] = example.Apply(getAlertsHistoryResult =&gt; getAlertsHistoryResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetAlertsHistoryResult> Invoke(GetAlertsHistoryInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetAlertsHistoryResult>("meraki:networks/getAlertsHistory:getAlertsHistory", args ?? new GetAlertsHistoryInvokeArgs(), options.WithDefaults());
     }
 
 

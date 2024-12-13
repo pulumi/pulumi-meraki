@@ -63,21 +63,11 @@ type GetApplianceContentFilteringCategoriesResult struct {
 }
 
 func GetApplianceContentFilteringCategoriesOutput(ctx *pulumi.Context, args GetApplianceContentFilteringCategoriesOutputArgs, opts ...pulumi.InvokeOption) GetApplianceContentFilteringCategoriesResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetApplianceContentFilteringCategoriesResultOutput, error) {
 			args := v.(GetApplianceContentFilteringCategoriesArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetApplianceContentFilteringCategoriesResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getApplianceContentFilteringCategories:getApplianceContentFilteringCategories", args, &rv, "", opts...)
-			if err != nil {
-				return GetApplianceContentFilteringCategoriesResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetApplianceContentFilteringCategoriesResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetApplianceContentFilteringCategoriesResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getApplianceContentFilteringCategories:getApplianceContentFilteringCategories", args, GetApplianceContentFilteringCategoriesResultOutput{}, options).(GetApplianceContentFilteringCategoriesResultOutput), nil
 		}).(GetApplianceContentFilteringCategoriesResultOutput)
 }
 

@@ -22,6 +22,12 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetWirelessSsidsIdentityPsksResult> Invoke(GetWirelessSsidsIdentityPsksInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetWirelessSsidsIdentityPsksResult>("meraki:networks/getWirelessSsidsIdentityPsks:getWirelessSsidsIdentityPsks", args ?? new GetWirelessSsidsIdentityPsksInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetWirelessSsidsIdentityPsksResult> Invoke(GetWirelessSsidsIdentityPsksInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetWirelessSsidsIdentityPsksResult>("meraki:networks/getWirelessSsidsIdentityPsks:getWirelessSsidsIdentityPsks", args ?? new GetWirelessSsidsIdentityPsksInvokeArgs(), options.WithDefaults());
     }
 
 

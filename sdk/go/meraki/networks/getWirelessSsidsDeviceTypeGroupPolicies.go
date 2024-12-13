@@ -68,21 +68,11 @@ type LookupWirelessSsidsDeviceTypeGroupPoliciesResult struct {
 }
 
 func LookupWirelessSsidsDeviceTypeGroupPoliciesOutput(ctx *pulumi.Context, args LookupWirelessSsidsDeviceTypeGroupPoliciesOutputArgs, opts ...pulumi.InvokeOption) LookupWirelessSsidsDeviceTypeGroupPoliciesResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupWirelessSsidsDeviceTypeGroupPoliciesResultOutput, error) {
 			args := v.(LookupWirelessSsidsDeviceTypeGroupPoliciesArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupWirelessSsidsDeviceTypeGroupPoliciesResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getWirelessSsidsDeviceTypeGroupPolicies:getWirelessSsidsDeviceTypeGroupPolicies", args, &rv, "", opts...)
-			if err != nil {
-				return LookupWirelessSsidsDeviceTypeGroupPoliciesResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupWirelessSsidsDeviceTypeGroupPoliciesResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupWirelessSsidsDeviceTypeGroupPoliciesResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getWirelessSsidsDeviceTypeGroupPolicies:getWirelessSsidsDeviceTypeGroupPolicies", args, LookupWirelessSsidsDeviceTypeGroupPoliciesResultOutput{}, options).(LookupWirelessSsidsDeviceTypeGroupPoliciesResultOutput), nil
 		}).(LookupWirelessSsidsDeviceTypeGroupPoliciesResultOutput)
 }
 

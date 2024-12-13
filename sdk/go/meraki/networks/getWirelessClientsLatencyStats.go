@@ -108,21 +108,11 @@ type GetWirelessClientsLatencyStatsResult struct {
 }
 
 func GetWirelessClientsLatencyStatsOutput(ctx *pulumi.Context, args GetWirelessClientsLatencyStatsOutputArgs, opts ...pulumi.InvokeOption) GetWirelessClientsLatencyStatsResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetWirelessClientsLatencyStatsResultOutput, error) {
 			args := v.(GetWirelessClientsLatencyStatsArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetWirelessClientsLatencyStatsResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getWirelessClientsLatencyStats:getWirelessClientsLatencyStats", args, &rv, "", opts...)
-			if err != nil {
-				return GetWirelessClientsLatencyStatsResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetWirelessClientsLatencyStatsResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetWirelessClientsLatencyStatsResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getWirelessClientsLatencyStats:getWirelessClientsLatencyStats", args, GetWirelessClientsLatencyStatsResultOutput{}, options).(GetWirelessClientsLatencyStatsResultOutput), nil
 		}).(GetWirelessClientsLatencyStatsResultOutput)
 }
 

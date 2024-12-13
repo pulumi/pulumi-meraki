@@ -106,6 +106,54 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetDevicesAvailabilitiesChangeHistoryResult> Invoke(GetDevicesAvailabilitiesChangeHistoryInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetDevicesAvailabilitiesChangeHistoryResult>("meraki:organizations/getDevicesAvailabilitiesChangeHistory:getDevicesAvailabilitiesChangeHistory", args ?? new GetDevicesAvailabilitiesChangeHistoryInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetDevicesAvailabilitiesChangeHistory.Invoke(new()
+        ///     {
+        ///         EndingBefore = "string",
+        ///         NetworkIds = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         OrganizationId = "string",
+        ///         PerPage = 1,
+        ///         ProductTypes = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         Serials = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         StartingAfter = "string",
+        ///         Statuses = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         T0 = "string",
+        ///         T1 = "string",
+        ///         Timespan = 1,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsDevicesAvailabilitiesChangeHistoryExample"] = example.Apply(getDevicesAvailabilitiesChangeHistoryResult =&gt; getDevicesAvailabilitiesChangeHistoryResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetDevicesAvailabilitiesChangeHistoryResult> Invoke(GetDevicesAvailabilitiesChangeHistoryInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetDevicesAvailabilitiesChangeHistoryResult>("meraki:organizations/getDevicesAvailabilitiesChangeHistory:getDevicesAvailabilitiesChangeHistory", args ?? new GetDevicesAvailabilitiesChangeHistoryInvokeArgs(), options.WithDefaults());
     }
 
 

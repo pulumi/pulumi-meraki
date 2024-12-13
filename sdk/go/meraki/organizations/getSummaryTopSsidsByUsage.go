@@ -79,21 +79,11 @@ type GetSummaryTopSsidsByUsageResult struct {
 }
 
 func GetSummaryTopSsidsByUsageOutput(ctx *pulumi.Context, args GetSummaryTopSsidsByUsageOutputArgs, opts ...pulumi.InvokeOption) GetSummaryTopSsidsByUsageResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetSummaryTopSsidsByUsageResultOutput, error) {
 			args := v.(GetSummaryTopSsidsByUsageArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetSummaryTopSsidsByUsageResult
-			secret, err := ctx.InvokePackageRaw("meraki:organizations/getSummaryTopSsidsByUsage:getSummaryTopSsidsByUsage", args, &rv, "", opts...)
-			if err != nil {
-				return GetSummaryTopSsidsByUsageResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetSummaryTopSsidsByUsageResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetSummaryTopSsidsByUsageResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:organizations/getSummaryTopSsidsByUsage:getSummaryTopSsidsByUsage", args, GetSummaryTopSsidsByUsageResultOutput{}, options).(GetSummaryTopSsidsByUsageResultOutput), nil
 		}).(GetSummaryTopSsidsByUsageResultOutput)
 }
 

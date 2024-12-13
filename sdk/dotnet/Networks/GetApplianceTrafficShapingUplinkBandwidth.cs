@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetApplianceTrafficShapingUplinkBandwidthResult> Invoke(GetApplianceTrafficShapingUplinkBandwidthInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetApplianceTrafficShapingUplinkBandwidthResult>("meraki:networks/getApplianceTrafficShapingUplinkBandwidth:getApplianceTrafficShapingUplinkBandwidth", args ?? new GetApplianceTrafficShapingUplinkBandwidthInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetApplianceTrafficShapingUplinkBandwidth.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksApplianceTrafficShapingUplinkBandwidthExample"] = example.Apply(getApplianceTrafficShapingUplinkBandwidthResult =&gt; getApplianceTrafficShapingUplinkBandwidthResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetApplianceTrafficShapingUplinkBandwidthResult> Invoke(GetApplianceTrafficShapingUplinkBandwidthInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetApplianceTrafficShapingUplinkBandwidthResult>("meraki:networks/getApplianceTrafficShapingUplinkBandwidth:getApplianceTrafficShapingUplinkBandwidth", args ?? new GetApplianceTrafficShapingUplinkBandwidthInvokeArgs(), options.WithDefaults());
     }
 
 

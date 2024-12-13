@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetApplianceRfProfilesResult> Invoke(GetApplianceRfProfilesInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetApplianceRfProfilesResult>("meraki:networks/getApplianceRfProfiles:getApplianceRfProfiles", args ?? new GetApplianceRfProfilesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetApplianceRfProfiles.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksApplianceRfProfilesExample"] = example.Apply(getApplianceRfProfilesResult =&gt; getApplianceRfProfilesResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetApplianceRfProfilesResult> Invoke(GetApplianceRfProfilesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetApplianceRfProfilesResult>("meraki:networks/getApplianceRfProfiles:getApplianceRfProfiles", args ?? new GetApplianceRfProfilesInvokeArgs(), options.WithDefaults());
     }
 
 

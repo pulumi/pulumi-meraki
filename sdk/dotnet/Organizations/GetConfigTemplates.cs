@@ -22,6 +22,12 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetConfigTemplatesResult> Invoke(GetConfigTemplatesInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetConfigTemplatesResult>("meraki:organizations/getConfigTemplates:getConfigTemplates", args ?? new GetConfigTemplatesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetConfigTemplatesResult> Invoke(GetConfigTemplatesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetConfigTemplatesResult>("meraki:organizations/getConfigTemplates:getConfigTemplates", args ?? new GetConfigTemplatesInvokeArgs(), options.WithDefaults());
     }
 
 

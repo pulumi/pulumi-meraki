@@ -22,6 +22,12 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetPiiRequestsResult> Invoke(GetPiiRequestsInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetPiiRequestsResult>("meraki:networks/getPiiRequests:getPiiRequests", args ?? new GetPiiRequestsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetPiiRequestsResult> Invoke(GetPiiRequestsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetPiiRequestsResult>("meraki:networks/getPiiRequests:getPiiRequests", args ?? new GetPiiRequestsInvokeArgs(), options.WithDefaults());
     }
 
 

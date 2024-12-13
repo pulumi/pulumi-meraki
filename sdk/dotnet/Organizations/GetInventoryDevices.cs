@@ -22,6 +22,12 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetInventoryDevicesResult> Invoke(GetInventoryDevicesInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetInventoryDevicesResult>("meraki:organizations/getInventoryDevices:getInventoryDevices", args ?? new GetInventoryDevicesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetInventoryDevicesResult> Invoke(GetInventoryDevicesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetInventoryDevicesResult>("meraki:organizations/getInventoryDevices:getInventoryDevices", args ?? new GetInventoryDevicesInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -44,21 +44,11 @@ type LookupCameraQualityRetentionProfilesResult struct {
 }
 
 func LookupCameraQualityRetentionProfilesOutput(ctx *pulumi.Context, args LookupCameraQualityRetentionProfilesOutputArgs, opts ...pulumi.InvokeOption) LookupCameraQualityRetentionProfilesResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupCameraQualityRetentionProfilesResultOutput, error) {
 			args := v.(LookupCameraQualityRetentionProfilesArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupCameraQualityRetentionProfilesResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getCameraQualityRetentionProfiles:getCameraQualityRetentionProfiles", args, &rv, "", opts...)
-			if err != nil {
-				return LookupCameraQualityRetentionProfilesResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupCameraQualityRetentionProfilesResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupCameraQualityRetentionProfilesResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getCameraQualityRetentionProfiles:getCameraQualityRetentionProfiles", args, LookupCameraQualityRetentionProfilesResultOutput{}, options).(LookupCameraQualityRetentionProfilesResultOutput), nil
 		}).(LookupCameraQualityRetentionProfilesResultOutput)
 }
 

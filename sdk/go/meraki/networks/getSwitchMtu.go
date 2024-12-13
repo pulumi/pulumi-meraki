@@ -63,21 +63,11 @@ type LookupSwitchMtuResult struct {
 }
 
 func LookupSwitchMtuOutput(ctx *pulumi.Context, args LookupSwitchMtuOutputArgs, opts ...pulumi.InvokeOption) LookupSwitchMtuResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupSwitchMtuResultOutput, error) {
 			args := v.(LookupSwitchMtuArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupSwitchMtuResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getSwitchMtu:getSwitchMtu", args, &rv, "", opts...)
-			if err != nil {
-				return LookupSwitchMtuResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupSwitchMtuResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupSwitchMtuResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getSwitchMtu:getSwitchMtu", args, LookupSwitchMtuResultOutput{}, options).(LookupSwitchMtuResultOutput), nil
 		}).(LookupSwitchMtuResultOutput)
 }
 

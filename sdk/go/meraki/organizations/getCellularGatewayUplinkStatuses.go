@@ -100,21 +100,11 @@ type GetCellularGatewayUplinkStatusesResult struct {
 }
 
 func GetCellularGatewayUplinkStatusesOutput(ctx *pulumi.Context, args GetCellularGatewayUplinkStatusesOutputArgs, opts ...pulumi.InvokeOption) GetCellularGatewayUplinkStatusesResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetCellularGatewayUplinkStatusesResultOutput, error) {
 			args := v.(GetCellularGatewayUplinkStatusesArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetCellularGatewayUplinkStatusesResult
-			secret, err := ctx.InvokePackageRaw("meraki:organizations/getCellularGatewayUplinkStatuses:getCellularGatewayUplinkStatuses", args, &rv, "", opts...)
-			if err != nil {
-				return GetCellularGatewayUplinkStatusesResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetCellularGatewayUplinkStatusesResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetCellularGatewayUplinkStatusesResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:organizations/getCellularGatewayUplinkStatuses:getCellularGatewayUplinkStatuses", args, GetCellularGatewayUplinkStatusesResultOutput{}, options).(GetCellularGatewayUplinkStatusesResultOutput), nil
 		}).(GetCellularGatewayUplinkStatusesResultOutput)
 }
 

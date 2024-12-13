@@ -44,21 +44,11 @@ type LookupApplianceSsidsResult struct {
 }
 
 func LookupApplianceSsidsOutput(ctx *pulumi.Context, args LookupApplianceSsidsOutputArgs, opts ...pulumi.InvokeOption) LookupApplianceSsidsResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupApplianceSsidsResultOutput, error) {
 			args := v.(LookupApplianceSsidsArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupApplianceSsidsResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getApplianceSsids:getApplianceSsids", args, &rv, "", opts...)
-			if err != nil {
-				return LookupApplianceSsidsResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupApplianceSsidsResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupApplianceSsidsResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getApplianceSsids:getApplianceSsids", args, LookupApplianceSsidsResultOutput{}, options).(LookupApplianceSsidsResultOutput), nil
 		}).(LookupApplianceSsidsResultOutput)
 }
 

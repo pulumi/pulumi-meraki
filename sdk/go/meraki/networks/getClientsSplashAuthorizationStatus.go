@@ -68,21 +68,11 @@ type LookupClientsSplashAuthorizationStatusResult struct {
 }
 
 func LookupClientsSplashAuthorizationStatusOutput(ctx *pulumi.Context, args LookupClientsSplashAuthorizationStatusOutputArgs, opts ...pulumi.InvokeOption) LookupClientsSplashAuthorizationStatusResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupClientsSplashAuthorizationStatusResultOutput, error) {
 			args := v.(LookupClientsSplashAuthorizationStatusArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupClientsSplashAuthorizationStatusResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getClientsSplashAuthorizationStatus:getClientsSplashAuthorizationStatus", args, &rv, "", opts...)
-			if err != nil {
-				return LookupClientsSplashAuthorizationStatusResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupClientsSplashAuthorizationStatusResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupClientsSplashAuthorizationStatusResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getClientsSplashAuthorizationStatus:getClientsSplashAuthorizationStatus", args, LookupClientsSplashAuthorizationStatusResultOutput{}, options).(LookupClientsSplashAuthorizationStatusResultOutput), nil
 		}).(LookupClientsSplashAuthorizationStatusResultOutput)
 }
 

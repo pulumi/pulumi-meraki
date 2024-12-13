@@ -64,6 +64,33 @@ namespace Pulumi.Meraki.Devices
         /// </summary>
         public static Output<GetLiveToolsCableTestResult> Invoke(GetLiveToolsCableTestInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetLiveToolsCableTestResult>("meraki:devices/getLiveToolsCableTest:getLiveToolsCableTest", args ?? new GetLiveToolsCableTestInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Devices.GetLiveToolsCableTest.Invoke(new()
+        ///     {
+        ///         Id = "string",
+        ///         Serial = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiDevicesLiveToolsCableTestExample"] = example.Apply(getLiveToolsCableTestResult =&gt; getLiveToolsCableTestResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetLiveToolsCableTestResult> Invoke(GetLiveToolsCableTestInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetLiveToolsCableTestResult>("meraki:devices/getLiveToolsCableTest:getLiveToolsCableTest", args ?? new GetLiveToolsCableTestInvokeArgs(), options.WithDefaults());
     }
 
 

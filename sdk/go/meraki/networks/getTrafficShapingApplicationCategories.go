@@ -63,21 +63,11 @@ type GetTrafficShapingApplicationCategoriesResult struct {
 }
 
 func GetTrafficShapingApplicationCategoriesOutput(ctx *pulumi.Context, args GetTrafficShapingApplicationCategoriesOutputArgs, opts ...pulumi.InvokeOption) GetTrafficShapingApplicationCategoriesResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetTrafficShapingApplicationCategoriesResultOutput, error) {
 			args := v.(GetTrafficShapingApplicationCategoriesArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetTrafficShapingApplicationCategoriesResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getTrafficShapingApplicationCategories:getTrafficShapingApplicationCategories", args, &rv, "", opts...)
-			if err != nil {
-				return GetTrafficShapingApplicationCategoriesResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetTrafficShapingApplicationCategoriesResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetTrafficShapingApplicationCategoriesResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getTrafficShapingApplicationCategories:getTrafficShapingApplicationCategories", args, GetTrafficShapingApplicationCategoriesResultOutput{}, options).(GetTrafficShapingApplicationCategoriesResultOutput), nil
 		}).(GetTrafficShapingApplicationCategoriesResultOutput)
 }
 

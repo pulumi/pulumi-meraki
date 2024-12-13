@@ -68,6 +68,35 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetSummaryTopAppliancesByUtilizationResult> Invoke(GetSummaryTopAppliancesByUtilizationInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSummaryTopAppliancesByUtilizationResult>("meraki:organizations/getSummaryTopAppliancesByUtilization:getSummaryTopAppliancesByUtilization", args ?? new GetSummaryTopAppliancesByUtilizationInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetSummaryTopAppliancesByUtilization.Invoke(new()
+        ///     {
+        ///         OrganizationId = "string",
+        ///         T0 = "string",
+        ///         T1 = "string",
+        ///         Timespan = 1,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsSummaryTopAppliancesByUtilizationExample"] = example.Apply(getSummaryTopAppliancesByUtilizationResult =&gt; getSummaryTopAppliancesByUtilizationResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSummaryTopAppliancesByUtilizationResult> Invoke(GetSummaryTopAppliancesByUtilizationInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSummaryTopAppliancesByUtilizationResult>("meraki:organizations/getSummaryTopAppliancesByUtilization:getSummaryTopAppliancesByUtilization", args ?? new GetSummaryTopAppliancesByUtilizationInvokeArgs(), options.WithDefaults());
     }
 
 

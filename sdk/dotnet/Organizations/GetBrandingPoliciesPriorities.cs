@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetBrandingPoliciesPrioritiesResult> Invoke(GetBrandingPoliciesPrioritiesInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetBrandingPoliciesPrioritiesResult>("meraki:organizations/getBrandingPoliciesPriorities:getBrandingPoliciesPriorities", args ?? new GetBrandingPoliciesPrioritiesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetBrandingPoliciesPriorities.Invoke(new()
+        ///     {
+        ///         OrganizationId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsBrandingPoliciesPrioritiesExample"] = example.Apply(getBrandingPoliciesPrioritiesResult =&gt; getBrandingPoliciesPrioritiesResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetBrandingPoliciesPrioritiesResult> Invoke(GetBrandingPoliciesPrioritiesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetBrandingPoliciesPrioritiesResult>("meraki:organizations/getBrandingPoliciesPriorities:getBrandingPoliciesPriorities", args ?? new GetBrandingPoliciesPrioritiesInvokeArgs(), options.WithDefaults());
     }
 
 

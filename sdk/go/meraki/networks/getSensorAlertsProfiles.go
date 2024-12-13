@@ -42,21 +42,11 @@ type LookupSensorAlertsProfilesResult struct {
 }
 
 func LookupSensorAlertsProfilesOutput(ctx *pulumi.Context, args LookupSensorAlertsProfilesOutputArgs, opts ...pulumi.InvokeOption) LookupSensorAlertsProfilesResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupSensorAlertsProfilesResultOutput, error) {
 			args := v.(LookupSensorAlertsProfilesArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupSensorAlertsProfilesResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getSensorAlertsProfiles:getSensorAlertsProfiles", args, &rv, "", opts...)
-			if err != nil {
-				return LookupSensorAlertsProfilesResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupSensorAlertsProfilesResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupSensorAlertsProfilesResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getSensorAlertsProfiles:getSensorAlertsProfiles", args, LookupSensorAlertsProfilesResultOutput{}, options).(LookupSensorAlertsProfilesResultOutput), nil
 		}).(LookupSensorAlertsProfilesResultOutput)
 }
 

@@ -68,6 +68,35 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetSmTrustedAccessConfigsResult> Invoke(GetSmTrustedAccessConfigsInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSmTrustedAccessConfigsResult>("meraki:networks/getSmTrustedAccessConfigs:getSmTrustedAccessConfigs", args ?? new GetSmTrustedAccessConfigsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetSmTrustedAccessConfigs.Invoke(new()
+        ///     {
+        ///         EndingBefore = "string",
+        ///         NetworkId = "string",
+        ///         PerPage = 1,
+        ///         StartingAfter = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksSmTrustedAccessConfigsExample"] = example.Apply(getSmTrustedAccessConfigsResult =&gt; getSmTrustedAccessConfigsResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSmTrustedAccessConfigsResult> Invoke(GetSmTrustedAccessConfigsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSmTrustedAccessConfigsResult>("meraki:networks/getSmTrustedAccessConfigs:getSmTrustedAccessConfigs", args ?? new GetSmTrustedAccessConfigsInvokeArgs(), options.WithDefaults());
     }
 
 

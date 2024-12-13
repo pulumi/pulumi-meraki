@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetApplianceVpnVpnFirewallRulesResult> Invoke(GetApplianceVpnVpnFirewallRulesInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetApplianceVpnVpnFirewallRulesResult>("meraki:organizations/getApplianceVpnVpnFirewallRules:getApplianceVpnVpnFirewallRules", args ?? new GetApplianceVpnVpnFirewallRulesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetApplianceVpnVpnFirewallRules.Invoke(new()
+        ///     {
+        ///         OrganizationId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsApplianceVpnVpnFirewallRulesExample"] = example.Apply(getApplianceVpnVpnFirewallRulesResult =&gt; getApplianceVpnVpnFirewallRulesResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetApplianceVpnVpnFirewallRulesResult> Invoke(GetApplianceVpnVpnFirewallRulesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetApplianceVpnVpnFirewallRulesResult>("meraki:organizations/getApplianceVpnVpnFirewallRules:getApplianceVpnVpnFirewallRules", args ?? new GetApplianceVpnVpnFirewallRulesInvokeArgs(), options.WithDefaults());
     }
 
 

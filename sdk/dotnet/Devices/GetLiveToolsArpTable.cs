@@ -64,6 +64,33 @@ namespace Pulumi.Meraki.Devices
         /// </summary>
         public static Output<GetLiveToolsArpTableResult> Invoke(GetLiveToolsArpTableInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetLiveToolsArpTableResult>("meraki:devices/getLiveToolsArpTable:getLiveToolsArpTable", args ?? new GetLiveToolsArpTableInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Devices.GetLiveToolsArpTable.Invoke(new()
+        ///     {
+        ///         ArpTableId = "string",
+        ///         Serial = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiDevicesLiveToolsArpTableExample"] = example.Apply(getLiveToolsArpTableResult =&gt; getLiveToolsArpTableResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetLiveToolsArpTableResult> Invoke(GetLiveToolsArpTableInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetLiveToolsArpTableResult>("meraki:devices/getLiveToolsArpTable:getLiveToolsArpTable", args ?? new GetLiveToolsArpTableInvokeArgs(), options.WithDefaults());
     }
 
 

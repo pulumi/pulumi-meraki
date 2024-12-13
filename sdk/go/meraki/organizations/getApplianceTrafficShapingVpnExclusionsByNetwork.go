@@ -85,21 +85,11 @@ type GetApplianceTrafficShapingVpnExclusionsByNetworkResult struct {
 }
 
 func GetApplianceTrafficShapingVpnExclusionsByNetworkOutput(ctx *pulumi.Context, args GetApplianceTrafficShapingVpnExclusionsByNetworkOutputArgs, opts ...pulumi.InvokeOption) GetApplianceTrafficShapingVpnExclusionsByNetworkResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetApplianceTrafficShapingVpnExclusionsByNetworkResultOutput, error) {
 			args := v.(GetApplianceTrafficShapingVpnExclusionsByNetworkArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetApplianceTrafficShapingVpnExclusionsByNetworkResult
-			secret, err := ctx.InvokePackageRaw("meraki:organizations/getApplianceTrafficShapingVpnExclusionsByNetwork:getApplianceTrafficShapingVpnExclusionsByNetwork", args, &rv, "", opts...)
-			if err != nil {
-				return GetApplianceTrafficShapingVpnExclusionsByNetworkResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetApplianceTrafficShapingVpnExclusionsByNetworkResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetApplianceTrafficShapingVpnExclusionsByNetworkResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:organizations/getApplianceTrafficShapingVpnExclusionsByNetwork:getApplianceTrafficShapingVpnExclusionsByNetwork", args, GetApplianceTrafficShapingVpnExclusionsByNetworkResultOutput{}, options).(GetApplianceTrafficShapingVpnExclusionsByNetworkResultOutput), nil
 		}).(GetApplianceTrafficShapingVpnExclusionsByNetworkResultOutput)
 }
 

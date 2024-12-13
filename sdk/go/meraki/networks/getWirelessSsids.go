@@ -44,21 +44,11 @@ type LookupWirelessSsidsResult struct {
 }
 
 func LookupWirelessSsidsOutput(ctx *pulumi.Context, args LookupWirelessSsidsOutputArgs, opts ...pulumi.InvokeOption) LookupWirelessSsidsResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupWirelessSsidsResultOutput, error) {
 			args := v.(LookupWirelessSsidsArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupWirelessSsidsResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getWirelessSsids:getWirelessSsids", args, &rv, "", opts...)
-			if err != nil {
-				return LookupWirelessSsidsResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupWirelessSsidsResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupWirelessSsidsResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getWirelessSsids:getWirelessSsids", args, LookupWirelessSsidsResultOutput{}, options).(LookupWirelessSsidsResultOutput), nil
 		}).(LookupWirelessSsidsResultOutput)
 }
 

@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetApplianceFirewallL7FirewallRulesApplicationCategoriesResult> Invoke(GetApplianceFirewallL7FirewallRulesApplicationCategoriesInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetApplianceFirewallL7FirewallRulesApplicationCategoriesResult>("meraki:networks/getApplianceFirewallL7FirewallRulesApplicationCategories:getApplianceFirewallL7FirewallRulesApplicationCategories", args ?? new GetApplianceFirewallL7FirewallRulesApplicationCategoriesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetApplianceFirewallL7FirewallRulesApplicationCategories.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksApplianceFirewallL7FirewallRulesApplicationCategoriesExample"] = example.Apply(getApplianceFirewallL7FirewallRulesApplicationCategoriesResult =&gt; getApplianceFirewallL7FirewallRulesApplicationCategoriesResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetApplianceFirewallL7FirewallRulesApplicationCategoriesResult> Invoke(GetApplianceFirewallL7FirewallRulesApplicationCategoriesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetApplianceFirewallL7FirewallRulesApplicationCategoriesResult>("meraki:networks/getApplianceFirewallL7FirewallRulesApplicationCategories:getApplianceFirewallL7FirewallRulesApplicationCategories", args ?? new GetApplianceFirewallL7FirewallRulesApplicationCategoriesInvokeArgs(), options.WithDefaults());
     }
 
 

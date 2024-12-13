@@ -64,6 +64,33 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetClientsSplashAuthorizationStatusResult> Invoke(GetClientsSplashAuthorizationStatusInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetClientsSplashAuthorizationStatusResult>("meraki:networks/getClientsSplashAuthorizationStatus:getClientsSplashAuthorizationStatus", args ?? new GetClientsSplashAuthorizationStatusInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetClientsSplashAuthorizationStatus.Invoke(new()
+        ///     {
+        ///         ClientId = "string",
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksClientsSplashAuthorizationStatusExample"] = example.Apply(getClientsSplashAuthorizationStatusResult =&gt; getClientsSplashAuthorizationStatusResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetClientsSplashAuthorizationStatusResult> Invoke(GetClientsSplashAuthorizationStatusInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetClientsSplashAuthorizationStatusResult>("meraki:networks/getClientsSplashAuthorizationStatus:getClientsSplashAuthorizationStatus", args ?? new GetClientsSplashAuthorizationStatusInvokeArgs(), options.WithDefaults());
     }
 
 

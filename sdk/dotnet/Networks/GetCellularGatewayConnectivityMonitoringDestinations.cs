@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetCellularGatewayConnectivityMonitoringDestinationsResult> Invoke(GetCellularGatewayConnectivityMonitoringDestinationsInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetCellularGatewayConnectivityMonitoringDestinationsResult>("meraki:networks/getCellularGatewayConnectivityMonitoringDestinations:getCellularGatewayConnectivityMonitoringDestinations", args ?? new GetCellularGatewayConnectivityMonitoringDestinationsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetCellularGatewayConnectivityMonitoringDestinations.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksCellularGatewayConnectivityMonitoringDestinationsExample"] = example.Apply(getCellularGatewayConnectivityMonitoringDestinationsResult =&gt; getCellularGatewayConnectivityMonitoringDestinationsResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetCellularGatewayConnectivityMonitoringDestinationsResult> Invoke(GetCellularGatewayConnectivityMonitoringDestinationsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetCellularGatewayConnectivityMonitoringDestinationsResult>("meraki:networks/getCellularGatewayConnectivityMonitoringDestinations:getCellularGatewayConnectivityMonitoringDestinations", args ?? new GetCellularGatewayConnectivityMonitoringDestinationsInvokeArgs(), options.WithDefaults());
     }
 
 

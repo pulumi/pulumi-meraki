@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetEarlyAccessFeaturesResult> Invoke(GetEarlyAccessFeaturesInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetEarlyAccessFeaturesResult>("meraki:organizations/getEarlyAccessFeatures:getEarlyAccessFeatures", args ?? new GetEarlyAccessFeaturesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetEarlyAccessFeatures.Invoke(new()
+        ///     {
+        ///         OrganizationId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsEarlyAccessFeaturesExample"] = example.Apply(getEarlyAccessFeaturesResult =&gt; getEarlyAccessFeaturesResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetEarlyAccessFeaturesResult> Invoke(GetEarlyAccessFeaturesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetEarlyAccessFeaturesResult>("meraki:organizations/getEarlyAccessFeatures:getEarlyAccessFeatures", args ?? new GetEarlyAccessFeaturesInvokeArgs(), options.WithDefaults());
     }
 
 

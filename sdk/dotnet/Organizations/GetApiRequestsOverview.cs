@@ -68,6 +68,35 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetApiRequestsOverviewResult> Invoke(GetApiRequestsOverviewInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetApiRequestsOverviewResult>("meraki:organizations/getApiRequestsOverview:getApiRequestsOverview", args ?? new GetApiRequestsOverviewInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetApiRequestsOverview.Invoke(new()
+        ///     {
+        ///         OrganizationId = "string",
+        ///         T0 = "string",
+        ///         T1 = "string",
+        ///         Timespan = 1,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsApiRequestsOverviewExample"] = example.Apply(getApiRequestsOverviewResult =&gt; getApiRequestsOverviewResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetApiRequestsOverviewResult> Invoke(GetApiRequestsOverviewInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetApiRequestsOverviewResult>("meraki:organizations/getApiRequestsOverview:getApiRequestsOverview", args ?? new GetApiRequestsOverviewInvokeArgs(), options.WithDefaults());
     }
 
 

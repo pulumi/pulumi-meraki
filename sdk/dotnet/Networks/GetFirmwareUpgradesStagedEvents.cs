@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetFirmwareUpgradesStagedEventsResult> Invoke(GetFirmwareUpgradesStagedEventsInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetFirmwareUpgradesStagedEventsResult>("meraki:networks/getFirmwareUpgradesStagedEvents:getFirmwareUpgradesStagedEvents", args ?? new GetFirmwareUpgradesStagedEventsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetFirmwareUpgradesStagedEvents.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksFirmwareUpgradesStagedEventsExample"] = example.Apply(getFirmwareUpgradesStagedEventsResult =&gt; getFirmwareUpgradesStagedEventsResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetFirmwareUpgradesStagedEventsResult> Invoke(GetFirmwareUpgradesStagedEventsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetFirmwareUpgradesStagedEventsResult>("meraki:networks/getFirmwareUpgradesStagedEvents:getFirmwareUpgradesStagedEvents", args ?? new GetFirmwareUpgradesStagedEventsInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -115,21 +115,11 @@ type GetApiRequestsOverviewResponseCodesByIntervalResult struct {
 }
 
 func GetApiRequestsOverviewResponseCodesByIntervalOutput(ctx *pulumi.Context, args GetApiRequestsOverviewResponseCodesByIntervalOutputArgs, opts ...pulumi.InvokeOption) GetApiRequestsOverviewResponseCodesByIntervalResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetApiRequestsOverviewResponseCodesByIntervalResultOutput, error) {
 			args := v.(GetApiRequestsOverviewResponseCodesByIntervalArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetApiRequestsOverviewResponseCodesByIntervalResult
-			secret, err := ctx.InvokePackageRaw("meraki:organizations/getApiRequestsOverviewResponseCodesByInterval:getApiRequestsOverviewResponseCodesByInterval", args, &rv, "", opts...)
-			if err != nil {
-				return GetApiRequestsOverviewResponseCodesByIntervalResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetApiRequestsOverviewResponseCodesByIntervalResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetApiRequestsOverviewResponseCodesByIntervalResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:organizations/getApiRequestsOverviewResponseCodesByInterval:getApiRequestsOverviewResponseCodesByInterval", args, GetApiRequestsOverviewResponseCodesByIntervalResultOutput{}, options).(GetApiRequestsOverviewResponseCodesByIntervalResultOutput), nil
 		}).(GetApiRequestsOverviewResponseCodesByIntervalResultOutput)
 }
 

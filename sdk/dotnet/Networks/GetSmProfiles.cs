@@ -70,6 +70,36 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetSmProfilesResult> Invoke(GetSmProfilesInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSmProfilesResult>("meraki:networks/getSmProfiles:getSmProfiles", args ?? new GetSmProfilesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetSmProfiles.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///         PayloadTypes = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksSmProfilesExample"] = example.Apply(getSmProfilesResult =&gt; getSmProfilesResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSmProfilesResult> Invoke(GetSmProfilesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSmProfilesResult>("meraki:networks/getSmProfiles:getSmProfiles", args ?? new GetSmProfilesInvokeArgs(), options.WithDefaults());
     }
 
 

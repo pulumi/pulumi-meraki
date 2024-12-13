@@ -76,6 +76,39 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetApplianceTrafficShapingVpnExclusionsByNetworkResult> Invoke(GetApplianceTrafficShapingVpnExclusionsByNetworkInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetApplianceTrafficShapingVpnExclusionsByNetworkResult>("meraki:organizations/getApplianceTrafficShapingVpnExclusionsByNetwork:getApplianceTrafficShapingVpnExclusionsByNetwork", args ?? new GetApplianceTrafficShapingVpnExclusionsByNetworkInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetApplianceTrafficShapingVpnExclusionsByNetwork.Invoke(new()
+        ///     {
+        ///         EndingBefore = "string",
+        ///         NetworkIds = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         OrganizationId = "string",
+        ///         PerPage = 1,
+        ///         StartingAfter = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsApplianceTrafficShapingVpnExclusionsByNetworkExample"] = example.Apply(getApplianceTrafficShapingVpnExclusionsByNetworkResult =&gt; getApplianceTrafficShapingVpnExclusionsByNetworkResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetApplianceTrafficShapingVpnExclusionsByNetworkResult> Invoke(GetApplianceTrafficShapingVpnExclusionsByNetworkInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetApplianceTrafficShapingVpnExclusionsByNetworkResult>("meraki:organizations/getApplianceTrafficShapingVpnExclusionsByNetwork:getApplianceTrafficShapingVpnExclusionsByNetwork", args ?? new GetApplianceTrafficShapingVpnExclusionsByNetworkInvokeArgs(), options.WithDefaults());
     }
 
 

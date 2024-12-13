@@ -92,6 +92,47 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetVlanProfilesAssignmentsByDeviceResult> Invoke(GetVlanProfilesAssignmentsByDeviceInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetVlanProfilesAssignmentsByDeviceResult>("meraki:networks/getVlanProfilesAssignmentsByDevice:getVlanProfilesAssignmentsByDevice", args ?? new GetVlanProfilesAssignmentsByDeviceInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetVlanProfilesAssignmentsByDevice.Invoke(new()
+        ///     {
+        ///         EndingBefore = "string",
+        ///         NetworkId = "string",
+        ///         PerPage = 1,
+        ///         ProductTypes = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         Serials = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         StackIds = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         StartingAfter = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksVlanProfilesAssignmentsByDeviceExample"] = example.Apply(getVlanProfilesAssignmentsByDeviceResult =&gt; getVlanProfilesAssignmentsByDeviceResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetVlanProfilesAssignmentsByDeviceResult> Invoke(GetVlanProfilesAssignmentsByDeviceInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetVlanProfilesAssignmentsByDeviceResult>("meraki:networks/getVlanProfilesAssignmentsByDevice:getVlanProfilesAssignmentsByDevice", args ?? new GetVlanProfilesAssignmentsByDeviceInvokeArgs(), options.WithDefaults());
     }
 
 

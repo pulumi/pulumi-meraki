@@ -22,6 +22,12 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetSensorAlertsProfilesResult> Invoke(GetSensorAlertsProfilesInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSensorAlertsProfilesResult>("meraki:networks/getSensorAlertsProfiles:getSensorAlertsProfiles", args ?? new GetSensorAlertsProfilesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetSensorAlertsProfilesResult> Invoke(GetSensorAlertsProfilesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSensorAlertsProfilesResult>("meraki:networks/getSensorAlertsProfiles:getSensorAlertsProfiles", args ?? new GetSensorAlertsProfilesInvokeArgs(), options.WithDefaults());
     }
 
 

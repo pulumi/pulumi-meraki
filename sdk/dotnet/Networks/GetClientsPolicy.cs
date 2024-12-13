@@ -64,6 +64,33 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetClientsPolicyResult> Invoke(GetClientsPolicyInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetClientsPolicyResult>("meraki:networks/getClientsPolicy:getClientsPolicy", args ?? new GetClientsPolicyInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetClientsPolicy.Invoke(new()
+        ///     {
+        ///         ClientId = "string",
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksClientsPolicyExample"] = example.Apply(getClientsPolicyResult =&gt; getClientsPolicyResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetClientsPolicyResult> Invoke(GetClientsPolicyInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetClientsPolicyResult>("meraki:networks/getClientsPolicy:getClientsPolicy", args ?? new GetClientsPolicyInvokeArgs(), options.WithDefaults());
     }
 
 

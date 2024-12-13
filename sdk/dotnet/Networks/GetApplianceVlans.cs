@@ -22,6 +22,12 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetApplianceVlansResult> Invoke(GetApplianceVlansInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetApplianceVlansResult>("meraki:networks/getApplianceVlans:getApplianceVlans", args ?? new GetApplianceVlansInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetApplianceVlansResult> Invoke(GetApplianceVlansInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetApplianceVlansResult>("meraki:networks/getApplianceVlans:getApplianceVlans", args ?? new GetApplianceVlansInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -63,21 +63,11 @@ type LookupSwitchWarmSpareResult struct {
 }
 
 func LookupSwitchWarmSpareOutput(ctx *pulumi.Context, args LookupSwitchWarmSpareOutputArgs, opts ...pulumi.InvokeOption) LookupSwitchWarmSpareResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupSwitchWarmSpareResultOutput, error) {
 			args := v.(LookupSwitchWarmSpareArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupSwitchWarmSpareResult
-			secret, err := ctx.InvokePackageRaw("meraki:devices/getSwitchWarmSpare:getSwitchWarmSpare", args, &rv, "", opts...)
-			if err != nil {
-				return LookupSwitchWarmSpareResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupSwitchWarmSpareResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupSwitchWarmSpareResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:devices/getSwitchWarmSpare:getSwitchWarmSpare", args, LookupSwitchWarmSpareResultOutput{}, options).(LookupSwitchWarmSpareResultOutput), nil
 		}).(LookupSwitchWarmSpareResultOutput)
 }
 

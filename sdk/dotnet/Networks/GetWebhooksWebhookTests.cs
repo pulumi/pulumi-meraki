@@ -64,6 +64,33 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetWebhooksWebhookTestsResult> Invoke(GetWebhooksWebhookTestsInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetWebhooksWebhookTestsResult>("meraki:networks/getWebhooksWebhookTests:getWebhooksWebhookTests", args ?? new GetWebhooksWebhookTestsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetWebhooksWebhookTests.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///         WebhookTestId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksWebhooksWebhookTestsExample"] = example.Apply(getWebhooksWebhookTestsResult =&gt; getWebhooksWebhookTestsResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetWebhooksWebhookTestsResult> Invoke(GetWebhooksWebhookTestsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetWebhooksWebhookTestsResult>("meraki:networks/getWebhooksWebhookTests:getWebhooksWebhookTests", args ?? new GetWebhooksWebhookTestsInvokeArgs(), options.WithDefaults());
     }
 
 

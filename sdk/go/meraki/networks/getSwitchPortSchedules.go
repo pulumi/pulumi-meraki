@@ -64,21 +64,11 @@ type LookupSwitchPortSchedulesResult struct {
 }
 
 func LookupSwitchPortSchedulesOutput(ctx *pulumi.Context, args LookupSwitchPortSchedulesOutputArgs, opts ...pulumi.InvokeOption) LookupSwitchPortSchedulesResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupSwitchPortSchedulesResultOutput, error) {
 			args := v.(LookupSwitchPortSchedulesArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupSwitchPortSchedulesResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getSwitchPortSchedules:getSwitchPortSchedules", args, &rv, "", opts...)
-			if err != nil {
-				return LookupSwitchPortSchedulesResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupSwitchPortSchedulesResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupSwitchPortSchedulesResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getSwitchPortSchedules:getSwitchPortSchedules", args, LookupSwitchPortSchedulesResultOutput{}, options).(LookupSwitchPortSchedulesResultOutput), nil
 		}).(LookupSwitchPortSchedulesResultOutput)
 }
 

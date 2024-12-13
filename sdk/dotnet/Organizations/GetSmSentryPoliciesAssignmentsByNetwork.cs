@@ -76,6 +76,39 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetSmSentryPoliciesAssignmentsByNetworkResult> Invoke(GetSmSentryPoliciesAssignmentsByNetworkInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSmSentryPoliciesAssignmentsByNetworkResult>("meraki:organizations/getSmSentryPoliciesAssignmentsByNetwork:getSmSentryPoliciesAssignmentsByNetwork", args ?? new GetSmSentryPoliciesAssignmentsByNetworkInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetSmSentryPoliciesAssignmentsByNetwork.Invoke(new()
+        ///     {
+        ///         EndingBefore = "string",
+        ///         NetworkIds = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         OrganizationId = "string",
+        ///         PerPage = 1,
+        ///         StartingAfter = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsSmSentryPoliciesAssignmentsByNetworkExample"] = example.Apply(getSmSentryPoliciesAssignmentsByNetworkResult =&gt; getSmSentryPoliciesAssignmentsByNetworkResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSmSentryPoliciesAssignmentsByNetworkResult> Invoke(GetSmSentryPoliciesAssignmentsByNetworkInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSmSentryPoliciesAssignmentsByNetworkResult>("meraki:organizations/getSmSentryPoliciesAssignmentsByNetwork:getSmSentryPoliciesAssignmentsByNetwork", args ?? new GetSmSentryPoliciesAssignmentsByNetworkInvokeArgs(), options.WithDefaults());
     }
 
 

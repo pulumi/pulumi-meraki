@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetApplianceSingleLanResult> Invoke(GetApplianceSingleLanInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetApplianceSingleLanResult>("meraki:networks/getApplianceSingleLan:getApplianceSingleLan", args ?? new GetApplianceSingleLanInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetApplianceSingleLan.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksApplianceSingleLanExample"] = example.Apply(getApplianceSingleLanResult =&gt; getApplianceSingleLanResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetApplianceSingleLanResult> Invoke(GetApplianceSingleLanInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetApplianceSingleLanResult>("meraki:networks/getApplianceSingleLan:getApplianceSingleLan", args ?? new GetApplianceSingleLanInvokeArgs(), options.WithDefaults());
     }
 
 

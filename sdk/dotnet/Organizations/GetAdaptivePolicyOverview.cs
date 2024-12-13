@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetAdaptivePolicyOverviewResult> Invoke(GetAdaptivePolicyOverviewInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetAdaptivePolicyOverviewResult>("meraki:organizations/getAdaptivePolicyOverview:getAdaptivePolicyOverview", args ?? new GetAdaptivePolicyOverviewInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetAdaptivePolicyOverview.Invoke(new()
+        ///     {
+        ///         OrganizationId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsAdaptivePolicyOverviewExample"] = example.Apply(getAdaptivePolicyOverviewResult =&gt; getAdaptivePolicyOverviewResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetAdaptivePolicyOverviewResult> Invoke(GetAdaptivePolicyOverviewInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetAdaptivePolicyOverviewResult>("meraki:organizations/getAdaptivePolicyOverview:getAdaptivePolicyOverview", args ?? new GetAdaptivePolicyOverviewInvokeArgs(), options.WithDefaults());
     }
 
 

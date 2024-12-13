@@ -63,21 +63,11 @@ type LookupApplianceSecurityIntrusionResult struct {
 }
 
 func LookupApplianceSecurityIntrusionOutput(ctx *pulumi.Context, args LookupApplianceSecurityIntrusionOutputArgs, opts ...pulumi.InvokeOption) LookupApplianceSecurityIntrusionResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupApplianceSecurityIntrusionResultOutput, error) {
 			args := v.(LookupApplianceSecurityIntrusionArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupApplianceSecurityIntrusionResult
-			secret, err := ctx.InvokePackageRaw("meraki:organizations/getApplianceSecurityIntrusion:getApplianceSecurityIntrusion", args, &rv, "", opts...)
-			if err != nil {
-				return LookupApplianceSecurityIntrusionResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupApplianceSecurityIntrusionResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupApplianceSecurityIntrusionResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:organizations/getApplianceSecurityIntrusion:getApplianceSecurityIntrusion", args, LookupApplianceSecurityIntrusionResultOutput{}, options).(LookupApplianceSecurityIntrusionResultOutput), nil
 		}).(LookupApplianceSecurityIntrusionResultOutput)
 }
 

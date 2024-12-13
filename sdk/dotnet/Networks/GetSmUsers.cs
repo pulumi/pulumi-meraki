@@ -94,6 +94,48 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetSmUsersResult> Invoke(GetSmUsersInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSmUsersResult>("meraki:networks/getSmUsers:getSmUsers", args ?? new GetSmUsersInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetSmUsers.Invoke(new()
+        ///     {
+        ///         Emails = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         Ids = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         NetworkId = "string",
+        ///         Scopes = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         Usernames = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksSmUsersExample"] = example.Apply(getSmUsersResult =&gt; getSmUsersResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSmUsersResult> Invoke(GetSmUsersInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSmUsersResult>("meraki:networks/getSmUsers:getSmUsers", args ?? new GetSmUsersInvokeArgs(), options.WithDefaults());
     }
 
 

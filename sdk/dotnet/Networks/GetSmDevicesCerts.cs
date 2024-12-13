@@ -64,6 +64,33 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetSmDevicesCertsResult> Invoke(GetSmDevicesCertsInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSmDevicesCertsResult>("meraki:networks/getSmDevicesCerts:getSmDevicesCerts", args ?? new GetSmDevicesCertsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetSmDevicesCerts.Invoke(new()
+        ///     {
+        ///         DeviceId = "string",
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksSmDevicesCertsExample"] = example.Apply(getSmDevicesCertsResult =&gt; getSmDevicesCertsResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSmDevicesCertsResult> Invoke(GetSmDevicesCertsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSmDevicesCertsResult>("meraki:networks/getSmDevicesCerts:getSmDevicesCerts", args ?? new GetSmDevicesCertsInvokeArgs(), options.WithDefaults());
     }
 
 

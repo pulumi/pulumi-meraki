@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetApplianceVlansSettingsResult> Invoke(GetApplianceVlansSettingsInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetApplianceVlansSettingsResult>("meraki:networks/getApplianceVlansSettings:getApplianceVlansSettings", args ?? new GetApplianceVlansSettingsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetApplianceVlansSettings.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksApplianceVlansSettingsExample"] = example.Apply(getApplianceVlansSettingsResult =&gt; getApplianceVlansSettingsResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetApplianceVlansSettingsResult> Invoke(GetApplianceVlansSettingsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetApplianceVlansSettingsResult>("meraki:networks/getApplianceVlansSettings:getApplianceVlansSettings", args ?? new GetApplianceVlansSettingsInvokeArgs(), options.WithDefaults());
     }
 
 

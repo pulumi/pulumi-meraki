@@ -63,21 +63,11 @@ type LookupSensorRelationshipsResult struct {
 }
 
 func LookupSensorRelationshipsOutput(ctx *pulumi.Context, args LookupSensorRelationshipsOutputArgs, opts ...pulumi.InvokeOption) LookupSensorRelationshipsResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupSensorRelationshipsResultOutput, error) {
 			args := v.(LookupSensorRelationshipsArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupSensorRelationshipsResult
-			secret, err := ctx.InvokePackageRaw("meraki:devices/getSensorRelationships:getSensorRelationships", args, &rv, "", opts...)
-			if err != nil {
-				return LookupSensorRelationshipsResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupSensorRelationshipsResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupSensorRelationshipsResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:devices/getSensorRelationships:getSensorRelationships", args, LookupSensorRelationshipsResultOutput{}, options).(LookupSensorRelationshipsResultOutput), nil
 		}).(LookupSensorRelationshipsResultOutput)
 }
 

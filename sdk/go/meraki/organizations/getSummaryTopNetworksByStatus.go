@@ -79,21 +79,11 @@ type GetSummaryTopNetworksByStatusResult struct {
 }
 
 func GetSummaryTopNetworksByStatusOutput(ctx *pulumi.Context, args GetSummaryTopNetworksByStatusOutputArgs, opts ...pulumi.InvokeOption) GetSummaryTopNetworksByStatusResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetSummaryTopNetworksByStatusResultOutput, error) {
 			args := v.(GetSummaryTopNetworksByStatusArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetSummaryTopNetworksByStatusResult
-			secret, err := ctx.InvokePackageRaw("meraki:organizations/getSummaryTopNetworksByStatus:getSummaryTopNetworksByStatus", args, &rv, "", opts...)
-			if err != nil {
-				return GetSummaryTopNetworksByStatusResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetSummaryTopNetworksByStatusResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetSummaryTopNetworksByStatusResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:organizations/getSummaryTopNetworksByStatus:getSummaryTopNetworksByStatus", args, GetSummaryTopNetworksByStatusResultOutput{}, options).(GetSummaryTopNetworksByStatusResultOutput), nil
 		}).(GetSummaryTopNetworksByStatusResultOutput)
 }
 

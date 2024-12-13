@@ -68,21 +68,11 @@ type LookupWirelessEthernetPortsProfilesResult struct {
 }
 
 func LookupWirelessEthernetPortsProfilesOutput(ctx *pulumi.Context, args LookupWirelessEthernetPortsProfilesOutputArgs, opts ...pulumi.InvokeOption) LookupWirelessEthernetPortsProfilesResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupWirelessEthernetPortsProfilesResultOutput, error) {
 			args := v.(LookupWirelessEthernetPortsProfilesArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupWirelessEthernetPortsProfilesResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getWirelessEthernetPortsProfiles:getWirelessEthernetPortsProfiles", args, &rv, "", opts...)
-			if err != nil {
-				return LookupWirelessEthernetPortsProfilesResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupWirelessEthernetPortsProfilesResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupWirelessEthernetPortsProfilesResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getWirelessEthernetPortsProfiles:getWirelessEthernetPortsProfiles", args, LookupWirelessEthernetPortsProfilesResultOutput{}, options).(LookupWirelessEthernetPortsProfilesResultOutput), nil
 		}).(LookupWirelessEthernetPortsProfilesResultOutput)
 }
 

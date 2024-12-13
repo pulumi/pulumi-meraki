@@ -116,21 +116,11 @@ type GetLicensingSubscriptionSubscriptionsResult struct {
 }
 
 func GetLicensingSubscriptionSubscriptionsOutput(ctx *pulumi.Context, args GetLicensingSubscriptionSubscriptionsOutputArgs, opts ...pulumi.InvokeOption) GetLicensingSubscriptionSubscriptionsResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetLicensingSubscriptionSubscriptionsResultOutput, error) {
 			args := v.(GetLicensingSubscriptionSubscriptionsArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetLicensingSubscriptionSubscriptionsResult
-			secret, err := ctx.InvokePackageRaw("meraki:administered/getLicensingSubscriptionSubscriptions:getLicensingSubscriptionSubscriptions", args, &rv, "", opts...)
-			if err != nil {
-				return GetLicensingSubscriptionSubscriptionsResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetLicensingSubscriptionSubscriptionsResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetLicensingSubscriptionSubscriptionsResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:administered/getLicensingSubscriptionSubscriptions:getLicensingSubscriptionSubscriptions", args, GetLicensingSubscriptionSubscriptionsResultOutput{}, options).(GetLicensingSubscriptionSubscriptionsResultOutput), nil
 		}).(GetLicensingSubscriptionSubscriptionsResultOutput)
 }
 

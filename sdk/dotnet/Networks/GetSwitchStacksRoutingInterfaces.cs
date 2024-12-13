@@ -22,6 +22,12 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetSwitchStacksRoutingInterfacesResult> Invoke(GetSwitchStacksRoutingInterfacesInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSwitchStacksRoutingInterfacesResult>("meraki:networks/getSwitchStacksRoutingInterfaces:getSwitchStacksRoutingInterfaces", args ?? new GetSwitchStacksRoutingInterfacesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetSwitchStacksRoutingInterfacesResult> Invoke(GetSwitchStacksRoutingInterfacesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSwitchStacksRoutingInterfacesResult>("meraki:networks/getSwitchStacksRoutingInterfaces:getSwitchStacksRoutingInterfaces", args ?? new GetSwitchStacksRoutingInterfacesInvokeArgs(), options.WithDefaults());
     }
 
 

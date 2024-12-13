@@ -63,21 +63,11 @@ type LookupCellularGatewaySubnetPoolResult struct {
 }
 
 func LookupCellularGatewaySubnetPoolOutput(ctx *pulumi.Context, args LookupCellularGatewaySubnetPoolOutputArgs, opts ...pulumi.InvokeOption) LookupCellularGatewaySubnetPoolResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupCellularGatewaySubnetPoolResultOutput, error) {
 			args := v.(LookupCellularGatewaySubnetPoolArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupCellularGatewaySubnetPoolResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getCellularGatewaySubnetPool:getCellularGatewaySubnetPool", args, &rv, "", opts...)
-			if err != nil {
-				return LookupCellularGatewaySubnetPoolResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupCellularGatewaySubnetPoolResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupCellularGatewaySubnetPoolResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getCellularGatewaySubnetPool:getCellularGatewaySubnetPool", args, LookupCellularGatewaySubnetPoolResultOutput{}, options).(LookupCellularGatewaySubnetPoolResultOutput), nil
 		}).(LookupCellularGatewaySubnetPoolResultOutput)
 }
 

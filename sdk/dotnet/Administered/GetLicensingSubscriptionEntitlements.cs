@@ -68,6 +68,35 @@ namespace Pulumi.Meraki.Administered
         /// </summary>
         public static Output<GetLicensingSubscriptionEntitlementsResult> Invoke(GetLicensingSubscriptionEntitlementsInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetLicensingSubscriptionEntitlementsResult>("meraki:administered/getLicensingSubscriptionEntitlements:getLicensingSubscriptionEntitlements", args ?? new GetLicensingSubscriptionEntitlementsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Administered.GetLicensingSubscriptionEntitlements.Invoke(new()
+        ///     {
+        ///         Skuses = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiAdministeredLicensingSubscriptionEntitlementsExample"] = example.Apply(getLicensingSubscriptionEntitlementsResult =&gt; getLicensingSubscriptionEntitlementsResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetLicensingSubscriptionEntitlementsResult> Invoke(GetLicensingSubscriptionEntitlementsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetLicensingSubscriptionEntitlementsResult>("meraki:administered/getLicensingSubscriptionEntitlements:getLicensingSubscriptionEntitlements", args ?? new GetLicensingSubscriptionEntitlementsInvokeArgs(), options.WithDefaults());
     }
 
 

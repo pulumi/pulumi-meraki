@@ -69,21 +69,11 @@ type GetConfigTemplatesSwitchProfilesResult struct {
 }
 
 func GetConfigTemplatesSwitchProfilesOutput(ctx *pulumi.Context, args GetConfigTemplatesSwitchProfilesOutputArgs, opts ...pulumi.InvokeOption) GetConfigTemplatesSwitchProfilesResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetConfigTemplatesSwitchProfilesResultOutput, error) {
 			args := v.(GetConfigTemplatesSwitchProfilesArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetConfigTemplatesSwitchProfilesResult
-			secret, err := ctx.InvokePackageRaw("meraki:organizations/getConfigTemplatesSwitchProfiles:getConfigTemplatesSwitchProfiles", args, &rv, "", opts...)
-			if err != nil {
-				return GetConfigTemplatesSwitchProfilesResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetConfigTemplatesSwitchProfilesResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetConfigTemplatesSwitchProfilesResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:organizations/getConfigTemplatesSwitchProfiles:getConfigTemplatesSwitchProfiles", args, GetConfigTemplatesSwitchProfilesResultOutput{}, options).(GetConfigTemplatesSwitchProfilesResultOutput), nil
 		}).(GetConfigTemplatesSwitchProfilesResultOutput)
 }
 

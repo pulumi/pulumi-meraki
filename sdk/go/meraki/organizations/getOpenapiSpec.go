@@ -68,21 +68,11 @@ type GetOpenapiSpecResult struct {
 }
 
 func GetOpenapiSpecOutput(ctx *pulumi.Context, args GetOpenapiSpecOutputArgs, opts ...pulumi.InvokeOption) GetOpenapiSpecResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetOpenapiSpecResultOutput, error) {
 			args := v.(GetOpenapiSpecArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetOpenapiSpecResult
-			secret, err := ctx.InvokePackageRaw("meraki:organizations/getOpenapiSpec:getOpenapiSpec", args, &rv, "", opts...)
-			if err != nil {
-				return GetOpenapiSpecResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetOpenapiSpecResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetOpenapiSpecResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:organizations/getOpenapiSpec:getOpenapiSpec", args, GetOpenapiSpecResultOutput{}, options).(GetOpenapiSpecResultOutput), nil
 		}).(GetOpenapiSpecResultOutput)
 }
 

@@ -22,6 +22,12 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetCameraQualityRetentionProfilesResult> Invoke(GetCameraQualityRetentionProfilesInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetCameraQualityRetentionProfilesResult>("meraki:networks/getCameraQualityRetentionProfiles:getCameraQualityRetentionProfiles", args ?? new GetCameraQualityRetentionProfilesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetCameraQualityRetentionProfilesResult> Invoke(GetCameraQualityRetentionProfilesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetCameraQualityRetentionProfilesResult>("meraki:networks/getCameraQualityRetentionProfiles:getCameraQualityRetentionProfiles", args ?? new GetCameraQualityRetentionProfilesInvokeArgs(), options.WithDefaults());
     }
 
 
