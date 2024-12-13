@@ -84,6 +84,43 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetWirelessLatencyHistoryResult> Invoke(GetWirelessLatencyHistoryInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetWirelessLatencyHistoryResult>("meraki:networks/getWirelessLatencyHistory:getWirelessLatencyHistory", args ?? new GetWirelessLatencyHistoryInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetWirelessLatencyHistory.Invoke(new()
+        ///     {
+        ///         AccessCategory = "string",
+        ///         ApTag = "string",
+        ///         AutoResolution = false,
+        ///         Band = "string",
+        ///         ClientId = "string",
+        ///         DeviceSerial = "string",
+        ///         NetworkId = "string",
+        ///         Resolution = 1,
+        ///         Ssid = 1,
+        ///         T0 = "string",
+        ///         T1 = "string",
+        ///         Timespan = 1,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksWirelessLatencyHistoryExample"] = example.Apply(getWirelessLatencyHistoryResult =&gt; getWirelessLatencyHistoryResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetWirelessLatencyHistoryResult> Invoke(GetWirelessLatencyHistoryInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetWirelessLatencyHistoryResult>("meraki:networks/getWirelessLatencyHistory:getWirelessLatencyHistory", args ?? new GetWirelessLatencyHistoryInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -68,21 +68,11 @@ type LookupWirelessSsidsEapOverrideResult struct {
 }
 
 func LookupWirelessSsidsEapOverrideOutput(ctx *pulumi.Context, args LookupWirelessSsidsEapOverrideOutputArgs, opts ...pulumi.InvokeOption) LookupWirelessSsidsEapOverrideResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupWirelessSsidsEapOverrideResultOutput, error) {
 			args := v.(LookupWirelessSsidsEapOverrideArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupWirelessSsidsEapOverrideResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getWirelessSsidsEapOverride:getWirelessSsidsEapOverride", args, &rv, "", opts...)
-			if err != nil {
-				return LookupWirelessSsidsEapOverrideResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupWirelessSsidsEapOverrideResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupWirelessSsidsEapOverrideResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getWirelessSsidsEapOverride:getWirelessSsidsEapOverride", args, LookupWirelessSsidsEapOverrideResultOutput{}, options).(LookupWirelessSsidsEapOverrideResultOutput), nil
 		}).(LookupWirelessSsidsEapOverrideResultOutput)
 }
 

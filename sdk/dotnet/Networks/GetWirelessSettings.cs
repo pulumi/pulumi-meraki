@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetWirelessSettingsResult> Invoke(GetWirelessSettingsInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetWirelessSettingsResult>("meraki:networks/getWirelessSettings:getWirelessSettings", args ?? new GetWirelessSettingsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetWirelessSettings.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksWirelessSettingsExample"] = example.Apply(getWirelessSettingsResult =&gt; getWirelessSettingsResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetWirelessSettingsResult> Invoke(GetWirelessSettingsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetWirelessSettingsResult>("meraki:networks/getWirelessSettings:getWirelessSettings", args ?? new GetWirelessSettingsInvokeArgs(), options.WithDefaults());
     }
 
 

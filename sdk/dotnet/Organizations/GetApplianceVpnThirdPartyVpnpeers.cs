@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetApplianceVpnThirdPartyVpnpeersResult> Invoke(GetApplianceVpnThirdPartyVpnpeersInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetApplianceVpnThirdPartyVpnpeersResult>("meraki:organizations/getApplianceVpnThirdPartyVpnpeers:getApplianceVpnThirdPartyVpnpeers", args ?? new GetApplianceVpnThirdPartyVpnpeersInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetApplianceVpnThirdPartyVpnpeers.Invoke(new()
+        ///     {
+        ///         OrganizationId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsApplianceVpnThirdPartyVpnpeersExample"] = example.Apply(getApplianceVpnThirdPartyVpnpeersResult =&gt; getApplianceVpnThirdPartyVpnpeersResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetApplianceVpnThirdPartyVpnpeersResult> Invoke(GetApplianceVpnThirdPartyVpnpeersInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetApplianceVpnThirdPartyVpnpeersResult>("meraki:organizations/getApplianceVpnThirdPartyVpnpeers:getApplianceVpnThirdPartyVpnpeers", args ?? new GetApplianceVpnThirdPartyVpnpeersInvokeArgs(), options.WithDefaults());
     }
 
 

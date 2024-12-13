@@ -106,6 +106,54 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetWirelessDevicesPacketLossByDeviceResult> Invoke(GetWirelessDevicesPacketLossByDeviceInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetWirelessDevicesPacketLossByDeviceResult>("meraki:organizations/getWirelessDevicesPacketLossByDevice:getWirelessDevicesPacketLossByDevice", args ?? new GetWirelessDevicesPacketLossByDeviceInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetWirelessDevicesPacketLossByDevice.Invoke(new()
+        ///     {
+        ///         Bands = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         EndingBefore = "string",
+        ///         NetworkIds = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         OrganizationId = "string",
+        ///         PerPage = 1,
+        ///         Serials = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         Ssids = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         StartingAfter = "string",
+        ///         T0 = "string",
+        ///         T1 = "string",
+        ///         Timespan = 1,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsWirelessDevicesPacketLossByDeviceExample"] = example.Apply(getWirelessDevicesPacketLossByDeviceResult =&gt; getWirelessDevicesPacketLossByDeviceResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetWirelessDevicesPacketLossByDeviceResult> Invoke(GetWirelessDevicesPacketLossByDeviceInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetWirelessDevicesPacketLossByDeviceResult>("meraki:organizations/getWirelessDevicesPacketLossByDevice:getWirelessDevicesPacketLossByDevice", args ?? new GetWirelessDevicesPacketLossByDeviceInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -69,21 +69,11 @@ type GetSmDevicesCellularUsageHistoryResult struct {
 }
 
 func GetSmDevicesCellularUsageHistoryOutput(ctx *pulumi.Context, args GetSmDevicesCellularUsageHistoryOutputArgs, opts ...pulumi.InvokeOption) GetSmDevicesCellularUsageHistoryResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetSmDevicesCellularUsageHistoryResultOutput, error) {
 			args := v.(GetSmDevicesCellularUsageHistoryArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetSmDevicesCellularUsageHistoryResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getSmDevicesCellularUsageHistory:getSmDevicesCellularUsageHistory", args, &rv, "", opts...)
-			if err != nil {
-				return GetSmDevicesCellularUsageHistoryResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetSmDevicesCellularUsageHistoryResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetSmDevicesCellularUsageHistoryResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getSmDevicesCellularUsageHistory:getSmDevicesCellularUsageHistory", args, GetSmDevicesCellularUsageHistoryResultOutput{}, options).(GetSmDevicesCellularUsageHistoryResultOutput), nil
 		}).(GetSmDevicesCellularUsageHistoryResultOutput)
 }
 

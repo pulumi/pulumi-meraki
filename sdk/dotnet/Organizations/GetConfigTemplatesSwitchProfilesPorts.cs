@@ -22,6 +22,12 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetConfigTemplatesSwitchProfilesPortsResult> Invoke(GetConfigTemplatesSwitchProfilesPortsInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetConfigTemplatesSwitchProfilesPortsResult>("meraki:organizations/getConfigTemplatesSwitchProfilesPorts:getConfigTemplatesSwitchProfilesPorts", args ?? new GetConfigTemplatesSwitchProfilesPortsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetConfigTemplatesSwitchProfilesPortsResult> Invoke(GetConfigTemplatesSwitchProfilesPortsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetConfigTemplatesSwitchProfilesPortsResult>("meraki:organizations/getConfigTemplatesSwitchProfilesPorts:getConfigTemplatesSwitchProfilesPorts", args ?? new GetConfigTemplatesSwitchProfilesPortsInvokeArgs(), options.WithDefaults());
     }
 
 

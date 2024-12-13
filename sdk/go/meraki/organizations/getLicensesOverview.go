@@ -63,21 +63,11 @@ type GetLicensesOverviewResult struct {
 }
 
 func GetLicensesOverviewOutput(ctx *pulumi.Context, args GetLicensesOverviewOutputArgs, opts ...pulumi.InvokeOption) GetLicensesOverviewResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetLicensesOverviewResultOutput, error) {
 			args := v.(GetLicensesOverviewArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetLicensesOverviewResult
-			secret, err := ctx.InvokePackageRaw("meraki:organizations/getLicensesOverview:getLicensesOverview", args, &rv, "", opts...)
-			if err != nil {
-				return GetLicensesOverviewResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetLicensesOverviewResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetLicensesOverviewResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:organizations/getLicensesOverview:getLicensesOverview", args, GetLicensesOverviewResultOutput{}, options).(GetLicensesOverviewResultOutput), nil
 		}).(GetLicensesOverviewResultOutput)
 }
 

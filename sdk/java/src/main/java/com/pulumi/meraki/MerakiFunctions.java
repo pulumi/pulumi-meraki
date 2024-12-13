@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import com.pulumi.deployment.InvokeOutputOptions;
 import com.pulumi.meraki.Utilities;
 import com.pulumi.meraki.inputs.GetDevicesArgs;
 import com.pulumi.meraki.inputs.GetDevicesPlainArgs;
@@ -59,6 +60,13 @@ public final class MerakiFunctions {
      * ## Example Usage
      * 
      */
+    public static Output<GetDevicesResult> getDevices(GetDevicesArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:index/getDevices:getDevices", TypeShape.of(GetDevicesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetDevicesResult> getDevicesPlain(GetDevicesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:index/getDevices:getDevices", TypeShape.of(GetDevicesResult.class), args, Utilities.withVersion(options));
     }
@@ -101,6 +109,13 @@ public final class MerakiFunctions {
      * ## Example Usage
      * 
      */
+    public static Output<GetNetworksResult> getNetworks(GetNetworksArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:index/getNetworks:getNetworks", TypeShape.of(GetNetworksResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetNetworksResult> getNetworksPlain(GetNetworksPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:index/getNetworks:getNetworks", TypeShape.of(GetNetworksResult.class), args, Utilities.withVersion(options));
     }
@@ -137,6 +152,13 @@ public final class MerakiFunctions {
      * 
      */
     public static Output<GetOrganizationsResult> getOrganizations(GetOrganizationsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:index/getOrganizations:getOrganizations", TypeShape.of(GetOrganizationsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetOrganizationsResult> getOrganizations(GetOrganizationsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:index/getOrganizations:getOrganizations", TypeShape.of(GetOrganizationsResult.class), args, Utilities.withVersion(options));
     }
     /**

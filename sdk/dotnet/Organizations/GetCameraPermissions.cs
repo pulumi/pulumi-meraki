@@ -64,6 +64,33 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetCameraPermissionsResult> Invoke(GetCameraPermissionsInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetCameraPermissionsResult>("meraki:organizations/getCameraPermissions:getCameraPermissions", args ?? new GetCameraPermissionsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetCameraPermissions.Invoke(new()
+        ///     {
+        ///         OrganizationId = "string",
+        ///         PermissionScopeId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsCameraPermissionsExample"] = example.Apply(getCameraPermissionsResult =&gt; getCameraPermissionsResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetCameraPermissionsResult> Invoke(GetCameraPermissionsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetCameraPermissionsResult>("meraki:organizations/getCameraPermissions:getCameraPermissions", args ?? new GetCameraPermissionsInvokeArgs(), options.WithDefaults());
     }
 
 

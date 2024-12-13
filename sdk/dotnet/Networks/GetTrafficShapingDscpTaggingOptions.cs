@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetTrafficShapingDscpTaggingOptionsResult> Invoke(GetTrafficShapingDscpTaggingOptionsInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetTrafficShapingDscpTaggingOptionsResult>("meraki:networks/getTrafficShapingDscpTaggingOptions:getTrafficShapingDscpTaggingOptions", args ?? new GetTrafficShapingDscpTaggingOptionsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetTrafficShapingDscpTaggingOptions.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksTrafficShapingDscpTaggingOptionsExample"] = example.Apply(getTrafficShapingDscpTaggingOptionsResult =&gt; getTrafficShapingDscpTaggingOptionsResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetTrafficShapingDscpTaggingOptionsResult> Invoke(GetTrafficShapingDscpTaggingOptionsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetTrafficShapingDscpTaggingOptionsResult>("meraki:networks/getTrafficShapingDscpTaggingOptions:getTrafficShapingDscpTaggingOptions", args ?? new GetTrafficShapingDscpTaggingOptionsInvokeArgs(), options.WithDefaults());
     }
 
 

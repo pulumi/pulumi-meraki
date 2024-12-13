@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetSwitchStormControlResult> Invoke(GetSwitchStormControlInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSwitchStormControlResult>("meraki:networks/getSwitchStormControl:getSwitchStormControl", args ?? new GetSwitchStormControlInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetSwitchStormControl.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksSwitchStormControlExample"] = example.Apply(getSwitchStormControlResult =&gt; getSwitchStormControlResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSwitchStormControlResult> Invoke(GetSwitchStormControlInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSwitchStormControlResult>("meraki:networks/getSwitchStormControl:getSwitchStormControl", args ?? new GetSwitchStormControlInvokeArgs(), options.WithDefaults());
     }
 
 

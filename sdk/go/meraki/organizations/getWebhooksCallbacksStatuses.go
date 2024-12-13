@@ -68,21 +68,11 @@ type GetWebhooksCallbacksStatusesResult struct {
 }
 
 func GetWebhooksCallbacksStatusesOutput(ctx *pulumi.Context, args GetWebhooksCallbacksStatusesOutputArgs, opts ...pulumi.InvokeOption) GetWebhooksCallbacksStatusesResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetWebhooksCallbacksStatusesResultOutput, error) {
 			args := v.(GetWebhooksCallbacksStatusesArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetWebhooksCallbacksStatusesResult
-			secret, err := ctx.InvokePackageRaw("meraki:organizations/getWebhooksCallbacksStatuses:getWebhooksCallbacksStatuses", args, &rv, "", opts...)
-			if err != nil {
-				return GetWebhooksCallbacksStatusesResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetWebhooksCallbacksStatusesResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetWebhooksCallbacksStatusesResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:organizations/getWebhooksCallbacksStatuses:getWebhooksCallbacksStatuses", args, GetWebhooksCallbacksStatusesResultOutput{}, options).(GetWebhooksCallbacksStatusesResultOutput), nil
 		}).(GetWebhooksCallbacksStatusesResultOutput)
 }
 

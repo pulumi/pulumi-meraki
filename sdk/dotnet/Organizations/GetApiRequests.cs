@@ -96,6 +96,49 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetApiRequestsResult> Invoke(GetApiRequestsInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetApiRequestsResult>("meraki:organizations/getApiRequests:getApiRequests", args ?? new GetApiRequestsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetApiRequests.Invoke(new()
+        ///     {
+        ///         AdminId = "string",
+        ///         EndingBefore = "string",
+        ///         Method = "string",
+        ///         OperationIds = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         OrganizationId = "string",
+        ///         Path = "string",
+        ///         PerPage = 1,
+        ///         ResponseCode = 1,
+        ///         SourceIp = "string",
+        ///         StartingAfter = "string",
+        ///         T0 = "string",
+        ///         T1 = "string",
+        ///         Timespan = 1,
+        ///         UserAgent = "string",
+        ///         Version = 1,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsApiRequestsExample"] = example.Apply(getApiRequestsResult =&gt; getApiRequestsResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetApiRequestsResult> Invoke(GetApiRequestsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetApiRequestsResult>("meraki:organizations/getApiRequests:getApiRequests", args ?? new GetApiRequestsInvokeArgs(), options.WithDefaults());
     }
 
 

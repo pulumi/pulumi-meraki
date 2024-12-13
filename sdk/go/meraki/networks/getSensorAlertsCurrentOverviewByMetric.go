@@ -63,21 +63,11 @@ type GetSensorAlertsCurrentOverviewByMetricResult struct {
 }
 
 func GetSensorAlertsCurrentOverviewByMetricOutput(ctx *pulumi.Context, args GetSensorAlertsCurrentOverviewByMetricOutputArgs, opts ...pulumi.InvokeOption) GetSensorAlertsCurrentOverviewByMetricResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetSensorAlertsCurrentOverviewByMetricResultOutput, error) {
 			args := v.(GetSensorAlertsCurrentOverviewByMetricArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetSensorAlertsCurrentOverviewByMetricResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getSensorAlertsCurrentOverviewByMetric:getSensorAlertsCurrentOverviewByMetric", args, &rv, "", opts...)
-			if err != nil {
-				return GetSensorAlertsCurrentOverviewByMetricResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetSensorAlertsCurrentOverviewByMetricResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetSensorAlertsCurrentOverviewByMetricResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getSensorAlertsCurrentOverviewByMetric:getSensorAlertsCurrentOverviewByMetric", args, GetSensorAlertsCurrentOverviewByMetricResultOutput{}, options).(GetSensorAlertsCurrentOverviewByMetricResultOutput), nil
 		}).(GetSensorAlertsCurrentOverviewByMetricResultOutput)
 }
 

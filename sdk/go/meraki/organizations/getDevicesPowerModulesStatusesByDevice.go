@@ -112,21 +112,11 @@ type GetDevicesPowerModulesStatusesByDeviceResult struct {
 }
 
 func GetDevicesPowerModulesStatusesByDeviceOutput(ctx *pulumi.Context, args GetDevicesPowerModulesStatusesByDeviceOutputArgs, opts ...pulumi.InvokeOption) GetDevicesPowerModulesStatusesByDeviceResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetDevicesPowerModulesStatusesByDeviceResultOutput, error) {
 			args := v.(GetDevicesPowerModulesStatusesByDeviceArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetDevicesPowerModulesStatusesByDeviceResult
-			secret, err := ctx.InvokePackageRaw("meraki:organizations/getDevicesPowerModulesStatusesByDevice:getDevicesPowerModulesStatusesByDevice", args, &rv, "", opts...)
-			if err != nil {
-				return GetDevicesPowerModulesStatusesByDeviceResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetDevicesPowerModulesStatusesByDeviceResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetDevicesPowerModulesStatusesByDeviceResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:organizations/getDevicesPowerModulesStatusesByDevice:getDevicesPowerModulesStatusesByDevice", args, GetDevicesPowerModulesStatusesByDeviceResultOutput{}, options).(GetDevicesPowerModulesStatusesByDeviceResultOutput), nil
 		}).(GetDevicesPowerModulesStatusesByDeviceResultOutput)
 }
 

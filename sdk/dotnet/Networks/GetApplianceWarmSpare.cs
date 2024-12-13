@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetApplianceWarmSpareResult> Invoke(GetApplianceWarmSpareInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetApplianceWarmSpareResult>("meraki:networks/getApplianceWarmSpare:getApplianceWarmSpare", args ?? new GetApplianceWarmSpareInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetApplianceWarmSpare.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksApplianceWarmSpareExample"] = example.Apply(getApplianceWarmSpareResult =&gt; getApplianceWarmSpareResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetApplianceWarmSpareResult> Invoke(GetApplianceWarmSpareInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetApplianceWarmSpareResult>("meraki:networks/getApplianceWarmSpare:getApplianceWarmSpare", args ?? new GetApplianceWarmSpareInvokeArgs(), options.WithDefaults());
     }
 
 

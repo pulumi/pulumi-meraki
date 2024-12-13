@@ -64,6 +64,33 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetWirelessSsidsEapOverrideResult> Invoke(GetWirelessSsidsEapOverrideInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetWirelessSsidsEapOverrideResult>("meraki:networks/getWirelessSsidsEapOverride:getWirelessSsidsEapOverride", args ?? new GetWirelessSsidsEapOverrideInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetWirelessSsidsEapOverride.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///         Number = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksWirelessSsidsEapOverrideExample"] = example.Apply(getWirelessSsidsEapOverrideResult =&gt; getWirelessSsidsEapOverrideResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetWirelessSsidsEapOverrideResult> Invoke(GetWirelessSsidsEapOverrideInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetWirelessSsidsEapOverrideResult>("meraki:networks/getWirelessSsidsEapOverride:getWirelessSsidsEapOverride", args ?? new GetWirelessSsidsEapOverrideInvokeArgs(), options.WithDefaults());
     }
 
 

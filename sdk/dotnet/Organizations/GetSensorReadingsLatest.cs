@@ -92,6 +92,47 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetSensorReadingsLatestResult> Invoke(GetSensorReadingsLatestInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSensorReadingsLatestResult>("meraki:organizations/getSensorReadingsLatest:getSensorReadingsLatest", args ?? new GetSensorReadingsLatestInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetSensorReadingsLatest.Invoke(new()
+        ///     {
+        ///         EndingBefore = "string",
+        ///         Metrics = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         NetworkIds = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         OrganizationId = "string",
+        ///         PerPage = 1,
+        ///         Serials = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         StartingAfter = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsSensorReadingsLatestExample"] = example.Apply(getSensorReadingsLatestResult =&gt; getSensorReadingsLatestResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSensorReadingsLatestResult> Invoke(GetSensorReadingsLatestInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSensorReadingsLatestResult>("meraki:organizations/getSensorReadingsLatest:getSensorReadingsLatest", args ?? new GetSensorReadingsLatestInvokeArgs(), options.WithDefaults());
     }
 
 

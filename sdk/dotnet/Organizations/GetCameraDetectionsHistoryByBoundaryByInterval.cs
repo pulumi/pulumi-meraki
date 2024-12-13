@@ -90,6 +90,46 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetCameraDetectionsHistoryByBoundaryByIntervalResult> Invoke(GetCameraDetectionsHistoryByBoundaryByIntervalInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetCameraDetectionsHistoryByBoundaryByIntervalResult>("meraki:organizations/getCameraDetectionsHistoryByBoundaryByInterval:getCameraDetectionsHistoryByBoundaryByInterval", args ?? new GetCameraDetectionsHistoryByBoundaryByIntervalInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetCameraDetectionsHistoryByBoundaryByInterval.Invoke(new()
+        ///     {
+        ///         BoundaryIds = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         BoundaryTypes = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         Duration = 1,
+        ///         OrganizationId = "string",
+        ///         PerPage = 1,
+        ///         Ranges = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsCameraDetectionsHistoryByBoundaryByIntervalExample"] = example.Apply(getCameraDetectionsHistoryByBoundaryByIntervalResult =&gt; getCameraDetectionsHistoryByBoundaryByIntervalResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetCameraDetectionsHistoryByBoundaryByIntervalResult> Invoke(GetCameraDetectionsHistoryByBoundaryByIntervalInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetCameraDetectionsHistoryByBoundaryByIntervalResult>("meraki:organizations/getCameraDetectionsHistoryByBoundaryByInterval:getCameraDetectionsHistoryByBoundaryByInterval", args ?? new GetCameraDetectionsHistoryByBoundaryByIntervalInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -93,21 +93,11 @@ type GetPiiSmOwnersForKeyResult struct {
 }
 
 func GetPiiSmOwnersForKeyOutput(ctx *pulumi.Context, args GetPiiSmOwnersForKeyOutputArgs, opts ...pulumi.InvokeOption) GetPiiSmOwnersForKeyResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetPiiSmOwnersForKeyResultOutput, error) {
 			args := v.(GetPiiSmOwnersForKeyArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetPiiSmOwnersForKeyResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getPiiSmOwnersForKey:getPiiSmOwnersForKey", args, &rv, "", opts...)
-			if err != nil {
-				return GetPiiSmOwnersForKeyResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetPiiSmOwnersForKeyResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetPiiSmOwnersForKeyResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getPiiSmOwnersForKey:getPiiSmOwnersForKey", args, GetPiiSmOwnersForKeyResultOutput{}, options).(GetPiiSmOwnersForKeyResultOutput), nil
 		}).(GetPiiSmOwnersForKeyResultOutput)
 }
 

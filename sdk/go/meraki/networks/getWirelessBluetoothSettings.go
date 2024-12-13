@@ -63,21 +63,11 @@ type LookupWirelessBluetoothSettingsResult struct {
 }
 
 func LookupWirelessBluetoothSettingsOutput(ctx *pulumi.Context, args LookupWirelessBluetoothSettingsOutputArgs, opts ...pulumi.InvokeOption) LookupWirelessBluetoothSettingsResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupWirelessBluetoothSettingsResultOutput, error) {
 			args := v.(LookupWirelessBluetoothSettingsArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupWirelessBluetoothSettingsResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getWirelessBluetoothSettings:getWirelessBluetoothSettings", args, &rv, "", opts...)
-			if err != nil {
-				return LookupWirelessBluetoothSettingsResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupWirelessBluetoothSettingsResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupWirelessBluetoothSettingsResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getWirelessBluetoothSettings:getWirelessBluetoothSettings", args, LookupWirelessBluetoothSettingsResultOutput{}, options).(LookupWirelessBluetoothSettingsResultOutput), nil
 		}).(LookupWirelessBluetoothSettingsResultOutput)
 }
 

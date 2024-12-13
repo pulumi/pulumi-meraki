@@ -63,21 +63,11 @@ type LookupNetflowResult struct {
 }
 
 func LookupNetflowOutput(ctx *pulumi.Context, args LookupNetflowOutputArgs, opts ...pulumi.InvokeOption) LookupNetflowResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupNetflowResultOutput, error) {
 			args := v.(LookupNetflowArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupNetflowResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getNetflow:getNetflow", args, &rv, "", opts...)
-			if err != nil {
-				return LookupNetflowResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupNetflowResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupNetflowResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getNetflow:getNetflow", args, LookupNetflowResultOutput{}, options).(LookupNetflowResultOutput), nil
 		}).(LookupNetflowResultOutput)
 }
 

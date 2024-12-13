@@ -115,21 +115,11 @@ type GetSensorReadingsHistoryResult struct {
 }
 
 func GetSensorReadingsHistoryOutput(ctx *pulumi.Context, args GetSensorReadingsHistoryOutputArgs, opts ...pulumi.InvokeOption) GetSensorReadingsHistoryResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetSensorReadingsHistoryResultOutput, error) {
 			args := v.(GetSensorReadingsHistoryArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetSensorReadingsHistoryResult
-			secret, err := ctx.InvokePackageRaw("meraki:organizations/getSensorReadingsHistory:getSensorReadingsHistory", args, &rv, "", opts...)
-			if err != nil {
-				return GetSensorReadingsHistoryResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetSensorReadingsHistoryResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetSensorReadingsHistoryResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:organizations/getSensorReadingsHistory:getSensorReadingsHistory", args, GetSensorReadingsHistoryResultOutput{}, options).(GetSensorReadingsHistoryResultOutput), nil
 		}).(GetSensorReadingsHistoryResultOutput)
 }
 

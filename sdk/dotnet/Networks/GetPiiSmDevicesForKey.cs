@@ -74,6 +74,38 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetPiiSmDevicesForKeyResult> Invoke(GetPiiSmDevicesForKeyInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetPiiSmDevicesForKeyResult>("meraki:networks/getPiiSmDevicesForKey:getPiiSmDevicesForKey", args ?? new GetPiiSmDevicesForKeyInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetPiiSmDevicesForKey.Invoke(new()
+        ///     {
+        ///         BluetoothMac = "string",
+        ///         Email = "string",
+        ///         Imei = "string",
+        ///         Mac = "string",
+        ///         NetworkId = "string",
+        ///         Serial = "string",
+        ///         Username = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksPiiSmDevicesForKeyExample"] = example.Apply(getPiiSmDevicesForKeyResult =&gt; getPiiSmDevicesForKeyResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetPiiSmDevicesForKeyResult> Invoke(GetPiiSmDevicesForKeyInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetPiiSmDevicesForKeyResult>("meraki:networks/getPiiSmDevicesForKey:getPiiSmDevicesForKey", args ?? new GetPiiSmDevicesForKeyInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -64,6 +64,33 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetWirelessSsidsHotspot20Result> Invoke(GetWirelessSsidsHotspot20InvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetWirelessSsidsHotspot20Result>("meraki:networks/getWirelessSsidsHotspot20:getWirelessSsidsHotspot20", args ?? new GetWirelessSsidsHotspot20InvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetWirelessSsidsHotspot20.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///         Number = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksWirelessSsidsHotspot20Example"] = example.Apply(getWirelessSsidsHotspot20Result =&gt; getWirelessSsidsHotspot20Result.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetWirelessSsidsHotspot20Result> Invoke(GetWirelessSsidsHotspot20InvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetWirelessSsidsHotspot20Result>("meraki:networks/getWirelessSsidsHotspot20:getWirelessSsidsHotspot20", args ?? new GetWirelessSsidsHotspot20InvokeArgs(), options.WithDefaults());
     }
 
 

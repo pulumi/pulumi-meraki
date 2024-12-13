@@ -64,6 +64,33 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetSmBypassActivationLockAttemptsResult> Invoke(GetSmBypassActivationLockAttemptsInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSmBypassActivationLockAttemptsResult>("meraki:networks/getSmBypassActivationLockAttempts:getSmBypassActivationLockAttempts", args ?? new GetSmBypassActivationLockAttemptsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetSmBypassActivationLockAttempts.Invoke(new()
+        ///     {
+        ///         AttemptId = "string",
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksSmBypassActivationLockAttemptsExample"] = example.Apply(getSmBypassActivationLockAttemptsResult =&gt; getSmBypassActivationLockAttemptsResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSmBypassActivationLockAttemptsResult> Invoke(GetSmBypassActivationLockAttemptsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSmBypassActivationLockAttemptsResult>("meraki:networks/getSmBypassActivationLockAttempts:getSmBypassActivationLockAttempts", args ?? new GetSmBypassActivationLockAttemptsInvokeArgs(), options.WithDefaults());
     }
 
 

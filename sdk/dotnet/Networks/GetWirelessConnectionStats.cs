@@ -76,6 +76,39 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetWirelessConnectionStatsResult> Invoke(GetWirelessConnectionStatsInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetWirelessConnectionStatsResult>("meraki:networks/getWirelessConnectionStats:getWirelessConnectionStats", args ?? new GetWirelessConnectionStatsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetWirelessConnectionStats.Invoke(new()
+        ///     {
+        ///         ApTag = "string",
+        ///         Band = "string",
+        ///         NetworkId = "string",
+        ///         Ssid = 1,
+        ///         T0 = "string",
+        ///         T1 = "string",
+        ///         Timespan = 1,
+        ///         Vlan = 1,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksWirelessConnectionStatsExample"] = example.Apply(getWirelessConnectionStatsResult =&gt; getWirelessConnectionStatsResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetWirelessConnectionStatsResult> Invoke(GetWirelessConnectionStatsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetWirelessConnectionStatsResult>("meraki:networks/getWirelessConnectionStats:getWirelessConnectionStats", args ?? new GetWirelessConnectionStatsInvokeArgs(), options.WithDefaults());
     }
 
 

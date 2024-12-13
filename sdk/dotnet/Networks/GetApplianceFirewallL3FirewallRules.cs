@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetApplianceFirewallL3FirewallRulesResult> Invoke(GetApplianceFirewallL3FirewallRulesInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetApplianceFirewallL3FirewallRulesResult>("meraki:networks/getApplianceFirewallL3FirewallRules:getApplianceFirewallL3FirewallRules", args ?? new GetApplianceFirewallL3FirewallRulesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetApplianceFirewallL3FirewallRules.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksApplianceFirewallL3FirewallRulesExample"] = example.Apply(getApplianceFirewallL3FirewallRulesResult =&gt; getApplianceFirewallL3FirewallRulesResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetApplianceFirewallL3FirewallRulesResult> Invoke(GetApplianceFirewallL3FirewallRulesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetApplianceFirewallL3FirewallRulesResult>("meraki:networks/getApplianceFirewallL3FirewallRules:getApplianceFirewallL3FirewallRules", args ?? new GetApplianceFirewallL3FirewallRulesInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Devices
         /// </summary>
         public static Output<GetSwitchWarmSpareResult> Invoke(GetSwitchWarmSpareInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSwitchWarmSpareResult>("meraki:devices/getSwitchWarmSpare:getSwitchWarmSpare", args ?? new GetSwitchWarmSpareInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Devices.GetSwitchWarmSpare.Invoke(new()
+        ///     {
+        ///         Serial = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiDevicesSwitchWarmSpareExample"] = example.Apply(getSwitchWarmSpareResult =&gt; getSwitchWarmSpareResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSwitchWarmSpareResult> Invoke(GetSwitchWarmSpareInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSwitchWarmSpareResult>("meraki:devices/getSwitchWarmSpare:getSwitchWarmSpare", args ?? new GetSwitchWarmSpareInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetSnmpResult> Invoke(GetSnmpInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSnmpResult>("meraki:organizations/getSnmp:getSnmp", args ?? new GetSnmpInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetSnmp.Invoke(new()
+        ///     {
+        ///         OrganizationId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsSnmpExample"] = example.Apply(getSnmpResult =&gt; getSnmpResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSnmpResult> Invoke(GetSnmpInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSnmpResult>("meraki:organizations/getSnmp:getSnmp", args ?? new GetSnmpInvokeArgs(), options.WithDefaults());
     }
 
 

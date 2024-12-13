@@ -64,6 +64,33 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetConfigTemplatesSwitchProfilesResult> Invoke(GetConfigTemplatesSwitchProfilesInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetConfigTemplatesSwitchProfilesResult>("meraki:organizations/getConfigTemplatesSwitchProfiles:getConfigTemplatesSwitchProfiles", args ?? new GetConfigTemplatesSwitchProfilesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetConfigTemplatesSwitchProfiles.Invoke(new()
+        ///     {
+        ///         ConfigTemplateId = "string",
+        ///         OrganizationId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsConfigTemplatesSwitchProfilesExample"] = example.Apply(getConfigTemplatesSwitchProfilesResult =&gt; getConfigTemplatesSwitchProfilesResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetConfigTemplatesSwitchProfilesResult> Invoke(GetConfigTemplatesSwitchProfilesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetConfigTemplatesSwitchProfilesResult>("meraki:organizations/getConfigTemplatesSwitchProfiles:getConfigTemplatesSwitchProfiles", args ?? new GetConfigTemplatesSwitchProfilesInvokeArgs(), options.WithDefaults());
     }
 
 

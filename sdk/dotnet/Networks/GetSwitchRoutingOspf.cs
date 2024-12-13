@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetSwitchRoutingOspfResult> Invoke(GetSwitchRoutingOspfInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSwitchRoutingOspfResult>("meraki:networks/getSwitchRoutingOspf:getSwitchRoutingOspf", args ?? new GetSwitchRoutingOspfInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetSwitchRoutingOspf.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksSwitchRoutingOspfExample"] = example.Apply(getSwitchRoutingOspfResult =&gt; getSwitchRoutingOspfResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSwitchRoutingOspfResult> Invoke(GetSwitchRoutingOspfInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSwitchRoutingOspfResult>("meraki:networks/getSwitchRoutingOspf:getSwitchRoutingOspf", args ?? new GetSwitchRoutingOspfInvokeArgs(), options.WithDefaults());
     }
 
 

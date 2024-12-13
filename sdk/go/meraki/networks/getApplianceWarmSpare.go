@@ -63,21 +63,11 @@ type LookupApplianceWarmSpareResult struct {
 }
 
 func LookupApplianceWarmSpareOutput(ctx *pulumi.Context, args LookupApplianceWarmSpareOutputArgs, opts ...pulumi.InvokeOption) LookupApplianceWarmSpareResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupApplianceWarmSpareResultOutput, error) {
 			args := v.(LookupApplianceWarmSpareArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupApplianceWarmSpareResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getApplianceWarmSpare:getApplianceWarmSpare", args, &rv, "", opts...)
-			if err != nil {
-				return LookupApplianceWarmSpareResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupApplianceWarmSpareResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupApplianceWarmSpareResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getApplianceWarmSpare:getApplianceWarmSpare", args, LookupApplianceWarmSpareResultOutput{}, options).(LookupApplianceWarmSpareResultOutput), nil
 		}).(LookupApplianceWarmSpareResultOutput)
 }
 

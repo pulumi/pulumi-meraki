@@ -64,6 +64,33 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetSmUsersDeviceProfilesResult> Invoke(GetSmUsersDeviceProfilesInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSmUsersDeviceProfilesResult>("meraki:networks/getSmUsersDeviceProfiles:getSmUsersDeviceProfiles", args ?? new GetSmUsersDeviceProfilesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetSmUsersDeviceProfiles.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///         UserId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksSmUsersDeviceProfilesExample"] = example.Apply(getSmUsersDeviceProfilesResult =&gt; getSmUsersDeviceProfilesResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSmUsersDeviceProfilesResult> Invoke(GetSmUsersDeviceProfilesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSmUsersDeviceProfilesResult>("meraki:networks/getSmUsersDeviceProfiles:getSmUsersDeviceProfiles", args ?? new GetSmUsersDeviceProfilesInvokeArgs(), options.WithDefaults());
     }
 
 

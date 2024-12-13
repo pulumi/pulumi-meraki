@@ -68,6 +68,35 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetApplianceUplinksUsageByNetworkResult> Invoke(GetApplianceUplinksUsageByNetworkInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetApplianceUplinksUsageByNetworkResult>("meraki:organizations/getApplianceUplinksUsageByNetwork:getApplianceUplinksUsageByNetwork", args ?? new GetApplianceUplinksUsageByNetworkInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetApplianceUplinksUsageByNetwork.Invoke(new()
+        ///     {
+        ///         OrganizationId = "string",
+        ///         T0 = "string",
+        ///         T1 = "string",
+        ///         Timespan = 1,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsApplianceUplinksUsageByNetworkExample"] = example.Apply(getApplianceUplinksUsageByNetworkResult =&gt; getApplianceUplinksUsageByNetworkResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetApplianceUplinksUsageByNetworkResult> Invoke(GetApplianceUplinksUsageByNetworkInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetApplianceUplinksUsageByNetworkResult>("meraki:organizations/getApplianceUplinksUsageByNetwork:getApplianceUplinksUsageByNetwork", args ?? new GetApplianceUplinksUsageByNetworkInvokeArgs(), options.WithDefaults());
     }
 
 

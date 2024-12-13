@@ -63,21 +63,11 @@ type GetCameraAnalyticsLiveResult struct {
 }
 
 func GetCameraAnalyticsLiveOutput(ctx *pulumi.Context, args GetCameraAnalyticsLiveOutputArgs, opts ...pulumi.InvokeOption) GetCameraAnalyticsLiveResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetCameraAnalyticsLiveResultOutput, error) {
 			args := v.(GetCameraAnalyticsLiveArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetCameraAnalyticsLiveResult
-			secret, err := ctx.InvokePackageRaw("meraki:devices/getCameraAnalyticsLive:getCameraAnalyticsLive", args, &rv, "", opts...)
-			if err != nil {
-				return GetCameraAnalyticsLiveResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetCameraAnalyticsLiveResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetCameraAnalyticsLiveResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:devices/getCameraAnalyticsLive:getCameraAnalyticsLive", args, GetCameraAnalyticsLiveResultOutput{}, options).(GetCameraAnalyticsLiveResultOutput), nil
 		}).(GetCameraAnalyticsLiveResultOutput)
 }
 

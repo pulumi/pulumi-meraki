@@ -79,21 +79,11 @@ type GetSummaryTopAppliancesByUtilizationResult struct {
 }
 
 func GetSummaryTopAppliancesByUtilizationOutput(ctx *pulumi.Context, args GetSummaryTopAppliancesByUtilizationOutputArgs, opts ...pulumi.InvokeOption) GetSummaryTopAppliancesByUtilizationResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetSummaryTopAppliancesByUtilizationResultOutput, error) {
 			args := v.(GetSummaryTopAppliancesByUtilizationArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetSummaryTopAppliancesByUtilizationResult
-			secret, err := ctx.InvokePackageRaw("meraki:organizations/getSummaryTopAppliancesByUtilization:getSummaryTopAppliancesByUtilization", args, &rv, "", opts...)
-			if err != nil {
-				return GetSummaryTopAppliancesByUtilizationResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetSummaryTopAppliancesByUtilizationResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetSummaryTopAppliancesByUtilizationResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:organizations/getSummaryTopAppliancesByUtilization:getSummaryTopAppliancesByUtilization", args, GetSummaryTopAppliancesByUtilizationResultOutput{}, options).(GetSummaryTopAppliancesByUtilizationResultOutput), nil
 		}).(GetSummaryTopAppliancesByUtilizationResultOutput)
 }
 

@@ -64,6 +64,33 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetSmDevicesWlanListsResult> Invoke(GetSmDevicesWlanListsInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSmDevicesWlanListsResult>("meraki:networks/getSmDevicesWlanLists:getSmDevicesWlanLists", args ?? new GetSmDevicesWlanListsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetSmDevicesWlanLists.Invoke(new()
+        ///     {
+        ///         DeviceId = "string",
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksSmDevicesWlanListsExample"] = example.Apply(getSmDevicesWlanListsResult =&gt; getSmDevicesWlanListsResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSmDevicesWlanListsResult> Invoke(GetSmDevicesWlanListsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSmDevicesWlanListsResult>("meraki:networks/getSmDevicesWlanLists:getSmDevicesWlanLists", args ?? new GetSmDevicesWlanListsInvokeArgs(), options.WithDefaults());
     }
 
 

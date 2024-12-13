@@ -95,21 +95,11 @@ type GetCameraDetectionsHistoryByBoundaryByIntervalResult struct {
 }
 
 func GetCameraDetectionsHistoryByBoundaryByIntervalOutput(ctx *pulumi.Context, args GetCameraDetectionsHistoryByBoundaryByIntervalOutputArgs, opts ...pulumi.InvokeOption) GetCameraDetectionsHistoryByBoundaryByIntervalResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetCameraDetectionsHistoryByBoundaryByIntervalResultOutput, error) {
 			args := v.(GetCameraDetectionsHistoryByBoundaryByIntervalArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetCameraDetectionsHistoryByBoundaryByIntervalResult
-			secret, err := ctx.InvokePackageRaw("meraki:organizations/getCameraDetectionsHistoryByBoundaryByInterval:getCameraDetectionsHistoryByBoundaryByInterval", args, &rv, "", opts...)
-			if err != nil {
-				return GetCameraDetectionsHistoryByBoundaryByIntervalResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetCameraDetectionsHistoryByBoundaryByIntervalResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetCameraDetectionsHistoryByBoundaryByIntervalResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:organizations/getCameraDetectionsHistoryByBoundaryByInterval:getCameraDetectionsHistoryByBoundaryByInterval", args, GetCameraDetectionsHistoryByBoundaryByIntervalResultOutput{}, options).(GetCameraDetectionsHistoryByBoundaryByIntervalResultOutput), nil
 		}).(GetCameraDetectionsHistoryByBoundaryByIntervalResultOutput)
 }
 

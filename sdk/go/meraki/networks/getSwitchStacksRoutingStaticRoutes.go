@@ -48,21 +48,11 @@ type LookupSwitchStacksRoutingStaticRoutesResult struct {
 }
 
 func LookupSwitchStacksRoutingStaticRoutesOutput(ctx *pulumi.Context, args LookupSwitchStacksRoutingStaticRoutesOutputArgs, opts ...pulumi.InvokeOption) LookupSwitchStacksRoutingStaticRoutesResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupSwitchStacksRoutingStaticRoutesResultOutput, error) {
 			args := v.(LookupSwitchStacksRoutingStaticRoutesArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupSwitchStacksRoutingStaticRoutesResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getSwitchStacksRoutingStaticRoutes:getSwitchStacksRoutingStaticRoutes", args, &rv, "", opts...)
-			if err != nil {
-				return LookupSwitchStacksRoutingStaticRoutesResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupSwitchStacksRoutingStaticRoutesResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupSwitchStacksRoutingStaticRoutesResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getSwitchStacksRoutingStaticRoutes:getSwitchStacksRoutingStaticRoutes", args, LookupSwitchStacksRoutingStaticRoutesResultOutput{}, options).(LookupSwitchStacksRoutingStaticRoutesResultOutput), nil
 		}).(LookupSwitchStacksRoutingStaticRoutesResultOutput)
 }
 

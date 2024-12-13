@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetApplianceContentFilteringResult> Invoke(GetApplianceContentFilteringInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetApplianceContentFilteringResult>("meraki:networks/getApplianceContentFiltering:getApplianceContentFiltering", args ?? new GetApplianceContentFilteringInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetApplianceContentFiltering.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksApplianceContentFilteringExample"] = example.Apply(getApplianceContentFilteringResult =&gt; getApplianceContentFilteringResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetApplianceContentFilteringResult> Invoke(GetApplianceContentFilteringInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetApplianceContentFilteringResult>("meraki:networks/getApplianceContentFiltering:getApplianceContentFiltering", args ?? new GetApplianceContentFilteringInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -144,6 +144,73 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetDevicesResult> Invoke(GetDevicesInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetDevicesResult>("meraki:organizations/getDevices:getDevices", args ?? new GetDevicesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetDevices.Invoke(new()
+        ///     {
+        ///         ConfigurationUpdatedAfter = "string",
+        ///         EndingBefore = "string",
+        ///         Mac = "string",
+        ///         Macs = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         Model = "string",
+        ///         Models = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         Name = "string",
+        ///         NetworkIds = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         OrganizationId = "string",
+        ///         PerPage = 1,
+        ///         ProductTypes = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         SensorAlertProfileIds = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         SensorMetrics = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         Serial = "string",
+        ///         Serials = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         StartingAfter = "string",
+        ///         Tags = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         TagsFilterType = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsDevicesExample"] = example.Apply(getDevicesResult =&gt; getDevicesResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetDevicesResult> Invoke(GetDevicesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetDevicesResult>("meraki:organizations/getDevices:getDevices", args ?? new GetDevicesInvokeArgs(), options.WithDefaults());
     }
 
 

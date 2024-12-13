@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetSwitchLinkAggregationsResult> Invoke(GetSwitchLinkAggregationsInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSwitchLinkAggregationsResult>("meraki:networks/getSwitchLinkAggregations:getSwitchLinkAggregations", args ?? new GetSwitchLinkAggregationsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetSwitchLinkAggregations.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksSwitchLinkAggregationsExample"] = example.Apply(getSwitchLinkAggregationsResult =&gt; getSwitchLinkAggregationsResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSwitchLinkAggregationsResult> Invoke(GetSwitchLinkAggregationsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSwitchLinkAggregationsResult>("meraki:networks/getSwitchLinkAggregations:getSwitchLinkAggregations", args ?? new GetSwitchLinkAggregationsInvokeArgs(), options.WithDefaults());
     }
 
 

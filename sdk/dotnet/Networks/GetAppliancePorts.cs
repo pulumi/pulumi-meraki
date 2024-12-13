@@ -22,6 +22,12 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetAppliancePortsResult> Invoke(GetAppliancePortsInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetAppliancePortsResult>("meraki:networks/getAppliancePorts:getAppliancePorts", args ?? new GetAppliancePortsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetAppliancePortsResult> Invoke(GetAppliancePortsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetAppliancePortsResult>("meraki:networks/getAppliancePorts:getAppliancePorts", args ?? new GetAppliancePortsInvokeArgs(), options.WithDefaults());
     }
 
 

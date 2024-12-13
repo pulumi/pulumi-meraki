@@ -72,6 +72,37 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetInsightApplicationsHealthByTimeResult> Invoke(GetInsightApplicationsHealthByTimeInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetInsightApplicationsHealthByTimeResult>("meraki:networks/getInsightApplicationsHealthByTime:getInsightApplicationsHealthByTime", args ?? new GetInsightApplicationsHealthByTimeInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetInsightApplicationsHealthByTime.Invoke(new()
+        ///     {
+        ///         ApplicationId = "string",
+        ///         NetworkId = "string",
+        ///         Resolution = 1,
+        ///         T0 = "string",
+        ///         T1 = "string",
+        ///         Timespan = 1,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksInsightApplicationsHealthByTimeExample"] = example.Apply(getInsightApplicationsHealthByTimeResult =&gt; getInsightApplicationsHealthByTimeResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetInsightApplicationsHealthByTimeResult> Invoke(GetInsightApplicationsHealthByTimeInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetInsightApplicationsHealthByTimeResult>("meraki:networks/getInsightApplicationsHealthByTime:getInsightApplicationsHealthByTime", args ?? new GetInsightApplicationsHealthByTimeInvokeArgs(), options.WithDefaults());
     }
 
 

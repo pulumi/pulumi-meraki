@@ -44,21 +44,11 @@ type LookupAppliancePortsResult struct {
 }
 
 func LookupAppliancePortsOutput(ctx *pulumi.Context, args LookupAppliancePortsOutputArgs, opts ...pulumi.InvokeOption) LookupAppliancePortsResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupAppliancePortsResultOutput, error) {
 			args := v.(LookupAppliancePortsArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupAppliancePortsResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getAppliancePorts:getAppliancePorts", args, &rv, "", opts...)
-			if err != nil {
-				return LookupAppliancePortsResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupAppliancePortsResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupAppliancePortsResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getAppliancePorts:getAppliancePorts", args, LookupAppliancePortsResultOutput{}, options).(LookupAppliancePortsResultOutput), nil
 		}).(LookupAppliancePortsResultOutput)
 }
 

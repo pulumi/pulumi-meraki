@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Devices
         /// </summary>
         public static Output<GetCameraVideoSettingsResult> Invoke(GetCameraVideoSettingsInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetCameraVideoSettingsResult>("meraki:devices/getCameraVideoSettings:getCameraVideoSettings", args ?? new GetCameraVideoSettingsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Devices.GetCameraVideoSettings.Invoke(new()
+        ///     {
+        ///         Serial = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiDevicesCameraVideoSettingsExample"] = example.Apply(getCameraVideoSettingsResult =&gt; getCameraVideoSettingsResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetCameraVideoSettingsResult> Invoke(GetCameraVideoSettingsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetCameraVideoSettingsResult>("meraki:devices/getCameraVideoSettings:getCameraVideoSettings", args ?? new GetCameraVideoSettingsInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -22,6 +22,12 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetActionBatchesResult> Invoke(GetActionBatchesInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetActionBatchesResult>("meraki:organizations/getActionBatches:getActionBatches", args ?? new GetActionBatchesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetActionBatchesResult> Invoke(GetActionBatchesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetActionBatchesResult>("meraki:organizations/getActionBatches:getActionBatches", args ?? new GetActionBatchesInvokeArgs(), options.WithDefaults());
     }
 
 

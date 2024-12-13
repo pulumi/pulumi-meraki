@@ -64,6 +64,33 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetWirelessSsidsSplashSettingsResult> Invoke(GetWirelessSsidsSplashSettingsInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetWirelessSsidsSplashSettingsResult>("meraki:networks/getWirelessSsidsSplashSettings:getWirelessSsidsSplashSettings", args ?? new GetWirelessSsidsSplashSettingsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetWirelessSsidsSplashSettings.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///         Number = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksWirelessSsidsSplashSettingsExample"] = example.Apply(getWirelessSsidsSplashSettingsResult =&gt; getWirelessSsidsSplashSettingsResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetWirelessSsidsSplashSettingsResult> Invoke(GetWirelessSsidsSplashSettingsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetWirelessSsidsSplashSettingsResult>("meraki:networks/getWirelessSsidsSplashSettings:getWirelessSsidsSplashSettings", args ?? new GetWirelessSsidsSplashSettingsInvokeArgs(), options.WithDefaults());
     }
 
 

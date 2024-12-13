@@ -64,21 +64,11 @@ type GetInsightApplicationsResult struct {
 }
 
 func GetInsightApplicationsOutput(ctx *pulumi.Context, args GetInsightApplicationsOutputArgs, opts ...pulumi.InvokeOption) GetInsightApplicationsResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetInsightApplicationsResultOutput, error) {
 			args := v.(GetInsightApplicationsArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetInsightApplicationsResult
-			secret, err := ctx.InvokePackageRaw("meraki:organizations/getInsightApplications:getInsightApplications", args, &rv, "", opts...)
-			if err != nil {
-				return GetInsightApplicationsResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetInsightApplicationsResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetInsightApplicationsResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:organizations/getInsightApplications:getInsightApplications", args, GetInsightApplicationsResultOutput{}, options).(GetInsightApplicationsResultOutput), nil
 		}).(GetInsightApplicationsResultOutput)
 }
 

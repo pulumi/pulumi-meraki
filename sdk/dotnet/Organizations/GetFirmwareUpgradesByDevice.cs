@@ -108,6 +108,55 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetFirmwareUpgradesByDeviceResult> Invoke(GetFirmwareUpgradesByDeviceInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetFirmwareUpgradesByDeviceResult>("meraki:organizations/getFirmwareUpgradesByDevice:getFirmwareUpgradesByDevice", args ?? new GetFirmwareUpgradesByDeviceInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetFirmwareUpgradesByDevice.Invoke(new()
+        ///     {
+        ///         EndingBefore = "string",
+        ///         FirmwareUpgradeBatchIds = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         Macs = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         NetworkIds = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         OrganizationId = "string",
+        ///         PerPage = 1,
+        ///         Serials = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         StartingAfter = "string",
+        ///         Upgradestatuses = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsFirmwareUpgradesByDeviceExample"] = example.Apply(getFirmwareUpgradesByDeviceResult =&gt; getFirmwareUpgradesByDeviceResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetFirmwareUpgradesByDeviceResult> Invoke(GetFirmwareUpgradesByDeviceInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetFirmwareUpgradesByDeviceResult>("meraki:organizations/getFirmwareUpgradesByDevice:getFirmwareUpgradesByDevice", args ?? new GetFirmwareUpgradesByDeviceInvokeArgs(), options.WithDefaults());
     }
 
 

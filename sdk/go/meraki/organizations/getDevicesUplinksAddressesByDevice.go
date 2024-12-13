@@ -112,21 +112,11 @@ type GetDevicesUplinksAddressesByDeviceResult struct {
 }
 
 func GetDevicesUplinksAddressesByDeviceOutput(ctx *pulumi.Context, args GetDevicesUplinksAddressesByDeviceOutputArgs, opts ...pulumi.InvokeOption) GetDevicesUplinksAddressesByDeviceResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetDevicesUplinksAddressesByDeviceResultOutput, error) {
 			args := v.(GetDevicesUplinksAddressesByDeviceArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetDevicesUplinksAddressesByDeviceResult
-			secret, err := ctx.InvokePackageRaw("meraki:organizations/getDevicesUplinksAddressesByDevice:getDevicesUplinksAddressesByDevice", args, &rv, "", opts...)
-			if err != nil {
-				return GetDevicesUplinksAddressesByDeviceResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetDevicesUplinksAddressesByDeviceResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetDevicesUplinksAddressesByDeviceResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:organizations/getDevicesUplinksAddressesByDevice:getDevicesUplinksAddressesByDevice", args, GetDevicesUplinksAddressesByDeviceResultOutput{}, options).(GetDevicesUplinksAddressesByDeviceResultOutput), nil
 		}).(GetDevicesUplinksAddressesByDeviceResultOutput)
 }
 

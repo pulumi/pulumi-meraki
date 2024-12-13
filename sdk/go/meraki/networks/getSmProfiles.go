@@ -71,21 +71,11 @@ type GetSmProfilesResult struct {
 }
 
 func GetSmProfilesOutput(ctx *pulumi.Context, args GetSmProfilesOutputArgs, opts ...pulumi.InvokeOption) GetSmProfilesResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetSmProfilesResultOutput, error) {
 			args := v.(GetSmProfilesArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetSmProfilesResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getSmProfiles:getSmProfiles", args, &rv, "", opts...)
-			if err != nil {
-				return GetSmProfilesResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetSmProfilesResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetSmProfilesResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getSmProfiles:getSmProfiles", args, GetSmProfilesResultOutput{}, options).(GetSmProfilesResultOutput), nil
 		}).(GetSmProfilesResultOutput)
 }
 

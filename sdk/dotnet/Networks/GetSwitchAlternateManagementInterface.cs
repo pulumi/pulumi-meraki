@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetSwitchAlternateManagementInterfaceResult> Invoke(GetSwitchAlternateManagementInterfaceInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSwitchAlternateManagementInterfaceResult>("meraki:networks/getSwitchAlternateManagementInterface:getSwitchAlternateManagementInterface", args ?? new GetSwitchAlternateManagementInterfaceInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetSwitchAlternateManagementInterface.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksSwitchAlternateManagementInterfaceExample"] = example.Apply(getSwitchAlternateManagementInterfaceResult =&gt; getSwitchAlternateManagementInterfaceResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSwitchAlternateManagementInterfaceResult> Invoke(GetSwitchAlternateManagementInterfaceInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSwitchAlternateManagementInterfaceResult>("meraki:networks/getSwitchAlternateManagementInterface:getSwitchAlternateManagementInterface", args ?? new GetSwitchAlternateManagementInterfaceInvokeArgs(), options.WithDefaults());
     }
 
 

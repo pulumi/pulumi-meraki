@@ -63,21 +63,11 @@ type LookupCellularSimsResult struct {
 }
 
 func LookupCellularSimsOutput(ctx *pulumi.Context, args LookupCellularSimsOutputArgs, opts ...pulumi.InvokeOption) LookupCellularSimsResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupCellularSimsResultOutput, error) {
 			args := v.(LookupCellularSimsArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupCellularSimsResult
-			secret, err := ctx.InvokePackageRaw("meraki:devices/getCellularSims:getCellularSims", args, &rv, "", opts...)
-			if err != nil {
-				return LookupCellularSimsResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupCellularSimsResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupCellularSimsResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:devices/getCellularSims:getCellularSims", args, LookupCellularSimsResultOutput{}, options).(LookupCellularSimsResultOutput), nil
 		}).(LookupCellularSimsResultOutput)
 }
 

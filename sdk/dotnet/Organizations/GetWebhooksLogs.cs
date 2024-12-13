@@ -76,6 +76,39 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetWebhooksLogsResult> Invoke(GetWebhooksLogsInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetWebhooksLogsResult>("meraki:organizations/getWebhooksLogs:getWebhooksLogs", args ?? new GetWebhooksLogsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetWebhooksLogs.Invoke(new()
+        ///     {
+        ///         EndingBefore = "string",
+        ///         OrganizationId = "string",
+        ///         PerPage = 1,
+        ///         StartingAfter = "string",
+        ///         T0 = "string",
+        ///         T1 = "string",
+        ///         Timespan = 1,
+        ///         Url = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsWebhooksLogsExample"] = example.Apply(getWebhooksLogsResult =&gt; getWebhooksLogsResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetWebhooksLogsResult> Invoke(GetWebhooksLogsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetWebhooksLogsResult>("meraki:organizations/getWebhooksLogs:getWebhooksLogs", args ?? new GetWebhooksLogsInvokeArgs(), options.WithDefaults());
     }
 
 

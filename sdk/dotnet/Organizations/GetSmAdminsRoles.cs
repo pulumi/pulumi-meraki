@@ -68,6 +68,35 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetSmAdminsRolesResult> Invoke(GetSmAdminsRolesInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSmAdminsRolesResult>("meraki:organizations/getSmAdminsRoles:getSmAdminsRoles", args ?? new GetSmAdminsRolesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetSmAdminsRoles.Invoke(new()
+        ///     {
+        ///         EndingBefore = "string",
+        ///         OrganizationId = "string",
+        ///         PerPage = 1,
+        ///         StartingAfter = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsSmAdminsRolesExample"] = example.Apply(getSmAdminsRolesResult =&gt; getSmAdminsRolesResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSmAdminsRolesResult> Invoke(GetSmAdminsRolesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSmAdminsRolesResult>("meraki:organizations/getSmAdminsRoles:getSmAdminsRoles", args ?? new GetSmAdminsRolesInvokeArgs(), options.WithDefaults());
     }
 
 

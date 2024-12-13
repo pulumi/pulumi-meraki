@@ -102,6 +102,52 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetEventsResult> Invoke(GetEventsInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetEventsResult>("meraki:networks/getEvents:getEvents", args ?? new GetEventsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetEvents.Invoke(new()
+        ///     {
+        ///         ClientIp = "string",
+        ///         ClientMac = "string",
+        ///         ClientName = "string",
+        ///         DeviceMac = "string",
+        ///         DeviceName = "string",
+        ///         DeviceSerial = "string",
+        ///         EndingBefore = "string",
+        ///         ExcludedEventTypes = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         IncludedEventTypes = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         NetworkId = "string",
+        ///         PerPage = 1,
+        ///         ProductType = "string",
+        ///         SmDeviceMac = "string",
+        ///         SmDeviceName = "string",
+        ///         StartingAfter = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksEventsExample"] = example.Apply(getEventsResult =&gt; getEventsResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetEventsResult> Invoke(GetEventsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetEventsResult>("meraki:networks/getEvents:getEvents", args ?? new GetEventsInvokeArgs(), options.WithDefaults());
     }
 
 

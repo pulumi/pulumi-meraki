@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetApplianceVpnBgpResult> Invoke(GetApplianceVpnBgpInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetApplianceVpnBgpResult>("meraki:networks/getApplianceVpnBgp:getApplianceVpnBgp", args ?? new GetApplianceVpnBgpInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetApplianceVpnBgp.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksApplianceVpnBgpExample"] = example.Apply(getApplianceVpnBgpResult =&gt; getApplianceVpnBgpResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetApplianceVpnBgpResult> Invoke(GetApplianceVpnBgpInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetApplianceVpnBgpResult>("meraki:networks/getApplianceVpnBgp:getApplianceVpnBgp", args ?? new GetApplianceVpnBgpInvokeArgs(), options.WithDefaults());
     }
 
 

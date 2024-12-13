@@ -89,21 +89,11 @@ type GetLicensingCotermLicensesResult struct {
 }
 
 func GetLicensingCotermLicensesOutput(ctx *pulumi.Context, args GetLicensingCotermLicensesOutputArgs, opts ...pulumi.InvokeOption) GetLicensingCotermLicensesResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetLicensingCotermLicensesResultOutput, error) {
 			args := v.(GetLicensingCotermLicensesArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetLicensingCotermLicensesResult
-			secret, err := ctx.InvokePackageRaw("meraki:organizations/getLicensingCotermLicenses:getLicensingCotermLicenses", args, &rv, "", opts...)
-			if err != nil {
-				return GetLicensingCotermLicensesResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetLicensingCotermLicensesResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetLicensingCotermLicensesResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:organizations/getLicensingCotermLicenses:getLicensingCotermLicenses", args, GetLicensingCotermLicensesResultOutput{}, options).(GetLicensingCotermLicensesResultOutput), nil
 		}).(GetLicensingCotermLicensesResultOutput)
 }
 

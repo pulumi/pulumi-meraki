@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetApplianceTrafficShapingRulesResult> Invoke(GetApplianceTrafficShapingRulesInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetApplianceTrafficShapingRulesResult>("meraki:networks/getApplianceTrafficShapingRules:getApplianceTrafficShapingRules", args ?? new GetApplianceTrafficShapingRulesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetApplianceTrafficShapingRules.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksApplianceTrafficShapingRulesExample"] = example.Apply(getApplianceTrafficShapingRulesResult =&gt; getApplianceTrafficShapingRulesResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetApplianceTrafficShapingRulesResult> Invoke(GetApplianceTrafficShapingRulesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetApplianceTrafficShapingRulesResult>("meraki:networks/getApplianceTrafficShapingRules:getApplianceTrafficShapingRules", args ?? new GetApplianceTrafficShapingRulesInvokeArgs(), options.WithDefaults());
     }
 
 

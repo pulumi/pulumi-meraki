@@ -92,6 +92,47 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetUplinksStatusesResult> Invoke(GetUplinksStatusesInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetUplinksStatusesResult>("meraki:organizations/getUplinksStatuses:getUplinksStatuses", args ?? new GetUplinksStatusesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetUplinksStatuses.Invoke(new()
+        ///     {
+        ///         EndingBefore = "string",
+        ///         Iccids = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         NetworkIds = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         OrganizationId = "string",
+        ///         PerPage = 1,
+        ///         Serials = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         StartingAfter = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsUplinksStatusesExample"] = example.Apply(getUplinksStatusesResult =&gt; getUplinksStatusesResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetUplinksStatusesResult> Invoke(GetUplinksStatusesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetUplinksStatusesResult>("meraki:organizations/getUplinksStatuses:getUplinksStatuses", args ?? new GetUplinksStatusesInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -44,21 +44,11 @@ type LookupWebhooksHttpServersResult struct {
 }
 
 func LookupWebhooksHttpServersOutput(ctx *pulumi.Context, args LookupWebhooksHttpServersOutputArgs, opts ...pulumi.InvokeOption) LookupWebhooksHttpServersResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupWebhooksHttpServersResultOutput, error) {
 			args := v.(LookupWebhooksHttpServersArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupWebhooksHttpServersResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getWebhooksHttpServers:getWebhooksHttpServers", args, &rv, "", opts...)
-			if err != nil {
-				return LookupWebhooksHttpServersResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupWebhooksHttpServersResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupWebhooksHttpServersResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getWebhooksHttpServers:getWebhooksHttpServers", args, LookupWebhooksHttpServersResultOutput{}, options).(LookupWebhooksHttpServersResultOutput), nil
 		}).(LookupWebhooksHttpServersResultOutput)
 }
 

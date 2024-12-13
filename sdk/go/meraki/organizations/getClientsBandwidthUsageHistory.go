@@ -79,21 +79,11 @@ type GetClientsBandwidthUsageHistoryResult struct {
 }
 
 func GetClientsBandwidthUsageHistoryOutput(ctx *pulumi.Context, args GetClientsBandwidthUsageHistoryOutputArgs, opts ...pulumi.InvokeOption) GetClientsBandwidthUsageHistoryResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetClientsBandwidthUsageHistoryResultOutput, error) {
 			args := v.(GetClientsBandwidthUsageHistoryArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetClientsBandwidthUsageHistoryResult
-			secret, err := ctx.InvokePackageRaw("meraki:organizations/getClientsBandwidthUsageHistory:getClientsBandwidthUsageHistory", args, &rv, "", opts...)
-			if err != nil {
-				return GetClientsBandwidthUsageHistoryResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetClientsBandwidthUsageHistoryResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetClientsBandwidthUsageHistoryResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:organizations/getClientsBandwidthUsageHistory:getClientsBandwidthUsageHistory", args, GetClientsBandwidthUsageHistoryResultOutput{}, options).(GetClientsBandwidthUsageHistoryResultOutput), nil
 		}).(GetClientsBandwidthUsageHistoryResultOutput)
 }
 

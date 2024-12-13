@@ -22,6 +22,12 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetBrandingPoliciesResult> Invoke(GetBrandingPoliciesInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetBrandingPoliciesResult>("meraki:organizations/getBrandingPolicies:getBrandingPolicies", args ?? new GetBrandingPoliciesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetBrandingPoliciesResult> Invoke(GetBrandingPoliciesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetBrandingPoliciesResult>("meraki:organizations/getBrandingPolicies:getBrandingPolicies", args ?? new GetBrandingPoliciesInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -102,6 +102,52 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetDevicesUplinksAddressesByDeviceResult> Invoke(GetDevicesUplinksAddressesByDeviceInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetDevicesUplinksAddressesByDeviceResult>("meraki:organizations/getDevicesUplinksAddressesByDevice:getDevicesUplinksAddressesByDevice", args ?? new GetDevicesUplinksAddressesByDeviceInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetDevicesUplinksAddressesByDevice.Invoke(new()
+        ///     {
+        ///         EndingBefore = "string",
+        ///         NetworkIds = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         OrganizationId = "string",
+        ///         PerPage = 1,
+        ///         ProductTypes = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         Serials = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         StartingAfter = "string",
+        ///         Tags = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         TagsFilterType = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsDevicesUplinksAddressesByDeviceExample"] = example.Apply(getDevicesUplinksAddressesByDeviceResult =&gt; getDevicesUplinksAddressesByDeviceResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetDevicesUplinksAddressesByDeviceResult> Invoke(GetDevicesUplinksAddressesByDeviceInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetDevicesUplinksAddressesByDeviceResult>("meraki:organizations/getDevicesUplinksAddressesByDevice:getDevicesUplinksAddressesByDevice", args ?? new GetDevicesUplinksAddressesByDeviceInvokeArgs(), options.WithDefaults());
     }
 
 

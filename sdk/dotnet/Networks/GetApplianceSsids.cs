@@ -22,6 +22,12 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetApplianceSsidsResult> Invoke(GetApplianceSsidsInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetApplianceSsidsResult>("meraki:networks/getApplianceSsids:getApplianceSsids", args ?? new GetApplianceSsidsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetApplianceSsidsResult> Invoke(GetApplianceSsidsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetApplianceSsidsResult>("meraki:networks/getApplianceSsids:getApplianceSsids", args ?? new GetApplianceSsidsInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetAdminsResult> Invoke(GetAdminsInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetAdminsResult>("meraki:organizations/getAdmins:getAdmins", args ?? new GetAdminsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetAdmins.Invoke(new()
+        ///     {
+        ///         OrganizationId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsAdminsExample"] = example.Apply(getAdminsResult =&gt; getAdminsResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetAdminsResult> Invoke(GetAdminsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetAdminsResult>("meraki:organizations/getAdmins:getAdmins", args ?? new GetAdminsInvokeArgs(), options.WithDefaults());
     }
 
 

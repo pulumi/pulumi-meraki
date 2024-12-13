@@ -68,21 +68,11 @@ type GetCameraPermissionsResult struct {
 }
 
 func GetCameraPermissionsOutput(ctx *pulumi.Context, args GetCameraPermissionsOutputArgs, opts ...pulumi.InvokeOption) GetCameraPermissionsResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetCameraPermissionsResultOutput, error) {
 			args := v.(GetCameraPermissionsArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetCameraPermissionsResult
-			secret, err := ctx.InvokePackageRaw("meraki:organizations/getCameraPermissions:getCameraPermissions", args, &rv, "", opts...)
-			if err != nil {
-				return GetCameraPermissionsResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetCameraPermissionsResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetCameraPermissionsResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:organizations/getCameraPermissions:getCameraPermissions", args, GetCameraPermissionsResultOutput{}, options).(GetCameraPermissionsResultOutput), nil
 		}).(GetCameraPermissionsResultOutput)
 }
 

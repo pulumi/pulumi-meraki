@@ -70,6 +70,36 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetSensorAlertsOverviewByMetricResult> Invoke(GetSensorAlertsOverviewByMetricInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSensorAlertsOverviewByMetricResult>("meraki:networks/getSensorAlertsOverviewByMetric:getSensorAlertsOverviewByMetric", args ?? new GetSensorAlertsOverviewByMetricInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetSensorAlertsOverviewByMetric.Invoke(new()
+        ///     {
+        ///         Interval = 1,
+        ///         NetworkId = "string",
+        ///         T0 = "string",
+        ///         T1 = "string",
+        ///         Timespan = 1,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksSensorAlertsOverviewByMetricExample"] = example.Apply(getSensorAlertsOverviewByMetricResult =&gt; getSensorAlertsOverviewByMetricResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSensorAlertsOverviewByMetricResult> Invoke(GetSensorAlertsOverviewByMetricInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSensorAlertsOverviewByMetricResult>("meraki:networks/getSensorAlertsOverviewByMetric:getSensorAlertsOverviewByMetric", args ?? new GetSensorAlertsOverviewByMetricInvokeArgs(), options.WithDefaults());
     }
 
 

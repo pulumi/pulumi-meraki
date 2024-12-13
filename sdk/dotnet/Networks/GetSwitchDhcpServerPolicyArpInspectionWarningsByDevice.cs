@@ -68,6 +68,35 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult> Invoke(GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult>("meraki:networks/getSwitchDhcpServerPolicyArpInspectionWarningsByDevice:getSwitchDhcpServerPolicyArpInspectionWarningsByDevice", args ?? new GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetSwitchDhcpServerPolicyArpInspectionWarningsByDevice.Invoke(new()
+        ///     {
+        ///         EndingBefore = "string",
+        ///         NetworkId = "string",
+        ///         PerPage = 1,
+        ///         StartingAfter = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksSwitchDhcpServerPolicyArpInspectionWarningsByDeviceExample"] = example.Apply(getSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult =&gt; getSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult> Invoke(GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult>("meraki:networks/getSwitchDhcpServerPolicyArpInspectionWarningsByDevice:getSwitchDhcpServerPolicyArpInspectionWarningsByDevice", args ?? new GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceInvokeArgs(), options.WithDefaults());
     }
 
 

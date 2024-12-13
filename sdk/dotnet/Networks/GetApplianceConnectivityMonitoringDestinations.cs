@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetApplianceConnectivityMonitoringDestinationsResult> Invoke(GetApplianceConnectivityMonitoringDestinationsInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetApplianceConnectivityMonitoringDestinationsResult>("meraki:networks/getApplianceConnectivityMonitoringDestinations:getApplianceConnectivityMonitoringDestinations", args ?? new GetApplianceConnectivityMonitoringDestinationsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetApplianceConnectivityMonitoringDestinations.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksApplianceConnectivityMonitoringDestinationsExample"] = example.Apply(getApplianceConnectivityMonitoringDestinationsResult =&gt; getApplianceConnectivityMonitoringDestinationsResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetApplianceConnectivityMonitoringDestinationsResult> Invoke(GetApplianceConnectivityMonitoringDestinationsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetApplianceConnectivityMonitoringDestinationsResult>("meraki:networks/getApplianceConnectivityMonitoringDestinations:getApplianceConnectivityMonitoringDestinations", args ?? new GetApplianceConnectivityMonitoringDestinationsInvokeArgs(), options.WithDefaults());
     }
 
 

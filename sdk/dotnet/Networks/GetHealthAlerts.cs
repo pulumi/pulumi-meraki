@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetHealthAlertsResult> Invoke(GetHealthAlertsInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetHealthAlertsResult>("meraki:networks/getHealthAlerts:getHealthAlerts", args ?? new GetHealthAlertsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetHealthAlerts.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksHealthAlertsExample"] = example.Apply(getHealthAlertsResult =&gt; getHealthAlertsResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetHealthAlertsResult> Invoke(GetHealthAlertsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetHealthAlertsResult>("meraki:networks/getHealthAlerts:getHealthAlerts", args ?? new GetHealthAlertsInvokeArgs(), options.WithDefaults());
     }
 
 

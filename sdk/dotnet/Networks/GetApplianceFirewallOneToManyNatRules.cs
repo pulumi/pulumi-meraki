@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetApplianceFirewallOneToManyNatRulesResult> Invoke(GetApplianceFirewallOneToManyNatRulesInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetApplianceFirewallOneToManyNatRulesResult>("meraki:networks/getApplianceFirewallOneToManyNatRules:getApplianceFirewallOneToManyNatRules", args ?? new GetApplianceFirewallOneToManyNatRulesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetApplianceFirewallOneToManyNatRules.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksApplianceFirewallOneToManyNatRulesExample"] = example.Apply(getApplianceFirewallOneToManyNatRulesResult =&gt; getApplianceFirewallOneToManyNatRulesResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetApplianceFirewallOneToManyNatRulesResult> Invoke(GetApplianceFirewallOneToManyNatRulesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetApplianceFirewallOneToManyNatRulesResult>("meraki:networks/getApplianceFirewallOneToManyNatRules:getApplianceFirewallOneToManyNatRules", args ?? new GetApplianceFirewallOneToManyNatRulesInvokeArgs(), options.WithDefaults());
     }
 
 

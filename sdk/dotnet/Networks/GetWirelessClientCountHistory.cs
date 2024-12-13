@@ -82,6 +82,42 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetWirelessClientCountHistoryResult> Invoke(GetWirelessClientCountHistoryInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetWirelessClientCountHistoryResult>("meraki:networks/getWirelessClientCountHistory:getWirelessClientCountHistory", args ?? new GetWirelessClientCountHistoryInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetWirelessClientCountHistory.Invoke(new()
+        ///     {
+        ///         ApTag = "string",
+        ///         AutoResolution = false,
+        ///         Band = "string",
+        ///         ClientId = "string",
+        ///         DeviceSerial = "string",
+        ///         NetworkId = "string",
+        ///         Resolution = 1,
+        ///         Ssid = 1,
+        ///         T0 = "string",
+        ///         T1 = "string",
+        ///         Timespan = 1,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksWirelessClientCountHistoryExample"] = example.Apply(getWirelessClientCountHistoryResult =&gt; getWirelessClientCountHistoryResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetWirelessClientCountHistoryResult> Invoke(GetWirelessClientCountHistoryInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetWirelessClientCountHistoryResult>("meraki:networks/getWirelessClientCountHistory:getWirelessClientCountHistory", args ?? new GetWirelessClientCountHistoryInvokeArgs(), options.WithDefaults());
     }
 
 

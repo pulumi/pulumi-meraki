@@ -114,21 +114,11 @@ type GetWirelessUsageHistoryResult struct {
 }
 
 func GetWirelessUsageHistoryOutput(ctx *pulumi.Context, args GetWirelessUsageHistoryOutputArgs, opts ...pulumi.InvokeOption) GetWirelessUsageHistoryResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetWirelessUsageHistoryResultOutput, error) {
 			args := v.(GetWirelessUsageHistoryArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetWirelessUsageHistoryResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getWirelessUsageHistory:getWirelessUsageHistory", args, &rv, "", opts...)
-			if err != nil {
-				return GetWirelessUsageHistoryResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetWirelessUsageHistoryResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetWirelessUsageHistoryResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getWirelessUsageHistory:getWirelessUsageHistory", args, GetWirelessUsageHistoryResultOutput{}, options).(GetWirelessUsageHistoryResultOutput), nil
 		}).(GetWirelessUsageHistoryResultOutput)
 }
 

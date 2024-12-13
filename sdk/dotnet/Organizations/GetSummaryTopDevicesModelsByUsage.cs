@@ -68,6 +68,35 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetSummaryTopDevicesModelsByUsageResult> Invoke(GetSummaryTopDevicesModelsByUsageInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSummaryTopDevicesModelsByUsageResult>("meraki:organizations/getSummaryTopDevicesModelsByUsage:getSummaryTopDevicesModelsByUsage", args ?? new GetSummaryTopDevicesModelsByUsageInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetSummaryTopDevicesModelsByUsage.Invoke(new()
+        ///     {
+        ///         OrganizationId = "string",
+        ///         T0 = "string",
+        ///         T1 = "string",
+        ///         Timespan = 1,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsSummaryTopDevicesModelsByUsageExample"] = example.Apply(getSummaryTopDevicesModelsByUsageResult =&gt; getSummaryTopDevicesModelsByUsageResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSummaryTopDevicesModelsByUsageResult> Invoke(GetSummaryTopDevicesModelsByUsageInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSummaryTopDevicesModelsByUsageResult>("meraki:organizations/getSummaryTopDevicesModelsByUsage:getSummaryTopDevicesModelsByUsage", args ?? new GetSummaryTopDevicesModelsByUsageInvokeArgs(), options.WithDefaults());
     }
 
 

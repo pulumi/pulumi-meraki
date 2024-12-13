@@ -82,6 +82,42 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetWirelessUsageHistoryResult> Invoke(GetWirelessUsageHistoryInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetWirelessUsageHistoryResult>("meraki:networks/getWirelessUsageHistory:getWirelessUsageHistory", args ?? new GetWirelessUsageHistoryInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetWirelessUsageHistory.Invoke(new()
+        ///     {
+        ///         ApTag = "string",
+        ///         AutoResolution = false,
+        ///         Band = "string",
+        ///         ClientId = "string",
+        ///         DeviceSerial = "string",
+        ///         NetworkId = "string",
+        ///         Resolution = 1,
+        ///         Ssid = 1,
+        ///         T0 = "string",
+        ///         T1 = "string",
+        ///         Timespan = 1,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksWirelessUsageHistoryExample"] = example.Apply(getWirelessUsageHistoryResult =&gt; getWirelessUsageHistoryResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetWirelessUsageHistoryResult> Invoke(GetWirelessUsageHistoryInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetWirelessUsageHistoryResult>("meraki:networks/getWirelessUsageHistory:getWirelessUsageHistory", args ?? new GetWirelessUsageHistoryInvokeArgs(), options.WithDefaults());
     }
 
 

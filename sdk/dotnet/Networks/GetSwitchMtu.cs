@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetSwitchMtuResult> Invoke(GetSwitchMtuInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSwitchMtuResult>("meraki:networks/getSwitchMtu:getSwitchMtu", args ?? new GetSwitchMtuInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetSwitchMtu.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksSwitchMtuExample"] = example.Apply(getSwitchMtuResult =&gt; getSwitchMtuResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSwitchMtuResult> Invoke(GetSwitchMtuInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSwitchMtuResult>("meraki:networks/getSwitchMtu:getSwitchMtu", args ?? new GetSwitchMtuInvokeArgs(), options.WithDefaults());
     }
 
 

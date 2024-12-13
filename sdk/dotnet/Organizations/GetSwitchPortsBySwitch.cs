@@ -108,6 +108,55 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetSwitchPortsBySwitchResult> Invoke(GetSwitchPortsBySwitchInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSwitchPortsBySwitchResult>("meraki:organizations/getSwitchPortsBySwitch:getSwitchPortsBySwitch", args ?? new GetSwitchPortsBySwitchInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetSwitchPortsBySwitch.Invoke(new()
+        ///     {
+        ///         ConfigurationUpdatedAfter = "string",
+        ///         EndingBefore = "string",
+        ///         Mac = "string",
+        ///         Macs = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         Name = "string",
+        ///         NetworkIds = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         OrganizationId = "string",
+        ///         PerPage = 1,
+        ///         PortProfileIds = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         Serial = "string",
+        ///         Serials = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         StartingAfter = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsSwitchPortsBySwitchExample"] = example.Apply(getSwitchPortsBySwitchResult =&gt; getSwitchPortsBySwitchResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSwitchPortsBySwitchResult> Invoke(GetSwitchPortsBySwitchInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSwitchPortsBySwitchResult>("meraki:organizations/getSwitchPortsBySwitch:getSwitchPortsBySwitch", args ?? new GetSwitchPortsBySwitchInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetSwitchAccessControlListsResult> Invoke(GetSwitchAccessControlListsInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSwitchAccessControlListsResult>("meraki:networks/getSwitchAccessControlLists:getSwitchAccessControlLists", args ?? new GetSwitchAccessControlListsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetSwitchAccessControlLists.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksSwitchAccessControlListsExample"] = example.Apply(getSwitchAccessControlListsResult =&gt; getSwitchAccessControlListsResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSwitchAccessControlListsResult> Invoke(GetSwitchAccessControlListsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSwitchAccessControlListsResult>("meraki:networks/getSwitchAccessControlLists:getSwitchAccessControlLists", args ?? new GetSwitchAccessControlListsInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -92,6 +92,47 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetWirelessDevicesChannelUtilizationByDeviceResult> Invoke(GetWirelessDevicesChannelUtilizationByDeviceInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetWirelessDevicesChannelUtilizationByDeviceResult>("meraki:organizations/getWirelessDevicesChannelUtilizationByDevice:getWirelessDevicesChannelUtilizationByDevice", args ?? new GetWirelessDevicesChannelUtilizationByDeviceInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetWirelessDevicesChannelUtilizationByDevice.Invoke(new()
+        ///     {
+        ///         EndingBefore = "string",
+        ///         Interval = 1,
+        ///         NetworkIds = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         OrganizationId = "string",
+        ///         PerPage = 1,
+        ///         Serials = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         StartingAfter = "string",
+        ///         T0 = "string",
+        ///         T1 = "string",
+        ///         Timespan = 1,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsWirelessDevicesChannelUtilizationByDeviceExample"] = example.Apply(getWirelessDevicesChannelUtilizationByDeviceResult =&gt; getWirelessDevicesChannelUtilizationByDeviceResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetWirelessDevicesChannelUtilizationByDeviceResult> Invoke(GetWirelessDevicesChannelUtilizationByDeviceInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetWirelessDevicesChannelUtilizationByDeviceResult>("meraki:organizations/getWirelessDevicesChannelUtilizationByDevice:getWirelessDevicesChannelUtilizationByDevice", args ?? new GetWirelessDevicesChannelUtilizationByDeviceInvokeArgs(), options.WithDefaults());
     }
 
 

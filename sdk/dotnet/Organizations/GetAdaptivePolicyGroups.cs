@@ -22,6 +22,12 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetAdaptivePolicyGroupsResult> Invoke(GetAdaptivePolicyGroupsInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetAdaptivePolicyGroupsResult>("meraki:organizations/getAdaptivePolicyGroups:getAdaptivePolicyGroups", args ?? new GetAdaptivePolicyGroupsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetAdaptivePolicyGroupsResult> Invoke(GetAdaptivePolicyGroupsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetAdaptivePolicyGroupsResult>("meraki:organizations/getAdaptivePolicyGroups:getAdaptivePolicyGroups", args ?? new GetAdaptivePolicyGroupsInvokeArgs(), options.WithDefaults());
     }
 
 

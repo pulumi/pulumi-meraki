@@ -63,21 +63,11 @@ type LookupWirelessRadioSettingsResult struct {
 }
 
 func LookupWirelessRadioSettingsOutput(ctx *pulumi.Context, args LookupWirelessRadioSettingsOutputArgs, opts ...pulumi.InvokeOption) LookupWirelessRadioSettingsResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupWirelessRadioSettingsResultOutput, error) {
 			args := v.(LookupWirelessRadioSettingsArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupWirelessRadioSettingsResult
-			secret, err := ctx.InvokePackageRaw("meraki:devices/getWirelessRadioSettings:getWirelessRadioSettings", args, &rv, "", opts...)
-			if err != nil {
-				return LookupWirelessRadioSettingsResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupWirelessRadioSettingsResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupWirelessRadioSettingsResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:devices/getWirelessRadioSettings:getWirelessRadioSettings", args, LookupWirelessRadioSettingsResultOutput{}, options).(LookupWirelessRadioSettingsResultOutput), nil
 		}).(LookupWirelessRadioSettingsResultOutput)
 }
 

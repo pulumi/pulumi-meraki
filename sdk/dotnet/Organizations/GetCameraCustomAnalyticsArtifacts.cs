@@ -22,6 +22,12 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetCameraCustomAnalyticsArtifactsResult> Invoke(GetCameraCustomAnalyticsArtifactsInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetCameraCustomAnalyticsArtifactsResult>("meraki:organizations/getCameraCustomAnalyticsArtifacts:getCameraCustomAnalyticsArtifacts", args ?? new GetCameraCustomAnalyticsArtifactsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetCameraCustomAnalyticsArtifactsResult> Invoke(GetCameraCustomAnalyticsArtifactsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetCameraCustomAnalyticsArtifactsResult>("meraki:organizations/getCameraCustomAnalyticsArtifacts:getCameraCustomAnalyticsArtifacts", args ?? new GetCameraCustomAnalyticsArtifactsInvokeArgs(), options.WithDefaults());
     }
 
 

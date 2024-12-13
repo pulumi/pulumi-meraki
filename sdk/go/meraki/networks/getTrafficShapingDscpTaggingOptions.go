@@ -64,21 +64,11 @@ type GetTrafficShapingDscpTaggingOptionsResult struct {
 }
 
 func GetTrafficShapingDscpTaggingOptionsOutput(ctx *pulumi.Context, args GetTrafficShapingDscpTaggingOptionsOutputArgs, opts ...pulumi.InvokeOption) GetTrafficShapingDscpTaggingOptionsResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetTrafficShapingDscpTaggingOptionsResultOutput, error) {
 			args := v.(GetTrafficShapingDscpTaggingOptionsArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetTrafficShapingDscpTaggingOptionsResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getTrafficShapingDscpTaggingOptions:getTrafficShapingDscpTaggingOptions", args, &rv, "", opts...)
-			if err != nil {
-				return GetTrafficShapingDscpTaggingOptionsResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetTrafficShapingDscpTaggingOptionsResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetTrafficShapingDscpTaggingOptionsResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getTrafficShapingDscpTaggingOptions:getTrafficShapingDscpTaggingOptions", args, GetTrafficShapingDscpTaggingOptionsResultOutput{}, options).(GetTrafficShapingDscpTaggingOptionsResultOutput), nil
 		}).(GetTrafficShapingDscpTaggingOptionsResultOutput)
 }
 

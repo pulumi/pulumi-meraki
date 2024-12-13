@@ -22,6 +22,12 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetFloorPlansResult> Invoke(GetFloorPlansInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetFloorPlansResult>("meraki:networks/getFloorPlans:getFloorPlans", args ?? new GetFloorPlansInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetFloorPlansResult> Invoke(GetFloorPlansInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetFloorPlansResult>("meraki:networks/getFloorPlans:getFloorPlans", args ?? new GetFloorPlansInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetApplianceTrafficShapingUplinkSelectionResult> Invoke(GetApplianceTrafficShapingUplinkSelectionInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetApplianceTrafficShapingUplinkSelectionResult>("meraki:networks/getApplianceTrafficShapingUplinkSelection:getApplianceTrafficShapingUplinkSelection", args ?? new GetApplianceTrafficShapingUplinkSelectionInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetApplianceTrafficShapingUplinkSelection.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksApplianceTrafficShapingUplinkSelectionExample"] = example.Apply(getApplianceTrafficShapingUplinkSelectionResult =&gt; getApplianceTrafficShapingUplinkSelectionResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetApplianceTrafficShapingUplinkSelectionResult> Invoke(GetApplianceTrafficShapingUplinkSelectionInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetApplianceTrafficShapingUplinkSelectionResult>("meraki:networks/getApplianceTrafficShapingUplinkSelection:getApplianceTrafficShapingUplinkSelection", args ?? new GetApplianceTrafficShapingUplinkSelectionInvokeArgs(), options.WithDefaults());
     }
 
 

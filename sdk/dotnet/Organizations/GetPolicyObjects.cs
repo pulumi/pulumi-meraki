@@ -68,6 +68,35 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetPolicyObjectsResult> Invoke(GetPolicyObjectsInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetPolicyObjectsResult>("meraki:organizations/getPolicyObjects:getPolicyObjects", args ?? new GetPolicyObjectsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetPolicyObjects.Invoke(new()
+        ///     {
+        ///         EndingBefore = "string",
+        ///         OrganizationId = "string",
+        ///         PerPage = 1,
+        ///         StartingAfter = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsPolicyObjectsExample"] = example.Apply(getPolicyObjectsResult =&gt; getPolicyObjectsResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetPolicyObjectsResult> Invoke(GetPolicyObjectsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetPolicyObjectsResult>("meraki:organizations/getPolicyObjects:getPolicyObjects", args ?? new GetPolicyObjectsInvokeArgs(), options.WithDefaults());
     }
 
 

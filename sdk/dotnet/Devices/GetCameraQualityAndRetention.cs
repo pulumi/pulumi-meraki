@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Devices
         /// </summary>
         public static Output<GetCameraQualityAndRetentionResult> Invoke(GetCameraQualityAndRetentionInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetCameraQualityAndRetentionResult>("meraki:devices/getCameraQualityAndRetention:getCameraQualityAndRetention", args ?? new GetCameraQualityAndRetentionInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Devices.GetCameraQualityAndRetention.Invoke(new()
+        ///     {
+        ///         Serial = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiDevicesCameraQualityAndRetentionExample"] = example.Apply(getCameraQualityAndRetentionResult =&gt; getCameraQualityAndRetentionResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetCameraQualityAndRetentionResult> Invoke(GetCameraQualityAndRetentionInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetCameraQualityAndRetentionResult>("meraki:devices/getCameraQualityAndRetention:getCameraQualityAndRetention", args ?? new GetCameraQualityAndRetentionInvokeArgs(), options.WithDefaults());
     }
 
 

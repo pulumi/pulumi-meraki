@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetSmApnsCertResult> Invoke(GetSmApnsCertInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSmApnsCertResult>("meraki:organizations/getSmApnsCert:getSmApnsCert", args ?? new GetSmApnsCertInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetSmApnsCert.Invoke(new()
+        ///     {
+        ///         OrganizationId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsSmApnsCertExample"] = example.Apply(getSmApnsCertResult =&gt; getSmApnsCertResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSmApnsCertResult> Invoke(GetSmApnsCertInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSmApnsCertResult>("meraki:organizations/getSmApnsCert:getSmApnsCert", args ?? new GetSmApnsCertInvokeArgs(), options.WithDefaults());
     }
 
 

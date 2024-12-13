@@ -44,21 +44,11 @@ type LookupSensorMqttBrokersResult struct {
 }
 
 func LookupSensorMqttBrokersOutput(ctx *pulumi.Context, args LookupSensorMqttBrokersOutputArgs, opts ...pulumi.InvokeOption) LookupSensorMqttBrokersResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupSensorMqttBrokersResultOutput, error) {
 			args := v.(LookupSensorMqttBrokersArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupSensorMqttBrokersResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getSensorMqttBrokers:getSensorMqttBrokers", args, &rv, "", opts...)
-			if err != nil {
-				return LookupSensorMqttBrokersResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupSensorMqttBrokersResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupSensorMqttBrokersResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getSensorMqttBrokers:getSensorMqttBrokers", args, LookupSensorMqttBrokersResultOutput{}, options).(LookupSensorMqttBrokersResultOutput), nil
 		}).(LookupSensorMqttBrokersResultOutput)
 }
 

@@ -76,6 +76,39 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetWirelessDevicesEthernetStatusesResult> Invoke(GetWirelessDevicesEthernetStatusesInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetWirelessDevicesEthernetStatusesResult>("meraki:organizations/getWirelessDevicesEthernetStatuses:getWirelessDevicesEthernetStatuses", args ?? new GetWirelessDevicesEthernetStatusesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetWirelessDevicesEthernetStatuses.Invoke(new()
+        ///     {
+        ///         EndingBefore = "string",
+        ///         NetworkIds = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         OrganizationId = "string",
+        ///         PerPage = 1,
+        ///         StartingAfter = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsWirelessDevicesEthernetStatusesExample"] = example.Apply(getWirelessDevicesEthernetStatusesResult =&gt; getWirelessDevicesEthernetStatusesResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetWirelessDevicesEthernetStatusesResult> Invoke(GetWirelessDevicesEthernetStatusesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetWirelessDevicesEthernetStatusesResult>("meraki:organizations/getWirelessDevicesEthernetStatuses:getWirelessDevicesEthernetStatuses", args ?? new GetWirelessDevicesEthernetStatusesInvokeArgs(), options.WithDefaults());
     }
 
 

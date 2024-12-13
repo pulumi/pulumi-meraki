@@ -72,6 +72,37 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetLicensingCotermLicensesResult> Invoke(GetLicensingCotermLicensesInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetLicensingCotermLicensesResult>("meraki:organizations/getLicensingCotermLicenses:getLicensingCotermLicenses", args ?? new GetLicensingCotermLicensesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetLicensingCotermLicenses.Invoke(new()
+        ///     {
+        ///         EndingBefore = "string",
+        ///         Expired = false,
+        ///         Invalidated = false,
+        ///         OrganizationId = "string",
+        ///         PerPage = 1,
+        ///         StartingAfter = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsLicensingCotermLicensesExample"] = example.Apply(getLicensingCotermLicensesResult =&gt; getLicensingCotermLicensesResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetLicensingCotermLicensesResult> Invoke(GetLicensingCotermLicensesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetLicensingCotermLicensesResult>("meraki:organizations/getLicensingCotermLicenses:getLicensingCotermLicenses", args ?? new GetLicensingCotermLicensesInvokeArgs(), options.WithDefaults());
     }
 
 

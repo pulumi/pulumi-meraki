@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetEventsEventTypesResult> Invoke(GetEventsEventTypesInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetEventsEventTypesResult>("meraki:networks/getEventsEventTypes:getEventsEventTypes", args ?? new GetEventsEventTypesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetEventsEventTypes.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksEventsEventTypesExample"] = example.Apply(getEventsEventTypesResult =&gt; getEventsEventTypesResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetEventsEventTypesResult> Invoke(GetEventsEventTypesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetEventsEventTypesResult>("meraki:networks/getEventsEventTypes:getEventsEventTypes", args ?? new GetEventsEventTypesInvokeArgs(), options.WithDefaults());
     }
 
 

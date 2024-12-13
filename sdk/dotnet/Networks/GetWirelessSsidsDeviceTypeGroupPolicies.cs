@@ -64,6 +64,33 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetWirelessSsidsDeviceTypeGroupPoliciesResult> Invoke(GetWirelessSsidsDeviceTypeGroupPoliciesInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetWirelessSsidsDeviceTypeGroupPoliciesResult>("meraki:networks/getWirelessSsidsDeviceTypeGroupPolicies:getWirelessSsidsDeviceTypeGroupPolicies", args ?? new GetWirelessSsidsDeviceTypeGroupPoliciesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetWirelessSsidsDeviceTypeGroupPolicies.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///         Number = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksWirelessSsidsDeviceTypeGroupPoliciesExample"] = example.Apply(getWirelessSsidsDeviceTypeGroupPoliciesResult =&gt; getWirelessSsidsDeviceTypeGroupPoliciesResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetWirelessSsidsDeviceTypeGroupPoliciesResult> Invoke(GetWirelessSsidsDeviceTypeGroupPoliciesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetWirelessSsidsDeviceTypeGroupPoliciesResult>("meraki:networks/getWirelessSsidsDeviceTypeGroupPolicies:getWirelessSsidsDeviceTypeGroupPolicies", args ?? new GetWirelessSsidsDeviceTypeGroupPoliciesInvokeArgs(), options.WithDefaults());
     }
 
 

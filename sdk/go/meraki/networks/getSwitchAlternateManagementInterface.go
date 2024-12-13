@@ -63,21 +63,11 @@ type LookupSwitchAlternateManagementInterfaceResult struct {
 }
 
 func LookupSwitchAlternateManagementInterfaceOutput(ctx *pulumi.Context, args LookupSwitchAlternateManagementInterfaceOutputArgs, opts ...pulumi.InvokeOption) LookupSwitchAlternateManagementInterfaceResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupSwitchAlternateManagementInterfaceResultOutput, error) {
 			args := v.(LookupSwitchAlternateManagementInterfaceArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupSwitchAlternateManagementInterfaceResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getSwitchAlternateManagementInterface:getSwitchAlternateManagementInterface", args, &rv, "", opts...)
-			if err != nil {
-				return LookupSwitchAlternateManagementInterfaceResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupSwitchAlternateManagementInterfaceResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupSwitchAlternateManagementInterfaceResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getSwitchAlternateManagementInterface:getSwitchAlternateManagementInterface", args, LookupSwitchAlternateManagementInterfaceResultOutput{}, options).(LookupSwitchAlternateManagementInterfaceResultOutput), nil
 		}).(LookupSwitchAlternateManagementInterfaceResultOutput)
 }
 

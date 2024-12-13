@@ -22,6 +22,12 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetSwitchStacksResult> Invoke(GetSwitchStacksInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSwitchStacksResult>("meraki:networks/getSwitchStacks:getSwitchStacks", args ?? new GetSwitchStacksInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetSwitchStacksResult> Invoke(GetSwitchStacksInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSwitchStacksResult>("meraki:networks/getSwitchStacks:getSwitchStacks", args ?? new GetSwitchStacksInvokeArgs(), options.WithDefaults());
     }
 
 

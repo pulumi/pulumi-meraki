@@ -68,21 +68,11 @@ type LookupWirelessSsidsSplashSettingsResult struct {
 }
 
 func LookupWirelessSsidsSplashSettingsOutput(ctx *pulumi.Context, args LookupWirelessSsidsSplashSettingsOutputArgs, opts ...pulumi.InvokeOption) LookupWirelessSsidsSplashSettingsResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupWirelessSsidsSplashSettingsResultOutput, error) {
 			args := v.(LookupWirelessSsidsSplashSettingsArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupWirelessSsidsSplashSettingsResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getWirelessSsidsSplashSettings:getWirelessSsidsSplashSettings", args, &rv, "", opts...)
-			if err != nil {
-				return LookupWirelessSsidsSplashSettingsResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupWirelessSsidsSplashSettingsResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupWirelessSsidsSplashSettingsResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getWirelessSsidsSplashSettings:getWirelessSsidsSplashSettings", args, LookupWirelessSsidsSplashSettingsResultOutput{}, options).(LookupWirelessSsidsSplashSettingsResultOutput), nil
 		}).(LookupWirelessSsidsSplashSettingsResultOutput)
 }
 

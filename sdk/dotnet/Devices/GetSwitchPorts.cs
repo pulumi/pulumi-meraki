@@ -22,6 +22,12 @@ namespace Pulumi.Meraki.Devices
         /// </summary>
         public static Output<GetSwitchPortsResult> Invoke(GetSwitchPortsInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSwitchPortsResult>("meraki:devices/getSwitchPorts:getSwitchPorts", args ?? new GetSwitchPortsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetSwitchPortsResult> Invoke(GetSwitchPortsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSwitchPortsResult>("meraki:devices/getSwitchPorts:getSwitchPorts", args ?? new GetSwitchPortsInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -70,6 +70,36 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetInventoryOnboardingCloudMonitoringImportsResult> Invoke(GetInventoryOnboardingCloudMonitoringImportsInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetInventoryOnboardingCloudMonitoringImportsResult>("meraki:organizations/getInventoryOnboardingCloudMonitoringImports:getInventoryOnboardingCloudMonitoringImports", args ?? new GetInventoryOnboardingCloudMonitoringImportsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetInventoryOnboardingCloudMonitoringImports.Invoke(new()
+        ///     {
+        ///         ImportIds = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         OrganizationId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsInventoryOnboardingCloudMonitoringImportsExample"] = example.Apply(getInventoryOnboardingCloudMonitoringImportsResult =&gt; getInventoryOnboardingCloudMonitoringImportsResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetInventoryOnboardingCloudMonitoringImportsResult> Invoke(GetInventoryOnboardingCloudMonitoringImportsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetInventoryOnboardingCloudMonitoringImportsResult>("meraki:organizations/getInventoryOnboardingCloudMonitoringImports:getInventoryOnboardingCloudMonitoringImports", args ?? new GetInventoryOnboardingCloudMonitoringImportsInvokeArgs(), options.WithDefaults());
     }
 
 

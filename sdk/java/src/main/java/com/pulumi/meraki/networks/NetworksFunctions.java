@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import com.pulumi.deployment.InvokeOutputOptions;
 import com.pulumi.meraki.Utilities;
 import com.pulumi.meraki.networks.inputs.GetAlertsHistoryArgs;
 import com.pulumi.meraki.networks.inputs.GetAlertsHistoryPlainArgs;
@@ -631,6 +632,50 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetAlertsHistoryResult> getAlertsHistory(GetAlertsHistoryArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getAlertsHistory:getAlertsHistory", TypeShape.of(GetAlertsHistoryResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetAlertsHistoryArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getAlertsHistory(GetAlertsHistoryArgs.builder()
+     *             .endingBefore("string")
+     *             .networkId("string")
+     *             .perPage(1)
+     *             .startingAfter("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksAlertsHistoryExample", example.applyValue(getAlertsHistoryResult -> getAlertsHistoryResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetAlertsHistoryResult> getAlertsHistoryPlain(GetAlertsHistoryPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getAlertsHistory:getAlertsHistory", TypeShape.of(GetAlertsHistoryResult.class), args, Utilities.withVersion(options));
     }
@@ -755,6 +800,47 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetAlertsSettingsResult> getAlertsSettings(GetAlertsSettingsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getAlertsSettings:getAlertsSettings", TypeShape.of(GetAlertsSettingsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetAlertsSettingsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getAlertsSettings(GetAlertsSettingsArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksAlertsSettingsExample", example.applyValue(getAlertsSettingsResult -> getAlertsSettingsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetAlertsSettingsResult> getAlertsSettings(GetAlertsSettingsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getAlertsSettings:getAlertsSettings", TypeShape.of(GetAlertsSettingsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -959,6 +1045,47 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetApplianceConnectivityMonitoringDestinationsResult> getApplianceConnectivityMonitoringDestinations(GetApplianceConnectivityMonitoringDestinationsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getApplianceConnectivityMonitoringDestinations:getApplianceConnectivityMonitoringDestinations", TypeShape.of(GetApplianceConnectivityMonitoringDestinationsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetApplianceConnectivityMonitoringDestinationsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getApplianceConnectivityMonitoringDestinations(GetApplianceConnectivityMonitoringDestinationsArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksApplianceConnectivityMonitoringDestinationsExample", example.applyValue(getApplianceConnectivityMonitoringDestinationsResult -> getApplianceConnectivityMonitoringDestinationsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetApplianceConnectivityMonitoringDestinationsResult> getApplianceConnectivityMonitoringDestinationsPlain(GetApplianceConnectivityMonitoringDestinationsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getApplianceConnectivityMonitoringDestinations:getApplianceConnectivityMonitoringDestinations", TypeShape.of(GetApplianceConnectivityMonitoringDestinationsResult.class), args, Utilities.withVersion(options));
     }
@@ -1083,6 +1210,47 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetApplianceContentFilteringResult> getApplianceContentFiltering(GetApplianceContentFilteringArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getApplianceContentFiltering:getApplianceContentFiltering", TypeShape.of(GetApplianceContentFilteringResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetApplianceContentFilteringArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getApplianceContentFiltering(GetApplianceContentFilteringArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksApplianceContentFilteringExample", example.applyValue(getApplianceContentFilteringResult -> getApplianceContentFilteringResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetApplianceContentFilteringResult> getApplianceContentFiltering(GetApplianceContentFilteringArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getApplianceContentFiltering:getApplianceContentFiltering", TypeShape.of(GetApplianceContentFilteringResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1287,6 +1455,47 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetApplianceContentFilteringCategoriesResult> getApplianceContentFilteringCategories(GetApplianceContentFilteringCategoriesArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getApplianceContentFilteringCategories:getApplianceContentFilteringCategories", TypeShape.of(GetApplianceContentFilteringCategoriesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetApplianceContentFilteringCategoriesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getApplianceContentFilteringCategories(GetApplianceContentFilteringCategoriesArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksApplianceContentFilteringCategoriesExample", example.applyValue(getApplianceContentFilteringCategoriesResult -> getApplianceContentFilteringCategoriesResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetApplianceContentFilteringCategoriesResult> getApplianceContentFilteringCategoriesPlain(GetApplianceContentFilteringCategoriesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getApplianceContentFilteringCategories:getApplianceContentFilteringCategories", TypeShape.of(GetApplianceContentFilteringCategoriesResult.class), args, Utilities.withVersion(options));
     }
@@ -1411,6 +1620,47 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetApplianceFirewallCellularFirewallRulesResult> getApplianceFirewallCellularFirewallRules(GetApplianceFirewallCellularFirewallRulesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getApplianceFirewallCellularFirewallRules:getApplianceFirewallCellularFirewallRules", TypeShape.of(GetApplianceFirewallCellularFirewallRulesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallCellularFirewallRulesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getApplianceFirewallCellularFirewallRules(GetApplianceFirewallCellularFirewallRulesArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksApplianceFirewallCellularFirewallRulesExample", example.applyValue(getApplianceFirewallCellularFirewallRulesResult -> getApplianceFirewallCellularFirewallRulesResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetApplianceFirewallCellularFirewallRulesResult> getApplianceFirewallCellularFirewallRules(GetApplianceFirewallCellularFirewallRulesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getApplianceFirewallCellularFirewallRules:getApplianceFirewallCellularFirewallRules", TypeShape.of(GetApplianceFirewallCellularFirewallRulesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1619,6 +1869,48 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetApplianceFirewallFirewalledServicesResult> getApplianceFirewallFirewalledServices(GetApplianceFirewallFirewalledServicesArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getApplianceFirewallFirewalledServices:getApplianceFirewallFirewalledServices", TypeShape.of(GetApplianceFirewallFirewalledServicesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallFirewalledServicesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getApplianceFirewallFirewalledServices(GetApplianceFirewallFirewalledServicesArgs.builder()
+     *             .networkId("string")
+     *             .service("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksApplianceFirewallFirewalledServicesExample", example.applyValue(getApplianceFirewallFirewalledServicesResult -> getApplianceFirewallFirewalledServicesResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetApplianceFirewallFirewalledServicesResult> getApplianceFirewallFirewalledServicesPlain(GetApplianceFirewallFirewalledServicesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getApplianceFirewallFirewalledServices:getApplianceFirewallFirewalledServices", TypeShape.of(GetApplianceFirewallFirewalledServicesResult.class), args, Utilities.withVersion(options));
     }
@@ -1743,6 +2035,47 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetApplianceFirewallInboundFirewallRulesResult> getApplianceFirewallInboundFirewallRules(GetApplianceFirewallInboundFirewallRulesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getApplianceFirewallInboundFirewallRules:getApplianceFirewallInboundFirewallRules", TypeShape.of(GetApplianceFirewallInboundFirewallRulesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallInboundFirewallRulesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getApplianceFirewallInboundFirewallRules(GetApplianceFirewallInboundFirewallRulesArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksApplianceFirewallInboundFirewallRulesExample", example.applyValue(getApplianceFirewallInboundFirewallRulesResult -> getApplianceFirewallInboundFirewallRulesResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetApplianceFirewallInboundFirewallRulesResult> getApplianceFirewallInboundFirewallRules(GetApplianceFirewallInboundFirewallRulesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getApplianceFirewallInboundFirewallRules:getApplianceFirewallInboundFirewallRules", TypeShape.of(GetApplianceFirewallInboundFirewallRulesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1947,6 +2280,47 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetApplianceFirewallL3FirewallRulesResult> getApplianceFirewallL3FirewallRules(GetApplianceFirewallL3FirewallRulesArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getApplianceFirewallL3FirewallRules:getApplianceFirewallL3FirewallRules", TypeShape.of(GetApplianceFirewallL3FirewallRulesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallL3FirewallRulesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getApplianceFirewallL3FirewallRules(GetApplianceFirewallL3FirewallRulesArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksApplianceFirewallL3FirewallRulesExample", example.applyValue(getApplianceFirewallL3FirewallRulesResult -> getApplianceFirewallL3FirewallRulesResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetApplianceFirewallL3FirewallRulesResult> getApplianceFirewallL3FirewallRulesPlain(GetApplianceFirewallL3FirewallRulesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getApplianceFirewallL3FirewallRules:getApplianceFirewallL3FirewallRules", TypeShape.of(GetApplianceFirewallL3FirewallRulesResult.class), args, Utilities.withVersion(options));
     }
@@ -2071,6 +2445,47 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetApplianceFirewallL7FirewallRulesResult> getApplianceFirewallL7FirewallRules(GetApplianceFirewallL7FirewallRulesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getApplianceFirewallL7FirewallRules:getApplianceFirewallL7FirewallRules", TypeShape.of(GetApplianceFirewallL7FirewallRulesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallL7FirewallRulesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getApplianceFirewallL7FirewallRules(GetApplianceFirewallL7FirewallRulesArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksApplianceFirewallL7FirewallRulesExample", example.applyValue(getApplianceFirewallL7FirewallRulesResult -> getApplianceFirewallL7FirewallRulesResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetApplianceFirewallL7FirewallRulesResult> getApplianceFirewallL7FirewallRules(GetApplianceFirewallL7FirewallRulesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getApplianceFirewallL7FirewallRules:getApplianceFirewallL7FirewallRules", TypeShape.of(GetApplianceFirewallL7FirewallRulesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -2275,6 +2690,47 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetApplianceFirewallL7FirewallRulesApplicationCategoriesResult> getApplianceFirewallL7FirewallRulesApplicationCategories(GetApplianceFirewallL7FirewallRulesApplicationCategoriesArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getApplianceFirewallL7FirewallRulesApplicationCategories:getApplianceFirewallL7FirewallRulesApplicationCategories", TypeShape.of(GetApplianceFirewallL7FirewallRulesApplicationCategoriesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallL7FirewallRulesApplicationCategoriesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getApplianceFirewallL7FirewallRulesApplicationCategories(GetApplianceFirewallL7FirewallRulesApplicationCategoriesArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksApplianceFirewallL7FirewallRulesApplicationCategoriesExample", example.applyValue(getApplianceFirewallL7FirewallRulesApplicationCategoriesResult -> getApplianceFirewallL7FirewallRulesApplicationCategoriesResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetApplianceFirewallL7FirewallRulesApplicationCategoriesResult> getApplianceFirewallL7FirewallRulesApplicationCategoriesPlain(GetApplianceFirewallL7FirewallRulesApplicationCategoriesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getApplianceFirewallL7FirewallRulesApplicationCategories:getApplianceFirewallL7FirewallRulesApplicationCategories", TypeShape.of(GetApplianceFirewallL7FirewallRulesApplicationCategoriesResult.class), args, Utilities.withVersion(options));
     }
@@ -2399,6 +2855,47 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetApplianceFirewallOneToManyNatRulesResult> getApplianceFirewallOneToManyNatRules(GetApplianceFirewallOneToManyNatRulesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getApplianceFirewallOneToManyNatRules:getApplianceFirewallOneToManyNatRules", TypeShape.of(GetApplianceFirewallOneToManyNatRulesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallOneToManyNatRulesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getApplianceFirewallOneToManyNatRules(GetApplianceFirewallOneToManyNatRulesArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksApplianceFirewallOneToManyNatRulesExample", example.applyValue(getApplianceFirewallOneToManyNatRulesResult -> getApplianceFirewallOneToManyNatRulesResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetApplianceFirewallOneToManyNatRulesResult> getApplianceFirewallOneToManyNatRules(GetApplianceFirewallOneToManyNatRulesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getApplianceFirewallOneToManyNatRules:getApplianceFirewallOneToManyNatRules", TypeShape.of(GetApplianceFirewallOneToManyNatRulesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -2603,6 +3100,47 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetApplianceFirewallOneToOneNatRulesResult> getApplianceFirewallOneToOneNatRules(GetApplianceFirewallOneToOneNatRulesArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getApplianceFirewallOneToOneNatRules:getApplianceFirewallOneToOneNatRules", TypeShape.of(GetApplianceFirewallOneToOneNatRulesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallOneToOneNatRulesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getApplianceFirewallOneToOneNatRules(GetApplianceFirewallOneToOneNatRulesArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksApplianceFirewallOneToOneNatRulesExample", example.applyValue(getApplianceFirewallOneToOneNatRulesResult -> getApplianceFirewallOneToOneNatRulesResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetApplianceFirewallOneToOneNatRulesResult> getApplianceFirewallOneToOneNatRulesPlain(GetApplianceFirewallOneToOneNatRulesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getApplianceFirewallOneToOneNatRules:getApplianceFirewallOneToOneNatRules", TypeShape.of(GetApplianceFirewallOneToOneNatRulesResult.class), args, Utilities.withVersion(options));
     }
@@ -2727,6 +3265,47 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetApplianceFirewallPortForwardingRulesResult> getApplianceFirewallPortForwardingRules(GetApplianceFirewallPortForwardingRulesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getApplianceFirewallPortForwardingRules:getApplianceFirewallPortForwardingRules", TypeShape.of(GetApplianceFirewallPortForwardingRulesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallPortForwardingRulesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getApplianceFirewallPortForwardingRules(GetApplianceFirewallPortForwardingRulesArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksApplianceFirewallPortForwardingRulesExample", example.applyValue(getApplianceFirewallPortForwardingRulesResult -> getApplianceFirewallPortForwardingRulesResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetApplianceFirewallPortForwardingRulesResult> getApplianceFirewallPortForwardingRules(GetApplianceFirewallPortForwardingRulesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getApplianceFirewallPortForwardingRules:getApplianceFirewallPortForwardingRules", TypeShape.of(GetApplianceFirewallPortForwardingRulesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -2931,6 +3510,47 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetApplianceFirewallSettingsResult> getApplianceFirewallSettings(GetApplianceFirewallSettingsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getApplianceFirewallSettings:getApplianceFirewallSettings", TypeShape.of(GetApplianceFirewallSettingsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallSettingsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getApplianceFirewallSettings(GetApplianceFirewallSettingsArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksApplianceFirewallSettingsExample", example.applyValue(getApplianceFirewallSettingsResult -> getApplianceFirewallSettingsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetApplianceFirewallSettingsResult> getApplianceFirewallSettingsPlain(GetApplianceFirewallSettingsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getApplianceFirewallSettings:getApplianceFirewallSettings", TypeShape.of(GetApplianceFirewallSettingsResult.class), args, Utilities.withVersion(options));
     }
@@ -2973,6 +3593,13 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      */
+    public static Output<GetAppliancePortsResult> getAppliancePorts(GetAppliancePortsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getAppliancePorts:getAppliancePorts", TypeShape.of(GetAppliancePortsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAppliancePortsResult> getAppliancePortsPlain(GetAppliancePortsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getAppliancePorts:getAppliancePorts", TypeShape.of(GetAppliancePortsResult.class), args, Utilities.withVersion(options));
     }
@@ -3009,6 +3636,13 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetAppliancePrefixesDelegatedStaticsResult> getAppliancePrefixesDelegatedStatics(GetAppliancePrefixesDelegatedStaticsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getAppliancePrefixesDelegatedStatics:getAppliancePrefixesDelegatedStatics", TypeShape.of(GetAppliancePrefixesDelegatedStaticsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetAppliancePrefixesDelegatedStaticsResult> getAppliancePrefixesDelegatedStatics(GetAppliancePrefixesDelegatedStaticsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getAppliancePrefixesDelegatedStatics:getAppliancePrefixesDelegatedStatics", TypeShape.of(GetAppliancePrefixesDelegatedStaticsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -3261,6 +3895,47 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetApplianceRfProfilesResult> getApplianceRfProfiles(GetApplianceRfProfilesArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getApplianceRfProfiles:getApplianceRfProfiles", TypeShape.of(GetApplianceRfProfilesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetApplianceRfProfilesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getApplianceRfProfiles(GetApplianceRfProfilesArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksApplianceRfProfilesExample", example.applyValue(getApplianceRfProfilesResult -> getApplianceRfProfilesResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetApplianceRfProfilesResult> getApplianceRfProfilesPlain(GetApplianceRfProfilesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getApplianceRfProfiles:getApplianceRfProfiles", TypeShape.of(GetApplianceRfProfilesResult.class), args, Utilities.withVersion(options));
     }
@@ -3385,6 +4060,47 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetApplianceSecurityIntrusionResult> getApplianceSecurityIntrusion(GetApplianceSecurityIntrusionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getApplianceSecurityIntrusion:getApplianceSecurityIntrusion", TypeShape.of(GetApplianceSecurityIntrusionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetApplianceSecurityIntrusionArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getApplianceSecurityIntrusion(GetApplianceSecurityIntrusionArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksApplianceSecurityIntrusionExample", example.applyValue(getApplianceSecurityIntrusionResult -> getApplianceSecurityIntrusionResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetApplianceSecurityIntrusionResult> getApplianceSecurityIntrusion(GetApplianceSecurityIntrusionArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getApplianceSecurityIntrusion:getApplianceSecurityIntrusion", TypeShape.of(GetApplianceSecurityIntrusionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -3589,6 +4305,47 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetApplianceSecurityMalwareResult> getApplianceSecurityMalware(GetApplianceSecurityMalwareArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getApplianceSecurityMalware:getApplianceSecurityMalware", TypeShape.of(GetApplianceSecurityMalwareResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetApplianceSecurityMalwareArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getApplianceSecurityMalware(GetApplianceSecurityMalwareArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksApplianceSecurityMalwareExample", example.applyValue(getApplianceSecurityMalwareResult -> getApplianceSecurityMalwareResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetApplianceSecurityMalwareResult> getApplianceSecurityMalwarePlain(GetApplianceSecurityMalwarePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getApplianceSecurityMalware:getApplianceSecurityMalware", TypeShape.of(GetApplianceSecurityMalwareResult.class), args, Utilities.withVersion(options));
     }
@@ -3713,6 +4470,47 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetApplianceSettingsResult> getApplianceSettings(GetApplianceSettingsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getApplianceSettings:getApplianceSettings", TypeShape.of(GetApplianceSettingsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetApplianceSettingsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getApplianceSettings(GetApplianceSettingsArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksApplianceSettingsExample", example.applyValue(getApplianceSettingsResult -> getApplianceSettingsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetApplianceSettingsResult> getApplianceSettings(GetApplianceSettingsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getApplianceSettings:getApplianceSettings", TypeShape.of(GetApplianceSettingsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -3917,6 +4715,47 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetApplianceSingleLanResult> getApplianceSingleLan(GetApplianceSingleLanArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getApplianceSingleLan:getApplianceSingleLan", TypeShape.of(GetApplianceSingleLanResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetApplianceSingleLanArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getApplianceSingleLan(GetApplianceSingleLanArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksApplianceSingleLanExample", example.applyValue(getApplianceSingleLanResult -> getApplianceSingleLanResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetApplianceSingleLanResult> getApplianceSingleLanPlain(GetApplianceSingleLanPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getApplianceSingleLan:getApplianceSingleLan", TypeShape.of(GetApplianceSingleLanResult.class), args, Utilities.withVersion(options));
     }
@@ -3953,6 +4792,13 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetApplianceSsidsResult> getApplianceSsids(GetApplianceSsidsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getApplianceSsids:getApplianceSsids", TypeShape.of(GetApplianceSsidsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetApplianceSsidsResult> getApplianceSsids(GetApplianceSsidsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getApplianceSsids:getApplianceSsids", TypeShape.of(GetApplianceSsidsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -4083,6 +4929,47 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetApplianceTrafficShapingResult> getApplianceTrafficShaping(GetApplianceTrafficShapingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getApplianceTrafficShaping:getApplianceTrafficShaping", TypeShape.of(GetApplianceTrafficShapingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetApplianceTrafficShapingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getApplianceTrafficShaping(GetApplianceTrafficShapingArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksApplianceTrafficShapingExample", example.applyValue(getApplianceTrafficShapingResult -> getApplianceTrafficShapingResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetApplianceTrafficShapingResult> getApplianceTrafficShaping(GetApplianceTrafficShapingArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getApplianceTrafficShaping:getApplianceTrafficShaping", TypeShape.of(GetApplianceTrafficShapingResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -4287,6 +5174,47 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetApplianceTrafficShapingRulesResult> getApplianceTrafficShapingRules(GetApplianceTrafficShapingRulesArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getApplianceTrafficShapingRules:getApplianceTrafficShapingRules", TypeShape.of(GetApplianceTrafficShapingRulesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetApplianceTrafficShapingRulesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getApplianceTrafficShapingRules(GetApplianceTrafficShapingRulesArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksApplianceTrafficShapingRulesExample", example.applyValue(getApplianceTrafficShapingRulesResult -> getApplianceTrafficShapingRulesResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetApplianceTrafficShapingRulesResult> getApplianceTrafficShapingRulesPlain(GetApplianceTrafficShapingRulesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getApplianceTrafficShapingRules:getApplianceTrafficShapingRules", TypeShape.of(GetApplianceTrafficShapingRulesResult.class), args, Utilities.withVersion(options));
     }
@@ -4411,6 +5339,47 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetApplianceTrafficShapingUplinkBandwidthResult> getApplianceTrafficShapingUplinkBandwidth(GetApplianceTrafficShapingUplinkBandwidthArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getApplianceTrafficShapingUplinkBandwidth:getApplianceTrafficShapingUplinkBandwidth", TypeShape.of(GetApplianceTrafficShapingUplinkBandwidthResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetApplianceTrafficShapingUplinkBandwidthArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getApplianceTrafficShapingUplinkBandwidth(GetApplianceTrafficShapingUplinkBandwidthArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksApplianceTrafficShapingUplinkBandwidthExample", example.applyValue(getApplianceTrafficShapingUplinkBandwidthResult -> getApplianceTrafficShapingUplinkBandwidthResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetApplianceTrafficShapingUplinkBandwidthResult> getApplianceTrafficShapingUplinkBandwidth(GetApplianceTrafficShapingUplinkBandwidthArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getApplianceTrafficShapingUplinkBandwidth:getApplianceTrafficShapingUplinkBandwidth", TypeShape.of(GetApplianceTrafficShapingUplinkBandwidthResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -4615,6 +5584,47 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetApplianceTrafficShapingUplinkSelectionResult> getApplianceTrafficShapingUplinkSelection(GetApplianceTrafficShapingUplinkSelectionArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getApplianceTrafficShapingUplinkSelection:getApplianceTrafficShapingUplinkSelection", TypeShape.of(GetApplianceTrafficShapingUplinkSelectionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetApplianceTrafficShapingUplinkSelectionArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getApplianceTrafficShapingUplinkSelection(GetApplianceTrafficShapingUplinkSelectionArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksApplianceTrafficShapingUplinkSelectionExample", example.applyValue(getApplianceTrafficShapingUplinkSelectionResult -> getApplianceTrafficShapingUplinkSelectionResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetApplianceTrafficShapingUplinkSelectionResult> getApplianceTrafficShapingUplinkSelectionPlain(GetApplianceTrafficShapingUplinkSelectionPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getApplianceTrafficShapingUplinkSelection:getApplianceTrafficShapingUplinkSelection", TypeShape.of(GetApplianceTrafficShapingUplinkSelectionResult.class), args, Utilities.withVersion(options));
     }
@@ -4651,6 +5661,13 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetApplianceVlansResult> getApplianceVlans(GetApplianceVlansArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getApplianceVlans:getApplianceVlans", TypeShape.of(GetApplianceVlansResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetApplianceVlansResult> getApplianceVlans(GetApplianceVlansArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getApplianceVlans:getApplianceVlans", TypeShape.of(GetApplianceVlansResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -4781,6 +5798,47 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetApplianceVlansSettingsResult> getApplianceVlansSettings(GetApplianceVlansSettingsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getApplianceVlansSettings:getApplianceVlansSettings", TypeShape.of(GetApplianceVlansSettingsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetApplianceVlansSettingsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getApplianceVlansSettings(GetApplianceVlansSettingsArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksApplianceVlansSettingsExample", example.applyValue(getApplianceVlansSettingsResult -> getApplianceVlansSettingsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetApplianceVlansSettingsResult> getApplianceVlansSettings(GetApplianceVlansSettingsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getApplianceVlansSettings:getApplianceVlansSettings", TypeShape.of(GetApplianceVlansSettingsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -4985,6 +6043,47 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetApplianceVpnBgpResult> getApplianceVpnBgp(GetApplianceVpnBgpArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getApplianceVpnBgp:getApplianceVpnBgp", TypeShape.of(GetApplianceVpnBgpResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetApplianceVpnBgpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getApplianceVpnBgp(GetApplianceVpnBgpArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksApplianceVpnBgpExample", example.applyValue(getApplianceVpnBgpResult -> getApplianceVpnBgpResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetApplianceVpnBgpResult> getApplianceVpnBgpPlain(GetApplianceVpnBgpPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getApplianceVpnBgp:getApplianceVpnBgp", TypeShape.of(GetApplianceVpnBgpResult.class), args, Utilities.withVersion(options));
     }
@@ -5149,6 +6248,47 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetApplianceVpnSiteToSiteVpnResult> getApplianceVpnSiteToSiteVpn(GetApplianceVpnSiteToSiteVpnArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getApplianceVpnSiteToSiteVpn:getApplianceVpnSiteToSiteVpn", TypeShape.of(GetApplianceVpnSiteToSiteVpnResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetApplianceVpnSiteToSiteVpnArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getApplianceVpnSiteToSiteVpn(GetApplianceVpnSiteToSiteVpnArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksApplianceVpnSiteToSiteVpnExample", example.applyValue(getApplianceVpnSiteToSiteVpnResult -> getApplianceVpnSiteToSiteVpnResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetApplianceVpnSiteToSiteVpnResult> getApplianceVpnSiteToSiteVpnPlain(GetApplianceVpnSiteToSiteVpnPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getApplianceVpnSiteToSiteVpn:getApplianceVpnSiteToSiteVpn", TypeShape.of(GetApplianceVpnSiteToSiteVpnResult.class), args, Utilities.withVersion(options));
     }
@@ -5273,6 +6413,47 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetApplianceWarmSpareResult> getApplianceWarmSpare(GetApplianceWarmSpareArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getApplianceWarmSpare:getApplianceWarmSpare", TypeShape.of(GetApplianceWarmSpareResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetApplianceWarmSpareArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getApplianceWarmSpare(GetApplianceWarmSpareArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksApplianceWarmSpareExample", example.applyValue(getApplianceWarmSpareResult -> getApplianceWarmSpareResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetApplianceWarmSpareResult> getApplianceWarmSpare(GetApplianceWarmSpareArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getApplianceWarmSpare:getApplianceWarmSpare", TypeShape.of(GetApplianceWarmSpareResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -5489,6 +6670,50 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetBluetoothClientsResult> getBluetoothClients(GetBluetoothClientsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getBluetoothClients:getBluetoothClients", TypeShape.of(GetBluetoothClientsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetBluetoothClientsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getBluetoothClients(GetBluetoothClientsArgs.builder()
+     *             .bluetoothClientId("string")
+     *             .connectivityHistoryTimespan(1)
+     *             .includeConnectivityHistory(false)
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksBluetoothClientsExample", example.applyValue(getBluetoothClientsResult -> getBluetoothClientsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetBluetoothClientsResult> getBluetoothClientsPlain(GetBluetoothClientsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getBluetoothClients:getBluetoothClients", TypeShape.of(GetBluetoothClientsResult.class), args, Utilities.withVersion(options));
     }
@@ -5531,6 +6756,13 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      */
+    public static Output<GetCameraQualityRetentionProfilesResult> getCameraQualityRetentionProfiles(GetCameraQualityRetentionProfilesArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getCameraQualityRetentionProfiles:getCameraQualityRetentionProfiles", TypeShape.of(GetCameraQualityRetentionProfilesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetCameraQualityRetentionProfilesResult> getCameraQualityRetentionProfilesPlain(GetCameraQualityRetentionProfilesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getCameraQualityRetentionProfiles:getCameraQualityRetentionProfiles", TypeShape.of(GetCameraQualityRetentionProfilesResult.class), args, Utilities.withVersion(options));
     }
@@ -5567,6 +6799,13 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetCameraWirelessProfilesResult> getCameraWirelessProfiles(GetCameraWirelessProfilesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getCameraWirelessProfiles:getCameraWirelessProfiles", TypeShape.of(GetCameraWirelessProfilesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetCameraWirelessProfilesResult> getCameraWirelessProfiles(GetCameraWirelessProfilesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getCameraWirelessProfiles:getCameraWirelessProfiles", TypeShape.of(GetCameraWirelessProfilesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -5697,6 +6936,47 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetCellularGatewayConnectivityMonitoringDestinationsResult> getCellularGatewayConnectivityMonitoringDestinations(GetCellularGatewayConnectivityMonitoringDestinationsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getCellularGatewayConnectivityMonitoringDestinations:getCellularGatewayConnectivityMonitoringDestinations", TypeShape.of(GetCellularGatewayConnectivityMonitoringDestinationsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetCellularGatewayConnectivityMonitoringDestinationsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getCellularGatewayConnectivityMonitoringDestinations(GetCellularGatewayConnectivityMonitoringDestinationsArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksCellularGatewayConnectivityMonitoringDestinationsExample", example.applyValue(getCellularGatewayConnectivityMonitoringDestinationsResult -> getCellularGatewayConnectivityMonitoringDestinationsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetCellularGatewayConnectivityMonitoringDestinationsResult> getCellularGatewayConnectivityMonitoringDestinations(GetCellularGatewayConnectivityMonitoringDestinationsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getCellularGatewayConnectivityMonitoringDestinations:getCellularGatewayConnectivityMonitoringDestinations", TypeShape.of(GetCellularGatewayConnectivityMonitoringDestinationsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -5901,6 +7181,47 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetCellularGatewayDhcpResult> getCellularGatewayDhcp(GetCellularGatewayDhcpArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getCellularGatewayDhcp:getCellularGatewayDhcp", TypeShape.of(GetCellularGatewayDhcpResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetCellularGatewayDhcpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getCellularGatewayDhcp(GetCellularGatewayDhcpArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksCellularGatewayDhcpExample", example.applyValue(getCellularGatewayDhcpResult -> getCellularGatewayDhcpResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetCellularGatewayDhcpResult> getCellularGatewayDhcpPlain(GetCellularGatewayDhcpPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getCellularGatewayDhcp:getCellularGatewayDhcp", TypeShape.of(GetCellularGatewayDhcpResult.class), args, Utilities.withVersion(options));
     }
@@ -6025,6 +7346,47 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetCellularGatewaySubnetPoolResult> getCellularGatewaySubnetPool(GetCellularGatewaySubnetPoolArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getCellularGatewaySubnetPool:getCellularGatewaySubnetPool", TypeShape.of(GetCellularGatewaySubnetPoolResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetCellularGatewaySubnetPoolArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getCellularGatewaySubnetPool(GetCellularGatewaySubnetPoolArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksCellularGatewaySubnetPoolExample", example.applyValue(getCellularGatewaySubnetPoolResult -> getCellularGatewaySubnetPoolResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetCellularGatewaySubnetPoolResult> getCellularGatewaySubnetPool(GetCellularGatewaySubnetPoolArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getCellularGatewaySubnetPool:getCellularGatewaySubnetPool", TypeShape.of(GetCellularGatewaySubnetPoolResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -6229,6 +7591,47 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetCellularGatewayUplinkResult> getCellularGatewayUplink(GetCellularGatewayUplinkArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getCellularGatewayUplink:getCellularGatewayUplink", TypeShape.of(GetCellularGatewayUplinkResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetCellularGatewayUplinkArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getCellularGatewayUplink(GetCellularGatewayUplinkArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksCellularGatewayUplinkExample", example.applyValue(getCellularGatewayUplinkResult -> getCellularGatewayUplinkResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetCellularGatewayUplinkResult> getCellularGatewayUplinkPlain(GetCellularGatewayUplinkPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getCellularGatewayUplink:getCellularGatewayUplink", TypeShape.of(GetCellularGatewayUplinkResult.class), args, Utilities.withVersion(options));
     }
@@ -6356,6 +7759,48 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetClientsResult> getClients(GetClientsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getClients:getClients", TypeShape.of(GetClientsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetClientsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getClients(GetClientsArgs.builder()
+     *             .clientId("string")
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksClientsExample", example.applyValue(getClientsResult -> getClientsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetClientsResult> getClients(GetClientsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getClients:getClients", TypeShape.of(GetClientsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -6577,6 +8022,51 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetClientsOverviewResult> getClientsOverview(GetClientsOverviewArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getClientsOverview:getClientsOverview", TypeShape.of(GetClientsOverviewResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetClientsOverviewArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getClientsOverview(GetClientsOverviewArgs.builder()
+     *             .networkId("string")
+     *             .resolution(1)
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksClientsOverviewExample", example.applyValue(getClientsOverviewResult -> getClientsOverviewResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetClientsOverviewResult> getClientsOverviewPlain(GetClientsOverviewPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getClientsOverview:getClientsOverview", TypeShape.of(GetClientsOverviewResult.class), args, Utilities.withVersion(options));
     }
@@ -6745,6 +8235,48 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetClientsPolicyResult> getClientsPolicy(GetClientsPolicyArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getClientsPolicy:getClientsPolicy", TypeShape.of(GetClientsPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetClientsPolicyArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getClientsPolicy(GetClientsPolicyArgs.builder()
+     *             .clientId("string")
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksClientsPolicyExample", example.applyValue(getClientsPolicyResult -> getClientsPolicyResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetClientsPolicyResult> getClientsPolicyPlain(GetClientsPolicyPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getClientsPolicy:getClientsPolicy", TypeShape.of(GetClientsPolicyResult.class), args, Utilities.withVersion(options));
     }
@@ -6872,6 +8404,48 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetClientsSplashAuthorizationStatusResult> getClientsSplashAuthorizationStatus(GetClientsSplashAuthorizationStatusArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getClientsSplashAuthorizationStatus:getClientsSplashAuthorizationStatus", TypeShape.of(GetClientsSplashAuthorizationStatusResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetClientsSplashAuthorizationStatusArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getClientsSplashAuthorizationStatus(GetClientsSplashAuthorizationStatusArgs.builder()
+     *             .clientId("string")
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksClientsSplashAuthorizationStatusExample", example.applyValue(getClientsSplashAuthorizationStatusResult -> getClientsSplashAuthorizationStatusResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetClientsSplashAuthorizationStatusResult> getClientsSplashAuthorizationStatus(GetClientsSplashAuthorizationStatusArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getClientsSplashAuthorizationStatus:getClientsSplashAuthorizationStatus", TypeShape.of(GetClientsSplashAuthorizationStatusResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -7133,6 +8707,61 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetEventsResult> getEvents(GetEventsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getEvents:getEvents", TypeShape.of(GetEventsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetEventsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getEvents(GetEventsArgs.builder()
+     *             .clientIp("string")
+     *             .clientMac("string")
+     *             .clientName("string")
+     *             .deviceMac("string")
+     *             .deviceName("string")
+     *             .deviceSerial("string")
+     *             .endingBefore("string")
+     *             .excludedEventTypes("string")
+     *             .includedEventTypes("string")
+     *             .networkId("string")
+     *             .perPage(1)
+     *             .productType("string")
+     *             .smDeviceMac("string")
+     *             .smDeviceName("string")
+     *             .startingAfter("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksEventsExample", example.applyValue(getEventsResult -> getEventsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetEventsResult> getEventsPlain(GetEventsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getEvents:getEvents", TypeShape.of(GetEventsResult.class), args, Utilities.withVersion(options));
     }
@@ -7257,6 +8886,47 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetEventsEventTypesResult> getEventsEventTypes(GetEventsEventTypesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getEventsEventTypes:getEventsEventTypes", TypeShape.of(GetEventsEventTypesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetEventsEventTypesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getEventsEventTypes(GetEventsEventTypesArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksEventsEventTypesExample", example.applyValue(getEventsEventTypesResult -> getEventsEventTypesResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetEventsEventTypesResult> getEventsEventTypes(GetEventsEventTypesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getEventsEventTypes:getEventsEventTypes", TypeShape.of(GetEventsEventTypesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -7461,6 +9131,47 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetFirmwareUpgradesResult> getFirmwareUpgrades(GetFirmwareUpgradesArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getFirmwareUpgrades:getFirmwareUpgrades", TypeShape.of(GetFirmwareUpgradesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetFirmwareUpgradesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getFirmwareUpgrades(GetFirmwareUpgradesArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksFirmwareUpgradesExample", example.applyValue(getFirmwareUpgradesResult -> getFirmwareUpgradesResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetFirmwareUpgradesResult> getFirmwareUpgradesPlain(GetFirmwareUpgradesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getFirmwareUpgrades:getFirmwareUpgrades", TypeShape.of(GetFirmwareUpgradesResult.class), args, Utilities.withVersion(options));
     }
@@ -7625,6 +9336,47 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetFirmwareUpgradesStagedEventsResult> getFirmwareUpgradesStagedEvents(GetFirmwareUpgradesStagedEventsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getFirmwareUpgradesStagedEvents:getFirmwareUpgradesStagedEvents", TypeShape.of(GetFirmwareUpgradesStagedEventsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetFirmwareUpgradesStagedEventsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getFirmwareUpgradesStagedEvents(GetFirmwareUpgradesStagedEventsArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksFirmwareUpgradesStagedEventsExample", example.applyValue(getFirmwareUpgradesStagedEventsResult -> getFirmwareUpgradesStagedEventsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetFirmwareUpgradesStagedEventsResult> getFirmwareUpgradesStagedEventsPlain(GetFirmwareUpgradesStagedEventsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getFirmwareUpgradesStagedEvents:getFirmwareUpgradesStagedEvents", TypeShape.of(GetFirmwareUpgradesStagedEventsResult.class), args, Utilities.withVersion(options));
     }
@@ -7661,6 +9413,13 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetFirmwareUpgradesStagedGroupsResult> getFirmwareUpgradesStagedGroups(GetFirmwareUpgradesStagedGroupsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getFirmwareUpgradesStagedGroups:getFirmwareUpgradesStagedGroups", TypeShape.of(GetFirmwareUpgradesStagedGroupsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetFirmwareUpgradesStagedGroupsResult> getFirmwareUpgradesStagedGroups(GetFirmwareUpgradesStagedGroupsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getFirmwareUpgradesStagedGroups:getFirmwareUpgradesStagedGroups", TypeShape.of(GetFirmwareUpgradesStagedGroupsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -7831,6 +9590,47 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetFirmwareUpgradesStagedStagesResult> getFirmwareUpgradesStagedStages(GetFirmwareUpgradesStagedStagesArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getFirmwareUpgradesStagedStages:getFirmwareUpgradesStagedStages", TypeShape.of(GetFirmwareUpgradesStagedStagesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetFirmwareUpgradesStagedStagesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getFirmwareUpgradesStagedStages(GetFirmwareUpgradesStagedStagesArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksFirmwareUpgradesStagedStagesExample", example.applyValue(getFirmwareUpgradesStagedStagesResult -> getFirmwareUpgradesStagedStagesResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetFirmwareUpgradesStagedStagesResult> getFirmwareUpgradesStagedStagesPlain(GetFirmwareUpgradesStagedStagesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getFirmwareUpgradesStagedStages:getFirmwareUpgradesStagedStages", TypeShape.of(GetFirmwareUpgradesStagedStagesResult.class), args, Utilities.withVersion(options));
     }
@@ -7873,6 +9673,13 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      */
+    public static Output<GetFloorPlansResult> getFloorPlans(GetFloorPlansArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getFloorPlans:getFloorPlans", TypeShape.of(GetFloorPlansResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetFloorPlansResult> getFloorPlansPlain(GetFloorPlansPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getFloorPlans:getFloorPlans", TypeShape.of(GetFloorPlansResult.class), args, Utilities.withVersion(options));
     }
@@ -7909,6 +9716,13 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetGroupPoliciesResult> getGroupPolicies(GetGroupPoliciesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getGroupPolicies:getGroupPolicies", TypeShape.of(GetGroupPoliciesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetGroupPoliciesResult> getGroupPolicies(GetGroupPoliciesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getGroupPolicies:getGroupPolicies", TypeShape.of(GetGroupPoliciesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -8039,6 +9853,47 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetHealthAlertsResult> getHealthAlerts(GetHealthAlertsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getHealthAlerts:getHealthAlerts", TypeShape.of(GetHealthAlertsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetHealthAlertsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getHealthAlerts(GetHealthAlertsArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksHealthAlertsExample", example.applyValue(getHealthAlertsResult -> getHealthAlertsResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetHealthAlertsResult> getHealthAlerts(GetHealthAlertsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getHealthAlerts:getHealthAlerts", TypeShape.of(GetHealthAlertsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -8263,6 +10118,52 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetInsightApplicationsHealthByTimeResult> getInsightApplicationsHealthByTime(GetInsightApplicationsHealthByTimeArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getInsightApplicationsHealthByTime:getInsightApplicationsHealthByTime", TypeShape.of(GetInsightApplicationsHealthByTimeResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetInsightApplicationsHealthByTimeArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getInsightApplicationsHealthByTime(GetInsightApplicationsHealthByTimeArgs.builder()
+     *             .applicationId("string")
+     *             .networkId("string")
+     *             .resolution(1)
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksInsightApplicationsHealthByTimeExample", example.applyValue(getInsightApplicationsHealthByTimeResult -> getInsightApplicationsHealthByTimeResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetInsightApplicationsHealthByTimeResult> getInsightApplicationsHealthByTimePlain(GetInsightApplicationsHealthByTimePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getInsightApplicationsHealthByTime:getInsightApplicationsHealthByTime", TypeShape.of(GetInsightApplicationsHealthByTimeResult.class), args, Utilities.withVersion(options));
     }
@@ -8299,6 +10200,13 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetMerakiAuthUsersResult> getMerakiAuthUsers(GetMerakiAuthUsersArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getMerakiAuthUsers:getMerakiAuthUsers", TypeShape.of(GetMerakiAuthUsersResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetMerakiAuthUsersResult> getMerakiAuthUsers(GetMerakiAuthUsersArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getMerakiAuthUsers:getMerakiAuthUsers", TypeShape.of(GetMerakiAuthUsersResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -8429,6 +10337,47 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetNetflowResult> getNetflow(GetNetflowArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getNetflow:getNetflow", TypeShape.of(GetNetflowResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetNetflowArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getNetflow(GetNetflowArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksNetflowExample", example.applyValue(getNetflowResult -> getNetflowResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetNetflowResult> getNetflow(GetNetflowArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getNetflow:getNetflow", TypeShape.of(GetNetflowResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -8657,6 +10606,53 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetPiiPiiKeysResult> getPiiPiiKeys(GetPiiPiiKeysArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getPiiPiiKeys:getPiiPiiKeys", TypeShape.of(GetPiiPiiKeysResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetPiiPiiKeysArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getPiiPiiKeys(GetPiiPiiKeysArgs.builder()
+     *             .bluetoothMac("string")
+     *             .email("string")
+     *             .imei("string")
+     *             .mac("string")
+     *             .networkId("string")
+     *             .serial("string")
+     *             .username("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksPiiPiiKeysExample", example.applyValue(getPiiPiiKeysResult -> getPiiPiiKeysResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetPiiPiiKeysResult> getPiiPiiKeysPlain(GetPiiPiiKeysPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getPiiPiiKeys:getPiiPiiKeys", TypeShape.of(GetPiiPiiKeysResult.class), args, Utilities.withVersion(options));
     }
@@ -8693,6 +10689,13 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetPiiRequestsResult> getPiiRequests(GetPiiRequestsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getPiiRequests:getPiiRequests", TypeShape.of(GetPiiRequestsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetPiiRequestsResult> getPiiRequests(GetPiiRequestsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getPiiRequests:getPiiRequests", TypeShape.of(GetPiiRequestsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -8841,6 +10844,53 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetPiiSmDevicesForKeyResult> getPiiSmDevicesForKey(GetPiiSmDevicesForKeyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getPiiSmDevicesForKey:getPiiSmDevicesForKey", TypeShape.of(GetPiiSmDevicesForKeyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetPiiSmDevicesForKeyArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getPiiSmDevicesForKey(GetPiiSmDevicesForKeyArgs.builder()
+     *             .bluetoothMac("string")
+     *             .email("string")
+     *             .imei("string")
+     *             .mac("string")
+     *             .networkId("string")
+     *             .serial("string")
+     *             .username("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksPiiSmDevicesForKeyExample", example.applyValue(getPiiSmDevicesForKeyResult -> getPiiSmDevicesForKeyResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetPiiSmDevicesForKeyResult> getPiiSmDevicesForKey(GetPiiSmDevicesForKeyArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getPiiSmDevicesForKey:getPiiSmDevicesForKey", TypeShape.of(GetPiiSmDevicesForKeyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -9075,6 +11125,53 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetPiiSmOwnersForKeyResult> getPiiSmOwnersForKey(GetPiiSmOwnersForKeyArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getPiiSmOwnersForKey:getPiiSmOwnersForKey", TypeShape.of(GetPiiSmOwnersForKeyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetPiiSmOwnersForKeyArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getPiiSmOwnersForKey(GetPiiSmOwnersForKeyArgs.builder()
+     *             .bluetoothMac("string")
+     *             .email("string")
+     *             .imei("string")
+     *             .mac("string")
+     *             .networkId("string")
+     *             .serial("string")
+     *             .username("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksPiiSmOwnersForKeyExample", example.applyValue(getPiiSmOwnersForKeyResult -> getPiiSmOwnersForKeyResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetPiiSmOwnersForKeyResult> getPiiSmOwnersForKeyPlain(GetPiiSmOwnersForKeyPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getPiiSmOwnersForKey:getPiiSmOwnersForKey", TypeShape.of(GetPiiSmOwnersForKeyResult.class), args, Utilities.withVersion(options));
     }
@@ -9259,6 +11356,52 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetPoliciesByClientResult> getPoliciesByClient(GetPoliciesByClientArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getPoliciesByClient:getPoliciesByClient", TypeShape.of(GetPoliciesByClientResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetPoliciesByClientArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getPoliciesByClient(GetPoliciesByClientArgs.builder()
+     *             .endingBefore("string")
+     *             .networkId("string")
+     *             .perPage(1)
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .timespan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksPoliciesByClientExample", example.applyValue(getPoliciesByClientResult -> getPoliciesByClientResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetPoliciesByClientResult> getPoliciesByClientPlain(GetPoliciesByClientPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getPoliciesByClient:getPoliciesByClient", TypeShape.of(GetPoliciesByClientResult.class), args, Utilities.withVersion(options));
     }
@@ -9383,6 +11526,47 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetSensorAlertsCurrentOverviewByMetricResult> getSensorAlertsCurrentOverviewByMetric(GetSensorAlertsCurrentOverviewByMetricArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSensorAlertsCurrentOverviewByMetric:getSensorAlertsCurrentOverviewByMetric", TypeShape.of(GetSensorAlertsCurrentOverviewByMetricResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSensorAlertsCurrentOverviewByMetricArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSensorAlertsCurrentOverviewByMetric(GetSensorAlertsCurrentOverviewByMetricArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSensorAlertsCurrentOverviewByMetricExample", example.applyValue(getSensorAlertsCurrentOverviewByMetricResult -> getSensorAlertsCurrentOverviewByMetricResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetSensorAlertsCurrentOverviewByMetricResult> getSensorAlertsCurrentOverviewByMetric(GetSensorAlertsCurrentOverviewByMetricArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getSensorAlertsCurrentOverviewByMetric:getSensorAlertsCurrentOverviewByMetric", TypeShape.of(GetSensorAlertsCurrentOverviewByMetricResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -9603,6 +11787,51 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetSensorAlertsOverviewByMetricResult> getSensorAlertsOverviewByMetric(GetSensorAlertsOverviewByMetricArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSensorAlertsOverviewByMetric:getSensorAlertsOverviewByMetric", TypeShape.of(GetSensorAlertsOverviewByMetricResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSensorAlertsOverviewByMetricArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSensorAlertsOverviewByMetric(GetSensorAlertsOverviewByMetricArgs.builder()
+     *             .interval(1)
+     *             .networkId("string")
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSensorAlertsOverviewByMetricExample", example.applyValue(getSensorAlertsOverviewByMetricResult -> getSensorAlertsOverviewByMetricResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetSensorAlertsOverviewByMetricResult> getSensorAlertsOverviewByMetricPlain(GetSensorAlertsOverviewByMetricPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getSensorAlertsOverviewByMetric:getSensorAlertsOverviewByMetric", TypeShape.of(GetSensorAlertsOverviewByMetricResult.class), args, Utilities.withVersion(options));
     }
@@ -9645,6 +11874,13 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      */
+    public static Output<GetSensorAlertsProfilesResult> getSensorAlertsProfiles(GetSensorAlertsProfilesArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSensorAlertsProfiles:getSensorAlertsProfiles", TypeShape.of(GetSensorAlertsProfilesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetSensorAlertsProfilesResult> getSensorAlertsProfilesPlain(GetSensorAlertsProfilesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getSensorAlertsProfiles:getSensorAlertsProfiles", TypeShape.of(GetSensorAlertsProfilesResult.class), args, Utilities.withVersion(options));
     }
@@ -9681,6 +11917,13 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetSensorMqttBrokersResult> getSensorMqttBrokers(GetSensorMqttBrokersArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSensorMqttBrokers:getSensorMqttBrokers", TypeShape.of(GetSensorMqttBrokersResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetSensorMqttBrokersResult> getSensorMqttBrokers(GetSensorMqttBrokersArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getSensorMqttBrokers:getSensorMqttBrokers", TypeShape.of(GetSensorMqttBrokersResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -9811,6 +12054,47 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetSensorRelationshipsResult> getSensorRelationships(GetSensorRelationshipsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSensorRelationships:getSensorRelationships", TypeShape.of(GetSensorRelationshipsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSensorRelationshipsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSensorRelationships(GetSensorRelationshipsArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSensorRelationshipsExample", example.applyValue(getSensorRelationshipsResult -> getSensorRelationshipsResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetSensorRelationshipsResult> getSensorRelationships(GetSensorRelationshipsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getSensorRelationships:getSensorRelationships", TypeShape.of(GetSensorRelationshipsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -10015,6 +12299,47 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetSettingsResult> getSettings(GetSettingsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSettings:getSettings", TypeShape.of(GetSettingsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSettingsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSettings(GetSettingsArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSettingsExample", example.applyValue(getSettingsResult -> getSettingsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetSettingsResult> getSettingsPlain(GetSettingsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getSettings:getSettings", TypeShape.of(GetSettingsResult.class), args, Utilities.withVersion(options));
     }
@@ -10142,6 +12467,48 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetSmBypassActivationLockAttemptsResult> getSmBypassActivationLockAttempts(GetSmBypassActivationLockAttemptsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSmBypassActivationLockAttempts:getSmBypassActivationLockAttempts", TypeShape.of(GetSmBypassActivationLockAttemptsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSmBypassActivationLockAttemptsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSmBypassActivationLockAttempts(GetSmBypassActivationLockAttemptsArgs.builder()
+     *             .attemptId("string")
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSmBypassActivationLockAttemptsExample", example.applyValue(getSmBypassActivationLockAttemptsResult -> getSmBypassActivationLockAttemptsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetSmBypassActivationLockAttemptsResult> getSmBypassActivationLockAttempts(GetSmBypassActivationLockAttemptsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getSmBypassActivationLockAttempts:getSmBypassActivationLockAttempts", TypeShape.of(GetSmBypassActivationLockAttemptsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -10387,6 +12754,57 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetSmDevicesResult> getSmDevices(GetSmDevicesArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSmDevices:getSmDevices", TypeShape.of(GetSmDevicesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSmDevicesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSmDevices(GetSmDevicesArgs.builder()
+     *             .endingBefore("string")
+     *             .fields("string")
+     *             .ids("string")
+     *             .networkId("string")
+     *             .perPage(1)
+     *             .scopes("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .systemTypes("string")
+     *             .uuids("string")
+     *             .wifiMacs("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSmDevicesExample", example.applyValue(getSmDevicesResult -> getSmDevicesResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetSmDevicesResult> getSmDevicesPlain(GetSmDevicesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getSmDevices:getSmDevices", TypeShape.of(GetSmDevicesResult.class), args, Utilities.withVersion(options));
     }
@@ -10514,6 +12932,48 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetSmDevicesCellularUsageHistoryResult> getSmDevicesCellularUsageHistory(GetSmDevicesCellularUsageHistoryArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSmDevicesCellularUsageHistory:getSmDevicesCellularUsageHistory", TypeShape.of(GetSmDevicesCellularUsageHistoryResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSmDevicesCellularUsageHistoryArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSmDevicesCellularUsageHistory(GetSmDevicesCellularUsageHistoryArgs.builder()
+     *             .deviceId("string")
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSmDevicesCellularUsageHistoryExample", example.applyValue(getSmDevicesCellularUsageHistoryResult -> getSmDevicesCellularUsageHistoryResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetSmDevicesCellularUsageHistoryResult> getSmDevicesCellularUsageHistory(GetSmDevicesCellularUsageHistoryArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getSmDevicesCellularUsageHistory:getSmDevicesCellularUsageHistory", TypeShape.of(GetSmDevicesCellularUsageHistoryResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -10723,6 +13183,48 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetSmDevicesCertsResult> getSmDevicesCerts(GetSmDevicesCertsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSmDevicesCerts:getSmDevicesCerts", TypeShape.of(GetSmDevicesCertsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSmDevicesCertsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSmDevicesCerts(GetSmDevicesCertsArgs.builder()
+     *             .deviceId("string")
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSmDevicesCertsExample", example.applyValue(getSmDevicesCertsResult -> getSmDevicesCertsResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetSmDevicesCertsResult> getSmDevicesCertsPlain(GetSmDevicesCertsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getSmDevicesCerts:getSmDevicesCerts", TypeShape.of(GetSmDevicesCertsResult.class), args, Utilities.withVersion(options));
     }
@@ -10859,6 +13361,51 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetSmDevicesConnectivityResult> getSmDevicesConnectivity(GetSmDevicesConnectivityArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSmDevicesConnectivity:getSmDevicesConnectivity", TypeShape.of(GetSmDevicesConnectivityResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSmDevicesConnectivityArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSmDevicesConnectivity(GetSmDevicesConnectivityArgs.builder()
+     *             .deviceId("string")
+     *             .endingBefore("string")
+     *             .networkId("string")
+     *             .perPage(1)
+     *             .startingAfter("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSmDevicesConnectivityExample", example.applyValue(getSmDevicesConnectivityResult -> getSmDevicesConnectivityResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetSmDevicesConnectivityResult> getSmDevicesConnectivity(GetSmDevicesConnectivityArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getSmDevicesConnectivity:getSmDevicesConnectivity", TypeShape.of(GetSmDevicesConnectivityResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -11083,6 +13630,51 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetSmDevicesDesktopLogsResult> getSmDevicesDesktopLogs(GetSmDevicesDesktopLogsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSmDevicesDesktopLogs:getSmDevicesDesktopLogs", TypeShape.of(GetSmDevicesDesktopLogsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSmDevicesDesktopLogsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSmDevicesDesktopLogs(GetSmDevicesDesktopLogsArgs.builder()
+     *             .deviceId("string")
+     *             .endingBefore("string")
+     *             .networkId("string")
+     *             .perPage(1)
+     *             .startingAfter("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSmDevicesDesktopLogsExample", example.applyValue(getSmDevicesDesktopLogsResult -> getSmDevicesDesktopLogsResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetSmDevicesDesktopLogsResult> getSmDevicesDesktopLogsPlain(GetSmDevicesDesktopLogsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getSmDevicesDesktopLogs:getSmDevicesDesktopLogs", TypeShape.of(GetSmDevicesDesktopLogsResult.class), args, Utilities.withVersion(options));
     }
@@ -11219,6 +13811,51 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetSmDevicesDeviceCommandLogsResult> getSmDevicesDeviceCommandLogs(GetSmDevicesDeviceCommandLogsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSmDevicesDeviceCommandLogs:getSmDevicesDeviceCommandLogs", TypeShape.of(GetSmDevicesDeviceCommandLogsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSmDevicesDeviceCommandLogsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSmDevicesDeviceCommandLogs(GetSmDevicesDeviceCommandLogsArgs.builder()
+     *             .deviceId("string")
+     *             .endingBefore("string")
+     *             .networkId("string")
+     *             .perPage(1)
+     *             .startingAfter("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSmDevicesDeviceCommandLogsExample", example.applyValue(getSmDevicesDeviceCommandLogsResult -> getSmDevicesDeviceCommandLogsResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetSmDevicesDeviceCommandLogsResult> getSmDevicesDeviceCommandLogs(GetSmDevicesDeviceCommandLogsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getSmDevicesDeviceCommandLogs:getSmDevicesDeviceCommandLogs", TypeShape.of(GetSmDevicesDeviceCommandLogsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -11431,6 +14068,48 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetSmDevicesDeviceProfilesResult> getSmDevicesDeviceProfiles(GetSmDevicesDeviceProfilesArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSmDevicesDeviceProfiles:getSmDevicesDeviceProfiles", TypeShape.of(GetSmDevicesDeviceProfilesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSmDevicesDeviceProfilesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSmDevicesDeviceProfiles(GetSmDevicesDeviceProfilesArgs.builder()
+     *             .deviceId("string")
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSmDevicesDeviceProfilesExample", example.applyValue(getSmDevicesDeviceProfilesResult -> getSmDevicesDeviceProfilesResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetSmDevicesDeviceProfilesResult> getSmDevicesDeviceProfilesPlain(GetSmDevicesDeviceProfilesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getSmDevicesDeviceProfiles:getSmDevicesDeviceProfiles", TypeShape.of(GetSmDevicesDeviceProfilesResult.class), args, Utilities.withVersion(options));
     }
@@ -11558,6 +14237,48 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetSmDevicesNetworkAdaptersResult> getSmDevicesNetworkAdapters(GetSmDevicesNetworkAdaptersArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSmDevicesNetworkAdapters:getSmDevicesNetworkAdapters", TypeShape.of(GetSmDevicesNetworkAdaptersResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSmDevicesNetworkAdaptersArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSmDevicesNetworkAdapters(GetSmDevicesNetworkAdaptersArgs.builder()
+     *             .deviceId("string")
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSmDevicesNetworkAdaptersExample", example.applyValue(getSmDevicesNetworkAdaptersResult -> getSmDevicesNetworkAdaptersResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetSmDevicesNetworkAdaptersResult> getSmDevicesNetworkAdapters(GetSmDevicesNetworkAdaptersArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getSmDevicesNetworkAdapters:getSmDevicesNetworkAdapters", TypeShape.of(GetSmDevicesNetworkAdaptersResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -11735,6 +14456,51 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetSmDevicesPerformanceHistoryResult> getSmDevicesPerformanceHistory(GetSmDevicesPerformanceHistoryArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSmDevicesPerformanceHistory:getSmDevicesPerformanceHistory", TypeShape.of(GetSmDevicesPerformanceHistoryResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSmDevicesPerformanceHistoryArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSmDevicesPerformanceHistory(GetSmDevicesPerformanceHistoryArgs.builder()
+     *             .deviceId("string")
+     *             .endingBefore("string")
+     *             .networkId("string")
+     *             .perPage(1)
+     *             .startingAfter("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSmDevicesPerformanceHistoryExample", example.applyValue(getSmDevicesPerformanceHistoryResult -> getSmDevicesPerformanceHistoryResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetSmDevicesPerformanceHistoryResult> getSmDevicesPerformanceHistory(GetSmDevicesPerformanceHistoryArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getSmDevicesPerformanceHistory:getSmDevicesPerformanceHistory", TypeShape.of(GetSmDevicesPerformanceHistoryResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -12031,6 +14797,48 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetSmDevicesSecurityCentersResult> getSmDevicesSecurityCenters(GetSmDevicesSecurityCentersArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSmDevicesSecurityCenters:getSmDevicesSecurityCenters", TypeShape.of(GetSmDevicesSecurityCentersResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSmDevicesSecurityCentersArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSmDevicesSecurityCenters(GetSmDevicesSecurityCentersArgs.builder()
+     *             .deviceId("string")
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSmDevicesSecurityCentersExample", example.applyValue(getSmDevicesSecurityCentersResult -> getSmDevicesSecurityCentersResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetSmDevicesSecurityCentersResult> getSmDevicesSecurityCentersPlain(GetSmDevicesSecurityCentersPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getSmDevicesSecurityCenters:getSmDevicesSecurityCenters", TypeShape.of(GetSmDevicesSecurityCentersResult.class), args, Utilities.withVersion(options));
     }
@@ -12158,6 +14966,48 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetSmDevicesWlanListsResult> getSmDevicesWlanLists(GetSmDevicesWlanListsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSmDevicesWlanLists:getSmDevicesWlanLists", TypeShape.of(GetSmDevicesWlanListsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSmDevicesWlanListsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSmDevicesWlanLists(GetSmDevicesWlanListsArgs.builder()
+     *             .deviceId("string")
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSmDevicesWlanListsExample", example.applyValue(getSmDevicesWlanListsResult -> getSmDevicesWlanListsResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetSmDevicesWlanListsResult> getSmDevicesWlanLists(GetSmDevicesWlanListsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getSmDevicesWlanLists:getSmDevicesWlanLists", TypeShape.of(GetSmDevicesWlanListsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -12367,6 +15217,48 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetSmProfilesResult> getSmProfiles(GetSmProfilesArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSmProfiles:getSmProfiles", TypeShape.of(GetSmProfilesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSmProfilesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSmProfiles(GetSmProfilesArgs.builder()
+     *             .networkId("string")
+     *             .payloadTypes("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSmProfilesExample", example.applyValue(getSmProfilesResult -> getSmProfilesResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetSmProfilesResult> getSmProfilesPlain(GetSmProfilesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getSmProfiles:getSmProfiles", TypeShape.of(GetSmProfilesResult.class), args, Utilities.withVersion(options));
     }
@@ -12403,6 +15295,13 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetSmTargetGroupsResult> getSmTargetGroups(GetSmTargetGroupsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSmTargetGroups:getSmTargetGroups", TypeShape.of(GetSmTargetGroupsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetSmTargetGroupsResult> getSmTargetGroups(GetSmTargetGroupsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getSmTargetGroups:getSmTargetGroups", TypeShape.of(GetSmTargetGroupsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -12585,6 +15484,50 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetSmTrustedAccessConfigsResult> getSmTrustedAccessConfigs(GetSmTrustedAccessConfigsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSmTrustedAccessConfigs:getSmTrustedAccessConfigs", TypeShape.of(GetSmTrustedAccessConfigsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSmTrustedAccessConfigsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSmTrustedAccessConfigs(GetSmTrustedAccessConfigsArgs.builder()
+     *             .endingBefore("string")
+     *             .networkId("string")
+     *             .perPage(1)
+     *             .startingAfter("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSmTrustedAccessConfigsExample", example.applyValue(getSmTrustedAccessConfigsResult -> getSmTrustedAccessConfigsResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetSmTrustedAccessConfigsResult> getSmTrustedAccessConfigsPlain(GetSmTrustedAccessConfigsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getSmTrustedAccessConfigs:getSmTrustedAccessConfigs", TypeShape.of(GetSmTrustedAccessConfigsResult.class), args, Utilities.withVersion(options));
     }
@@ -12718,6 +15661,50 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetSmUserAccessDevicesResult> getSmUserAccessDevices(GetSmUserAccessDevicesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSmUserAccessDevices:getSmUserAccessDevices", TypeShape.of(GetSmUserAccessDevicesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSmUserAccessDevicesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSmUserAccessDevices(GetSmUserAccessDevicesArgs.builder()
+     *             .endingBefore("string")
+     *             .networkId("string")
+     *             .perPage(1)
+     *             .startingAfter("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSmUserAccessDevicesExample", example.applyValue(getSmUserAccessDevicesResult -> getSmUserAccessDevicesResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetSmUserAccessDevicesResult> getSmUserAccessDevices(GetSmUserAccessDevicesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getSmUserAccessDevices:getSmUserAccessDevices", TypeShape.of(GetSmUserAccessDevicesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -12941,6 +15928,51 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetSmUsersResult> getSmUsers(GetSmUsersArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSmUsers:getSmUsers", TypeShape.of(GetSmUsersResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSmUsersArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSmUsers(GetSmUsersArgs.builder()
+     *             .emails("string")
+     *             .ids("string")
+     *             .networkId("string")
+     *             .scopes("string")
+     *             .usernames("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSmUsersExample", example.applyValue(getSmUsersResult -> getSmUsersResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetSmUsersResult> getSmUsersPlain(GetSmUsersPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getSmUsers:getSmUsers", TypeShape.of(GetSmUsersResult.class), args, Utilities.withVersion(options));
     }
@@ -13068,6 +16100,48 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetSmUsersDeviceProfilesResult> getSmUsersDeviceProfiles(GetSmUsersDeviceProfilesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSmUsersDeviceProfiles:getSmUsersDeviceProfiles", TypeShape.of(GetSmUsersDeviceProfilesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSmUsersDeviceProfilesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSmUsersDeviceProfiles(GetSmUsersDeviceProfilesArgs.builder()
+     *             .networkId("string")
+     *             .userId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSmUsersDeviceProfilesExample", example.applyValue(getSmUsersDeviceProfilesResult -> getSmUsersDeviceProfilesResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetSmUsersDeviceProfilesResult> getSmUsersDeviceProfiles(GetSmUsersDeviceProfilesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getSmUsersDeviceProfiles:getSmUsersDeviceProfiles", TypeShape.of(GetSmUsersDeviceProfilesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -13277,6 +16351,48 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetSmUsersSoftwaresResult> getSmUsersSoftwares(GetSmUsersSoftwaresArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSmUsersSoftwares:getSmUsersSoftwares", TypeShape.of(GetSmUsersSoftwaresResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSmUsersSoftwaresArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSmUsersSoftwares(GetSmUsersSoftwaresArgs.builder()
+     *             .networkId("string")
+     *             .userId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSmUsersSoftwaresExample", example.applyValue(getSmUsersSoftwaresResult -> getSmUsersSoftwaresResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetSmUsersSoftwaresResult> getSmUsersSoftwaresPlain(GetSmUsersSoftwaresPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getSmUsersSoftwares:getSmUsersSoftwares", TypeShape.of(GetSmUsersSoftwaresResult.class), args, Utilities.withVersion(options));
     }
@@ -13401,6 +16517,47 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetSnmpResult> getSnmp(GetSnmpArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSnmp:getSnmp", TypeShape.of(GetSnmpResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSnmpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSnmp(GetSnmpArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSnmpExample", example.applyValue(getSnmpResult -> getSnmpResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetSnmpResult> getSnmp(GetSnmpArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getSnmp:getSnmp", TypeShape.of(GetSnmpResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -13605,6 +16762,47 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetSwitchAccessControlListsResult> getSwitchAccessControlLists(GetSwitchAccessControlListsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSwitchAccessControlLists:getSwitchAccessControlLists", TypeShape.of(GetSwitchAccessControlListsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSwitchAccessControlListsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSwitchAccessControlLists(GetSwitchAccessControlListsArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSwitchAccessControlListsExample", example.applyValue(getSwitchAccessControlListsResult -> getSwitchAccessControlListsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetSwitchAccessControlListsResult> getSwitchAccessControlListsPlain(GetSwitchAccessControlListsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getSwitchAccessControlLists:getSwitchAccessControlLists", TypeShape.of(GetSwitchAccessControlListsResult.class), args, Utilities.withVersion(options));
     }
@@ -13641,6 +16839,13 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetSwitchAccessPoliciesResult> getSwitchAccessPolicies(GetSwitchAccessPoliciesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSwitchAccessPolicies:getSwitchAccessPolicies", TypeShape.of(GetSwitchAccessPoliciesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetSwitchAccessPoliciesResult> getSwitchAccessPolicies(GetSwitchAccessPoliciesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getSwitchAccessPolicies:getSwitchAccessPolicies", TypeShape.of(GetSwitchAccessPoliciesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -13811,6 +17016,47 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetSwitchAlternateManagementInterfaceResult> getSwitchAlternateManagementInterface(GetSwitchAlternateManagementInterfaceArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSwitchAlternateManagementInterface:getSwitchAlternateManagementInterface", TypeShape.of(GetSwitchAlternateManagementInterfaceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSwitchAlternateManagementInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSwitchAlternateManagementInterface(GetSwitchAlternateManagementInterfaceArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSwitchAlternateManagementInterfaceExample", example.applyValue(getSwitchAlternateManagementInterfaceResult -> getSwitchAlternateManagementInterfaceResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetSwitchAlternateManagementInterfaceResult> getSwitchAlternateManagementInterfacePlain(GetSwitchAlternateManagementInterfacePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getSwitchAlternateManagementInterface:getSwitchAlternateManagementInterface", TypeShape.of(GetSwitchAlternateManagementInterfaceResult.class), args, Utilities.withVersion(options));
     }
@@ -13935,6 +17181,47 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetSwitchDhcpServerPolicyResult> getSwitchDhcpServerPolicy(GetSwitchDhcpServerPolicyArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSwitchDhcpServerPolicy:getSwitchDhcpServerPolicy", TypeShape.of(GetSwitchDhcpServerPolicyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSwitchDhcpServerPolicyArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSwitchDhcpServerPolicy(GetSwitchDhcpServerPolicyArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyExample", example.applyValue(getSwitchDhcpServerPolicyResult -> getSwitchDhcpServerPolicyResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetSwitchDhcpServerPolicyResult> getSwitchDhcpServerPolicy(GetSwitchDhcpServerPolicyArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getSwitchDhcpServerPolicy:getSwitchDhcpServerPolicy", TypeShape.of(GetSwitchDhcpServerPolicyResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -14151,6 +17438,50 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetSwitchDhcpServerPolicyArpInspectionTrustedServersResult> getSwitchDhcpServerPolicyArpInspectionTrustedServers(GetSwitchDhcpServerPolicyArpInspectionTrustedServersArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSwitchDhcpServerPolicyArpInspectionTrustedServers:getSwitchDhcpServerPolicyArpInspectionTrustedServers", TypeShape.of(GetSwitchDhcpServerPolicyArpInspectionTrustedServersResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSwitchDhcpServerPolicyArpInspectionTrustedServersArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSwitchDhcpServerPolicyArpInspectionTrustedServers(GetSwitchDhcpServerPolicyArpInspectionTrustedServersArgs.builder()
+     *             .endingBefore("string")
+     *             .networkId("string")
+     *             .perPage(1)
+     *             .startingAfter("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyArpInspectionTrustedServersExample", example.applyValue(getSwitchDhcpServerPolicyArpInspectionTrustedServersResult -> getSwitchDhcpServerPolicyArpInspectionTrustedServersResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetSwitchDhcpServerPolicyArpInspectionTrustedServersResult> getSwitchDhcpServerPolicyArpInspectionTrustedServersPlain(GetSwitchDhcpServerPolicyArpInspectionTrustedServersPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getSwitchDhcpServerPolicyArpInspectionTrustedServers:getSwitchDhcpServerPolicyArpInspectionTrustedServers", TypeShape.of(GetSwitchDhcpServerPolicyArpInspectionTrustedServersResult.class), args, Utilities.withVersion(options));
     }
@@ -14284,6 +17615,50 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult> getSwitchDhcpServerPolicyArpInspectionWarningsByDevice(GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSwitchDhcpServerPolicyArpInspectionWarningsByDevice:getSwitchDhcpServerPolicyArpInspectionWarningsByDevice", TypeShape.of(GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSwitchDhcpServerPolicyArpInspectionWarningsByDevice(GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceArgs.builder()
+     *             .endingBefore("string")
+     *             .networkId("string")
+     *             .perPage(1)
+     *             .startingAfter("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyArpInspectionWarningsByDeviceExample", example.applyValue(getSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult -> getSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult> getSwitchDhcpServerPolicyArpInspectionWarningsByDevice(GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getSwitchDhcpServerPolicyArpInspectionWarningsByDevice:getSwitchDhcpServerPolicyArpInspectionWarningsByDevice", TypeShape.of(GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -14511,6 +17886,52 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetSwitchDhcpV4ServersSeenResult> getSwitchDhcpV4ServersSeen(GetSwitchDhcpV4ServersSeenArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSwitchDhcpV4ServersSeen:getSwitchDhcpV4ServersSeen", TypeShape.of(GetSwitchDhcpV4ServersSeenResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSwitchDhcpV4ServersSeenArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSwitchDhcpV4ServersSeen(GetSwitchDhcpV4ServersSeenArgs.builder()
+     *             .endingBefore("string")
+     *             .networkId("string")
+     *             .perPage(1)
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .timespan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSwitchDhcpV4ServersSeenExample", example.applyValue(getSwitchDhcpV4ServersSeenResult -> getSwitchDhcpV4ServersSeenResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetSwitchDhcpV4ServersSeenResult> getSwitchDhcpV4ServersSeenPlain(GetSwitchDhcpV4ServersSeenPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getSwitchDhcpV4ServersSeen:getSwitchDhcpV4ServersSeen", TypeShape.of(GetSwitchDhcpV4ServersSeenResult.class), args, Utilities.withVersion(options));
     }
@@ -14635,6 +18056,47 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetSwitchDscpToCosMappingsResult> getSwitchDscpToCosMappings(GetSwitchDscpToCosMappingsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSwitchDscpToCosMappings:getSwitchDscpToCosMappings", TypeShape.of(GetSwitchDscpToCosMappingsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSwitchDscpToCosMappingsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSwitchDscpToCosMappings(GetSwitchDscpToCosMappingsArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSwitchDscpToCosMappingsExample", example.applyValue(getSwitchDscpToCosMappingsResult -> getSwitchDscpToCosMappingsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetSwitchDscpToCosMappingsResult> getSwitchDscpToCosMappings(GetSwitchDscpToCosMappingsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getSwitchDscpToCosMappings:getSwitchDscpToCosMappings", TypeShape.of(GetSwitchDscpToCosMappingsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -14839,6 +18301,47 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetSwitchLinkAggregationsResult> getSwitchLinkAggregations(GetSwitchLinkAggregationsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSwitchLinkAggregations:getSwitchLinkAggregations", TypeShape.of(GetSwitchLinkAggregationsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSwitchLinkAggregationsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSwitchLinkAggregations(GetSwitchLinkAggregationsArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSwitchLinkAggregationsExample", example.applyValue(getSwitchLinkAggregationsResult -> getSwitchLinkAggregationsResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetSwitchLinkAggregationsResult> getSwitchLinkAggregationsPlain(GetSwitchLinkAggregationsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getSwitchLinkAggregations:getSwitchLinkAggregations", TypeShape.of(GetSwitchLinkAggregationsResult.class), args, Utilities.withVersion(options));
     }
@@ -14963,6 +18466,47 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetSwitchMtuResult> getSwitchMtu(GetSwitchMtuArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSwitchMtu:getSwitchMtu", TypeShape.of(GetSwitchMtuResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSwitchMtuArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSwitchMtu(GetSwitchMtuArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSwitchMtuExample", example.applyValue(getSwitchMtuResult -> getSwitchMtuResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetSwitchMtuResult> getSwitchMtu(GetSwitchMtuArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getSwitchMtu:getSwitchMtu", TypeShape.of(GetSwitchMtuResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -15167,6 +18711,47 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetSwitchPortSchedulesResult> getSwitchPortSchedules(GetSwitchPortSchedulesArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSwitchPortSchedules:getSwitchPortSchedules", TypeShape.of(GetSwitchPortSchedulesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSwitchPortSchedulesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSwitchPortSchedules(GetSwitchPortSchedulesArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSwitchPortSchedulesExample", example.applyValue(getSwitchPortSchedulesResult -> getSwitchPortSchedulesResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetSwitchPortSchedulesResult> getSwitchPortSchedulesPlain(GetSwitchPortSchedulesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getSwitchPortSchedules:getSwitchPortSchedules", TypeShape.of(GetSwitchPortSchedulesResult.class), args, Utilities.withVersion(options));
     }
@@ -15203,6 +18788,13 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetSwitchQosRulesOrderResult> getSwitchQosRulesOrder(GetSwitchQosRulesOrderArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSwitchQosRulesOrder:getSwitchQosRulesOrder", TypeShape.of(GetSwitchQosRulesOrderResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetSwitchQosRulesOrderResult> getSwitchQosRulesOrder(GetSwitchQosRulesOrderArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getSwitchQosRulesOrder:getSwitchQosRulesOrder", TypeShape.of(GetSwitchQosRulesOrderResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -15373,6 +18965,47 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetSwitchRoutingMulticastResult> getSwitchRoutingMulticast(GetSwitchRoutingMulticastArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSwitchRoutingMulticast:getSwitchRoutingMulticast", TypeShape.of(GetSwitchRoutingMulticastResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSwitchRoutingMulticastArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSwitchRoutingMulticast(GetSwitchRoutingMulticastArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSwitchRoutingMulticastExample", example.applyValue(getSwitchRoutingMulticastResult -> getSwitchRoutingMulticastResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetSwitchRoutingMulticastResult> getSwitchRoutingMulticastPlain(GetSwitchRoutingMulticastPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getSwitchRoutingMulticast:getSwitchRoutingMulticast", TypeShape.of(GetSwitchRoutingMulticastResult.class), args, Utilities.withVersion(options));
     }
@@ -15409,6 +19042,13 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetSwitchRoutingMulticastRendezvousPointsResult> getSwitchRoutingMulticastRendezvousPoints(GetSwitchRoutingMulticastRendezvousPointsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSwitchRoutingMulticastRendezvousPoints:getSwitchRoutingMulticastRendezvousPoints", TypeShape.of(GetSwitchRoutingMulticastRendezvousPointsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetSwitchRoutingMulticastRendezvousPointsResult> getSwitchRoutingMulticastRendezvousPoints(GetSwitchRoutingMulticastRendezvousPointsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getSwitchRoutingMulticastRendezvousPoints:getSwitchRoutingMulticastRendezvousPoints", TypeShape.of(GetSwitchRoutingMulticastRendezvousPointsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -15539,6 +19179,47 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetSwitchRoutingOspfResult> getSwitchRoutingOspf(GetSwitchRoutingOspfArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSwitchRoutingOspf:getSwitchRoutingOspf", TypeShape.of(GetSwitchRoutingOspfResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSwitchRoutingOspfArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSwitchRoutingOspf(GetSwitchRoutingOspfArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSwitchRoutingOspfExample", example.applyValue(getSwitchRoutingOspfResult -> getSwitchRoutingOspfResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetSwitchRoutingOspfResult> getSwitchRoutingOspf(GetSwitchRoutingOspfArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getSwitchRoutingOspf:getSwitchRoutingOspf", TypeShape.of(GetSwitchRoutingOspfResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -15743,6 +19424,47 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetSwitchSettingsResult> getSwitchSettings(GetSwitchSettingsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSwitchSettings:getSwitchSettings", TypeShape.of(GetSwitchSettingsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSwitchSettingsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSwitchSettings(GetSwitchSettingsArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSwitchSettingsExample", example.applyValue(getSwitchSettingsResult -> getSwitchSettingsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetSwitchSettingsResult> getSwitchSettingsPlain(GetSwitchSettingsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getSwitchSettings:getSwitchSettings", TypeShape.of(GetSwitchSettingsResult.class), args, Utilities.withVersion(options));
     }
@@ -15785,6 +19507,13 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      */
+    public static Output<GetSwitchStacksResult> getSwitchStacks(GetSwitchStacksArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSwitchStacks:getSwitchStacks", TypeShape.of(GetSwitchStacksResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetSwitchStacksResult> getSwitchStacksPlain(GetSwitchStacksPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getSwitchStacks:getSwitchStacks", TypeShape.of(GetSwitchStacksResult.class), args, Utilities.withVersion(options));
     }
@@ -15821,6 +19550,13 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetSwitchStacksRoutingInterfacesResult> getSwitchStacksRoutingInterfaces(GetSwitchStacksRoutingInterfacesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSwitchStacksRoutingInterfaces:getSwitchStacksRoutingInterfaces", TypeShape.of(GetSwitchStacksRoutingInterfacesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetSwitchStacksRoutingInterfacesResult> getSwitchStacksRoutingInterfaces(GetSwitchStacksRoutingInterfacesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getSwitchStacksRoutingInterfaces:getSwitchStacksRoutingInterfaces", TypeShape.of(GetSwitchStacksRoutingInterfacesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -15999,6 +19735,49 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetSwitchStacksRoutingInterfacesDhcpResult> getSwitchStacksRoutingInterfacesDhcp(GetSwitchStacksRoutingInterfacesDhcpArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSwitchStacksRoutingInterfacesDhcp:getSwitchStacksRoutingInterfacesDhcp", TypeShape.of(GetSwitchStacksRoutingInterfacesDhcpResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSwitchStacksRoutingInterfacesDhcpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSwitchStacksRoutingInterfacesDhcp(GetSwitchStacksRoutingInterfacesDhcpArgs.builder()
+     *             .interfaceId("string")
+     *             .networkId("string")
+     *             .switchStackId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSwitchStacksRoutingInterfacesDhcpExample", example.applyValue(getSwitchStacksRoutingInterfacesDhcpResult -> getSwitchStacksRoutingInterfacesDhcpResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetSwitchStacksRoutingInterfacesDhcpResult> getSwitchStacksRoutingInterfacesDhcpPlain(GetSwitchStacksRoutingInterfacesDhcpPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getSwitchStacksRoutingInterfacesDhcp:getSwitchStacksRoutingInterfacesDhcp", TypeShape.of(GetSwitchStacksRoutingInterfacesDhcpResult.class), args, Utilities.withVersion(options));
     }
@@ -16035,6 +19814,13 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetSwitchStacksRoutingStaticRoutesResult> getSwitchStacksRoutingStaticRoutes(GetSwitchStacksRoutingStaticRoutesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSwitchStacksRoutingStaticRoutes:getSwitchStacksRoutingStaticRoutes", TypeShape.of(GetSwitchStacksRoutingStaticRoutesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetSwitchStacksRoutingStaticRoutesResult> getSwitchStacksRoutingStaticRoutes(GetSwitchStacksRoutingStaticRoutesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getSwitchStacksRoutingStaticRoutes:getSwitchStacksRoutingStaticRoutes", TypeShape.of(GetSwitchStacksRoutingStaticRoutesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -16165,6 +19951,47 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetSwitchStormControlResult> getSwitchStormControl(GetSwitchStormControlArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSwitchStormControl:getSwitchStormControl", TypeShape.of(GetSwitchStormControlResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSwitchStormControlArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSwitchStormControl(GetSwitchStormControlArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSwitchStormControlExample", example.applyValue(getSwitchStormControlResult -> getSwitchStormControlResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetSwitchStormControlResult> getSwitchStormControl(GetSwitchStormControlArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getSwitchStormControl:getSwitchStormControl", TypeShape.of(GetSwitchStormControlResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -16369,6 +20196,47 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetSwitchStpResult> getSwitchStp(GetSwitchStpArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSwitchStp:getSwitchStp", TypeShape.of(GetSwitchStpResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSwitchStpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSwitchStp(GetSwitchStpArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSwitchStpExample", example.applyValue(getSwitchStpResult -> getSwitchStpResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetSwitchStpResult> getSwitchStpPlain(GetSwitchStpPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getSwitchStp:getSwitchStp", TypeShape.of(GetSwitchStpResult.class), args, Utilities.withVersion(options));
     }
@@ -16493,6 +20361,47 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetSyslogServersResult> getSyslogServers(GetSyslogServersArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getSyslogServers:getSyslogServers", TypeShape.of(GetSyslogServersResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetSyslogServersArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getSyslogServers(GetSyslogServersArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksSyslogServersExample", example.applyValue(getSyslogServersResult -> getSyslogServersResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetSyslogServersResult> getSyslogServers(GetSyslogServersArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getSyslogServers:getSyslogServers", TypeShape.of(GetSyslogServersResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -16697,6 +20606,47 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetTopologyLinkLayerResult> getTopologyLinkLayer(GetTopologyLinkLayerArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getTopologyLinkLayer:getTopologyLinkLayer", TypeShape.of(GetTopologyLinkLayerResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetTopologyLinkLayerArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getTopologyLinkLayer(GetTopologyLinkLayerArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksTopologyLinkLayerExample", example.applyValue(getTopologyLinkLayerResult -> getTopologyLinkLayerResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetTopologyLinkLayerResult> getTopologyLinkLayerPlain(GetTopologyLinkLayerPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getTopologyLinkLayer:getTopologyLinkLayer", TypeShape.of(GetTopologyLinkLayerResult.class), args, Utilities.withVersion(options));
     }
@@ -16821,6 +20771,47 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetTrafficAnalysisResult> getTrafficAnalysis(GetTrafficAnalysisArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getTrafficAnalysis:getTrafficAnalysis", TypeShape.of(GetTrafficAnalysisResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetTrafficAnalysisArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getTrafficAnalysis(GetTrafficAnalysisArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksTrafficAnalysisExample", example.applyValue(getTrafficAnalysisResult -> getTrafficAnalysisResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetTrafficAnalysisResult> getTrafficAnalysis(GetTrafficAnalysisArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getTrafficAnalysis:getTrafficAnalysis", TypeShape.of(GetTrafficAnalysisResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -17025,6 +21016,47 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetTrafficShapingApplicationCategoriesResult> getTrafficShapingApplicationCategories(GetTrafficShapingApplicationCategoriesArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getTrafficShapingApplicationCategories:getTrafficShapingApplicationCategories", TypeShape.of(GetTrafficShapingApplicationCategoriesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetTrafficShapingApplicationCategoriesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getTrafficShapingApplicationCategories(GetTrafficShapingApplicationCategoriesArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksTrafficShapingApplicationCategoriesExample", example.applyValue(getTrafficShapingApplicationCategoriesResult -> getTrafficShapingApplicationCategoriesResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetTrafficShapingApplicationCategoriesResult> getTrafficShapingApplicationCategoriesPlain(GetTrafficShapingApplicationCategoriesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getTrafficShapingApplicationCategories:getTrafficShapingApplicationCategories", TypeShape.of(GetTrafficShapingApplicationCategoriesResult.class), args, Utilities.withVersion(options));
     }
@@ -17149,6 +21181,47 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetTrafficShapingDscpTaggingOptionsResult> getTrafficShapingDscpTaggingOptions(GetTrafficShapingDscpTaggingOptionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getTrafficShapingDscpTaggingOptions:getTrafficShapingDscpTaggingOptions", TypeShape.of(GetTrafficShapingDscpTaggingOptionsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetTrafficShapingDscpTaggingOptionsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getTrafficShapingDscpTaggingOptions(GetTrafficShapingDscpTaggingOptionsArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksTrafficShapingDscpTaggingOptionsExample", example.applyValue(getTrafficShapingDscpTaggingOptionsResult -> getTrafficShapingDscpTaggingOptionsResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetTrafficShapingDscpTaggingOptionsResult> getTrafficShapingDscpTaggingOptions(GetTrafficShapingDscpTaggingOptionsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getTrafficShapingDscpTaggingOptions:getTrafficShapingDscpTaggingOptions", TypeShape.of(GetTrafficShapingDscpTaggingOptionsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -17316,6 +21389,48 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetVlanProfilesResult> getVlanProfiles(GetVlanProfilesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getVlanProfiles:getVlanProfiles", TypeShape.of(GetVlanProfilesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetVlanProfilesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getVlanProfiles(GetVlanProfilesArgs.builder()
+     *             .iname("string")
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksVlanProfilesExample", example.applyValue(getVlanProfilesResult -> getVlanProfilesResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetVlanProfilesResult> getVlanProfiles(GetVlanProfilesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getVlanProfiles:getVlanProfiles", TypeShape.of(GetVlanProfilesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -17545,6 +21660,53 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetVlanProfilesAssignmentsByDeviceResult> getVlanProfilesAssignmentsByDevice(GetVlanProfilesAssignmentsByDeviceArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getVlanProfilesAssignmentsByDevice:getVlanProfilesAssignmentsByDevice", TypeShape.of(GetVlanProfilesAssignmentsByDeviceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetVlanProfilesAssignmentsByDeviceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getVlanProfilesAssignmentsByDevice(GetVlanProfilesAssignmentsByDeviceArgs.builder()
+     *             .endingBefore("string")
+     *             .networkId("string")
+     *             .perPage(1)
+     *             .productTypes("string")
+     *             .serials("string")
+     *             .stackIds("string")
+     *             .startingAfter("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksVlanProfilesAssignmentsByDeviceExample", example.applyValue(getVlanProfilesAssignmentsByDeviceResult -> getVlanProfilesAssignmentsByDeviceResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetVlanProfilesAssignmentsByDeviceResult> getVlanProfilesAssignmentsByDevicePlain(GetVlanProfilesAssignmentsByDevicePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getVlanProfilesAssignmentsByDevice:getVlanProfilesAssignmentsByDevice", TypeShape.of(GetVlanProfilesAssignmentsByDeviceResult.class), args, Utilities.withVersion(options));
     }
@@ -17587,6 +21749,13 @@ public final class NetworksFunctions {
      * ## Example Usage
      * 
      */
+    public static Output<GetWebhooksHttpServersResult> getWebhooksHttpServers(GetWebhooksHttpServersArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getWebhooksHttpServers:getWebhooksHttpServers", TypeShape.of(GetWebhooksHttpServersResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetWebhooksHttpServersResult> getWebhooksHttpServersPlain(GetWebhooksHttpServersPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getWebhooksHttpServers:getWebhooksHttpServers", TypeShape.of(GetWebhooksHttpServersResult.class), args, Utilities.withVersion(options));
     }
@@ -17623,6 +21792,13 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetWebhooksPayloadTemplatesResult> getWebhooksPayloadTemplates(GetWebhooksPayloadTemplatesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getWebhooksPayloadTemplates:getWebhooksPayloadTemplates", TypeShape.of(GetWebhooksPayloadTemplatesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetWebhooksPayloadTemplatesResult> getWebhooksPayloadTemplates(GetWebhooksPayloadTemplatesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getWebhooksPayloadTemplates:getWebhooksPayloadTemplates", TypeShape.of(GetWebhooksPayloadTemplatesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -17756,6 +21932,48 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetWebhooksWebhookTestsResult> getWebhooksWebhookTests(GetWebhooksWebhookTestsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getWebhooksWebhookTests:getWebhooksWebhookTests", TypeShape.of(GetWebhooksWebhookTestsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetWebhooksWebhookTestsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getWebhooksWebhookTests(GetWebhooksWebhookTestsArgs.builder()
+     *             .networkId("string")
+     *             .webhookTestId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksWebhooksWebhookTestsExample", example.applyValue(getWebhooksWebhookTestsResult -> getWebhooksWebhookTestsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetWebhooksWebhookTestsResult> getWebhooksWebhookTests(GetWebhooksWebhookTestsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getWebhooksWebhookTests:getWebhooksWebhookTests", TypeShape.of(GetWebhooksWebhookTestsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -17961,6 +22179,47 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetWirelessAlternateManagementInterfaceResult> getWirelessAlternateManagementInterface(GetWirelessAlternateManagementInterfaceArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getWirelessAlternateManagementInterface:getWirelessAlternateManagementInterface", TypeShape.of(GetWirelessAlternateManagementInterfaceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetWirelessAlternateManagementInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getWirelessAlternateManagementInterface(GetWirelessAlternateManagementInterfaceArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksWirelessAlternateManagementInterfaceExample", example.applyValue(getWirelessAlternateManagementInterfaceResult -> getWirelessAlternateManagementInterfaceResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetWirelessAlternateManagementInterfaceResult> getWirelessAlternateManagementInterfacePlain(GetWirelessAlternateManagementInterfacePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getWirelessAlternateManagementInterface:getWirelessAlternateManagementInterface", TypeShape.of(GetWirelessAlternateManagementInterfaceResult.class), args, Utilities.withVersion(options));
     }
@@ -18085,6 +22344,47 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetWirelessBillingResult> getWirelessBilling(GetWirelessBillingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getWirelessBilling:getWirelessBilling", TypeShape.of(GetWirelessBillingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetWirelessBillingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getWirelessBilling(GetWirelessBillingArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksWirelessBillingExample", example.applyValue(getWirelessBillingResult -> getWirelessBillingResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetWirelessBillingResult> getWirelessBilling(GetWirelessBillingArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getWirelessBilling:getWirelessBilling", TypeShape.of(GetWirelessBillingResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -18289,6 +22589,47 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetWirelessBluetoothSettingsResult> getWirelessBluetoothSettings(GetWirelessBluetoothSettingsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getWirelessBluetoothSettings:getWirelessBluetoothSettings", TypeShape.of(GetWirelessBluetoothSettingsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetWirelessBluetoothSettingsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getWirelessBluetoothSettings(GetWirelessBluetoothSettingsArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksWirelessBluetoothSettingsExample", example.applyValue(getWirelessBluetoothSettingsResult -> getWirelessBluetoothSettingsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetWirelessBluetoothSettingsResult> getWirelessBluetoothSettingsPlain(GetWirelessBluetoothSettingsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getWirelessBluetoothSettings:getWirelessBluetoothSettings", TypeShape.of(GetWirelessBluetoothSettingsResult.class), args, Utilities.withVersion(options));
     }
@@ -18440,6 +22781,56 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetWirelessChannelUtilizationHistoryResult> getWirelessChannelUtilizationHistory(GetWirelessChannelUtilizationHistoryArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getWirelessChannelUtilizationHistory:getWirelessChannelUtilizationHistory", TypeShape.of(GetWirelessChannelUtilizationHistoryResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetWirelessChannelUtilizationHistoryArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getWirelessChannelUtilizationHistory(GetWirelessChannelUtilizationHistoryArgs.builder()
+     *             .apTag("string")
+     *             .autoResolution(false)
+     *             .band("string")
+     *             .clientId("string")
+     *             .deviceSerial("string")
+     *             .networkId("string")
+     *             .resolution(1)
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksWirelessChannelUtilizationHistoryExample", example.applyValue(getWirelessChannelUtilizationHistoryResult -> getWirelessChannelUtilizationHistoryResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetWirelessChannelUtilizationHistoryResult> getWirelessChannelUtilizationHistory(GetWirelessChannelUtilizationHistoryArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getWirelessChannelUtilizationHistory:getWirelessChannelUtilizationHistory", TypeShape.of(GetWirelessChannelUtilizationHistoryResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -18693,6 +23084,57 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetWirelessClientCountHistoryResult> getWirelessClientCountHistory(GetWirelessClientCountHistoryArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getWirelessClientCountHistory:getWirelessClientCountHistory", TypeShape.of(GetWirelessClientCountHistoryResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetWirelessClientCountHistoryArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getWirelessClientCountHistory(GetWirelessClientCountHistoryArgs.builder()
+     *             .apTag("string")
+     *             .autoResolution(false)
+     *             .band("string")
+     *             .clientId("string")
+     *             .deviceSerial("string")
+     *             .networkId("string")
+     *             .resolution(1)
+     *             .ssid(1)
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksWirelessClientCountHistoryExample", example.applyValue(getWirelessClientCountHistoryResult -> getWirelessClientCountHistoryResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetWirelessClientCountHistoryResult> getWirelessClientCountHistoryPlain(GetWirelessClientCountHistoryPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getWirelessClientCountHistory:getWirelessClientCountHistory", TypeShape.of(GetWirelessClientCountHistoryResult.class), args, Utilities.withVersion(options));
     }
@@ -18841,6 +23283,55 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetWirelessClientsConnectionStatsResult> getWirelessClientsConnectionStats(GetWirelessClientsConnectionStatsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getWirelessClientsConnectionStats:getWirelessClientsConnectionStats", TypeShape.of(GetWirelessClientsConnectionStatsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetWirelessClientsConnectionStatsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getWirelessClientsConnectionStats(GetWirelessClientsConnectionStatsArgs.builder()
+     *             .apTag("string")
+     *             .band("string")
+     *             .clientId("string")
+     *             .networkId("string")
+     *             .ssid(1)
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .vlan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksWirelessClientsConnectionStatsExample", example.applyValue(getWirelessClientsConnectionStatsResult -> getWirelessClientsConnectionStatsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetWirelessClientsConnectionStatsResult> getWirelessClientsConnectionStats(GetWirelessClientsConnectionStatsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getWirelessClientsConnectionStats:getWirelessClientsConnectionStats", TypeShape.of(GetWirelessClientsConnectionStatsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -19089,6 +23580,56 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetWirelessClientsLatencyStatsResult> getWirelessClientsLatencyStats(GetWirelessClientsLatencyStatsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getWirelessClientsLatencyStats:getWirelessClientsLatencyStats", TypeShape.of(GetWirelessClientsLatencyStatsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetWirelessClientsLatencyStatsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getWirelessClientsLatencyStats(GetWirelessClientsLatencyStatsArgs.builder()
+     *             .apTag("string")
+     *             .band("string")
+     *             .clientId("string")
+     *             .fields("string")
+     *             .networkId("string")
+     *             .ssid(1)
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .vlan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksWirelessClientsLatencyStatsExample", example.applyValue(getWirelessClientsLatencyStatsResult -> getWirelessClientsLatencyStatsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetWirelessClientsLatencyStatsResult> getWirelessClientsLatencyStatsPlain(GetWirelessClientsLatencyStatsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getWirelessClientsLatencyStats:getWirelessClientsLatencyStats", TypeShape.of(GetWirelessClientsLatencyStatsResult.class), args, Utilities.withVersion(options));
     }
@@ -19234,6 +23775,54 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetWirelessConnectionStatsResult> getWirelessConnectionStats(GetWirelessConnectionStatsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getWirelessConnectionStats:getWirelessConnectionStats", TypeShape.of(GetWirelessConnectionStatsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetWirelessConnectionStatsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getWirelessConnectionStats(GetWirelessConnectionStatsArgs.builder()
+     *             .apTag("string")
+     *             .band("string")
+     *             .networkId("string")
+     *             .ssid(1)
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .vlan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksWirelessConnectionStatsExample", example.applyValue(getWirelessConnectionStatsResult -> getWirelessConnectionStatsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetWirelessConnectionStatsResult> getWirelessConnectionStats(GetWirelessConnectionStatsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getWirelessConnectionStats:getWirelessConnectionStats", TypeShape.of(GetWirelessConnectionStatsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -19485,6 +24074,57 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetWirelessDataRateHistoryResult> getWirelessDataRateHistory(GetWirelessDataRateHistoryArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getWirelessDataRateHistory:getWirelessDataRateHistory", TypeShape.of(GetWirelessDataRateHistoryResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetWirelessDataRateHistoryArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getWirelessDataRateHistory(GetWirelessDataRateHistoryArgs.builder()
+     *             .apTag("string")
+     *             .autoResolution(false)
+     *             .band("string")
+     *             .clientId("string")
+     *             .deviceSerial("string")
+     *             .networkId("string")
+     *             .resolution(1)
+     *             .ssid(1)
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksWirelessDataRateHistoryExample", example.applyValue(getWirelessDataRateHistoryResult -> getWirelessDataRateHistoryResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetWirelessDataRateHistoryResult> getWirelessDataRateHistoryPlain(GetWirelessDataRateHistoryPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getWirelessDataRateHistory:getWirelessDataRateHistory", TypeShape.of(GetWirelessDataRateHistoryResult.class), args, Utilities.withVersion(options));
     }
@@ -19630,6 +24270,54 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetWirelessDevicesConnectionStatsResult> getWirelessDevicesConnectionStats(GetWirelessDevicesConnectionStatsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getWirelessDevicesConnectionStats:getWirelessDevicesConnectionStats", TypeShape.of(GetWirelessDevicesConnectionStatsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetWirelessDevicesConnectionStatsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getWirelessDevicesConnectionStats(GetWirelessDevicesConnectionStatsArgs.builder()
+     *             .apTag("string")
+     *             .band("string")
+     *             .networkId("string")
+     *             .ssid(1)
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .vlan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksWirelessDevicesConnectionStatsExample", example.applyValue(getWirelessDevicesConnectionStatsResult -> getWirelessDevicesConnectionStatsResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetWirelessDevicesConnectionStatsResult> getWirelessDevicesConnectionStats(GetWirelessDevicesConnectionStatsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getWirelessDevicesConnectionStats:getWirelessDevicesConnectionStats", TypeShape.of(GetWirelessDevicesConnectionStatsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -19845,6 +24533,48 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetWirelessEthernetPortsProfilesResult> getWirelessEthernetPortsProfiles(GetWirelessEthernetPortsProfilesArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getWirelessEthernetPortsProfiles:getWirelessEthernetPortsProfiles", TypeShape.of(GetWirelessEthernetPortsProfilesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetWirelessEthernetPortsProfilesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getWirelessEthernetPortsProfiles(GetWirelessEthernetPortsProfilesArgs.builder()
+     *             .networkId("string")
+     *             .profileId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksWirelessEthernetPortsProfilesExample", example.applyValue(getWirelessEthernetPortsProfilesResult -> getWirelessEthernetPortsProfilesResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetWirelessEthernetPortsProfilesResult> getWirelessEthernetPortsProfilesPlain(GetWirelessEthernetPortsProfilesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getWirelessEthernetPortsProfiles:getWirelessEthernetPortsProfiles", TypeShape.of(GetWirelessEthernetPortsProfilesResult.class), args, Utilities.withVersion(options));
     }
@@ -19996,6 +24726,56 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetWirelessFailedConnectionsResult> getWirelessFailedConnections(GetWirelessFailedConnectionsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getWirelessFailedConnections:getWirelessFailedConnections", TypeShape.of(GetWirelessFailedConnectionsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetWirelessFailedConnectionsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getWirelessFailedConnections(GetWirelessFailedConnectionsArgs.builder()
+     *             .apTag("string")
+     *             .band("string")
+     *             .clientId("string")
+     *             .networkId("string")
+     *             .serial("string")
+     *             .ssid(1)
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .vlan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksWirelessFailedConnectionsExample", example.applyValue(getWirelessFailedConnectionsResult -> getWirelessFailedConnectionsResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetWirelessFailedConnectionsResult> getWirelessFailedConnections(GetWirelessFailedConnectionsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getWirelessFailedConnections:getWirelessFailedConnections", TypeShape.of(GetWirelessFailedConnectionsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -20253,6 +25033,58 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetWirelessLatencyHistoryResult> getWirelessLatencyHistory(GetWirelessLatencyHistoryArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getWirelessLatencyHistory:getWirelessLatencyHistory", TypeShape.of(GetWirelessLatencyHistoryResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetWirelessLatencyHistoryArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getWirelessLatencyHistory(GetWirelessLatencyHistoryArgs.builder()
+     *             .accessCategory("string")
+     *             .apTag("string")
+     *             .autoResolution(false)
+     *             .band("string")
+     *             .clientId("string")
+     *             .deviceSerial("string")
+     *             .networkId("string")
+     *             .resolution(1)
+     *             .ssid(1)
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksWirelessLatencyHistoryExample", example.applyValue(getWirelessLatencyHistoryResult -> getWirelessLatencyHistoryResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetWirelessLatencyHistoryResult> getWirelessLatencyHistoryPlain(GetWirelessLatencyHistoryPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getWirelessLatencyHistory:getWirelessLatencyHistory", TypeShape.of(GetWirelessLatencyHistoryResult.class), args, Utilities.withVersion(options));
     }
@@ -20449,6 +25281,55 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetWirelessLatencyStatsResult> getWirelessLatencyStats(GetWirelessLatencyStatsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getWirelessLatencyStats:getWirelessLatencyStats", TypeShape.of(GetWirelessLatencyStatsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetWirelessLatencyStatsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getWirelessLatencyStats(GetWirelessLatencyStatsArgs.builder()
+     *             .apTag("string")
+     *             .band("string")
+     *             .fields("string")
+     *             .networkId("string")
+     *             .ssid(1)
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .vlan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksWirelessLatencyStatsExample", example.applyValue(getWirelessLatencyStatsResult -> getWirelessLatencyStatsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetWirelessLatencyStatsResult> getWirelessLatencyStatsPlain(GetWirelessLatencyStatsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getWirelessLatencyStats:getWirelessLatencyStats", TypeShape.of(GetWirelessLatencyStatsResult.class), args, Utilities.withVersion(options));
     }
@@ -20582,6 +25463,50 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetWirelessMeshStatusesResult> getWirelessMeshStatuses(GetWirelessMeshStatusesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getWirelessMeshStatuses:getWirelessMeshStatuses", TypeShape.of(GetWirelessMeshStatusesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetWirelessMeshStatusesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getWirelessMeshStatuses(GetWirelessMeshStatusesArgs.builder()
+     *             .endingBefore("string")
+     *             .networkId("string")
+     *             .perPage(1)
+     *             .startingAfter("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksWirelessMeshStatusesExample", example.applyValue(getWirelessMeshStatusesResult -> getWirelessMeshStatusesResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetWirelessMeshStatusesResult> getWirelessMeshStatuses(GetWirelessMeshStatusesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getWirelessMeshStatuses:getWirelessMeshStatuses", TypeShape.of(GetWirelessMeshStatusesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -20877,6 +25802,48 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetWirelessRfProfilesResult> getWirelessRfProfiles(GetWirelessRfProfilesArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getWirelessRfProfiles:getWirelessRfProfiles", TypeShape.of(GetWirelessRfProfilesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetWirelessRfProfilesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getWirelessRfProfiles(GetWirelessRfProfilesArgs.builder()
+     *             .includeTemplateProfiles(false)
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksWirelessRfProfilesExample", example.applyValue(getWirelessRfProfilesResult -> getWirelessRfProfilesResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetWirelessRfProfilesResult> getWirelessRfProfilesPlain(GetWirelessRfProfilesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getWirelessRfProfiles:getWirelessRfProfiles", TypeShape.of(GetWirelessRfProfilesResult.class), args, Utilities.withVersion(options));
     }
@@ -21001,6 +25968,47 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetWirelessSettingsResult> getWirelessSettings(GetWirelessSettingsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getWirelessSettings:getWirelessSettings", TypeShape.of(GetWirelessSettingsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetWirelessSettingsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getWirelessSettings(GetWirelessSettingsArgs.builder()
+     *             .networkId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksWirelessSettingsExample", example.applyValue(getWirelessSettingsResult -> getWirelessSettingsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetWirelessSettingsResult> getWirelessSettings(GetWirelessSettingsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getWirelessSettings:getWirelessSettings", TypeShape.of(GetWirelessSettingsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -21245,6 +26253,57 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetWirelessSignalQualityHistoryResult> getWirelessSignalQualityHistory(GetWirelessSignalQualityHistoryArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getWirelessSignalQualityHistory:getWirelessSignalQualityHistory", TypeShape.of(GetWirelessSignalQualityHistoryResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetWirelessSignalQualityHistoryArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getWirelessSignalQualityHistory(GetWirelessSignalQualityHistoryArgs.builder()
+     *             .apTag("string")
+     *             .autoResolution(false)
+     *             .band("string")
+     *             .clientId("string")
+     *             .deviceSerial("string")
+     *             .networkId("string")
+     *             .resolution(1)
+     *             .ssid(1)
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksWirelessSignalQualityHistoryExample", example.applyValue(getWirelessSignalQualityHistoryResult -> getWirelessSignalQualityHistoryResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetWirelessSignalQualityHistoryResult> getWirelessSignalQualityHistoryPlain(GetWirelessSignalQualityHistoryPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getWirelessSignalQualityHistory:getWirelessSignalQualityHistory", TypeShape.of(GetWirelessSignalQualityHistoryResult.class), args, Utilities.withVersion(options));
     }
@@ -21281,6 +26340,13 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetWirelessSsidsResult> getWirelessSsids(GetWirelessSsidsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getWirelessSsids:getWirelessSsids", TypeShape.of(GetWirelessSsidsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetWirelessSsidsResult> getWirelessSsids(GetWirelessSsidsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getWirelessSsids:getWirelessSsids", TypeShape.of(GetWirelessSsidsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -21414,6 +26480,48 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetWirelessSsidsBonjourForwardingResult> getWirelessSsidsBonjourForwarding(GetWirelessSsidsBonjourForwardingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getWirelessSsidsBonjourForwarding:getWirelessSsidsBonjourForwarding", TypeShape.of(GetWirelessSsidsBonjourForwardingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsBonjourForwardingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getWirelessSsidsBonjourForwarding(GetWirelessSsidsBonjourForwardingArgs.builder()
+     *             .networkId("string")
+     *             .number("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksWirelessSsidsBonjourForwardingExample", example.applyValue(getWirelessSsidsBonjourForwardingResult -> getWirelessSsidsBonjourForwardingResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetWirelessSsidsBonjourForwardingResult> getWirelessSsidsBonjourForwarding(GetWirelessSsidsBonjourForwardingArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getWirelessSsidsBonjourForwarding:getWirelessSsidsBonjourForwarding", TypeShape.of(GetWirelessSsidsBonjourForwardingResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -21623,6 +26731,48 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetWirelessSsidsDeviceTypeGroupPoliciesResult> getWirelessSsidsDeviceTypeGroupPolicies(GetWirelessSsidsDeviceTypeGroupPoliciesArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getWirelessSsidsDeviceTypeGroupPolicies:getWirelessSsidsDeviceTypeGroupPolicies", TypeShape.of(GetWirelessSsidsDeviceTypeGroupPoliciesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsDeviceTypeGroupPoliciesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getWirelessSsidsDeviceTypeGroupPolicies(GetWirelessSsidsDeviceTypeGroupPoliciesArgs.builder()
+     *             .networkId("string")
+     *             .number("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksWirelessSsidsDeviceTypeGroupPoliciesExample", example.applyValue(getWirelessSsidsDeviceTypeGroupPoliciesResult -> getWirelessSsidsDeviceTypeGroupPoliciesResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetWirelessSsidsDeviceTypeGroupPoliciesResult> getWirelessSsidsDeviceTypeGroupPoliciesPlain(GetWirelessSsidsDeviceTypeGroupPoliciesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getWirelessSsidsDeviceTypeGroupPolicies:getWirelessSsidsDeviceTypeGroupPolicies", TypeShape.of(GetWirelessSsidsDeviceTypeGroupPoliciesResult.class), args, Utilities.withVersion(options));
     }
@@ -21750,6 +26900,48 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetWirelessSsidsEapOverrideResult> getWirelessSsidsEapOverride(GetWirelessSsidsEapOverrideArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getWirelessSsidsEapOverride:getWirelessSsidsEapOverride", TypeShape.of(GetWirelessSsidsEapOverrideResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsEapOverrideArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getWirelessSsidsEapOverride(GetWirelessSsidsEapOverrideArgs.builder()
+     *             .networkId("string")
+     *             .number("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksWirelessSsidsEapOverrideExample", example.applyValue(getWirelessSsidsEapOverrideResult -> getWirelessSsidsEapOverrideResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetWirelessSsidsEapOverrideResult> getWirelessSsidsEapOverride(GetWirelessSsidsEapOverrideArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getWirelessSsidsEapOverride:getWirelessSsidsEapOverride", TypeShape.of(GetWirelessSsidsEapOverrideResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -21959,6 +27151,48 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetWirelessSsidsFirewallL3FirewallRulesResult> getWirelessSsidsFirewallL3FirewallRules(GetWirelessSsidsFirewallL3FirewallRulesArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getWirelessSsidsFirewallL3FirewallRules:getWirelessSsidsFirewallL3FirewallRules", TypeShape.of(GetWirelessSsidsFirewallL3FirewallRulesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsFirewallL3FirewallRulesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getWirelessSsidsFirewallL3FirewallRules(GetWirelessSsidsFirewallL3FirewallRulesArgs.builder()
+     *             .networkId("string")
+     *             .number("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksWirelessSsidsFirewallL3FirewallRulesExample", example.applyValue(getWirelessSsidsFirewallL3FirewallRulesResult -> getWirelessSsidsFirewallL3FirewallRulesResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetWirelessSsidsFirewallL3FirewallRulesResult> getWirelessSsidsFirewallL3FirewallRulesPlain(GetWirelessSsidsFirewallL3FirewallRulesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getWirelessSsidsFirewallL3FirewallRules:getWirelessSsidsFirewallL3FirewallRules", TypeShape.of(GetWirelessSsidsFirewallL3FirewallRulesResult.class), args, Utilities.withVersion(options));
     }
@@ -22086,6 +27320,48 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetWirelessSsidsFirewallL7FirewallRulesResult> getWirelessSsidsFirewallL7FirewallRules(GetWirelessSsidsFirewallL7FirewallRulesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getWirelessSsidsFirewallL7FirewallRules:getWirelessSsidsFirewallL7FirewallRules", TypeShape.of(GetWirelessSsidsFirewallL7FirewallRulesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsFirewallL7FirewallRulesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getWirelessSsidsFirewallL7FirewallRules(GetWirelessSsidsFirewallL7FirewallRulesArgs.builder()
+     *             .networkId("string")
+     *             .number("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksWirelessSsidsFirewallL7FirewallRulesExample", example.applyValue(getWirelessSsidsFirewallL7FirewallRulesResult -> getWirelessSsidsFirewallL7FirewallRulesResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetWirelessSsidsFirewallL7FirewallRulesResult> getWirelessSsidsFirewallL7FirewallRules(GetWirelessSsidsFirewallL7FirewallRulesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getWirelessSsidsFirewallL7FirewallRules:getWirelessSsidsFirewallL7FirewallRules", TypeShape.of(GetWirelessSsidsFirewallL7FirewallRulesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -22295,6 +27571,48 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetWirelessSsidsHotspot20Result> getWirelessSsidsHotspot20(GetWirelessSsidsHotspot20Args args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getWirelessSsidsHotspot20:getWirelessSsidsHotspot20", TypeShape.of(GetWirelessSsidsHotspot20Result.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsHotspot20Args;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getWirelessSsidsHotspot20(GetWirelessSsidsHotspot20Args.builder()
+     *             .networkId("string")
+     *             .number("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksWirelessSsidsHotspot20Example", example.applyValue(getWirelessSsidsHotspot20Result -> getWirelessSsidsHotspot20Result.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetWirelessSsidsHotspot20Result> getWirelessSsidsHotspot20Plain(GetWirelessSsidsHotspot20PlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getWirelessSsidsHotspot20:getWirelessSsidsHotspot20", TypeShape.of(GetWirelessSsidsHotspot20Result.class), args, Utilities.withVersion(options));
     }
@@ -22331,6 +27649,13 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetWirelessSsidsIdentityPsksResult> getWirelessSsidsIdentityPsks(GetWirelessSsidsIdentityPsksArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getWirelessSsidsIdentityPsks:getWirelessSsidsIdentityPsks", TypeShape.of(GetWirelessSsidsIdentityPsksResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetWirelessSsidsIdentityPsksResult> getWirelessSsidsIdentityPsks(GetWirelessSsidsIdentityPsksArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getWirelessSsidsIdentityPsks:getWirelessSsidsIdentityPsks", TypeShape.of(GetWirelessSsidsIdentityPsksResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -22464,6 +27789,48 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetWirelessSsidsSchedulesResult> getWirelessSsidsSchedules(GetWirelessSsidsSchedulesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getWirelessSsidsSchedules:getWirelessSsidsSchedules", TypeShape.of(GetWirelessSsidsSchedulesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsSchedulesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getWirelessSsidsSchedules(GetWirelessSsidsSchedulesArgs.builder()
+     *             .networkId("string")
+     *             .number("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksWirelessSsidsSchedulesExample", example.applyValue(getWirelessSsidsSchedulesResult -> getWirelessSsidsSchedulesResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetWirelessSsidsSchedulesResult> getWirelessSsidsSchedules(GetWirelessSsidsSchedulesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getWirelessSsidsSchedules:getWirelessSsidsSchedules", TypeShape.of(GetWirelessSsidsSchedulesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -22673,6 +28040,48 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetWirelessSsidsSplashSettingsResult> getWirelessSsidsSplashSettings(GetWirelessSsidsSplashSettingsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getWirelessSsidsSplashSettings:getWirelessSsidsSplashSettings", TypeShape.of(GetWirelessSsidsSplashSettingsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsSplashSettingsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getWirelessSsidsSplashSettings(GetWirelessSsidsSplashSettingsArgs.builder()
+     *             .networkId("string")
+     *             .number("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksWirelessSsidsSplashSettingsExample", example.applyValue(getWirelessSsidsSplashSettingsResult -> getWirelessSsidsSplashSettingsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetWirelessSsidsSplashSettingsResult> getWirelessSsidsSplashSettingsPlain(GetWirelessSsidsSplashSettingsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getWirelessSsidsSplashSettings:getWirelessSsidsSplashSettings", TypeShape.of(GetWirelessSsidsSplashSettingsResult.class), args, Utilities.withVersion(options));
     }
@@ -22800,6 +28209,48 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetWirelessSsidsTrafficShapingRulesResult> getWirelessSsidsTrafficShapingRules(GetWirelessSsidsTrafficShapingRulesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getWirelessSsidsTrafficShapingRules:getWirelessSsidsTrafficShapingRules", TypeShape.of(GetWirelessSsidsTrafficShapingRulesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsTrafficShapingRulesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getWirelessSsidsTrafficShapingRules(GetWirelessSsidsTrafficShapingRulesArgs.builder()
+     *             .networkId("string")
+     *             .number("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksWirelessSsidsTrafficShapingRulesExample", example.applyValue(getWirelessSsidsTrafficShapingRulesResult -> getWirelessSsidsTrafficShapingRulesResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetWirelessSsidsTrafficShapingRulesResult> getWirelessSsidsTrafficShapingRules(GetWirelessSsidsTrafficShapingRulesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getWirelessSsidsTrafficShapingRules:getWirelessSsidsTrafficShapingRules", TypeShape.of(GetWirelessSsidsTrafficShapingRulesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -23009,6 +28460,48 @@ public final class NetworksFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetWirelessSsidsVpnResult> getWirelessSsidsVpn(GetWirelessSsidsVpnArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getWirelessSsidsVpn:getWirelessSsidsVpn", TypeShape.of(GetWirelessSsidsVpnResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsVpnArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getWirelessSsidsVpn(GetWirelessSsidsVpnArgs.builder()
+     *             .networkId("string")
+     *             .number("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksWirelessSsidsVpnExample", example.applyValue(getWirelessSsidsVpnResult -> getWirelessSsidsVpnResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetWirelessSsidsVpnResult> getWirelessSsidsVpnPlain(GetWirelessSsidsVpnPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:networks/getWirelessSsidsVpn:getWirelessSsidsVpn", TypeShape.of(GetWirelessSsidsVpnResult.class), args, Utilities.withVersion(options));
     }
@@ -23163,6 +28656,57 @@ public final class NetworksFunctions {
      * 
      */
     public static Output<GetWirelessUsageHistoryResult> getWirelessUsageHistory(GetWirelessUsageHistoryArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:networks/getWirelessUsageHistory:getWirelessUsageHistory", TypeShape.of(GetWirelessUsageHistoryResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.networks.NetworksFunctions;
+     * import com.pulumi.meraki.networks.inputs.GetWirelessUsageHistoryArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = NetworksFunctions.getWirelessUsageHistory(GetWirelessUsageHistoryArgs.builder()
+     *             .apTag("string")
+     *             .autoResolution(false)
+     *             .band("string")
+     *             .clientId("string")
+     *             .deviceSerial("string")
+     *             .networkId("string")
+     *             .resolution(1)
+     *             .ssid(1)
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiNetworksWirelessUsageHistoryExample", example.applyValue(getWirelessUsageHistoryResult -> getWirelessUsageHistoryResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetWirelessUsageHistoryResult> getWirelessUsageHistory(GetWirelessUsageHistoryArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:networks/getWirelessUsageHistory:getWirelessUsageHistory", TypeShape.of(GetWirelessUsageHistoryResult.class), args, Utilities.withVersion(options));
     }
     /**

@@ -74,6 +74,38 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetPiiSmOwnersForKeyResult> Invoke(GetPiiSmOwnersForKeyInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetPiiSmOwnersForKeyResult>("meraki:networks/getPiiSmOwnersForKey:getPiiSmOwnersForKey", args ?? new GetPiiSmOwnersForKeyInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetPiiSmOwnersForKey.Invoke(new()
+        ///     {
+        ///         BluetoothMac = "string",
+        ///         Email = "string",
+        ///         Imei = "string",
+        ///         Mac = "string",
+        ///         NetworkId = "string",
+        ///         Serial = "string",
+        ///         Username = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksPiiSmOwnersForKeyExample"] = example.Apply(getPiiSmOwnersForKeyResult =&gt; getPiiSmOwnersForKeyResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetPiiSmOwnersForKeyResult> Invoke(GetPiiSmOwnersForKeyInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetPiiSmOwnersForKeyResult>("meraki:networks/getPiiSmOwnersForKey:getPiiSmOwnersForKey", args ?? new GetPiiSmOwnersForKeyInvokeArgs(), options.WithDefaults());
     }
 
 
