@@ -64,6 +64,33 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetSmDevicesCellularUsageHistoryResult> Invoke(GetSmDevicesCellularUsageHistoryInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSmDevicesCellularUsageHistoryResult>("meraki:networks/getSmDevicesCellularUsageHistory:getSmDevicesCellularUsageHistory", args ?? new GetSmDevicesCellularUsageHistoryInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetSmDevicesCellularUsageHistory.Invoke(new()
+        ///     {
+        ///         DeviceId = "string",
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksSmDevicesCellularUsageHistoryExample"] = example.Apply(getSmDevicesCellularUsageHistoryResult =&gt; getSmDevicesCellularUsageHistoryResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSmDevicesCellularUsageHistoryResult> Invoke(GetSmDevicesCellularUsageHistoryInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSmDevicesCellularUsageHistoryResult>("meraki:networks/getSmDevicesCellularUsageHistory:getSmDevicesCellularUsageHistory", args ?? new GetSmDevicesCellularUsageHistoryInvokeArgs(), options.WithDefaults());
     }
 
 

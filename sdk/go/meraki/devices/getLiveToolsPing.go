@@ -66,21 +66,11 @@ type LookupLiveToolsPingResult struct {
 }
 
 func LookupLiveToolsPingOutput(ctx *pulumi.Context, args LookupLiveToolsPingOutputArgs, opts ...pulumi.InvokeOption) LookupLiveToolsPingResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupLiveToolsPingResultOutput, error) {
 			args := v.(LookupLiveToolsPingArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupLiveToolsPingResult
-			secret, err := ctx.InvokePackageRaw("meraki:devices/getLiveToolsPing:getLiveToolsPing", args, &rv, "", opts...)
-			if err != nil {
-				return LookupLiveToolsPingResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupLiveToolsPingResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupLiveToolsPingResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:devices/getLiveToolsPing:getLiveToolsPing", args, LookupLiveToolsPingResultOutput{}, options).(LookupLiveToolsPingResultOutput), nil
 		}).(LookupLiveToolsPingResultOutput)
 }
 

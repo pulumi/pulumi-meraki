@@ -63,21 +63,11 @@ type LookupAlertsSettingsResult struct {
 }
 
 func LookupAlertsSettingsOutput(ctx *pulumi.Context, args LookupAlertsSettingsOutputArgs, opts ...pulumi.InvokeOption) LookupAlertsSettingsResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupAlertsSettingsResultOutput, error) {
 			args := v.(LookupAlertsSettingsArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupAlertsSettingsResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getAlertsSettings:getAlertsSettings", args, &rv, "", opts...)
-			if err != nil {
-				return LookupAlertsSettingsResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupAlertsSettingsResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupAlertsSettingsResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getAlertsSettings:getAlertsSettings", args, LookupAlertsSettingsResultOutput{}, options).(LookupAlertsSettingsResultOutput), nil
 		}).(LookupAlertsSettingsResultOutput)
 }
 

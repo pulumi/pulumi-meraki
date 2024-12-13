@@ -68,6 +68,35 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetSummaryTopClientsManufacturersByUsageResult> Invoke(GetSummaryTopClientsManufacturersByUsageInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSummaryTopClientsManufacturersByUsageResult>("meraki:organizations/getSummaryTopClientsManufacturersByUsage:getSummaryTopClientsManufacturersByUsage", args ?? new GetSummaryTopClientsManufacturersByUsageInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetSummaryTopClientsManufacturersByUsage.Invoke(new()
+        ///     {
+        ///         OrganizationId = "string",
+        ///         T0 = "string",
+        ///         T1 = "string",
+        ///         Timespan = 1,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsSummaryTopClientsManufacturersByUsageExample"] = example.Apply(getSummaryTopClientsManufacturersByUsageResult =&gt; getSummaryTopClientsManufacturersByUsageResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSummaryTopClientsManufacturersByUsageResult> Invoke(GetSummaryTopClientsManufacturersByUsageInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSummaryTopClientsManufacturersByUsageResult>("meraki:organizations/getSummaryTopClientsManufacturersByUsage:getSummaryTopClientsManufacturersByUsage", args ?? new GetSummaryTopClientsManufacturersByUsageInvokeArgs(), options.WithDefaults());
     }
 
 

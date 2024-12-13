@@ -22,6 +22,12 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetSwitchQosRulesOrderResult> Invoke(GetSwitchQosRulesOrderInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSwitchQosRulesOrderResult>("meraki:networks/getSwitchQosRulesOrder:getSwitchQosRulesOrder", args ?? new GetSwitchQosRulesOrderInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetSwitchQosRulesOrderResult> Invoke(GetSwitchQosRulesOrderInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSwitchQosRulesOrderResult>("meraki:networks/getSwitchQosRulesOrder:getSwitchQosRulesOrder", args ?? new GetSwitchQosRulesOrderInvokeArgs(), options.WithDefaults());
     }
 
 

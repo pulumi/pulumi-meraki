@@ -79,21 +79,11 @@ type GetAlertsHistoryResult struct {
 }
 
 func GetAlertsHistoryOutput(ctx *pulumi.Context, args GetAlertsHistoryOutputArgs, opts ...pulumi.InvokeOption) GetAlertsHistoryResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetAlertsHistoryResultOutput, error) {
 			args := v.(GetAlertsHistoryArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetAlertsHistoryResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getAlertsHistory:getAlertsHistory", args, &rv, "", opts...)
-			if err != nil {
-				return GetAlertsHistoryResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetAlertsHistoryResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetAlertsHistoryResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getAlertsHistory:getAlertsHistory", args, GetAlertsHistoryResultOutput{}, options).(GetAlertsHistoryResultOutput), nil
 		}).(GetAlertsHistoryResultOutput)
 }
 

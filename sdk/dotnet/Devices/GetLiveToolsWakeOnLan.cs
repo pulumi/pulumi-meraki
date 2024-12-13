@@ -64,6 +64,33 @@ namespace Pulumi.Meraki.Devices
         /// </summary>
         public static Output<GetLiveToolsWakeOnLanResult> Invoke(GetLiveToolsWakeOnLanInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetLiveToolsWakeOnLanResult>("meraki:devices/getLiveToolsWakeOnLan:getLiveToolsWakeOnLan", args ?? new GetLiveToolsWakeOnLanInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Devices.GetLiveToolsWakeOnLan.Invoke(new()
+        ///     {
+        ///         Serial = "string",
+        ///         WakeOnLanId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiDevicesLiveToolsWakeOnLanExample"] = example.Apply(getLiveToolsWakeOnLanResult =&gt; getLiveToolsWakeOnLanResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetLiveToolsWakeOnLanResult> Invoke(GetLiveToolsWakeOnLanInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetLiveToolsWakeOnLanResult>("meraki:devices/getLiveToolsWakeOnLan:getLiveToolsWakeOnLan", args ?? new GetLiveToolsWakeOnLanInvokeArgs(), options.WithDefaults());
     }
 
 

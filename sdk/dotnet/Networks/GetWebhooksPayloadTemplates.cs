@@ -22,6 +22,12 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetWebhooksPayloadTemplatesResult> Invoke(GetWebhooksPayloadTemplatesInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetWebhooksPayloadTemplatesResult>("meraki:networks/getWebhooksPayloadTemplates:getWebhooksPayloadTemplates", args ?? new GetWebhooksPayloadTemplatesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetWebhooksPayloadTemplatesResult> Invoke(GetWebhooksPayloadTemplatesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetWebhooksPayloadTemplatesResult>("meraki:networks/getWebhooksPayloadTemplates:getWebhooksPayloadTemplates", args ?? new GetWebhooksPayloadTemplatesInvokeArgs(), options.WithDefaults());
     }
 
 

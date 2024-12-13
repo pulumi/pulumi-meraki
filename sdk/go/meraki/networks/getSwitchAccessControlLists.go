@@ -63,21 +63,11 @@ type LookupSwitchAccessControlListsResult struct {
 }
 
 func LookupSwitchAccessControlListsOutput(ctx *pulumi.Context, args LookupSwitchAccessControlListsOutputArgs, opts ...pulumi.InvokeOption) LookupSwitchAccessControlListsResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupSwitchAccessControlListsResultOutput, error) {
 			args := v.(LookupSwitchAccessControlListsArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupSwitchAccessControlListsResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getSwitchAccessControlLists:getSwitchAccessControlLists", args, &rv, "", opts...)
-			if err != nil {
-				return LookupSwitchAccessControlListsResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupSwitchAccessControlListsResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupSwitchAccessControlListsResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getSwitchAccessControlLists:getSwitchAccessControlLists", args, LookupSwitchAccessControlListsResultOutput{}, options).(LookupSwitchAccessControlListsResultOutput), nil
 		}).(LookupSwitchAccessControlListsResultOutput)
 }
 

@@ -68,6 +68,35 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetSummaryTopSwitchesByEnergyUsageResult> Invoke(GetSummaryTopSwitchesByEnergyUsageInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSummaryTopSwitchesByEnergyUsageResult>("meraki:organizations/getSummaryTopSwitchesByEnergyUsage:getSummaryTopSwitchesByEnergyUsage", args ?? new GetSummaryTopSwitchesByEnergyUsageInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetSummaryTopSwitchesByEnergyUsage.Invoke(new()
+        ///     {
+        ///         OrganizationId = "string",
+        ///         T0 = "string",
+        ///         T1 = "string",
+        ///         Timespan = 1,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsSummaryTopSwitchesByEnergyUsageExample"] = example.Apply(getSummaryTopSwitchesByEnergyUsageResult =&gt; getSummaryTopSwitchesByEnergyUsageResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSummaryTopSwitchesByEnergyUsageResult> Invoke(GetSummaryTopSwitchesByEnergyUsageInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSummaryTopSwitchesByEnergyUsageResult>("meraki:organizations/getSummaryTopSwitchesByEnergyUsage:getSummaryTopSwitchesByEnergyUsage", args ?? new GetSummaryTopSwitchesByEnergyUsageInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -70,6 +70,36 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetSmDevicesDesktopLogsResult> Invoke(GetSmDevicesDesktopLogsInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSmDevicesDesktopLogsResult>("meraki:networks/getSmDevicesDesktopLogs:getSmDevicesDesktopLogs", args ?? new GetSmDevicesDesktopLogsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetSmDevicesDesktopLogs.Invoke(new()
+        ///     {
+        ///         DeviceId = "string",
+        ///         EndingBefore = "string",
+        ///         NetworkId = "string",
+        ///         PerPage = 1,
+        ///         StartingAfter = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksSmDevicesDesktopLogsExample"] = example.Apply(getSmDevicesDesktopLogsResult =&gt; getSmDevicesDesktopLogsResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSmDevicesDesktopLogsResult> Invoke(GetSmDevicesDesktopLogsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSmDevicesDesktopLogsResult>("meraki:networks/getSmDevicesDesktopLogs:getSmDevicesDesktopLogs", args ?? new GetSmDevicesDesktopLogsInvokeArgs(), options.WithDefaults());
     }
 
 

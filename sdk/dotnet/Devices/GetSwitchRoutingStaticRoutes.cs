@@ -22,6 +22,12 @@ namespace Pulumi.Meraki.Devices
         /// </summary>
         public static Output<GetSwitchRoutingStaticRoutesResult> Invoke(GetSwitchRoutingStaticRoutesInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSwitchRoutingStaticRoutesResult>("meraki:devices/getSwitchRoutingStaticRoutes:getSwitchRoutingStaticRoutes", args ?? new GetSwitchRoutingStaticRoutesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetSwitchRoutingStaticRoutesResult> Invoke(GetSwitchRoutingStaticRoutesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSwitchRoutingStaticRoutesResult>("meraki:devices/getSwitchRoutingStaticRoutes:getSwitchRoutingStaticRoutes", args ?? new GetSwitchRoutingStaticRoutesInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import com.pulumi.deployment.InvokeOutputOptions;
 import com.pulumi.meraki.Utilities;
 import com.pulumi.meraki.organizations.inputs.GetActionBatchesArgs;
 import com.pulumi.meraki.organizations.inputs.GetActionBatchesPlainArgs;
@@ -314,6 +315,13 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      */
+    public static Output<GetActionBatchesResult> getActionBatches(GetActionBatchesArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getActionBatches:getActionBatches", TypeShape.of(GetActionBatchesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetActionBatchesResult> getActionBatchesPlain(GetActionBatchesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getActionBatches:getActionBatches", TypeShape.of(GetActionBatchesResult.class), args, Utilities.withVersion(options));
     }
@@ -356,6 +364,13 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      */
+    public static Output<GetAdaptivePolicyAclsResult> getAdaptivePolicyAcls(GetAdaptivePolicyAclsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getAdaptivePolicyAcls:getAdaptivePolicyAcls", TypeShape.of(GetAdaptivePolicyAclsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetAdaptivePolicyAclsResult> getAdaptivePolicyAclsPlain(GetAdaptivePolicyAclsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getAdaptivePolicyAcls:getAdaptivePolicyAcls", TypeShape.of(GetAdaptivePolicyAclsResult.class), args, Utilities.withVersion(options));
     }
@@ -392,6 +407,13 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetAdaptivePolicyGroupsResult> getAdaptivePolicyGroups(GetAdaptivePolicyGroupsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getAdaptivePolicyGroups:getAdaptivePolicyGroups", TypeShape.of(GetAdaptivePolicyGroupsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetAdaptivePolicyGroupsResult> getAdaptivePolicyGroups(GetAdaptivePolicyGroupsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getAdaptivePolicyGroups:getAdaptivePolicyGroups", TypeShape.of(GetAdaptivePolicyGroupsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -562,6 +584,47 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetAdaptivePolicyOverviewResult> getAdaptivePolicyOverview(GetAdaptivePolicyOverviewArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getAdaptivePolicyOverview:getAdaptivePolicyOverview", TypeShape.of(GetAdaptivePolicyOverviewResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetAdaptivePolicyOverviewArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getAdaptivePolicyOverview(GetAdaptivePolicyOverviewArgs.builder()
+     *             .organizationId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsAdaptivePolicyOverviewExample", example.applyValue(getAdaptivePolicyOverviewResult -> getAdaptivePolicyOverviewResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetAdaptivePolicyOverviewResult> getAdaptivePolicyOverviewPlain(GetAdaptivePolicyOverviewPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getAdaptivePolicyOverview:getAdaptivePolicyOverview", TypeShape.of(GetAdaptivePolicyOverviewResult.class), args, Utilities.withVersion(options));
     }
@@ -598,6 +661,13 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetAdaptivePolicyPoliciesResult> getAdaptivePolicyPolicies(GetAdaptivePolicyPoliciesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getAdaptivePolicyPolicies:getAdaptivePolicyPolicies", TypeShape.of(GetAdaptivePolicyPoliciesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetAdaptivePolicyPoliciesResult> getAdaptivePolicyPolicies(GetAdaptivePolicyPoliciesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getAdaptivePolicyPolicies:getAdaptivePolicyPolicies", TypeShape.of(GetAdaptivePolicyPoliciesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -728,6 +798,47 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetAdaptivePolicySettingsResult> getAdaptivePolicySettings(GetAdaptivePolicySettingsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getAdaptivePolicySettings:getAdaptivePolicySettings", TypeShape.of(GetAdaptivePolicySettingsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetAdaptivePolicySettingsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getAdaptivePolicySettings(GetAdaptivePolicySettingsArgs.builder()
+     *             .organizationId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsAdaptivePolicySettingsExample", example.applyValue(getAdaptivePolicySettingsResult -> getAdaptivePolicySettingsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetAdaptivePolicySettingsResult> getAdaptivePolicySettings(GetAdaptivePolicySettingsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getAdaptivePolicySettings:getAdaptivePolicySettings", TypeShape.of(GetAdaptivePolicySettingsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -932,6 +1043,47 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetAdminsResult> getAdmins(GetAdminsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getAdmins:getAdmins", TypeShape.of(GetAdminsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetAdminsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getAdmins(GetAdminsArgs.builder()
+     *             .organizationId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsAdminsExample", example.applyValue(getAdminsResult -> getAdminsResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetAdminsResult> getAdminsPlain(GetAdminsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getAdmins:getAdmins", TypeShape.of(GetAdminsResult.class), args, Utilities.withVersion(options));
     }
@@ -1056,6 +1208,47 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetAlertsProfilesResult> getAlertsProfiles(GetAlertsProfilesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getAlertsProfiles:getAlertsProfiles", TypeShape.of(GetAlertsProfilesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetAlertsProfilesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getAlertsProfiles(GetAlertsProfilesArgs.builder()
+     *             .organizationId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsAlertsProfilesExample", example.applyValue(getAlertsProfilesResult -> getAlertsProfilesResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetAlertsProfilesResult> getAlertsProfiles(GetAlertsProfilesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getAlertsProfiles:getAlertsProfiles", TypeShape.of(GetAlertsProfilesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1316,6 +1509,61 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetApiRequestsResult> getApiRequests(GetApiRequestsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getApiRequests:getApiRequests", TypeShape.of(GetApiRequestsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetApiRequestsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getApiRequests(GetApiRequestsArgs.builder()
+     *             .adminId("string")
+     *             .endingBefore("string")
+     *             .method("string")
+     *             .operationIds("string")
+     *             .organizationId("string")
+     *             .path("string")
+     *             .perPage(1)
+     *             .responseCode(1)
+     *             .sourceIp("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .userAgent("string")
+     *             .version(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsApiRequestsExample", example.applyValue(getApiRequestsResult -> getApiRequestsResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetApiRequestsResult> getApiRequestsPlain(GetApiRequestsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getApiRequests:getApiRequests", TypeShape.of(GetApiRequestsResult.class), args, Utilities.withVersion(options));
     }
@@ -1449,6 +1697,50 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetApiRequestsOverviewResult> getApiRequestsOverview(GetApiRequestsOverviewArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getApiRequestsOverview:getApiRequestsOverview", TypeShape.of(GetApiRequestsOverviewResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetApiRequestsOverviewArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getApiRequestsOverview(GetApiRequestsOverviewArgs.builder()
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsApiRequestsOverviewExample", example.applyValue(getApiRequestsOverviewResult -> getApiRequestsOverviewResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetApiRequestsOverviewResult> getApiRequestsOverview(GetApiRequestsOverviewArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getApiRequestsOverview:getApiRequestsOverview", TypeShape.of(GetApiRequestsOverviewResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1692,6 +1984,56 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetApiRequestsOverviewResponseCodesByIntervalResult> getApiRequestsOverviewResponseCodesByInterval(GetApiRequestsOverviewResponseCodesByIntervalArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getApiRequestsOverviewResponseCodesByInterval:getApiRequestsOverviewResponseCodesByInterval", TypeShape.of(GetApiRequestsOverviewResponseCodesByIntervalResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetApiRequestsOverviewResponseCodesByIntervalArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getApiRequestsOverviewResponseCodesByInterval(GetApiRequestsOverviewResponseCodesByIntervalArgs.builder()
+     *             .adminIds("string")
+     *             .interval(1)
+     *             .operationIds("string")
+     *             .organizationId("string")
+     *             .sourceIps("string")
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .userAgent("string")
+     *             .version(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsApiRequestsOverviewResponseCodesByIntervalExample", example.applyValue(getApiRequestsOverviewResponseCodesByIntervalResult -> getApiRequestsOverviewResponseCodesByIntervalResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetApiRequestsOverviewResponseCodesByIntervalResult> getApiRequestsOverviewResponseCodesByIntervalPlain(GetApiRequestsOverviewResponseCodesByIntervalPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getApiRequestsOverviewResponseCodesByInterval:getApiRequestsOverviewResponseCodesByInterval", TypeShape.of(GetApiRequestsOverviewResponseCodesByIntervalResult.class), args, Utilities.withVersion(options));
     }
@@ -1816,6 +2158,47 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetApplianceSecurityIntrusionResult> getApplianceSecurityIntrusion(GetApplianceSecurityIntrusionArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getApplianceSecurityIntrusion:getApplianceSecurityIntrusion", TypeShape.of(GetApplianceSecurityIntrusionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetApplianceSecurityIntrusionArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getApplianceSecurityIntrusion(GetApplianceSecurityIntrusionArgs.builder()
+     *             .organizationId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsApplianceSecurityIntrusionExample", example.applyValue(getApplianceSecurityIntrusionResult -> getApplianceSecurityIntrusionResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetApplianceSecurityIntrusionResult> getApplianceSecurityIntrusion(GetApplianceSecurityIntrusionArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getApplianceSecurityIntrusion:getApplianceSecurityIntrusion", TypeShape.of(GetApplianceSecurityIntrusionResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -2036,6 +2419,51 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetApplianceTrafficShapingVpnExclusionsByNetworkResult> getApplianceTrafficShapingVpnExclusionsByNetwork(GetApplianceTrafficShapingVpnExclusionsByNetworkArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getApplianceTrafficShapingVpnExclusionsByNetwork:getApplianceTrafficShapingVpnExclusionsByNetwork", TypeShape.of(GetApplianceTrafficShapingVpnExclusionsByNetworkResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetApplianceTrafficShapingVpnExclusionsByNetworkArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getApplianceTrafficShapingVpnExclusionsByNetwork(GetApplianceTrafficShapingVpnExclusionsByNetworkArgs.builder()
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
+     *             .perPage(1)
+     *             .startingAfter("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsApplianceTrafficShapingVpnExclusionsByNetworkExample", example.applyValue(getApplianceTrafficShapingVpnExclusionsByNetworkResult -> getApplianceTrafficShapingVpnExclusionsByNetworkResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetApplianceTrafficShapingVpnExclusionsByNetworkResult> getApplianceTrafficShapingVpnExclusionsByNetworkPlain(GetApplianceTrafficShapingVpnExclusionsByNetworkPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getApplianceTrafficShapingVpnExclusionsByNetwork:getApplianceTrafficShapingVpnExclusionsByNetwork", TypeShape.of(GetApplianceTrafficShapingVpnExclusionsByNetworkResult.class), args, Utilities.withVersion(options));
     }
@@ -2160,6 +2588,47 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetApplianceUplinksStatusesOverviewResult> getApplianceUplinksStatusesOverview(GetApplianceUplinksStatusesOverviewArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getApplianceUplinksStatusesOverview:getApplianceUplinksStatusesOverview", TypeShape.of(GetApplianceUplinksStatusesOverviewResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetApplianceUplinksStatusesOverviewArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getApplianceUplinksStatusesOverview(GetApplianceUplinksStatusesOverviewArgs.builder()
+     *             .organizationId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsApplianceUplinksStatusesOverviewExample", example.applyValue(getApplianceUplinksStatusesOverviewResult -> getApplianceUplinksStatusesOverviewResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetApplianceUplinksStatusesOverviewResult> getApplianceUplinksStatusesOverview(GetApplianceUplinksStatusesOverviewArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getApplianceUplinksStatusesOverview:getApplianceUplinksStatusesOverview", TypeShape.of(GetApplianceUplinksStatusesOverviewResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -2376,6 +2845,50 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetApplianceUplinksUsageByNetworkResult> getApplianceUplinksUsageByNetwork(GetApplianceUplinksUsageByNetworkArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getApplianceUplinksUsageByNetwork:getApplianceUplinksUsageByNetwork", TypeShape.of(GetApplianceUplinksUsageByNetworkResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetApplianceUplinksUsageByNetworkArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getApplianceUplinksUsageByNetwork(GetApplianceUplinksUsageByNetworkArgs.builder()
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsApplianceUplinksUsageByNetworkExample", example.applyValue(getApplianceUplinksUsageByNetworkResult -> getApplianceUplinksUsageByNetworkResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetApplianceUplinksUsageByNetworkResult> getApplianceUplinksUsageByNetworkPlain(GetApplianceUplinksUsageByNetworkPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getApplianceUplinksUsageByNetwork:getApplianceUplinksUsageByNetwork", TypeShape.of(GetApplianceUplinksUsageByNetworkResult.class), args, Utilities.withVersion(options));
     }
@@ -2500,6 +3013,47 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetApplianceVpnThirdPartyVpnpeersResult> getApplianceVpnThirdPartyVpnpeers(GetApplianceVpnThirdPartyVpnpeersArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getApplianceVpnThirdPartyVpnpeers:getApplianceVpnThirdPartyVpnpeers", TypeShape.of(GetApplianceVpnThirdPartyVpnpeersResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetApplianceVpnThirdPartyVpnpeersArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getApplianceVpnThirdPartyVpnpeers(GetApplianceVpnThirdPartyVpnpeersArgs.builder()
+     *             .organizationId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsApplianceVpnThirdPartyVpnpeersExample", example.applyValue(getApplianceVpnThirdPartyVpnpeersResult -> getApplianceVpnThirdPartyVpnpeersResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetApplianceVpnThirdPartyVpnpeersResult> getApplianceVpnThirdPartyVpnpeers(GetApplianceVpnThirdPartyVpnpeersArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getApplianceVpnThirdPartyVpnpeers:getApplianceVpnThirdPartyVpnpeers", TypeShape.of(GetApplianceVpnThirdPartyVpnpeersResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -2704,6 +3258,47 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetApplianceVpnVpnFirewallRulesResult> getApplianceVpnVpnFirewallRules(GetApplianceVpnVpnFirewallRulesArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getApplianceVpnVpnFirewallRules:getApplianceVpnVpnFirewallRules", TypeShape.of(GetApplianceVpnVpnFirewallRulesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetApplianceVpnVpnFirewallRulesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getApplianceVpnVpnFirewallRules(GetApplianceVpnVpnFirewallRulesArgs.builder()
+     *             .organizationId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsApplianceVpnVpnFirewallRulesExample", example.applyValue(getApplianceVpnVpnFirewallRulesResult -> getApplianceVpnVpnFirewallRulesResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetApplianceVpnVpnFirewallRulesResult> getApplianceVpnVpnFirewallRulesPlain(GetApplianceVpnVpnFirewallRulesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getApplianceVpnVpnFirewallRules:getApplianceVpnVpnFirewallRules", TypeShape.of(GetApplianceVpnVpnFirewallRulesResult.class), args, Utilities.withVersion(options));
     }
@@ -2740,6 +3335,13 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetBrandingPoliciesResult> getBrandingPolicies(GetBrandingPoliciesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getBrandingPolicies:getBrandingPolicies", TypeShape.of(GetBrandingPoliciesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetBrandingPoliciesResult> getBrandingPolicies(GetBrandingPoliciesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getBrandingPolicies:getBrandingPolicies", TypeShape.of(GetBrandingPoliciesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -2910,6 +3512,47 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetBrandingPoliciesPrioritiesResult> getBrandingPoliciesPriorities(GetBrandingPoliciesPrioritiesArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getBrandingPoliciesPriorities:getBrandingPoliciesPriorities", TypeShape.of(GetBrandingPoliciesPrioritiesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetBrandingPoliciesPrioritiesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getBrandingPoliciesPriorities(GetBrandingPoliciesPrioritiesArgs.builder()
+     *             .organizationId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsBrandingPoliciesPrioritiesExample", example.applyValue(getBrandingPoliciesPrioritiesResult -> getBrandingPoliciesPrioritiesResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetBrandingPoliciesPrioritiesResult> getBrandingPoliciesPrioritiesPlain(GetBrandingPoliciesPrioritiesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getBrandingPoliciesPriorities:getBrandingPoliciesPriorities", TypeShape.of(GetBrandingPoliciesPrioritiesResult.class), args, Utilities.withVersion(options));
     }
@@ -3037,6 +3680,48 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetCameraBoundariesAreasByDeviceResult> getCameraBoundariesAreasByDevice(GetCameraBoundariesAreasByDeviceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getCameraBoundariesAreasByDevice:getCameraBoundariesAreasByDevice", TypeShape.of(GetCameraBoundariesAreasByDeviceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetCameraBoundariesAreasByDeviceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getCameraBoundariesAreasByDevice(GetCameraBoundariesAreasByDeviceArgs.builder()
+     *             .organizationId("string")
+     *             .serials("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsCameraBoundariesAreasByDeviceExample", example.applyValue(getCameraBoundariesAreasByDeviceResult -> getCameraBoundariesAreasByDeviceResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetCameraBoundariesAreasByDeviceResult> getCameraBoundariesAreasByDevice(GetCameraBoundariesAreasByDeviceArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getCameraBoundariesAreasByDevice:getCameraBoundariesAreasByDevice", TypeShape.of(GetCameraBoundariesAreasByDeviceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -3246,6 +3931,48 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetCameraBoundariesLinesByDeviceResult> getCameraBoundariesLinesByDevice(GetCameraBoundariesLinesByDeviceArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getCameraBoundariesLinesByDevice:getCameraBoundariesLinesByDevice", TypeShape.of(GetCameraBoundariesLinesByDeviceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetCameraBoundariesLinesByDeviceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getCameraBoundariesLinesByDevice(GetCameraBoundariesLinesByDeviceArgs.builder()
+     *             .organizationId("string")
+     *             .serials("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsCameraBoundariesLinesByDeviceExample", example.applyValue(getCameraBoundariesLinesByDeviceResult -> getCameraBoundariesLinesByDeviceResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetCameraBoundariesLinesByDeviceResult> getCameraBoundariesLinesByDevicePlain(GetCameraBoundariesLinesByDevicePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getCameraBoundariesLinesByDevice:getCameraBoundariesLinesByDevice", TypeShape.of(GetCameraBoundariesLinesByDeviceResult.class), args, Utilities.withVersion(options));
     }
@@ -3282,6 +4009,13 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetCameraCustomAnalyticsArtifactsResult> getCameraCustomAnalyticsArtifacts(GetCameraCustomAnalyticsArtifactsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getCameraCustomAnalyticsArtifacts:getCameraCustomAnalyticsArtifacts", TypeShape.of(GetCameraCustomAnalyticsArtifactsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetCameraCustomAnalyticsArtifactsResult> getCameraCustomAnalyticsArtifacts(GetCameraCustomAnalyticsArtifactsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getCameraCustomAnalyticsArtifacts:getCameraCustomAnalyticsArtifacts", TypeShape.of(GetCameraCustomAnalyticsArtifactsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -3427,6 +4161,52 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetCameraDetectionsHistoryByBoundaryByIntervalResult> getCameraDetectionsHistoryByBoundaryByInterval(GetCameraDetectionsHistoryByBoundaryByIntervalArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getCameraDetectionsHistoryByBoundaryByInterval:getCameraDetectionsHistoryByBoundaryByInterval", TypeShape.of(GetCameraDetectionsHistoryByBoundaryByIntervalResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetCameraDetectionsHistoryByBoundaryByIntervalArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getCameraDetectionsHistoryByBoundaryByInterval(GetCameraDetectionsHistoryByBoundaryByIntervalArgs.builder()
+     *             .boundaryIds("string")
+     *             .boundaryTypes("string")
+     *             .duration(1)
+     *             .organizationId("string")
+     *             .perPage(1)
+     *             .ranges("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsCameraDetectionsHistoryByBoundaryByIntervalExample", example.applyValue(getCameraDetectionsHistoryByBoundaryByIntervalResult -> getCameraDetectionsHistoryByBoundaryByIntervalResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetCameraDetectionsHistoryByBoundaryByIntervalResult> getCameraDetectionsHistoryByBoundaryByInterval(GetCameraDetectionsHistoryByBoundaryByIntervalArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getCameraDetectionsHistoryByBoundaryByInterval:getCameraDetectionsHistoryByBoundaryByInterval", TypeShape.of(GetCameraDetectionsHistoryByBoundaryByIntervalResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -3640,6 +4420,48 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetCameraPermissionsResult> getCameraPermissions(GetCameraPermissionsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getCameraPermissions:getCameraPermissions", TypeShape.of(GetCameraPermissionsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetCameraPermissionsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getCameraPermissions(GetCameraPermissionsArgs.builder()
+     *             .organizationId("string")
+     *             .permissionScopeId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsCameraPermissionsExample", example.applyValue(getCameraPermissionsResult -> getCameraPermissionsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetCameraPermissionsResult> getCameraPermissionsPlain(GetCameraPermissionsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getCameraPermissions:getCameraPermissions", TypeShape.of(GetCameraPermissionsResult.class), args, Utilities.withVersion(options));
     }
@@ -3676,6 +4498,13 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetCameraRolesResult> getCameraRoles(GetCameraRolesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getCameraRoles:getCameraRoles", TypeShape.of(GetCameraRolesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetCameraRolesResult> getCameraRoles(GetCameraRolesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getCameraRoles:getCameraRoles", TypeShape.of(GetCameraRolesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -3824,6 +4653,53 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetCellularGatewayUplinkStatusesResult> getCellularGatewayUplinkStatuses(GetCellularGatewayUplinkStatusesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getCellularGatewayUplinkStatuses:getCellularGatewayUplinkStatuses", TypeShape.of(GetCellularGatewayUplinkStatusesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetCellularGatewayUplinkStatusesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getCellularGatewayUplinkStatuses(GetCellularGatewayUplinkStatusesArgs.builder()
+     *             .endingBefore("string")
+     *             .iccids("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
+     *             .perPage(1)
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsCellularGatewayUplinkStatusesExample", example.applyValue(getCellularGatewayUplinkStatusesResult -> getCellularGatewayUplinkStatusesResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetCellularGatewayUplinkStatusesResult> getCellularGatewayUplinkStatuses(GetCellularGatewayUplinkStatusesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getCellularGatewayUplinkStatuses:getCellularGatewayUplinkStatuses", TypeShape.of(GetCellularGatewayUplinkStatusesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -4046,6 +4922,50 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetClientsBandwidthUsageHistoryResult> getClientsBandwidthUsageHistory(GetClientsBandwidthUsageHistoryArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getClientsBandwidthUsageHistory:getClientsBandwidthUsageHistory", TypeShape.of(GetClientsBandwidthUsageHistoryResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetClientsBandwidthUsageHistoryArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getClientsBandwidthUsageHistory(GetClientsBandwidthUsageHistoryArgs.builder()
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsClientsBandwidthUsageHistoryExample", example.applyValue(getClientsBandwidthUsageHistoryResult -> getClientsBandwidthUsageHistoryResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetClientsBandwidthUsageHistoryResult> getClientsBandwidthUsageHistoryPlain(GetClientsBandwidthUsageHistoryPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getClientsBandwidthUsageHistory:getClientsBandwidthUsageHistory", TypeShape.of(GetClientsBandwidthUsageHistoryResult.class), args, Utilities.withVersion(options));
     }
@@ -4179,6 +5099,50 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetClientsOverviewResult> getClientsOverview(GetClientsOverviewArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getClientsOverview:getClientsOverview", TypeShape.of(GetClientsOverviewResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetClientsOverviewArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getClientsOverview(GetClientsOverviewArgs.builder()
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsClientsOverviewExample", example.applyValue(getClientsOverviewResult -> getClientsOverviewResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetClientsOverviewResult> getClientsOverview(GetClientsOverviewArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getClientsOverview:getClientsOverview", TypeShape.of(GetClientsOverviewResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -4402,6 +5366,51 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetClientsSearchResult> getClientsSearch(GetClientsSearchArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getClientsSearch:getClientsSearch", TypeShape.of(GetClientsSearchResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetClientsSearchArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getClientsSearch(GetClientsSearchArgs.builder()
+     *             .endingBefore("string")
+     *             .mac("string")
+     *             .organizationId("string")
+     *             .perPage(1)
+     *             .startingAfter("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsClientsSearchExample", example.applyValue(getClientsSearchResult -> getClientsSearchResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetClientsSearchResult> getClientsSearchPlain(GetClientsSearchPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getClientsSearch:getClientsSearch", TypeShape.of(GetClientsSearchResult.class), args, Utilities.withVersion(options));
     }
@@ -4438,6 +5447,13 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetConfigTemplatesResult> getConfigTemplates(GetConfigTemplatesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getConfigTemplates:getConfigTemplates", TypeShape.of(GetConfigTemplatesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetConfigTemplatesResult> getConfigTemplates(GetConfigTemplatesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getConfigTemplates:getConfigTemplates", TypeShape.of(GetConfigTemplatesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -4612,6 +5628,48 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetConfigTemplatesSwitchProfilesResult> getConfigTemplatesSwitchProfiles(GetConfigTemplatesSwitchProfilesArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getConfigTemplatesSwitchProfiles:getConfigTemplatesSwitchProfiles", TypeShape.of(GetConfigTemplatesSwitchProfilesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetConfigTemplatesSwitchProfilesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getConfigTemplatesSwitchProfiles(GetConfigTemplatesSwitchProfilesArgs.builder()
+     *             .configTemplateId("string")
+     *             .organizationId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsConfigTemplatesSwitchProfilesExample", example.applyValue(getConfigTemplatesSwitchProfilesResult -> getConfigTemplatesSwitchProfilesResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetConfigTemplatesSwitchProfilesResult> getConfigTemplatesSwitchProfilesPlain(GetConfigTemplatesSwitchProfilesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getConfigTemplatesSwitchProfiles:getConfigTemplatesSwitchProfiles", TypeShape.of(GetConfigTemplatesSwitchProfilesResult.class), args, Utilities.withVersion(options));
     }
@@ -4648,6 +5706,13 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetConfigTemplatesSwitchProfilesPortsResult> getConfigTemplatesSwitchProfilesPorts(GetConfigTemplatesSwitchProfilesPortsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getConfigTemplatesSwitchProfilesPorts:getConfigTemplatesSwitchProfilesPorts", TypeShape.of(GetConfigTemplatesSwitchProfilesPortsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetConfigTemplatesSwitchProfilesPortsResult> getConfigTemplatesSwitchProfilesPorts(GetConfigTemplatesSwitchProfilesPortsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getConfigTemplatesSwitchProfilesPorts:getConfigTemplatesSwitchProfilesPorts", TypeShape.of(GetConfigTemplatesSwitchProfilesPortsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -4829,6 +5894,64 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetDevicesResult> getDevices(GetDevicesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getDevices:getDevices", TypeShape.of(GetDevicesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetDevicesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getDevices(GetDevicesArgs.builder()
+     *             .configurationUpdatedAfter("string")
+     *             .endingBefore("string")
+     *             .mac("string")
+     *             .macs("string")
+     *             .model("string")
+     *             .models("string")
+     *             .name("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
+     *             .perPage(1)
+     *             .productTypes("string")
+     *             .sensorAlertProfileIds("string")
+     *             .sensorMetrics("string")
+     *             .serial("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .tags("string")
+     *             .tagsFilterType("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsDevicesExample", example.applyValue(getDevicesResult -> getDevicesResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetDevicesResult> getDevices(GetDevicesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getDevices:getDevices", TypeShape.of(GetDevicesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -5082,6 +6205,55 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetDevicesAvailabilitiesResult> getDevicesAvailabilities(GetDevicesAvailabilitiesArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getDevicesAvailabilities:getDevicesAvailabilities", TypeShape.of(GetDevicesAvailabilitiesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetDevicesAvailabilitiesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getDevicesAvailabilities(GetDevicesAvailabilitiesArgs.builder()
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
+     *             .perPage(1)
+     *             .productTypes("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .tags("string")
+     *             .tagsFilterType("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsDevicesAvailabilitiesExample", example.applyValue(getDevicesAvailabilitiesResult -> getDevicesAvailabilitiesResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetDevicesAvailabilitiesResult> getDevicesAvailabilitiesPlain(GetDevicesAvailabilitiesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getDevicesAvailabilities:getDevicesAvailabilities", TypeShape.of(GetDevicesAvailabilitiesResult.class), args, Utilities.withVersion(options));
     }
@@ -5236,6 +6408,57 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetDevicesAvailabilitiesChangeHistoryResult> getDevicesAvailabilitiesChangeHistory(GetDevicesAvailabilitiesChangeHistoryArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getDevicesAvailabilitiesChangeHistory:getDevicesAvailabilitiesChangeHistory", TypeShape.of(GetDevicesAvailabilitiesChangeHistoryResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetDevicesAvailabilitiesChangeHistoryArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getDevicesAvailabilitiesChangeHistory(GetDevicesAvailabilitiesChangeHistoryArgs.builder()
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
+     *             .perPage(1)
+     *             .productTypes("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .statuses("string")
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsDevicesAvailabilitiesChangeHistoryExample", example.applyValue(getDevicesAvailabilitiesChangeHistoryResult -> getDevicesAvailabilitiesChangeHistoryResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetDevicesAvailabilitiesChangeHistoryResult> getDevicesAvailabilitiesChangeHistory(GetDevicesAvailabilitiesChangeHistoryArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getDevicesAvailabilitiesChangeHistory:getDevicesAvailabilitiesChangeHistory", TypeShape.of(GetDevicesAvailabilitiesChangeHistoryResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -5486,6 +6709,56 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetDevicesBootsHistoryResult> getDevicesBootsHistory(GetDevicesBootsHistoryArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getDevicesBootsHistory:getDevicesBootsHistory", TypeShape.of(GetDevicesBootsHistoryResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetDevicesBootsHistoryArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getDevicesBootsHistory(GetDevicesBootsHistoryArgs.builder()
+     *             .endingBefore("string")
+     *             .mostRecentPerDevice(false)
+     *             .organizationId("string")
+     *             .perPage(1)
+     *             .serials("string")
+     *             .sortOrder("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsDevicesBootsHistoryExample", example.applyValue(getDevicesBootsHistoryResult -> getDevicesBootsHistoryResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetDevicesBootsHistoryResult> getDevicesBootsHistoryPlain(GetDevicesBootsHistoryPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getDevicesBootsHistory:getDevicesBootsHistory", TypeShape.of(GetDevicesBootsHistoryResult.class), args, Utilities.withVersion(options));
     }
@@ -5634,6 +6907,55 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetDevicesPowerModulesStatusesByDeviceResult> getDevicesPowerModulesStatusesByDevice(GetDevicesPowerModulesStatusesByDeviceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getDevicesPowerModulesStatusesByDevice:getDevicesPowerModulesStatusesByDevice", TypeShape.of(GetDevicesPowerModulesStatusesByDeviceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetDevicesPowerModulesStatusesByDeviceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getDevicesPowerModulesStatusesByDevice(GetDevicesPowerModulesStatusesByDeviceArgs.builder()
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
+     *             .perPage(1)
+     *             .productTypes("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .tags("string")
+     *             .tagsFilterType("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsDevicesPowerModulesStatusesByDeviceExample", example.applyValue(getDevicesPowerModulesStatusesByDeviceResult -> getDevicesPowerModulesStatusesByDeviceResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetDevicesPowerModulesStatusesByDeviceResult> getDevicesPowerModulesStatusesByDevice(GetDevicesPowerModulesStatusesByDeviceArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getDevicesPowerModulesStatusesByDevice:getDevicesPowerModulesStatusesByDevice", TypeShape.of(GetDevicesPowerModulesStatusesByDeviceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -5833,6 +7155,56 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetDevicesProvisioningStatusesResult> getDevicesProvisioningStatuses(GetDevicesProvisioningStatusesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getDevicesProvisioningStatuses:getDevicesProvisioningStatuses", TypeShape.of(GetDevicesProvisioningStatusesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetDevicesProvisioningStatusesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getDevicesProvisioningStatuses(GetDevicesProvisioningStatusesArgs.builder()
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
+     *             .perPage(1)
+     *             .productTypes("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .status("string")
+     *             .tags("string")
+     *             .tagsFilterType("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsDevicesProvisioningStatusesExample", example.applyValue(getDevicesProvisioningStatusesResult -> getDevicesProvisioningStatusesResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetDevicesProvisioningStatusesResult> getDevicesProvisioningStatuses(GetDevicesProvisioningStatusesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getDevicesProvisioningStatuses:getDevicesProvisioningStatuses", TypeShape.of(GetDevicesProvisioningStatusesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -6086,6 +7458,57 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetDevicesStatusesResult> getDevicesStatuses(GetDevicesStatusesArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getDevicesStatuses:getDevicesStatuses", TypeShape.of(GetDevicesStatusesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetDevicesStatusesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getDevicesStatuses(GetDevicesStatusesArgs.builder()
+     *             .endingBefore("string")
+     *             .models("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
+     *             .perPage(1)
+     *             .productTypes("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .statuses("string")
+     *             .tags("string")
+     *             .tagsFilterType("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsDevicesStatusesExample", example.applyValue(getDevicesStatusesResult -> getDevicesStatusesResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetDevicesStatusesResult> getDevicesStatusesPlain(GetDevicesStatusesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getDevicesStatuses:getDevicesStatuses", TypeShape.of(GetDevicesStatusesResult.class), args, Utilities.withVersion(options));
     }
@@ -6216,6 +7639,49 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetDevicesStatusesOverviewResult> getDevicesStatusesOverview(GetDevicesStatusesOverviewArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getDevicesStatusesOverview:getDevicesStatusesOverview", TypeShape.of(GetDevicesStatusesOverviewResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetDevicesStatusesOverviewArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getDevicesStatusesOverview(GetDevicesStatusesOverviewArgs.builder()
+     *             .networkIds("string")
+     *             .organizationId("string")
+     *             .productTypes("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsDevicesStatusesOverviewExample", example.applyValue(getDevicesStatusesOverviewResult -> getDevicesStatusesOverviewResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetDevicesStatusesOverviewResult> getDevicesStatusesOverview(GetDevicesStatusesOverviewArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getDevicesStatusesOverview:getDevicesStatusesOverview", TypeShape.of(GetDevicesStatusesOverviewResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -6454,6 +7920,55 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetDevicesUplinksAddressesByDeviceResult> getDevicesUplinksAddressesByDevice(GetDevicesUplinksAddressesByDeviceArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getDevicesUplinksAddressesByDevice:getDevicesUplinksAddressesByDevice", TypeShape.of(GetDevicesUplinksAddressesByDeviceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetDevicesUplinksAddressesByDeviceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getDevicesUplinksAddressesByDevice(GetDevicesUplinksAddressesByDeviceArgs.builder()
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
+     *             .perPage(1)
+     *             .productTypes("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .tags("string")
+     *             .tagsFilterType("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsDevicesUplinksAddressesByDeviceExample", example.applyValue(getDevicesUplinksAddressesByDeviceResult -> getDevicesUplinksAddressesByDeviceResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetDevicesUplinksAddressesByDeviceResult> getDevicesUplinksAddressesByDevicePlain(GetDevicesUplinksAddressesByDevicePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getDevicesUplinksAddressesByDevice:getDevicesUplinksAddressesByDevice", TypeShape.of(GetDevicesUplinksAddressesByDeviceResult.class), args, Utilities.withVersion(options));
     }
@@ -6638,6 +8153,52 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetDevicesUplinksLossAndLatencyResult> getDevicesUplinksLossAndLatency(GetDevicesUplinksLossAndLatencyArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getDevicesUplinksLossAndLatency:getDevicesUplinksLossAndLatency", TypeShape.of(GetDevicesUplinksLossAndLatencyResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetDevicesUplinksLossAndLatencyArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getDevicesUplinksLossAndLatency(GetDevicesUplinksLossAndLatencyArgs.builder()
+     *             .ip("string")
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .uplink("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsDevicesUplinksLossAndLatencyExample", example.applyValue(getDevicesUplinksLossAndLatencyResult -> getDevicesUplinksLossAndLatencyResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetDevicesUplinksLossAndLatencyResult> getDevicesUplinksLossAndLatencyPlain(GetDevicesUplinksLossAndLatencyPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getDevicesUplinksLossAndLatency:getDevicesUplinksLossAndLatency", TypeShape.of(GetDevicesUplinksLossAndLatencyResult.class), args, Utilities.withVersion(options));
     }
@@ -6762,6 +8323,47 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetEarlyAccessFeaturesResult> getEarlyAccessFeatures(GetEarlyAccessFeaturesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getEarlyAccessFeatures:getEarlyAccessFeatures", TypeShape.of(GetEarlyAccessFeaturesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetEarlyAccessFeaturesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getEarlyAccessFeatures(GetEarlyAccessFeaturesArgs.builder()
+     *             .organizationId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesExample", example.applyValue(getEarlyAccessFeaturesResult -> getEarlyAccessFeaturesResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetEarlyAccessFeaturesResult> getEarlyAccessFeatures(GetEarlyAccessFeaturesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getEarlyAccessFeatures:getEarlyAccessFeatures", TypeShape.of(GetEarlyAccessFeaturesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -7048,6 +8650,47 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetEarlyAccessFeaturesOptInsResult> getEarlyAccessFeaturesOptIns(GetEarlyAccessFeaturesOptInsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getEarlyAccessFeaturesOptIns:getEarlyAccessFeaturesOptIns", TypeShape.of(GetEarlyAccessFeaturesOptInsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetEarlyAccessFeaturesOptInsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getEarlyAccessFeaturesOptIns(GetEarlyAccessFeaturesOptInsArgs.builder()
+     *             .organizationId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesOptInsExample", example.applyValue(getEarlyAccessFeaturesOptInsResult -> getEarlyAccessFeaturesOptInsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetEarlyAccessFeaturesOptInsResult> getEarlyAccessFeaturesOptInsPlain(GetEarlyAccessFeaturesOptInsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getEarlyAccessFeaturesOptIns:getEarlyAccessFeaturesOptIns", TypeShape.of(GetEarlyAccessFeaturesOptInsResult.class), args, Utilities.withVersion(options));
     }
@@ -7187,6 +8830,52 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetFirmwareUpgradesResult> getFirmwareUpgrades(GetFirmwareUpgradesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getFirmwareUpgrades:getFirmwareUpgrades", TypeShape.of(GetFirmwareUpgradesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetFirmwareUpgradesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getFirmwareUpgrades(GetFirmwareUpgradesArgs.builder()
+     *             .endingBefore("string")
+     *             .organizationId("string")
+     *             .perPage(1)
+     *             .productTypes("string")
+     *             .startingAfter("string")
+     *             .statuses("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsFirmwareUpgradesExample", example.applyValue(getFirmwareUpgradesResult -> getFirmwareUpgradesResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetFirmwareUpgradesResult> getFirmwareUpgrades(GetFirmwareUpgradesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getFirmwareUpgrades:getFirmwareUpgrades", TypeShape.of(GetFirmwareUpgradesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -7428,6 +9117,55 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetFirmwareUpgradesByDeviceResult> getFirmwareUpgradesByDevice(GetFirmwareUpgradesByDeviceArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getFirmwareUpgradesByDevice:getFirmwareUpgradesByDevice", TypeShape.of(GetFirmwareUpgradesByDeviceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetFirmwareUpgradesByDeviceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getFirmwareUpgradesByDevice(GetFirmwareUpgradesByDeviceArgs.builder()
+     *             .endingBefore("string")
+     *             .firmwareUpgradeBatchIds("string")
+     *             .macs("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
+     *             .perPage(1)
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .upgradestatuses("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsFirmwareUpgradesByDeviceExample", example.applyValue(getFirmwareUpgradesByDeviceResult -> getFirmwareUpgradesByDeviceResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetFirmwareUpgradesByDeviceResult> getFirmwareUpgradesByDevicePlain(GetFirmwareUpgradesByDevicePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getFirmwareUpgradesByDevice:getFirmwareUpgradesByDevice", TypeShape.of(GetFirmwareUpgradesByDeviceResult.class), args, Utilities.withVersion(options));
     }
@@ -7592,6 +9330,47 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetInsightApplicationsResult> getInsightApplications(GetInsightApplicationsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getInsightApplications:getInsightApplications", TypeShape.of(GetInsightApplicationsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetInsightApplicationsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getInsightApplications(GetInsightApplicationsArgs.builder()
+     *             .organizationId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsInsightApplicationsExample", example.applyValue(getInsightApplicationsResult -> getInsightApplicationsResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetInsightApplicationsResult> getInsightApplicationsPlain(GetInsightApplicationsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getInsightApplications:getInsightApplications", TypeShape.of(GetInsightApplicationsResult.class), args, Utilities.withVersion(options));
     }
@@ -7634,6 +9413,13 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      */
+    public static Output<GetInsightMonitoredMediaServersResult> getInsightMonitoredMediaServers(GetInsightMonitoredMediaServersArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getInsightMonitoredMediaServers:getInsightMonitoredMediaServers", TypeShape.of(GetInsightMonitoredMediaServersResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetInsightMonitoredMediaServersResult> getInsightMonitoredMediaServersPlain(GetInsightMonitoredMediaServersPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getInsightMonitoredMediaServers:getInsightMonitoredMediaServers", TypeShape.of(GetInsightMonitoredMediaServersResult.class), args, Utilities.withVersion(options));
     }
@@ -7670,6 +9456,13 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetInventoryDevicesResult> getInventoryDevices(GetInventoryDevicesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getInventoryDevices:getInventoryDevices", TypeShape.of(GetInventoryDevicesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetInventoryDevicesResult> getInventoryDevices(GetInventoryDevicesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getInventoryDevices:getInventoryDevices", TypeShape.of(GetInventoryDevicesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -7803,6 +9596,48 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetInventoryOnboardingCloudMonitoringImportsResult> getInventoryOnboardingCloudMonitoringImports(GetInventoryOnboardingCloudMonitoringImportsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getInventoryOnboardingCloudMonitoringImports:getInventoryOnboardingCloudMonitoringImports", TypeShape.of(GetInventoryOnboardingCloudMonitoringImportsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetInventoryOnboardingCloudMonitoringImportsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getInventoryOnboardingCloudMonitoringImports(GetInventoryOnboardingCloudMonitoringImportsArgs.builder()
+     *             .importIds("string")
+     *             .organizationId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsInventoryOnboardingCloudMonitoringImportsExample", example.applyValue(getInventoryOnboardingCloudMonitoringImportsResult -> getInventoryOnboardingCloudMonitoringImportsResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetInventoryOnboardingCloudMonitoringImportsResult> getInventoryOnboardingCloudMonitoringImports(GetInventoryOnboardingCloudMonitoringImportsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getInventoryOnboardingCloudMonitoringImports:getInventoryOnboardingCloudMonitoringImports", TypeShape.of(GetInventoryOnboardingCloudMonitoringImportsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -8028,6 +9863,52 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetInventoryOnboardingCloudMonitoringNetworksResult> getInventoryOnboardingCloudMonitoringNetworks(GetInventoryOnboardingCloudMonitoringNetworksArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getInventoryOnboardingCloudMonitoringNetworks:getInventoryOnboardingCloudMonitoringNetworks", TypeShape.of(GetInventoryOnboardingCloudMonitoringNetworksResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetInventoryOnboardingCloudMonitoringNetworksArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getInventoryOnboardingCloudMonitoringNetworks(GetInventoryOnboardingCloudMonitoringNetworksArgs.builder()
+     *             .deviceType("string")
+     *             .endingBefore("string")
+     *             .organizationId("string")
+     *             .perPage(1)
+     *             .search("string")
+     *             .startingAfter("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsInventoryOnboardingCloudMonitoringNetworksExample", example.applyValue(getInventoryOnboardingCloudMonitoringNetworksResult -> getInventoryOnboardingCloudMonitoringNetworksResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetInventoryOnboardingCloudMonitoringNetworksResult> getInventoryOnboardingCloudMonitoringNetworksPlain(GetInventoryOnboardingCloudMonitoringNetworksPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getInventoryOnboardingCloudMonitoringNetworks:getInventoryOnboardingCloudMonitoringNetworks", TypeShape.of(GetInventoryOnboardingCloudMonitoringNetworksResult.class), args, Utilities.withVersion(options));
     }
@@ -8196,6 +10077,48 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetLicensesResult> getLicenses(GetLicensesArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getLicenses:getLicenses", TypeShape.of(GetLicensesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetLicensesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getLicenses(GetLicensesArgs.builder()
+     *             .licenseId("string")
+     *             .organizationId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsLicensesExample", example.applyValue(getLicensesResult -> getLicensesResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetLicensesResult> getLicensesPlain(GetLicensesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getLicenses:getLicenses", TypeShape.of(GetLicensesResult.class), args, Utilities.withVersion(options));
     }
@@ -8320,6 +10243,47 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetLicensesOverviewResult> getLicensesOverview(GetLicensesOverviewArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getLicensesOverview:getLicensesOverview", TypeShape.of(GetLicensesOverviewResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetLicensesOverviewArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getLicensesOverview(GetLicensesOverviewArgs.builder()
+     *             .organizationId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsLicensesOverviewExample", example.applyValue(getLicensesOverviewResult -> getLicensesOverviewResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetLicensesOverviewResult> getLicensesOverview(GetLicensesOverviewArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getLicensesOverview:getLicensesOverview", TypeShape.of(GetLicensesOverviewResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -8544,6 +10508,52 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetLicensingCotermLicensesResult> getLicensingCotermLicenses(GetLicensingCotermLicensesArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getLicensingCotermLicenses:getLicensingCotermLicenses", TypeShape.of(GetLicensingCotermLicensesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetLicensingCotermLicensesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getLicensingCotermLicenses(GetLicensingCotermLicensesArgs.builder()
+     *             .endingBefore("string")
+     *             .expired(false)
+     *             .invalidated(false)
+     *             .organizationId("string")
+     *             .perPage(1)
+     *             .startingAfter("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsLicensingCotermLicensesExample", example.applyValue(getLicensingCotermLicensesResult -> getLicensingCotermLicensesResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetLicensingCotermLicensesResult> getLicensingCotermLicensesPlain(GetLicensingCotermLicensesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getLicensingCotermLicenses:getLicensingCotermLicenses", TypeShape.of(GetLicensingCotermLicensesResult.class), args, Utilities.withVersion(options));
     }
@@ -8668,6 +10678,47 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetLoginSecurityResult> getLoginSecurity(GetLoginSecurityArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getLoginSecurity:getLoginSecurity", TypeShape.of(GetLoginSecurityResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetLoginSecurityArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getLoginSecurity(GetLoginSecurityArgs.builder()
+     *             .organizationId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsLoginSecurityExample", example.applyValue(getLoginSecurityResult -> getLoginSecurityResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetLoginSecurityResult> getLoginSecurity(GetLoginSecurityArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getLoginSecurity:getLoginSecurity", TypeShape.of(GetLoginSecurityResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -8835,6 +10886,48 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetOpenapiSpecResult> getOpenapiSpec(GetOpenapiSpecArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getOpenapiSpec:getOpenapiSpec", TypeShape.of(GetOpenapiSpecResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetOpenapiSpecArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getOpenapiSpec(GetOpenapiSpecArgs.builder()
+     *             .organizationId("string")
+     *             .version(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsOpenapiSpecExample", example.applyValue(getOpenapiSpecResult -> getOpenapiSpecResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetOpenapiSpecResult> getOpenapiSpec(GetOpenapiSpecArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getOpenapiSpec:getOpenapiSpec", TypeShape.of(GetOpenapiSpecResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -9097,6 +11190,50 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetPolicyObjectsResult> getPolicyObjects(GetPolicyObjectsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getPolicyObjects:getPolicyObjects", TypeShape.of(GetPolicyObjectsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetPolicyObjectsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getPolicyObjects(GetPolicyObjectsArgs.builder()
+     *             .endingBefore("string")
+     *             .organizationId("string")
+     *             .perPage(1)
+     *             .startingAfter("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsPolicyObjectsExample", example.applyValue(getPolicyObjectsResult -> getPolicyObjectsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetPolicyObjectsResult> getPolicyObjects(GetPolicyObjectsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getPolicyObjects:getPolicyObjects", TypeShape.of(GetPolicyObjectsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -9404,6 +11541,50 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetPolicyObjectsGroupsResult> getPolicyObjectsGroups(GetPolicyObjectsGroupsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getPolicyObjectsGroups:getPolicyObjectsGroups", TypeShape.of(GetPolicyObjectsGroupsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetPolicyObjectsGroupsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getPolicyObjectsGroups(GetPolicyObjectsGroupsArgs.builder()
+     *             .endingBefore("string")
+     *             .organizationId("string")
+     *             .perPage(1)
+     *             .startingAfter("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsPolicyObjectsGroupsExample", example.applyValue(getPolicyObjectsGroupsResult -> getPolicyObjectsGroupsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetPolicyObjectsGroupsResult> getPolicyObjectsGroupsPlain(GetPolicyObjectsGroupsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getPolicyObjectsGroups:getPolicyObjectsGroups", TypeShape.of(GetPolicyObjectsGroupsResult.class), args, Utilities.withVersion(options));
     }
@@ -9568,6 +11749,47 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetSamlResult> getSaml(GetSamlArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getSaml:getSaml", TypeShape.of(GetSamlResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetSamlArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getSaml(GetSamlArgs.builder()
+     *             .organizationId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsSamlExample", example.applyValue(getSamlResult -> getSamlResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetSamlResult> getSamlPlain(GetSamlPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getSaml:getSaml", TypeShape.of(GetSamlResult.class), args, Utilities.withVersion(options));
     }
@@ -9610,6 +11832,13 @@ public final class OrganizationsFunctions {
      * ## Example Usage
      * 
      */
+    public static Output<GetSamlIdpsResult> getSamlIdps(GetSamlIdpsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getSamlIdps:getSamlIdps", TypeShape.of(GetSamlIdpsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
     public static CompletableFuture<GetSamlIdpsResult> getSamlIdpsPlain(GetSamlIdpsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getSamlIdps:getSamlIdps", TypeShape.of(GetSamlIdpsResult.class), args, Utilities.withVersion(options));
     }
@@ -9646,6 +11875,13 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetSamlRolesResult> getSamlRoles(GetSamlRolesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getSamlRoles:getSamlRoles", TypeShape.of(GetSamlRolesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetSamlRolesResult> getSamlRoles(GetSamlRolesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getSamlRoles:getSamlRoles", TypeShape.of(GetSamlRolesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -9852,6 +12088,56 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetSensorReadingsHistoryResult> getSensorReadingsHistory(GetSensorReadingsHistoryArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getSensorReadingsHistory:getSensorReadingsHistory", TypeShape.of(GetSensorReadingsHistoryResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetSensorReadingsHistoryArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getSensorReadingsHistory(GetSensorReadingsHistoryArgs.builder()
+     *             .endingBefore("string")
+     *             .metrics("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
+     *             .perPage(1)
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsSensorReadingsHistoryExample", example.applyValue(getSensorReadingsHistoryResult -> getSensorReadingsHistoryResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetSensorReadingsHistoryResult> getSensorReadingsHistoryPlain(GetSensorReadingsHistoryPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getSensorReadingsHistory:getSensorReadingsHistory", TypeShape.of(GetSensorReadingsHistoryResult.class), args, Utilities.withVersion(options));
     }
@@ -9994,6 +12280,53 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetSensorReadingsLatestResult> getSensorReadingsLatest(GetSensorReadingsLatestArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getSensorReadingsLatest:getSensorReadingsLatest", TypeShape.of(GetSensorReadingsLatestResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetSensorReadingsLatestArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getSensorReadingsLatest(GetSensorReadingsLatestArgs.builder()
+     *             .endingBefore("string")
+     *             .metrics("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
+     *             .perPage(1)
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsSensorReadingsLatestExample", example.applyValue(getSensorReadingsLatestResult -> getSensorReadingsLatestResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetSensorReadingsLatestResult> getSensorReadingsLatest(GetSensorReadingsLatestArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getSensorReadingsLatest:getSensorReadingsLatest", TypeShape.of(GetSensorReadingsLatestResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -10304,6 +12637,50 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetSmAdminsRolesResult> getSmAdminsRoles(GetSmAdminsRolesArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getSmAdminsRoles:getSmAdminsRoles", TypeShape.of(GetSmAdminsRolesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetSmAdminsRolesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getSmAdminsRoles(GetSmAdminsRolesArgs.builder()
+     *             .endingBefore("string")
+     *             .organizationId("string")
+     *             .perPage(1)
+     *             .startingAfter("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsSmAdminsRolesExample", example.applyValue(getSmAdminsRolesResult -> getSmAdminsRolesResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetSmAdminsRolesResult> getSmAdminsRolesPlain(GetSmAdminsRolesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getSmAdminsRoles:getSmAdminsRoles", TypeShape.of(GetSmAdminsRolesResult.class), args, Utilities.withVersion(options));
     }
@@ -10428,6 +12805,47 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetSmApnsCertResult> getSmApnsCert(GetSmApnsCertArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getSmApnsCert:getSmApnsCert", TypeShape.of(GetSmApnsCertResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetSmApnsCertArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getSmApnsCert(GetSmApnsCertArgs.builder()
+     *             .organizationId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsSmApnsCertExample", example.applyValue(getSmApnsCertResult -> getSmApnsCertResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetSmApnsCertResult> getSmApnsCert(GetSmApnsCertArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getSmApnsCert:getSmApnsCert", TypeShape.of(GetSmApnsCertResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -10648,6 +13066,51 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetSmSentryPoliciesAssignmentsByNetworkResult> getSmSentryPoliciesAssignmentsByNetwork(GetSmSentryPoliciesAssignmentsByNetworkArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getSmSentryPoliciesAssignmentsByNetwork:getSmSentryPoliciesAssignmentsByNetwork", TypeShape.of(GetSmSentryPoliciesAssignmentsByNetworkResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetSmSentryPoliciesAssignmentsByNetworkArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getSmSentryPoliciesAssignmentsByNetwork(GetSmSentryPoliciesAssignmentsByNetworkArgs.builder()
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
+     *             .perPage(1)
+     *             .startingAfter("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsSmSentryPoliciesAssignmentsByNetworkExample", example.applyValue(getSmSentryPoliciesAssignmentsByNetworkResult -> getSmSentryPoliciesAssignmentsByNetworkResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetSmSentryPoliciesAssignmentsByNetworkResult> getSmSentryPoliciesAssignmentsByNetworkPlain(GetSmSentryPoliciesAssignmentsByNetworkPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getSmSentryPoliciesAssignmentsByNetwork:getSmSentryPoliciesAssignmentsByNetwork", TypeShape.of(GetSmSentryPoliciesAssignmentsByNetworkResult.class), args, Utilities.withVersion(options));
     }
@@ -10684,6 +13147,13 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetSmVppAccountsResult> getSmVppAccounts(GetSmVppAccountsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getSmVppAccounts:getSmVppAccounts", TypeShape.of(GetSmVppAccountsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetSmVppAccountsResult> getSmVppAccounts(GetSmVppAccountsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getSmVppAccounts:getSmVppAccounts", TypeShape.of(GetSmVppAccountsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -10814,6 +13284,47 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetSnmpResult> getSnmp(GetSnmpArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getSnmp:getSnmp", TypeShape.of(GetSnmpResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetSnmpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getSnmp(GetSnmpArgs.builder()
+     *             .organizationId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsSnmpExample", example.applyValue(getSnmpResult -> getSnmpResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetSnmpResult> getSnmp(GetSnmpArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getSnmp:getSnmp", TypeShape.of(GetSnmpResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -10987,6 +13498,50 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetSummaryTopAppliancesByUtilizationResult> getSummaryTopAppliancesByUtilization(GetSummaryTopAppliancesByUtilizationArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getSummaryTopAppliancesByUtilization:getSummaryTopAppliancesByUtilization", TypeShape.of(GetSummaryTopAppliancesByUtilizationResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetSummaryTopAppliancesByUtilizationArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getSummaryTopAppliancesByUtilization(GetSummaryTopAppliancesByUtilizationArgs.builder()
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsSummaryTopAppliancesByUtilizationExample", example.applyValue(getSummaryTopAppliancesByUtilizationResult -> getSummaryTopAppliancesByUtilizationResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetSummaryTopAppliancesByUtilizationResult> getSummaryTopAppliancesByUtilization(GetSummaryTopAppliancesByUtilizationArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getSummaryTopAppliancesByUtilization:getSummaryTopAppliancesByUtilization", TypeShape.of(GetSummaryTopAppliancesByUtilizationResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -11206,6 +13761,50 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetSummaryTopClientsByUsageResult> getSummaryTopClientsByUsage(GetSummaryTopClientsByUsageArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getSummaryTopClientsByUsage:getSummaryTopClientsByUsage", TypeShape.of(GetSummaryTopClientsByUsageResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetSummaryTopClientsByUsageArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getSummaryTopClientsByUsage(GetSummaryTopClientsByUsageArgs.builder()
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsSummaryTopClientsByUsageExample", example.applyValue(getSummaryTopClientsByUsageResult -> getSummaryTopClientsByUsageResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetSummaryTopClientsByUsageResult> getSummaryTopClientsByUsagePlain(GetSummaryTopClientsByUsagePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getSummaryTopClientsByUsage:getSummaryTopClientsByUsage", TypeShape.of(GetSummaryTopClientsByUsageResult.class), args, Utilities.withVersion(options));
     }
@@ -11339,6 +13938,50 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetSummaryTopClientsManufacturersByUsageResult> getSummaryTopClientsManufacturersByUsage(GetSummaryTopClientsManufacturersByUsageArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getSummaryTopClientsManufacturersByUsage:getSummaryTopClientsManufacturersByUsage", TypeShape.of(GetSummaryTopClientsManufacturersByUsageResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetSummaryTopClientsManufacturersByUsageArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getSummaryTopClientsManufacturersByUsage(GetSummaryTopClientsManufacturersByUsageArgs.builder()
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsSummaryTopClientsManufacturersByUsageExample", example.applyValue(getSummaryTopClientsManufacturersByUsageResult -> getSummaryTopClientsManufacturersByUsageResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetSummaryTopClientsManufacturersByUsageResult> getSummaryTopClientsManufacturersByUsage(GetSummaryTopClientsManufacturersByUsageArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getSummaryTopClientsManufacturersByUsage:getSummaryTopClientsManufacturersByUsage", TypeShape.of(GetSummaryTopClientsManufacturersByUsageResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -11558,6 +14201,50 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetSummaryTopDevicesByUsageResult> getSummaryTopDevicesByUsage(GetSummaryTopDevicesByUsageArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getSummaryTopDevicesByUsage:getSummaryTopDevicesByUsage", TypeShape.of(GetSummaryTopDevicesByUsageResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetSummaryTopDevicesByUsageArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getSummaryTopDevicesByUsage(GetSummaryTopDevicesByUsageArgs.builder()
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsSummaryTopDevicesByUsageExample", example.applyValue(getSummaryTopDevicesByUsageResult -> getSummaryTopDevicesByUsageResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetSummaryTopDevicesByUsageResult> getSummaryTopDevicesByUsagePlain(GetSummaryTopDevicesByUsagePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getSummaryTopDevicesByUsage:getSummaryTopDevicesByUsage", TypeShape.of(GetSummaryTopDevicesByUsageResult.class), args, Utilities.withVersion(options));
     }
@@ -11691,6 +14378,50 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetSummaryTopDevicesModelsByUsageResult> getSummaryTopDevicesModelsByUsage(GetSummaryTopDevicesModelsByUsageArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getSummaryTopDevicesModelsByUsage:getSummaryTopDevicesModelsByUsage", TypeShape.of(GetSummaryTopDevicesModelsByUsageResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetSummaryTopDevicesModelsByUsageArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getSummaryTopDevicesModelsByUsage(GetSummaryTopDevicesModelsByUsageArgs.builder()
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsSummaryTopDevicesModelsByUsageExample", example.applyValue(getSummaryTopDevicesModelsByUsageResult -> getSummaryTopDevicesModelsByUsageResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetSummaryTopDevicesModelsByUsageResult> getSummaryTopDevicesModelsByUsage(GetSummaryTopDevicesModelsByUsageArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getSummaryTopDevicesModelsByUsage:getSummaryTopDevicesModelsByUsage", TypeShape.of(GetSummaryTopDevicesModelsByUsageResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -11910,6 +14641,50 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetSummaryTopNetworksByStatusResult> getSummaryTopNetworksByStatus(GetSummaryTopNetworksByStatusArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getSummaryTopNetworksByStatus:getSummaryTopNetworksByStatus", TypeShape.of(GetSummaryTopNetworksByStatusResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetSummaryTopNetworksByStatusArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getSummaryTopNetworksByStatus(GetSummaryTopNetworksByStatusArgs.builder()
+     *             .endingBefore("string")
+     *             .organizationId("string")
+     *             .perPage(1)
+     *             .startingAfter("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsSummaryTopNetworksByStatusExample", example.applyValue(getSummaryTopNetworksByStatusResult -> getSummaryTopNetworksByStatusResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetSummaryTopNetworksByStatusResult> getSummaryTopNetworksByStatusPlain(GetSummaryTopNetworksByStatusPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getSummaryTopNetworksByStatus:getSummaryTopNetworksByStatus", TypeShape.of(GetSummaryTopNetworksByStatusResult.class), args, Utilities.withVersion(options));
     }
@@ -12086,6 +14861,50 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetSummaryTopSsidsByUsageResult> getSummaryTopSsidsByUsage(GetSummaryTopSsidsByUsageArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getSummaryTopSsidsByUsage:getSummaryTopSsidsByUsage", TypeShape.of(GetSummaryTopSsidsByUsageResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetSummaryTopSsidsByUsageArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getSummaryTopSsidsByUsage(GetSummaryTopSsidsByUsageArgs.builder()
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsSummaryTopSsidsByUsageExample", example.applyValue(getSummaryTopSsidsByUsageResult -> getSummaryTopSsidsByUsageResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetSummaryTopSsidsByUsageResult> getSummaryTopSsidsByUsagePlain(GetSummaryTopSsidsByUsagePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getSummaryTopSsidsByUsage:getSummaryTopSsidsByUsage", TypeShape.of(GetSummaryTopSsidsByUsageResult.class), args, Utilities.withVersion(options));
     }
@@ -12219,6 +15038,50 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetSummaryTopSwitchesByEnergyUsageResult> getSummaryTopSwitchesByEnergyUsage(GetSummaryTopSwitchesByEnergyUsageArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getSummaryTopSwitchesByEnergyUsage:getSummaryTopSwitchesByEnergyUsage", TypeShape.of(GetSummaryTopSwitchesByEnergyUsageResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetSummaryTopSwitchesByEnergyUsageArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getSummaryTopSwitchesByEnergyUsage(GetSummaryTopSwitchesByEnergyUsageArgs.builder()
+     *             .organizationId("string")
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsSummaryTopSwitchesByEnergyUsageExample", example.applyValue(getSummaryTopSwitchesByEnergyUsageResult -> getSummaryTopSwitchesByEnergyUsageResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetSummaryTopSwitchesByEnergyUsageResult> getSummaryTopSwitchesByEnergyUsage(GetSummaryTopSwitchesByEnergyUsageArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getSummaryTopSwitchesByEnergyUsage:getSummaryTopSwitchesByEnergyUsage", TypeShape.of(GetSummaryTopSwitchesByEnergyUsageResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -12470,6 +15333,58 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetSwitchPortsBySwitchResult> getSwitchPortsBySwitch(GetSwitchPortsBySwitchArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getSwitchPortsBySwitch:getSwitchPortsBySwitch", TypeShape.of(GetSwitchPortsBySwitchResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetSwitchPortsBySwitchArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getSwitchPortsBySwitch(GetSwitchPortsBySwitchArgs.builder()
+     *             .configurationUpdatedAfter("string")
+     *             .endingBefore("string")
+     *             .mac("string")
+     *             .macs("string")
+     *             .name("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
+     *             .perPage(1)
+     *             .portProfileIds("string")
+     *             .serial("string")
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsSwitchPortsBySwitchExample", example.applyValue(getSwitchPortsBySwitchResult -> getSwitchPortsBySwitchResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetSwitchPortsBySwitchResult> getSwitchPortsBySwitchPlain(GetSwitchPortsBySwitchPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getSwitchPortsBySwitch:getSwitchPortsBySwitch", TypeShape.of(GetSwitchPortsBySwitchResult.class), args, Utilities.withVersion(options));
     }
@@ -12658,6 +15573,53 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetUplinksStatusesResult> getUplinksStatuses(GetUplinksStatusesArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getUplinksStatuses:getUplinksStatuses", TypeShape.of(GetUplinksStatusesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetUplinksStatusesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getUplinksStatuses(GetUplinksStatusesArgs.builder()
+     *             .endingBefore("string")
+     *             .iccids("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
+     *             .perPage(1)
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsUplinksStatusesExample", example.applyValue(getUplinksStatusesResult -> getUplinksStatusesResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetUplinksStatusesResult> getUplinksStatusesPlain(GetUplinksStatusesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getUplinksStatuses:getUplinksStatuses", TypeShape.of(GetUplinksStatusesResult.class), args, Utilities.withVersion(options));
     }
@@ -12785,6 +15747,48 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetWebhooksCallbacksStatusesResult> getWebhooksCallbacksStatuses(GetWebhooksCallbacksStatusesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getWebhooksCallbacksStatuses:getWebhooksCallbacksStatuses", TypeShape.of(GetWebhooksCallbacksStatusesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetWebhooksCallbacksStatusesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getWebhooksCallbacksStatuses(GetWebhooksCallbacksStatusesArgs.builder()
+     *             .callbackId("string")
+     *             .organizationId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsWebhooksCallbacksStatusesExample", example.applyValue(getWebhooksCallbacksStatusesResult -> getWebhooksCallbacksStatusesResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetWebhooksCallbacksStatusesResult> getWebhooksCallbacksStatuses(GetWebhooksCallbacksStatusesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getWebhooksCallbacksStatuses:getWebhooksCallbacksStatuses", TypeShape.of(GetWebhooksCallbacksStatusesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -13018,6 +16022,54 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetWebhooksLogsResult> getWebhooksLogs(GetWebhooksLogsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getWebhooksLogs:getWebhooksLogs", TypeShape.of(GetWebhooksLogsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetWebhooksLogsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getWebhooksLogs(GetWebhooksLogsArgs.builder()
+     *             .endingBefore("string")
+     *             .organizationId("string")
+     *             .perPage(1)
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .url("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsWebhooksLogsExample", example.applyValue(getWebhooksLogsResult -> getWebhooksLogsResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetWebhooksLogsResult> getWebhooksLogsPlain(GetWebhooksLogsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getWebhooksLogs:getWebhooksLogs", TypeShape.of(GetWebhooksLogsResult.class), args, Utilities.withVersion(options));
     }
@@ -13169,6 +16221,56 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetWirelessDevicesChannelUtilizationByDeviceResult> getWirelessDevicesChannelUtilizationByDevice(GetWirelessDevicesChannelUtilizationByDeviceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getWirelessDevicesChannelUtilizationByDevice:getWirelessDevicesChannelUtilizationByDevice", TypeShape.of(GetWirelessDevicesChannelUtilizationByDeviceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesChannelUtilizationByDeviceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getWirelessDevicesChannelUtilizationByDevice(GetWirelessDevicesChannelUtilizationByDeviceArgs.builder()
+     *             .endingBefore("string")
+     *             .interval(1)
+     *             .networkIds("string")
+     *             .organizationId("string")
+     *             .perPage(1)
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByDeviceExample", example.applyValue(getWirelessDevicesChannelUtilizationByDeviceResult -> getWirelessDevicesChannelUtilizationByDeviceResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetWirelessDevicesChannelUtilizationByDeviceResult> getWirelessDevicesChannelUtilizationByDevice(GetWirelessDevicesChannelUtilizationByDeviceArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getWirelessDevicesChannelUtilizationByDevice:getWirelessDevicesChannelUtilizationByDevice", TypeShape.of(GetWirelessDevicesChannelUtilizationByDeviceResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -13418,6 +16520,56 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetWirelessDevicesChannelUtilizationByNetworkResult> getWirelessDevicesChannelUtilizationByNetwork(GetWirelessDevicesChannelUtilizationByNetworkArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getWirelessDevicesChannelUtilizationByNetwork:getWirelessDevicesChannelUtilizationByNetwork", TypeShape.of(GetWirelessDevicesChannelUtilizationByNetworkResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesChannelUtilizationByNetworkArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getWirelessDevicesChannelUtilizationByNetwork(GetWirelessDevicesChannelUtilizationByNetworkArgs.builder()
+     *             .endingBefore("string")
+     *             .interval(1)
+     *             .networkIds("string")
+     *             .organizationId("string")
+     *             .perPage(1)
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByNetworkExample", example.applyValue(getWirelessDevicesChannelUtilizationByNetworkResult -> getWirelessDevicesChannelUtilizationByNetworkResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetWirelessDevicesChannelUtilizationByNetworkResult> getWirelessDevicesChannelUtilizationByNetworkPlain(GetWirelessDevicesChannelUtilizationByNetworkPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getWirelessDevicesChannelUtilizationByNetwork:getWirelessDevicesChannelUtilizationByNetwork", TypeShape.of(GetWirelessDevicesChannelUtilizationByNetworkResult.class), args, Utilities.withVersion(options));
     }
@@ -13569,6 +16721,56 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult> getWirelessDevicesChannelUtilizationHistoryByDeviceByInterval(GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getWirelessDevicesChannelUtilizationHistoryByDeviceByInterval:getWirelessDevicesChannelUtilizationHistoryByDeviceByInterval", TypeShape.of(GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getWirelessDevicesChannelUtilizationHistoryByDeviceByInterval(GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalArgs.builder()
+     *             .endingBefore("string")
+     *             .interval(1)
+     *             .networkIds("string")
+     *             .organizationId("string")
+     *             .perPage(1)
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalExample", example.applyValue(getWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult -> getWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult> getWirelessDevicesChannelUtilizationHistoryByDeviceByInterval(GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getWirelessDevicesChannelUtilizationHistoryByDeviceByInterval:getWirelessDevicesChannelUtilizationHistoryByDeviceByInterval", TypeShape.of(GetWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -13818,6 +17020,56 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalResult> getWirelessDevicesChannelUtilizationHistoryByNetworkByInterval(GetWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getWirelessDevicesChannelUtilizationHistoryByNetworkByInterval:getWirelessDevicesChannelUtilizationHistoryByNetworkByInterval", TypeShape.of(GetWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getWirelessDevicesChannelUtilizationHistoryByNetworkByInterval(GetWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalArgs.builder()
+     *             .endingBefore("string")
+     *             .interval(1)
+     *             .networkIds("string")
+     *             .organizationId("string")
+     *             .perPage(1)
+     *             .serials("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalExample", example.applyValue(getWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalResult -> getWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalResult> getWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalPlain(GetWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getWirelessDevicesChannelUtilizationHistoryByNetworkByInterval:getWirelessDevicesChannelUtilizationHistoryByNetworkByInterval", TypeShape.of(GetWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalResult.class), args, Utilities.withVersion(options));
     }
@@ -13954,6 +17206,51 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetWirelessDevicesEthernetStatusesResult> getWirelessDevicesEthernetStatuses(GetWirelessDevicesEthernetStatusesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getWirelessDevicesEthernetStatuses:getWirelessDevicesEthernetStatuses", TypeShape.of(GetWirelessDevicesEthernetStatusesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesEthernetStatusesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getWirelessDevicesEthernetStatuses(GetWirelessDevicesEthernetStatusesArgs.builder()
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
+     *             .perPage(1)
+     *             .startingAfter("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsWirelessDevicesEthernetStatusesExample", example.applyValue(getWirelessDevicesEthernetStatusesResult -> getWirelessDevicesEthernetStatusesResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetWirelessDevicesEthernetStatusesResult> getWirelessDevicesEthernetStatuses(GetWirelessDevicesEthernetStatusesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getWirelessDevicesEthernetStatuses:getWirelessDevicesEthernetStatuses", TypeShape.of(GetWirelessDevicesEthernetStatusesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -14152,6 +17449,57 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetWirelessDevicesPacketLossByClientResult> getWirelessDevicesPacketLossByClient(GetWirelessDevicesPacketLossByClientArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getWirelessDevicesPacketLossByClient:getWirelessDevicesPacketLossByClient", TypeShape.of(GetWirelessDevicesPacketLossByClientResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesPacketLossByClientArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getWirelessDevicesPacketLossByClient(GetWirelessDevicesPacketLossByClientArgs.builder()
+     *             .bands("string")
+     *             .endingBefore("string")
+     *             .macs("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
+     *             .perPage(1)
+     *             .ssids("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByClientExample", example.applyValue(getWirelessDevicesPacketLossByClientResult -> getWirelessDevicesPacketLossByClientResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetWirelessDevicesPacketLossByClientResult> getWirelessDevicesPacketLossByClient(GetWirelessDevicesPacketLossByClientArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getWirelessDevicesPacketLossByClient:getWirelessDevicesPacketLossByClient", TypeShape.of(GetWirelessDevicesPacketLossByClientResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -14406,6 +17754,57 @@ public final class OrganizationsFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetWirelessDevicesPacketLossByDeviceResult> getWirelessDevicesPacketLossByDevice(GetWirelessDevicesPacketLossByDeviceArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getWirelessDevicesPacketLossByDevice:getWirelessDevicesPacketLossByDevice", TypeShape.of(GetWirelessDevicesPacketLossByDeviceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesPacketLossByDeviceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getWirelessDevicesPacketLossByDevice(GetWirelessDevicesPacketLossByDeviceArgs.builder()
+     *             .bands("string")
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
+     *             .perPage(1)
+     *             .serials("string")
+     *             .ssids("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByDeviceExample", example.applyValue(getWirelessDevicesPacketLossByDeviceResult -> getWirelessDevicesPacketLossByDeviceResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetWirelessDevicesPacketLossByDeviceResult> getWirelessDevicesPacketLossByDevicePlain(GetWirelessDevicesPacketLossByDevicePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:organizations/getWirelessDevicesPacketLossByDevice:getWirelessDevicesPacketLossByDevice", TypeShape.of(GetWirelessDevicesPacketLossByDeviceResult.class), args, Utilities.withVersion(options));
     }
@@ -14560,6 +17959,57 @@ public final class OrganizationsFunctions {
      * 
      */
     public static Output<GetWirelessDevicesPacketLossByNetworkResult> getWirelessDevicesPacketLossByNetwork(GetWirelessDevicesPacketLossByNetworkArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:organizations/getWirelessDevicesPacketLossByNetwork:getWirelessDevicesPacketLossByNetwork", TypeShape.of(GetWirelessDevicesPacketLossByNetworkResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.organizations.OrganizationsFunctions;
+     * import com.pulumi.meraki.organizations.inputs.GetWirelessDevicesPacketLossByNetworkArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = OrganizationsFunctions.getWirelessDevicesPacketLossByNetwork(GetWirelessDevicesPacketLossByNetworkArgs.builder()
+     *             .bands("string")
+     *             .endingBefore("string")
+     *             .networkIds("string")
+     *             .organizationId("string")
+     *             .perPage(1)
+     *             .serials("string")
+     *             .ssids("string")
+     *             .startingAfter("string")
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByNetworkExample", example.applyValue(getWirelessDevicesPacketLossByNetworkResult -> getWirelessDevicesPacketLossByNetworkResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetWirelessDevicesPacketLossByNetworkResult> getWirelessDevicesPacketLossByNetwork(GetWirelessDevicesPacketLossByNetworkArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:organizations/getWirelessDevicesPacketLossByNetwork:getWirelessDevicesPacketLossByNetwork", TypeShape.of(GetWirelessDevicesPacketLossByNetworkResult.class), args, Utilities.withVersion(options));
     }
     /**

@@ -64,6 +64,33 @@ namespace Pulumi.Meraki.Devices
         /// </summary>
         public static Output<GetLiveToolsThroughputTestResult> Invoke(GetLiveToolsThroughputTestInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetLiveToolsThroughputTestResult>("meraki:devices/getLiveToolsThroughputTest:getLiveToolsThroughputTest", args ?? new GetLiveToolsThroughputTestInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Devices.GetLiveToolsThroughputTest.Invoke(new()
+        ///     {
+        ///         Serial = "string",
+        ///         ThroughputTestId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiDevicesLiveToolsThroughputTestExample"] = example.Apply(getLiveToolsThroughputTestResult =&gt; getLiveToolsThroughputTestResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetLiveToolsThroughputTestResult> Invoke(GetLiveToolsThroughputTestInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetLiveToolsThroughputTestResult>("meraki:devices/getLiveToolsThroughputTest:getLiveToolsThroughputTest", args ?? new GetLiveToolsThroughputTestInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -22,6 +22,12 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetSwitchRoutingMulticastRendezvousPointsResult> Invoke(GetSwitchRoutingMulticastRendezvousPointsInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSwitchRoutingMulticastRendezvousPointsResult>("meraki:networks/getSwitchRoutingMulticastRendezvousPoints:getSwitchRoutingMulticastRendezvousPoints", args ?? new GetSwitchRoutingMulticastRendezvousPointsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetSwitchRoutingMulticastRendezvousPointsResult> Invoke(GetSwitchRoutingMulticastRendezvousPointsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSwitchRoutingMulticastRendezvousPointsResult>("meraki:networks/getSwitchRoutingMulticastRendezvousPoints:getSwitchRoutingMulticastRendezvousPoints", args ?? new GetSwitchRoutingMulticastRendezvousPointsInvokeArgs(), options.WithDefaults());
     }
 
 

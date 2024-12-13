@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Devices
         /// </summary>
         public static Output<GetAppliancePerformanceResult> Invoke(GetAppliancePerformanceInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetAppliancePerformanceResult>("meraki:devices/getAppliancePerformance:getAppliancePerformance", args ?? new GetAppliancePerformanceInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Devices.GetAppliancePerformance.Invoke(new()
+        ///     {
+        ///         Serial = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiDevicesAppliancePerformanceExample"] = example.Apply(getAppliancePerformanceResult =&gt; getAppliancePerformanceResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetAppliancePerformanceResult> Invoke(GetAppliancePerformanceInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetAppliancePerformanceResult>("meraki:devices/getAppliancePerformance:getAppliancePerformance", args ?? new GetAppliancePerformanceInvokeArgs(), options.WithDefaults());
     }
 
 

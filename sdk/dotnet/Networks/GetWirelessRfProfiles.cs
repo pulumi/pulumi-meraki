@@ -64,6 +64,33 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetWirelessRfProfilesResult> Invoke(GetWirelessRfProfilesInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetWirelessRfProfilesResult>("meraki:networks/getWirelessRfProfiles:getWirelessRfProfiles", args ?? new GetWirelessRfProfilesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetWirelessRfProfiles.Invoke(new()
+        ///     {
+        ///         IncludeTemplateProfiles = false,
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksWirelessRfProfilesExample"] = example.Apply(getWirelessRfProfilesResult =&gt; getWirelessRfProfilesResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetWirelessRfProfilesResult> Invoke(GetWirelessRfProfilesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetWirelessRfProfilesResult>("meraki:networks/getWirelessRfProfiles:getWirelessRfProfiles", args ?? new GetWirelessRfProfilesInvokeArgs(), options.WithDefaults());
     }
 
 

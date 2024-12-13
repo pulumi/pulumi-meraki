@@ -89,21 +89,11 @@ type GetPoliciesByClientResult struct {
 }
 
 func GetPoliciesByClientOutput(ctx *pulumi.Context, args GetPoliciesByClientOutputArgs, opts ...pulumi.InvokeOption) GetPoliciesByClientResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetPoliciesByClientResultOutput, error) {
 			args := v.(GetPoliciesByClientArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetPoliciesByClientResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getPoliciesByClient:getPoliciesByClient", args, &rv, "", opts...)
-			if err != nil {
-				return GetPoliciesByClientResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetPoliciesByClientResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetPoliciesByClientResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getPoliciesByClient:getPoliciesByClient", args, GetPoliciesByClientResultOutput{}, options).(GetPoliciesByClientResultOutput), nil
 		}).(GetPoliciesByClientResultOutput)
 }
 

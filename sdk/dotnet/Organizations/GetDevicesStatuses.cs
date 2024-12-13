@@ -118,6 +118,60 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetDevicesStatusesResult> Invoke(GetDevicesStatusesInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetDevicesStatusesResult>("meraki:organizations/getDevicesStatuses:getDevicesStatuses", args ?? new GetDevicesStatusesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetDevicesStatuses.Invoke(new()
+        ///     {
+        ///         EndingBefore = "string",
+        ///         Models = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         NetworkIds = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         OrganizationId = "string",
+        ///         PerPage = 1,
+        ///         ProductTypes = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         Serials = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         StartingAfter = "string",
+        ///         Statuses = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         Tags = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         TagsFilterType = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsDevicesStatusesExample"] = example.Apply(getDevicesStatusesResult =&gt; getDevicesStatusesResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetDevicesStatusesResult> Invoke(GetDevicesStatusesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetDevicesStatusesResult>("meraki:organizations/getDevicesStatuses:getDevicesStatuses", args ?? new GetDevicesStatusesInvokeArgs(), options.WithDefaults());
     }
 
 

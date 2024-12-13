@@ -22,6 +22,12 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetSwitchAccessPoliciesResult> Invoke(GetSwitchAccessPoliciesInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSwitchAccessPoliciesResult>("meraki:networks/getSwitchAccessPolicies:getSwitchAccessPolicies", args ?? new GetSwitchAccessPoliciesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetSwitchAccessPoliciesResult> Invoke(GetSwitchAccessPoliciesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSwitchAccessPoliciesResult>("meraki:networks/getSwitchAccessPolicies:getSwitchAccessPolicies", args ?? new GetSwitchAccessPoliciesInvokeArgs(), options.WithDefaults());
     }
 
 

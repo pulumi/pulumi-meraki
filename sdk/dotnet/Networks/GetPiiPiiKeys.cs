@@ -74,6 +74,38 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetPiiPiiKeysResult> Invoke(GetPiiPiiKeysInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetPiiPiiKeysResult>("meraki:networks/getPiiPiiKeys:getPiiPiiKeys", args ?? new GetPiiPiiKeysInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetPiiPiiKeys.Invoke(new()
+        ///     {
+        ///         BluetoothMac = "string",
+        ///         Email = "string",
+        ///         Imei = "string",
+        ///         Mac = "string",
+        ///         NetworkId = "string",
+        ///         Serial = "string",
+        ///         Username = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksPiiPiiKeysExample"] = example.Apply(getPiiPiiKeysResult =&gt; getPiiPiiKeysResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetPiiPiiKeysResult> Invoke(GetPiiPiiKeysInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetPiiPiiKeysResult>("meraki:networks/getPiiPiiKeys:getPiiPiiKeys", args ?? new GetPiiPiiKeysInvokeArgs(), options.WithDefaults());
     }
 
 

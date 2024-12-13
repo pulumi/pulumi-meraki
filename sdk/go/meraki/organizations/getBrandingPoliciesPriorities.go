@@ -63,21 +63,11 @@ type LookupBrandingPoliciesPrioritiesResult struct {
 }
 
 func LookupBrandingPoliciesPrioritiesOutput(ctx *pulumi.Context, args LookupBrandingPoliciesPrioritiesOutputArgs, opts ...pulumi.InvokeOption) LookupBrandingPoliciesPrioritiesResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupBrandingPoliciesPrioritiesResultOutput, error) {
 			args := v.(LookupBrandingPoliciesPrioritiesArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupBrandingPoliciesPrioritiesResult
-			secret, err := ctx.InvokePackageRaw("meraki:organizations/getBrandingPoliciesPriorities:getBrandingPoliciesPriorities", args, &rv, "", opts...)
-			if err != nil {
-				return LookupBrandingPoliciesPrioritiesResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupBrandingPoliciesPrioritiesResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupBrandingPoliciesPrioritiesResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:organizations/getBrandingPoliciesPriorities:getBrandingPoliciesPriorities", args, LookupBrandingPoliciesPrioritiesResultOutput{}, options).(LookupBrandingPoliciesPrioritiesResultOutput), nil
 		}).(LookupBrandingPoliciesPrioritiesResultOutput)
 }
 

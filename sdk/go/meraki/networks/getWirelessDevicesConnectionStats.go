@@ -99,21 +99,11 @@ type GetWirelessDevicesConnectionStatsResult struct {
 }
 
 func GetWirelessDevicesConnectionStatsOutput(ctx *pulumi.Context, args GetWirelessDevicesConnectionStatsOutputArgs, opts ...pulumi.InvokeOption) GetWirelessDevicesConnectionStatsResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetWirelessDevicesConnectionStatsResultOutput, error) {
 			args := v.(GetWirelessDevicesConnectionStatsArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetWirelessDevicesConnectionStatsResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getWirelessDevicesConnectionStats:getWirelessDevicesConnectionStats", args, &rv, "", opts...)
-			if err != nil {
-				return GetWirelessDevicesConnectionStatsResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetWirelessDevicesConnectionStatsResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetWirelessDevicesConnectionStatsResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getWirelessDevicesConnectionStats:getWirelessDevicesConnectionStats", args, GetWirelessDevicesConnectionStatsResultOutput{}, options).(GetWirelessDevicesConnectionStatsResultOutput), nil
 		}).(GetWirelessDevicesConnectionStatsResultOutput)
 }
 

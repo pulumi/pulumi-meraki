@@ -102,6 +102,52 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetDevicesPowerModulesStatusesByDeviceResult> Invoke(GetDevicesPowerModulesStatusesByDeviceInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetDevicesPowerModulesStatusesByDeviceResult>("meraki:organizations/getDevicesPowerModulesStatusesByDevice:getDevicesPowerModulesStatusesByDevice", args ?? new GetDevicesPowerModulesStatusesByDeviceInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetDevicesPowerModulesStatusesByDevice.Invoke(new()
+        ///     {
+        ///         EndingBefore = "string",
+        ///         NetworkIds = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         OrganizationId = "string",
+        ///         PerPage = 1,
+        ///         ProductTypes = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         Serials = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         StartingAfter = "string",
+        ///         Tags = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         TagsFilterType = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsDevicesPowerModulesStatusesByDeviceExample"] = example.Apply(getDevicesPowerModulesStatusesByDeviceResult =&gt; getDevicesPowerModulesStatusesByDeviceResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetDevicesPowerModulesStatusesByDeviceResult> Invoke(GetDevicesPowerModulesStatusesByDeviceInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetDevicesPowerModulesStatusesByDeviceResult>("meraki:organizations/getDevicesPowerModulesStatusesByDevice:getDevicesPowerModulesStatusesByDevice", args ?? new GetDevicesPowerModulesStatusesByDeviceInvokeArgs(), options.WithDefaults());
     }
 
 

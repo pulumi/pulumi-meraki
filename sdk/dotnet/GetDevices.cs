@@ -22,6 +22,12 @@ namespace Pulumi.Meraki
         /// </summary>
         public static Output<GetDevicesResult> Invoke(GetDevicesInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetDevicesResult>("meraki:index/getDevices:getDevices", args ?? new GetDevicesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetDevicesResult> Invoke(GetDevicesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetDevicesResult>("meraki:index/getDevices:getDevices", args ?? new GetDevicesInvokeArgs(), options.WithDefaults());
     }
 
 

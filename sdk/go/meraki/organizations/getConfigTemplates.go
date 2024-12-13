@@ -44,21 +44,11 @@ type LookupConfigTemplatesResult struct {
 }
 
 func LookupConfigTemplatesOutput(ctx *pulumi.Context, args LookupConfigTemplatesOutputArgs, opts ...pulumi.InvokeOption) LookupConfigTemplatesResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupConfigTemplatesResultOutput, error) {
 			args := v.(LookupConfigTemplatesArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupConfigTemplatesResult
-			secret, err := ctx.InvokePackageRaw("meraki:organizations/getConfigTemplates:getConfigTemplates", args, &rv, "", opts...)
-			if err != nil {
-				return LookupConfigTemplatesResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupConfigTemplatesResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupConfigTemplatesResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:organizations/getConfigTemplates:getConfigTemplates", args, LookupConfigTemplatesResultOutput{}, options).(LookupConfigTemplatesResultOutput), nil
 		}).(LookupConfigTemplatesResultOutput)
 }
 

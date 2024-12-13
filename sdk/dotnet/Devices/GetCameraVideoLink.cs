@@ -64,6 +64,33 @@ namespace Pulumi.Meraki.Devices
         /// </summary>
         public static Output<GetCameraVideoLinkResult> Invoke(GetCameraVideoLinkInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetCameraVideoLinkResult>("meraki:devices/getCameraVideoLink:getCameraVideoLink", args ?? new GetCameraVideoLinkInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Devices.GetCameraVideoLink.Invoke(new()
+        ///     {
+        ///         Serial = "string",
+        ///         Timestamp = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiDevicesCameraVideoLinkExample"] = example.Apply(getCameraVideoLinkResult =&gt; getCameraVideoLinkResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetCameraVideoLinkResult> Invoke(GetCameraVideoLinkInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetCameraVideoLinkResult>("meraki:devices/getCameraVideoLink:getCameraVideoLink", args ?? new GetCameraVideoLinkInvokeArgs(), options.WithDefaults());
     }
 
 

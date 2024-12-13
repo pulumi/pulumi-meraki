@@ -63,21 +63,11 @@ type GetApplianceUplinksStatusesOverviewResult struct {
 }
 
 func GetApplianceUplinksStatusesOverviewOutput(ctx *pulumi.Context, args GetApplianceUplinksStatusesOverviewOutputArgs, opts ...pulumi.InvokeOption) GetApplianceUplinksStatusesOverviewResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetApplianceUplinksStatusesOverviewResultOutput, error) {
 			args := v.(GetApplianceUplinksStatusesOverviewArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetApplianceUplinksStatusesOverviewResult
-			secret, err := ctx.InvokePackageRaw("meraki:organizations/getApplianceUplinksStatusesOverview:getApplianceUplinksStatusesOverview", args, &rv, "", opts...)
-			if err != nil {
-				return GetApplianceUplinksStatusesOverviewResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetApplianceUplinksStatusesOverviewResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetApplianceUplinksStatusesOverviewResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:organizations/getApplianceUplinksStatusesOverview:getApplianceUplinksStatusesOverview", args, GetApplianceUplinksStatusesOverviewResultOutput{}, options).(GetApplianceUplinksStatusesOverviewResultOutput), nil
 		}).(GetApplianceUplinksStatusesOverviewResultOutput)
 }
 

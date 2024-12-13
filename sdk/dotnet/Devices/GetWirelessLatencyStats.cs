@@ -78,6 +78,40 @@ namespace Pulumi.Meraki.Devices
         /// </summary>
         public static Output<GetWirelessLatencyStatsResult> Invoke(GetWirelessLatencyStatsInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetWirelessLatencyStatsResult>("meraki:devices/getWirelessLatencyStats:getWirelessLatencyStats", args ?? new GetWirelessLatencyStatsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Devices.GetWirelessLatencyStats.Invoke(new()
+        ///     {
+        ///         ApTag = "string",
+        ///         Band = "string",
+        ///         Fields = "string",
+        ///         Serial = "string",
+        ///         Ssid = 1,
+        ///         T0 = "string",
+        ///         T1 = "string",
+        ///         Timespan = 1,
+        ///         Vlan = 1,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiDevicesWirelessLatencyStatsExample"] = example.Apply(getWirelessLatencyStatsResult =&gt; getWirelessLatencyStatsResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetWirelessLatencyStatsResult> Invoke(GetWirelessLatencyStatsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetWirelessLatencyStatsResult>("meraki:devices/getWirelessLatencyStats:getWirelessLatencyStats", args ?? new GetWirelessLatencyStatsInvokeArgs(), options.WithDefaults());
     }
 
 

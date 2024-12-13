@@ -63,21 +63,11 @@ type LookupApplianceFirewallCellularFirewallRulesResult struct {
 }
 
 func LookupApplianceFirewallCellularFirewallRulesOutput(ctx *pulumi.Context, args LookupApplianceFirewallCellularFirewallRulesOutputArgs, opts ...pulumi.InvokeOption) LookupApplianceFirewallCellularFirewallRulesResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupApplianceFirewallCellularFirewallRulesResultOutput, error) {
 			args := v.(LookupApplianceFirewallCellularFirewallRulesArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupApplianceFirewallCellularFirewallRulesResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getApplianceFirewallCellularFirewallRules:getApplianceFirewallCellularFirewallRules", args, &rv, "", opts...)
-			if err != nil {
-				return LookupApplianceFirewallCellularFirewallRulesResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupApplianceFirewallCellularFirewallRulesResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupApplianceFirewallCellularFirewallRulesResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getApplianceFirewallCellularFirewallRules:getApplianceFirewallCellularFirewallRules", args, LookupApplianceFirewallCellularFirewallRulesResultOutput{}, options).(LookupApplianceFirewallCellularFirewallRulesResultOutput), nil
 		}).(LookupApplianceFirewallCellularFirewallRulesResultOutput)
 }
 

@@ -89,21 +89,11 @@ type GetDevicesUplinksLossAndLatencyResult struct {
 }
 
 func GetDevicesUplinksLossAndLatencyOutput(ctx *pulumi.Context, args GetDevicesUplinksLossAndLatencyOutputArgs, opts ...pulumi.InvokeOption) GetDevicesUplinksLossAndLatencyResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetDevicesUplinksLossAndLatencyResultOutput, error) {
 			args := v.(GetDevicesUplinksLossAndLatencyArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetDevicesUplinksLossAndLatencyResult
-			secret, err := ctx.InvokePackageRaw("meraki:organizations/getDevicesUplinksLossAndLatency:getDevicesUplinksLossAndLatency", args, &rv, "", opts...)
-			if err != nil {
-				return GetDevicesUplinksLossAndLatencyResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetDevicesUplinksLossAndLatencyResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetDevicesUplinksLossAndLatencyResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:organizations/getDevicesUplinksLossAndLatency:getDevicesUplinksLossAndLatency", args, GetDevicesUplinksLossAndLatencyResultOutput{}, options).(GetDevicesUplinksLossAndLatencyResultOutput), nil
 		}).(GetDevicesUplinksLossAndLatencyResultOutput)
 }
 

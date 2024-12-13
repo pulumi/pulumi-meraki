@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Devices
         /// </summary>
         public static Output<GetCameraCustomAnalyticsResult> Invoke(GetCameraCustomAnalyticsInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetCameraCustomAnalyticsResult>("meraki:devices/getCameraCustomAnalytics:getCameraCustomAnalytics", args ?? new GetCameraCustomAnalyticsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Devices.GetCameraCustomAnalytics.Invoke(new()
+        ///     {
+        ///         Serial = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiDevicesCameraCustomAnalyticsExample"] = example.Apply(getCameraCustomAnalyticsResult =&gt; getCameraCustomAnalyticsResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetCameraCustomAnalyticsResult> Invoke(GetCameraCustomAnalyticsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetCameraCustomAnalyticsResult>("meraki:devices/getCameraCustomAnalytics:getCameraCustomAnalytics", args ?? new GetCameraCustomAnalyticsInvokeArgs(), options.WithDefaults());
     }
 
 

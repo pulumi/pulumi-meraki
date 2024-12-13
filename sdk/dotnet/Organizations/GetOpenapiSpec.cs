@@ -64,6 +64,33 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetOpenapiSpecResult> Invoke(GetOpenapiSpecInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetOpenapiSpecResult>("meraki:organizations/getOpenapiSpec:getOpenapiSpec", args ?? new GetOpenapiSpecInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetOpenapiSpec.Invoke(new()
+        ///     {
+        ///         OrganizationId = "string",
+        ///         Version = 1,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsOpenapiSpecExample"] = example.Apply(getOpenapiSpecResult =&gt; getOpenapiSpecResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetOpenapiSpecResult> Invoke(GetOpenapiSpecInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetOpenapiSpecResult>("meraki:organizations/getOpenapiSpec:getOpenapiSpec", args ?? new GetOpenapiSpecInvokeArgs(), options.WithDefaults());
     }
 
 

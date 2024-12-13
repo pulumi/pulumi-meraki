@@ -44,21 +44,11 @@ type LookupInsightMonitoredMediaServersResult struct {
 }
 
 func LookupInsightMonitoredMediaServersOutput(ctx *pulumi.Context, args LookupInsightMonitoredMediaServersOutputArgs, opts ...pulumi.InvokeOption) LookupInsightMonitoredMediaServersResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupInsightMonitoredMediaServersResultOutput, error) {
 			args := v.(LookupInsightMonitoredMediaServersArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupInsightMonitoredMediaServersResult
-			secret, err := ctx.InvokePackageRaw("meraki:organizations/getInsightMonitoredMediaServers:getInsightMonitoredMediaServers", args, &rv, "", opts...)
-			if err != nil {
-				return LookupInsightMonitoredMediaServersResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupInsightMonitoredMediaServersResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupInsightMonitoredMediaServersResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:organizations/getInsightMonitoredMediaServers:getInsightMonitoredMediaServers", args, LookupInsightMonitoredMediaServersResultOutput{}, options).(LookupInsightMonitoredMediaServersResultOutput), nil
 		}).(LookupInsightMonitoredMediaServersResultOutput)
 }
 

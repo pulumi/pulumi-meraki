@@ -68,6 +68,35 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetSummaryTopNetworksByStatusResult> Invoke(GetSummaryTopNetworksByStatusInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSummaryTopNetworksByStatusResult>("meraki:organizations/getSummaryTopNetworksByStatus:getSummaryTopNetworksByStatus", args ?? new GetSummaryTopNetworksByStatusInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetSummaryTopNetworksByStatus.Invoke(new()
+        ///     {
+        ///         EndingBefore = "string",
+        ///         OrganizationId = "string",
+        ///         PerPage = 1,
+        ///         StartingAfter = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsSummaryTopNetworksByStatusExample"] = example.Apply(getSummaryTopNetworksByStatusResult =&gt; getSummaryTopNetworksByStatusResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSummaryTopNetworksByStatusResult> Invoke(GetSummaryTopNetworksByStatusInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSummaryTopNetworksByStatusResult>("meraki:organizations/getSummaryTopNetworksByStatus:getSummaryTopNetworksByStatus", args ?? new GetSummaryTopNetworksByStatusInvokeArgs(), options.WithDefaults());
     }
 
 

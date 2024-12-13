@@ -84,21 +84,11 @@ type GetSmDevicesPerformanceHistoryResult struct {
 }
 
 func GetSmDevicesPerformanceHistoryOutput(ctx *pulumi.Context, args GetSmDevicesPerformanceHistoryOutputArgs, opts ...pulumi.InvokeOption) GetSmDevicesPerformanceHistoryResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetSmDevicesPerformanceHistoryResultOutput, error) {
 			args := v.(GetSmDevicesPerformanceHistoryArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetSmDevicesPerformanceHistoryResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getSmDevicesPerformanceHistory:getSmDevicesPerformanceHistory", args, &rv, "", opts...)
-			if err != nil {
-				return GetSmDevicesPerformanceHistoryResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetSmDevicesPerformanceHistoryResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetSmDevicesPerformanceHistoryResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getSmDevicesPerformanceHistory:getSmDevicesPerformanceHistory", args, GetSmDevicesPerformanceHistoryResultOutput{}, options).(GetSmDevicesPerformanceHistoryResultOutput), nil
 		}).(GetSmDevicesPerformanceHistoryResultOutput)
 }
 

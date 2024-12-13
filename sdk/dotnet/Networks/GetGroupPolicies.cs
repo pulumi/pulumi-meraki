@@ -22,6 +22,12 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetGroupPoliciesResult> Invoke(GetGroupPoliciesInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetGroupPoliciesResult>("meraki:networks/getGroupPolicies:getGroupPolicies", args ?? new GetGroupPoliciesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetGroupPoliciesResult> Invoke(GetGroupPoliciesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetGroupPoliciesResult>("meraki:networks/getGroupPolicies:getGroupPolicies", args ?? new GetGroupPoliciesInvokeArgs(), options.WithDefaults());
     }
 
 

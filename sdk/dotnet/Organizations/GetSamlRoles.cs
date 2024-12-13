@@ -22,6 +22,12 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetSamlRolesResult> Invoke(GetSamlRolesInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSamlRolesResult>("meraki:organizations/getSamlRoles:getSamlRoles", args ?? new GetSamlRolesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetSamlRolesResult> Invoke(GetSamlRolesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSamlRolesResult>("meraki:organizations/getSamlRoles:getSamlRoles", args ?? new GetSamlRolesInvokeArgs(), options.WithDefaults());
     }
 
 

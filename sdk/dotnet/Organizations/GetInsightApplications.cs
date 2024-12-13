@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetInsightApplicationsResult> Invoke(GetInsightApplicationsInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetInsightApplicationsResult>("meraki:organizations/getInsightApplications:getInsightApplications", args ?? new GetInsightApplicationsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetInsightApplications.Invoke(new()
+        ///     {
+        ///         OrganizationId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsInsightApplicationsExample"] = example.Apply(getInsightApplicationsResult =&gt; getInsightApplicationsResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetInsightApplicationsResult> Invoke(GetInsightApplicationsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetInsightApplicationsResult>("meraki:organizations/getInsightApplications:getInsightApplications", args ?? new GetInsightApplicationsInvokeArgs(), options.WithDefaults());
     }
 
 

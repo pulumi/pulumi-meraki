@@ -68,21 +68,11 @@ type LookupLiveToolsThroughputTestResult struct {
 }
 
 func LookupLiveToolsThroughputTestOutput(ctx *pulumi.Context, args LookupLiveToolsThroughputTestOutputArgs, opts ...pulumi.InvokeOption) LookupLiveToolsThroughputTestResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupLiveToolsThroughputTestResultOutput, error) {
 			args := v.(LookupLiveToolsThroughputTestArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupLiveToolsThroughputTestResult
-			secret, err := ctx.InvokePackageRaw("meraki:devices/getLiveToolsThroughputTest:getLiveToolsThroughputTest", args, &rv, "", opts...)
-			if err != nil {
-				return LookupLiveToolsThroughputTestResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupLiveToolsThroughputTestResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupLiveToolsThroughputTestResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:devices/getLiveToolsThroughputTest:getLiveToolsThroughputTest", args, LookupLiveToolsThroughputTestResultOutput{}, options).(LookupLiveToolsThroughputTestResultOutput), nil
 		}).(LookupLiveToolsThroughputTestResultOutput)
 }
 

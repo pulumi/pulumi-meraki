@@ -70,6 +70,36 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetClientsSearchResult> Invoke(GetClientsSearchInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetClientsSearchResult>("meraki:organizations/getClientsSearch:getClientsSearch", args ?? new GetClientsSearchInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetClientsSearch.Invoke(new()
+        ///     {
+        ///         EndingBefore = "string",
+        ///         Mac = "string",
+        ///         OrganizationId = "string",
+        ///         PerPage = 1,
+        ///         StartingAfter = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsClientsSearchExample"] = example.Apply(getClientsSearchResult =&gt; getClientsSearchResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetClientsSearchResult> Invoke(GetClientsSearchInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetClientsSearchResult>("meraki:organizations/getClientsSearch:getClientsSearch", args ?? new GetClientsSearchInvokeArgs(), options.WithDefaults());
     }
 
 

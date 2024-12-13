@@ -68,6 +68,35 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetBluetoothClientsResult> Invoke(GetBluetoothClientsInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetBluetoothClientsResult>("meraki:networks/getBluetoothClients:getBluetoothClients", args ?? new GetBluetoothClientsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetBluetoothClients.Invoke(new()
+        ///     {
+        ///         BluetoothClientId = "string",
+        ///         ConnectivityHistoryTimespan = 1,
+        ///         IncludeConnectivityHistory = false,
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksBluetoothClientsExample"] = example.Apply(getBluetoothClientsResult =&gt; getBluetoothClientsResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetBluetoothClientsResult> Invoke(GetBluetoothClientsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetBluetoothClientsResult>("meraki:networks/getBluetoothClients:getBluetoothClients", args ?? new GetBluetoothClientsInvokeArgs(), options.WithDefaults());
     }
 
 

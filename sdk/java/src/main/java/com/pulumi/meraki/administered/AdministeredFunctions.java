@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import com.pulumi.deployment.InvokeOutputOptions;
 import com.pulumi.meraki.Utilities;
 import com.pulumi.meraki.administered.inputs.GetLicensingSubscriptionEntitlementsArgs;
 import com.pulumi.meraki.administered.inputs.GetLicensingSubscriptionEntitlementsPlainArgs;
@@ -210,6 +211,44 @@ public final class AdministeredFunctions {
      * 
      */
     public static Output<GetIdentitiesMeResult> getIdentitiesMe(InvokeArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:administered/getIdentitiesMe:getIdentitiesMe", TypeShape.of(GetIdentitiesMeResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.administered.AdministeredFunctions;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = AdministeredFunctions.getIdentitiesMe();
+     * 
+     *         ctx.export("merakiAdministeredIdentitiesMeExample", example.applyValue(getIdentitiesMeResult -> getIdentitiesMeResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetIdentitiesMeResult> getIdentitiesMe(InvokeArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:administered/getIdentitiesMe:getIdentitiesMe", TypeShape.of(GetIdentitiesMeResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -453,6 +492,47 @@ public final class AdministeredFunctions {
      * 
      */
     public static Output<GetLicensingSubscriptionEntitlementsResult> getLicensingSubscriptionEntitlements(GetLicensingSubscriptionEntitlementsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:administered/getLicensingSubscriptionEntitlements:getLicensingSubscriptionEntitlements", TypeShape.of(GetLicensingSubscriptionEntitlementsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.administered.AdministeredFunctions;
+     * import com.pulumi.meraki.administered.inputs.GetLicensingSubscriptionEntitlementsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = AdministeredFunctions.getLicensingSubscriptionEntitlements(GetLicensingSubscriptionEntitlementsArgs.builder()
+     *             .skuses("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiAdministeredLicensingSubscriptionEntitlementsExample", example.applyValue(getLicensingSubscriptionEntitlementsResult -> getLicensingSubscriptionEntitlementsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetLicensingSubscriptionEntitlementsResult> getLicensingSubscriptionEntitlements(GetLicensingSubscriptionEntitlementsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:administered/getLicensingSubscriptionEntitlements:getLicensingSubscriptionEntitlements", TypeShape.of(GetLicensingSubscriptionEntitlementsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -787,6 +867,55 @@ public final class AdministeredFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetLicensingSubscriptionSubscriptionsResult> getLicensingSubscriptionSubscriptions(GetLicensingSubscriptionSubscriptionsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:administered/getLicensingSubscriptionSubscriptions:getLicensingSubscriptionSubscriptions", TypeShape.of(GetLicensingSubscriptionSubscriptionsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.administered.AdministeredFunctions;
+     * import com.pulumi.meraki.administered.inputs.GetLicensingSubscriptionSubscriptionsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = AdministeredFunctions.getLicensingSubscriptionSubscriptions(GetLicensingSubscriptionSubscriptionsArgs.builder()
+     *             .endDate("string")
+     *             .endingBefore("string")
+     *             .organizationIds("string")
+     *             .perPage(1)
+     *             .productTypes("string")
+     *             .startDate("string")
+     *             .startingAfter("string")
+     *             .statuses("string")
+     *             .subscriptionIds("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsExample", example.applyValue(getLicensingSubscriptionSubscriptionsResult -> getLicensingSubscriptionSubscriptionsResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetLicensingSubscriptionSubscriptionsResult> getLicensingSubscriptionSubscriptionsPlain(GetLicensingSubscriptionSubscriptionsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:administered/getLicensingSubscriptionSubscriptions:getLicensingSubscriptionSubscriptions", TypeShape.of(GetLicensingSubscriptionSubscriptionsResult.class), args, Utilities.withVersion(options));
     }
@@ -998,6 +1127,48 @@ public final class AdministeredFunctions {
      * 
      */
     public static Output<GetLicensingSubscriptionSubscriptionsComplianceStatusesResult> getLicensingSubscriptionSubscriptionsComplianceStatuses(GetLicensingSubscriptionSubscriptionsComplianceStatusesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:administered/getLicensingSubscriptionSubscriptionsComplianceStatuses:getLicensingSubscriptionSubscriptionsComplianceStatuses", TypeShape.of(GetLicensingSubscriptionSubscriptionsComplianceStatusesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.administered.AdministeredFunctions;
+     * import com.pulumi.meraki.administered.inputs.GetLicensingSubscriptionSubscriptionsComplianceStatusesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = AdministeredFunctions.getLicensingSubscriptionSubscriptionsComplianceStatuses(GetLicensingSubscriptionSubscriptionsComplianceStatusesArgs.builder()
+     *             .organizationIds("string")
+     *             .subscriptionIds("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsComplianceStatusesExample", example.applyValue(getLicensingSubscriptionSubscriptionsComplianceStatusesResult -> getLicensingSubscriptionSubscriptionsComplianceStatusesResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetLicensingSubscriptionSubscriptionsComplianceStatusesResult> getLicensingSubscriptionSubscriptionsComplianceStatuses(GetLicensingSubscriptionSubscriptionsComplianceStatusesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:administered/getLicensingSubscriptionSubscriptionsComplianceStatuses:getLicensingSubscriptionSubscriptionsComplianceStatuses", TypeShape.of(GetLicensingSubscriptionSubscriptionsComplianceStatusesResult.class), args, Utilities.withVersion(options));
     }
     /**

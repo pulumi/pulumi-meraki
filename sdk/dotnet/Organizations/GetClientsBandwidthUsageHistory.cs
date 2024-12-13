@@ -68,6 +68,35 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetClientsBandwidthUsageHistoryResult> Invoke(GetClientsBandwidthUsageHistoryInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetClientsBandwidthUsageHistoryResult>("meraki:organizations/getClientsBandwidthUsageHistory:getClientsBandwidthUsageHistory", args ?? new GetClientsBandwidthUsageHistoryInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetClientsBandwidthUsageHistory.Invoke(new()
+        ///     {
+        ///         OrganizationId = "string",
+        ///         T0 = "string",
+        ///         T1 = "string",
+        ///         Timespan = 1,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsClientsBandwidthUsageHistoryExample"] = example.Apply(getClientsBandwidthUsageHistoryResult =&gt; getClientsBandwidthUsageHistoryResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetClientsBandwidthUsageHistoryResult> Invoke(GetClientsBandwidthUsageHistoryInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetClientsBandwidthUsageHistoryResult>("meraki:organizations/getClientsBandwidthUsageHistory:getClientsBandwidthUsageHistory", args ?? new GetClientsBandwidthUsageHistoryInvokeArgs(), options.WithDefaults());
     }
 
 

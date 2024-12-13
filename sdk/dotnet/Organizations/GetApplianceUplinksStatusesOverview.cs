@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetApplianceUplinksStatusesOverviewResult> Invoke(GetApplianceUplinksStatusesOverviewInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetApplianceUplinksStatusesOverviewResult>("meraki:organizations/getApplianceUplinksStatusesOverview:getApplianceUplinksStatusesOverview", args ?? new GetApplianceUplinksStatusesOverviewInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetApplianceUplinksStatusesOverview.Invoke(new()
+        ///     {
+        ///         OrganizationId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsApplianceUplinksStatusesOverviewExample"] = example.Apply(getApplianceUplinksStatusesOverviewResult =&gt; getApplianceUplinksStatusesOverviewResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetApplianceUplinksStatusesOverviewResult> Invoke(GetApplianceUplinksStatusesOverviewInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetApplianceUplinksStatusesOverviewResult>("meraki:organizations/getApplianceUplinksStatusesOverview:getApplianceUplinksStatusesOverview", args ?? new GetApplianceUplinksStatusesOverviewInvokeArgs(), options.WithDefaults());
     }
 
 

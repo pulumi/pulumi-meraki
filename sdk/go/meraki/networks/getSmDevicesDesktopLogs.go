@@ -84,21 +84,11 @@ type GetSmDevicesDesktopLogsResult struct {
 }
 
 func GetSmDevicesDesktopLogsOutput(ctx *pulumi.Context, args GetSmDevicesDesktopLogsOutputArgs, opts ...pulumi.InvokeOption) GetSmDevicesDesktopLogsResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetSmDevicesDesktopLogsResultOutput, error) {
 			args := v.(GetSmDevicesDesktopLogsArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetSmDevicesDesktopLogsResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getSmDevicesDesktopLogs:getSmDevicesDesktopLogs", args, &rv, "", opts...)
-			if err != nil {
-				return GetSmDevicesDesktopLogsResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetSmDevicesDesktopLogsResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetSmDevicesDesktopLogsResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getSmDevicesDesktopLogs:getSmDevicesDesktopLogs", args, GetSmDevicesDesktopLogsResultOutput{}, options).(GetSmDevicesDesktopLogsResultOutput), nil
 		}).(GetSmDevicesDesktopLogsResultOutput)
 }
 

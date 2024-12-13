@@ -64,6 +64,33 @@ namespace Pulumi.Meraki.Devices
         /// </summary>
         public static Output<GetSwitchRoutingInterfacesDhcpResult> Invoke(GetSwitchRoutingInterfacesDhcpInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSwitchRoutingInterfacesDhcpResult>("meraki:devices/getSwitchRoutingInterfacesDhcp:getSwitchRoutingInterfacesDhcp", args ?? new GetSwitchRoutingInterfacesDhcpInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Devices.GetSwitchRoutingInterfacesDhcp.Invoke(new()
+        ///     {
+        ///         InterfaceId = "string",
+        ///         Serial = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiDevicesSwitchRoutingInterfacesDhcpExample"] = example.Apply(getSwitchRoutingInterfacesDhcpResult =&gt; getSwitchRoutingInterfacesDhcpResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSwitchRoutingInterfacesDhcpResult> Invoke(GetSwitchRoutingInterfacesDhcpInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSwitchRoutingInterfacesDhcpResult>("meraki:devices/getSwitchRoutingInterfacesDhcp:getSwitchRoutingInterfacesDhcp", args ?? new GetSwitchRoutingInterfacesDhcpInvokeArgs(), options.WithDefaults());
     }
 
 

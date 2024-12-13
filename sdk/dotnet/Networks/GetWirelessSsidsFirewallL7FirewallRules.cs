@@ -64,6 +64,33 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetWirelessSsidsFirewallL7FirewallRulesResult> Invoke(GetWirelessSsidsFirewallL7FirewallRulesInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetWirelessSsidsFirewallL7FirewallRulesResult>("meraki:networks/getWirelessSsidsFirewallL7FirewallRules:getWirelessSsidsFirewallL7FirewallRules", args ?? new GetWirelessSsidsFirewallL7FirewallRulesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetWirelessSsidsFirewallL7FirewallRules.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///         Number = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksWirelessSsidsFirewallL7FirewallRulesExample"] = example.Apply(getWirelessSsidsFirewallL7FirewallRulesResult =&gt; getWirelessSsidsFirewallL7FirewallRulesResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetWirelessSsidsFirewallL7FirewallRulesResult> Invoke(GetWirelessSsidsFirewallL7FirewallRulesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetWirelessSsidsFirewallL7FirewallRulesResult>("meraki:networks/getWirelessSsidsFirewallL7FirewallRules:getWirelessSsidsFirewallL7FirewallRules", args ?? new GetWirelessSsidsFirewallL7FirewallRulesInvokeArgs(), options.WithDefaults());
     }
 
 

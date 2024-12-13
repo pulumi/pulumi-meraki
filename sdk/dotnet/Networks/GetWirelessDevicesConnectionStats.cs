@@ -76,6 +76,39 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetWirelessDevicesConnectionStatsResult> Invoke(GetWirelessDevicesConnectionStatsInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetWirelessDevicesConnectionStatsResult>("meraki:networks/getWirelessDevicesConnectionStats:getWirelessDevicesConnectionStats", args ?? new GetWirelessDevicesConnectionStatsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetWirelessDevicesConnectionStats.Invoke(new()
+        ///     {
+        ///         ApTag = "string",
+        ///         Band = "string",
+        ///         NetworkId = "string",
+        ///         Ssid = 1,
+        ///         T0 = "string",
+        ///         T1 = "string",
+        ///         Timespan = 1,
+        ///         Vlan = 1,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksWirelessDevicesConnectionStatsExample"] = example.Apply(getWirelessDevicesConnectionStatsResult =&gt; getWirelessDevicesConnectionStatsResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetWirelessDevicesConnectionStatsResult> Invoke(GetWirelessDevicesConnectionStatsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetWirelessDevicesConnectionStatsResult>("meraki:networks/getWirelessDevicesConnectionStats:getWirelessDevicesConnectionStats", args ?? new GetWirelessDevicesConnectionStatsInvokeArgs(), options.WithDefaults());
     }
 
 

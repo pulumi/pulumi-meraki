@@ -84,6 +84,43 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetFirmwareUpgradesResult> Invoke(GetFirmwareUpgradesInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetFirmwareUpgradesResult>("meraki:organizations/getFirmwareUpgrades:getFirmwareUpgrades", args ?? new GetFirmwareUpgradesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetFirmwareUpgrades.Invoke(new()
+        ///     {
+        ///         EndingBefore = "string",
+        ///         OrganizationId = "string",
+        ///         PerPage = 1,
+        ///         ProductTypes = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         StartingAfter = "string",
+        ///         Statuses = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsFirmwareUpgradesExample"] = example.Apply(getFirmwareUpgradesResult =&gt; getFirmwareUpgradesResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetFirmwareUpgradesResult> Invoke(GetFirmwareUpgradesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetFirmwareUpgradesResult>("meraki:organizations/getFirmwareUpgrades:getFirmwareUpgrades", args ?? new GetFirmwareUpgradesInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetWirelessBluetoothSettingsResult> Invoke(GetWirelessBluetoothSettingsInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetWirelessBluetoothSettingsResult>("meraki:networks/getWirelessBluetoothSettings:getWirelessBluetoothSettings", args ?? new GetWirelessBluetoothSettingsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetWirelessBluetoothSettings.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksWirelessBluetoothSettingsExample"] = example.Apply(getWirelessBluetoothSettingsResult =&gt; getWirelessBluetoothSettingsResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetWirelessBluetoothSettingsResult> Invoke(GetWirelessBluetoothSettingsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetWirelessBluetoothSettingsResult>("meraki:networks/getWirelessBluetoothSettings:getWirelessBluetoothSettings", args ?? new GetWirelessBluetoothSettingsInvokeArgs(), options.WithDefaults());
     }
 
 

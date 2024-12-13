@@ -68,6 +68,35 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetSummaryTopSsidsByUsageResult> Invoke(GetSummaryTopSsidsByUsageInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSummaryTopSsidsByUsageResult>("meraki:organizations/getSummaryTopSsidsByUsage:getSummaryTopSsidsByUsage", args ?? new GetSummaryTopSsidsByUsageInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetSummaryTopSsidsByUsage.Invoke(new()
+        ///     {
+        ///         OrganizationId = "string",
+        ///         T0 = "string",
+        ///         T1 = "string",
+        ///         Timespan = 1,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsSummaryTopSsidsByUsageExample"] = example.Apply(getSummaryTopSsidsByUsageResult =&gt; getSummaryTopSsidsByUsageResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSummaryTopSsidsByUsageResult> Invoke(GetSummaryTopSsidsByUsageInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSummaryTopSsidsByUsageResult>("meraki:organizations/getSummaryTopSsidsByUsage:getSummaryTopSsidsByUsage", args ?? new GetSummaryTopSsidsByUsageInvokeArgs(), options.WithDefaults());
     }
 
 

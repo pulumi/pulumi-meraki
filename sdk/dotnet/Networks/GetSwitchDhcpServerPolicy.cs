@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetSwitchDhcpServerPolicyResult> Invoke(GetSwitchDhcpServerPolicyInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSwitchDhcpServerPolicyResult>("meraki:networks/getSwitchDhcpServerPolicy:getSwitchDhcpServerPolicy", args ?? new GetSwitchDhcpServerPolicyInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetSwitchDhcpServerPolicy.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksSwitchDhcpServerPolicyExample"] = example.Apply(getSwitchDhcpServerPolicyResult =&gt; getSwitchDhcpServerPolicyResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSwitchDhcpServerPolicyResult> Invoke(GetSwitchDhcpServerPolicyInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSwitchDhcpServerPolicyResult>("meraki:networks/getSwitchDhcpServerPolicy:getSwitchDhcpServerPolicy", args ?? new GetSwitchDhcpServerPolicyInvokeArgs(), options.WithDefaults());
     }
 
 

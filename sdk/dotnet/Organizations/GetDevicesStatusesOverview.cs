@@ -78,6 +78,40 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetDevicesStatusesOverviewResult> Invoke(GetDevicesStatusesOverviewInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetDevicesStatusesOverviewResult>("meraki:organizations/getDevicesStatusesOverview:getDevicesStatusesOverview", args ?? new GetDevicesStatusesOverviewInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetDevicesStatusesOverview.Invoke(new()
+        ///     {
+        ///         NetworkIds = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         OrganizationId = "string",
+        ///         ProductTypes = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsDevicesStatusesOverviewExample"] = example.Apply(getDevicesStatusesOverviewResult =&gt; getDevicesStatusesOverviewResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetDevicesStatusesOverviewResult> Invoke(GetDevicesStatusesOverviewInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetDevicesStatusesOverviewResult>("meraki:organizations/getDevicesStatusesOverview:getDevicesStatusesOverview", args ?? new GetDevicesStatusesOverviewInvokeArgs(), options.WithDefaults());
     }
 
 

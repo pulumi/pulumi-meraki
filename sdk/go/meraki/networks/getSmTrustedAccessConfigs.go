@@ -79,21 +79,11 @@ type GetSmTrustedAccessConfigsResult struct {
 }
 
 func GetSmTrustedAccessConfigsOutput(ctx *pulumi.Context, args GetSmTrustedAccessConfigsOutputArgs, opts ...pulumi.InvokeOption) GetSmTrustedAccessConfigsResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetSmTrustedAccessConfigsResultOutput, error) {
 			args := v.(GetSmTrustedAccessConfigsArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetSmTrustedAccessConfigsResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getSmTrustedAccessConfigs:getSmTrustedAccessConfigs", args, &rv, "", opts...)
-			if err != nil {
-				return GetSmTrustedAccessConfigsResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetSmTrustedAccessConfigsResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetSmTrustedAccessConfigsResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getSmTrustedAccessConfigs:getSmTrustedAccessConfigs", args, GetSmTrustedAccessConfigsResultOutput{}, options).(GetSmTrustedAccessConfigsResultOutput), nil
 		}).(GetSmTrustedAccessConfigsResultOutput)
 }
 

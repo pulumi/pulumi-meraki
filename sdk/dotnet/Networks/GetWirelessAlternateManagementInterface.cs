@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetWirelessAlternateManagementInterfaceResult> Invoke(GetWirelessAlternateManagementInterfaceInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetWirelessAlternateManagementInterfaceResult>("meraki:networks/getWirelessAlternateManagementInterface:getWirelessAlternateManagementInterface", args ?? new GetWirelessAlternateManagementInterfaceInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetWirelessAlternateManagementInterface.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksWirelessAlternateManagementInterfaceExample"] = example.Apply(getWirelessAlternateManagementInterfaceResult =&gt; getWirelessAlternateManagementInterfaceResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetWirelessAlternateManagementInterfaceResult> Invoke(GetWirelessAlternateManagementInterfaceInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetWirelessAlternateManagementInterfaceResult>("meraki:networks/getWirelessAlternateManagementInterface:getWirelessAlternateManagementInterface", args ?? new GetWirelessAlternateManagementInterfaceInvokeArgs(), options.WithDefaults());
     }
 
 

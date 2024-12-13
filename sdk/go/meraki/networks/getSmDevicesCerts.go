@@ -69,21 +69,11 @@ type GetSmDevicesCertsResult struct {
 }
 
 func GetSmDevicesCertsOutput(ctx *pulumi.Context, args GetSmDevicesCertsOutputArgs, opts ...pulumi.InvokeOption) GetSmDevicesCertsResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetSmDevicesCertsResultOutput, error) {
 			args := v.(GetSmDevicesCertsArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetSmDevicesCertsResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getSmDevicesCerts:getSmDevicesCerts", args, &rv, "", opts...)
-			if err != nil {
-				return GetSmDevicesCertsResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetSmDevicesCertsResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetSmDevicesCertsResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getSmDevicesCerts:getSmDevicesCerts", args, GetSmDevicesCertsResultOutput{}, options).(GetSmDevicesCertsResultOutput), nil
 		}).(GetSmDevicesCertsResultOutput)
 }
 

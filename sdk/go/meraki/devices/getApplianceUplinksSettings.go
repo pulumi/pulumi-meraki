@@ -63,21 +63,11 @@ type LookupApplianceUplinksSettingsResult struct {
 }
 
 func LookupApplianceUplinksSettingsOutput(ctx *pulumi.Context, args LookupApplianceUplinksSettingsOutputArgs, opts ...pulumi.InvokeOption) LookupApplianceUplinksSettingsResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupApplianceUplinksSettingsResultOutput, error) {
 			args := v.(LookupApplianceUplinksSettingsArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupApplianceUplinksSettingsResult
-			secret, err := ctx.InvokePackageRaw("meraki:devices/getApplianceUplinksSettings:getApplianceUplinksSettings", args, &rv, "", opts...)
-			if err != nil {
-				return LookupApplianceUplinksSettingsResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupApplianceUplinksSettingsResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupApplianceUplinksSettingsResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:devices/getApplianceUplinksSettings:getApplianceUplinksSettings", args, LookupApplianceUplinksSettingsResultOutput{}, options).(LookupApplianceUplinksSettingsResultOutput), nil
 		}).(LookupApplianceUplinksSettingsResultOutput)
 }
 

@@ -64,6 +64,33 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetLicensesResult> Invoke(GetLicensesInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetLicensesResult>("meraki:organizations/getLicenses:getLicenses", args ?? new GetLicensesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetLicenses.Invoke(new()
+        ///     {
+        ///         LicenseId = "string",
+        ///         OrganizationId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsLicensesExample"] = example.Apply(getLicensesResult =&gt; getLicensesResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetLicensesResult> Invoke(GetLicensesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetLicensesResult>("meraki:organizations/getLicenses:getLicenses", args ?? new GetLicensesInvokeArgs(), options.WithDefaults());
     }
 
 

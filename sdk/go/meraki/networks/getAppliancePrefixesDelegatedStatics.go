@@ -44,21 +44,11 @@ type LookupAppliancePrefixesDelegatedStaticsResult struct {
 }
 
 func LookupAppliancePrefixesDelegatedStaticsOutput(ctx *pulumi.Context, args LookupAppliancePrefixesDelegatedStaticsOutputArgs, opts ...pulumi.InvokeOption) LookupAppliancePrefixesDelegatedStaticsResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupAppliancePrefixesDelegatedStaticsResultOutput, error) {
 			args := v.(LookupAppliancePrefixesDelegatedStaticsArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupAppliancePrefixesDelegatedStaticsResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getAppliancePrefixesDelegatedStatics:getAppliancePrefixesDelegatedStatics", args, &rv, "", opts...)
-			if err != nil {
-				return LookupAppliancePrefixesDelegatedStaticsResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupAppliancePrefixesDelegatedStaticsResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupAppliancePrefixesDelegatedStaticsResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getAppliancePrefixesDelegatedStatics:getAppliancePrefixesDelegatedStatics", args, LookupAppliancePrefixesDelegatedStaticsResultOutput{}, options).(LookupAppliancePrefixesDelegatedStaticsResultOutput), nil
 		}).(LookupAppliancePrefixesDelegatedStaticsResultOutput)
 }
 

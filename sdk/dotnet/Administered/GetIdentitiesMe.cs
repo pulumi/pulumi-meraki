@@ -56,6 +56,29 @@ namespace Pulumi.Meraki.Administered
         /// </summary>
         public static Output<GetIdentitiesMeResult> Invoke(InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetIdentitiesMeResult>("meraki:administered/getIdentitiesMe:getIdentitiesMe", InvokeArgs.Empty, options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Administered.GetIdentitiesMe.Invoke();
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiAdministeredIdentitiesMeExample"] = example.Apply(getIdentitiesMeResult =&gt; getIdentitiesMeResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetIdentitiesMeResult> Invoke(InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetIdentitiesMeResult>("meraki:administered/getIdentitiesMe:getIdentitiesMe", InvokeArgs.Empty, options.WithDefaults());
     }
 
 

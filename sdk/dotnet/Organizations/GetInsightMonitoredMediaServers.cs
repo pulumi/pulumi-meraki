@@ -22,6 +22,12 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetInsightMonitoredMediaServersResult> Invoke(GetInsightMonitoredMediaServersInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetInsightMonitoredMediaServersResult>("meraki:organizations/getInsightMonitoredMediaServers:getInsightMonitoredMediaServers", args ?? new GetInsightMonitoredMediaServersInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetInsightMonitoredMediaServersResult> Invoke(GetInsightMonitoredMediaServersInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetInsightMonitoredMediaServersResult>("meraki:organizations/getInsightMonitoredMediaServers:getInsightMonitoredMediaServers", args ?? new GetInsightMonitoredMediaServersInvokeArgs(), options.WithDefaults());
     }
 
 

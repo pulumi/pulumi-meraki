@@ -64,6 +64,33 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetWirelessSsidsVpnResult> Invoke(GetWirelessSsidsVpnInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetWirelessSsidsVpnResult>("meraki:networks/getWirelessSsidsVpn:getWirelessSsidsVpn", args ?? new GetWirelessSsidsVpnInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetWirelessSsidsVpn.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///         Number = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksWirelessSsidsVpnExample"] = example.Apply(getWirelessSsidsVpnResult =&gt; getWirelessSsidsVpnResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetWirelessSsidsVpnResult> Invoke(GetWirelessSsidsVpnInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetWirelessSsidsVpnResult>("meraki:networks/getWirelessSsidsVpn:getWirelessSsidsVpn", args ?? new GetWirelessSsidsVpnInvokeArgs(), options.WithDefaults());
     }
 
 

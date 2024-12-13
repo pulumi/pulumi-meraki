@@ -22,6 +22,12 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetAppliancePrefixesDelegatedStaticsResult> Invoke(GetAppliancePrefixesDelegatedStaticsInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetAppliancePrefixesDelegatedStaticsResult>("meraki:networks/getAppliancePrefixesDelegatedStatics:getAppliancePrefixesDelegatedStatics", args ?? new GetAppliancePrefixesDelegatedStaticsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetAppliancePrefixesDelegatedStaticsResult> Invoke(GetAppliancePrefixesDelegatedStaticsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetAppliancePrefixesDelegatedStaticsResult>("meraki:networks/getAppliancePrefixesDelegatedStatics:getAppliancePrefixesDelegatedStatics", args ?? new GetAppliancePrefixesDelegatedStaticsInvokeArgs(), options.WithDefaults());
     }
 
 

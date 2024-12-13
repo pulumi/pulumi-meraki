@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetLoginSecurityResult> Invoke(GetLoginSecurityInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetLoginSecurityResult>("meraki:organizations/getLoginSecurity:getLoginSecurity", args ?? new GetLoginSecurityInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetLoginSecurity.Invoke(new()
+        ///     {
+        ///         OrganizationId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsLoginSecurityExample"] = example.Apply(getLoginSecurityResult =&gt; getLoginSecurityResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetLoginSecurityResult> Invoke(GetLoginSecurityInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetLoginSecurityResult>("meraki:organizations/getLoginSecurity:getLoginSecurity", args ?? new GetLoginSecurityInvokeArgs(), options.WithDefaults());
     }
 
 

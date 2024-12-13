@@ -66,6 +66,34 @@ namespace Pulumi.Meraki.Devices
         /// </summary>
         public static Output<GetSwitchPortsStatusesResult> Invoke(GetSwitchPortsStatusesInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSwitchPortsStatusesResult>("meraki:devices/getSwitchPortsStatuses:getSwitchPortsStatuses", args ?? new GetSwitchPortsStatusesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Devices.GetSwitchPortsStatuses.Invoke(new()
+        ///     {
+        ///         Serial = "string",
+        ///         T0 = "string",
+        ///         Timespan = 1,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiDevicesSwitchPortsStatusesExample"] = example.Apply(getSwitchPortsStatusesResult =&gt; getSwitchPortsStatusesResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSwitchPortsStatusesResult> Invoke(GetSwitchPortsStatusesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSwitchPortsStatusesResult>("meraki:devices/getSwitchPortsStatuses:getSwitchPortsStatuses", args ?? new GetSwitchPortsStatusesInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -63,21 +63,11 @@ type LookupApplianceVpnBgpResult struct {
 }
 
 func LookupApplianceVpnBgpOutput(ctx *pulumi.Context, args LookupApplianceVpnBgpOutputArgs, opts ...pulumi.InvokeOption) LookupApplianceVpnBgpResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupApplianceVpnBgpResultOutput, error) {
 			args := v.(LookupApplianceVpnBgpArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupApplianceVpnBgpResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getApplianceVpnBgp:getApplianceVpnBgp", args, &rv, "", opts...)
-			if err != nil {
-				return LookupApplianceVpnBgpResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupApplianceVpnBgpResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupApplianceVpnBgpResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getApplianceVpnBgp:getApplianceVpnBgp", args, LookupApplianceVpnBgpResultOutput{}, options).(LookupApplianceVpnBgpResultOutput), nil
 		}).(LookupApplianceVpnBgpResultOutput)
 }
 

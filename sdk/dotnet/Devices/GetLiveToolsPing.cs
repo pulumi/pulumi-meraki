@@ -64,6 +64,33 @@ namespace Pulumi.Meraki.Devices
         /// </summary>
         public static Output<GetLiveToolsPingResult> Invoke(GetLiveToolsPingInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetLiveToolsPingResult>("meraki:devices/getLiveToolsPing:getLiveToolsPing", args ?? new GetLiveToolsPingInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Devices.GetLiveToolsPing.Invoke(new()
+        ///     {
+        ///         Id = "string",
+        ///         Serial = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiDevicesLiveToolsPingExample"] = example.Apply(getLiveToolsPingResult =&gt; getLiveToolsPingResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetLiveToolsPingResult> Invoke(GetLiveToolsPingInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetLiveToolsPingResult>("meraki:devices/getLiveToolsPing:getLiveToolsPing", args ?? new GetLiveToolsPingInvokeArgs(), options.WithDefaults());
     }
 
 

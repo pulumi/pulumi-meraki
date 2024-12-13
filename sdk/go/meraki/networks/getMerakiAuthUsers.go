@@ -44,21 +44,11 @@ type LookupMerakiAuthUsersResult struct {
 }
 
 func LookupMerakiAuthUsersOutput(ctx *pulumi.Context, args LookupMerakiAuthUsersOutputArgs, opts ...pulumi.InvokeOption) LookupMerakiAuthUsersResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupMerakiAuthUsersResultOutput, error) {
 			args := v.(LookupMerakiAuthUsersArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupMerakiAuthUsersResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getMerakiAuthUsers:getMerakiAuthUsers", args, &rv, "", opts...)
-			if err != nil {
-				return LookupMerakiAuthUsersResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupMerakiAuthUsersResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupMerakiAuthUsersResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getMerakiAuthUsers:getMerakiAuthUsers", args, LookupMerakiAuthUsersResultOutput{}, options).(LookupMerakiAuthUsersResultOutput), nil
 		}).(LookupMerakiAuthUsersResultOutput)
 }
 

@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Devices
         /// </summary>
         public static Output<GetWirelessStatusResult> Invoke(GetWirelessStatusInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetWirelessStatusResult>("meraki:devices/getWirelessStatus:getWirelessStatus", args ?? new GetWirelessStatusInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Devices.GetWirelessStatus.Invoke(new()
+        ///     {
+        ///         Serial = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiDevicesWirelessStatusExample"] = example.Apply(getWirelessStatusResult =&gt; getWirelessStatusResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetWirelessStatusResult> Invoke(GetWirelessStatusInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetWirelessStatusResult>("meraki:devices/getWirelessStatus:getWirelessStatus", args ?? new GetWirelessStatusInvokeArgs(), options.WithDefaults());
     }
 
 

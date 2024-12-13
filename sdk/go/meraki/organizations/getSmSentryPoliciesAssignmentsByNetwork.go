@@ -86,21 +86,11 @@ type GetSmSentryPoliciesAssignmentsByNetworkResult struct {
 }
 
 func GetSmSentryPoliciesAssignmentsByNetworkOutput(ctx *pulumi.Context, args GetSmSentryPoliciesAssignmentsByNetworkOutputArgs, opts ...pulumi.InvokeOption) GetSmSentryPoliciesAssignmentsByNetworkResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetSmSentryPoliciesAssignmentsByNetworkResultOutput, error) {
 			args := v.(GetSmSentryPoliciesAssignmentsByNetworkArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetSmSentryPoliciesAssignmentsByNetworkResult
-			secret, err := ctx.InvokePackageRaw("meraki:organizations/getSmSentryPoliciesAssignmentsByNetwork:getSmSentryPoliciesAssignmentsByNetwork", args, &rv, "", opts...)
-			if err != nil {
-				return GetSmSentryPoliciesAssignmentsByNetworkResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetSmSentryPoliciesAssignmentsByNetworkResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetSmSentryPoliciesAssignmentsByNetworkResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:organizations/getSmSentryPoliciesAssignmentsByNetwork:getSmSentryPoliciesAssignmentsByNetwork", args, GetSmSentryPoliciesAssignmentsByNetworkResultOutput{}, options).(GetSmSentryPoliciesAssignmentsByNetworkResultOutput), nil
 		}).(GetSmSentryPoliciesAssignmentsByNetworkResultOutput)
 }
 

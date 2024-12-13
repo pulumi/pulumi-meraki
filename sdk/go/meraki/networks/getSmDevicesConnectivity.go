@@ -84,21 +84,11 @@ type GetSmDevicesConnectivityResult struct {
 }
 
 func GetSmDevicesConnectivityOutput(ctx *pulumi.Context, args GetSmDevicesConnectivityOutputArgs, opts ...pulumi.InvokeOption) GetSmDevicesConnectivityResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetSmDevicesConnectivityResultOutput, error) {
 			args := v.(GetSmDevicesConnectivityArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetSmDevicesConnectivityResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getSmDevicesConnectivity:getSmDevicesConnectivity", args, &rv, "", opts...)
-			if err != nil {
-				return GetSmDevicesConnectivityResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetSmDevicesConnectivityResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetSmDevicesConnectivityResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getSmDevicesConnectivity:getSmDevicesConnectivity", args, GetSmDevicesConnectivityResultOutput{}, options).(GetSmDevicesConnectivityResultOutput), nil
 		}).(GetSmDevicesConnectivityResultOutput)
 }
 

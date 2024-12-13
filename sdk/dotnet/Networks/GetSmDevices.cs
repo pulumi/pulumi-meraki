@@ -124,6 +124,63 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetSmDevicesResult> Invoke(GetSmDevicesInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSmDevicesResult>("meraki:networks/getSmDevices:getSmDevices", args ?? new GetSmDevicesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetSmDevices.Invoke(new()
+        ///     {
+        ///         EndingBefore = "string",
+        ///         Fields = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         Ids = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         NetworkId = "string",
+        ///         PerPage = 1,
+        ///         Scopes = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         Serials = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         StartingAfter = "string",
+        ///         SystemTypes = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         Uuids = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         WifiMacs = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksSmDevicesExample"] = example.Apply(getSmDevicesResult =&gt; getSmDevicesResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSmDevicesResult> Invoke(GetSmDevicesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSmDevicesResult>("meraki:networks/getSmDevices:getSmDevices", args ?? new GetSmDevicesInvokeArgs(), options.WithDefaults());
     }
 
 

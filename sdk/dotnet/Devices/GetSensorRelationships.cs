@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Devices
         /// </summary>
         public static Output<GetSensorRelationshipsResult> Invoke(GetSensorRelationshipsInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSensorRelationshipsResult>("meraki:devices/getSensorRelationships:getSensorRelationships", args ?? new GetSensorRelationshipsInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Devices.GetSensorRelationships.Invoke(new()
+        ///     {
+        ///         Serial = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiDevicesSensorRelationshipsExample"] = example.Apply(getSensorRelationshipsResult =&gt; getSensorRelationshipsResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetSensorRelationshipsResult> Invoke(GetSensorRelationshipsInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSensorRelationshipsResult>("meraki:devices/getSensorRelationships:getSensorRelationships", args ?? new GetSensorRelationshipsInvokeArgs(), options.WithDefaults());
     }
 
 

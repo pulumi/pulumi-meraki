@@ -70,6 +70,36 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetCameraBoundariesLinesByDeviceResult> Invoke(GetCameraBoundariesLinesByDeviceInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetCameraBoundariesLinesByDeviceResult>("meraki:organizations/getCameraBoundariesLinesByDevice:getCameraBoundariesLinesByDevice", args ?? new GetCameraBoundariesLinesByDeviceInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetCameraBoundariesLinesByDevice.Invoke(new()
+        ///     {
+        ///         OrganizationId = "string",
+        ///         Serials = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsCameraBoundariesLinesByDeviceExample"] = example.Apply(getCameraBoundariesLinesByDeviceResult =&gt; getCameraBoundariesLinesByDeviceResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetCameraBoundariesLinesByDeviceResult> Invoke(GetCameraBoundariesLinesByDeviceInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetCameraBoundariesLinesByDeviceResult>("meraki:organizations/getCameraBoundariesLinesByDevice:getCameraBoundariesLinesByDevice", args ?? new GetCameraBoundariesLinesByDeviceInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -63,21 +63,11 @@ type LookupApplianceContentFilteringResult struct {
 }
 
 func LookupApplianceContentFilteringOutput(ctx *pulumi.Context, args LookupApplianceContentFilteringOutputArgs, opts ...pulumi.InvokeOption) LookupApplianceContentFilteringResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupApplianceContentFilteringResultOutput, error) {
 			args := v.(LookupApplianceContentFilteringArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupApplianceContentFilteringResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getApplianceContentFiltering:getApplianceContentFiltering", args, &rv, "", opts...)
-			if err != nil {
-				return LookupApplianceContentFilteringResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupApplianceContentFilteringResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupApplianceContentFilteringResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getApplianceContentFiltering:getApplianceContentFiltering", args, LookupApplianceContentFilteringResultOutput{}, options).(LookupApplianceContentFilteringResultOutput), nil
 		}).(LookupApplianceContentFilteringResultOutput)
 }
 

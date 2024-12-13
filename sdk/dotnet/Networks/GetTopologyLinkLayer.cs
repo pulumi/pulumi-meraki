@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetTopologyLinkLayerResult> Invoke(GetTopologyLinkLayerInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetTopologyLinkLayerResult>("meraki:networks/getTopologyLinkLayer:getTopologyLinkLayer", args ?? new GetTopologyLinkLayerInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetTopologyLinkLayer.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksTopologyLinkLayerExample"] = example.Apply(getTopologyLinkLayerResult =&gt; getTopologyLinkLayerResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetTopologyLinkLayerResult> Invoke(GetTopologyLinkLayerInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetTopologyLinkLayerResult>("meraki:networks/getTopologyLinkLayer:getTopologyLinkLayer", args ?? new GetTopologyLinkLayerInvokeArgs(), options.WithDefaults());
     }
 
 

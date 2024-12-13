@@ -64,6 +64,33 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetWebhooksCallbacksStatusesResult> Invoke(GetWebhooksCallbacksStatusesInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetWebhooksCallbacksStatusesResult>("meraki:organizations/getWebhooksCallbacksStatuses:getWebhooksCallbacksStatuses", args ?? new GetWebhooksCallbacksStatusesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetWebhooksCallbacksStatuses.Invoke(new()
+        ///     {
+        ///         CallbackId = "string",
+        ///         OrganizationId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsWebhooksCallbacksStatusesExample"] = example.Apply(getWebhooksCallbacksStatusesResult =&gt; getWebhooksCallbacksStatusesResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetWebhooksCallbacksStatusesResult> Invoke(GetWebhooksCallbacksStatusesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetWebhooksCallbacksStatusesResult>("meraki:organizations/getWebhooksCallbacksStatuses:getWebhooksCallbacksStatuses", args ?? new GetWebhooksCallbacksStatusesInvokeArgs(), options.WithDefaults());
     }
 
 

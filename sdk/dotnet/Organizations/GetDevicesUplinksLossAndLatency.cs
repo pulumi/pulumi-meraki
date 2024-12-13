@@ -72,6 +72,37 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetDevicesUplinksLossAndLatencyResult> Invoke(GetDevicesUplinksLossAndLatencyInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetDevicesUplinksLossAndLatencyResult>("meraki:organizations/getDevicesUplinksLossAndLatency:getDevicesUplinksLossAndLatency", args ?? new GetDevicesUplinksLossAndLatencyInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetDevicesUplinksLossAndLatency.Invoke(new()
+        ///     {
+        ///         Ip = "string",
+        ///         OrganizationId = "string",
+        ///         T0 = "string",
+        ///         T1 = "string",
+        ///         Timespan = 1,
+        ///         Uplink = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsDevicesUplinksLossAndLatencyExample"] = example.Apply(getDevicesUplinksLossAndLatencyResult =&gt; getDevicesUplinksLossAndLatencyResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetDevicesUplinksLossAndLatencyResult> Invoke(GetDevicesUplinksLossAndLatencyInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetDevicesUplinksLossAndLatencyResult>("meraki:organizations/getDevicesUplinksLossAndLatency:getDevicesUplinksLossAndLatency", args ?? new GetDevicesUplinksLossAndLatencyInvokeArgs(), options.WithDefaults());
     }
 
 

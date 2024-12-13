@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Devices
         /// </summary>
         public static Output<GetCellularGatewayLanResult> Invoke(GetCellularGatewayLanInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetCellularGatewayLanResult>("meraki:devices/getCellularGatewayLan:getCellularGatewayLan", args ?? new GetCellularGatewayLanInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Devices.GetCellularGatewayLan.Invoke(new()
+        ///     {
+        ///         Serial = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiDevicesCellularGatewayLanExample"] = example.Apply(getCellularGatewayLanResult =&gt; getCellularGatewayLanResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetCellularGatewayLanResult> Invoke(GetCellularGatewayLanInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetCellularGatewayLanResult>("meraki:devices/getCellularGatewayLan:getCellularGatewayLan", args ?? new GetCellularGatewayLanInvokeArgs(), options.WithDefaults());
     }
 
 

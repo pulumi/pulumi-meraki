@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetApplianceFirewallPortForwardingRulesResult> Invoke(GetApplianceFirewallPortForwardingRulesInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetApplianceFirewallPortForwardingRulesResult>("meraki:networks/getApplianceFirewallPortForwardingRules:getApplianceFirewallPortForwardingRules", args ?? new GetApplianceFirewallPortForwardingRulesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Networks.GetApplianceFirewallPortForwardingRules.Invoke(new()
+        ///     {
+        ///         NetworkId = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiNetworksApplianceFirewallPortForwardingRulesExample"] = example.Apply(getApplianceFirewallPortForwardingRulesResult =&gt; getApplianceFirewallPortForwardingRulesResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetApplianceFirewallPortForwardingRulesResult> Invoke(GetApplianceFirewallPortForwardingRulesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetApplianceFirewallPortForwardingRulesResult>("meraki:networks/getApplianceFirewallPortForwardingRules:getApplianceFirewallPortForwardingRules", args ?? new GetApplianceFirewallPortForwardingRulesInvokeArgs(), options.WithDefaults());
     }
 
 

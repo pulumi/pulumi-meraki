@@ -140,21 +140,11 @@ type GetSmDevicesResult struct {
 }
 
 func GetSmDevicesOutput(ctx *pulumi.Context, args GetSmDevicesOutputArgs, opts ...pulumi.InvokeOption) GetSmDevicesResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetSmDevicesResultOutput, error) {
 			args := v.(GetSmDevicesArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetSmDevicesResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getSmDevices:getSmDevices", args, &rv, "", opts...)
-			if err != nil {
-				return GetSmDevicesResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetSmDevicesResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetSmDevicesResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getSmDevices:getSmDevices", args, GetSmDevicesResultOutput{}, options).(GetSmDevicesResultOutput), nil
 		}).(GetSmDevicesResultOutput)
 }
 

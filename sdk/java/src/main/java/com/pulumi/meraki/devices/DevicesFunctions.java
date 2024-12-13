@@ -7,6 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.TypeShape;
 import com.pulumi.deployment.Deployment;
 import com.pulumi.deployment.InvokeOptions;
+import com.pulumi.deployment.InvokeOutputOptions;
 import com.pulumi.meraki.Utilities;
 import com.pulumi.meraki.devices.inputs.GetAppliancePerformanceArgs;
 import com.pulumi.meraki.devices.inputs.GetAppliancePerformancePlainArgs;
@@ -271,6 +272,47 @@ public final class DevicesFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetAppliancePerformanceResult> getAppliancePerformance(GetAppliancePerformanceArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:devices/getAppliancePerformance:getAppliancePerformance", TypeShape.of(GetAppliancePerformanceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.devices.DevicesFunctions;
+     * import com.pulumi.meraki.devices.inputs.GetAppliancePerformanceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DevicesFunctions.getAppliancePerformance(GetAppliancePerformanceArgs.builder()
+     *             .serial("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiDevicesAppliancePerformanceExample", example.applyValue(getAppliancePerformanceResult -> getAppliancePerformanceResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetAppliancePerformanceResult> getAppliancePerformancePlain(GetAppliancePerformancePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:devices/getAppliancePerformance:getAppliancePerformance", TypeShape.of(GetAppliancePerformanceResult.class), args, Utilities.withVersion(options));
     }
@@ -395,6 +437,47 @@ public final class DevicesFunctions {
      * 
      */
     public static Output<GetApplianceRadioSettingsResult> getApplianceRadioSettings(GetApplianceRadioSettingsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:devices/getApplianceRadioSettings:getApplianceRadioSettings", TypeShape.of(GetApplianceRadioSettingsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.devices.DevicesFunctions;
+     * import com.pulumi.meraki.devices.inputs.GetApplianceRadioSettingsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DevicesFunctions.getApplianceRadioSettings(GetApplianceRadioSettingsArgs.builder()
+     *             .serial("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiDevicesApplianceRadioSettingsExample", example.applyValue(getApplianceRadioSettingsResult -> getApplianceRadioSettingsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetApplianceRadioSettingsResult> getApplianceRadioSettings(GetApplianceRadioSettingsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:devices/getApplianceRadioSettings:getApplianceRadioSettings", TypeShape.of(GetApplianceRadioSettingsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -599,6 +682,47 @@ public final class DevicesFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetApplianceUplinksSettingsResult> getApplianceUplinksSettings(GetApplianceUplinksSettingsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:devices/getApplianceUplinksSettings:getApplianceUplinksSettings", TypeShape.of(GetApplianceUplinksSettingsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.devices.DevicesFunctions;
+     * import com.pulumi.meraki.devices.inputs.GetApplianceUplinksSettingsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DevicesFunctions.getApplianceUplinksSettings(GetApplianceUplinksSettingsArgs.builder()
+     *             .serial("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiDevicesApplianceUplinksSettingsExample", example.applyValue(getApplianceUplinksSettingsResult -> getApplianceUplinksSettingsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetApplianceUplinksSettingsResult> getApplianceUplinksSettingsPlain(GetApplianceUplinksSettingsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:devices/getApplianceUplinksSettings:getApplianceUplinksSettings", TypeShape.of(GetApplianceUplinksSettingsResult.class), args, Utilities.withVersion(options));
     }
@@ -723,6 +847,47 @@ public final class DevicesFunctions {
      * 
      */
     public static Output<GetCameraAnalyticsLiveResult> getCameraAnalyticsLive(GetCameraAnalyticsLiveArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:devices/getCameraAnalyticsLive:getCameraAnalyticsLive", TypeShape.of(GetCameraAnalyticsLiveResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.devices.DevicesFunctions;
+     * import com.pulumi.meraki.devices.inputs.GetCameraAnalyticsLiveArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DevicesFunctions.getCameraAnalyticsLive(GetCameraAnalyticsLiveArgs.builder()
+     *             .serial("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiDevicesCameraAnalyticsLiveExample", example.applyValue(getCameraAnalyticsLiveResult -> getCameraAnalyticsLiveResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetCameraAnalyticsLiveResult> getCameraAnalyticsLive(GetCameraAnalyticsLiveArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:devices/getCameraAnalyticsLive:getCameraAnalyticsLive", TypeShape.of(GetCameraAnalyticsLiveResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -927,6 +1092,47 @@ public final class DevicesFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetCameraCustomAnalyticsResult> getCameraCustomAnalytics(GetCameraCustomAnalyticsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:devices/getCameraCustomAnalytics:getCameraCustomAnalytics", TypeShape.of(GetCameraCustomAnalyticsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.devices.DevicesFunctions;
+     * import com.pulumi.meraki.devices.inputs.GetCameraCustomAnalyticsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DevicesFunctions.getCameraCustomAnalytics(GetCameraCustomAnalyticsArgs.builder()
+     *             .serial("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiDevicesCameraCustomAnalyticsExample", example.applyValue(getCameraCustomAnalyticsResult -> getCameraCustomAnalyticsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetCameraCustomAnalyticsResult> getCameraCustomAnalyticsPlain(GetCameraCustomAnalyticsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:devices/getCameraCustomAnalytics:getCameraCustomAnalytics", TypeShape.of(GetCameraCustomAnalyticsResult.class), args, Utilities.withVersion(options));
     }
@@ -1091,6 +1297,47 @@ public final class DevicesFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetCameraQualityAndRetentionResult> getCameraQualityAndRetention(GetCameraQualityAndRetentionArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:devices/getCameraQualityAndRetention:getCameraQualityAndRetention", TypeShape.of(GetCameraQualityAndRetentionResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.devices.DevicesFunctions;
+     * import com.pulumi.meraki.devices.inputs.GetCameraQualityAndRetentionArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DevicesFunctions.getCameraQualityAndRetention(GetCameraQualityAndRetentionArgs.builder()
+     *             .serial("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiDevicesCameraQualityAndRetentionExample", example.applyValue(getCameraQualityAndRetentionResult -> getCameraQualityAndRetentionResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetCameraQualityAndRetentionResult> getCameraQualityAndRetentionPlain(GetCameraQualityAndRetentionPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:devices/getCameraQualityAndRetention:getCameraQualityAndRetention", TypeShape.of(GetCameraQualityAndRetentionResult.class), args, Utilities.withVersion(options));
     }
@@ -1215,6 +1462,47 @@ public final class DevicesFunctions {
      * 
      */
     public static Output<GetCameraSenseResult> getCameraSense(GetCameraSenseArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:devices/getCameraSense:getCameraSense", TypeShape.of(GetCameraSenseResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.devices.DevicesFunctions;
+     * import com.pulumi.meraki.devices.inputs.GetCameraSenseArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DevicesFunctions.getCameraSense(GetCameraSenseArgs.builder()
+     *             .serial("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiDevicesCameraSenseExample", example.applyValue(getCameraSenseResult -> getCameraSenseResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetCameraSenseResult> getCameraSense(GetCameraSenseArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:devices/getCameraSense:getCameraSense", TypeShape.of(GetCameraSenseResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1423,6 +1711,48 @@ public final class DevicesFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetCameraVideoLinkResult> getCameraVideoLink(GetCameraVideoLinkArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:devices/getCameraVideoLink:getCameraVideoLink", TypeShape.of(GetCameraVideoLinkResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.devices.DevicesFunctions;
+     * import com.pulumi.meraki.devices.inputs.GetCameraVideoLinkArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DevicesFunctions.getCameraVideoLink(GetCameraVideoLinkArgs.builder()
+     *             .serial("string")
+     *             .timestamp("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiDevicesCameraVideoLinkExample", example.applyValue(getCameraVideoLinkResult -> getCameraVideoLinkResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetCameraVideoLinkResult> getCameraVideoLinkPlain(GetCameraVideoLinkPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:devices/getCameraVideoLink:getCameraVideoLink", TypeShape.of(GetCameraVideoLinkResult.class), args, Utilities.withVersion(options));
     }
@@ -1547,6 +1877,47 @@ public final class DevicesFunctions {
      * 
      */
     public static Output<GetCameraVideoSettingsResult> getCameraVideoSettings(GetCameraVideoSettingsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:devices/getCameraVideoSettings:getCameraVideoSettings", TypeShape.of(GetCameraVideoSettingsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.devices.DevicesFunctions;
+     * import com.pulumi.meraki.devices.inputs.GetCameraVideoSettingsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DevicesFunctions.getCameraVideoSettings(GetCameraVideoSettingsArgs.builder()
+     *             .serial("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiDevicesCameraVideoSettingsExample", example.applyValue(getCameraVideoSettingsResult -> getCameraVideoSettingsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetCameraVideoSettingsResult> getCameraVideoSettings(GetCameraVideoSettingsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:devices/getCameraVideoSettings:getCameraVideoSettings", TypeShape.of(GetCameraVideoSettingsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -1751,6 +2122,47 @@ public final class DevicesFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetCameraWirelessProfilesResult> getCameraWirelessProfiles(GetCameraWirelessProfilesArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:devices/getCameraWirelessProfiles:getCameraWirelessProfiles", TypeShape.of(GetCameraWirelessProfilesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.devices.DevicesFunctions;
+     * import com.pulumi.meraki.devices.inputs.GetCameraWirelessProfilesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DevicesFunctions.getCameraWirelessProfiles(GetCameraWirelessProfilesArgs.builder()
+     *             .serial("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiDevicesCameraWirelessProfilesExample", example.applyValue(getCameraWirelessProfilesResult -> getCameraWirelessProfilesResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetCameraWirelessProfilesResult> getCameraWirelessProfilesPlain(GetCameraWirelessProfilesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:devices/getCameraWirelessProfiles:getCameraWirelessProfiles", TypeShape.of(GetCameraWirelessProfilesResult.class), args, Utilities.withVersion(options));
     }
@@ -1875,6 +2287,47 @@ public final class DevicesFunctions {
      * 
      */
     public static Output<GetCellularGatewayLanResult> getCellularGatewayLan(GetCellularGatewayLanArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:devices/getCellularGatewayLan:getCellularGatewayLan", TypeShape.of(GetCellularGatewayLanResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.devices.DevicesFunctions;
+     * import com.pulumi.meraki.devices.inputs.GetCellularGatewayLanArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DevicesFunctions.getCellularGatewayLan(GetCellularGatewayLanArgs.builder()
+     *             .serial("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiDevicesCellularGatewayLanExample", example.applyValue(getCellularGatewayLanResult -> getCellularGatewayLanResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetCellularGatewayLanResult> getCellularGatewayLan(GetCellularGatewayLanArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:devices/getCellularGatewayLan:getCellularGatewayLan", TypeShape.of(GetCellularGatewayLanResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -2079,6 +2532,47 @@ public final class DevicesFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetCellularGatewayPortForwardingRulesResult> getCellularGatewayPortForwardingRules(GetCellularGatewayPortForwardingRulesArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:devices/getCellularGatewayPortForwardingRules:getCellularGatewayPortForwardingRules", TypeShape.of(GetCellularGatewayPortForwardingRulesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.devices.DevicesFunctions;
+     * import com.pulumi.meraki.devices.inputs.GetCellularGatewayPortForwardingRulesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DevicesFunctions.getCellularGatewayPortForwardingRules(GetCellularGatewayPortForwardingRulesArgs.builder()
+     *             .serial("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiDevicesCellularGatewayPortForwardingRulesExample", example.applyValue(getCellularGatewayPortForwardingRulesResult -> getCellularGatewayPortForwardingRulesResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetCellularGatewayPortForwardingRulesResult> getCellularGatewayPortForwardingRulesPlain(GetCellularGatewayPortForwardingRulesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:devices/getCellularGatewayPortForwardingRules:getCellularGatewayPortForwardingRules", TypeShape.of(GetCellularGatewayPortForwardingRulesResult.class), args, Utilities.withVersion(options));
     }
@@ -2203,6 +2697,47 @@ public final class DevicesFunctions {
      * 
      */
     public static Output<GetCellularSimsResult> getCellularSims(GetCellularSimsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:devices/getCellularSims:getCellularSims", TypeShape.of(GetCellularSimsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.devices.DevicesFunctions;
+     * import com.pulumi.meraki.devices.inputs.GetCellularSimsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DevicesFunctions.getCellularSims(GetCellularSimsArgs.builder()
+     *             .serial("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiDevicesCellularSimsExample", example.applyValue(getCellularSimsResult -> getCellularSimsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetCellularSimsResult> getCellularSims(GetCellularSimsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:devices/getCellularSims:getCellularSims", TypeShape.of(GetCellularSimsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -2370,6 +2905,48 @@ public final class DevicesFunctions {
      * 
      */
     public static Output<GetLiveToolsArpTableResult> getLiveToolsArpTable(GetLiveToolsArpTableArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:devices/getLiveToolsArpTable:getLiveToolsArpTable", TypeShape.of(GetLiveToolsArpTableResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.devices.DevicesFunctions;
+     * import com.pulumi.meraki.devices.inputs.GetLiveToolsArpTableArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DevicesFunctions.getLiveToolsArpTable(GetLiveToolsArpTableArgs.builder()
+     *             .arpTableId("string")
+     *             .serial("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiDevicesLiveToolsArpTableExample", example.applyValue(getLiveToolsArpTableResult -> getLiveToolsArpTableResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetLiveToolsArpTableResult> getLiveToolsArpTable(GetLiveToolsArpTableArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:devices/getLiveToolsArpTable:getLiveToolsArpTable", TypeShape.of(GetLiveToolsArpTableResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -2579,6 +3156,48 @@ public final class DevicesFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetLiveToolsCableTestResult> getLiveToolsCableTest(GetLiveToolsCableTestArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:devices/getLiveToolsCableTest:getLiveToolsCableTest", TypeShape.of(GetLiveToolsCableTestResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.devices.DevicesFunctions;
+     * import com.pulumi.meraki.devices.inputs.GetLiveToolsCableTestArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DevicesFunctions.getLiveToolsCableTest(GetLiveToolsCableTestArgs.builder()
+     *             .id("string")
+     *             .serial("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiDevicesLiveToolsCableTestExample", example.applyValue(getLiveToolsCableTestResult -> getLiveToolsCableTestResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetLiveToolsCableTestResult> getLiveToolsCableTestPlain(GetLiveToolsCableTestPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:devices/getLiveToolsCableTest:getLiveToolsCableTest", TypeShape.of(GetLiveToolsCableTestResult.class), args, Utilities.withVersion(options));
     }
@@ -2706,6 +3325,48 @@ public final class DevicesFunctions {
      * 
      */
     public static Output<GetLiveToolsPingResult> getLiveToolsPing(GetLiveToolsPingArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:devices/getLiveToolsPing:getLiveToolsPing", TypeShape.of(GetLiveToolsPingResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.devices.DevicesFunctions;
+     * import com.pulumi.meraki.devices.inputs.GetLiveToolsPingArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DevicesFunctions.getLiveToolsPing(GetLiveToolsPingArgs.builder()
+     *             .id("string")
+     *             .serial("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiDevicesLiveToolsPingExample", example.applyValue(getLiveToolsPingResult -> getLiveToolsPingResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetLiveToolsPingResult> getLiveToolsPing(GetLiveToolsPingArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:devices/getLiveToolsPing:getLiveToolsPing", TypeShape.of(GetLiveToolsPingResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -2915,6 +3576,48 @@ public final class DevicesFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetLiveToolsPingDeviceResult> getLiveToolsPingDevice(GetLiveToolsPingDeviceArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:devices/getLiveToolsPingDevice:getLiveToolsPingDevice", TypeShape.of(GetLiveToolsPingDeviceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.devices.DevicesFunctions;
+     * import com.pulumi.meraki.devices.inputs.GetLiveToolsPingDeviceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DevicesFunctions.getLiveToolsPingDevice(GetLiveToolsPingDeviceArgs.builder()
+     *             .id("string")
+     *             .serial("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiDevicesLiveToolsPingDeviceExample", example.applyValue(getLiveToolsPingDeviceResult -> getLiveToolsPingDeviceResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetLiveToolsPingDeviceResult> getLiveToolsPingDevicePlain(GetLiveToolsPingDevicePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:devices/getLiveToolsPingDevice:getLiveToolsPingDevice", TypeShape.of(GetLiveToolsPingDeviceResult.class), args, Utilities.withVersion(options));
     }
@@ -3042,6 +3745,48 @@ public final class DevicesFunctions {
      * 
      */
     public static Output<GetLiveToolsThroughputTestResult> getLiveToolsThroughputTest(GetLiveToolsThroughputTestArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:devices/getLiveToolsThroughputTest:getLiveToolsThroughputTest", TypeShape.of(GetLiveToolsThroughputTestResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.devices.DevicesFunctions;
+     * import com.pulumi.meraki.devices.inputs.GetLiveToolsThroughputTestArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DevicesFunctions.getLiveToolsThroughputTest(GetLiveToolsThroughputTestArgs.builder()
+     *             .serial("string")
+     *             .throughputTestId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiDevicesLiveToolsThroughputTestExample", example.applyValue(getLiveToolsThroughputTestResult -> getLiveToolsThroughputTestResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetLiveToolsThroughputTestResult> getLiveToolsThroughputTest(GetLiveToolsThroughputTestArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:devices/getLiveToolsThroughputTest:getLiveToolsThroughputTest", TypeShape.of(GetLiveToolsThroughputTestResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -3251,6 +3996,48 @@ public final class DevicesFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetLiveToolsWakeOnLanResult> getLiveToolsWakeOnLan(GetLiveToolsWakeOnLanArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:devices/getLiveToolsWakeOnLan:getLiveToolsWakeOnLan", TypeShape.of(GetLiveToolsWakeOnLanResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.devices.DevicesFunctions;
+     * import com.pulumi.meraki.devices.inputs.GetLiveToolsWakeOnLanArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DevicesFunctions.getLiveToolsWakeOnLan(GetLiveToolsWakeOnLanArgs.builder()
+     *             .serial("string")
+     *             .wakeOnLanId("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiDevicesLiveToolsWakeOnLanExample", example.applyValue(getLiveToolsWakeOnLanResult -> getLiveToolsWakeOnLanResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetLiveToolsWakeOnLanResult> getLiveToolsWakeOnLanPlain(GetLiveToolsWakeOnLanPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:devices/getLiveToolsWakeOnLan:getLiveToolsWakeOnLan", TypeShape.of(GetLiveToolsWakeOnLanResult.class), args, Utilities.withVersion(options));
     }
@@ -3375,6 +4162,47 @@ public final class DevicesFunctions {
      * 
      */
     public static Output<GetLldpCdpResult> getLldpCdp(GetLldpCdpArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:devices/getLldpCdp:getLldpCdp", TypeShape.of(GetLldpCdpResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.devices.DevicesFunctions;
+     * import com.pulumi.meraki.devices.inputs.GetLldpCdpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DevicesFunctions.getLldpCdp(GetLldpCdpArgs.builder()
+     *             .serial("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiDevicesLldpCdpExample", example.applyValue(getLldpCdpResult -> getLldpCdpResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetLldpCdpResult> getLldpCdp(GetLldpCdpArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:devices/getLldpCdp:getLldpCdp", TypeShape.of(GetLldpCdpResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -3579,6 +4407,47 @@ public final class DevicesFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetManagementInterfaceResult> getManagementInterface(GetManagementInterfaceArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:devices/getManagementInterface:getManagementInterface", TypeShape.of(GetManagementInterfaceResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.devices.DevicesFunctions;
+     * import com.pulumi.meraki.devices.inputs.GetManagementInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DevicesFunctions.getManagementInterface(GetManagementInterfaceArgs.builder()
+     *             .serial("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiDevicesManagementInterfaceExample", example.applyValue(getManagementInterfaceResult -> getManagementInterfaceResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetManagementInterfaceResult> getManagementInterfacePlain(GetManagementInterfacePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:devices/getManagementInterface:getManagementInterface", TypeShape.of(GetManagementInterfaceResult.class), args, Utilities.withVersion(options));
     }
@@ -3743,6 +4612,47 @@ public final class DevicesFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetSensorRelationshipsResult> getSensorRelationships(GetSensorRelationshipsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:devices/getSensorRelationships:getSensorRelationships", TypeShape.of(GetSensorRelationshipsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.devices.DevicesFunctions;
+     * import com.pulumi.meraki.devices.inputs.GetSensorRelationshipsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DevicesFunctions.getSensorRelationships(GetSensorRelationshipsArgs.builder()
+     *             .serial("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiDevicesSensorRelationshipsExample", example.applyValue(getSensorRelationshipsResult -> getSensorRelationshipsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetSensorRelationshipsResult> getSensorRelationshipsPlain(GetSensorRelationshipsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:devices/getSensorRelationships:getSensorRelationships", TypeShape.of(GetSensorRelationshipsResult.class), args, Utilities.withVersion(options));
     }
@@ -3779,6 +4689,13 @@ public final class DevicesFunctions {
      * 
      */
     public static Output<GetSwitchPortsResult> getSwitchPorts(GetSwitchPortsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:devices/getSwitchPorts:getSwitchPorts", TypeShape.of(GetSwitchPortsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetSwitchPortsResult> getSwitchPorts(GetSwitchPortsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:devices/getSwitchPorts:getSwitchPorts", TypeShape.of(GetSwitchPortsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -3957,6 +4874,49 @@ public final class DevicesFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetSwitchPortsStatusesResult> getSwitchPortsStatuses(GetSwitchPortsStatusesArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:devices/getSwitchPortsStatuses:getSwitchPortsStatuses", TypeShape.of(GetSwitchPortsStatusesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.devices.DevicesFunctions;
+     * import com.pulumi.meraki.devices.inputs.GetSwitchPortsStatusesArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DevicesFunctions.getSwitchPortsStatuses(GetSwitchPortsStatusesArgs.builder()
+     *             .serial("string")
+     *             .t0("string")
+     *             .timespan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiDevicesSwitchPortsStatusesExample", example.applyValue(getSwitchPortsStatusesResult -> getSwitchPortsStatusesResult.items()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetSwitchPortsStatusesResult> getSwitchPortsStatusesPlain(GetSwitchPortsStatusesPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:devices/getSwitchPortsStatuses:getSwitchPortsStatuses", TypeShape.of(GetSwitchPortsStatusesResult.class), args, Utilities.withVersion(options));
     }
@@ -3993,6 +4953,13 @@ public final class DevicesFunctions {
      * 
      */
     public static Output<GetSwitchRoutingInterfacesResult> getSwitchRoutingInterfaces(GetSwitchRoutingInterfacesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:devices/getSwitchRoutingInterfaces:getSwitchRoutingInterfaces", TypeShape.of(GetSwitchRoutingInterfacesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetSwitchRoutingInterfacesResult> getSwitchRoutingInterfaces(GetSwitchRoutingInterfacesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:devices/getSwitchRoutingInterfaces:getSwitchRoutingInterfaces", TypeShape.of(GetSwitchRoutingInterfacesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -4167,6 +5134,48 @@ public final class DevicesFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetSwitchRoutingInterfacesDhcpResult> getSwitchRoutingInterfacesDhcp(GetSwitchRoutingInterfacesDhcpArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:devices/getSwitchRoutingInterfacesDhcp:getSwitchRoutingInterfacesDhcp", TypeShape.of(GetSwitchRoutingInterfacesDhcpResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.devices.DevicesFunctions;
+     * import com.pulumi.meraki.devices.inputs.GetSwitchRoutingInterfacesDhcpArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DevicesFunctions.getSwitchRoutingInterfacesDhcp(GetSwitchRoutingInterfacesDhcpArgs.builder()
+     *             .interfaceId("string")
+     *             .serial("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiDevicesSwitchRoutingInterfacesDhcpExample", example.applyValue(getSwitchRoutingInterfacesDhcpResult -> getSwitchRoutingInterfacesDhcpResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetSwitchRoutingInterfacesDhcpResult> getSwitchRoutingInterfacesDhcpPlain(GetSwitchRoutingInterfacesDhcpPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:devices/getSwitchRoutingInterfacesDhcp:getSwitchRoutingInterfacesDhcp", TypeShape.of(GetSwitchRoutingInterfacesDhcpResult.class), args, Utilities.withVersion(options));
     }
@@ -4203,6 +5212,13 @@ public final class DevicesFunctions {
      * 
      */
     public static Output<GetSwitchRoutingStaticRoutesResult> getSwitchRoutingStaticRoutes(GetSwitchRoutingStaticRoutesArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:devices/getSwitchRoutingStaticRoutes:getSwitchRoutingStaticRoutes", TypeShape.of(GetSwitchRoutingStaticRoutesResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     */
+    public static Output<GetSwitchRoutingStaticRoutesResult> getSwitchRoutingStaticRoutes(GetSwitchRoutingStaticRoutesArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:devices/getSwitchRoutingStaticRoutes:getSwitchRoutingStaticRoutes", TypeShape.of(GetSwitchRoutingStaticRoutesResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -4333,6 +5349,47 @@ public final class DevicesFunctions {
      * 
      */
     public static Output<GetSwitchWarmSpareResult> getSwitchWarmSpare(GetSwitchWarmSpareArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:devices/getSwitchWarmSpare:getSwitchWarmSpare", TypeShape.of(GetSwitchWarmSpareResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.devices.DevicesFunctions;
+     * import com.pulumi.meraki.devices.inputs.GetSwitchWarmSpareArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DevicesFunctions.getSwitchWarmSpare(GetSwitchWarmSpareArgs.builder()
+     *             .serial("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiDevicesSwitchWarmSpareExample", example.applyValue(getSwitchWarmSpareResult -> getSwitchWarmSpareResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetSwitchWarmSpareResult> getSwitchWarmSpare(GetSwitchWarmSpareArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:devices/getSwitchWarmSpare:getSwitchWarmSpare", TypeShape.of(GetSwitchWarmSpareResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -4537,6 +5594,47 @@ public final class DevicesFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetWirelessBluetoothSettingsResult> getWirelessBluetoothSettings(GetWirelessBluetoothSettingsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:devices/getWirelessBluetoothSettings:getWirelessBluetoothSettings", TypeShape.of(GetWirelessBluetoothSettingsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.devices.DevicesFunctions;
+     * import com.pulumi.meraki.devices.inputs.GetWirelessBluetoothSettingsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DevicesFunctions.getWirelessBluetoothSettings(GetWirelessBluetoothSettingsArgs.builder()
+     *             .serial("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiDevicesWirelessBluetoothSettingsExample", example.applyValue(getWirelessBluetoothSettingsResult -> getWirelessBluetoothSettingsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetWirelessBluetoothSettingsResult> getWirelessBluetoothSettingsPlain(GetWirelessBluetoothSettingsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:devices/getWirelessBluetoothSettings:getWirelessBluetoothSettings", TypeShape.of(GetWirelessBluetoothSettingsResult.class), args, Utilities.withVersion(options));
     }
@@ -4682,6 +5780,54 @@ public final class DevicesFunctions {
      * 
      */
     public static Output<GetWirelessConnectionStatsResult> getWirelessConnectionStats(GetWirelessConnectionStatsArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:devices/getWirelessConnectionStats:getWirelessConnectionStats", TypeShape.of(GetWirelessConnectionStatsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.devices.DevicesFunctions;
+     * import com.pulumi.meraki.devices.inputs.GetWirelessConnectionStatsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DevicesFunctions.getWirelessConnectionStats(GetWirelessConnectionStatsArgs.builder()
+     *             .apTag("string")
+     *             .band("string")
+     *             .serial("string")
+     *             .ssid(1)
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .vlan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiDevicesWirelessConnectionStatsExample", example.applyValue(getWirelessConnectionStatsResult -> getWirelessConnectionStatsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetWirelessConnectionStatsResult> getWirelessConnectionStats(GetWirelessConnectionStatsArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:devices/getWirelessConnectionStats:getWirelessConnectionStats", TypeShape.of(GetWirelessConnectionStatsResult.class), args, Utilities.withVersion(options));
     }
     /**
@@ -4925,6 +6071,55 @@ public final class DevicesFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetWirelessLatencyStatsResult> getWirelessLatencyStats(GetWirelessLatencyStatsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:devices/getWirelessLatencyStats:getWirelessLatencyStats", TypeShape.of(GetWirelessLatencyStatsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.devices.DevicesFunctions;
+     * import com.pulumi.meraki.devices.inputs.GetWirelessLatencyStatsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DevicesFunctions.getWirelessLatencyStats(GetWirelessLatencyStatsArgs.builder()
+     *             .apTag("string")
+     *             .band("string")
+     *             .fields("string")
+     *             .serial("string")
+     *             .ssid(1)
+     *             .t0("string")
+     *             .t1("string")
+     *             .timespan(1)
+     *             .vlan(1)
+     *             .build());
+     * 
+     *         ctx.export("merakiDevicesWirelessLatencyStatsExample", example.applyValue(getWirelessLatencyStatsResult -> getWirelessLatencyStatsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetWirelessLatencyStatsResult> getWirelessLatencyStatsPlain(GetWirelessLatencyStatsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:devices/getWirelessLatencyStats:getWirelessLatencyStats", TypeShape.of(GetWirelessLatencyStatsResult.class), args, Utilities.withVersion(options));
     }
@@ -5089,6 +6284,47 @@ public final class DevicesFunctions {
      * &lt;!--End PulumiCodeChooser --&gt;
      * 
      */
+    public static Output<GetWirelessRadioSettingsResult> getWirelessRadioSettings(GetWirelessRadioSettingsArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("meraki:devices/getWirelessRadioSettings:getWirelessRadioSettings", TypeShape.of(GetWirelessRadioSettingsResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.devices.DevicesFunctions;
+     * import com.pulumi.meraki.devices.inputs.GetWirelessRadioSettingsArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DevicesFunctions.getWirelessRadioSettings(GetWirelessRadioSettingsArgs.builder()
+     *             .serial("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiDevicesWirelessRadioSettingsExample", example.applyValue(getWirelessRadioSettingsResult -> getWirelessRadioSettingsResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
     public static CompletableFuture<GetWirelessRadioSettingsResult> getWirelessRadioSettingsPlain(GetWirelessRadioSettingsPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("meraki:devices/getWirelessRadioSettings:getWirelessRadioSettings", TypeShape.of(GetWirelessRadioSettingsResult.class), args, Utilities.withVersion(options));
     }
@@ -5213,6 +6449,47 @@ public final class DevicesFunctions {
      * 
      */
     public static Output<GetWirelessStatusResult> getWirelessStatus(GetWirelessStatusArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("meraki:devices/getWirelessStatus:getWirelessStatus", TypeShape.of(GetWirelessStatusResult.class), args, Utilities.withVersion(options));
+    }
+    /**
+     * ## Example Usage
+     * 
+     * &lt;!--Start PulumiCodeChooser --&gt;
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.meraki.devices.DevicesFunctions;
+     * import com.pulumi.meraki.devices.inputs.GetWirelessStatusArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var example = DevicesFunctions.getWirelessStatus(GetWirelessStatusArgs.builder()
+     *             .serial("string")
+     *             .build());
+     * 
+     *         ctx.export("merakiDevicesWirelessStatusExample", example.applyValue(getWirelessStatusResult -> getWirelessStatusResult.item()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * &lt;!--End PulumiCodeChooser --&gt;
+     * 
+     */
+    public static Output<GetWirelessStatusResult> getWirelessStatus(GetWirelessStatusArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("meraki:devices/getWirelessStatus:getWirelessStatus", TypeShape.of(GetWirelessStatusResult.class), args, Utilities.withVersion(options));
     }
     /**

@@ -22,6 +22,12 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetCameraRolesResult> Invoke(GetCameraRolesInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetCameraRolesResult>("meraki:organizations/getCameraRoles:getCameraRoles", args ?? new GetCameraRolesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetCameraRolesResult> Invoke(GetCameraRolesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetCameraRolesResult>("meraki:organizations/getCameraRoles:getCameraRoles", args ?? new GetCameraRolesInvokeArgs(), options.WithDefaults());
     }
 
 

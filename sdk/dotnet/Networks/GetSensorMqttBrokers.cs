@@ -22,6 +22,12 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetSensorMqttBrokersResult> Invoke(GetSensorMqttBrokersInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSensorMqttBrokersResult>("meraki:networks/getSensorMqttBrokers:getSensorMqttBrokers", args ?? new GetSensorMqttBrokersInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetSensorMqttBrokersResult> Invoke(GetSensorMqttBrokersInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetSensorMqttBrokersResult>("meraki:networks/getSensorMqttBrokers:getSensorMqttBrokers", args ?? new GetSensorMqttBrokersInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -71,21 +71,11 @@ type LookupInventoryOnboardingCloudMonitoringImportsResult struct {
 }
 
 func LookupInventoryOnboardingCloudMonitoringImportsOutput(ctx *pulumi.Context, args LookupInventoryOnboardingCloudMonitoringImportsOutputArgs, opts ...pulumi.InvokeOption) LookupInventoryOnboardingCloudMonitoringImportsResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupInventoryOnboardingCloudMonitoringImportsResultOutput, error) {
 			args := v.(LookupInventoryOnboardingCloudMonitoringImportsArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupInventoryOnboardingCloudMonitoringImportsResult
-			secret, err := ctx.InvokePackageRaw("meraki:organizations/getInventoryOnboardingCloudMonitoringImports:getInventoryOnboardingCloudMonitoringImports", args, &rv, "", opts...)
-			if err != nil {
-				return LookupInventoryOnboardingCloudMonitoringImportsResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupInventoryOnboardingCloudMonitoringImportsResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupInventoryOnboardingCloudMonitoringImportsResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:organizations/getInventoryOnboardingCloudMonitoringImports:getInventoryOnboardingCloudMonitoringImports", args, LookupInventoryOnboardingCloudMonitoringImportsResultOutput{}, options).(LookupInventoryOnboardingCloudMonitoringImportsResultOutput), nil
 		}).(LookupInventoryOnboardingCloudMonitoringImportsResultOutput)
 }
 

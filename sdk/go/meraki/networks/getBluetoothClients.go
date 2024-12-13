@@ -78,21 +78,11 @@ type GetBluetoothClientsResult struct {
 }
 
 func GetBluetoothClientsOutput(ctx *pulumi.Context, args GetBluetoothClientsOutputArgs, opts ...pulumi.InvokeOption) GetBluetoothClientsResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetBluetoothClientsResultOutput, error) {
 			args := v.(GetBluetoothClientsArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetBluetoothClientsResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getBluetoothClients:getBluetoothClients", args, &rv, "", opts...)
-			if err != nil {
-				return GetBluetoothClientsResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetBluetoothClientsResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetBluetoothClientsResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getBluetoothClients:getBluetoothClients", args, GetBluetoothClientsResultOutput{}, options).(GetBluetoothClientsResultOutput), nil
 		}).(GetBluetoothClientsResultOutput)
 }
 

@@ -64,21 +64,11 @@ type LookupSwitchLinkAggregationsResult struct {
 }
 
 func LookupSwitchLinkAggregationsOutput(ctx *pulumi.Context, args LookupSwitchLinkAggregationsOutputArgs, opts ...pulumi.InvokeOption) LookupSwitchLinkAggregationsResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (LookupSwitchLinkAggregationsResultOutput, error) {
 			args := v.(LookupSwitchLinkAggregationsArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv LookupSwitchLinkAggregationsResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getSwitchLinkAggregations:getSwitchLinkAggregations", args, &rv, "", opts...)
-			if err != nil {
-				return LookupSwitchLinkAggregationsResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(LookupSwitchLinkAggregationsResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(LookupSwitchLinkAggregationsResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getSwitchLinkAggregations:getSwitchLinkAggregations", args, LookupSwitchLinkAggregationsResultOutput{}, options).(LookupSwitchLinkAggregationsResultOutput), nil
 		}).(LookupSwitchLinkAggregationsResultOutput)
 }
 

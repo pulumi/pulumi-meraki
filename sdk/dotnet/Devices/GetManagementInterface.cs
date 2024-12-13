@@ -62,6 +62,32 @@ namespace Pulumi.Meraki.Devices
         /// </summary>
         public static Output<GetManagementInterfaceResult> Invoke(GetManagementInterfaceInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetManagementInterfaceResult>("meraki:devices/getManagementInterface:getManagementInterface", args ?? new GetManagementInterfaceInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Devices.GetManagementInterface.Invoke(new()
+        ///     {
+        ///         Serial = "string",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiDevicesManagementInterfaceExample"] = example.Apply(getManagementInterfaceResult =&gt; getManagementInterfaceResult.Item),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetManagementInterfaceResult> Invoke(GetManagementInterfaceInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetManagementInterfaceResult>("meraki:devices/getManagementInterface:getManagementInterface", args ?? new GetManagementInterfaceInvokeArgs(), options.WithDefaults());
     }
 
 

@@ -22,6 +22,12 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         public static Output<GetCameraWirelessProfilesResult> Invoke(GetCameraWirelessProfilesInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetCameraWirelessProfilesResult>("meraki:networks/getCameraWirelessProfiles:getCameraWirelessProfiles", args ?? new GetCameraWirelessProfilesInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// </summary>
+        public static Output<GetCameraWirelessProfilesResult> Invoke(GetCameraWirelessProfilesInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetCameraWirelessProfilesResult>("meraki:networks/getCameraWirelessProfiles:getCameraWirelessProfiles", args ?? new GetCameraWirelessProfilesInvokeArgs(), options.WithDefaults());
     }
 
 

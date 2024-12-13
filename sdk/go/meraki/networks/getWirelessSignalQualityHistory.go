@@ -114,21 +114,11 @@ type GetWirelessSignalQualityHistoryResult struct {
 }
 
 func GetWirelessSignalQualityHistoryOutput(ctx *pulumi.Context, args GetWirelessSignalQualityHistoryOutputArgs, opts ...pulumi.InvokeOption) GetWirelessSignalQualityHistoryResultOutput {
-	return pulumi.ToOutputWithContext(context.Background(), args).
+	return pulumi.ToOutputWithContext(ctx.Context(), args).
 		ApplyT(func(v interface{}) (GetWirelessSignalQualityHistoryResultOutput, error) {
 			args := v.(GetWirelessSignalQualityHistoryArgs)
-			opts = internal.PkgInvokeDefaultOpts(opts)
-			var rv GetWirelessSignalQualityHistoryResult
-			secret, err := ctx.InvokePackageRaw("meraki:networks/getWirelessSignalQualityHistory:getWirelessSignalQualityHistory", args, &rv, "", opts...)
-			if err != nil {
-				return GetWirelessSignalQualityHistoryResultOutput{}, err
-			}
-
-			output := pulumi.ToOutput(rv).(GetWirelessSignalQualityHistoryResultOutput)
-			if secret {
-				return pulumi.ToSecret(output).(GetWirelessSignalQualityHistoryResultOutput), nil
-			}
-			return output, nil
+			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
+			return ctx.InvokeOutput("meraki:networks/getWirelessSignalQualityHistory:getWirelessSignalQualityHistory", args, GetWirelessSignalQualityHistoryResultOutput{}, options).(GetWirelessSignalQualityHistoryResultOutput), nil
 		}).(GetWirelessSignalQualityHistoryResultOutput)
 }
 

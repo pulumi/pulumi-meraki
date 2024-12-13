@@ -86,6 +86,44 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         public static Output<GetDevicesBootsHistoryResult> Invoke(GetDevicesBootsHistoryInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetDevicesBootsHistoryResult>("meraki:organizations/getDevicesBootsHistory:getDevicesBootsHistory", args ?? new GetDevicesBootsHistoryInvokeArgs(), options.WithDefaults());
+
+        /// <summary>
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Meraki = Pulumi.Meraki;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var example = Meraki.Organizations.GetDevicesBootsHistory.Invoke(new()
+        ///     {
+        ///         EndingBefore = "string",
+        ///         MostRecentPerDevice = false,
+        ///         OrganizationId = "string",
+        ///         PerPage = 1,
+        ///         Serials = new[]
+        ///         {
+        ///             "string",
+        ///         },
+        ///         SortOrder = "string",
+        ///         StartingAfter = "string",
+        ///         T0 = "string",
+        ///         T1 = "string",
+        ///         Timespan = 1,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["merakiOrganizationsDevicesBootsHistoryExample"] = example.Apply(getDevicesBootsHistoryResult =&gt; getDevicesBootsHistoryResult.Items),
+        ///     };
+        /// });
+        /// ```
+        /// </summary>
+        public static Output<GetDevicesBootsHistoryResult> Invoke(GetDevicesBootsHistoryInvokeArgs args, InvokeOutputOptions options)
+            => global::Pulumi.Deployment.Instance.Invoke<GetDevicesBootsHistoryResult>("meraki:organizations/getDevicesBootsHistory:getDevicesBootsHistory", args ?? new GetDevicesBootsHistoryInvokeArgs(), options.WithDefaults());
     }
 
 
