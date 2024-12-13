@@ -1,3 +1,0 @@
-name: meraki-network-webhooks-http-servers-ts
-runtime: nodejs
-description: A minimal TypeScript Pulumi program
