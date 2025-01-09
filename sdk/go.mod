@@ -2,7 +2,7 @@ module github.com/pulumi/pulumi-meraki/sdk
 
 go 1.21
 
-require github.com/pulumi/pulumi/sdk/v3 v3.143.0
+require github.com/pulumi/pulumi/sdk/v3 v3.145.0
 
 require github.com/BurntSushi/toml v1.2.1 // indirect
 
@@ -75,7 +75,7 @@ require (
 	golang.org/x/crypto v0.31.0 // indirect
 	golang.org/x/exp v0.0.0-20240604190554-fc45aab8b7f8 // indirect
 	golang.org/x/mod v0.18.0 // indirect
-	golang.org/x/net v0.26.0 // indirect
+	golang.org/x/net v0.33.0 // indirect
 	golang.org/x/sync v0.10.0 // indirect
 	golang.org/x/sys v0.28.0 // indirect
 	golang.org/x/term v0.27.0 // indirect
