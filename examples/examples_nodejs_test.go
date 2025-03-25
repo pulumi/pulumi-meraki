@@ -57,7 +57,7 @@ func TestApplianceVlansTs(t *testing.T) {
 
 func TestAlertSettingsTs(t *testing.T) {
 	checkBaseEnvVars(t)
-	t.Setenv("PULUMI_DEBUG", true)
+	t.Setenv("PULUMI_DEBUG", "true")
 	test := pulumitest.NewPulumiTest(t, "network-alert-settings-ts",
 		opttest.LocalProviderPath("meraki", filepath.Join(getCwd(t), "..", "bin")),
 		opttest.YarnLink("@pulumi/meraki"),
