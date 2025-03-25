@@ -29,7 +29,7 @@ func TestNetworkBaseTs(t *testing.T) {
 		opttest.YarnLink("@pulumi/meraki"),
 	)
 	test.SetConfig("organizationId", os.Getenv(EnvMerakiOrgID))
-	test.SetConfig("networkName", "Pulumi Base Test Network_" + randomString(6))
+	test.SetConfig("networkName", "Pulumi Base Test Network_"+randomString(6))
 	test.Up()
 }
 
@@ -40,7 +40,7 @@ func TestNetworkSettingsTs(t *testing.T) {
 		opttest.YarnLink("@pulumi/meraki"),
 	)
 	test.SetConfig("organizationId", os.Getenv(EnvMerakiOrgID))
-	test.SetConfig("networkName", "Pulumi Base Test Network_" + randomString(6))
+	test.SetConfig("networkName", "Pulumi Base Test Network_"+randomString(6))
 	test.Up()
 }
 
@@ -51,18 +51,19 @@ func TestApplianceVlansTs(t *testing.T) {
 		opttest.YarnLink("@pulumi/meraki"),
 	)
 	test.SetConfig("organizationId", os.Getenv(EnvMerakiOrgID))
-	test.SetConfig("networkName", "Pulumi Base Test Network_" + randomString(6))
+	test.SetConfig("networkName", "Pulumi Base Test Network_"+randomString(6))
 	test.Up()
 }
 
 func TestAlertSettingsTs(t *testing.T) {
 	checkBaseEnvVars(t)
+	t.Setenv("PULUMI_DEBUG", true)
 	test := pulumitest.NewPulumiTest(t, "network-alert-settings-ts",
 		opttest.LocalProviderPath("meraki", filepath.Join(getCwd(t), "..", "bin")),
 		opttest.YarnLink("@pulumi/meraki"),
 	)
 	test.SetConfig("organizationId", os.Getenv(EnvMerakiOrgID))
-	test.SetConfig("networkName", "Pulumi Base Test Network_" + randomString(6))
+	test.SetConfig("networkName", "Pulumi Base Test Network_"+randomString(6))
 	test.Up()
 }
 func TestApplianceContentFilterTs(t *testing.T) {
@@ -72,6 +73,6 @@ func TestApplianceContentFilterTs(t *testing.T) {
 		opttest.YarnLink("@pulumi/meraki"),
 	)
 	test.SetConfig("organizationId", os.Getenv(EnvMerakiOrgID))
-	test.SetConfig("networkName", "Pulumi Base Test Network_" + randomString(6))
+	test.SetConfig("networkName", "Pulumi Base Test Network_"+randomString(6))
 	test.Up()
 }
