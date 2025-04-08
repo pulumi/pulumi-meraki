@@ -21,49 +21,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.meraki.networks.ApplianceVpnBgp;
- * import com.pulumi.meraki.networks.ApplianceVpnBgpArgs;
- * import com.pulumi.meraki.networks.inputs.ApplianceVpnBgpNeighborArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new ApplianceVpnBgp("example", ApplianceVpnBgpArgs.builder()
- *             .asNumber(64515)
- *             .enabled(true)
- *             .ibgpHoldTimer(120)
- *             .neighbors(ApplianceVpnBgpNeighborArgs.builder()
- *                 .allow_transit(true)
- *                 .ebgp_hold_timer(180)
- *                 .ebgp_multihop(2)
- *                 .ip("10.10.10.22")
- *                 .receive_limit(120)
- *                 .remote_as_number(64343)
- *                 .build())
- *             .networkId("string")
- *             .build());
- * 
- *         ctx.export("merakiNetworksApplianceVpnBgpExample", example);
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

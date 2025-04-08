@@ -23,44 +23,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.meraki.administered.LicensingSubscriptionSubscriptionsClaim;
- * import com.pulumi.meraki.administered.LicensingSubscriptionSubscriptionsClaimArgs;
- * import com.pulumi.meraki.administered.inputs.LicensingSubscriptionSubscriptionsClaimParametersArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new LicensingSubscriptionSubscriptionsClaim("example", LicensingSubscriptionSubscriptionsClaimArgs.builder()
- *             .validate(false)
- *             .parameters(LicensingSubscriptionSubscriptionsClaimParametersArgs.builder()
- *                 .claim_key("S2345-6789A-BCDEF-GHJKM")
- *                 .description("Subscription for all main offices")
- *                 .name("Corporate subscription")
- *                 .organization_id("12345678910")
- *                 .build())
- *             .build());
- * 
- *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsClaimExample", example);
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

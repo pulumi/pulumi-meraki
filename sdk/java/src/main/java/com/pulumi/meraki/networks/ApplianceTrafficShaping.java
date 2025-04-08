@@ -18,42 +18,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.meraki.networks.ApplianceTrafficShaping;
- * import com.pulumi.meraki.networks.ApplianceTrafficShapingArgs;
- * import com.pulumi.meraki.networks.inputs.ApplianceTrafficShapingGlobalBandwidthLimitsArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new ApplianceTrafficShaping("example", ApplianceTrafficShapingArgs.builder()
- *             .globalBandwidthLimits(ApplianceTrafficShapingGlobalBandwidthLimitsArgs.builder()
- *                 .limit_down(5120)
- *                 .limit_up(2048)
- *                 .build())
- *             .networkId("string")
- *             .build());
- * 
- *         ctx.export("merakiNetworksApplianceTrafficShapingExample", example);
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

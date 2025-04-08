@@ -22,42 +22,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.meraki.networks.ApplianceTrafficShapingVpnExclusions;
- * import com.pulumi.meraki.networks.ApplianceTrafficShapingVpnExclusionsArgs;
- * import com.pulumi.meraki.networks.inputs.ApplianceTrafficShapingVpnExclusionsParametersArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new ApplianceTrafficShapingVpnExclusions("example", ApplianceTrafficShapingVpnExclusionsArgs.builder()
- *             .networkId("string")
- *             .parameters(ApplianceTrafficShapingVpnExclusionsParametersArgs.builder()
- *                 .custom(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
- *                 .major_applications(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
- *                 .build())
- *             .build());
- * 
- *         ctx.export("merakiNetworksApplianceTrafficShapingVpnExclusionsExample", example);
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

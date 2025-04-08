@@ -19,45 +19,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.meraki.networks.WirelessBilling;
- * import com.pulumi.meraki.networks.WirelessBillingArgs;
- * import com.pulumi.meraki.networks.inputs.WirelessBillingPlanArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new WirelessBilling("example", WirelessBillingArgs.builder()
- *             .currency("USD")
- *             .networkId("string")
- *             .plans(WirelessBillingPlanArgs.builder()
- *                 .bandwidth_limits(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
- *                 .id("1")
- *                 .price(5)
- *                 .time_limit("1 hour")
- *                 .build())
- *             .build());
- * 
- *         ctx.export("merakiNetworksWirelessBillingExample", example);
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

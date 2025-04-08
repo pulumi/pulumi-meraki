@@ -22,44 +22,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.meraki.networks.SmDevicesWipe;
- * import com.pulumi.meraki.networks.SmDevicesWipeArgs;
- * import com.pulumi.meraki.networks.inputs.SmDevicesWipeParametersArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new SmDevicesWipe("example", SmDevicesWipeArgs.builder()
- *             .networkId("string")
- *             .parameters(SmDevicesWipeParametersArgs.builder()
- *                 .id("1284392014819")
- *                 .pin(123456)
- *                 .serial("XY0XX0Y0X0")
- *                 .wifi_mac("00:11:22:33:44:55")
- *                 .build())
- *             .build());
- * 
- *         ctx.export("merakiNetworksSmDevicesWipeExample", example);
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

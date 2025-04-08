@@ -29,7 +29,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.Pulumi;
  * import com.pulumi.core.Output;
  * import com.pulumi.meraki.organizations.base;
- * import com.pulumi.meraki.organizations.BaseArgs;
+ * import com.pulumi.meraki.organizations.baseArgs;
  * import com.pulumi.meraki.organizations.inputs.BaseManagementArgs;
  * import java.util.List;
  * import java.util.ArrayList;

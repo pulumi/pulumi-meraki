@@ -18,45 +18,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.meraki.networks.WebhooksHttpServers;
- * import com.pulumi.meraki.networks.WebhooksHttpServersArgs;
- * import com.pulumi.meraki.networks.inputs.WebhooksHttpServersPayloadTemplateArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new WebhooksHttpServers("example", WebhooksHttpServersArgs.builder()
- *             .name("Example Webhook Server")
- *             .networkId("string")
- *             .payloadTemplate(WebhooksHttpServersPayloadTemplateArgs.builder()
- *                 .name("Meraki (included)")
- *                 .payload_template_id("wpt_00001")
- *                 .build())
- *             .sharedSecret("shhh")
- *             .url("https://example.com")
- *             .build());
- * 
- *         ctx.export("merakiNetworksWebhooksHttpServersExample", example);
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import
