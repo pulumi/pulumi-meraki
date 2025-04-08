@@ -21,62 +21,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.meraki.networks.FirmwareUpgradesStagedEvents;
- * import com.pulumi.meraki.networks.FirmwareUpgradesStagedEventsArgs;
- * import com.pulumi.meraki.networks.inputs.FirmwareUpgradesStagedEventsProductsArgs;
- * import com.pulumi.meraki.networks.inputs.FirmwareUpgradesStagedEventsProductsSwitchArgs;
- * import com.pulumi.meraki.networks.inputs.FirmwareUpgradesStagedEventsProductsSwitchNextUpgradeArgs;
- * import com.pulumi.meraki.networks.inputs.FirmwareUpgradesStagedEventsProductsSwitchNextUpgradeToVersionArgs;
- * import com.pulumi.meraki.networks.inputs.FirmwareUpgradesStagedEventsStageArgs;
- * import com.pulumi.meraki.networks.inputs.FirmwareUpgradesStagedEventsStageGroupArgs;
- * import com.pulumi.meraki.networks.inputs.FirmwareUpgradesStagedEventsStageMilestonesArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new FirmwareUpgradesStagedEvents("example", FirmwareUpgradesStagedEventsArgs.builder()
- *             .networkId("string")
- *             .products(FirmwareUpgradesStagedEventsProductsArgs.builder()
- *                 .switch_(FirmwareUpgradesStagedEventsProductsSwitchArgs.builder()
- *                     .nextUpgrade(FirmwareUpgradesStagedEventsProductsSwitchNextUpgradeArgs.builder()
- *                         .toVersion(FirmwareUpgradesStagedEventsProductsSwitchNextUpgradeToVersionArgs.builder()
- *                             .id("1234")
- *                             .build())
- *                         .build())
- *                     .build())
- *                 .switch_catalyst(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
- *                 .build())
- *             .stages(FirmwareUpgradesStagedEventsStageArgs.builder()
- *                 .group(FirmwareUpgradesStagedEventsStageGroupArgs.builder()
- *                     .id("1234")
- *                     .build())
- *                 .milestones(FirmwareUpgradesStagedEventsStageMilestonesArgs.builder()
- *                     .scheduledFor("2018-02-11T00:00:00Z")
- *                     .build())
- *                 .build())
- *             .build());
- * 
- *         ctx.export("merakiNetworksFirmwareUpgradesStagedEventsExample", example);
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

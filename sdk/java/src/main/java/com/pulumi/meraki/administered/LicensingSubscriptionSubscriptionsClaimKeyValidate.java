@@ -21,40 +21,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.meraki.administered.LicensingSubscriptionSubscriptionsClaimKeyValidate;
- * import com.pulumi.meraki.administered.LicensingSubscriptionSubscriptionsClaimKeyValidateArgs;
- * import com.pulumi.meraki.administered.inputs.LicensingSubscriptionSubscriptionsClaimKeyValidateParametersArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new LicensingSubscriptionSubscriptionsClaimKeyValidate("example", LicensingSubscriptionSubscriptionsClaimKeyValidateArgs.builder()
- *             .parameters(LicensingSubscriptionSubscriptionsClaimKeyValidateParametersArgs.builder()
- *                 .claim_key("S2345-6789A-BCDEF-GHJKM")
- *                 .build())
- *             .build());
- * 
- *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsClaimKeyValidateExample", example);
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

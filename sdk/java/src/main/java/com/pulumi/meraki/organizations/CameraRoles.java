@@ -22,54 +22,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.meraki.organizations.CameraRoles;
- * import com.pulumi.meraki.organizations.CameraRolesArgs;
- * import com.pulumi.meraki.organizations.inputs.CameraRolesAppliedOnDeviceArgs;
- * import com.pulumi.meraki.organizations.inputs.CameraRolesAppliedOnNetworkArgs;
- * import com.pulumi.meraki.organizations.inputs.CameraRolesAppliedOrgWideArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new CameraRoles("example", CameraRolesArgs.builder()
- *             .appliedOnDevices(CameraRolesAppliedOnDeviceArgs.builder()
- *                 .id("")
- *                 .permission_scope_id("1")
- *                 .tag("reception-desk")
- *                 .build())
- *             .appliedOnNetworks(CameraRolesAppliedOnNetworkArgs.builder()
- *                 .id("")
- *                 .permission_scope_id("2")
- *                 .tag("building-a")
- *                 .build())
- *             .appliedOrgWides(CameraRolesAppliedOrgWideArgs.builder()
- *                 .permission_scope_id("2")
- *                 .build())
- *             .name("Security_Guard")
- *             .organizationId("string")
- *             .build());
- * 
- *         ctx.export("merakiOrganizationsCameraRolesExample", example);
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

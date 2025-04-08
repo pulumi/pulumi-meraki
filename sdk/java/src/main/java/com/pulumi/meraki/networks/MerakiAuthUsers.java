@@ -21,48 +21,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.meraki.networks.MerakiAuthUsers;
- * import com.pulumi.meraki.networks.MerakiAuthUsersArgs;
- * import com.pulumi.meraki.networks.inputs.MerakiAuthUsersAuthorizationArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App }{{@code
- *     public static void main(String[] args) }{{@code
- *         Pulumi.run(App::stack);
- *     }}{@code
- * 
- *     public static void stack(Context ctx) }{{@code
- *         var example = new MerakiAuthUsers("example", MerakiAuthUsersArgs.builder()
- *             .accountType("802.1X")
- *             .authorizations(MerakiAuthUsersAuthorizationArgs.builder()
- *                 .expires_at("2018-03-13T00:00:00.090210Z")
- *                 .ssid_number(1)
- *                 .build())
- *             .email("miles}{@literal @}{@code meraki.com")
- *             .emailPasswordToUser(false)
- *             .isAdmin(false)
- *             .name("Miles Meraki")
- *             .networkId("string")
- *             .password("secret")
- *             .build());
- * 
- *         ctx.export("merakiNetworksMerakiAuthUsersExample", example);
- *     }}{@code
- * }}{@code
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

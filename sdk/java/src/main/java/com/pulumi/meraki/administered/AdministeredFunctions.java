@@ -48,9 +48,9 @@ public final class AdministeredFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = AdministeredFunctions.getIdentitiesMe();
+     *         final var example = AdministeredFunctions.getIdentitiesMe(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference);
      * 
-     *         ctx.export("merakiAdministeredIdentitiesMeExample", example.applyValue(getIdentitiesMeResult -> getIdentitiesMeResult.item()));
+     *         ctx.export("merakiAdministeredIdentitiesMeExample", example.item());
      *     }
      * }
      * }
@@ -86,9 +86,9 @@ public final class AdministeredFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = AdministeredFunctions.getIdentitiesMe();
+     *         final var example = AdministeredFunctions.getIdentitiesMe(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference);
      * 
-     *         ctx.export("merakiAdministeredIdentitiesMeExample", example.applyValue(getIdentitiesMeResult -> getIdentitiesMeResult.item()));
+     *         ctx.export("merakiAdministeredIdentitiesMeExample", example.item());
      *     }
      * }
      * }
@@ -124,9 +124,9 @@ public final class AdministeredFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = AdministeredFunctions.getIdentitiesMe();
+     *         final var example = AdministeredFunctions.getIdentitiesMe(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference);
      * 
-     *         ctx.export("merakiAdministeredIdentitiesMeExample", example.applyValue(getIdentitiesMeResult -> getIdentitiesMeResult.item()));
+     *         ctx.export("merakiAdministeredIdentitiesMeExample", example.item());
      *     }
      * }
      * }
@@ -162,9 +162,9 @@ public final class AdministeredFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = AdministeredFunctions.getIdentitiesMe();
+     *         final var example = AdministeredFunctions.getIdentitiesMe(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference);
      * 
-     *         ctx.export("merakiAdministeredIdentitiesMeExample", example.applyValue(getIdentitiesMeResult -> getIdentitiesMeResult.item()));
+     *         ctx.export("merakiAdministeredIdentitiesMeExample", example.item());
      *     }
      * }
      * }
@@ -200,9 +200,9 @@ public final class AdministeredFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = AdministeredFunctions.getIdentitiesMe();
+     *         final var example = AdministeredFunctions.getIdentitiesMe(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference);
      * 
-     *         ctx.export("merakiAdministeredIdentitiesMeExample", example.applyValue(getIdentitiesMeResult -> getIdentitiesMeResult.item()));
+     *         ctx.export("merakiAdministeredIdentitiesMeExample", example.item());
      *     }
      * }
      * }
@@ -238,9 +238,9 @@ public final class AdministeredFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = AdministeredFunctions.getIdentitiesMe();
+     *         final var example = AdministeredFunctions.getIdentitiesMe(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference);
      * 
-     *         ctx.export("merakiAdministeredIdentitiesMeExample", example.applyValue(getIdentitiesMeResult -> getIdentitiesMeResult.item()));
+     *         ctx.export("merakiAdministeredIdentitiesMeExample", example.item());
      *     }
      * }
      * }
@@ -276,9 +276,9 @@ public final class AdministeredFunctions {
      *     }
      * 
      *     public static void stack(Context ctx) {
-     *         final var example = AdministeredFunctions.getIdentitiesMe();
+     *         final var example = AdministeredFunctions.getIdentitiesMe(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference);
      * 
-     *         ctx.export("merakiAdministeredIdentitiesMeExample", example.applyValue(getIdentitiesMeResult -> getIdentitiesMeResult.item()));
+     *         ctx.export("merakiAdministeredIdentitiesMeExample", example.item());
      *     }
      * }
      * }
@@ -319,7 +319,7 @@ public final class AdministeredFunctions {
      *             .skuses("string")
      *             .build());
      * 
-     *         ctx.export("merakiAdministeredLicensingSubscriptionEntitlementsExample", example.applyValue(getLicensingSubscriptionEntitlementsResult -> getLicensingSubscriptionEntitlementsResult.item()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionEntitlementsExample", example.item());
      *     }
      * }
      * }
@@ -360,7 +360,7 @@ public final class AdministeredFunctions {
      *             .skuses("string")
      *             .build());
      * 
-     *         ctx.export("merakiAdministeredLicensingSubscriptionEntitlementsExample", example.applyValue(getLicensingSubscriptionEntitlementsResult -> getLicensingSubscriptionEntitlementsResult.item()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionEntitlementsExample", example.item());
      *     }
      * }
      * }
@@ -401,7 +401,7 @@ public final class AdministeredFunctions {
      *             .skuses("string")
      *             .build());
      * 
-     *         ctx.export("merakiAdministeredLicensingSubscriptionEntitlementsExample", example.applyValue(getLicensingSubscriptionEntitlementsResult -> getLicensingSubscriptionEntitlementsResult.item()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionEntitlementsExample", example.item());
      *     }
      * }
      * }
@@ -442,7 +442,7 @@ public final class AdministeredFunctions {
      *             .skuses("string")
      *             .build());
      * 
-     *         ctx.export("merakiAdministeredLicensingSubscriptionEntitlementsExample", example.applyValue(getLicensingSubscriptionEntitlementsResult -> getLicensingSubscriptionEntitlementsResult.item()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionEntitlementsExample", example.item());
      *     }
      * }
      * }
@@ -483,7 +483,7 @@ public final class AdministeredFunctions {
      *             .skuses("string")
      *             .build());
      * 
-     *         ctx.export("merakiAdministeredLicensingSubscriptionEntitlementsExample", example.applyValue(getLicensingSubscriptionEntitlementsResult -> getLicensingSubscriptionEntitlementsResult.item()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionEntitlementsExample", example.item());
      *     }
      * }
      * }
@@ -524,7 +524,7 @@ public final class AdministeredFunctions {
      *             .skuses("string")
      *             .build());
      * 
-     *         ctx.export("merakiAdministeredLicensingSubscriptionEntitlementsExample", example.applyValue(getLicensingSubscriptionEntitlementsResult -> getLicensingSubscriptionEntitlementsResult.item()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionEntitlementsExample", example.item());
      *     }
      * }
      * }
@@ -565,7 +565,7 @@ public final class AdministeredFunctions {
      *             .skuses("string")
      *             .build());
      * 
-     *         ctx.export("merakiAdministeredLicensingSubscriptionEntitlementsExample", example.applyValue(getLicensingSubscriptionEntitlementsResult -> getLicensingSubscriptionEntitlementsResult.item()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionEntitlementsExample", example.item());
      *     }
      * }
      * }
@@ -614,7 +614,7 @@ public final class AdministeredFunctions {
      *             .subscriptionIds("string")
      *             .build());
      * 
-     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsExample", example.applyValue(getLicensingSubscriptionSubscriptionsResult -> getLicensingSubscriptionSubscriptionsResult.items()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsExample", example.items());
      *     }
      * }
      * }
@@ -663,7 +663,7 @@ public final class AdministeredFunctions {
      *             .subscriptionIds("string")
      *             .build());
      * 
-     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsExample", example.applyValue(getLicensingSubscriptionSubscriptionsResult -> getLicensingSubscriptionSubscriptionsResult.items()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsExample", example.items());
      *     }
      * }
      * }
@@ -712,7 +712,7 @@ public final class AdministeredFunctions {
      *             .subscriptionIds("string")
      *             .build());
      * 
-     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsExample", example.applyValue(getLicensingSubscriptionSubscriptionsResult -> getLicensingSubscriptionSubscriptionsResult.items()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsExample", example.items());
      *     }
      * }
      * }
@@ -761,7 +761,7 @@ public final class AdministeredFunctions {
      *             .subscriptionIds("string")
      *             .build());
      * 
-     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsExample", example.applyValue(getLicensingSubscriptionSubscriptionsResult -> getLicensingSubscriptionSubscriptionsResult.items()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsExample", example.items());
      *     }
      * }
      * }
@@ -810,7 +810,7 @@ public final class AdministeredFunctions {
      *             .subscriptionIds("string")
      *             .build());
      * 
-     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsExample", example.applyValue(getLicensingSubscriptionSubscriptionsResult -> getLicensingSubscriptionSubscriptionsResult.items()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsExample", example.items());
      *     }
      * }
      * }
@@ -859,7 +859,7 @@ public final class AdministeredFunctions {
      *             .subscriptionIds("string")
      *             .build());
      * 
-     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsExample", example.applyValue(getLicensingSubscriptionSubscriptionsResult -> getLicensingSubscriptionSubscriptionsResult.items()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsExample", example.items());
      *     }
      * }
      * }
@@ -908,7 +908,7 @@ public final class AdministeredFunctions {
      *             .subscriptionIds("string")
      *             .build());
      * 
-     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsExample", example.applyValue(getLicensingSubscriptionSubscriptionsResult -> getLicensingSubscriptionSubscriptionsResult.items()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsExample", example.items());
      *     }
      * }
      * }
@@ -950,7 +950,7 @@ public final class AdministeredFunctions {
      *             .subscriptionIds("string")
      *             .build());
      * 
-     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsComplianceStatusesExample", example.applyValue(getLicensingSubscriptionSubscriptionsComplianceStatusesResult -> getLicensingSubscriptionSubscriptionsComplianceStatusesResult.items()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsComplianceStatusesExample", example.items());
      *     }
      * }
      * }
@@ -992,7 +992,7 @@ public final class AdministeredFunctions {
      *             .subscriptionIds("string")
      *             .build());
      * 
-     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsComplianceStatusesExample", example.applyValue(getLicensingSubscriptionSubscriptionsComplianceStatusesResult -> getLicensingSubscriptionSubscriptionsComplianceStatusesResult.items()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsComplianceStatusesExample", example.items());
      *     }
      * }
      * }
@@ -1034,7 +1034,7 @@ public final class AdministeredFunctions {
      *             .subscriptionIds("string")
      *             .build());
      * 
-     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsComplianceStatusesExample", example.applyValue(getLicensingSubscriptionSubscriptionsComplianceStatusesResult -> getLicensingSubscriptionSubscriptionsComplianceStatusesResult.items()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsComplianceStatusesExample", example.items());
      *     }
      * }
      * }
@@ -1076,7 +1076,7 @@ public final class AdministeredFunctions {
      *             .subscriptionIds("string")
      *             .build());
      * 
-     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsComplianceStatusesExample", example.applyValue(getLicensingSubscriptionSubscriptionsComplianceStatusesResult -> getLicensingSubscriptionSubscriptionsComplianceStatusesResult.items()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsComplianceStatusesExample", example.items());
      *     }
      * }
      * }
@@ -1118,7 +1118,7 @@ public final class AdministeredFunctions {
      *             .subscriptionIds("string")
      *             .build());
      * 
-     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsComplianceStatusesExample", example.applyValue(getLicensingSubscriptionSubscriptionsComplianceStatusesResult -> getLicensingSubscriptionSubscriptionsComplianceStatusesResult.items()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsComplianceStatusesExample", example.items());
      *     }
      * }
      * }
@@ -1160,7 +1160,7 @@ public final class AdministeredFunctions {
      *             .subscriptionIds("string")
      *             .build());
      * 
-     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsComplianceStatusesExample", example.applyValue(getLicensingSubscriptionSubscriptionsComplianceStatusesResult -> getLicensingSubscriptionSubscriptionsComplianceStatusesResult.items()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsComplianceStatusesExample", example.items());
      *     }
      * }
      * }
@@ -1202,7 +1202,7 @@ public final class AdministeredFunctions {
      *             .subscriptionIds("string")
      *             .build());
      * 
-     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsComplianceStatusesExample", example.applyValue(getLicensingSubscriptionSubscriptionsComplianceStatusesResult -> getLicensingSubscriptionSubscriptionsComplianceStatusesResult.items()));
+     *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsComplianceStatusesExample", example.items());
      *     }
      * }
      * }

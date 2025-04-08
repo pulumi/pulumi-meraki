@@ -48,7 +48,7 @@ import javax.annotation.Nullable;
  *             .enabled(true)
  *             .parameters(CameraCustomAnalyticsParameterArgs.builder()
  *                 .name("detection_threshold")
- *                 .value("0.5")
+ *                 .value(0.5)
  *                 .build())
  *             .serial("string")
  *             .build());
