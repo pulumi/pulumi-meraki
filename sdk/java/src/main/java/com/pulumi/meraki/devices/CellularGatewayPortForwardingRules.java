@@ -19,46 +19,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.meraki.devices.CellularGatewayPortForwardingRules;
- * import com.pulumi.meraki.devices.CellularGatewayPortForwardingRulesArgs;
- * import com.pulumi.meraki.devices.inputs.CellularGatewayPortForwardingRulesRuleArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new CellularGatewayPortForwardingRules("example", CellularGatewayPortForwardingRulesArgs.builder()
- *             .rules(CellularGatewayPortForwardingRulesRuleArgs.builder()
- *                 .access("any")
- *                 .lan_ip("172.31.128.5")
- *                 .local_port("4")
- *                 .name("test")
- *                 .protocol("tcp")
- *                 .public_port("11-12")
- *                 .build())
- *             .serial("string")
- *             .build());
- * 
- *         ctx.export("merakiDevicesCellularGatewayPortForwardingRulesExample", example);
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

@@ -22,41 +22,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.meraki.networks.Unbind;
- * import com.pulumi.meraki.networks.UnbindArgs;
- * import com.pulumi.meraki.networks.inputs.UnbindParametersArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new Unbind("example", UnbindArgs.builder()
- *             .networkId("string")
- *             .parameters(UnbindParametersArgs.builder()
- *                 .retain_configs(true)
- *                 .build())
- *             .build());
- * 
- *         ctx.export("merakiNetworksUnbindExample", example);
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

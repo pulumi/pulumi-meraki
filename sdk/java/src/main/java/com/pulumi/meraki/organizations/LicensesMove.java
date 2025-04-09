@@ -22,44 +22,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.meraki.organizations.LicensesMove;
- * import com.pulumi.meraki.organizations.LicensesMoveArgs;
- * import com.pulumi.meraki.organizations.inputs.LicensesMoveParametersArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new LicensesMove("example", LicensesMoveArgs.builder()
- *             .organizationId("string")
- *             .parameters(LicensesMoveParametersArgs.builder()
- *                 .dest_organization_id("2930418")
- *                 .license_ids(                
- *                     "123",
- *                     "456")
- *                 .build())
- *             .build());
- * 
- *         ctx.export("merakiOrganizationsLicensesMoveExample", example);
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

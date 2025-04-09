@@ -22,45 +22,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.meraki.networks.WirelessEthernetPortsProfilesAssign;
- * import com.pulumi.meraki.networks.WirelessEthernetPortsProfilesAssignArgs;
- * import com.pulumi.meraki.networks.inputs.WirelessEthernetPortsProfilesAssignParametersArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new WirelessEthernetPortsProfilesAssign("example", WirelessEthernetPortsProfilesAssignArgs.builder()
- *             .networkId("string")
- *             .parameters(WirelessEthernetPortsProfilesAssignParametersArgs.builder()
- *                 .profile_id("1001")
- *                 .serials(                
- *                     "Q234-ABCD-0001",
- *                     "Q234-ABCD-0002",
- *                     "Q234-ABCD-0003")
- *                 .build())
- *             .build());
- * 
- *         ctx.export("merakiNetworksWirelessEthernetPortsProfilesAssignExample", example);
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

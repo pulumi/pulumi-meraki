@@ -24,44 +24,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.meraki.administered.LicensingSubscriptionSubscriptionsBind;
- * import com.pulumi.meraki.administered.LicensingSubscriptionSubscriptionsBindArgs;
- * import com.pulumi.meraki.administered.inputs.LicensingSubscriptionSubscriptionsBindParametersArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new LicensingSubscriptionSubscriptionsBind("example", LicensingSubscriptionSubscriptionsBindArgs.builder()
- *             .subscriptionId("string")
- *             .validate(false)
- *             .parameters(LicensingSubscriptionSubscriptionsBindParametersArgs.builder()
- *                 .network_ids(                
- *                     "L_1234",
- *                     "N_5678")
- *                 .build())
- *             .build());
- * 
- *         ctx.export("merakiAdministeredLicensingSubscriptionSubscriptionsBindExample", example);
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

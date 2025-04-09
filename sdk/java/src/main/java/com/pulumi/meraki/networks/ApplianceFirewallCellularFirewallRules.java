@@ -19,48 +19,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.meraki.networks.ApplianceFirewallCellularFirewallRules;
- * import com.pulumi.meraki.networks.ApplianceFirewallCellularFirewallRulesArgs;
- * import com.pulumi.meraki.networks.inputs.ApplianceFirewallCellularFirewallRulesRuleArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new ApplianceFirewallCellularFirewallRules("example", ApplianceFirewallCellularFirewallRulesArgs.builder()
- *             .networkId("string")
- *             .rules(ApplianceFirewallCellularFirewallRulesRuleArgs.builder()
- *                 .comment("Allow TCP traffic to subnet with HTTP servers.")
- *                 .dest_cidr("192.168.1.0/24")
- *                 .dest_port("443")
- *                 .policy("allow")
- *                 .protocol("tcp")
- *                 .src_cidr("Any")
- *                 .src_port("Any")
- *                 .syslog_enabled(false)
- *                 .build())
- *             .build());
- * 
- *         ctx.export("merakiNetworksApplianceFirewallCellularFirewallRulesExample", example);
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

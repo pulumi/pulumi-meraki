@@ -20,60 +20,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.meraki.networks.WirelessSsidsVpn;
- * import com.pulumi.meraki.networks.WirelessSsidsVpnArgs;
- * import com.pulumi.meraki.networks.inputs.WirelessSsidsVpnConcentratorArgs;
- * import com.pulumi.meraki.networks.inputs.WirelessSsidsVpnFailoverArgs;
- * import com.pulumi.meraki.networks.inputs.WirelessSsidsVpnSplitTunnelArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new WirelessSsidsVpn("example", WirelessSsidsVpnArgs.builder()
- *             .concentrator(WirelessSsidsVpnConcentratorArgs.builder()
- *                 .network_id("N_123")
- *                 .vlan_id(44)
- *                 .build())
- *             .failover(WirelessSsidsVpnFailoverArgs.builder()
- *                 .heartbeat_interval(10)
- *                 .idle_timeout(30)
- *                 .request_ip("1.1.1.1")
- *                 .build())
- *             .networkId("string")
- *             .number("string")
- *             .splitTunnel(WirelessSsidsVpnSplitTunnelArgs.builder()
- *                 .enabled(true)
- *                 .rules(WirelessSsidsVpnSplitTunnelRuleArgs.builder()
- *                     .comment("split tunnel rule 1")
- *                     .destCidr("1.1.1.1/32")
- *                     .destPort("any")
- *                     .policy("allow")
- *                     .protocol("Any")
- *                     .build())
- *                 .build())
- *             .build());
- * 
- *         ctx.export("merakiNetworksWirelessSsidsVpnExample", example);
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

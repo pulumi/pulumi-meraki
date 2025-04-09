@@ -20,41 +20,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.meraki.devices.SensorRelationships;
- * import com.pulumi.meraki.devices.SensorRelationshipsArgs;
- * import com.pulumi.meraki.devices.inputs.SensorRelationshipsLivestreamArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new SensorRelationships("example", SensorRelationshipsArgs.builder()
- *             .livestream(SensorRelationshipsLivestreamArgs.builder()
- *                 .related_devices(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
- *                 .build())
- *             .serial("string")
- *             .build());
- * 
- *         ctx.export("merakiDevicesSensorRelationshipsExample", example);
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

@@ -453,7 +453,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsAdaptivePolicyOverviewExample", example.applyValue(getAdaptivePolicyOverviewResult -> getAdaptivePolicyOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsAdaptivePolicyOverviewExample", example.item());
      *     }
      * }
      * }
@@ -494,7 +494,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsAdaptivePolicyOverviewExample", example.applyValue(getAdaptivePolicyOverviewResult -> getAdaptivePolicyOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsAdaptivePolicyOverviewExample", example.item());
      *     }
      * }
      * }
@@ -535,7 +535,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsAdaptivePolicyOverviewExample", example.applyValue(getAdaptivePolicyOverviewResult -> getAdaptivePolicyOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsAdaptivePolicyOverviewExample", example.item());
      *     }
      * }
      * }
@@ -576,7 +576,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsAdaptivePolicyOverviewExample", example.applyValue(getAdaptivePolicyOverviewResult -> getAdaptivePolicyOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsAdaptivePolicyOverviewExample", example.item());
      *     }
      * }
      * }
@@ -617,7 +617,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsAdaptivePolicyOverviewExample", example.applyValue(getAdaptivePolicyOverviewResult -> getAdaptivePolicyOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsAdaptivePolicyOverviewExample", example.item());
      *     }
      * }
      * }
@@ -707,7 +707,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsAdaptivePolicySettingsExample", example.applyValue(getAdaptivePolicySettingsResult -> getAdaptivePolicySettingsResult.item()));
+     *         ctx.export("merakiOrganizationsAdaptivePolicySettingsExample", example.item());
      *     }
      * }
      * }
@@ -748,7 +748,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsAdaptivePolicySettingsExample", example.applyValue(getAdaptivePolicySettingsResult -> getAdaptivePolicySettingsResult.item()));
+     *         ctx.export("merakiOrganizationsAdaptivePolicySettingsExample", example.item());
      *     }
      * }
      * }
@@ -789,7 +789,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsAdaptivePolicySettingsExample", example.applyValue(getAdaptivePolicySettingsResult -> getAdaptivePolicySettingsResult.item()));
+     *         ctx.export("merakiOrganizationsAdaptivePolicySettingsExample", example.item());
      *     }
      * }
      * }
@@ -830,7 +830,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsAdaptivePolicySettingsExample", example.applyValue(getAdaptivePolicySettingsResult -> getAdaptivePolicySettingsResult.item()));
+     *         ctx.export("merakiOrganizationsAdaptivePolicySettingsExample", example.item());
      *     }
      * }
      * }
@@ -871,7 +871,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsAdaptivePolicySettingsExample", example.applyValue(getAdaptivePolicySettingsResult -> getAdaptivePolicySettingsResult.item()));
+     *         ctx.export("merakiOrganizationsAdaptivePolicySettingsExample", example.item());
      *     }
      * }
      * }
@@ -912,7 +912,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsAdminsExample", example.applyValue(getAdminsResult -> getAdminsResult.items()));
+     *         ctx.export("merakiOrganizationsAdminsExample", example.items());
      *     }
      * }
      * }
@@ -953,7 +953,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsAdminsExample", example.applyValue(getAdminsResult -> getAdminsResult.items()));
+     *         ctx.export("merakiOrganizationsAdminsExample", example.items());
      *     }
      * }
      * }
@@ -994,7 +994,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsAdminsExample", example.applyValue(getAdminsResult -> getAdminsResult.items()));
+     *         ctx.export("merakiOrganizationsAdminsExample", example.items());
      *     }
      * }
      * }
@@ -1035,7 +1035,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsAdminsExample", example.applyValue(getAdminsResult -> getAdminsResult.items()));
+     *         ctx.export("merakiOrganizationsAdminsExample", example.items());
      *     }
      * }
      * }
@@ -1076,7 +1076,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsAdminsExample", example.applyValue(getAdminsResult -> getAdminsResult.items()));
+     *         ctx.export("merakiOrganizationsAdminsExample", example.items());
      *     }
      * }
      * }
@@ -1117,7 +1117,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsAlertsProfilesExample", example.applyValue(getAlertsProfilesResult -> getAlertsProfilesResult.items()));
+     *         ctx.export("merakiOrganizationsAlertsProfilesExample", example.items());
      *     }
      * }
      * }
@@ -1158,7 +1158,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsAlertsProfilesExample", example.applyValue(getAlertsProfilesResult -> getAlertsProfilesResult.items()));
+     *         ctx.export("merakiOrganizationsAlertsProfilesExample", example.items());
      *     }
      * }
      * }
@@ -1199,7 +1199,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsAlertsProfilesExample", example.applyValue(getAlertsProfilesResult -> getAlertsProfilesResult.items()));
+     *         ctx.export("merakiOrganizationsAlertsProfilesExample", example.items());
      *     }
      * }
      * }
@@ -1240,7 +1240,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsAlertsProfilesExample", example.applyValue(getAlertsProfilesResult -> getAlertsProfilesResult.items()));
+     *         ctx.export("merakiOrganizationsAlertsProfilesExample", example.items());
      *     }
      * }
      * }
@@ -1281,7 +1281,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsAlertsProfilesExample", example.applyValue(getAlertsProfilesResult -> getAlertsProfilesResult.items()));
+     *         ctx.export("merakiOrganizationsAlertsProfilesExample", example.items());
      *     }
      * }
      * }
@@ -1336,7 +1336,7 @@ public final class OrganizationsFunctions {
      *             .version(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApiRequestsExample", example.applyValue(getApiRequestsResult -> getApiRequestsResult.items()));
+     *         ctx.export("merakiOrganizationsApiRequestsExample", example.items());
      *     }
      * }
      * }
@@ -1391,7 +1391,7 @@ public final class OrganizationsFunctions {
      *             .version(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApiRequestsExample", example.applyValue(getApiRequestsResult -> getApiRequestsResult.items()));
+     *         ctx.export("merakiOrganizationsApiRequestsExample", example.items());
      *     }
      * }
      * }
@@ -1446,7 +1446,7 @@ public final class OrganizationsFunctions {
      *             .version(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApiRequestsExample", example.applyValue(getApiRequestsResult -> getApiRequestsResult.items()));
+     *         ctx.export("merakiOrganizationsApiRequestsExample", example.items());
      *     }
      * }
      * }
@@ -1501,7 +1501,7 @@ public final class OrganizationsFunctions {
      *             .version(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApiRequestsExample", example.applyValue(getApiRequestsResult -> getApiRequestsResult.items()));
+     *         ctx.export("merakiOrganizationsApiRequestsExample", example.items());
      *     }
      * }
      * }
@@ -1556,7 +1556,7 @@ public final class OrganizationsFunctions {
      *             .version(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApiRequestsExample", example.applyValue(getApiRequestsResult -> getApiRequestsResult.items()));
+     *         ctx.export("merakiOrganizationsApiRequestsExample", example.items());
      *     }
      * }
      * }
@@ -1600,7 +1600,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApiRequestsOverviewExample", example.applyValue(getApiRequestsOverviewResult -> getApiRequestsOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsApiRequestsOverviewExample", example.item());
      *     }
      * }
      * }
@@ -1644,7 +1644,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApiRequestsOverviewExample", example.applyValue(getApiRequestsOverviewResult -> getApiRequestsOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsApiRequestsOverviewExample", example.item());
      *     }
      * }
      * }
@@ -1688,7 +1688,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApiRequestsOverviewExample", example.applyValue(getApiRequestsOverviewResult -> getApiRequestsOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsApiRequestsOverviewExample", example.item());
      *     }
      * }
      * }
@@ -1732,7 +1732,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApiRequestsOverviewExample", example.applyValue(getApiRequestsOverviewResult -> getApiRequestsOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsApiRequestsOverviewExample", example.item());
      *     }
      * }
      * }
@@ -1776,7 +1776,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApiRequestsOverviewExample", example.applyValue(getApiRequestsOverviewResult -> getApiRequestsOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsApiRequestsOverviewExample", example.item());
      *     }
      * }
      * }
@@ -1826,7 +1826,7 @@ public final class OrganizationsFunctions {
      *             .version(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApiRequestsOverviewResponseCodesByIntervalExample", example.applyValue(getApiRequestsOverviewResponseCodesByIntervalResult -> getApiRequestsOverviewResponseCodesByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsApiRequestsOverviewResponseCodesByIntervalExample", example.items());
      *     }
      * }
      * }
@@ -1876,7 +1876,7 @@ public final class OrganizationsFunctions {
      *             .version(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApiRequestsOverviewResponseCodesByIntervalExample", example.applyValue(getApiRequestsOverviewResponseCodesByIntervalResult -> getApiRequestsOverviewResponseCodesByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsApiRequestsOverviewResponseCodesByIntervalExample", example.items());
      *     }
      * }
      * }
@@ -1926,7 +1926,7 @@ public final class OrganizationsFunctions {
      *             .version(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApiRequestsOverviewResponseCodesByIntervalExample", example.applyValue(getApiRequestsOverviewResponseCodesByIntervalResult -> getApiRequestsOverviewResponseCodesByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsApiRequestsOverviewResponseCodesByIntervalExample", example.items());
      *     }
      * }
      * }
@@ -1976,7 +1976,7 @@ public final class OrganizationsFunctions {
      *             .version(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApiRequestsOverviewResponseCodesByIntervalExample", example.applyValue(getApiRequestsOverviewResponseCodesByIntervalResult -> getApiRequestsOverviewResponseCodesByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsApiRequestsOverviewResponseCodesByIntervalExample", example.items());
      *     }
      * }
      * }
@@ -2026,7 +2026,7 @@ public final class OrganizationsFunctions {
      *             .version(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApiRequestsOverviewResponseCodesByIntervalExample", example.applyValue(getApiRequestsOverviewResponseCodesByIntervalResult -> getApiRequestsOverviewResponseCodesByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsApiRequestsOverviewResponseCodesByIntervalExample", example.items());
      *     }
      * }
      * }
@@ -2067,7 +2067,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApplianceSecurityIntrusionExample", example.applyValue(getApplianceSecurityIntrusionResult -> getApplianceSecurityIntrusionResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceSecurityIntrusionExample", example.item());
      *     }
      * }
      * }
@@ -2108,7 +2108,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApplianceSecurityIntrusionExample", example.applyValue(getApplianceSecurityIntrusionResult -> getApplianceSecurityIntrusionResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceSecurityIntrusionExample", example.item());
      *     }
      * }
      * }
@@ -2149,7 +2149,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApplianceSecurityIntrusionExample", example.applyValue(getApplianceSecurityIntrusionResult -> getApplianceSecurityIntrusionResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceSecurityIntrusionExample", example.item());
      *     }
      * }
      * }
@@ -2190,7 +2190,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApplianceSecurityIntrusionExample", example.applyValue(getApplianceSecurityIntrusionResult -> getApplianceSecurityIntrusionResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceSecurityIntrusionExample", example.item());
      *     }
      * }
      * }
@@ -2231,7 +2231,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApplianceSecurityIntrusionExample", example.applyValue(getApplianceSecurityIntrusionResult -> getApplianceSecurityIntrusionResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceSecurityIntrusionExample", example.item());
      *     }
      * }
      * }
@@ -2276,7 +2276,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApplianceTrafficShapingVpnExclusionsByNetworkExample", example.applyValue(getApplianceTrafficShapingVpnExclusionsByNetworkResult -> getApplianceTrafficShapingVpnExclusionsByNetworkResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceTrafficShapingVpnExclusionsByNetworkExample", example.item());
      *     }
      * }
      * }
@@ -2321,7 +2321,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApplianceTrafficShapingVpnExclusionsByNetworkExample", example.applyValue(getApplianceTrafficShapingVpnExclusionsByNetworkResult -> getApplianceTrafficShapingVpnExclusionsByNetworkResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceTrafficShapingVpnExclusionsByNetworkExample", example.item());
      *     }
      * }
      * }
@@ -2366,7 +2366,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApplianceTrafficShapingVpnExclusionsByNetworkExample", example.applyValue(getApplianceTrafficShapingVpnExclusionsByNetworkResult -> getApplianceTrafficShapingVpnExclusionsByNetworkResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceTrafficShapingVpnExclusionsByNetworkExample", example.item());
      *     }
      * }
      * }
@@ -2411,7 +2411,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApplianceTrafficShapingVpnExclusionsByNetworkExample", example.applyValue(getApplianceTrafficShapingVpnExclusionsByNetworkResult -> getApplianceTrafficShapingVpnExclusionsByNetworkResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceTrafficShapingVpnExclusionsByNetworkExample", example.item());
      *     }
      * }
      * }
@@ -2456,7 +2456,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApplianceTrafficShapingVpnExclusionsByNetworkExample", example.applyValue(getApplianceTrafficShapingVpnExclusionsByNetworkResult -> getApplianceTrafficShapingVpnExclusionsByNetworkResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceTrafficShapingVpnExclusionsByNetworkExample", example.item());
      *     }
      * }
      * }
@@ -2497,7 +2497,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApplianceUplinksStatusesOverviewExample", example.applyValue(getApplianceUplinksStatusesOverviewResult -> getApplianceUplinksStatusesOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceUplinksStatusesOverviewExample", example.item());
      *     }
      * }
      * }
@@ -2538,7 +2538,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApplianceUplinksStatusesOverviewExample", example.applyValue(getApplianceUplinksStatusesOverviewResult -> getApplianceUplinksStatusesOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceUplinksStatusesOverviewExample", example.item());
      *     }
      * }
      * }
@@ -2579,7 +2579,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApplianceUplinksStatusesOverviewExample", example.applyValue(getApplianceUplinksStatusesOverviewResult -> getApplianceUplinksStatusesOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceUplinksStatusesOverviewExample", example.item());
      *     }
      * }
      * }
@@ -2620,7 +2620,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApplianceUplinksStatusesOverviewExample", example.applyValue(getApplianceUplinksStatusesOverviewResult -> getApplianceUplinksStatusesOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceUplinksStatusesOverviewExample", example.item());
      *     }
      * }
      * }
@@ -2661,7 +2661,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApplianceUplinksStatusesOverviewExample", example.applyValue(getApplianceUplinksStatusesOverviewResult -> getApplianceUplinksStatusesOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceUplinksStatusesOverviewExample", example.item());
      *     }
      * }
      * }
@@ -2705,7 +2705,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApplianceUplinksUsageByNetworkExample", example.applyValue(getApplianceUplinksUsageByNetworkResult -> getApplianceUplinksUsageByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsApplianceUplinksUsageByNetworkExample", example.items());
      *     }
      * }
      * }
@@ -2749,7 +2749,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApplianceUplinksUsageByNetworkExample", example.applyValue(getApplianceUplinksUsageByNetworkResult -> getApplianceUplinksUsageByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsApplianceUplinksUsageByNetworkExample", example.items());
      *     }
      * }
      * }
@@ -2793,7 +2793,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApplianceUplinksUsageByNetworkExample", example.applyValue(getApplianceUplinksUsageByNetworkResult -> getApplianceUplinksUsageByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsApplianceUplinksUsageByNetworkExample", example.items());
      *     }
      * }
      * }
@@ -2837,7 +2837,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApplianceUplinksUsageByNetworkExample", example.applyValue(getApplianceUplinksUsageByNetworkResult -> getApplianceUplinksUsageByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsApplianceUplinksUsageByNetworkExample", example.items());
      *     }
      * }
      * }
@@ -2881,7 +2881,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApplianceUplinksUsageByNetworkExample", example.applyValue(getApplianceUplinksUsageByNetworkResult -> getApplianceUplinksUsageByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsApplianceUplinksUsageByNetworkExample", example.items());
      *     }
      * }
      * }
@@ -2922,7 +2922,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApplianceVpnThirdPartyVpnpeersExample", example.applyValue(getApplianceVpnThirdPartyVpnpeersResult -> getApplianceVpnThirdPartyVpnpeersResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceVpnThirdPartyVpnpeersExample", example.item());
      *     }
      * }
      * }
@@ -2963,7 +2963,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApplianceVpnThirdPartyVpnpeersExample", example.applyValue(getApplianceVpnThirdPartyVpnpeersResult -> getApplianceVpnThirdPartyVpnpeersResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceVpnThirdPartyVpnpeersExample", example.item());
      *     }
      * }
      * }
@@ -3004,7 +3004,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApplianceVpnThirdPartyVpnpeersExample", example.applyValue(getApplianceVpnThirdPartyVpnpeersResult -> getApplianceVpnThirdPartyVpnpeersResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceVpnThirdPartyVpnpeersExample", example.item());
      *     }
      * }
      * }
@@ -3045,7 +3045,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApplianceVpnThirdPartyVpnpeersExample", example.applyValue(getApplianceVpnThirdPartyVpnpeersResult -> getApplianceVpnThirdPartyVpnpeersResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceVpnThirdPartyVpnpeersExample", example.item());
      *     }
      * }
      * }
@@ -3086,7 +3086,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApplianceVpnThirdPartyVpnpeersExample", example.applyValue(getApplianceVpnThirdPartyVpnpeersResult -> getApplianceVpnThirdPartyVpnpeersResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceVpnThirdPartyVpnpeersExample", example.item());
      *     }
      * }
      * }
@@ -3127,7 +3127,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApplianceVpnVpnFirewallRulesExample", example.applyValue(getApplianceVpnVpnFirewallRulesResult -> getApplianceVpnVpnFirewallRulesResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceVpnVpnFirewallRulesExample", example.item());
      *     }
      * }
      * }
@@ -3168,7 +3168,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApplianceVpnVpnFirewallRulesExample", example.applyValue(getApplianceVpnVpnFirewallRulesResult -> getApplianceVpnVpnFirewallRulesResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceVpnVpnFirewallRulesExample", example.item());
      *     }
      * }
      * }
@@ -3209,7 +3209,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApplianceVpnVpnFirewallRulesExample", example.applyValue(getApplianceVpnVpnFirewallRulesResult -> getApplianceVpnVpnFirewallRulesResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceVpnVpnFirewallRulesExample", example.item());
      *     }
      * }
      * }
@@ -3250,7 +3250,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApplianceVpnVpnFirewallRulesExample", example.applyValue(getApplianceVpnVpnFirewallRulesResult -> getApplianceVpnVpnFirewallRulesResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceVpnVpnFirewallRulesExample", example.item());
      *     }
      * }
      * }
@@ -3291,7 +3291,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsApplianceVpnVpnFirewallRulesExample", example.applyValue(getApplianceVpnVpnFirewallRulesResult -> getApplianceVpnVpnFirewallRulesResult.item()));
+     *         ctx.export("merakiOrganizationsApplianceVpnVpnFirewallRulesExample", example.item());
      *     }
      * }
      * }
@@ -3381,7 +3381,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsBrandingPoliciesPrioritiesExample", example.applyValue(getBrandingPoliciesPrioritiesResult -> getBrandingPoliciesPrioritiesResult.item()));
+     *         ctx.export("merakiOrganizationsBrandingPoliciesPrioritiesExample", example.item());
      *     }
      * }
      * }
@@ -3422,7 +3422,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsBrandingPoliciesPrioritiesExample", example.applyValue(getBrandingPoliciesPrioritiesResult -> getBrandingPoliciesPrioritiesResult.item()));
+     *         ctx.export("merakiOrganizationsBrandingPoliciesPrioritiesExample", example.item());
      *     }
      * }
      * }
@@ -3463,7 +3463,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsBrandingPoliciesPrioritiesExample", example.applyValue(getBrandingPoliciesPrioritiesResult -> getBrandingPoliciesPrioritiesResult.item()));
+     *         ctx.export("merakiOrganizationsBrandingPoliciesPrioritiesExample", example.item());
      *     }
      * }
      * }
@@ -3504,7 +3504,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsBrandingPoliciesPrioritiesExample", example.applyValue(getBrandingPoliciesPrioritiesResult -> getBrandingPoliciesPrioritiesResult.item()));
+     *         ctx.export("merakiOrganizationsBrandingPoliciesPrioritiesExample", example.item());
      *     }
      * }
      * }
@@ -3545,7 +3545,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsBrandingPoliciesPrioritiesExample", example.applyValue(getBrandingPoliciesPrioritiesResult -> getBrandingPoliciesPrioritiesResult.item()));
+     *         ctx.export("merakiOrganizationsBrandingPoliciesPrioritiesExample", example.item());
      *     }
      * }
      * }
@@ -3587,7 +3587,7 @@ public final class OrganizationsFunctions {
      *             .serials("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsCameraBoundariesAreasByDeviceExample", example.applyValue(getCameraBoundariesAreasByDeviceResult -> getCameraBoundariesAreasByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsCameraBoundariesAreasByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -3629,7 +3629,7 @@ public final class OrganizationsFunctions {
      *             .serials("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsCameraBoundariesAreasByDeviceExample", example.applyValue(getCameraBoundariesAreasByDeviceResult -> getCameraBoundariesAreasByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsCameraBoundariesAreasByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -3671,7 +3671,7 @@ public final class OrganizationsFunctions {
      *             .serials("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsCameraBoundariesAreasByDeviceExample", example.applyValue(getCameraBoundariesAreasByDeviceResult -> getCameraBoundariesAreasByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsCameraBoundariesAreasByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -3713,7 +3713,7 @@ public final class OrganizationsFunctions {
      *             .serials("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsCameraBoundariesAreasByDeviceExample", example.applyValue(getCameraBoundariesAreasByDeviceResult -> getCameraBoundariesAreasByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsCameraBoundariesAreasByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -3755,7 +3755,7 @@ public final class OrganizationsFunctions {
      *             .serials("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsCameraBoundariesAreasByDeviceExample", example.applyValue(getCameraBoundariesAreasByDeviceResult -> getCameraBoundariesAreasByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsCameraBoundariesAreasByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -3797,7 +3797,7 @@ public final class OrganizationsFunctions {
      *             .serials("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsCameraBoundariesLinesByDeviceExample", example.applyValue(getCameraBoundariesLinesByDeviceResult -> getCameraBoundariesLinesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsCameraBoundariesLinesByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -3839,7 +3839,7 @@ public final class OrganizationsFunctions {
      *             .serials("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsCameraBoundariesLinesByDeviceExample", example.applyValue(getCameraBoundariesLinesByDeviceResult -> getCameraBoundariesLinesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsCameraBoundariesLinesByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -3881,7 +3881,7 @@ public final class OrganizationsFunctions {
      *             .serials("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsCameraBoundariesLinesByDeviceExample", example.applyValue(getCameraBoundariesLinesByDeviceResult -> getCameraBoundariesLinesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsCameraBoundariesLinesByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -3923,7 +3923,7 @@ public final class OrganizationsFunctions {
      *             .serials("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsCameraBoundariesLinesByDeviceExample", example.applyValue(getCameraBoundariesLinesByDeviceResult -> getCameraBoundariesLinesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsCameraBoundariesLinesByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -3965,7 +3965,7 @@ public final class OrganizationsFunctions {
      *             .serials("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsCameraBoundariesLinesByDeviceExample", example.applyValue(getCameraBoundariesLinesByDeviceResult -> getCameraBoundariesLinesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsCameraBoundariesLinesByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -4060,7 +4060,7 @@ public final class OrganizationsFunctions {
      *             .ranges("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsCameraDetectionsHistoryByBoundaryByIntervalExample", example.applyValue(getCameraDetectionsHistoryByBoundaryByIntervalResult -> getCameraDetectionsHistoryByBoundaryByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsCameraDetectionsHistoryByBoundaryByIntervalExample", example.items());
      *     }
      * }
      * }
@@ -4106,7 +4106,7 @@ public final class OrganizationsFunctions {
      *             .ranges("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsCameraDetectionsHistoryByBoundaryByIntervalExample", example.applyValue(getCameraDetectionsHistoryByBoundaryByIntervalResult -> getCameraDetectionsHistoryByBoundaryByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsCameraDetectionsHistoryByBoundaryByIntervalExample", example.items());
      *     }
      * }
      * }
@@ -4152,7 +4152,7 @@ public final class OrganizationsFunctions {
      *             .ranges("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsCameraDetectionsHistoryByBoundaryByIntervalExample", example.applyValue(getCameraDetectionsHistoryByBoundaryByIntervalResult -> getCameraDetectionsHistoryByBoundaryByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsCameraDetectionsHistoryByBoundaryByIntervalExample", example.items());
      *     }
      * }
      * }
@@ -4198,7 +4198,7 @@ public final class OrganizationsFunctions {
      *             .ranges("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsCameraDetectionsHistoryByBoundaryByIntervalExample", example.applyValue(getCameraDetectionsHistoryByBoundaryByIntervalResult -> getCameraDetectionsHistoryByBoundaryByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsCameraDetectionsHistoryByBoundaryByIntervalExample", example.items());
      *     }
      * }
      * }
@@ -4244,7 +4244,7 @@ public final class OrganizationsFunctions {
      *             .ranges("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsCameraDetectionsHistoryByBoundaryByIntervalExample", example.applyValue(getCameraDetectionsHistoryByBoundaryByIntervalResult -> getCameraDetectionsHistoryByBoundaryByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsCameraDetectionsHistoryByBoundaryByIntervalExample", example.items());
      *     }
      * }
      * }
@@ -4286,7 +4286,7 @@ public final class OrganizationsFunctions {
      *             .permissionScopeId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsCameraPermissionsExample", example.applyValue(getCameraPermissionsResult -> getCameraPermissionsResult.item()));
+     *         ctx.export("merakiOrganizationsCameraPermissionsExample", example.item());
      *     }
      * }
      * }
@@ -4328,7 +4328,7 @@ public final class OrganizationsFunctions {
      *             .permissionScopeId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsCameraPermissionsExample", example.applyValue(getCameraPermissionsResult -> getCameraPermissionsResult.item()));
+     *         ctx.export("merakiOrganizationsCameraPermissionsExample", example.item());
      *     }
      * }
      * }
@@ -4370,7 +4370,7 @@ public final class OrganizationsFunctions {
      *             .permissionScopeId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsCameraPermissionsExample", example.applyValue(getCameraPermissionsResult -> getCameraPermissionsResult.item()));
+     *         ctx.export("merakiOrganizationsCameraPermissionsExample", example.item());
      *     }
      * }
      * }
@@ -4412,7 +4412,7 @@ public final class OrganizationsFunctions {
      *             .permissionScopeId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsCameraPermissionsExample", example.applyValue(getCameraPermissionsResult -> getCameraPermissionsResult.item()));
+     *         ctx.export("merakiOrganizationsCameraPermissionsExample", example.item());
      *     }
      * }
      * }
@@ -4454,7 +4454,7 @@ public final class OrganizationsFunctions {
      *             .permissionScopeId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsCameraPermissionsExample", example.applyValue(getCameraPermissionsResult -> getCameraPermissionsResult.item()));
+     *         ctx.export("merakiOrganizationsCameraPermissionsExample", example.item());
      *     }
      * }
      * }
@@ -4550,7 +4550,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsCellularGatewayUplinkStatusesExample", example.applyValue(getCellularGatewayUplinkStatusesResult -> getCellularGatewayUplinkStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsCellularGatewayUplinkStatusesExample", example.items());
      *     }
      * }
      * }
@@ -4597,7 +4597,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsCellularGatewayUplinkStatusesExample", example.applyValue(getCellularGatewayUplinkStatusesResult -> getCellularGatewayUplinkStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsCellularGatewayUplinkStatusesExample", example.items());
      *     }
      * }
      * }
@@ -4644,7 +4644,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsCellularGatewayUplinkStatusesExample", example.applyValue(getCellularGatewayUplinkStatusesResult -> getCellularGatewayUplinkStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsCellularGatewayUplinkStatusesExample", example.items());
      *     }
      * }
      * }
@@ -4691,7 +4691,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsCellularGatewayUplinkStatusesExample", example.applyValue(getCellularGatewayUplinkStatusesResult -> getCellularGatewayUplinkStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsCellularGatewayUplinkStatusesExample", example.items());
      *     }
      * }
      * }
@@ -4738,7 +4738,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsCellularGatewayUplinkStatusesExample", example.applyValue(getCellularGatewayUplinkStatusesResult -> getCellularGatewayUplinkStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsCellularGatewayUplinkStatusesExample", example.items());
      *     }
      * }
      * }
@@ -4782,7 +4782,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsClientsBandwidthUsageHistoryExample", example.applyValue(getClientsBandwidthUsageHistoryResult -> getClientsBandwidthUsageHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsClientsBandwidthUsageHistoryExample", example.items());
      *     }
      * }
      * }
@@ -4826,7 +4826,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsClientsBandwidthUsageHistoryExample", example.applyValue(getClientsBandwidthUsageHistoryResult -> getClientsBandwidthUsageHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsClientsBandwidthUsageHistoryExample", example.items());
      *     }
      * }
      * }
@@ -4870,7 +4870,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsClientsBandwidthUsageHistoryExample", example.applyValue(getClientsBandwidthUsageHistoryResult -> getClientsBandwidthUsageHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsClientsBandwidthUsageHistoryExample", example.items());
      *     }
      * }
      * }
@@ -4914,7 +4914,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsClientsBandwidthUsageHistoryExample", example.applyValue(getClientsBandwidthUsageHistoryResult -> getClientsBandwidthUsageHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsClientsBandwidthUsageHistoryExample", example.items());
      *     }
      * }
      * }
@@ -4958,7 +4958,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsClientsBandwidthUsageHistoryExample", example.applyValue(getClientsBandwidthUsageHistoryResult -> getClientsBandwidthUsageHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsClientsBandwidthUsageHistoryExample", example.items());
      *     }
      * }
      * }
@@ -5002,7 +5002,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsClientsOverviewExample", example.applyValue(getClientsOverviewResult -> getClientsOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsClientsOverviewExample", example.item());
      *     }
      * }
      * }
@@ -5046,7 +5046,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsClientsOverviewExample", example.applyValue(getClientsOverviewResult -> getClientsOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsClientsOverviewExample", example.item());
      *     }
      * }
      * }
@@ -5090,7 +5090,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsClientsOverviewExample", example.applyValue(getClientsOverviewResult -> getClientsOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsClientsOverviewExample", example.item());
      *     }
      * }
      * }
@@ -5134,7 +5134,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsClientsOverviewExample", example.applyValue(getClientsOverviewResult -> getClientsOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsClientsOverviewExample", example.item());
      *     }
      * }
      * }
@@ -5178,7 +5178,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsClientsOverviewExample", example.applyValue(getClientsOverviewResult -> getClientsOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsClientsOverviewExample", example.item());
      *     }
      * }
      * }
@@ -5223,7 +5223,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsClientsSearchExample", example.applyValue(getClientsSearchResult -> getClientsSearchResult.item()));
+     *         ctx.export("merakiOrganizationsClientsSearchExample", example.item());
      *     }
      * }
      * }
@@ -5268,7 +5268,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsClientsSearchExample", example.applyValue(getClientsSearchResult -> getClientsSearchResult.item()));
+     *         ctx.export("merakiOrganizationsClientsSearchExample", example.item());
      *     }
      * }
      * }
@@ -5313,7 +5313,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsClientsSearchExample", example.applyValue(getClientsSearchResult -> getClientsSearchResult.item()));
+     *         ctx.export("merakiOrganizationsClientsSearchExample", example.item());
      *     }
      * }
      * }
@@ -5358,7 +5358,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsClientsSearchExample", example.applyValue(getClientsSearchResult -> getClientsSearchResult.item()));
+     *         ctx.export("merakiOrganizationsClientsSearchExample", example.item());
      *     }
      * }
      * }
@@ -5403,7 +5403,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsClientsSearchExample", example.applyValue(getClientsSearchResult -> getClientsSearchResult.item()));
+     *         ctx.export("merakiOrganizationsClientsSearchExample", example.item());
      *     }
      * }
      * }
@@ -5494,7 +5494,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsConfigTemplatesSwitchProfilesExample", example.applyValue(getConfigTemplatesSwitchProfilesResult -> getConfigTemplatesSwitchProfilesResult.items()));
+     *         ctx.export("merakiOrganizationsConfigTemplatesSwitchProfilesExample", example.items());
      *     }
      * }
      * }
@@ -5536,7 +5536,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsConfigTemplatesSwitchProfilesExample", example.applyValue(getConfigTemplatesSwitchProfilesResult -> getConfigTemplatesSwitchProfilesResult.items()));
+     *         ctx.export("merakiOrganizationsConfigTemplatesSwitchProfilesExample", example.items());
      *     }
      * }
      * }
@@ -5578,7 +5578,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsConfigTemplatesSwitchProfilesExample", example.applyValue(getConfigTemplatesSwitchProfilesResult -> getConfigTemplatesSwitchProfilesResult.items()));
+     *         ctx.export("merakiOrganizationsConfigTemplatesSwitchProfilesExample", example.items());
      *     }
      * }
      * }
@@ -5620,7 +5620,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsConfigTemplatesSwitchProfilesExample", example.applyValue(getConfigTemplatesSwitchProfilesResult -> getConfigTemplatesSwitchProfilesResult.items()));
+     *         ctx.export("merakiOrganizationsConfigTemplatesSwitchProfilesExample", example.items());
      *     }
      * }
      * }
@@ -5662,7 +5662,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsConfigTemplatesSwitchProfilesExample", example.applyValue(getConfigTemplatesSwitchProfilesResult -> getConfigTemplatesSwitchProfilesResult.items()));
+     *         ctx.export("merakiOrganizationsConfigTemplatesSwitchProfilesExample", example.items());
      *     }
      * }
      * }
@@ -5769,7 +5769,7 @@ public final class OrganizationsFunctions {
      *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesExample", example.applyValue(getDevicesResult -> getDevicesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesExample", example.items());
      *     }
      * }
      * }
@@ -5827,7 +5827,7 @@ public final class OrganizationsFunctions {
      *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesExample", example.applyValue(getDevicesResult -> getDevicesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesExample", example.items());
      *     }
      * }
      * }
@@ -5885,7 +5885,7 @@ public final class OrganizationsFunctions {
      *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesExample", example.applyValue(getDevicesResult -> getDevicesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesExample", example.items());
      *     }
      * }
      * }
@@ -5943,7 +5943,7 @@ public final class OrganizationsFunctions {
      *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesExample", example.applyValue(getDevicesResult -> getDevicesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesExample", example.items());
      *     }
      * }
      * }
@@ -6001,7 +6001,7 @@ public final class OrganizationsFunctions {
      *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesExample", example.applyValue(getDevicesResult -> getDevicesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesExample", example.items());
      *     }
      * }
      * }
@@ -6050,7 +6050,7 @@ public final class OrganizationsFunctions {
      *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesAvailabilitiesExample", example.applyValue(getDevicesAvailabilitiesResult -> getDevicesAvailabilitiesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesAvailabilitiesExample", example.items());
      *     }
      * }
      * }
@@ -6099,7 +6099,7 @@ public final class OrganizationsFunctions {
      *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesAvailabilitiesExample", example.applyValue(getDevicesAvailabilitiesResult -> getDevicesAvailabilitiesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesAvailabilitiesExample", example.items());
      *     }
      * }
      * }
@@ -6148,7 +6148,7 @@ public final class OrganizationsFunctions {
      *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesAvailabilitiesExample", example.applyValue(getDevicesAvailabilitiesResult -> getDevicesAvailabilitiesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesAvailabilitiesExample", example.items());
      *     }
      * }
      * }
@@ -6197,7 +6197,7 @@ public final class OrganizationsFunctions {
      *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesAvailabilitiesExample", example.applyValue(getDevicesAvailabilitiesResult -> getDevicesAvailabilitiesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesAvailabilitiesExample", example.items());
      *     }
      * }
      * }
@@ -6246,7 +6246,7 @@ public final class OrganizationsFunctions {
      *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesAvailabilitiesExample", example.applyValue(getDevicesAvailabilitiesResult -> getDevicesAvailabilitiesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesAvailabilitiesExample", example.items());
      *     }
      * }
      * }
@@ -6297,7 +6297,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesAvailabilitiesChangeHistoryExample", example.applyValue(getDevicesAvailabilitiesChangeHistoryResult -> getDevicesAvailabilitiesChangeHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesAvailabilitiesChangeHistoryExample", example.items());
      *     }
      * }
      * }
@@ -6348,7 +6348,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesAvailabilitiesChangeHistoryExample", example.applyValue(getDevicesAvailabilitiesChangeHistoryResult -> getDevicesAvailabilitiesChangeHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesAvailabilitiesChangeHistoryExample", example.items());
      *     }
      * }
      * }
@@ -6399,7 +6399,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesAvailabilitiesChangeHistoryExample", example.applyValue(getDevicesAvailabilitiesChangeHistoryResult -> getDevicesAvailabilitiesChangeHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesAvailabilitiesChangeHistoryExample", example.items());
      *     }
      * }
      * }
@@ -6450,7 +6450,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesAvailabilitiesChangeHistoryExample", example.applyValue(getDevicesAvailabilitiesChangeHistoryResult -> getDevicesAvailabilitiesChangeHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesAvailabilitiesChangeHistoryExample", example.items());
      *     }
      * }
      * }
@@ -6501,7 +6501,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesAvailabilitiesChangeHistoryExample", example.applyValue(getDevicesAvailabilitiesChangeHistoryResult -> getDevicesAvailabilitiesChangeHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesAvailabilitiesChangeHistoryExample", example.items());
      *     }
      * }
      * }
@@ -6551,7 +6551,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesBootsHistoryExample", example.applyValue(getDevicesBootsHistoryResult -> getDevicesBootsHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesBootsHistoryExample", example.items());
      *     }
      * }
      * }
@@ -6601,7 +6601,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesBootsHistoryExample", example.applyValue(getDevicesBootsHistoryResult -> getDevicesBootsHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesBootsHistoryExample", example.items());
      *     }
      * }
      * }
@@ -6651,7 +6651,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesBootsHistoryExample", example.applyValue(getDevicesBootsHistoryResult -> getDevicesBootsHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesBootsHistoryExample", example.items());
      *     }
      * }
      * }
@@ -6701,7 +6701,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesBootsHistoryExample", example.applyValue(getDevicesBootsHistoryResult -> getDevicesBootsHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesBootsHistoryExample", example.items());
      *     }
      * }
      * }
@@ -6751,7 +6751,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesBootsHistoryExample", example.applyValue(getDevicesBootsHistoryResult -> getDevicesBootsHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesBootsHistoryExample", example.items());
      *     }
      * }
      * }
@@ -6800,7 +6800,7 @@ public final class OrganizationsFunctions {
      *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesPowerModulesStatusesByDeviceExample", example.applyValue(getDevicesPowerModulesStatusesByDeviceResult -> getDevicesPowerModulesStatusesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesPowerModulesStatusesByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -6849,7 +6849,7 @@ public final class OrganizationsFunctions {
      *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesPowerModulesStatusesByDeviceExample", example.applyValue(getDevicesPowerModulesStatusesByDeviceResult -> getDevicesPowerModulesStatusesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesPowerModulesStatusesByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -6898,7 +6898,7 @@ public final class OrganizationsFunctions {
      *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesPowerModulesStatusesByDeviceExample", example.applyValue(getDevicesPowerModulesStatusesByDeviceResult -> getDevicesPowerModulesStatusesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesPowerModulesStatusesByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -6947,7 +6947,7 @@ public final class OrganizationsFunctions {
      *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesPowerModulesStatusesByDeviceExample", example.applyValue(getDevicesPowerModulesStatusesByDeviceResult -> getDevicesPowerModulesStatusesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesPowerModulesStatusesByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -6996,7 +6996,7 @@ public final class OrganizationsFunctions {
      *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesPowerModulesStatusesByDeviceExample", example.applyValue(getDevicesPowerModulesStatusesByDeviceResult -> getDevicesPowerModulesStatusesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesPowerModulesStatusesByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -7046,7 +7046,7 @@ public final class OrganizationsFunctions {
      *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesProvisioningStatusesExample", example.applyValue(getDevicesProvisioningStatusesResult -> getDevicesProvisioningStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesProvisioningStatusesExample", example.items());
      *     }
      * }
      * }
@@ -7096,7 +7096,7 @@ public final class OrganizationsFunctions {
      *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesProvisioningStatusesExample", example.applyValue(getDevicesProvisioningStatusesResult -> getDevicesProvisioningStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesProvisioningStatusesExample", example.items());
      *     }
      * }
      * }
@@ -7146,7 +7146,7 @@ public final class OrganizationsFunctions {
      *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesProvisioningStatusesExample", example.applyValue(getDevicesProvisioningStatusesResult -> getDevicesProvisioningStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesProvisioningStatusesExample", example.items());
      *     }
      * }
      * }
@@ -7196,7 +7196,7 @@ public final class OrganizationsFunctions {
      *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesProvisioningStatusesExample", example.applyValue(getDevicesProvisioningStatusesResult -> getDevicesProvisioningStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesProvisioningStatusesExample", example.items());
      *     }
      * }
      * }
@@ -7246,7 +7246,7 @@ public final class OrganizationsFunctions {
      *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesProvisioningStatusesExample", example.applyValue(getDevicesProvisioningStatusesResult -> getDevicesProvisioningStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesProvisioningStatusesExample", example.items());
      *     }
      * }
      * }
@@ -7297,7 +7297,7 @@ public final class OrganizationsFunctions {
      *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesStatusesExample", example.applyValue(getDevicesStatusesResult -> getDevicesStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesStatusesExample", example.items());
      *     }
      * }
      * }
@@ -7348,7 +7348,7 @@ public final class OrganizationsFunctions {
      *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesStatusesExample", example.applyValue(getDevicesStatusesResult -> getDevicesStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesStatusesExample", example.items());
      *     }
      * }
      * }
@@ -7399,7 +7399,7 @@ public final class OrganizationsFunctions {
      *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesStatusesExample", example.applyValue(getDevicesStatusesResult -> getDevicesStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesStatusesExample", example.items());
      *     }
      * }
      * }
@@ -7450,7 +7450,7 @@ public final class OrganizationsFunctions {
      *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesStatusesExample", example.applyValue(getDevicesStatusesResult -> getDevicesStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesStatusesExample", example.items());
      *     }
      * }
      * }
@@ -7501,7 +7501,7 @@ public final class OrganizationsFunctions {
      *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesStatusesExample", example.applyValue(getDevicesStatusesResult -> getDevicesStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesStatusesExample", example.items());
      *     }
      * }
      * }
@@ -7544,7 +7544,7 @@ public final class OrganizationsFunctions {
      *             .productTypes("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesStatusesOverviewExample", example.applyValue(getDevicesStatusesOverviewResult -> getDevicesStatusesOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsDevicesStatusesOverviewExample", example.item());
      *     }
      * }
      * }
@@ -7587,7 +7587,7 @@ public final class OrganizationsFunctions {
      *             .productTypes("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesStatusesOverviewExample", example.applyValue(getDevicesStatusesOverviewResult -> getDevicesStatusesOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsDevicesStatusesOverviewExample", example.item());
      *     }
      * }
      * }
@@ -7630,7 +7630,7 @@ public final class OrganizationsFunctions {
      *             .productTypes("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesStatusesOverviewExample", example.applyValue(getDevicesStatusesOverviewResult -> getDevicesStatusesOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsDevicesStatusesOverviewExample", example.item());
      *     }
      * }
      * }
@@ -7673,7 +7673,7 @@ public final class OrganizationsFunctions {
      *             .productTypes("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesStatusesOverviewExample", example.applyValue(getDevicesStatusesOverviewResult -> getDevicesStatusesOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsDevicesStatusesOverviewExample", example.item());
      *     }
      * }
      * }
@@ -7716,7 +7716,7 @@ public final class OrganizationsFunctions {
      *             .productTypes("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesStatusesOverviewExample", example.applyValue(getDevicesStatusesOverviewResult -> getDevicesStatusesOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsDevicesStatusesOverviewExample", example.item());
      *     }
      * }
      * }
@@ -7765,7 +7765,7 @@ public final class OrganizationsFunctions {
      *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesUplinksAddressesByDeviceExample", example.applyValue(getDevicesUplinksAddressesByDeviceResult -> getDevicesUplinksAddressesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesUplinksAddressesByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -7814,7 +7814,7 @@ public final class OrganizationsFunctions {
      *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesUplinksAddressesByDeviceExample", example.applyValue(getDevicesUplinksAddressesByDeviceResult -> getDevicesUplinksAddressesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesUplinksAddressesByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -7863,7 +7863,7 @@ public final class OrganizationsFunctions {
      *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesUplinksAddressesByDeviceExample", example.applyValue(getDevicesUplinksAddressesByDeviceResult -> getDevicesUplinksAddressesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesUplinksAddressesByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -7912,7 +7912,7 @@ public final class OrganizationsFunctions {
      *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesUplinksAddressesByDeviceExample", example.applyValue(getDevicesUplinksAddressesByDeviceResult -> getDevicesUplinksAddressesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesUplinksAddressesByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -7961,7 +7961,7 @@ public final class OrganizationsFunctions {
      *             .tagsFilterType("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesUplinksAddressesByDeviceExample", example.applyValue(getDevicesUplinksAddressesByDeviceResult -> getDevicesUplinksAddressesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesUplinksAddressesByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -8007,7 +8007,7 @@ public final class OrganizationsFunctions {
      *             .uplink("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesUplinksLossAndLatencyExample", example.applyValue(getDevicesUplinksLossAndLatencyResult -> getDevicesUplinksLossAndLatencyResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesUplinksLossAndLatencyExample", example.items());
      *     }
      * }
      * }
@@ -8053,7 +8053,7 @@ public final class OrganizationsFunctions {
      *             .uplink("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesUplinksLossAndLatencyExample", example.applyValue(getDevicesUplinksLossAndLatencyResult -> getDevicesUplinksLossAndLatencyResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesUplinksLossAndLatencyExample", example.items());
      *     }
      * }
      * }
@@ -8099,7 +8099,7 @@ public final class OrganizationsFunctions {
      *             .uplink("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesUplinksLossAndLatencyExample", example.applyValue(getDevicesUplinksLossAndLatencyResult -> getDevicesUplinksLossAndLatencyResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesUplinksLossAndLatencyExample", example.items());
      *     }
      * }
      * }
@@ -8145,7 +8145,7 @@ public final class OrganizationsFunctions {
      *             .uplink("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesUplinksLossAndLatencyExample", example.applyValue(getDevicesUplinksLossAndLatencyResult -> getDevicesUplinksLossAndLatencyResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesUplinksLossAndLatencyExample", example.items());
      *     }
      * }
      * }
@@ -8191,7 +8191,7 @@ public final class OrganizationsFunctions {
      *             .uplink("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsDevicesUplinksLossAndLatencyExample", example.applyValue(getDevicesUplinksLossAndLatencyResult -> getDevicesUplinksLossAndLatencyResult.items()));
+     *         ctx.export("merakiOrganizationsDevicesUplinksLossAndLatencyExample", example.items());
      *     }
      * }
      * }
@@ -8232,7 +8232,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesExample", example.applyValue(getEarlyAccessFeaturesResult -> getEarlyAccessFeaturesResult.items()));
+     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesExample", example.items());
      *     }
      * }
      * }
@@ -8273,7 +8273,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesExample", example.applyValue(getEarlyAccessFeaturesResult -> getEarlyAccessFeaturesResult.items()));
+     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesExample", example.items());
      *     }
      * }
      * }
@@ -8314,7 +8314,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesExample", example.applyValue(getEarlyAccessFeaturesResult -> getEarlyAccessFeaturesResult.items()));
+     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesExample", example.items());
      *     }
      * }
      * }
@@ -8355,7 +8355,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesExample", example.applyValue(getEarlyAccessFeaturesResult -> getEarlyAccessFeaturesResult.items()));
+     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesExample", example.items());
      *     }
      * }
      * }
@@ -8396,7 +8396,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesExample", example.applyValue(getEarlyAccessFeaturesResult -> getEarlyAccessFeaturesResult.items()));
+     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesExample", example.items());
      *     }
      * }
      * }
@@ -8437,7 +8437,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesOptInsExample", example.applyValue(getEarlyAccessFeaturesOptInsResult -> getEarlyAccessFeaturesOptInsResult.item()));
+     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesOptInsExample", example.item());
      *     }
      * }
      * }
@@ -8478,7 +8478,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesOptInsExample", example.applyValue(getEarlyAccessFeaturesOptInsResult -> getEarlyAccessFeaturesOptInsResult.item()));
+     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesOptInsExample", example.item());
      *     }
      * }
      * }
@@ -8519,7 +8519,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesOptInsExample", example.applyValue(getEarlyAccessFeaturesOptInsResult -> getEarlyAccessFeaturesOptInsResult.item()));
+     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesOptInsExample", example.item());
      *     }
      * }
      * }
@@ -8560,7 +8560,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesOptInsExample", example.applyValue(getEarlyAccessFeaturesOptInsResult -> getEarlyAccessFeaturesOptInsResult.item()));
+     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesOptInsExample", example.item());
      *     }
      * }
      * }
@@ -8601,7 +8601,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesOptInsExample", example.applyValue(getEarlyAccessFeaturesOptInsResult -> getEarlyAccessFeaturesOptInsResult.item()));
+     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesOptInsExample", example.item());
      *     }
      * }
      * }
@@ -8642,7 +8642,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesOptInsExample", example.applyValue(getEarlyAccessFeaturesOptInsResult -> getEarlyAccessFeaturesOptInsResult.item()));
+     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesOptInsExample", example.item());
      *     }
      * }
      * }
@@ -8683,7 +8683,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesOptInsExample", example.applyValue(getEarlyAccessFeaturesOptInsResult -> getEarlyAccessFeaturesOptInsResult.item()));
+     *         ctx.export("merakiOrganizationsEarlyAccessFeaturesOptInsExample", example.item());
      *     }
      * }
      * }
@@ -8729,7 +8729,7 @@ public final class OrganizationsFunctions {
      *             .statuses("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsFirmwareUpgradesExample", example.applyValue(getFirmwareUpgradesResult -> getFirmwareUpgradesResult.items()));
+     *         ctx.export("merakiOrganizationsFirmwareUpgradesExample", example.items());
      *     }
      * }
      * }
@@ -8775,7 +8775,7 @@ public final class OrganizationsFunctions {
      *             .statuses("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsFirmwareUpgradesExample", example.applyValue(getFirmwareUpgradesResult -> getFirmwareUpgradesResult.items()));
+     *         ctx.export("merakiOrganizationsFirmwareUpgradesExample", example.items());
      *     }
      * }
      * }
@@ -8821,7 +8821,7 @@ public final class OrganizationsFunctions {
      *             .statuses("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsFirmwareUpgradesExample", example.applyValue(getFirmwareUpgradesResult -> getFirmwareUpgradesResult.items()));
+     *         ctx.export("merakiOrganizationsFirmwareUpgradesExample", example.items());
      *     }
      * }
      * }
@@ -8867,7 +8867,7 @@ public final class OrganizationsFunctions {
      *             .statuses("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsFirmwareUpgradesExample", example.applyValue(getFirmwareUpgradesResult -> getFirmwareUpgradesResult.items()));
+     *         ctx.export("merakiOrganizationsFirmwareUpgradesExample", example.items());
      *     }
      * }
      * }
@@ -8913,7 +8913,7 @@ public final class OrganizationsFunctions {
      *             .statuses("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsFirmwareUpgradesExample", example.applyValue(getFirmwareUpgradesResult -> getFirmwareUpgradesResult.items()));
+     *         ctx.export("merakiOrganizationsFirmwareUpgradesExample", example.items());
      *     }
      * }
      * }
@@ -8962,7 +8962,7 @@ public final class OrganizationsFunctions {
      *             .upgradestatuses("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsFirmwareUpgradesByDeviceExample", example.applyValue(getFirmwareUpgradesByDeviceResult -> getFirmwareUpgradesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsFirmwareUpgradesByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -9011,7 +9011,7 @@ public final class OrganizationsFunctions {
      *             .upgradestatuses("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsFirmwareUpgradesByDeviceExample", example.applyValue(getFirmwareUpgradesByDeviceResult -> getFirmwareUpgradesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsFirmwareUpgradesByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -9060,7 +9060,7 @@ public final class OrganizationsFunctions {
      *             .upgradestatuses("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsFirmwareUpgradesByDeviceExample", example.applyValue(getFirmwareUpgradesByDeviceResult -> getFirmwareUpgradesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsFirmwareUpgradesByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -9109,7 +9109,7 @@ public final class OrganizationsFunctions {
      *             .upgradestatuses("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsFirmwareUpgradesByDeviceExample", example.applyValue(getFirmwareUpgradesByDeviceResult -> getFirmwareUpgradesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsFirmwareUpgradesByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -9158,7 +9158,7 @@ public final class OrganizationsFunctions {
      *             .upgradestatuses("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsFirmwareUpgradesByDeviceExample", example.applyValue(getFirmwareUpgradesByDeviceResult -> getFirmwareUpgradesByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsFirmwareUpgradesByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -9199,7 +9199,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsInsightApplicationsExample", example.applyValue(getInsightApplicationsResult -> getInsightApplicationsResult.items()));
+     *         ctx.export("merakiOrganizationsInsightApplicationsExample", example.items());
      *     }
      * }
      * }
@@ -9240,7 +9240,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsInsightApplicationsExample", example.applyValue(getInsightApplicationsResult -> getInsightApplicationsResult.items()));
+     *         ctx.export("merakiOrganizationsInsightApplicationsExample", example.items());
      *     }
      * }
      * }
@@ -9281,7 +9281,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsInsightApplicationsExample", example.applyValue(getInsightApplicationsResult -> getInsightApplicationsResult.items()));
+     *         ctx.export("merakiOrganizationsInsightApplicationsExample", example.items());
      *     }
      * }
      * }
@@ -9322,7 +9322,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsInsightApplicationsExample", example.applyValue(getInsightApplicationsResult -> getInsightApplicationsResult.items()));
+     *         ctx.export("merakiOrganizationsInsightApplicationsExample", example.items());
      *     }
      * }
      * }
@@ -9363,7 +9363,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsInsightApplicationsExample", example.applyValue(getInsightApplicationsResult -> getInsightApplicationsResult.items()));
+     *         ctx.export("merakiOrganizationsInsightApplicationsExample", example.items());
      *     }
      * }
      * }
@@ -9503,7 +9503,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsInventoryOnboardingCloudMonitoringImportsExample", example.applyValue(getInventoryOnboardingCloudMonitoringImportsResult -> getInventoryOnboardingCloudMonitoringImportsResult.items()));
+     *         ctx.export("merakiOrganizationsInventoryOnboardingCloudMonitoringImportsExample", example.items());
      *     }
      * }
      * }
@@ -9545,7 +9545,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsInventoryOnboardingCloudMonitoringImportsExample", example.applyValue(getInventoryOnboardingCloudMonitoringImportsResult -> getInventoryOnboardingCloudMonitoringImportsResult.items()));
+     *         ctx.export("merakiOrganizationsInventoryOnboardingCloudMonitoringImportsExample", example.items());
      *     }
      * }
      * }
@@ -9587,7 +9587,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsInventoryOnboardingCloudMonitoringImportsExample", example.applyValue(getInventoryOnboardingCloudMonitoringImportsResult -> getInventoryOnboardingCloudMonitoringImportsResult.items()));
+     *         ctx.export("merakiOrganizationsInventoryOnboardingCloudMonitoringImportsExample", example.items());
      *     }
      * }
      * }
@@ -9629,7 +9629,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsInventoryOnboardingCloudMonitoringImportsExample", example.applyValue(getInventoryOnboardingCloudMonitoringImportsResult -> getInventoryOnboardingCloudMonitoringImportsResult.items()));
+     *         ctx.export("merakiOrganizationsInventoryOnboardingCloudMonitoringImportsExample", example.items());
      *     }
      * }
      * }
@@ -9671,7 +9671,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsInventoryOnboardingCloudMonitoringImportsExample", example.applyValue(getInventoryOnboardingCloudMonitoringImportsResult -> getInventoryOnboardingCloudMonitoringImportsResult.items()));
+     *         ctx.export("merakiOrganizationsInventoryOnboardingCloudMonitoringImportsExample", example.items());
      *     }
      * }
      * }
@@ -9717,7 +9717,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsInventoryOnboardingCloudMonitoringNetworksExample", example.applyValue(getInventoryOnboardingCloudMonitoringNetworksResult -> getInventoryOnboardingCloudMonitoringNetworksResult.items()));
+     *         ctx.export("merakiOrganizationsInventoryOnboardingCloudMonitoringNetworksExample", example.items());
      *     }
      * }
      * }
@@ -9763,7 +9763,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsInventoryOnboardingCloudMonitoringNetworksExample", example.applyValue(getInventoryOnboardingCloudMonitoringNetworksResult -> getInventoryOnboardingCloudMonitoringNetworksResult.items()));
+     *         ctx.export("merakiOrganizationsInventoryOnboardingCloudMonitoringNetworksExample", example.items());
      *     }
      * }
      * }
@@ -9809,7 +9809,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsInventoryOnboardingCloudMonitoringNetworksExample", example.applyValue(getInventoryOnboardingCloudMonitoringNetworksResult -> getInventoryOnboardingCloudMonitoringNetworksResult.items()));
+     *         ctx.export("merakiOrganizationsInventoryOnboardingCloudMonitoringNetworksExample", example.items());
      *     }
      * }
      * }
@@ -9855,7 +9855,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsInventoryOnboardingCloudMonitoringNetworksExample", example.applyValue(getInventoryOnboardingCloudMonitoringNetworksResult -> getInventoryOnboardingCloudMonitoringNetworksResult.items()));
+     *         ctx.export("merakiOrganizationsInventoryOnboardingCloudMonitoringNetworksExample", example.items());
      *     }
      * }
      * }
@@ -9901,7 +9901,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsInventoryOnboardingCloudMonitoringNetworksExample", example.applyValue(getInventoryOnboardingCloudMonitoringNetworksResult -> getInventoryOnboardingCloudMonitoringNetworksResult.items()));
+     *         ctx.export("merakiOrganizationsInventoryOnboardingCloudMonitoringNetworksExample", example.items());
      *     }
      * }
      * }
@@ -9943,7 +9943,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsLicensesExample", example.applyValue(getLicensesResult -> getLicensesResult.item()));
+     *         ctx.export("merakiOrganizationsLicensesExample", example.item());
      *     }
      * }
      * }
@@ -9985,7 +9985,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsLicensesExample", example.applyValue(getLicensesResult -> getLicensesResult.item()));
+     *         ctx.export("merakiOrganizationsLicensesExample", example.item());
      *     }
      * }
      * }
@@ -10027,7 +10027,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsLicensesExample", example.applyValue(getLicensesResult -> getLicensesResult.item()));
+     *         ctx.export("merakiOrganizationsLicensesExample", example.item());
      *     }
      * }
      * }
@@ -10069,7 +10069,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsLicensesExample", example.applyValue(getLicensesResult -> getLicensesResult.item()));
+     *         ctx.export("merakiOrganizationsLicensesExample", example.item());
      *     }
      * }
      * }
@@ -10111,7 +10111,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsLicensesExample", example.applyValue(getLicensesResult -> getLicensesResult.item()));
+     *         ctx.export("merakiOrganizationsLicensesExample", example.item());
      *     }
      * }
      * }
@@ -10152,7 +10152,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsLicensesOverviewExample", example.applyValue(getLicensesOverviewResult -> getLicensesOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsLicensesOverviewExample", example.item());
      *     }
      * }
      * }
@@ -10193,7 +10193,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsLicensesOverviewExample", example.applyValue(getLicensesOverviewResult -> getLicensesOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsLicensesOverviewExample", example.item());
      *     }
      * }
      * }
@@ -10234,7 +10234,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsLicensesOverviewExample", example.applyValue(getLicensesOverviewResult -> getLicensesOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsLicensesOverviewExample", example.item());
      *     }
      * }
      * }
@@ -10275,7 +10275,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsLicensesOverviewExample", example.applyValue(getLicensesOverviewResult -> getLicensesOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsLicensesOverviewExample", example.item());
      *     }
      * }
      * }
@@ -10316,7 +10316,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsLicensesOverviewExample", example.applyValue(getLicensesOverviewResult -> getLicensesOverviewResult.item()));
+     *         ctx.export("merakiOrganizationsLicensesOverviewExample", example.item());
      *     }
      * }
      * }
@@ -10362,7 +10362,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsLicensingCotermLicensesExample", example.applyValue(getLicensingCotermLicensesResult -> getLicensingCotermLicensesResult.items()));
+     *         ctx.export("merakiOrganizationsLicensingCotermLicensesExample", example.items());
      *     }
      * }
      * }
@@ -10408,7 +10408,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsLicensingCotermLicensesExample", example.applyValue(getLicensingCotermLicensesResult -> getLicensingCotermLicensesResult.items()));
+     *         ctx.export("merakiOrganizationsLicensingCotermLicensesExample", example.items());
      *     }
      * }
      * }
@@ -10454,7 +10454,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsLicensingCotermLicensesExample", example.applyValue(getLicensingCotermLicensesResult -> getLicensingCotermLicensesResult.items()));
+     *         ctx.export("merakiOrganizationsLicensingCotermLicensesExample", example.items());
      *     }
      * }
      * }
@@ -10500,7 +10500,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsLicensingCotermLicensesExample", example.applyValue(getLicensingCotermLicensesResult -> getLicensingCotermLicensesResult.items()));
+     *         ctx.export("merakiOrganizationsLicensingCotermLicensesExample", example.items());
      *     }
      * }
      * }
@@ -10546,7 +10546,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsLicensingCotermLicensesExample", example.applyValue(getLicensingCotermLicensesResult -> getLicensingCotermLicensesResult.items()));
+     *         ctx.export("merakiOrganizationsLicensingCotermLicensesExample", example.items());
      *     }
      * }
      * }
@@ -10587,7 +10587,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsLoginSecurityExample", example.applyValue(getLoginSecurityResult -> getLoginSecurityResult.item()));
+     *         ctx.export("merakiOrganizationsLoginSecurityExample", example.item());
      *     }
      * }
      * }
@@ -10628,7 +10628,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsLoginSecurityExample", example.applyValue(getLoginSecurityResult -> getLoginSecurityResult.item()));
+     *         ctx.export("merakiOrganizationsLoginSecurityExample", example.item());
      *     }
      * }
      * }
@@ -10669,7 +10669,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsLoginSecurityExample", example.applyValue(getLoginSecurityResult -> getLoginSecurityResult.item()));
+     *         ctx.export("merakiOrganizationsLoginSecurityExample", example.item());
      *     }
      * }
      * }
@@ -10710,7 +10710,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsLoginSecurityExample", example.applyValue(getLoginSecurityResult -> getLoginSecurityResult.item()));
+     *         ctx.export("merakiOrganizationsLoginSecurityExample", example.item());
      *     }
      * }
      * }
@@ -10751,7 +10751,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsLoginSecurityExample", example.applyValue(getLoginSecurityResult -> getLoginSecurityResult.item()));
+     *         ctx.export("merakiOrganizationsLoginSecurityExample", example.item());
      *     }
      * }
      * }
@@ -10793,7 +10793,7 @@ public final class OrganizationsFunctions {
      *             .version(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsOpenapiSpecExample", example.applyValue(getOpenapiSpecResult -> getOpenapiSpecResult.item()));
+     *         ctx.export("merakiOrganizationsOpenapiSpecExample", example.item());
      *     }
      * }
      * }
@@ -10835,7 +10835,7 @@ public final class OrganizationsFunctions {
      *             .version(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsOpenapiSpecExample", example.applyValue(getOpenapiSpecResult -> getOpenapiSpecResult.item()));
+     *         ctx.export("merakiOrganizationsOpenapiSpecExample", example.item());
      *     }
      * }
      * }
@@ -10877,7 +10877,7 @@ public final class OrganizationsFunctions {
      *             .version(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsOpenapiSpecExample", example.applyValue(getOpenapiSpecResult -> getOpenapiSpecResult.item()));
+     *         ctx.export("merakiOrganizationsOpenapiSpecExample", example.item());
      *     }
      * }
      * }
@@ -10919,7 +10919,7 @@ public final class OrganizationsFunctions {
      *             .version(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsOpenapiSpecExample", example.applyValue(getOpenapiSpecResult -> getOpenapiSpecResult.item()));
+     *         ctx.export("merakiOrganizationsOpenapiSpecExample", example.item());
      *     }
      * }
      * }
@@ -10961,7 +10961,7 @@ public final class OrganizationsFunctions {
      *             .version(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsOpenapiSpecExample", example.applyValue(getOpenapiSpecResult -> getOpenapiSpecResult.item()));
+     *         ctx.export("merakiOrganizationsOpenapiSpecExample", example.item());
      *     }
      * }
      * }
@@ -11005,7 +11005,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsPolicyObjectsExample", example.applyValue(getPolicyObjectsResult -> getPolicyObjectsResult.item()));
+     *         ctx.export("merakiOrganizationsPolicyObjectsExample", example.item());
      *     }
      * }
      * }
@@ -11049,7 +11049,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsPolicyObjectsExample", example.applyValue(getPolicyObjectsResult -> getPolicyObjectsResult.item()));
+     *         ctx.export("merakiOrganizationsPolicyObjectsExample", example.item());
      *     }
      * }
      * }
@@ -11093,7 +11093,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsPolicyObjectsExample", example.applyValue(getPolicyObjectsResult -> getPolicyObjectsResult.item()));
+     *         ctx.export("merakiOrganizationsPolicyObjectsExample", example.item());
      *     }
      * }
      * }
@@ -11137,7 +11137,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsPolicyObjectsExample", example.applyValue(getPolicyObjectsResult -> getPolicyObjectsResult.item()));
+     *         ctx.export("merakiOrganizationsPolicyObjectsExample", example.item());
      *     }
      * }
      * }
@@ -11181,7 +11181,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsPolicyObjectsExample", example.applyValue(getPolicyObjectsResult -> getPolicyObjectsResult.item()));
+     *         ctx.export("merakiOrganizationsPolicyObjectsExample", example.item());
      *     }
      * }
      * }
@@ -11225,7 +11225,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsPolicyObjectsExample", example.applyValue(getPolicyObjectsResult -> getPolicyObjectsResult.item()));
+     *         ctx.export("merakiOrganizationsPolicyObjectsExample", example.item());
      *     }
      * }
      * }
@@ -11269,7 +11269,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsPolicyObjectsExample", example.applyValue(getPolicyObjectsResult -> getPolicyObjectsResult.item()));
+     *         ctx.export("merakiOrganizationsPolicyObjectsExample", example.item());
      *     }
      * }
      * }
@@ -11313,7 +11313,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsPolicyObjectsGroupsExample", example.applyValue(getPolicyObjectsGroupsResult -> getPolicyObjectsGroupsResult.item()));
+     *         ctx.export("merakiOrganizationsPolicyObjectsGroupsExample", example.item());
      *     }
      * }
      * }
@@ -11357,7 +11357,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsPolicyObjectsGroupsExample", example.applyValue(getPolicyObjectsGroupsResult -> getPolicyObjectsGroupsResult.item()));
+     *         ctx.export("merakiOrganizationsPolicyObjectsGroupsExample", example.item());
      *     }
      * }
      * }
@@ -11401,7 +11401,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsPolicyObjectsGroupsExample", example.applyValue(getPolicyObjectsGroupsResult -> getPolicyObjectsGroupsResult.item()));
+     *         ctx.export("merakiOrganizationsPolicyObjectsGroupsExample", example.item());
      *     }
      * }
      * }
@@ -11445,7 +11445,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsPolicyObjectsGroupsExample", example.applyValue(getPolicyObjectsGroupsResult -> getPolicyObjectsGroupsResult.item()));
+     *         ctx.export("merakiOrganizationsPolicyObjectsGroupsExample", example.item());
      *     }
      * }
      * }
@@ -11489,7 +11489,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsPolicyObjectsGroupsExample", example.applyValue(getPolicyObjectsGroupsResult -> getPolicyObjectsGroupsResult.item()));
+     *         ctx.export("merakiOrganizationsPolicyObjectsGroupsExample", example.item());
      *     }
      * }
      * }
@@ -11533,7 +11533,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsPolicyObjectsGroupsExample", example.applyValue(getPolicyObjectsGroupsResult -> getPolicyObjectsGroupsResult.item()));
+     *         ctx.export("merakiOrganizationsPolicyObjectsGroupsExample", example.item());
      *     }
      * }
      * }
@@ -11577,7 +11577,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsPolicyObjectsGroupsExample", example.applyValue(getPolicyObjectsGroupsResult -> getPolicyObjectsGroupsResult.item()));
+     *         ctx.export("merakiOrganizationsPolicyObjectsGroupsExample", example.item());
      *     }
      * }
      * }
@@ -11618,7 +11618,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSamlExample", example.applyValue(getSamlResult -> getSamlResult.item()));
+     *         ctx.export("merakiOrganizationsSamlExample", example.item());
      *     }
      * }
      * }
@@ -11659,7 +11659,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSamlExample", example.applyValue(getSamlResult -> getSamlResult.item()));
+     *         ctx.export("merakiOrganizationsSamlExample", example.item());
      *     }
      * }
      * }
@@ -11700,7 +11700,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSamlExample", example.applyValue(getSamlResult -> getSamlResult.item()));
+     *         ctx.export("merakiOrganizationsSamlExample", example.item());
      *     }
      * }
      * }
@@ -11741,7 +11741,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSamlExample", example.applyValue(getSamlResult -> getSamlResult.item()));
+     *         ctx.export("merakiOrganizationsSamlExample", example.item());
      *     }
      * }
      * }
@@ -11782,7 +11782,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSamlExample", example.applyValue(getSamlResult -> getSamlResult.item()));
+     *         ctx.export("merakiOrganizationsSamlExample", example.item());
      *     }
      * }
      * }
@@ -11930,7 +11930,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSensorReadingsHistoryExample", example.applyValue(getSensorReadingsHistoryResult -> getSensorReadingsHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsSensorReadingsHistoryExample", example.items());
      *     }
      * }
      * }
@@ -11980,7 +11980,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSensorReadingsHistoryExample", example.applyValue(getSensorReadingsHistoryResult -> getSensorReadingsHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsSensorReadingsHistoryExample", example.items());
      *     }
      * }
      * }
@@ -12030,7 +12030,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSensorReadingsHistoryExample", example.applyValue(getSensorReadingsHistoryResult -> getSensorReadingsHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsSensorReadingsHistoryExample", example.items());
      *     }
      * }
      * }
@@ -12080,7 +12080,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSensorReadingsHistoryExample", example.applyValue(getSensorReadingsHistoryResult -> getSensorReadingsHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsSensorReadingsHistoryExample", example.items());
      *     }
      * }
      * }
@@ -12130,7 +12130,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSensorReadingsHistoryExample", example.applyValue(getSensorReadingsHistoryResult -> getSensorReadingsHistoryResult.items()));
+     *         ctx.export("merakiOrganizationsSensorReadingsHistoryExample", example.items());
      *     }
      * }
      * }
@@ -12177,7 +12177,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSensorReadingsLatestExample", example.applyValue(getSensorReadingsLatestResult -> getSensorReadingsLatestResult.items()));
+     *         ctx.export("merakiOrganizationsSensorReadingsLatestExample", example.items());
      *     }
      * }
      * }
@@ -12224,7 +12224,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSensorReadingsLatestExample", example.applyValue(getSensorReadingsLatestResult -> getSensorReadingsLatestResult.items()));
+     *         ctx.export("merakiOrganizationsSensorReadingsLatestExample", example.items());
      *     }
      * }
      * }
@@ -12271,7 +12271,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSensorReadingsLatestExample", example.applyValue(getSensorReadingsLatestResult -> getSensorReadingsLatestResult.items()));
+     *         ctx.export("merakiOrganizationsSensorReadingsLatestExample", example.items());
      *     }
      * }
      * }
@@ -12318,7 +12318,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSensorReadingsLatestExample", example.applyValue(getSensorReadingsLatestResult -> getSensorReadingsLatestResult.items()));
+     *         ctx.export("merakiOrganizationsSensorReadingsLatestExample", example.items());
      *     }
      * }
      * }
@@ -12365,7 +12365,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSensorReadingsLatestExample", example.applyValue(getSensorReadingsLatestResult -> getSensorReadingsLatestResult.items()));
+     *         ctx.export("merakiOrganizationsSensorReadingsLatestExample", example.items());
      *     }
      * }
      * }
@@ -12409,7 +12409,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSmAdminsRolesExample", example.applyValue(getSmAdminsRolesResult -> getSmAdminsRolesResult.item()));
+     *         ctx.export("merakiOrganizationsSmAdminsRolesExample", example.item());
      *     }
      * }
      * }
@@ -12453,7 +12453,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSmAdminsRolesExample", example.applyValue(getSmAdminsRolesResult -> getSmAdminsRolesResult.item()));
+     *         ctx.export("merakiOrganizationsSmAdminsRolesExample", example.item());
      *     }
      * }
      * }
@@ -12497,7 +12497,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSmAdminsRolesExample", example.applyValue(getSmAdminsRolesResult -> getSmAdminsRolesResult.item()));
+     *         ctx.export("merakiOrganizationsSmAdminsRolesExample", example.item());
      *     }
      * }
      * }
@@ -12541,7 +12541,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSmAdminsRolesExample", example.applyValue(getSmAdminsRolesResult -> getSmAdminsRolesResult.item()));
+     *         ctx.export("merakiOrganizationsSmAdminsRolesExample", example.item());
      *     }
      * }
      * }
@@ -12585,7 +12585,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSmAdminsRolesExample", example.applyValue(getSmAdminsRolesResult -> getSmAdminsRolesResult.item()));
+     *         ctx.export("merakiOrganizationsSmAdminsRolesExample", example.item());
      *     }
      * }
      * }
@@ -12629,7 +12629,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSmAdminsRolesExample", example.applyValue(getSmAdminsRolesResult -> getSmAdminsRolesResult.item()));
+     *         ctx.export("merakiOrganizationsSmAdminsRolesExample", example.item());
      *     }
      * }
      * }
@@ -12673,7 +12673,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSmAdminsRolesExample", example.applyValue(getSmAdminsRolesResult -> getSmAdminsRolesResult.item()));
+     *         ctx.export("merakiOrganizationsSmAdminsRolesExample", example.item());
      *     }
      * }
      * }
@@ -12714,7 +12714,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSmApnsCertExample", example.applyValue(getSmApnsCertResult -> getSmApnsCertResult.item()));
+     *         ctx.export("merakiOrganizationsSmApnsCertExample", example.item());
      *     }
      * }
      * }
@@ -12755,7 +12755,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSmApnsCertExample", example.applyValue(getSmApnsCertResult -> getSmApnsCertResult.item()));
+     *         ctx.export("merakiOrganizationsSmApnsCertExample", example.item());
      *     }
      * }
      * }
@@ -12796,7 +12796,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSmApnsCertExample", example.applyValue(getSmApnsCertResult -> getSmApnsCertResult.item()));
+     *         ctx.export("merakiOrganizationsSmApnsCertExample", example.item());
      *     }
      * }
      * }
@@ -12837,7 +12837,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSmApnsCertExample", example.applyValue(getSmApnsCertResult -> getSmApnsCertResult.item()));
+     *         ctx.export("merakiOrganizationsSmApnsCertExample", example.item());
      *     }
      * }
      * }
@@ -12878,7 +12878,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSmApnsCertExample", example.applyValue(getSmApnsCertResult -> getSmApnsCertResult.item()));
+     *         ctx.export("merakiOrganizationsSmApnsCertExample", example.item());
      *     }
      * }
      * }
@@ -12923,7 +12923,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSmSentryPoliciesAssignmentsByNetworkExample", example.applyValue(getSmSentryPoliciesAssignmentsByNetworkResult -> getSmSentryPoliciesAssignmentsByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsSmSentryPoliciesAssignmentsByNetworkExample", example.items());
      *     }
      * }
      * }
@@ -12968,7 +12968,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSmSentryPoliciesAssignmentsByNetworkExample", example.applyValue(getSmSentryPoliciesAssignmentsByNetworkResult -> getSmSentryPoliciesAssignmentsByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsSmSentryPoliciesAssignmentsByNetworkExample", example.items());
      *     }
      * }
      * }
@@ -13013,7 +13013,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSmSentryPoliciesAssignmentsByNetworkExample", example.applyValue(getSmSentryPoliciesAssignmentsByNetworkResult -> getSmSentryPoliciesAssignmentsByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsSmSentryPoliciesAssignmentsByNetworkExample", example.items());
      *     }
      * }
      * }
@@ -13058,7 +13058,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSmSentryPoliciesAssignmentsByNetworkExample", example.applyValue(getSmSentryPoliciesAssignmentsByNetworkResult -> getSmSentryPoliciesAssignmentsByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsSmSentryPoliciesAssignmentsByNetworkExample", example.items());
      *     }
      * }
      * }
@@ -13103,7 +13103,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSmSentryPoliciesAssignmentsByNetworkExample", example.applyValue(getSmSentryPoliciesAssignmentsByNetworkResult -> getSmSentryPoliciesAssignmentsByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsSmSentryPoliciesAssignmentsByNetworkExample", example.items());
      *     }
      * }
      * }
@@ -13193,7 +13193,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSnmpExample", example.applyValue(getSnmpResult -> getSnmpResult.item()));
+     *         ctx.export("merakiOrganizationsSnmpExample", example.item());
      *     }
      * }
      * }
@@ -13234,7 +13234,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSnmpExample", example.applyValue(getSnmpResult -> getSnmpResult.item()));
+     *         ctx.export("merakiOrganizationsSnmpExample", example.item());
      *     }
      * }
      * }
@@ -13275,7 +13275,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSnmpExample", example.applyValue(getSnmpResult -> getSnmpResult.item()));
+     *         ctx.export("merakiOrganizationsSnmpExample", example.item());
      *     }
      * }
      * }
@@ -13316,7 +13316,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSnmpExample", example.applyValue(getSnmpResult -> getSnmpResult.item()));
+     *         ctx.export("merakiOrganizationsSnmpExample", example.item());
      *     }
      * }
      * }
@@ -13357,7 +13357,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSnmpExample", example.applyValue(getSnmpResult -> getSnmpResult.item()));
+     *         ctx.export("merakiOrganizationsSnmpExample", example.item());
      *     }
      * }
      * }
@@ -13401,7 +13401,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopAppliancesByUtilizationExample", example.applyValue(getSummaryTopAppliancesByUtilizationResult -> getSummaryTopAppliancesByUtilizationResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopAppliancesByUtilizationExample", example.items());
      *     }
      * }
      * }
@@ -13445,7 +13445,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopAppliancesByUtilizationExample", example.applyValue(getSummaryTopAppliancesByUtilizationResult -> getSummaryTopAppliancesByUtilizationResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopAppliancesByUtilizationExample", example.items());
      *     }
      * }
      * }
@@ -13489,7 +13489,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopAppliancesByUtilizationExample", example.applyValue(getSummaryTopAppliancesByUtilizationResult -> getSummaryTopAppliancesByUtilizationResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopAppliancesByUtilizationExample", example.items());
      *     }
      * }
      * }
@@ -13533,7 +13533,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopAppliancesByUtilizationExample", example.applyValue(getSummaryTopAppliancesByUtilizationResult -> getSummaryTopAppliancesByUtilizationResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopAppliancesByUtilizationExample", example.items());
      *     }
      * }
      * }
@@ -13577,7 +13577,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopAppliancesByUtilizationExample", example.applyValue(getSummaryTopAppliancesByUtilizationResult -> getSummaryTopAppliancesByUtilizationResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopAppliancesByUtilizationExample", example.items());
      *     }
      * }
      * }
@@ -13621,7 +13621,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopClientsByUsageExample", example.applyValue(getSummaryTopClientsByUsageResult -> getSummaryTopClientsByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopClientsByUsageExample", example.items());
      *     }
      * }
      * }
@@ -13665,7 +13665,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopClientsByUsageExample", example.applyValue(getSummaryTopClientsByUsageResult -> getSummaryTopClientsByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopClientsByUsageExample", example.items());
      *     }
      * }
      * }
@@ -13709,7 +13709,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopClientsByUsageExample", example.applyValue(getSummaryTopClientsByUsageResult -> getSummaryTopClientsByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopClientsByUsageExample", example.items());
      *     }
      * }
      * }
@@ -13753,7 +13753,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopClientsByUsageExample", example.applyValue(getSummaryTopClientsByUsageResult -> getSummaryTopClientsByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopClientsByUsageExample", example.items());
      *     }
      * }
      * }
@@ -13797,7 +13797,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopClientsByUsageExample", example.applyValue(getSummaryTopClientsByUsageResult -> getSummaryTopClientsByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopClientsByUsageExample", example.items());
      *     }
      * }
      * }
@@ -13841,7 +13841,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopClientsManufacturersByUsageExample", example.applyValue(getSummaryTopClientsManufacturersByUsageResult -> getSummaryTopClientsManufacturersByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopClientsManufacturersByUsageExample", example.items());
      *     }
      * }
      * }
@@ -13885,7 +13885,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopClientsManufacturersByUsageExample", example.applyValue(getSummaryTopClientsManufacturersByUsageResult -> getSummaryTopClientsManufacturersByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopClientsManufacturersByUsageExample", example.items());
      *     }
      * }
      * }
@@ -13929,7 +13929,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopClientsManufacturersByUsageExample", example.applyValue(getSummaryTopClientsManufacturersByUsageResult -> getSummaryTopClientsManufacturersByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopClientsManufacturersByUsageExample", example.items());
      *     }
      * }
      * }
@@ -13973,7 +13973,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopClientsManufacturersByUsageExample", example.applyValue(getSummaryTopClientsManufacturersByUsageResult -> getSummaryTopClientsManufacturersByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopClientsManufacturersByUsageExample", example.items());
      *     }
      * }
      * }
@@ -14017,7 +14017,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopClientsManufacturersByUsageExample", example.applyValue(getSummaryTopClientsManufacturersByUsageResult -> getSummaryTopClientsManufacturersByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopClientsManufacturersByUsageExample", example.items());
      *     }
      * }
      * }
@@ -14061,7 +14061,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopDevicesByUsageExample", example.applyValue(getSummaryTopDevicesByUsageResult -> getSummaryTopDevicesByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopDevicesByUsageExample", example.items());
      *     }
      * }
      * }
@@ -14105,7 +14105,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopDevicesByUsageExample", example.applyValue(getSummaryTopDevicesByUsageResult -> getSummaryTopDevicesByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopDevicesByUsageExample", example.items());
      *     }
      * }
      * }
@@ -14149,7 +14149,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopDevicesByUsageExample", example.applyValue(getSummaryTopDevicesByUsageResult -> getSummaryTopDevicesByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopDevicesByUsageExample", example.items());
      *     }
      * }
      * }
@@ -14193,7 +14193,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopDevicesByUsageExample", example.applyValue(getSummaryTopDevicesByUsageResult -> getSummaryTopDevicesByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopDevicesByUsageExample", example.items());
      *     }
      * }
      * }
@@ -14237,7 +14237,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopDevicesByUsageExample", example.applyValue(getSummaryTopDevicesByUsageResult -> getSummaryTopDevicesByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopDevicesByUsageExample", example.items());
      *     }
      * }
      * }
@@ -14281,7 +14281,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopDevicesModelsByUsageExample", example.applyValue(getSummaryTopDevicesModelsByUsageResult -> getSummaryTopDevicesModelsByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopDevicesModelsByUsageExample", example.items());
      *     }
      * }
      * }
@@ -14325,7 +14325,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopDevicesModelsByUsageExample", example.applyValue(getSummaryTopDevicesModelsByUsageResult -> getSummaryTopDevicesModelsByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopDevicesModelsByUsageExample", example.items());
      *     }
      * }
      * }
@@ -14369,7 +14369,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopDevicesModelsByUsageExample", example.applyValue(getSummaryTopDevicesModelsByUsageResult -> getSummaryTopDevicesModelsByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopDevicesModelsByUsageExample", example.items());
      *     }
      * }
      * }
@@ -14413,7 +14413,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopDevicesModelsByUsageExample", example.applyValue(getSummaryTopDevicesModelsByUsageResult -> getSummaryTopDevicesModelsByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopDevicesModelsByUsageExample", example.items());
      *     }
      * }
      * }
@@ -14457,7 +14457,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopDevicesModelsByUsageExample", example.applyValue(getSummaryTopDevicesModelsByUsageResult -> getSummaryTopDevicesModelsByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopDevicesModelsByUsageExample", example.items());
      *     }
      * }
      * }
@@ -14501,7 +14501,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopNetworksByStatusExample", example.applyValue(getSummaryTopNetworksByStatusResult -> getSummaryTopNetworksByStatusResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopNetworksByStatusExample", example.items());
      *     }
      * }
      * }
@@ -14545,7 +14545,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopNetworksByStatusExample", example.applyValue(getSummaryTopNetworksByStatusResult -> getSummaryTopNetworksByStatusResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopNetworksByStatusExample", example.items());
      *     }
      * }
      * }
@@ -14589,7 +14589,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopNetworksByStatusExample", example.applyValue(getSummaryTopNetworksByStatusResult -> getSummaryTopNetworksByStatusResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopNetworksByStatusExample", example.items());
      *     }
      * }
      * }
@@ -14633,7 +14633,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopNetworksByStatusExample", example.applyValue(getSummaryTopNetworksByStatusResult -> getSummaryTopNetworksByStatusResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopNetworksByStatusExample", example.items());
      *     }
      * }
      * }
@@ -14677,7 +14677,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopNetworksByStatusExample", example.applyValue(getSummaryTopNetworksByStatusResult -> getSummaryTopNetworksByStatusResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopNetworksByStatusExample", example.items());
      *     }
      * }
      * }
@@ -14721,7 +14721,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopSsidsByUsageExample", example.applyValue(getSummaryTopSsidsByUsageResult -> getSummaryTopSsidsByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopSsidsByUsageExample", example.items());
      *     }
      * }
      * }
@@ -14765,7 +14765,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopSsidsByUsageExample", example.applyValue(getSummaryTopSsidsByUsageResult -> getSummaryTopSsidsByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopSsidsByUsageExample", example.items());
      *     }
      * }
      * }
@@ -14809,7 +14809,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopSsidsByUsageExample", example.applyValue(getSummaryTopSsidsByUsageResult -> getSummaryTopSsidsByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopSsidsByUsageExample", example.items());
      *     }
      * }
      * }
@@ -14853,7 +14853,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopSsidsByUsageExample", example.applyValue(getSummaryTopSsidsByUsageResult -> getSummaryTopSsidsByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopSsidsByUsageExample", example.items());
      *     }
      * }
      * }
@@ -14897,7 +14897,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopSsidsByUsageExample", example.applyValue(getSummaryTopSsidsByUsageResult -> getSummaryTopSsidsByUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopSsidsByUsageExample", example.items());
      *     }
      * }
      * }
@@ -14941,7 +14941,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopSwitchesByEnergyUsageExample", example.applyValue(getSummaryTopSwitchesByEnergyUsageResult -> getSummaryTopSwitchesByEnergyUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopSwitchesByEnergyUsageExample", example.items());
      *     }
      * }
      * }
@@ -14985,7 +14985,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopSwitchesByEnergyUsageExample", example.applyValue(getSummaryTopSwitchesByEnergyUsageResult -> getSummaryTopSwitchesByEnergyUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopSwitchesByEnergyUsageExample", example.items());
      *     }
      * }
      * }
@@ -15029,7 +15029,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopSwitchesByEnergyUsageExample", example.applyValue(getSummaryTopSwitchesByEnergyUsageResult -> getSummaryTopSwitchesByEnergyUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopSwitchesByEnergyUsageExample", example.items());
      *     }
      * }
      * }
@@ -15073,7 +15073,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopSwitchesByEnergyUsageExample", example.applyValue(getSummaryTopSwitchesByEnergyUsageResult -> getSummaryTopSwitchesByEnergyUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopSwitchesByEnergyUsageExample", example.items());
      *     }
      * }
      * }
@@ -15117,7 +15117,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSummaryTopSwitchesByEnergyUsageExample", example.applyValue(getSummaryTopSwitchesByEnergyUsageResult -> getSummaryTopSwitchesByEnergyUsageResult.items()));
+     *         ctx.export("merakiOrganizationsSummaryTopSwitchesByEnergyUsageExample", example.items());
      *     }
      * }
      * }
@@ -15169,7 +15169,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSwitchPortsBySwitchExample", example.applyValue(getSwitchPortsBySwitchResult -> getSwitchPortsBySwitchResult.items()));
+     *         ctx.export("merakiOrganizationsSwitchPortsBySwitchExample", example.items());
      *     }
      * }
      * }
@@ -15221,7 +15221,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSwitchPortsBySwitchExample", example.applyValue(getSwitchPortsBySwitchResult -> getSwitchPortsBySwitchResult.items()));
+     *         ctx.export("merakiOrganizationsSwitchPortsBySwitchExample", example.items());
      *     }
      * }
      * }
@@ -15273,7 +15273,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSwitchPortsBySwitchExample", example.applyValue(getSwitchPortsBySwitchResult -> getSwitchPortsBySwitchResult.items()));
+     *         ctx.export("merakiOrganizationsSwitchPortsBySwitchExample", example.items());
      *     }
      * }
      * }
@@ -15325,7 +15325,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSwitchPortsBySwitchExample", example.applyValue(getSwitchPortsBySwitchResult -> getSwitchPortsBySwitchResult.items()));
+     *         ctx.export("merakiOrganizationsSwitchPortsBySwitchExample", example.items());
      *     }
      * }
      * }
@@ -15377,7 +15377,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsSwitchPortsBySwitchExample", example.applyValue(getSwitchPortsBySwitchResult -> getSwitchPortsBySwitchResult.items()));
+     *         ctx.export("merakiOrganizationsSwitchPortsBySwitchExample", example.items());
      *     }
      * }
      * }
@@ -15424,7 +15424,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsUplinksStatusesExample", example.applyValue(getUplinksStatusesResult -> getUplinksStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsUplinksStatusesExample", example.items());
      *     }
      * }
      * }
@@ -15471,7 +15471,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsUplinksStatusesExample", example.applyValue(getUplinksStatusesResult -> getUplinksStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsUplinksStatusesExample", example.items());
      *     }
      * }
      * }
@@ -15518,7 +15518,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsUplinksStatusesExample", example.applyValue(getUplinksStatusesResult -> getUplinksStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsUplinksStatusesExample", example.items());
      *     }
      * }
      * }
@@ -15565,7 +15565,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsUplinksStatusesExample", example.applyValue(getUplinksStatusesResult -> getUplinksStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsUplinksStatusesExample", example.items());
      *     }
      * }
      * }
@@ -15612,7 +15612,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsUplinksStatusesExample", example.applyValue(getUplinksStatusesResult -> getUplinksStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsUplinksStatusesExample", example.items());
      *     }
      * }
      * }
@@ -15654,7 +15654,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWebhooksCallbacksStatusesExample", example.applyValue(getWebhooksCallbacksStatusesResult -> getWebhooksCallbacksStatusesResult.item()));
+     *         ctx.export("merakiOrganizationsWebhooksCallbacksStatusesExample", example.item());
      *     }
      * }
      * }
@@ -15696,7 +15696,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWebhooksCallbacksStatusesExample", example.applyValue(getWebhooksCallbacksStatusesResult -> getWebhooksCallbacksStatusesResult.item()));
+     *         ctx.export("merakiOrganizationsWebhooksCallbacksStatusesExample", example.item());
      *     }
      * }
      * }
@@ -15738,7 +15738,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWebhooksCallbacksStatusesExample", example.applyValue(getWebhooksCallbacksStatusesResult -> getWebhooksCallbacksStatusesResult.item()));
+     *         ctx.export("merakiOrganizationsWebhooksCallbacksStatusesExample", example.item());
      *     }
      * }
      * }
@@ -15780,7 +15780,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWebhooksCallbacksStatusesExample", example.applyValue(getWebhooksCallbacksStatusesResult -> getWebhooksCallbacksStatusesResult.item()));
+     *         ctx.export("merakiOrganizationsWebhooksCallbacksStatusesExample", example.item());
      *     }
      * }
      * }
@@ -15822,7 +15822,7 @@ public final class OrganizationsFunctions {
      *             .organizationId("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWebhooksCallbacksStatusesExample", example.applyValue(getWebhooksCallbacksStatusesResult -> getWebhooksCallbacksStatusesResult.item()));
+     *         ctx.export("merakiOrganizationsWebhooksCallbacksStatusesExample", example.item());
      *     }
      * }
      * }
@@ -15870,7 +15870,7 @@ public final class OrganizationsFunctions {
      *             .url("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWebhooksLogsExample", example.applyValue(getWebhooksLogsResult -> getWebhooksLogsResult.items()));
+     *         ctx.export("merakiOrganizationsWebhooksLogsExample", example.items());
      *     }
      * }
      * }
@@ -15918,7 +15918,7 @@ public final class OrganizationsFunctions {
      *             .url("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWebhooksLogsExample", example.applyValue(getWebhooksLogsResult -> getWebhooksLogsResult.items()));
+     *         ctx.export("merakiOrganizationsWebhooksLogsExample", example.items());
      *     }
      * }
      * }
@@ -15966,7 +15966,7 @@ public final class OrganizationsFunctions {
      *             .url("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWebhooksLogsExample", example.applyValue(getWebhooksLogsResult -> getWebhooksLogsResult.items()));
+     *         ctx.export("merakiOrganizationsWebhooksLogsExample", example.items());
      *     }
      * }
      * }
@@ -16014,7 +16014,7 @@ public final class OrganizationsFunctions {
      *             .url("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWebhooksLogsExample", example.applyValue(getWebhooksLogsResult -> getWebhooksLogsResult.items()));
+     *         ctx.export("merakiOrganizationsWebhooksLogsExample", example.items());
      *     }
      * }
      * }
@@ -16062,7 +16062,7 @@ public final class OrganizationsFunctions {
      *             .url("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWebhooksLogsExample", example.applyValue(getWebhooksLogsResult -> getWebhooksLogsResult.items()));
+     *         ctx.export("merakiOrganizationsWebhooksLogsExample", example.items());
      *     }
      * }
      * }
@@ -16112,7 +16112,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByDeviceExample", example.applyValue(getWirelessDevicesChannelUtilizationByDeviceResult -> getWirelessDevicesChannelUtilizationByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -16162,7 +16162,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByDeviceExample", example.applyValue(getWirelessDevicesChannelUtilizationByDeviceResult -> getWirelessDevicesChannelUtilizationByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -16212,7 +16212,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByDeviceExample", example.applyValue(getWirelessDevicesChannelUtilizationByDeviceResult -> getWirelessDevicesChannelUtilizationByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -16262,7 +16262,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByDeviceExample", example.applyValue(getWirelessDevicesChannelUtilizationByDeviceResult -> getWirelessDevicesChannelUtilizationByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -16312,7 +16312,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByDeviceExample", example.applyValue(getWirelessDevicesChannelUtilizationByDeviceResult -> getWirelessDevicesChannelUtilizationByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -16362,7 +16362,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByNetworkExample", example.applyValue(getWirelessDevicesChannelUtilizationByNetworkResult -> getWirelessDevicesChannelUtilizationByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByNetworkExample", example.items());
      *     }
      * }
      * }
@@ -16412,7 +16412,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByNetworkExample", example.applyValue(getWirelessDevicesChannelUtilizationByNetworkResult -> getWirelessDevicesChannelUtilizationByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByNetworkExample", example.items());
      *     }
      * }
      * }
@@ -16462,7 +16462,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByNetworkExample", example.applyValue(getWirelessDevicesChannelUtilizationByNetworkResult -> getWirelessDevicesChannelUtilizationByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByNetworkExample", example.items());
      *     }
      * }
      * }
@@ -16512,7 +16512,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByNetworkExample", example.applyValue(getWirelessDevicesChannelUtilizationByNetworkResult -> getWirelessDevicesChannelUtilizationByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByNetworkExample", example.items());
      *     }
      * }
      * }
@@ -16562,7 +16562,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByNetworkExample", example.applyValue(getWirelessDevicesChannelUtilizationByNetworkResult -> getWirelessDevicesChannelUtilizationByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationByNetworkExample", example.items());
      *     }
      * }
      * }
@@ -16612,7 +16612,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalExample", example.applyValue(getWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult -> getWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalExample", example.items());
      *     }
      * }
      * }
@@ -16662,7 +16662,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalExample", example.applyValue(getWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult -> getWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalExample", example.items());
      *     }
      * }
      * }
@@ -16712,7 +16712,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalExample", example.applyValue(getWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult -> getWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalExample", example.items());
      *     }
      * }
      * }
@@ -16762,7 +16762,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalExample", example.applyValue(getWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult -> getWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalExample", example.items());
      *     }
      * }
      * }
@@ -16812,7 +16812,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalExample", example.applyValue(getWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult -> getWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalExample", example.items());
      *     }
      * }
      * }
@@ -16862,7 +16862,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalExample", example.applyValue(getWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalResult -> getWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalExample", example.items());
      *     }
      * }
      * }
@@ -16912,7 +16912,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalExample", example.applyValue(getWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalResult -> getWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalExample", example.items());
      *     }
      * }
      * }
@@ -16962,7 +16962,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalExample", example.applyValue(getWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalResult -> getWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalExample", example.items());
      *     }
      * }
      * }
@@ -17012,7 +17012,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalExample", example.applyValue(getWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalResult -> getWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalExample", example.items());
      *     }
      * }
      * }
@@ -17062,7 +17062,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalExample", example.applyValue(getWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalResult -> getWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByNetworkByIntervalExample", example.items());
      *     }
      * }
      * }
@@ -17107,7 +17107,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesEthernetStatusesExample", example.applyValue(getWirelessDevicesEthernetStatusesResult -> getWirelessDevicesEthernetStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesEthernetStatusesExample", example.items());
      *     }
      * }
      * }
@@ -17152,7 +17152,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesEthernetStatusesExample", example.applyValue(getWirelessDevicesEthernetStatusesResult -> getWirelessDevicesEthernetStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesEthernetStatusesExample", example.items());
      *     }
      * }
      * }
@@ -17197,7 +17197,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesEthernetStatusesExample", example.applyValue(getWirelessDevicesEthernetStatusesResult -> getWirelessDevicesEthernetStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesEthernetStatusesExample", example.items());
      *     }
      * }
      * }
@@ -17242,7 +17242,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesEthernetStatusesExample", example.applyValue(getWirelessDevicesEthernetStatusesResult -> getWirelessDevicesEthernetStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesEthernetStatusesExample", example.items());
      *     }
      * }
      * }
@@ -17287,7 +17287,7 @@ public final class OrganizationsFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesEthernetStatusesExample", example.applyValue(getWirelessDevicesEthernetStatusesResult -> getWirelessDevicesEthernetStatusesResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesEthernetStatusesExample", example.items());
      *     }
      * }
      * }
@@ -17338,7 +17338,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByClientExample", example.applyValue(getWirelessDevicesPacketLossByClientResult -> getWirelessDevicesPacketLossByClientResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByClientExample", example.items());
      *     }
      * }
      * }
@@ -17389,7 +17389,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByClientExample", example.applyValue(getWirelessDevicesPacketLossByClientResult -> getWirelessDevicesPacketLossByClientResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByClientExample", example.items());
      *     }
      * }
      * }
@@ -17440,7 +17440,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByClientExample", example.applyValue(getWirelessDevicesPacketLossByClientResult -> getWirelessDevicesPacketLossByClientResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByClientExample", example.items());
      *     }
      * }
      * }
@@ -17491,7 +17491,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByClientExample", example.applyValue(getWirelessDevicesPacketLossByClientResult -> getWirelessDevicesPacketLossByClientResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByClientExample", example.items());
      *     }
      * }
      * }
@@ -17542,7 +17542,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByClientExample", example.applyValue(getWirelessDevicesPacketLossByClientResult -> getWirelessDevicesPacketLossByClientResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByClientExample", example.items());
      *     }
      * }
      * }
@@ -17593,7 +17593,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByDeviceExample", example.applyValue(getWirelessDevicesPacketLossByDeviceResult -> getWirelessDevicesPacketLossByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -17644,7 +17644,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByDeviceExample", example.applyValue(getWirelessDevicesPacketLossByDeviceResult -> getWirelessDevicesPacketLossByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -17695,7 +17695,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByDeviceExample", example.applyValue(getWirelessDevicesPacketLossByDeviceResult -> getWirelessDevicesPacketLossByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -17746,7 +17746,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByDeviceExample", example.applyValue(getWirelessDevicesPacketLossByDeviceResult -> getWirelessDevicesPacketLossByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -17797,7 +17797,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByDeviceExample", example.applyValue(getWirelessDevicesPacketLossByDeviceResult -> getWirelessDevicesPacketLossByDeviceResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -17848,7 +17848,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByNetworkExample", example.applyValue(getWirelessDevicesPacketLossByNetworkResult -> getWirelessDevicesPacketLossByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByNetworkExample", example.items());
      *     }
      * }
      * }
@@ -17899,7 +17899,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByNetworkExample", example.applyValue(getWirelessDevicesPacketLossByNetworkResult -> getWirelessDevicesPacketLossByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByNetworkExample", example.items());
      *     }
      * }
      * }
@@ -17950,7 +17950,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByNetworkExample", example.applyValue(getWirelessDevicesPacketLossByNetworkResult -> getWirelessDevicesPacketLossByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByNetworkExample", example.items());
      *     }
      * }
      * }
@@ -18001,7 +18001,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByNetworkExample", example.applyValue(getWirelessDevicesPacketLossByNetworkResult -> getWirelessDevicesPacketLossByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByNetworkExample", example.items());
      *     }
      * }
      * }
@@ -18052,7 +18052,7 @@ public final class OrganizationsFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByNetworkExample", example.applyValue(getWirelessDevicesPacketLossByNetworkResult -> getWirelessDevicesPacketLossByNetworkResult.items()));
+     *         ctx.export("merakiOrganizationsWirelessDevicesPacketLossByNetworkExample", example.items());
      *     }
      * }
      * }

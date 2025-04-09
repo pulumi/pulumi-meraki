@@ -22,59 +22,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.meraki.networks.ApplianceTrafficShapingUplinkSelection;
- * import com.pulumi.meraki.networks.ApplianceTrafficShapingUplinkSelectionArgs;
- * import com.pulumi.meraki.networks.inputs.ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgs;
- * import com.pulumi.meraki.networks.inputs.ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackImmediateArgs;
- * import com.pulumi.meraki.networks.inputs.ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgs;
- * import com.pulumi.meraki.networks.inputs.ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new ApplianceTrafficShapingUplinkSelection("example", ApplianceTrafficShapingUplinkSelectionArgs.builder()
- *             .activeActiveAutoVpnEnabled(true)
- *             .defaultUplink("wan1")
- *             .failoverAndFailback(ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgs.builder()
- *                 .immediate(ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackImmediateArgs.builder()
- *                     .enabled(true)
- *                     .build())
- *                 .build())
- *             .loadBalancingEnabled(true)
- *             .networkId("string")
- *             .vpnTrafficUplinkPreferences(ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgs.builder()
- *                 .fail_over_criterion("poorPerformance")
- *                 .performance_class(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
- *                 .preferred_uplink("bestForVoIP")
- *                 .traffic_filters(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
- *                 .build())
- *             .wanTrafficUplinkPreferences(ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgs.builder()
- *                 .preferred_uplink("wan1")
- *                 .traffic_filters(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
- *                 .build())
- *             .build());
- * 
- *         ctx.export("merakiNetworksApplianceTrafficShapingUplinkSelectionExample", example);
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

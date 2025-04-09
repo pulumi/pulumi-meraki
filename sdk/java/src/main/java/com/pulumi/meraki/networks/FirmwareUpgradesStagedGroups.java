@@ -19,48 +19,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.meraki.networks.FirmwareUpgradesStagedGroups;
- * import com.pulumi.meraki.networks.FirmwareUpgradesStagedGroupsArgs;
- * import com.pulumi.meraki.networks.inputs.FirmwareUpgradesStagedGroupsAssignedDevicesArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new FirmwareUpgradesStagedGroups("example", FirmwareUpgradesStagedGroupsArgs.builder()
- *             .assignedDevices(FirmwareUpgradesStagedGroupsAssignedDevicesArgs.builder()
- *                 .devices(FirmwareUpgradesStagedGroupsAssignedDevicesDeviceArgs.builder()
- *                     .name("Device Name")
- *                     .serial("Q234-ABCD-5678")
- *                     .build())
- *                 .switch_stacks(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
- *                 .build())
- *             .description("The description of the group")
- *             .isDefault(false)
- *             .name("My Staged Upgrade Group")
- *             .networkId("string")
- *             .build());
- * 
- *         ctx.export("merakiNetworksFirmwareUpgradesStagedGroupsExample", example);
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import

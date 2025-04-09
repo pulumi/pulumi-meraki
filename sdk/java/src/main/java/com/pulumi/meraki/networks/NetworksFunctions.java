@@ -492,7 +492,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksAlertsHistoryExample", example.applyValue(getAlertsHistoryResult -> getAlertsHistoryResult.items()));
+     *         ctx.export("merakiNetworksAlertsHistoryExample", example.items());
      *     }
      * }
      * }
@@ -536,7 +536,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksAlertsHistoryExample", example.applyValue(getAlertsHistoryResult -> getAlertsHistoryResult.items()));
+     *         ctx.export("merakiNetworksAlertsHistoryExample", example.items());
      *     }
      * }
      * }
@@ -580,7 +580,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksAlertsHistoryExample", example.applyValue(getAlertsHistoryResult -> getAlertsHistoryResult.items()));
+     *         ctx.export("merakiNetworksAlertsHistoryExample", example.items());
      *     }
      * }
      * }
@@ -624,7 +624,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksAlertsHistoryExample", example.applyValue(getAlertsHistoryResult -> getAlertsHistoryResult.items()));
+     *         ctx.export("merakiNetworksAlertsHistoryExample", example.items());
      *     }
      * }
      * }
@@ -668,7 +668,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksAlertsHistoryExample", example.applyValue(getAlertsHistoryResult -> getAlertsHistoryResult.items()));
+     *         ctx.export("merakiNetworksAlertsHistoryExample", example.items());
      *     }
      * }
      * }
@@ -709,7 +709,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksAlertsSettingsExample", example.applyValue(getAlertsSettingsResult -> getAlertsSettingsResult.item()));
+     *         ctx.export("merakiNetworksAlertsSettingsExample", example.item());
      *     }
      * }
      * }
@@ -750,7 +750,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksAlertsSettingsExample", example.applyValue(getAlertsSettingsResult -> getAlertsSettingsResult.item()));
+     *         ctx.export("merakiNetworksAlertsSettingsExample", example.item());
      *     }
      * }
      * }
@@ -791,7 +791,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksAlertsSettingsExample", example.applyValue(getAlertsSettingsResult -> getAlertsSettingsResult.item()));
+     *         ctx.export("merakiNetworksAlertsSettingsExample", example.item());
      *     }
      * }
      * }
@@ -832,7 +832,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksAlertsSettingsExample", example.applyValue(getAlertsSettingsResult -> getAlertsSettingsResult.item()));
+     *         ctx.export("merakiNetworksAlertsSettingsExample", example.item());
      *     }
      * }
      * }
@@ -873,7 +873,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksAlertsSettingsExample", example.applyValue(getAlertsSettingsResult -> getAlertsSettingsResult.item()));
+     *         ctx.export("merakiNetworksAlertsSettingsExample", example.item());
      *     }
      * }
      * }
@@ -914,7 +914,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceConnectivityMonitoringDestinationsExample", example.applyValue(getApplianceConnectivityMonitoringDestinationsResult -> getApplianceConnectivityMonitoringDestinationsResult.item()));
+     *         ctx.export("merakiNetworksApplianceConnectivityMonitoringDestinationsExample", example.item());
      *     }
      * }
      * }
@@ -955,7 +955,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceConnectivityMonitoringDestinationsExample", example.applyValue(getApplianceConnectivityMonitoringDestinationsResult -> getApplianceConnectivityMonitoringDestinationsResult.item()));
+     *         ctx.export("merakiNetworksApplianceConnectivityMonitoringDestinationsExample", example.item());
      *     }
      * }
      * }
@@ -996,7 +996,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceConnectivityMonitoringDestinationsExample", example.applyValue(getApplianceConnectivityMonitoringDestinationsResult -> getApplianceConnectivityMonitoringDestinationsResult.item()));
+     *         ctx.export("merakiNetworksApplianceConnectivityMonitoringDestinationsExample", example.item());
      *     }
      * }
      * }
@@ -1037,7 +1037,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceConnectivityMonitoringDestinationsExample", example.applyValue(getApplianceConnectivityMonitoringDestinationsResult -> getApplianceConnectivityMonitoringDestinationsResult.item()));
+     *         ctx.export("merakiNetworksApplianceConnectivityMonitoringDestinationsExample", example.item());
      *     }
      * }
      * }
@@ -1078,7 +1078,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceConnectivityMonitoringDestinationsExample", example.applyValue(getApplianceConnectivityMonitoringDestinationsResult -> getApplianceConnectivityMonitoringDestinationsResult.item()));
+     *         ctx.export("merakiNetworksApplianceConnectivityMonitoringDestinationsExample", example.item());
      *     }
      * }
      * }
@@ -1119,7 +1119,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceContentFilteringExample", example.applyValue(getApplianceContentFilteringResult -> getApplianceContentFilteringResult.item()));
+     *         ctx.export("merakiNetworksApplianceContentFilteringExample", example.item());
      *     }
      * }
      * }
@@ -1160,7 +1160,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceContentFilteringExample", example.applyValue(getApplianceContentFilteringResult -> getApplianceContentFilteringResult.item()));
+     *         ctx.export("merakiNetworksApplianceContentFilteringExample", example.item());
      *     }
      * }
      * }
@@ -1201,7 +1201,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceContentFilteringExample", example.applyValue(getApplianceContentFilteringResult -> getApplianceContentFilteringResult.item()));
+     *         ctx.export("merakiNetworksApplianceContentFilteringExample", example.item());
      *     }
      * }
      * }
@@ -1242,7 +1242,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceContentFilteringExample", example.applyValue(getApplianceContentFilteringResult -> getApplianceContentFilteringResult.item()));
+     *         ctx.export("merakiNetworksApplianceContentFilteringExample", example.item());
      *     }
      * }
      * }
@@ -1283,7 +1283,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceContentFilteringExample", example.applyValue(getApplianceContentFilteringResult -> getApplianceContentFilteringResult.item()));
+     *         ctx.export("merakiNetworksApplianceContentFilteringExample", example.item());
      *     }
      * }
      * }
@@ -1324,7 +1324,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceContentFilteringCategoriesExample", example.applyValue(getApplianceContentFilteringCategoriesResult -> getApplianceContentFilteringCategoriesResult.item()));
+     *         ctx.export("merakiNetworksApplianceContentFilteringCategoriesExample", example.item());
      *     }
      * }
      * }
@@ -1365,7 +1365,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceContentFilteringCategoriesExample", example.applyValue(getApplianceContentFilteringCategoriesResult -> getApplianceContentFilteringCategoriesResult.item()));
+     *         ctx.export("merakiNetworksApplianceContentFilteringCategoriesExample", example.item());
      *     }
      * }
      * }
@@ -1406,7 +1406,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceContentFilteringCategoriesExample", example.applyValue(getApplianceContentFilteringCategoriesResult -> getApplianceContentFilteringCategoriesResult.item()));
+     *         ctx.export("merakiNetworksApplianceContentFilteringCategoriesExample", example.item());
      *     }
      * }
      * }
@@ -1447,7 +1447,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceContentFilteringCategoriesExample", example.applyValue(getApplianceContentFilteringCategoriesResult -> getApplianceContentFilteringCategoriesResult.item()));
+     *         ctx.export("merakiNetworksApplianceContentFilteringCategoriesExample", example.item());
      *     }
      * }
      * }
@@ -1488,7 +1488,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceContentFilteringCategoriesExample", example.applyValue(getApplianceContentFilteringCategoriesResult -> getApplianceContentFilteringCategoriesResult.item()));
+     *         ctx.export("merakiNetworksApplianceContentFilteringCategoriesExample", example.item());
      *     }
      * }
      * }
@@ -1529,7 +1529,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallCellularFirewallRulesExample", example.applyValue(getApplianceFirewallCellularFirewallRulesResult -> getApplianceFirewallCellularFirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallCellularFirewallRulesExample", example.item());
      *     }
      * }
      * }
@@ -1570,7 +1570,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallCellularFirewallRulesExample", example.applyValue(getApplianceFirewallCellularFirewallRulesResult -> getApplianceFirewallCellularFirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallCellularFirewallRulesExample", example.item());
      *     }
      * }
      * }
@@ -1611,7 +1611,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallCellularFirewallRulesExample", example.applyValue(getApplianceFirewallCellularFirewallRulesResult -> getApplianceFirewallCellularFirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallCellularFirewallRulesExample", example.item());
      *     }
      * }
      * }
@@ -1652,7 +1652,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallCellularFirewallRulesExample", example.applyValue(getApplianceFirewallCellularFirewallRulesResult -> getApplianceFirewallCellularFirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallCellularFirewallRulesExample", example.item());
      *     }
      * }
      * }
@@ -1693,7 +1693,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallCellularFirewallRulesExample", example.applyValue(getApplianceFirewallCellularFirewallRulesResult -> getApplianceFirewallCellularFirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallCellularFirewallRulesExample", example.item());
      *     }
      * }
      * }
@@ -1735,7 +1735,7 @@ public final class NetworksFunctions {
      *             .service("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallFirewalledServicesExample", example.applyValue(getApplianceFirewallFirewalledServicesResult -> getApplianceFirewallFirewalledServicesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallFirewalledServicesExample", example.item());
      *     }
      * }
      * }
@@ -1777,7 +1777,7 @@ public final class NetworksFunctions {
      *             .service("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallFirewalledServicesExample", example.applyValue(getApplianceFirewallFirewalledServicesResult -> getApplianceFirewallFirewalledServicesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallFirewalledServicesExample", example.item());
      *     }
      * }
      * }
@@ -1819,7 +1819,7 @@ public final class NetworksFunctions {
      *             .service("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallFirewalledServicesExample", example.applyValue(getApplianceFirewallFirewalledServicesResult -> getApplianceFirewallFirewalledServicesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallFirewalledServicesExample", example.item());
      *     }
      * }
      * }
@@ -1861,7 +1861,7 @@ public final class NetworksFunctions {
      *             .service("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallFirewalledServicesExample", example.applyValue(getApplianceFirewallFirewalledServicesResult -> getApplianceFirewallFirewalledServicesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallFirewalledServicesExample", example.item());
      *     }
      * }
      * }
@@ -1903,7 +1903,7 @@ public final class NetworksFunctions {
      *             .service("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallFirewalledServicesExample", example.applyValue(getApplianceFirewallFirewalledServicesResult -> getApplianceFirewallFirewalledServicesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallFirewalledServicesExample", example.item());
      *     }
      * }
      * }
@@ -1944,7 +1944,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallInboundFirewallRulesExample", example.applyValue(getApplianceFirewallInboundFirewallRulesResult -> getApplianceFirewallInboundFirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallInboundFirewallRulesExample", example.item());
      *     }
      * }
      * }
@@ -1985,7 +1985,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallInboundFirewallRulesExample", example.applyValue(getApplianceFirewallInboundFirewallRulesResult -> getApplianceFirewallInboundFirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallInboundFirewallRulesExample", example.item());
      *     }
      * }
      * }
@@ -2026,7 +2026,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallInboundFirewallRulesExample", example.applyValue(getApplianceFirewallInboundFirewallRulesResult -> getApplianceFirewallInboundFirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallInboundFirewallRulesExample", example.item());
      *     }
      * }
      * }
@@ -2067,7 +2067,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallInboundFirewallRulesExample", example.applyValue(getApplianceFirewallInboundFirewallRulesResult -> getApplianceFirewallInboundFirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallInboundFirewallRulesExample", example.item());
      *     }
      * }
      * }
@@ -2108,7 +2108,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallInboundFirewallRulesExample", example.applyValue(getApplianceFirewallInboundFirewallRulesResult -> getApplianceFirewallInboundFirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallInboundFirewallRulesExample", example.item());
      *     }
      * }
      * }
@@ -2149,7 +2149,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallL3FirewallRulesExample", example.applyValue(getApplianceFirewallL3FirewallRulesResult -> getApplianceFirewallL3FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallL3FirewallRulesExample", example.item());
      *     }
      * }
      * }
@@ -2190,7 +2190,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallL3FirewallRulesExample", example.applyValue(getApplianceFirewallL3FirewallRulesResult -> getApplianceFirewallL3FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallL3FirewallRulesExample", example.item());
      *     }
      * }
      * }
@@ -2231,7 +2231,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallL3FirewallRulesExample", example.applyValue(getApplianceFirewallL3FirewallRulesResult -> getApplianceFirewallL3FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallL3FirewallRulesExample", example.item());
      *     }
      * }
      * }
@@ -2272,7 +2272,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallL3FirewallRulesExample", example.applyValue(getApplianceFirewallL3FirewallRulesResult -> getApplianceFirewallL3FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallL3FirewallRulesExample", example.item());
      *     }
      * }
      * }
@@ -2313,7 +2313,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallL3FirewallRulesExample", example.applyValue(getApplianceFirewallL3FirewallRulesResult -> getApplianceFirewallL3FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallL3FirewallRulesExample", example.item());
      *     }
      * }
      * }
@@ -2354,7 +2354,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallL7FirewallRulesExample", example.applyValue(getApplianceFirewallL7FirewallRulesResult -> getApplianceFirewallL7FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallL7FirewallRulesExample", example.item());
      *     }
      * }
      * }
@@ -2395,7 +2395,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallL7FirewallRulesExample", example.applyValue(getApplianceFirewallL7FirewallRulesResult -> getApplianceFirewallL7FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallL7FirewallRulesExample", example.item());
      *     }
      * }
      * }
@@ -2436,7 +2436,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallL7FirewallRulesExample", example.applyValue(getApplianceFirewallL7FirewallRulesResult -> getApplianceFirewallL7FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallL7FirewallRulesExample", example.item());
      *     }
      * }
      * }
@@ -2477,7 +2477,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallL7FirewallRulesExample", example.applyValue(getApplianceFirewallL7FirewallRulesResult -> getApplianceFirewallL7FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallL7FirewallRulesExample", example.item());
      *     }
      * }
      * }
@@ -2518,7 +2518,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallL7FirewallRulesExample", example.applyValue(getApplianceFirewallL7FirewallRulesResult -> getApplianceFirewallL7FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallL7FirewallRulesExample", example.item());
      *     }
      * }
      * }
@@ -2559,7 +2559,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallL7FirewallRulesApplicationCategoriesExample", example.applyValue(getApplianceFirewallL7FirewallRulesApplicationCategoriesResult -> getApplianceFirewallL7FirewallRulesApplicationCategoriesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallL7FirewallRulesApplicationCategoriesExample", example.item());
      *     }
      * }
      * }
@@ -2600,7 +2600,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallL7FirewallRulesApplicationCategoriesExample", example.applyValue(getApplianceFirewallL7FirewallRulesApplicationCategoriesResult -> getApplianceFirewallL7FirewallRulesApplicationCategoriesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallL7FirewallRulesApplicationCategoriesExample", example.item());
      *     }
      * }
      * }
@@ -2641,7 +2641,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallL7FirewallRulesApplicationCategoriesExample", example.applyValue(getApplianceFirewallL7FirewallRulesApplicationCategoriesResult -> getApplianceFirewallL7FirewallRulesApplicationCategoriesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallL7FirewallRulesApplicationCategoriesExample", example.item());
      *     }
      * }
      * }
@@ -2682,7 +2682,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallL7FirewallRulesApplicationCategoriesExample", example.applyValue(getApplianceFirewallL7FirewallRulesApplicationCategoriesResult -> getApplianceFirewallL7FirewallRulesApplicationCategoriesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallL7FirewallRulesApplicationCategoriesExample", example.item());
      *     }
      * }
      * }
@@ -2723,7 +2723,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallL7FirewallRulesApplicationCategoriesExample", example.applyValue(getApplianceFirewallL7FirewallRulesApplicationCategoriesResult -> getApplianceFirewallL7FirewallRulesApplicationCategoriesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallL7FirewallRulesApplicationCategoriesExample", example.item());
      *     }
      * }
      * }
@@ -2764,7 +2764,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallOneToManyNatRulesExample", example.applyValue(getApplianceFirewallOneToManyNatRulesResult -> getApplianceFirewallOneToManyNatRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallOneToManyNatRulesExample", example.item());
      *     }
      * }
      * }
@@ -2805,7 +2805,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallOneToManyNatRulesExample", example.applyValue(getApplianceFirewallOneToManyNatRulesResult -> getApplianceFirewallOneToManyNatRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallOneToManyNatRulesExample", example.item());
      *     }
      * }
      * }
@@ -2846,7 +2846,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallOneToManyNatRulesExample", example.applyValue(getApplianceFirewallOneToManyNatRulesResult -> getApplianceFirewallOneToManyNatRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallOneToManyNatRulesExample", example.item());
      *     }
      * }
      * }
@@ -2887,7 +2887,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallOneToManyNatRulesExample", example.applyValue(getApplianceFirewallOneToManyNatRulesResult -> getApplianceFirewallOneToManyNatRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallOneToManyNatRulesExample", example.item());
      *     }
      * }
      * }
@@ -2928,7 +2928,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallOneToManyNatRulesExample", example.applyValue(getApplianceFirewallOneToManyNatRulesResult -> getApplianceFirewallOneToManyNatRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallOneToManyNatRulesExample", example.item());
      *     }
      * }
      * }
@@ -2969,7 +2969,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallOneToOneNatRulesExample", example.applyValue(getApplianceFirewallOneToOneNatRulesResult -> getApplianceFirewallOneToOneNatRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallOneToOneNatRulesExample", example.item());
      *     }
      * }
      * }
@@ -3010,7 +3010,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallOneToOneNatRulesExample", example.applyValue(getApplianceFirewallOneToOneNatRulesResult -> getApplianceFirewallOneToOneNatRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallOneToOneNatRulesExample", example.item());
      *     }
      * }
      * }
@@ -3051,7 +3051,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallOneToOneNatRulesExample", example.applyValue(getApplianceFirewallOneToOneNatRulesResult -> getApplianceFirewallOneToOneNatRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallOneToOneNatRulesExample", example.item());
      *     }
      * }
      * }
@@ -3092,7 +3092,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallOneToOneNatRulesExample", example.applyValue(getApplianceFirewallOneToOneNatRulesResult -> getApplianceFirewallOneToOneNatRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallOneToOneNatRulesExample", example.item());
      *     }
      * }
      * }
@@ -3133,7 +3133,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallOneToOneNatRulesExample", example.applyValue(getApplianceFirewallOneToOneNatRulesResult -> getApplianceFirewallOneToOneNatRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallOneToOneNatRulesExample", example.item());
      *     }
      * }
      * }
@@ -3174,7 +3174,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallPortForwardingRulesExample", example.applyValue(getApplianceFirewallPortForwardingRulesResult -> getApplianceFirewallPortForwardingRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallPortForwardingRulesExample", example.item());
      *     }
      * }
      * }
@@ -3215,7 +3215,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallPortForwardingRulesExample", example.applyValue(getApplianceFirewallPortForwardingRulesResult -> getApplianceFirewallPortForwardingRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallPortForwardingRulesExample", example.item());
      *     }
      * }
      * }
@@ -3256,7 +3256,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallPortForwardingRulesExample", example.applyValue(getApplianceFirewallPortForwardingRulesResult -> getApplianceFirewallPortForwardingRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallPortForwardingRulesExample", example.item());
      *     }
      * }
      * }
@@ -3297,7 +3297,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallPortForwardingRulesExample", example.applyValue(getApplianceFirewallPortForwardingRulesResult -> getApplianceFirewallPortForwardingRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallPortForwardingRulesExample", example.item());
      *     }
      * }
      * }
@@ -3338,7 +3338,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallPortForwardingRulesExample", example.applyValue(getApplianceFirewallPortForwardingRulesResult -> getApplianceFirewallPortForwardingRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallPortForwardingRulesExample", example.item());
      *     }
      * }
      * }
@@ -3379,7 +3379,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallSettingsExample", example.applyValue(getApplianceFirewallSettingsResult -> getApplianceFirewallSettingsResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallSettingsExample", example.item());
      *     }
      * }
      * }
@@ -3420,7 +3420,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallSettingsExample", example.applyValue(getApplianceFirewallSettingsResult -> getApplianceFirewallSettingsResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallSettingsExample", example.item());
      *     }
      * }
      * }
@@ -3461,7 +3461,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallSettingsExample", example.applyValue(getApplianceFirewallSettingsResult -> getApplianceFirewallSettingsResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallSettingsExample", example.item());
      *     }
      * }
      * }
@@ -3502,7 +3502,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallSettingsExample", example.applyValue(getApplianceFirewallSettingsResult -> getApplianceFirewallSettingsResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallSettingsExample", example.item());
      *     }
      * }
      * }
@@ -3543,7 +3543,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceFirewallSettingsExample", example.applyValue(getApplianceFirewallSettingsResult -> getApplianceFirewallSettingsResult.item()));
+     *         ctx.export("merakiNetworksApplianceFirewallSettingsExample", example.item());
      *     }
      * }
      * }
@@ -3682,7 +3682,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceRfProfilesExample", example.applyValue(getApplianceRfProfilesResult -> getApplianceRfProfilesResult.item()));
+     *         ctx.export("merakiNetworksApplianceRfProfilesExample", example.item());
      *     }
      * }
      * }
@@ -3723,7 +3723,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceRfProfilesExample", example.applyValue(getApplianceRfProfilesResult -> getApplianceRfProfilesResult.item()));
+     *         ctx.export("merakiNetworksApplianceRfProfilesExample", example.item());
      *     }
      * }
      * }
@@ -3764,7 +3764,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceRfProfilesExample", example.applyValue(getApplianceRfProfilesResult -> getApplianceRfProfilesResult.item()));
+     *         ctx.export("merakiNetworksApplianceRfProfilesExample", example.item());
      *     }
      * }
      * }
@@ -3805,7 +3805,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceRfProfilesExample", example.applyValue(getApplianceRfProfilesResult -> getApplianceRfProfilesResult.item()));
+     *         ctx.export("merakiNetworksApplianceRfProfilesExample", example.item());
      *     }
      * }
      * }
@@ -3846,7 +3846,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceRfProfilesExample", example.applyValue(getApplianceRfProfilesResult -> getApplianceRfProfilesResult.item()));
+     *         ctx.export("merakiNetworksApplianceRfProfilesExample", example.item());
      *     }
      * }
      * }
@@ -3887,7 +3887,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceRfProfilesExample", example.applyValue(getApplianceRfProfilesResult -> getApplianceRfProfilesResult.item()));
+     *         ctx.export("merakiNetworksApplianceRfProfilesExample", example.item());
      *     }
      * }
      * }
@@ -3928,7 +3928,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceRfProfilesExample", example.applyValue(getApplianceRfProfilesResult -> getApplianceRfProfilesResult.item()));
+     *         ctx.export("merakiNetworksApplianceRfProfilesExample", example.item());
      *     }
      * }
      * }
@@ -3969,7 +3969,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceSecurityIntrusionExample", example.applyValue(getApplianceSecurityIntrusionResult -> getApplianceSecurityIntrusionResult.item()));
+     *         ctx.export("merakiNetworksApplianceSecurityIntrusionExample", example.item());
      *     }
      * }
      * }
@@ -4010,7 +4010,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceSecurityIntrusionExample", example.applyValue(getApplianceSecurityIntrusionResult -> getApplianceSecurityIntrusionResult.item()));
+     *         ctx.export("merakiNetworksApplianceSecurityIntrusionExample", example.item());
      *     }
      * }
      * }
@@ -4051,7 +4051,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceSecurityIntrusionExample", example.applyValue(getApplianceSecurityIntrusionResult -> getApplianceSecurityIntrusionResult.item()));
+     *         ctx.export("merakiNetworksApplianceSecurityIntrusionExample", example.item());
      *     }
      * }
      * }
@@ -4092,7 +4092,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceSecurityIntrusionExample", example.applyValue(getApplianceSecurityIntrusionResult -> getApplianceSecurityIntrusionResult.item()));
+     *         ctx.export("merakiNetworksApplianceSecurityIntrusionExample", example.item());
      *     }
      * }
      * }
@@ -4133,7 +4133,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceSecurityIntrusionExample", example.applyValue(getApplianceSecurityIntrusionResult -> getApplianceSecurityIntrusionResult.item()));
+     *         ctx.export("merakiNetworksApplianceSecurityIntrusionExample", example.item());
      *     }
      * }
      * }
@@ -4174,7 +4174,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceSecurityMalwareExample", example.applyValue(getApplianceSecurityMalwareResult -> getApplianceSecurityMalwareResult.item()));
+     *         ctx.export("merakiNetworksApplianceSecurityMalwareExample", example.item());
      *     }
      * }
      * }
@@ -4215,7 +4215,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceSecurityMalwareExample", example.applyValue(getApplianceSecurityMalwareResult -> getApplianceSecurityMalwareResult.item()));
+     *         ctx.export("merakiNetworksApplianceSecurityMalwareExample", example.item());
      *     }
      * }
      * }
@@ -4256,7 +4256,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceSecurityMalwareExample", example.applyValue(getApplianceSecurityMalwareResult -> getApplianceSecurityMalwareResult.item()));
+     *         ctx.export("merakiNetworksApplianceSecurityMalwareExample", example.item());
      *     }
      * }
      * }
@@ -4297,7 +4297,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceSecurityMalwareExample", example.applyValue(getApplianceSecurityMalwareResult -> getApplianceSecurityMalwareResult.item()));
+     *         ctx.export("merakiNetworksApplianceSecurityMalwareExample", example.item());
      *     }
      * }
      * }
@@ -4338,7 +4338,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceSecurityMalwareExample", example.applyValue(getApplianceSecurityMalwareResult -> getApplianceSecurityMalwareResult.item()));
+     *         ctx.export("merakiNetworksApplianceSecurityMalwareExample", example.item());
      *     }
      * }
      * }
@@ -4379,7 +4379,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceSettingsExample", example.applyValue(getApplianceSettingsResult -> getApplianceSettingsResult.item()));
+     *         ctx.export("merakiNetworksApplianceSettingsExample", example.item());
      *     }
      * }
      * }
@@ -4420,7 +4420,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceSettingsExample", example.applyValue(getApplianceSettingsResult -> getApplianceSettingsResult.item()));
+     *         ctx.export("merakiNetworksApplianceSettingsExample", example.item());
      *     }
      * }
      * }
@@ -4461,7 +4461,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceSettingsExample", example.applyValue(getApplianceSettingsResult -> getApplianceSettingsResult.item()));
+     *         ctx.export("merakiNetworksApplianceSettingsExample", example.item());
      *     }
      * }
      * }
@@ -4502,7 +4502,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceSettingsExample", example.applyValue(getApplianceSettingsResult -> getApplianceSettingsResult.item()));
+     *         ctx.export("merakiNetworksApplianceSettingsExample", example.item());
      *     }
      * }
      * }
@@ -4543,7 +4543,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceSettingsExample", example.applyValue(getApplianceSettingsResult -> getApplianceSettingsResult.item()));
+     *         ctx.export("merakiNetworksApplianceSettingsExample", example.item());
      *     }
      * }
      * }
@@ -4584,7 +4584,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceSingleLanExample", example.applyValue(getApplianceSingleLanResult -> getApplianceSingleLanResult.item()));
+     *         ctx.export("merakiNetworksApplianceSingleLanExample", example.item());
      *     }
      * }
      * }
@@ -4625,7 +4625,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceSingleLanExample", example.applyValue(getApplianceSingleLanResult -> getApplianceSingleLanResult.item()));
+     *         ctx.export("merakiNetworksApplianceSingleLanExample", example.item());
      *     }
      * }
      * }
@@ -4666,7 +4666,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceSingleLanExample", example.applyValue(getApplianceSingleLanResult -> getApplianceSingleLanResult.item()));
+     *         ctx.export("merakiNetworksApplianceSingleLanExample", example.item());
      *     }
      * }
      * }
@@ -4707,7 +4707,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceSingleLanExample", example.applyValue(getApplianceSingleLanResult -> getApplianceSingleLanResult.item()));
+     *         ctx.export("merakiNetworksApplianceSingleLanExample", example.item());
      *     }
      * }
      * }
@@ -4748,7 +4748,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceSingleLanExample", example.applyValue(getApplianceSingleLanResult -> getApplianceSingleLanResult.item()));
+     *         ctx.export("merakiNetworksApplianceSingleLanExample", example.item());
      *     }
      * }
      * }
@@ -4838,7 +4838,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceTrafficShapingExample", example.applyValue(getApplianceTrafficShapingResult -> getApplianceTrafficShapingResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingExample", example.item());
      *     }
      * }
      * }
@@ -4879,7 +4879,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceTrafficShapingExample", example.applyValue(getApplianceTrafficShapingResult -> getApplianceTrafficShapingResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingExample", example.item());
      *     }
      * }
      * }
@@ -4920,7 +4920,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceTrafficShapingExample", example.applyValue(getApplianceTrafficShapingResult -> getApplianceTrafficShapingResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingExample", example.item());
      *     }
      * }
      * }
@@ -4961,7 +4961,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceTrafficShapingExample", example.applyValue(getApplianceTrafficShapingResult -> getApplianceTrafficShapingResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingExample", example.item());
      *     }
      * }
      * }
@@ -5002,7 +5002,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceTrafficShapingExample", example.applyValue(getApplianceTrafficShapingResult -> getApplianceTrafficShapingResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingExample", example.item());
      *     }
      * }
      * }
@@ -5043,7 +5043,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceTrafficShapingRulesExample", example.applyValue(getApplianceTrafficShapingRulesResult -> getApplianceTrafficShapingRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingRulesExample", example.item());
      *     }
      * }
      * }
@@ -5084,7 +5084,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceTrafficShapingRulesExample", example.applyValue(getApplianceTrafficShapingRulesResult -> getApplianceTrafficShapingRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingRulesExample", example.item());
      *     }
      * }
      * }
@@ -5125,7 +5125,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceTrafficShapingRulesExample", example.applyValue(getApplianceTrafficShapingRulesResult -> getApplianceTrafficShapingRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingRulesExample", example.item());
      *     }
      * }
      * }
@@ -5166,7 +5166,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceTrafficShapingRulesExample", example.applyValue(getApplianceTrafficShapingRulesResult -> getApplianceTrafficShapingRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingRulesExample", example.item());
      *     }
      * }
      * }
@@ -5207,7 +5207,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceTrafficShapingRulesExample", example.applyValue(getApplianceTrafficShapingRulesResult -> getApplianceTrafficShapingRulesResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingRulesExample", example.item());
      *     }
      * }
      * }
@@ -5248,7 +5248,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceTrafficShapingUplinkBandwidthExample", example.applyValue(getApplianceTrafficShapingUplinkBandwidthResult -> getApplianceTrafficShapingUplinkBandwidthResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingUplinkBandwidthExample", example.item());
      *     }
      * }
      * }
@@ -5289,7 +5289,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceTrafficShapingUplinkBandwidthExample", example.applyValue(getApplianceTrafficShapingUplinkBandwidthResult -> getApplianceTrafficShapingUplinkBandwidthResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingUplinkBandwidthExample", example.item());
      *     }
      * }
      * }
@@ -5330,7 +5330,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceTrafficShapingUplinkBandwidthExample", example.applyValue(getApplianceTrafficShapingUplinkBandwidthResult -> getApplianceTrafficShapingUplinkBandwidthResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingUplinkBandwidthExample", example.item());
      *     }
      * }
      * }
@@ -5371,7 +5371,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceTrafficShapingUplinkBandwidthExample", example.applyValue(getApplianceTrafficShapingUplinkBandwidthResult -> getApplianceTrafficShapingUplinkBandwidthResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingUplinkBandwidthExample", example.item());
      *     }
      * }
      * }
@@ -5412,7 +5412,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceTrafficShapingUplinkBandwidthExample", example.applyValue(getApplianceTrafficShapingUplinkBandwidthResult -> getApplianceTrafficShapingUplinkBandwidthResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingUplinkBandwidthExample", example.item());
      *     }
      * }
      * }
@@ -5453,7 +5453,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceTrafficShapingUplinkSelectionExample", example.applyValue(getApplianceTrafficShapingUplinkSelectionResult -> getApplianceTrafficShapingUplinkSelectionResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingUplinkSelectionExample", example.item());
      *     }
      * }
      * }
@@ -5494,7 +5494,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceTrafficShapingUplinkSelectionExample", example.applyValue(getApplianceTrafficShapingUplinkSelectionResult -> getApplianceTrafficShapingUplinkSelectionResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingUplinkSelectionExample", example.item());
      *     }
      * }
      * }
@@ -5535,7 +5535,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceTrafficShapingUplinkSelectionExample", example.applyValue(getApplianceTrafficShapingUplinkSelectionResult -> getApplianceTrafficShapingUplinkSelectionResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingUplinkSelectionExample", example.item());
      *     }
      * }
      * }
@@ -5576,7 +5576,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceTrafficShapingUplinkSelectionExample", example.applyValue(getApplianceTrafficShapingUplinkSelectionResult -> getApplianceTrafficShapingUplinkSelectionResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingUplinkSelectionExample", example.item());
      *     }
      * }
      * }
@@ -5617,7 +5617,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceTrafficShapingUplinkSelectionExample", example.applyValue(getApplianceTrafficShapingUplinkSelectionResult -> getApplianceTrafficShapingUplinkSelectionResult.item()));
+     *         ctx.export("merakiNetworksApplianceTrafficShapingUplinkSelectionExample", example.item());
      *     }
      * }
      * }
@@ -5707,7 +5707,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceVlansSettingsExample", example.applyValue(getApplianceVlansSettingsResult -> getApplianceVlansSettingsResult.item()));
+     *         ctx.export("merakiNetworksApplianceVlansSettingsExample", example.item());
      *     }
      * }
      * }
@@ -5748,7 +5748,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceVlansSettingsExample", example.applyValue(getApplianceVlansSettingsResult -> getApplianceVlansSettingsResult.item()));
+     *         ctx.export("merakiNetworksApplianceVlansSettingsExample", example.item());
      *     }
      * }
      * }
@@ -5789,7 +5789,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceVlansSettingsExample", example.applyValue(getApplianceVlansSettingsResult -> getApplianceVlansSettingsResult.item()));
+     *         ctx.export("merakiNetworksApplianceVlansSettingsExample", example.item());
      *     }
      * }
      * }
@@ -5830,7 +5830,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceVlansSettingsExample", example.applyValue(getApplianceVlansSettingsResult -> getApplianceVlansSettingsResult.item()));
+     *         ctx.export("merakiNetworksApplianceVlansSettingsExample", example.item());
      *     }
      * }
      * }
@@ -5871,7 +5871,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceVlansSettingsExample", example.applyValue(getApplianceVlansSettingsResult -> getApplianceVlansSettingsResult.item()));
+     *         ctx.export("merakiNetworksApplianceVlansSettingsExample", example.item());
      *     }
      * }
      * }
@@ -5912,7 +5912,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceVpnBgpExample", example.applyValue(getApplianceVpnBgpResult -> getApplianceVpnBgpResult.item()));
+     *         ctx.export("merakiNetworksApplianceVpnBgpExample", example.item());
      *     }
      * }
      * }
@@ -5953,7 +5953,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceVpnBgpExample", example.applyValue(getApplianceVpnBgpResult -> getApplianceVpnBgpResult.item()));
+     *         ctx.export("merakiNetworksApplianceVpnBgpExample", example.item());
      *     }
      * }
      * }
@@ -5994,7 +5994,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceVpnBgpExample", example.applyValue(getApplianceVpnBgpResult -> getApplianceVpnBgpResult.item()));
+     *         ctx.export("merakiNetworksApplianceVpnBgpExample", example.item());
      *     }
      * }
      * }
@@ -6035,7 +6035,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceVpnBgpExample", example.applyValue(getApplianceVpnBgpResult -> getApplianceVpnBgpResult.item()));
+     *         ctx.export("merakiNetworksApplianceVpnBgpExample", example.item());
      *     }
      * }
      * }
@@ -6076,7 +6076,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceVpnBgpExample", example.applyValue(getApplianceVpnBgpResult -> getApplianceVpnBgpResult.item()));
+     *         ctx.export("merakiNetworksApplianceVpnBgpExample", example.item());
      *     }
      * }
      * }
@@ -6117,7 +6117,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceVpnSiteToSiteVpnExample", example.applyValue(getApplianceVpnSiteToSiteVpnResult -> getApplianceVpnSiteToSiteVpnResult.item()));
+     *         ctx.export("merakiNetworksApplianceVpnSiteToSiteVpnExample", example.item());
      *     }
      * }
      * }
@@ -6158,7 +6158,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceVpnSiteToSiteVpnExample", example.applyValue(getApplianceVpnSiteToSiteVpnResult -> getApplianceVpnSiteToSiteVpnResult.item()));
+     *         ctx.export("merakiNetworksApplianceVpnSiteToSiteVpnExample", example.item());
      *     }
      * }
      * }
@@ -6199,7 +6199,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceVpnSiteToSiteVpnExample", example.applyValue(getApplianceVpnSiteToSiteVpnResult -> getApplianceVpnSiteToSiteVpnResult.item()));
+     *         ctx.export("merakiNetworksApplianceVpnSiteToSiteVpnExample", example.item());
      *     }
      * }
      * }
@@ -6240,7 +6240,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceVpnSiteToSiteVpnExample", example.applyValue(getApplianceVpnSiteToSiteVpnResult -> getApplianceVpnSiteToSiteVpnResult.item()));
+     *         ctx.export("merakiNetworksApplianceVpnSiteToSiteVpnExample", example.item());
      *     }
      * }
      * }
@@ -6281,7 +6281,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceVpnSiteToSiteVpnExample", example.applyValue(getApplianceVpnSiteToSiteVpnResult -> getApplianceVpnSiteToSiteVpnResult.item()));
+     *         ctx.export("merakiNetworksApplianceVpnSiteToSiteVpnExample", example.item());
      *     }
      * }
      * }
@@ -6322,7 +6322,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceWarmSpareExample", example.applyValue(getApplianceWarmSpareResult -> getApplianceWarmSpareResult.item()));
+     *         ctx.export("merakiNetworksApplianceWarmSpareExample", example.item());
      *     }
      * }
      * }
@@ -6363,7 +6363,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceWarmSpareExample", example.applyValue(getApplianceWarmSpareResult -> getApplianceWarmSpareResult.item()));
+     *         ctx.export("merakiNetworksApplianceWarmSpareExample", example.item());
      *     }
      * }
      * }
@@ -6404,7 +6404,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceWarmSpareExample", example.applyValue(getApplianceWarmSpareResult -> getApplianceWarmSpareResult.item()));
+     *         ctx.export("merakiNetworksApplianceWarmSpareExample", example.item());
      *     }
      * }
      * }
@@ -6445,7 +6445,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceWarmSpareExample", example.applyValue(getApplianceWarmSpareResult -> getApplianceWarmSpareResult.item()));
+     *         ctx.export("merakiNetworksApplianceWarmSpareExample", example.item());
      *     }
      * }
      * }
@@ -6486,7 +6486,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksApplianceWarmSpareExample", example.applyValue(getApplianceWarmSpareResult -> getApplianceWarmSpareResult.item()));
+     *         ctx.export("merakiNetworksApplianceWarmSpareExample", example.item());
      *     }
      * }
      * }
@@ -6530,7 +6530,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksBluetoothClientsExample", example.applyValue(getBluetoothClientsResult -> getBluetoothClientsResult.item()));
+     *         ctx.export("merakiNetworksBluetoothClientsExample", example.item());
      *     }
      * }
      * }
@@ -6574,7 +6574,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksBluetoothClientsExample", example.applyValue(getBluetoothClientsResult -> getBluetoothClientsResult.item()));
+     *         ctx.export("merakiNetworksBluetoothClientsExample", example.item());
      *     }
      * }
      * }
@@ -6618,7 +6618,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksBluetoothClientsExample", example.applyValue(getBluetoothClientsResult -> getBluetoothClientsResult.item()));
+     *         ctx.export("merakiNetworksBluetoothClientsExample", example.item());
      *     }
      * }
      * }
@@ -6662,7 +6662,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksBluetoothClientsExample", example.applyValue(getBluetoothClientsResult -> getBluetoothClientsResult.item()));
+     *         ctx.export("merakiNetworksBluetoothClientsExample", example.item());
      *     }
      * }
      * }
@@ -6706,7 +6706,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksBluetoothClientsExample", example.applyValue(getBluetoothClientsResult -> getBluetoothClientsResult.item()));
+     *         ctx.export("merakiNetworksBluetoothClientsExample", example.item());
      *     }
      * }
      * }
@@ -6845,7 +6845,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksCellularGatewayConnectivityMonitoringDestinationsExample", example.applyValue(getCellularGatewayConnectivityMonitoringDestinationsResult -> getCellularGatewayConnectivityMonitoringDestinationsResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewayConnectivityMonitoringDestinationsExample", example.item());
      *     }
      * }
      * }
@@ -6886,7 +6886,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksCellularGatewayConnectivityMonitoringDestinationsExample", example.applyValue(getCellularGatewayConnectivityMonitoringDestinationsResult -> getCellularGatewayConnectivityMonitoringDestinationsResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewayConnectivityMonitoringDestinationsExample", example.item());
      *     }
      * }
      * }
@@ -6927,7 +6927,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksCellularGatewayConnectivityMonitoringDestinationsExample", example.applyValue(getCellularGatewayConnectivityMonitoringDestinationsResult -> getCellularGatewayConnectivityMonitoringDestinationsResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewayConnectivityMonitoringDestinationsExample", example.item());
      *     }
      * }
      * }
@@ -6968,7 +6968,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksCellularGatewayConnectivityMonitoringDestinationsExample", example.applyValue(getCellularGatewayConnectivityMonitoringDestinationsResult -> getCellularGatewayConnectivityMonitoringDestinationsResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewayConnectivityMonitoringDestinationsExample", example.item());
      *     }
      * }
      * }
@@ -7009,7 +7009,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksCellularGatewayConnectivityMonitoringDestinationsExample", example.applyValue(getCellularGatewayConnectivityMonitoringDestinationsResult -> getCellularGatewayConnectivityMonitoringDestinationsResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewayConnectivityMonitoringDestinationsExample", example.item());
      *     }
      * }
      * }
@@ -7050,7 +7050,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksCellularGatewayDhcpExample", example.applyValue(getCellularGatewayDhcpResult -> getCellularGatewayDhcpResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewayDhcpExample", example.item());
      *     }
      * }
      * }
@@ -7091,7 +7091,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksCellularGatewayDhcpExample", example.applyValue(getCellularGatewayDhcpResult -> getCellularGatewayDhcpResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewayDhcpExample", example.item());
      *     }
      * }
      * }
@@ -7132,7 +7132,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksCellularGatewayDhcpExample", example.applyValue(getCellularGatewayDhcpResult -> getCellularGatewayDhcpResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewayDhcpExample", example.item());
      *     }
      * }
      * }
@@ -7173,7 +7173,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksCellularGatewayDhcpExample", example.applyValue(getCellularGatewayDhcpResult -> getCellularGatewayDhcpResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewayDhcpExample", example.item());
      *     }
      * }
      * }
@@ -7214,7 +7214,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksCellularGatewayDhcpExample", example.applyValue(getCellularGatewayDhcpResult -> getCellularGatewayDhcpResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewayDhcpExample", example.item());
      *     }
      * }
      * }
@@ -7255,7 +7255,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksCellularGatewaySubnetPoolExample", example.applyValue(getCellularGatewaySubnetPoolResult -> getCellularGatewaySubnetPoolResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewaySubnetPoolExample", example.item());
      *     }
      * }
      * }
@@ -7296,7 +7296,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksCellularGatewaySubnetPoolExample", example.applyValue(getCellularGatewaySubnetPoolResult -> getCellularGatewaySubnetPoolResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewaySubnetPoolExample", example.item());
      *     }
      * }
      * }
@@ -7337,7 +7337,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksCellularGatewaySubnetPoolExample", example.applyValue(getCellularGatewaySubnetPoolResult -> getCellularGatewaySubnetPoolResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewaySubnetPoolExample", example.item());
      *     }
      * }
      * }
@@ -7378,7 +7378,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksCellularGatewaySubnetPoolExample", example.applyValue(getCellularGatewaySubnetPoolResult -> getCellularGatewaySubnetPoolResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewaySubnetPoolExample", example.item());
      *     }
      * }
      * }
@@ -7419,7 +7419,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksCellularGatewaySubnetPoolExample", example.applyValue(getCellularGatewaySubnetPoolResult -> getCellularGatewaySubnetPoolResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewaySubnetPoolExample", example.item());
      *     }
      * }
      * }
@@ -7460,7 +7460,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksCellularGatewayUplinkExample", example.applyValue(getCellularGatewayUplinkResult -> getCellularGatewayUplinkResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewayUplinkExample", example.item());
      *     }
      * }
      * }
@@ -7501,7 +7501,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksCellularGatewayUplinkExample", example.applyValue(getCellularGatewayUplinkResult -> getCellularGatewayUplinkResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewayUplinkExample", example.item());
      *     }
      * }
      * }
@@ -7542,7 +7542,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksCellularGatewayUplinkExample", example.applyValue(getCellularGatewayUplinkResult -> getCellularGatewayUplinkResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewayUplinkExample", example.item());
      *     }
      * }
      * }
@@ -7583,7 +7583,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksCellularGatewayUplinkExample", example.applyValue(getCellularGatewayUplinkResult -> getCellularGatewayUplinkResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewayUplinkExample", example.item());
      *     }
      * }
      * }
@@ -7624,7 +7624,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksCellularGatewayUplinkExample", example.applyValue(getCellularGatewayUplinkResult -> getCellularGatewayUplinkResult.item()));
+     *         ctx.export("merakiNetworksCellularGatewayUplinkExample", example.item());
      *     }
      * }
      * }
@@ -7666,7 +7666,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksClientsExample", example.applyValue(getClientsResult -> getClientsResult.item()));
+     *         ctx.export("merakiNetworksClientsExample", example.item());
      *     }
      * }
      * }
@@ -7708,7 +7708,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksClientsExample", example.applyValue(getClientsResult -> getClientsResult.item()));
+     *         ctx.export("merakiNetworksClientsExample", example.item());
      *     }
      * }
      * }
@@ -7750,7 +7750,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksClientsExample", example.applyValue(getClientsResult -> getClientsResult.item()));
+     *         ctx.export("merakiNetworksClientsExample", example.item());
      *     }
      * }
      * }
@@ -7792,7 +7792,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksClientsExample", example.applyValue(getClientsResult -> getClientsResult.item()));
+     *         ctx.export("merakiNetworksClientsExample", example.item());
      *     }
      * }
      * }
@@ -7834,7 +7834,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksClientsExample", example.applyValue(getClientsResult -> getClientsResult.item()));
+     *         ctx.export("merakiNetworksClientsExample", example.item());
      *     }
      * }
      * }
@@ -7879,7 +7879,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksClientsOverviewExample", example.applyValue(getClientsOverviewResult -> getClientsOverviewResult.item()));
+     *         ctx.export("merakiNetworksClientsOverviewExample", example.item());
      *     }
      * }
      * }
@@ -7924,7 +7924,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksClientsOverviewExample", example.applyValue(getClientsOverviewResult -> getClientsOverviewResult.item()));
+     *         ctx.export("merakiNetworksClientsOverviewExample", example.item());
      *     }
      * }
      * }
@@ -7969,7 +7969,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksClientsOverviewExample", example.applyValue(getClientsOverviewResult -> getClientsOverviewResult.item()));
+     *         ctx.export("merakiNetworksClientsOverviewExample", example.item());
      *     }
      * }
      * }
@@ -8014,7 +8014,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksClientsOverviewExample", example.applyValue(getClientsOverviewResult -> getClientsOverviewResult.item()));
+     *         ctx.export("merakiNetworksClientsOverviewExample", example.item());
      *     }
      * }
      * }
@@ -8059,7 +8059,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksClientsOverviewExample", example.applyValue(getClientsOverviewResult -> getClientsOverviewResult.item()));
+     *         ctx.export("merakiNetworksClientsOverviewExample", example.item());
      *     }
      * }
      * }
@@ -8101,7 +8101,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksClientsPolicyExample", example.applyValue(getClientsPolicyResult -> getClientsPolicyResult.item()));
+     *         ctx.export("merakiNetworksClientsPolicyExample", example.item());
      *     }
      * }
      * }
@@ -8143,7 +8143,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksClientsPolicyExample", example.applyValue(getClientsPolicyResult -> getClientsPolicyResult.item()));
+     *         ctx.export("merakiNetworksClientsPolicyExample", example.item());
      *     }
      * }
      * }
@@ -8185,7 +8185,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksClientsPolicyExample", example.applyValue(getClientsPolicyResult -> getClientsPolicyResult.item()));
+     *         ctx.export("merakiNetworksClientsPolicyExample", example.item());
      *     }
      * }
      * }
@@ -8227,7 +8227,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksClientsPolicyExample", example.applyValue(getClientsPolicyResult -> getClientsPolicyResult.item()));
+     *         ctx.export("merakiNetworksClientsPolicyExample", example.item());
      *     }
      * }
      * }
@@ -8269,7 +8269,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksClientsPolicyExample", example.applyValue(getClientsPolicyResult -> getClientsPolicyResult.item()));
+     *         ctx.export("merakiNetworksClientsPolicyExample", example.item());
      *     }
      * }
      * }
@@ -8311,7 +8311,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksClientsSplashAuthorizationStatusExample", example.applyValue(getClientsSplashAuthorizationStatusResult -> getClientsSplashAuthorizationStatusResult.item()));
+     *         ctx.export("merakiNetworksClientsSplashAuthorizationStatusExample", example.item());
      *     }
      * }
      * }
@@ -8353,7 +8353,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksClientsSplashAuthorizationStatusExample", example.applyValue(getClientsSplashAuthorizationStatusResult -> getClientsSplashAuthorizationStatusResult.item()));
+     *         ctx.export("merakiNetworksClientsSplashAuthorizationStatusExample", example.item());
      *     }
      * }
      * }
@@ -8395,7 +8395,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksClientsSplashAuthorizationStatusExample", example.applyValue(getClientsSplashAuthorizationStatusResult -> getClientsSplashAuthorizationStatusResult.item()));
+     *         ctx.export("merakiNetworksClientsSplashAuthorizationStatusExample", example.item());
      *     }
      * }
      * }
@@ -8437,7 +8437,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksClientsSplashAuthorizationStatusExample", example.applyValue(getClientsSplashAuthorizationStatusResult -> getClientsSplashAuthorizationStatusResult.item()));
+     *         ctx.export("merakiNetworksClientsSplashAuthorizationStatusExample", example.item());
      *     }
      * }
      * }
@@ -8479,7 +8479,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksClientsSplashAuthorizationStatusExample", example.applyValue(getClientsSplashAuthorizationStatusResult -> getClientsSplashAuthorizationStatusResult.item()));
+     *         ctx.export("merakiNetworksClientsSplashAuthorizationStatusExample", example.item());
      *     }
      * }
      * }
@@ -8534,7 +8534,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksEventsExample", example.applyValue(getEventsResult -> getEventsResult.item()));
+     *         ctx.export("merakiNetworksEventsExample", example.item());
      *     }
      * }
      * }
@@ -8589,7 +8589,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksEventsExample", example.applyValue(getEventsResult -> getEventsResult.item()));
+     *         ctx.export("merakiNetworksEventsExample", example.item());
      *     }
      * }
      * }
@@ -8644,7 +8644,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksEventsExample", example.applyValue(getEventsResult -> getEventsResult.item()));
+     *         ctx.export("merakiNetworksEventsExample", example.item());
      *     }
      * }
      * }
@@ -8699,7 +8699,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksEventsExample", example.applyValue(getEventsResult -> getEventsResult.item()));
+     *         ctx.export("merakiNetworksEventsExample", example.item());
      *     }
      * }
      * }
@@ -8754,7 +8754,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksEventsExample", example.applyValue(getEventsResult -> getEventsResult.item()));
+     *         ctx.export("merakiNetworksEventsExample", example.item());
      *     }
      * }
      * }
@@ -8795,7 +8795,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksEventsEventTypesExample", example.applyValue(getEventsEventTypesResult -> getEventsEventTypesResult.items()));
+     *         ctx.export("merakiNetworksEventsEventTypesExample", example.items());
      *     }
      * }
      * }
@@ -8836,7 +8836,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksEventsEventTypesExample", example.applyValue(getEventsEventTypesResult -> getEventsEventTypesResult.items()));
+     *         ctx.export("merakiNetworksEventsEventTypesExample", example.items());
      *     }
      * }
      * }
@@ -8877,7 +8877,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksEventsEventTypesExample", example.applyValue(getEventsEventTypesResult -> getEventsEventTypesResult.items()));
+     *         ctx.export("merakiNetworksEventsEventTypesExample", example.items());
      *     }
      * }
      * }
@@ -8918,7 +8918,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksEventsEventTypesExample", example.applyValue(getEventsEventTypesResult -> getEventsEventTypesResult.items()));
+     *         ctx.export("merakiNetworksEventsEventTypesExample", example.items());
      *     }
      * }
      * }
@@ -8959,7 +8959,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksEventsEventTypesExample", example.applyValue(getEventsEventTypesResult -> getEventsEventTypesResult.items()));
+     *         ctx.export("merakiNetworksEventsEventTypesExample", example.items());
      *     }
      * }
      * }
@@ -9000,7 +9000,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksFirmwareUpgradesExample", example.applyValue(getFirmwareUpgradesResult -> getFirmwareUpgradesResult.item()));
+     *         ctx.export("merakiNetworksFirmwareUpgradesExample", example.item());
      *     }
      * }
      * }
@@ -9041,7 +9041,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksFirmwareUpgradesExample", example.applyValue(getFirmwareUpgradesResult -> getFirmwareUpgradesResult.item()));
+     *         ctx.export("merakiNetworksFirmwareUpgradesExample", example.item());
      *     }
      * }
      * }
@@ -9082,7 +9082,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksFirmwareUpgradesExample", example.applyValue(getFirmwareUpgradesResult -> getFirmwareUpgradesResult.item()));
+     *         ctx.export("merakiNetworksFirmwareUpgradesExample", example.item());
      *     }
      * }
      * }
@@ -9123,7 +9123,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksFirmwareUpgradesExample", example.applyValue(getFirmwareUpgradesResult -> getFirmwareUpgradesResult.item()));
+     *         ctx.export("merakiNetworksFirmwareUpgradesExample", example.item());
      *     }
      * }
      * }
@@ -9164,7 +9164,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksFirmwareUpgradesExample", example.applyValue(getFirmwareUpgradesResult -> getFirmwareUpgradesResult.item()));
+     *         ctx.export("merakiNetworksFirmwareUpgradesExample", example.item());
      *     }
      * }
      * }
@@ -9205,7 +9205,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksFirmwareUpgradesStagedEventsExample", example.applyValue(getFirmwareUpgradesStagedEventsResult -> getFirmwareUpgradesStagedEventsResult.item()));
+     *         ctx.export("merakiNetworksFirmwareUpgradesStagedEventsExample", example.item());
      *     }
      * }
      * }
@@ -9246,7 +9246,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksFirmwareUpgradesStagedEventsExample", example.applyValue(getFirmwareUpgradesStagedEventsResult -> getFirmwareUpgradesStagedEventsResult.item()));
+     *         ctx.export("merakiNetworksFirmwareUpgradesStagedEventsExample", example.item());
      *     }
      * }
      * }
@@ -9287,7 +9287,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksFirmwareUpgradesStagedEventsExample", example.applyValue(getFirmwareUpgradesStagedEventsResult -> getFirmwareUpgradesStagedEventsResult.item()));
+     *         ctx.export("merakiNetworksFirmwareUpgradesStagedEventsExample", example.item());
      *     }
      * }
      * }
@@ -9328,7 +9328,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksFirmwareUpgradesStagedEventsExample", example.applyValue(getFirmwareUpgradesStagedEventsResult -> getFirmwareUpgradesStagedEventsResult.item()));
+     *         ctx.export("merakiNetworksFirmwareUpgradesStagedEventsExample", example.item());
      *     }
      * }
      * }
@@ -9369,7 +9369,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksFirmwareUpgradesStagedEventsExample", example.applyValue(getFirmwareUpgradesStagedEventsResult -> getFirmwareUpgradesStagedEventsResult.item()));
+     *         ctx.export("merakiNetworksFirmwareUpgradesStagedEventsExample", example.item());
      *     }
      * }
      * }
@@ -9459,7 +9459,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksFirmwareUpgradesStagedStagesExample", example.applyValue(getFirmwareUpgradesStagedStagesResult -> getFirmwareUpgradesStagedStagesResult.items()));
+     *         ctx.export("merakiNetworksFirmwareUpgradesStagedStagesExample", example.items());
      *     }
      * }
      * }
@@ -9500,7 +9500,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksFirmwareUpgradesStagedStagesExample", example.applyValue(getFirmwareUpgradesStagedStagesResult -> getFirmwareUpgradesStagedStagesResult.items()));
+     *         ctx.export("merakiNetworksFirmwareUpgradesStagedStagesExample", example.items());
      *     }
      * }
      * }
@@ -9541,7 +9541,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksFirmwareUpgradesStagedStagesExample", example.applyValue(getFirmwareUpgradesStagedStagesResult -> getFirmwareUpgradesStagedStagesResult.items()));
+     *         ctx.export("merakiNetworksFirmwareUpgradesStagedStagesExample", example.items());
      *     }
      * }
      * }
@@ -9582,7 +9582,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksFirmwareUpgradesStagedStagesExample", example.applyValue(getFirmwareUpgradesStagedStagesResult -> getFirmwareUpgradesStagedStagesResult.items()));
+     *         ctx.export("merakiNetworksFirmwareUpgradesStagedStagesExample", example.items());
      *     }
      * }
      * }
@@ -9623,7 +9623,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksFirmwareUpgradesStagedStagesExample", example.applyValue(getFirmwareUpgradesStagedStagesResult -> getFirmwareUpgradesStagedStagesResult.items()));
+     *         ctx.export("merakiNetworksFirmwareUpgradesStagedStagesExample", example.items());
      *     }
      * }
      * }
@@ -9762,7 +9762,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksHealthAlertsExample", example.applyValue(getHealthAlertsResult -> getHealthAlertsResult.items()));
+     *         ctx.export("merakiNetworksHealthAlertsExample", example.items());
      *     }
      * }
      * }
@@ -9803,7 +9803,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksHealthAlertsExample", example.applyValue(getHealthAlertsResult -> getHealthAlertsResult.items()));
+     *         ctx.export("merakiNetworksHealthAlertsExample", example.items());
      *     }
      * }
      * }
@@ -9844,7 +9844,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksHealthAlertsExample", example.applyValue(getHealthAlertsResult -> getHealthAlertsResult.items()));
+     *         ctx.export("merakiNetworksHealthAlertsExample", example.items());
      *     }
      * }
      * }
@@ -9885,7 +9885,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksHealthAlertsExample", example.applyValue(getHealthAlertsResult -> getHealthAlertsResult.items()));
+     *         ctx.export("merakiNetworksHealthAlertsExample", example.items());
      *     }
      * }
      * }
@@ -9926,7 +9926,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksHealthAlertsExample", example.applyValue(getHealthAlertsResult -> getHealthAlertsResult.items()));
+     *         ctx.export("merakiNetworksHealthAlertsExample", example.items());
      *     }
      * }
      * }
@@ -9972,7 +9972,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksInsightApplicationsHealthByTimeExample", example.applyValue(getInsightApplicationsHealthByTimeResult -> getInsightApplicationsHealthByTimeResult.items()));
+     *         ctx.export("merakiNetworksInsightApplicationsHealthByTimeExample", example.items());
      *     }
      * }
      * }
@@ -10018,7 +10018,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksInsightApplicationsHealthByTimeExample", example.applyValue(getInsightApplicationsHealthByTimeResult -> getInsightApplicationsHealthByTimeResult.items()));
+     *         ctx.export("merakiNetworksInsightApplicationsHealthByTimeExample", example.items());
      *     }
      * }
      * }
@@ -10064,7 +10064,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksInsightApplicationsHealthByTimeExample", example.applyValue(getInsightApplicationsHealthByTimeResult -> getInsightApplicationsHealthByTimeResult.items()));
+     *         ctx.export("merakiNetworksInsightApplicationsHealthByTimeExample", example.items());
      *     }
      * }
      * }
@@ -10110,7 +10110,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksInsightApplicationsHealthByTimeExample", example.applyValue(getInsightApplicationsHealthByTimeResult -> getInsightApplicationsHealthByTimeResult.items()));
+     *         ctx.export("merakiNetworksInsightApplicationsHealthByTimeExample", example.items());
      *     }
      * }
      * }
@@ -10156,7 +10156,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksInsightApplicationsHealthByTimeExample", example.applyValue(getInsightApplicationsHealthByTimeResult -> getInsightApplicationsHealthByTimeResult.items()));
+     *         ctx.export("merakiNetworksInsightApplicationsHealthByTimeExample", example.items());
      *     }
      * }
      * }
@@ -10246,7 +10246,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksNetflowExample", example.applyValue(getNetflowResult -> getNetflowResult.item()));
+     *         ctx.export("merakiNetworksNetflowExample", example.item());
      *     }
      * }
      * }
@@ -10287,7 +10287,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksNetflowExample", example.applyValue(getNetflowResult -> getNetflowResult.item()));
+     *         ctx.export("merakiNetworksNetflowExample", example.item());
      *     }
      * }
      * }
@@ -10328,7 +10328,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksNetflowExample", example.applyValue(getNetflowResult -> getNetflowResult.item()));
+     *         ctx.export("merakiNetworksNetflowExample", example.item());
      *     }
      * }
      * }
@@ -10369,7 +10369,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksNetflowExample", example.applyValue(getNetflowResult -> getNetflowResult.item()));
+     *         ctx.export("merakiNetworksNetflowExample", example.item());
      *     }
      * }
      * }
@@ -10410,7 +10410,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksNetflowExample", example.applyValue(getNetflowResult -> getNetflowResult.item()));
+     *         ctx.export("merakiNetworksNetflowExample", example.item());
      *     }
      * }
      * }
@@ -10457,7 +10457,7 @@ public final class NetworksFunctions {
      *             .username("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksPiiPiiKeysExample", example.applyValue(getPiiPiiKeysResult -> getPiiPiiKeysResult.item()));
+     *         ctx.export("merakiNetworksPiiPiiKeysExample", example.item());
      *     }
      * }
      * }
@@ -10504,7 +10504,7 @@ public final class NetworksFunctions {
      *             .username("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksPiiPiiKeysExample", example.applyValue(getPiiPiiKeysResult -> getPiiPiiKeysResult.item()));
+     *         ctx.export("merakiNetworksPiiPiiKeysExample", example.item());
      *     }
      * }
      * }
@@ -10551,7 +10551,7 @@ public final class NetworksFunctions {
      *             .username("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksPiiPiiKeysExample", example.applyValue(getPiiPiiKeysResult -> getPiiPiiKeysResult.item()));
+     *         ctx.export("merakiNetworksPiiPiiKeysExample", example.item());
      *     }
      * }
      * }
@@ -10598,7 +10598,7 @@ public final class NetworksFunctions {
      *             .username("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksPiiPiiKeysExample", example.applyValue(getPiiPiiKeysResult -> getPiiPiiKeysResult.item()));
+     *         ctx.export("merakiNetworksPiiPiiKeysExample", example.item());
      *     }
      * }
      * }
@@ -10645,7 +10645,7 @@ public final class NetworksFunctions {
      *             .username("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksPiiPiiKeysExample", example.applyValue(getPiiPiiKeysResult -> getPiiPiiKeysResult.item()));
+     *         ctx.export("merakiNetworksPiiPiiKeysExample", example.item());
      *     }
      * }
      * }
@@ -10741,7 +10741,7 @@ public final class NetworksFunctions {
      *             .username("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksPiiSmDevicesForKeyExample", example.applyValue(getPiiSmDevicesForKeyResult -> getPiiSmDevicesForKeyResult.item()));
+     *         ctx.export("merakiNetworksPiiSmDevicesForKeyExample", example.item());
      *     }
      * }
      * }
@@ -10788,7 +10788,7 @@ public final class NetworksFunctions {
      *             .username("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksPiiSmDevicesForKeyExample", example.applyValue(getPiiSmDevicesForKeyResult -> getPiiSmDevicesForKeyResult.item()));
+     *         ctx.export("merakiNetworksPiiSmDevicesForKeyExample", example.item());
      *     }
      * }
      * }
@@ -10835,7 +10835,7 @@ public final class NetworksFunctions {
      *             .username("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksPiiSmDevicesForKeyExample", example.applyValue(getPiiSmDevicesForKeyResult -> getPiiSmDevicesForKeyResult.item()));
+     *         ctx.export("merakiNetworksPiiSmDevicesForKeyExample", example.item());
      *     }
      * }
      * }
@@ -10882,7 +10882,7 @@ public final class NetworksFunctions {
      *             .username("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksPiiSmDevicesForKeyExample", example.applyValue(getPiiSmDevicesForKeyResult -> getPiiSmDevicesForKeyResult.item()));
+     *         ctx.export("merakiNetworksPiiSmDevicesForKeyExample", example.item());
      *     }
      * }
      * }
@@ -10929,7 +10929,7 @@ public final class NetworksFunctions {
      *             .username("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksPiiSmDevicesForKeyExample", example.applyValue(getPiiSmDevicesForKeyResult -> getPiiSmDevicesForKeyResult.item()));
+     *         ctx.export("merakiNetworksPiiSmDevicesForKeyExample", example.item());
      *     }
      * }
      * }
@@ -10976,7 +10976,7 @@ public final class NetworksFunctions {
      *             .username("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksPiiSmOwnersForKeyExample", example.applyValue(getPiiSmOwnersForKeyResult -> getPiiSmOwnersForKeyResult.item()));
+     *         ctx.export("merakiNetworksPiiSmOwnersForKeyExample", example.item());
      *     }
      * }
      * }
@@ -11023,7 +11023,7 @@ public final class NetworksFunctions {
      *             .username("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksPiiSmOwnersForKeyExample", example.applyValue(getPiiSmOwnersForKeyResult -> getPiiSmOwnersForKeyResult.item()));
+     *         ctx.export("merakiNetworksPiiSmOwnersForKeyExample", example.item());
      *     }
      * }
      * }
@@ -11070,7 +11070,7 @@ public final class NetworksFunctions {
      *             .username("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksPiiSmOwnersForKeyExample", example.applyValue(getPiiSmOwnersForKeyResult -> getPiiSmOwnersForKeyResult.item()));
+     *         ctx.export("merakiNetworksPiiSmOwnersForKeyExample", example.item());
      *     }
      * }
      * }
@@ -11117,7 +11117,7 @@ public final class NetworksFunctions {
      *             .username("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksPiiSmOwnersForKeyExample", example.applyValue(getPiiSmOwnersForKeyResult -> getPiiSmOwnersForKeyResult.item()));
+     *         ctx.export("merakiNetworksPiiSmOwnersForKeyExample", example.item());
      *     }
      * }
      * }
@@ -11164,7 +11164,7 @@ public final class NetworksFunctions {
      *             .username("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksPiiSmOwnersForKeyExample", example.applyValue(getPiiSmOwnersForKeyResult -> getPiiSmOwnersForKeyResult.item()));
+     *         ctx.export("merakiNetworksPiiSmOwnersForKeyExample", example.item());
      *     }
      * }
      * }
@@ -11210,7 +11210,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksPoliciesByClientExample", example.applyValue(getPoliciesByClientResult -> getPoliciesByClientResult.items()));
+     *         ctx.export("merakiNetworksPoliciesByClientExample", example.items());
      *     }
      * }
      * }
@@ -11256,7 +11256,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksPoliciesByClientExample", example.applyValue(getPoliciesByClientResult -> getPoliciesByClientResult.items()));
+     *         ctx.export("merakiNetworksPoliciesByClientExample", example.items());
      *     }
      * }
      * }
@@ -11302,7 +11302,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksPoliciesByClientExample", example.applyValue(getPoliciesByClientResult -> getPoliciesByClientResult.items()));
+     *         ctx.export("merakiNetworksPoliciesByClientExample", example.items());
      *     }
      * }
      * }
@@ -11348,7 +11348,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksPoliciesByClientExample", example.applyValue(getPoliciesByClientResult -> getPoliciesByClientResult.items()));
+     *         ctx.export("merakiNetworksPoliciesByClientExample", example.items());
      *     }
      * }
      * }
@@ -11394,7 +11394,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksPoliciesByClientExample", example.applyValue(getPoliciesByClientResult -> getPoliciesByClientResult.items()));
+     *         ctx.export("merakiNetworksPoliciesByClientExample", example.items());
      *     }
      * }
      * }
@@ -11435,7 +11435,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSensorAlertsCurrentOverviewByMetricExample", example.applyValue(getSensorAlertsCurrentOverviewByMetricResult -> getSensorAlertsCurrentOverviewByMetricResult.item()));
+     *         ctx.export("merakiNetworksSensorAlertsCurrentOverviewByMetricExample", example.item());
      *     }
      * }
      * }
@@ -11476,7 +11476,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSensorAlertsCurrentOverviewByMetricExample", example.applyValue(getSensorAlertsCurrentOverviewByMetricResult -> getSensorAlertsCurrentOverviewByMetricResult.item()));
+     *         ctx.export("merakiNetworksSensorAlertsCurrentOverviewByMetricExample", example.item());
      *     }
      * }
      * }
@@ -11517,7 +11517,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSensorAlertsCurrentOverviewByMetricExample", example.applyValue(getSensorAlertsCurrentOverviewByMetricResult -> getSensorAlertsCurrentOverviewByMetricResult.item()));
+     *         ctx.export("merakiNetworksSensorAlertsCurrentOverviewByMetricExample", example.item());
      *     }
      * }
      * }
@@ -11558,7 +11558,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSensorAlertsCurrentOverviewByMetricExample", example.applyValue(getSensorAlertsCurrentOverviewByMetricResult -> getSensorAlertsCurrentOverviewByMetricResult.item()));
+     *         ctx.export("merakiNetworksSensorAlertsCurrentOverviewByMetricExample", example.item());
      *     }
      * }
      * }
@@ -11599,7 +11599,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSensorAlertsCurrentOverviewByMetricExample", example.applyValue(getSensorAlertsCurrentOverviewByMetricResult -> getSensorAlertsCurrentOverviewByMetricResult.item()));
+     *         ctx.export("merakiNetworksSensorAlertsCurrentOverviewByMetricExample", example.item());
      *     }
      * }
      * }
@@ -11644,7 +11644,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSensorAlertsOverviewByMetricExample", example.applyValue(getSensorAlertsOverviewByMetricResult -> getSensorAlertsOverviewByMetricResult.items()));
+     *         ctx.export("merakiNetworksSensorAlertsOverviewByMetricExample", example.items());
      *     }
      * }
      * }
@@ -11689,7 +11689,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSensorAlertsOverviewByMetricExample", example.applyValue(getSensorAlertsOverviewByMetricResult -> getSensorAlertsOverviewByMetricResult.items()));
+     *         ctx.export("merakiNetworksSensorAlertsOverviewByMetricExample", example.items());
      *     }
      * }
      * }
@@ -11734,7 +11734,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSensorAlertsOverviewByMetricExample", example.applyValue(getSensorAlertsOverviewByMetricResult -> getSensorAlertsOverviewByMetricResult.items()));
+     *         ctx.export("merakiNetworksSensorAlertsOverviewByMetricExample", example.items());
      *     }
      * }
      * }
@@ -11779,7 +11779,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSensorAlertsOverviewByMetricExample", example.applyValue(getSensorAlertsOverviewByMetricResult -> getSensorAlertsOverviewByMetricResult.items()));
+     *         ctx.export("merakiNetworksSensorAlertsOverviewByMetricExample", example.items());
      *     }
      * }
      * }
@@ -11824,7 +11824,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSensorAlertsOverviewByMetricExample", example.applyValue(getSensorAlertsOverviewByMetricResult -> getSensorAlertsOverviewByMetricResult.items()));
+     *         ctx.export("merakiNetworksSensorAlertsOverviewByMetricExample", example.items());
      *     }
      * }
      * }
@@ -11963,7 +11963,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSensorRelationshipsExample", example.applyValue(getSensorRelationshipsResult -> getSensorRelationshipsResult.items()));
+     *         ctx.export("merakiNetworksSensorRelationshipsExample", example.items());
      *     }
      * }
      * }
@@ -12004,7 +12004,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSensorRelationshipsExample", example.applyValue(getSensorRelationshipsResult -> getSensorRelationshipsResult.items()));
+     *         ctx.export("merakiNetworksSensorRelationshipsExample", example.items());
      *     }
      * }
      * }
@@ -12045,7 +12045,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSensorRelationshipsExample", example.applyValue(getSensorRelationshipsResult -> getSensorRelationshipsResult.items()));
+     *         ctx.export("merakiNetworksSensorRelationshipsExample", example.items());
      *     }
      * }
      * }
@@ -12086,7 +12086,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSensorRelationshipsExample", example.applyValue(getSensorRelationshipsResult -> getSensorRelationshipsResult.items()));
+     *         ctx.export("merakiNetworksSensorRelationshipsExample", example.items());
      *     }
      * }
      * }
@@ -12127,7 +12127,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSensorRelationshipsExample", example.applyValue(getSensorRelationshipsResult -> getSensorRelationshipsResult.items()));
+     *         ctx.export("merakiNetworksSensorRelationshipsExample", example.items());
      *     }
      * }
      * }
@@ -12168,7 +12168,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSettingsExample", example.applyValue(getSettingsResult -> getSettingsResult.item()));
+     *         ctx.export("merakiNetworksSettingsExample", example.item());
      *     }
      * }
      * }
@@ -12209,7 +12209,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSettingsExample", example.applyValue(getSettingsResult -> getSettingsResult.item()));
+     *         ctx.export("merakiNetworksSettingsExample", example.item());
      *     }
      * }
      * }
@@ -12250,7 +12250,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSettingsExample", example.applyValue(getSettingsResult -> getSettingsResult.item()));
+     *         ctx.export("merakiNetworksSettingsExample", example.item());
      *     }
      * }
      * }
@@ -12291,7 +12291,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSettingsExample", example.applyValue(getSettingsResult -> getSettingsResult.item()));
+     *         ctx.export("merakiNetworksSettingsExample", example.item());
      *     }
      * }
      * }
@@ -12332,7 +12332,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSettingsExample", example.applyValue(getSettingsResult -> getSettingsResult.item()));
+     *         ctx.export("merakiNetworksSettingsExample", example.item());
      *     }
      * }
      * }
@@ -12374,7 +12374,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmBypassActivationLockAttemptsExample", example.applyValue(getSmBypassActivationLockAttemptsResult -> getSmBypassActivationLockAttemptsResult.item()));
+     *         ctx.export("merakiNetworksSmBypassActivationLockAttemptsExample", example.item());
      *     }
      * }
      * }
@@ -12416,7 +12416,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmBypassActivationLockAttemptsExample", example.applyValue(getSmBypassActivationLockAttemptsResult -> getSmBypassActivationLockAttemptsResult.item()));
+     *         ctx.export("merakiNetworksSmBypassActivationLockAttemptsExample", example.item());
      *     }
      * }
      * }
@@ -12458,7 +12458,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmBypassActivationLockAttemptsExample", example.applyValue(getSmBypassActivationLockAttemptsResult -> getSmBypassActivationLockAttemptsResult.item()));
+     *         ctx.export("merakiNetworksSmBypassActivationLockAttemptsExample", example.item());
      *     }
      * }
      * }
@@ -12500,7 +12500,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmBypassActivationLockAttemptsExample", example.applyValue(getSmBypassActivationLockAttemptsResult -> getSmBypassActivationLockAttemptsResult.item()));
+     *         ctx.export("merakiNetworksSmBypassActivationLockAttemptsExample", example.item());
      *     }
      * }
      * }
@@ -12542,7 +12542,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmBypassActivationLockAttemptsExample", example.applyValue(getSmBypassActivationLockAttemptsResult -> getSmBypassActivationLockAttemptsResult.item()));
+     *         ctx.export("merakiNetworksSmBypassActivationLockAttemptsExample", example.item());
      *     }
      * }
      * }
@@ -12593,7 +12593,7 @@ public final class NetworksFunctions {
      *             .wifiMacs("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesExample", example.applyValue(getSmDevicesResult -> getSmDevicesResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesExample", example.items());
      *     }
      * }
      * }
@@ -12644,7 +12644,7 @@ public final class NetworksFunctions {
      *             .wifiMacs("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesExample", example.applyValue(getSmDevicesResult -> getSmDevicesResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesExample", example.items());
      *     }
      * }
      * }
@@ -12695,7 +12695,7 @@ public final class NetworksFunctions {
      *             .wifiMacs("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesExample", example.applyValue(getSmDevicesResult -> getSmDevicesResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesExample", example.items());
      *     }
      * }
      * }
@@ -12746,7 +12746,7 @@ public final class NetworksFunctions {
      *             .wifiMacs("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesExample", example.applyValue(getSmDevicesResult -> getSmDevicesResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesExample", example.items());
      *     }
      * }
      * }
@@ -12797,7 +12797,7 @@ public final class NetworksFunctions {
      *             .wifiMacs("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesExample", example.applyValue(getSmDevicesResult -> getSmDevicesResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesExample", example.items());
      *     }
      * }
      * }
@@ -12839,7 +12839,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesCellularUsageHistoryExample", example.applyValue(getSmDevicesCellularUsageHistoryResult -> getSmDevicesCellularUsageHistoryResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesCellularUsageHistoryExample", example.items());
      *     }
      * }
      * }
@@ -12881,7 +12881,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesCellularUsageHistoryExample", example.applyValue(getSmDevicesCellularUsageHistoryResult -> getSmDevicesCellularUsageHistoryResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesCellularUsageHistoryExample", example.items());
      *     }
      * }
      * }
@@ -12923,7 +12923,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesCellularUsageHistoryExample", example.applyValue(getSmDevicesCellularUsageHistoryResult -> getSmDevicesCellularUsageHistoryResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesCellularUsageHistoryExample", example.items());
      *     }
      * }
      * }
@@ -12965,7 +12965,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesCellularUsageHistoryExample", example.applyValue(getSmDevicesCellularUsageHistoryResult -> getSmDevicesCellularUsageHistoryResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesCellularUsageHistoryExample", example.items());
      *     }
      * }
      * }
@@ -13007,7 +13007,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesCellularUsageHistoryExample", example.applyValue(getSmDevicesCellularUsageHistoryResult -> getSmDevicesCellularUsageHistoryResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesCellularUsageHistoryExample", example.items());
      *     }
      * }
      * }
@@ -13049,7 +13049,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesCertsExample", example.applyValue(getSmDevicesCertsResult -> getSmDevicesCertsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesCertsExample", example.items());
      *     }
      * }
      * }
@@ -13091,7 +13091,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesCertsExample", example.applyValue(getSmDevicesCertsResult -> getSmDevicesCertsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesCertsExample", example.items());
      *     }
      * }
      * }
@@ -13133,7 +13133,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesCertsExample", example.applyValue(getSmDevicesCertsResult -> getSmDevicesCertsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesCertsExample", example.items());
      *     }
      * }
      * }
@@ -13175,7 +13175,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesCertsExample", example.applyValue(getSmDevicesCertsResult -> getSmDevicesCertsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesCertsExample", example.items());
      *     }
      * }
      * }
@@ -13217,7 +13217,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesCertsExample", example.applyValue(getSmDevicesCertsResult -> getSmDevicesCertsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesCertsExample", example.items());
      *     }
      * }
      * }
@@ -13262,7 +13262,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesConnectivityExample", example.applyValue(getSmDevicesConnectivityResult -> getSmDevicesConnectivityResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesConnectivityExample", example.items());
      *     }
      * }
      * }
@@ -13307,7 +13307,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesConnectivityExample", example.applyValue(getSmDevicesConnectivityResult -> getSmDevicesConnectivityResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesConnectivityExample", example.items());
      *     }
      * }
      * }
@@ -13352,7 +13352,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesConnectivityExample", example.applyValue(getSmDevicesConnectivityResult -> getSmDevicesConnectivityResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesConnectivityExample", example.items());
      *     }
      * }
      * }
@@ -13397,7 +13397,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesConnectivityExample", example.applyValue(getSmDevicesConnectivityResult -> getSmDevicesConnectivityResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesConnectivityExample", example.items());
      *     }
      * }
      * }
@@ -13442,7 +13442,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesConnectivityExample", example.applyValue(getSmDevicesConnectivityResult -> getSmDevicesConnectivityResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesConnectivityExample", example.items());
      *     }
      * }
      * }
@@ -13487,7 +13487,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesDesktopLogsExample", example.applyValue(getSmDevicesDesktopLogsResult -> getSmDevicesDesktopLogsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesDesktopLogsExample", example.items());
      *     }
      * }
      * }
@@ -13532,7 +13532,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesDesktopLogsExample", example.applyValue(getSmDevicesDesktopLogsResult -> getSmDevicesDesktopLogsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesDesktopLogsExample", example.items());
      *     }
      * }
      * }
@@ -13577,7 +13577,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesDesktopLogsExample", example.applyValue(getSmDevicesDesktopLogsResult -> getSmDevicesDesktopLogsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesDesktopLogsExample", example.items());
      *     }
      * }
      * }
@@ -13622,7 +13622,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesDesktopLogsExample", example.applyValue(getSmDevicesDesktopLogsResult -> getSmDevicesDesktopLogsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesDesktopLogsExample", example.items());
      *     }
      * }
      * }
@@ -13667,7 +13667,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesDesktopLogsExample", example.applyValue(getSmDevicesDesktopLogsResult -> getSmDevicesDesktopLogsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesDesktopLogsExample", example.items());
      *     }
      * }
      * }
@@ -13712,7 +13712,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesDeviceCommandLogsExample", example.applyValue(getSmDevicesDeviceCommandLogsResult -> getSmDevicesDeviceCommandLogsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesDeviceCommandLogsExample", example.items());
      *     }
      * }
      * }
@@ -13757,7 +13757,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesDeviceCommandLogsExample", example.applyValue(getSmDevicesDeviceCommandLogsResult -> getSmDevicesDeviceCommandLogsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesDeviceCommandLogsExample", example.items());
      *     }
      * }
      * }
@@ -13802,7 +13802,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesDeviceCommandLogsExample", example.applyValue(getSmDevicesDeviceCommandLogsResult -> getSmDevicesDeviceCommandLogsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesDeviceCommandLogsExample", example.items());
      *     }
      * }
      * }
@@ -13847,7 +13847,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesDeviceCommandLogsExample", example.applyValue(getSmDevicesDeviceCommandLogsResult -> getSmDevicesDeviceCommandLogsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesDeviceCommandLogsExample", example.items());
      *     }
      * }
      * }
@@ -13892,7 +13892,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesDeviceCommandLogsExample", example.applyValue(getSmDevicesDeviceCommandLogsResult -> getSmDevicesDeviceCommandLogsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesDeviceCommandLogsExample", example.items());
      *     }
      * }
      * }
@@ -13934,7 +13934,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesDeviceProfilesExample", example.applyValue(getSmDevicesDeviceProfilesResult -> getSmDevicesDeviceProfilesResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesDeviceProfilesExample", example.items());
      *     }
      * }
      * }
@@ -13976,7 +13976,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesDeviceProfilesExample", example.applyValue(getSmDevicesDeviceProfilesResult -> getSmDevicesDeviceProfilesResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesDeviceProfilesExample", example.items());
      *     }
      * }
      * }
@@ -14018,7 +14018,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesDeviceProfilesExample", example.applyValue(getSmDevicesDeviceProfilesResult -> getSmDevicesDeviceProfilesResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesDeviceProfilesExample", example.items());
      *     }
      * }
      * }
@@ -14060,7 +14060,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesDeviceProfilesExample", example.applyValue(getSmDevicesDeviceProfilesResult -> getSmDevicesDeviceProfilesResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesDeviceProfilesExample", example.items());
      *     }
      * }
      * }
@@ -14102,7 +14102,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesDeviceProfilesExample", example.applyValue(getSmDevicesDeviceProfilesResult -> getSmDevicesDeviceProfilesResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesDeviceProfilesExample", example.items());
      *     }
      * }
      * }
@@ -14144,7 +14144,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesNetworkAdaptersExample", example.applyValue(getSmDevicesNetworkAdaptersResult -> getSmDevicesNetworkAdaptersResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesNetworkAdaptersExample", example.items());
      *     }
      * }
      * }
@@ -14186,7 +14186,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesNetworkAdaptersExample", example.applyValue(getSmDevicesNetworkAdaptersResult -> getSmDevicesNetworkAdaptersResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesNetworkAdaptersExample", example.items());
      *     }
      * }
      * }
@@ -14228,7 +14228,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesNetworkAdaptersExample", example.applyValue(getSmDevicesNetworkAdaptersResult -> getSmDevicesNetworkAdaptersResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesNetworkAdaptersExample", example.items());
      *     }
      * }
      * }
@@ -14270,7 +14270,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesNetworkAdaptersExample", example.applyValue(getSmDevicesNetworkAdaptersResult -> getSmDevicesNetworkAdaptersResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesNetworkAdaptersExample", example.items());
      *     }
      * }
      * }
@@ -14312,7 +14312,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesNetworkAdaptersExample", example.applyValue(getSmDevicesNetworkAdaptersResult -> getSmDevicesNetworkAdaptersResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesNetworkAdaptersExample", example.items());
      *     }
      * }
      * }
@@ -14357,7 +14357,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesPerformanceHistoryExample", example.applyValue(getSmDevicesPerformanceHistoryResult -> getSmDevicesPerformanceHistoryResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesPerformanceHistoryExample", example.items());
      *     }
      * }
      * }
@@ -14402,7 +14402,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesPerformanceHistoryExample", example.applyValue(getSmDevicesPerformanceHistoryResult -> getSmDevicesPerformanceHistoryResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesPerformanceHistoryExample", example.items());
      *     }
      * }
      * }
@@ -14447,7 +14447,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesPerformanceHistoryExample", example.applyValue(getSmDevicesPerformanceHistoryResult -> getSmDevicesPerformanceHistoryResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesPerformanceHistoryExample", example.items());
      *     }
      * }
      * }
@@ -14492,7 +14492,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesPerformanceHistoryExample", example.applyValue(getSmDevicesPerformanceHistoryResult -> getSmDevicesPerformanceHistoryResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesPerformanceHistoryExample", example.items());
      *     }
      * }
      * }
@@ -14537,7 +14537,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesPerformanceHistoryExample", example.applyValue(getSmDevicesPerformanceHistoryResult -> getSmDevicesPerformanceHistoryResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesPerformanceHistoryExample", example.items());
      *     }
      * }
      * }
@@ -14579,7 +14579,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesSecurityCentersExample", example.applyValue(getSmDevicesSecurityCentersResult -> getSmDevicesSecurityCentersResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesSecurityCentersExample", example.items());
      *     }
      * }
      * }
@@ -14621,7 +14621,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesSecurityCentersExample", example.applyValue(getSmDevicesSecurityCentersResult -> getSmDevicesSecurityCentersResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesSecurityCentersExample", example.items());
      *     }
      * }
      * }
@@ -14663,7 +14663,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesSecurityCentersExample", example.applyValue(getSmDevicesSecurityCentersResult -> getSmDevicesSecurityCentersResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesSecurityCentersExample", example.items());
      *     }
      * }
      * }
@@ -14705,7 +14705,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesSecurityCentersExample", example.applyValue(getSmDevicesSecurityCentersResult -> getSmDevicesSecurityCentersResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesSecurityCentersExample", example.items());
      *     }
      * }
      * }
@@ -14747,7 +14747,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesSecurityCentersExample", example.applyValue(getSmDevicesSecurityCentersResult -> getSmDevicesSecurityCentersResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesSecurityCentersExample", example.items());
      *     }
      * }
      * }
@@ -14789,7 +14789,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesSecurityCentersExample", example.applyValue(getSmDevicesSecurityCentersResult -> getSmDevicesSecurityCentersResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesSecurityCentersExample", example.items());
      *     }
      * }
      * }
@@ -14831,7 +14831,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesSecurityCentersExample", example.applyValue(getSmDevicesSecurityCentersResult -> getSmDevicesSecurityCentersResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesSecurityCentersExample", example.items());
      *     }
      * }
      * }
@@ -14873,7 +14873,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesWlanListsExample", example.applyValue(getSmDevicesWlanListsResult -> getSmDevicesWlanListsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesWlanListsExample", example.items());
      *     }
      * }
      * }
@@ -14915,7 +14915,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesWlanListsExample", example.applyValue(getSmDevicesWlanListsResult -> getSmDevicesWlanListsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesWlanListsExample", example.items());
      *     }
      * }
      * }
@@ -14957,7 +14957,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesWlanListsExample", example.applyValue(getSmDevicesWlanListsResult -> getSmDevicesWlanListsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesWlanListsExample", example.items());
      *     }
      * }
      * }
@@ -14999,7 +14999,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesWlanListsExample", example.applyValue(getSmDevicesWlanListsResult -> getSmDevicesWlanListsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesWlanListsExample", example.items());
      *     }
      * }
      * }
@@ -15041,7 +15041,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmDevicesWlanListsExample", example.applyValue(getSmDevicesWlanListsResult -> getSmDevicesWlanListsResult.items()));
+     *         ctx.export("merakiNetworksSmDevicesWlanListsExample", example.items());
      *     }
      * }
      * }
@@ -15083,7 +15083,7 @@ public final class NetworksFunctions {
      *             .payloadTypes("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmProfilesExample", example.applyValue(getSmProfilesResult -> getSmProfilesResult.items()));
+     *         ctx.export("merakiNetworksSmProfilesExample", example.items());
      *     }
      * }
      * }
@@ -15125,7 +15125,7 @@ public final class NetworksFunctions {
      *             .payloadTypes("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmProfilesExample", example.applyValue(getSmProfilesResult -> getSmProfilesResult.items()));
+     *         ctx.export("merakiNetworksSmProfilesExample", example.items());
      *     }
      * }
      * }
@@ -15167,7 +15167,7 @@ public final class NetworksFunctions {
      *             .payloadTypes("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmProfilesExample", example.applyValue(getSmProfilesResult -> getSmProfilesResult.items()));
+     *         ctx.export("merakiNetworksSmProfilesExample", example.items());
      *     }
      * }
      * }
@@ -15209,7 +15209,7 @@ public final class NetworksFunctions {
      *             .payloadTypes("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmProfilesExample", example.applyValue(getSmProfilesResult -> getSmProfilesResult.items()));
+     *         ctx.export("merakiNetworksSmProfilesExample", example.items());
      *     }
      * }
      * }
@@ -15251,7 +15251,7 @@ public final class NetworksFunctions {
      *             .payloadTypes("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmProfilesExample", example.applyValue(getSmProfilesResult -> getSmProfilesResult.items()));
+     *         ctx.export("merakiNetworksSmProfilesExample", example.items());
      *     }
      * }
      * }
@@ -15344,7 +15344,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmTrustedAccessConfigsExample", example.applyValue(getSmTrustedAccessConfigsResult -> getSmTrustedAccessConfigsResult.items()));
+     *         ctx.export("merakiNetworksSmTrustedAccessConfigsExample", example.items());
      *     }
      * }
      * }
@@ -15388,7 +15388,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmTrustedAccessConfigsExample", example.applyValue(getSmTrustedAccessConfigsResult -> getSmTrustedAccessConfigsResult.items()));
+     *         ctx.export("merakiNetworksSmTrustedAccessConfigsExample", example.items());
      *     }
      * }
      * }
@@ -15432,7 +15432,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmTrustedAccessConfigsExample", example.applyValue(getSmTrustedAccessConfigsResult -> getSmTrustedAccessConfigsResult.items()));
+     *         ctx.export("merakiNetworksSmTrustedAccessConfigsExample", example.items());
      *     }
      * }
      * }
@@ -15476,7 +15476,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmTrustedAccessConfigsExample", example.applyValue(getSmTrustedAccessConfigsResult -> getSmTrustedAccessConfigsResult.items()));
+     *         ctx.export("merakiNetworksSmTrustedAccessConfigsExample", example.items());
      *     }
      * }
      * }
@@ -15520,7 +15520,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmTrustedAccessConfigsExample", example.applyValue(getSmTrustedAccessConfigsResult -> getSmTrustedAccessConfigsResult.items()));
+     *         ctx.export("merakiNetworksSmTrustedAccessConfigsExample", example.items());
      *     }
      * }
      * }
@@ -15564,7 +15564,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmUserAccessDevicesExample", example.applyValue(getSmUserAccessDevicesResult -> getSmUserAccessDevicesResult.items()));
+     *         ctx.export("merakiNetworksSmUserAccessDevicesExample", example.items());
      *     }
      * }
      * }
@@ -15608,7 +15608,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmUserAccessDevicesExample", example.applyValue(getSmUserAccessDevicesResult -> getSmUserAccessDevicesResult.items()));
+     *         ctx.export("merakiNetworksSmUserAccessDevicesExample", example.items());
      *     }
      * }
      * }
@@ -15652,7 +15652,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmUserAccessDevicesExample", example.applyValue(getSmUserAccessDevicesResult -> getSmUserAccessDevicesResult.items()));
+     *         ctx.export("merakiNetworksSmUserAccessDevicesExample", example.items());
      *     }
      * }
      * }
@@ -15696,7 +15696,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmUserAccessDevicesExample", example.applyValue(getSmUserAccessDevicesResult -> getSmUserAccessDevicesResult.items()));
+     *         ctx.export("merakiNetworksSmUserAccessDevicesExample", example.items());
      *     }
      * }
      * }
@@ -15740,7 +15740,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmUserAccessDevicesExample", example.applyValue(getSmUserAccessDevicesResult -> getSmUserAccessDevicesResult.items()));
+     *         ctx.export("merakiNetworksSmUserAccessDevicesExample", example.items());
      *     }
      * }
      * }
@@ -15785,7 +15785,7 @@ public final class NetworksFunctions {
      *             .usernames("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmUsersExample", example.applyValue(getSmUsersResult -> getSmUsersResult.items()));
+     *         ctx.export("merakiNetworksSmUsersExample", example.items());
      *     }
      * }
      * }
@@ -15830,7 +15830,7 @@ public final class NetworksFunctions {
      *             .usernames("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmUsersExample", example.applyValue(getSmUsersResult -> getSmUsersResult.items()));
+     *         ctx.export("merakiNetworksSmUsersExample", example.items());
      *     }
      * }
      * }
@@ -15875,7 +15875,7 @@ public final class NetworksFunctions {
      *             .usernames("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmUsersExample", example.applyValue(getSmUsersResult -> getSmUsersResult.items()));
+     *         ctx.export("merakiNetworksSmUsersExample", example.items());
      *     }
      * }
      * }
@@ -15920,7 +15920,7 @@ public final class NetworksFunctions {
      *             .usernames("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmUsersExample", example.applyValue(getSmUsersResult -> getSmUsersResult.items()));
+     *         ctx.export("merakiNetworksSmUsersExample", example.items());
      *     }
      * }
      * }
@@ -15965,7 +15965,7 @@ public final class NetworksFunctions {
      *             .usernames("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmUsersExample", example.applyValue(getSmUsersResult -> getSmUsersResult.items()));
+     *         ctx.export("merakiNetworksSmUsersExample", example.items());
      *     }
      * }
      * }
@@ -16007,7 +16007,7 @@ public final class NetworksFunctions {
      *             .userId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmUsersDeviceProfilesExample", example.applyValue(getSmUsersDeviceProfilesResult -> getSmUsersDeviceProfilesResult.items()));
+     *         ctx.export("merakiNetworksSmUsersDeviceProfilesExample", example.items());
      *     }
      * }
      * }
@@ -16049,7 +16049,7 @@ public final class NetworksFunctions {
      *             .userId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmUsersDeviceProfilesExample", example.applyValue(getSmUsersDeviceProfilesResult -> getSmUsersDeviceProfilesResult.items()));
+     *         ctx.export("merakiNetworksSmUsersDeviceProfilesExample", example.items());
      *     }
      * }
      * }
@@ -16091,7 +16091,7 @@ public final class NetworksFunctions {
      *             .userId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmUsersDeviceProfilesExample", example.applyValue(getSmUsersDeviceProfilesResult -> getSmUsersDeviceProfilesResult.items()));
+     *         ctx.export("merakiNetworksSmUsersDeviceProfilesExample", example.items());
      *     }
      * }
      * }
@@ -16133,7 +16133,7 @@ public final class NetworksFunctions {
      *             .userId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmUsersDeviceProfilesExample", example.applyValue(getSmUsersDeviceProfilesResult -> getSmUsersDeviceProfilesResult.items()));
+     *         ctx.export("merakiNetworksSmUsersDeviceProfilesExample", example.items());
      *     }
      * }
      * }
@@ -16175,7 +16175,7 @@ public final class NetworksFunctions {
      *             .userId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmUsersDeviceProfilesExample", example.applyValue(getSmUsersDeviceProfilesResult -> getSmUsersDeviceProfilesResult.items()));
+     *         ctx.export("merakiNetworksSmUsersDeviceProfilesExample", example.items());
      *     }
      * }
      * }
@@ -16217,7 +16217,7 @@ public final class NetworksFunctions {
      *             .userId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmUsersSoftwaresExample", example.applyValue(getSmUsersSoftwaresResult -> getSmUsersSoftwaresResult.items()));
+     *         ctx.export("merakiNetworksSmUsersSoftwaresExample", example.items());
      *     }
      * }
      * }
@@ -16259,7 +16259,7 @@ public final class NetworksFunctions {
      *             .userId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmUsersSoftwaresExample", example.applyValue(getSmUsersSoftwaresResult -> getSmUsersSoftwaresResult.items()));
+     *         ctx.export("merakiNetworksSmUsersSoftwaresExample", example.items());
      *     }
      * }
      * }
@@ -16301,7 +16301,7 @@ public final class NetworksFunctions {
      *             .userId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmUsersSoftwaresExample", example.applyValue(getSmUsersSoftwaresResult -> getSmUsersSoftwaresResult.items()));
+     *         ctx.export("merakiNetworksSmUsersSoftwaresExample", example.items());
      *     }
      * }
      * }
@@ -16343,7 +16343,7 @@ public final class NetworksFunctions {
      *             .userId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmUsersSoftwaresExample", example.applyValue(getSmUsersSoftwaresResult -> getSmUsersSoftwaresResult.items()));
+     *         ctx.export("merakiNetworksSmUsersSoftwaresExample", example.items());
      *     }
      * }
      * }
@@ -16385,7 +16385,7 @@ public final class NetworksFunctions {
      *             .userId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSmUsersSoftwaresExample", example.applyValue(getSmUsersSoftwaresResult -> getSmUsersSoftwaresResult.items()));
+     *         ctx.export("merakiNetworksSmUsersSoftwaresExample", example.items());
      *     }
      * }
      * }
@@ -16426,7 +16426,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSnmpExample", example.applyValue(getSnmpResult -> getSnmpResult.item()));
+     *         ctx.export("merakiNetworksSnmpExample", example.item());
      *     }
      * }
      * }
@@ -16467,7 +16467,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSnmpExample", example.applyValue(getSnmpResult -> getSnmpResult.item()));
+     *         ctx.export("merakiNetworksSnmpExample", example.item());
      *     }
      * }
      * }
@@ -16508,7 +16508,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSnmpExample", example.applyValue(getSnmpResult -> getSnmpResult.item()));
+     *         ctx.export("merakiNetworksSnmpExample", example.item());
      *     }
      * }
      * }
@@ -16549,7 +16549,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSnmpExample", example.applyValue(getSnmpResult -> getSnmpResult.item()));
+     *         ctx.export("merakiNetworksSnmpExample", example.item());
      *     }
      * }
      * }
@@ -16590,7 +16590,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSnmpExample", example.applyValue(getSnmpResult -> getSnmpResult.item()));
+     *         ctx.export("merakiNetworksSnmpExample", example.item());
      *     }
      * }
      * }
@@ -16631,7 +16631,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchAccessControlListsExample", example.applyValue(getSwitchAccessControlListsResult -> getSwitchAccessControlListsResult.item()));
+     *         ctx.export("merakiNetworksSwitchAccessControlListsExample", example.item());
      *     }
      * }
      * }
@@ -16672,7 +16672,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchAccessControlListsExample", example.applyValue(getSwitchAccessControlListsResult -> getSwitchAccessControlListsResult.item()));
+     *         ctx.export("merakiNetworksSwitchAccessControlListsExample", example.item());
      *     }
      * }
      * }
@@ -16713,7 +16713,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchAccessControlListsExample", example.applyValue(getSwitchAccessControlListsResult -> getSwitchAccessControlListsResult.item()));
+     *         ctx.export("merakiNetworksSwitchAccessControlListsExample", example.item());
      *     }
      * }
      * }
@@ -16754,7 +16754,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchAccessControlListsExample", example.applyValue(getSwitchAccessControlListsResult -> getSwitchAccessControlListsResult.item()));
+     *         ctx.export("merakiNetworksSwitchAccessControlListsExample", example.item());
      *     }
      * }
      * }
@@ -16795,7 +16795,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchAccessControlListsExample", example.applyValue(getSwitchAccessControlListsResult -> getSwitchAccessControlListsResult.item()));
+     *         ctx.export("merakiNetworksSwitchAccessControlListsExample", example.item());
      *     }
      * }
      * }
@@ -16885,7 +16885,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchAlternateManagementInterfaceExample", example.applyValue(getSwitchAlternateManagementInterfaceResult -> getSwitchAlternateManagementInterfaceResult.item()));
+     *         ctx.export("merakiNetworksSwitchAlternateManagementInterfaceExample", example.item());
      *     }
      * }
      * }
@@ -16926,7 +16926,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchAlternateManagementInterfaceExample", example.applyValue(getSwitchAlternateManagementInterfaceResult -> getSwitchAlternateManagementInterfaceResult.item()));
+     *         ctx.export("merakiNetworksSwitchAlternateManagementInterfaceExample", example.item());
      *     }
      * }
      * }
@@ -16967,7 +16967,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchAlternateManagementInterfaceExample", example.applyValue(getSwitchAlternateManagementInterfaceResult -> getSwitchAlternateManagementInterfaceResult.item()));
+     *         ctx.export("merakiNetworksSwitchAlternateManagementInterfaceExample", example.item());
      *     }
      * }
      * }
@@ -17008,7 +17008,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchAlternateManagementInterfaceExample", example.applyValue(getSwitchAlternateManagementInterfaceResult -> getSwitchAlternateManagementInterfaceResult.item()));
+     *         ctx.export("merakiNetworksSwitchAlternateManagementInterfaceExample", example.item());
      *     }
      * }
      * }
@@ -17049,7 +17049,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchAlternateManagementInterfaceExample", example.applyValue(getSwitchAlternateManagementInterfaceResult -> getSwitchAlternateManagementInterfaceResult.item()));
+     *         ctx.export("merakiNetworksSwitchAlternateManagementInterfaceExample", example.item());
      *     }
      * }
      * }
@@ -17090,7 +17090,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyExample", example.applyValue(getSwitchDhcpServerPolicyResult -> getSwitchDhcpServerPolicyResult.item()));
+     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyExample", example.item());
      *     }
      * }
      * }
@@ -17131,7 +17131,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyExample", example.applyValue(getSwitchDhcpServerPolicyResult -> getSwitchDhcpServerPolicyResult.item()));
+     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyExample", example.item());
      *     }
      * }
      * }
@@ -17172,7 +17172,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyExample", example.applyValue(getSwitchDhcpServerPolicyResult -> getSwitchDhcpServerPolicyResult.item()));
+     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyExample", example.item());
      *     }
      * }
      * }
@@ -17213,7 +17213,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyExample", example.applyValue(getSwitchDhcpServerPolicyResult -> getSwitchDhcpServerPolicyResult.item()));
+     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyExample", example.item());
      *     }
      * }
      * }
@@ -17254,7 +17254,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyExample", example.applyValue(getSwitchDhcpServerPolicyResult -> getSwitchDhcpServerPolicyResult.item()));
+     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyExample", example.item());
      *     }
      * }
      * }
@@ -17298,7 +17298,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyArpInspectionTrustedServersExample", example.applyValue(getSwitchDhcpServerPolicyArpInspectionTrustedServersResult -> getSwitchDhcpServerPolicyArpInspectionTrustedServersResult.items()));
+     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyArpInspectionTrustedServersExample", example.items());
      *     }
      * }
      * }
@@ -17342,7 +17342,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyArpInspectionTrustedServersExample", example.applyValue(getSwitchDhcpServerPolicyArpInspectionTrustedServersResult -> getSwitchDhcpServerPolicyArpInspectionTrustedServersResult.items()));
+     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyArpInspectionTrustedServersExample", example.items());
      *     }
      * }
      * }
@@ -17386,7 +17386,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyArpInspectionTrustedServersExample", example.applyValue(getSwitchDhcpServerPolicyArpInspectionTrustedServersResult -> getSwitchDhcpServerPolicyArpInspectionTrustedServersResult.items()));
+     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyArpInspectionTrustedServersExample", example.items());
      *     }
      * }
      * }
@@ -17430,7 +17430,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyArpInspectionTrustedServersExample", example.applyValue(getSwitchDhcpServerPolicyArpInspectionTrustedServersResult -> getSwitchDhcpServerPolicyArpInspectionTrustedServersResult.items()));
+     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyArpInspectionTrustedServersExample", example.items());
      *     }
      * }
      * }
@@ -17474,7 +17474,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyArpInspectionTrustedServersExample", example.applyValue(getSwitchDhcpServerPolicyArpInspectionTrustedServersResult -> getSwitchDhcpServerPolicyArpInspectionTrustedServersResult.items()));
+     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyArpInspectionTrustedServersExample", example.items());
      *     }
      * }
      * }
@@ -17518,7 +17518,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyArpInspectionWarningsByDeviceExample", example.applyValue(getSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult -> getSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult.items()));
+     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyArpInspectionWarningsByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -17562,7 +17562,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyArpInspectionWarningsByDeviceExample", example.applyValue(getSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult -> getSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult.items()));
+     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyArpInspectionWarningsByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -17606,7 +17606,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyArpInspectionWarningsByDeviceExample", example.applyValue(getSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult -> getSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult.items()));
+     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyArpInspectionWarningsByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -17650,7 +17650,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyArpInspectionWarningsByDeviceExample", example.applyValue(getSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult -> getSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult.items()));
+     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyArpInspectionWarningsByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -17694,7 +17694,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyArpInspectionWarningsByDeviceExample", example.applyValue(getSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult -> getSwitchDhcpServerPolicyArpInspectionWarningsByDeviceResult.items()));
+     *         ctx.export("merakiNetworksSwitchDhcpServerPolicyArpInspectionWarningsByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -17740,7 +17740,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchDhcpV4ServersSeenExample", example.applyValue(getSwitchDhcpV4ServersSeenResult -> getSwitchDhcpV4ServersSeenResult.items()));
+     *         ctx.export("merakiNetworksSwitchDhcpV4ServersSeenExample", example.items());
      *     }
      * }
      * }
@@ -17786,7 +17786,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchDhcpV4ServersSeenExample", example.applyValue(getSwitchDhcpV4ServersSeenResult -> getSwitchDhcpV4ServersSeenResult.items()));
+     *         ctx.export("merakiNetworksSwitchDhcpV4ServersSeenExample", example.items());
      *     }
      * }
      * }
@@ -17832,7 +17832,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchDhcpV4ServersSeenExample", example.applyValue(getSwitchDhcpV4ServersSeenResult -> getSwitchDhcpV4ServersSeenResult.items()));
+     *         ctx.export("merakiNetworksSwitchDhcpV4ServersSeenExample", example.items());
      *     }
      * }
      * }
@@ -17878,7 +17878,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchDhcpV4ServersSeenExample", example.applyValue(getSwitchDhcpV4ServersSeenResult -> getSwitchDhcpV4ServersSeenResult.items()));
+     *         ctx.export("merakiNetworksSwitchDhcpV4ServersSeenExample", example.items());
      *     }
      * }
      * }
@@ -17924,7 +17924,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchDhcpV4ServersSeenExample", example.applyValue(getSwitchDhcpV4ServersSeenResult -> getSwitchDhcpV4ServersSeenResult.items()));
+     *         ctx.export("merakiNetworksSwitchDhcpV4ServersSeenExample", example.items());
      *     }
      * }
      * }
@@ -17965,7 +17965,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchDscpToCosMappingsExample", example.applyValue(getSwitchDscpToCosMappingsResult -> getSwitchDscpToCosMappingsResult.item()));
+     *         ctx.export("merakiNetworksSwitchDscpToCosMappingsExample", example.item());
      *     }
      * }
      * }
@@ -18006,7 +18006,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchDscpToCosMappingsExample", example.applyValue(getSwitchDscpToCosMappingsResult -> getSwitchDscpToCosMappingsResult.item()));
+     *         ctx.export("merakiNetworksSwitchDscpToCosMappingsExample", example.item());
      *     }
      * }
      * }
@@ -18047,7 +18047,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchDscpToCosMappingsExample", example.applyValue(getSwitchDscpToCosMappingsResult -> getSwitchDscpToCosMappingsResult.item()));
+     *         ctx.export("merakiNetworksSwitchDscpToCosMappingsExample", example.item());
      *     }
      * }
      * }
@@ -18088,7 +18088,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchDscpToCosMappingsExample", example.applyValue(getSwitchDscpToCosMappingsResult -> getSwitchDscpToCosMappingsResult.item()));
+     *         ctx.export("merakiNetworksSwitchDscpToCosMappingsExample", example.item());
      *     }
      * }
      * }
@@ -18129,7 +18129,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchDscpToCosMappingsExample", example.applyValue(getSwitchDscpToCosMappingsResult -> getSwitchDscpToCosMappingsResult.item()));
+     *         ctx.export("merakiNetworksSwitchDscpToCosMappingsExample", example.item());
      *     }
      * }
      * }
@@ -18170,7 +18170,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchLinkAggregationsExample", example.applyValue(getSwitchLinkAggregationsResult -> getSwitchLinkAggregationsResult.items()));
+     *         ctx.export("merakiNetworksSwitchLinkAggregationsExample", example.items());
      *     }
      * }
      * }
@@ -18211,7 +18211,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchLinkAggregationsExample", example.applyValue(getSwitchLinkAggregationsResult -> getSwitchLinkAggregationsResult.items()));
+     *         ctx.export("merakiNetworksSwitchLinkAggregationsExample", example.items());
      *     }
      * }
      * }
@@ -18252,7 +18252,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchLinkAggregationsExample", example.applyValue(getSwitchLinkAggregationsResult -> getSwitchLinkAggregationsResult.items()));
+     *         ctx.export("merakiNetworksSwitchLinkAggregationsExample", example.items());
      *     }
      * }
      * }
@@ -18293,7 +18293,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchLinkAggregationsExample", example.applyValue(getSwitchLinkAggregationsResult -> getSwitchLinkAggregationsResult.items()));
+     *         ctx.export("merakiNetworksSwitchLinkAggregationsExample", example.items());
      *     }
      * }
      * }
@@ -18334,7 +18334,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchLinkAggregationsExample", example.applyValue(getSwitchLinkAggregationsResult -> getSwitchLinkAggregationsResult.items()));
+     *         ctx.export("merakiNetworksSwitchLinkAggregationsExample", example.items());
      *     }
      * }
      * }
@@ -18375,7 +18375,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchMtuExample", example.applyValue(getSwitchMtuResult -> getSwitchMtuResult.item()));
+     *         ctx.export("merakiNetworksSwitchMtuExample", example.item());
      *     }
      * }
      * }
@@ -18416,7 +18416,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchMtuExample", example.applyValue(getSwitchMtuResult -> getSwitchMtuResult.item()));
+     *         ctx.export("merakiNetworksSwitchMtuExample", example.item());
      *     }
      * }
      * }
@@ -18457,7 +18457,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchMtuExample", example.applyValue(getSwitchMtuResult -> getSwitchMtuResult.item()));
+     *         ctx.export("merakiNetworksSwitchMtuExample", example.item());
      *     }
      * }
      * }
@@ -18498,7 +18498,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchMtuExample", example.applyValue(getSwitchMtuResult -> getSwitchMtuResult.item()));
+     *         ctx.export("merakiNetworksSwitchMtuExample", example.item());
      *     }
      * }
      * }
@@ -18539,7 +18539,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchMtuExample", example.applyValue(getSwitchMtuResult -> getSwitchMtuResult.item()));
+     *         ctx.export("merakiNetworksSwitchMtuExample", example.item());
      *     }
      * }
      * }
@@ -18580,7 +18580,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchPortSchedulesExample", example.applyValue(getSwitchPortSchedulesResult -> getSwitchPortSchedulesResult.items()));
+     *         ctx.export("merakiNetworksSwitchPortSchedulesExample", example.items());
      *     }
      * }
      * }
@@ -18621,7 +18621,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchPortSchedulesExample", example.applyValue(getSwitchPortSchedulesResult -> getSwitchPortSchedulesResult.items()));
+     *         ctx.export("merakiNetworksSwitchPortSchedulesExample", example.items());
      *     }
      * }
      * }
@@ -18662,7 +18662,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchPortSchedulesExample", example.applyValue(getSwitchPortSchedulesResult -> getSwitchPortSchedulesResult.items()));
+     *         ctx.export("merakiNetworksSwitchPortSchedulesExample", example.items());
      *     }
      * }
      * }
@@ -18703,7 +18703,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchPortSchedulesExample", example.applyValue(getSwitchPortSchedulesResult -> getSwitchPortSchedulesResult.items()));
+     *         ctx.export("merakiNetworksSwitchPortSchedulesExample", example.items());
      *     }
      * }
      * }
@@ -18744,7 +18744,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchPortSchedulesExample", example.applyValue(getSwitchPortSchedulesResult -> getSwitchPortSchedulesResult.items()));
+     *         ctx.export("merakiNetworksSwitchPortSchedulesExample", example.items());
      *     }
      * }
      * }
@@ -18834,7 +18834,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchRoutingMulticastExample", example.applyValue(getSwitchRoutingMulticastResult -> getSwitchRoutingMulticastResult.item()));
+     *         ctx.export("merakiNetworksSwitchRoutingMulticastExample", example.item());
      *     }
      * }
      * }
@@ -18875,7 +18875,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchRoutingMulticastExample", example.applyValue(getSwitchRoutingMulticastResult -> getSwitchRoutingMulticastResult.item()));
+     *         ctx.export("merakiNetworksSwitchRoutingMulticastExample", example.item());
      *     }
      * }
      * }
@@ -18916,7 +18916,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchRoutingMulticastExample", example.applyValue(getSwitchRoutingMulticastResult -> getSwitchRoutingMulticastResult.item()));
+     *         ctx.export("merakiNetworksSwitchRoutingMulticastExample", example.item());
      *     }
      * }
      * }
@@ -18957,7 +18957,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchRoutingMulticastExample", example.applyValue(getSwitchRoutingMulticastResult -> getSwitchRoutingMulticastResult.item()));
+     *         ctx.export("merakiNetworksSwitchRoutingMulticastExample", example.item());
      *     }
      * }
      * }
@@ -18998,7 +18998,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchRoutingMulticastExample", example.applyValue(getSwitchRoutingMulticastResult -> getSwitchRoutingMulticastResult.item()));
+     *         ctx.export("merakiNetworksSwitchRoutingMulticastExample", example.item());
      *     }
      * }
      * }
@@ -19088,7 +19088,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchRoutingOspfExample", example.applyValue(getSwitchRoutingOspfResult -> getSwitchRoutingOspfResult.item()));
+     *         ctx.export("merakiNetworksSwitchRoutingOspfExample", example.item());
      *     }
      * }
      * }
@@ -19129,7 +19129,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchRoutingOspfExample", example.applyValue(getSwitchRoutingOspfResult -> getSwitchRoutingOspfResult.item()));
+     *         ctx.export("merakiNetworksSwitchRoutingOspfExample", example.item());
      *     }
      * }
      * }
@@ -19170,7 +19170,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchRoutingOspfExample", example.applyValue(getSwitchRoutingOspfResult -> getSwitchRoutingOspfResult.item()));
+     *         ctx.export("merakiNetworksSwitchRoutingOspfExample", example.item());
      *     }
      * }
      * }
@@ -19211,7 +19211,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchRoutingOspfExample", example.applyValue(getSwitchRoutingOspfResult -> getSwitchRoutingOspfResult.item()));
+     *         ctx.export("merakiNetworksSwitchRoutingOspfExample", example.item());
      *     }
      * }
      * }
@@ -19252,7 +19252,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchRoutingOspfExample", example.applyValue(getSwitchRoutingOspfResult -> getSwitchRoutingOspfResult.item()));
+     *         ctx.export("merakiNetworksSwitchRoutingOspfExample", example.item());
      *     }
      * }
      * }
@@ -19293,7 +19293,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchSettingsExample", example.applyValue(getSwitchSettingsResult -> getSwitchSettingsResult.item()));
+     *         ctx.export("merakiNetworksSwitchSettingsExample", example.item());
      *     }
      * }
      * }
@@ -19334,7 +19334,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchSettingsExample", example.applyValue(getSwitchSettingsResult -> getSwitchSettingsResult.item()));
+     *         ctx.export("merakiNetworksSwitchSettingsExample", example.item());
      *     }
      * }
      * }
@@ -19375,7 +19375,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchSettingsExample", example.applyValue(getSwitchSettingsResult -> getSwitchSettingsResult.item()));
+     *         ctx.export("merakiNetworksSwitchSettingsExample", example.item());
      *     }
      * }
      * }
@@ -19416,7 +19416,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchSettingsExample", example.applyValue(getSwitchSettingsResult -> getSwitchSettingsResult.item()));
+     *         ctx.export("merakiNetworksSwitchSettingsExample", example.item());
      *     }
      * }
      * }
@@ -19457,7 +19457,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchSettingsExample", example.applyValue(getSwitchSettingsResult -> getSwitchSettingsResult.item()));
+     *         ctx.export("merakiNetworksSwitchSettingsExample", example.item());
      *     }
      * }
      * }
@@ -19598,7 +19598,7 @@ public final class NetworksFunctions {
      *             .switchStackId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchStacksRoutingInterfacesDhcpExample", example.applyValue(getSwitchStacksRoutingInterfacesDhcpResult -> getSwitchStacksRoutingInterfacesDhcpResult.item()));
+     *         ctx.export("merakiNetworksSwitchStacksRoutingInterfacesDhcpExample", example.item());
      *     }
      * }
      * }
@@ -19641,7 +19641,7 @@ public final class NetworksFunctions {
      *             .switchStackId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchStacksRoutingInterfacesDhcpExample", example.applyValue(getSwitchStacksRoutingInterfacesDhcpResult -> getSwitchStacksRoutingInterfacesDhcpResult.item()));
+     *         ctx.export("merakiNetworksSwitchStacksRoutingInterfacesDhcpExample", example.item());
      *     }
      * }
      * }
@@ -19684,7 +19684,7 @@ public final class NetworksFunctions {
      *             .switchStackId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchStacksRoutingInterfacesDhcpExample", example.applyValue(getSwitchStacksRoutingInterfacesDhcpResult -> getSwitchStacksRoutingInterfacesDhcpResult.item()));
+     *         ctx.export("merakiNetworksSwitchStacksRoutingInterfacesDhcpExample", example.item());
      *     }
      * }
      * }
@@ -19727,7 +19727,7 @@ public final class NetworksFunctions {
      *             .switchStackId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchStacksRoutingInterfacesDhcpExample", example.applyValue(getSwitchStacksRoutingInterfacesDhcpResult -> getSwitchStacksRoutingInterfacesDhcpResult.item()));
+     *         ctx.export("merakiNetworksSwitchStacksRoutingInterfacesDhcpExample", example.item());
      *     }
      * }
      * }
@@ -19770,7 +19770,7 @@ public final class NetworksFunctions {
      *             .switchStackId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchStacksRoutingInterfacesDhcpExample", example.applyValue(getSwitchStacksRoutingInterfacesDhcpResult -> getSwitchStacksRoutingInterfacesDhcpResult.item()));
+     *         ctx.export("merakiNetworksSwitchStacksRoutingInterfacesDhcpExample", example.item());
      *     }
      * }
      * }
@@ -19860,7 +19860,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchStormControlExample", example.applyValue(getSwitchStormControlResult -> getSwitchStormControlResult.item()));
+     *         ctx.export("merakiNetworksSwitchStormControlExample", example.item());
      *     }
      * }
      * }
@@ -19901,7 +19901,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchStormControlExample", example.applyValue(getSwitchStormControlResult -> getSwitchStormControlResult.item()));
+     *         ctx.export("merakiNetworksSwitchStormControlExample", example.item());
      *     }
      * }
      * }
@@ -19942,7 +19942,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchStormControlExample", example.applyValue(getSwitchStormControlResult -> getSwitchStormControlResult.item()));
+     *         ctx.export("merakiNetworksSwitchStormControlExample", example.item());
      *     }
      * }
      * }
@@ -19983,7 +19983,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchStormControlExample", example.applyValue(getSwitchStormControlResult -> getSwitchStormControlResult.item()));
+     *         ctx.export("merakiNetworksSwitchStormControlExample", example.item());
      *     }
      * }
      * }
@@ -20024,7 +20024,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchStormControlExample", example.applyValue(getSwitchStormControlResult -> getSwitchStormControlResult.item()));
+     *         ctx.export("merakiNetworksSwitchStormControlExample", example.item());
      *     }
      * }
      * }
@@ -20065,7 +20065,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchStpExample", example.applyValue(getSwitchStpResult -> getSwitchStpResult.item()));
+     *         ctx.export("merakiNetworksSwitchStpExample", example.item());
      *     }
      * }
      * }
@@ -20106,7 +20106,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchStpExample", example.applyValue(getSwitchStpResult -> getSwitchStpResult.item()));
+     *         ctx.export("merakiNetworksSwitchStpExample", example.item());
      *     }
      * }
      * }
@@ -20147,7 +20147,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchStpExample", example.applyValue(getSwitchStpResult -> getSwitchStpResult.item()));
+     *         ctx.export("merakiNetworksSwitchStpExample", example.item());
      *     }
      * }
      * }
@@ -20188,7 +20188,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchStpExample", example.applyValue(getSwitchStpResult -> getSwitchStpResult.item()));
+     *         ctx.export("merakiNetworksSwitchStpExample", example.item());
      *     }
      * }
      * }
@@ -20229,7 +20229,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSwitchStpExample", example.applyValue(getSwitchStpResult -> getSwitchStpResult.item()));
+     *         ctx.export("merakiNetworksSwitchStpExample", example.item());
      *     }
      * }
      * }
@@ -20270,7 +20270,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSyslogServersExample", example.applyValue(getSyslogServersResult -> getSyslogServersResult.item()));
+     *         ctx.export("merakiNetworksSyslogServersExample", example.item());
      *     }
      * }
      * }
@@ -20311,7 +20311,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSyslogServersExample", example.applyValue(getSyslogServersResult -> getSyslogServersResult.item()));
+     *         ctx.export("merakiNetworksSyslogServersExample", example.item());
      *     }
      * }
      * }
@@ -20352,7 +20352,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSyslogServersExample", example.applyValue(getSyslogServersResult -> getSyslogServersResult.item()));
+     *         ctx.export("merakiNetworksSyslogServersExample", example.item());
      *     }
      * }
      * }
@@ -20393,7 +20393,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSyslogServersExample", example.applyValue(getSyslogServersResult -> getSyslogServersResult.item()));
+     *         ctx.export("merakiNetworksSyslogServersExample", example.item());
      *     }
      * }
      * }
@@ -20434,7 +20434,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksSyslogServersExample", example.applyValue(getSyslogServersResult -> getSyslogServersResult.item()));
+     *         ctx.export("merakiNetworksSyslogServersExample", example.item());
      *     }
      * }
      * }
@@ -20475,7 +20475,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksTopologyLinkLayerExample", example.applyValue(getTopologyLinkLayerResult -> getTopologyLinkLayerResult.item()));
+     *         ctx.export("merakiNetworksTopologyLinkLayerExample", example.item());
      *     }
      * }
      * }
@@ -20516,7 +20516,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksTopologyLinkLayerExample", example.applyValue(getTopologyLinkLayerResult -> getTopologyLinkLayerResult.item()));
+     *         ctx.export("merakiNetworksTopologyLinkLayerExample", example.item());
      *     }
      * }
      * }
@@ -20557,7 +20557,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksTopologyLinkLayerExample", example.applyValue(getTopologyLinkLayerResult -> getTopologyLinkLayerResult.item()));
+     *         ctx.export("merakiNetworksTopologyLinkLayerExample", example.item());
      *     }
      * }
      * }
@@ -20598,7 +20598,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksTopologyLinkLayerExample", example.applyValue(getTopologyLinkLayerResult -> getTopologyLinkLayerResult.item()));
+     *         ctx.export("merakiNetworksTopologyLinkLayerExample", example.item());
      *     }
      * }
      * }
@@ -20639,7 +20639,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksTopologyLinkLayerExample", example.applyValue(getTopologyLinkLayerResult -> getTopologyLinkLayerResult.item()));
+     *         ctx.export("merakiNetworksTopologyLinkLayerExample", example.item());
      *     }
      * }
      * }
@@ -20680,7 +20680,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksTrafficAnalysisExample", example.applyValue(getTrafficAnalysisResult -> getTrafficAnalysisResult.item()));
+     *         ctx.export("merakiNetworksTrafficAnalysisExample", example.item());
      *     }
      * }
      * }
@@ -20721,7 +20721,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksTrafficAnalysisExample", example.applyValue(getTrafficAnalysisResult -> getTrafficAnalysisResult.item()));
+     *         ctx.export("merakiNetworksTrafficAnalysisExample", example.item());
      *     }
      * }
      * }
@@ -20762,7 +20762,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksTrafficAnalysisExample", example.applyValue(getTrafficAnalysisResult -> getTrafficAnalysisResult.item()));
+     *         ctx.export("merakiNetworksTrafficAnalysisExample", example.item());
      *     }
      * }
      * }
@@ -20803,7 +20803,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksTrafficAnalysisExample", example.applyValue(getTrafficAnalysisResult -> getTrafficAnalysisResult.item()));
+     *         ctx.export("merakiNetworksTrafficAnalysisExample", example.item());
      *     }
      * }
      * }
@@ -20844,7 +20844,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksTrafficAnalysisExample", example.applyValue(getTrafficAnalysisResult -> getTrafficAnalysisResult.item()));
+     *         ctx.export("merakiNetworksTrafficAnalysisExample", example.item());
      *     }
      * }
      * }
@@ -20885,7 +20885,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksTrafficShapingApplicationCategoriesExample", example.applyValue(getTrafficShapingApplicationCategoriesResult -> getTrafficShapingApplicationCategoriesResult.item()));
+     *         ctx.export("merakiNetworksTrafficShapingApplicationCategoriesExample", example.item());
      *     }
      * }
      * }
@@ -20926,7 +20926,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksTrafficShapingApplicationCategoriesExample", example.applyValue(getTrafficShapingApplicationCategoriesResult -> getTrafficShapingApplicationCategoriesResult.item()));
+     *         ctx.export("merakiNetworksTrafficShapingApplicationCategoriesExample", example.item());
      *     }
      * }
      * }
@@ -20967,7 +20967,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksTrafficShapingApplicationCategoriesExample", example.applyValue(getTrafficShapingApplicationCategoriesResult -> getTrafficShapingApplicationCategoriesResult.item()));
+     *         ctx.export("merakiNetworksTrafficShapingApplicationCategoriesExample", example.item());
      *     }
      * }
      * }
@@ -21008,7 +21008,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksTrafficShapingApplicationCategoriesExample", example.applyValue(getTrafficShapingApplicationCategoriesResult -> getTrafficShapingApplicationCategoriesResult.item()));
+     *         ctx.export("merakiNetworksTrafficShapingApplicationCategoriesExample", example.item());
      *     }
      * }
      * }
@@ -21049,7 +21049,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksTrafficShapingApplicationCategoriesExample", example.applyValue(getTrafficShapingApplicationCategoriesResult -> getTrafficShapingApplicationCategoriesResult.item()));
+     *         ctx.export("merakiNetworksTrafficShapingApplicationCategoriesExample", example.item());
      *     }
      * }
      * }
@@ -21090,7 +21090,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksTrafficShapingDscpTaggingOptionsExample", example.applyValue(getTrafficShapingDscpTaggingOptionsResult -> getTrafficShapingDscpTaggingOptionsResult.items()));
+     *         ctx.export("merakiNetworksTrafficShapingDscpTaggingOptionsExample", example.items());
      *     }
      * }
      * }
@@ -21131,7 +21131,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksTrafficShapingDscpTaggingOptionsExample", example.applyValue(getTrafficShapingDscpTaggingOptionsResult -> getTrafficShapingDscpTaggingOptionsResult.items()));
+     *         ctx.export("merakiNetworksTrafficShapingDscpTaggingOptionsExample", example.items());
      *     }
      * }
      * }
@@ -21172,7 +21172,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksTrafficShapingDscpTaggingOptionsExample", example.applyValue(getTrafficShapingDscpTaggingOptionsResult -> getTrafficShapingDscpTaggingOptionsResult.items()));
+     *         ctx.export("merakiNetworksTrafficShapingDscpTaggingOptionsExample", example.items());
      *     }
      * }
      * }
@@ -21213,7 +21213,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksTrafficShapingDscpTaggingOptionsExample", example.applyValue(getTrafficShapingDscpTaggingOptionsResult -> getTrafficShapingDscpTaggingOptionsResult.items()));
+     *         ctx.export("merakiNetworksTrafficShapingDscpTaggingOptionsExample", example.items());
      *     }
      * }
      * }
@@ -21254,7 +21254,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksTrafficShapingDscpTaggingOptionsExample", example.applyValue(getTrafficShapingDscpTaggingOptionsResult -> getTrafficShapingDscpTaggingOptionsResult.items()));
+     *         ctx.export("merakiNetworksTrafficShapingDscpTaggingOptionsExample", example.items());
      *     }
      * }
      * }
@@ -21296,7 +21296,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksVlanProfilesExample", example.applyValue(getVlanProfilesResult -> getVlanProfilesResult.item()));
+     *         ctx.export("merakiNetworksVlanProfilesExample", example.item());
      *     }
      * }
      * }
@@ -21338,7 +21338,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksVlanProfilesExample", example.applyValue(getVlanProfilesResult -> getVlanProfilesResult.item()));
+     *         ctx.export("merakiNetworksVlanProfilesExample", example.item());
      *     }
      * }
      * }
@@ -21380,7 +21380,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksVlanProfilesExample", example.applyValue(getVlanProfilesResult -> getVlanProfilesResult.item()));
+     *         ctx.export("merakiNetworksVlanProfilesExample", example.item());
      *     }
      * }
      * }
@@ -21422,7 +21422,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksVlanProfilesExample", example.applyValue(getVlanProfilesResult -> getVlanProfilesResult.item()));
+     *         ctx.export("merakiNetworksVlanProfilesExample", example.item());
      *     }
      * }
      * }
@@ -21464,7 +21464,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksVlanProfilesExample", example.applyValue(getVlanProfilesResult -> getVlanProfilesResult.item()));
+     *         ctx.export("merakiNetworksVlanProfilesExample", example.item());
      *     }
      * }
      * }
@@ -21511,7 +21511,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksVlanProfilesAssignmentsByDeviceExample", example.applyValue(getVlanProfilesAssignmentsByDeviceResult -> getVlanProfilesAssignmentsByDeviceResult.items()));
+     *         ctx.export("merakiNetworksVlanProfilesAssignmentsByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -21558,7 +21558,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksVlanProfilesAssignmentsByDeviceExample", example.applyValue(getVlanProfilesAssignmentsByDeviceResult -> getVlanProfilesAssignmentsByDeviceResult.items()));
+     *         ctx.export("merakiNetworksVlanProfilesAssignmentsByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -21605,7 +21605,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksVlanProfilesAssignmentsByDeviceExample", example.applyValue(getVlanProfilesAssignmentsByDeviceResult -> getVlanProfilesAssignmentsByDeviceResult.items()));
+     *         ctx.export("merakiNetworksVlanProfilesAssignmentsByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -21652,7 +21652,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksVlanProfilesAssignmentsByDeviceExample", example.applyValue(getVlanProfilesAssignmentsByDeviceResult -> getVlanProfilesAssignmentsByDeviceResult.items()));
+     *         ctx.export("merakiNetworksVlanProfilesAssignmentsByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -21699,7 +21699,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksVlanProfilesAssignmentsByDeviceExample", example.applyValue(getVlanProfilesAssignmentsByDeviceResult -> getVlanProfilesAssignmentsByDeviceResult.items()));
+     *         ctx.export("merakiNetworksVlanProfilesAssignmentsByDeviceExample", example.items());
      *     }
      * }
      * }
@@ -21839,7 +21839,7 @@ public final class NetworksFunctions {
      *             .webhookTestId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWebhooksWebhookTestsExample", example.applyValue(getWebhooksWebhookTestsResult -> getWebhooksWebhookTestsResult.item()));
+     *         ctx.export("merakiNetworksWebhooksWebhookTestsExample", example.item());
      *     }
      * }
      * }
@@ -21881,7 +21881,7 @@ public final class NetworksFunctions {
      *             .webhookTestId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWebhooksWebhookTestsExample", example.applyValue(getWebhooksWebhookTestsResult -> getWebhooksWebhookTestsResult.item()));
+     *         ctx.export("merakiNetworksWebhooksWebhookTestsExample", example.item());
      *     }
      * }
      * }
@@ -21923,7 +21923,7 @@ public final class NetworksFunctions {
      *             .webhookTestId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWebhooksWebhookTestsExample", example.applyValue(getWebhooksWebhookTestsResult -> getWebhooksWebhookTestsResult.item()));
+     *         ctx.export("merakiNetworksWebhooksWebhookTestsExample", example.item());
      *     }
      * }
      * }
@@ -21965,7 +21965,7 @@ public final class NetworksFunctions {
      *             .webhookTestId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWebhooksWebhookTestsExample", example.applyValue(getWebhooksWebhookTestsResult -> getWebhooksWebhookTestsResult.item()));
+     *         ctx.export("merakiNetworksWebhooksWebhookTestsExample", example.item());
      *     }
      * }
      * }
@@ -22007,7 +22007,7 @@ public final class NetworksFunctions {
      *             .webhookTestId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWebhooksWebhookTestsExample", example.applyValue(getWebhooksWebhookTestsResult -> getWebhooksWebhookTestsResult.item()));
+     *         ctx.export("merakiNetworksWebhooksWebhookTestsExample", example.item());
      *     }
      * }
      * }
@@ -22048,7 +22048,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessAlternateManagementInterfaceExample", example.applyValue(getWirelessAlternateManagementInterfaceResult -> getWirelessAlternateManagementInterfaceResult.item()));
+     *         ctx.export("merakiNetworksWirelessAlternateManagementInterfaceExample", example.item());
      *     }
      * }
      * }
@@ -22089,7 +22089,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessAlternateManagementInterfaceExample", example.applyValue(getWirelessAlternateManagementInterfaceResult -> getWirelessAlternateManagementInterfaceResult.item()));
+     *         ctx.export("merakiNetworksWirelessAlternateManagementInterfaceExample", example.item());
      *     }
      * }
      * }
@@ -22130,7 +22130,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessAlternateManagementInterfaceExample", example.applyValue(getWirelessAlternateManagementInterfaceResult -> getWirelessAlternateManagementInterfaceResult.item()));
+     *         ctx.export("merakiNetworksWirelessAlternateManagementInterfaceExample", example.item());
      *     }
      * }
      * }
@@ -22171,7 +22171,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessAlternateManagementInterfaceExample", example.applyValue(getWirelessAlternateManagementInterfaceResult -> getWirelessAlternateManagementInterfaceResult.item()));
+     *         ctx.export("merakiNetworksWirelessAlternateManagementInterfaceExample", example.item());
      *     }
      * }
      * }
@@ -22212,7 +22212,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessAlternateManagementInterfaceExample", example.applyValue(getWirelessAlternateManagementInterfaceResult -> getWirelessAlternateManagementInterfaceResult.item()));
+     *         ctx.export("merakiNetworksWirelessAlternateManagementInterfaceExample", example.item());
      *     }
      * }
      * }
@@ -22253,7 +22253,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessBillingExample", example.applyValue(getWirelessBillingResult -> getWirelessBillingResult.item()));
+     *         ctx.export("merakiNetworksWirelessBillingExample", example.item());
      *     }
      * }
      * }
@@ -22294,7 +22294,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessBillingExample", example.applyValue(getWirelessBillingResult -> getWirelessBillingResult.item()));
+     *         ctx.export("merakiNetworksWirelessBillingExample", example.item());
      *     }
      * }
      * }
@@ -22335,7 +22335,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessBillingExample", example.applyValue(getWirelessBillingResult -> getWirelessBillingResult.item()));
+     *         ctx.export("merakiNetworksWirelessBillingExample", example.item());
      *     }
      * }
      * }
@@ -22376,7 +22376,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessBillingExample", example.applyValue(getWirelessBillingResult -> getWirelessBillingResult.item()));
+     *         ctx.export("merakiNetworksWirelessBillingExample", example.item());
      *     }
      * }
      * }
@@ -22417,7 +22417,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessBillingExample", example.applyValue(getWirelessBillingResult -> getWirelessBillingResult.item()));
+     *         ctx.export("merakiNetworksWirelessBillingExample", example.item());
      *     }
      * }
      * }
@@ -22458,7 +22458,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessBluetoothSettingsExample", example.applyValue(getWirelessBluetoothSettingsResult -> getWirelessBluetoothSettingsResult.item()));
+     *         ctx.export("merakiNetworksWirelessBluetoothSettingsExample", example.item());
      *     }
      * }
      * }
@@ -22499,7 +22499,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessBluetoothSettingsExample", example.applyValue(getWirelessBluetoothSettingsResult -> getWirelessBluetoothSettingsResult.item()));
+     *         ctx.export("merakiNetworksWirelessBluetoothSettingsExample", example.item());
      *     }
      * }
      * }
@@ -22540,7 +22540,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessBluetoothSettingsExample", example.applyValue(getWirelessBluetoothSettingsResult -> getWirelessBluetoothSettingsResult.item()));
+     *         ctx.export("merakiNetworksWirelessBluetoothSettingsExample", example.item());
      *     }
      * }
      * }
@@ -22581,7 +22581,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessBluetoothSettingsExample", example.applyValue(getWirelessBluetoothSettingsResult -> getWirelessBluetoothSettingsResult.item()));
+     *         ctx.export("merakiNetworksWirelessBluetoothSettingsExample", example.item());
      *     }
      * }
      * }
@@ -22622,7 +22622,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessBluetoothSettingsExample", example.applyValue(getWirelessBluetoothSettingsResult -> getWirelessBluetoothSettingsResult.item()));
+     *         ctx.export("merakiNetworksWirelessBluetoothSettingsExample", example.item());
      *     }
      * }
      * }
@@ -22672,7 +22672,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessChannelUtilizationHistoryExample", example.applyValue(getWirelessChannelUtilizationHistoryResult -> getWirelessChannelUtilizationHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessChannelUtilizationHistoryExample", example.items());
      *     }
      * }
      * }
@@ -22722,7 +22722,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessChannelUtilizationHistoryExample", example.applyValue(getWirelessChannelUtilizationHistoryResult -> getWirelessChannelUtilizationHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessChannelUtilizationHistoryExample", example.items());
      *     }
      * }
      * }
@@ -22772,7 +22772,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessChannelUtilizationHistoryExample", example.applyValue(getWirelessChannelUtilizationHistoryResult -> getWirelessChannelUtilizationHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessChannelUtilizationHistoryExample", example.items());
      *     }
      * }
      * }
@@ -22822,7 +22822,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessChannelUtilizationHistoryExample", example.applyValue(getWirelessChannelUtilizationHistoryResult -> getWirelessChannelUtilizationHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessChannelUtilizationHistoryExample", example.items());
      *     }
      * }
      * }
@@ -22872,7 +22872,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessChannelUtilizationHistoryExample", example.applyValue(getWirelessChannelUtilizationHistoryResult -> getWirelessChannelUtilizationHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessChannelUtilizationHistoryExample", example.items());
      *     }
      * }
      * }
@@ -22923,7 +22923,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessClientCountHistoryExample", example.applyValue(getWirelessClientCountHistoryResult -> getWirelessClientCountHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessClientCountHistoryExample", example.items());
      *     }
      * }
      * }
@@ -22974,7 +22974,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessClientCountHistoryExample", example.applyValue(getWirelessClientCountHistoryResult -> getWirelessClientCountHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessClientCountHistoryExample", example.items());
      *     }
      * }
      * }
@@ -23025,7 +23025,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessClientCountHistoryExample", example.applyValue(getWirelessClientCountHistoryResult -> getWirelessClientCountHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessClientCountHistoryExample", example.items());
      *     }
      * }
      * }
@@ -23076,7 +23076,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessClientCountHistoryExample", example.applyValue(getWirelessClientCountHistoryResult -> getWirelessClientCountHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessClientCountHistoryExample", example.items());
      *     }
      * }
      * }
@@ -23127,7 +23127,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessClientCountHistoryExample", example.applyValue(getWirelessClientCountHistoryResult -> getWirelessClientCountHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessClientCountHistoryExample", example.items());
      *     }
      * }
      * }
@@ -23176,7 +23176,7 @@ public final class NetworksFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessClientsConnectionStatsExample", example.applyValue(getWirelessClientsConnectionStatsResult -> getWirelessClientsConnectionStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessClientsConnectionStatsExample", example.item());
      *     }
      * }
      * }
@@ -23225,7 +23225,7 @@ public final class NetworksFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessClientsConnectionStatsExample", example.applyValue(getWirelessClientsConnectionStatsResult -> getWirelessClientsConnectionStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessClientsConnectionStatsExample", example.item());
      *     }
      * }
      * }
@@ -23274,7 +23274,7 @@ public final class NetworksFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessClientsConnectionStatsExample", example.applyValue(getWirelessClientsConnectionStatsResult -> getWirelessClientsConnectionStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessClientsConnectionStatsExample", example.item());
      *     }
      * }
      * }
@@ -23323,7 +23323,7 @@ public final class NetworksFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessClientsConnectionStatsExample", example.applyValue(getWirelessClientsConnectionStatsResult -> getWirelessClientsConnectionStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessClientsConnectionStatsExample", example.item());
      *     }
      * }
      * }
@@ -23372,7 +23372,7 @@ public final class NetworksFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessClientsConnectionStatsExample", example.applyValue(getWirelessClientsConnectionStatsResult -> getWirelessClientsConnectionStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessClientsConnectionStatsExample", example.item());
      *     }
      * }
      * }
@@ -23422,7 +23422,7 @@ public final class NetworksFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessClientsLatencyStatsExample", example.applyValue(getWirelessClientsLatencyStatsResult -> getWirelessClientsLatencyStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessClientsLatencyStatsExample", example.item());
      *     }
      * }
      * }
@@ -23472,7 +23472,7 @@ public final class NetworksFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessClientsLatencyStatsExample", example.applyValue(getWirelessClientsLatencyStatsResult -> getWirelessClientsLatencyStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessClientsLatencyStatsExample", example.item());
      *     }
      * }
      * }
@@ -23522,7 +23522,7 @@ public final class NetworksFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessClientsLatencyStatsExample", example.applyValue(getWirelessClientsLatencyStatsResult -> getWirelessClientsLatencyStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessClientsLatencyStatsExample", example.item());
      *     }
      * }
      * }
@@ -23572,7 +23572,7 @@ public final class NetworksFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessClientsLatencyStatsExample", example.applyValue(getWirelessClientsLatencyStatsResult -> getWirelessClientsLatencyStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessClientsLatencyStatsExample", example.item());
      *     }
      * }
      * }
@@ -23622,7 +23622,7 @@ public final class NetworksFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessClientsLatencyStatsExample", example.applyValue(getWirelessClientsLatencyStatsResult -> getWirelessClientsLatencyStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessClientsLatencyStatsExample", example.item());
      *     }
      * }
      * }
@@ -23670,7 +23670,7 @@ public final class NetworksFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessConnectionStatsExample", example.applyValue(getWirelessConnectionStatsResult -> getWirelessConnectionStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessConnectionStatsExample", example.item());
      *     }
      * }
      * }
@@ -23718,7 +23718,7 @@ public final class NetworksFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessConnectionStatsExample", example.applyValue(getWirelessConnectionStatsResult -> getWirelessConnectionStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessConnectionStatsExample", example.item());
      *     }
      * }
      * }
@@ -23766,7 +23766,7 @@ public final class NetworksFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessConnectionStatsExample", example.applyValue(getWirelessConnectionStatsResult -> getWirelessConnectionStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessConnectionStatsExample", example.item());
      *     }
      * }
      * }
@@ -23814,7 +23814,7 @@ public final class NetworksFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessConnectionStatsExample", example.applyValue(getWirelessConnectionStatsResult -> getWirelessConnectionStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessConnectionStatsExample", example.item());
      *     }
      * }
      * }
@@ -23862,7 +23862,7 @@ public final class NetworksFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessConnectionStatsExample", example.applyValue(getWirelessConnectionStatsResult -> getWirelessConnectionStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessConnectionStatsExample", example.item());
      *     }
      * }
      * }
@@ -23913,7 +23913,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessDataRateHistoryExample", example.applyValue(getWirelessDataRateHistoryResult -> getWirelessDataRateHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessDataRateHistoryExample", example.items());
      *     }
      * }
      * }
@@ -23964,7 +23964,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessDataRateHistoryExample", example.applyValue(getWirelessDataRateHistoryResult -> getWirelessDataRateHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessDataRateHistoryExample", example.items());
      *     }
      * }
      * }
@@ -24015,7 +24015,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessDataRateHistoryExample", example.applyValue(getWirelessDataRateHistoryResult -> getWirelessDataRateHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessDataRateHistoryExample", example.items());
      *     }
      * }
      * }
@@ -24066,7 +24066,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessDataRateHistoryExample", example.applyValue(getWirelessDataRateHistoryResult -> getWirelessDataRateHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessDataRateHistoryExample", example.items());
      *     }
      * }
      * }
@@ -24117,7 +24117,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessDataRateHistoryExample", example.applyValue(getWirelessDataRateHistoryResult -> getWirelessDataRateHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessDataRateHistoryExample", example.items());
      *     }
      * }
      * }
@@ -24165,7 +24165,7 @@ public final class NetworksFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessDevicesConnectionStatsExample", example.applyValue(getWirelessDevicesConnectionStatsResult -> getWirelessDevicesConnectionStatsResult.items()));
+     *         ctx.export("merakiNetworksWirelessDevicesConnectionStatsExample", example.items());
      *     }
      * }
      * }
@@ -24213,7 +24213,7 @@ public final class NetworksFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessDevicesConnectionStatsExample", example.applyValue(getWirelessDevicesConnectionStatsResult -> getWirelessDevicesConnectionStatsResult.items()));
+     *         ctx.export("merakiNetworksWirelessDevicesConnectionStatsExample", example.items());
      *     }
      * }
      * }
@@ -24261,7 +24261,7 @@ public final class NetworksFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessDevicesConnectionStatsExample", example.applyValue(getWirelessDevicesConnectionStatsResult -> getWirelessDevicesConnectionStatsResult.items()));
+     *         ctx.export("merakiNetworksWirelessDevicesConnectionStatsExample", example.items());
      *     }
      * }
      * }
@@ -24309,7 +24309,7 @@ public final class NetworksFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessDevicesConnectionStatsExample", example.applyValue(getWirelessDevicesConnectionStatsResult -> getWirelessDevicesConnectionStatsResult.items()));
+     *         ctx.export("merakiNetworksWirelessDevicesConnectionStatsExample", example.items());
      *     }
      * }
      * }
@@ -24357,7 +24357,7 @@ public final class NetworksFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessDevicesConnectionStatsExample", example.applyValue(getWirelessDevicesConnectionStatsResult -> getWirelessDevicesConnectionStatsResult.items()));
+     *         ctx.export("merakiNetworksWirelessDevicesConnectionStatsExample", example.items());
      *     }
      * }
      * }
@@ -24399,7 +24399,7 @@ public final class NetworksFunctions {
      *             .profileId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessEthernetPortsProfilesExample", example.applyValue(getWirelessEthernetPortsProfilesResult -> getWirelessEthernetPortsProfilesResult.item()));
+     *         ctx.export("merakiNetworksWirelessEthernetPortsProfilesExample", example.item());
      *     }
      * }
      * }
@@ -24441,7 +24441,7 @@ public final class NetworksFunctions {
      *             .profileId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessEthernetPortsProfilesExample", example.applyValue(getWirelessEthernetPortsProfilesResult -> getWirelessEthernetPortsProfilesResult.item()));
+     *         ctx.export("merakiNetworksWirelessEthernetPortsProfilesExample", example.item());
      *     }
      * }
      * }
@@ -24483,7 +24483,7 @@ public final class NetworksFunctions {
      *             .profileId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessEthernetPortsProfilesExample", example.applyValue(getWirelessEthernetPortsProfilesResult -> getWirelessEthernetPortsProfilesResult.item()));
+     *         ctx.export("merakiNetworksWirelessEthernetPortsProfilesExample", example.item());
      *     }
      * }
      * }
@@ -24525,7 +24525,7 @@ public final class NetworksFunctions {
      *             .profileId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessEthernetPortsProfilesExample", example.applyValue(getWirelessEthernetPortsProfilesResult -> getWirelessEthernetPortsProfilesResult.item()));
+     *         ctx.export("merakiNetworksWirelessEthernetPortsProfilesExample", example.item());
      *     }
      * }
      * }
@@ -24567,7 +24567,7 @@ public final class NetworksFunctions {
      *             .profileId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessEthernetPortsProfilesExample", example.applyValue(getWirelessEthernetPortsProfilesResult -> getWirelessEthernetPortsProfilesResult.item()));
+     *         ctx.export("merakiNetworksWirelessEthernetPortsProfilesExample", example.item());
      *     }
      * }
      * }
@@ -24617,7 +24617,7 @@ public final class NetworksFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessFailedConnectionsExample", example.applyValue(getWirelessFailedConnectionsResult -> getWirelessFailedConnectionsResult.items()));
+     *         ctx.export("merakiNetworksWirelessFailedConnectionsExample", example.items());
      *     }
      * }
      * }
@@ -24667,7 +24667,7 @@ public final class NetworksFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessFailedConnectionsExample", example.applyValue(getWirelessFailedConnectionsResult -> getWirelessFailedConnectionsResult.items()));
+     *         ctx.export("merakiNetworksWirelessFailedConnectionsExample", example.items());
      *     }
      * }
      * }
@@ -24717,7 +24717,7 @@ public final class NetworksFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessFailedConnectionsExample", example.applyValue(getWirelessFailedConnectionsResult -> getWirelessFailedConnectionsResult.items()));
+     *         ctx.export("merakiNetworksWirelessFailedConnectionsExample", example.items());
      *     }
      * }
      * }
@@ -24767,7 +24767,7 @@ public final class NetworksFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessFailedConnectionsExample", example.applyValue(getWirelessFailedConnectionsResult -> getWirelessFailedConnectionsResult.items()));
+     *         ctx.export("merakiNetworksWirelessFailedConnectionsExample", example.items());
      *     }
      * }
      * }
@@ -24817,7 +24817,7 @@ public final class NetworksFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessFailedConnectionsExample", example.applyValue(getWirelessFailedConnectionsResult -> getWirelessFailedConnectionsResult.items()));
+     *         ctx.export("merakiNetworksWirelessFailedConnectionsExample", example.items());
      *     }
      * }
      * }
@@ -24869,7 +24869,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessLatencyHistoryExample", example.applyValue(getWirelessLatencyHistoryResult -> getWirelessLatencyHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessLatencyHistoryExample", example.items());
      *     }
      * }
      * }
@@ -24921,7 +24921,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessLatencyHistoryExample", example.applyValue(getWirelessLatencyHistoryResult -> getWirelessLatencyHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessLatencyHistoryExample", example.items());
      *     }
      * }
      * }
@@ -24973,7 +24973,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessLatencyHistoryExample", example.applyValue(getWirelessLatencyHistoryResult -> getWirelessLatencyHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessLatencyHistoryExample", example.items());
      *     }
      * }
      * }
@@ -25025,7 +25025,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessLatencyHistoryExample", example.applyValue(getWirelessLatencyHistoryResult -> getWirelessLatencyHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessLatencyHistoryExample", example.items());
      *     }
      * }
      * }
@@ -25077,7 +25077,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessLatencyHistoryExample", example.applyValue(getWirelessLatencyHistoryResult -> getWirelessLatencyHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessLatencyHistoryExample", example.items());
      *     }
      * }
      * }
@@ -25126,7 +25126,7 @@ public final class NetworksFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessLatencyStatsExample", example.applyValue(getWirelessLatencyStatsResult -> getWirelessLatencyStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessLatencyStatsExample", example.item());
      *     }
      * }
      * }
@@ -25175,7 +25175,7 @@ public final class NetworksFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessLatencyStatsExample", example.applyValue(getWirelessLatencyStatsResult -> getWirelessLatencyStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessLatencyStatsExample", example.item());
      *     }
      * }
      * }
@@ -25224,7 +25224,7 @@ public final class NetworksFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessLatencyStatsExample", example.applyValue(getWirelessLatencyStatsResult -> getWirelessLatencyStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessLatencyStatsExample", example.item());
      *     }
      * }
      * }
@@ -25273,7 +25273,7 @@ public final class NetworksFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessLatencyStatsExample", example.applyValue(getWirelessLatencyStatsResult -> getWirelessLatencyStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessLatencyStatsExample", example.item());
      *     }
      * }
      * }
@@ -25322,7 +25322,7 @@ public final class NetworksFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessLatencyStatsExample", example.applyValue(getWirelessLatencyStatsResult -> getWirelessLatencyStatsResult.item()));
+     *         ctx.export("merakiNetworksWirelessLatencyStatsExample", example.item());
      *     }
      * }
      * }
@@ -25366,7 +25366,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessMeshStatusesExample", example.applyValue(getWirelessMeshStatusesResult -> getWirelessMeshStatusesResult.items()));
+     *         ctx.export("merakiNetworksWirelessMeshStatusesExample", example.items());
      *     }
      * }
      * }
@@ -25410,7 +25410,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessMeshStatusesExample", example.applyValue(getWirelessMeshStatusesResult -> getWirelessMeshStatusesResult.items()));
+     *         ctx.export("merakiNetworksWirelessMeshStatusesExample", example.items());
      *     }
      * }
      * }
@@ -25454,7 +25454,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessMeshStatusesExample", example.applyValue(getWirelessMeshStatusesResult -> getWirelessMeshStatusesResult.items()));
+     *         ctx.export("merakiNetworksWirelessMeshStatusesExample", example.items());
      *     }
      * }
      * }
@@ -25498,7 +25498,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessMeshStatusesExample", example.applyValue(getWirelessMeshStatusesResult -> getWirelessMeshStatusesResult.items()));
+     *         ctx.export("merakiNetworksWirelessMeshStatusesExample", example.items());
      *     }
      * }
      * }
@@ -25542,7 +25542,7 @@ public final class NetworksFunctions {
      *             .startingAfter("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessMeshStatusesExample", example.applyValue(getWirelessMeshStatusesResult -> getWirelessMeshStatusesResult.items()));
+     *         ctx.export("merakiNetworksWirelessMeshStatusesExample", example.items());
      *     }
      * }
      * }
@@ -25584,7 +25584,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessRfProfilesExample", example.applyValue(getWirelessRfProfilesResult -> getWirelessRfProfilesResult.item()));
+     *         ctx.export("merakiNetworksWirelessRfProfilesExample", example.item());
      *     }
      * }
      * }
@@ -25626,7 +25626,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessRfProfilesExample", example.applyValue(getWirelessRfProfilesResult -> getWirelessRfProfilesResult.item()));
+     *         ctx.export("merakiNetworksWirelessRfProfilesExample", example.item());
      *     }
      * }
      * }
@@ -25668,7 +25668,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessRfProfilesExample", example.applyValue(getWirelessRfProfilesResult -> getWirelessRfProfilesResult.item()));
+     *         ctx.export("merakiNetworksWirelessRfProfilesExample", example.item());
      *     }
      * }
      * }
@@ -25710,7 +25710,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessRfProfilesExample", example.applyValue(getWirelessRfProfilesResult -> getWirelessRfProfilesResult.item()));
+     *         ctx.export("merakiNetworksWirelessRfProfilesExample", example.item());
      *     }
      * }
      * }
@@ -25752,7 +25752,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessRfProfilesExample", example.applyValue(getWirelessRfProfilesResult -> getWirelessRfProfilesResult.item()));
+     *         ctx.export("merakiNetworksWirelessRfProfilesExample", example.item());
      *     }
      * }
      * }
@@ -25794,7 +25794,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessRfProfilesExample", example.applyValue(getWirelessRfProfilesResult -> getWirelessRfProfilesResult.item()));
+     *         ctx.export("merakiNetworksWirelessRfProfilesExample", example.item());
      *     }
      * }
      * }
@@ -25836,7 +25836,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessRfProfilesExample", example.applyValue(getWirelessRfProfilesResult -> getWirelessRfProfilesResult.item()));
+     *         ctx.export("merakiNetworksWirelessRfProfilesExample", example.item());
      *     }
      * }
      * }
@@ -25877,7 +25877,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSettingsExample", example.applyValue(getWirelessSettingsResult -> getWirelessSettingsResult.item()));
+     *         ctx.export("merakiNetworksWirelessSettingsExample", example.item());
      *     }
      * }
      * }
@@ -25918,7 +25918,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSettingsExample", example.applyValue(getWirelessSettingsResult -> getWirelessSettingsResult.item()));
+     *         ctx.export("merakiNetworksWirelessSettingsExample", example.item());
      *     }
      * }
      * }
@@ -25959,7 +25959,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSettingsExample", example.applyValue(getWirelessSettingsResult -> getWirelessSettingsResult.item()));
+     *         ctx.export("merakiNetworksWirelessSettingsExample", example.item());
      *     }
      * }
      * }
@@ -26000,7 +26000,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSettingsExample", example.applyValue(getWirelessSettingsResult -> getWirelessSettingsResult.item()));
+     *         ctx.export("merakiNetworksWirelessSettingsExample", example.item());
      *     }
      * }
      * }
@@ -26041,7 +26041,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSettingsExample", example.applyValue(getWirelessSettingsResult -> getWirelessSettingsResult.item()));
+     *         ctx.export("merakiNetworksWirelessSettingsExample", example.item());
      *     }
      * }
      * }
@@ -26092,7 +26092,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSignalQualityHistoryExample", example.applyValue(getWirelessSignalQualityHistoryResult -> getWirelessSignalQualityHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessSignalQualityHistoryExample", example.items());
      *     }
      * }
      * }
@@ -26143,7 +26143,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSignalQualityHistoryExample", example.applyValue(getWirelessSignalQualityHistoryResult -> getWirelessSignalQualityHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessSignalQualityHistoryExample", example.items());
      *     }
      * }
      * }
@@ -26194,7 +26194,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSignalQualityHistoryExample", example.applyValue(getWirelessSignalQualityHistoryResult -> getWirelessSignalQualityHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessSignalQualityHistoryExample", example.items());
      *     }
      * }
      * }
@@ -26245,7 +26245,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSignalQualityHistoryExample", example.applyValue(getWirelessSignalQualityHistoryResult -> getWirelessSignalQualityHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessSignalQualityHistoryExample", example.items());
      *     }
      * }
      * }
@@ -26296,7 +26296,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSignalQualityHistoryExample", example.applyValue(getWirelessSignalQualityHistoryResult -> getWirelessSignalQualityHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessSignalQualityHistoryExample", example.items());
      *     }
      * }
      * }
@@ -26387,7 +26387,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsBonjourForwardingExample", example.applyValue(getWirelessSsidsBonjourForwardingResult -> getWirelessSsidsBonjourForwardingResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsBonjourForwardingExample", example.item());
      *     }
      * }
      * }
@@ -26429,7 +26429,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsBonjourForwardingExample", example.applyValue(getWirelessSsidsBonjourForwardingResult -> getWirelessSsidsBonjourForwardingResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsBonjourForwardingExample", example.item());
      *     }
      * }
      * }
@@ -26471,7 +26471,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsBonjourForwardingExample", example.applyValue(getWirelessSsidsBonjourForwardingResult -> getWirelessSsidsBonjourForwardingResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsBonjourForwardingExample", example.item());
      *     }
      * }
      * }
@@ -26513,7 +26513,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsBonjourForwardingExample", example.applyValue(getWirelessSsidsBonjourForwardingResult -> getWirelessSsidsBonjourForwardingResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsBonjourForwardingExample", example.item());
      *     }
      * }
      * }
@@ -26555,7 +26555,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsBonjourForwardingExample", example.applyValue(getWirelessSsidsBonjourForwardingResult -> getWirelessSsidsBonjourForwardingResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsBonjourForwardingExample", example.item());
      *     }
      * }
      * }
@@ -26597,7 +26597,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsDeviceTypeGroupPoliciesExample", example.applyValue(getWirelessSsidsDeviceTypeGroupPoliciesResult -> getWirelessSsidsDeviceTypeGroupPoliciesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsDeviceTypeGroupPoliciesExample", example.item());
      *     }
      * }
      * }
@@ -26639,7 +26639,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsDeviceTypeGroupPoliciesExample", example.applyValue(getWirelessSsidsDeviceTypeGroupPoliciesResult -> getWirelessSsidsDeviceTypeGroupPoliciesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsDeviceTypeGroupPoliciesExample", example.item());
      *     }
      * }
      * }
@@ -26681,7 +26681,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsDeviceTypeGroupPoliciesExample", example.applyValue(getWirelessSsidsDeviceTypeGroupPoliciesResult -> getWirelessSsidsDeviceTypeGroupPoliciesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsDeviceTypeGroupPoliciesExample", example.item());
      *     }
      * }
      * }
@@ -26723,7 +26723,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsDeviceTypeGroupPoliciesExample", example.applyValue(getWirelessSsidsDeviceTypeGroupPoliciesResult -> getWirelessSsidsDeviceTypeGroupPoliciesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsDeviceTypeGroupPoliciesExample", example.item());
      *     }
      * }
      * }
@@ -26765,7 +26765,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsDeviceTypeGroupPoliciesExample", example.applyValue(getWirelessSsidsDeviceTypeGroupPoliciesResult -> getWirelessSsidsDeviceTypeGroupPoliciesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsDeviceTypeGroupPoliciesExample", example.item());
      *     }
      * }
      * }
@@ -26807,7 +26807,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsEapOverrideExample", example.applyValue(getWirelessSsidsEapOverrideResult -> getWirelessSsidsEapOverrideResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsEapOverrideExample", example.item());
      *     }
      * }
      * }
@@ -26849,7 +26849,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsEapOverrideExample", example.applyValue(getWirelessSsidsEapOverrideResult -> getWirelessSsidsEapOverrideResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsEapOverrideExample", example.item());
      *     }
      * }
      * }
@@ -26891,7 +26891,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsEapOverrideExample", example.applyValue(getWirelessSsidsEapOverrideResult -> getWirelessSsidsEapOverrideResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsEapOverrideExample", example.item());
      *     }
      * }
      * }
@@ -26933,7 +26933,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsEapOverrideExample", example.applyValue(getWirelessSsidsEapOverrideResult -> getWirelessSsidsEapOverrideResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsEapOverrideExample", example.item());
      *     }
      * }
      * }
@@ -26975,7 +26975,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsEapOverrideExample", example.applyValue(getWirelessSsidsEapOverrideResult -> getWirelessSsidsEapOverrideResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsEapOverrideExample", example.item());
      *     }
      * }
      * }
@@ -27017,7 +27017,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsFirewallL3FirewallRulesExample", example.applyValue(getWirelessSsidsFirewallL3FirewallRulesResult -> getWirelessSsidsFirewallL3FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsFirewallL3FirewallRulesExample", example.item());
      *     }
      * }
      * }
@@ -27059,7 +27059,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsFirewallL3FirewallRulesExample", example.applyValue(getWirelessSsidsFirewallL3FirewallRulesResult -> getWirelessSsidsFirewallL3FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsFirewallL3FirewallRulesExample", example.item());
      *     }
      * }
      * }
@@ -27101,7 +27101,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsFirewallL3FirewallRulesExample", example.applyValue(getWirelessSsidsFirewallL3FirewallRulesResult -> getWirelessSsidsFirewallL3FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsFirewallL3FirewallRulesExample", example.item());
      *     }
      * }
      * }
@@ -27143,7 +27143,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsFirewallL3FirewallRulesExample", example.applyValue(getWirelessSsidsFirewallL3FirewallRulesResult -> getWirelessSsidsFirewallL3FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsFirewallL3FirewallRulesExample", example.item());
      *     }
      * }
      * }
@@ -27185,7 +27185,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsFirewallL3FirewallRulesExample", example.applyValue(getWirelessSsidsFirewallL3FirewallRulesResult -> getWirelessSsidsFirewallL3FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsFirewallL3FirewallRulesExample", example.item());
      *     }
      * }
      * }
@@ -27227,7 +27227,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsFirewallL7FirewallRulesExample", example.applyValue(getWirelessSsidsFirewallL7FirewallRulesResult -> getWirelessSsidsFirewallL7FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsFirewallL7FirewallRulesExample", example.item());
      *     }
      * }
      * }
@@ -27269,7 +27269,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsFirewallL7FirewallRulesExample", example.applyValue(getWirelessSsidsFirewallL7FirewallRulesResult -> getWirelessSsidsFirewallL7FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsFirewallL7FirewallRulesExample", example.item());
      *     }
      * }
      * }
@@ -27311,7 +27311,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsFirewallL7FirewallRulesExample", example.applyValue(getWirelessSsidsFirewallL7FirewallRulesResult -> getWirelessSsidsFirewallL7FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsFirewallL7FirewallRulesExample", example.item());
      *     }
      * }
      * }
@@ -27353,7 +27353,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsFirewallL7FirewallRulesExample", example.applyValue(getWirelessSsidsFirewallL7FirewallRulesResult -> getWirelessSsidsFirewallL7FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsFirewallL7FirewallRulesExample", example.item());
      *     }
      * }
      * }
@@ -27395,7 +27395,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsFirewallL7FirewallRulesExample", example.applyValue(getWirelessSsidsFirewallL7FirewallRulesResult -> getWirelessSsidsFirewallL7FirewallRulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsFirewallL7FirewallRulesExample", example.item());
      *     }
      * }
      * }
@@ -27437,7 +27437,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsHotspot20Example", example.applyValue(getWirelessSsidsHotspot20Result -> getWirelessSsidsHotspot20Result.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsHotspot20Example", example.item());
      *     }
      * }
      * }
@@ -27479,7 +27479,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsHotspot20Example", example.applyValue(getWirelessSsidsHotspot20Result -> getWirelessSsidsHotspot20Result.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsHotspot20Example", example.item());
      *     }
      * }
      * }
@@ -27521,7 +27521,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsHotspot20Example", example.applyValue(getWirelessSsidsHotspot20Result -> getWirelessSsidsHotspot20Result.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsHotspot20Example", example.item());
      *     }
      * }
      * }
@@ -27563,7 +27563,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsHotspot20Example", example.applyValue(getWirelessSsidsHotspot20Result -> getWirelessSsidsHotspot20Result.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsHotspot20Example", example.item());
      *     }
      * }
      * }
@@ -27605,7 +27605,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsHotspot20Example", example.applyValue(getWirelessSsidsHotspot20Result -> getWirelessSsidsHotspot20Result.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsHotspot20Example", example.item());
      *     }
      * }
      * }
@@ -27696,7 +27696,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsSchedulesExample", example.applyValue(getWirelessSsidsSchedulesResult -> getWirelessSsidsSchedulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsSchedulesExample", example.item());
      *     }
      * }
      * }
@@ -27738,7 +27738,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsSchedulesExample", example.applyValue(getWirelessSsidsSchedulesResult -> getWirelessSsidsSchedulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsSchedulesExample", example.item());
      *     }
      * }
      * }
@@ -27780,7 +27780,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsSchedulesExample", example.applyValue(getWirelessSsidsSchedulesResult -> getWirelessSsidsSchedulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsSchedulesExample", example.item());
      *     }
      * }
      * }
@@ -27822,7 +27822,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsSchedulesExample", example.applyValue(getWirelessSsidsSchedulesResult -> getWirelessSsidsSchedulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsSchedulesExample", example.item());
      *     }
      * }
      * }
@@ -27864,7 +27864,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsSchedulesExample", example.applyValue(getWirelessSsidsSchedulesResult -> getWirelessSsidsSchedulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsSchedulesExample", example.item());
      *     }
      * }
      * }
@@ -27906,7 +27906,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsSplashSettingsExample", example.applyValue(getWirelessSsidsSplashSettingsResult -> getWirelessSsidsSplashSettingsResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsSplashSettingsExample", example.item());
      *     }
      * }
      * }
@@ -27948,7 +27948,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsSplashSettingsExample", example.applyValue(getWirelessSsidsSplashSettingsResult -> getWirelessSsidsSplashSettingsResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsSplashSettingsExample", example.item());
      *     }
      * }
      * }
@@ -27990,7 +27990,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsSplashSettingsExample", example.applyValue(getWirelessSsidsSplashSettingsResult -> getWirelessSsidsSplashSettingsResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsSplashSettingsExample", example.item());
      *     }
      * }
      * }
@@ -28032,7 +28032,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsSplashSettingsExample", example.applyValue(getWirelessSsidsSplashSettingsResult -> getWirelessSsidsSplashSettingsResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsSplashSettingsExample", example.item());
      *     }
      * }
      * }
@@ -28074,7 +28074,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsSplashSettingsExample", example.applyValue(getWirelessSsidsSplashSettingsResult -> getWirelessSsidsSplashSettingsResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsSplashSettingsExample", example.item());
      *     }
      * }
      * }
@@ -28116,7 +28116,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsTrafficShapingRulesExample", example.applyValue(getWirelessSsidsTrafficShapingRulesResult -> getWirelessSsidsTrafficShapingRulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsTrafficShapingRulesExample", example.item());
      *     }
      * }
      * }
@@ -28158,7 +28158,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsTrafficShapingRulesExample", example.applyValue(getWirelessSsidsTrafficShapingRulesResult -> getWirelessSsidsTrafficShapingRulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsTrafficShapingRulesExample", example.item());
      *     }
      * }
      * }
@@ -28200,7 +28200,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsTrafficShapingRulesExample", example.applyValue(getWirelessSsidsTrafficShapingRulesResult -> getWirelessSsidsTrafficShapingRulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsTrafficShapingRulesExample", example.item());
      *     }
      * }
      * }
@@ -28242,7 +28242,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsTrafficShapingRulesExample", example.applyValue(getWirelessSsidsTrafficShapingRulesResult -> getWirelessSsidsTrafficShapingRulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsTrafficShapingRulesExample", example.item());
      *     }
      * }
      * }
@@ -28284,7 +28284,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsTrafficShapingRulesExample", example.applyValue(getWirelessSsidsTrafficShapingRulesResult -> getWirelessSsidsTrafficShapingRulesResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsTrafficShapingRulesExample", example.item());
      *     }
      * }
      * }
@@ -28326,7 +28326,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsVpnExample", example.applyValue(getWirelessSsidsVpnResult -> getWirelessSsidsVpnResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsVpnExample", example.item());
      *     }
      * }
      * }
@@ -28368,7 +28368,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsVpnExample", example.applyValue(getWirelessSsidsVpnResult -> getWirelessSsidsVpnResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsVpnExample", example.item());
      *     }
      * }
      * }
@@ -28410,7 +28410,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsVpnExample", example.applyValue(getWirelessSsidsVpnResult -> getWirelessSsidsVpnResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsVpnExample", example.item());
      *     }
      * }
      * }
@@ -28452,7 +28452,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsVpnExample", example.applyValue(getWirelessSsidsVpnResult -> getWirelessSsidsVpnResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsVpnExample", example.item());
      *     }
      * }
      * }
@@ -28494,7 +28494,7 @@ public final class NetworksFunctions {
      *             .number("string")
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessSsidsVpnExample", example.applyValue(getWirelessSsidsVpnResult -> getWirelessSsidsVpnResult.item()));
+     *         ctx.export("merakiNetworksWirelessSsidsVpnExample", example.item());
      *     }
      * }
      * }
@@ -28545,7 +28545,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessUsageHistoryExample", example.applyValue(getWirelessUsageHistoryResult -> getWirelessUsageHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessUsageHistoryExample", example.items());
      *     }
      * }
      * }
@@ -28596,7 +28596,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessUsageHistoryExample", example.applyValue(getWirelessUsageHistoryResult -> getWirelessUsageHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessUsageHistoryExample", example.items());
      *     }
      * }
      * }
@@ -28647,7 +28647,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessUsageHistoryExample", example.applyValue(getWirelessUsageHistoryResult -> getWirelessUsageHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessUsageHistoryExample", example.items());
      *     }
      * }
      * }
@@ -28698,7 +28698,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessUsageHistoryExample", example.applyValue(getWirelessUsageHistoryResult -> getWirelessUsageHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessUsageHistoryExample", example.items());
      *     }
      * }
      * }
@@ -28749,7 +28749,7 @@ public final class NetworksFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiNetworksWirelessUsageHistoryExample", example.applyValue(getWirelessUsageHistoryResult -> getWirelessUsageHistoryResult.items()));
+     *         ctx.export("merakiNetworksWirelessUsageHistoryExample", example.items());
      *     }
      * }
      * }
