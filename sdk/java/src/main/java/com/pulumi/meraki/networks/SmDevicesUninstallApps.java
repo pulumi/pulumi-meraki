@@ -21,44 +21,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.meraki.networks.SmDevicesUninstallApps;
- * import com.pulumi.meraki.networks.SmDevicesUninstallAppsArgs;
- * import com.pulumi.meraki.networks.inputs.SmDevicesUninstallAppsParametersArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new SmDevicesUninstallApps("example", SmDevicesUninstallAppsArgs.builder()
- *             .deviceId("string")
- *             .networkId("string")
- *             .parameters(SmDevicesUninstallAppsParametersArgs.builder()
- *                 .app_ids(                
- *                     "1284392014819",
- *                     "2983092129865")
- *                 .build())
- *             .build());
- * 
- *         ctx.export("merakiNetworksSmDevicesUninstallAppsExample", example);
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

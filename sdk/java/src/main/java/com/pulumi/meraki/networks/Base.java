@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.Pulumi;
  * import com.pulumi.core.Output;
  * import com.pulumi.meraki.networks.base;
- * import com.pulumi.meraki.networks.BaseArgs;
+ * import com.pulumi.meraki.networks.baseArgs;
  * import java.util.List;
  * import java.util.ArrayList;
  * import java.util.Map;

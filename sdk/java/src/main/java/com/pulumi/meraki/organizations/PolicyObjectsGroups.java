@@ -43,7 +43,7 @@ import javax.annotation.Nullable;
  *         var example = new PolicyObjectsGroups("example", PolicyObjectsGroupsArgs.builder()
  *             .category("NetworkObjectGroup")
  *             .name("Web Servers - Datacenter 10")
- *             .objectIds(100)
+ *             .objectIds("100")
  *             .organizationId("string")
  *             .build());
  * 

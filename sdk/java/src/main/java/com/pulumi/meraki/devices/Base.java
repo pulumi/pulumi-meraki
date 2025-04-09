@@ -29,7 +29,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.Pulumi;
  * import com.pulumi.core.Output;
  * import com.pulumi.meraki.devices.base;
- * import com.pulumi.meraki.devices.BaseArgs;
+ * import com.pulumi.meraki.devices.baseArgs;
  * import java.util.List;
  * import java.util.ArrayList;
  * import java.util.Map;

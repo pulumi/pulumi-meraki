@@ -22,48 +22,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.meraki.networks.ClientsProvision;
- * import com.pulumi.meraki.networks.ClientsProvisionArgs;
- * import com.pulumi.meraki.networks.inputs.ClientsProvisionParametersArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new ClientsProvision("example", ClientsProvisionArgs.builder()
- *             .networkId("string")
- *             .parameters(ClientsProvisionParametersArgs.builder()
- *                 .clients(ClientsProvisionParametersClientArgs.builder()
- *                     .mac("00:11:22:33:44:55")
- *                     .name("Miles's phone")
- *                     .build())
- *                 .device_policy("Group policy")
- *                 .group_policy_id("101")
- *                 .policies_by_security_appliance(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
- *                 .policies_by_ssid(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
- *                 .build())
- *             .build());
- * 
- *         ctx.export("merakiNetworksClientsProvisionExample", example);
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

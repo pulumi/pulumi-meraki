@@ -22,52 +22,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.meraki.networks.SmDevicesShutdown;
- * import com.pulumi.meraki.networks.SmDevicesShutdownArgs;
- * import com.pulumi.meraki.networks.inputs.SmDevicesShutdownParametersArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new SmDevicesShutdown("example", SmDevicesShutdownArgs.builder()
- *             .networkId("string")
- *             .parameters(SmDevicesShutdownParametersArgs.builder()
- *                 .ids(                
- *                     "1284392014819",
- *                     "2983092129865")
- *                 .scope(                
- *                     "withAny",
- *                     "tag1",
- *                     "tag2")
- *                 .serials(                
- *                     "XY0XX0Y0X0",
- *                     "A01B01CD00E",
- *                     "X02YZ1ZYZX")
- *                 .wifi_macs("00:11:22:33:44:55")
- *                 .build())
- *             .build());
- * 
- *         ctx.export("merakiNetworksSmDevicesShutdownExample", example);
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  */

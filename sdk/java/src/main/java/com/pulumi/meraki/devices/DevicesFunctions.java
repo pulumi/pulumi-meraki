@@ -141,7 +141,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesAppliancePerformanceExample", example.applyValue(getAppliancePerformanceResult -> getAppliancePerformanceResult.item()));
+     *         ctx.export("merakiDevicesAppliancePerformanceExample", example.item());
      *     }
      * }
      * }
@@ -182,7 +182,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesAppliancePerformanceExample", example.applyValue(getAppliancePerformanceResult -> getAppliancePerformanceResult.item()));
+     *         ctx.export("merakiDevicesAppliancePerformanceExample", example.item());
      *     }
      * }
      * }
@@ -223,7 +223,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesAppliancePerformanceExample", example.applyValue(getAppliancePerformanceResult -> getAppliancePerformanceResult.item()));
+     *         ctx.export("merakiDevicesAppliancePerformanceExample", example.item());
      *     }
      * }
      * }
@@ -264,7 +264,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesAppliancePerformanceExample", example.applyValue(getAppliancePerformanceResult -> getAppliancePerformanceResult.item()));
+     *         ctx.export("merakiDevicesAppliancePerformanceExample", example.item());
      *     }
      * }
      * }
@@ -305,7 +305,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesAppliancePerformanceExample", example.applyValue(getAppliancePerformanceResult -> getAppliancePerformanceResult.item()));
+     *         ctx.export("merakiDevicesAppliancePerformanceExample", example.item());
      *     }
      * }
      * }
@@ -346,7 +346,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesApplianceRadioSettingsExample", example.applyValue(getApplianceRadioSettingsResult -> getApplianceRadioSettingsResult.item()));
+     *         ctx.export("merakiDevicesApplianceRadioSettingsExample", example.item());
      *     }
      * }
      * }
@@ -387,7 +387,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesApplianceRadioSettingsExample", example.applyValue(getApplianceRadioSettingsResult -> getApplianceRadioSettingsResult.item()));
+     *         ctx.export("merakiDevicesApplianceRadioSettingsExample", example.item());
      *     }
      * }
      * }
@@ -428,7 +428,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesApplianceRadioSettingsExample", example.applyValue(getApplianceRadioSettingsResult -> getApplianceRadioSettingsResult.item()));
+     *         ctx.export("merakiDevicesApplianceRadioSettingsExample", example.item());
      *     }
      * }
      * }
@@ -469,7 +469,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesApplianceRadioSettingsExample", example.applyValue(getApplianceRadioSettingsResult -> getApplianceRadioSettingsResult.item()));
+     *         ctx.export("merakiDevicesApplianceRadioSettingsExample", example.item());
      *     }
      * }
      * }
@@ -510,7 +510,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesApplianceRadioSettingsExample", example.applyValue(getApplianceRadioSettingsResult -> getApplianceRadioSettingsResult.item()));
+     *         ctx.export("merakiDevicesApplianceRadioSettingsExample", example.item());
      *     }
      * }
      * }
@@ -551,7 +551,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesApplianceUplinksSettingsExample", example.applyValue(getApplianceUplinksSettingsResult -> getApplianceUplinksSettingsResult.item()));
+     *         ctx.export("merakiDevicesApplianceUplinksSettingsExample", example.item());
      *     }
      * }
      * }
@@ -592,7 +592,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesApplianceUplinksSettingsExample", example.applyValue(getApplianceUplinksSettingsResult -> getApplianceUplinksSettingsResult.item()));
+     *         ctx.export("merakiDevicesApplianceUplinksSettingsExample", example.item());
      *     }
      * }
      * }
@@ -633,7 +633,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesApplianceUplinksSettingsExample", example.applyValue(getApplianceUplinksSettingsResult -> getApplianceUplinksSettingsResult.item()));
+     *         ctx.export("merakiDevicesApplianceUplinksSettingsExample", example.item());
      *     }
      * }
      * }
@@ -674,7 +674,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesApplianceUplinksSettingsExample", example.applyValue(getApplianceUplinksSettingsResult -> getApplianceUplinksSettingsResult.item()));
+     *         ctx.export("merakiDevicesApplianceUplinksSettingsExample", example.item());
      *     }
      * }
      * }
@@ -715,7 +715,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesApplianceUplinksSettingsExample", example.applyValue(getApplianceUplinksSettingsResult -> getApplianceUplinksSettingsResult.item()));
+     *         ctx.export("merakiDevicesApplianceUplinksSettingsExample", example.item());
      *     }
      * }
      * }
@@ -756,7 +756,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCameraAnalyticsLiveExample", example.applyValue(getCameraAnalyticsLiveResult -> getCameraAnalyticsLiveResult.item()));
+     *         ctx.export("merakiDevicesCameraAnalyticsLiveExample", example.item());
      *     }
      * }
      * }
@@ -797,7 +797,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCameraAnalyticsLiveExample", example.applyValue(getCameraAnalyticsLiveResult -> getCameraAnalyticsLiveResult.item()));
+     *         ctx.export("merakiDevicesCameraAnalyticsLiveExample", example.item());
      *     }
      * }
      * }
@@ -838,7 +838,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCameraAnalyticsLiveExample", example.applyValue(getCameraAnalyticsLiveResult -> getCameraAnalyticsLiveResult.item()));
+     *         ctx.export("merakiDevicesCameraAnalyticsLiveExample", example.item());
      *     }
      * }
      * }
@@ -879,7 +879,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCameraAnalyticsLiveExample", example.applyValue(getCameraAnalyticsLiveResult -> getCameraAnalyticsLiveResult.item()));
+     *         ctx.export("merakiDevicesCameraAnalyticsLiveExample", example.item());
      *     }
      * }
      * }
@@ -920,7 +920,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCameraAnalyticsLiveExample", example.applyValue(getCameraAnalyticsLiveResult -> getCameraAnalyticsLiveResult.item()));
+     *         ctx.export("merakiDevicesCameraAnalyticsLiveExample", example.item());
      *     }
      * }
      * }
@@ -961,7 +961,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCameraCustomAnalyticsExample", example.applyValue(getCameraCustomAnalyticsResult -> getCameraCustomAnalyticsResult.item()));
+     *         ctx.export("merakiDevicesCameraCustomAnalyticsExample", example.item());
      *     }
      * }
      * }
@@ -1002,7 +1002,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCameraCustomAnalyticsExample", example.applyValue(getCameraCustomAnalyticsResult -> getCameraCustomAnalyticsResult.item()));
+     *         ctx.export("merakiDevicesCameraCustomAnalyticsExample", example.item());
      *     }
      * }
      * }
@@ -1043,7 +1043,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCameraCustomAnalyticsExample", example.applyValue(getCameraCustomAnalyticsResult -> getCameraCustomAnalyticsResult.item()));
+     *         ctx.export("merakiDevicesCameraCustomAnalyticsExample", example.item());
      *     }
      * }
      * }
@@ -1084,7 +1084,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCameraCustomAnalyticsExample", example.applyValue(getCameraCustomAnalyticsResult -> getCameraCustomAnalyticsResult.item()));
+     *         ctx.export("merakiDevicesCameraCustomAnalyticsExample", example.item());
      *     }
      * }
      * }
@@ -1125,7 +1125,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCameraCustomAnalyticsExample", example.applyValue(getCameraCustomAnalyticsResult -> getCameraCustomAnalyticsResult.item()));
+     *         ctx.export("merakiDevicesCameraCustomAnalyticsExample", example.item());
      *     }
      * }
      * }
@@ -1166,7 +1166,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCameraQualityAndRetentionExample", example.applyValue(getCameraQualityAndRetentionResult -> getCameraQualityAndRetentionResult.item()));
+     *         ctx.export("merakiDevicesCameraQualityAndRetentionExample", example.item());
      *     }
      * }
      * }
@@ -1207,7 +1207,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCameraQualityAndRetentionExample", example.applyValue(getCameraQualityAndRetentionResult -> getCameraQualityAndRetentionResult.item()));
+     *         ctx.export("merakiDevicesCameraQualityAndRetentionExample", example.item());
      *     }
      * }
      * }
@@ -1248,7 +1248,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCameraQualityAndRetentionExample", example.applyValue(getCameraQualityAndRetentionResult -> getCameraQualityAndRetentionResult.item()));
+     *         ctx.export("merakiDevicesCameraQualityAndRetentionExample", example.item());
      *     }
      * }
      * }
@@ -1289,7 +1289,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCameraQualityAndRetentionExample", example.applyValue(getCameraQualityAndRetentionResult -> getCameraQualityAndRetentionResult.item()));
+     *         ctx.export("merakiDevicesCameraQualityAndRetentionExample", example.item());
      *     }
      * }
      * }
@@ -1330,7 +1330,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCameraQualityAndRetentionExample", example.applyValue(getCameraQualityAndRetentionResult -> getCameraQualityAndRetentionResult.item()));
+     *         ctx.export("merakiDevicesCameraQualityAndRetentionExample", example.item());
      *     }
      * }
      * }
@@ -1371,7 +1371,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCameraSenseExample", example.applyValue(getCameraSenseResult -> getCameraSenseResult.item()));
+     *         ctx.export("merakiDevicesCameraSenseExample", example.item());
      *     }
      * }
      * }
@@ -1412,7 +1412,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCameraSenseExample", example.applyValue(getCameraSenseResult -> getCameraSenseResult.item()));
+     *         ctx.export("merakiDevicesCameraSenseExample", example.item());
      *     }
      * }
      * }
@@ -1453,7 +1453,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCameraSenseExample", example.applyValue(getCameraSenseResult -> getCameraSenseResult.item()));
+     *         ctx.export("merakiDevicesCameraSenseExample", example.item());
      *     }
      * }
      * }
@@ -1494,7 +1494,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCameraSenseExample", example.applyValue(getCameraSenseResult -> getCameraSenseResult.item()));
+     *         ctx.export("merakiDevicesCameraSenseExample", example.item());
      *     }
      * }
      * }
@@ -1535,7 +1535,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCameraSenseExample", example.applyValue(getCameraSenseResult -> getCameraSenseResult.item()));
+     *         ctx.export("merakiDevicesCameraSenseExample", example.item());
      *     }
      * }
      * }
@@ -1577,7 +1577,7 @@ public final class DevicesFunctions {
      *             .timestamp("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCameraVideoLinkExample", example.applyValue(getCameraVideoLinkResult -> getCameraVideoLinkResult.item()));
+     *         ctx.export("merakiDevicesCameraVideoLinkExample", example.item());
      *     }
      * }
      * }
@@ -1619,7 +1619,7 @@ public final class DevicesFunctions {
      *             .timestamp("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCameraVideoLinkExample", example.applyValue(getCameraVideoLinkResult -> getCameraVideoLinkResult.item()));
+     *         ctx.export("merakiDevicesCameraVideoLinkExample", example.item());
      *     }
      * }
      * }
@@ -1661,7 +1661,7 @@ public final class DevicesFunctions {
      *             .timestamp("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCameraVideoLinkExample", example.applyValue(getCameraVideoLinkResult -> getCameraVideoLinkResult.item()));
+     *         ctx.export("merakiDevicesCameraVideoLinkExample", example.item());
      *     }
      * }
      * }
@@ -1703,7 +1703,7 @@ public final class DevicesFunctions {
      *             .timestamp("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCameraVideoLinkExample", example.applyValue(getCameraVideoLinkResult -> getCameraVideoLinkResult.item()));
+     *         ctx.export("merakiDevicesCameraVideoLinkExample", example.item());
      *     }
      * }
      * }
@@ -1745,7 +1745,7 @@ public final class DevicesFunctions {
      *             .timestamp("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCameraVideoLinkExample", example.applyValue(getCameraVideoLinkResult -> getCameraVideoLinkResult.item()));
+     *         ctx.export("merakiDevicesCameraVideoLinkExample", example.item());
      *     }
      * }
      * }
@@ -1786,7 +1786,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCameraVideoSettingsExample", example.applyValue(getCameraVideoSettingsResult -> getCameraVideoSettingsResult.item()));
+     *         ctx.export("merakiDevicesCameraVideoSettingsExample", example.item());
      *     }
      * }
      * }
@@ -1827,7 +1827,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCameraVideoSettingsExample", example.applyValue(getCameraVideoSettingsResult -> getCameraVideoSettingsResult.item()));
+     *         ctx.export("merakiDevicesCameraVideoSettingsExample", example.item());
      *     }
      * }
      * }
@@ -1868,7 +1868,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCameraVideoSettingsExample", example.applyValue(getCameraVideoSettingsResult -> getCameraVideoSettingsResult.item()));
+     *         ctx.export("merakiDevicesCameraVideoSettingsExample", example.item());
      *     }
      * }
      * }
@@ -1909,7 +1909,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCameraVideoSettingsExample", example.applyValue(getCameraVideoSettingsResult -> getCameraVideoSettingsResult.item()));
+     *         ctx.export("merakiDevicesCameraVideoSettingsExample", example.item());
      *     }
      * }
      * }
@@ -1950,7 +1950,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCameraVideoSettingsExample", example.applyValue(getCameraVideoSettingsResult -> getCameraVideoSettingsResult.item()));
+     *         ctx.export("merakiDevicesCameraVideoSettingsExample", example.item());
      *     }
      * }
      * }
@@ -1991,7 +1991,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCameraWirelessProfilesExample", example.applyValue(getCameraWirelessProfilesResult -> getCameraWirelessProfilesResult.item()));
+     *         ctx.export("merakiDevicesCameraWirelessProfilesExample", example.item());
      *     }
      * }
      * }
@@ -2032,7 +2032,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCameraWirelessProfilesExample", example.applyValue(getCameraWirelessProfilesResult -> getCameraWirelessProfilesResult.item()));
+     *         ctx.export("merakiDevicesCameraWirelessProfilesExample", example.item());
      *     }
      * }
      * }
@@ -2073,7 +2073,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCameraWirelessProfilesExample", example.applyValue(getCameraWirelessProfilesResult -> getCameraWirelessProfilesResult.item()));
+     *         ctx.export("merakiDevicesCameraWirelessProfilesExample", example.item());
      *     }
      * }
      * }
@@ -2114,7 +2114,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCameraWirelessProfilesExample", example.applyValue(getCameraWirelessProfilesResult -> getCameraWirelessProfilesResult.item()));
+     *         ctx.export("merakiDevicesCameraWirelessProfilesExample", example.item());
      *     }
      * }
      * }
@@ -2155,7 +2155,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCameraWirelessProfilesExample", example.applyValue(getCameraWirelessProfilesResult -> getCameraWirelessProfilesResult.item()));
+     *         ctx.export("merakiDevicesCameraWirelessProfilesExample", example.item());
      *     }
      * }
      * }
@@ -2196,7 +2196,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCellularGatewayLanExample", example.applyValue(getCellularGatewayLanResult -> getCellularGatewayLanResult.item()));
+     *         ctx.export("merakiDevicesCellularGatewayLanExample", example.item());
      *     }
      * }
      * }
@@ -2237,7 +2237,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCellularGatewayLanExample", example.applyValue(getCellularGatewayLanResult -> getCellularGatewayLanResult.item()));
+     *         ctx.export("merakiDevicesCellularGatewayLanExample", example.item());
      *     }
      * }
      * }
@@ -2278,7 +2278,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCellularGatewayLanExample", example.applyValue(getCellularGatewayLanResult -> getCellularGatewayLanResult.item()));
+     *         ctx.export("merakiDevicesCellularGatewayLanExample", example.item());
      *     }
      * }
      * }
@@ -2319,7 +2319,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCellularGatewayLanExample", example.applyValue(getCellularGatewayLanResult -> getCellularGatewayLanResult.item()));
+     *         ctx.export("merakiDevicesCellularGatewayLanExample", example.item());
      *     }
      * }
      * }
@@ -2360,7 +2360,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCellularGatewayLanExample", example.applyValue(getCellularGatewayLanResult -> getCellularGatewayLanResult.item()));
+     *         ctx.export("merakiDevicesCellularGatewayLanExample", example.item());
      *     }
      * }
      * }
@@ -2401,7 +2401,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCellularGatewayPortForwardingRulesExample", example.applyValue(getCellularGatewayPortForwardingRulesResult -> getCellularGatewayPortForwardingRulesResult.item()));
+     *         ctx.export("merakiDevicesCellularGatewayPortForwardingRulesExample", example.item());
      *     }
      * }
      * }
@@ -2442,7 +2442,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCellularGatewayPortForwardingRulesExample", example.applyValue(getCellularGatewayPortForwardingRulesResult -> getCellularGatewayPortForwardingRulesResult.item()));
+     *         ctx.export("merakiDevicesCellularGatewayPortForwardingRulesExample", example.item());
      *     }
      * }
      * }
@@ -2483,7 +2483,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCellularGatewayPortForwardingRulesExample", example.applyValue(getCellularGatewayPortForwardingRulesResult -> getCellularGatewayPortForwardingRulesResult.item()));
+     *         ctx.export("merakiDevicesCellularGatewayPortForwardingRulesExample", example.item());
      *     }
      * }
      * }
@@ -2524,7 +2524,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCellularGatewayPortForwardingRulesExample", example.applyValue(getCellularGatewayPortForwardingRulesResult -> getCellularGatewayPortForwardingRulesResult.item()));
+     *         ctx.export("merakiDevicesCellularGatewayPortForwardingRulesExample", example.item());
      *     }
      * }
      * }
@@ -2565,7 +2565,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCellularGatewayPortForwardingRulesExample", example.applyValue(getCellularGatewayPortForwardingRulesResult -> getCellularGatewayPortForwardingRulesResult.item()));
+     *         ctx.export("merakiDevicesCellularGatewayPortForwardingRulesExample", example.item());
      *     }
      * }
      * }
@@ -2606,7 +2606,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCellularSimsExample", example.applyValue(getCellularSimsResult -> getCellularSimsResult.item()));
+     *         ctx.export("merakiDevicesCellularSimsExample", example.item());
      *     }
      * }
      * }
@@ -2647,7 +2647,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCellularSimsExample", example.applyValue(getCellularSimsResult -> getCellularSimsResult.item()));
+     *         ctx.export("merakiDevicesCellularSimsExample", example.item());
      *     }
      * }
      * }
@@ -2688,7 +2688,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCellularSimsExample", example.applyValue(getCellularSimsResult -> getCellularSimsResult.item()));
+     *         ctx.export("merakiDevicesCellularSimsExample", example.item());
      *     }
      * }
      * }
@@ -2729,7 +2729,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCellularSimsExample", example.applyValue(getCellularSimsResult -> getCellularSimsResult.item()));
+     *         ctx.export("merakiDevicesCellularSimsExample", example.item());
      *     }
      * }
      * }
@@ -2770,7 +2770,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesCellularSimsExample", example.applyValue(getCellularSimsResult -> getCellularSimsResult.item()));
+     *         ctx.export("merakiDevicesCellularSimsExample", example.item());
      *     }
      * }
      * }
@@ -2812,7 +2812,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesLiveToolsArpTableExample", example.applyValue(getLiveToolsArpTableResult -> getLiveToolsArpTableResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsArpTableExample", example.item());
      *     }
      * }
      * }
@@ -2854,7 +2854,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesLiveToolsArpTableExample", example.applyValue(getLiveToolsArpTableResult -> getLiveToolsArpTableResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsArpTableExample", example.item());
      *     }
      * }
      * }
@@ -2896,7 +2896,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesLiveToolsArpTableExample", example.applyValue(getLiveToolsArpTableResult -> getLiveToolsArpTableResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsArpTableExample", example.item());
      *     }
      * }
      * }
@@ -2938,7 +2938,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesLiveToolsArpTableExample", example.applyValue(getLiveToolsArpTableResult -> getLiveToolsArpTableResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsArpTableExample", example.item());
      *     }
      * }
      * }
@@ -2980,7 +2980,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesLiveToolsArpTableExample", example.applyValue(getLiveToolsArpTableResult -> getLiveToolsArpTableResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsArpTableExample", example.item());
      *     }
      * }
      * }
@@ -3022,7 +3022,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesLiveToolsCableTestExample", example.applyValue(getLiveToolsCableTestResult -> getLiveToolsCableTestResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsCableTestExample", example.item());
      *     }
      * }
      * }
@@ -3064,7 +3064,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesLiveToolsCableTestExample", example.applyValue(getLiveToolsCableTestResult -> getLiveToolsCableTestResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsCableTestExample", example.item());
      *     }
      * }
      * }
@@ -3106,7 +3106,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesLiveToolsCableTestExample", example.applyValue(getLiveToolsCableTestResult -> getLiveToolsCableTestResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsCableTestExample", example.item());
      *     }
      * }
      * }
@@ -3148,7 +3148,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesLiveToolsCableTestExample", example.applyValue(getLiveToolsCableTestResult -> getLiveToolsCableTestResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsCableTestExample", example.item());
      *     }
      * }
      * }
@@ -3190,7 +3190,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesLiveToolsCableTestExample", example.applyValue(getLiveToolsCableTestResult -> getLiveToolsCableTestResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsCableTestExample", example.item());
      *     }
      * }
      * }
@@ -3232,7 +3232,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesLiveToolsPingExample", example.applyValue(getLiveToolsPingResult -> getLiveToolsPingResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsPingExample", example.item());
      *     }
      * }
      * }
@@ -3274,7 +3274,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesLiveToolsPingExample", example.applyValue(getLiveToolsPingResult -> getLiveToolsPingResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsPingExample", example.item());
      *     }
      * }
      * }
@@ -3316,7 +3316,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesLiveToolsPingExample", example.applyValue(getLiveToolsPingResult -> getLiveToolsPingResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsPingExample", example.item());
      *     }
      * }
      * }
@@ -3358,7 +3358,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesLiveToolsPingExample", example.applyValue(getLiveToolsPingResult -> getLiveToolsPingResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsPingExample", example.item());
      *     }
      * }
      * }
@@ -3400,7 +3400,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesLiveToolsPingExample", example.applyValue(getLiveToolsPingResult -> getLiveToolsPingResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsPingExample", example.item());
      *     }
      * }
      * }
@@ -3442,7 +3442,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesLiveToolsPingDeviceExample", example.applyValue(getLiveToolsPingDeviceResult -> getLiveToolsPingDeviceResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsPingDeviceExample", example.item());
      *     }
      * }
      * }
@@ -3484,7 +3484,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesLiveToolsPingDeviceExample", example.applyValue(getLiveToolsPingDeviceResult -> getLiveToolsPingDeviceResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsPingDeviceExample", example.item());
      *     }
      * }
      * }
@@ -3526,7 +3526,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesLiveToolsPingDeviceExample", example.applyValue(getLiveToolsPingDeviceResult -> getLiveToolsPingDeviceResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsPingDeviceExample", example.item());
      *     }
      * }
      * }
@@ -3568,7 +3568,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesLiveToolsPingDeviceExample", example.applyValue(getLiveToolsPingDeviceResult -> getLiveToolsPingDeviceResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsPingDeviceExample", example.item());
      *     }
      * }
      * }
@@ -3610,7 +3610,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesLiveToolsPingDeviceExample", example.applyValue(getLiveToolsPingDeviceResult -> getLiveToolsPingDeviceResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsPingDeviceExample", example.item());
      *     }
      * }
      * }
@@ -3652,7 +3652,7 @@ public final class DevicesFunctions {
      *             .throughputTestId("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesLiveToolsThroughputTestExample", example.applyValue(getLiveToolsThroughputTestResult -> getLiveToolsThroughputTestResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsThroughputTestExample", example.item());
      *     }
      * }
      * }
@@ -3694,7 +3694,7 @@ public final class DevicesFunctions {
      *             .throughputTestId("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesLiveToolsThroughputTestExample", example.applyValue(getLiveToolsThroughputTestResult -> getLiveToolsThroughputTestResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsThroughputTestExample", example.item());
      *     }
      * }
      * }
@@ -3736,7 +3736,7 @@ public final class DevicesFunctions {
      *             .throughputTestId("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesLiveToolsThroughputTestExample", example.applyValue(getLiveToolsThroughputTestResult -> getLiveToolsThroughputTestResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsThroughputTestExample", example.item());
      *     }
      * }
      * }
@@ -3778,7 +3778,7 @@ public final class DevicesFunctions {
      *             .throughputTestId("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesLiveToolsThroughputTestExample", example.applyValue(getLiveToolsThroughputTestResult -> getLiveToolsThroughputTestResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsThroughputTestExample", example.item());
      *     }
      * }
      * }
@@ -3820,7 +3820,7 @@ public final class DevicesFunctions {
      *             .throughputTestId("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesLiveToolsThroughputTestExample", example.applyValue(getLiveToolsThroughputTestResult -> getLiveToolsThroughputTestResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsThroughputTestExample", example.item());
      *     }
      * }
      * }
@@ -3862,7 +3862,7 @@ public final class DevicesFunctions {
      *             .wakeOnLanId("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesLiveToolsWakeOnLanExample", example.applyValue(getLiveToolsWakeOnLanResult -> getLiveToolsWakeOnLanResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsWakeOnLanExample", example.item());
      *     }
      * }
      * }
@@ -3904,7 +3904,7 @@ public final class DevicesFunctions {
      *             .wakeOnLanId("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesLiveToolsWakeOnLanExample", example.applyValue(getLiveToolsWakeOnLanResult -> getLiveToolsWakeOnLanResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsWakeOnLanExample", example.item());
      *     }
      * }
      * }
@@ -3946,7 +3946,7 @@ public final class DevicesFunctions {
      *             .wakeOnLanId("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesLiveToolsWakeOnLanExample", example.applyValue(getLiveToolsWakeOnLanResult -> getLiveToolsWakeOnLanResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsWakeOnLanExample", example.item());
      *     }
      * }
      * }
@@ -3988,7 +3988,7 @@ public final class DevicesFunctions {
      *             .wakeOnLanId("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesLiveToolsWakeOnLanExample", example.applyValue(getLiveToolsWakeOnLanResult -> getLiveToolsWakeOnLanResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsWakeOnLanExample", example.item());
      *     }
      * }
      * }
@@ -4030,7 +4030,7 @@ public final class DevicesFunctions {
      *             .wakeOnLanId("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesLiveToolsWakeOnLanExample", example.applyValue(getLiveToolsWakeOnLanResult -> getLiveToolsWakeOnLanResult.item()));
+     *         ctx.export("merakiDevicesLiveToolsWakeOnLanExample", example.item());
      *     }
      * }
      * }
@@ -4071,7 +4071,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesLldpCdpExample", example.applyValue(getLldpCdpResult -> getLldpCdpResult.item()));
+     *         ctx.export("merakiDevicesLldpCdpExample", example.item());
      *     }
      * }
      * }
@@ -4112,7 +4112,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesLldpCdpExample", example.applyValue(getLldpCdpResult -> getLldpCdpResult.item()));
+     *         ctx.export("merakiDevicesLldpCdpExample", example.item());
      *     }
      * }
      * }
@@ -4153,7 +4153,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesLldpCdpExample", example.applyValue(getLldpCdpResult -> getLldpCdpResult.item()));
+     *         ctx.export("merakiDevicesLldpCdpExample", example.item());
      *     }
      * }
      * }
@@ -4194,7 +4194,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesLldpCdpExample", example.applyValue(getLldpCdpResult -> getLldpCdpResult.item()));
+     *         ctx.export("merakiDevicesLldpCdpExample", example.item());
      *     }
      * }
      * }
@@ -4235,7 +4235,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesLldpCdpExample", example.applyValue(getLldpCdpResult -> getLldpCdpResult.item()));
+     *         ctx.export("merakiDevicesLldpCdpExample", example.item());
      *     }
      * }
      * }
@@ -4276,7 +4276,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesManagementInterfaceExample", example.applyValue(getManagementInterfaceResult -> getManagementInterfaceResult.item()));
+     *         ctx.export("merakiDevicesManagementInterfaceExample", example.item());
      *     }
      * }
      * }
@@ -4317,7 +4317,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesManagementInterfaceExample", example.applyValue(getManagementInterfaceResult -> getManagementInterfaceResult.item()));
+     *         ctx.export("merakiDevicesManagementInterfaceExample", example.item());
      *     }
      * }
      * }
@@ -4358,7 +4358,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesManagementInterfaceExample", example.applyValue(getManagementInterfaceResult -> getManagementInterfaceResult.item()));
+     *         ctx.export("merakiDevicesManagementInterfaceExample", example.item());
      *     }
      * }
      * }
@@ -4399,7 +4399,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesManagementInterfaceExample", example.applyValue(getManagementInterfaceResult -> getManagementInterfaceResult.item()));
+     *         ctx.export("merakiDevicesManagementInterfaceExample", example.item());
      *     }
      * }
      * }
@@ -4440,7 +4440,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesManagementInterfaceExample", example.applyValue(getManagementInterfaceResult -> getManagementInterfaceResult.item()));
+     *         ctx.export("merakiDevicesManagementInterfaceExample", example.item());
      *     }
      * }
      * }
@@ -4481,7 +4481,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesSensorRelationshipsExample", example.applyValue(getSensorRelationshipsResult -> getSensorRelationshipsResult.item()));
+     *         ctx.export("merakiDevicesSensorRelationshipsExample", example.item());
      *     }
      * }
      * }
@@ -4522,7 +4522,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesSensorRelationshipsExample", example.applyValue(getSensorRelationshipsResult -> getSensorRelationshipsResult.item()));
+     *         ctx.export("merakiDevicesSensorRelationshipsExample", example.item());
      *     }
      * }
      * }
@@ -4563,7 +4563,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesSensorRelationshipsExample", example.applyValue(getSensorRelationshipsResult -> getSensorRelationshipsResult.item()));
+     *         ctx.export("merakiDevicesSensorRelationshipsExample", example.item());
      *     }
      * }
      * }
@@ -4604,7 +4604,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesSensorRelationshipsExample", example.applyValue(getSensorRelationshipsResult -> getSensorRelationshipsResult.item()));
+     *         ctx.export("merakiDevicesSensorRelationshipsExample", example.item());
      *     }
      * }
      * }
@@ -4645,7 +4645,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesSensorRelationshipsExample", example.applyValue(getSensorRelationshipsResult -> getSensorRelationshipsResult.item()));
+     *         ctx.export("merakiDevicesSensorRelationshipsExample", example.item());
      *     }
      * }
      * }
@@ -4737,7 +4737,7 @@ public final class DevicesFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiDevicesSwitchPortsStatusesExample", example.applyValue(getSwitchPortsStatusesResult -> getSwitchPortsStatusesResult.items()));
+     *         ctx.export("merakiDevicesSwitchPortsStatusesExample", example.items());
      *     }
      * }
      * }
@@ -4780,7 +4780,7 @@ public final class DevicesFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiDevicesSwitchPortsStatusesExample", example.applyValue(getSwitchPortsStatusesResult -> getSwitchPortsStatusesResult.items()));
+     *         ctx.export("merakiDevicesSwitchPortsStatusesExample", example.items());
      *     }
      * }
      * }
@@ -4823,7 +4823,7 @@ public final class DevicesFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiDevicesSwitchPortsStatusesExample", example.applyValue(getSwitchPortsStatusesResult -> getSwitchPortsStatusesResult.items()));
+     *         ctx.export("merakiDevicesSwitchPortsStatusesExample", example.items());
      *     }
      * }
      * }
@@ -4866,7 +4866,7 @@ public final class DevicesFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiDevicesSwitchPortsStatusesExample", example.applyValue(getSwitchPortsStatusesResult -> getSwitchPortsStatusesResult.items()));
+     *         ctx.export("merakiDevicesSwitchPortsStatusesExample", example.items());
      *     }
      * }
      * }
@@ -4909,7 +4909,7 @@ public final class DevicesFunctions {
      *             .timespan(1)
      *             .build());
      * 
-     *         ctx.export("merakiDevicesSwitchPortsStatusesExample", example.applyValue(getSwitchPortsStatusesResult -> getSwitchPortsStatusesResult.items()));
+     *         ctx.export("merakiDevicesSwitchPortsStatusesExample", example.items());
      *     }
      * }
      * }
@@ -5000,7 +5000,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesSwitchRoutingInterfacesDhcpExample", example.applyValue(getSwitchRoutingInterfacesDhcpResult -> getSwitchRoutingInterfacesDhcpResult.item()));
+     *         ctx.export("merakiDevicesSwitchRoutingInterfacesDhcpExample", example.item());
      *     }
      * }
      * }
@@ -5042,7 +5042,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesSwitchRoutingInterfacesDhcpExample", example.applyValue(getSwitchRoutingInterfacesDhcpResult -> getSwitchRoutingInterfacesDhcpResult.item()));
+     *         ctx.export("merakiDevicesSwitchRoutingInterfacesDhcpExample", example.item());
      *     }
      * }
      * }
@@ -5084,7 +5084,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesSwitchRoutingInterfacesDhcpExample", example.applyValue(getSwitchRoutingInterfacesDhcpResult -> getSwitchRoutingInterfacesDhcpResult.item()));
+     *         ctx.export("merakiDevicesSwitchRoutingInterfacesDhcpExample", example.item());
      *     }
      * }
      * }
@@ -5126,7 +5126,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesSwitchRoutingInterfacesDhcpExample", example.applyValue(getSwitchRoutingInterfacesDhcpResult -> getSwitchRoutingInterfacesDhcpResult.item()));
+     *         ctx.export("merakiDevicesSwitchRoutingInterfacesDhcpExample", example.item());
      *     }
      * }
      * }
@@ -5168,7 +5168,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesSwitchRoutingInterfacesDhcpExample", example.applyValue(getSwitchRoutingInterfacesDhcpResult -> getSwitchRoutingInterfacesDhcpResult.item()));
+     *         ctx.export("merakiDevicesSwitchRoutingInterfacesDhcpExample", example.item());
      *     }
      * }
      * }
@@ -5258,7 +5258,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesSwitchWarmSpareExample", example.applyValue(getSwitchWarmSpareResult -> getSwitchWarmSpareResult.item()));
+     *         ctx.export("merakiDevicesSwitchWarmSpareExample", example.item());
      *     }
      * }
      * }
@@ -5299,7 +5299,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesSwitchWarmSpareExample", example.applyValue(getSwitchWarmSpareResult -> getSwitchWarmSpareResult.item()));
+     *         ctx.export("merakiDevicesSwitchWarmSpareExample", example.item());
      *     }
      * }
      * }
@@ -5340,7 +5340,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesSwitchWarmSpareExample", example.applyValue(getSwitchWarmSpareResult -> getSwitchWarmSpareResult.item()));
+     *         ctx.export("merakiDevicesSwitchWarmSpareExample", example.item());
      *     }
      * }
      * }
@@ -5381,7 +5381,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesSwitchWarmSpareExample", example.applyValue(getSwitchWarmSpareResult -> getSwitchWarmSpareResult.item()));
+     *         ctx.export("merakiDevicesSwitchWarmSpareExample", example.item());
      *     }
      * }
      * }
@@ -5422,7 +5422,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesSwitchWarmSpareExample", example.applyValue(getSwitchWarmSpareResult -> getSwitchWarmSpareResult.item()));
+     *         ctx.export("merakiDevicesSwitchWarmSpareExample", example.item());
      *     }
      * }
      * }
@@ -5463,7 +5463,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesWirelessBluetoothSettingsExample", example.applyValue(getWirelessBluetoothSettingsResult -> getWirelessBluetoothSettingsResult.item()));
+     *         ctx.export("merakiDevicesWirelessBluetoothSettingsExample", example.item());
      *     }
      * }
      * }
@@ -5504,7 +5504,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesWirelessBluetoothSettingsExample", example.applyValue(getWirelessBluetoothSettingsResult -> getWirelessBluetoothSettingsResult.item()));
+     *         ctx.export("merakiDevicesWirelessBluetoothSettingsExample", example.item());
      *     }
      * }
      * }
@@ -5545,7 +5545,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesWirelessBluetoothSettingsExample", example.applyValue(getWirelessBluetoothSettingsResult -> getWirelessBluetoothSettingsResult.item()));
+     *         ctx.export("merakiDevicesWirelessBluetoothSettingsExample", example.item());
      *     }
      * }
      * }
@@ -5586,7 +5586,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesWirelessBluetoothSettingsExample", example.applyValue(getWirelessBluetoothSettingsResult -> getWirelessBluetoothSettingsResult.item()));
+     *         ctx.export("merakiDevicesWirelessBluetoothSettingsExample", example.item());
      *     }
      * }
      * }
@@ -5627,7 +5627,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesWirelessBluetoothSettingsExample", example.applyValue(getWirelessBluetoothSettingsResult -> getWirelessBluetoothSettingsResult.item()));
+     *         ctx.export("merakiDevicesWirelessBluetoothSettingsExample", example.item());
      *     }
      * }
      * }
@@ -5675,7 +5675,7 @@ public final class DevicesFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiDevicesWirelessConnectionStatsExample", example.applyValue(getWirelessConnectionStatsResult -> getWirelessConnectionStatsResult.item()));
+     *         ctx.export("merakiDevicesWirelessConnectionStatsExample", example.item());
      *     }
      * }
      * }
@@ -5723,7 +5723,7 @@ public final class DevicesFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiDevicesWirelessConnectionStatsExample", example.applyValue(getWirelessConnectionStatsResult -> getWirelessConnectionStatsResult.item()));
+     *         ctx.export("merakiDevicesWirelessConnectionStatsExample", example.item());
      *     }
      * }
      * }
@@ -5771,7 +5771,7 @@ public final class DevicesFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiDevicesWirelessConnectionStatsExample", example.applyValue(getWirelessConnectionStatsResult -> getWirelessConnectionStatsResult.item()));
+     *         ctx.export("merakiDevicesWirelessConnectionStatsExample", example.item());
      *     }
      * }
      * }
@@ -5819,7 +5819,7 @@ public final class DevicesFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiDevicesWirelessConnectionStatsExample", example.applyValue(getWirelessConnectionStatsResult -> getWirelessConnectionStatsResult.item()));
+     *         ctx.export("merakiDevicesWirelessConnectionStatsExample", example.item());
      *     }
      * }
      * }
@@ -5867,7 +5867,7 @@ public final class DevicesFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiDevicesWirelessConnectionStatsExample", example.applyValue(getWirelessConnectionStatsResult -> getWirelessConnectionStatsResult.item()));
+     *         ctx.export("merakiDevicesWirelessConnectionStatsExample", example.item());
      *     }
      * }
      * }
@@ -5916,7 +5916,7 @@ public final class DevicesFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiDevicesWirelessLatencyStatsExample", example.applyValue(getWirelessLatencyStatsResult -> getWirelessLatencyStatsResult.item()));
+     *         ctx.export("merakiDevicesWirelessLatencyStatsExample", example.item());
      *     }
      * }
      * }
@@ -5965,7 +5965,7 @@ public final class DevicesFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiDevicesWirelessLatencyStatsExample", example.applyValue(getWirelessLatencyStatsResult -> getWirelessLatencyStatsResult.item()));
+     *         ctx.export("merakiDevicesWirelessLatencyStatsExample", example.item());
      *     }
      * }
      * }
@@ -6014,7 +6014,7 @@ public final class DevicesFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiDevicesWirelessLatencyStatsExample", example.applyValue(getWirelessLatencyStatsResult -> getWirelessLatencyStatsResult.item()));
+     *         ctx.export("merakiDevicesWirelessLatencyStatsExample", example.item());
      *     }
      * }
      * }
@@ -6063,7 +6063,7 @@ public final class DevicesFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiDevicesWirelessLatencyStatsExample", example.applyValue(getWirelessLatencyStatsResult -> getWirelessLatencyStatsResult.item()));
+     *         ctx.export("merakiDevicesWirelessLatencyStatsExample", example.item());
      *     }
      * }
      * }
@@ -6112,7 +6112,7 @@ public final class DevicesFunctions {
      *             .vlan(1)
      *             .build());
      * 
-     *         ctx.export("merakiDevicesWirelessLatencyStatsExample", example.applyValue(getWirelessLatencyStatsResult -> getWirelessLatencyStatsResult.item()));
+     *         ctx.export("merakiDevicesWirelessLatencyStatsExample", example.item());
      *     }
      * }
      * }
@@ -6153,7 +6153,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesWirelessRadioSettingsExample", example.applyValue(getWirelessRadioSettingsResult -> getWirelessRadioSettingsResult.item()));
+     *         ctx.export("merakiDevicesWirelessRadioSettingsExample", example.item());
      *     }
      * }
      * }
@@ -6194,7 +6194,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesWirelessRadioSettingsExample", example.applyValue(getWirelessRadioSettingsResult -> getWirelessRadioSettingsResult.item()));
+     *         ctx.export("merakiDevicesWirelessRadioSettingsExample", example.item());
      *     }
      * }
      * }
@@ -6235,7 +6235,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesWirelessRadioSettingsExample", example.applyValue(getWirelessRadioSettingsResult -> getWirelessRadioSettingsResult.item()));
+     *         ctx.export("merakiDevicesWirelessRadioSettingsExample", example.item());
      *     }
      * }
      * }
@@ -6276,7 +6276,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesWirelessRadioSettingsExample", example.applyValue(getWirelessRadioSettingsResult -> getWirelessRadioSettingsResult.item()));
+     *         ctx.export("merakiDevicesWirelessRadioSettingsExample", example.item());
      *     }
      * }
      * }
@@ -6317,7 +6317,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesWirelessRadioSettingsExample", example.applyValue(getWirelessRadioSettingsResult -> getWirelessRadioSettingsResult.item()));
+     *         ctx.export("merakiDevicesWirelessRadioSettingsExample", example.item());
      *     }
      * }
      * }
@@ -6358,7 +6358,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesWirelessStatusExample", example.applyValue(getWirelessStatusResult -> getWirelessStatusResult.item()));
+     *         ctx.export("merakiDevicesWirelessStatusExample", example.item());
      *     }
      * }
      * }
@@ -6399,7 +6399,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesWirelessStatusExample", example.applyValue(getWirelessStatusResult -> getWirelessStatusResult.item()));
+     *         ctx.export("merakiDevicesWirelessStatusExample", example.item());
      *     }
      * }
      * }
@@ -6440,7 +6440,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesWirelessStatusExample", example.applyValue(getWirelessStatusResult -> getWirelessStatusResult.item()));
+     *         ctx.export("merakiDevicesWirelessStatusExample", example.item());
      *     }
      * }
      * }
@@ -6481,7 +6481,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesWirelessStatusExample", example.applyValue(getWirelessStatusResult -> getWirelessStatusResult.item()));
+     *         ctx.export("merakiDevicesWirelessStatusExample", example.item());
      *     }
      * }
      * }
@@ -6522,7 +6522,7 @@ public final class DevicesFunctions {
      *             .serial("string")
      *             .build());
      * 
-     *         ctx.export("merakiDevicesWirelessStatusExample", example.applyValue(getWirelessStatusResult -> getWirelessStatusResult.item()));
+     *         ctx.export("merakiDevicesWirelessStatusExample", example.item());
      *     }
      * }
      * }

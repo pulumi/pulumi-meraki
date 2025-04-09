@@ -20,44 +20,6 @@ import javax.annotation.Nullable;
  * ## Example Usage
  * 
  * &lt;!--Start PulumiCodeChooser --&gt;
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.meraki.devices.LiveToolsThroughputTest;
- * import com.pulumi.meraki.devices.LiveToolsThroughputTestArgs;
- * import com.pulumi.meraki.devices.inputs.LiveToolsThroughputTestCallbackArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new LiveToolsThroughputTest("example", LiveToolsThroughputTestArgs.builder()
- *             .callback(LiveToolsThroughputTestCallbackArgs.builder()
- *                 .http_server(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
- *                 .payload_template(%!v(PANIC=Format method: runtime error: invalid memory address or nil pointer dereference))
- *                 .shared_secret("secret")
- *                 .url("https://webhook.site/28efa24e-f830-4d9f-a12b-fbb9e5035031")
- *                 .build())
- *             .serial("string")
- *             .build());
- * 
- *         ctx.export("merakiDevicesLiveToolsThroughputTestExample", example);
- *     }
- * }
- * }
- * </pre>
  * &lt;!--End PulumiCodeChooser --&gt;
  * 
  * ## Import
