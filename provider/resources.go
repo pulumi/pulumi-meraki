@@ -27,9 +27,11 @@ import (
 	pf "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/pf/tfbridge"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
 	tks "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge/tokens"
+	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge/tokens/fallbackstrat"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfshim/walk"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/resource"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/tokens"
+	"github.com/pulumi/pulumi/sdk/v3/go/common/util/contract"
 
 	"github.com/pulumi/pulumi-meraki/provider/pkg/version"
 )
@@ -214,12 +216,17 @@ func Provider() tfbridge.ProviderInfo {
 
 	tfbridge.MustTraverseProperties(&prov, "ids", applyResourceIDs)
 
-	prov.MustComputeTokens(tks.KnownModules("meraki_", mainMod, []string{
-		"administered_",
-		"devices_",
-		"networks_",
-		"organizations_",
-	}, tks.MakeStandard(mainPkg)))
+	strategy, err := fallbackstrat.KnownModulesWithInferredFallback(
+		&prov,
+		"meraki_", mainMod, []string{
+			"administered_",
+			"devices_",
+			"networks_",
+			"organizations_",
+		}, tks.MakeStandard(mainPkg),
+	)
+	contract.AssertNoErrorf(err, "failed to create fallback strategy")
+	prov.MustComputeTokens(strategy)
 	prov.SetAutonaming(255, "-")
 	prov.MustApplyAutoAliases()
 
