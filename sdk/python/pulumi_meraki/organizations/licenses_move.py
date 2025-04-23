@@ -102,6 +102,9 @@ class _LicensesMoveState:
 
 
 class LicensesMove(pulumi.CustomResource):
+
+    pulumi_type = "meraki:organizations/licensesMove:LicensesMove"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

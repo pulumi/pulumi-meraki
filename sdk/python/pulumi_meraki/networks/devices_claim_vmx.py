@@ -102,6 +102,9 @@ class _DevicesClaimVmxState:
 
 
 class DevicesClaimVmx(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/devicesClaimVmx:DevicesClaimVmx"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

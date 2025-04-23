@@ -99,6 +99,9 @@ class _ApplianceUplinksSettingsState:
 
 
 class ApplianceUplinksSettings(pulumi.CustomResource):
+
+    pulumi_type = "meraki:devices/applianceUplinksSettings:ApplianceUplinksSettings"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

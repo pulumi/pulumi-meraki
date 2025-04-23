@@ -259,6 +259,9 @@ class _ApplianceTrafficShapingUplinkSelectionState:
 
 
 class ApplianceTrafficShapingUplinkSelection(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/applianceTrafficShapingUplinkSelection:ApplianceTrafficShapingUplinkSelection"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -193,6 +193,9 @@ class _InsightMonitoredMediaServersState:
 
 
 class InsightMonitoredMediaServers(pulumi.CustomResource):
+
+    pulumi_type = "meraki:organizations/insightMonitoredMediaServers:InsightMonitoredMediaServers"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -194,6 +194,9 @@ class _WirelessSsidsSchedulesState:
 
 
 class WirelessSsidsSchedules(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/wirelessSsidsSchedules:WirelessSsidsSchedules"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

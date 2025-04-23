@@ -102,6 +102,9 @@ class _LicensingCotermLicensesMoveState:
 
 
 class LicensingCotermLicensesMove(pulumi.CustomResource):
+
+    pulumi_type = "meraki:organizations/licensingCotermLicensesMove:LicensingCotermLicensesMove"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -97,6 +97,9 @@ class _SamlState:
 
 
 class Saml(pulumi.CustomResource):
+
+    pulumi_type = "meraki:organizations/saml:Saml"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

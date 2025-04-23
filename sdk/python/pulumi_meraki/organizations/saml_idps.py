@@ -177,6 +177,9 @@ class _SamlIdpsState:
 
 
 class SamlIdps(pulumi.CustomResource):
+
+    pulumi_type = "meraki:organizations/samlIdps:SamlIdps"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

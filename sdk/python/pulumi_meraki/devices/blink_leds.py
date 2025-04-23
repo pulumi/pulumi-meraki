@@ -102,6 +102,9 @@ class _BlinkLedsState:
 
 
 class BlinkLeds(pulumi.CustomResource):
+
+    pulumi_type = "meraki:devices/blinkLeds:BlinkLeds"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

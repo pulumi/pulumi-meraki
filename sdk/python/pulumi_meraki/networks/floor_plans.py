@@ -435,6 +435,9 @@ class _FloorPlansState:
 
 
 class FloorPlans(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/floorPlans:FloorPlans"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

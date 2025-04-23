@@ -135,6 +135,9 @@ class _TrafficAnalysisState:
 
 
 class TrafficAnalysis(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/trafficAnalysis:TrafficAnalysis"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

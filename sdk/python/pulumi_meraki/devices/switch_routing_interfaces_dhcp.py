@@ -450,6 +450,9 @@ class _SwitchRoutingInterfacesDhcpState:
 
 
 class SwitchRoutingInterfacesDhcp(pulumi.CustomResource):
+
+    pulumi_type = "meraki:devices/switchRoutingInterfacesDhcp:SwitchRoutingInterfacesDhcp"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

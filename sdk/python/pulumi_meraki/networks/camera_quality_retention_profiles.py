@@ -387,6 +387,9 @@ class _CameraQualityRetentionProfilesState:
 
 
 class CameraQualityRetentionProfiles(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/cameraQualityRetentionProfiles:CameraQualityRetentionProfiles"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

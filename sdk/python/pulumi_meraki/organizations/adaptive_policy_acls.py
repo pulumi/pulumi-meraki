@@ -259,6 +259,9 @@ class _AdaptivePolicyAclsState:
 
 
 class AdaptivePolicyAcls(pulumi.CustomResource):
+
+    pulumi_type = "meraki:organizations/adaptivePolicyAcls:AdaptivePolicyAcls"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

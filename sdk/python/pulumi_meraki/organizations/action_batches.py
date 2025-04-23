@@ -243,6 +243,9 @@ class _ActionBatchesState:
 
 
 class ActionBatches(pulumi.CustomResource):
+
+    pulumi_type = "meraki:organizations/actionBatches:ActionBatches"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

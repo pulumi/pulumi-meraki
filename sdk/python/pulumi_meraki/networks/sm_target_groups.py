@@ -177,6 +177,9 @@ class _SmTargetGroupsState:
 
 
 class SmTargetGroups(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/smTargetGroups:SmTargetGroups"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

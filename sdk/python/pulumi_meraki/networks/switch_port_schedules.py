@@ -171,6 +171,9 @@ class _SwitchPortSchedulesState:
 
 
 class SwitchPortSchedules(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/switchPortSchedules:SwitchPortSchedules"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

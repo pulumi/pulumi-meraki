@@ -102,6 +102,9 @@ class _SmDevicesMoveState:
 
 
 class SmDevicesMove(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/smDevicesMove:SmDevicesMove"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

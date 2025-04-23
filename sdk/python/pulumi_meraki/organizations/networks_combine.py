@@ -102,6 +102,9 @@ class _NetworksCombineState:
 
 
 class NetworksCombine(pulumi.CustomResource):
+
+    pulumi_type = "meraki:organizations/networksCombine:NetworksCombine"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

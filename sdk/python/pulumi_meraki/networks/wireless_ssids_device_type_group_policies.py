@@ -162,6 +162,9 @@ class _WirelessSsidsDeviceTypeGroupPoliciesState:
 
 
 class WirelessSsidsDeviceTypeGroupPolicies(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/wirelessSsidsDeviceTypeGroupPolicies:WirelessSsidsDeviceTypeGroupPolicies"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

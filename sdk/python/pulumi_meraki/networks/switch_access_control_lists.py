@@ -131,6 +131,9 @@ class _SwitchAccessControlListsState:
 
 
 class SwitchAccessControlLists(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/switchAccessControlLists:SwitchAccessControlLists"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

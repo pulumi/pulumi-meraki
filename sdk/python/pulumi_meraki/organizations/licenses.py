@@ -338,6 +338,9 @@ class _LicensesState:
 
 
 class Licenses(pulumi.CustomResource):
+
+    pulumi_type = "meraki:organizations/licenses:Licenses"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

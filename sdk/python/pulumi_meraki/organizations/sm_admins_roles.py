@@ -193,6 +193,9 @@ class _SmAdminsRolesState:
 
 
 class SmAdminsRoles(pulumi.CustomResource):
+
+    pulumi_type = "meraki:organizations/smAdminsRoles:SmAdminsRoles"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

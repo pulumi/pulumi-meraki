@@ -99,6 +99,9 @@ class _CellularGatewayUplinkState:
 
 
 class CellularGatewayUplink(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/cellularGatewayUplink:CellularGatewayUplink"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

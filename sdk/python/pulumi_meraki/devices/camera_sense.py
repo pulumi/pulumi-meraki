@@ -207,6 +207,9 @@ class _CameraSenseState:
 
 
 class CameraSense(pulumi.CustomResource):
+
+    pulumi_type = "meraki:devices/cameraSense:CameraSense"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

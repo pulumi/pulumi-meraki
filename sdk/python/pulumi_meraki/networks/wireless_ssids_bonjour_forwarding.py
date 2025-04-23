@@ -194,6 +194,9 @@ class _WirelessSsidsBonjourForwardingState:
 
 
 class WirelessSsidsBonjourForwarding(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/wirelessSsidsBonjourForwarding:WirelessSsidsBonjourForwarding"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

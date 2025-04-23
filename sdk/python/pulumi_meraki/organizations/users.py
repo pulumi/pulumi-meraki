@@ -96,6 +96,9 @@ class _UsersState:
 
 
 class Users(pulumi.CustomResource):
+
+    pulumi_type = "meraki:organizations/users:Users"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

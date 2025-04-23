@@ -113,6 +113,9 @@ class _CameraVideoSettingsState:
 
 
 class CameraVideoSettings(pulumi.CustomResource):
+
+    pulumi_type = "meraki:devices/cameraVideoSettings:CameraVideoSettings"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

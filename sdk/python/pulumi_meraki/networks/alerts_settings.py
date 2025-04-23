@@ -179,6 +179,9 @@ class _AlertsSettingsState:
 
 
 class AlertsSettings(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/alertsSettings:AlertsSettings"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

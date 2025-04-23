@@ -121,6 +121,9 @@ class _SmDevicesUninstallAppsState:
 
 
 class SmDevicesUninstallApps(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/smDevicesUninstallApps:SmDevicesUninstallApps"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -259,6 +259,9 @@ class _LiveToolsWakeOnLanState:
 
 
 class LiveToolsWakeOnLan(pulumi.CustomResource):
+
+    pulumi_type = "meraki:devices/liveToolsWakeOnLan:LiveToolsWakeOnLan"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

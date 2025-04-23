@@ -163,6 +163,9 @@ class _ApplianceSettingsState:
 
 
 class ApplianceSettings(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/applianceSettings:ApplianceSettings"
+
     @overload
     def __init__(__self__,
                  resource_name: str,
