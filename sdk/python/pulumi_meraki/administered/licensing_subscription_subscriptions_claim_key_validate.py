@@ -71,6 +71,9 @@ class _LicensingSubscriptionSubscriptionsClaimKeyValidateState:
 
 
 class LicensingSubscriptionSubscriptionsClaimKeyValidate(pulumi.CustomResource):
+
+    pulumi_type = "meraki:administered/licensingSubscriptionSubscriptionsClaimKeyValidate:LicensingSubscriptionSubscriptionsClaimKeyValidate"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -227,6 +227,9 @@ class _ApplianceRfProfilesState:
 
 
 class ApplianceRfProfiles(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/applianceRfProfiles:ApplianceRfProfiles"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

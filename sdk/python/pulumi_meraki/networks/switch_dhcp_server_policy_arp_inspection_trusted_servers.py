@@ -195,6 +195,9 @@ class _SwitchDhcpServerPolicyArpInspectionTrustedServersState:
 
 
 class SwitchDhcpServerPolicyArpInspectionTrustedServers(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/switchDhcpServerPolicyArpInspectionTrustedServers:SwitchDhcpServerPolicyArpInspectionTrustedServers"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

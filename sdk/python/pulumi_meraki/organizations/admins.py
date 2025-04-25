@@ -355,6 +355,9 @@ class _AdminsState:
 
 
 class Admins(pulumi.CustomResource):
+
+    pulumi_type = "meraki:organizations/admins:Admins"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

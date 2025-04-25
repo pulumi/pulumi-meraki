@@ -139,6 +139,9 @@ class _SwitchRoutingMulticastState:
 
 
 class SwitchRoutingMulticast(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/switchRoutingMulticast:SwitchRoutingMulticast"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

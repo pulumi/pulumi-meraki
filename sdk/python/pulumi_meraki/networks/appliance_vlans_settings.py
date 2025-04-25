@@ -97,6 +97,9 @@ class _ApplianceVlansSettingsState:
 
 
 class ApplianceVlansSettings(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/applianceVlansSettings:ApplianceVlansSettings"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

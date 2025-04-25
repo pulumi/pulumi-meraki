@@ -354,6 +354,9 @@ class _WirelessSsidsHotspot20State:
 
 
 class WirelessSsidsHotspot20(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/wirelessSsidsHotspot20:WirelessSsidsHotspot20"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

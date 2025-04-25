@@ -195,6 +195,9 @@ class _ApplianceSingleLanState:
 
 
 class ApplianceSingleLan(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/applianceSingleLan:ApplianceSingleLan"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

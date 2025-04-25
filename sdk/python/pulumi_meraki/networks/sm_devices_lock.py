@@ -102,6 +102,9 @@ class _SmDevicesLockState:
 
 
 class SmDevicesLock(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/smDevicesLock:SmDevicesLock"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -211,6 +211,9 @@ class _LiveToolsArpTableState:
 
 
 class LiveToolsArpTable(pulumi.CustomResource):
+
+    pulumi_type = "meraki:devices/liveToolsArpTable:LiveToolsArpTable"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

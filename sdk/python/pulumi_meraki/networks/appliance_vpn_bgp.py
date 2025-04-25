@@ -195,6 +195,9 @@ class _ApplianceVpnBgpState:
 
 
 class ApplianceVpnBgp(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/applianceVpnBgp:ApplianceVpnBgp"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

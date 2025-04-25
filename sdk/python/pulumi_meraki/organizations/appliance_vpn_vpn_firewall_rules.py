@@ -131,6 +131,9 @@ class _ApplianceVpnVpnFirewallRulesState:
 
 
 class ApplianceVpnVpnFirewallRules(pulumi.CustomResource):
+
+    pulumi_type = "meraki:organizations/applianceVpnVpnFirewallRules:ApplianceVpnVpnFirewallRules"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

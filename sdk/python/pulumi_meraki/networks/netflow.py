@@ -225,6 +225,9 @@ class _NetflowState:
 
 
 class Netflow(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/netflow:Netflow"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

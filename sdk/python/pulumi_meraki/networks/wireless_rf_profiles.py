@@ -451,6 +451,9 @@ class _WirelessRfProfilesState:
 
 
 class WirelessRfProfiles(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/wirelessRfProfiles:WirelessRfProfiles"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

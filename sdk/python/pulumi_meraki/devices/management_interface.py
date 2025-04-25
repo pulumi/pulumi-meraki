@@ -147,6 +147,9 @@ class _ManagementInterfaceState:
 
 
 class ManagementInterface(pulumi.CustomResource):
+
+    pulumi_type = "meraki:devices/managementInterface:ManagementInterface"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

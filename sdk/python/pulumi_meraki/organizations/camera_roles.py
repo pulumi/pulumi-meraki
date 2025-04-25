@@ -227,6 +227,9 @@ class _CameraRolesState:
 
 
 class CameraRoles(pulumi.CustomResource):
+
+    pulumi_type = "meraki:organizations/cameraRoles:CameraRoles"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

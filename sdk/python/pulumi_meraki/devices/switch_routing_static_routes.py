@@ -257,6 +257,9 @@ class _SwitchRoutingStaticRoutesState:
 
 
 class SwitchRoutingStaticRoutes(pulumi.CustomResource):
+
+    pulumi_type = "meraki:devices/switchRoutingStaticRoutes:SwitchRoutingStaticRoutes"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

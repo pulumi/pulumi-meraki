@@ -288,6 +288,9 @@ class _WirelessSsidsIdentityPsksState:
 
 
 class WirelessSsidsIdentityPsks(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/wirelessSsidsIdentityPsks:WirelessSsidsIdentityPsks"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

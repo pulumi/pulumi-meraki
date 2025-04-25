@@ -243,6 +243,9 @@ class _SamlRolesState:
 
 
 class SamlRoles(pulumi.CustomResource):
+
+    pulumi_type = "meraki:organizations/samlRoles:SamlRoles"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

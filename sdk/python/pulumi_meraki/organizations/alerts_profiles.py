@@ -291,6 +291,9 @@ class _AlertsProfilesState:
 
 
 class AlertsProfiles(pulumi.CustomResource):
+
+    pulumi_type = "meraki:organizations/alertsProfiles:AlertsProfiles"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

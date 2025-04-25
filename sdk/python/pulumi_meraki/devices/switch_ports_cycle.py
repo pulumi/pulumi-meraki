@@ -102,6 +102,9 @@ class _SwitchPortsCycleState:
 
 
 class SwitchPortsCycle(pulumi.CustomResource):
+
+    pulumi_type = "meraki:devices/switchPortsCycle:SwitchPortsCycle"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

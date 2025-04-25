@@ -99,6 +99,9 @@ class _ApplianceSecurityIntrusionState:
 
 
 class ApplianceSecurityIntrusion(pulumi.CustomResource):
+
+    pulumi_type = "meraki:organizations/applianceSecurityIntrusion:ApplianceSecurityIntrusion"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

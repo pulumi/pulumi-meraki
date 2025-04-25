@@ -134,6 +134,9 @@ class _LicensingSubscriptionSubscriptionsBindState:
 
 
 class LicensingSubscriptionSubscriptionsBind(pulumi.CustomResource):
+
+    pulumi_type = "meraki:administered/licensingSubscriptionSubscriptionsBind:LicensingSubscriptionSubscriptionsBind"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

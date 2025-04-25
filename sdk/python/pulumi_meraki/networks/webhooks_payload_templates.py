@@ -291,6 +291,9 @@ class _WebhooksPayloadTemplatesState:
 
 
 class WebhooksPayloadTemplates(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/webhooksPayloadTemplates:WebhooksPayloadTemplates"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

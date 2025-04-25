@@ -90,6 +90,9 @@ class _InventoryOnboardingCloudMonitoringExportEventsState:
 
 
 class InventoryOnboardingCloudMonitoringExportEvents(pulumi.CustomResource):
+
+    pulumi_type = "meraki:organizations/inventoryOnboardingCloudMonitoringExportEvents:InventoryOnboardingCloudMonitoringExportEvents"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

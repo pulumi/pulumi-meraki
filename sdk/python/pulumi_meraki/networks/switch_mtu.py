@@ -135,6 +135,9 @@ class _SwitchMtuState:
 
 
 class SwitchMtu(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/switchMtu:SwitchMtu"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

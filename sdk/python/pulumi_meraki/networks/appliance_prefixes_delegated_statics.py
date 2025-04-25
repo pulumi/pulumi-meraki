@@ -227,6 +227,9 @@ class _AppliancePrefixesDelegatedStaticsState:
 
 
 class AppliancePrefixesDelegatedStatics(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/appliancePrefixesDelegatedStatics:AppliancePrefixesDelegatedStatics"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

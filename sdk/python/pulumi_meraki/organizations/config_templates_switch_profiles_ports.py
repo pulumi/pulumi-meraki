@@ -944,6 +944,9 @@ class _ConfigTemplatesSwitchProfilesPortsState:
 
 
 class ConfigTemplatesSwitchProfilesPorts(pulumi.CustomResource):
+
+    pulumi_type = "meraki:organizations/configTemplatesSwitchProfilesPorts:ConfigTemplatesSwitchProfilesPorts"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -102,6 +102,9 @@ class _SmSentryPoliciesAssignmentsState:
 
 
 class SmSentryPoliciesAssignments(pulumi.CustomResource):
+
+    pulumi_type = "meraki:organizations/smSentryPoliciesAssignments:SmSentryPoliciesAssignments"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

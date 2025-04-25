@@ -273,6 +273,9 @@ class _WirelessBluetoothSettingsState:
 
 
 class WirelessBluetoothSettings(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/wirelessBluetoothSettings:WirelessBluetoothSettings"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

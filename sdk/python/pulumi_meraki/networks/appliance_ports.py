@@ -304,6 +304,9 @@ class _AppliancePortsState:
 
 
 class AppliancePorts(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/appliancePorts:AppliancePorts"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

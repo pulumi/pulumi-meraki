@@ -115,6 +115,9 @@ class _ApplianceVpnThirdPartyVpnpeersState:
 
 
 class ApplianceVpnThirdPartyVpnpeers(pulumi.CustomResource):
+
+    pulumi_type = "meraki:organizations/applianceVpnThirdPartyVpnpeers:ApplianceVpnThirdPartyVpnpeers"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

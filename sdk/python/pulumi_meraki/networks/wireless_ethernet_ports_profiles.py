@@ -210,6 +210,9 @@ class _WirelessEthernetPortsProfilesState:
 
 
 class WirelessEthernetPortsProfiles(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/wirelessEthernetPortsProfiles:WirelessEthernetPortsProfiles"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

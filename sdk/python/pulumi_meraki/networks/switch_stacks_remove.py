@@ -133,6 +133,9 @@ class _SwitchStacksRemoveState:
 
 
 class SwitchStacksRemove(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/switchStacksRemove:SwitchStacksRemove"
+
     @overload
     def __init__(__self__,
                  resource_name: str,
