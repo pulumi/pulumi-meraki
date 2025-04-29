@@ -90,6 +90,9 @@ class _DevicesRemoveState:
 
 
 class DevicesRemove(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/devicesRemove:DevicesRemove"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

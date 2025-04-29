@@ -147,6 +147,9 @@ class _ApplianceFirewallL3FirewallRulesState:
 
 
 class ApplianceFirewallL3FirewallRules(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/applianceFirewallL3FirewallRules:ApplianceFirewallL3FirewallRules"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -211,6 +211,9 @@ class _LiveToolsThroughputTestState:
 
 
 class LiveToolsThroughputTest(pulumi.CustomResource):
+
+    pulumi_type = "meraki:devices/liveToolsThroughputTest:LiveToolsThroughputTest"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -155,6 +155,9 @@ class _CellularGatewaySubnetPoolState:
 
 
 class CellularGatewaySubnetPool(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/cellularGatewaySubnetPool:CellularGatewaySubnetPool"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

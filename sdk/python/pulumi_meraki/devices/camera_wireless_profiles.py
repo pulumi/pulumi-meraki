@@ -99,6 +99,9 @@ class _CameraWirelessProfilesState:
 
 
 class CameraWirelessProfiles(pulumi.CustomResource):
+
+    pulumi_type = "meraki:devices/cameraWirelessProfiles:CameraWirelessProfiles"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

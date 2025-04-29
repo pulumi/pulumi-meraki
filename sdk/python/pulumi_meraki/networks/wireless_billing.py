@@ -131,6 +131,9 @@ class _WirelessBillingState:
 
 
 class WirelessBilling(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/wirelessBilling:WirelessBilling"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

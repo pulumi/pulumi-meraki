@@ -339,6 +339,9 @@ class _MerakiAuthUsersState:
 
 
 class MerakiAuthUsers(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/merakiAuthUsers:MerakiAuthUsers"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

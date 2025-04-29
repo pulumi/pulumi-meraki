@@ -226,6 +226,9 @@ class _WirelessSsidsEapOverrideState:
 
 
 class WirelessSsidsEapOverride(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/wirelessSsidsEapOverride:WirelessSsidsEapOverride"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -163,6 +163,9 @@ class _ApplianceRadioSettingsState:
 
 
 class ApplianceRadioSettings(pulumi.CustomResource):
+
+    pulumi_type = "meraki:devices/applianceRadioSettings:ApplianceRadioSettings"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

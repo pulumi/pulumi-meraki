@@ -227,6 +227,9 @@ class _WebhooksHttpServersState:
 
 
 class WebhooksHttpServers(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/webhooksHttpServers:WebhooksHttpServers"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

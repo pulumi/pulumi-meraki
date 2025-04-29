@@ -79,6 +79,9 @@ class _ApplianceVmxAuthenticationTokenState:
 
 
 class ApplianceVmxAuthenticationToken(pulumi.CustomResource):
+
+    pulumi_type = "meraki:devices/applianceVmxAuthenticationToken:ApplianceVmxAuthenticationToken"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

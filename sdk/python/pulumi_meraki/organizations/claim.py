@@ -102,6 +102,9 @@ class _ClaimState:
 
 
 class Claim(pulumi.CustomResource):
+
+    pulumi_type = "meraki:organizations/claim:Claim"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

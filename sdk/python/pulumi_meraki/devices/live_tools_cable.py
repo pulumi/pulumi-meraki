@@ -227,6 +227,9 @@ class _LiveToolsCableState:
 
 
 class LiveToolsCable(pulumi.CustomResource):
+
+    pulumi_type = "meraki:devices/liveToolsCable:LiveToolsCable"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

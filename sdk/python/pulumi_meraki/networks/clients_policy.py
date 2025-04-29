@@ -176,6 +176,9 @@ class _ClientsPolicyState:
 
 
 class ClientsPolicy(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/clientsPolicy:ClientsPolicy"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

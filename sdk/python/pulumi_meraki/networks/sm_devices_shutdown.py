@@ -102,6 +102,9 @@ class _SmDevicesShutdownState:
 
 
 class SmDevicesShutdown(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/smDevicesShutdown:SmDevicesShutdown"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

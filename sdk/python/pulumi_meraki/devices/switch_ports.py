@@ -946,6 +946,9 @@ class _SwitchPortsState:
 
 
 class SwitchPorts(pulumi.CustomResource):
+
+    pulumi_type = "meraki:devices/switchPorts:SwitchPorts"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

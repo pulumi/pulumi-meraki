@@ -163,6 +163,9 @@ class _WirelessRadioSettingsState:
 
 
 class WirelessRadioSettings(pulumi.CustomResource):
+
+    pulumi_type = "meraki:devices/wirelessRadioSettings:WirelessRadioSettings"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

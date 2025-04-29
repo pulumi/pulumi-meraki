@@ -131,6 +131,9 @@ class _CellularSimsState:
 
 
 class CellularSims(pulumi.CustomResource):
+
+    pulumi_type = "meraki:devices/cellularSims:CellularSims"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

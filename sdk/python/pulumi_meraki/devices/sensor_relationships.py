@@ -131,6 +131,9 @@ class _SensorRelationshipsState:
 
 
 class SensorRelationships(pulumi.CustomResource):
+
+    pulumi_type = "meraki:devices/sensorRelationships:SensorRelationships"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

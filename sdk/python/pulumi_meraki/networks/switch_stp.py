@@ -147,6 +147,9 @@ class _SwitchStpState:
 
 
 class SwitchStp(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/switchStp:SwitchStp"
+
     @overload
     def __init__(__self__,
                  resource_name: str,
