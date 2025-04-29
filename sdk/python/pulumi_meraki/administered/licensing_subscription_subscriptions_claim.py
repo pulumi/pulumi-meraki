@@ -103,6 +103,9 @@ class _LicensingSubscriptionSubscriptionsClaimState:
 
 
 class LicensingSubscriptionSubscriptionsClaim(pulumi.CustomResource):
+
+    pulumi_type = "meraki:administered/licensingSubscriptionSubscriptionsClaim:LicensingSubscriptionSubscriptionsClaim"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

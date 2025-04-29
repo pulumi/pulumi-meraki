@@ -102,6 +102,9 @@ class _ClientsProvisionState:
 
 
 class ClientsProvision(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/clientsProvision:ClientsProvision"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -195,6 +195,9 @@ class _SwitchAlternateManagementInterfaceState:
 
 
 class SwitchAlternateManagementInterface(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/switchAlternateManagementInterface:SwitchAlternateManagementInterface"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

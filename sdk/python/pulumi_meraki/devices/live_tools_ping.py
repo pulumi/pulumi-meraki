@@ -102,6 +102,9 @@ class _LiveToolsPingState:
 
 
 class LiveToolsPing(pulumi.CustomResource):
+
+    pulumi_type = "meraki:devices/liveToolsPing:LiveToolsPing"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

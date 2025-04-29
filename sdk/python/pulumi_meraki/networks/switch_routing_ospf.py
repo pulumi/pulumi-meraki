@@ -291,6 +291,9 @@ class _SwitchRoutingOspfState:
 
 
 class SwitchRoutingOspf(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/switchRoutingOspf:SwitchRoutingOspf"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

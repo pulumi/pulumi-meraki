@@ -90,6 +90,9 @@ class _CameraGenerateSnapshotState:
 
 
 class CameraGenerateSnapshot(pulumi.CustomResource):
+
+    pulumi_type = "meraki:devices/cameraGenerateSnapshot:CameraGenerateSnapshot"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

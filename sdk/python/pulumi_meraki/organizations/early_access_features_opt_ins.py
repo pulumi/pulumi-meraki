@@ -209,6 +209,9 @@ class _EarlyAccessFeaturesOptInsState:
 
 
 class EarlyAccessFeaturesOptIns(pulumi.CustomResource):
+
+    pulumi_type = "meraki:organizations/earlyAccessFeaturesOptIns:EarlyAccessFeaturesOptIns"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

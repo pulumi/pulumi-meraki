@@ -79,6 +79,9 @@ class _FirmwareUpgradesStagedEventsDeferState:
 
 
 class FirmwareUpgradesStagedEventsDefer(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/firmwareUpgradesStagedEventsDefer:FirmwareUpgradesStagedEventsDefer"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

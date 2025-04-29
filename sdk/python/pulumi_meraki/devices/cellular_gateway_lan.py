@@ -179,6 +179,9 @@ class _CellularGatewayLanState:
 
 
 class CellularGatewayLan(pulumi.CustomResource):
+
+    pulumi_type = "meraki:devices/cellularGatewayLan:CellularGatewayLan"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

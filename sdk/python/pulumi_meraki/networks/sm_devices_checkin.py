@@ -102,6 +102,9 @@ class _SmDevicesCheckinState:
 
 
 class SmDevicesCheckin(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/smDevicesCheckin:SmDevicesCheckin"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

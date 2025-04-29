@@ -99,6 +99,9 @@ class _ApplianceFirewallSettingsState:
 
 
 class ApplianceFirewallSettings(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/applianceFirewallSettings:ApplianceFirewallSettings"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

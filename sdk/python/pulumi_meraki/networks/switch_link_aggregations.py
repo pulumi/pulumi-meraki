@@ -163,6 +163,9 @@ class _SwitchLinkAggregationsState:
 
 
 class SwitchLinkAggregations(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/switchLinkAggregations:SwitchLinkAggregations"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

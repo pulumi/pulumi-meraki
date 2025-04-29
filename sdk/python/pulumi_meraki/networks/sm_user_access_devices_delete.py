@@ -96,6 +96,9 @@ class _SmUserAccessDevicesDeleteState:
 
 
 class SmUserAccessDevicesDelete(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/smUserAccessDevicesDelete:SmUserAccessDevicesDelete"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

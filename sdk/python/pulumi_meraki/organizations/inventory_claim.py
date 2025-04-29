@@ -102,6 +102,9 @@ class _InventoryClaimState:
 
 
 class InventoryClaim(pulumi.CustomResource):
+
+    pulumi_type = "meraki:organizations/inventoryClaim:InventoryClaim"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

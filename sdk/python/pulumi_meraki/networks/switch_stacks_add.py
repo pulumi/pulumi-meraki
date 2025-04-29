@@ -133,6 +133,9 @@ class _SwitchStacksAddState:
 
 
 class SwitchStacksAdd(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/switchStacksAdd:SwitchStacksAdd"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

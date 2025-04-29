@@ -161,6 +161,9 @@ class _SwitchStormControlState:
 
 
 class SwitchStormControl(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/switchStormControl:SwitchStormControl"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

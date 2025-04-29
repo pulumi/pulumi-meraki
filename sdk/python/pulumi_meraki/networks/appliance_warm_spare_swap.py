@@ -65,6 +65,9 @@ class _ApplianceWarmSpareSwapState:
 
 
 class ApplianceWarmSpareSwap(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/applianceWarmSpareSwap:ApplianceWarmSpareSwap"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

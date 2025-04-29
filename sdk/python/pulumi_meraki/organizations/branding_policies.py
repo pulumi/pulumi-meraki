@@ -271,6 +271,9 @@ class _BrandingPoliciesState:
 
 
 class BrandingPolicies(pulumi.CustomResource):
+
+    pulumi_type = "meraki:organizations/brandingPolicies:BrandingPolicies"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

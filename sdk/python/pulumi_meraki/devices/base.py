@@ -483,6 +483,9 @@ class _BaseState:
 
 
 class Base(pulumi.CustomResource):
+
+    pulumi_type = "meraki:devices/base:base"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

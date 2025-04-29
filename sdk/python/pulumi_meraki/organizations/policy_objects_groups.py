@@ -229,6 +229,9 @@ class _PolicyObjectsGroupsState:
 
 
 class PolicyObjectsGroups(pulumi.CustomResource):
+
+    pulumi_type = "meraki:organizations/policyObjectsGroups:PolicyObjectsGroups"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

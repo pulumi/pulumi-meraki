@@ -99,6 +99,9 @@ class _ApplianceFirewallOneToOneNatRulesState:
 
 
 class ApplianceFirewallOneToOneNatRules(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/applianceFirewallOneToOneNatRules:ApplianceFirewallOneToOneNatRules"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -102,6 +102,9 @@ class _WirelessAlternateManagementInterfaceIpv6State:
 
 
 class WirelessAlternateManagementInterfaceIpv6(pulumi.CustomResource):
+
+    pulumi_type = "meraki:devices/wirelessAlternateManagementInterfaceIpv6:WirelessAlternateManagementInterfaceIpv6"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

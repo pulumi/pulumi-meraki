@@ -483,6 +483,9 @@ class _LoginSecurityState:
 
 
 class LoginSecurity(pulumi.CustomResource):
+
+    pulumi_type = "meraki:organizations/loginSecurity:LoginSecurity"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

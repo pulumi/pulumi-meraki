@@ -102,6 +102,9 @@ class _FirmwareUpgradesStagedEventsRollbacksState:
 
 
 class FirmwareUpgradesStagedEventsRollbacks(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/firmwareUpgradesStagedEventsRollbacks:FirmwareUpgradesStagedEventsRollbacks"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

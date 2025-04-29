@@ -102,6 +102,9 @@ class _SmDevicesRebootState:
 
 
 class SmDevicesReboot(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/smDevicesReboot:SmDevicesReboot"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

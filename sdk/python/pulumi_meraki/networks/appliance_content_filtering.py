@@ -207,6 +207,9 @@ class _ApplianceContentFilteringState:
 
 
 class ApplianceContentFiltering(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/applianceContentFiltering:ApplianceContentFiltering"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

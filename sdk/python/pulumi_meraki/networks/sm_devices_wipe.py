@@ -102,6 +102,9 @@ class _SmDevicesWipeState:
 
 
 class SmDevicesWipe(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/smDevicesWipe:SmDevicesWipe"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

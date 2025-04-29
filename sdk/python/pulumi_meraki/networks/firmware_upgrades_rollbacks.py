@@ -102,6 +102,9 @@ class _FirmwareUpgradesRollbacksState:
 
 
 class FirmwareUpgradesRollbacks(pulumi.CustomResource):
+
+    pulumi_type = "meraki:networks/firmwareUpgradesRollbacks:FirmwareUpgradesRollbacks"
+
     @overload
     def __init__(__self__,
                  resource_name: str,

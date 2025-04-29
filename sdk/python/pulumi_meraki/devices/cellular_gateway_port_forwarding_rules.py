@@ -99,6 +99,9 @@ class _CellularGatewayPortForwardingRulesState:
 
 
 class CellularGatewayPortForwardingRules(pulumi.CustomResource):
+
+    pulumi_type = "meraki:devices/cellularGatewayPortForwardingRules:CellularGatewayPortForwardingRules"
+
     @overload
     def __init__(__self__,
                  resource_name: str,
