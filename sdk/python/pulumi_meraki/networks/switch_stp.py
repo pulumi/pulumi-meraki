@@ -146,10 +146,8 @@ class _SwitchStpState:
         pulumi.set(self, "stp_bridge_priority_responses", value)
 
 
+@pulumi.type_token("meraki:networks/switchStp:SwitchStp")
 class SwitchStp(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/switchStp:SwitchStp"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

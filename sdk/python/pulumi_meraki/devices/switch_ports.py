@@ -945,10 +945,8 @@ class _SwitchPortsState:
         pulumi.set(self, "voice_vlan", value)
 
 
+@pulumi.type_token("meraki:devices/switchPorts:SwitchPorts")
 class SwitchPorts(pulumi.CustomResource):
-
-    pulumi_type = "meraki:devices/switchPorts:SwitchPorts"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

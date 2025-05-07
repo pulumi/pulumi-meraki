@@ -211,10 +211,8 @@ class _BaseState:
         pulumi.set(self, "url", value)
 
 
+@pulumi.type_token("meraki:organizations/base:base")
 class Base(pulumi.CustomResource):
-
-    pulumi_type = "meraki:organizations/base:base"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

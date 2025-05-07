@@ -226,10 +226,8 @@ class _AppliancePrefixesDelegatedStaticsState:
         pulumi.set(self, "updated_at", value)
 
 
+@pulumi.type_token("meraki:networks/appliancePrefixesDelegatedStatics:AppliancePrefixesDelegatedStatics")
 class AppliancePrefixesDelegatedStatics(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/appliancePrefixesDelegatedStatics:AppliancePrefixesDelegatedStatics"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -162,10 +162,8 @@ class _WirelessRadioSettingsState:
         pulumi.set(self, "two_four_ghz_settings", value)
 
 
+@pulumi.type_token("meraki:devices/wirelessRadioSettings:WirelessRadioSettings")
 class WirelessRadioSettings(pulumi.CustomResource):
-
-    pulumi_type = "meraki:devices/wirelessRadioSettings:WirelessRadioSettings"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

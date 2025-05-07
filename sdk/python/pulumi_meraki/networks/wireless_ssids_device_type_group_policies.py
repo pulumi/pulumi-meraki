@@ -161,10 +161,8 @@ class _WirelessSsidsDeviceTypeGroupPoliciesState:
         pulumi.set(self, "number", value)
 
 
+@pulumi.type_token("meraki:networks/wirelessSsidsDeviceTypeGroupPolicies:WirelessSsidsDeviceTypeGroupPolicies")
 class WirelessSsidsDeviceTypeGroupPolicies(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/wirelessSsidsDeviceTypeGroupPolicies:WirelessSsidsDeviceTypeGroupPolicies"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

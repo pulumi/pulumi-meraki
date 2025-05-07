@@ -290,10 +290,8 @@ class _WebhooksPayloadTemplatesState:
         pulumi.set(self, "type", value)
 
 
+@pulumi.type_token("meraki:networks/webhooksPayloadTemplates:WebhooksPayloadTemplates")
 class WebhooksPayloadTemplates(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/webhooksPayloadTemplates:WebhooksPayloadTemplates"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

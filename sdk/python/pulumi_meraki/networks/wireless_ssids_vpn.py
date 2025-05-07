@@ -193,10 +193,8 @@ class _WirelessSsidsVpnState:
         pulumi.set(self, "split_tunnel", value)
 
 
+@pulumi.type_token("meraki:networks/wirelessSsidsVpn:WirelessSsidsVpn")
 class WirelessSsidsVpn(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/wirelessSsidsVpn:WirelessSsidsVpn"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

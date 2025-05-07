@@ -95,10 +95,8 @@ class _UsersState:
         pulumi.set(self, "user_id", value)
 
 
+@pulumi.type_token("meraki:organizations/users:Users")
 class Users(pulumi.CustomResource):
-
-    pulumi_type = "meraki:organizations/users:Users"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -162,10 +162,8 @@ class _FirmwareUpgradesState:
         pulumi.set(self, "upgrade_window", value)
 
 
+@pulumi.type_token("meraki:networks/firmwareUpgrades:FirmwareUpgrades")
 class FirmwareUpgrades(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/firmwareUpgrades:FirmwareUpgrades"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

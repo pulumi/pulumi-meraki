@@ -134,10 +134,8 @@ class _SwitchMtuState:
         pulumi.set(self, "overrides", value)
 
 
+@pulumi.type_token("meraki:networks/switchMtu:SwitchMtu")
 class SwitchMtu(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/switchMtu:SwitchMtu"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

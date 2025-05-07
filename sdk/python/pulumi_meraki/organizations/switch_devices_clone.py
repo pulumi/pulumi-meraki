@@ -89,10 +89,8 @@ class _SwitchDevicesCloneState:
         pulumi.set(self, "parameters", value)
 
 
+@pulumi.type_token("meraki:organizations/switchDevicesClone:SwitchDevicesClone")
 class SwitchDevicesClone(pulumi.CustomResource):
-
-    pulumi_type = "meraki:organizations/switchDevicesClone:SwitchDevicesClone"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -98,10 +98,8 @@ class _ApplianceTrafficShapingUplinkBandwidthState:
         pulumi.set(self, "network_id", value)
 
 
+@pulumi.type_token("meraki:networks/applianceTrafficShapingUplinkBandwidth:ApplianceTrafficShapingUplinkBandwidth")
 class ApplianceTrafficShapingUplinkBandwidth(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/applianceTrafficShapingUplinkBandwidth:ApplianceTrafficShapingUplinkBandwidth"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

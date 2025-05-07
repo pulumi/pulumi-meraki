@@ -162,10 +162,8 @@ class _CameraCustomAnalyticsState:
         pulumi.set(self, "serial", value)
 
 
+@pulumi.type_token("meraki:devices/cameraCustomAnalytics:CameraCustomAnalytics")
 class CameraCustomAnalytics(pulumi.CustomResource):
-
-    pulumi_type = "meraki:devices/cameraCustomAnalytics:CameraCustomAnalytics"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

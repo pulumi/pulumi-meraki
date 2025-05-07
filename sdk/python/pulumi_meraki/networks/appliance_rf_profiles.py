@@ -226,10 +226,8 @@ class _ApplianceRfProfilesState:
         pulumi.set(self, "two_four_ghz_settings", value)
 
 
+@pulumi.type_token("meraki:networks/applianceRfProfiles:ApplianceRfProfiles")
 class ApplianceRfProfiles(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/applianceRfProfiles:ApplianceRfProfiles"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

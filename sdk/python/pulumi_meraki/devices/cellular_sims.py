@@ -130,10 +130,8 @@ class _CellularSimsState:
         pulumi.set(self, "sims", value)
 
 
+@pulumi.type_token("meraki:devices/cellularSims:CellularSims")
 class CellularSims(pulumi.CustomResource):
-
-    pulumi_type = "meraki:devices/cellularSims:CellularSims"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

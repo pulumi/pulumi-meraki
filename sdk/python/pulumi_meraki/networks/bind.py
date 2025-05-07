@@ -101,10 +101,8 @@ class _BindState:
         pulumi.set(self, "parameters", value)
 
 
+@pulumi.type_token("meraki:networks/bind:Bind")
 class Bind(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/bind:Bind"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

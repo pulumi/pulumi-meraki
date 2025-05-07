@@ -721,10 +721,8 @@ class _ApplianceVlansState:
         pulumi.set(self, "vpn_nat_subnet", value)
 
 
+@pulumi.type_token("meraki:networks/applianceVlans:ApplianceVlans")
 class ApplianceVlans(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/applianceVlans:ApplianceVlans"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

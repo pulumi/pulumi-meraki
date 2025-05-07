@@ -101,10 +101,8 @@ class _LiveToolsPingState:
         pulumi.set(self, "serial", value)
 
 
+@pulumi.type_token("meraki:devices/liveToolsPing:LiveToolsPing")
 class LiveToolsPing(pulumi.CustomResource):
-
-    pulumi_type = "meraki:devices/liveToolsPing:LiveToolsPing"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

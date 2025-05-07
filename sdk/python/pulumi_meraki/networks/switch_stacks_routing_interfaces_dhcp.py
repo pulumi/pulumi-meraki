@@ -480,10 +480,8 @@ class _SwitchStacksRoutingInterfacesDhcpState:
         pulumi.set(self, "switch_stack_id", value)
 
 
+@pulumi.type_token("meraki:networks/switchStacksRoutingInterfacesDhcp:SwitchStacksRoutingInterfacesDhcp")
 class SwitchStacksRoutingInterfacesDhcp(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/switchStacksRoutingInterfacesDhcp:SwitchStacksRoutingInterfacesDhcp"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -101,10 +101,8 @@ class _CloneState:
         pulumi.set(self, "parameters", value)
 
 
+@pulumi.type_token("meraki:organizations/clone:Clone")
 class Clone(pulumi.CustomResource):
-
-    pulumi_type = "meraki:organizations/clone:Clone"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

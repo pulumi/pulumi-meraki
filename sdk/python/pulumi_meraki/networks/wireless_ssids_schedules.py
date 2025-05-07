@@ -193,10 +193,8 @@ class _WirelessSsidsSchedulesState:
         pulumi.set(self, "ranges_in_seconds", value)
 
 
+@pulumi.type_token("meraki:networks/wirelessSsidsSchedules:WirelessSsidsSchedules")
 class WirelessSsidsSchedules(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/wirelessSsidsSchedules:WirelessSsidsSchedules"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

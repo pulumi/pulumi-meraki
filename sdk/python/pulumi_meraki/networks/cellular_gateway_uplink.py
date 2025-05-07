@@ -98,10 +98,8 @@ class _CellularGatewayUplinkState:
         pulumi.set(self, "network_id", value)
 
 
+@pulumi.type_token("meraki:networks/cellularGatewayUplink:CellularGatewayUplink")
 class CellularGatewayUplink(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/cellularGatewayUplink:CellularGatewayUplink"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

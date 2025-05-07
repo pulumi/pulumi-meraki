@@ -178,10 +178,8 @@ class _AlertsSettingsState:
         pulumi.set(self, "network_id", value)
 
 
+@pulumi.type_token("meraki:networks/alertsSettings:AlertsSettings")
 class AlertsSettings(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/alertsSettings:AlertsSettings"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

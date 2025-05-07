@@ -274,10 +274,8 @@ class _WirelessSettingsState:
         pulumi.set(self, "upgradestrategy", value)
 
 
+@pulumi.type_token("meraki:networks/wirelessSettings:WirelessSettings")
 class WirelessSettings(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/wirelessSettings:WirelessSettings"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

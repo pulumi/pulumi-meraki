@@ -194,10 +194,8 @@ class _ApplianceVpnBgpState:
         pulumi.set(self, "network_id", value)
 
 
+@pulumi.type_token("meraki:networks/applianceVpnBgp:ApplianceVpnBgp")
 class ApplianceVpnBgp(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/applianceVpnBgp:ApplianceVpnBgp"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

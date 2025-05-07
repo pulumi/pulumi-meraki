@@ -146,10 +146,8 @@ class _CameraCustomAnalyticsArtifactsState:
         pulumi.set(self, "status", value)
 
 
+@pulumi.type_token("meraki:organizations/cameraCustomAnalyticsArtifacts:CameraCustomAnalyticsArtifacts")
 class CameraCustomAnalyticsArtifacts(pulumi.CustomResource):
-
-    pulumi_type = "meraki:organizations/cameraCustomAnalyticsArtifacts:CameraCustomAnalyticsArtifacts"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

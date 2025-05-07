@@ -303,10 +303,8 @@ class _AppliancePortsState:
         pulumi.set(self, "vlan", value)
 
 
+@pulumi.type_token("meraki:networks/appliancePorts:AppliancePorts")
 class AppliancePorts(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/appliancePorts:AppliancePorts"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

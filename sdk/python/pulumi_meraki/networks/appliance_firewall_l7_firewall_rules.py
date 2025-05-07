@@ -114,10 +114,8 @@ class _ApplianceFirewallL7FirewallRulesState:
         pulumi.set(self, "rules_responses", value)
 
 
+@pulumi.type_token("meraki:networks/applianceFirewallL7FirewallRules:ApplianceFirewallL7FirewallRules")
 class ApplianceFirewallL7FirewallRules(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/applianceFirewallL7FirewallRules:ApplianceFirewallL7FirewallRules"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

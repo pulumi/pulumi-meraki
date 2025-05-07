@@ -101,10 +101,8 @@ class _ApplianceTrafficShapingVpnExclusionsState:
         pulumi.set(self, "parameters", value)
 
 
+@pulumi.type_token("meraki:networks/applianceTrafficShapingVpnExclusions:ApplianceTrafficShapingVpnExclusions")
 class ApplianceTrafficShapingVpnExclusions(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/applianceTrafficShapingVpnExclusions:ApplianceTrafficShapingVpnExclusions"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -226,10 +226,8 @@ class _CameraRolesState:
         pulumi.set(self, "role_id", value)
 
 
+@pulumi.type_token("meraki:organizations/cameraRoles:CameraRoles")
 class CameraRoles(pulumi.CustomResource):
-
-    pulumi_type = "meraki:organizations/cameraRoles:CameraRoles"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

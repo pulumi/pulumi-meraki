@@ -194,10 +194,8 @@ class _SwitchDhcpServerPolicyArpInspectionTrustedServersState:
         pulumi.set(self, "vlan", value)
 
 
+@pulumi.type_token("meraki:networks/switchDhcpServerPolicyArpInspectionTrustedServers:SwitchDhcpServerPolicyArpInspectionTrustedServers")
 class SwitchDhcpServerPolicyArpInspectionTrustedServers(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/switchDhcpServerPolicyArpInspectionTrustedServers:SwitchDhcpServerPolicyArpInspectionTrustedServers"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

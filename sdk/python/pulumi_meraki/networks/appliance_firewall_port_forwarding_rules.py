@@ -98,10 +98,8 @@ class _ApplianceFirewallPortForwardingRulesState:
         pulumi.set(self, "rules", value)
 
 
+@pulumi.type_token("meraki:networks/applianceFirewallPortForwardingRules:ApplianceFirewallPortForwardingRules")
 class ApplianceFirewallPortForwardingRules(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/applianceFirewallPortForwardingRules:ApplianceFirewallPortForwardingRules"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

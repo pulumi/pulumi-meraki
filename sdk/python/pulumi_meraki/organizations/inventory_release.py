@@ -101,10 +101,8 @@ class _InventoryReleaseState:
         pulumi.set(self, "parameters", value)
 
 
+@pulumi.type_token("meraki:organizations/inventoryRelease:InventoryRelease")
 class InventoryRelease(pulumi.CustomResource):
-
-    pulumi_type = "meraki:organizations/inventoryRelease:InventoryRelease"
-
     @overload
     def __init__(__self__,
                  resource_name: str,
