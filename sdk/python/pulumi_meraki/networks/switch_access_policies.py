@@ -690,10 +690,8 @@ class _SwitchAccessPoliciesState:
         pulumi.set(self, "voice_vlan_clients", value)
 
 
+@pulumi.type_token("meraki:networks/switchAccessPolicies:SwitchAccessPolicies")
 class SwitchAccessPolicies(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/switchAccessPolicies:SwitchAccessPolicies"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

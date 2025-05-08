@@ -101,10 +101,8 @@ class _WirelessEthernetPortsProfilesSetDefaultState:
         pulumi.set(self, "parameters", value)
 
 
+@pulumi.type_token("meraki:networks/wirelessEthernetPortsProfilesSetDefault:WirelessEthernetPortsProfilesSetDefault")
 class WirelessEthernetPortsProfilesSetDefault(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/wirelessEthernetPortsProfilesSetDefault:WirelessEthernetPortsProfilesSetDefault"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

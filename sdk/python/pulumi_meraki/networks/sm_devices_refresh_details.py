@@ -95,10 +95,8 @@ class _SmDevicesRefreshDetailsState:
         pulumi.set(self, "network_id", value)
 
 
+@pulumi.type_token("meraki:networks/smDevicesRefreshDetails:SmDevicesRefreshDetails")
 class SmDevicesRefreshDetails(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/smDevicesRefreshDetails:SmDevicesRefreshDetails"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -194,10 +194,8 @@ class _ApplianceSingleLanState:
         pulumi.set(self, "subnet", value)
 
 
+@pulumi.type_token("meraki:networks/applianceSingleLan:ApplianceSingleLan")
 class ApplianceSingleLan(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/applianceSingleLan:ApplianceSingleLan"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

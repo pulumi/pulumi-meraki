@@ -194,10 +194,8 @@ class _WirelessAlternateManagementInterfaceState:
         pulumi.set(self, "vlan_id", value)
 
 
+@pulumi.type_token("meraki:networks/wirelessAlternateManagementInterface:WirelessAlternateManagementInterface")
 class WirelessAlternateManagementInterface(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/wirelessAlternateManagementInterface:WirelessAlternateManagementInterface"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

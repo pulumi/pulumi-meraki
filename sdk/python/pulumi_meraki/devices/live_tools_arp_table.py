@@ -210,10 +210,8 @@ class _LiveToolsArpTableState:
         pulumi.set(self, "url", value)
 
 
+@pulumi.type_token("meraki:devices/liveToolsArpTable:LiveToolsArpTable")
 class LiveToolsArpTable(pulumi.CustomResource):
-
-    pulumi_type = "meraki:devices/liveToolsArpTable:LiveToolsArpTable"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

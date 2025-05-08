@@ -354,10 +354,8 @@ class _AdminsState:
         pulumi.set(self, "two_factor_auth_enabled", value)
 
 
+@pulumi.type_token("meraki:organizations/admins:Admins")
 class Admins(pulumi.CustomResource):
-
-    pulumi_type = "meraki:organizations/admins:Admins"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

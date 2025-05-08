@@ -162,10 +162,8 @@ class _SnmpState:
         pulumi.set(self, "users", value)
 
 
+@pulumi.type_token("meraki:networks/snmp:Snmp")
 class Snmp(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/snmp:Snmp"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

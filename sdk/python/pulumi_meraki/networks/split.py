@@ -78,10 +78,8 @@ class _SplitState:
         pulumi.set(self, "network_id", value)
 
 
+@pulumi.type_token("meraki:networks/split:Split")
 class Split(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/split:Split"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

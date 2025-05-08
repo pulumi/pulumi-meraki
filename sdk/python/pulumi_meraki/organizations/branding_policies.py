@@ -270,10 +270,8 @@ class _BrandingPoliciesState:
         pulumi.set(self, "organization_id", value)
 
 
+@pulumi.type_token("meraki:organizations/brandingPolicies:BrandingPolicies")
 class BrandingPolicies(pulumi.CustomResource):
-
-    pulumi_type = "meraki:organizations/brandingPolicies:BrandingPolicies"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

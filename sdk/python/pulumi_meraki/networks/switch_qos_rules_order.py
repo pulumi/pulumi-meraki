@@ -320,10 +320,8 @@ class _SwitchQosRulesOrderState:
         pulumi.set(self, "vlan", value)
 
 
+@pulumi.type_token("meraki:networks/switchQosRulesOrder:SwitchQosRulesOrder")
 class SwitchQosRulesOrder(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/switchQosRulesOrder:SwitchQosRulesOrder"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

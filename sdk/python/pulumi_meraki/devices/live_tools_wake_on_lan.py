@@ -258,10 +258,8 @@ class _LiveToolsWakeOnLanState:
         pulumi.set(self, "wake_on_lan_id", value)
 
 
+@pulumi.type_token("meraki:devices/liveToolsWakeOnLan:LiveToolsWakeOnLan")
 class LiveToolsWakeOnLan(pulumi.CustomResource):
-
-    pulumi_type = "meraki:devices/liveToolsWakeOnLan:LiveToolsWakeOnLan"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

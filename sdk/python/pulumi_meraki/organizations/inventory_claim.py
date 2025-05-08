@@ -101,10 +101,8 @@ class _InventoryClaimState:
         pulumi.set(self, "parameters", value)
 
 
+@pulumi.type_token("meraki:organizations/inventoryClaim:InventoryClaim")
 class InventoryClaim(pulumi.CustomResource):
-
-    pulumi_type = "meraki:organizations/inventoryClaim:InventoryClaim"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -162,10 +162,8 @@ class _ApplianceSettingsState:
         pulumi.set(self, "network_id", value)
 
 
+@pulumi.type_token("meraki:networks/applianceSettings:ApplianceSettings")
 class ApplianceSettings(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/applianceSettings:ApplianceSettings"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

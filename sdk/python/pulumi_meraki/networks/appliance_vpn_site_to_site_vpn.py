@@ -162,10 +162,8 @@ class _ApplianceVpnSiteToSiteVpnState:
         pulumi.set(self, "subnets", value)
 
 
+@pulumi.type_token("meraki:networks/applianceVpnSiteToSiteVpn:ApplianceVpnSiteToSiteVpn")
 class ApplianceVpnSiteToSiteVpn(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/applianceVpnSiteToSiteVpn:ApplianceVpnSiteToSiteVpn"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

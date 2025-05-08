@@ -130,10 +130,8 @@ class _SwitchAccessControlListsState:
         pulumi.set(self, "rules_responses", value)
 
 
+@pulumi.type_token("meraki:networks/switchAccessControlLists:SwitchAccessControlLists")
 class SwitchAccessControlLists(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/switchAccessControlLists:SwitchAccessControlLists"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -175,10 +175,8 @@ class _ClientsPolicyState:
         pulumi.set(self, "network_id", value)
 
 
+@pulumi.type_token("meraki:networks/clientsPolicy:ClientsPolicy")
 class ClientsPolicy(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/clientsPolicy:ClientsPolicy"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

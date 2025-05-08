@@ -98,10 +98,8 @@ class _ApplianceFirewallCellularFirewallRulesState:
         pulumi.set(self, "rules", value)
 
 
+@pulumi.type_token("meraki:networks/applianceFirewallCellularFirewallRules:ApplianceFirewallCellularFirewallRules")
 class ApplianceFirewallCellularFirewallRules(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/applianceFirewallCellularFirewallRules:ApplianceFirewallCellularFirewallRules"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

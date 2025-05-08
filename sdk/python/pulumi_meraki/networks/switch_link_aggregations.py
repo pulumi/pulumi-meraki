@@ -162,10 +162,8 @@ class _SwitchLinkAggregationsState:
         pulumi.set(self, "switch_profile_ports", value)
 
 
+@pulumi.type_token("meraki:networks/switchLinkAggregations:SwitchLinkAggregations")
 class SwitchLinkAggregations(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/switchLinkAggregations:SwitchLinkAggregations"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -160,10 +160,8 @@ class _SwitchStormControlState:
         pulumi.set(self, "unknown_unicast_threshold", value)
 
 
+@pulumi.type_token("meraki:networks/switchStormControl:SwitchStormControl")
 class SwitchStormControl(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/switchStormControl:SwitchStormControl"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

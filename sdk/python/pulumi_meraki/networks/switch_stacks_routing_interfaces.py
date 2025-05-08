@@ -417,10 +417,8 @@ class _SwitchStacksRoutingInterfacesState:
         pulumi.set(self, "vlan_id", value)
 
 
+@pulumi.type_token("meraki:networks/switchStacksRoutingInterfaces:SwitchStacksRoutingInterfaces")
 class SwitchStacksRoutingInterfaces(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/switchStacksRoutingInterfaces:SwitchStacksRoutingInterfaces"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

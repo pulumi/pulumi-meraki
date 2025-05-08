@@ -105,10 +105,8 @@ class _SmDevicesFieldsState:
         pulumi.set(self, "parameters", value)
 
 
+@pulumi.type_token("meraki:networks/smDevicesFields:SmDevicesFields")
 class SmDevicesFields(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/smDevicesFields:SmDevicesFields"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

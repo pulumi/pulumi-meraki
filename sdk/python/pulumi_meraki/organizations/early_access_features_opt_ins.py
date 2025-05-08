@@ -208,10 +208,8 @@ class _EarlyAccessFeaturesOptInsState:
         pulumi.set(self, "short_name", value)
 
 
+@pulumi.type_token("meraki:organizations/earlyAccessFeaturesOptIns:EarlyAccessFeaturesOptIns")
 class EarlyAccessFeaturesOptIns(pulumi.CustomResource):
-
-    pulumi_type = "meraki:organizations/earlyAccessFeaturesOptIns:EarlyAccessFeaturesOptIns"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

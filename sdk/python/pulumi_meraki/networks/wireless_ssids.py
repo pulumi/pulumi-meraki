@@ -2061,10 +2061,8 @@ class _WirelessSsidsState:
         pulumi.set(self, "wpa_encryption_mode", value)
 
 
+@pulumi.type_token("meraki:networks/wirelessSsids:WirelessSsids")
 class WirelessSsids(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/wirelessSsids:WirelessSsids"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

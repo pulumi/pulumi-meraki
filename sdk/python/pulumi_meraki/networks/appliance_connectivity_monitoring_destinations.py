@@ -98,10 +98,8 @@ class _ApplianceConnectivityMonitoringDestinationsState:
         pulumi.set(self, "network_id", value)
 
 
+@pulumi.type_token("meraki:networks/applianceConnectivityMonitoringDestinations:ApplianceConnectivityMonitoringDestinations")
 class ApplianceConnectivityMonitoringDestinations(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/applianceConnectivityMonitoringDestinations:ApplianceConnectivityMonitoringDestinations"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

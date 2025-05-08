@@ -226,10 +226,8 @@ class _FirmwareUpgradesStagedGroupsState:
         pulumi.set(self, "network_id", value)
 
 
+@pulumi.type_token("meraki:networks/firmwareUpgradesStagedGroups:FirmwareUpgradesStagedGroups")
 class FirmwareUpgradesStagedGroups(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/firmwareUpgradesStagedGroups:FirmwareUpgradesStagedGroups"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

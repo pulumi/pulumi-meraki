@@ -96,10 +96,8 @@ class _SamlState:
         pulumi.set(self, "organization_id", value)
 
 
+@pulumi.type_token("meraki:organizations/saml:Saml")
 class Saml(pulumi.CustomResource):
-
-    pulumi_type = "meraki:organizations/saml:Saml"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -209,10 +209,8 @@ class _VlanProfilesState:
         pulumi.set(self, "vlan_names", value)
 
 
+@pulumi.type_token("meraki:networks/vlanProfiles:VlanProfiles")
 class VlanProfiles(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/vlanProfiles:VlanProfiles"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

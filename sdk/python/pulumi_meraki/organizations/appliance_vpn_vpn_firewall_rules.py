@@ -130,10 +130,8 @@ class _ApplianceVpnVpnFirewallRulesState:
         pulumi.set(self, "syslog_default_rule", value)
 
 
+@pulumi.type_token("meraki:organizations/applianceVpnVpnFirewallRules:ApplianceVpnVpnFirewallRules")
 class ApplianceVpnVpnFirewallRules(pulumi.CustomResource):
-
-    pulumi_type = "meraki:organizations/applianceVpnVpnFirewallRules:ApplianceVpnVpnFirewallRules"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

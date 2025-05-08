@@ -434,10 +434,8 @@ class _FloorPlansState:
         pulumi.set(self, "width", value)
 
 
+@pulumi.type_token("meraki:networks/floorPlans:FloorPlans")
 class FloorPlans(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/floorPlans:FloorPlans"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

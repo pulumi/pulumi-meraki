@@ -138,10 +138,8 @@ class _ApplianceTrafficShapingRulesState:
         pulumi.set(self, "rules", value)
 
 
+@pulumi.type_token("meraki:networks/applianceTrafficShapingRules:ApplianceTrafficShapingRules")
 class ApplianceTrafficShapingRules(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/applianceTrafficShapingRules:ApplianceTrafficShapingRules"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

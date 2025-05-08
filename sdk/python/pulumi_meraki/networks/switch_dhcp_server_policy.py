@@ -234,10 +234,8 @@ class _SwitchDhcpServerPolicyState:
         pulumi.set(self, "network_id", value)
 
 
+@pulumi.type_token("meraki:networks/switchDhcpServerPolicy:SwitchDhcpServerPolicy")
 class SwitchDhcpServerPolicy(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/switchDhcpServerPolicy:SwitchDhcpServerPolicy"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

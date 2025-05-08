@@ -146,10 +146,8 @@ class _ManagementInterfaceState:
         pulumi.set(self, "wan2", value)
 
 
+@pulumi.type_token("meraki:devices/managementInterface:ManagementInterface")
 class ManagementInterface(pulumi.CustomResource):
-
-    pulumi_type = "meraki:devices/managementInterface:ManagementInterface"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

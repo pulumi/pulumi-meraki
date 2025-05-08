@@ -657,10 +657,8 @@ class _WirelessSsidsSplashSettingsState:
         pulumi.set(self, "welcome_message", value)
 
 
+@pulumi.type_token("meraki:networks/wirelessSsidsSplashSettings:WirelessSsidsSplashSettings")
 class WirelessSsidsSplashSettings(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/wirelessSsidsSplashSettings:WirelessSsidsSplashSettings"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -338,10 +338,8 @@ class _GroupPoliciesState:
         pulumi.set(self, "vlan_tagging", value)
 
 
+@pulumi.type_token("meraki:networks/groupPolicies:GroupPolicies")
 class GroupPolicies(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/groupPolicies:GroupPolicies"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

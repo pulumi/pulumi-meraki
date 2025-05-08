@@ -101,10 +101,8 @@ class _DevicesClaimState:
         pulumi.set(self, "parameters", value)
 
 
+@pulumi.type_token("meraki:networks/devicesClaim:DevicesClaim")
 class DevicesClaim(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/devicesClaim:DevicesClaim"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

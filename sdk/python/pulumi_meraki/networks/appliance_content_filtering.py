@@ -206,10 +206,8 @@ class _ApplianceContentFilteringState:
         pulumi.set(self, "url_category_list_size", value)
 
 
+@pulumi.type_token("meraki:networks/applianceContentFiltering:ApplianceContentFiltering")
 class ApplianceContentFiltering(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/applianceContentFiltering:ApplianceContentFiltering"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

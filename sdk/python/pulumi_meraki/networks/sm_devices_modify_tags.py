@@ -105,10 +105,8 @@ class _SmDevicesModifyTagsState:
         pulumi.set(self, "parameters", value)
 
 
+@pulumi.type_token("meraki:networks/smDevicesModifyTags:SmDevicesModifyTags")
 class SmDevicesModifyTags(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/smDevicesModifyTags:SmDevicesModifyTags"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

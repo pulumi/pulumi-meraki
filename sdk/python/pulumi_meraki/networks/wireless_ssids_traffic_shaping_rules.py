@@ -201,10 +201,8 @@ class _WirelessSsidsTrafficShapingRulesState:
         pulumi.set(self, "traffic_shaping_enabled", value)
 
 
+@pulumi.type_token("meraki:networks/wirelessSsidsTrafficShapingRules:WirelessSsidsTrafficShapingRules")
 class WirelessSsidsTrafficShapingRules(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/wirelessSsidsTrafficShapingRules:WirelessSsidsTrafficShapingRules"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

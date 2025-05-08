@@ -101,10 +101,8 @@ class _UnbindState:
         pulumi.set(self, "parameters", value)
 
 
+@pulumi.type_token("meraki:networks/unbind:Unbind")
 class Unbind(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/unbind:Unbind"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

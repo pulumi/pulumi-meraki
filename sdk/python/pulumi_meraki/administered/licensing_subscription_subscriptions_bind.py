@@ -133,10 +133,8 @@ class _LicensingSubscriptionSubscriptionsBindState:
         pulumi.set(self, "validate", value)
 
 
+@pulumi.type_token("meraki:administered/licensingSubscriptionSubscriptionsBind:LicensingSubscriptionSubscriptionsBind")
 class LicensingSubscriptionSubscriptionsBind(pulumi.CustomResource):
-
-    pulumi_type = "meraki:administered/licensingSubscriptionSubscriptionsBind:LicensingSubscriptionSubscriptionsBind"
-
     @overload
     def __init__(__self__,
                  resource_name: str,
