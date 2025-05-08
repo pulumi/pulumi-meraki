@@ -176,10 +176,8 @@ class _ConfigTemplatesState:
         pulumi.set(self, "time_zone", value)
 
 
+@pulumi.type_token("meraki:organizations/configTemplates:ConfigTemplates")
 class ConfigTemplates(pulumi.CustomResource):
-
-    pulumi_type = "meraki:organizations/configTemplates:ConfigTemplates"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

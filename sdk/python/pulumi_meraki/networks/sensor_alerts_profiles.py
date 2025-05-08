@@ -258,10 +258,8 @@ class _SensorAlertsProfilesState:
         pulumi.set(self, "serials", value)
 
 
+@pulumi.type_token("meraki:networks/sensorAlertsProfiles:SensorAlertsProfiles")
 class SensorAlertsProfiles(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/sensorAlertsProfiles:SensorAlertsProfiles"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -193,10 +193,8 @@ class _WirelessSsidsFirewallL3FirewallRulesState:
         pulumi.set(self, "rules_responses", value)
 
 
+@pulumi.type_token("meraki:networks/wirelessSsidsFirewallL3FirewallRules:WirelessSsidsFirewallL3FirewallRules")
 class WirelessSsidsFirewallL3FirewallRules(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/wirelessSsidsFirewallL3FirewallRules:WirelessSsidsFirewallL3FirewallRules"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

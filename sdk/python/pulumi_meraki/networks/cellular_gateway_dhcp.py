@@ -160,10 +160,8 @@ class _CellularGatewayDhcpState:
         pulumi.set(self, "network_id", value)
 
 
+@pulumi.type_token("meraki:networks/cellularGatewayDhcp:CellularGatewayDhcp")
 class CellularGatewayDhcp(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/cellularGatewayDhcp:CellularGatewayDhcp"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

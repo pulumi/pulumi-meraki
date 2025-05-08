@@ -98,10 +98,8 @@ class _ApplianceUplinksSettingsState:
         pulumi.set(self, "serial", value)
 
 
+@pulumi.type_token("meraki:devices/applianceUplinksSettings:ApplianceUplinksSettings")
 class ApplianceUplinksSettings(pulumi.CustomResource):
-
-    pulumi_type = "meraki:devices/applianceUplinksSettings:ApplianceUplinksSettings"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

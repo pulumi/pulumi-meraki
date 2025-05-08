@@ -105,10 +105,8 @@ class _InventoryOnboardingCloudMonitoringPrepareState:
         pulumi.set(self, "parameters", value)
 
 
+@pulumi.type_token("meraki:organizations/inventoryOnboardingCloudMonitoringPrepare:InventoryOnboardingCloudMonitoringPrepare")
 class InventoryOnboardingCloudMonitoringPrepare(pulumi.CustomResource):
-
-    pulumi_type = "meraki:organizations/inventoryOnboardingCloudMonitoringPrepare:InventoryOnboardingCloudMonitoringPrepare"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

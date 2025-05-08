@@ -225,10 +225,8 @@ class _WirelessSsidsEapOverrideState:
         pulumi.set(self, "timeout", value)
 
 
+@pulumi.type_token("meraki:networks/wirelessSsidsEapOverride:WirelessSsidsEapOverride")
 class WirelessSsidsEapOverride(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/wirelessSsidsEapOverride:WirelessSsidsEapOverride"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

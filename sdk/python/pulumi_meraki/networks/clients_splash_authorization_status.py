@@ -129,10 +129,8 @@ class _ClientsSplashAuthorizationStatusState:
         pulumi.set(self, "ssids", value)
 
 
+@pulumi.type_token("meraki:networks/clientsSplashAuthorizationStatus:ClientsSplashAuthorizationStatus")
 class ClientsSplashAuthorizationStatus(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/clientsSplashAuthorizationStatus:ClientsSplashAuthorizationStatus"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

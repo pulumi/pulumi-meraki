@@ -184,10 +184,8 @@ class _SwitchRoutingMulticastRendezvousPointsState:
         pulumi.set(self, "serial", value)
 
 
+@pulumi.type_token("meraki:networks/switchRoutingMulticastRendezvousPoints:SwitchRoutingMulticastRendezvousPoints")
 class SwitchRoutingMulticastRendezvousPoints(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/switchRoutingMulticastRendezvousPoints:SwitchRoutingMulticastRendezvousPoints"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

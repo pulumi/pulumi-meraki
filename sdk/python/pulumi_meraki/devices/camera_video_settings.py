@@ -112,10 +112,8 @@ class _CameraVideoSettingsState:
         pulumi.set(self, "serial", value)
 
 
+@pulumi.type_token("meraki:devices/cameraVideoSettings:CameraVideoSettings")
 class CameraVideoSettings(pulumi.CustomResource):
-
-    pulumi_type = "meraki:devices/cameraVideoSettings:CameraVideoSettings"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -290,10 +290,8 @@ class _SwitchRoutingOspfState:
         pulumi.set(self, "v3", value)
 
 
+@pulumi.type_token("meraki:networks/switchRoutingOspf:SwitchRoutingOspf")
 class SwitchRoutingOspf(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/switchRoutingOspf:SwitchRoutingOspf"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -159,10 +159,8 @@ class _ApplianceFirewallFirewalledServicesState:
         pulumi.set(self, "service", value)
 
 
+@pulumi.type_token("meraki:networks/applianceFirewallFirewalledServices:ApplianceFirewallFirewalledServices")
 class ApplianceFirewallFirewalledServices(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/applianceFirewallFirewalledServices:ApplianceFirewallFirewalledServices"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

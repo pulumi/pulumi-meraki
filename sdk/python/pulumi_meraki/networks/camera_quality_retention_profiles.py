@@ -386,10 +386,8 @@ class _CameraQualityRetentionProfilesState:
         pulumi.set(self, "video_settings", value)
 
 
+@pulumi.type_token("meraki:networks/cameraQualityRetentionProfiles:CameraQualityRetentionProfiles")
 class CameraQualityRetentionProfiles(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/cameraQualityRetentionProfiles:CameraQualityRetentionProfiles"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

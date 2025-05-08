@@ -101,10 +101,8 @@ class _VlanProfilesAssignmentsReassignState:
         pulumi.set(self, "parameters", value)
 
 
+@pulumi.type_token("meraki:networks/vlanProfilesAssignmentsReassign:VlanProfilesAssignmentsReassign")
 class VlanProfilesAssignmentsReassign(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/vlanProfilesAssignmentsReassign:VlanProfilesAssignmentsReassign"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

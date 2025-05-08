@@ -943,10 +943,8 @@ class _ConfigTemplatesSwitchProfilesPortsState:
         pulumi.set(self, "voice_vlan", value)
 
 
+@pulumi.type_token("meraki:organizations/configTemplatesSwitchProfilesPorts:ConfigTemplatesSwitchProfilesPorts")
 class ConfigTemplatesSwitchProfilesPorts(pulumi.CustomResource):
-
-    pulumi_type = "meraki:organizations/configTemplatesSwitchProfilesPorts:ConfigTemplatesSwitchProfilesPorts"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

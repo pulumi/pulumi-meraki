@@ -101,10 +101,8 @@ class _LicensesRenewSeatsState:
         pulumi.set(self, "parameters", value)
 
 
+@pulumi.type_token("meraki:organizations/licensesRenewSeats:LicensesRenewSeats")
 class LicensesRenewSeats(pulumi.CustomResource):
-
-    pulumi_type = "meraki:organizations/licensesRenewSeats:LicensesRenewSeats"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

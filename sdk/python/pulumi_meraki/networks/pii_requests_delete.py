@@ -95,10 +95,8 @@ class _PiiRequestsDeleteState:
         pulumi.set(self, "request_id", value)
 
 
+@pulumi.type_token("meraki:networks/piiRequestsDelete:PiiRequestsDelete")
 class PiiRequestsDelete(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/piiRequestsDelete:PiiRequestsDelete"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

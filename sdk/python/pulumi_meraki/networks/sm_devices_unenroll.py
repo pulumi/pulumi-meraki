@@ -109,10 +109,8 @@ class _SmDevicesUnenrollState:
         pulumi.set(self, "network_id", value)
 
 
+@pulumi.type_token("meraki:networks/smDevicesUnenroll:SmDevicesUnenroll")
 class SmDevicesUnenroll(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/smDevicesUnenroll:SmDevicesUnenroll"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

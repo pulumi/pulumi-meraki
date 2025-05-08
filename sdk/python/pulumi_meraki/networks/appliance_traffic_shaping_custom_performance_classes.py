@@ -89,10 +89,8 @@ class _ApplianceTrafficShapingCustomPerformanceClassesState:
         pulumi.set(self, "parameters", value)
 
 
+@pulumi.type_token("meraki:networks/applianceTrafficShapingCustomPerformanceClasses:ApplianceTrafficShapingCustomPerformanceClasses")
 class ApplianceTrafficShapingCustomPerformanceClasses(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/applianceTrafficShapingCustomPerformanceClasses:ApplianceTrafficShapingCustomPerformanceClasses"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -482,10 +482,8 @@ class _LoginSecurityState:
         pulumi.set(self, "password_expiration_days", value)
 
 
+@pulumi.type_token("meraki:organizations/loginSecurity:LoginSecurity")
 class LoginSecurity(pulumi.CustomResource):
-
-    pulumi_type = "meraki:organizations/loginSecurity:LoginSecurity"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

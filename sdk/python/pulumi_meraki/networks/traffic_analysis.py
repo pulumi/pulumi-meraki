@@ -134,10 +134,8 @@ class _TrafficAnalysisState:
         pulumi.set(self, "network_id", value)
 
 
+@pulumi.type_token("meraki:networks/trafficAnalysis:TrafficAnalysis")
 class TrafficAnalysis(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/trafficAnalysis:TrafficAnalysis"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

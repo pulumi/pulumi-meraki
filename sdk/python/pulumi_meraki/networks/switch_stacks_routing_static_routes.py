@@ -287,10 +287,8 @@ class _SwitchStacksRoutingStaticRoutesState:
         pulumi.set(self, "switch_stack_id", value)
 
 
+@pulumi.type_token("meraki:networks/switchStacksRoutingStaticRoutes:SwitchStacksRoutingStaticRoutes")
 class SwitchStacksRoutingStaticRoutes(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/switchStacksRoutingStaticRoutes:SwitchStacksRoutingStaticRoutes"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

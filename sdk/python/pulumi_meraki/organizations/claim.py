@@ -101,10 +101,8 @@ class _ClaimState:
         pulumi.set(self, "parameters", value)
 
 
+@pulumi.type_token("meraki:organizations/claim:Claim")
 class Claim(pulumi.CustomResource):
-
-    pulumi_type = "meraki:organizations/claim:Claim"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

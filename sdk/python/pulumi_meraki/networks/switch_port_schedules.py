@@ -170,10 +170,8 @@ class _SwitchPortSchedulesState:
         pulumi.set(self, "port_schedule_id", value)
 
 
+@pulumi.type_token("meraki:networks/switchPortSchedules:SwitchPortSchedules")
 class SwitchPortSchedules(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/switchPortSchedules:SwitchPortSchedules"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

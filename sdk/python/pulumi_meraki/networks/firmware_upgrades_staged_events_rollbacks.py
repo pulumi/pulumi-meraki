@@ -101,10 +101,8 @@ class _FirmwareUpgradesStagedEventsRollbacksState:
         pulumi.set(self, "parameters", value)
 
 
+@pulumi.type_token("meraki:networks/firmwareUpgradesStagedEventsRollbacks:FirmwareUpgradesStagedEventsRollbacks")
 class FirmwareUpgradesStagedEventsRollbacks(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/firmwareUpgradesStagedEventsRollbacks:FirmwareUpgradesStagedEventsRollbacks"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

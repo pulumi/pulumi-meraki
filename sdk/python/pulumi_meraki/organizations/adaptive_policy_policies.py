@@ -230,10 +230,8 @@ class _AdaptivePolicyPoliciesState:
         pulumi.set(self, "updated_at", value)
 
 
+@pulumi.type_token("meraki:organizations/adaptivePolicyPolicies:AdaptivePolicyPolicies")
 class AdaptivePolicyPolicies(pulumi.CustomResource):
-
-    pulumi_type = "meraki:organizations/adaptivePolicyPolicies:AdaptivePolicyPolicies"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

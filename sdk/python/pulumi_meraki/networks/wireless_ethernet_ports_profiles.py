@@ -209,10 +209,8 @@ class _WirelessEthernetPortsProfilesState:
         pulumi.set(self, "usb_ports", value)
 
 
+@pulumi.type_token("meraki:networks/wirelessEthernetPortsProfiles:WirelessEthernetPortsProfiles")
 class WirelessEthernetPortsProfiles(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/wirelessEthernetPortsProfiles:WirelessEthernetPortsProfiles"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

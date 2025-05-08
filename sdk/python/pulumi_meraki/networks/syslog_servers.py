@@ -98,10 +98,8 @@ class _SyslogServersState:
         pulumi.set(self, "servers", value)
 
 
+@pulumi.type_token("meraki:networks/syslogServers:SyslogServers")
 class SyslogServers(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/syslogServers:SyslogServers"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

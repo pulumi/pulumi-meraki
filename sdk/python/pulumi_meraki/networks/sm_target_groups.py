@@ -176,10 +176,8 @@ class _SmTargetGroupsState:
         pulumi.set(self, "target_group_id", value)
 
 
+@pulumi.type_token("meraki:networks/smTargetGroups:SmTargetGroups")
 class SmTargetGroups(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/smTargetGroups:SmTargetGroups"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

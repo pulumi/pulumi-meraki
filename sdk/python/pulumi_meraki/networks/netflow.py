@@ -224,10 +224,8 @@ class _NetflowState:
         pulumi.set(self, "reporting_enabled", value)
 
 
+@pulumi.type_token("meraki:networks/netflow:Netflow")
 class Netflow(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/netflow:Netflow"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

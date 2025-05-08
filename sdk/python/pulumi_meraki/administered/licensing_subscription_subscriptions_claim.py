@@ -102,10 +102,8 @@ class _LicensingSubscriptionSubscriptionsClaimState:
         pulumi.set(self, "validate", value)
 
 
+@pulumi.type_token("meraki:administered/licensingSubscriptionSubscriptionsClaim:LicensingSubscriptionSubscriptionsClaim")
 class LicensingSubscriptionSubscriptionsClaim(pulumi.CustomResource):
-
-    pulumi_type = "meraki:administered/licensingSubscriptionSubscriptionsClaim:LicensingSubscriptionSubscriptionsClaim"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

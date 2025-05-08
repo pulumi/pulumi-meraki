@@ -154,10 +154,8 @@ class _SmBypassActivationLockAttemptsState:
         pulumi.set(self, "status", value)
 
 
+@pulumi.type_token("meraki:networks/smBypassActivationLockAttempts:SmBypassActivationLockAttempts")
 class SmBypassActivationLockAttempts(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/smBypassActivationLockAttempts:SmBypassActivationLockAttempts"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

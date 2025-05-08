@@ -353,10 +353,8 @@ class _WirelessSsidsHotspot20State:
         pulumi.set(self, "venue", value)
 
 
+@pulumi.type_token("meraki:networks/wirelessSsidsHotspot20:WirelessSsidsHotspot20")
 class WirelessSsidsHotspot20(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/wirelessSsidsHotspot20:WirelessSsidsHotspot20"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

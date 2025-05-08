@@ -242,10 +242,8 @@ class _SettingsState:
         pulumi.set(self, "secure_port", value)
 
 
+@pulumi.type_token("meraki:networks/settings:Settings")
 class Settings(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/settings:Settings"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

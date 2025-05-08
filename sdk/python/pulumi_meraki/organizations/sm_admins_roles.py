@@ -192,10 +192,8 @@ class _SmAdminsRolesState:
         pulumi.set(self, "tags", value)
 
 
+@pulumi.type_token("meraki:organizations/smAdminsRoles:SmAdminsRoles")
 class SmAdminsRoles(pulumi.CustomResource):
-
-    pulumi_type = "meraki:organizations/smAdminsRoles:SmAdminsRoles"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

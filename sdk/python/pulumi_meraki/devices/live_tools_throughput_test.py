@@ -210,10 +210,8 @@ class _LiveToolsThroughputTestState:
         pulumi.set(self, "url", value)
 
 
+@pulumi.type_token("meraki:devices/liveToolsThroughputTest:LiveToolsThroughputTest")
 class LiveToolsThroughputTest(pulumi.CustomResource):
-
-    pulumi_type = "meraki:devices/liveToolsThroughputTest:LiveToolsThroughputTest"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -98,10 +98,8 @@ class _ApplianceFirewallSettingsState:
         pulumi.set(self, "spoofing_protection", value)
 
 
+@pulumi.type_token("meraki:networks/applianceFirewallSettings:ApplianceFirewallSettings")
 class ApplianceFirewallSettings(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/applianceFirewallSettings:ApplianceFirewallSettings"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -101,10 +101,8 @@ class _BlinkLedsState:
         pulumi.set(self, "serial", value)
 
 
+@pulumi.type_token("meraki:devices/blinkLeds:BlinkLeds")
 class BlinkLeds(pulumi.CustomResource):
-
-    pulumi_type = "meraki:devices/blinkLeds:BlinkLeds"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

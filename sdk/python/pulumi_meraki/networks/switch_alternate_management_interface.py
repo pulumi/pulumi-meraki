@@ -194,10 +194,8 @@ class _SwitchAlternateManagementInterfaceState:
         pulumi.set(self, "vlan_id", value)
 
 
+@pulumi.type_token("meraki:networks/switchAlternateManagementInterface:SwitchAlternateManagementInterface")
 class SwitchAlternateManagementInterface(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/switchAlternateManagementInterface:SwitchAlternateManagementInterface"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -162,10 +162,8 @@ class _ApplianceSecurityIntrusionState:
         pulumi.set(self, "protected_networks", value)
 
 
+@pulumi.type_token("meraki:networks/applianceSecurityIntrusion:ApplianceSecurityIntrusion")
 class ApplianceSecurityIntrusion(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/applianceSecurityIntrusion:ApplianceSecurityIntrusion"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

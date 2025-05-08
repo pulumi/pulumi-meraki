@@ -144,10 +144,8 @@ class _SwitchWarmSpareState:
         pulumi.set(self, "spare_serial", value)
 
 
+@pulumi.type_token("meraki:devices/switchWarmSpare:SwitchWarmSpare")
 class SwitchWarmSpare(pulumi.CustomResource):
-
-    pulumi_type = "meraki:devices/switchWarmSpare:SwitchWarmSpare"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

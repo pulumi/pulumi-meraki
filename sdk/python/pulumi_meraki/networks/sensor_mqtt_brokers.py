@@ -127,10 +127,8 @@ class _SensorMqttBrokersState:
         pulumi.set(self, "network_id", value)
 
 
+@pulumi.type_token("meraki:networks/sensorMqttBrokers:SensorMqttBrokers")
 class SensorMqttBrokers(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/sensorMqttBrokers:SensorMqttBrokers"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

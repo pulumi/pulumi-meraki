@@ -114,10 +114,8 @@ class _ApplianceVpnThirdPartyVpnpeersState:
         pulumi.set(self, "peers_responses", value)
 
 
+@pulumi.type_token("meraki:organizations/applianceVpnThirdPartyVpnpeers:ApplianceVpnThirdPartyVpnpeers")
 class ApplianceVpnThirdPartyVpnpeers(pulumi.CustomResource):
-
-    pulumi_type = "meraki:organizations/applianceVpnThirdPartyVpnpeers:ApplianceVpnThirdPartyVpnpeers"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -178,10 +178,8 @@ class _CellularGatewayLanState:
         pulumi.set(self, "serial", value)
 
 
+@pulumi.type_token("meraki:devices/cellularGatewayLan:CellularGatewayLan")
 class CellularGatewayLan(pulumi.CustomResource):
-
-    pulumi_type = "meraki:devices/cellularGatewayLan:CellularGatewayLan"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

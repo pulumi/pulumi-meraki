@@ -482,10 +482,8 @@ class _BaseState:
         pulumi.set(self, "tags", value)
 
 
+@pulumi.type_token("meraki:devices/base:base")
 class Base(pulumi.CustomResource):
-
-    pulumi_type = "meraki:devices/base:base"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

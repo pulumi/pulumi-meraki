@@ -262,10 +262,8 @@ class _ApplianceWarmSpareState:
         pulumi.set(self, "wan2", value)
 
 
+@pulumi.type_token("meraki:networks/applianceWarmSpare:ApplianceWarmSpare")
 class ApplianceWarmSpare(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/applianceWarmSpare:ApplianceWarmSpare"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

@@ -226,10 +226,8 @@ class _LiveToolsCableState:
         pulumi.set(self, "url", value)
 
 
+@pulumi.type_token("meraki:devices/liveToolsCable:LiveToolsCable")
 class LiveToolsCable(pulumi.CustomResource):
-
-    pulumi_type = "meraki:devices/liveToolsCable:LiveToolsCable"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

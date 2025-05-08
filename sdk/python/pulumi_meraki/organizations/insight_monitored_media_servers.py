@@ -192,10 +192,8 @@ class _InsightMonitoredMediaServersState:
         pulumi.set(self, "organization_id", value)
 
 
+@pulumi.type_token("meraki:organizations/insightMonitoredMediaServers:InsightMonitoredMediaServers")
 class InsightMonitoredMediaServers(pulumi.CustomResource):
-
-    pulumi_type = "meraki:organizations/insightMonitoredMediaServers:InsightMonitoredMediaServers"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

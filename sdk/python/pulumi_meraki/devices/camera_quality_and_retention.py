@@ -288,10 +288,8 @@ class _CameraQualityAndRetentionState:
         pulumi.set(self, "serial", value)
 
 
+@pulumi.type_token("meraki:devices/cameraQualityAndRetention:CameraQualityAndRetention")
 class CameraQualityAndRetention(pulumi.CustomResource):
-
-    pulumi_type = "meraki:devices/cameraQualityAndRetention:CameraQualityAndRetention"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

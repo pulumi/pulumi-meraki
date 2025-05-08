@@ -206,10 +206,8 @@ class _CameraWirelessProfilesState:
         pulumi.set(self, "wireless_profile_id", value)
 
 
+@pulumi.type_token("meraki:networks/cameraWirelessProfiles:CameraWirelessProfiles")
 class CameraWirelessProfiles(pulumi.CustomResource):
-
-    pulumi_type = "meraki:networks/cameraWirelessProfiles:CameraWirelessProfiles"
-
     @overload
     def __init__(__self__,
                  resource_name: str,

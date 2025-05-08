@@ -290,10 +290,8 @@ class _AlertsProfilesState:
         pulumi.set(self, "type", value)
 
 
+@pulumi.type_token("meraki:organizations/alertsProfiles:AlertsProfiles")
 class AlertsProfiles(pulumi.CustomResource):
-
-    pulumi_type = "meraki:organizations/alertsProfiles:AlertsProfiles"
-
     @overload
     def __init__(__self__,
                  resource_name: str,
