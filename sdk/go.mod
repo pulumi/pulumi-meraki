@@ -4,7 +4,7 @@ go 1.23.0
 
 toolchain go1.23.9
 
-require github.com/pulumi/pulumi/sdk/v3 v3.172.0
+require github.com/pulumi/pulumi/sdk/v3 v3.175.0
 
 require (
 	github.com/BurntSushi/toml v1.2.1 // indirect
