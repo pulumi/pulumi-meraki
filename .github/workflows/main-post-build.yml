@@ -10,7 +10,6 @@ on:
         required: true
 
 env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   MERAKI_DASHBOARD_API_KEY: ${{ secrets.MERAKI_DASHBOARD_API_KEY }}
   MERAKI_ORG_ID: ${{ secrets.MERAKI_ORG_ID }}
   PULUMI_API: https://api.pulumi-staging.io
