@@ -38,16 +38,16 @@ export class LicensingSubscriptionSubscriptionsBind extends pulumi.CustomResourc
         return obj['__pulumiType'] === LicensingSubscriptionSubscriptionsBind.__pulumiType;
     }
 
-    public /*out*/ readonly item!: pulumi.Output<outputs.administered.LicensingSubscriptionSubscriptionsBindItem>;
-    public readonly parameters!: pulumi.Output<outputs.administered.LicensingSubscriptionSubscriptionsBindParameters>;
+    declare public /*out*/ readonly item: pulumi.Output<outputs.administered.LicensingSubscriptionSubscriptionsBindItem>;
+    declare public readonly parameters: pulumi.Output<outputs.administered.LicensingSubscriptionSubscriptionsBindParameters>;
     /**
      * subscriptionId path parameter. Subscription ID
      */
-    public readonly subscriptionId!: pulumi.Output<string>;
+    declare public readonly subscriptionId: pulumi.Output<string>;
     /**
      * validate query parameter. Check if the provided networks can be bound to the subscription. Returns any licensing problems and does not commit the results.
      */
-    public readonly validate!: pulumi.Output<boolean | undefined>;
+    declare public readonly validate: pulumi.Output<boolean | undefined>;
 
     /**
      * Create a LicensingSubscriptionSubscriptionsBind resource with the given unique name, arguments, and options.
@@ -62,21 +62,21 @@ export class LicensingSubscriptionSubscriptionsBind extends pulumi.CustomResourc
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as LicensingSubscriptionSubscriptionsBindState | undefined;
-            resourceInputs["item"] = state ? state.item : undefined;
-            resourceInputs["parameters"] = state ? state.parameters : undefined;
-            resourceInputs["subscriptionId"] = state ? state.subscriptionId : undefined;
-            resourceInputs["validate"] = state ? state.validate : undefined;
+            resourceInputs["item"] = state?.item;
+            resourceInputs["parameters"] = state?.parameters;
+            resourceInputs["subscriptionId"] = state?.subscriptionId;
+            resourceInputs["validate"] = state?.validate;
         } else {
             const args = argsOrState as LicensingSubscriptionSubscriptionsBindArgs | undefined;
-            if ((!args || args.parameters === undefined) && !opts.urn) {
+            if (args?.parameters === undefined && !opts.urn) {
                 throw new Error("Missing required property 'parameters'");
             }
-            if ((!args || args.subscriptionId === undefined) && !opts.urn) {
+            if (args?.subscriptionId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'subscriptionId'");
             }
-            resourceInputs["parameters"] = args ? args.parameters : undefined;
-            resourceInputs["subscriptionId"] = args ? args.subscriptionId : undefined;
-            resourceInputs["validate"] = args ? args.validate : undefined;
+            resourceInputs["parameters"] = args?.parameters;
+            resourceInputs["subscriptionId"] = args?.subscriptionId;
+            resourceInputs["validate"] = args?.validate;
             resourceInputs["item"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

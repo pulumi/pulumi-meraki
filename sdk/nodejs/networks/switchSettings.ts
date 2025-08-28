@@ -46,27 +46,27 @@ export class SwitchSettings extends pulumi.CustomResource {
     /**
      * MAC blocklist
      */
-    public readonly macBlocklist!: pulumi.Output<outputs.networks.SwitchSettingsMacBlocklist>;
+    declare public readonly macBlocklist: pulumi.Output<outputs.networks.SwitchSettingsMacBlocklist>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * Exceptions on a per switch basis to "useCombinedPower"
      */
-    public readonly powerExceptions!: pulumi.Output<outputs.networks.SwitchSettingsPowerException[]>;
+    declare public readonly powerExceptions: pulumi.Output<outputs.networks.SwitchSettingsPowerException[]>;
     /**
      * Uplink client sampling
      */
-    public readonly uplinkClientSampling!: pulumi.Output<outputs.networks.SwitchSettingsUplinkClientSampling>;
+    declare public readonly uplinkClientSampling: pulumi.Output<outputs.networks.SwitchSettingsUplinkClientSampling>;
     /**
      * The use Combined Power as the default behavior of secondary power supplies on supported devices.
      */
-    public readonly useCombinedPower!: pulumi.Output<boolean>;
+    declare public readonly useCombinedPower: pulumi.Output<boolean>;
     /**
      * Management VLAN
      */
-    public readonly vlan!: pulumi.Output<number>;
+    declare public readonly vlan: pulumi.Output<number>;
 
     /**
      * Create a SwitchSettings resource with the given unique name, arguments, and options.
@@ -81,23 +81,23 @@ export class SwitchSettings extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SwitchSettingsState | undefined;
-            resourceInputs["macBlocklist"] = state ? state.macBlocklist : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["powerExceptions"] = state ? state.powerExceptions : undefined;
-            resourceInputs["uplinkClientSampling"] = state ? state.uplinkClientSampling : undefined;
-            resourceInputs["useCombinedPower"] = state ? state.useCombinedPower : undefined;
-            resourceInputs["vlan"] = state ? state.vlan : undefined;
+            resourceInputs["macBlocklist"] = state?.macBlocklist;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["powerExceptions"] = state?.powerExceptions;
+            resourceInputs["uplinkClientSampling"] = state?.uplinkClientSampling;
+            resourceInputs["useCombinedPower"] = state?.useCombinedPower;
+            resourceInputs["vlan"] = state?.vlan;
         } else {
             const args = argsOrState as SwitchSettingsArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["macBlocklist"] = args ? args.macBlocklist : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["powerExceptions"] = args ? args.powerExceptions : undefined;
-            resourceInputs["uplinkClientSampling"] = args ? args.uplinkClientSampling : undefined;
-            resourceInputs["useCombinedPower"] = args ? args.useCombinedPower : undefined;
-            resourceInputs["vlan"] = args ? args.vlan : undefined;
+            resourceInputs["macBlocklist"] = args?.macBlocklist;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["powerExceptions"] = args?.powerExceptions;
+            resourceInputs["uplinkClientSampling"] = args?.uplinkClientSampling;
+            resourceInputs["useCombinedPower"] = args?.useCombinedPower;
+            resourceInputs["vlan"] = args?.vlan;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(SwitchSettings.__pulumiType, name, resourceInputs, opts);

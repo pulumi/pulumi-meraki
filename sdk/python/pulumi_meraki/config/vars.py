@@ -23,24 +23,21 @@ class _ExportableConfig(types.ModuleType):
     @_builtins.property
     def meraki_base_url(self) -> Optional[str]:
         """
-        Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is
-        (https://api.meraki.com/)
+        Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is (https://api.meraki.com/)
         """
         return __config__.get('merakiBaseUrl')
 
     @_builtins.property
     def meraki_dashboard_api_key(self) -> Optional[str]:
         """
-        Cisco Meraki meraki_dashboard_api_key to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment
-        variable.
+        Cisco Meraki meraki_dashboard_api_key to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
         """
         return __config__.get('merakiDashboardApiKey')
 
     @_builtins.property
     def meraki_debug(self) -> Optional[str]:
         """
-        Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to
-        `false`.
+        Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to `false`.
         """
         return __config__.get('merakiDebug')
 

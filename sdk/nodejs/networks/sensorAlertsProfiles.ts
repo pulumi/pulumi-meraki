@@ -46,35 +46,35 @@ export class SensorAlertsProfiles extends pulumi.CustomResource {
     /**
      * List of conditions that will cause the profile to send an alert.
      */
-    public readonly conditions!: pulumi.Output<outputs.networks.SensorAlertsProfilesCondition[] | undefined>;
+    declare public readonly conditions: pulumi.Output<outputs.networks.SensorAlertsProfilesCondition[] | undefined>;
     /**
      * List of conditions that will cause the profile to send an alert.
      */
-    public /*out*/ readonly conditionsResponses!: pulumi.Output<outputs.networks.SensorAlertsProfilesConditionsResponse[]>;
+    declare public /*out*/ readonly conditionsResponses: pulumi.Output<outputs.networks.SensorAlertsProfilesConditionsResponse[]>;
     /**
      * Name of the sensor alert profile.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * ID of the sensor alert profile.
      */
-    public /*out*/ readonly profileId!: pulumi.Output<string>;
+    declare public /*out*/ readonly profileId: pulumi.Output<string>;
     /**
      * List of recipients that will receive the alert.
      */
-    public readonly recipients!: pulumi.Output<outputs.networks.SensorAlertsProfilesRecipients>;
+    declare public readonly recipients: pulumi.Output<outputs.networks.SensorAlertsProfilesRecipients>;
     /**
      * The sensor schedule to use with the alert profile.
      */
-    public readonly schedule!: pulumi.Output<outputs.networks.SensorAlertsProfilesSchedule>;
+    declare public readonly schedule: pulumi.Output<outputs.networks.SensorAlertsProfilesSchedule>;
     /**
      * List of device serials assigned to this sensor alert profile.
      */
-    public readonly serials!: pulumi.Output<string[]>;
+    declare public readonly serials: pulumi.Output<string[]>;
 
     /**
      * Create a SensorAlertsProfiles resource with the given unique name, arguments, and options.
@@ -89,25 +89,25 @@ export class SensorAlertsProfiles extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SensorAlertsProfilesState | undefined;
-            resourceInputs["conditions"] = state ? state.conditions : undefined;
-            resourceInputs["conditionsResponses"] = state ? state.conditionsResponses : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["profileId"] = state ? state.profileId : undefined;
-            resourceInputs["recipients"] = state ? state.recipients : undefined;
-            resourceInputs["schedule"] = state ? state.schedule : undefined;
-            resourceInputs["serials"] = state ? state.serials : undefined;
+            resourceInputs["conditions"] = state?.conditions;
+            resourceInputs["conditionsResponses"] = state?.conditionsResponses;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["profileId"] = state?.profileId;
+            resourceInputs["recipients"] = state?.recipients;
+            resourceInputs["schedule"] = state?.schedule;
+            resourceInputs["serials"] = state?.serials;
         } else {
             const args = argsOrState as SensorAlertsProfilesArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["conditions"] = args ? args.conditions : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["recipients"] = args ? args.recipients : undefined;
-            resourceInputs["schedule"] = args ? args.schedule : undefined;
-            resourceInputs["serials"] = args ? args.serials : undefined;
+            resourceInputs["conditions"] = args?.conditions;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["recipients"] = args?.recipients;
+            resourceInputs["schedule"] = args?.schedule;
+            resourceInputs["serials"] = args?.serials;
             resourceInputs["conditionsResponses"] = undefined /*out*/;
             resourceInputs["profileId"] = undefined /*out*/;
         }

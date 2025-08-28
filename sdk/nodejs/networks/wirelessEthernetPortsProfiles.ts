@@ -46,27 +46,27 @@ export class WirelessEthernetPortsProfiles extends pulumi.CustomResource {
     /**
      * Is default profile
      */
-    public /*out*/ readonly isDefault!: pulumi.Output<boolean>;
+    declare public /*out*/ readonly isDefault: pulumi.Output<boolean>;
     /**
      * AP port profile name
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * Ports config
      */
-    public readonly ports!: pulumi.Output<outputs.networks.WirelessEthernetPortsProfilesPort[]>;
+    declare public readonly ports: pulumi.Output<outputs.networks.WirelessEthernetPortsProfilesPort[]>;
     /**
      * AP port profile ID
      */
-    public readonly profileId!: pulumi.Output<string>;
+    declare public readonly profileId: pulumi.Output<string>;
     /**
      * Usb ports config
      */
-    public readonly usbPorts!: pulumi.Output<outputs.networks.WirelessEthernetPortsProfilesUsbPort[]>;
+    declare public readonly usbPorts: pulumi.Output<outputs.networks.WirelessEthernetPortsProfilesUsbPort[]>;
 
     /**
      * Create a WirelessEthernetPortsProfiles resource with the given unique name, arguments, and options.
@@ -81,25 +81,25 @@ export class WirelessEthernetPortsProfiles extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as WirelessEthernetPortsProfilesState | undefined;
-            resourceInputs["isDefault"] = state ? state.isDefault : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["ports"] = state ? state.ports : undefined;
-            resourceInputs["profileId"] = state ? state.profileId : undefined;
-            resourceInputs["usbPorts"] = state ? state.usbPorts : undefined;
+            resourceInputs["isDefault"] = state?.isDefault;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["ports"] = state?.ports;
+            resourceInputs["profileId"] = state?.profileId;
+            resourceInputs["usbPorts"] = state?.usbPorts;
         } else {
             const args = argsOrState as WirelessEthernetPortsProfilesArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            if ((!args || args.profileId === undefined) && !opts.urn) {
+            if (args?.profileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'profileId'");
             }
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["ports"] = args ? args.ports : undefined;
-            resourceInputs["profileId"] = args ? args.profileId : undefined;
-            resourceInputs["usbPorts"] = args ? args.usbPorts : undefined;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["ports"] = args?.ports;
+            resourceInputs["profileId"] = args?.profileId;
+            resourceInputs["usbPorts"] = args?.usbPorts;
             resourceInputs["isDefault"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

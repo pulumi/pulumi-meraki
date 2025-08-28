@@ -46,35 +46,35 @@ export class WirelessSettings extends pulumi.CustomResource {
     /**
      * Toggle for enabling or disabling IPv6 bridging in a network (Note: if enabled, SSIDs must also be configured to use bridge mode)
      */
-    public readonly ipv6BridgeEnabled!: pulumi.Output<boolean>;
+    declare public readonly ipv6BridgeEnabled: pulumi.Output<boolean>;
     /**
      * Toggle for enabling or disabling LED lights on all APs in the network (making them run dark)
      */
-    public readonly ledLightsOn!: pulumi.Output<boolean>;
+    declare public readonly ledLightsOn: pulumi.Output<boolean>;
     /**
      * Toggle for enabling or disabling location analytics for your network
      */
-    public readonly locationAnalyticsEnabled!: pulumi.Output<boolean>;
+    declare public readonly locationAnalyticsEnabled: pulumi.Output<boolean>;
     /**
      * Toggle for enabling or disabling meshing in a network
      */
-    public readonly meshingEnabled!: pulumi.Output<boolean>;
+    declare public readonly meshingEnabled: pulumi.Output<boolean>;
     /**
      * Named VLAN settings for wireless networks.
      */
-    public readonly namedVlans!: pulumi.Output<outputs.networks.WirelessSettingsNamedVlans>;
+    declare public readonly namedVlans: pulumi.Output<outputs.networks.WirelessSettingsNamedVlans>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * Regulatory domain information for this network.
      */
-    public /*out*/ readonly regulatoryDomain!: pulumi.Output<outputs.networks.WirelessSettingsRegulatoryDomain>;
+    declare public /*out*/ readonly regulatoryDomain: pulumi.Output<outputs.networks.WirelessSettingsRegulatoryDomain>;
     /**
      * The upgrade strategy to apply to the network. Must be one of 'minimizeUpgradeTime' or 'minimizeClientDowntime'. Requires firmware version MR 26.8 or higher'
      */
-    public readonly upgradestrategy!: pulumi.Output<string>;
+    declare public readonly upgradestrategy: pulumi.Output<string>;
 
     /**
      * Create a WirelessSettings resource with the given unique name, arguments, and options.
@@ -89,26 +89,26 @@ export class WirelessSettings extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as WirelessSettingsState | undefined;
-            resourceInputs["ipv6BridgeEnabled"] = state ? state.ipv6BridgeEnabled : undefined;
-            resourceInputs["ledLightsOn"] = state ? state.ledLightsOn : undefined;
-            resourceInputs["locationAnalyticsEnabled"] = state ? state.locationAnalyticsEnabled : undefined;
-            resourceInputs["meshingEnabled"] = state ? state.meshingEnabled : undefined;
-            resourceInputs["namedVlans"] = state ? state.namedVlans : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["regulatoryDomain"] = state ? state.regulatoryDomain : undefined;
-            resourceInputs["upgradestrategy"] = state ? state.upgradestrategy : undefined;
+            resourceInputs["ipv6BridgeEnabled"] = state?.ipv6BridgeEnabled;
+            resourceInputs["ledLightsOn"] = state?.ledLightsOn;
+            resourceInputs["locationAnalyticsEnabled"] = state?.locationAnalyticsEnabled;
+            resourceInputs["meshingEnabled"] = state?.meshingEnabled;
+            resourceInputs["namedVlans"] = state?.namedVlans;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["regulatoryDomain"] = state?.regulatoryDomain;
+            resourceInputs["upgradestrategy"] = state?.upgradestrategy;
         } else {
             const args = argsOrState as WirelessSettingsArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["ipv6BridgeEnabled"] = args ? args.ipv6BridgeEnabled : undefined;
-            resourceInputs["ledLightsOn"] = args ? args.ledLightsOn : undefined;
-            resourceInputs["locationAnalyticsEnabled"] = args ? args.locationAnalyticsEnabled : undefined;
-            resourceInputs["meshingEnabled"] = args ? args.meshingEnabled : undefined;
-            resourceInputs["namedVlans"] = args ? args.namedVlans : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["upgradestrategy"] = args ? args.upgradestrategy : undefined;
+            resourceInputs["ipv6BridgeEnabled"] = args?.ipv6BridgeEnabled;
+            resourceInputs["ledLightsOn"] = args?.ledLightsOn;
+            resourceInputs["locationAnalyticsEnabled"] = args?.locationAnalyticsEnabled;
+            resourceInputs["meshingEnabled"] = args?.meshingEnabled;
+            resourceInputs["namedVlans"] = args?.namedVlans;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["upgradestrategy"] = args?.upgradestrategy;
             resourceInputs["regulatoryDomain"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

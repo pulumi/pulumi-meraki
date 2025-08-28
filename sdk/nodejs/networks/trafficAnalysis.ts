@@ -62,16 +62,16 @@ export class TrafficAnalysis extends pulumi.CustomResource {
     /**
      * The list of items that make up the custom pie chart for traffic reporting.
      */
-    public readonly customPieChartItems!: pulumi.Output<outputs.networks.TrafficAnalysisCustomPieChartItem[]>;
+    declare public readonly customPieChartItems: pulumi.Output<outputs.networks.TrafficAnalysisCustomPieChartItem[]>;
     /**
      * The traffic analysis mode for the network. Can be one of 'disabled' (do not collect traffic types),
      * 'basic' (collect generic traffic categories), or 'detailed' (collect destination hostnames).
      */
-    public readonly mode!: pulumi.Output<string>;
+    declare public readonly mode: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
 
     /**
      * Create a TrafficAnalysis resource with the given unique name, arguments, and options.
@@ -86,17 +86,17 @@ export class TrafficAnalysis extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as TrafficAnalysisState | undefined;
-            resourceInputs["customPieChartItems"] = state ? state.customPieChartItems : undefined;
-            resourceInputs["mode"] = state ? state.mode : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
+            resourceInputs["customPieChartItems"] = state?.customPieChartItems;
+            resourceInputs["mode"] = state?.mode;
+            resourceInputs["networkId"] = state?.networkId;
         } else {
             const args = argsOrState as TrafficAnalysisArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["customPieChartItems"] = args ? args.customPieChartItems : undefined;
-            resourceInputs["mode"] = args ? args.mode : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
+            resourceInputs["customPieChartItems"] = args?.customPieChartItems;
+            resourceInputs["mode"] = args?.mode;
+            resourceInputs["networkId"] = args?.networkId;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(TrafficAnalysis.__pulumiType, name, resourceInputs, opts);

@@ -46,19 +46,19 @@ export class WirelessSsidsDeviceTypeGroupPolicies extends pulumi.CustomResource 
     /**
      * List of device type policies.
      */
-    public readonly deviceTypePolicies!: pulumi.Output<outputs.networks.WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicy[]>;
+    declare public readonly deviceTypePolicies: pulumi.Output<outputs.networks.WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicy[]>;
     /**
      * If true, the SSID device type group policies are enabled.
      */
-    public readonly enabled!: pulumi.Output<boolean>;
+    declare public readonly enabled: pulumi.Output<boolean>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * number path parameter.
      */
-    public readonly number!: pulumi.Output<string>;
+    declare public readonly number: pulumi.Output<string>;
 
     /**
      * Create a WirelessSsidsDeviceTypeGroupPolicies resource with the given unique name, arguments, and options.
@@ -73,22 +73,22 @@ export class WirelessSsidsDeviceTypeGroupPolicies extends pulumi.CustomResource 
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as WirelessSsidsDeviceTypeGroupPoliciesState | undefined;
-            resourceInputs["deviceTypePolicies"] = state ? state.deviceTypePolicies : undefined;
-            resourceInputs["enabled"] = state ? state.enabled : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["number"] = state ? state.number : undefined;
+            resourceInputs["deviceTypePolicies"] = state?.deviceTypePolicies;
+            resourceInputs["enabled"] = state?.enabled;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["number"] = state?.number;
         } else {
             const args = argsOrState as WirelessSsidsDeviceTypeGroupPoliciesArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            if ((!args || args.number === undefined) && !opts.urn) {
+            if (args?.number === undefined && !opts.urn) {
                 throw new Error("Missing required property 'number'");
             }
-            resourceInputs["deviceTypePolicies"] = args ? args.deviceTypePolicies : undefined;
-            resourceInputs["enabled"] = args ? args.enabled : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["number"] = args ? args.number : undefined;
+            resourceInputs["deviceTypePolicies"] = args?.deviceTypePolicies;
+            resourceInputs["enabled"] = args?.enabled;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["number"] = args?.number;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(WirelessSsidsDeviceTypeGroupPolicies.__pulumiType, name, resourceInputs, opts);

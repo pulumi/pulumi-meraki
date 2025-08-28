@@ -46,87 +46,87 @@ export class WirelessSsidsSplashSettings extends pulumi.CustomResource {
     /**
      * Whether or not to allow simultaneous logins from different devices.
      */
-    public readonly allowSimultaneousLogins!: pulumi.Output<boolean>;
+    declare public readonly allowSimultaneousLogins: pulumi.Output<boolean>;
     /**
      * Details associated with billing splash
      */
-    public readonly billing!: pulumi.Output<outputs.networks.WirelessSsidsSplashSettingsBilling>;
+    declare public readonly billing: pulumi.Output<outputs.networks.WirelessSsidsSplashSettingsBilling>;
     /**
      * How restricted allowing traffic should be. If true, all traffic types are blocked until the splash page is acknowledged. If false, all non-HTTP traffic is allowed before the splash page is acknowledged.
      */
-    public readonly blockAllTrafficBeforeSignOn!: pulumi.Output<boolean>;
+    declare public readonly blockAllTrafficBeforeSignOn: pulumi.Output<boolean>;
     /**
      * How login attempts should be handled when the controller is unreachable.
      */
-    public readonly controllerDisconnectionBehavior!: pulumi.Output<string>;
+    declare public readonly controllerDisconnectionBehavior: pulumi.Output<string>;
     /**
      * Details associated with guest sponsored splash
      */
-    public readonly guestSponsorship!: pulumi.Output<outputs.networks.WirelessSsidsSplashSettingsGuestSponsorship>;
+    declare public readonly guestSponsorship: pulumi.Output<outputs.networks.WirelessSsidsSplashSettingsGuestSponsorship>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * number path parameter.
      */
-    public readonly number!: pulumi.Output<string>;
+    declare public readonly number: pulumi.Output<string>;
     /**
      * The custom redirect URL where the users will go after the splash page.
      */
-    public readonly redirectUrl!: pulumi.Output<string>;
+    declare public readonly redirectUrl: pulumi.Output<string>;
     /**
      * Self-registration for splash with Meraki authentication.
      */
-    public /*out*/ readonly selfRegistration!: pulumi.Output<outputs.networks.WirelessSsidsSplashSettingsSelfRegistration>;
+    declare public /*out*/ readonly selfRegistration: pulumi.Output<outputs.networks.WirelessSsidsSplashSettingsSelfRegistration>;
     /**
      * Systems Manager sentry enrollment splash settings.
      */
-    public readonly sentryEnrollment!: pulumi.Output<outputs.networks.WirelessSsidsSplashSettingsSentryEnrollment>;
+    declare public readonly sentryEnrollment: pulumi.Output<outputs.networks.WirelessSsidsSplashSettingsSentryEnrollment>;
     /**
      * The image used in the splash page.
      */
-    public readonly splashImage!: pulumi.Output<outputs.networks.WirelessSsidsSplashSettingsSplashImage>;
+    declare public readonly splashImage: pulumi.Output<outputs.networks.WirelessSsidsSplashSettingsSplashImage>;
     /**
      * The logo used in the splash page.
      */
-    public readonly splashLogo!: pulumi.Output<outputs.networks.WirelessSsidsSplashSettingsSplashLogo>;
+    declare public readonly splashLogo: pulumi.Output<outputs.networks.WirelessSsidsSplashSettingsSplashLogo>;
     /**
      * The type of splash page for this SSID
      */
-    public /*out*/ readonly splashPage!: pulumi.Output<string>;
+    declare public /*out*/ readonly splashPage: pulumi.Output<string>;
     /**
      * The prepaid front image used in the splash page.
      */
-    public readonly splashPrepaidFront!: pulumi.Output<outputs.networks.WirelessSsidsSplashSettingsSplashPrepaidFront>;
+    declare public readonly splashPrepaidFront: pulumi.Output<outputs.networks.WirelessSsidsSplashSettingsSplashPrepaidFront>;
     /**
      * Splash timeout in minutes.
      */
-    public readonly splashTimeout!: pulumi.Output<number>;
+    declare public readonly splashTimeout: pulumi.Output<number>;
     /**
      * The custom splash URL of the click-through splash page.
      */
-    public readonly splashUrl!: pulumi.Output<string>;
+    declare public readonly splashUrl: pulumi.Output<string>;
     /**
      * SSID number
      */
-    public /*out*/ readonly ssidNumber!: pulumi.Output<number>;
+    declare public /*out*/ readonly ssidNumber: pulumi.Output<number>;
     /**
      * The id of the selected splash theme.
      */
-    public readonly themeId!: pulumi.Output<string>;
+    declare public readonly themeId: pulumi.Output<string>;
     /**
      * The Boolean indicating whether the the user will be redirected to the custom redirect URL after the splash page.
      */
-    public readonly useRedirectUrl!: pulumi.Output<boolean>;
+    declare public readonly useRedirectUrl: pulumi.Output<boolean>;
     /**
      * Boolean indicating whether the users will be redirected to the custom splash url
      */
-    public readonly useSplashUrl!: pulumi.Output<boolean>;
+    declare public readonly useSplashUrl: pulumi.Output<boolean>;
     /**
      * The welcome message for the users on the splash page.
      */
-    public readonly welcomeMessage!: pulumi.Output<string>;
+    declare public readonly welcomeMessage: pulumi.Output<string>;
 
     /**
      * Create a WirelessSsidsSplashSettings resource with the given unique name, arguments, and options.
@@ -141,53 +141,53 @@ export class WirelessSsidsSplashSettings extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as WirelessSsidsSplashSettingsState | undefined;
-            resourceInputs["allowSimultaneousLogins"] = state ? state.allowSimultaneousLogins : undefined;
-            resourceInputs["billing"] = state ? state.billing : undefined;
-            resourceInputs["blockAllTrafficBeforeSignOn"] = state ? state.blockAllTrafficBeforeSignOn : undefined;
-            resourceInputs["controllerDisconnectionBehavior"] = state ? state.controllerDisconnectionBehavior : undefined;
-            resourceInputs["guestSponsorship"] = state ? state.guestSponsorship : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["number"] = state ? state.number : undefined;
-            resourceInputs["redirectUrl"] = state ? state.redirectUrl : undefined;
-            resourceInputs["selfRegistration"] = state ? state.selfRegistration : undefined;
-            resourceInputs["sentryEnrollment"] = state ? state.sentryEnrollment : undefined;
-            resourceInputs["splashImage"] = state ? state.splashImage : undefined;
-            resourceInputs["splashLogo"] = state ? state.splashLogo : undefined;
-            resourceInputs["splashPage"] = state ? state.splashPage : undefined;
-            resourceInputs["splashPrepaidFront"] = state ? state.splashPrepaidFront : undefined;
-            resourceInputs["splashTimeout"] = state ? state.splashTimeout : undefined;
-            resourceInputs["splashUrl"] = state ? state.splashUrl : undefined;
-            resourceInputs["ssidNumber"] = state ? state.ssidNumber : undefined;
-            resourceInputs["themeId"] = state ? state.themeId : undefined;
-            resourceInputs["useRedirectUrl"] = state ? state.useRedirectUrl : undefined;
-            resourceInputs["useSplashUrl"] = state ? state.useSplashUrl : undefined;
-            resourceInputs["welcomeMessage"] = state ? state.welcomeMessage : undefined;
+            resourceInputs["allowSimultaneousLogins"] = state?.allowSimultaneousLogins;
+            resourceInputs["billing"] = state?.billing;
+            resourceInputs["blockAllTrafficBeforeSignOn"] = state?.blockAllTrafficBeforeSignOn;
+            resourceInputs["controllerDisconnectionBehavior"] = state?.controllerDisconnectionBehavior;
+            resourceInputs["guestSponsorship"] = state?.guestSponsorship;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["number"] = state?.number;
+            resourceInputs["redirectUrl"] = state?.redirectUrl;
+            resourceInputs["selfRegistration"] = state?.selfRegistration;
+            resourceInputs["sentryEnrollment"] = state?.sentryEnrollment;
+            resourceInputs["splashImage"] = state?.splashImage;
+            resourceInputs["splashLogo"] = state?.splashLogo;
+            resourceInputs["splashPage"] = state?.splashPage;
+            resourceInputs["splashPrepaidFront"] = state?.splashPrepaidFront;
+            resourceInputs["splashTimeout"] = state?.splashTimeout;
+            resourceInputs["splashUrl"] = state?.splashUrl;
+            resourceInputs["ssidNumber"] = state?.ssidNumber;
+            resourceInputs["themeId"] = state?.themeId;
+            resourceInputs["useRedirectUrl"] = state?.useRedirectUrl;
+            resourceInputs["useSplashUrl"] = state?.useSplashUrl;
+            resourceInputs["welcomeMessage"] = state?.welcomeMessage;
         } else {
             const args = argsOrState as WirelessSsidsSplashSettingsArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            if ((!args || args.number === undefined) && !opts.urn) {
+            if (args?.number === undefined && !opts.urn) {
                 throw new Error("Missing required property 'number'");
             }
-            resourceInputs["allowSimultaneousLogins"] = args ? args.allowSimultaneousLogins : undefined;
-            resourceInputs["billing"] = args ? args.billing : undefined;
-            resourceInputs["blockAllTrafficBeforeSignOn"] = args ? args.blockAllTrafficBeforeSignOn : undefined;
-            resourceInputs["controllerDisconnectionBehavior"] = args ? args.controllerDisconnectionBehavior : undefined;
-            resourceInputs["guestSponsorship"] = args ? args.guestSponsorship : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["number"] = args ? args.number : undefined;
-            resourceInputs["redirectUrl"] = args ? args.redirectUrl : undefined;
-            resourceInputs["sentryEnrollment"] = args ? args.sentryEnrollment : undefined;
-            resourceInputs["splashImage"] = args ? args.splashImage : undefined;
-            resourceInputs["splashLogo"] = args ? args.splashLogo : undefined;
-            resourceInputs["splashPrepaidFront"] = args ? args.splashPrepaidFront : undefined;
-            resourceInputs["splashTimeout"] = args ? args.splashTimeout : undefined;
-            resourceInputs["splashUrl"] = args ? args.splashUrl : undefined;
-            resourceInputs["themeId"] = args ? args.themeId : undefined;
-            resourceInputs["useRedirectUrl"] = args ? args.useRedirectUrl : undefined;
-            resourceInputs["useSplashUrl"] = args ? args.useSplashUrl : undefined;
-            resourceInputs["welcomeMessage"] = args ? args.welcomeMessage : undefined;
+            resourceInputs["allowSimultaneousLogins"] = args?.allowSimultaneousLogins;
+            resourceInputs["billing"] = args?.billing;
+            resourceInputs["blockAllTrafficBeforeSignOn"] = args?.blockAllTrafficBeforeSignOn;
+            resourceInputs["controllerDisconnectionBehavior"] = args?.controllerDisconnectionBehavior;
+            resourceInputs["guestSponsorship"] = args?.guestSponsorship;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["number"] = args?.number;
+            resourceInputs["redirectUrl"] = args?.redirectUrl;
+            resourceInputs["sentryEnrollment"] = args?.sentryEnrollment;
+            resourceInputs["splashImage"] = args?.splashImage;
+            resourceInputs["splashLogo"] = args?.splashLogo;
+            resourceInputs["splashPrepaidFront"] = args?.splashPrepaidFront;
+            resourceInputs["splashTimeout"] = args?.splashTimeout;
+            resourceInputs["splashUrl"] = args?.splashUrl;
+            resourceInputs["themeId"] = args?.themeId;
+            resourceInputs["useRedirectUrl"] = args?.useRedirectUrl;
+            resourceInputs["useSplashUrl"] = args?.useSplashUrl;
+            resourceInputs["welcomeMessage"] = args?.welcomeMessage;
             resourceInputs["selfRegistration"] = undefined /*out*/;
             resourceInputs["splashPage"] = undefined /*out*/;
             resourceInputs["ssidNumber"] = undefined /*out*/;

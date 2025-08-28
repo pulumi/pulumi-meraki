@@ -58,12 +58,12 @@ export class InventoryClaim extends pulumi.CustomResource {
         return obj['__pulumiType'] === InventoryClaim.__pulumiType;
     }
 
-    public /*out*/ readonly item!: pulumi.Output<outputs.organizations.InventoryClaimItem>;
+    declare public /*out*/ readonly item: pulumi.Output<outputs.organizations.InventoryClaimItem>;
     /**
      * organizationId path parameter. Organization ID
      */
-    public readonly organizationId!: pulumi.Output<string>;
-    public readonly parameters!: pulumi.Output<outputs.organizations.InventoryClaimParameters>;
+    declare public readonly organizationId: pulumi.Output<string>;
+    declare public readonly parameters: pulumi.Output<outputs.organizations.InventoryClaimParameters>;
 
     /**
      * Create a InventoryClaim resource with the given unique name, arguments, and options.
@@ -78,19 +78,19 @@ export class InventoryClaim extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as InventoryClaimState | undefined;
-            resourceInputs["item"] = state ? state.item : undefined;
-            resourceInputs["organizationId"] = state ? state.organizationId : undefined;
-            resourceInputs["parameters"] = state ? state.parameters : undefined;
+            resourceInputs["item"] = state?.item;
+            resourceInputs["organizationId"] = state?.organizationId;
+            resourceInputs["parameters"] = state?.parameters;
         } else {
             const args = argsOrState as InventoryClaimArgs | undefined;
-            if ((!args || args.organizationId === undefined) && !opts.urn) {
+            if (args?.organizationId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'organizationId'");
             }
-            if ((!args || args.parameters === undefined) && !opts.urn) {
+            if (args?.parameters === undefined && !opts.urn) {
                 throw new Error("Missing required property 'parameters'");
             }
-            resourceInputs["organizationId"] = args ? args.organizationId : undefined;
-            resourceInputs["parameters"] = args ? args.parameters : undefined;
+            resourceInputs["organizationId"] = args?.organizationId;
+            resourceInputs["parameters"] = args?.parameters;
             resourceInputs["item"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

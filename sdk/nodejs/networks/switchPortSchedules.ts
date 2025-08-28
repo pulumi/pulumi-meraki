@@ -94,21 +94,21 @@ export class SwitchPortSchedules extends pulumi.CustomResource {
     /**
      * The name for your port schedule. Required
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * The schedule for switch port scheduling. Schedules are applied to days of the week.
      * When it's empty, default schedule with all days of a week are configured.
      * Any unspecified day in the schedule is added as a default schedule configuration of the day.
      */
-    public readonly portSchedule!: pulumi.Output<outputs.networks.SwitchPortSchedulesPortSchedule>;
+    declare public readonly portSchedule: pulumi.Output<outputs.networks.SwitchPortSchedulesPortSchedule>;
     /**
      * portScheduleId path parameter. Port schedule ID
      */
-    public readonly portScheduleId!: pulumi.Output<string>;
+    declare public readonly portScheduleId: pulumi.Output<string>;
 
     /**
      * Create a SwitchPortSchedules resource with the given unique name, arguments, and options.
@@ -123,19 +123,19 @@ export class SwitchPortSchedules extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SwitchPortSchedulesState | undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["portSchedule"] = state ? state.portSchedule : undefined;
-            resourceInputs["portScheduleId"] = state ? state.portScheduleId : undefined;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["portSchedule"] = state?.portSchedule;
+            resourceInputs["portScheduleId"] = state?.portScheduleId;
         } else {
             const args = argsOrState as SwitchPortSchedulesArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["portSchedule"] = args ? args.portSchedule : undefined;
-            resourceInputs["portScheduleId"] = args ? args.portScheduleId : undefined;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["portSchedule"] = args?.portSchedule;
+            resourceInputs["portScheduleId"] = args?.portScheduleId;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(SwitchPortSchedules.__pulumiType, name, resourceInputs, opts);

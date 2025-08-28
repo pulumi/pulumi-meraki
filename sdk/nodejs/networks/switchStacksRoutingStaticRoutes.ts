@@ -60,35 +60,35 @@ export class SwitchStacksRoutingStaticRoutes extends pulumi.CustomResource {
     /**
      * Option to advertise static routes via OSPF
      */
-    public readonly advertiseViaOspfEnabled!: pulumi.Output<boolean>;
+    declare public readonly advertiseViaOspfEnabled: pulumi.Output<boolean>;
     /**
      * The name or description of the layer 3 static route
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * The IP address of the router to which traffic for this destination network should be sent
      */
-    public readonly nextHopIp!: pulumi.Output<string>;
+    declare public readonly nextHopIp: pulumi.Output<string>;
     /**
      * Option to prefer static routes over OSPF routes
      */
-    public readonly preferOverOspfRoutesEnabled!: pulumi.Output<boolean>;
+    declare public readonly preferOverOspfRoutesEnabled: pulumi.Output<boolean>;
     /**
      * The identifier of a layer 3 static route
      */
-    public readonly staticRouteId!: pulumi.Output<string>;
+    declare public readonly staticRouteId: pulumi.Output<string>;
     /**
      * The IP address of the subnetwork specified in CIDR notation (ex. 1.2.3.0/24)
      */
-    public readonly subnet!: pulumi.Output<string>;
+    declare public readonly subnet: pulumi.Output<string>;
     /**
      * switchStackId path parameter. Switch stack ID
      */
-    public readonly switchStackId!: pulumi.Output<string>;
+    declare public readonly switchStackId: pulumi.Output<string>;
 
     /**
      * Create a SwitchStacksRoutingStaticRoutes resource with the given unique name, arguments, and options.
@@ -103,30 +103,30 @@ export class SwitchStacksRoutingStaticRoutes extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SwitchStacksRoutingStaticRoutesState | undefined;
-            resourceInputs["advertiseViaOspfEnabled"] = state ? state.advertiseViaOspfEnabled : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["nextHopIp"] = state ? state.nextHopIp : undefined;
-            resourceInputs["preferOverOspfRoutesEnabled"] = state ? state.preferOverOspfRoutesEnabled : undefined;
-            resourceInputs["staticRouteId"] = state ? state.staticRouteId : undefined;
-            resourceInputs["subnet"] = state ? state.subnet : undefined;
-            resourceInputs["switchStackId"] = state ? state.switchStackId : undefined;
+            resourceInputs["advertiseViaOspfEnabled"] = state?.advertiseViaOspfEnabled;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["nextHopIp"] = state?.nextHopIp;
+            resourceInputs["preferOverOspfRoutesEnabled"] = state?.preferOverOspfRoutesEnabled;
+            resourceInputs["staticRouteId"] = state?.staticRouteId;
+            resourceInputs["subnet"] = state?.subnet;
+            resourceInputs["switchStackId"] = state?.switchStackId;
         } else {
             const args = argsOrState as SwitchStacksRoutingStaticRoutesArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            if ((!args || args.switchStackId === undefined) && !opts.urn) {
+            if (args?.switchStackId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'switchStackId'");
             }
-            resourceInputs["advertiseViaOspfEnabled"] = args ? args.advertiseViaOspfEnabled : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["nextHopIp"] = args ? args.nextHopIp : undefined;
-            resourceInputs["preferOverOspfRoutesEnabled"] = args ? args.preferOverOspfRoutesEnabled : undefined;
-            resourceInputs["staticRouteId"] = args ? args.staticRouteId : undefined;
-            resourceInputs["subnet"] = args ? args.subnet : undefined;
-            resourceInputs["switchStackId"] = args ? args.switchStackId : undefined;
+            resourceInputs["advertiseViaOspfEnabled"] = args?.advertiseViaOspfEnabled;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["nextHopIp"] = args?.nextHopIp;
+            resourceInputs["preferOverOspfRoutesEnabled"] = args?.preferOverOspfRoutesEnabled;
+            resourceInputs["staticRouteId"] = args?.staticRouteId;
+            resourceInputs["subnet"] = args?.subnet;
+            resourceInputs["switchStackId"] = args?.switchStackId;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(SwitchStacksRoutingStaticRoutes.__pulumiType, name, resourceInputs, opts);

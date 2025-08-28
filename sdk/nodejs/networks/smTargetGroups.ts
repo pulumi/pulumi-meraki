@@ -56,23 +56,23 @@ export class SmTargetGroups extends pulumi.CustomResource {
     /**
      * The name of this target group.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * The scope of the target group.
      */
-    public readonly scope!: pulumi.Output<string>;
+    declare public readonly scope: pulumi.Output<string>;
     /**
      * The tags of the target group.
      */
-    public /*out*/ readonly tags!: pulumi.Output<string[]>;
+    declare public /*out*/ readonly tags: pulumi.Output<string[]>;
     /**
      * targetGroupId path parameter. Target group ID
      */
-    public readonly targetGroupId!: pulumi.Output<string | undefined>;
+    declare public readonly targetGroupId: pulumi.Output<string | undefined>;
 
     /**
      * Create a SmTargetGroups resource with the given unique name, arguments, and options.
@@ -87,20 +87,20 @@ export class SmTargetGroups extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SmTargetGroupsState | undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["scope"] = state ? state.scope : undefined;
-            resourceInputs["tags"] = state ? state.tags : undefined;
-            resourceInputs["targetGroupId"] = state ? state.targetGroupId : undefined;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["scope"] = state?.scope;
+            resourceInputs["tags"] = state?.tags;
+            resourceInputs["targetGroupId"] = state?.targetGroupId;
         } else {
             const args = argsOrState as SmTargetGroupsArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["scope"] = args ? args.scope : undefined;
-            resourceInputs["targetGroupId"] = args ? args.targetGroupId : undefined;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["scope"] = args?.scope;
+            resourceInputs["targetGroupId"] = args?.targetGroupId;
             resourceInputs["tags"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

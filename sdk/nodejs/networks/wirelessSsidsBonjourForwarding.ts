@@ -46,23 +46,23 @@ export class WirelessSsidsBonjourForwarding extends pulumi.CustomResource {
     /**
      * If true, Bonjour forwarding is enabled on the SSID.
      */
-    public readonly enabled!: pulumi.Output<boolean>;
+    declare public readonly enabled: pulumi.Output<boolean>;
     /**
      * Bonjour forwarding exception
      */
-    public readonly exception!: pulumi.Output<outputs.networks.WirelessSsidsBonjourForwardingException>;
+    declare public readonly exception: pulumi.Output<outputs.networks.WirelessSsidsBonjourForwardingException>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * number path parameter.
      */
-    public readonly number!: pulumi.Output<string>;
+    declare public readonly number: pulumi.Output<string>;
     /**
      * Bonjour forwarding rules
      */
-    public readonly rules!: pulumi.Output<outputs.networks.WirelessSsidsBonjourForwardingRule[]>;
+    declare public readonly rules: pulumi.Output<outputs.networks.WirelessSsidsBonjourForwardingRule[]>;
 
     /**
      * Create a WirelessSsidsBonjourForwarding resource with the given unique name, arguments, and options.
@@ -77,24 +77,24 @@ export class WirelessSsidsBonjourForwarding extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as WirelessSsidsBonjourForwardingState | undefined;
-            resourceInputs["enabled"] = state ? state.enabled : undefined;
-            resourceInputs["exception"] = state ? state.exception : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["number"] = state ? state.number : undefined;
-            resourceInputs["rules"] = state ? state.rules : undefined;
+            resourceInputs["enabled"] = state?.enabled;
+            resourceInputs["exception"] = state?.exception;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["number"] = state?.number;
+            resourceInputs["rules"] = state?.rules;
         } else {
             const args = argsOrState as WirelessSsidsBonjourForwardingArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            if ((!args || args.number === undefined) && !opts.urn) {
+            if (args?.number === undefined && !opts.urn) {
                 throw new Error("Missing required property 'number'");
             }
-            resourceInputs["enabled"] = args ? args.enabled : undefined;
-            resourceInputs["exception"] = args ? args.exception : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["number"] = args ? args.number : undefined;
-            resourceInputs["rules"] = args ? args.rules : undefined;
+            resourceInputs["enabled"] = args?.enabled;
+            resourceInputs["exception"] = args?.exception;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["number"] = args?.number;
+            resourceInputs["rules"] = args?.rules;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(WirelessSsidsBonjourForwarding.__pulumiType, name, resourceInputs, opts);

@@ -61,11 +61,11 @@ export class CameraWirelessProfiles extends pulumi.CustomResource {
     /**
      * The ids of the wireless profile to assign to the given camera
      */
-    public readonly ids!: pulumi.Output<outputs.devices.CameraWirelessProfilesIds>;
+    declare public readonly ids: pulumi.Output<outputs.devices.CameraWirelessProfilesIds>;
     /**
      * serial path parameter.
      */
-    public readonly serial!: pulumi.Output<string>;
+    declare public readonly serial: pulumi.Output<string>;
 
     /**
      * Create a CameraWirelessProfiles resource with the given unique name, arguments, and options.
@@ -80,15 +80,15 @@ export class CameraWirelessProfiles extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CameraWirelessProfilesState | undefined;
-            resourceInputs["ids"] = state ? state.ids : undefined;
-            resourceInputs["serial"] = state ? state.serial : undefined;
+            resourceInputs["ids"] = state?.ids;
+            resourceInputs["serial"] = state?.serial;
         } else {
             const args = argsOrState as CameraWirelessProfilesArgs | undefined;
-            if ((!args || args.serial === undefined) && !opts.urn) {
+            if (args?.serial === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serial'");
             }
-            resourceInputs["ids"] = args ? args.ids : undefined;
-            resourceInputs["serial"] = args ? args.serial : undefined;
+            resourceInputs["ids"] = args?.ids;
+            resourceInputs["serial"] = args?.serial;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(CameraWirelessProfiles.__pulumiType, name, resourceInputs, opts);

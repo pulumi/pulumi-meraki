@@ -43,27 +43,27 @@ export class CameraWirelessProfiles extends pulumi.CustomResource {
         return obj['__pulumiType'] === CameraWirelessProfiles.__pulumiType;
     }
 
-    public /*out*/ readonly appliedDeviceCount!: pulumi.Output<number>;
+    declare public /*out*/ readonly appliedDeviceCount: pulumi.Output<number>;
     /**
      * The identity of the wireless profile. Required for creating wireless profiles in 8021x-radius auth mode.
      */
-    public readonly identity!: pulumi.Output<outputs.networks.CameraWirelessProfilesIdentity>;
+    declare public readonly identity: pulumi.Output<outputs.networks.CameraWirelessProfilesIdentity>;
     /**
      * The name of the camera wireless profile. This parameter is required.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * The details of the SSID config.
      */
-    public readonly ssid!: pulumi.Output<outputs.networks.CameraWirelessProfilesSsid>;
+    declare public readonly ssid: pulumi.Output<outputs.networks.CameraWirelessProfilesSsid>;
     /**
      * wirelessProfileId path parameter. Wireless profile ID
      */
-    public readonly wirelessProfileId!: pulumi.Output<string | undefined>;
+    declare public readonly wirelessProfileId: pulumi.Output<string | undefined>;
 
     /**
      * Create a CameraWirelessProfiles resource with the given unique name, arguments, and options.
@@ -78,22 +78,22 @@ export class CameraWirelessProfiles extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CameraWirelessProfilesState | undefined;
-            resourceInputs["appliedDeviceCount"] = state ? state.appliedDeviceCount : undefined;
-            resourceInputs["identity"] = state ? state.identity : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["ssid"] = state ? state.ssid : undefined;
-            resourceInputs["wirelessProfileId"] = state ? state.wirelessProfileId : undefined;
+            resourceInputs["appliedDeviceCount"] = state?.appliedDeviceCount;
+            resourceInputs["identity"] = state?.identity;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["ssid"] = state?.ssid;
+            resourceInputs["wirelessProfileId"] = state?.wirelessProfileId;
         } else {
             const args = argsOrState as CameraWirelessProfilesArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["identity"] = args ? args.identity : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["ssid"] = args ? args.ssid : undefined;
-            resourceInputs["wirelessProfileId"] = args ? args.wirelessProfileId : undefined;
+            resourceInputs["identity"] = args?.identity;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["ssid"] = args?.ssid;
+            resourceInputs["wirelessProfileId"] = args?.wirelessProfileId;
             resourceInputs["appliedDeviceCount"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

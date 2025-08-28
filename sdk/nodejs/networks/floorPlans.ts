@@ -78,67 +78,67 @@ export class FloorPlans extends pulumi.CustomResource {
     /**
      * The longitude and latitude of the bottom left corner of your floor plan.
      */
-    public readonly bottomLeftCorner!: pulumi.Output<outputs.networks.FloorPlansBottomLeftCorner>;
+    declare public readonly bottomLeftCorner: pulumi.Output<outputs.networks.FloorPlansBottomLeftCorner>;
     /**
      * The longitude and latitude of the bottom right corner of your floor plan.
      */
-    public readonly bottomRightCorner!: pulumi.Output<outputs.networks.FloorPlansBottomRightCorner>;
+    declare public readonly bottomRightCorner: pulumi.Output<outputs.networks.FloorPlansBottomRightCorner>;
     /**
      * The longitude and latitude of the center of your floor plan. The 'center' or two adjacent corners (e.g. 'topLeftCorner' and 'bottomLeftCorner') must be specified. If 'center' is specified, the floor plan is placed over that point with no rotation. If two adjacent corners are specified, the floor plan is rotated to line up with the two specified points. The aspect ratio of the floor plan's image is preserved regardless of which corners/center are specified. (This means if that more than two corners are specified, only two corners may be used to preserve the floor plan's aspect ratio.). No two points can have the same latitude, longitude pair.
      */
-    public readonly center!: pulumi.Output<outputs.networks.FloorPlansCenter>;
+    declare public readonly center: pulumi.Output<outputs.networks.FloorPlansCenter>;
     /**
      * List of devices for the floorplan
      */
-    public /*out*/ readonly devices!: pulumi.Output<outputs.networks.FloorPlansDevice[]>;
+    declare public /*out*/ readonly devices: pulumi.Output<outputs.networks.FloorPlansDevice[]>;
     /**
      * Floor plan ID
      */
-    public readonly floorPlanId!: pulumi.Output<string>;
+    declare public readonly floorPlanId: pulumi.Output<string>;
     /**
      * The height of your floor plan.
      */
-    public /*out*/ readonly height!: pulumi.Output<number>;
+    declare public /*out*/ readonly height: pulumi.Output<number>;
     /**
      * The file contents (a base 64 encoded string) of your image. Supported formats are PNG, GIF, and JPG. Note that all images are saved as PNG files, regardless of the format they are uploaded in.
      */
-    public readonly imageContents!: pulumi.Output<string>;
+    declare public readonly imageContents: pulumi.Output<string>;
     /**
      * The format type of the image.
      */
-    public /*out*/ readonly imageExtension!: pulumi.Output<string>;
+    declare public /*out*/ readonly imageExtension: pulumi.Output<string>;
     /**
      * The file contents (a base 64 encoded string) of your new image. Supported formats are PNG, GIF, and JPG. Note that all images are saved as PNG files, regardless of the format they are uploaded in. If you upload a new image, and you do NOT specify any new geolocation fields ('center, 'topLeftCorner', etc), the floor plan will be recentered with no rotation in order to maintain the aspect ratio of your new image.
      */
-    public /*out*/ readonly imageMd5!: pulumi.Output<string>;
+    declare public /*out*/ readonly imageMd5: pulumi.Output<string>;
     /**
      * The url link for the floor plan image.
      */
-    public /*out*/ readonly imageUrl!: pulumi.Output<string>;
+    declare public /*out*/ readonly imageUrl: pulumi.Output<string>;
     /**
      * The time the image url link will expire.
      */
-    public /*out*/ readonly imageUrlExpiresAt!: pulumi.Output<string>;
+    declare public /*out*/ readonly imageUrlExpiresAt: pulumi.Output<string>;
     /**
      * The name of your floor plan.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * The longitude and latitude of the top left corner of your floor plan.
      */
-    public readonly topLeftCorner!: pulumi.Output<outputs.networks.FloorPlansTopLeftCorner>;
+    declare public readonly topLeftCorner: pulumi.Output<outputs.networks.FloorPlansTopLeftCorner>;
     /**
      * The longitude and latitude of the top right corner of your floor plan.
      */
-    public readonly topRightCorner!: pulumi.Output<outputs.networks.FloorPlansTopRightCorner>;
+    declare public readonly topRightCorner: pulumi.Output<outputs.networks.FloorPlansTopRightCorner>;
     /**
      * The width of your floor plan.
      */
-    public /*out*/ readonly width!: pulumi.Output<number>;
+    declare public /*out*/ readonly width: pulumi.Output<number>;
 
     /**
      * Create a FloorPlans resource with the given unique name, arguments, and options.
@@ -153,36 +153,36 @@ export class FloorPlans extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as FloorPlansState | undefined;
-            resourceInputs["bottomLeftCorner"] = state ? state.bottomLeftCorner : undefined;
-            resourceInputs["bottomRightCorner"] = state ? state.bottomRightCorner : undefined;
-            resourceInputs["center"] = state ? state.center : undefined;
-            resourceInputs["devices"] = state ? state.devices : undefined;
-            resourceInputs["floorPlanId"] = state ? state.floorPlanId : undefined;
-            resourceInputs["height"] = state ? state.height : undefined;
-            resourceInputs["imageContents"] = state ? state.imageContents : undefined;
-            resourceInputs["imageExtension"] = state ? state.imageExtension : undefined;
-            resourceInputs["imageMd5"] = state ? state.imageMd5 : undefined;
-            resourceInputs["imageUrl"] = state ? state.imageUrl : undefined;
-            resourceInputs["imageUrlExpiresAt"] = state ? state.imageUrlExpiresAt : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["topLeftCorner"] = state ? state.topLeftCorner : undefined;
-            resourceInputs["topRightCorner"] = state ? state.topRightCorner : undefined;
-            resourceInputs["width"] = state ? state.width : undefined;
+            resourceInputs["bottomLeftCorner"] = state?.bottomLeftCorner;
+            resourceInputs["bottomRightCorner"] = state?.bottomRightCorner;
+            resourceInputs["center"] = state?.center;
+            resourceInputs["devices"] = state?.devices;
+            resourceInputs["floorPlanId"] = state?.floorPlanId;
+            resourceInputs["height"] = state?.height;
+            resourceInputs["imageContents"] = state?.imageContents;
+            resourceInputs["imageExtension"] = state?.imageExtension;
+            resourceInputs["imageMd5"] = state?.imageMd5;
+            resourceInputs["imageUrl"] = state?.imageUrl;
+            resourceInputs["imageUrlExpiresAt"] = state?.imageUrlExpiresAt;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["topLeftCorner"] = state?.topLeftCorner;
+            resourceInputs["topRightCorner"] = state?.topRightCorner;
+            resourceInputs["width"] = state?.width;
         } else {
             const args = argsOrState as FloorPlansArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["bottomLeftCorner"] = args ? args.bottomLeftCorner : undefined;
-            resourceInputs["bottomRightCorner"] = args ? args.bottomRightCorner : undefined;
-            resourceInputs["center"] = args ? args.center : undefined;
-            resourceInputs["floorPlanId"] = args ? args.floorPlanId : undefined;
-            resourceInputs["imageContents"] = args ? args.imageContents : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["topLeftCorner"] = args ? args.topLeftCorner : undefined;
-            resourceInputs["topRightCorner"] = args ? args.topRightCorner : undefined;
+            resourceInputs["bottomLeftCorner"] = args?.bottomLeftCorner;
+            resourceInputs["bottomRightCorner"] = args?.bottomRightCorner;
+            resourceInputs["center"] = args?.center;
+            resourceInputs["floorPlanId"] = args?.floorPlanId;
+            resourceInputs["imageContents"] = args?.imageContents;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["topLeftCorner"] = args?.topLeftCorner;
+            resourceInputs["topRightCorner"] = args?.topRightCorner;
             resourceInputs["devices"] = undefined /*out*/;
             resourceInputs["height"] = undefined /*out*/;
             resourceInputs["imageExtension"] = undefined /*out*/;

@@ -60,35 +60,35 @@ export class WirelessBluetoothSettings extends pulumi.CustomResource {
     /**
      * Whether APs will advertise beacons.
      */
-    public readonly advertisingEnabled!: pulumi.Output<boolean>;
+    declare public readonly advertisingEnabled: pulumi.Output<boolean>;
     /**
      * Whether ESL is enabled on this network.
      */
-    public /*out*/ readonly eslEnabled!: pulumi.Output<boolean>;
+    declare public /*out*/ readonly eslEnabled: pulumi.Output<boolean>;
     /**
      * The major number to be used in the beacon identifier. Only valid in 'Non-unique' mode.
      */
-    public readonly major!: pulumi.Output<number>;
+    declare public readonly major: pulumi.Output<number>;
     /**
      * The way major and minor number should be assigned to nodes in the network. ('Unique', 'Non-unique')
      */
-    public readonly majorMinorAssignmentMode!: pulumi.Output<string>;
+    declare public readonly majorMinorAssignmentMode: pulumi.Output<string>;
     /**
      * The minor number to be used in the beacon identifier. Only valid in 'Non-unique' mode.
      */
-    public readonly minor!: pulumi.Output<number>;
+    declare public readonly minor: pulumi.Output<number>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * Whether APs will scan for Bluetooth enabled clients.
      */
-    public readonly scanningEnabled!: pulumi.Output<boolean>;
+    declare public readonly scanningEnabled: pulumi.Output<boolean>;
     /**
      * The UUID to be used in the beacon identifier.
      */
-    public readonly uuid!: pulumi.Output<string>;
+    declare public readonly uuid: pulumi.Output<string>;
 
     /**
      * Create a WirelessBluetoothSettings resource with the given unique name, arguments, and options.
@@ -103,26 +103,26 @@ export class WirelessBluetoothSettings extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as WirelessBluetoothSettingsState | undefined;
-            resourceInputs["advertisingEnabled"] = state ? state.advertisingEnabled : undefined;
-            resourceInputs["eslEnabled"] = state ? state.eslEnabled : undefined;
-            resourceInputs["major"] = state ? state.major : undefined;
-            resourceInputs["majorMinorAssignmentMode"] = state ? state.majorMinorAssignmentMode : undefined;
-            resourceInputs["minor"] = state ? state.minor : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["scanningEnabled"] = state ? state.scanningEnabled : undefined;
-            resourceInputs["uuid"] = state ? state.uuid : undefined;
+            resourceInputs["advertisingEnabled"] = state?.advertisingEnabled;
+            resourceInputs["eslEnabled"] = state?.eslEnabled;
+            resourceInputs["major"] = state?.major;
+            resourceInputs["majorMinorAssignmentMode"] = state?.majorMinorAssignmentMode;
+            resourceInputs["minor"] = state?.minor;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["scanningEnabled"] = state?.scanningEnabled;
+            resourceInputs["uuid"] = state?.uuid;
         } else {
             const args = argsOrState as WirelessBluetoothSettingsArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["advertisingEnabled"] = args ? args.advertisingEnabled : undefined;
-            resourceInputs["major"] = args ? args.major : undefined;
-            resourceInputs["majorMinorAssignmentMode"] = args ? args.majorMinorAssignmentMode : undefined;
-            resourceInputs["minor"] = args ? args.minor : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["scanningEnabled"] = args ? args.scanningEnabled : undefined;
-            resourceInputs["uuid"] = args ? args.uuid : undefined;
+            resourceInputs["advertisingEnabled"] = args?.advertisingEnabled;
+            resourceInputs["major"] = args?.major;
+            resourceInputs["majorMinorAssignmentMode"] = args?.majorMinorAssignmentMode;
+            resourceInputs["minor"] = args?.minor;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["scanningEnabled"] = args?.scanningEnabled;
+            resourceInputs["uuid"] = args?.uuid;
             resourceInputs["eslEnabled"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

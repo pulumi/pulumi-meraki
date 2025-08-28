@@ -46,31 +46,31 @@ export class ActionBatches extends pulumi.CustomResource {
     /**
      * actionBatchId path parameter. Action batch ID
      */
-    public readonly actionBatchId!: pulumi.Output<string>;
+    declare public readonly actionBatchId: pulumi.Output<string>;
     /**
      * A set of changes made as part of this action (\n\nmore details\n\n)
      */
-    public readonly actions!: pulumi.Output<outputs.organizations.ActionBatchesAction[]>;
+    declare public readonly actions: pulumi.Output<outputs.organizations.ActionBatchesAction[]>;
     /**
      * Information for callback used to send back results
      */
-    public readonly callback!: pulumi.Output<outputs.organizations.ActionBatchesCallback>;
+    declare public readonly callback: pulumi.Output<outputs.organizations.ActionBatchesCallback>;
     /**
      * Flag describing whether the action should be previewed before executing or not
      */
-    public readonly confirmed!: pulumi.Output<boolean>;
+    declare public readonly confirmed: pulumi.Output<boolean>;
     /**
      * ID of the organization this action batch belongs to
      */
-    public readonly organizationId!: pulumi.Output<string>;
+    declare public readonly organizationId: pulumi.Output<string>;
     /**
      * Status of action batch
      */
-    public /*out*/ readonly status!: pulumi.Output<outputs.organizations.ActionBatchesStatus>;
+    declare public /*out*/ readonly status: pulumi.Output<outputs.organizations.ActionBatchesStatus>;
     /**
      * Flag describing whether actions should run synchronously or asynchronously
      */
-    public readonly synchronous!: pulumi.Output<boolean>;
+    declare public readonly synchronous: pulumi.Output<boolean>;
 
     /**
      * Create a ActionBatches resource with the given unique name, arguments, and options.
@@ -85,24 +85,24 @@ export class ActionBatches extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ActionBatchesState | undefined;
-            resourceInputs["actionBatchId"] = state ? state.actionBatchId : undefined;
-            resourceInputs["actions"] = state ? state.actions : undefined;
-            resourceInputs["callback"] = state ? state.callback : undefined;
-            resourceInputs["confirmed"] = state ? state.confirmed : undefined;
-            resourceInputs["organizationId"] = state ? state.organizationId : undefined;
-            resourceInputs["status"] = state ? state.status : undefined;
-            resourceInputs["synchronous"] = state ? state.synchronous : undefined;
+            resourceInputs["actionBatchId"] = state?.actionBatchId;
+            resourceInputs["actions"] = state?.actions;
+            resourceInputs["callback"] = state?.callback;
+            resourceInputs["confirmed"] = state?.confirmed;
+            resourceInputs["organizationId"] = state?.organizationId;
+            resourceInputs["status"] = state?.status;
+            resourceInputs["synchronous"] = state?.synchronous;
         } else {
             const args = argsOrState as ActionBatchesArgs | undefined;
-            if ((!args || args.organizationId === undefined) && !opts.urn) {
+            if (args?.organizationId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'organizationId'");
             }
-            resourceInputs["actionBatchId"] = args ? args.actionBatchId : undefined;
-            resourceInputs["actions"] = args ? args.actions : undefined;
-            resourceInputs["callback"] = args ? args.callback : undefined;
-            resourceInputs["confirmed"] = args ? args.confirmed : undefined;
-            resourceInputs["organizationId"] = args ? args.organizationId : undefined;
-            resourceInputs["synchronous"] = args ? args.synchronous : undefined;
+            resourceInputs["actionBatchId"] = args?.actionBatchId;
+            resourceInputs["actions"] = args?.actions;
+            resourceInputs["callback"] = args?.callback;
+            resourceInputs["confirmed"] = args?.confirmed;
+            resourceInputs["organizationId"] = args?.organizationId;
+            resourceInputs["synchronous"] = args?.synchronous;
             resourceInputs["status"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

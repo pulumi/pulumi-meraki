@@ -46,27 +46,27 @@ export class ApplianceRfProfiles extends pulumi.CustomResource {
     /**
      * Settings related to 5Ghz band.
      */
-    public readonly fiveGhzSettings!: pulumi.Output<outputs.networks.ApplianceRfProfilesFiveGhzSettings>;
+    declare public readonly fiveGhzSettings: pulumi.Output<outputs.networks.ApplianceRfProfilesFiveGhzSettings>;
     /**
      * The name of the profile.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * ID of network this RF Profile belongs in.
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * Per-SSID radio settings by number.
      */
-    public readonly perSsidSettings!: pulumi.Output<outputs.networks.ApplianceRfProfilesPerSsidSettings>;
+    declare public readonly perSsidSettings: pulumi.Output<outputs.networks.ApplianceRfProfilesPerSsidSettings>;
     /**
      * rfProfileId path parameter. Rf profile ID
      */
-    public readonly rfProfileId!: pulumi.Output<string | undefined>;
+    declare public readonly rfProfileId: pulumi.Output<string | undefined>;
     /**
      * Settings related to 2.4Ghz band.
      */
-    public readonly twoFourGhzSettings!: pulumi.Output<outputs.networks.ApplianceRfProfilesTwoFourGhzSettings>;
+    declare public readonly twoFourGhzSettings: pulumi.Output<outputs.networks.ApplianceRfProfilesTwoFourGhzSettings>;
 
     /**
      * Create a ApplianceRfProfiles resource with the given unique name, arguments, and options.
@@ -81,23 +81,23 @@ export class ApplianceRfProfiles extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ApplianceRfProfilesState | undefined;
-            resourceInputs["fiveGhzSettings"] = state ? state.fiveGhzSettings : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["perSsidSettings"] = state ? state.perSsidSettings : undefined;
-            resourceInputs["rfProfileId"] = state ? state.rfProfileId : undefined;
-            resourceInputs["twoFourGhzSettings"] = state ? state.twoFourGhzSettings : undefined;
+            resourceInputs["fiveGhzSettings"] = state?.fiveGhzSettings;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["perSsidSettings"] = state?.perSsidSettings;
+            resourceInputs["rfProfileId"] = state?.rfProfileId;
+            resourceInputs["twoFourGhzSettings"] = state?.twoFourGhzSettings;
         } else {
             const args = argsOrState as ApplianceRfProfilesArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["fiveGhzSettings"] = args ? args.fiveGhzSettings : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["perSsidSettings"] = args ? args.perSsidSettings : undefined;
-            resourceInputs["rfProfileId"] = args ? args.rfProfileId : undefined;
-            resourceInputs["twoFourGhzSettings"] = args ? args.twoFourGhzSettings : undefined;
+            resourceInputs["fiveGhzSettings"] = args?.fiveGhzSettings;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["perSsidSettings"] = args?.perSsidSettings;
+            resourceInputs["rfProfileId"] = args?.rfProfileId;
+            resourceInputs["twoFourGhzSettings"] = args?.twoFourGhzSettings;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(ApplianceRfProfiles.__pulumiType, name, resourceInputs, opts);

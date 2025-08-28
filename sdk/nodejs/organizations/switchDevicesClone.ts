@@ -41,8 +41,8 @@ export class SwitchDevicesClone extends pulumi.CustomResource {
     /**
      * organizationId path parameter. Organization ID
      */
-    public readonly organizationId!: pulumi.Output<string>;
-    public readonly parameters!: pulumi.Output<outputs.organizations.SwitchDevicesCloneParameters>;
+    declare public readonly organizationId: pulumi.Output<string>;
+    declare public readonly parameters: pulumi.Output<outputs.organizations.SwitchDevicesCloneParameters>;
 
     /**
      * Create a SwitchDevicesClone resource with the given unique name, arguments, and options.
@@ -57,18 +57,18 @@ export class SwitchDevicesClone extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SwitchDevicesCloneState | undefined;
-            resourceInputs["organizationId"] = state ? state.organizationId : undefined;
-            resourceInputs["parameters"] = state ? state.parameters : undefined;
+            resourceInputs["organizationId"] = state?.organizationId;
+            resourceInputs["parameters"] = state?.parameters;
         } else {
             const args = argsOrState as SwitchDevicesCloneArgs | undefined;
-            if ((!args || args.organizationId === undefined) && !opts.urn) {
+            if (args?.organizationId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'organizationId'");
             }
-            if ((!args || args.parameters === undefined) && !opts.urn) {
+            if (args?.parameters === undefined && !opts.urn) {
                 throw new Error("Missing required property 'parameters'");
             }
-            resourceInputs["organizationId"] = args ? args.organizationId : undefined;
-            resourceInputs["parameters"] = args ? args.parameters : undefined;
+            resourceInputs["organizationId"] = args?.organizationId;
+            resourceInputs["parameters"] = args?.parameters;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(SwitchDevicesClone.__pulumiType, name, resourceInputs, opts);

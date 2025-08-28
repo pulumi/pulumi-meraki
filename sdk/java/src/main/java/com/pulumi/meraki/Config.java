@@ -12,24 +12,21 @@ public final class Config {
 
     private static final com.pulumi.Config config = com.pulumi.Config.of("meraki");
 /**
- * Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is
- * (https://api.meraki.com/)
+ * Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is (https://api.meraki.com/)
  * 
  */
     public Optional<String> merakiBaseUrl() {
         return Codegen.stringProp("merakiBaseUrl").config(config).get();
     }
 /**
- * Cisco Meraki meraki_dashboard_api_key to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment
- * variable.
+ * Cisco Meraki meraki_dashboard_api_key to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
  * 
  */
     public Optional<String> merakiDashboardApiKey() {
         return Codegen.stringProp("merakiDashboardApiKey").config(config).get();
     }
 /**
- * Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to
- * `false`.
+ * Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to `false`.
  * 
  */
     public Optional<String> merakiDebug() {

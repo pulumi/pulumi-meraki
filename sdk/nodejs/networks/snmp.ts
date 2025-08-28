@@ -62,19 +62,19 @@ export class Snmp extends pulumi.CustomResource {
     /**
      * The type of SNMP access. Can be one of 'none' (disabled), 'community' (V1/V2c), or 'users' (V3).
      */
-    public readonly access!: pulumi.Output<string>;
+    declare public readonly access: pulumi.Output<string>;
     /**
      * SNMP community string if access is 'community'.
      */
-    public readonly communityString!: pulumi.Output<string>;
+    declare public readonly communityString: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * SNMP settings if access is 'users'.
      */
-    public readonly users!: pulumi.Output<outputs.networks.SnmpUser[]>;
+    declare public readonly users: pulumi.Output<outputs.networks.SnmpUser[]>;
 
     /**
      * Create a Snmp resource with the given unique name, arguments, and options.
@@ -89,19 +89,19 @@ export class Snmp extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SnmpState | undefined;
-            resourceInputs["access"] = state ? state.access : undefined;
-            resourceInputs["communityString"] = state ? state.communityString : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["users"] = state ? state.users : undefined;
+            resourceInputs["access"] = state?.access;
+            resourceInputs["communityString"] = state?.communityString;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["users"] = state?.users;
         } else {
             const args = argsOrState as SnmpArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["access"] = args ? args.access : undefined;
-            resourceInputs["communityString"] = args ? args.communityString : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["users"] = args ? args.users : undefined;
+            resourceInputs["access"] = args?.access;
+            resourceInputs["communityString"] = args?.communityString;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["users"] = args?.users;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(Snmp.__pulumiType, name, resourceInputs, opts);

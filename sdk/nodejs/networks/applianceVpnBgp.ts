@@ -46,23 +46,23 @@ export class ApplianceVpnBgp extends pulumi.CustomResource {
     /**
      * An Autonomous System Number (ASN) is required if you are to run BGP and peer with another BGP Speaker outside of the Auto VPN domain. This ASN will be applied to the entire Auto VPN domain. The entire 4-byte ASN range is supported. So, the ASN must be an integer between 1 and 4294967295. When absent, this field is not updated. If no value exists then it defaults to 64512.
      */
-    public readonly asNumber!: pulumi.Output<number>;
+    declare public readonly asNumber: pulumi.Output<number>;
     /**
      * Boolean value to enable or disable the BGP configuration. When BGP is enabled, the asNumber (ASN) will be autopopulated with the preconfigured ASN at other Hubs or a default value if there is no ASN configured.
      */
-    public readonly enabled!: pulumi.Output<boolean>;
+    declare public readonly enabled: pulumi.Output<boolean>;
     /**
      * The iBGP holdtimer in seconds. The iBGP holdtimer must be an integer between 12 and 240. When absent, this field is not updated. If no value exists then it defaults to 240.
      */
-    public readonly ibgpHoldTimer!: pulumi.Output<number>;
+    declare public readonly ibgpHoldTimer: pulumi.Output<number>;
     /**
      * List of BGP neighbors. This list replaces the existing set of neighbors. When absent, this field is not updated.
      */
-    public readonly neighbors!: pulumi.Output<outputs.networks.ApplianceVpnBgpNeighbor[]>;
+    declare public readonly neighbors: pulumi.Output<outputs.networks.ApplianceVpnBgpNeighbor[]>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
 
     /**
      * Create a ApplianceVpnBgp resource with the given unique name, arguments, and options.
@@ -77,21 +77,21 @@ export class ApplianceVpnBgp extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ApplianceVpnBgpState | undefined;
-            resourceInputs["asNumber"] = state ? state.asNumber : undefined;
-            resourceInputs["enabled"] = state ? state.enabled : undefined;
-            resourceInputs["ibgpHoldTimer"] = state ? state.ibgpHoldTimer : undefined;
-            resourceInputs["neighbors"] = state ? state.neighbors : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
+            resourceInputs["asNumber"] = state?.asNumber;
+            resourceInputs["enabled"] = state?.enabled;
+            resourceInputs["ibgpHoldTimer"] = state?.ibgpHoldTimer;
+            resourceInputs["neighbors"] = state?.neighbors;
+            resourceInputs["networkId"] = state?.networkId;
         } else {
             const args = argsOrState as ApplianceVpnBgpArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["asNumber"] = args ? args.asNumber : undefined;
-            resourceInputs["enabled"] = args ? args.enabled : undefined;
-            resourceInputs["ibgpHoldTimer"] = args ? args.ibgpHoldTimer : undefined;
-            resourceInputs["neighbors"] = args ? args.neighbors : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
+            resourceInputs["asNumber"] = args?.asNumber;
+            resourceInputs["enabled"] = args?.enabled;
+            resourceInputs["ibgpHoldTimer"] = args?.ibgpHoldTimer;
+            resourceInputs["neighbors"] = args?.neighbors;
+            resourceInputs["networkId"] = args?.networkId;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(ApplianceVpnBgp.__pulumiType, name, resourceInputs, opts);

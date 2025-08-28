@@ -4,6 +4,7 @@ title: Cisco Meraki Provider
 meta_desc: Provides an overview on how to configure the Pulumi Cisco Meraki provider.
 layout: package
 ---
+
 ## Installation
 
 The Cisco Meraki provider is available as a package in all Pulumi languages:
@@ -13,6 +14,7 @@ The Cisco Meraki provider is available as a package in all Pulumi languages:
 * Go: [`github.com/pulumi/pulumi-meraki/sdk/go/meraki`](https://github.com/pulumi/pulumi-meraki)
 * .NET: [`Pulumi.Meraki`](https://www.nuget.org/packages/Pulumi.Meraki)
 * Java: [`com.pulumi/meraki`](https://central.sonatype.com/artifact/com.pulumi/meraki)
+
 ## Configuration Reference
 ### Required
 - `merakiDashboardApiKey` (String, Sensitive) Cisco  merakiDashboardApiKey to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.

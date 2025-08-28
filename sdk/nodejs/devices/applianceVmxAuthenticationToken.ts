@@ -48,11 +48,11 @@ export class ApplianceVmxAuthenticationToken extends pulumi.CustomResource {
         return obj['__pulumiType'] === ApplianceVmxAuthenticationToken.__pulumiType;
     }
 
-    public /*out*/ readonly item!: pulumi.Output<outputs.devices.ApplianceVmxAuthenticationTokenItem>;
+    declare public /*out*/ readonly item: pulumi.Output<outputs.devices.ApplianceVmxAuthenticationTokenItem>;
     /**
      * serial path parameter.
      */
-    public readonly serial!: pulumi.Output<string>;
+    declare public readonly serial: pulumi.Output<string>;
 
     /**
      * Create a ApplianceVmxAuthenticationToken resource with the given unique name, arguments, and options.
@@ -67,14 +67,14 @@ export class ApplianceVmxAuthenticationToken extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ApplianceVmxAuthenticationTokenState | undefined;
-            resourceInputs["item"] = state ? state.item : undefined;
-            resourceInputs["serial"] = state ? state.serial : undefined;
+            resourceInputs["item"] = state?.item;
+            resourceInputs["serial"] = state?.serial;
         } else {
             const args = argsOrState as ApplianceVmxAuthenticationTokenArgs | undefined;
-            if ((!args || args.serial === undefined) && !opts.urn) {
+            if (args?.serial === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serial'");
             }
-            resourceInputs["serial"] = args ? args.serial : undefined;
+            resourceInputs["serial"] = args?.serial;
             resourceInputs["item"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

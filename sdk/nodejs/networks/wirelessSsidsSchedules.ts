@@ -46,23 +46,23 @@ export class WirelessSsidsSchedules extends pulumi.CustomResource {
     /**
      * If true, the SSID outage schedule is enabled.
      */
-    public readonly enabled!: pulumi.Output<boolean>;
+    declare public readonly enabled: pulumi.Output<boolean>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * number path parameter.
      */
-    public readonly number!: pulumi.Output<string>;
+    declare public readonly number: pulumi.Output<string>;
     /**
      * List of outage ranges. Has a start date and time, and end date and time. If this parameter is passed in along with rangesInSeconds parameter, this will take precedence.
      */
-    public readonly ranges!: pulumi.Output<outputs.networks.WirelessSsidsSchedulesRange[]>;
+    declare public readonly ranges: pulumi.Output<outputs.networks.WirelessSsidsSchedulesRange[]>;
     /**
      * List of outage ranges in seconds since Sunday at Midnight. Has a start and end. If this parameter is passed in along with the ranges parameter, ranges will take precedence.
      */
-    public readonly rangesInSeconds!: pulumi.Output<outputs.networks.WirelessSsidsSchedulesRangesInSecond[]>;
+    declare public readonly rangesInSeconds: pulumi.Output<outputs.networks.WirelessSsidsSchedulesRangesInSecond[]>;
 
     /**
      * Create a WirelessSsidsSchedules resource with the given unique name, arguments, and options.
@@ -77,24 +77,24 @@ export class WirelessSsidsSchedules extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as WirelessSsidsSchedulesState | undefined;
-            resourceInputs["enabled"] = state ? state.enabled : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["number"] = state ? state.number : undefined;
-            resourceInputs["ranges"] = state ? state.ranges : undefined;
-            resourceInputs["rangesInSeconds"] = state ? state.rangesInSeconds : undefined;
+            resourceInputs["enabled"] = state?.enabled;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["number"] = state?.number;
+            resourceInputs["ranges"] = state?.ranges;
+            resourceInputs["rangesInSeconds"] = state?.rangesInSeconds;
         } else {
             const args = argsOrState as WirelessSsidsSchedulesArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            if ((!args || args.number === undefined) && !opts.urn) {
+            if (args?.number === undefined && !opts.urn) {
                 throw new Error("Missing required property 'number'");
             }
-            resourceInputs["enabled"] = args ? args.enabled : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["number"] = args ? args.number : undefined;
-            resourceInputs["ranges"] = args ? args.ranges : undefined;
-            resourceInputs["rangesInSeconds"] = args ? args.rangesInSeconds : undefined;
+            resourceInputs["enabled"] = args?.enabled;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["number"] = args?.number;
+            resourceInputs["ranges"] = args?.ranges;
+            resourceInputs["rangesInSeconds"] = args?.rangesInSeconds;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(WirelessSsidsSchedules.__pulumiType, name, resourceInputs, opts);

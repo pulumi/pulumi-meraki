@@ -8,8 +8,7 @@ declare var exports: any;
 const __config = new pulumi.Config("meraki");
 
 /**
- * Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is
- * (https://api.meraki.com/)
+ * Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is (https://api.meraki.com/)
  */
 export declare const merakiBaseUrl: string | undefined;
 Object.defineProperty(exports, "merakiBaseUrl", {
@@ -20,8 +19,7 @@ Object.defineProperty(exports, "merakiBaseUrl", {
 });
 
 /**
- * Cisco Meraki merakiDashboardApiKey to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment
- * variable.
+ * Cisco Meraki merakiDashboardApiKey to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
  */
 export declare const merakiDashboardApiKey: string | undefined;
 Object.defineProperty(exports, "merakiDashboardApiKey", {
@@ -32,8 +30,7 @@ Object.defineProperty(exports, "merakiDashboardApiKey", {
 });
 
 /**
- * Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to
- * `false`.
+ * Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to `false`.
  */
 export declare const merakiDebug: string | undefined;
 Object.defineProperty(exports, "merakiDebug", {

@@ -46,23 +46,23 @@ export class WirelessAlternateManagementInterface extends pulumi.CustomResource 
     /**
      * Array of access point serial number and IP assignment. Note: accessPoints IP assignment is not applicable for template networks, in other words, do not put 'accessPoints' in the body when updating template networks. Also, an empty 'accessPoints' array will remove all previous static IP assignments
      */
-    public readonly accessPoints!: pulumi.Output<outputs.networks.WirelessAlternateManagementInterfaceAccessPoint[]>;
+    declare public readonly accessPoints: pulumi.Output<outputs.networks.WirelessAlternateManagementInterfaceAccessPoint[]>;
     /**
      * Boolean value to enable or disable alternate management interface
      */
-    public readonly enabled!: pulumi.Output<boolean>;
+    declare public readonly enabled: pulumi.Output<boolean>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * Can be one or more of the following values: 'radius', 'snmp', 'syslog' or 'ldap'
      */
-    public readonly protocols!: pulumi.Output<string[]>;
+    declare public readonly protocols: pulumi.Output<string[]>;
     /**
      * Alternate management interface VLAN, must be between 1 and 4094
      */
-    public readonly vlanId!: pulumi.Output<number>;
+    declare public readonly vlanId: pulumi.Output<number>;
 
     /**
      * Create a WirelessAlternateManagementInterface resource with the given unique name, arguments, and options.
@@ -77,21 +77,21 @@ export class WirelessAlternateManagementInterface extends pulumi.CustomResource 
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as WirelessAlternateManagementInterfaceState | undefined;
-            resourceInputs["accessPoints"] = state ? state.accessPoints : undefined;
-            resourceInputs["enabled"] = state ? state.enabled : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["protocols"] = state ? state.protocols : undefined;
-            resourceInputs["vlanId"] = state ? state.vlanId : undefined;
+            resourceInputs["accessPoints"] = state?.accessPoints;
+            resourceInputs["enabled"] = state?.enabled;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["protocols"] = state?.protocols;
+            resourceInputs["vlanId"] = state?.vlanId;
         } else {
             const args = argsOrState as WirelessAlternateManagementInterfaceArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["accessPoints"] = args ? args.accessPoints : undefined;
-            resourceInputs["enabled"] = args ? args.enabled : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["protocols"] = args ? args.protocols : undefined;
-            resourceInputs["vlanId"] = args ? args.vlanId : undefined;
+            resourceInputs["accessPoints"] = args?.accessPoints;
+            resourceInputs["enabled"] = args?.enabled;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["protocols"] = args?.protocols;
+            resourceInputs["vlanId"] = args?.vlanId;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(WirelessAlternateManagementInterface.__pulumiType, name, resourceInputs, opts);

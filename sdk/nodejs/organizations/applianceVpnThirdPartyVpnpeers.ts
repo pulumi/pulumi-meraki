@@ -46,15 +46,15 @@ export class ApplianceVpnThirdPartyVpnpeers extends pulumi.CustomResource {
     /**
      * organizationId path parameter. Organization ID
      */
-    public readonly organizationId!: pulumi.Output<string>;
+    declare public readonly organizationId: pulumi.Output<string>;
     /**
      * The list of VPN peers
      */
-    public readonly peers!: pulumi.Output<outputs.organizations.ApplianceVpnThirdPartyVpnpeersPeer[] | undefined>;
+    declare public readonly peers: pulumi.Output<outputs.organizations.ApplianceVpnThirdPartyVpnpeersPeer[] | undefined>;
     /**
      * The list of VPN peers
      */
-    public /*out*/ readonly peersResponses!: pulumi.Output<outputs.organizations.ApplianceVpnThirdPartyVpnpeersPeersResponse[]>;
+    declare public /*out*/ readonly peersResponses: pulumi.Output<outputs.organizations.ApplianceVpnThirdPartyVpnpeersPeersResponse[]>;
 
     /**
      * Create a ApplianceVpnThirdPartyVpnpeers resource with the given unique name, arguments, and options.
@@ -69,16 +69,16 @@ export class ApplianceVpnThirdPartyVpnpeers extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ApplianceVpnThirdPartyVpnpeersState | undefined;
-            resourceInputs["organizationId"] = state ? state.organizationId : undefined;
-            resourceInputs["peers"] = state ? state.peers : undefined;
-            resourceInputs["peersResponses"] = state ? state.peersResponses : undefined;
+            resourceInputs["organizationId"] = state?.organizationId;
+            resourceInputs["peers"] = state?.peers;
+            resourceInputs["peersResponses"] = state?.peersResponses;
         } else {
             const args = argsOrState as ApplianceVpnThirdPartyVpnpeersArgs | undefined;
-            if ((!args || args.organizationId === undefined) && !opts.urn) {
+            if (args?.organizationId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'organizationId'");
             }
-            resourceInputs["organizationId"] = args ? args.organizationId : undefined;
-            resourceInputs["peers"] = args ? args.peers : undefined;
+            resourceInputs["organizationId"] = args?.organizationId;
+            resourceInputs["peers"] = args?.peers;
             resourceInputs["peersResponses"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

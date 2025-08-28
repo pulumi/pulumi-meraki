@@ -66,27 +66,27 @@ export class CellularGatewayLan extends pulumi.CustomResource {
     /**
      * Lan IP of the MG
      */
-    public /*out*/ readonly deviceLanIp!: pulumi.Output<string>;
+    declare public /*out*/ readonly deviceLanIp: pulumi.Output<string>;
     /**
      * Name of the MG.
      */
-    public /*out*/ readonly deviceName!: pulumi.Output<string>;
+    declare public /*out*/ readonly deviceName: pulumi.Output<string>;
     /**
      * Subnet configuration of the MG.
      */
-    public /*out*/ readonly deviceSubnet!: pulumi.Output<string>;
+    declare public /*out*/ readonly deviceSubnet: pulumi.Output<string>;
     /**
      * list of all fixed IP assignments for a single MG
      */
-    public readonly fixedIpAssignments!: pulumi.Output<outputs.devices.CellularGatewayLanFixedIpAssignment[]>;
+    declare public readonly fixedIpAssignments: pulumi.Output<outputs.devices.CellularGatewayLanFixedIpAssignment[]>;
     /**
      * list of all reserved IP ranges for a single MG
      */
-    public readonly reservedIpRanges!: pulumi.Output<outputs.devices.CellularGatewayLanReservedIpRange[]>;
+    declare public readonly reservedIpRanges: pulumi.Output<outputs.devices.CellularGatewayLanReservedIpRange[]>;
     /**
      * serial path parameter.
      */
-    public readonly serial!: pulumi.Output<string>;
+    declare public readonly serial: pulumi.Output<string>;
 
     /**
      * Create a CellularGatewayLan resource with the given unique name, arguments, and options.
@@ -101,20 +101,20 @@ export class CellularGatewayLan extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CellularGatewayLanState | undefined;
-            resourceInputs["deviceLanIp"] = state ? state.deviceLanIp : undefined;
-            resourceInputs["deviceName"] = state ? state.deviceName : undefined;
-            resourceInputs["deviceSubnet"] = state ? state.deviceSubnet : undefined;
-            resourceInputs["fixedIpAssignments"] = state ? state.fixedIpAssignments : undefined;
-            resourceInputs["reservedIpRanges"] = state ? state.reservedIpRanges : undefined;
-            resourceInputs["serial"] = state ? state.serial : undefined;
+            resourceInputs["deviceLanIp"] = state?.deviceLanIp;
+            resourceInputs["deviceName"] = state?.deviceName;
+            resourceInputs["deviceSubnet"] = state?.deviceSubnet;
+            resourceInputs["fixedIpAssignments"] = state?.fixedIpAssignments;
+            resourceInputs["reservedIpRanges"] = state?.reservedIpRanges;
+            resourceInputs["serial"] = state?.serial;
         } else {
             const args = argsOrState as CellularGatewayLanArgs | undefined;
-            if ((!args || args.serial === undefined) && !opts.urn) {
+            if (args?.serial === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serial'");
             }
-            resourceInputs["fixedIpAssignments"] = args ? args.fixedIpAssignments : undefined;
-            resourceInputs["reservedIpRanges"] = args ? args.reservedIpRanges : undefined;
-            resourceInputs["serial"] = args ? args.serial : undefined;
+            resourceInputs["fixedIpAssignments"] = args?.fixedIpAssignments;
+            resourceInputs["reservedIpRanges"] = args?.reservedIpRanges;
+            resourceInputs["serial"] = args?.serial;
             resourceInputs["deviceLanIp"] = undefined /*out*/;
             resourceInputs["deviceName"] = undefined /*out*/;
             resourceInputs["deviceSubnet"] = undefined /*out*/;

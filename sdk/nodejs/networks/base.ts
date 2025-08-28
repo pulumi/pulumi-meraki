@@ -66,43 +66,43 @@ export class Base extends pulumi.CustomResource {
     /**
      * Enrollment string for the network
      */
-    public readonly enrollmentString!: pulumi.Output<string>;
+    declare public readonly enrollmentString: pulumi.Output<string>;
     /**
      * If the network is bound to a config template
      */
-    public /*out*/ readonly isBoundToConfigTemplate!: pulumi.Output<boolean>;
+    declare public /*out*/ readonly isBoundToConfigTemplate: pulumi.Output<boolean>;
     /**
      * Network name
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * Notes for the network
      */
-    public readonly notes!: pulumi.Output<string>;
+    declare public readonly notes: pulumi.Output<string>;
     /**
      * Organization ID
      */
-    public readonly organizationId!: pulumi.Output<string>;
+    declare public readonly organizationId: pulumi.Output<string>;
     /**
      * List of the product types that the network supports
      */
-    public readonly productTypes!: pulumi.Output<string[]>;
+    declare public readonly productTypes: pulumi.Output<string[]>;
     /**
      * Network tags
      */
-    public readonly tags!: pulumi.Output<string[]>;
+    declare public readonly tags: pulumi.Output<string[]>;
     /**
      * Timezone of the network
      */
-    public readonly timeZone!: pulumi.Output<string>;
+    declare public readonly timeZone: pulumi.Output<string>;
     /**
      * URL to the network Dashboard UI
      */
-    public /*out*/ readonly url!: pulumi.Output<string>;
+    declare public /*out*/ readonly url: pulumi.Output<string>;
 
     /**
      * Create a Base resource with the given unique name, arguments, and options.
@@ -117,29 +117,29 @@ export class Base extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as BaseState | undefined;
-            resourceInputs["enrollmentString"] = state ? state.enrollmentString : undefined;
-            resourceInputs["isBoundToConfigTemplate"] = state ? state.isBoundToConfigTemplate : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["notes"] = state ? state.notes : undefined;
-            resourceInputs["organizationId"] = state ? state.organizationId : undefined;
-            resourceInputs["productTypes"] = state ? state.productTypes : undefined;
-            resourceInputs["tags"] = state ? state.tags : undefined;
-            resourceInputs["timeZone"] = state ? state.timeZone : undefined;
-            resourceInputs["url"] = state ? state.url : undefined;
+            resourceInputs["enrollmentString"] = state?.enrollmentString;
+            resourceInputs["isBoundToConfigTemplate"] = state?.isBoundToConfigTemplate;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["notes"] = state?.notes;
+            resourceInputs["organizationId"] = state?.organizationId;
+            resourceInputs["productTypes"] = state?.productTypes;
+            resourceInputs["tags"] = state?.tags;
+            resourceInputs["timeZone"] = state?.timeZone;
+            resourceInputs["url"] = state?.url;
         } else {
             const args = argsOrState as BaseArgs | undefined;
-            if ((!args || args.organizationId === undefined) && !opts.urn) {
+            if (args?.organizationId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'organizationId'");
             }
-            resourceInputs["enrollmentString"] = args ? args.enrollmentString : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["notes"] = args ? args.notes : undefined;
-            resourceInputs["organizationId"] = args ? args.organizationId : undefined;
-            resourceInputs["productTypes"] = args ? args.productTypes : undefined;
-            resourceInputs["tags"] = args ? args.tags : undefined;
-            resourceInputs["timeZone"] = args ? args.timeZone : undefined;
+            resourceInputs["enrollmentString"] = args?.enrollmentString;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["notes"] = args?.notes;
+            resourceInputs["organizationId"] = args?.organizationId;
+            resourceInputs["productTypes"] = args?.productTypes;
+            resourceInputs["tags"] = args?.tags;
+            resourceInputs["timeZone"] = args?.timeZone;
             resourceInputs["isBoundToConfigTemplate"] = undefined /*out*/;
             resourceInputs["url"] = undefined /*out*/;
         }

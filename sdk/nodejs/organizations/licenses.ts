@@ -58,67 +58,67 @@ export class Licenses extends pulumi.CustomResource {
     /**
      * The date the license started burning
      */
-    public /*out*/ readonly activationDate!: pulumi.Output<string>;
+    declare public /*out*/ readonly activationDate: pulumi.Output<string>;
     /**
      * The date the license was claimed into the organization
      */
-    public /*out*/ readonly claimDate!: pulumi.Output<string>;
+    declare public /*out*/ readonly claimDate: pulumi.Output<string>;
     /**
      * Serial number of the device the license is assigned to
      */
-    public readonly deviceSerial!: pulumi.Output<string>;
+    declare public readonly deviceSerial: pulumi.Output<string>;
     /**
      * The duration of the individual license
      */
-    public /*out*/ readonly durationInDays!: pulumi.Output<number>;
+    declare public /*out*/ readonly durationInDays: pulumi.Output<number>;
     /**
      * The date the license will expire
      */
-    public /*out*/ readonly expirationDate!: pulumi.Output<string>;
+    declare public /*out*/ readonly expirationDate: pulumi.Output<string>;
     /**
      * The id of the head license this license is queued behind. If there is no head license, it returns nil.
      */
-    public /*out*/ readonly headLicenseId!: pulumi.Output<string>;
+    declare public /*out*/ readonly headLicenseId: pulumi.Output<string>;
     /**
      * licenseId path parameter. License ID
      */
-    public readonly licenseId!: pulumi.Output<string>;
+    declare public readonly licenseId: pulumi.Output<string>;
     /**
      * License key
      */
-    public /*out*/ readonly licenseKey!: pulumi.Output<string>;
+    declare public /*out*/ readonly licenseKey: pulumi.Output<string>;
     /**
      * License type
      */
-    public /*out*/ readonly licenseType!: pulumi.Output<string>;
+    declare public /*out*/ readonly licenseType: pulumi.Output<string>;
     /**
      * ID of the network the license is assigned to
      */
-    public /*out*/ readonly networkId!: pulumi.Output<string>;
+    declare public /*out*/ readonly networkId: pulumi.Output<string>;
     /**
      * Order number
      */
-    public /*out*/ readonly orderNumber!: pulumi.Output<string>;
+    declare public /*out*/ readonly orderNumber: pulumi.Output<string>;
     /**
      * organizationId path parameter. Organization ID
      */
-    public readonly organizationId!: pulumi.Output<string>;
+    declare public readonly organizationId: pulumi.Output<string>;
     /**
      * DEPRECATED List of permanently queued licenses attached to the license. Instead, use /organizations/{organizationId}/licenses?deviceSerial= to retrieved queued licenses for a given device.
      */
-    public /*out*/ readonly permanentlyQueuedLicenses!: pulumi.Output<outputs.organizations.LicensesPermanentlyQueuedLicense[]>;
+    declare public /*out*/ readonly permanentlyQueuedLicenses: pulumi.Output<outputs.organizations.LicensesPermanentlyQueuedLicense[]>;
     /**
      * The number of seats of the license. Only applicable to SM licenses.
      */
-    public /*out*/ readonly seatCount!: pulumi.Output<number>;
+    declare public /*out*/ readonly seatCount: pulumi.Output<number>;
     /**
      * The state of the license. All queued licenses have a status of *recentlyQueued*.
      */
-    public /*out*/ readonly state!: pulumi.Output<string>;
+    declare public /*out*/ readonly state: pulumi.Output<string>;
     /**
      * The duration of the license plus all permanently queued licenses associated with it
      */
-    public /*out*/ readonly totalDurationInDays!: pulumi.Output<number>;
+    declare public /*out*/ readonly totalDurationInDays: pulumi.Output<number>;
 
     /**
      * Create a Licenses resource with the given unique name, arguments, and options.
@@ -133,33 +133,33 @@ export class Licenses extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as LicensesState | undefined;
-            resourceInputs["activationDate"] = state ? state.activationDate : undefined;
-            resourceInputs["claimDate"] = state ? state.claimDate : undefined;
-            resourceInputs["deviceSerial"] = state ? state.deviceSerial : undefined;
-            resourceInputs["durationInDays"] = state ? state.durationInDays : undefined;
-            resourceInputs["expirationDate"] = state ? state.expirationDate : undefined;
-            resourceInputs["headLicenseId"] = state ? state.headLicenseId : undefined;
-            resourceInputs["licenseId"] = state ? state.licenseId : undefined;
-            resourceInputs["licenseKey"] = state ? state.licenseKey : undefined;
-            resourceInputs["licenseType"] = state ? state.licenseType : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["orderNumber"] = state ? state.orderNumber : undefined;
-            resourceInputs["organizationId"] = state ? state.organizationId : undefined;
-            resourceInputs["permanentlyQueuedLicenses"] = state ? state.permanentlyQueuedLicenses : undefined;
-            resourceInputs["seatCount"] = state ? state.seatCount : undefined;
-            resourceInputs["state"] = state ? state.state : undefined;
-            resourceInputs["totalDurationInDays"] = state ? state.totalDurationInDays : undefined;
+            resourceInputs["activationDate"] = state?.activationDate;
+            resourceInputs["claimDate"] = state?.claimDate;
+            resourceInputs["deviceSerial"] = state?.deviceSerial;
+            resourceInputs["durationInDays"] = state?.durationInDays;
+            resourceInputs["expirationDate"] = state?.expirationDate;
+            resourceInputs["headLicenseId"] = state?.headLicenseId;
+            resourceInputs["licenseId"] = state?.licenseId;
+            resourceInputs["licenseKey"] = state?.licenseKey;
+            resourceInputs["licenseType"] = state?.licenseType;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["orderNumber"] = state?.orderNumber;
+            resourceInputs["organizationId"] = state?.organizationId;
+            resourceInputs["permanentlyQueuedLicenses"] = state?.permanentlyQueuedLicenses;
+            resourceInputs["seatCount"] = state?.seatCount;
+            resourceInputs["state"] = state?.state;
+            resourceInputs["totalDurationInDays"] = state?.totalDurationInDays;
         } else {
             const args = argsOrState as LicensesArgs | undefined;
-            if ((!args || args.licenseId === undefined) && !opts.urn) {
+            if (args?.licenseId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'licenseId'");
             }
-            if ((!args || args.organizationId === undefined) && !opts.urn) {
+            if (args?.organizationId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'organizationId'");
             }
-            resourceInputs["deviceSerial"] = args ? args.deviceSerial : undefined;
-            resourceInputs["licenseId"] = args ? args.licenseId : undefined;
-            resourceInputs["organizationId"] = args ? args.organizationId : undefined;
+            resourceInputs["deviceSerial"] = args?.deviceSerial;
+            resourceInputs["licenseId"] = args?.licenseId;
+            resourceInputs["organizationId"] = args?.organizationId;
             resourceInputs["activationDate"] = undefined /*out*/;
             resourceInputs["claimDate"] = undefined /*out*/;
             resourceInputs["durationInDays"] = undefined /*out*/;

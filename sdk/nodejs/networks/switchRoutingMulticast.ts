@@ -47,16 +47,16 @@ export class SwitchRoutingMulticast extends pulumi.CustomResource {
      * Default multicast setting for entire network. IGMP snooping and Flood unknown
      *   multicast traffic settings are enabled by default.
      */
-    public readonly defaultSettings!: pulumi.Output<outputs.networks.SwitchRoutingMulticastDefaultSettings>;
+    declare public readonly defaultSettings: pulumi.Output<outputs.networks.SwitchRoutingMulticastDefaultSettings>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * Array of paired switches/stacks/profiles and corresponding multicast settings.
      *   An empty array will clear the multicast settings.
      */
-    public readonly overrides!: pulumi.Output<outputs.networks.SwitchRoutingMulticastOverride[]>;
+    declare public readonly overrides: pulumi.Output<outputs.networks.SwitchRoutingMulticastOverride[]>;
 
     /**
      * Create a SwitchRoutingMulticast resource with the given unique name, arguments, and options.
@@ -71,17 +71,17 @@ export class SwitchRoutingMulticast extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SwitchRoutingMulticastState | undefined;
-            resourceInputs["defaultSettings"] = state ? state.defaultSettings : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["overrides"] = state ? state.overrides : undefined;
+            resourceInputs["defaultSettings"] = state?.defaultSettings;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["overrides"] = state?.overrides;
         } else {
             const args = argsOrState as SwitchRoutingMulticastArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["defaultSettings"] = args ? args.defaultSettings : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["overrides"] = args ? args.overrides : undefined;
+            resourceInputs["defaultSettings"] = args?.defaultSettings;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["overrides"] = args?.overrides;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(SwitchRoutingMulticast.__pulumiType, name, resourceInputs, opts);

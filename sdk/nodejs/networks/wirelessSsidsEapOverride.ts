@@ -46,27 +46,27 @@ export class WirelessSsidsEapOverride extends pulumi.CustomResource {
     /**
      * EAPOL Key settings.
      */
-    public readonly eapolKey!: pulumi.Output<outputs.networks.WirelessSsidsEapOverrideEapolKey>;
+    declare public readonly eapolKey: pulumi.Output<outputs.networks.WirelessSsidsEapOverrideEapolKey>;
     /**
      * EAP settings for identity requests.
      */
-    public readonly identity!: pulumi.Output<outputs.networks.WirelessSsidsEapOverrideIdentity>;
+    declare public readonly identity: pulumi.Output<outputs.networks.WirelessSsidsEapOverrideIdentity>;
     /**
      * Maximum number of general EAP retries.
      */
-    public readonly maxRetries!: pulumi.Output<number>;
+    declare public readonly maxRetries: pulumi.Output<number>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * number path parameter.
      */
-    public readonly number!: pulumi.Output<string>;
+    declare public readonly number: pulumi.Output<string>;
     /**
      * General EAP timeout in seconds.
      */
-    public readonly timeout!: pulumi.Output<number>;
+    declare public readonly timeout: pulumi.Output<number>;
 
     /**
      * Create a WirelessSsidsEapOverride resource with the given unique name, arguments, and options.
@@ -81,26 +81,26 @@ export class WirelessSsidsEapOverride extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as WirelessSsidsEapOverrideState | undefined;
-            resourceInputs["eapolKey"] = state ? state.eapolKey : undefined;
-            resourceInputs["identity"] = state ? state.identity : undefined;
-            resourceInputs["maxRetries"] = state ? state.maxRetries : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["number"] = state ? state.number : undefined;
-            resourceInputs["timeout"] = state ? state.timeout : undefined;
+            resourceInputs["eapolKey"] = state?.eapolKey;
+            resourceInputs["identity"] = state?.identity;
+            resourceInputs["maxRetries"] = state?.maxRetries;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["number"] = state?.number;
+            resourceInputs["timeout"] = state?.timeout;
         } else {
             const args = argsOrState as WirelessSsidsEapOverrideArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            if ((!args || args.number === undefined) && !opts.urn) {
+            if (args?.number === undefined && !opts.urn) {
                 throw new Error("Missing required property 'number'");
             }
-            resourceInputs["eapolKey"] = args ? args.eapolKey : undefined;
-            resourceInputs["identity"] = args ? args.identity : undefined;
-            resourceInputs["maxRetries"] = args ? args.maxRetries : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["number"] = args ? args.number : undefined;
-            resourceInputs["timeout"] = args ? args.timeout : undefined;
+            resourceInputs["eapolKey"] = args?.eapolKey;
+            resourceInputs["identity"] = args?.identity;
+            resourceInputs["maxRetries"] = args?.maxRetries;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["number"] = args?.number;
+            resourceInputs["timeout"] = args?.timeout;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(WirelessSsidsEapOverride.__pulumiType, name, resourceInputs, opts);

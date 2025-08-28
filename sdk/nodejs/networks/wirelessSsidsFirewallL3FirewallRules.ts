@@ -46,23 +46,23 @@ export class WirelessSsidsFirewallL3FirewallRules extends pulumi.CustomResource 
     /**
      * Allow wireless client access to local LAN (boolean value - true allows access and false denies access) (optional)
      */
-    public readonly allowLanAccess!: pulumi.Output<boolean | undefined>;
+    declare public readonly allowLanAccess: pulumi.Output<boolean | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * number path parameter.
      */
-    public readonly number!: pulumi.Output<string>;
+    declare public readonly number: pulumi.Output<string>;
     /**
      * An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
      */
-    public readonly rules!: pulumi.Output<outputs.networks.WirelessSsidsFirewallL3FirewallRulesRule[]>;
+    declare public readonly rules: pulumi.Output<outputs.networks.WirelessSsidsFirewallL3FirewallRulesRule[]>;
     /**
      * An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
      */
-    public readonly rulesResponses!: pulumi.Output<outputs.networks.WirelessSsidsFirewallL3FirewallRulesRulesResponse[]>;
+    declare public readonly rulesResponses: pulumi.Output<outputs.networks.WirelessSsidsFirewallL3FirewallRulesRulesResponse[]>;
 
     /**
      * Create a WirelessSsidsFirewallL3FirewallRules resource with the given unique name, arguments, and options.
@@ -77,24 +77,24 @@ export class WirelessSsidsFirewallL3FirewallRules extends pulumi.CustomResource 
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as WirelessSsidsFirewallL3FirewallRulesState | undefined;
-            resourceInputs["allowLanAccess"] = state ? state.allowLanAccess : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["number"] = state ? state.number : undefined;
-            resourceInputs["rules"] = state ? state.rules : undefined;
-            resourceInputs["rulesResponses"] = state ? state.rulesResponses : undefined;
+            resourceInputs["allowLanAccess"] = state?.allowLanAccess;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["number"] = state?.number;
+            resourceInputs["rules"] = state?.rules;
+            resourceInputs["rulesResponses"] = state?.rulesResponses;
         } else {
             const args = argsOrState as WirelessSsidsFirewallL3FirewallRulesArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            if ((!args || args.number === undefined) && !opts.urn) {
+            if (args?.number === undefined && !opts.urn) {
                 throw new Error("Missing required property 'number'");
             }
-            resourceInputs["allowLanAccess"] = args ? args.allowLanAccess : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["number"] = args ? args.number : undefined;
-            resourceInputs["rules"] = args ? args.rules : undefined;
-            resourceInputs["rulesResponses"] = args ? args.rulesResponses : undefined;
+            resourceInputs["allowLanAccess"] = args?.allowLanAccess;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["number"] = args?.number;
+            resourceInputs["rules"] = args?.rules;
+            resourceInputs["rulesResponses"] = args?.rulesResponses;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(WirelessSsidsFirewallL3FirewallRules.__pulumiType, name, resourceInputs, opts);

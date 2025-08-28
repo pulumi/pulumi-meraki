@@ -56,19 +56,19 @@ export class SwitchWarmSpare extends pulumi.CustomResource {
     /**
      * Enable or disable warm spare for a switch
      */
-    public readonly enabled!: pulumi.Output<boolean>;
+    declare public readonly enabled: pulumi.Output<boolean>;
     /**
      * Serial number of the primary switch
      */
-    public /*out*/ readonly primarySerial!: pulumi.Output<string>;
+    declare public /*out*/ readonly primarySerial: pulumi.Output<string>;
     /**
      * serial path parameter.
      */
-    public readonly serial!: pulumi.Output<string>;
+    declare public readonly serial: pulumi.Output<string>;
     /**
      * Serial number of the warm spare switch
      */
-    public readonly spareSerial!: pulumi.Output<string>;
+    declare public readonly spareSerial: pulumi.Output<string>;
 
     /**
      * Create a SwitchWarmSpare resource with the given unique name, arguments, and options.
@@ -83,18 +83,18 @@ export class SwitchWarmSpare extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SwitchWarmSpareState | undefined;
-            resourceInputs["enabled"] = state ? state.enabled : undefined;
-            resourceInputs["primarySerial"] = state ? state.primarySerial : undefined;
-            resourceInputs["serial"] = state ? state.serial : undefined;
-            resourceInputs["spareSerial"] = state ? state.spareSerial : undefined;
+            resourceInputs["enabled"] = state?.enabled;
+            resourceInputs["primarySerial"] = state?.primarySerial;
+            resourceInputs["serial"] = state?.serial;
+            resourceInputs["spareSerial"] = state?.spareSerial;
         } else {
             const args = argsOrState as SwitchWarmSpareArgs | undefined;
-            if ((!args || args.serial === undefined) && !opts.urn) {
+            if (args?.serial === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serial'");
             }
-            resourceInputs["enabled"] = args ? args.enabled : undefined;
-            resourceInputs["serial"] = args ? args.serial : undefined;
-            resourceInputs["spareSerial"] = args ? args.spareSerial : undefined;
+            resourceInputs["enabled"] = args?.enabled;
+            resourceInputs["serial"] = args?.serial;
+            resourceInputs["spareSerial"] = args?.spareSerial;
             resourceInputs["primarySerial"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

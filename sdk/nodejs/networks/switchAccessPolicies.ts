@@ -46,91 +46,91 @@ export class SwitchAccessPolicies extends pulumi.CustomResource {
     /**
      * accessPolicyNumber path parameter. Access policy number
      */
-    public readonly accessPolicyNumber!: pulumi.Output<string>;
+    declare public readonly accessPolicyNumber: pulumi.Output<string>;
     /**
      * Access Type of the policy. Automatically 'Hybrid authentication' when hostMode is 'Multi-Domain'.
      */
-    public readonly accessPolicyType!: pulumi.Output<string>;
+    declare public readonly accessPolicyType: pulumi.Output<string>;
     /**
      * Counts associated with the access policy
      */
-    public /*out*/ readonly counts!: pulumi.Output<outputs.networks.SwitchAccessPoliciesCounts>;
+    declare public /*out*/ readonly counts: pulumi.Output<outputs.networks.SwitchAccessPoliciesCounts>;
     /**
      * 802.1x Settings
      */
-    public readonly dot1x!: pulumi.Output<outputs.networks.SwitchAccessPoliciesDot1x>;
+    declare public readonly dot1x: pulumi.Output<outputs.networks.SwitchAccessPoliciesDot1x>;
     /**
      * If enabled, Meraki devices will periodically send access-request messages to these RADIUS servers
      */
-    public readonly guestPortBouncing!: pulumi.Output<boolean>;
+    declare public readonly guestPortBouncing: pulumi.Output<boolean>;
     /**
      * ID for the guest VLAN allow unauthorized devices access to limited network resources
      */
-    public readonly guestVlanId!: pulumi.Output<number | undefined>;
+    declare public readonly guestVlanId: pulumi.Output<number | undefined>;
     /**
      * Choose the Host Mode for the access policy.
      */
-    public readonly hostMode!: pulumi.Output<string>;
+    declare public readonly hostMode: pulumi.Output<string>;
     /**
      * Enabling this option will make switches execute 802.1X and MAC-bypass authentication simultaneously so that clients authenticate faster. Only required when accessPolicyType is 'Hybrid Authentication.
      */
-    public readonly increaseAccessSpeed!: pulumi.Output<boolean>;
+    declare public readonly increaseAccessSpeed: pulumi.Output<boolean>;
     /**
      * Name of the access policy
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * Object for RADIUS Settings
      */
-    public readonly radius!: pulumi.Output<outputs.networks.SwitchAccessPoliciesRadius>;
+    declare public readonly radius: pulumi.Output<outputs.networks.SwitchAccessPoliciesRadius>;
     /**
      * Enable to send start, interim-update and stop messages to a configured RADIUS accounting server for tracking connected clients
      */
-    public readonly radiusAccountingEnabled!: pulumi.Output<boolean>;
+    declare public readonly radiusAccountingEnabled: pulumi.Output<boolean>;
     /**
      * List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
      */
-    public readonly radiusAccountingServers!: pulumi.Output<outputs.networks.SwitchAccessPoliciesRadiusAccountingServer[] | undefined>;
+    declare public readonly radiusAccountingServers: pulumi.Output<outputs.networks.SwitchAccessPoliciesRadiusAccountingServer[] | undefined>;
     /**
      * List of RADIUS accounting servers to require connecting devices to authenticate against before granting network access
      */
-    public /*out*/ readonly radiusAccountingServersResponses!: pulumi.Output<outputs.networks.SwitchAccessPoliciesRadiusAccountingServersResponse[]>;
+    declare public /*out*/ readonly radiusAccountingServersResponses: pulumi.Output<outputs.networks.SwitchAccessPoliciesRadiusAccountingServersResponse[]>;
     /**
      * Change of authentication for RADIUS re-authentication and disconnection
      */
-    public readonly radiusCoaSupportEnabled!: pulumi.Output<boolean>;
+    declare public readonly radiusCoaSupportEnabled: pulumi.Output<boolean>;
     /**
      * Acceptable values are *""* for None, or *"11"* for Group Policies ACL
      */
-    public readonly radiusGroupAttribute!: pulumi.Output<string>;
+    declare public readonly radiusGroupAttribute: pulumi.Output<string>;
     /**
      * List of RADIUS servers to require connecting devices to authenticate against before granting network access
      */
-    public readonly radiusServers!: pulumi.Output<outputs.networks.SwitchAccessPoliciesRadiusServer[] | undefined>;
+    declare public readonly radiusServers: pulumi.Output<outputs.networks.SwitchAccessPoliciesRadiusServer[] | undefined>;
     /**
      * List of RADIUS servers to require connecting devices to authenticate against before granting network access
      */
-    public /*out*/ readonly radiusServersResponses!: pulumi.Output<outputs.networks.SwitchAccessPoliciesRadiusServersResponse[]>;
+    declare public /*out*/ readonly radiusServersResponses: pulumi.Output<outputs.networks.SwitchAccessPoliciesRadiusServersResponse[]>;
     /**
      * If enabled, Meraki devices will periodically send access-request messages to these RADIUS servers
      */
-    public readonly radiusTestingEnabled!: pulumi.Output<boolean>;
+    declare public readonly radiusTestingEnabled: pulumi.Output<boolean>;
     /**
      * Enable to restrict access for clients to a responseObjectific set of IP addresses or hostnames prior to authentication
      */
-    public readonly urlRedirectWalledGardenEnabled!: pulumi.Output<boolean>;
+    declare public readonly urlRedirectWalledGardenEnabled: pulumi.Output<boolean>;
     /**
      * IP address ranges, in CIDR notation, to restrict access for clients to a specific set of IP addresses or hostnames prior to authentication
      */
-    public readonly urlRedirectWalledGardenRanges!: pulumi.Output<string[] | undefined>;
+    declare public readonly urlRedirectWalledGardenRanges: pulumi.Output<string[] | undefined>;
     /**
      * CDP/LLDP capable voice clients will be able to use this VLAN. Automatically true when hostMode is 'Multi-Domain'.
      */
-    public readonly voiceVlanClients!: pulumi.Output<boolean>;
+    declare public readonly voiceVlanClients: pulumi.Output<boolean>;
 
     /**
      * Create a SwitchAccessPolicies resource with the given unique name, arguments, and options.
@@ -145,52 +145,52 @@ export class SwitchAccessPolicies extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SwitchAccessPoliciesState | undefined;
-            resourceInputs["accessPolicyNumber"] = state ? state.accessPolicyNumber : undefined;
-            resourceInputs["accessPolicyType"] = state ? state.accessPolicyType : undefined;
-            resourceInputs["counts"] = state ? state.counts : undefined;
-            resourceInputs["dot1x"] = state ? state.dot1x : undefined;
-            resourceInputs["guestPortBouncing"] = state ? state.guestPortBouncing : undefined;
-            resourceInputs["guestVlanId"] = state ? state.guestVlanId : undefined;
-            resourceInputs["hostMode"] = state ? state.hostMode : undefined;
-            resourceInputs["increaseAccessSpeed"] = state ? state.increaseAccessSpeed : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["radius"] = state ? state.radius : undefined;
-            resourceInputs["radiusAccountingEnabled"] = state ? state.radiusAccountingEnabled : undefined;
-            resourceInputs["radiusAccountingServers"] = state ? state.radiusAccountingServers : undefined;
-            resourceInputs["radiusAccountingServersResponses"] = state ? state.radiusAccountingServersResponses : undefined;
-            resourceInputs["radiusCoaSupportEnabled"] = state ? state.radiusCoaSupportEnabled : undefined;
-            resourceInputs["radiusGroupAttribute"] = state ? state.radiusGroupAttribute : undefined;
-            resourceInputs["radiusServers"] = state ? state.radiusServers : undefined;
-            resourceInputs["radiusServersResponses"] = state ? state.radiusServersResponses : undefined;
-            resourceInputs["radiusTestingEnabled"] = state ? state.radiusTestingEnabled : undefined;
-            resourceInputs["urlRedirectWalledGardenEnabled"] = state ? state.urlRedirectWalledGardenEnabled : undefined;
-            resourceInputs["urlRedirectWalledGardenRanges"] = state ? state.urlRedirectWalledGardenRanges : undefined;
-            resourceInputs["voiceVlanClients"] = state ? state.voiceVlanClients : undefined;
+            resourceInputs["accessPolicyNumber"] = state?.accessPolicyNumber;
+            resourceInputs["accessPolicyType"] = state?.accessPolicyType;
+            resourceInputs["counts"] = state?.counts;
+            resourceInputs["dot1x"] = state?.dot1x;
+            resourceInputs["guestPortBouncing"] = state?.guestPortBouncing;
+            resourceInputs["guestVlanId"] = state?.guestVlanId;
+            resourceInputs["hostMode"] = state?.hostMode;
+            resourceInputs["increaseAccessSpeed"] = state?.increaseAccessSpeed;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["radius"] = state?.radius;
+            resourceInputs["radiusAccountingEnabled"] = state?.radiusAccountingEnabled;
+            resourceInputs["radiusAccountingServers"] = state?.radiusAccountingServers;
+            resourceInputs["radiusAccountingServersResponses"] = state?.radiusAccountingServersResponses;
+            resourceInputs["radiusCoaSupportEnabled"] = state?.radiusCoaSupportEnabled;
+            resourceInputs["radiusGroupAttribute"] = state?.radiusGroupAttribute;
+            resourceInputs["radiusServers"] = state?.radiusServers;
+            resourceInputs["radiusServersResponses"] = state?.radiusServersResponses;
+            resourceInputs["radiusTestingEnabled"] = state?.radiusTestingEnabled;
+            resourceInputs["urlRedirectWalledGardenEnabled"] = state?.urlRedirectWalledGardenEnabled;
+            resourceInputs["urlRedirectWalledGardenRanges"] = state?.urlRedirectWalledGardenRanges;
+            resourceInputs["voiceVlanClients"] = state?.voiceVlanClients;
         } else {
             const args = argsOrState as SwitchAccessPoliciesArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["accessPolicyNumber"] = args ? args.accessPolicyNumber : undefined;
-            resourceInputs["accessPolicyType"] = args ? args.accessPolicyType : undefined;
-            resourceInputs["dot1x"] = args ? args.dot1x : undefined;
-            resourceInputs["guestPortBouncing"] = args ? args.guestPortBouncing : undefined;
-            resourceInputs["guestVlanId"] = args ? args.guestVlanId : undefined;
-            resourceInputs["hostMode"] = args ? args.hostMode : undefined;
-            resourceInputs["increaseAccessSpeed"] = args ? args.increaseAccessSpeed : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["radius"] = args ? args.radius : undefined;
-            resourceInputs["radiusAccountingEnabled"] = args ? args.radiusAccountingEnabled : undefined;
-            resourceInputs["radiusAccountingServers"] = args ? args.radiusAccountingServers : undefined;
-            resourceInputs["radiusCoaSupportEnabled"] = args ? args.radiusCoaSupportEnabled : undefined;
-            resourceInputs["radiusGroupAttribute"] = args ? args.radiusGroupAttribute : undefined;
-            resourceInputs["radiusServers"] = args ? args.radiusServers : undefined;
-            resourceInputs["radiusTestingEnabled"] = args ? args.radiusTestingEnabled : undefined;
-            resourceInputs["urlRedirectWalledGardenEnabled"] = args ? args.urlRedirectWalledGardenEnabled : undefined;
-            resourceInputs["urlRedirectWalledGardenRanges"] = args ? args.urlRedirectWalledGardenRanges : undefined;
-            resourceInputs["voiceVlanClients"] = args ? args.voiceVlanClients : undefined;
+            resourceInputs["accessPolicyNumber"] = args?.accessPolicyNumber;
+            resourceInputs["accessPolicyType"] = args?.accessPolicyType;
+            resourceInputs["dot1x"] = args?.dot1x;
+            resourceInputs["guestPortBouncing"] = args?.guestPortBouncing;
+            resourceInputs["guestVlanId"] = args?.guestVlanId;
+            resourceInputs["hostMode"] = args?.hostMode;
+            resourceInputs["increaseAccessSpeed"] = args?.increaseAccessSpeed;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["radius"] = args?.radius;
+            resourceInputs["radiusAccountingEnabled"] = args?.radiusAccountingEnabled;
+            resourceInputs["radiusAccountingServers"] = args?.radiusAccountingServers;
+            resourceInputs["radiusCoaSupportEnabled"] = args?.radiusCoaSupportEnabled;
+            resourceInputs["radiusGroupAttribute"] = args?.radiusGroupAttribute;
+            resourceInputs["radiusServers"] = args?.radiusServers;
+            resourceInputs["radiusTestingEnabled"] = args?.radiusTestingEnabled;
+            resourceInputs["urlRedirectWalledGardenEnabled"] = args?.urlRedirectWalledGardenEnabled;
+            resourceInputs["urlRedirectWalledGardenRanges"] = args?.urlRedirectWalledGardenRanges;
+            resourceInputs["voiceVlanClients"] = args?.voiceVlanClients;
             resourceInputs["counts"] = undefined /*out*/;
             resourceInputs["radiusAccountingServersResponses"] = undefined /*out*/;
             resourceInputs["radiusServersResponses"] = undefined /*out*/;

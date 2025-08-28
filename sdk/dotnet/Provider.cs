@@ -19,22 +19,19 @@ namespace Pulumi.Meraki
     public partial class Provider : global::Pulumi.ProviderResource
     {
         /// <summary>
-        /// Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is
-        /// (https://api.meraki.com/)
+        /// Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is (https://api.meraki.com/)
         /// </summary>
         [Output("merakiBaseUrl")]
         public Output<string?> MerakiBaseUrl { get; private set; } = null!;
 
         /// <summary>
-        /// Cisco Meraki meraki_dashboard_api_key to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment
-        /// variable.
+        /// Cisco Meraki meraki_dashboard_api_key to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
         /// </summary>
         [Output("merakiDashboardApiKey")]
         public Output<string?> MerakiDashboardApiKey { get; private set; } = null!;
 
         /// <summary>
-        /// Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to
-        /// `false`.
+        /// Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to `false`.
         /// </summary>
         [Output("merakiDebug")]
         public Output<string?> MerakiDebug { get; private set; } = null!;
@@ -79,8 +76,7 @@ namespace Pulumi.Meraki
     public sealed class ProviderArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is
-        /// (https://api.meraki.com/)
+        /// Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is (https://api.meraki.com/)
         /// </summary>
         [Input("merakiBaseUrl")]
         public Input<string>? MerakiBaseUrl { get; set; }
@@ -89,8 +85,7 @@ namespace Pulumi.Meraki
         private Input<string>? _merakiDashboardApiKey;
 
         /// <summary>
-        /// Cisco Meraki meraki_dashboard_api_key to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment
-        /// variable.
+        /// Cisco Meraki meraki_dashboard_api_key to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
         /// </summary>
         public Input<string>? MerakiDashboardApiKey
         {
@@ -103,8 +98,7 @@ namespace Pulumi.Meraki
         }
 
         /// <summary>
-        /// Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to
-        /// `false`.
+        /// Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to `false`.
         /// </summary>
         [Input("merakiDebug")]
         public Input<string>? MerakiDebug { get; set; }

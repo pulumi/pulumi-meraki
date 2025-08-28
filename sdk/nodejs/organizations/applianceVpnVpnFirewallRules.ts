@@ -46,15 +46,15 @@ export class ApplianceVpnVpnFirewallRules extends pulumi.CustomResource {
     /**
      * organizationId path parameter. Organization ID
      */
-    public readonly organizationId!: pulumi.Output<string>;
+    declare public readonly organizationId: pulumi.Output<string>;
     /**
      * An ordered array of the firewall rules (not including the default rule)
      */
-    public readonly rules!: pulumi.Output<outputs.organizations.ApplianceVpnVpnFirewallRulesRule[]>;
+    declare public readonly rules: pulumi.Output<outputs.organizations.ApplianceVpnVpnFirewallRulesRule[]>;
     /**
      * Log the special default rule (boolean value - enable only if you've configured a syslog server) (optional)
      */
-    public readonly syslogDefaultRule!: pulumi.Output<boolean>;
+    declare public readonly syslogDefaultRule: pulumi.Output<boolean>;
 
     /**
      * Create a ApplianceVpnVpnFirewallRules resource with the given unique name, arguments, and options.
@@ -69,17 +69,17 @@ export class ApplianceVpnVpnFirewallRules extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ApplianceVpnVpnFirewallRulesState | undefined;
-            resourceInputs["organizationId"] = state ? state.organizationId : undefined;
-            resourceInputs["rules"] = state ? state.rules : undefined;
-            resourceInputs["syslogDefaultRule"] = state ? state.syslogDefaultRule : undefined;
+            resourceInputs["organizationId"] = state?.organizationId;
+            resourceInputs["rules"] = state?.rules;
+            resourceInputs["syslogDefaultRule"] = state?.syslogDefaultRule;
         } else {
             const args = argsOrState as ApplianceVpnVpnFirewallRulesArgs | undefined;
-            if ((!args || args.organizationId === undefined) && !opts.urn) {
+            if (args?.organizationId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'organizationId'");
             }
-            resourceInputs["organizationId"] = args ? args.organizationId : undefined;
-            resourceInputs["rules"] = args ? args.rules : undefined;
-            resourceInputs["syslogDefaultRule"] = args ? args.syslogDefaultRule : undefined;
+            resourceInputs["organizationId"] = args?.organizationId;
+            resourceInputs["rules"] = args?.rules;
+            resourceInputs["syslogDefaultRule"] = args?.syslogDefaultRule;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(ApplianceVpnVpnFirewallRules.__pulumiType, name, resourceInputs, opts);

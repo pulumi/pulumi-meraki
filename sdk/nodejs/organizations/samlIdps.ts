@@ -56,23 +56,23 @@ export class SamlIdps extends pulumi.CustomResource {
     /**
      * URL that is consuming SAML Identity Provider (IdP)
      */
-    public /*out*/ readonly consumerUrl!: pulumi.Output<string>;
+    declare public /*out*/ readonly consumerUrl: pulumi.Output<string>;
     /**
      * ID associated with the SAML Identity Provider (IdP)
      */
-    public readonly idpId!: pulumi.Output<string>;
+    declare public readonly idpId: pulumi.Output<string>;
     /**
      * organizationId path parameter. Organization ID
      */
-    public readonly organizationId!: pulumi.Output<string>;
+    declare public readonly organizationId: pulumi.Output<string>;
     /**
      * Dashboard will redirect users to this URL when they sign out.
      */
-    public readonly sloLogoutUrl!: pulumi.Output<string>;
+    declare public readonly sloLogoutUrl: pulumi.Output<string>;
     /**
      * Fingerprint (SHA1) of the SAML certificate provided by your Identity Provider (IdP). This will be used for encryption / validation.
      */
-    public readonly x509certSha1Fingerprint!: pulumi.Output<string>;
+    declare public readonly x509certSha1Fingerprint: pulumi.Output<string>;
 
     /**
      * Create a SamlIdps resource with the given unique name, arguments, and options.
@@ -87,20 +87,20 @@ export class SamlIdps extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SamlIdpsState | undefined;
-            resourceInputs["consumerUrl"] = state ? state.consumerUrl : undefined;
-            resourceInputs["idpId"] = state ? state.idpId : undefined;
-            resourceInputs["organizationId"] = state ? state.organizationId : undefined;
-            resourceInputs["sloLogoutUrl"] = state ? state.sloLogoutUrl : undefined;
-            resourceInputs["x509certSha1Fingerprint"] = state ? state.x509certSha1Fingerprint : undefined;
+            resourceInputs["consumerUrl"] = state?.consumerUrl;
+            resourceInputs["idpId"] = state?.idpId;
+            resourceInputs["organizationId"] = state?.organizationId;
+            resourceInputs["sloLogoutUrl"] = state?.sloLogoutUrl;
+            resourceInputs["x509certSha1Fingerprint"] = state?.x509certSha1Fingerprint;
         } else {
             const args = argsOrState as SamlIdpsArgs | undefined;
-            if ((!args || args.organizationId === undefined) && !opts.urn) {
+            if (args?.organizationId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'organizationId'");
             }
-            resourceInputs["idpId"] = args ? args.idpId : undefined;
-            resourceInputs["organizationId"] = args ? args.organizationId : undefined;
-            resourceInputs["sloLogoutUrl"] = args ? args.sloLogoutUrl : undefined;
-            resourceInputs["x509certSha1Fingerprint"] = args ? args.x509certSha1Fingerprint : undefined;
+            resourceInputs["idpId"] = args?.idpId;
+            resourceInputs["organizationId"] = args?.organizationId;
+            resourceInputs["sloLogoutUrl"] = args?.sloLogoutUrl;
+            resourceInputs["x509certSha1Fingerprint"] = args?.x509certSha1Fingerprint;
             resourceInputs["consumerUrl"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

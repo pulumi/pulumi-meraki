@@ -46,19 +46,19 @@ export class ApplianceVpnSiteToSiteVpn extends pulumi.CustomResource {
     /**
      * The list of VPN hubs, in order of preference.
      */
-    public readonly hubs!: pulumi.Output<outputs.networks.ApplianceVpnSiteToSiteVpnHub[]>;
+    declare public readonly hubs: pulumi.Output<outputs.networks.ApplianceVpnSiteToSiteVpnHub[]>;
     /**
      * The site-to-site VPN mode.
      */
-    public readonly mode!: pulumi.Output<string>;
+    declare public readonly mode: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * The list of subnets and their VPN presence.
      */
-    public readonly subnets!: pulumi.Output<outputs.networks.ApplianceVpnSiteToSiteVpnSubnet[]>;
+    declare public readonly subnets: pulumi.Output<outputs.networks.ApplianceVpnSiteToSiteVpnSubnet[]>;
 
     /**
      * Create a ApplianceVpnSiteToSiteVpn resource with the given unique name, arguments, and options.
@@ -73,19 +73,19 @@ export class ApplianceVpnSiteToSiteVpn extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ApplianceVpnSiteToSiteVpnState | undefined;
-            resourceInputs["hubs"] = state ? state.hubs : undefined;
-            resourceInputs["mode"] = state ? state.mode : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["subnets"] = state ? state.subnets : undefined;
+            resourceInputs["hubs"] = state?.hubs;
+            resourceInputs["mode"] = state?.mode;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["subnets"] = state?.subnets;
         } else {
             const args = argsOrState as ApplianceVpnSiteToSiteVpnArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["hubs"] = args ? args.hubs : undefined;
-            resourceInputs["mode"] = args ? args.mode : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["subnets"] = args ? args.subnets : undefined;
+            resourceInputs["hubs"] = args?.hubs;
+            resourceInputs["mode"] = args?.mode;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["subnets"] = args?.subnets;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(ApplianceVpnSiteToSiteVpn.__pulumiType, name, resourceInputs, opts);

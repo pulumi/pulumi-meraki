@@ -60,17 +60,17 @@ export class SmBypassActivationLockAttempts extends pulumi.CustomResource {
     /**
      * attemptId path parameter. Attempt ID
      */
-    public readonly attemptId!: pulumi.Output<string | undefined>;
-    public /*out*/ readonly data!: pulumi.Output<outputs.networks.SmBypassActivationLockAttemptsData>;
+    declare public readonly attemptId: pulumi.Output<string | undefined>;
+    declare public /*out*/ readonly data: pulumi.Output<outputs.networks.SmBypassActivationLockAttemptsData>;
     /**
      * The ids of the devices to attempt activation lock bypass.
      */
-    public readonly ids!: pulumi.Output<string[]>;
+    declare public readonly ids: pulumi.Output<string[]>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
-    public /*out*/ readonly status!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
+    declare public /*out*/ readonly status: pulumi.Output<string>;
 
     /**
      * Create a SmBypassActivationLockAttempts resource with the given unique name, arguments, and options.
@@ -85,19 +85,19 @@ export class SmBypassActivationLockAttempts extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SmBypassActivationLockAttemptsState | undefined;
-            resourceInputs["attemptId"] = state ? state.attemptId : undefined;
-            resourceInputs["data"] = state ? state.data : undefined;
-            resourceInputs["ids"] = state ? state.ids : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["status"] = state ? state.status : undefined;
+            resourceInputs["attemptId"] = state?.attemptId;
+            resourceInputs["data"] = state?.data;
+            resourceInputs["ids"] = state?.ids;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["status"] = state?.status;
         } else {
             const args = argsOrState as SmBypassActivationLockAttemptsArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["attemptId"] = args ? args.attemptId : undefined;
-            resourceInputs["ids"] = args ? args.ids : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
+            resourceInputs["attemptId"] = args?.attemptId;
+            resourceInputs["ids"] = args?.ids;
+            resourceInputs["networkId"] = args?.networkId;
             resourceInputs["data"] = undefined /*out*/;
             resourceInputs["status"] = undefined /*out*/;
         }

@@ -61,24 +61,24 @@ export class CameraSense extends pulumi.CustomResource {
     /**
      * The details of the audio detection config.
      */
-    public readonly audioDetection!: pulumi.Output<outputs.devices.CameraSenseAudioDetection>;
+    declare public readonly audioDetection: pulumi.Output<outputs.devices.CameraSenseAudioDetection>;
     /**
      * The ID of the object detection model
      */
-    public readonly detectionModelId!: pulumi.Output<string>;
+    declare public readonly detectionModelId: pulumi.Output<string>;
     /**
      * The ID of the MQTT broker to be enabled on the camera. A value of null will disable MQTT on the camera
      */
-    public readonly mqttBrokerId!: pulumi.Output<string>;
-    public /*out*/ readonly mqttTopics!: pulumi.Output<string[]>;
+    declare public readonly mqttBrokerId: pulumi.Output<string>;
+    declare public /*out*/ readonly mqttTopics: pulumi.Output<string[]>;
     /**
      * Boolean indicating if sense(license) is enabled(true) or disabled(false) on the camera
      */
-    public readonly senseEnabled!: pulumi.Output<boolean>;
+    declare public readonly senseEnabled: pulumi.Output<boolean>;
     /**
      * serial path parameter.
      */
-    public readonly serial!: pulumi.Output<string>;
+    declare public readonly serial: pulumi.Output<string>;
 
     /**
      * Create a CameraSense resource with the given unique name, arguments, and options.
@@ -93,22 +93,22 @@ export class CameraSense extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CameraSenseState | undefined;
-            resourceInputs["audioDetection"] = state ? state.audioDetection : undefined;
-            resourceInputs["detectionModelId"] = state ? state.detectionModelId : undefined;
-            resourceInputs["mqttBrokerId"] = state ? state.mqttBrokerId : undefined;
-            resourceInputs["mqttTopics"] = state ? state.mqttTopics : undefined;
-            resourceInputs["senseEnabled"] = state ? state.senseEnabled : undefined;
-            resourceInputs["serial"] = state ? state.serial : undefined;
+            resourceInputs["audioDetection"] = state?.audioDetection;
+            resourceInputs["detectionModelId"] = state?.detectionModelId;
+            resourceInputs["mqttBrokerId"] = state?.mqttBrokerId;
+            resourceInputs["mqttTopics"] = state?.mqttTopics;
+            resourceInputs["senseEnabled"] = state?.senseEnabled;
+            resourceInputs["serial"] = state?.serial;
         } else {
             const args = argsOrState as CameraSenseArgs | undefined;
-            if ((!args || args.serial === undefined) && !opts.urn) {
+            if (args?.serial === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serial'");
             }
-            resourceInputs["audioDetection"] = args ? args.audioDetection : undefined;
-            resourceInputs["detectionModelId"] = args ? args.detectionModelId : undefined;
-            resourceInputs["mqttBrokerId"] = args ? args.mqttBrokerId : undefined;
-            resourceInputs["senseEnabled"] = args ? args.senseEnabled : undefined;
-            resourceInputs["serial"] = args ? args.serial : undefined;
+            resourceInputs["audioDetection"] = args?.audioDetection;
+            resourceInputs["detectionModelId"] = args?.detectionModelId;
+            resourceInputs["mqttBrokerId"] = args?.mqttBrokerId;
+            resourceInputs["senseEnabled"] = args?.senseEnabled;
+            resourceInputs["serial"] = args?.serial;
             resourceInputs["mqttTopics"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

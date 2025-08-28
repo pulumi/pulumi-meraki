@@ -46,35 +46,35 @@ export class SwitchRoutingOspf extends pulumi.CustomResource {
     /**
      * OSPF areas
      */
-    public readonly areas!: pulumi.Output<outputs.networks.SwitchRoutingOspfArea[]>;
+    declare public readonly areas: pulumi.Output<outputs.networks.SwitchRoutingOspfArea[]>;
     /**
      * Time interval to determine when the peer will be declared inactive/dead. Value must be between 1 and 65535
      */
-    public readonly deadTimerInSeconds!: pulumi.Output<number>;
+    declare public readonly deadTimerInSeconds: pulumi.Output<number>;
     /**
      * Boolean value to enable or disable OSPF routing. OSPF routing is disabled by default.
      */
-    public readonly enabled!: pulumi.Output<boolean>;
+    declare public readonly enabled: pulumi.Output<boolean>;
     /**
      * Time interval in seconds at which hello packet will be sent to OSPF neighbors to maintain connectivity. Value must be between 1 and 255. Default is 10 seconds.
      */
-    public readonly helloTimerInSeconds!: pulumi.Output<number>;
+    declare public readonly helloTimerInSeconds: pulumi.Output<number>;
     /**
      * Boolean value to enable or disable MD5 authentication. MD5 authentication is disabled by default.
      */
-    public readonly md5AuthenticationEnabled!: pulumi.Output<boolean>;
+    declare public readonly md5AuthenticationEnabled: pulumi.Output<boolean>;
     /**
      * MD5 authentication credentials. This param is only relevant if md5AuthenticationEnabled is true
      */
-    public readonly md5AuthenticationKey!: pulumi.Output<outputs.networks.SwitchRoutingOspfMd5AuthenticationKey>;
+    declare public readonly md5AuthenticationKey: pulumi.Output<outputs.networks.SwitchRoutingOspfMd5AuthenticationKey>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * OSPF v3 configuration
      */
-    public readonly v3!: pulumi.Output<outputs.networks.SwitchRoutingOspfV3>;
+    declare public readonly v3: pulumi.Output<outputs.networks.SwitchRoutingOspfV3>;
 
     /**
      * Create a SwitchRoutingOspf resource with the given unique name, arguments, and options.
@@ -89,27 +89,27 @@ export class SwitchRoutingOspf extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SwitchRoutingOspfState | undefined;
-            resourceInputs["areas"] = state ? state.areas : undefined;
-            resourceInputs["deadTimerInSeconds"] = state ? state.deadTimerInSeconds : undefined;
-            resourceInputs["enabled"] = state ? state.enabled : undefined;
-            resourceInputs["helloTimerInSeconds"] = state ? state.helloTimerInSeconds : undefined;
-            resourceInputs["md5AuthenticationEnabled"] = state ? state.md5AuthenticationEnabled : undefined;
-            resourceInputs["md5AuthenticationKey"] = state ? state.md5AuthenticationKey : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["v3"] = state ? state.v3 : undefined;
+            resourceInputs["areas"] = state?.areas;
+            resourceInputs["deadTimerInSeconds"] = state?.deadTimerInSeconds;
+            resourceInputs["enabled"] = state?.enabled;
+            resourceInputs["helloTimerInSeconds"] = state?.helloTimerInSeconds;
+            resourceInputs["md5AuthenticationEnabled"] = state?.md5AuthenticationEnabled;
+            resourceInputs["md5AuthenticationKey"] = state?.md5AuthenticationKey;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["v3"] = state?.v3;
         } else {
             const args = argsOrState as SwitchRoutingOspfArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["areas"] = args ? args.areas : undefined;
-            resourceInputs["deadTimerInSeconds"] = args ? args.deadTimerInSeconds : undefined;
-            resourceInputs["enabled"] = args ? args.enabled : undefined;
-            resourceInputs["helloTimerInSeconds"] = args ? args.helloTimerInSeconds : undefined;
-            resourceInputs["md5AuthenticationEnabled"] = args ? args.md5AuthenticationEnabled : undefined;
-            resourceInputs["md5AuthenticationKey"] = args ? args.md5AuthenticationKey : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["v3"] = args ? args.v3 : undefined;
+            resourceInputs["areas"] = args?.areas;
+            resourceInputs["deadTimerInSeconds"] = args?.deadTimerInSeconds;
+            resourceInputs["enabled"] = args?.enabled;
+            resourceInputs["helloTimerInSeconds"] = args?.helloTimerInSeconds;
+            resourceInputs["md5AuthenticationEnabled"] = args?.md5AuthenticationEnabled;
+            resourceInputs["md5AuthenticationKey"] = args?.md5AuthenticationKey;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["v3"] = args?.v3;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(SwitchRoutingOspf.__pulumiType, name, resourceInputs, opts);

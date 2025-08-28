@@ -46,27 +46,27 @@ export class WebhooksHttpServers extends pulumi.CustomResource {
     /**
      * httpServerId path parameter. Http server ID
      */
-    public readonly httpServerId!: pulumi.Output<string>;
+    declare public readonly httpServerId: pulumi.Output<string>;
     /**
      * A name for easy reference to the HTTP server
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * A Meraki network ID.
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * The payload template to use when posting data to the HTTP server.
      */
-    public readonly payloadTemplate!: pulumi.Output<outputs.networks.WebhooksHttpServersPayloadTemplate>;
+    declare public readonly payloadTemplate: pulumi.Output<outputs.networks.WebhooksHttpServersPayloadTemplate>;
     /**
      * A shared secret that will be included in POSTs sent to the HTTP server. This secret can be used to verify that the request was sent by Meraki.
      */
-    public readonly sharedSecret!: pulumi.Output<string>;
+    declare public readonly sharedSecret: pulumi.Output<string>;
     /**
      * The URL of the HTTP server.
      */
-    public readonly url!: pulumi.Output<string>;
+    declare public readonly url: pulumi.Output<string>;
 
     /**
      * Create a WebhooksHttpServers resource with the given unique name, arguments, and options.
@@ -81,23 +81,23 @@ export class WebhooksHttpServers extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as WebhooksHttpServersState | undefined;
-            resourceInputs["httpServerId"] = state ? state.httpServerId : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["payloadTemplate"] = state ? state.payloadTemplate : undefined;
-            resourceInputs["sharedSecret"] = state ? state.sharedSecret : undefined;
-            resourceInputs["url"] = state ? state.url : undefined;
+            resourceInputs["httpServerId"] = state?.httpServerId;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["payloadTemplate"] = state?.payloadTemplate;
+            resourceInputs["sharedSecret"] = state?.sharedSecret;
+            resourceInputs["url"] = state?.url;
         } else {
             const args = argsOrState as WebhooksHttpServersArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["httpServerId"] = args ? args.httpServerId : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["payloadTemplate"] = args ? args.payloadTemplate : undefined;
-            resourceInputs["sharedSecret"] = args ? args.sharedSecret : undefined;
-            resourceInputs["url"] = args ? args.url : undefined;
+            resourceInputs["httpServerId"] = args?.httpServerId;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["payloadTemplate"] = args?.payloadTemplate;
+            resourceInputs["sharedSecret"] = args?.sharedSecret;
+            resourceInputs["url"] = args?.url;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(WebhooksHttpServers.__pulumiType, name, resourceInputs, opts);

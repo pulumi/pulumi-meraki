@@ -38,12 +38,12 @@ export class LicensingSubscriptionSubscriptionsClaim extends pulumi.CustomResour
         return obj['__pulumiType'] === LicensingSubscriptionSubscriptionsClaim.__pulumiType;
     }
 
-    public /*out*/ readonly item!: pulumi.Output<outputs.administered.LicensingSubscriptionSubscriptionsClaimItem>;
-    public readonly parameters!: pulumi.Output<outputs.administered.LicensingSubscriptionSubscriptionsClaimParameters>;
+    declare public /*out*/ readonly item: pulumi.Output<outputs.administered.LicensingSubscriptionSubscriptionsClaimItem>;
+    declare public readonly parameters: pulumi.Output<outputs.administered.LicensingSubscriptionSubscriptionsClaimParameters>;
     /**
      * validate query parameter. Check if the provided claim key is valid and can be claimed into the organization.
      */
-    public readonly validate!: pulumi.Output<boolean | undefined>;
+    declare public readonly validate: pulumi.Output<boolean | undefined>;
 
     /**
      * Create a LicensingSubscriptionSubscriptionsClaim resource with the given unique name, arguments, and options.
@@ -58,16 +58,16 @@ export class LicensingSubscriptionSubscriptionsClaim extends pulumi.CustomResour
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as LicensingSubscriptionSubscriptionsClaimState | undefined;
-            resourceInputs["item"] = state ? state.item : undefined;
-            resourceInputs["parameters"] = state ? state.parameters : undefined;
-            resourceInputs["validate"] = state ? state.validate : undefined;
+            resourceInputs["item"] = state?.item;
+            resourceInputs["parameters"] = state?.parameters;
+            resourceInputs["validate"] = state?.validate;
         } else {
             const args = argsOrState as LicensingSubscriptionSubscriptionsClaimArgs | undefined;
-            if ((!args || args.parameters === undefined) && !opts.urn) {
+            if (args?.parameters === undefined && !opts.urn) {
                 throw new Error("Missing required property 'parameters'");
             }
-            resourceInputs["parameters"] = args ? args.parameters : undefined;
-            resourceInputs["validate"] = args ? args.validate : undefined;
+            resourceInputs["parameters"] = args?.parameters;
+            resourceInputs["validate"] = args?.validate;
             resourceInputs["item"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

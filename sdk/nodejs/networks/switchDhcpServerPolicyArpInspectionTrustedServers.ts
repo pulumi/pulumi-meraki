@@ -61,23 +61,23 @@ export class SwitchDhcpServerPolicyArpInspectionTrustedServers extends pulumi.Cu
     /**
      * IPv4 attributes of the trusted server.
      */
-    public readonly ipv4!: pulumi.Output<outputs.networks.SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4>;
+    declare public readonly ipv4: pulumi.Output<outputs.networks.SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4>;
     /**
      * Mac address of the trusted server.
      */
-    public readonly mac!: pulumi.Output<string>;
+    declare public readonly mac: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * ID of the trusted server.
      */
-    public readonly trustedServerId!: pulumi.Output<string>;
+    declare public readonly trustedServerId: pulumi.Output<string>;
     /**
      * Vlan ID of the trusted server.
      */
-    public readonly vlan!: pulumi.Output<number>;
+    declare public readonly vlan: pulumi.Output<number>;
 
     /**
      * Create a SwitchDhcpServerPolicyArpInspectionTrustedServers resource with the given unique name, arguments, and options.
@@ -92,21 +92,21 @@ export class SwitchDhcpServerPolicyArpInspectionTrustedServers extends pulumi.Cu
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SwitchDhcpServerPolicyArpInspectionTrustedServersState | undefined;
-            resourceInputs["ipv4"] = state ? state.ipv4 : undefined;
-            resourceInputs["mac"] = state ? state.mac : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["trustedServerId"] = state ? state.trustedServerId : undefined;
-            resourceInputs["vlan"] = state ? state.vlan : undefined;
+            resourceInputs["ipv4"] = state?.ipv4;
+            resourceInputs["mac"] = state?.mac;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["trustedServerId"] = state?.trustedServerId;
+            resourceInputs["vlan"] = state?.vlan;
         } else {
             const args = argsOrState as SwitchDhcpServerPolicyArpInspectionTrustedServersArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["ipv4"] = args ? args.ipv4 : undefined;
-            resourceInputs["mac"] = args ? args.mac : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["trustedServerId"] = args ? args.trustedServerId : undefined;
-            resourceInputs["vlan"] = args ? args.vlan : undefined;
+            resourceInputs["ipv4"] = args?.ipv4;
+            resourceInputs["mac"] = args?.mac;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["trustedServerId"] = args?.trustedServerId;
+            resourceInputs["vlan"] = args?.vlan;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(SwitchDhcpServerPolicyArpInspectionTrustedServers.__pulumiType, name, resourceInputs, opts);

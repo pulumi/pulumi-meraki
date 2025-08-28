@@ -46,35 +46,35 @@ export class LiveToolsArpTable extends pulumi.CustomResource {
     /**
      * Id of the ARP table request. Used to check the status of the request.
      */
-    public readonly arpTableId!: pulumi.Output<string>;
+    declare public readonly arpTableId: pulumi.Output<string>;
     /**
      * Details for the callback. Please include either an httpServerId OR url and sharedSecret
      */
-    public readonly callback!: pulumi.Output<outputs.devices.LiveToolsArpTableCallback>;
+    declare public readonly callback: pulumi.Output<outputs.devices.LiveToolsArpTableCallback>;
     /**
      * The ARP table entries
      */
-    public /*out*/ readonly entries!: pulumi.Output<outputs.devices.LiveToolsArpTableEntry[]>;
+    declare public /*out*/ readonly entries: pulumi.Output<outputs.devices.LiveToolsArpTableEntry[]>;
     /**
      * An error message for a failed execution
      */
-    public /*out*/ readonly error!: pulumi.Output<string>;
+    declare public /*out*/ readonly error: pulumi.Output<string>;
     /**
      * ARP table request parameters
      */
-    public /*out*/ readonly request!: pulumi.Output<outputs.devices.LiveToolsArpTableRequest>;
+    declare public /*out*/ readonly request: pulumi.Output<outputs.devices.LiveToolsArpTableRequest>;
     /**
      * serial path parameter.
      */
-    public readonly serial!: pulumi.Output<string>;
+    declare public readonly serial: pulumi.Output<string>;
     /**
      * Status of the ARP table request.
      */
-    public /*out*/ readonly status!: pulumi.Output<string>;
+    declare public /*out*/ readonly status: pulumi.Output<string>;
     /**
      * GET this url to check the status of your ARP table request.
      */
-    public /*out*/ readonly url!: pulumi.Output<string>;
+    declare public /*out*/ readonly url: pulumi.Output<string>;
 
     /**
      * Create a LiveToolsArpTable resource with the given unique name, arguments, and options.
@@ -89,22 +89,22 @@ export class LiveToolsArpTable extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as LiveToolsArpTableState | undefined;
-            resourceInputs["arpTableId"] = state ? state.arpTableId : undefined;
-            resourceInputs["callback"] = state ? state.callback : undefined;
-            resourceInputs["entries"] = state ? state.entries : undefined;
-            resourceInputs["error"] = state ? state.error : undefined;
-            resourceInputs["request"] = state ? state.request : undefined;
-            resourceInputs["serial"] = state ? state.serial : undefined;
-            resourceInputs["status"] = state ? state.status : undefined;
-            resourceInputs["url"] = state ? state.url : undefined;
+            resourceInputs["arpTableId"] = state?.arpTableId;
+            resourceInputs["callback"] = state?.callback;
+            resourceInputs["entries"] = state?.entries;
+            resourceInputs["error"] = state?.error;
+            resourceInputs["request"] = state?.request;
+            resourceInputs["serial"] = state?.serial;
+            resourceInputs["status"] = state?.status;
+            resourceInputs["url"] = state?.url;
         } else {
             const args = argsOrState as LiveToolsArpTableArgs | undefined;
-            if ((!args || args.serial === undefined) && !opts.urn) {
+            if (args?.serial === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serial'");
             }
-            resourceInputs["arpTableId"] = args ? args.arpTableId : undefined;
-            resourceInputs["callback"] = args ? args.callback : undefined;
-            resourceInputs["serial"] = args ? args.serial : undefined;
+            resourceInputs["arpTableId"] = args?.arpTableId;
+            resourceInputs["callback"] = args?.callback;
+            resourceInputs["serial"] = args?.serial;
             resourceInputs["entries"] = undefined /*out*/;
             resourceInputs["error"] = undefined /*out*/;
             resourceInputs["request"] = undefined /*out*/;

@@ -56,27 +56,27 @@ export class EarlyAccessFeaturesOptIns extends pulumi.CustomResource {
     /**
      * Time when Early Access Feature was created
      */
-    public /*out*/ readonly createdAt!: pulumi.Output<string>;
+    declare public /*out*/ readonly createdAt: pulumi.Output<string>;
     /**
      * Networks assigned to the Early Access Feature
      */
-    public readonly limitScopeToNetworks!: pulumi.Output<string[]>;
+    declare public readonly limitScopeToNetworks: pulumi.Output<string[]>;
     /**
      * Networks assigned to the Early Access Feature
      */
-    public readonly limitScopeToNetworksRs!: pulumi.Output<string[]>;
+    declare public readonly limitScopeToNetworksRs: pulumi.Output<string[]>;
     /**
      * optInId path parameter. Opt in ID
      */
-    public readonly optInId!: pulumi.Output<string | undefined>;
+    declare public readonly optInId: pulumi.Output<string | undefined>;
     /**
      * organizationId path parameter. Organization ID
      */
-    public readonly organizationId!: pulumi.Output<string>;
+    declare public readonly organizationId: pulumi.Output<string>;
     /**
      * Name of Early Access Feature
      */
-    public readonly shortName!: pulumi.Output<string>;
+    declare public readonly shortName: pulumi.Output<string>;
 
     /**
      * Create a EarlyAccessFeaturesOptIns resource with the given unique name, arguments, and options.
@@ -91,22 +91,22 @@ export class EarlyAccessFeaturesOptIns extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as EarlyAccessFeaturesOptInsState | undefined;
-            resourceInputs["createdAt"] = state ? state.createdAt : undefined;
-            resourceInputs["limitScopeToNetworks"] = state ? state.limitScopeToNetworks : undefined;
-            resourceInputs["limitScopeToNetworksRs"] = state ? state.limitScopeToNetworksRs : undefined;
-            resourceInputs["optInId"] = state ? state.optInId : undefined;
-            resourceInputs["organizationId"] = state ? state.organizationId : undefined;
-            resourceInputs["shortName"] = state ? state.shortName : undefined;
+            resourceInputs["createdAt"] = state?.createdAt;
+            resourceInputs["limitScopeToNetworks"] = state?.limitScopeToNetworks;
+            resourceInputs["limitScopeToNetworksRs"] = state?.limitScopeToNetworksRs;
+            resourceInputs["optInId"] = state?.optInId;
+            resourceInputs["organizationId"] = state?.organizationId;
+            resourceInputs["shortName"] = state?.shortName;
         } else {
             const args = argsOrState as EarlyAccessFeaturesOptInsArgs | undefined;
-            if ((!args || args.organizationId === undefined) && !opts.urn) {
+            if (args?.organizationId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'organizationId'");
             }
-            resourceInputs["limitScopeToNetworks"] = args ? args.limitScopeToNetworks : undefined;
-            resourceInputs["limitScopeToNetworksRs"] = args ? args.limitScopeToNetworksRs : undefined;
-            resourceInputs["optInId"] = args ? args.optInId : undefined;
-            resourceInputs["organizationId"] = args ? args.organizationId : undefined;
-            resourceInputs["shortName"] = args ? args.shortName : undefined;
+            resourceInputs["limitScopeToNetworks"] = args?.limitScopeToNetworks;
+            resourceInputs["limitScopeToNetworksRs"] = args?.limitScopeToNetworksRs;
+            resourceInputs["optInId"] = args?.optInId;
+            resourceInputs["organizationId"] = args?.organizationId;
+            resourceInputs["shortName"] = args?.shortName;
             resourceInputs["createdAt"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

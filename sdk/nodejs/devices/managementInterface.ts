@@ -46,19 +46,19 @@ export class ManagementInterface extends pulumi.CustomResource {
     /**
      * Dynamic DNS hostnames.
      */
-    public /*out*/ readonly ddnsHostnames!: pulumi.Output<outputs.devices.ManagementInterfaceDdnsHostnames>;
+    declare public /*out*/ readonly ddnsHostnames: pulumi.Output<outputs.devices.ManagementInterfaceDdnsHostnames>;
     /**
      * serial path parameter.
      */
-    public readonly serial!: pulumi.Output<string>;
+    declare public readonly serial: pulumi.Output<string>;
     /**
      * WAN 1 settings
      */
-    public readonly wan1!: pulumi.Output<outputs.devices.ManagementInterfaceWan1>;
+    declare public readonly wan1: pulumi.Output<outputs.devices.ManagementInterfaceWan1>;
     /**
      * WAN 2 settings (only for MX devices)
      */
-    public readonly wan2!: pulumi.Output<outputs.devices.ManagementInterfaceWan2>;
+    declare public readonly wan2: pulumi.Output<outputs.devices.ManagementInterfaceWan2>;
 
     /**
      * Create a ManagementInterface resource with the given unique name, arguments, and options.
@@ -73,18 +73,18 @@ export class ManagementInterface extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ManagementInterfaceState | undefined;
-            resourceInputs["ddnsHostnames"] = state ? state.ddnsHostnames : undefined;
-            resourceInputs["serial"] = state ? state.serial : undefined;
-            resourceInputs["wan1"] = state ? state.wan1 : undefined;
-            resourceInputs["wan2"] = state ? state.wan2 : undefined;
+            resourceInputs["ddnsHostnames"] = state?.ddnsHostnames;
+            resourceInputs["serial"] = state?.serial;
+            resourceInputs["wan1"] = state?.wan1;
+            resourceInputs["wan2"] = state?.wan2;
         } else {
             const args = argsOrState as ManagementInterfaceArgs | undefined;
-            if ((!args || args.serial === undefined) && !opts.urn) {
+            if (args?.serial === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serial'");
             }
-            resourceInputs["serial"] = args ? args.serial : undefined;
-            resourceInputs["wan1"] = args ? args.wan1 : undefined;
-            resourceInputs["wan2"] = args ? args.wan2 : undefined;
+            resourceInputs["serial"] = args?.serial;
+            resourceInputs["wan1"] = args?.wan1;
+            resourceInputs["wan2"] = args?.wan2;
             resourceInputs["ddnsHostnames"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

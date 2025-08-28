@@ -46,23 +46,23 @@ export class AlertsSettings extends pulumi.CustomResource {
     /**
      * Alert-specific configuration for each type. Only alerts that pertain to the network can be updated.
      */
-    public readonly alerts!: pulumi.Output<outputs.networks.AlertsSettingsAlert[] | undefined>;
+    declare public readonly alerts: pulumi.Output<outputs.networks.AlertsSettingsAlert[] | undefined>;
     /**
      * Alert-specific configuration for each type. Only alerts that pertain to the network can be updated.
      */
-    public /*out*/ readonly alertsResponses!: pulumi.Output<outputs.networks.AlertsSettingsAlertsResponse[]>;
+    declare public /*out*/ readonly alertsResponses: pulumi.Output<outputs.networks.AlertsSettingsAlertsResponse[]>;
     /**
      * The network-wide destinations for all alerts on the network.
      */
-    public readonly defaultDestinations!: pulumi.Output<outputs.networks.AlertsSettingsDefaultDestinations>;
+    declare public readonly defaultDestinations: pulumi.Output<outputs.networks.AlertsSettingsDefaultDestinations>;
     /**
      * muting
      */
-    public readonly muting!: pulumi.Output<outputs.networks.AlertsSettingsMuting>;
+    declare public readonly muting: pulumi.Output<outputs.networks.AlertsSettingsMuting>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
 
     /**
      * Create a AlertsSettings resource with the given unique name, arguments, and options.
@@ -77,20 +77,20 @@ export class AlertsSettings extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as AlertsSettingsState | undefined;
-            resourceInputs["alerts"] = state ? state.alerts : undefined;
-            resourceInputs["alertsResponses"] = state ? state.alertsResponses : undefined;
-            resourceInputs["defaultDestinations"] = state ? state.defaultDestinations : undefined;
-            resourceInputs["muting"] = state ? state.muting : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
+            resourceInputs["alerts"] = state?.alerts;
+            resourceInputs["alertsResponses"] = state?.alertsResponses;
+            resourceInputs["defaultDestinations"] = state?.defaultDestinations;
+            resourceInputs["muting"] = state?.muting;
+            resourceInputs["networkId"] = state?.networkId;
         } else {
             const args = argsOrState as AlertsSettingsArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["alerts"] = args ? args.alerts : undefined;
-            resourceInputs["defaultDestinations"] = args ? args.defaultDestinations : undefined;
-            resourceInputs["muting"] = args ? args.muting : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
+            resourceInputs["alerts"] = args?.alerts;
+            resourceInputs["defaultDestinations"] = args?.defaultDestinations;
+            resourceInputs["muting"] = args?.muting;
+            resourceInputs["networkId"] = args?.networkId;
             resourceInputs["alertsResponses"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

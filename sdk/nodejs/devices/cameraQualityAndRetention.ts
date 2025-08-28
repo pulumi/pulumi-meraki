@@ -61,35 +61,35 @@ export class CameraQualityAndRetention extends pulumi.CustomResource {
     /**
      * Boolean indicating if audio recording is enabled(true) or disabled(false) on the camera
      */
-    public readonly audioRecordingEnabled!: pulumi.Output<boolean>;
+    declare public readonly audioRecordingEnabled: pulumi.Output<boolean>;
     /**
      * Boolean indicating if motion-based retention is enabled(true) or disabled(false) on the camera.
      */
-    public readonly motionBasedRetentionEnabled!: pulumi.Output<boolean>;
+    declare public readonly motionBasedRetentionEnabled: pulumi.Output<boolean>;
     /**
      * The version of the motion detector that will be used by the camera. Only applies to Gen 2 cameras. Defaults to v2.
      */
-    public readonly motionDetectorVersion!: pulumi.Output<number>;
+    declare public readonly motionDetectorVersion: pulumi.Output<number>;
     /**
      * The ID of a quality and retention profile to assign to the camera. The profile's settings will override all of the per-camera quality and retention settings. If the value of this parameter is null, any existing profile will be unassigned from the camera.
      */
-    public readonly profileId!: pulumi.Output<string>;
+    declare public readonly profileId: pulumi.Output<string>;
     /**
      * Quality of the camera. Can be one of 'Standard', 'High' or 'Enhanced'. Not all qualities are supported by every camera model.
      */
-    public readonly quality!: pulumi.Output<string>;
+    declare public readonly quality: pulumi.Output<string>;
     /**
      * Resolution of the camera. Can be one of '1280x720', '1920x1080', '1080x1080', '2112x2112', '2880x2880', '2688x1512' or '3840x2160'.Not all resolutions are supported by every camera model.
      */
-    public readonly resolution!: pulumi.Output<string>;
+    declare public readonly resolution: pulumi.Output<string>;
     /**
      * Boolean indicating if restricted bandwidth is enabled(true) or disabled(false) on the camera. This setting does not apply to MV2 cameras.
      */
-    public readonly restrictedBandwidthModeEnabled!: pulumi.Output<boolean>;
+    declare public readonly restrictedBandwidthModeEnabled: pulumi.Output<boolean>;
     /**
      * serial path parameter.
      */
-    public readonly serial!: pulumi.Output<string>;
+    declare public readonly serial: pulumi.Output<string>;
 
     /**
      * Create a CameraQualityAndRetention resource with the given unique name, arguments, and options.
@@ -104,27 +104,27 @@ export class CameraQualityAndRetention extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CameraQualityAndRetentionState | undefined;
-            resourceInputs["audioRecordingEnabled"] = state ? state.audioRecordingEnabled : undefined;
-            resourceInputs["motionBasedRetentionEnabled"] = state ? state.motionBasedRetentionEnabled : undefined;
-            resourceInputs["motionDetectorVersion"] = state ? state.motionDetectorVersion : undefined;
-            resourceInputs["profileId"] = state ? state.profileId : undefined;
-            resourceInputs["quality"] = state ? state.quality : undefined;
-            resourceInputs["resolution"] = state ? state.resolution : undefined;
-            resourceInputs["restrictedBandwidthModeEnabled"] = state ? state.restrictedBandwidthModeEnabled : undefined;
-            resourceInputs["serial"] = state ? state.serial : undefined;
+            resourceInputs["audioRecordingEnabled"] = state?.audioRecordingEnabled;
+            resourceInputs["motionBasedRetentionEnabled"] = state?.motionBasedRetentionEnabled;
+            resourceInputs["motionDetectorVersion"] = state?.motionDetectorVersion;
+            resourceInputs["profileId"] = state?.profileId;
+            resourceInputs["quality"] = state?.quality;
+            resourceInputs["resolution"] = state?.resolution;
+            resourceInputs["restrictedBandwidthModeEnabled"] = state?.restrictedBandwidthModeEnabled;
+            resourceInputs["serial"] = state?.serial;
         } else {
             const args = argsOrState as CameraQualityAndRetentionArgs | undefined;
-            if ((!args || args.serial === undefined) && !opts.urn) {
+            if (args?.serial === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serial'");
             }
-            resourceInputs["audioRecordingEnabled"] = args ? args.audioRecordingEnabled : undefined;
-            resourceInputs["motionBasedRetentionEnabled"] = args ? args.motionBasedRetentionEnabled : undefined;
-            resourceInputs["motionDetectorVersion"] = args ? args.motionDetectorVersion : undefined;
-            resourceInputs["profileId"] = args ? args.profileId : undefined;
-            resourceInputs["quality"] = args ? args.quality : undefined;
-            resourceInputs["resolution"] = args ? args.resolution : undefined;
-            resourceInputs["restrictedBandwidthModeEnabled"] = args ? args.restrictedBandwidthModeEnabled : undefined;
-            resourceInputs["serial"] = args ? args.serial : undefined;
+            resourceInputs["audioRecordingEnabled"] = args?.audioRecordingEnabled;
+            resourceInputs["motionBasedRetentionEnabled"] = args?.motionBasedRetentionEnabled;
+            resourceInputs["motionDetectorVersion"] = args?.motionDetectorVersion;
+            resourceInputs["profileId"] = args?.profileId;
+            resourceInputs["quality"] = args?.quality;
+            resourceInputs["resolution"] = args?.resolution;
+            resourceInputs["restrictedBandwidthModeEnabled"] = args?.restrictedBandwidthModeEnabled;
+            resourceInputs["serial"] = args?.serial;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(CameraQualityAndRetention.__pulumiType, name, resourceInputs, opts);
