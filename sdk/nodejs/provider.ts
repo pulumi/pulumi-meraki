@@ -26,20 +26,17 @@ export class Provider extends pulumi.ProviderResource {
     }
 
     /**
-     * Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is
-     * (https://api.meraki.com/)
+     * Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is (https://api.meraki.com/)
      */
-    public readonly merakiBaseUrl!: pulumi.Output<string | undefined>;
+    declare public readonly merakiBaseUrl: pulumi.Output<string | undefined>;
     /**
-     * Cisco Meraki merakiDashboardApiKey to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment
-     * variable.
+     * Cisco Meraki merakiDashboardApiKey to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
      */
-    public readonly merakiDashboardApiKey!: pulumi.Output<string | undefined>;
+    declare public readonly merakiDashboardApiKey: pulumi.Output<string | undefined>;
     /**
-     * Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to
-     * `false`.
+     * Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to `false`.
      */
-    public readonly merakiDebug!: pulumi.Output<string | undefined>;
+    declare public readonly merakiDebug: pulumi.Output<string | undefined>;
 
     /**
      * Create a Provider resource with the given unique name, arguments, and options.
@@ -52,10 +49,10 @@ export class Provider extends pulumi.ProviderResource {
         let resourceInputs: pulumi.Inputs = {};
         opts = opts || {};
         {
-            resourceInputs["merakiBaseUrl"] = args ? args.merakiBaseUrl : undefined;
+            resourceInputs["merakiBaseUrl"] = args?.merakiBaseUrl;
             resourceInputs["merakiDashboardApiKey"] = args?.merakiDashboardApiKey ? pulumi.secret(args.merakiDashboardApiKey) : undefined;
-            resourceInputs["merakiDebug"] = args ? args.merakiDebug : undefined;
-            resourceInputs["merakiRequestsPerSecond"] = pulumi.output(args ? args.merakiRequestsPerSecond : undefined).apply(JSON.stringify);
+            resourceInputs["merakiDebug"] = args?.merakiDebug;
+            resourceInputs["merakiRequestsPerSecond"] = pulumi.output(args?.merakiRequestsPerSecond).apply(JSON.stringify);
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         const secretOpts = { additionalSecretOutputs: ["merakiDashboardApiKey"] };
@@ -78,18 +75,15 @@ export class Provider extends pulumi.ProviderResource {
  */
 export interface ProviderArgs {
     /**
-     * Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is
-     * (https://api.meraki.com/)
+     * Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is (https://api.meraki.com/)
      */
     merakiBaseUrl?: pulumi.Input<string>;
     /**
-     * Cisco Meraki merakiDashboardApiKey to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment
-     * variable.
+     * Cisco Meraki merakiDashboardApiKey to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
      */
     merakiDashboardApiKey?: pulumi.Input<string>;
     /**
-     * Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to
-     * `false`.
+     * Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to `false`.
      */
     merakiDebug?: pulumi.Input<string>;
     /**

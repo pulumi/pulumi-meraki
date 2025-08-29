@@ -38,12 +38,12 @@ export class NetworksCombine extends pulumi.CustomResource {
         return obj['__pulumiType'] === NetworksCombine.__pulumiType;
     }
 
-    public /*out*/ readonly item!: pulumi.Output<outputs.organizations.NetworksCombineItem>;
+    declare public /*out*/ readonly item: pulumi.Output<outputs.organizations.NetworksCombineItem>;
     /**
      * organizationId path parameter. Organization ID
      */
-    public readonly organizationId!: pulumi.Output<string>;
-    public readonly parameters!: pulumi.Output<outputs.organizations.NetworksCombineParameters>;
+    declare public readonly organizationId: pulumi.Output<string>;
+    declare public readonly parameters: pulumi.Output<outputs.organizations.NetworksCombineParameters>;
 
     /**
      * Create a NetworksCombine resource with the given unique name, arguments, and options.
@@ -58,19 +58,19 @@ export class NetworksCombine extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as NetworksCombineState | undefined;
-            resourceInputs["item"] = state ? state.item : undefined;
-            resourceInputs["organizationId"] = state ? state.organizationId : undefined;
-            resourceInputs["parameters"] = state ? state.parameters : undefined;
+            resourceInputs["item"] = state?.item;
+            resourceInputs["organizationId"] = state?.organizationId;
+            resourceInputs["parameters"] = state?.parameters;
         } else {
             const args = argsOrState as NetworksCombineArgs | undefined;
-            if ((!args || args.organizationId === undefined) && !opts.urn) {
+            if (args?.organizationId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'organizationId'");
             }
-            if ((!args || args.parameters === undefined) && !opts.urn) {
+            if (args?.parameters === undefined && !opts.urn) {
                 throw new Error("Missing required property 'parameters'");
             }
-            resourceInputs["organizationId"] = args ? args.organizationId : undefined;
-            resourceInputs["parameters"] = args ? args.parameters : undefined;
+            resourceInputs["organizationId"] = args?.organizationId;
+            resourceInputs["parameters"] = args?.parameters;
             resourceInputs["item"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

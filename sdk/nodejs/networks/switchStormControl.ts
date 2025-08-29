@@ -57,19 +57,19 @@ export class SwitchStormControl extends pulumi.CustomResource {
     /**
      * Broadcast threshold.
      */
-    public readonly broadcastThreshold!: pulumi.Output<number>;
+    declare public readonly broadcastThreshold: pulumi.Output<number>;
     /**
      * Multicast threshold.
      */
-    public readonly multicastThreshold!: pulumi.Output<number>;
+    declare public readonly multicastThreshold: pulumi.Output<number>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * Unknown Unicast threshold.
      */
-    public readonly unknownUnicastThreshold!: pulumi.Output<number>;
+    declare public readonly unknownUnicastThreshold: pulumi.Output<number>;
 
     /**
      * Create a SwitchStormControl resource with the given unique name, arguments, and options.
@@ -84,19 +84,19 @@ export class SwitchStormControl extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SwitchStormControlState | undefined;
-            resourceInputs["broadcastThreshold"] = state ? state.broadcastThreshold : undefined;
-            resourceInputs["multicastThreshold"] = state ? state.multicastThreshold : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["unknownUnicastThreshold"] = state ? state.unknownUnicastThreshold : undefined;
+            resourceInputs["broadcastThreshold"] = state?.broadcastThreshold;
+            resourceInputs["multicastThreshold"] = state?.multicastThreshold;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["unknownUnicastThreshold"] = state?.unknownUnicastThreshold;
         } else {
             const args = argsOrState as SwitchStormControlArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["broadcastThreshold"] = args ? args.broadcastThreshold : undefined;
-            resourceInputs["multicastThreshold"] = args ? args.multicastThreshold : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["unknownUnicastThreshold"] = args ? args.unknownUnicastThreshold : undefined;
+            resourceInputs["broadcastThreshold"] = args?.broadcastThreshold;
+            resourceInputs["multicastThreshold"] = args?.multicastThreshold;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["unknownUnicastThreshold"] = args?.unknownUnicastThreshold;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(SwitchStormControl.__pulumiType, name, resourceInputs, opts);

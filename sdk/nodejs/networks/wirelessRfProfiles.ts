@@ -46,55 +46,55 @@ export class WirelessRfProfiles extends pulumi.CustomResource {
     /**
      * Settings that will be enabled if selectionType is set to 'ap'.
      */
-    public readonly apBandSettings!: pulumi.Output<outputs.networks.WirelessRfProfilesApBandSettings>;
+    declare public readonly apBandSettings: pulumi.Output<outputs.networks.WirelessRfProfilesApBandSettings>;
     /**
      * Band selection can be set to either 'ssid' or 'ap'. This param is required on creation.
      */
-    public readonly bandSelectionType!: pulumi.Output<string>;
+    declare public readonly bandSelectionType: pulumi.Output<string>;
     /**
      * Steers client to best available access point. Can be either true or false. Defaults to true.
      */
-    public readonly clientBalancingEnabled!: pulumi.Output<boolean>;
+    declare public readonly clientBalancingEnabled: pulumi.Output<boolean>;
     /**
      * Settings related to 5Ghz band
      */
-    public readonly fiveGhzSettings!: pulumi.Output<outputs.networks.WirelessRfProfilesFiveGhzSettings>;
+    declare public readonly fiveGhzSettings: pulumi.Output<outputs.networks.WirelessRfProfilesFiveGhzSettings>;
     /**
      * Flex radio settings.
      */
-    public readonly flexRadios!: pulumi.Output<outputs.networks.WirelessRfProfilesFlexRadios | undefined>;
+    declare public readonly flexRadios: pulumi.Output<outputs.networks.WirelessRfProfilesFlexRadios | undefined>;
     /**
      * Minimum bitrate can be set to either 'band' or 'ssid'. Defaults to band.
      */
-    public readonly minBitrateType!: pulumi.Output<string>;
+    declare public readonly minBitrateType: pulumi.Output<string>;
     /**
      * The name of the new profile. Must be unique. This param is required on creation.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The network ID of the RF Profile
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * Per-SSID radio settings by number.
      */
-    public readonly perSsidSettings!: pulumi.Output<outputs.networks.WirelessRfProfilesPerSsidSettings>;
+    declare public readonly perSsidSettings: pulumi.Output<outputs.networks.WirelessRfProfilesPerSsidSettings>;
     /**
      * rfProfileId path parameter. Rf profile ID
      */
-    public readonly rfProfileId!: pulumi.Output<string>;
+    declare public readonly rfProfileId: pulumi.Output<string>;
     /**
      * Settings related to 6Ghz band. Only applicable to networks with 6Ghz capable APs
      */
-    public readonly sixGhzSettings!: pulumi.Output<outputs.networks.WirelessRfProfilesSixGhzSettings>;
+    declare public readonly sixGhzSettings: pulumi.Output<outputs.networks.WirelessRfProfilesSixGhzSettings>;
     /**
      * Settings related to radio transmission.
      */
-    public readonly transmission!: pulumi.Output<outputs.networks.WirelessRfProfilesTransmission>;
+    declare public readonly transmission: pulumi.Output<outputs.networks.WirelessRfProfilesTransmission>;
     /**
      * Settings related to 2.4Ghz band
      */
-    public readonly twoFourGhzSettings!: pulumi.Output<outputs.networks.WirelessRfProfilesTwoFourGhzSettings>;
+    declare public readonly twoFourGhzSettings: pulumi.Output<outputs.networks.WirelessRfProfilesTwoFourGhzSettings>;
 
     /**
      * Create a WirelessRfProfiles resource with the given unique name, arguments, and options.
@@ -109,37 +109,37 @@ export class WirelessRfProfiles extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as WirelessRfProfilesState | undefined;
-            resourceInputs["apBandSettings"] = state ? state.apBandSettings : undefined;
-            resourceInputs["bandSelectionType"] = state ? state.bandSelectionType : undefined;
-            resourceInputs["clientBalancingEnabled"] = state ? state.clientBalancingEnabled : undefined;
-            resourceInputs["fiveGhzSettings"] = state ? state.fiveGhzSettings : undefined;
-            resourceInputs["flexRadios"] = state ? state.flexRadios : undefined;
-            resourceInputs["minBitrateType"] = state ? state.minBitrateType : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["perSsidSettings"] = state ? state.perSsidSettings : undefined;
-            resourceInputs["rfProfileId"] = state ? state.rfProfileId : undefined;
-            resourceInputs["sixGhzSettings"] = state ? state.sixGhzSettings : undefined;
-            resourceInputs["transmission"] = state ? state.transmission : undefined;
-            resourceInputs["twoFourGhzSettings"] = state ? state.twoFourGhzSettings : undefined;
+            resourceInputs["apBandSettings"] = state?.apBandSettings;
+            resourceInputs["bandSelectionType"] = state?.bandSelectionType;
+            resourceInputs["clientBalancingEnabled"] = state?.clientBalancingEnabled;
+            resourceInputs["fiveGhzSettings"] = state?.fiveGhzSettings;
+            resourceInputs["flexRadios"] = state?.flexRadios;
+            resourceInputs["minBitrateType"] = state?.minBitrateType;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["perSsidSettings"] = state?.perSsidSettings;
+            resourceInputs["rfProfileId"] = state?.rfProfileId;
+            resourceInputs["sixGhzSettings"] = state?.sixGhzSettings;
+            resourceInputs["transmission"] = state?.transmission;
+            resourceInputs["twoFourGhzSettings"] = state?.twoFourGhzSettings;
         } else {
             const args = argsOrState as WirelessRfProfilesArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["apBandSettings"] = args ? args.apBandSettings : undefined;
-            resourceInputs["bandSelectionType"] = args ? args.bandSelectionType : undefined;
-            resourceInputs["clientBalancingEnabled"] = args ? args.clientBalancingEnabled : undefined;
-            resourceInputs["fiveGhzSettings"] = args ? args.fiveGhzSettings : undefined;
-            resourceInputs["flexRadios"] = args ? args.flexRadios : undefined;
-            resourceInputs["minBitrateType"] = args ? args.minBitrateType : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["perSsidSettings"] = args ? args.perSsidSettings : undefined;
-            resourceInputs["rfProfileId"] = args ? args.rfProfileId : undefined;
-            resourceInputs["sixGhzSettings"] = args ? args.sixGhzSettings : undefined;
-            resourceInputs["transmission"] = args ? args.transmission : undefined;
-            resourceInputs["twoFourGhzSettings"] = args ? args.twoFourGhzSettings : undefined;
+            resourceInputs["apBandSettings"] = args?.apBandSettings;
+            resourceInputs["bandSelectionType"] = args?.bandSelectionType;
+            resourceInputs["clientBalancingEnabled"] = args?.clientBalancingEnabled;
+            resourceInputs["fiveGhzSettings"] = args?.fiveGhzSettings;
+            resourceInputs["flexRadios"] = args?.flexRadios;
+            resourceInputs["minBitrateType"] = args?.minBitrateType;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["perSsidSettings"] = args?.perSsidSettings;
+            resourceInputs["rfProfileId"] = args?.rfProfileId;
+            resourceInputs["sixGhzSettings"] = args?.sixGhzSettings;
+            resourceInputs["transmission"] = args?.transmission;
+            resourceInputs["twoFourGhzSettings"] = args?.twoFourGhzSettings;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(WirelessRfProfiles.__pulumiType, name, resourceInputs, opts);

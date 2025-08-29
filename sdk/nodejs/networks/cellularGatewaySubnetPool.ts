@@ -58,17 +58,17 @@ export class CellularGatewaySubnetPool extends pulumi.CustomResource {
     /**
      * CIDR of the pool of subnets. Each MG in this network will automatically pick a subnet from this pool.
      */
-    public readonly cidr!: pulumi.Output<string>;
-    public /*out*/ readonly deploymentMode!: pulumi.Output<string>;
+    declare public readonly cidr: pulumi.Output<string>;
+    declare public /*out*/ readonly deploymentMode: pulumi.Output<string>;
     /**
      * Mask used for the subnet of all MGs in  this network.
      */
-    public readonly mask!: pulumi.Output<number>;
+    declare public readonly mask: pulumi.Output<number>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
-    public /*out*/ readonly subnets!: pulumi.Output<outputs.networks.CellularGatewaySubnetPoolSubnet[]>;
+    declare public readonly networkId: pulumi.Output<string>;
+    declare public /*out*/ readonly subnets: pulumi.Output<outputs.networks.CellularGatewaySubnetPoolSubnet[]>;
 
     /**
      * Create a CellularGatewaySubnetPool resource with the given unique name, arguments, and options.
@@ -83,19 +83,19 @@ export class CellularGatewaySubnetPool extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CellularGatewaySubnetPoolState | undefined;
-            resourceInputs["cidr"] = state ? state.cidr : undefined;
-            resourceInputs["deploymentMode"] = state ? state.deploymentMode : undefined;
-            resourceInputs["mask"] = state ? state.mask : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["subnets"] = state ? state.subnets : undefined;
+            resourceInputs["cidr"] = state?.cidr;
+            resourceInputs["deploymentMode"] = state?.deploymentMode;
+            resourceInputs["mask"] = state?.mask;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["subnets"] = state?.subnets;
         } else {
             const args = argsOrState as CellularGatewaySubnetPoolArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["cidr"] = args ? args.cidr : undefined;
-            resourceInputs["mask"] = args ? args.mask : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
+            resourceInputs["cidr"] = args?.cidr;
+            resourceInputs["mask"] = args?.mask;
+            resourceInputs["networkId"] = args?.networkId;
             resourceInputs["deploymentMode"] = undefined /*out*/;
             resourceInputs["subnets"] = undefined /*out*/;
         }

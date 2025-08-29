@@ -37,39 +37,39 @@ export class LiveToolsCable extends pulumi.CustomResource {
     /**
      * Id of the cable test request. Used to check the status of the request.
      */
-    public /*out*/ readonly cableTestId!: pulumi.Output<string>;
+    declare public /*out*/ readonly cableTestId: pulumi.Output<string>;
     /**
      * Details for the callback. Please include either an httpServerId OR url and sharedSecret
      */
-    public readonly callback!: pulumi.Output<outputs.devices.LiveToolsCableCallback>;
+    declare public readonly callback: pulumi.Output<outputs.devices.LiveToolsCableCallback>;
     /**
      * An error message for a failed execution
      */
-    public /*out*/ readonly error!: pulumi.Output<string>;
+    declare public /*out*/ readonly error: pulumi.Output<string>;
     /**
      * A list of ports for which to perform the cable test.
      */
-    public readonly ports!: pulumi.Output<string[]>;
+    declare public readonly ports: pulumi.Output<string[]>;
     /**
      * Cable test request parameters
      */
-    public /*out*/ readonly request!: pulumi.Output<outputs.devices.LiveToolsCableRequest>;
+    declare public /*out*/ readonly request: pulumi.Output<outputs.devices.LiveToolsCableRequest>;
     /**
      * Results of the cable test request, one for each requested port.
      */
-    public /*out*/ readonly results!: pulumi.Output<outputs.devices.LiveToolsCableResult[]>;
+    declare public /*out*/ readonly results: pulumi.Output<outputs.devices.LiveToolsCableResult[]>;
     /**
      * serial path parameter.
      */
-    public readonly serial!: pulumi.Output<string>;
+    declare public readonly serial: pulumi.Output<string>;
     /**
      * Status of the cable test request.
      */
-    public /*out*/ readonly status!: pulumi.Output<string>;
+    declare public /*out*/ readonly status: pulumi.Output<string>;
     /**
      * GET this url to check the status of your cable test request.
      */
-    public /*out*/ readonly url!: pulumi.Output<string>;
+    declare public /*out*/ readonly url: pulumi.Output<string>;
 
     /**
      * Create a LiveToolsCable resource with the given unique name, arguments, and options.
@@ -84,23 +84,23 @@ export class LiveToolsCable extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as LiveToolsCableState | undefined;
-            resourceInputs["cableTestId"] = state ? state.cableTestId : undefined;
-            resourceInputs["callback"] = state ? state.callback : undefined;
-            resourceInputs["error"] = state ? state.error : undefined;
-            resourceInputs["ports"] = state ? state.ports : undefined;
-            resourceInputs["request"] = state ? state.request : undefined;
-            resourceInputs["results"] = state ? state.results : undefined;
-            resourceInputs["serial"] = state ? state.serial : undefined;
-            resourceInputs["status"] = state ? state.status : undefined;
-            resourceInputs["url"] = state ? state.url : undefined;
+            resourceInputs["cableTestId"] = state?.cableTestId;
+            resourceInputs["callback"] = state?.callback;
+            resourceInputs["error"] = state?.error;
+            resourceInputs["ports"] = state?.ports;
+            resourceInputs["request"] = state?.request;
+            resourceInputs["results"] = state?.results;
+            resourceInputs["serial"] = state?.serial;
+            resourceInputs["status"] = state?.status;
+            resourceInputs["url"] = state?.url;
         } else {
             const args = argsOrState as LiveToolsCableArgs | undefined;
-            if ((!args || args.serial === undefined) && !opts.urn) {
+            if (args?.serial === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serial'");
             }
-            resourceInputs["callback"] = args ? args.callback : undefined;
-            resourceInputs["ports"] = args ? args.ports : undefined;
-            resourceInputs["serial"] = args ? args.serial : undefined;
+            resourceInputs["callback"] = args?.callback;
+            resourceInputs["ports"] = args?.ports;
+            resourceInputs["serial"] = args?.serial;
             resourceInputs["cableTestId"] = undefined /*out*/;
             resourceInputs["error"] = undefined /*out*/;
             resourceInputs["request"] = undefined /*out*/;

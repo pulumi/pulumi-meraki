@@ -46,27 +46,27 @@ export class VlanProfiles extends pulumi.CustomResource {
     /**
      * IName of the VLAN profile
      */
-    public readonly iname!: pulumi.Output<string>;
+    declare public readonly iname: pulumi.Output<string>;
     /**
      * Boolean indicating the default VLAN Profile for any device that does not have a profile explicitly assigned
      */
-    public /*out*/ readonly isDefault!: pulumi.Output<boolean>;
+    declare public /*out*/ readonly isDefault: pulumi.Output<boolean>;
     /**
      * Name of the profile, string length must be from 1 to 255 characters
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * An array of named VLANs
      */
-    public readonly vlanGroups!: pulumi.Output<outputs.networks.VlanProfilesVlanGroup[]>;
+    declare public readonly vlanGroups: pulumi.Output<outputs.networks.VlanProfilesVlanGroup[]>;
     /**
      * An array of named VLANs
      */
-    public readonly vlanNames!: pulumi.Output<outputs.networks.VlanProfilesVlanName[]>;
+    declare public readonly vlanNames: pulumi.Output<outputs.networks.VlanProfilesVlanName[]>;
 
     /**
      * Create a VlanProfiles resource with the given unique name, arguments, and options.
@@ -81,25 +81,25 @@ export class VlanProfiles extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as VlanProfilesState | undefined;
-            resourceInputs["iname"] = state ? state.iname : undefined;
-            resourceInputs["isDefault"] = state ? state.isDefault : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["vlanGroups"] = state ? state.vlanGroups : undefined;
-            resourceInputs["vlanNames"] = state ? state.vlanNames : undefined;
+            resourceInputs["iname"] = state?.iname;
+            resourceInputs["isDefault"] = state?.isDefault;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["vlanGroups"] = state?.vlanGroups;
+            resourceInputs["vlanNames"] = state?.vlanNames;
         } else {
             const args = argsOrState as VlanProfilesArgs | undefined;
-            if ((!args || args.iname === undefined) && !opts.urn) {
+            if (args?.iname === undefined && !opts.urn) {
                 throw new Error("Missing required property 'iname'");
             }
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["iname"] = args ? args.iname : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["vlanGroups"] = args ? args.vlanGroups : undefined;
-            resourceInputs["vlanNames"] = args ? args.vlanNames : undefined;
+            resourceInputs["iname"] = args?.iname;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["vlanGroups"] = args?.vlanGroups;
+            resourceInputs["vlanNames"] = args?.vlanNames;
             resourceInputs["isDefault"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

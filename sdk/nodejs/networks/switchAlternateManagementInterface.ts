@@ -46,23 +46,23 @@ export class SwitchAlternateManagementInterface extends pulumi.CustomResource {
     /**
      * Boolean value to enable or disable AMI configuration. If enabled, VLAN and protocols must be set
      */
-    public readonly enabled!: pulumi.Output<boolean>;
+    declare public readonly enabled: pulumi.Output<boolean>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * Can be one or more of the following values: 'radius', 'snmp' or 'syslog'
      */
-    public readonly protocols!: pulumi.Output<string[]>;
+    declare public readonly protocols: pulumi.Output<string[]>;
     /**
      * Array of switch serial number and IP assignment. If parameter is present, it cannot have empty body. Note: switches parameter is not applicable for template networks, in other words, do not put 'switches' in the body when updating template networks. Also, an empty 'switches' array will remove all previous assignments
      */
-    public readonly switches!: pulumi.Output<outputs.networks.SwitchAlternateManagementInterfaceSwitch[]>;
+    declare public readonly switches: pulumi.Output<outputs.networks.SwitchAlternateManagementInterfaceSwitch[]>;
     /**
      * Alternate management VLAN, must be between 1 and 4094
      */
-    public readonly vlanId!: pulumi.Output<number>;
+    declare public readonly vlanId: pulumi.Output<number>;
 
     /**
      * Create a SwitchAlternateManagementInterface resource with the given unique name, arguments, and options.
@@ -77,21 +77,21 @@ export class SwitchAlternateManagementInterface extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SwitchAlternateManagementInterfaceState | undefined;
-            resourceInputs["enabled"] = state ? state.enabled : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["protocols"] = state ? state.protocols : undefined;
-            resourceInputs["switches"] = state ? state.switches : undefined;
-            resourceInputs["vlanId"] = state ? state.vlanId : undefined;
+            resourceInputs["enabled"] = state?.enabled;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["protocols"] = state?.protocols;
+            resourceInputs["switches"] = state?.switches;
+            resourceInputs["vlanId"] = state?.vlanId;
         } else {
             const args = argsOrState as SwitchAlternateManagementInterfaceArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["enabled"] = args ? args.enabled : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["protocols"] = args ? args.protocols : undefined;
-            resourceInputs["switches"] = args ? args.switches : undefined;
-            resourceInputs["vlanId"] = args ? args.vlanId : undefined;
+            resourceInputs["enabled"] = args?.enabled;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["protocols"] = args?.protocols;
+            resourceInputs["switches"] = args?.switches;
+            resourceInputs["vlanId"] = args?.vlanId;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(SwitchAlternateManagementInterface.__pulumiType, name, resourceInputs, opts);

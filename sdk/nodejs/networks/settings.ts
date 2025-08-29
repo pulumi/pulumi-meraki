@@ -70,31 +70,31 @@ export class Settings extends pulumi.CustomResource {
     /**
      * A hash of FIPS options applied to the Network
      */
-    public /*out*/ readonly fips!: pulumi.Output<outputs.networks.SettingsFips>;
+    declare public /*out*/ readonly fips: pulumi.Output<outputs.networks.SettingsFips>;
     /**
      * A hash of Local Status page(s)' authentication options applied to the Network.
      */
-    public readonly localStatusPage!: pulumi.Output<outputs.networks.SettingsLocalStatusPage>;
+    declare public readonly localStatusPage: pulumi.Output<outputs.networks.SettingsLocalStatusPage>;
     /**
      * Enables / disables the local device status pages (\n\nmy.meraki.com, \n\n\n\nap.meraki.com, \n\n\n\nswitch.meraki.com, \n\n\n\nwired.meraki.com\n\n). Optional (defaults to false)
      */
-    public readonly localStatusPageEnabled!: pulumi.Output<boolean>;
+    declare public readonly localStatusPageEnabled: pulumi.Output<boolean>;
     /**
      * A hash of Named VLANs options applied to the Network.
      */
-    public readonly namedVlans!: pulumi.Output<outputs.networks.SettingsNamedVlans>;
+    declare public readonly namedVlans: pulumi.Output<outputs.networks.SettingsNamedVlans>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * Enables / disables access to the device status page (\n\nhttp://[device's LAN IP])\n\n. Optional. Can only be set if localStatusPageEnabled is set to true
      */
-    public readonly remoteStatusPageEnabled!: pulumi.Output<boolean>;
+    declare public readonly remoteStatusPageEnabled: pulumi.Output<boolean>;
     /**
      * A hash of SecureConnect options applied to the Network.
      */
-    public readonly securePort!: pulumi.Output<outputs.networks.SettingsSecurePort>;
+    declare public readonly securePort: pulumi.Output<outputs.networks.SettingsSecurePort>;
 
     /**
      * Create a Settings resource with the given unique name, arguments, and options.
@@ -109,24 +109,24 @@ export class Settings extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SettingsState | undefined;
-            resourceInputs["fips"] = state ? state.fips : undefined;
-            resourceInputs["localStatusPage"] = state ? state.localStatusPage : undefined;
-            resourceInputs["localStatusPageEnabled"] = state ? state.localStatusPageEnabled : undefined;
-            resourceInputs["namedVlans"] = state ? state.namedVlans : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["remoteStatusPageEnabled"] = state ? state.remoteStatusPageEnabled : undefined;
-            resourceInputs["securePort"] = state ? state.securePort : undefined;
+            resourceInputs["fips"] = state?.fips;
+            resourceInputs["localStatusPage"] = state?.localStatusPage;
+            resourceInputs["localStatusPageEnabled"] = state?.localStatusPageEnabled;
+            resourceInputs["namedVlans"] = state?.namedVlans;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["remoteStatusPageEnabled"] = state?.remoteStatusPageEnabled;
+            resourceInputs["securePort"] = state?.securePort;
         } else {
             const args = argsOrState as SettingsArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["localStatusPage"] = args ? args.localStatusPage : undefined;
-            resourceInputs["localStatusPageEnabled"] = args ? args.localStatusPageEnabled : undefined;
-            resourceInputs["namedVlans"] = args ? args.namedVlans : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["remoteStatusPageEnabled"] = args ? args.remoteStatusPageEnabled : undefined;
-            resourceInputs["securePort"] = args ? args.securePort : undefined;
+            resourceInputs["localStatusPage"] = args?.localStatusPage;
+            resourceInputs["localStatusPageEnabled"] = args?.localStatusPageEnabled;
+            resourceInputs["namedVlans"] = args?.namedVlans;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["remoteStatusPageEnabled"] = args?.remoteStatusPageEnabled;
+            resourceInputs["securePort"] = args?.securePort;
             resourceInputs["fips"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

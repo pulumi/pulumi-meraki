@@ -130,11 +130,11 @@ export class ApplianceUplinksSettings extends pulumi.CustomResource {
     /**
      * Interface settings.
      */
-    public readonly interfaces!: pulumi.Output<outputs.devices.ApplianceUplinksSettingsInterfaces>;
+    declare public readonly interfaces: pulumi.Output<outputs.devices.ApplianceUplinksSettingsInterfaces>;
     /**
      * serial path parameter.
      */
-    public readonly serial!: pulumi.Output<string>;
+    declare public readonly serial: pulumi.Output<string>;
 
     /**
      * Create a ApplianceUplinksSettings resource with the given unique name, arguments, and options.
@@ -149,15 +149,15 @@ export class ApplianceUplinksSettings extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ApplianceUplinksSettingsState | undefined;
-            resourceInputs["interfaces"] = state ? state.interfaces : undefined;
-            resourceInputs["serial"] = state ? state.serial : undefined;
+            resourceInputs["interfaces"] = state?.interfaces;
+            resourceInputs["serial"] = state?.serial;
         } else {
             const args = argsOrState as ApplianceUplinksSettingsArgs | undefined;
-            if ((!args || args.serial === undefined) && !opts.urn) {
+            if (args?.serial === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serial'");
             }
-            resourceInputs["interfaces"] = args ? args.interfaces : undefined;
-            resourceInputs["serial"] = args ? args.serial : undefined;
+            resourceInputs["interfaces"] = args?.interfaces;
+            resourceInputs["serial"] = args?.serial;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(ApplianceUplinksSettings.__pulumiType, name, resourceInputs, opts);

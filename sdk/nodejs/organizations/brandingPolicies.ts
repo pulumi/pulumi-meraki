@@ -46,34 +46,34 @@ export class BrandingPolicies extends pulumi.CustomResource {
     /**
      * Settings for describing which kinds of admins this policy applies to.
      */
-    public readonly adminSettings!: pulumi.Output<outputs.organizations.BrandingPoliciesAdminSettings>;
+    declare public readonly adminSettings: pulumi.Output<outputs.organizations.BrandingPoliciesAdminSettings>;
     /**
      * brandingPolicyId path parameter. Branding policy ID
      */
-    public readonly brandingPolicyId!: pulumi.Output<string | undefined>;
+    declare public readonly brandingPolicyId: pulumi.Output<string | undefined>;
     /**
      * Properties describing the custom logo attached to the branding policy.
      */
-    public readonly customLogo!: pulumi.Output<outputs.organizations.BrandingPoliciesCustomLogo>;
+    declare public readonly customLogo: pulumi.Output<outputs.organizations.BrandingPoliciesCustomLogo>;
     /**
      * Boolean indicating whether this policy is enabled.
      */
-    public readonly enabled!: pulumi.Output<boolean>;
+    declare public readonly enabled: pulumi.Output<boolean>;
     /**
      * Settings for describing the modifications to various Help page features. Each property in this object accepts one of
      *   'default or inherit' (do not modify functionality), 'hide' (remove the section from Dashboard), or 'show' (always show
      *   the section on Dashboard). Some properties in this object also accept custom HTML used to replace the section on
      *   Dashboard; see the documentation for each property to see the allowed values.
      */
-    public readonly helpSettings!: pulumi.Output<outputs.organizations.BrandingPoliciesHelpSettings>;
+    declare public readonly helpSettings: pulumi.Output<outputs.organizations.BrandingPoliciesHelpSettings>;
     /**
      * Name of the Dashboard branding policy.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * organizationId path parameter. Organization ID
      */
-    public readonly organizationId!: pulumi.Output<string>;
+    declare public readonly organizationId: pulumi.Output<string>;
 
     /**
      * Create a BrandingPolicies resource with the given unique name, arguments, and options.
@@ -88,25 +88,25 @@ export class BrandingPolicies extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as BrandingPoliciesState | undefined;
-            resourceInputs["adminSettings"] = state ? state.adminSettings : undefined;
-            resourceInputs["brandingPolicyId"] = state ? state.brandingPolicyId : undefined;
-            resourceInputs["customLogo"] = state ? state.customLogo : undefined;
-            resourceInputs["enabled"] = state ? state.enabled : undefined;
-            resourceInputs["helpSettings"] = state ? state.helpSettings : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["organizationId"] = state ? state.organizationId : undefined;
+            resourceInputs["adminSettings"] = state?.adminSettings;
+            resourceInputs["brandingPolicyId"] = state?.brandingPolicyId;
+            resourceInputs["customLogo"] = state?.customLogo;
+            resourceInputs["enabled"] = state?.enabled;
+            resourceInputs["helpSettings"] = state?.helpSettings;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["organizationId"] = state?.organizationId;
         } else {
             const args = argsOrState as BrandingPoliciesArgs | undefined;
-            if ((!args || args.organizationId === undefined) && !opts.urn) {
+            if (args?.organizationId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'organizationId'");
             }
-            resourceInputs["adminSettings"] = args ? args.adminSettings : undefined;
-            resourceInputs["brandingPolicyId"] = args ? args.brandingPolicyId : undefined;
-            resourceInputs["customLogo"] = args ? args.customLogo : undefined;
-            resourceInputs["enabled"] = args ? args.enabled : undefined;
-            resourceInputs["helpSettings"] = args ? args.helpSettings : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["organizationId"] = args ? args.organizationId : undefined;
+            resourceInputs["adminSettings"] = args?.adminSettings;
+            resourceInputs["brandingPolicyId"] = args?.brandingPolicyId;
+            resourceInputs["customLogo"] = args?.customLogo;
+            resourceInputs["enabled"] = args?.enabled;
+            resourceInputs["helpSettings"] = args?.helpSettings;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["organizationId"] = args?.organizationId;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(BrandingPolicies.__pulumiType, name, resourceInputs, opts);

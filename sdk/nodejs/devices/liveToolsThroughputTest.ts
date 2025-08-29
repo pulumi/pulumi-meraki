@@ -46,35 +46,35 @@ export class LiveToolsThroughputTest extends pulumi.CustomResource {
     /**
      * Details for the callback. Please include either an httpServerId OR url and sharedSecret
      */
-    public readonly callback!: pulumi.Output<outputs.devices.LiveToolsThroughputTestCallback>;
+    declare public readonly callback: pulumi.Output<outputs.devices.LiveToolsThroughputTestCallback>;
     /**
      * Description of the error.
      */
-    public /*out*/ readonly error!: pulumi.Output<string>;
+    declare public /*out*/ readonly error: pulumi.Output<string>;
     /**
      * The parameters of the throughput test request
      */
-    public /*out*/ readonly request!: pulumi.Output<outputs.devices.LiveToolsThroughputTestRequest>;
+    declare public /*out*/ readonly request: pulumi.Output<outputs.devices.LiveToolsThroughputTestRequest>;
     /**
      * Result of the throughput test request
      */
-    public /*out*/ readonly result!: pulumi.Output<outputs.devices.LiveToolsThroughputTestResult>;
+    declare public /*out*/ readonly result: pulumi.Output<outputs.devices.LiveToolsThroughputTestResult>;
     /**
      * serial path parameter.
      */
-    public readonly serial!: pulumi.Output<string>;
+    declare public readonly serial: pulumi.Output<string>;
     /**
      * Status of the throughput test request
      */
-    public /*out*/ readonly status!: pulumi.Output<string>;
+    declare public /*out*/ readonly status: pulumi.Output<string>;
     /**
      * ID of throughput test job
      */
-    public readonly throughputTestId!: pulumi.Output<string>;
+    declare public readonly throughputTestId: pulumi.Output<string>;
     /**
      * GET this url to check the status of your throughput test request
      */
-    public /*out*/ readonly url!: pulumi.Output<string>;
+    declare public /*out*/ readonly url: pulumi.Output<string>;
 
     /**
      * Create a LiveToolsThroughputTest resource with the given unique name, arguments, and options.
@@ -89,22 +89,22 @@ export class LiveToolsThroughputTest extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as LiveToolsThroughputTestState | undefined;
-            resourceInputs["callback"] = state ? state.callback : undefined;
-            resourceInputs["error"] = state ? state.error : undefined;
-            resourceInputs["request"] = state ? state.request : undefined;
-            resourceInputs["result"] = state ? state.result : undefined;
-            resourceInputs["serial"] = state ? state.serial : undefined;
-            resourceInputs["status"] = state ? state.status : undefined;
-            resourceInputs["throughputTestId"] = state ? state.throughputTestId : undefined;
-            resourceInputs["url"] = state ? state.url : undefined;
+            resourceInputs["callback"] = state?.callback;
+            resourceInputs["error"] = state?.error;
+            resourceInputs["request"] = state?.request;
+            resourceInputs["result"] = state?.result;
+            resourceInputs["serial"] = state?.serial;
+            resourceInputs["status"] = state?.status;
+            resourceInputs["throughputTestId"] = state?.throughputTestId;
+            resourceInputs["url"] = state?.url;
         } else {
             const args = argsOrState as LiveToolsThroughputTestArgs | undefined;
-            if ((!args || args.serial === undefined) && !opts.urn) {
+            if (args?.serial === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serial'");
             }
-            resourceInputs["callback"] = args ? args.callback : undefined;
-            resourceInputs["serial"] = args ? args.serial : undefined;
-            resourceInputs["throughputTestId"] = args ? args.throughputTestId : undefined;
+            resourceInputs["callback"] = args?.callback;
+            resourceInputs["serial"] = args?.serial;
+            resourceInputs["throughputTestId"] = args?.throughputTestId;
             resourceInputs["error"] = undefined /*out*/;
             resourceInputs["request"] = undefined /*out*/;
             resourceInputs["result"] = undefined /*out*/;

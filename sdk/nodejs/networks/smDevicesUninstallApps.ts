@@ -41,12 +41,12 @@ export class SmDevicesUninstallApps extends pulumi.CustomResource {
     /**
      * deviceId path parameter. Device ID
      */
-    public readonly deviceId!: pulumi.Output<string>;
+    declare public readonly deviceId: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
-    public readonly parameters!: pulumi.Output<outputs.networks.SmDevicesUninstallAppsParameters>;
+    declare public readonly networkId: pulumi.Output<string>;
+    declare public readonly parameters: pulumi.Output<outputs.networks.SmDevicesUninstallAppsParameters>;
 
     /**
      * Create a SmDevicesUninstallApps resource with the given unique name, arguments, and options.
@@ -61,23 +61,23 @@ export class SmDevicesUninstallApps extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SmDevicesUninstallAppsState | undefined;
-            resourceInputs["deviceId"] = state ? state.deviceId : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["parameters"] = state ? state.parameters : undefined;
+            resourceInputs["deviceId"] = state?.deviceId;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["parameters"] = state?.parameters;
         } else {
             const args = argsOrState as SmDevicesUninstallAppsArgs | undefined;
-            if ((!args || args.deviceId === undefined) && !opts.urn) {
+            if (args?.deviceId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'deviceId'");
             }
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            if ((!args || args.parameters === undefined) && !opts.urn) {
+            if (args?.parameters === undefined && !opts.urn) {
                 throw new Error("Missing required property 'parameters'");
             }
-            resourceInputs["deviceId"] = args ? args.deviceId : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["parameters"] = args ? args.parameters : undefined;
+            resourceInputs["deviceId"] = args?.deviceId;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["parameters"] = args?.parameters;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(SmDevicesUninstallApps.__pulumiType, name, resourceInputs, opts);

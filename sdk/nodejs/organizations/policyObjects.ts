@@ -62,46 +62,46 @@ export class PolicyObjects extends pulumi.CustomResource {
     /**
      * Category of a policy object (one of: adaptivePolicy, network)
      */
-    public readonly category!: pulumi.Output<string>;
+    declare public readonly category: pulumi.Output<string>;
     /**
      * CIDR Value of a policy object (e.g. 10.11.12.1/24")
      */
-    public readonly cidr!: pulumi.Output<string>;
-    public /*out*/ readonly createdAt!: pulumi.Output<string>;
+    declare public readonly cidr: pulumi.Output<string>;
+    declare public /*out*/ readonly createdAt: pulumi.Output<string>;
     /**
      * Fully qualified domain name of policy object (e.g. "example.com")
      */
-    public readonly fqdn!: pulumi.Output<string>;
+    declare public readonly fqdn: pulumi.Output<string>;
     /**
      * The IDs of policy object groups the policy object belongs to
      */
-    public readonly groupIds!: pulumi.Output<string[]>;
+    declare public readonly groupIds: pulumi.Output<string[]>;
     /**
      * IP Address of a policy object (e.g. "1.2.3.4")
      */
-    public readonly ip!: pulumi.Output<string>;
+    declare public readonly ip: pulumi.Output<string>;
     /**
      * Mask of a policy object (e.g. "255.255.0.0")
      */
-    public readonly mask!: pulumi.Output<string>;
+    declare public readonly mask: pulumi.Output<string>;
     /**
      * Name of a policy object, unique within the organization (alphanumeric, space, dash, or underscore characters only)
      */
-    public readonly name!: pulumi.Output<string>;
-    public /*out*/ readonly networkIds!: pulumi.Output<string[]>;
+    declare public readonly name: pulumi.Output<string>;
+    declare public /*out*/ readonly networkIds: pulumi.Output<string[]>;
     /**
      * organizationId path parameter. Organization ID
      */
-    public readonly organizationId!: pulumi.Output<string>;
+    declare public readonly organizationId: pulumi.Output<string>;
     /**
      * policyObjectId path parameter. Policy object ID
      */
-    public readonly policyObjectId!: pulumi.Output<string>;
+    declare public readonly policyObjectId: pulumi.Output<string>;
     /**
      * Type of a policy object (one of: adaptivePolicyIpv4Cidr, cidr, fqdn, ipAndMask)
      */
-    public readonly type!: pulumi.Output<string>;
-    public /*out*/ readonly updatedAt!: pulumi.Output<string>;
+    declare public readonly type: pulumi.Output<string>;
+    declare public /*out*/ readonly updatedAt: pulumi.Output<string>;
 
     /**
      * Create a PolicyObjects resource with the given unique name, arguments, and options.
@@ -116,34 +116,34 @@ export class PolicyObjects extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as PolicyObjectsState | undefined;
-            resourceInputs["category"] = state ? state.category : undefined;
-            resourceInputs["cidr"] = state ? state.cidr : undefined;
-            resourceInputs["createdAt"] = state ? state.createdAt : undefined;
-            resourceInputs["fqdn"] = state ? state.fqdn : undefined;
-            resourceInputs["groupIds"] = state ? state.groupIds : undefined;
-            resourceInputs["ip"] = state ? state.ip : undefined;
-            resourceInputs["mask"] = state ? state.mask : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["networkIds"] = state ? state.networkIds : undefined;
-            resourceInputs["organizationId"] = state ? state.organizationId : undefined;
-            resourceInputs["policyObjectId"] = state ? state.policyObjectId : undefined;
-            resourceInputs["type"] = state ? state.type : undefined;
-            resourceInputs["updatedAt"] = state ? state.updatedAt : undefined;
+            resourceInputs["category"] = state?.category;
+            resourceInputs["cidr"] = state?.cidr;
+            resourceInputs["createdAt"] = state?.createdAt;
+            resourceInputs["fqdn"] = state?.fqdn;
+            resourceInputs["groupIds"] = state?.groupIds;
+            resourceInputs["ip"] = state?.ip;
+            resourceInputs["mask"] = state?.mask;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["networkIds"] = state?.networkIds;
+            resourceInputs["organizationId"] = state?.organizationId;
+            resourceInputs["policyObjectId"] = state?.policyObjectId;
+            resourceInputs["type"] = state?.type;
+            resourceInputs["updatedAt"] = state?.updatedAt;
         } else {
             const args = argsOrState as PolicyObjectsArgs | undefined;
-            if ((!args || args.organizationId === undefined) && !opts.urn) {
+            if (args?.organizationId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'organizationId'");
             }
-            resourceInputs["category"] = args ? args.category : undefined;
-            resourceInputs["cidr"] = args ? args.cidr : undefined;
-            resourceInputs["fqdn"] = args ? args.fqdn : undefined;
-            resourceInputs["groupIds"] = args ? args.groupIds : undefined;
-            resourceInputs["ip"] = args ? args.ip : undefined;
-            resourceInputs["mask"] = args ? args.mask : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["organizationId"] = args ? args.organizationId : undefined;
-            resourceInputs["policyObjectId"] = args ? args.policyObjectId : undefined;
-            resourceInputs["type"] = args ? args.type : undefined;
+            resourceInputs["category"] = args?.category;
+            resourceInputs["cidr"] = args?.cidr;
+            resourceInputs["fqdn"] = args?.fqdn;
+            resourceInputs["groupIds"] = args?.groupIds;
+            resourceInputs["ip"] = args?.ip;
+            resourceInputs["mask"] = args?.mask;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["organizationId"] = args?.organizationId;
+            resourceInputs["policyObjectId"] = args?.policyObjectId;
+            resourceInputs["type"] = args?.type;
             resourceInputs["createdAt"] = undefined /*out*/;
             resourceInputs["networkIds"] = undefined /*out*/;
             resourceInputs["updatedAt"] = undefined /*out*/;

@@ -81,59 +81,59 @@ export class SwitchStacksRoutingInterfacesDhcp extends pulumi.CustomResource {
     /**
      * The PXE boot server file name for the DHCP server running on the switch stack interface
      */
-    public readonly bootFileName!: pulumi.Output<string>;
+    declare public readonly bootFileName: pulumi.Output<string>;
     /**
      * The PXE boot server IP for the DHCP server running on the switch stack interface
      */
-    public readonly bootNextServer!: pulumi.Output<string>;
+    declare public readonly bootNextServer: pulumi.Output<string>;
     /**
      * Enable DHCP boot options to provide PXE boot options configs for the dhcp server running on the switch stack interface
      */
-    public readonly bootOptionsEnabled!: pulumi.Output<boolean>;
+    declare public readonly bootOptionsEnabled: pulumi.Output<boolean>;
     /**
      * The DHCP lease time config for the dhcp server running on the switch stack interface ('30 minutes', '1 hour', '4 hours', '12 hours', '1 day' or '1 week')
      */
-    public readonly dhcpLeaseTime!: pulumi.Output<string>;
+    declare public readonly dhcpLeaseTime: pulumi.Output<string>;
     /**
      * The DHCP mode options for the switch stack interface ('dhcpDisabled', 'dhcpRelay' or 'dhcpServer')
      */
-    public readonly dhcpMode!: pulumi.Output<string>;
+    declare public readonly dhcpMode: pulumi.Output<string>;
     /**
      * Array of DHCP options consisting of code, type and value for the DHCP server running on the switch stack interface
      */
-    public readonly dhcpOptions!: pulumi.Output<outputs.networks.SwitchStacksRoutingInterfacesDhcpDhcpOption[]>;
+    declare public readonly dhcpOptions: pulumi.Output<outputs.networks.SwitchStacksRoutingInterfacesDhcpDhcpOption[]>;
     /**
      * The DHCP relay server IPs to which DHCP packets would get relayed for the switch stack interface
      */
-    public readonly dhcpRelayServerIps!: pulumi.Output<string[]>;
+    declare public readonly dhcpRelayServerIps: pulumi.Output<string[]>;
     /**
      * The DHCP name server IPs when DHCP name server option is 'custom'
      */
-    public readonly dnsCustomNameservers!: pulumi.Output<string[]>;
+    declare public readonly dnsCustomNameservers: pulumi.Output<string[]>;
     /**
      * The DHCP name server option for the dhcp server running on the switch stack interface ('googlePublicDns', 'openDns' or 'custom')
      */
-    public readonly dnsNameserversOption!: pulumi.Output<string>;
+    declare public readonly dnsNameserversOption: pulumi.Output<string>;
     /**
      * Array of DHCP reserved IP assignments for the DHCP server running on the switch stack interface
      */
-    public readonly fixedIpAssignments!: pulumi.Output<outputs.networks.SwitchStacksRoutingInterfacesDhcpFixedIpAssignment[]>;
+    declare public readonly fixedIpAssignments: pulumi.Output<outputs.networks.SwitchStacksRoutingInterfacesDhcpFixedIpAssignment[]>;
     /**
      * interfaceId path parameter. Interface ID
      */
-    public readonly interfaceId!: pulumi.Output<string>;
+    declare public readonly interfaceId: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * Array of DHCP reserved IP assignments for the DHCP server running on the switch stack interface
      */
-    public readonly reservedIpRanges!: pulumi.Output<outputs.networks.SwitchStacksRoutingInterfacesDhcpReservedIpRange[]>;
+    declare public readonly reservedIpRanges: pulumi.Output<outputs.networks.SwitchStacksRoutingInterfacesDhcpReservedIpRange[]>;
     /**
      * switchStackId path parameter. Switch stack ID
      */
-    public readonly switchStackId!: pulumi.Output<string>;
+    declare public readonly switchStackId: pulumi.Output<string>;
 
     /**
      * Create a SwitchStacksRoutingInterfacesDhcp resource with the given unique name, arguments, and options.
@@ -148,45 +148,45 @@ export class SwitchStacksRoutingInterfacesDhcp extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SwitchStacksRoutingInterfacesDhcpState | undefined;
-            resourceInputs["bootFileName"] = state ? state.bootFileName : undefined;
-            resourceInputs["bootNextServer"] = state ? state.bootNextServer : undefined;
-            resourceInputs["bootOptionsEnabled"] = state ? state.bootOptionsEnabled : undefined;
-            resourceInputs["dhcpLeaseTime"] = state ? state.dhcpLeaseTime : undefined;
-            resourceInputs["dhcpMode"] = state ? state.dhcpMode : undefined;
-            resourceInputs["dhcpOptions"] = state ? state.dhcpOptions : undefined;
-            resourceInputs["dhcpRelayServerIps"] = state ? state.dhcpRelayServerIps : undefined;
-            resourceInputs["dnsCustomNameservers"] = state ? state.dnsCustomNameservers : undefined;
-            resourceInputs["dnsNameserversOption"] = state ? state.dnsNameserversOption : undefined;
-            resourceInputs["fixedIpAssignments"] = state ? state.fixedIpAssignments : undefined;
-            resourceInputs["interfaceId"] = state ? state.interfaceId : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["reservedIpRanges"] = state ? state.reservedIpRanges : undefined;
-            resourceInputs["switchStackId"] = state ? state.switchStackId : undefined;
+            resourceInputs["bootFileName"] = state?.bootFileName;
+            resourceInputs["bootNextServer"] = state?.bootNextServer;
+            resourceInputs["bootOptionsEnabled"] = state?.bootOptionsEnabled;
+            resourceInputs["dhcpLeaseTime"] = state?.dhcpLeaseTime;
+            resourceInputs["dhcpMode"] = state?.dhcpMode;
+            resourceInputs["dhcpOptions"] = state?.dhcpOptions;
+            resourceInputs["dhcpRelayServerIps"] = state?.dhcpRelayServerIps;
+            resourceInputs["dnsCustomNameservers"] = state?.dnsCustomNameservers;
+            resourceInputs["dnsNameserversOption"] = state?.dnsNameserversOption;
+            resourceInputs["fixedIpAssignments"] = state?.fixedIpAssignments;
+            resourceInputs["interfaceId"] = state?.interfaceId;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["reservedIpRanges"] = state?.reservedIpRanges;
+            resourceInputs["switchStackId"] = state?.switchStackId;
         } else {
             const args = argsOrState as SwitchStacksRoutingInterfacesDhcpArgs | undefined;
-            if ((!args || args.interfaceId === undefined) && !opts.urn) {
+            if (args?.interfaceId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'interfaceId'");
             }
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            if ((!args || args.switchStackId === undefined) && !opts.urn) {
+            if (args?.switchStackId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'switchStackId'");
             }
-            resourceInputs["bootFileName"] = args ? args.bootFileName : undefined;
-            resourceInputs["bootNextServer"] = args ? args.bootNextServer : undefined;
-            resourceInputs["bootOptionsEnabled"] = args ? args.bootOptionsEnabled : undefined;
-            resourceInputs["dhcpLeaseTime"] = args ? args.dhcpLeaseTime : undefined;
-            resourceInputs["dhcpMode"] = args ? args.dhcpMode : undefined;
-            resourceInputs["dhcpOptions"] = args ? args.dhcpOptions : undefined;
-            resourceInputs["dhcpRelayServerIps"] = args ? args.dhcpRelayServerIps : undefined;
-            resourceInputs["dnsCustomNameservers"] = args ? args.dnsCustomNameservers : undefined;
-            resourceInputs["dnsNameserversOption"] = args ? args.dnsNameserversOption : undefined;
-            resourceInputs["fixedIpAssignments"] = args ? args.fixedIpAssignments : undefined;
-            resourceInputs["interfaceId"] = args ? args.interfaceId : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["reservedIpRanges"] = args ? args.reservedIpRanges : undefined;
-            resourceInputs["switchStackId"] = args ? args.switchStackId : undefined;
+            resourceInputs["bootFileName"] = args?.bootFileName;
+            resourceInputs["bootNextServer"] = args?.bootNextServer;
+            resourceInputs["bootOptionsEnabled"] = args?.bootOptionsEnabled;
+            resourceInputs["dhcpLeaseTime"] = args?.dhcpLeaseTime;
+            resourceInputs["dhcpMode"] = args?.dhcpMode;
+            resourceInputs["dhcpOptions"] = args?.dhcpOptions;
+            resourceInputs["dhcpRelayServerIps"] = args?.dhcpRelayServerIps;
+            resourceInputs["dnsCustomNameservers"] = args?.dnsCustomNameservers;
+            resourceInputs["dnsNameserversOption"] = args?.dnsNameserversOption;
+            resourceInputs["fixedIpAssignments"] = args?.fixedIpAssignments;
+            resourceInputs["interfaceId"] = args?.interfaceId;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["reservedIpRanges"] = args?.reservedIpRanges;
+            resourceInputs["switchStackId"] = args?.switchStackId;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(SwitchStacksRoutingInterfacesDhcp.__pulumiType, name, resourceInputs, opts);

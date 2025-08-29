@@ -41,8 +41,8 @@ export class ApplianceTrafficShapingCustomPerformanceClasses extends pulumi.Cust
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
-    public readonly parameters!: pulumi.Output<outputs.networks.ApplianceTrafficShapingCustomPerformanceClassesParameters>;
+    declare public readonly networkId: pulumi.Output<string>;
+    declare public readonly parameters: pulumi.Output<outputs.networks.ApplianceTrafficShapingCustomPerformanceClassesParameters>;
 
     /**
      * Create a ApplianceTrafficShapingCustomPerformanceClasses resource with the given unique name, arguments, and options.
@@ -57,18 +57,18 @@ export class ApplianceTrafficShapingCustomPerformanceClasses extends pulumi.Cust
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ApplianceTrafficShapingCustomPerformanceClassesState | undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["parameters"] = state ? state.parameters : undefined;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["parameters"] = state?.parameters;
         } else {
             const args = argsOrState as ApplianceTrafficShapingCustomPerformanceClassesArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            if ((!args || args.parameters === undefined) && !opts.urn) {
+            if (args?.parameters === undefined && !opts.urn) {
                 throw new Error("Missing required property 'parameters'");
             }
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["parameters"] = args ? args.parameters : undefined;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["parameters"] = args?.parameters;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(ApplianceTrafficShapingCustomPerformanceClasses.__pulumiType, name, resourceInputs, opts);

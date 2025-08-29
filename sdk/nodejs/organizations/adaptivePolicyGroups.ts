@@ -60,31 +60,31 @@ export class AdaptivePolicyGroups extends pulumi.CustomResource {
         return obj['__pulumiType'] === AdaptivePolicyGroups.__pulumiType;
     }
 
-    public /*out*/ readonly createdAt!: pulumi.Output<string>;
+    declare public /*out*/ readonly createdAt: pulumi.Output<string>;
     /**
      * Description of the group (default: "")
      */
-    public readonly description!: pulumi.Output<string>;
-    public /*out*/ readonly groupId!: pulumi.Output<string>;
-    public /*out*/ readonly isDefaultGroup!: pulumi.Output<boolean>;
+    declare public readonly description: pulumi.Output<string>;
+    declare public /*out*/ readonly groupId: pulumi.Output<string>;
+    declare public /*out*/ readonly isDefaultGroup: pulumi.Output<boolean>;
     /**
      * Name of the group
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * organizationId path parameter. Organization ID
      */
-    public readonly organizationId!: pulumi.Output<string>;
+    declare public readonly organizationId: pulumi.Output<string>;
     /**
      * The policy objects that belong to this group; traffic from addresses specified by these policy objects will be tagged with this group's SGT value if no other tagging scheme is being used (each requires one unique attribute) ()
      */
-    public readonly policyObjects!: pulumi.Output<outputs.organizations.AdaptivePolicyGroupsPolicyObject[]>;
-    public /*out*/ readonly requiredIpMappings!: pulumi.Output<string[]>;
+    declare public readonly policyObjects: pulumi.Output<outputs.organizations.AdaptivePolicyGroupsPolicyObject[]>;
+    declare public /*out*/ readonly requiredIpMappings: pulumi.Output<string[]>;
     /**
      * SGT value of the group
      */
-    public readonly sgt!: pulumi.Output<number>;
-    public /*out*/ readonly updatedAt!: pulumi.Output<string>;
+    declare public readonly sgt: pulumi.Output<number>;
+    declare public /*out*/ readonly updatedAt: pulumi.Output<string>;
 
     /**
      * Create a AdaptivePolicyGroups resource with the given unique name, arguments, and options.
@@ -99,26 +99,26 @@ export class AdaptivePolicyGroups extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as AdaptivePolicyGroupsState | undefined;
-            resourceInputs["createdAt"] = state ? state.createdAt : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["groupId"] = state ? state.groupId : undefined;
-            resourceInputs["isDefaultGroup"] = state ? state.isDefaultGroup : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["organizationId"] = state ? state.organizationId : undefined;
-            resourceInputs["policyObjects"] = state ? state.policyObjects : undefined;
-            resourceInputs["requiredIpMappings"] = state ? state.requiredIpMappings : undefined;
-            resourceInputs["sgt"] = state ? state.sgt : undefined;
-            resourceInputs["updatedAt"] = state ? state.updatedAt : undefined;
+            resourceInputs["createdAt"] = state?.createdAt;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["groupId"] = state?.groupId;
+            resourceInputs["isDefaultGroup"] = state?.isDefaultGroup;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["organizationId"] = state?.organizationId;
+            resourceInputs["policyObjects"] = state?.policyObjects;
+            resourceInputs["requiredIpMappings"] = state?.requiredIpMappings;
+            resourceInputs["sgt"] = state?.sgt;
+            resourceInputs["updatedAt"] = state?.updatedAt;
         } else {
             const args = argsOrState as AdaptivePolicyGroupsArgs | undefined;
-            if ((!args || args.organizationId === undefined) && !opts.urn) {
+            if (args?.organizationId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'organizationId'");
             }
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["organizationId"] = args ? args.organizationId : undefined;
-            resourceInputs["policyObjects"] = args ? args.policyObjects : undefined;
-            resourceInputs["sgt"] = args ? args.sgt : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["organizationId"] = args?.organizationId;
+            resourceInputs["policyObjects"] = args?.policyObjects;
+            resourceInputs["sgt"] = args?.sgt;
             resourceInputs["createdAt"] = undefined /*out*/;
             resourceInputs["groupId"] = undefined /*out*/;
             resourceInputs["isDefaultGroup"] = undefined /*out*/;

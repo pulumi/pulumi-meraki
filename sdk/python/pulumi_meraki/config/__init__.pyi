@@ -16,20 +16,17 @@ from .. import _utilities
 
 merakiBaseUrl: Optional[str]
 """
-Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is
-(https://api.meraki.com/)
+Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is (https://api.meraki.com/)
 """
 
 merakiDashboardApiKey: Optional[str]
 """
-Cisco Meraki meraki_dashboard_api_key to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment
-variable.
+Cisco Meraki meraki_dashboard_api_key to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
 """
 
 merakiDebug: Optional[str]
 """
-Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to
-`false`.
+Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to `false`.
 """
 
 merakiRequestsPerSecond: Optional[int]

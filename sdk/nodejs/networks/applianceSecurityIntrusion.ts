@@ -46,19 +46,19 @@ export class ApplianceSecurityIntrusion extends pulumi.CustomResource {
     /**
      * Intrusion detection ruleset
      */
-    public readonly idsRulesets!: pulumi.Output<string>;
+    declare public readonly idsRulesets: pulumi.Output<string>;
     /**
      * Intrusion detection mode
      */
-    public readonly mode!: pulumi.Output<string>;
+    declare public readonly mode: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * Networks included in and excluded from the detection engine
      */
-    public readonly protectedNetworks!: pulumi.Output<outputs.networks.ApplianceSecurityIntrusionProtectedNetworks>;
+    declare public readonly protectedNetworks: pulumi.Output<outputs.networks.ApplianceSecurityIntrusionProtectedNetworks>;
 
     /**
      * Create a ApplianceSecurityIntrusion resource with the given unique name, arguments, and options.
@@ -73,19 +73,19 @@ export class ApplianceSecurityIntrusion extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ApplianceSecurityIntrusionState | undefined;
-            resourceInputs["idsRulesets"] = state ? state.idsRulesets : undefined;
-            resourceInputs["mode"] = state ? state.mode : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["protectedNetworks"] = state ? state.protectedNetworks : undefined;
+            resourceInputs["idsRulesets"] = state?.idsRulesets;
+            resourceInputs["mode"] = state?.mode;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["protectedNetworks"] = state?.protectedNetworks;
         } else {
             const args = argsOrState as ApplianceSecurityIntrusionArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["idsRulesets"] = args ? args.idsRulesets : undefined;
-            resourceInputs["mode"] = args ? args.mode : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["protectedNetworks"] = args ? args.protectedNetworks : undefined;
+            resourceInputs["idsRulesets"] = args?.idsRulesets;
+            resourceInputs["mode"] = args?.mode;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["protectedNetworks"] = args?.protectedNetworks;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(ApplianceSecurityIntrusion.__pulumiType, name, resourceInputs, opts);

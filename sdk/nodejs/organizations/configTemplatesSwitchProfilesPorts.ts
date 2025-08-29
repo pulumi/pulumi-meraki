@@ -95,123 +95,123 @@ export class ConfigTemplatesSwitchProfilesPorts extends pulumi.CustomResource {
     /**
      * The number of a custom access policy to configure on the switch template port. Only applicable when 'accessPolicyType' is 'Custom access policy'.
      */
-    public readonly accessPolicyNumber!: pulumi.Output<number>;
+    declare public readonly accessPolicyNumber: pulumi.Output<number>;
     /**
      * The type of the access policy of the switch template port. Only applicable to access ports. Can be one of 'Open', 'Custom access policy', 'MAC allow list' or 'Sticky MAC allow list'.
      */
-    public readonly accessPolicyType!: pulumi.Output<string>;
+    declare public readonly accessPolicyType: pulumi.Output<string>;
     /**
      * The VLANs allowed on the switch template port. Only applicable to trunk ports.
      */
-    public readonly allowedVlans!: pulumi.Output<string>;
+    declare public readonly allowedVlans: pulumi.Output<string>;
     /**
      * configTemplateId path parameter. Config template ID
      */
-    public readonly configTemplateId!: pulumi.Output<string>;
+    declare public readonly configTemplateId: pulumi.Output<string>;
     /**
      * If true, ARP packets for this port will be considered trusted, and Dynamic ARP Inspection will allow the traffic.
      */
-    public readonly daiTrusted!: pulumi.Output<boolean>;
+    declare public readonly daiTrusted: pulumi.Output<boolean>;
     /**
      * The status of the switch template port.
      */
-    public readonly enabled!: pulumi.Output<boolean>;
+    declare public readonly enabled: pulumi.Output<boolean>;
     /**
      * For supported switches (e.g. MS420/MS425), whether or not the port has flexible stacking enabled.
      */
-    public readonly flexibleStackingEnabled!: pulumi.Output<boolean>;
+    declare public readonly flexibleStackingEnabled: pulumi.Output<boolean>;
     /**
      * The isolation status of the switch template port.
      */
-    public readonly isolationEnabled!: pulumi.Output<boolean>;
+    declare public readonly isolationEnabled: pulumi.Output<boolean>;
     /**
      * The link speed for the switch template port.
      */
-    public readonly linkNegotiation!: pulumi.Output<string>;
+    declare public readonly linkNegotiation: pulumi.Output<string>;
     /**
      * Available link speeds for the switch template port.
      */
-    public /*out*/ readonly linkNegotiationCapabilities!: pulumi.Output<string[]>;
+    declare public /*out*/ readonly linkNegotiationCapabilities: pulumi.Output<string[]>;
     /**
      * Only devices with MAC addresses specified in this list will have access to this port. Up to 20 MAC addresses can be defined. Only applicable when 'accessPolicyType' is 'MAC allow list'.
      */
-    public readonly macAllowLists!: pulumi.Output<string[]>;
+    declare public readonly macAllowLists: pulumi.Output<string[]>;
     /**
      * Port mirror
      */
-    public /*out*/ readonly mirror!: pulumi.Output<outputs.organizations.ConfigTemplatesSwitchProfilesPortsMirror>;
+    declare public /*out*/ readonly mirror: pulumi.Output<outputs.organizations.ConfigTemplatesSwitchProfilesPortsMirror>;
     /**
      * Expansion module
      */
-    public /*out*/ readonly module!: pulumi.Output<outputs.organizations.ConfigTemplatesSwitchProfilesPortsModule>;
+    declare public /*out*/ readonly module: pulumi.Output<outputs.organizations.ConfigTemplatesSwitchProfilesPortsModule>;
     /**
      * The name of the switch template port.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * organizationId path parameter. Organization ID
      */
-    public readonly organizationId!: pulumi.Output<string>;
+    declare public readonly organizationId: pulumi.Output<string>;
     /**
      * The PoE status of the switch template port.
      */
-    public readonly poeEnabled!: pulumi.Output<boolean>;
+    declare public readonly poeEnabled: pulumi.Output<boolean>;
     /**
      * The identifier of the switch template port.
      */
-    public readonly portId!: pulumi.Output<string>;
+    declare public readonly portId: pulumi.Output<string>;
     /**
      * The ID of the port schedule. A value of null will clear the port schedule.
      */
-    public readonly portScheduleId!: pulumi.Output<string>;
+    declare public readonly portScheduleId: pulumi.Output<string>;
     /**
      * Profile attributes
      */
-    public readonly profile!: pulumi.Output<outputs.organizations.ConfigTemplatesSwitchProfilesPortsProfile>;
+    declare public readonly profile: pulumi.Output<outputs.organizations.ConfigTemplatesSwitchProfilesPortsProfile>;
     /**
      * profileId path parameter. Profile ID
      */
-    public readonly profileId!: pulumi.Output<string>;
+    declare public readonly profileId: pulumi.Output<string>;
     /**
      * The rapid spanning tree protocol status.
      */
-    public readonly rstpEnabled!: pulumi.Output<boolean>;
+    declare public readonly rstpEnabled: pulumi.Output<boolean>;
     /**
      * The maximum number of MAC addresses for sticky MAC allow list. Only applicable when 'accessPolicyType' is 'Sticky MAC allow list'.
      */
-    public readonly stickyMacAllowListLimit!: pulumi.Output<number>;
+    declare public readonly stickyMacAllowListLimit: pulumi.Output<number>;
     /**
      * The initial list of MAC addresses for sticky Mac allow list. Only applicable when 'accessPolicyType' is 'Sticky MAC allow list'.
      */
-    public readonly stickyMacAllowLists!: pulumi.Output<string[]>;
+    declare public readonly stickyMacAllowLists: pulumi.Output<string[]>;
     /**
      * The storm control status of the switch template port.
      */
-    public readonly stormControlEnabled!: pulumi.Output<boolean>;
+    declare public readonly stormControlEnabled: pulumi.Output<boolean>;
     /**
      * The state of the STP guard ('disabled', 'root guard', 'bpdu guard' or 'loop guard').
      */
-    public readonly stpGuard!: pulumi.Output<string>;
+    declare public readonly stpGuard: pulumi.Output<string>;
     /**
      * The list of tags of the switch template port.
      */
-    public readonly tags!: pulumi.Output<string[]>;
+    declare public readonly tags: pulumi.Output<string[]>;
     /**
      * The type of the switch template port ('trunk' or 'access').
      */
-    public readonly type!: pulumi.Output<string>;
+    declare public readonly type: pulumi.Output<string>;
     /**
      * The action to take when Unidirectional Link is detected (Alert only, Enforce). Default configuration is Alert only.
      */
-    public readonly udld!: pulumi.Output<string>;
+    declare public readonly udld: pulumi.Output<string>;
     /**
      * The VLAN of the switch template port. For a trunk port, this is the native VLAN. A null value will clear the value set for trunk ports.
      */
-    public readonly vlan!: pulumi.Output<number>;
+    declare public readonly vlan: pulumi.Output<number>;
     /**
      * The voice VLAN of the switch template port. Only applicable to access ports.
      */
-    public readonly voiceVlan!: pulumi.Output<number>;
+    declare public readonly voiceVlan: pulumi.Output<number>;
 
     /**
      * Create a ConfigTemplatesSwitchProfilesPorts resource with the given unique name, arguments, and options.
@@ -226,77 +226,77 @@ export class ConfigTemplatesSwitchProfilesPorts extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ConfigTemplatesSwitchProfilesPortsState | undefined;
-            resourceInputs["accessPolicyNumber"] = state ? state.accessPolicyNumber : undefined;
-            resourceInputs["accessPolicyType"] = state ? state.accessPolicyType : undefined;
-            resourceInputs["allowedVlans"] = state ? state.allowedVlans : undefined;
-            resourceInputs["configTemplateId"] = state ? state.configTemplateId : undefined;
-            resourceInputs["daiTrusted"] = state ? state.daiTrusted : undefined;
-            resourceInputs["enabled"] = state ? state.enabled : undefined;
-            resourceInputs["flexibleStackingEnabled"] = state ? state.flexibleStackingEnabled : undefined;
-            resourceInputs["isolationEnabled"] = state ? state.isolationEnabled : undefined;
-            resourceInputs["linkNegotiation"] = state ? state.linkNegotiation : undefined;
-            resourceInputs["linkNegotiationCapabilities"] = state ? state.linkNegotiationCapabilities : undefined;
-            resourceInputs["macAllowLists"] = state ? state.macAllowLists : undefined;
-            resourceInputs["mirror"] = state ? state.mirror : undefined;
-            resourceInputs["module"] = state ? state.module : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["organizationId"] = state ? state.organizationId : undefined;
-            resourceInputs["poeEnabled"] = state ? state.poeEnabled : undefined;
-            resourceInputs["portId"] = state ? state.portId : undefined;
-            resourceInputs["portScheduleId"] = state ? state.portScheduleId : undefined;
-            resourceInputs["profile"] = state ? state.profile : undefined;
-            resourceInputs["profileId"] = state ? state.profileId : undefined;
-            resourceInputs["rstpEnabled"] = state ? state.rstpEnabled : undefined;
-            resourceInputs["stickyMacAllowListLimit"] = state ? state.stickyMacAllowListLimit : undefined;
-            resourceInputs["stickyMacAllowLists"] = state ? state.stickyMacAllowLists : undefined;
-            resourceInputs["stormControlEnabled"] = state ? state.stormControlEnabled : undefined;
-            resourceInputs["stpGuard"] = state ? state.stpGuard : undefined;
-            resourceInputs["tags"] = state ? state.tags : undefined;
-            resourceInputs["type"] = state ? state.type : undefined;
-            resourceInputs["udld"] = state ? state.udld : undefined;
-            resourceInputs["vlan"] = state ? state.vlan : undefined;
-            resourceInputs["voiceVlan"] = state ? state.voiceVlan : undefined;
+            resourceInputs["accessPolicyNumber"] = state?.accessPolicyNumber;
+            resourceInputs["accessPolicyType"] = state?.accessPolicyType;
+            resourceInputs["allowedVlans"] = state?.allowedVlans;
+            resourceInputs["configTemplateId"] = state?.configTemplateId;
+            resourceInputs["daiTrusted"] = state?.daiTrusted;
+            resourceInputs["enabled"] = state?.enabled;
+            resourceInputs["flexibleStackingEnabled"] = state?.flexibleStackingEnabled;
+            resourceInputs["isolationEnabled"] = state?.isolationEnabled;
+            resourceInputs["linkNegotiation"] = state?.linkNegotiation;
+            resourceInputs["linkNegotiationCapabilities"] = state?.linkNegotiationCapabilities;
+            resourceInputs["macAllowLists"] = state?.macAllowLists;
+            resourceInputs["mirror"] = state?.mirror;
+            resourceInputs["module"] = state?.module;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["organizationId"] = state?.organizationId;
+            resourceInputs["poeEnabled"] = state?.poeEnabled;
+            resourceInputs["portId"] = state?.portId;
+            resourceInputs["portScheduleId"] = state?.portScheduleId;
+            resourceInputs["profile"] = state?.profile;
+            resourceInputs["profileId"] = state?.profileId;
+            resourceInputs["rstpEnabled"] = state?.rstpEnabled;
+            resourceInputs["stickyMacAllowListLimit"] = state?.stickyMacAllowListLimit;
+            resourceInputs["stickyMacAllowLists"] = state?.stickyMacAllowLists;
+            resourceInputs["stormControlEnabled"] = state?.stormControlEnabled;
+            resourceInputs["stpGuard"] = state?.stpGuard;
+            resourceInputs["tags"] = state?.tags;
+            resourceInputs["type"] = state?.type;
+            resourceInputs["udld"] = state?.udld;
+            resourceInputs["vlan"] = state?.vlan;
+            resourceInputs["voiceVlan"] = state?.voiceVlan;
         } else {
             const args = argsOrState as ConfigTemplatesSwitchProfilesPortsArgs | undefined;
-            if ((!args || args.configTemplateId === undefined) && !opts.urn) {
+            if (args?.configTemplateId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'configTemplateId'");
             }
-            if ((!args || args.organizationId === undefined) && !opts.urn) {
+            if (args?.organizationId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'organizationId'");
             }
-            if ((!args || args.portId === undefined) && !opts.urn) {
+            if (args?.portId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'portId'");
             }
-            if ((!args || args.profileId === undefined) && !opts.urn) {
+            if (args?.profileId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'profileId'");
             }
-            resourceInputs["accessPolicyNumber"] = args ? args.accessPolicyNumber : undefined;
-            resourceInputs["accessPolicyType"] = args ? args.accessPolicyType : undefined;
-            resourceInputs["allowedVlans"] = args ? args.allowedVlans : undefined;
-            resourceInputs["configTemplateId"] = args ? args.configTemplateId : undefined;
-            resourceInputs["daiTrusted"] = args ? args.daiTrusted : undefined;
-            resourceInputs["enabled"] = args ? args.enabled : undefined;
-            resourceInputs["flexibleStackingEnabled"] = args ? args.flexibleStackingEnabled : undefined;
-            resourceInputs["isolationEnabled"] = args ? args.isolationEnabled : undefined;
-            resourceInputs["linkNegotiation"] = args ? args.linkNegotiation : undefined;
-            resourceInputs["macAllowLists"] = args ? args.macAllowLists : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["organizationId"] = args ? args.organizationId : undefined;
-            resourceInputs["poeEnabled"] = args ? args.poeEnabled : undefined;
-            resourceInputs["portId"] = args ? args.portId : undefined;
-            resourceInputs["portScheduleId"] = args ? args.portScheduleId : undefined;
-            resourceInputs["profile"] = args ? args.profile : undefined;
-            resourceInputs["profileId"] = args ? args.profileId : undefined;
-            resourceInputs["rstpEnabled"] = args ? args.rstpEnabled : undefined;
-            resourceInputs["stickyMacAllowListLimit"] = args ? args.stickyMacAllowListLimit : undefined;
-            resourceInputs["stickyMacAllowLists"] = args ? args.stickyMacAllowLists : undefined;
-            resourceInputs["stormControlEnabled"] = args ? args.stormControlEnabled : undefined;
-            resourceInputs["stpGuard"] = args ? args.stpGuard : undefined;
-            resourceInputs["tags"] = args ? args.tags : undefined;
-            resourceInputs["type"] = args ? args.type : undefined;
-            resourceInputs["udld"] = args ? args.udld : undefined;
-            resourceInputs["vlan"] = args ? args.vlan : undefined;
-            resourceInputs["voiceVlan"] = args ? args.voiceVlan : undefined;
+            resourceInputs["accessPolicyNumber"] = args?.accessPolicyNumber;
+            resourceInputs["accessPolicyType"] = args?.accessPolicyType;
+            resourceInputs["allowedVlans"] = args?.allowedVlans;
+            resourceInputs["configTemplateId"] = args?.configTemplateId;
+            resourceInputs["daiTrusted"] = args?.daiTrusted;
+            resourceInputs["enabled"] = args?.enabled;
+            resourceInputs["flexibleStackingEnabled"] = args?.flexibleStackingEnabled;
+            resourceInputs["isolationEnabled"] = args?.isolationEnabled;
+            resourceInputs["linkNegotiation"] = args?.linkNegotiation;
+            resourceInputs["macAllowLists"] = args?.macAllowLists;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["organizationId"] = args?.organizationId;
+            resourceInputs["poeEnabled"] = args?.poeEnabled;
+            resourceInputs["portId"] = args?.portId;
+            resourceInputs["portScheduleId"] = args?.portScheduleId;
+            resourceInputs["profile"] = args?.profile;
+            resourceInputs["profileId"] = args?.profileId;
+            resourceInputs["rstpEnabled"] = args?.rstpEnabled;
+            resourceInputs["stickyMacAllowListLimit"] = args?.stickyMacAllowListLimit;
+            resourceInputs["stickyMacAllowLists"] = args?.stickyMacAllowLists;
+            resourceInputs["stormControlEnabled"] = args?.stormControlEnabled;
+            resourceInputs["stpGuard"] = args?.stpGuard;
+            resourceInputs["tags"] = args?.tags;
+            resourceInputs["type"] = args?.type;
+            resourceInputs["udld"] = args?.udld;
+            resourceInputs["vlan"] = args?.vlan;
+            resourceInputs["voiceVlan"] = args?.voiceVlan;
             resourceInputs["linkNegotiationCapabilities"] = undefined /*out*/;
             resourceInputs["mirror"] = undefined /*out*/;
             resourceInputs["module"] = undefined /*out*/;

@@ -46,55 +46,55 @@ export class SwitchStacksRoutingInterfaces extends pulumi.CustomResource {
     /**
      * IPv4 default gateway
      */
-    public readonly defaultGateway!: pulumi.Output<string>;
+    declare public readonly defaultGateway: pulumi.Output<string>;
     /**
      * IPv4 default gateway
      */
-    public /*out*/ readonly defaultGatewayResponse!: pulumi.Output<string>;
+    declare public /*out*/ readonly defaultGatewayResponse: pulumi.Output<string>;
     /**
      * The id
      */
-    public readonly interfaceId!: pulumi.Output<string>;
+    declare public readonly interfaceId: pulumi.Output<string>;
     /**
      * IPv4 address
      */
-    public readonly interfaceIp!: pulumi.Output<string>;
+    declare public readonly interfaceIp: pulumi.Output<string>;
     /**
      * IPv6 addressing
      */
-    public readonly ipv6!: pulumi.Output<outputs.networks.SwitchStacksRoutingInterfacesIpv6>;
+    declare public readonly ipv6: pulumi.Output<outputs.networks.SwitchStacksRoutingInterfacesIpv6>;
     /**
      * Multicast routing status
      */
-    public readonly multicastRouting!: pulumi.Output<string>;
+    declare public readonly multicastRouting: pulumi.Output<string>;
     /**
      * The name
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * IPv4 OSPF Settings
      */
-    public readonly ospfSettings!: pulumi.Output<outputs.networks.SwitchStacksRoutingInterfacesOspfSettings>;
+    declare public readonly ospfSettings: pulumi.Output<outputs.networks.SwitchStacksRoutingInterfacesOspfSettings>;
     /**
      * IPv6 OSPF Settings
      */
-    public /*out*/ readonly ospfV3!: pulumi.Output<outputs.networks.SwitchStacksRoutingInterfacesOspfV3>;
+    declare public /*out*/ readonly ospfV3: pulumi.Output<outputs.networks.SwitchStacksRoutingInterfacesOspfV3>;
     /**
      * IPv4 subnet
      */
-    public readonly subnet!: pulumi.Output<string>;
+    declare public readonly subnet: pulumi.Output<string>;
     /**
      * switchStackId path parameter. Switch stack ID
      */
-    public readonly switchStackId!: pulumi.Output<string>;
+    declare public readonly switchStackId: pulumi.Output<string>;
     /**
      * VLAN id
      */
-    public readonly vlanId!: pulumi.Output<number>;
+    declare public readonly vlanId: pulumi.Output<number>;
 
     /**
      * Create a SwitchStacksRoutingInterfaces resource with the given unique name, arguments, and options.
@@ -109,38 +109,38 @@ export class SwitchStacksRoutingInterfaces extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SwitchStacksRoutingInterfacesState | undefined;
-            resourceInputs["defaultGateway"] = state ? state.defaultGateway : undefined;
-            resourceInputs["defaultGatewayResponse"] = state ? state.defaultGatewayResponse : undefined;
-            resourceInputs["interfaceId"] = state ? state.interfaceId : undefined;
-            resourceInputs["interfaceIp"] = state ? state.interfaceIp : undefined;
-            resourceInputs["ipv6"] = state ? state.ipv6 : undefined;
-            resourceInputs["multicastRouting"] = state ? state.multicastRouting : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["ospfSettings"] = state ? state.ospfSettings : undefined;
-            resourceInputs["ospfV3"] = state ? state.ospfV3 : undefined;
-            resourceInputs["subnet"] = state ? state.subnet : undefined;
-            resourceInputs["switchStackId"] = state ? state.switchStackId : undefined;
-            resourceInputs["vlanId"] = state ? state.vlanId : undefined;
+            resourceInputs["defaultGateway"] = state?.defaultGateway;
+            resourceInputs["defaultGatewayResponse"] = state?.defaultGatewayResponse;
+            resourceInputs["interfaceId"] = state?.interfaceId;
+            resourceInputs["interfaceIp"] = state?.interfaceIp;
+            resourceInputs["ipv6"] = state?.ipv6;
+            resourceInputs["multicastRouting"] = state?.multicastRouting;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["ospfSettings"] = state?.ospfSettings;
+            resourceInputs["ospfV3"] = state?.ospfV3;
+            resourceInputs["subnet"] = state?.subnet;
+            resourceInputs["switchStackId"] = state?.switchStackId;
+            resourceInputs["vlanId"] = state?.vlanId;
         } else {
             const args = argsOrState as SwitchStacksRoutingInterfacesArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            if ((!args || args.switchStackId === undefined) && !opts.urn) {
+            if (args?.switchStackId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'switchStackId'");
             }
-            resourceInputs["defaultGateway"] = args ? args.defaultGateway : undefined;
-            resourceInputs["interfaceId"] = args ? args.interfaceId : undefined;
-            resourceInputs["interfaceIp"] = args ? args.interfaceIp : undefined;
-            resourceInputs["ipv6"] = args ? args.ipv6 : undefined;
-            resourceInputs["multicastRouting"] = args ? args.multicastRouting : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["ospfSettings"] = args ? args.ospfSettings : undefined;
-            resourceInputs["subnet"] = args ? args.subnet : undefined;
-            resourceInputs["switchStackId"] = args ? args.switchStackId : undefined;
-            resourceInputs["vlanId"] = args ? args.vlanId : undefined;
+            resourceInputs["defaultGateway"] = args?.defaultGateway;
+            resourceInputs["interfaceId"] = args?.interfaceId;
+            resourceInputs["interfaceIp"] = args?.interfaceIp;
+            resourceInputs["ipv6"] = args?.ipv6;
+            resourceInputs["multicastRouting"] = args?.multicastRouting;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["ospfSettings"] = args?.ospfSettings;
+            resourceInputs["subnet"] = args?.subnet;
+            resourceInputs["switchStackId"] = args?.switchStackId;
+            resourceInputs["vlanId"] = args?.vlanId;
             resourceInputs["defaultGatewayResponse"] = undefined /*out*/;
             resourceInputs["ospfV3"] = undefined /*out*/;
         }

@@ -18,14 +18,11 @@ import (
 type Provider struct {
 	pulumi.ProviderResourceState
 
-	// Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is
-	// (https://api.meraki.com/)
+	// Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is (https://api.meraki.com/)
 	MerakiBaseUrl pulumi.StringPtrOutput `pulumi:"merakiBaseUrl"`
-	// Cisco Meraki merakiDashboardApiKey to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment
-	// variable.
+	// Cisco Meraki merakiDashboardApiKey to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
 	MerakiDashboardApiKey pulumi.StringPtrOutput `pulumi:"merakiDashboardApiKey"`
-	// Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to
-	// `false`.
+	// Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to `false`.
 	MerakiDebug pulumi.StringPtrOutput `pulumi:"merakiDebug"`
 }
 
@@ -53,14 +50,11 @@ func NewProvider(ctx *pulumi.Context,
 }
 
 type providerArgs struct {
-	// Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is
-	// (https://api.meraki.com/)
+	// Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is (https://api.meraki.com/)
 	MerakiBaseUrl *string `pulumi:"merakiBaseUrl"`
-	// Cisco Meraki merakiDashboardApiKey to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment
-	// variable.
+	// Cisco Meraki merakiDashboardApiKey to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
 	MerakiDashboardApiKey *string `pulumi:"merakiDashboardApiKey"`
-	// Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to
-	// `false`.
+	// Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to `false`.
 	MerakiDebug *string `pulumi:"merakiDebug"`
 	// Flag requests per second allowed for client. Default is (10)
 	MerakiRequestsPerSecond *int `pulumi:"merakiRequestsPerSecond"`
@@ -68,14 +62,11 @@ type providerArgs struct {
 
 // The set of arguments for constructing a Provider resource.
 type ProviderArgs struct {
-	// Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is
-	// (https://api.meraki.com/)
+	// Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is (https://api.meraki.com/)
 	MerakiBaseUrl pulumi.StringPtrInput
-	// Cisco Meraki merakiDashboardApiKey to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment
-	// variable.
+	// Cisco Meraki merakiDashboardApiKey to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
 	MerakiDashboardApiKey pulumi.StringPtrInput
-	// Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to
-	// `false`.
+	// Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to `false`.
 	MerakiDebug pulumi.StringPtrInput
 	// Flag requests per second allowed for client. Default is (10)
 	MerakiRequestsPerSecond pulumi.IntPtrInput
@@ -141,20 +132,17 @@ func (o ProviderOutput) ToProviderOutputWithContext(ctx context.Context) Provide
 	return o
 }
 
-// Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is
-// (https://api.meraki.com/)
+// Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is (https://api.meraki.com/)
 func (o ProviderOutput) MerakiBaseUrl() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Provider) pulumi.StringPtrOutput { return v.MerakiBaseUrl }).(pulumi.StringPtrOutput)
 }
 
-// Cisco Meraki merakiDashboardApiKey to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment
-// variable.
+// Cisco Meraki merakiDashboardApiKey to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
 func (o ProviderOutput) MerakiDashboardApiKey() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Provider) pulumi.StringPtrOutput { return v.MerakiDashboardApiKey }).(pulumi.StringPtrOutput)
 }
 
-// Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to
-// `false`.
+// Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to `false`.
 func (o ProviderOutput) MerakiDebug() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Provider) pulumi.StringPtrOutput { return v.MerakiDebug }).(pulumi.StringPtrOutput)
 }

@@ -56,21 +56,21 @@ export class SwitchRoutingMulticastRendezvousPoints extends pulumi.CustomResourc
     /**
      * The IP address of the interface where the RP needs to be created.
      */
-    public readonly interfaceIp!: pulumi.Output<string>;
-    public /*out*/ readonly interfaceName!: pulumi.Output<string>;
+    declare public readonly interfaceIp: pulumi.Output<string>;
+    declare public /*out*/ readonly interfaceName: pulumi.Output<string>;
     /**
      * 'Any', or the IP address of a multicast group
      */
-    public readonly multicastGroup!: pulumi.Output<string>;
+    declare public readonly multicastGroup: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * rendezvousPointId path parameter. Rendezvous point ID
      */
-    public readonly rendezvousPointId!: pulumi.Output<string>;
-    public /*out*/ readonly serial!: pulumi.Output<string>;
+    declare public readonly rendezvousPointId: pulumi.Output<string>;
+    declare public /*out*/ readonly serial: pulumi.Output<string>;
 
     /**
      * Create a SwitchRoutingMulticastRendezvousPoints resource with the given unique name, arguments, and options.
@@ -85,21 +85,21 @@ export class SwitchRoutingMulticastRendezvousPoints extends pulumi.CustomResourc
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SwitchRoutingMulticastRendezvousPointsState | undefined;
-            resourceInputs["interfaceIp"] = state ? state.interfaceIp : undefined;
-            resourceInputs["interfaceName"] = state ? state.interfaceName : undefined;
-            resourceInputs["multicastGroup"] = state ? state.multicastGroup : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["rendezvousPointId"] = state ? state.rendezvousPointId : undefined;
-            resourceInputs["serial"] = state ? state.serial : undefined;
+            resourceInputs["interfaceIp"] = state?.interfaceIp;
+            resourceInputs["interfaceName"] = state?.interfaceName;
+            resourceInputs["multicastGroup"] = state?.multicastGroup;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["rendezvousPointId"] = state?.rendezvousPointId;
+            resourceInputs["serial"] = state?.serial;
         } else {
             const args = argsOrState as SwitchRoutingMulticastRendezvousPointsArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["interfaceIp"] = args ? args.interfaceIp : undefined;
-            resourceInputs["multicastGroup"] = args ? args.multicastGroup : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["rendezvousPointId"] = args ? args.rendezvousPointId : undefined;
+            resourceInputs["interfaceIp"] = args?.interfaceIp;
+            resourceInputs["multicastGroup"] = args?.multicastGroup;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["rendezvousPointId"] = args?.rendezvousPointId;
             resourceInputs["interfaceName"] = undefined /*out*/;
             resourceInputs["serial"] = undefined /*out*/;
         }

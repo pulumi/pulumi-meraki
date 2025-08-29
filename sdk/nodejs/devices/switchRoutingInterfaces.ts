@@ -46,47 +46,47 @@ export class SwitchRoutingInterfaces extends pulumi.CustomResource {
     /**
      * IPv4 default gateway
      */
-    public readonly defaultGateway!: pulumi.Output<string>;
+    declare public readonly defaultGateway: pulumi.Output<string>;
     /**
      * The id
      */
-    public readonly interfaceId!: pulumi.Output<string>;
+    declare public readonly interfaceId: pulumi.Output<string>;
     /**
      * IPv4 address
      */
-    public readonly interfaceIp!: pulumi.Output<string>;
+    declare public readonly interfaceIp: pulumi.Output<string>;
     /**
      * IPv6 addressing
      */
-    public readonly ipv6!: pulumi.Output<outputs.devices.SwitchRoutingInterfacesIpv6>;
+    declare public readonly ipv6: pulumi.Output<outputs.devices.SwitchRoutingInterfacesIpv6>;
     /**
      * Multicast routing status
      */
-    public readonly multicastRouting!: pulumi.Output<string>;
+    declare public readonly multicastRouting: pulumi.Output<string>;
     /**
      * The name
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * IPv4 OSPF Settings
      */
-    public readonly ospfSettings!: pulumi.Output<outputs.devices.SwitchRoutingInterfacesOspfSettings>;
+    declare public readonly ospfSettings: pulumi.Output<outputs.devices.SwitchRoutingInterfacesOspfSettings>;
     /**
      * IPv6 OSPF Settings
      */
-    public readonly ospfV3!: pulumi.Output<outputs.devices.SwitchRoutingInterfacesOspfV3>;
+    declare public readonly ospfV3: pulumi.Output<outputs.devices.SwitchRoutingInterfacesOspfV3>;
     /**
      * serial path parameter.
      */
-    public readonly serial!: pulumi.Output<string>;
+    declare public readonly serial: pulumi.Output<string>;
     /**
      * IPv4 subnet
      */
-    public readonly subnet!: pulumi.Output<string>;
+    declare public readonly subnet: pulumi.Output<string>;
     /**
      * VLAN id
      */
-    public readonly vlanId!: pulumi.Output<number>;
+    declare public readonly vlanId: pulumi.Output<number>;
 
     /**
      * Create a SwitchRoutingInterfaces resource with the given unique name, arguments, and options.
@@ -101,33 +101,33 @@ export class SwitchRoutingInterfaces extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SwitchRoutingInterfacesState | undefined;
-            resourceInputs["defaultGateway"] = state ? state.defaultGateway : undefined;
-            resourceInputs["interfaceId"] = state ? state.interfaceId : undefined;
-            resourceInputs["interfaceIp"] = state ? state.interfaceIp : undefined;
-            resourceInputs["ipv6"] = state ? state.ipv6 : undefined;
-            resourceInputs["multicastRouting"] = state ? state.multicastRouting : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["ospfSettings"] = state ? state.ospfSettings : undefined;
-            resourceInputs["ospfV3"] = state ? state.ospfV3 : undefined;
-            resourceInputs["serial"] = state ? state.serial : undefined;
-            resourceInputs["subnet"] = state ? state.subnet : undefined;
-            resourceInputs["vlanId"] = state ? state.vlanId : undefined;
+            resourceInputs["defaultGateway"] = state?.defaultGateway;
+            resourceInputs["interfaceId"] = state?.interfaceId;
+            resourceInputs["interfaceIp"] = state?.interfaceIp;
+            resourceInputs["ipv6"] = state?.ipv6;
+            resourceInputs["multicastRouting"] = state?.multicastRouting;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["ospfSettings"] = state?.ospfSettings;
+            resourceInputs["ospfV3"] = state?.ospfV3;
+            resourceInputs["serial"] = state?.serial;
+            resourceInputs["subnet"] = state?.subnet;
+            resourceInputs["vlanId"] = state?.vlanId;
         } else {
             const args = argsOrState as SwitchRoutingInterfacesArgs | undefined;
-            if ((!args || args.serial === undefined) && !opts.urn) {
+            if (args?.serial === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serial'");
             }
-            resourceInputs["defaultGateway"] = args ? args.defaultGateway : undefined;
-            resourceInputs["interfaceId"] = args ? args.interfaceId : undefined;
-            resourceInputs["interfaceIp"] = args ? args.interfaceIp : undefined;
-            resourceInputs["ipv6"] = args ? args.ipv6 : undefined;
-            resourceInputs["multicastRouting"] = args ? args.multicastRouting : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["ospfSettings"] = args ? args.ospfSettings : undefined;
-            resourceInputs["ospfV3"] = args ? args.ospfV3 : undefined;
-            resourceInputs["serial"] = args ? args.serial : undefined;
-            resourceInputs["subnet"] = args ? args.subnet : undefined;
-            resourceInputs["vlanId"] = args ? args.vlanId : undefined;
+            resourceInputs["defaultGateway"] = args?.defaultGateway;
+            resourceInputs["interfaceId"] = args?.interfaceId;
+            resourceInputs["interfaceIp"] = args?.interfaceIp;
+            resourceInputs["ipv6"] = args?.ipv6;
+            resourceInputs["multicastRouting"] = args?.multicastRouting;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["ospfSettings"] = args?.ospfSettings;
+            resourceInputs["ospfV3"] = args?.ospfV3;
+            resourceInputs["serial"] = args?.serial;
+            resourceInputs["subnet"] = args?.subnet;
+            resourceInputs["vlanId"] = args?.vlanId;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(SwitchRoutingInterfaces.__pulumiType, name, resourceInputs, opts);

@@ -46,19 +46,19 @@ export class FirmwareUpgradesStagedEvents extends pulumi.CustomResource {
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * The network devices to be updated
      */
-    public readonly products!: pulumi.Output<outputs.networks.FirmwareUpgradesStagedEventsProducts>;
+    declare public readonly products: pulumi.Output<outputs.networks.FirmwareUpgradesStagedEventsProducts>;
     /**
      * Reasons for the rollback
      */
-    public /*out*/ readonly reasons!: pulumi.Output<outputs.networks.FirmwareUpgradesStagedEventsReason[]>;
+    declare public /*out*/ readonly reasons: pulumi.Output<outputs.networks.FirmwareUpgradesStagedEventsReason[]>;
     /**
      * The ordered stages in the network
      */
-    public readonly stages!: pulumi.Output<outputs.networks.FirmwareUpgradesStagedEventsStage[]>;
+    declare public readonly stages: pulumi.Output<outputs.networks.FirmwareUpgradesStagedEventsStage[]>;
 
     /**
      * Create a FirmwareUpgradesStagedEvents resource with the given unique name, arguments, and options.
@@ -73,18 +73,18 @@ export class FirmwareUpgradesStagedEvents extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as FirmwareUpgradesStagedEventsState | undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["products"] = state ? state.products : undefined;
-            resourceInputs["reasons"] = state ? state.reasons : undefined;
-            resourceInputs["stages"] = state ? state.stages : undefined;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["products"] = state?.products;
+            resourceInputs["reasons"] = state?.reasons;
+            resourceInputs["stages"] = state?.stages;
         } else {
             const args = argsOrState as FirmwareUpgradesStagedEventsArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["products"] = args ? args.products : undefined;
-            resourceInputs["stages"] = args ? args.stages : undefined;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["products"] = args?.products;
+            resourceInputs["stages"] = args?.stages;
             resourceInputs["reasons"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

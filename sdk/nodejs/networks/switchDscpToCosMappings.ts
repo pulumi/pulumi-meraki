@@ -61,11 +61,11 @@ export class SwitchDscpToCosMappings extends pulumi.CustomResource {
     /**
      * An array of DSCP to CoS mappings. An empty array will reset the mappings to default.
      */
-    public readonly mappings!: pulumi.Output<outputs.networks.SwitchDscpToCosMappingsMapping[]>;
+    declare public readonly mappings: pulumi.Output<outputs.networks.SwitchDscpToCosMappingsMapping[]>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
 
     /**
      * Create a SwitchDscpToCosMappings resource with the given unique name, arguments, and options.
@@ -80,15 +80,15 @@ export class SwitchDscpToCosMappings extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SwitchDscpToCosMappingsState | undefined;
-            resourceInputs["mappings"] = state ? state.mappings : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
+            resourceInputs["mappings"] = state?.mappings;
+            resourceInputs["networkId"] = state?.networkId;
         } else {
             const args = argsOrState as SwitchDscpToCosMappingsArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["mappings"] = args ? args.mappings : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
+            resourceInputs["mappings"] = args?.mappings;
+            resourceInputs["networkId"] = args?.networkId;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(SwitchDscpToCosMappings.__pulumiType, name, resourceInputs, opts);

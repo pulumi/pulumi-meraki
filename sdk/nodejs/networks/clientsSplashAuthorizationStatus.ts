@@ -46,15 +46,15 @@ export class ClientsSplashAuthorizationStatus extends pulumi.CustomResource {
     /**
      * clientId path parameter. Client ID
      */
-    public readonly clientId!: pulumi.Output<string>;
+    declare public readonly clientId: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * The target SSIDs. Each SSID must be enabled and must have Click-through splash enabled. For each SSID where isAuthorized is true, the expiration time will automatically be set according to the SSID's splash frequency. Not all networks support configuring all SSIDs
      */
-    public readonly ssids!: pulumi.Output<outputs.networks.ClientsSplashAuthorizationStatusSsids>;
+    declare public readonly ssids: pulumi.Output<outputs.networks.ClientsSplashAuthorizationStatusSsids>;
 
     /**
      * Create a ClientsSplashAuthorizationStatus resource with the given unique name, arguments, and options.
@@ -69,20 +69,20 @@ export class ClientsSplashAuthorizationStatus extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ClientsSplashAuthorizationStatusState | undefined;
-            resourceInputs["clientId"] = state ? state.clientId : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["ssids"] = state ? state.ssids : undefined;
+            resourceInputs["clientId"] = state?.clientId;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["ssids"] = state?.ssids;
         } else {
             const args = argsOrState as ClientsSplashAuthorizationStatusArgs | undefined;
-            if ((!args || args.clientId === undefined) && !opts.urn) {
+            if (args?.clientId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'clientId'");
             }
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["clientId"] = args ? args.clientId : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["ssids"] = args ? args.ssids : undefined;
+            resourceInputs["clientId"] = args?.clientId;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["ssids"] = args?.ssids;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(ClientsSplashAuthorizationStatus.__pulumiType, name, resourceInputs, opts);

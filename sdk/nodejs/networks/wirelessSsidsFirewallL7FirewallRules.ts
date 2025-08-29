@@ -62,15 +62,15 @@ export class WirelessSsidsFirewallL7FirewallRules extends pulumi.CustomResource 
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * number path parameter.
      */
-    public readonly number!: pulumi.Output<string>;
+    declare public readonly number: pulumi.Output<string>;
     /**
      * An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
      */
-    public readonly rules!: pulumi.Output<outputs.networks.WirelessSsidsFirewallL7FirewallRulesRule[]>;
+    declare public readonly rules: pulumi.Output<outputs.networks.WirelessSsidsFirewallL7FirewallRulesRule[]>;
 
     /**
      * Create a WirelessSsidsFirewallL7FirewallRules resource with the given unique name, arguments, and options.
@@ -85,20 +85,20 @@ export class WirelessSsidsFirewallL7FirewallRules extends pulumi.CustomResource 
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as WirelessSsidsFirewallL7FirewallRulesState | undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["number"] = state ? state.number : undefined;
-            resourceInputs["rules"] = state ? state.rules : undefined;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["number"] = state?.number;
+            resourceInputs["rules"] = state?.rules;
         } else {
             const args = argsOrState as WirelessSsidsFirewallL7FirewallRulesArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            if ((!args || args.number === undefined) && !opts.urn) {
+            if (args?.number === undefined && !opts.urn) {
                 throw new Error("Missing required property 'number'");
             }
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["number"] = args ? args.number : undefined;
-            resourceInputs["rules"] = args ? args.rules : undefined;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["number"] = args?.number;
+            resourceInputs["rules"] = args?.rules;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(WirelessSsidsFirewallL7FirewallRules.__pulumiType, name, resourceInputs, opts);

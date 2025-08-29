@@ -54,16 +54,16 @@ export class SwitchStacksRemove extends pulumi.CustomResource {
         return obj['__pulumiType'] === SwitchStacksRemove.__pulumiType;
     }
 
-    public /*out*/ readonly item!: pulumi.Output<outputs.networks.SwitchStacksRemoveItem>;
+    declare public /*out*/ readonly item: pulumi.Output<outputs.networks.SwitchStacksRemoveItem>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
-    public readonly parameters!: pulumi.Output<outputs.networks.SwitchStacksRemoveParameters>;
+    declare public readonly networkId: pulumi.Output<string>;
+    declare public readonly parameters: pulumi.Output<outputs.networks.SwitchStacksRemoveParameters>;
     /**
      * switchStackId path parameter. Switch stack ID
      */
-    public readonly switchStackId!: pulumi.Output<string>;
+    declare public readonly switchStackId: pulumi.Output<string>;
 
     /**
      * Create a SwitchStacksRemove resource with the given unique name, arguments, and options.
@@ -78,24 +78,24 @@ export class SwitchStacksRemove extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SwitchStacksRemoveState | undefined;
-            resourceInputs["item"] = state ? state.item : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["parameters"] = state ? state.parameters : undefined;
-            resourceInputs["switchStackId"] = state ? state.switchStackId : undefined;
+            resourceInputs["item"] = state?.item;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["parameters"] = state?.parameters;
+            resourceInputs["switchStackId"] = state?.switchStackId;
         } else {
             const args = argsOrState as SwitchStacksRemoveArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            if ((!args || args.parameters === undefined) && !opts.urn) {
+            if (args?.parameters === undefined && !opts.urn) {
                 throw new Error("Missing required property 'parameters'");
             }
-            if ((!args || args.switchStackId === undefined) && !opts.urn) {
+            if (args?.switchStackId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'switchStackId'");
             }
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["parameters"] = args ? args.parameters : undefined;
-            resourceInputs["switchStackId"] = args ? args.switchStackId : undefined;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["parameters"] = args?.parameters;
+            resourceInputs["switchStackId"] = args?.switchStackId;
             resourceInputs["item"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

@@ -46,19 +46,19 @@ export class SwitchLinkAggregations extends pulumi.CustomResource {
     /**
      * linkAggregationId path parameter. Link aggregation ID
      */
-    public readonly linkAggregationId!: pulumi.Output<string>;
+    declare public readonly linkAggregationId: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * Array of switch or stack ports for creating aggregation group. Minimum 2 and maximum 8 ports are supported.
      */
-    public readonly switchPorts!: pulumi.Output<outputs.networks.SwitchLinkAggregationsSwitchPort[]>;
+    declare public readonly switchPorts: pulumi.Output<outputs.networks.SwitchLinkAggregationsSwitchPort[]>;
     /**
      * Array of switch profile ports for creating aggregation group. Minimum 2 and maximum 8 ports are supported.
      */
-    public readonly switchProfilePorts!: pulumi.Output<outputs.networks.SwitchLinkAggregationsSwitchProfilePort[]>;
+    declare public readonly switchProfilePorts: pulumi.Output<outputs.networks.SwitchLinkAggregationsSwitchProfilePort[]>;
 
     /**
      * Create a SwitchLinkAggregations resource with the given unique name, arguments, and options.
@@ -73,19 +73,19 @@ export class SwitchLinkAggregations extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SwitchLinkAggregationsState | undefined;
-            resourceInputs["linkAggregationId"] = state ? state.linkAggregationId : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["switchPorts"] = state ? state.switchPorts : undefined;
-            resourceInputs["switchProfilePorts"] = state ? state.switchProfilePorts : undefined;
+            resourceInputs["linkAggregationId"] = state?.linkAggregationId;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["switchPorts"] = state?.switchPorts;
+            resourceInputs["switchProfilePorts"] = state?.switchProfilePorts;
         } else {
             const args = argsOrState as SwitchLinkAggregationsArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["linkAggregationId"] = args ? args.linkAggregationId : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["switchPorts"] = args ? args.switchPorts : undefined;
-            resourceInputs["switchProfilePorts"] = args ? args.switchProfilePorts : undefined;
+            resourceInputs["linkAggregationId"] = args?.linkAggregationId;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["switchPorts"] = args?.switchPorts;
+            resourceInputs["switchProfilePorts"] = args?.switchProfilePorts;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(SwitchLinkAggregations.__pulumiType, name, resourceInputs, opts);

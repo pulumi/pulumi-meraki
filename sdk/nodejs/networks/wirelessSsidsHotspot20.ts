@@ -46,43 +46,43 @@ export class WirelessSsidsHotspot20 extends pulumi.CustomResource {
     /**
      * An array of domain names
      */
-    public readonly domains!: pulumi.Output<string[]>;
+    declare public readonly domains: pulumi.Output<string[]>;
     /**
      * Whether or not Hotspot 2.0 for this SSID is enabled
      */
-    public readonly enabled!: pulumi.Output<boolean>;
+    declare public readonly enabled: pulumi.Output<boolean>;
     /**
      * An array of MCC/MNC pairs
      */
-    public readonly mccMncs!: pulumi.Output<outputs.networks.WirelessSsidsHotspot20MccMnc[]>;
+    declare public readonly mccMncs: pulumi.Output<outputs.networks.WirelessSsidsHotspot20MccMnc[]>;
     /**
      * An array of NAI realms
      */
-    public readonly naiRealms!: pulumi.Output<outputs.networks.WirelessSsidsHotspot20NaiRealm[]>;
+    declare public readonly naiRealms: pulumi.Output<outputs.networks.WirelessSsidsHotspot20NaiRealm[]>;
     /**
      * The network type of this SSID ('Private network', 'Private network with guest access', 'Chargeable public network', 'Free public network', 'Personal device network', 'Emergency services only network', 'Test or experimental', 'Wildcard')
      */
-    public readonly networkAccessType!: pulumi.Output<string>;
+    declare public readonly networkAccessType: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * number path parameter.
      */
-    public readonly number!: pulumi.Output<string>;
+    declare public readonly number: pulumi.Output<string>;
     /**
      * Operator settings for this SSID
      */
-    public readonly operator!: pulumi.Output<outputs.networks.WirelessSsidsHotspot20Operator>;
+    declare public readonly operator: pulumi.Output<outputs.networks.WirelessSsidsHotspot20Operator>;
     /**
      * An array of roaming consortium OIs (hexadecimal number 3-5 octets in length)
      */
-    public readonly roamConsortOis!: pulumi.Output<string[]>;
+    declare public readonly roamConsortOis: pulumi.Output<string[]>;
     /**
      * Venue settings for this SSID
      */
-    public readonly venue!: pulumi.Output<outputs.networks.WirelessSsidsHotspot20Venue>;
+    declare public readonly venue: pulumi.Output<outputs.networks.WirelessSsidsHotspot20Venue>;
 
     /**
      * Create a WirelessSsidsHotspot20 resource with the given unique name, arguments, and options.
@@ -97,34 +97,34 @@ export class WirelessSsidsHotspot20 extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as WirelessSsidsHotspot20State | undefined;
-            resourceInputs["domains"] = state ? state.domains : undefined;
-            resourceInputs["enabled"] = state ? state.enabled : undefined;
-            resourceInputs["mccMncs"] = state ? state.mccMncs : undefined;
-            resourceInputs["naiRealms"] = state ? state.naiRealms : undefined;
-            resourceInputs["networkAccessType"] = state ? state.networkAccessType : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["number"] = state ? state.number : undefined;
-            resourceInputs["operator"] = state ? state.operator : undefined;
-            resourceInputs["roamConsortOis"] = state ? state.roamConsortOis : undefined;
-            resourceInputs["venue"] = state ? state.venue : undefined;
+            resourceInputs["domains"] = state?.domains;
+            resourceInputs["enabled"] = state?.enabled;
+            resourceInputs["mccMncs"] = state?.mccMncs;
+            resourceInputs["naiRealms"] = state?.naiRealms;
+            resourceInputs["networkAccessType"] = state?.networkAccessType;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["number"] = state?.number;
+            resourceInputs["operator"] = state?.operator;
+            resourceInputs["roamConsortOis"] = state?.roamConsortOis;
+            resourceInputs["venue"] = state?.venue;
         } else {
             const args = argsOrState as WirelessSsidsHotspot20Args | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            if ((!args || args.number === undefined) && !opts.urn) {
+            if (args?.number === undefined && !opts.urn) {
                 throw new Error("Missing required property 'number'");
             }
-            resourceInputs["domains"] = args ? args.domains : undefined;
-            resourceInputs["enabled"] = args ? args.enabled : undefined;
-            resourceInputs["mccMncs"] = args ? args.mccMncs : undefined;
-            resourceInputs["naiRealms"] = args ? args.naiRealms : undefined;
-            resourceInputs["networkAccessType"] = args ? args.networkAccessType : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["number"] = args ? args.number : undefined;
-            resourceInputs["operator"] = args ? args.operator : undefined;
-            resourceInputs["roamConsortOis"] = args ? args.roamConsortOis : undefined;
-            resourceInputs["venue"] = args ? args.venue : undefined;
+            resourceInputs["domains"] = args?.domains;
+            resourceInputs["enabled"] = args?.enabled;
+            resourceInputs["mccMncs"] = args?.mccMncs;
+            resourceInputs["naiRealms"] = args?.naiRealms;
+            resourceInputs["networkAccessType"] = args?.networkAccessType;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["number"] = args?.number;
+            resourceInputs["operator"] = args?.operator;
+            resourceInputs["roamConsortOis"] = args?.roamConsortOis;
+            resourceInputs["venue"] = args?.venue;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(WirelessSsidsHotspot20.__pulumiType, name, resourceInputs, opts);

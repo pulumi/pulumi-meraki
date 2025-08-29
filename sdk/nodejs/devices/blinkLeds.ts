@@ -55,12 +55,12 @@ export class BlinkLeds extends pulumi.CustomResource {
         return obj['__pulumiType'] === BlinkLeds.__pulumiType;
     }
 
-    public /*out*/ readonly item!: pulumi.Output<outputs.devices.BlinkLedsItem>;
-    public readonly parameters!: pulumi.Output<outputs.devices.BlinkLedsParameters>;
+    declare public /*out*/ readonly item: pulumi.Output<outputs.devices.BlinkLedsItem>;
+    declare public readonly parameters: pulumi.Output<outputs.devices.BlinkLedsParameters>;
     /**
      * serial path parameter.
      */
-    public readonly serial!: pulumi.Output<string>;
+    declare public readonly serial: pulumi.Output<string>;
 
     /**
      * Create a BlinkLeds resource with the given unique name, arguments, and options.
@@ -75,19 +75,19 @@ export class BlinkLeds extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as BlinkLedsState | undefined;
-            resourceInputs["item"] = state ? state.item : undefined;
-            resourceInputs["parameters"] = state ? state.parameters : undefined;
-            resourceInputs["serial"] = state ? state.serial : undefined;
+            resourceInputs["item"] = state?.item;
+            resourceInputs["parameters"] = state?.parameters;
+            resourceInputs["serial"] = state?.serial;
         } else {
             const args = argsOrState as BlinkLedsArgs | undefined;
-            if ((!args || args.parameters === undefined) && !opts.urn) {
+            if (args?.parameters === undefined && !opts.urn) {
                 throw new Error("Missing required property 'parameters'");
             }
-            if ((!args || args.serial === undefined) && !opts.urn) {
+            if (args?.serial === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serial'");
             }
-            resourceInputs["parameters"] = args ? args.parameters : undefined;
-            resourceInputs["serial"] = args ? args.serial : undefined;
+            resourceInputs["parameters"] = args?.parameters;
+            resourceInputs["serial"] = args?.serial;
             resourceInputs["item"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

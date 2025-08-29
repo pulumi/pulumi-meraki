@@ -61,39 +61,39 @@ export class SwitchQosRulesOrder extends pulumi.CustomResource {
     /**
      * DSCP tag. Set this to -1 to trust incoming DSCP. Default value is 0
      */
-    public readonly dscp!: pulumi.Output<number>;
+    declare public readonly dscp: pulumi.Output<number>;
     /**
      * The destination port of the incoming packet. Applicable only if protocol is TCP or UDP.
      */
-    public readonly dstPort!: pulumi.Output<number>;
+    declare public readonly dstPort: pulumi.Output<number>;
     /**
      * The destination port range of the incoming packet. Applicable only if protocol is set to TCP or UDP. Example: 70-80
      */
-    public readonly dstPortRange!: pulumi.Output<string>;
+    declare public readonly dstPortRange: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * The protocol of the incoming packet. Can be one of "ANY", "TCP" or "UDP". Default value is "ANY"
      */
-    public readonly protocol!: pulumi.Output<string>;
+    declare public readonly protocol: pulumi.Output<string>;
     /**
      * qosRuleId path parameter. Qos rule ID
      */
-    public readonly qosRuleId!: pulumi.Output<string>;
+    declare public readonly qosRuleId: pulumi.Output<string>;
     /**
      * The source port of the incoming packet. Applicable only if protocol is TCP or UDP.
      */
-    public readonly srcPort!: pulumi.Output<number>;
+    declare public readonly srcPort: pulumi.Output<number>;
     /**
      * The source port range of the incoming packet. Applicable only if protocol is set to TCP or UDP. Example: 70-80
      */
-    public readonly srcPortRange!: pulumi.Output<string>;
+    declare public readonly srcPortRange: pulumi.Output<string>;
     /**
      * The VLAN of the incoming packet. A null value will match any VLAN.
      */
-    public readonly vlan!: pulumi.Output<number>;
+    declare public readonly vlan: pulumi.Output<number>;
 
     /**
      * Create a SwitchQosRulesOrder resource with the given unique name, arguments, and options.
@@ -108,29 +108,29 @@ export class SwitchQosRulesOrder extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SwitchQosRulesOrderState | undefined;
-            resourceInputs["dscp"] = state ? state.dscp : undefined;
-            resourceInputs["dstPort"] = state ? state.dstPort : undefined;
-            resourceInputs["dstPortRange"] = state ? state.dstPortRange : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["protocol"] = state ? state.protocol : undefined;
-            resourceInputs["qosRuleId"] = state ? state.qosRuleId : undefined;
-            resourceInputs["srcPort"] = state ? state.srcPort : undefined;
-            resourceInputs["srcPortRange"] = state ? state.srcPortRange : undefined;
-            resourceInputs["vlan"] = state ? state.vlan : undefined;
+            resourceInputs["dscp"] = state?.dscp;
+            resourceInputs["dstPort"] = state?.dstPort;
+            resourceInputs["dstPortRange"] = state?.dstPortRange;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["protocol"] = state?.protocol;
+            resourceInputs["qosRuleId"] = state?.qosRuleId;
+            resourceInputs["srcPort"] = state?.srcPort;
+            resourceInputs["srcPortRange"] = state?.srcPortRange;
+            resourceInputs["vlan"] = state?.vlan;
         } else {
             const args = argsOrState as SwitchQosRulesOrderArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["dscp"] = args ? args.dscp : undefined;
-            resourceInputs["dstPort"] = args ? args.dstPort : undefined;
-            resourceInputs["dstPortRange"] = args ? args.dstPortRange : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["protocol"] = args ? args.protocol : undefined;
-            resourceInputs["qosRuleId"] = args ? args.qosRuleId : undefined;
-            resourceInputs["srcPort"] = args ? args.srcPort : undefined;
-            resourceInputs["srcPortRange"] = args ? args.srcPortRange : undefined;
-            resourceInputs["vlan"] = args ? args.vlan : undefined;
+            resourceInputs["dscp"] = args?.dscp;
+            resourceInputs["dstPort"] = args?.dstPort;
+            resourceInputs["dstPortRange"] = args?.dstPortRange;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["protocol"] = args?.protocol;
+            resourceInputs["qosRuleId"] = args?.qosRuleId;
+            resourceInputs["srcPort"] = args?.srcPort;
+            resourceInputs["srcPortRange"] = args?.srcPortRange;
+            resourceInputs["vlan"] = args?.vlan;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(SwitchQosRulesOrder.__pulumiType, name, resourceInputs, opts);

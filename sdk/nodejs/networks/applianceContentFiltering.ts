@@ -69,24 +69,24 @@ export class ApplianceContentFiltering extends pulumi.CustomResource {
     /**
      * A list of URL patterns that are allowed
      */
-    public readonly allowedUrlPatterns!: pulumi.Output<string[]>;
+    declare public readonly allowedUrlPatterns: pulumi.Output<string[]>;
     /**
      * A list of URL categories to block
      */
-    public readonly blockedUrlCategories!: pulumi.Output<string[] | undefined>;
-    public /*out*/ readonly blockedUrlCategoriesResponses!: pulumi.Output<outputs.networks.ApplianceContentFilteringBlockedUrlCategoriesResponse[]>;
+    declare public readonly blockedUrlCategories: pulumi.Output<string[] | undefined>;
+    declare public /*out*/ readonly blockedUrlCategoriesResponses: pulumi.Output<outputs.networks.ApplianceContentFilteringBlockedUrlCategoriesResponse[]>;
     /**
      * A list of URL patterns that are blocked
      */
-    public readonly blockedUrlPatterns!: pulumi.Output<string[]>;
+    declare public readonly blockedUrlPatterns: pulumi.Output<string[]>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * URL category list size which is either 'topSites' or 'fullList'
      */
-    public readonly urlCategoryListSize!: pulumi.Output<string | undefined>;
+    declare public readonly urlCategoryListSize: pulumi.Output<string | undefined>;
 
     /**
      * Create a ApplianceContentFiltering resource with the given unique name, arguments, and options.
@@ -101,22 +101,22 @@ export class ApplianceContentFiltering extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ApplianceContentFilteringState | undefined;
-            resourceInputs["allowedUrlPatterns"] = state ? state.allowedUrlPatterns : undefined;
-            resourceInputs["blockedUrlCategories"] = state ? state.blockedUrlCategories : undefined;
-            resourceInputs["blockedUrlCategoriesResponses"] = state ? state.blockedUrlCategoriesResponses : undefined;
-            resourceInputs["blockedUrlPatterns"] = state ? state.blockedUrlPatterns : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["urlCategoryListSize"] = state ? state.urlCategoryListSize : undefined;
+            resourceInputs["allowedUrlPatterns"] = state?.allowedUrlPatterns;
+            resourceInputs["blockedUrlCategories"] = state?.blockedUrlCategories;
+            resourceInputs["blockedUrlCategoriesResponses"] = state?.blockedUrlCategoriesResponses;
+            resourceInputs["blockedUrlPatterns"] = state?.blockedUrlPatterns;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["urlCategoryListSize"] = state?.urlCategoryListSize;
         } else {
             const args = argsOrState as ApplianceContentFilteringArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["allowedUrlPatterns"] = args ? args.allowedUrlPatterns : undefined;
-            resourceInputs["blockedUrlCategories"] = args ? args.blockedUrlCategories : undefined;
-            resourceInputs["blockedUrlPatterns"] = args ? args.blockedUrlPatterns : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["urlCategoryListSize"] = args ? args.urlCategoryListSize : undefined;
+            resourceInputs["allowedUrlPatterns"] = args?.allowedUrlPatterns;
+            resourceInputs["blockedUrlCategories"] = args?.blockedUrlCategories;
+            resourceInputs["blockedUrlPatterns"] = args?.blockedUrlPatterns;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["urlCategoryListSize"] = args?.urlCategoryListSize;
             resourceInputs["blockedUrlCategoriesResponses"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

@@ -54,11 +54,11 @@ export class CameraGenerateSnapshot extends pulumi.CustomResource {
         return obj['__pulumiType'] === CameraGenerateSnapshot.__pulumiType;
     }
 
-    public readonly parameters!: pulumi.Output<outputs.devices.CameraGenerateSnapshotParameters>;
+    declare public readonly parameters: pulumi.Output<outputs.devices.CameraGenerateSnapshotParameters>;
     /**
      * serial path parameter.
      */
-    public readonly serial!: pulumi.Output<string>;
+    declare public readonly serial: pulumi.Output<string>;
 
     /**
      * Create a CameraGenerateSnapshot resource with the given unique name, arguments, and options.
@@ -73,18 +73,18 @@ export class CameraGenerateSnapshot extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CameraGenerateSnapshotState | undefined;
-            resourceInputs["parameters"] = state ? state.parameters : undefined;
-            resourceInputs["serial"] = state ? state.serial : undefined;
+            resourceInputs["parameters"] = state?.parameters;
+            resourceInputs["serial"] = state?.serial;
         } else {
             const args = argsOrState as CameraGenerateSnapshotArgs | undefined;
-            if ((!args || args.parameters === undefined) && !opts.urn) {
+            if (args?.parameters === undefined && !opts.urn) {
                 throw new Error("Missing required property 'parameters'");
             }
-            if ((!args || args.serial === undefined) && !opts.urn) {
+            if (args?.serial === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serial'");
             }
-            resourceInputs["parameters"] = args ? args.parameters : undefined;
-            resourceInputs["serial"] = args ? args.serial : undefined;
+            resourceInputs["parameters"] = args?.parameters;
+            resourceInputs["serial"] = args?.serial;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(CameraGenerateSnapshot.__pulumiType, name, resourceInputs, opts);

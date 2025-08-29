@@ -62,15 +62,15 @@ export class ApplianceFirewallL7FirewallRules extends pulumi.CustomResource {
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * An ordered array of the MX L7 firewall rules
      */
-    public readonly rules!: pulumi.Output<outputs.networks.ApplianceFirewallL7FirewallRulesRule[] | undefined>;
+    declare public readonly rules: pulumi.Output<outputs.networks.ApplianceFirewallL7FirewallRulesRule[] | undefined>;
     /**
      * An ordered array of the MX L7 firewall rules
      */
-    public /*out*/ readonly rulesResponses!: pulumi.Output<outputs.networks.ApplianceFirewallL7FirewallRulesRulesResponse[]>;
+    declare public /*out*/ readonly rulesResponses: pulumi.Output<outputs.networks.ApplianceFirewallL7FirewallRulesRulesResponse[]>;
 
     /**
      * Create a ApplianceFirewallL7FirewallRules resource with the given unique name, arguments, and options.
@@ -85,16 +85,16 @@ export class ApplianceFirewallL7FirewallRules extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ApplianceFirewallL7FirewallRulesState | undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["rules"] = state ? state.rules : undefined;
-            resourceInputs["rulesResponses"] = state ? state.rulesResponses : undefined;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["rules"] = state?.rules;
+            resourceInputs["rulesResponses"] = state?.rulesResponses;
         } else {
             const args = argsOrState as ApplianceFirewallL7FirewallRulesArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["rules"] = args ? args.rules : undefined;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["rules"] = args?.rules;
             resourceInputs["rulesResponses"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

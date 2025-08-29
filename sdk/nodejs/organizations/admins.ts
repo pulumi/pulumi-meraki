@@ -68,51 +68,51 @@ export class Admins extends pulumi.CustomResource {
     /**
      * Status of the admin's account
      */
-    public /*out*/ readonly accountStatus!: pulumi.Output<string>;
+    declare public /*out*/ readonly accountStatus: pulumi.Output<string>;
     /**
      * adminId path parameter. Admin ID
      */
-    public readonly adminId!: pulumi.Output<string | undefined>;
+    declare public readonly adminId: pulumi.Output<string | undefined>;
     /**
      * Admin's authentication method
      */
-    public readonly authenticationMethod!: pulumi.Output<string>;
+    declare public readonly authenticationMethod: pulumi.Output<string>;
     /**
      * Admin's email address
      */
-    public readonly email!: pulumi.Output<string>;
+    declare public readonly email: pulumi.Output<string>;
     /**
      * Indicates whether the admin has an API key
      */
-    public /*out*/ readonly hasApiKey!: pulumi.Output<boolean>;
+    declare public /*out*/ readonly hasApiKey: pulumi.Output<boolean>;
     /**
      * Time when the admin was last active
      */
-    public /*out*/ readonly lastActive!: pulumi.Output<string>;
+    declare public /*out*/ readonly lastActive: pulumi.Output<string>;
     /**
      * Admin's username
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Admin network access information
      */
-    public readonly networks!: pulumi.Output<outputs.organizations.AdminsNetwork[]>;
+    declare public readonly networks: pulumi.Output<outputs.organizations.AdminsNetwork[]>;
     /**
      * Admin's level of access to the organization
      */
-    public readonly orgAccess!: pulumi.Output<string>;
+    declare public readonly orgAccess: pulumi.Output<string>;
     /**
      * organizationId path parameter. Organization ID
      */
-    public readonly organizationId!: pulumi.Output<string>;
+    declare public readonly organizationId: pulumi.Output<string>;
     /**
      * Admin tag information
      */
-    public readonly tags!: pulumi.Output<outputs.organizations.AdminsTag[]>;
+    declare public readonly tags: pulumi.Output<outputs.organizations.AdminsTag[]>;
     /**
      * Indicates whether two-factor authentication is enabled
      */
-    public /*out*/ readonly twoFactorAuthEnabled!: pulumi.Output<boolean>;
+    declare public /*out*/ readonly twoFactorAuthEnabled: pulumi.Output<boolean>;
 
     /**
      * Create a Admins resource with the given unique name, arguments, and options.
@@ -127,31 +127,31 @@ export class Admins extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as AdminsState | undefined;
-            resourceInputs["accountStatus"] = state ? state.accountStatus : undefined;
-            resourceInputs["adminId"] = state ? state.adminId : undefined;
-            resourceInputs["authenticationMethod"] = state ? state.authenticationMethod : undefined;
-            resourceInputs["email"] = state ? state.email : undefined;
-            resourceInputs["hasApiKey"] = state ? state.hasApiKey : undefined;
-            resourceInputs["lastActive"] = state ? state.lastActive : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["networks"] = state ? state.networks : undefined;
-            resourceInputs["orgAccess"] = state ? state.orgAccess : undefined;
-            resourceInputs["organizationId"] = state ? state.organizationId : undefined;
-            resourceInputs["tags"] = state ? state.tags : undefined;
-            resourceInputs["twoFactorAuthEnabled"] = state ? state.twoFactorAuthEnabled : undefined;
+            resourceInputs["accountStatus"] = state?.accountStatus;
+            resourceInputs["adminId"] = state?.adminId;
+            resourceInputs["authenticationMethod"] = state?.authenticationMethod;
+            resourceInputs["email"] = state?.email;
+            resourceInputs["hasApiKey"] = state?.hasApiKey;
+            resourceInputs["lastActive"] = state?.lastActive;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["networks"] = state?.networks;
+            resourceInputs["orgAccess"] = state?.orgAccess;
+            resourceInputs["organizationId"] = state?.organizationId;
+            resourceInputs["tags"] = state?.tags;
+            resourceInputs["twoFactorAuthEnabled"] = state?.twoFactorAuthEnabled;
         } else {
             const args = argsOrState as AdminsArgs | undefined;
-            if ((!args || args.organizationId === undefined) && !opts.urn) {
+            if (args?.organizationId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'organizationId'");
             }
-            resourceInputs["adminId"] = args ? args.adminId : undefined;
-            resourceInputs["authenticationMethod"] = args ? args.authenticationMethod : undefined;
-            resourceInputs["email"] = args ? args.email : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["networks"] = args ? args.networks : undefined;
-            resourceInputs["orgAccess"] = args ? args.orgAccess : undefined;
-            resourceInputs["organizationId"] = args ? args.organizationId : undefined;
-            resourceInputs["tags"] = args ? args.tags : undefined;
+            resourceInputs["adminId"] = args?.adminId;
+            resourceInputs["authenticationMethod"] = args?.authenticationMethod;
+            resourceInputs["email"] = args?.email;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["networks"] = args?.networks;
+            resourceInputs["orgAccess"] = args?.orgAccess;
+            resourceInputs["organizationId"] = args?.organizationId;
+            resourceInputs["tags"] = args?.tags;
             resourceInputs["accountStatus"] = undefined /*out*/;
             resourceInputs["hasApiKey"] = undefined /*out*/;
             resourceInputs["lastActive"] = undefined /*out*/;

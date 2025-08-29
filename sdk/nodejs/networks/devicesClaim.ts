@@ -57,12 +57,12 @@ export class DevicesClaim extends pulumi.CustomResource {
         return obj['__pulumiType'] === DevicesClaim.__pulumiType;
     }
 
-    public /*out*/ readonly item!: pulumi.Output<outputs.networks.DevicesClaimItem>;
+    declare public /*out*/ readonly item: pulumi.Output<outputs.networks.DevicesClaimItem>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
-    public readonly parameters!: pulumi.Output<outputs.networks.DevicesClaimParameters>;
+    declare public readonly networkId: pulumi.Output<string>;
+    declare public readonly parameters: pulumi.Output<outputs.networks.DevicesClaimParameters>;
 
     /**
      * Create a DevicesClaim resource with the given unique name, arguments, and options.
@@ -77,19 +77,19 @@ export class DevicesClaim extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as DevicesClaimState | undefined;
-            resourceInputs["item"] = state ? state.item : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["parameters"] = state ? state.parameters : undefined;
+            resourceInputs["item"] = state?.item;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["parameters"] = state?.parameters;
         } else {
             const args = argsOrState as DevicesClaimArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            if ((!args || args.parameters === undefined) && !opts.urn) {
+            if (args?.parameters === undefined && !opts.urn) {
                 throw new Error("Missing required property 'parameters'");
             }
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["parameters"] = args ? args.parameters : undefined;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["parameters"] = args?.parameters;
             resourceInputs["item"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

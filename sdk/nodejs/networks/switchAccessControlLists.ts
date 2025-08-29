@@ -46,15 +46,15 @@ export class SwitchAccessControlLists extends pulumi.CustomResource {
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * An ordered array of the access control list rules
      */
-    public readonly rules!: pulumi.Output<outputs.networks.SwitchAccessControlListsRule[]>;
+    declare public readonly rules: pulumi.Output<outputs.networks.SwitchAccessControlListsRule[]>;
     /**
      * An ordered array of the access control list rules
      */
-    public readonly rulesResponses!: pulumi.Output<outputs.networks.SwitchAccessControlListsRulesResponse[]>;
+    declare public readonly rulesResponses: pulumi.Output<outputs.networks.SwitchAccessControlListsRulesResponse[]>;
 
     /**
      * Create a SwitchAccessControlLists resource with the given unique name, arguments, and options.
@@ -69,17 +69,17 @@ export class SwitchAccessControlLists extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SwitchAccessControlListsState | undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["rules"] = state ? state.rules : undefined;
-            resourceInputs["rulesResponses"] = state ? state.rulesResponses : undefined;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["rules"] = state?.rules;
+            resourceInputs["rulesResponses"] = state?.rulesResponses;
         } else {
             const args = argsOrState as SwitchAccessControlListsArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["rules"] = args ? args.rules : undefined;
-            resourceInputs["rulesResponses"] = args ? args.rulesResponses : undefined;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["rules"] = args?.rules;
+            resourceInputs["rulesResponses"] = args?.rulesResponses;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(SwitchAccessControlLists.__pulumiType, name, resourceInputs, opts);

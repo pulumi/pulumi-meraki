@@ -46,39 +46,39 @@ export class LiveToolsWakeOnLan extends pulumi.CustomResource {
     /**
      * Details for the callback. Please include either an httpServerId OR url and sharedSecret
      */
-    public readonly callback!: pulumi.Output<outputs.devices.LiveToolsWakeOnLanCallback>;
+    declare public readonly callback: pulumi.Output<outputs.devices.LiveToolsWakeOnLanCallback>;
     /**
      * An error message for a failed execution
      */
-    public /*out*/ readonly error!: pulumi.Output<string>;
+    declare public /*out*/ readonly error: pulumi.Output<string>;
     /**
      * The target's MAC address
      */
-    public readonly mac!: pulumi.Output<string>;
+    declare public readonly mac: pulumi.Output<string>;
     /**
      * The parameters of the Wake-on-LAN request
      */
-    public /*out*/ readonly request!: pulumi.Output<outputs.devices.LiveToolsWakeOnLanRequest>;
+    declare public /*out*/ readonly request: pulumi.Output<outputs.devices.LiveToolsWakeOnLanRequest>;
     /**
      * serial path parameter.
      */
-    public readonly serial!: pulumi.Output<string>;
+    declare public readonly serial: pulumi.Output<string>;
     /**
      * Status of the Wake-on-LAN request
      */
-    public /*out*/ readonly status!: pulumi.Output<string>;
+    declare public /*out*/ readonly status: pulumi.Output<string>;
     /**
      * GET this url to check the status of your ping request
      */
-    public /*out*/ readonly url!: pulumi.Output<string>;
+    declare public /*out*/ readonly url: pulumi.Output<string>;
     /**
      * The target's VLAN (1 to 4094)
      */
-    public readonly vlanId!: pulumi.Output<number>;
+    declare public readonly vlanId: pulumi.Output<number>;
     /**
      * ID of the Wake-on-LAN job
      */
-    public readonly wakeOnLanId!: pulumi.Output<string>;
+    declare public readonly wakeOnLanId: pulumi.Output<string>;
 
     /**
      * Create a LiveToolsWakeOnLan resource with the given unique name, arguments, and options.
@@ -93,25 +93,25 @@ export class LiveToolsWakeOnLan extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as LiveToolsWakeOnLanState | undefined;
-            resourceInputs["callback"] = state ? state.callback : undefined;
-            resourceInputs["error"] = state ? state.error : undefined;
-            resourceInputs["mac"] = state ? state.mac : undefined;
-            resourceInputs["request"] = state ? state.request : undefined;
-            resourceInputs["serial"] = state ? state.serial : undefined;
-            resourceInputs["status"] = state ? state.status : undefined;
-            resourceInputs["url"] = state ? state.url : undefined;
-            resourceInputs["vlanId"] = state ? state.vlanId : undefined;
-            resourceInputs["wakeOnLanId"] = state ? state.wakeOnLanId : undefined;
+            resourceInputs["callback"] = state?.callback;
+            resourceInputs["error"] = state?.error;
+            resourceInputs["mac"] = state?.mac;
+            resourceInputs["request"] = state?.request;
+            resourceInputs["serial"] = state?.serial;
+            resourceInputs["status"] = state?.status;
+            resourceInputs["url"] = state?.url;
+            resourceInputs["vlanId"] = state?.vlanId;
+            resourceInputs["wakeOnLanId"] = state?.wakeOnLanId;
         } else {
             const args = argsOrState as LiveToolsWakeOnLanArgs | undefined;
-            if ((!args || args.serial === undefined) && !opts.urn) {
+            if (args?.serial === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serial'");
             }
-            resourceInputs["callback"] = args ? args.callback : undefined;
-            resourceInputs["mac"] = args ? args.mac : undefined;
-            resourceInputs["serial"] = args ? args.serial : undefined;
-            resourceInputs["vlanId"] = args ? args.vlanId : undefined;
-            resourceInputs["wakeOnLanId"] = args ? args.wakeOnLanId : undefined;
+            resourceInputs["callback"] = args?.callback;
+            resourceInputs["mac"] = args?.mac;
+            resourceInputs["serial"] = args?.serial;
+            resourceInputs["vlanId"] = args?.vlanId;
+            resourceInputs["wakeOnLanId"] = args?.wakeOnLanId;
             resourceInputs["error"] = undefined /*out*/;
             resourceInputs["request"] = undefined /*out*/;
             resourceInputs["status"] = undefined /*out*/;

@@ -46,17 +46,17 @@ export class ApplianceTrafficShapingRules extends pulumi.CustomResource {
     /**
      * Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network's traffic shaping page. Note that default rules count against the rule limit of 8.
      */
-    public readonly defaultRulesEnabled!: pulumi.Output<boolean>;
+    declare public readonly defaultRulesEnabled: pulumi.Output<boolean>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * An array of traffic shaping rules. Rules are applied in the order that
      * they are specified in. An empty list (or null) means no rules. Note that
      * you are allowed a maximum of 8 rules.
      */
-    public readonly rules!: pulumi.Output<outputs.networks.ApplianceTrafficShapingRulesRule[]>;
+    declare public readonly rules: pulumi.Output<outputs.networks.ApplianceTrafficShapingRulesRule[]>;
 
     /**
      * Create a ApplianceTrafficShapingRules resource with the given unique name, arguments, and options.
@@ -71,17 +71,17 @@ export class ApplianceTrafficShapingRules extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ApplianceTrafficShapingRulesState | undefined;
-            resourceInputs["defaultRulesEnabled"] = state ? state.defaultRulesEnabled : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["rules"] = state ? state.rules : undefined;
+            resourceInputs["defaultRulesEnabled"] = state?.defaultRulesEnabled;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["rules"] = state?.rules;
         } else {
             const args = argsOrState as ApplianceTrafficShapingRulesArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["defaultRulesEnabled"] = args ? args.defaultRulesEnabled : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["rules"] = args ? args.rules : undefined;
+            resourceInputs["defaultRulesEnabled"] = args?.defaultRulesEnabled;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["rules"] = args?.rules;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(ApplianceTrafficShapingRules.__pulumiType, name, resourceInputs, opts);

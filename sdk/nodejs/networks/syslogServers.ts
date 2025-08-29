@@ -64,11 +64,11 @@ export class SyslogServers extends pulumi.CustomResource {
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * List of the syslog servers for this network
      */
-    public readonly servers!: pulumi.Output<outputs.networks.SyslogServersServer[]>;
+    declare public readonly servers: pulumi.Output<outputs.networks.SyslogServersServer[]>;
 
     /**
      * Create a SyslogServers resource with the given unique name, arguments, and options.
@@ -83,15 +83,15 @@ export class SyslogServers extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SyslogServersState | undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["servers"] = state ? state.servers : undefined;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["servers"] = state?.servers;
         } else {
             const args = argsOrState as SyslogServersArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["servers"] = args ? args.servers : undefined;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["servers"] = args?.servers;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(SyslogServers.__pulumiType, name, resourceInputs, opts);

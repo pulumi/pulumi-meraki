@@ -46,16 +46,16 @@ export class SwitchMtu extends pulumi.CustomResource {
     /**
      * MTU size for the entire network. Default value is 9578.
      */
-    public readonly defaultMtuSize!: pulumi.Output<number>;
+    declare public readonly defaultMtuSize: pulumi.Output<number>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * Override MTU size for individual switches or switch templates.
      *   An empty array will clear overrides.
      */
-    public readonly overrides!: pulumi.Output<outputs.networks.SwitchMtuOverride[]>;
+    declare public readonly overrides: pulumi.Output<outputs.networks.SwitchMtuOverride[]>;
 
     /**
      * Create a SwitchMtu resource with the given unique name, arguments, and options.
@@ -70,17 +70,17 @@ export class SwitchMtu extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SwitchMtuState | undefined;
-            resourceInputs["defaultMtuSize"] = state ? state.defaultMtuSize : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["overrides"] = state ? state.overrides : undefined;
+            resourceInputs["defaultMtuSize"] = state?.defaultMtuSize;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["overrides"] = state?.overrides;
         } else {
             const args = argsOrState as SwitchMtuArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["defaultMtuSize"] = args ? args.defaultMtuSize : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["overrides"] = args ? args.overrides : undefined;
+            resourceInputs["defaultMtuSize"] = args?.defaultMtuSize;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["overrides"] = args?.overrides;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(SwitchMtu.__pulumiType, name, resourceInputs, opts);

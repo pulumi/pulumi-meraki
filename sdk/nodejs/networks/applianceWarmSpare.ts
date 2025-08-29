@@ -61,30 +61,30 @@ export class ApplianceWarmSpare extends pulumi.CustomResource {
     /**
      * Enable warm spare
      */
-    public readonly enabled!: pulumi.Output<boolean>;
+    declare public readonly enabled: pulumi.Output<boolean>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
-    public /*out*/ readonly primarySerial!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
+    declare public /*out*/ readonly primarySerial: pulumi.Output<string>;
     /**
      * Serial number of the warm spare appliance
      */
-    public readonly spareSerial!: pulumi.Output<string>;
+    declare public readonly spareSerial: pulumi.Output<string>;
     /**
      * Uplink mode, either virtual or public
      */
-    public readonly uplinkMode!: pulumi.Output<string>;
+    declare public readonly uplinkMode: pulumi.Output<string>;
     /**
      * The WAN 1 shared IP
      */
-    public readonly virtualIp1!: pulumi.Output<string>;
+    declare public readonly virtualIp1: pulumi.Output<string>;
     /**
      * The WAN 2 shared IP
      */
-    public readonly virtualIp2!: pulumi.Output<string>;
-    public /*out*/ readonly wan1!: pulumi.Output<outputs.networks.ApplianceWarmSpareWan1>;
-    public /*out*/ readonly wan2!: pulumi.Output<outputs.networks.ApplianceWarmSpareWan2>;
+    declare public readonly virtualIp2: pulumi.Output<string>;
+    declare public /*out*/ readonly wan1: pulumi.Output<outputs.networks.ApplianceWarmSpareWan1>;
+    declare public /*out*/ readonly wan2: pulumi.Output<outputs.networks.ApplianceWarmSpareWan2>;
 
     /**
      * Create a ApplianceWarmSpare resource with the given unique name, arguments, and options.
@@ -99,26 +99,26 @@ export class ApplianceWarmSpare extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ApplianceWarmSpareState | undefined;
-            resourceInputs["enabled"] = state ? state.enabled : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["primarySerial"] = state ? state.primarySerial : undefined;
-            resourceInputs["spareSerial"] = state ? state.spareSerial : undefined;
-            resourceInputs["uplinkMode"] = state ? state.uplinkMode : undefined;
-            resourceInputs["virtualIp1"] = state ? state.virtualIp1 : undefined;
-            resourceInputs["virtualIp2"] = state ? state.virtualIp2 : undefined;
-            resourceInputs["wan1"] = state ? state.wan1 : undefined;
-            resourceInputs["wan2"] = state ? state.wan2 : undefined;
+            resourceInputs["enabled"] = state?.enabled;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["primarySerial"] = state?.primarySerial;
+            resourceInputs["spareSerial"] = state?.spareSerial;
+            resourceInputs["uplinkMode"] = state?.uplinkMode;
+            resourceInputs["virtualIp1"] = state?.virtualIp1;
+            resourceInputs["virtualIp2"] = state?.virtualIp2;
+            resourceInputs["wan1"] = state?.wan1;
+            resourceInputs["wan2"] = state?.wan2;
         } else {
             const args = argsOrState as ApplianceWarmSpareArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["enabled"] = args ? args.enabled : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["spareSerial"] = args ? args.spareSerial : undefined;
-            resourceInputs["uplinkMode"] = args ? args.uplinkMode : undefined;
-            resourceInputs["virtualIp1"] = args ? args.virtualIp1 : undefined;
-            resourceInputs["virtualIp2"] = args ? args.virtualIp2 : undefined;
+            resourceInputs["enabled"] = args?.enabled;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["spareSerial"] = args?.spareSerial;
+            resourceInputs["uplinkMode"] = args?.uplinkMode;
+            resourceInputs["virtualIp1"] = args?.virtualIp1;
+            resourceInputs["virtualIp2"] = args?.virtualIp2;
             resourceInputs["primarySerial"] = undefined /*out*/;
             resourceInputs["wan1"] = undefined /*out*/;
             resourceInputs["wan2"] = undefined /*out*/;

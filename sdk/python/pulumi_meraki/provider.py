@@ -25,12 +25,9 @@ class ProviderArgs:
                  meraki_requests_per_second: Optional[pulumi.Input[_builtins.int]] = None):
         """
         The set of arguments for constructing a Provider resource.
-        :param pulumi.Input[_builtins.str] meraki_base_url: Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is
-               (https://api.meraki.com/)
-        :param pulumi.Input[_builtins.str] meraki_dashboard_api_key: Cisco Meraki meraki_dashboard_api_key to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment
-               variable.
-        :param pulumi.Input[_builtins.str] meraki_debug: Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to
-               `false`.
+        :param pulumi.Input[_builtins.str] meraki_base_url: Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is (https://api.meraki.com/)
+        :param pulumi.Input[_builtins.str] meraki_dashboard_api_key: Cisco Meraki meraki_dashboard_api_key to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
+        :param pulumi.Input[_builtins.str] meraki_debug: Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to `false`.
         :param pulumi.Input[_builtins.int] meraki_requests_per_second: Flag requests per second allowed for client. Default is (10)
         """
         if meraki_base_url is not None:
@@ -46,8 +43,7 @@ class ProviderArgs:
     @pulumi.getter(name="merakiBaseUrl")
     def meraki_base_url(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is
-        (https://api.meraki.com/)
+        Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is (https://api.meraki.com/)
         """
         return pulumi.get(self, "meraki_base_url")
 
@@ -59,8 +55,7 @@ class ProviderArgs:
     @pulumi.getter(name="merakiDashboardApiKey")
     def meraki_dashboard_api_key(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Cisco Meraki meraki_dashboard_api_key to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment
-        variable.
+        Cisco Meraki meraki_dashboard_api_key to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
         """
         return pulumi.get(self, "meraki_dashboard_api_key")
 
@@ -72,8 +67,7 @@ class ProviderArgs:
     @pulumi.getter(name="merakiDebug")
     def meraki_debug(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to
-        `false`.
+        Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to `false`.
         """
         return pulumi.get(self, "meraki_debug")
 
@@ -113,12 +107,9 @@ class Provider(pulumi.ProviderResource):
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] meraki_base_url: Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is
-               (https://api.meraki.com/)
-        :param pulumi.Input[_builtins.str] meraki_dashboard_api_key: Cisco Meraki meraki_dashboard_api_key to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment
-               variable.
-        :param pulumi.Input[_builtins.str] meraki_debug: Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to
-               `false`.
+        :param pulumi.Input[_builtins.str] meraki_base_url: Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is (https://api.meraki.com/)
+        :param pulumi.Input[_builtins.str] meraki_dashboard_api_key: Cisco Meraki meraki_dashboard_api_key to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
+        :param pulumi.Input[_builtins.str] meraki_debug: Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to `false`.
         :param pulumi.Input[_builtins.int] meraki_requests_per_second: Flag requests per second allowed for client. Default is (10)
         """
         ...
@@ -177,8 +168,7 @@ class Provider(pulumi.ProviderResource):
     @pulumi.getter(name="merakiBaseUrl")
     def meraki_base_url(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is
-        (https://api.meraki.com/)
+        Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is (https://api.meraki.com/)
         """
         return pulumi.get(self, "meraki_base_url")
 
@@ -186,8 +176,7 @@ class Provider(pulumi.ProviderResource):
     @pulumi.getter(name="merakiDashboardApiKey")
     def meraki_dashboard_api_key(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Cisco Meraki meraki_dashboard_api_key to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment
-        variable.
+        Cisco Meraki meraki_dashboard_api_key to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
         """
         return pulumi.get(self, "meraki_dashboard_api_key")
 
@@ -195,8 +184,7 @@ class Provider(pulumi.ProviderResource):
     @pulumi.getter(name="merakiDebug")
     def meraki_debug(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to
-        `false`.
+        Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to `false`.
         """
         return pulumi.get(self, "meraki_debug")
 

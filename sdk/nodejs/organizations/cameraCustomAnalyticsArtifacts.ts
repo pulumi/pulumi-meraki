@@ -57,19 +57,19 @@ export class CameraCustomAnalyticsArtifacts extends pulumi.CustomResource {
     /**
      * Custom analytics artifact ID
      */
-    public readonly artifactId!: pulumi.Output<string>;
+    declare public readonly artifactId: pulumi.Output<string>;
     /**
      * Custom analytics artifact name
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Organization ID
      */
-    public readonly organizationId!: pulumi.Output<string>;
+    declare public readonly organizationId: pulumi.Output<string>;
     /**
      * Custom analytics artifact status
      */
-    public /*out*/ readonly status!: pulumi.Output<outputs.organizations.CameraCustomAnalyticsArtifactsStatus>;
+    declare public /*out*/ readonly status: pulumi.Output<outputs.organizations.CameraCustomAnalyticsArtifactsStatus>;
 
     /**
      * Create a CameraCustomAnalyticsArtifacts resource with the given unique name, arguments, and options.
@@ -84,18 +84,18 @@ export class CameraCustomAnalyticsArtifacts extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CameraCustomAnalyticsArtifactsState | undefined;
-            resourceInputs["artifactId"] = state ? state.artifactId : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["organizationId"] = state ? state.organizationId : undefined;
-            resourceInputs["status"] = state ? state.status : undefined;
+            resourceInputs["artifactId"] = state?.artifactId;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["organizationId"] = state?.organizationId;
+            resourceInputs["status"] = state?.status;
         } else {
             const args = argsOrState as CameraCustomAnalyticsArtifactsArgs | undefined;
-            if ((!args || args.organizationId === undefined) && !opts.urn) {
+            if (args?.organizationId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'organizationId'");
             }
-            resourceInputs["artifactId"] = args ? args.artifactId : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["organizationId"] = args ? args.organizationId : undefined;
+            resourceInputs["artifactId"] = args?.artifactId;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["organizationId"] = args?.organizationId;
             resourceInputs["status"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

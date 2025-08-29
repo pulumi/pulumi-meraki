@@ -62,19 +62,19 @@ export class ApplianceSettings extends pulumi.CustomResource {
     /**
      * Client tracking method of a network
      */
-    public readonly clientTrackingMethod!: pulumi.Output<string>;
+    declare public readonly clientTrackingMethod: pulumi.Output<string>;
     /**
      * Deployment mode of a network
      */
-    public readonly deploymentMode!: pulumi.Output<string>;
+    declare public readonly deploymentMode: pulumi.Output<string>;
     /**
      * Dynamic DNS settings for a network
      */
-    public readonly dynamicDns!: pulumi.Output<outputs.networks.ApplianceSettingsDynamicDns>;
+    declare public readonly dynamicDns: pulumi.Output<outputs.networks.ApplianceSettingsDynamicDns>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
 
     /**
      * Create a ApplianceSettings resource with the given unique name, arguments, and options.
@@ -89,19 +89,19 @@ export class ApplianceSettings extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ApplianceSettingsState | undefined;
-            resourceInputs["clientTrackingMethod"] = state ? state.clientTrackingMethod : undefined;
-            resourceInputs["deploymentMode"] = state ? state.deploymentMode : undefined;
-            resourceInputs["dynamicDns"] = state ? state.dynamicDns : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
+            resourceInputs["clientTrackingMethod"] = state?.clientTrackingMethod;
+            resourceInputs["deploymentMode"] = state?.deploymentMode;
+            resourceInputs["dynamicDns"] = state?.dynamicDns;
+            resourceInputs["networkId"] = state?.networkId;
         } else {
             const args = argsOrState as ApplianceSettingsArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["clientTrackingMethod"] = args ? args.clientTrackingMethod : undefined;
-            resourceInputs["deploymentMode"] = args ? args.deploymentMode : undefined;
-            resourceInputs["dynamicDns"] = args ? args.dynamicDns : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
+            resourceInputs["clientTrackingMethod"] = args?.clientTrackingMethod;
+            resourceInputs["deploymentMode"] = args?.deploymentMode;
+            resourceInputs["dynamicDns"] = args?.dynamicDns;
+            resourceInputs["networkId"] = args?.networkId;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(ApplianceSettings.__pulumiType, name, resourceInputs, opts);

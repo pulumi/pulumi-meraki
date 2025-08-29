@@ -45,11 +45,11 @@ export class Split extends pulumi.CustomResource {
         return obj['__pulumiType'] === Split.__pulumiType;
     }
 
-    public /*out*/ readonly item!: pulumi.Output<outputs.networks.SplitItem>;
+    declare public /*out*/ readonly item: pulumi.Output<outputs.networks.SplitItem>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
 
     /**
      * Create a Split resource with the given unique name, arguments, and options.
@@ -64,14 +64,14 @@ export class Split extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SplitState | undefined;
-            resourceInputs["item"] = state ? state.item : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
+            resourceInputs["item"] = state?.item;
+            resourceInputs["networkId"] = state?.networkId;
         } else {
             const args = argsOrState as SplitArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
+            resourceInputs["networkId"] = args?.networkId;
             resourceInputs["item"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

@@ -46,23 +46,23 @@ export class WirelessSsidsVpn extends pulumi.CustomResource {
     /**
      * The VPN concentrator settings for this SSID.
      */
-    public readonly concentrator!: pulumi.Output<outputs.networks.WirelessSsidsVpnConcentrator>;
+    declare public readonly concentrator: pulumi.Output<outputs.networks.WirelessSsidsVpnConcentrator>;
     /**
      * Secondary VPN concentrator settings. This is only used when two VPN concentrators are configured on the SSID.
      */
-    public readonly failover!: pulumi.Output<outputs.networks.WirelessSsidsVpnFailover>;
+    declare public readonly failover: pulumi.Output<outputs.networks.WirelessSsidsVpnFailover>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * number path parameter.
      */
-    public readonly number!: pulumi.Output<string>;
+    declare public readonly number: pulumi.Output<string>;
     /**
      * The VPN split tunnel settings for this SSID.
      */
-    public readonly splitTunnel!: pulumi.Output<outputs.networks.WirelessSsidsVpnSplitTunnel>;
+    declare public readonly splitTunnel: pulumi.Output<outputs.networks.WirelessSsidsVpnSplitTunnel>;
 
     /**
      * Create a WirelessSsidsVpn resource with the given unique name, arguments, and options.
@@ -77,24 +77,24 @@ export class WirelessSsidsVpn extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as WirelessSsidsVpnState | undefined;
-            resourceInputs["concentrator"] = state ? state.concentrator : undefined;
-            resourceInputs["failover"] = state ? state.failover : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["number"] = state ? state.number : undefined;
-            resourceInputs["splitTunnel"] = state ? state.splitTunnel : undefined;
+            resourceInputs["concentrator"] = state?.concentrator;
+            resourceInputs["failover"] = state?.failover;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["number"] = state?.number;
+            resourceInputs["splitTunnel"] = state?.splitTunnel;
         } else {
             const args = argsOrState as WirelessSsidsVpnArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            if ((!args || args.number === undefined) && !opts.urn) {
+            if (args?.number === undefined && !opts.urn) {
                 throw new Error("Missing required property 'number'");
             }
-            resourceInputs["concentrator"] = args ? args.concentrator : undefined;
-            resourceInputs["failover"] = args ? args.failover : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["number"] = args ? args.number : undefined;
-            resourceInputs["splitTunnel"] = args ? args.splitTunnel : undefined;
+            resourceInputs["concentrator"] = args?.concentrator;
+            resourceInputs["failover"] = args?.failover;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["number"] = args?.number;
+            resourceInputs["splitTunnel"] = args?.splitTunnel;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(WirelessSsidsVpn.__pulumiType, name, resourceInputs, opts);

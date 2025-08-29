@@ -59,27 +59,27 @@ export class Netflow extends pulumi.CustomResource {
     /**
      * The IPv4 address of the NetFlow collector.
      */
-    public readonly collectorIp!: pulumi.Output<string>;
+    declare public readonly collectorIp: pulumi.Output<string>;
     /**
      * The port that the NetFlow collector will be listening on.
      */
-    public readonly collectorPort!: pulumi.Output<number>;
+    declare public readonly collectorPort: pulumi.Output<number>;
     /**
      * The port that the Encrypted Traffic Analytics collector will be listening on.
      */
-    public readonly etaDstPort!: pulumi.Output<number>;
+    declare public readonly etaDstPort: pulumi.Output<number>;
     /**
      * Boolean indicating whether Encrypted Traffic Analytics is enabled (true) or disabled (false).
      */
-    public readonly etaEnabled!: pulumi.Output<boolean>;
+    declare public readonly etaEnabled: pulumi.Output<boolean>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * Boolean indicating whether NetFlow traffic reporting is enabled (true) or disabled (false).
      */
-    public readonly reportingEnabled!: pulumi.Output<boolean>;
+    declare public readonly reportingEnabled: pulumi.Output<boolean>;
 
     /**
      * Create a Netflow resource with the given unique name, arguments, and options.
@@ -94,23 +94,23 @@ export class Netflow extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as NetflowState | undefined;
-            resourceInputs["collectorIp"] = state ? state.collectorIp : undefined;
-            resourceInputs["collectorPort"] = state ? state.collectorPort : undefined;
-            resourceInputs["etaDstPort"] = state ? state.etaDstPort : undefined;
-            resourceInputs["etaEnabled"] = state ? state.etaEnabled : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["reportingEnabled"] = state ? state.reportingEnabled : undefined;
+            resourceInputs["collectorIp"] = state?.collectorIp;
+            resourceInputs["collectorPort"] = state?.collectorPort;
+            resourceInputs["etaDstPort"] = state?.etaDstPort;
+            resourceInputs["etaEnabled"] = state?.etaEnabled;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["reportingEnabled"] = state?.reportingEnabled;
         } else {
             const args = argsOrState as NetflowArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["collectorIp"] = args ? args.collectorIp : undefined;
-            resourceInputs["collectorPort"] = args ? args.collectorPort : undefined;
-            resourceInputs["etaDstPort"] = args ? args.etaDstPort : undefined;
-            resourceInputs["etaEnabled"] = args ? args.etaEnabled : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["reportingEnabled"] = args ? args.reportingEnabled : undefined;
+            resourceInputs["collectorIp"] = args?.collectorIp;
+            resourceInputs["collectorPort"] = args?.collectorPort;
+            resourceInputs["etaDstPort"] = args?.etaDstPort;
+            resourceInputs["etaEnabled"] = args?.etaEnabled;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["reportingEnabled"] = args?.reportingEnabled;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(Netflow.__pulumiType, name, resourceInputs, opts);

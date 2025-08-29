@@ -46,35 +46,35 @@ export class AdaptivePolicyAcls extends pulumi.CustomResource {
     /**
      * ID of the adaptive policy ACL
      */
-    public readonly aclId!: pulumi.Output<string>;
+    declare public readonly aclId: pulumi.Output<string>;
     /**
      * When the adaptive policy ACL was created
      */
-    public /*out*/ readonly createdAt!: pulumi.Output<string>;
+    declare public /*out*/ readonly createdAt: pulumi.Output<string>;
     /**
      * Description of the adaptive policy ACL
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
      * IP version of adpative policy ACL
      */
-    public readonly ipVersion!: pulumi.Output<string>;
+    declare public readonly ipVersion: pulumi.Output<string>;
     /**
      * Name of the adaptive policy ACL
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * organizationId path parameter. Organization ID
      */
-    public readonly organizationId!: pulumi.Output<string>;
+    declare public readonly organizationId: pulumi.Output<string>;
     /**
      * An ordered array of the adaptive policy ACL rules
      */
-    public readonly rules!: pulumi.Output<outputs.organizations.AdaptivePolicyAclsRule[]>;
+    declare public readonly rules: pulumi.Output<outputs.organizations.AdaptivePolicyAclsRule[]>;
     /**
      * When the adaptive policy ACL was last updated
      */
-    public /*out*/ readonly updatedAt!: pulumi.Output<string>;
+    declare public /*out*/ readonly updatedAt: pulumi.Output<string>;
 
     /**
      * Create a AdaptivePolicyAcls resource with the given unique name, arguments, and options.
@@ -89,25 +89,25 @@ export class AdaptivePolicyAcls extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as AdaptivePolicyAclsState | undefined;
-            resourceInputs["aclId"] = state ? state.aclId : undefined;
-            resourceInputs["createdAt"] = state ? state.createdAt : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["ipVersion"] = state ? state.ipVersion : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["organizationId"] = state ? state.organizationId : undefined;
-            resourceInputs["rules"] = state ? state.rules : undefined;
-            resourceInputs["updatedAt"] = state ? state.updatedAt : undefined;
+            resourceInputs["aclId"] = state?.aclId;
+            resourceInputs["createdAt"] = state?.createdAt;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["ipVersion"] = state?.ipVersion;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["organizationId"] = state?.organizationId;
+            resourceInputs["rules"] = state?.rules;
+            resourceInputs["updatedAt"] = state?.updatedAt;
         } else {
             const args = argsOrState as AdaptivePolicyAclsArgs | undefined;
-            if ((!args || args.organizationId === undefined) && !opts.urn) {
+            if (args?.organizationId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'organizationId'");
             }
-            resourceInputs["aclId"] = args ? args.aclId : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["ipVersion"] = args ? args.ipVersion : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["organizationId"] = args ? args.organizationId : undefined;
-            resourceInputs["rules"] = args ? args.rules : undefined;
+            resourceInputs["aclId"] = args?.aclId;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["ipVersion"] = args?.ipVersion;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["organizationId"] = args?.organizationId;
+            resourceInputs["rules"] = args?.rules;
             resourceInputs["createdAt"] = undefined /*out*/;
             resourceInputs["updatedAt"] = undefined /*out*/;
         }

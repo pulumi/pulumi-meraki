@@ -46,35 +46,35 @@ export class AlertsProfiles extends pulumi.CustomResource {
     /**
      * The conditions that determine if the alert triggers
      */
-    public readonly alertCondition!: pulumi.Output<outputs.organizations.AlertsProfilesAlertCondition>;
+    declare public readonly alertCondition: pulumi.Output<outputs.organizations.AlertsProfilesAlertCondition>;
     /**
      * alertConfigId path parameter. Alert config ID
      */
-    public readonly alertConfigId!: pulumi.Output<string>;
+    declare public readonly alertConfigId: pulumi.Output<string>;
     /**
      * User supplied description of the alert
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
      * Is the alert config enabled
      */
-    public readonly enabled!: pulumi.Output<boolean>;
+    declare public readonly enabled: pulumi.Output<boolean>;
     /**
      * Networks with these tags will be monitored for the alert
      */
-    public readonly networkTags!: pulumi.Output<string[]>;
+    declare public readonly networkTags: pulumi.Output<string[]>;
     /**
      * organizationId path parameter. Organization ID
      */
-    public readonly organizationId!: pulumi.Output<string>;
+    declare public readonly organizationId: pulumi.Output<string>;
     /**
      * List of recipients that will recieve the alert.
      */
-    public readonly recipients!: pulumi.Output<outputs.organizations.AlertsProfilesRecipients>;
+    declare public readonly recipients: pulumi.Output<outputs.organizations.AlertsProfilesRecipients>;
     /**
      * The alert type
      */
-    public readonly type!: pulumi.Output<string>;
+    declare public readonly type: pulumi.Output<string>;
 
     /**
      * Create a AlertsProfiles resource with the given unique name, arguments, and options.
@@ -89,27 +89,27 @@ export class AlertsProfiles extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as AlertsProfilesState | undefined;
-            resourceInputs["alertCondition"] = state ? state.alertCondition : undefined;
-            resourceInputs["alertConfigId"] = state ? state.alertConfigId : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["enabled"] = state ? state.enabled : undefined;
-            resourceInputs["networkTags"] = state ? state.networkTags : undefined;
-            resourceInputs["organizationId"] = state ? state.organizationId : undefined;
-            resourceInputs["recipients"] = state ? state.recipients : undefined;
-            resourceInputs["type"] = state ? state.type : undefined;
+            resourceInputs["alertCondition"] = state?.alertCondition;
+            resourceInputs["alertConfigId"] = state?.alertConfigId;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["enabled"] = state?.enabled;
+            resourceInputs["networkTags"] = state?.networkTags;
+            resourceInputs["organizationId"] = state?.organizationId;
+            resourceInputs["recipients"] = state?.recipients;
+            resourceInputs["type"] = state?.type;
         } else {
             const args = argsOrState as AlertsProfilesArgs | undefined;
-            if ((!args || args.organizationId === undefined) && !opts.urn) {
+            if (args?.organizationId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'organizationId'");
             }
-            resourceInputs["alertCondition"] = args ? args.alertCondition : undefined;
-            resourceInputs["alertConfigId"] = args ? args.alertConfigId : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["enabled"] = args ? args.enabled : undefined;
-            resourceInputs["networkTags"] = args ? args.networkTags : undefined;
-            resourceInputs["organizationId"] = args ? args.organizationId : undefined;
-            resourceInputs["recipients"] = args ? args.recipients : undefined;
-            resourceInputs["type"] = args ? args.type : undefined;
+            resourceInputs["alertCondition"] = args?.alertCondition;
+            resourceInputs["alertConfigId"] = args?.alertConfigId;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["enabled"] = args?.enabled;
+            resourceInputs["networkTags"] = args?.networkTags;
+            resourceInputs["organizationId"] = args?.organizationId;
+            resourceInputs["recipients"] = args?.recipients;
+            resourceInputs["type"] = args?.type;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(AlertsProfiles.__pulumiType, name, resourceInputs, opts);

@@ -46,15 +46,15 @@ export class WirelessBilling extends pulumi.CustomResource {
     /**
      * The currency code of this node group's billing plans
      */
-    public readonly currency!: pulumi.Output<string>;
+    declare public readonly currency: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * Array of billing plans in the node group. (Can configure a maximum of 5)
      */
-    public readonly plans!: pulumi.Output<outputs.networks.WirelessBillingPlan[]>;
+    declare public readonly plans: pulumi.Output<outputs.networks.WirelessBillingPlan[]>;
 
     /**
      * Create a WirelessBilling resource with the given unique name, arguments, and options.
@@ -69,17 +69,17 @@ export class WirelessBilling extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as WirelessBillingState | undefined;
-            resourceInputs["currency"] = state ? state.currency : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["plans"] = state ? state.plans : undefined;
+            resourceInputs["currency"] = state?.currency;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["plans"] = state?.plans;
         } else {
             const args = argsOrState as WirelessBillingArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["currency"] = args ? args.currency : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["plans"] = args ? args.plans : undefined;
+            resourceInputs["currency"] = args?.currency;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["plans"] = args?.plans;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(WirelessBilling.__pulumiType, name, resourceInputs, opts);

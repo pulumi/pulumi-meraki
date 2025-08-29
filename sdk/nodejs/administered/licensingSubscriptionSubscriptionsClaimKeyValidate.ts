@@ -38,8 +38,8 @@ export class LicensingSubscriptionSubscriptionsClaimKeyValidate extends pulumi.C
         return obj['__pulumiType'] === LicensingSubscriptionSubscriptionsClaimKeyValidate.__pulumiType;
     }
 
-    public /*out*/ readonly item!: pulumi.Output<outputs.administered.LicensingSubscriptionSubscriptionsClaimKeyValidateItem>;
-    public readonly parameters!: pulumi.Output<outputs.administered.LicensingSubscriptionSubscriptionsClaimKeyValidateParameters>;
+    declare public /*out*/ readonly item: pulumi.Output<outputs.administered.LicensingSubscriptionSubscriptionsClaimKeyValidateItem>;
+    declare public readonly parameters: pulumi.Output<outputs.administered.LicensingSubscriptionSubscriptionsClaimKeyValidateParameters>;
 
     /**
      * Create a LicensingSubscriptionSubscriptionsClaimKeyValidate resource with the given unique name, arguments, and options.
@@ -54,14 +54,14 @@ export class LicensingSubscriptionSubscriptionsClaimKeyValidate extends pulumi.C
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as LicensingSubscriptionSubscriptionsClaimKeyValidateState | undefined;
-            resourceInputs["item"] = state ? state.item : undefined;
-            resourceInputs["parameters"] = state ? state.parameters : undefined;
+            resourceInputs["item"] = state?.item;
+            resourceInputs["parameters"] = state?.parameters;
         } else {
             const args = argsOrState as LicensingSubscriptionSubscriptionsClaimKeyValidateArgs | undefined;
-            if ((!args || args.parameters === undefined) && !opts.urn) {
+            if (args?.parameters === undefined && !opts.urn) {
                 throw new Error("Missing required property 'parameters'");
             }
-            resourceInputs["parameters"] = args ? args.parameters : undefined;
+            resourceInputs["parameters"] = args?.parameters;
             resourceInputs["item"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

@@ -46,11 +46,11 @@ export class ApplianceSecurityIntrusion extends pulumi.CustomResource {
     /**
      * Sets a list of specific SNORT signatures to allow
      */
-    public readonly allowedRules!: pulumi.Output<outputs.organizations.ApplianceSecurityIntrusionAllowedRule[]>;
+    declare public readonly allowedRules: pulumi.Output<outputs.organizations.ApplianceSecurityIntrusionAllowedRule[]>;
     /**
      * organizationId path parameter. Organization ID
      */
-    public readonly organizationId!: pulumi.Output<string>;
+    declare public readonly organizationId: pulumi.Output<string>;
 
     /**
      * Create a ApplianceSecurityIntrusion resource with the given unique name, arguments, and options.
@@ -65,15 +65,15 @@ export class ApplianceSecurityIntrusion extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ApplianceSecurityIntrusionState | undefined;
-            resourceInputs["allowedRules"] = state ? state.allowedRules : undefined;
-            resourceInputs["organizationId"] = state ? state.organizationId : undefined;
+            resourceInputs["allowedRules"] = state?.allowedRules;
+            resourceInputs["organizationId"] = state?.organizationId;
         } else {
             const args = argsOrState as ApplianceSecurityIntrusionArgs | undefined;
-            if ((!args || args.organizationId === undefined) && !opts.urn) {
+            if (args?.organizationId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'organizationId'");
             }
-            resourceInputs["allowedRules"] = args ? args.allowedRules : undefined;
-            resourceInputs["organizationId"] = args ? args.organizationId : undefined;
+            resourceInputs["allowedRules"] = args?.allowedRules;
+            resourceInputs["organizationId"] = args?.organizationId;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(ApplianceSecurityIntrusion.__pulumiType, name, resourceInputs, opts);

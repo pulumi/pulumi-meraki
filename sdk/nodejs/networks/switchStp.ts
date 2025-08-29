@@ -46,19 +46,19 @@ export class SwitchStp extends pulumi.CustomResource {
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * The spanning tree protocol status in network
      */
-    public readonly rstpEnabled!: pulumi.Output<boolean>;
+    declare public readonly rstpEnabled: pulumi.Output<boolean>;
     /**
      * STP bridge priority for switches/stacks or switch templates. An empty array will clear the STP bridge priority settings.
      */
-    public readonly stpBridgePriorities!: pulumi.Output<outputs.networks.SwitchStpStpBridgePriority[] | undefined>;
+    declare public readonly stpBridgePriorities: pulumi.Output<outputs.networks.SwitchStpStpBridgePriority[] | undefined>;
     /**
      * STP bridge priority for switches/stacks or switch templates. An empty array will clear the STP bridge priority settings.
      */
-    public /*out*/ readonly stpBridgePriorityResponses!: pulumi.Output<outputs.networks.SwitchStpStpBridgePriorityResponse[]>;
+    declare public /*out*/ readonly stpBridgePriorityResponses: pulumi.Output<outputs.networks.SwitchStpStpBridgePriorityResponse[]>;
 
     /**
      * Create a SwitchStp resource with the given unique name, arguments, and options.
@@ -73,18 +73,18 @@ export class SwitchStp extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SwitchStpState | undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["rstpEnabled"] = state ? state.rstpEnabled : undefined;
-            resourceInputs["stpBridgePriorities"] = state ? state.stpBridgePriorities : undefined;
-            resourceInputs["stpBridgePriorityResponses"] = state ? state.stpBridgePriorityResponses : undefined;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["rstpEnabled"] = state?.rstpEnabled;
+            resourceInputs["stpBridgePriorities"] = state?.stpBridgePriorities;
+            resourceInputs["stpBridgePriorityResponses"] = state?.stpBridgePriorityResponses;
         } else {
             const args = argsOrState as SwitchStpArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["rstpEnabled"] = args ? args.rstpEnabled : undefined;
-            resourceInputs["stpBridgePriorities"] = args ? args.stpBridgePriorities : undefined;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["rstpEnabled"] = args?.rstpEnabled;
+            resourceInputs["stpBridgePriorities"] = args?.stpBridgePriorities;
             resourceInputs["stpBridgePriorityResponses"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
