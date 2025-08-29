@@ -71,26 +71,26 @@ export class AdaptivePolicyPolicies extends pulumi.CustomResource {
     /**
      * An ordered array of adaptive policy ACLs (each requires one unique attribute) that apply to this policy (default: [])
      */
-    public readonly acls!: pulumi.Output<outputs.organizations.AdaptivePolicyPoliciesAcl[]>;
-    public /*out*/ readonly adaptivePolicyId!: pulumi.Output<string>;
-    public /*out*/ readonly createdAt!: pulumi.Output<string>;
+    declare public readonly acls: pulumi.Output<outputs.organizations.AdaptivePolicyPoliciesAcl[]>;
+    declare public /*out*/ readonly adaptivePolicyId: pulumi.Output<string>;
+    declare public /*out*/ readonly createdAt: pulumi.Output<string>;
     /**
      * The destination adaptive policy group (requires one unique attribute)
      */
-    public readonly destinationGroup!: pulumi.Output<outputs.organizations.AdaptivePolicyPoliciesDestinationGroup>;
+    declare public readonly destinationGroup: pulumi.Output<outputs.organizations.AdaptivePolicyPoliciesDestinationGroup>;
     /**
      * The rule to apply if there is no matching ACL (default: "default")
      */
-    public readonly lastEntryRule!: pulumi.Output<string>;
+    declare public readonly lastEntryRule: pulumi.Output<string>;
     /**
      * organizationId path parameter. Organization ID
      */
-    public readonly organizationId!: pulumi.Output<string>;
+    declare public readonly organizationId: pulumi.Output<string>;
     /**
      * The source adaptive policy group (requires one unique attribute)
      */
-    public readonly sourceGroup!: pulumi.Output<outputs.organizations.AdaptivePolicyPoliciesSourceGroup>;
-    public /*out*/ readonly updatedAt!: pulumi.Output<string>;
+    declare public readonly sourceGroup: pulumi.Output<outputs.organizations.AdaptivePolicyPoliciesSourceGroup>;
+    declare public /*out*/ readonly updatedAt: pulumi.Output<string>;
 
     /**
      * Create a AdaptivePolicyPolicies resource with the given unique name, arguments, and options.
@@ -105,24 +105,24 @@ export class AdaptivePolicyPolicies extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as AdaptivePolicyPoliciesState | undefined;
-            resourceInputs["acls"] = state ? state.acls : undefined;
-            resourceInputs["adaptivePolicyId"] = state ? state.adaptivePolicyId : undefined;
-            resourceInputs["createdAt"] = state ? state.createdAt : undefined;
-            resourceInputs["destinationGroup"] = state ? state.destinationGroup : undefined;
-            resourceInputs["lastEntryRule"] = state ? state.lastEntryRule : undefined;
-            resourceInputs["organizationId"] = state ? state.organizationId : undefined;
-            resourceInputs["sourceGroup"] = state ? state.sourceGroup : undefined;
-            resourceInputs["updatedAt"] = state ? state.updatedAt : undefined;
+            resourceInputs["acls"] = state?.acls;
+            resourceInputs["adaptivePolicyId"] = state?.adaptivePolicyId;
+            resourceInputs["createdAt"] = state?.createdAt;
+            resourceInputs["destinationGroup"] = state?.destinationGroup;
+            resourceInputs["lastEntryRule"] = state?.lastEntryRule;
+            resourceInputs["organizationId"] = state?.organizationId;
+            resourceInputs["sourceGroup"] = state?.sourceGroup;
+            resourceInputs["updatedAt"] = state?.updatedAt;
         } else {
             const args = argsOrState as AdaptivePolicyPoliciesArgs | undefined;
-            if ((!args || args.organizationId === undefined) && !opts.urn) {
+            if (args?.organizationId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'organizationId'");
             }
-            resourceInputs["acls"] = args ? args.acls : undefined;
-            resourceInputs["destinationGroup"] = args ? args.destinationGroup : undefined;
-            resourceInputs["lastEntryRule"] = args ? args.lastEntryRule : undefined;
-            resourceInputs["organizationId"] = args ? args.organizationId : undefined;
-            resourceInputs["sourceGroup"] = args ? args.sourceGroup : undefined;
+            resourceInputs["acls"] = args?.acls;
+            resourceInputs["destinationGroup"] = args?.destinationGroup;
+            resourceInputs["lastEntryRule"] = args?.lastEntryRule;
+            resourceInputs["organizationId"] = args?.organizationId;
+            resourceInputs["sourceGroup"] = args?.sourceGroup;
             resourceInputs["adaptivePolicyId"] = undefined /*out*/;
             resourceInputs["createdAt"] = undefined /*out*/;
             resourceInputs["updatedAt"] = undefined /*out*/;

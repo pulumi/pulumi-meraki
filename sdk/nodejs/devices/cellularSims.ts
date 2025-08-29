@@ -54,15 +54,15 @@ export class CellularSims extends pulumi.CustomResource {
     /**
      * serial path parameter.
      */
-    public readonly serial!: pulumi.Output<string>;
+    declare public readonly serial: pulumi.Output<string>;
     /**
      * SIM Failover settings.
      */
-    public readonly simFailover!: pulumi.Output<outputs.devices.CellularSimsSimFailover>;
+    declare public readonly simFailover: pulumi.Output<outputs.devices.CellularSimsSimFailover>;
     /**
      * List of SIMs. If a SIM was previously configured and not specified in this request, it will remain unchanged.
      */
-    public readonly sims!: pulumi.Output<outputs.devices.CellularSimsSim[]>;
+    declare public readonly sims: pulumi.Output<outputs.devices.CellularSimsSim[]>;
 
     /**
      * Create a CellularSims resource with the given unique name, arguments, and options.
@@ -77,17 +77,17 @@ export class CellularSims extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CellularSimsState | undefined;
-            resourceInputs["serial"] = state ? state.serial : undefined;
-            resourceInputs["simFailover"] = state ? state.simFailover : undefined;
-            resourceInputs["sims"] = state ? state.sims : undefined;
+            resourceInputs["serial"] = state?.serial;
+            resourceInputs["simFailover"] = state?.simFailover;
+            resourceInputs["sims"] = state?.sims;
         } else {
             const args = argsOrState as CellularSimsArgs | undefined;
-            if ((!args || args.serial === undefined) && !opts.urn) {
+            if (args?.serial === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serial'");
             }
-            resourceInputs["serial"] = args ? args.serial : undefined;
-            resourceInputs["simFailover"] = args ? args.simFailover : undefined;
-            resourceInputs["sims"] = args ? args.sims : undefined;
+            resourceInputs["serial"] = args?.serial;
+            resourceInputs["simFailover"] = args?.simFailover;
+            resourceInputs["sims"] = args?.sims;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(CellularSims.__pulumiType, name, resourceInputs, opts);

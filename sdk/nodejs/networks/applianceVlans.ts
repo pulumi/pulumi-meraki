@@ -46,91 +46,91 @@ export class ApplianceVlans extends pulumi.CustomResource {
     /**
      * The local IP of the appliance on the VLAN
      */
-    public readonly applianceIp!: pulumi.Output<string>;
+    declare public readonly applianceIp: pulumi.Output<string>;
     /**
      * CIDR of the pool of subnets. Applicable only for template network. Each network bound to the template will automatically pick a subnet from this pool to build its own VLAN.
      */
-    public readonly cidr!: pulumi.Output<string | undefined>;
+    declare public readonly cidr: pulumi.Output<string | undefined>;
     /**
      * DHCP boot option for boot filename
      */
-    public readonly dhcpBootFilename!: pulumi.Output<string>;
+    declare public readonly dhcpBootFilename: pulumi.Output<string>;
     /**
      * DHCP boot option to direct boot clients to the server to load the boot file from
      */
-    public readonly dhcpBootNextServer!: pulumi.Output<string>;
+    declare public readonly dhcpBootNextServer: pulumi.Output<string>;
     /**
      * Use DHCP boot options specified in other properties
      */
-    public readonly dhcpBootOptionsEnabled!: pulumi.Output<boolean>;
+    declare public readonly dhcpBootOptionsEnabled: pulumi.Output<boolean>;
     /**
      * The appliance's handling of DHCP requests on this VLAN. One of: 'Run a DHCP server', 'Relay DHCP to another server' or 'Do not respond to DHCP requests'
      */
-    public readonly dhcpHandling!: pulumi.Output<string>;
+    declare public readonly dhcpHandling: pulumi.Output<string>;
     /**
      * The term of DHCP leases if the appliance is running a DHCP server on this VLAN. One of: '30 minutes', '1 hour', '4 hours', '12 hours', '1 day' or '1 week'
      */
-    public readonly dhcpLeaseTime!: pulumi.Output<string>;
+    declare public readonly dhcpLeaseTime: pulumi.Output<string>;
     /**
      * The list of DHCP options that will be included in DHCP responses. Each object in the list should have "code", "type", and "value" properties.
      */
-    public readonly dhcpOptions!: pulumi.Output<outputs.networks.ApplianceVlansDhcpOption[]>;
+    declare public readonly dhcpOptions: pulumi.Output<outputs.networks.ApplianceVlansDhcpOption[]>;
     /**
      * The IPs of the DHCP servers that DHCP requests should be relayed to
      */
-    public readonly dhcpRelayServerIps!: pulumi.Output<string[]>;
+    declare public readonly dhcpRelayServerIps: pulumi.Output<string[]>;
     /**
      * The DNS nameservers used for DHCP responses, either "upstream*dns", "google*dns", "opendns", or a newline seperated string of IP addresses or domain names
      */
-    public readonly dnsNameservers!: pulumi.Output<string>;
+    declare public readonly dnsNameservers: pulumi.Output<string>;
     /**
      * The id of the desired group policy to apply to the VLAN
      */
-    public readonly groupPolicyId!: pulumi.Output<string>;
+    declare public readonly groupPolicyId: pulumi.Output<string>;
     /**
      * The interface ID of the VLAN
      */
-    public /*out*/ readonly interfaceId!: pulumi.Output<string>;
+    declare public /*out*/ readonly interfaceId: pulumi.Output<string>;
     /**
      * IPv6 configuration on the VLAN
      */
-    public readonly ipv6!: pulumi.Output<outputs.networks.ApplianceVlansIpv6>;
+    declare public readonly ipv6: pulumi.Output<outputs.networks.ApplianceVlansIpv6>;
     /**
      * Mandatory DHCP will enforce that clients connecting to this VLAN must use the IP address assigned by the DHCP server. Clients who use a static IP address won't be able to associate. Only available on firmware versions 17.0 and above
      */
-    public readonly mandatoryDhcp!: pulumi.Output<outputs.networks.ApplianceVlansMandatoryDhcp>;
+    declare public readonly mandatoryDhcp: pulumi.Output<outputs.networks.ApplianceVlansMandatoryDhcp>;
     /**
      * Mask used for the subnet of all bound to the template networks. Applicable only for template network.
      */
-    public readonly mask!: pulumi.Output<number>;
+    declare public readonly mask: pulumi.Output<number>;
     /**
      * The name of the VLAN
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * The DHCP reserved IP ranges on the VLAN
      */
-    public readonly reservedIpRanges!: pulumi.Output<outputs.networks.ApplianceVlansReservedIpRange[]>;
+    declare public readonly reservedIpRanges: pulumi.Output<outputs.networks.ApplianceVlansReservedIpRange[]>;
     /**
      * The subnet of the VLAN
      */
-    public readonly subnet!: pulumi.Output<string>;
+    declare public readonly subnet: pulumi.Output<string>;
     /**
      * Type of subnetting of the VLAN. Applicable only for template network.
      */
-    public readonly templateVlanType!: pulumi.Output<string>;
+    declare public readonly templateVlanType: pulumi.Output<string>;
     /**
      * The VLAN ID of the VLAN
      */
-    public readonly vlanId!: pulumi.Output<string>;
+    declare public readonly vlanId: pulumi.Output<string>;
     /**
      * The translated VPN subnet if VPN and VPN subnet translation are enabled on the VLAN
      */
-    public readonly vpnNatSubnet!: pulumi.Output<string>;
+    declare public readonly vpnNatSubnet: pulumi.Output<string>;
 
     /**
      * Create a ApplianceVlans resource with the given unique name, arguments, and options.
@@ -145,57 +145,57 @@ export class ApplianceVlans extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ApplianceVlansState | undefined;
-            resourceInputs["applianceIp"] = state ? state.applianceIp : undefined;
-            resourceInputs["cidr"] = state ? state.cidr : undefined;
-            resourceInputs["dhcpBootFilename"] = state ? state.dhcpBootFilename : undefined;
-            resourceInputs["dhcpBootNextServer"] = state ? state.dhcpBootNextServer : undefined;
-            resourceInputs["dhcpBootOptionsEnabled"] = state ? state.dhcpBootOptionsEnabled : undefined;
-            resourceInputs["dhcpHandling"] = state ? state.dhcpHandling : undefined;
-            resourceInputs["dhcpLeaseTime"] = state ? state.dhcpLeaseTime : undefined;
-            resourceInputs["dhcpOptions"] = state ? state.dhcpOptions : undefined;
-            resourceInputs["dhcpRelayServerIps"] = state ? state.dhcpRelayServerIps : undefined;
-            resourceInputs["dnsNameservers"] = state ? state.dnsNameservers : undefined;
-            resourceInputs["groupPolicyId"] = state ? state.groupPolicyId : undefined;
-            resourceInputs["interfaceId"] = state ? state.interfaceId : undefined;
-            resourceInputs["ipv6"] = state ? state.ipv6 : undefined;
-            resourceInputs["mandatoryDhcp"] = state ? state.mandatoryDhcp : undefined;
-            resourceInputs["mask"] = state ? state.mask : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["reservedIpRanges"] = state ? state.reservedIpRanges : undefined;
-            resourceInputs["subnet"] = state ? state.subnet : undefined;
-            resourceInputs["templateVlanType"] = state ? state.templateVlanType : undefined;
-            resourceInputs["vlanId"] = state ? state.vlanId : undefined;
-            resourceInputs["vpnNatSubnet"] = state ? state.vpnNatSubnet : undefined;
+            resourceInputs["applianceIp"] = state?.applianceIp;
+            resourceInputs["cidr"] = state?.cidr;
+            resourceInputs["dhcpBootFilename"] = state?.dhcpBootFilename;
+            resourceInputs["dhcpBootNextServer"] = state?.dhcpBootNextServer;
+            resourceInputs["dhcpBootOptionsEnabled"] = state?.dhcpBootOptionsEnabled;
+            resourceInputs["dhcpHandling"] = state?.dhcpHandling;
+            resourceInputs["dhcpLeaseTime"] = state?.dhcpLeaseTime;
+            resourceInputs["dhcpOptions"] = state?.dhcpOptions;
+            resourceInputs["dhcpRelayServerIps"] = state?.dhcpRelayServerIps;
+            resourceInputs["dnsNameservers"] = state?.dnsNameservers;
+            resourceInputs["groupPolicyId"] = state?.groupPolicyId;
+            resourceInputs["interfaceId"] = state?.interfaceId;
+            resourceInputs["ipv6"] = state?.ipv6;
+            resourceInputs["mandatoryDhcp"] = state?.mandatoryDhcp;
+            resourceInputs["mask"] = state?.mask;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["reservedIpRanges"] = state?.reservedIpRanges;
+            resourceInputs["subnet"] = state?.subnet;
+            resourceInputs["templateVlanType"] = state?.templateVlanType;
+            resourceInputs["vlanId"] = state?.vlanId;
+            resourceInputs["vpnNatSubnet"] = state?.vpnNatSubnet;
         } else {
             const args = argsOrState as ApplianceVlansArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            if ((!args || args.vlanId === undefined) && !opts.urn) {
+            if (args?.vlanId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'vlanId'");
             }
-            resourceInputs["applianceIp"] = args ? args.applianceIp : undefined;
-            resourceInputs["cidr"] = args ? args.cidr : undefined;
-            resourceInputs["dhcpBootFilename"] = args ? args.dhcpBootFilename : undefined;
-            resourceInputs["dhcpBootNextServer"] = args ? args.dhcpBootNextServer : undefined;
-            resourceInputs["dhcpBootOptionsEnabled"] = args ? args.dhcpBootOptionsEnabled : undefined;
-            resourceInputs["dhcpHandling"] = args ? args.dhcpHandling : undefined;
-            resourceInputs["dhcpLeaseTime"] = args ? args.dhcpLeaseTime : undefined;
-            resourceInputs["dhcpOptions"] = args ? args.dhcpOptions : undefined;
-            resourceInputs["dhcpRelayServerIps"] = args ? args.dhcpRelayServerIps : undefined;
-            resourceInputs["dnsNameservers"] = args ? args.dnsNameservers : undefined;
-            resourceInputs["groupPolicyId"] = args ? args.groupPolicyId : undefined;
-            resourceInputs["ipv6"] = args ? args.ipv6 : undefined;
-            resourceInputs["mandatoryDhcp"] = args ? args.mandatoryDhcp : undefined;
-            resourceInputs["mask"] = args ? args.mask : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["reservedIpRanges"] = args ? args.reservedIpRanges : undefined;
-            resourceInputs["subnet"] = args ? args.subnet : undefined;
-            resourceInputs["templateVlanType"] = args ? args.templateVlanType : undefined;
-            resourceInputs["vlanId"] = args ? args.vlanId : undefined;
-            resourceInputs["vpnNatSubnet"] = args ? args.vpnNatSubnet : undefined;
+            resourceInputs["applianceIp"] = args?.applianceIp;
+            resourceInputs["cidr"] = args?.cidr;
+            resourceInputs["dhcpBootFilename"] = args?.dhcpBootFilename;
+            resourceInputs["dhcpBootNextServer"] = args?.dhcpBootNextServer;
+            resourceInputs["dhcpBootOptionsEnabled"] = args?.dhcpBootOptionsEnabled;
+            resourceInputs["dhcpHandling"] = args?.dhcpHandling;
+            resourceInputs["dhcpLeaseTime"] = args?.dhcpLeaseTime;
+            resourceInputs["dhcpOptions"] = args?.dhcpOptions;
+            resourceInputs["dhcpRelayServerIps"] = args?.dhcpRelayServerIps;
+            resourceInputs["dnsNameservers"] = args?.dnsNameservers;
+            resourceInputs["groupPolicyId"] = args?.groupPolicyId;
+            resourceInputs["ipv6"] = args?.ipv6;
+            resourceInputs["mandatoryDhcp"] = args?.mandatoryDhcp;
+            resourceInputs["mask"] = args?.mask;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["reservedIpRanges"] = args?.reservedIpRanges;
+            resourceInputs["subnet"] = args?.subnet;
+            resourceInputs["templateVlanType"] = args?.templateVlanType;
+            resourceInputs["vlanId"] = args?.vlanId;
+            resourceInputs["vpnNatSubnet"] = args?.vpnNatSubnet;
             resourceInputs["interfaceId"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

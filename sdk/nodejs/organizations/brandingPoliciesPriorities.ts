@@ -59,11 +59,11 @@ export class BrandingPoliciesPriorities extends pulumi.CustomResource {
     /**
      * An ordered list of branding policy IDs that determines the priority order of how to apply the policies
      */
-    public readonly brandingPolicyIds!: pulumi.Output<string[]>;
+    declare public readonly brandingPolicyIds: pulumi.Output<string[]>;
     /**
      * organizationId path parameter. Organization ID
      */
-    public readonly organizationId!: pulumi.Output<string>;
+    declare public readonly organizationId: pulumi.Output<string>;
 
     /**
      * Create a BrandingPoliciesPriorities resource with the given unique name, arguments, and options.
@@ -78,15 +78,15 @@ export class BrandingPoliciesPriorities extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as BrandingPoliciesPrioritiesState | undefined;
-            resourceInputs["brandingPolicyIds"] = state ? state.brandingPolicyIds : undefined;
-            resourceInputs["organizationId"] = state ? state.organizationId : undefined;
+            resourceInputs["brandingPolicyIds"] = state?.brandingPolicyIds;
+            resourceInputs["organizationId"] = state?.organizationId;
         } else {
             const args = argsOrState as BrandingPoliciesPrioritiesArgs | undefined;
-            if ((!args || args.organizationId === undefined) && !opts.urn) {
+            if (args?.organizationId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'organizationId'");
             }
-            resourceInputs["brandingPolicyIds"] = args ? args.brandingPolicyIds : undefined;
-            resourceInputs["organizationId"] = args ? args.organizationId : undefined;
+            resourceInputs["brandingPolicyIds"] = args?.brandingPolicyIds;
+            resourceInputs["organizationId"] = args?.organizationId;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(BrandingPoliciesPriorities.__pulumiType, name, resourceInputs, opts);

@@ -46,31 +46,31 @@ export class ApplianceTrafficShapingUplinkSelection extends pulumi.CustomResourc
     /**
      * Whether active-active AutoVPN is enabled
      */
-    public readonly activeActiveAutoVpnEnabled!: pulumi.Output<boolean>;
+    declare public readonly activeActiveAutoVpnEnabled: pulumi.Output<boolean>;
     /**
      * The default uplink. Must be one of: 'wan1' or 'wan2'
      */
-    public readonly defaultUplink!: pulumi.Output<string>;
+    declare public readonly defaultUplink: pulumi.Output<string>;
     /**
      * WAN failover and failback
      */
-    public readonly failoverAndFailback!: pulumi.Output<outputs.networks.ApplianceTrafficShapingUplinkSelectionFailoverAndFailback>;
+    declare public readonly failoverAndFailback: pulumi.Output<outputs.networks.ApplianceTrafficShapingUplinkSelectionFailoverAndFailback>;
     /**
      * Whether load balancing is enabled
      */
-    public readonly loadBalancingEnabled!: pulumi.Output<boolean>;
+    declare public readonly loadBalancingEnabled: pulumi.Output<boolean>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * Uplink preference rules for VPN traffic
      */
-    public readonly vpnTrafficUplinkPreferences!: pulumi.Output<outputs.networks.ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreference[]>;
+    declare public readonly vpnTrafficUplinkPreferences: pulumi.Output<outputs.networks.ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreference[]>;
     /**
      * Uplink preference rules for WAN traffic
      */
-    public readonly wanTrafficUplinkPreferences!: pulumi.Output<outputs.networks.ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreference[]>;
+    declare public readonly wanTrafficUplinkPreferences: pulumi.Output<outputs.networks.ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreference[]>;
 
     /**
      * Create a ApplianceTrafficShapingUplinkSelection resource with the given unique name, arguments, and options.
@@ -85,25 +85,25 @@ export class ApplianceTrafficShapingUplinkSelection extends pulumi.CustomResourc
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ApplianceTrafficShapingUplinkSelectionState | undefined;
-            resourceInputs["activeActiveAutoVpnEnabled"] = state ? state.activeActiveAutoVpnEnabled : undefined;
-            resourceInputs["defaultUplink"] = state ? state.defaultUplink : undefined;
-            resourceInputs["failoverAndFailback"] = state ? state.failoverAndFailback : undefined;
-            resourceInputs["loadBalancingEnabled"] = state ? state.loadBalancingEnabled : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["vpnTrafficUplinkPreferences"] = state ? state.vpnTrafficUplinkPreferences : undefined;
-            resourceInputs["wanTrafficUplinkPreferences"] = state ? state.wanTrafficUplinkPreferences : undefined;
+            resourceInputs["activeActiveAutoVpnEnabled"] = state?.activeActiveAutoVpnEnabled;
+            resourceInputs["defaultUplink"] = state?.defaultUplink;
+            resourceInputs["failoverAndFailback"] = state?.failoverAndFailback;
+            resourceInputs["loadBalancingEnabled"] = state?.loadBalancingEnabled;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["vpnTrafficUplinkPreferences"] = state?.vpnTrafficUplinkPreferences;
+            resourceInputs["wanTrafficUplinkPreferences"] = state?.wanTrafficUplinkPreferences;
         } else {
             const args = argsOrState as ApplianceTrafficShapingUplinkSelectionArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["activeActiveAutoVpnEnabled"] = args ? args.activeActiveAutoVpnEnabled : undefined;
-            resourceInputs["defaultUplink"] = args ? args.defaultUplink : undefined;
-            resourceInputs["failoverAndFailback"] = args ? args.failoverAndFailback : undefined;
-            resourceInputs["loadBalancingEnabled"] = args ? args.loadBalancingEnabled : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["vpnTrafficUplinkPreferences"] = args ? args.vpnTrafficUplinkPreferences : undefined;
-            resourceInputs["wanTrafficUplinkPreferences"] = args ? args.wanTrafficUplinkPreferences : undefined;
+            resourceInputs["activeActiveAutoVpnEnabled"] = args?.activeActiveAutoVpnEnabled;
+            resourceInputs["defaultUplink"] = args?.defaultUplink;
+            resourceInputs["failoverAndFailback"] = args?.failoverAndFailback;
+            resourceInputs["loadBalancingEnabled"] = args?.loadBalancingEnabled;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["vpnTrafficUplinkPreferences"] = args?.vpnTrafficUplinkPreferences;
+            resourceInputs["wanTrafficUplinkPreferences"] = args?.wanTrafficUplinkPreferences;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(ApplianceTrafficShapingUplinkSelection.__pulumiType, name, resourceInputs, opts);

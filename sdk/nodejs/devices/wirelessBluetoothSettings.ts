@@ -57,19 +57,19 @@ export class WirelessBluetoothSettings extends pulumi.CustomResource {
     /**
      * Desired major value of the beacon. If the value is set to null it will reset to Dashboard's automatically generated value.
      */
-    public readonly major!: pulumi.Output<number>;
+    declare public readonly major: pulumi.Output<number>;
     /**
      * Desired minor value of the beacon. If the value is set to null it will reset to Dashboard's automatically generated value.
      */
-    public readonly minor!: pulumi.Output<number>;
+    declare public readonly minor: pulumi.Output<number>;
     /**
      * serial path parameter.
      */
-    public readonly serial!: pulumi.Output<string>;
+    declare public readonly serial: pulumi.Output<string>;
     /**
      * Desired UUID of the beacon. If the value is set to null it will reset to Dashboard's automatically generated value.
      */
-    public readonly uuid!: pulumi.Output<string>;
+    declare public readonly uuid: pulumi.Output<string>;
 
     /**
      * Create a WirelessBluetoothSettings resource with the given unique name, arguments, and options.
@@ -84,19 +84,19 @@ export class WirelessBluetoothSettings extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as WirelessBluetoothSettingsState | undefined;
-            resourceInputs["major"] = state ? state.major : undefined;
-            resourceInputs["minor"] = state ? state.minor : undefined;
-            resourceInputs["serial"] = state ? state.serial : undefined;
-            resourceInputs["uuid"] = state ? state.uuid : undefined;
+            resourceInputs["major"] = state?.major;
+            resourceInputs["minor"] = state?.minor;
+            resourceInputs["serial"] = state?.serial;
+            resourceInputs["uuid"] = state?.uuid;
         } else {
             const args = argsOrState as WirelessBluetoothSettingsArgs | undefined;
-            if ((!args || args.serial === undefined) && !opts.urn) {
+            if (args?.serial === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serial'");
             }
-            resourceInputs["major"] = args ? args.major : undefined;
-            resourceInputs["minor"] = args ? args.minor : undefined;
-            resourceInputs["serial"] = args ? args.serial : undefined;
-            resourceInputs["uuid"] = args ? args.uuid : undefined;
+            resourceInputs["major"] = args?.major;
+            resourceInputs["minor"] = args?.minor;
+            resourceInputs["serial"] = args?.serial;
+            resourceInputs["uuid"] = args?.uuid;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(WirelessBluetoothSettings.__pulumiType, name, resourceInputs, opts);

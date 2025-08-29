@@ -73,29 +73,29 @@ export class SwitchDhcpServerPolicy extends pulumi.CustomResource {
     /**
      * Email alert settings for DHCP servers
      */
-    public readonly alerts!: pulumi.Output<outputs.networks.SwitchDhcpServerPolicyAlerts>;
+    declare public readonly alerts: pulumi.Output<outputs.networks.SwitchDhcpServerPolicyAlerts>;
     /**
      * List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
      *   to block.An empty array will clear the entries.
      */
-    public readonly allowedServers!: pulumi.Output<string[]>;
+    declare public readonly allowedServers: pulumi.Output<string[]>;
     /**
      * Dynamic ARP Inspection settings
      */
-    public readonly arpInspection!: pulumi.Output<outputs.networks.SwitchDhcpServerPolicyArpInspection>;
+    declare public readonly arpInspection: pulumi.Output<outputs.networks.SwitchDhcpServerPolicyArpInspection>;
     /**
      * List the MAC addresses of DHCP servers to block on the network when defaultPolicy is set
      *   to allow.An empty array will clear the entries.
      */
-    public readonly blockedServers!: pulumi.Output<string[]>;
+    declare public readonly blockedServers: pulumi.Output<string[]>;
     /**
      * 'allow' or 'block' new DHCP servers. Default value is 'allow'.
      */
-    public readonly defaultPolicy!: pulumi.Output<string>;
+    declare public readonly defaultPolicy: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
 
     /**
      * Create a SwitchDhcpServerPolicy resource with the given unique name, arguments, and options.
@@ -110,23 +110,23 @@ export class SwitchDhcpServerPolicy extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SwitchDhcpServerPolicyState | undefined;
-            resourceInputs["alerts"] = state ? state.alerts : undefined;
-            resourceInputs["allowedServers"] = state ? state.allowedServers : undefined;
-            resourceInputs["arpInspection"] = state ? state.arpInspection : undefined;
-            resourceInputs["blockedServers"] = state ? state.blockedServers : undefined;
-            resourceInputs["defaultPolicy"] = state ? state.defaultPolicy : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
+            resourceInputs["alerts"] = state?.alerts;
+            resourceInputs["allowedServers"] = state?.allowedServers;
+            resourceInputs["arpInspection"] = state?.arpInspection;
+            resourceInputs["blockedServers"] = state?.blockedServers;
+            resourceInputs["defaultPolicy"] = state?.defaultPolicy;
+            resourceInputs["networkId"] = state?.networkId;
         } else {
             const args = argsOrState as SwitchDhcpServerPolicyArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["alerts"] = args ? args.alerts : undefined;
-            resourceInputs["allowedServers"] = args ? args.allowedServers : undefined;
-            resourceInputs["arpInspection"] = args ? args.arpInspection : undefined;
-            resourceInputs["blockedServers"] = args ? args.blockedServers : undefined;
-            resourceInputs["defaultPolicy"] = args ? args.defaultPolicy : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
+            resourceInputs["alerts"] = args?.alerts;
+            resourceInputs["allowedServers"] = args?.allowedServers;
+            resourceInputs["arpInspection"] = args?.arpInspection;
+            resourceInputs["blockedServers"] = args?.blockedServers;
+            resourceInputs["defaultPolicy"] = args?.defaultPolicy;
+            resourceInputs["networkId"] = args?.networkId;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(SwitchDhcpServerPolicy.__pulumiType, name, resourceInputs, opts);

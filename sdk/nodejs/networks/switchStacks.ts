@@ -59,19 +59,19 @@ export class SwitchStacks extends pulumi.CustomResource {
     /**
      * Name of the Switch stack
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * Serials of the switches in the switch stack
      */
-    public readonly serials!: pulumi.Output<string[]>;
+    declare public readonly serials: pulumi.Output<string[]>;
     /**
      * switchStackId path parameter. Switch stack ID
      */
-    public readonly switchStackId!: pulumi.Output<string>;
+    declare public readonly switchStackId: pulumi.Output<string>;
 
     /**
      * Create a SwitchStacks resource with the given unique name, arguments, and options.
@@ -86,19 +86,19 @@ export class SwitchStacks extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SwitchStacksState | undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["serials"] = state ? state.serials : undefined;
-            resourceInputs["switchStackId"] = state ? state.switchStackId : undefined;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["serials"] = state?.serials;
+            resourceInputs["switchStackId"] = state?.switchStackId;
         } else {
             const args = argsOrState as SwitchStacksArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["serials"] = args ? args.serials : undefined;
-            resourceInputs["switchStackId"] = args ? args.switchStackId : undefined;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["serials"] = args?.serials;
+            resourceInputs["switchStackId"] = args?.switchStackId;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(SwitchStacks.__pulumiType, name, resourceInputs, opts);

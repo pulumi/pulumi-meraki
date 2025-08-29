@@ -61,39 +61,39 @@ export class AppliancePorts extends pulumi.CustomResource {
     /**
      * The name of the policy. Only applicable to Access ports.
      */
-    public readonly accessPolicy!: pulumi.Output<string>;
+    declare public readonly accessPolicy: pulumi.Output<string>;
     /**
      * Comma-delimited list of the VLAN ID's allowed on the port, or 'all' to permit all VLAN's on the port.
      */
-    public readonly allowedVlans!: pulumi.Output<string>;
+    declare public readonly allowedVlans: pulumi.Output<string>;
     /**
      * Whether the trunk port can drop all untagged traffic.
      */
-    public readonly dropUntaggedTraffic!: pulumi.Output<boolean>;
+    declare public readonly dropUntaggedTraffic: pulumi.Output<boolean>;
     /**
      * The status of the port
      */
-    public readonly enabled!: pulumi.Output<boolean>;
+    declare public readonly enabled: pulumi.Output<boolean>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * Number of the port
      */
-    public /*out*/ readonly number!: pulumi.Output<number>;
+    declare public /*out*/ readonly number: pulumi.Output<number>;
     /**
      * portId path parameter. Port ID
      */
-    public readonly portId!: pulumi.Output<string>;
+    declare public readonly portId: pulumi.Output<string>;
     /**
      * The type of the port: 'access' or 'trunk'.
      */
-    public readonly type!: pulumi.Output<string>;
+    declare public readonly type: pulumi.Output<string>;
     /**
      * Native VLAN when the port is in Trunk mode. Access VLAN when the port is in Access mode.
      */
-    public readonly vlan!: pulumi.Output<number>;
+    declare public readonly vlan: pulumi.Output<number>;
 
     /**
      * Create a AppliancePorts resource with the given unique name, arguments, and options.
@@ -108,31 +108,31 @@ export class AppliancePorts extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as AppliancePortsState | undefined;
-            resourceInputs["accessPolicy"] = state ? state.accessPolicy : undefined;
-            resourceInputs["allowedVlans"] = state ? state.allowedVlans : undefined;
-            resourceInputs["dropUntaggedTraffic"] = state ? state.dropUntaggedTraffic : undefined;
-            resourceInputs["enabled"] = state ? state.enabled : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["number"] = state ? state.number : undefined;
-            resourceInputs["portId"] = state ? state.portId : undefined;
-            resourceInputs["type"] = state ? state.type : undefined;
-            resourceInputs["vlan"] = state ? state.vlan : undefined;
+            resourceInputs["accessPolicy"] = state?.accessPolicy;
+            resourceInputs["allowedVlans"] = state?.allowedVlans;
+            resourceInputs["dropUntaggedTraffic"] = state?.dropUntaggedTraffic;
+            resourceInputs["enabled"] = state?.enabled;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["number"] = state?.number;
+            resourceInputs["portId"] = state?.portId;
+            resourceInputs["type"] = state?.type;
+            resourceInputs["vlan"] = state?.vlan;
         } else {
             const args = argsOrState as AppliancePortsArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            if ((!args || args.portId === undefined) && !opts.urn) {
+            if (args?.portId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'portId'");
             }
-            resourceInputs["accessPolicy"] = args ? args.accessPolicy : undefined;
-            resourceInputs["allowedVlans"] = args ? args.allowedVlans : undefined;
-            resourceInputs["dropUntaggedTraffic"] = args ? args.dropUntaggedTraffic : undefined;
-            resourceInputs["enabled"] = args ? args.enabled : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["portId"] = args ? args.portId : undefined;
-            resourceInputs["type"] = args ? args.type : undefined;
-            resourceInputs["vlan"] = args ? args.vlan : undefined;
+            resourceInputs["accessPolicy"] = args?.accessPolicy;
+            resourceInputs["allowedVlans"] = args?.allowedVlans;
+            resourceInputs["dropUntaggedTraffic"] = args?.dropUntaggedTraffic;
+            resourceInputs["enabled"] = args?.enabled;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["portId"] = args?.portId;
+            resourceInputs["type"] = args?.type;
+            resourceInputs["vlan"] = args?.vlan;
             resourceInputs["number"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

@@ -55,15 +55,15 @@ export class CameraVideoSettings extends pulumi.CustomResource {
     /**
      * Boolean indicating if external rtsp stream is exposed
      */
-    public readonly externalRtspEnabled!: pulumi.Output<boolean>;
+    declare public readonly externalRtspEnabled: pulumi.Output<boolean>;
     /**
      * External rstp url. Will only be returned if external rtsp stream is exposed
      */
-    public /*out*/ readonly rtspUrl!: pulumi.Output<string>;
+    declare public /*out*/ readonly rtspUrl: pulumi.Output<string>;
     /**
      * serial path parameter.
      */
-    public readonly serial!: pulumi.Output<string>;
+    declare public readonly serial: pulumi.Output<string>;
 
     /**
      * Create a CameraVideoSettings resource with the given unique name, arguments, and options.
@@ -78,16 +78,16 @@ export class CameraVideoSettings extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CameraVideoSettingsState | undefined;
-            resourceInputs["externalRtspEnabled"] = state ? state.externalRtspEnabled : undefined;
-            resourceInputs["rtspUrl"] = state ? state.rtspUrl : undefined;
-            resourceInputs["serial"] = state ? state.serial : undefined;
+            resourceInputs["externalRtspEnabled"] = state?.externalRtspEnabled;
+            resourceInputs["rtspUrl"] = state?.rtspUrl;
+            resourceInputs["serial"] = state?.serial;
         } else {
             const args = argsOrState as CameraVideoSettingsArgs | undefined;
-            if ((!args || args.serial === undefined) && !opts.urn) {
+            if (args?.serial === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serial'");
             }
-            resourceInputs["externalRtspEnabled"] = args ? args.externalRtspEnabled : undefined;
-            resourceInputs["serial"] = args ? args.serial : undefined;
+            resourceInputs["externalRtspEnabled"] = args?.externalRtspEnabled;
+            resourceInputs["serial"] = args?.serial;
             resourceInputs["rtspUrl"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

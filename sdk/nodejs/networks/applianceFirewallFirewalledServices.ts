@@ -57,19 +57,19 @@ export class ApplianceFirewallFirewalledServices extends pulumi.CustomResource {
     /**
      * A string indicating the rule for which IPs are allowed to use the specified service
      */
-    public readonly access!: pulumi.Output<string>;
+    declare public readonly access: pulumi.Output<string>;
     /**
      * An array of allowed IPs that can access the service
      */
-    public readonly allowedIps!: pulumi.Output<string[]>;
+    declare public readonly allowedIps: pulumi.Output<string[]>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * Appliance service name
      */
-    public readonly service!: pulumi.Output<string>;
+    declare public readonly service: pulumi.Output<string>;
 
     /**
      * Create a ApplianceFirewallFirewalledServices resource with the given unique name, arguments, and options.
@@ -84,22 +84,22 @@ export class ApplianceFirewallFirewalledServices extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ApplianceFirewallFirewalledServicesState | undefined;
-            resourceInputs["access"] = state ? state.access : undefined;
-            resourceInputs["allowedIps"] = state ? state.allowedIps : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["service"] = state ? state.service : undefined;
+            resourceInputs["access"] = state?.access;
+            resourceInputs["allowedIps"] = state?.allowedIps;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["service"] = state?.service;
         } else {
             const args = argsOrState as ApplianceFirewallFirewalledServicesArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            if ((!args || args.service === undefined) && !opts.urn) {
+            if (args?.service === undefined && !opts.urn) {
                 throw new Error("Missing required property 'service'");
             }
-            resourceInputs["access"] = args ? args.access : undefined;
-            resourceInputs["allowedIps"] = args ? args.allowedIps : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["service"] = args ? args.service : undefined;
+            resourceInputs["access"] = args?.access;
+            resourceInputs["allowedIps"] = args?.allowedIps;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["service"] = args?.service;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(ApplianceFirewallFirewalledServices.__pulumiType, name, resourceInputs, opts);

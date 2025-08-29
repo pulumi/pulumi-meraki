@@ -57,26 +57,26 @@ export class PolicyObjectsGroups extends pulumi.CustomResource {
     /**
      * Category of a policy object group (one of: NetworkObjectGroup, GeoLocationGroup, PortObjectGroup, ApplicationGroup)
      */
-    public readonly category!: pulumi.Output<string>;
-    public /*out*/ readonly createdAt!: pulumi.Output<string>;
+    declare public readonly category: pulumi.Output<string>;
+    declare public /*out*/ readonly createdAt: pulumi.Output<string>;
     /**
      * A name for the group of network addresses, unique within the organization (alphanumeric, space, dash, or underscore characters only)
      */
-    public readonly name!: pulumi.Output<string>;
-    public /*out*/ readonly networkIds!: pulumi.Output<string[]>;
+    declare public readonly name: pulumi.Output<string>;
+    declare public /*out*/ readonly networkIds: pulumi.Output<string[]>;
     /**
      * A list of Policy Object ID's that this NetworkObjectGroup should be associated to (note: these ID's will replace the existing associated Policy Objects)
      */
-    public readonly objectIds!: pulumi.Output<string[]>;
+    declare public readonly objectIds: pulumi.Output<string[]>;
     /**
      * organizationId path parameter. Organization ID
      */
-    public readonly organizationId!: pulumi.Output<string>;
+    declare public readonly organizationId: pulumi.Output<string>;
     /**
      * policyObjectGroupId path parameter. Policy object group ID
      */
-    public readonly policyObjectGroupId!: pulumi.Output<string>;
-    public /*out*/ readonly updatedAt!: pulumi.Output<string>;
+    declare public readonly policyObjectGroupId: pulumi.Output<string>;
+    declare public /*out*/ readonly updatedAt: pulumi.Output<string>;
 
     /**
      * Create a PolicyObjectsGroups resource with the given unique name, arguments, and options.
@@ -91,24 +91,24 @@ export class PolicyObjectsGroups extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as PolicyObjectsGroupsState | undefined;
-            resourceInputs["category"] = state ? state.category : undefined;
-            resourceInputs["createdAt"] = state ? state.createdAt : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["networkIds"] = state ? state.networkIds : undefined;
-            resourceInputs["objectIds"] = state ? state.objectIds : undefined;
-            resourceInputs["organizationId"] = state ? state.organizationId : undefined;
-            resourceInputs["policyObjectGroupId"] = state ? state.policyObjectGroupId : undefined;
-            resourceInputs["updatedAt"] = state ? state.updatedAt : undefined;
+            resourceInputs["category"] = state?.category;
+            resourceInputs["createdAt"] = state?.createdAt;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["networkIds"] = state?.networkIds;
+            resourceInputs["objectIds"] = state?.objectIds;
+            resourceInputs["organizationId"] = state?.organizationId;
+            resourceInputs["policyObjectGroupId"] = state?.policyObjectGroupId;
+            resourceInputs["updatedAt"] = state?.updatedAt;
         } else {
             const args = argsOrState as PolicyObjectsGroupsArgs | undefined;
-            if ((!args || args.organizationId === undefined) && !opts.urn) {
+            if (args?.organizationId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'organizationId'");
             }
-            resourceInputs["category"] = args ? args.category : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["objectIds"] = args ? args.objectIds : undefined;
-            resourceInputs["organizationId"] = args ? args.organizationId : undefined;
-            resourceInputs["policyObjectGroupId"] = args ? args.policyObjectGroupId : undefined;
+            resourceInputs["category"] = args?.category;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["objectIds"] = args?.objectIds;
+            resourceInputs["organizationId"] = args?.organizationId;
+            resourceInputs["policyObjectGroupId"] = args?.policyObjectGroupId;
             resourceInputs["createdAt"] = undefined /*out*/;
             resourceInputs["networkIds"] = undefined /*out*/;
             resourceInputs["updatedAt"] = undefined /*out*/;

@@ -60,75 +60,75 @@ export class Base extends pulumi.CustomResource {
     /**
      * Physical address of the device
      */
-    public readonly address!: pulumi.Output<string>;
+    declare public readonly address: pulumi.Output<string>;
     /**
      * Additional device information
      */
-    public /*out*/ readonly details!: pulumi.Output<outputs.devices.BaseDetail[]>;
+    declare public /*out*/ readonly details: pulumi.Output<outputs.devices.BaseDetail[]>;
     /**
      * Firmware version of the device
      */
-    public /*out*/ readonly firmware!: pulumi.Output<string>;
+    declare public /*out*/ readonly firmware: pulumi.Output<string>;
     /**
      * The floor plan to associate to this device. null disassociates the device from the floorplan.
      */
-    public readonly floorPlanId!: pulumi.Output<string>;
+    declare public readonly floorPlanId: pulumi.Output<string>;
     /**
      * IMEI of the device, if applicable
      */
-    public /*out*/ readonly imei!: pulumi.Output<string>;
+    declare public /*out*/ readonly imei: pulumi.Output<string>;
     /**
      * LAN IP address of the device
      */
-    public /*out*/ readonly lanIp!: pulumi.Output<string>;
+    declare public /*out*/ readonly lanIp: pulumi.Output<string>;
     /**
      * Latitude of the device
      */
-    public readonly lat!: pulumi.Output<number>;
+    declare public readonly lat: pulumi.Output<number>;
     /**
      * Longitude of the device
      */
-    public readonly lng!: pulumi.Output<number>;
+    declare public readonly lng: pulumi.Output<number>;
     /**
      * MAC address of the device
      */
-    public /*out*/ readonly mac!: pulumi.Output<string>;
+    declare public /*out*/ readonly mac: pulumi.Output<string>;
     /**
      * Model of the device
      */
-    public /*out*/ readonly model!: pulumi.Output<string>;
+    declare public /*out*/ readonly model: pulumi.Output<string>;
     /**
      * Whether or not to set the latitude and longitude of a device based on the new address. Only applies when lat and lng are not specified.
      */
-    public readonly moveMapMarker!: pulumi.Output<boolean>;
+    declare public readonly moveMapMarker: pulumi.Output<boolean>;
     /**
      * Name of the device
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * ID of the network the device belongs to
      */
-    public /*out*/ readonly networkId!: pulumi.Output<string>;
+    declare public /*out*/ readonly networkId: pulumi.Output<string>;
     /**
      * Notes for the device, limited to 255 characters
      */
-    public readonly notes!: pulumi.Output<string>;
+    declare public readonly notes: pulumi.Output<string>;
     /**
      * Product type of the device
      */
-    public /*out*/ readonly productType!: pulumi.Output<string>;
+    declare public /*out*/ readonly productType: pulumi.Output<string>;
     /**
      * Serial number of the device
      */
-    public readonly serial!: pulumi.Output<string>;
+    declare public readonly serial: pulumi.Output<string>;
     /**
      * The ID of a switch template to bind to the device (for available switch templates, see the 'Switch Templates' endpoint). Use null to unbind the switch device from the current profile. For a device to be bindable to a switch template, it must (1) be a switch, and (2) belong to a network that is bound to a configuration template.
      */
-    public readonly switchProfileId!: pulumi.Output<string>;
+    declare public readonly switchProfileId: pulumi.Output<string>;
     /**
      * List of tags assigned to the device
      */
-    public readonly tags!: pulumi.Output<string[]>;
+    declare public readonly tags: pulumi.Output<string[]>;
 
     /**
      * Create a Base resource with the given unique name, arguments, and options.
@@ -143,39 +143,39 @@ export class Base extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as BaseState | undefined;
-            resourceInputs["address"] = state ? state.address : undefined;
-            resourceInputs["details"] = state ? state.details : undefined;
-            resourceInputs["firmware"] = state ? state.firmware : undefined;
-            resourceInputs["floorPlanId"] = state ? state.floorPlanId : undefined;
-            resourceInputs["imei"] = state ? state.imei : undefined;
-            resourceInputs["lanIp"] = state ? state.lanIp : undefined;
-            resourceInputs["lat"] = state ? state.lat : undefined;
-            resourceInputs["lng"] = state ? state.lng : undefined;
-            resourceInputs["mac"] = state ? state.mac : undefined;
-            resourceInputs["model"] = state ? state.model : undefined;
-            resourceInputs["moveMapMarker"] = state ? state.moveMapMarker : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["notes"] = state ? state.notes : undefined;
-            resourceInputs["productType"] = state ? state.productType : undefined;
-            resourceInputs["serial"] = state ? state.serial : undefined;
-            resourceInputs["switchProfileId"] = state ? state.switchProfileId : undefined;
-            resourceInputs["tags"] = state ? state.tags : undefined;
+            resourceInputs["address"] = state?.address;
+            resourceInputs["details"] = state?.details;
+            resourceInputs["firmware"] = state?.firmware;
+            resourceInputs["floorPlanId"] = state?.floorPlanId;
+            resourceInputs["imei"] = state?.imei;
+            resourceInputs["lanIp"] = state?.lanIp;
+            resourceInputs["lat"] = state?.lat;
+            resourceInputs["lng"] = state?.lng;
+            resourceInputs["mac"] = state?.mac;
+            resourceInputs["model"] = state?.model;
+            resourceInputs["moveMapMarker"] = state?.moveMapMarker;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["notes"] = state?.notes;
+            resourceInputs["productType"] = state?.productType;
+            resourceInputs["serial"] = state?.serial;
+            resourceInputs["switchProfileId"] = state?.switchProfileId;
+            resourceInputs["tags"] = state?.tags;
         } else {
             const args = argsOrState as BaseArgs | undefined;
-            if ((!args || args.serial === undefined) && !opts.urn) {
+            if (args?.serial === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serial'");
             }
-            resourceInputs["address"] = args ? args.address : undefined;
-            resourceInputs["floorPlanId"] = args ? args.floorPlanId : undefined;
-            resourceInputs["lat"] = args ? args.lat : undefined;
-            resourceInputs["lng"] = args ? args.lng : undefined;
-            resourceInputs["moveMapMarker"] = args ? args.moveMapMarker : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["notes"] = args ? args.notes : undefined;
-            resourceInputs["serial"] = args ? args.serial : undefined;
-            resourceInputs["switchProfileId"] = args ? args.switchProfileId : undefined;
-            resourceInputs["tags"] = args ? args.tags : undefined;
+            resourceInputs["address"] = args?.address;
+            resourceInputs["floorPlanId"] = args?.floorPlanId;
+            resourceInputs["lat"] = args?.lat;
+            resourceInputs["lng"] = args?.lng;
+            resourceInputs["moveMapMarker"] = args?.moveMapMarker;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["notes"] = args?.notes;
+            resourceInputs["serial"] = args?.serial;
+            resourceInputs["switchProfileId"] = args?.switchProfileId;
+            resourceInputs["tags"] = args?.tags;
             resourceInputs["details"] = undefined /*out*/;
             resourceInputs["firmware"] = undefined /*out*/;
             resourceInputs["imei"] = undefined /*out*/;

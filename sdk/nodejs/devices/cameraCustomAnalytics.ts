@@ -62,19 +62,19 @@ export class CameraCustomAnalytics extends pulumi.CustomResource {
     /**
      * Custom analytics artifact ID
      */
-    public readonly artifactId!: pulumi.Output<string>;
+    declare public readonly artifactId: pulumi.Output<string>;
     /**
      * Whether custom analytics is enabled
      */
-    public readonly enabled!: pulumi.Output<boolean>;
+    declare public readonly enabled: pulumi.Output<boolean>;
     /**
      * Parameters for the custom analytics workload
      */
-    public readonly parameters!: pulumi.Output<outputs.devices.CameraCustomAnalyticsParameter[]>;
+    declare public readonly parameters: pulumi.Output<outputs.devices.CameraCustomAnalyticsParameter[]>;
     /**
      * serial path parameter.
      */
-    public readonly serial!: pulumi.Output<string>;
+    declare public readonly serial: pulumi.Output<string>;
 
     /**
      * Create a CameraCustomAnalytics resource with the given unique name, arguments, and options.
@@ -89,19 +89,19 @@ export class CameraCustomAnalytics extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CameraCustomAnalyticsState | undefined;
-            resourceInputs["artifactId"] = state ? state.artifactId : undefined;
-            resourceInputs["enabled"] = state ? state.enabled : undefined;
-            resourceInputs["parameters"] = state ? state.parameters : undefined;
-            resourceInputs["serial"] = state ? state.serial : undefined;
+            resourceInputs["artifactId"] = state?.artifactId;
+            resourceInputs["enabled"] = state?.enabled;
+            resourceInputs["parameters"] = state?.parameters;
+            resourceInputs["serial"] = state?.serial;
         } else {
             const args = argsOrState as CameraCustomAnalyticsArgs | undefined;
-            if ((!args || args.serial === undefined) && !opts.urn) {
+            if (args?.serial === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serial'");
             }
-            resourceInputs["artifactId"] = args ? args.artifactId : undefined;
-            resourceInputs["enabled"] = args ? args.enabled : undefined;
-            resourceInputs["parameters"] = args ? args.parameters : undefined;
-            resourceInputs["serial"] = args ? args.serial : undefined;
+            resourceInputs["artifactId"] = args?.artifactId;
+            resourceInputs["enabled"] = args?.enabled;
+            resourceInputs["parameters"] = args?.parameters;
+            resourceInputs["serial"] = args?.serial;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(CameraCustomAnalytics.__pulumiType, name, resourceInputs, opts);

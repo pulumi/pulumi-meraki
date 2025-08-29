@@ -70,11 +70,11 @@ export class ApplianceTrafficShapingUplinkBandwidth extends pulumi.CustomResourc
     /**
      * A hash uplink keys and their configured settings for the Appliance
      */
-    public readonly bandwidthLimits!: pulumi.Output<outputs.networks.ApplianceTrafficShapingUplinkBandwidthBandwidthLimits>;
+    declare public readonly bandwidthLimits: pulumi.Output<outputs.networks.ApplianceTrafficShapingUplinkBandwidthBandwidthLimits>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
 
     /**
      * Create a ApplianceTrafficShapingUplinkBandwidth resource with the given unique name, arguments, and options.
@@ -89,15 +89,15 @@ export class ApplianceTrafficShapingUplinkBandwidth extends pulumi.CustomResourc
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ApplianceTrafficShapingUplinkBandwidthState | undefined;
-            resourceInputs["bandwidthLimits"] = state ? state.bandwidthLimits : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
+            resourceInputs["bandwidthLimits"] = state?.bandwidthLimits;
+            resourceInputs["networkId"] = state?.networkId;
         } else {
             const args = argsOrState as ApplianceTrafficShapingUplinkBandwidthArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["bandwidthLimits"] = args ? args.bandwidthLimits : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
+            resourceInputs["bandwidthLimits"] = args?.bandwidthLimits;
+            resourceInputs["networkId"] = args?.networkId;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(ApplianceTrafficShapingUplinkBandwidth.__pulumiType, name, resourceInputs, opts);

@@ -48,11 +48,11 @@ export class FirmwareUpgradesStagedEventsDefer extends pulumi.CustomResource {
         return obj['__pulumiType'] === FirmwareUpgradesStagedEventsDefer.__pulumiType;
     }
 
-    public /*out*/ readonly item!: pulumi.Output<outputs.networks.FirmwareUpgradesStagedEventsDeferItem>;
+    declare public /*out*/ readonly item: pulumi.Output<outputs.networks.FirmwareUpgradesStagedEventsDeferItem>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
 
     /**
      * Create a FirmwareUpgradesStagedEventsDefer resource with the given unique name, arguments, and options.
@@ -67,14 +67,14 @@ export class FirmwareUpgradesStagedEventsDefer extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as FirmwareUpgradesStagedEventsDeferState | undefined;
-            resourceInputs["item"] = state ? state.item : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
+            resourceInputs["item"] = state?.item;
+            resourceInputs["networkId"] = state?.networkId;
         } else {
             const args = argsOrState as FirmwareUpgradesStagedEventsDeferArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
+            resourceInputs["networkId"] = args?.networkId;
             resourceInputs["item"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

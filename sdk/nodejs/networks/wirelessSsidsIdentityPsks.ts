@@ -59,39 +59,39 @@ export class WirelessSsidsIdentityPsks extends pulumi.CustomResource {
     /**
      * The email associated with the System's Manager User
      */
-    public /*out*/ readonly email!: pulumi.Output<string>;
+    declare public /*out*/ readonly email: pulumi.Output<string>;
     /**
      * Timestamp for when the Identity PSK expires, or 'null' to never expire
      */
-    public readonly expiresAt!: pulumi.Output<string>;
+    declare public readonly expiresAt: pulumi.Output<string>;
     /**
      * The group policy to be applied to clients
      */
-    public readonly groupPolicyId!: pulumi.Output<string>;
+    declare public readonly groupPolicyId: pulumi.Output<string>;
     /**
      * identityPskId path parameter. Identity psk ID
      */
-    public readonly identityPskId!: pulumi.Output<string>;
+    declare public readonly identityPskId: pulumi.Output<string>;
     /**
      * The name of the Identity PSK
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * number path parameter.
      */
-    public readonly number!: pulumi.Output<string>;
+    declare public readonly number: pulumi.Output<string>;
     /**
      * The passphrase for client authentication
      */
-    public readonly passphrase!: pulumi.Output<string>;
+    declare public readonly passphrase: pulumi.Output<string>;
     /**
      * The WiFi Personal Network unique identifier
      */
-    public /*out*/ readonly wifiPersonalNetworkId!: pulumi.Output<string>;
+    declare public /*out*/ readonly wifiPersonalNetworkId: pulumi.Output<string>;
 
     /**
      * Create a WirelessSsidsIdentityPsks resource with the given unique name, arguments, and options.
@@ -106,30 +106,30 @@ export class WirelessSsidsIdentityPsks extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as WirelessSsidsIdentityPsksState | undefined;
-            resourceInputs["email"] = state ? state.email : undefined;
-            resourceInputs["expiresAt"] = state ? state.expiresAt : undefined;
-            resourceInputs["groupPolicyId"] = state ? state.groupPolicyId : undefined;
-            resourceInputs["identityPskId"] = state ? state.identityPskId : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["number"] = state ? state.number : undefined;
-            resourceInputs["passphrase"] = state ? state.passphrase : undefined;
-            resourceInputs["wifiPersonalNetworkId"] = state ? state.wifiPersonalNetworkId : undefined;
+            resourceInputs["email"] = state?.email;
+            resourceInputs["expiresAt"] = state?.expiresAt;
+            resourceInputs["groupPolicyId"] = state?.groupPolicyId;
+            resourceInputs["identityPskId"] = state?.identityPskId;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["number"] = state?.number;
+            resourceInputs["passphrase"] = state?.passphrase;
+            resourceInputs["wifiPersonalNetworkId"] = state?.wifiPersonalNetworkId;
         } else {
             const args = argsOrState as WirelessSsidsIdentityPsksArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            if ((!args || args.number === undefined) && !opts.urn) {
+            if (args?.number === undefined && !opts.urn) {
                 throw new Error("Missing required property 'number'");
             }
-            resourceInputs["expiresAt"] = args ? args.expiresAt : undefined;
-            resourceInputs["groupPolicyId"] = args ? args.groupPolicyId : undefined;
-            resourceInputs["identityPskId"] = args ? args.identityPskId : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["number"] = args ? args.number : undefined;
-            resourceInputs["passphrase"] = args ? args.passphrase : undefined;
+            resourceInputs["expiresAt"] = args?.expiresAt;
+            resourceInputs["groupPolicyId"] = args?.groupPolicyId;
+            resourceInputs["identityPskId"] = args?.identityPskId;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["number"] = args?.number;
+            resourceInputs["passphrase"] = args?.passphrase;
             resourceInputs["email"] = undefined /*out*/;
             resourceInputs["wifiPersonalNetworkId"] = undefined /*out*/;
         }

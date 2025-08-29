@@ -46,27 +46,27 @@ export class CameraRoles extends pulumi.CustomResource {
     /**
      * Device tag on which this specified permission is applied.
      */
-    public readonly appliedOnDevices!: pulumi.Output<outputs.organizations.CameraRolesAppliedOnDevice[]>;
+    declare public readonly appliedOnDevices: pulumi.Output<outputs.organizations.CameraRolesAppliedOnDevice[]>;
     /**
      * Network tag on which this specified permission is applied.
      */
-    public readonly appliedOnNetworks!: pulumi.Output<outputs.organizations.CameraRolesAppliedOnNetwork[]>;
+    declare public readonly appliedOnNetworks: pulumi.Output<outputs.organizations.CameraRolesAppliedOnNetwork[]>;
     /**
      * Permissions to be applied org wide.
      */
-    public readonly appliedOrgWides!: pulumi.Output<outputs.organizations.CameraRolesAppliedOrgWide[]>;
+    declare public readonly appliedOrgWides: pulumi.Output<outputs.organizations.CameraRolesAppliedOrgWide[]>;
     /**
      * The name of the new role. Must be unique. This parameter is required.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * organizationId path parameter. Organization ID
      */
-    public readonly organizationId!: pulumi.Output<string>;
+    declare public readonly organizationId: pulumi.Output<string>;
     /**
      * roleId path parameter. Role ID
      */
-    public readonly roleId!: pulumi.Output<string | undefined>;
+    declare public readonly roleId: pulumi.Output<string | undefined>;
 
     /**
      * Create a CameraRoles resource with the given unique name, arguments, and options.
@@ -81,23 +81,23 @@ export class CameraRoles extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CameraRolesState | undefined;
-            resourceInputs["appliedOnDevices"] = state ? state.appliedOnDevices : undefined;
-            resourceInputs["appliedOnNetworks"] = state ? state.appliedOnNetworks : undefined;
-            resourceInputs["appliedOrgWides"] = state ? state.appliedOrgWides : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["organizationId"] = state ? state.organizationId : undefined;
-            resourceInputs["roleId"] = state ? state.roleId : undefined;
+            resourceInputs["appliedOnDevices"] = state?.appliedOnDevices;
+            resourceInputs["appliedOnNetworks"] = state?.appliedOnNetworks;
+            resourceInputs["appliedOrgWides"] = state?.appliedOrgWides;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["organizationId"] = state?.organizationId;
+            resourceInputs["roleId"] = state?.roleId;
         } else {
             const args = argsOrState as CameraRolesArgs | undefined;
-            if ((!args || args.organizationId === undefined) && !opts.urn) {
+            if (args?.organizationId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'organizationId'");
             }
-            resourceInputs["appliedOnDevices"] = args ? args.appliedOnDevices : undefined;
-            resourceInputs["appliedOnNetworks"] = args ? args.appliedOnNetworks : undefined;
-            resourceInputs["appliedOrgWides"] = args ? args.appliedOrgWides : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["organizationId"] = args ? args.organizationId : undefined;
-            resourceInputs["roleId"] = args ? args.roleId : undefined;
+            resourceInputs["appliedOnDevices"] = args?.appliedOnDevices;
+            resourceInputs["appliedOnNetworks"] = args?.appliedOnNetworks;
+            resourceInputs["appliedOrgWides"] = args?.appliedOrgWides;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["organizationId"] = args?.organizationId;
+            resourceInputs["roleId"] = args?.roleId;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(CameraRoles.__pulumiType, name, resourceInputs, opts);

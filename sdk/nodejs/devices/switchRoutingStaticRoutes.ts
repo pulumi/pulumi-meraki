@@ -59,31 +59,31 @@ export class SwitchRoutingStaticRoutes extends pulumi.CustomResource {
     /**
      * Option to advertise static routes via OSPF
      */
-    public readonly advertiseViaOspfEnabled!: pulumi.Output<boolean>;
+    declare public readonly advertiseViaOspfEnabled: pulumi.Output<boolean>;
     /**
      * The name or description of the layer 3 static route
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * The IP address of the router to which traffic for this destination network should be sent
      */
-    public readonly nextHopIp!: pulumi.Output<string>;
+    declare public readonly nextHopIp: pulumi.Output<string>;
     /**
      * Option to prefer static routes over OSPF routes
      */
-    public readonly preferOverOspfRoutesEnabled!: pulumi.Output<boolean>;
+    declare public readonly preferOverOspfRoutesEnabled: pulumi.Output<boolean>;
     /**
      * serial path parameter.
      */
-    public readonly serial!: pulumi.Output<string>;
+    declare public readonly serial: pulumi.Output<string>;
     /**
      * The identifier of a layer 3 static route
      */
-    public readonly staticRouteId!: pulumi.Output<string>;
+    declare public readonly staticRouteId: pulumi.Output<string>;
     /**
      * The IP address of the subnetwork specified in CIDR notation (ex. 1.2.3.0/24)
      */
-    public readonly subnet!: pulumi.Output<string>;
+    declare public readonly subnet: pulumi.Output<string>;
 
     /**
      * Create a SwitchRoutingStaticRoutes resource with the given unique name, arguments, and options.
@@ -98,25 +98,25 @@ export class SwitchRoutingStaticRoutes extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SwitchRoutingStaticRoutesState | undefined;
-            resourceInputs["advertiseViaOspfEnabled"] = state ? state.advertiseViaOspfEnabled : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["nextHopIp"] = state ? state.nextHopIp : undefined;
-            resourceInputs["preferOverOspfRoutesEnabled"] = state ? state.preferOverOspfRoutesEnabled : undefined;
-            resourceInputs["serial"] = state ? state.serial : undefined;
-            resourceInputs["staticRouteId"] = state ? state.staticRouteId : undefined;
-            resourceInputs["subnet"] = state ? state.subnet : undefined;
+            resourceInputs["advertiseViaOspfEnabled"] = state?.advertiseViaOspfEnabled;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["nextHopIp"] = state?.nextHopIp;
+            resourceInputs["preferOverOspfRoutesEnabled"] = state?.preferOverOspfRoutesEnabled;
+            resourceInputs["serial"] = state?.serial;
+            resourceInputs["staticRouteId"] = state?.staticRouteId;
+            resourceInputs["subnet"] = state?.subnet;
         } else {
             const args = argsOrState as SwitchRoutingStaticRoutesArgs | undefined;
-            if ((!args || args.serial === undefined) && !opts.urn) {
+            if (args?.serial === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serial'");
             }
-            resourceInputs["advertiseViaOspfEnabled"] = args ? args.advertiseViaOspfEnabled : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["nextHopIp"] = args ? args.nextHopIp : undefined;
-            resourceInputs["preferOverOspfRoutesEnabled"] = args ? args.preferOverOspfRoutesEnabled : undefined;
-            resourceInputs["serial"] = args ? args.serial : undefined;
-            resourceInputs["staticRouteId"] = args ? args.staticRouteId : undefined;
-            resourceInputs["subnet"] = args ? args.subnet : undefined;
+            resourceInputs["advertiseViaOspfEnabled"] = args?.advertiseViaOspfEnabled;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["nextHopIp"] = args?.nextHopIp;
+            resourceInputs["preferOverOspfRoutesEnabled"] = args?.preferOverOspfRoutesEnabled;
+            resourceInputs["serial"] = args?.serial;
+            resourceInputs["staticRouteId"] = args?.staticRouteId;
+            resourceInputs["subnet"] = args?.subnet;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(SwitchRoutingStaticRoutes.__pulumiType, name, resourceInputs, opts);

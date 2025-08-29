@@ -61,51 +61,51 @@ export class Snmp extends pulumi.CustomResource {
     /**
      * The hostname of the SNMP server.
      */
-    public /*out*/ readonly hostname!: pulumi.Output<string>;
+    declare public /*out*/ readonly hostname: pulumi.Output<string>;
     /**
      * organizationId path parameter. Organization ID
      */
-    public readonly organizationId!: pulumi.Output<string>;
+    declare public readonly organizationId: pulumi.Output<string>;
     /**
      * The list of IPv4 addresses that are allowed to access the SNMP server.
      */
-    public readonly peerIps!: pulumi.Output<string[]>;
+    declare public readonly peerIps: pulumi.Output<string[]>;
     /**
      * The port of the SNMP server.
      */
-    public /*out*/ readonly port!: pulumi.Output<number>;
+    declare public /*out*/ readonly port: pulumi.Output<number>;
     /**
      * The community string for SNMP version 2c, if enabled.
      */
-    public /*out*/ readonly v2CommunityString!: pulumi.Output<string>;
+    declare public /*out*/ readonly v2CommunityString: pulumi.Output<string>;
     /**
      * Boolean indicating whether SNMP version 2c is enabled for the organization.
      */
-    public readonly v2cEnabled!: pulumi.Output<boolean>;
+    declare public readonly v2cEnabled: pulumi.Output<boolean>;
     /**
      * The SNMP version 3 authentication mode. Can be either 'MD5' or 'SHA'.
      */
-    public readonly v3AuthMode!: pulumi.Output<string>;
+    declare public readonly v3AuthMode: pulumi.Output<string>;
     /**
      * The SNMP version 3 authentication password. Must be at least 8 characters if specified.
      */
-    public readonly v3AuthPass!: pulumi.Output<string>;
+    declare public readonly v3AuthPass: pulumi.Output<string>;
     /**
      * Boolean indicating whether SNMP version 3 is enabled for the organization.
      */
-    public readonly v3Enabled!: pulumi.Output<boolean>;
+    declare public readonly v3Enabled: pulumi.Output<boolean>;
     /**
      * The SNMP version 3 privacy mode. Can be either 'DES' or 'AES128'.
      */
-    public readonly v3PrivMode!: pulumi.Output<string>;
+    declare public readonly v3PrivMode: pulumi.Output<string>;
     /**
      * The SNMP version 3 privacy password. Must be at least 8 characters if specified.
      */
-    public readonly v3PrivPass!: pulumi.Output<string>;
+    declare public readonly v3PrivPass: pulumi.Output<string>;
     /**
      * The user for SNMP version 3, if enabled.
      */
-    public /*out*/ readonly v3User!: pulumi.Output<string>;
+    declare public /*out*/ readonly v3User: pulumi.Output<string>;
 
     /**
      * Create a Snmp resource with the given unique name, arguments, and options.
@@ -120,31 +120,31 @@ export class Snmp extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SnmpState | undefined;
-            resourceInputs["hostname"] = state ? state.hostname : undefined;
-            resourceInputs["organizationId"] = state ? state.organizationId : undefined;
-            resourceInputs["peerIps"] = state ? state.peerIps : undefined;
-            resourceInputs["port"] = state ? state.port : undefined;
-            resourceInputs["v2CommunityString"] = state ? state.v2CommunityString : undefined;
-            resourceInputs["v2cEnabled"] = state ? state.v2cEnabled : undefined;
-            resourceInputs["v3AuthMode"] = state ? state.v3AuthMode : undefined;
-            resourceInputs["v3AuthPass"] = state ? state.v3AuthPass : undefined;
-            resourceInputs["v3Enabled"] = state ? state.v3Enabled : undefined;
-            resourceInputs["v3PrivMode"] = state ? state.v3PrivMode : undefined;
-            resourceInputs["v3PrivPass"] = state ? state.v3PrivPass : undefined;
-            resourceInputs["v3User"] = state ? state.v3User : undefined;
+            resourceInputs["hostname"] = state?.hostname;
+            resourceInputs["organizationId"] = state?.organizationId;
+            resourceInputs["peerIps"] = state?.peerIps;
+            resourceInputs["port"] = state?.port;
+            resourceInputs["v2CommunityString"] = state?.v2CommunityString;
+            resourceInputs["v2cEnabled"] = state?.v2cEnabled;
+            resourceInputs["v3AuthMode"] = state?.v3AuthMode;
+            resourceInputs["v3AuthPass"] = state?.v3AuthPass;
+            resourceInputs["v3Enabled"] = state?.v3Enabled;
+            resourceInputs["v3PrivMode"] = state?.v3PrivMode;
+            resourceInputs["v3PrivPass"] = state?.v3PrivPass;
+            resourceInputs["v3User"] = state?.v3User;
         } else {
             const args = argsOrState as SnmpArgs | undefined;
-            if ((!args || args.organizationId === undefined) && !opts.urn) {
+            if (args?.organizationId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'organizationId'");
             }
-            resourceInputs["organizationId"] = args ? args.organizationId : undefined;
-            resourceInputs["peerIps"] = args ? args.peerIps : undefined;
-            resourceInputs["v2cEnabled"] = args ? args.v2cEnabled : undefined;
-            resourceInputs["v3AuthMode"] = args ? args.v3AuthMode : undefined;
-            resourceInputs["v3AuthPass"] = args ? args.v3AuthPass : undefined;
-            resourceInputs["v3Enabled"] = args ? args.v3Enabled : undefined;
-            resourceInputs["v3PrivMode"] = args ? args.v3PrivMode : undefined;
-            resourceInputs["v3PrivPass"] = args ? args.v3PrivPass : undefined;
+            resourceInputs["organizationId"] = args?.organizationId;
+            resourceInputs["peerIps"] = args?.peerIps;
+            resourceInputs["v2cEnabled"] = args?.v2cEnabled;
+            resourceInputs["v3AuthMode"] = args?.v3AuthMode;
+            resourceInputs["v3AuthPass"] = args?.v3AuthPass;
+            resourceInputs["v3Enabled"] = args?.v3Enabled;
+            resourceInputs["v3PrivMode"] = args?.v3PrivMode;
+            resourceInputs["v3PrivPass"] = args?.v3PrivPass;
             resourceInputs["hostname"] = undefined /*out*/;
             resourceInputs["port"] = undefined /*out*/;
             resourceInputs["v2CommunityString"] = undefined /*out*/;

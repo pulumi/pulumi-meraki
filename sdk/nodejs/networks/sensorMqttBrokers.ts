@@ -56,15 +56,15 @@ export class SensorMqttBrokers extends pulumi.CustomResource {
     /**
      * Specifies whether the broker is enabled for sensor data. Currently, only a single broker may be enabled for sensor data.
      */
-    public readonly enabled!: pulumi.Output<boolean>;
+    declare public readonly enabled: pulumi.Output<boolean>;
     /**
      * ID of the MQTT Broker.
      */
-    public readonly mqttBrokerId!: pulumi.Output<string>;
+    declare public readonly mqttBrokerId: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
 
     /**
      * Create a SensorMqttBrokers resource with the given unique name, arguments, and options.
@@ -79,20 +79,20 @@ export class SensorMqttBrokers extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SensorMqttBrokersState | undefined;
-            resourceInputs["enabled"] = state ? state.enabled : undefined;
-            resourceInputs["mqttBrokerId"] = state ? state.mqttBrokerId : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
+            resourceInputs["enabled"] = state?.enabled;
+            resourceInputs["mqttBrokerId"] = state?.mqttBrokerId;
+            resourceInputs["networkId"] = state?.networkId;
         } else {
             const args = argsOrState as SensorMqttBrokersArgs | undefined;
-            if ((!args || args.mqttBrokerId === undefined) && !opts.urn) {
+            if (args?.mqttBrokerId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'mqttBrokerId'");
             }
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["enabled"] = args ? args.enabled : undefined;
-            resourceInputs["mqttBrokerId"] = args ? args.mqttBrokerId : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
+            resourceInputs["enabled"] = args?.enabled;
+            resourceInputs["mqttBrokerId"] = args?.mqttBrokerId;
+            resourceInputs["networkId"] = args?.networkId;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(SensorMqttBrokers.__pulumiType, name, resourceInputs, opts);

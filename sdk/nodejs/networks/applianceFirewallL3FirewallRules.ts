@@ -46,19 +46,19 @@ export class ApplianceFirewallL3FirewallRules extends pulumi.CustomResource {
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * An ordered array of the firewall rules (not including the default rule)
      */
-    public readonly rules!: pulumi.Output<outputs.networks.ApplianceFirewallL3FirewallRulesRule[] | undefined>;
+    declare public readonly rules: pulumi.Output<outputs.networks.ApplianceFirewallL3FirewallRulesRule[] | undefined>;
     /**
      * An ordered array of the firewall rules (not including the default rule)
      */
-    public /*out*/ readonly rulesResponses!: pulumi.Output<outputs.networks.ApplianceFirewallL3FirewallRulesRulesResponse[]>;
+    declare public /*out*/ readonly rulesResponses: pulumi.Output<outputs.networks.ApplianceFirewallL3FirewallRulesRulesResponse[]>;
     /**
      * Log the special default rule (boolean value - enable only if you've configured a syslog server) (optional)
      */
-    public readonly syslogDefaultRule!: pulumi.Output<boolean>;
+    declare public readonly syslogDefaultRule: pulumi.Output<boolean>;
 
     /**
      * Create a ApplianceFirewallL3FirewallRules resource with the given unique name, arguments, and options.
@@ -73,18 +73,18 @@ export class ApplianceFirewallL3FirewallRules extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ApplianceFirewallL3FirewallRulesState | undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["rules"] = state ? state.rules : undefined;
-            resourceInputs["rulesResponses"] = state ? state.rulesResponses : undefined;
-            resourceInputs["syslogDefaultRule"] = state ? state.syslogDefaultRule : undefined;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["rules"] = state?.rules;
+            resourceInputs["rulesResponses"] = state?.rulesResponses;
+            resourceInputs["syslogDefaultRule"] = state?.syslogDefaultRule;
         } else {
             const args = argsOrState as ApplianceFirewallL3FirewallRulesArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["rules"] = args ? args.rules : undefined;
-            resourceInputs["syslogDefaultRule"] = args ? args.syslogDefaultRule : undefined;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["rules"] = args?.rules;
+            resourceInputs["syslogDefaultRule"] = args?.syslogDefaultRule;
             resourceInputs["rulesResponses"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

@@ -52,11 +52,11 @@ export class SmDevicesRefreshDetails extends pulumi.CustomResource {
     /**
      * deviceId path parameter. Device ID
      */
-    public readonly deviceId!: pulumi.Output<string>;
+    declare public readonly deviceId: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
 
     /**
      * Create a SmDevicesRefreshDetails resource with the given unique name, arguments, and options.
@@ -71,18 +71,18 @@ export class SmDevicesRefreshDetails extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SmDevicesRefreshDetailsState | undefined;
-            resourceInputs["deviceId"] = state ? state.deviceId : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
+            resourceInputs["deviceId"] = state?.deviceId;
+            resourceInputs["networkId"] = state?.networkId;
         } else {
             const args = argsOrState as SmDevicesRefreshDetailsArgs | undefined;
-            if ((!args || args.deviceId === undefined) && !opts.urn) {
+            if (args?.deviceId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'deviceId'");
             }
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["deviceId"] = args ? args.deviceId : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
+            resourceInputs["deviceId"] = args?.deviceId;
+            resourceInputs["networkId"] = args?.networkId;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(SmDevicesRefreshDetails.__pulumiType, name, resourceInputs, opts);

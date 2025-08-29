@@ -46,43 +46,43 @@ export class MerakiAuthUsers extends pulumi.CustomResource {
     /**
      * Authorization type for user.
      */
-    public readonly accountType!: pulumi.Output<string>;
+    declare public readonly accountType: pulumi.Output<string>;
     /**
      * User authorization info
      */
-    public readonly authorizations!: pulumi.Output<outputs.networks.MerakiAuthUsersAuthorization[]>;
+    declare public readonly authorizations: pulumi.Output<outputs.networks.MerakiAuthUsersAuthorization[]>;
     /**
      * Creation time of the user
      */
-    public /*out*/ readonly createdAt!: pulumi.Output<string>;
+    declare public /*out*/ readonly createdAt: pulumi.Output<string>;
     /**
      * Email address of the user
      */
-    public readonly email!: pulumi.Output<string>;
+    declare public readonly email: pulumi.Output<string>;
     /**
      * Whether or not Meraki should email the password to user. Default is false.
      */
-    public readonly emailPasswordToUser!: pulumi.Output<boolean>;
+    declare public readonly emailPasswordToUser: pulumi.Output<boolean>;
     /**
      * Whether or not the user is a Dashboard administrator
      */
-    public readonly isAdmin!: pulumi.Output<boolean>;
+    declare public readonly isAdmin: pulumi.Output<boolean>;
     /**
      * merakiAuthUserId path parameter. Meraki auth user ID
      */
-    public readonly merakiAuthUserId!: pulumi.Output<string | undefined>;
+    declare public readonly merakiAuthUserId: pulumi.Output<string | undefined>;
     /**
      * Name of the user
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * The password for this user account. Only required If the user is not a Dashboard administrator.
      */
-    public readonly password!: pulumi.Output<string>;
+    declare public readonly password: pulumi.Output<string>;
 
     /**
      * Create a MerakiAuthUsers resource with the given unique name, arguments, and options.
@@ -97,29 +97,29 @@ export class MerakiAuthUsers extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as MerakiAuthUsersState | undefined;
-            resourceInputs["accountType"] = state ? state.accountType : undefined;
-            resourceInputs["authorizations"] = state ? state.authorizations : undefined;
-            resourceInputs["createdAt"] = state ? state.createdAt : undefined;
-            resourceInputs["email"] = state ? state.email : undefined;
-            resourceInputs["emailPasswordToUser"] = state ? state.emailPasswordToUser : undefined;
-            resourceInputs["isAdmin"] = state ? state.isAdmin : undefined;
-            resourceInputs["merakiAuthUserId"] = state ? state.merakiAuthUserId : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["password"] = state ? state.password : undefined;
+            resourceInputs["accountType"] = state?.accountType;
+            resourceInputs["authorizations"] = state?.authorizations;
+            resourceInputs["createdAt"] = state?.createdAt;
+            resourceInputs["email"] = state?.email;
+            resourceInputs["emailPasswordToUser"] = state?.emailPasswordToUser;
+            resourceInputs["isAdmin"] = state?.isAdmin;
+            resourceInputs["merakiAuthUserId"] = state?.merakiAuthUserId;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["password"] = state?.password;
         } else {
             const args = argsOrState as MerakiAuthUsersArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["accountType"] = args ? args.accountType : undefined;
-            resourceInputs["authorizations"] = args ? args.authorizations : undefined;
-            resourceInputs["email"] = args ? args.email : undefined;
-            resourceInputs["emailPasswordToUser"] = args ? args.emailPasswordToUser : undefined;
-            resourceInputs["isAdmin"] = args ? args.isAdmin : undefined;
-            resourceInputs["merakiAuthUserId"] = args ? args.merakiAuthUserId : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
+            resourceInputs["accountType"] = args?.accountType;
+            resourceInputs["authorizations"] = args?.authorizations;
+            resourceInputs["email"] = args?.email;
+            resourceInputs["emailPasswordToUser"] = args?.emailPasswordToUser;
+            resourceInputs["isAdmin"] = args?.isAdmin;
+            resourceInputs["merakiAuthUserId"] = args?.merakiAuthUserId;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["networkId"] = args?.networkId;
             resourceInputs["password"] = args?.password ? pulumi.secret(args.password) : undefined;
             resourceInputs["createdAt"] = undefined /*out*/;
         }

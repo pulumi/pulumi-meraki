@@ -60,19 +60,19 @@ export class CellularGatewayDhcp extends pulumi.CustomResource {
     /**
      * DHCP Lease time for all MG in the network.
      */
-    public readonly dhcpLeaseTime!: pulumi.Output<string>;
+    declare public readonly dhcpLeaseTime: pulumi.Output<string>;
     /**
      * List of fixed IPs representing the the DNS Name servers when the mode is 'custom'.
      */
-    public readonly dnsCustomNameservers!: pulumi.Output<string[]>;
+    declare public readonly dnsCustomNameservers: pulumi.Output<string[]>;
     /**
      * DNS name servers mode for all MG in the network.
      */
-    public readonly dnsNameservers!: pulumi.Output<string>;
+    declare public readonly dnsNameservers: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
 
     /**
      * Create a CellularGatewayDhcp resource with the given unique name, arguments, and options.
@@ -87,19 +87,19 @@ export class CellularGatewayDhcp extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CellularGatewayDhcpState | undefined;
-            resourceInputs["dhcpLeaseTime"] = state ? state.dhcpLeaseTime : undefined;
-            resourceInputs["dnsCustomNameservers"] = state ? state.dnsCustomNameservers : undefined;
-            resourceInputs["dnsNameservers"] = state ? state.dnsNameservers : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
+            resourceInputs["dhcpLeaseTime"] = state?.dhcpLeaseTime;
+            resourceInputs["dnsCustomNameservers"] = state?.dnsCustomNameservers;
+            resourceInputs["dnsNameservers"] = state?.dnsNameservers;
+            resourceInputs["networkId"] = state?.networkId;
         } else {
             const args = argsOrState as CellularGatewayDhcpArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["dhcpLeaseTime"] = args ? args.dhcpLeaseTime : undefined;
-            resourceInputs["dnsCustomNameservers"] = args ? args.dnsCustomNameservers : undefined;
-            resourceInputs["dnsNameservers"] = args ? args.dnsNameservers : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
+            resourceInputs["dhcpLeaseTime"] = args?.dhcpLeaseTime;
+            resourceInputs["dnsCustomNameservers"] = args?.dnsCustomNameservers;
+            resourceInputs["dnsNameservers"] = args?.dnsNameservers;
+            resourceInputs["networkId"] = args?.networkId;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(CellularGatewayDhcp.__pulumiType, name, resourceInputs, opts);

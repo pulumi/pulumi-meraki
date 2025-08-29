@@ -62,31 +62,31 @@ export class Base extends pulumi.CustomResource {
     /**
      * API related settings
      */
-    public readonly api!: pulumi.Output<outputs.organizations.BaseApi>;
+    declare public readonly api: pulumi.Output<outputs.organizations.BaseApi>;
     /**
      * Data for this organization
      */
-    public /*out*/ readonly cloud!: pulumi.Output<outputs.organizations.BaseCloud>;
+    declare public /*out*/ readonly cloud: pulumi.Output<outputs.organizations.BaseCloud>;
     /**
      * Licensing related settings
      */
-    public /*out*/ readonly licensing!: pulumi.Output<outputs.organizations.BaseLicensing>;
+    declare public /*out*/ readonly licensing: pulumi.Output<outputs.organizations.BaseLicensing>;
     /**
      * Information about the organization's management system
      */
-    public readonly management!: pulumi.Output<outputs.organizations.BaseManagement>;
+    declare public readonly management: pulumi.Output<outputs.organizations.BaseManagement>;
     /**
      * Organization name
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * organizationId path parameter. Organization ID
      */
-    public readonly organizationId!: pulumi.Output<string>;
+    declare public readonly organizationId: pulumi.Output<string>;
     /**
      * Organization URL
      */
-    public /*out*/ readonly url!: pulumi.Output<string>;
+    declare public /*out*/ readonly url: pulumi.Output<string>;
 
     /**
      * Create a Base resource with the given unique name, arguments, and options.
@@ -101,19 +101,19 @@ export class Base extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as BaseState | undefined;
-            resourceInputs["api"] = state ? state.api : undefined;
-            resourceInputs["cloud"] = state ? state.cloud : undefined;
-            resourceInputs["licensing"] = state ? state.licensing : undefined;
-            resourceInputs["management"] = state ? state.management : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["organizationId"] = state ? state.organizationId : undefined;
-            resourceInputs["url"] = state ? state.url : undefined;
+            resourceInputs["api"] = state?.api;
+            resourceInputs["cloud"] = state?.cloud;
+            resourceInputs["licensing"] = state?.licensing;
+            resourceInputs["management"] = state?.management;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["organizationId"] = state?.organizationId;
+            resourceInputs["url"] = state?.url;
         } else {
             const args = argsOrState as BaseArgs | undefined;
-            resourceInputs["api"] = args ? args.api : undefined;
-            resourceInputs["management"] = args ? args.management : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["organizationId"] = args ? args.organizationId : undefined;
+            resourceInputs["api"] = args?.api;
+            resourceInputs["management"] = args?.management;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["organizationId"] = args?.organizationId;
             resourceInputs["cloud"] = undefined /*out*/;
             resourceInputs["licensing"] = undefined /*out*/;
             resourceInputs["url"] = undefined /*out*/;

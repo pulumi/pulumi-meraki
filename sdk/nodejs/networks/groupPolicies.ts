@@ -46,43 +46,43 @@ export class GroupPolicies extends pulumi.CustomResource {
     /**
      * The bandwidth settings for clients bound to your group policy.
      */
-    public readonly bandwidth!: pulumi.Output<outputs.networks.GroupPoliciesBandwidth>;
+    declare public readonly bandwidth: pulumi.Output<outputs.networks.GroupPoliciesBandwidth>;
     /**
      * The Bonjour settings for your group policy. Only valid if your network has a wireless configuration.
      */
-    public readonly bonjourForwarding!: pulumi.Output<outputs.networks.GroupPoliciesBonjourForwarding>;
+    declare public readonly bonjourForwarding: pulumi.Output<outputs.networks.GroupPoliciesBonjourForwarding>;
     /**
      * The content filtering settings for your group policy
      */
-    public readonly contentFiltering!: pulumi.Output<outputs.networks.GroupPoliciesContentFiltering>;
+    declare public readonly contentFiltering: pulumi.Output<outputs.networks.GroupPoliciesContentFiltering>;
     /**
      * The firewall and traffic shaping rules and settings for your policy.
      */
-    public readonly firewallAndTrafficShaping!: pulumi.Output<outputs.networks.GroupPoliciesFirewallAndTrafficShaping>;
+    declare public readonly firewallAndTrafficShaping: pulumi.Output<outputs.networks.GroupPoliciesFirewallAndTrafficShaping>;
     /**
      * The ID of the group policy
      */
-    public /*out*/ readonly groupPolicyId!: pulumi.Output<string>;
+    declare public /*out*/ readonly groupPolicyId: pulumi.Output<string>;
     /**
      * The name for your group policy. Required.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * The schedule for the group policy. Schedules are applied to days of the week.
      */
-    public readonly scheduling!: pulumi.Output<outputs.networks.GroupPoliciesScheduling>;
+    declare public readonly scheduling: pulumi.Output<outputs.networks.GroupPoliciesScheduling>;
     /**
      * Whether clients bound to your policy will bypass splash authorization or behave according to the network's rules. Can be one of 'network default' or 'bypass'. Only available if your network has a wireless configuration.
      */
-    public readonly splashAuthSettings!: pulumi.Output<string>;
+    declare public readonly splashAuthSettings: pulumi.Output<string>;
     /**
      * The VLAN tagging settings for your group policy. Only available if your network has a wireless configuration.
      */
-    public readonly vlanTagging!: pulumi.Output<outputs.networks.GroupPoliciesVlanTagging>;
+    declare public readonly vlanTagging: pulumi.Output<outputs.networks.GroupPoliciesVlanTagging>;
 
     /**
      * Create a GroupPolicies resource with the given unique name, arguments, and options.
@@ -97,30 +97,30 @@ export class GroupPolicies extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as GroupPoliciesState | undefined;
-            resourceInputs["bandwidth"] = state ? state.bandwidth : undefined;
-            resourceInputs["bonjourForwarding"] = state ? state.bonjourForwarding : undefined;
-            resourceInputs["contentFiltering"] = state ? state.contentFiltering : undefined;
-            resourceInputs["firewallAndTrafficShaping"] = state ? state.firewallAndTrafficShaping : undefined;
-            resourceInputs["groupPolicyId"] = state ? state.groupPolicyId : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["scheduling"] = state ? state.scheduling : undefined;
-            resourceInputs["splashAuthSettings"] = state ? state.splashAuthSettings : undefined;
-            resourceInputs["vlanTagging"] = state ? state.vlanTagging : undefined;
+            resourceInputs["bandwidth"] = state?.bandwidth;
+            resourceInputs["bonjourForwarding"] = state?.bonjourForwarding;
+            resourceInputs["contentFiltering"] = state?.contentFiltering;
+            resourceInputs["firewallAndTrafficShaping"] = state?.firewallAndTrafficShaping;
+            resourceInputs["groupPolicyId"] = state?.groupPolicyId;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["scheduling"] = state?.scheduling;
+            resourceInputs["splashAuthSettings"] = state?.splashAuthSettings;
+            resourceInputs["vlanTagging"] = state?.vlanTagging;
         } else {
             const args = argsOrState as GroupPoliciesArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["bandwidth"] = args ? args.bandwidth : undefined;
-            resourceInputs["bonjourForwarding"] = args ? args.bonjourForwarding : undefined;
-            resourceInputs["contentFiltering"] = args ? args.contentFiltering : undefined;
-            resourceInputs["firewallAndTrafficShaping"] = args ? args.firewallAndTrafficShaping : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["scheduling"] = args ? args.scheduling : undefined;
-            resourceInputs["splashAuthSettings"] = args ? args.splashAuthSettings : undefined;
-            resourceInputs["vlanTagging"] = args ? args.vlanTagging : undefined;
+            resourceInputs["bandwidth"] = args?.bandwidth;
+            resourceInputs["bonjourForwarding"] = args?.bonjourForwarding;
+            resourceInputs["contentFiltering"] = args?.contentFiltering;
+            resourceInputs["firewallAndTrafficShaping"] = args?.firewallAndTrafficShaping;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["scheduling"] = args?.scheduling;
+            resourceInputs["splashAuthSettings"] = args?.splashAuthSettings;
+            resourceInputs["vlanTagging"] = args?.vlanTagging;
             resourceInputs["groupPolicyId"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

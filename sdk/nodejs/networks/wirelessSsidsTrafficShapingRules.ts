@@ -46,25 +46,25 @@ export class WirelessSsidsTrafficShapingRules extends pulumi.CustomResource {
     /**
      * Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network's traffic shaping page. Note that default rules count against the rule limit of 8.
      */
-    public readonly defaultRulesEnabled!: pulumi.Output<boolean>;
+    declare public readonly defaultRulesEnabled: pulumi.Output<boolean>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * number path parameter.
      */
-    public readonly number!: pulumi.Output<string>;
+    declare public readonly number: pulumi.Output<string>;
     /**
      * An array of traffic shaping rules. Rules are applied in the order that
      * they are specified in. An empty list (or null) means no rules. Note that
      * you are allowed a maximum of 8 rules.
      */
-    public readonly rules!: pulumi.Output<outputs.networks.WirelessSsidsTrafficShapingRulesRule[]>;
+    declare public readonly rules: pulumi.Output<outputs.networks.WirelessSsidsTrafficShapingRulesRule[]>;
     /**
      * Whether traffic shaping rules are applied to clients on your SSID.
      */
-    public readonly trafficShapingEnabled!: pulumi.Output<boolean>;
+    declare public readonly trafficShapingEnabled: pulumi.Output<boolean>;
 
     /**
      * Create a WirelessSsidsTrafficShapingRules resource with the given unique name, arguments, and options.
@@ -79,24 +79,24 @@ export class WirelessSsidsTrafficShapingRules extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as WirelessSsidsTrafficShapingRulesState | undefined;
-            resourceInputs["defaultRulesEnabled"] = state ? state.defaultRulesEnabled : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["number"] = state ? state.number : undefined;
-            resourceInputs["rules"] = state ? state.rules : undefined;
-            resourceInputs["trafficShapingEnabled"] = state ? state.trafficShapingEnabled : undefined;
+            resourceInputs["defaultRulesEnabled"] = state?.defaultRulesEnabled;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["number"] = state?.number;
+            resourceInputs["rules"] = state?.rules;
+            resourceInputs["trafficShapingEnabled"] = state?.trafficShapingEnabled;
         } else {
             const args = argsOrState as WirelessSsidsTrafficShapingRulesArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            if ((!args || args.number === undefined) && !opts.urn) {
+            if (args?.number === undefined && !opts.urn) {
                 throw new Error("Missing required property 'number'");
             }
-            resourceInputs["defaultRulesEnabled"] = args ? args.defaultRulesEnabled : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["number"] = args ? args.number : undefined;
-            resourceInputs["rules"] = args ? args.rules : undefined;
-            resourceInputs["trafficShapingEnabled"] = args ? args.trafficShapingEnabled : undefined;
+            resourceInputs["defaultRulesEnabled"] = args?.defaultRulesEnabled;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["number"] = args?.number;
+            resourceInputs["rules"] = args?.rules;
+            resourceInputs["trafficShapingEnabled"] = args?.trafficShapingEnabled;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(WirelessSsidsTrafficShapingRules.__pulumiType, name, resourceInputs, opts);

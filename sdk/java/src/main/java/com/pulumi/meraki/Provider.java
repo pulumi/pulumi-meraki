@@ -24,48 +24,42 @@ import javax.annotation.Nullable;
 @ResourceType(type="pulumi:providers:meraki")
 public class Provider extends com.pulumi.resources.ProviderResource {
     /**
-     * Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is
-     * (https://api.meraki.com/)
+     * Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is (https://api.meraki.com/)
      * 
      */
     @Export(name="merakiBaseUrl", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> merakiBaseUrl;
 
     /**
-     * @return Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is
-     * (https://api.meraki.com/)
+     * @return Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is (https://api.meraki.com/)
      * 
      */
     public Output<Optional<String>> merakiBaseUrl() {
         return Codegen.optional(this.merakiBaseUrl);
     }
     /**
-     * Cisco Meraki meraki_dashboard_api_key to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment
-     * variable.
+     * Cisco Meraki meraki_dashboard_api_key to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
      * 
      */
     @Export(name="merakiDashboardApiKey", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> merakiDashboardApiKey;
 
     /**
-     * @return Cisco Meraki meraki_dashboard_api_key to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment
-     * variable.
+     * @return Cisco Meraki meraki_dashboard_api_key to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
      * 
      */
     public Output<Optional<String>> merakiDashboardApiKey() {
         return Codegen.optional(this.merakiDashboardApiKey);
     }
     /**
-     * Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to
-     * `false`.
+     * Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to `false`.
      * 
      */
     @Export(name="merakiDebug", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> merakiDebug;
 
     /**
-     * @return Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to
-     * `false`.
+     * @return Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to `false`.
      * 
      */
     public Output<Optional<String>> merakiDebug() {

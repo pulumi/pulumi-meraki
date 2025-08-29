@@ -46,11 +46,11 @@ export class ApplianceFirewallPortForwardingRules extends pulumi.CustomResource 
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * An array of port forwarding params
      */
-    public readonly rules!: pulumi.Output<outputs.networks.ApplianceFirewallPortForwardingRulesRule[]>;
+    declare public readonly rules: pulumi.Output<outputs.networks.ApplianceFirewallPortForwardingRulesRule[]>;
 
     /**
      * Create a ApplianceFirewallPortForwardingRules resource with the given unique name, arguments, and options.
@@ -65,15 +65,15 @@ export class ApplianceFirewallPortForwardingRules extends pulumi.CustomResource 
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ApplianceFirewallPortForwardingRulesState | undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["rules"] = state ? state.rules : undefined;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["rules"] = state?.rules;
         } else {
             const args = argsOrState as ApplianceFirewallPortForwardingRulesArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["rules"] = args ? args.rules : undefined;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["rules"] = args?.rules;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(ApplianceFirewallPortForwardingRules.__pulumiType, name, resourceInputs, opts);

@@ -11,20 +11,17 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
-// Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is
-// (https://api.meraki.com/)
+// Cisco Meraki base URL, FQDN or IP. If not set, it uses the MERAKI_BASE_URL environment variable. Default is (https://api.meraki.com/)
 func GetMerakiBaseUrl(ctx *pulumi.Context) string {
 	return config.Get(ctx, "meraki:merakiBaseUrl")
 }
 
-// Cisco Meraki merakiDashboardApiKey to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment
-// variable.
+// Cisco Meraki merakiDashboardApiKey to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
 func GetMerakiDashboardApiKey(ctx *pulumi.Context) string {
 	return config.Get(ctx, "meraki:merakiDashboardApiKey")
 }
 
-// Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to
-// `false`.
+// Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to `false`.
 func GetMerakiDebug(ctx *pulumi.Context) string {
 	return config.Get(ctx, "meraki:merakiDebug")
 }

@@ -46,27 +46,27 @@ export class FirmwareUpgradesStagedGroups extends pulumi.CustomResource {
     /**
      * The devices and Switch Stacks assigned to the Group
      */
-    public readonly assignedDevices!: pulumi.Output<outputs.networks.FirmwareUpgradesStagedGroupsAssignedDevices>;
+    declare public readonly assignedDevices: pulumi.Output<outputs.networks.FirmwareUpgradesStagedGroupsAssignedDevices>;
     /**
      * Description of the Staged Upgrade Group
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
      * Id of staged upgrade group
      */
-    public readonly groupId!: pulumi.Output<string>;
+    declare public readonly groupId: pulumi.Output<string>;
     /**
      * Boolean indicating the default Group. Any device that does not have a group explicitly assigned will upgrade with this group
      */
-    public readonly isDefault!: pulumi.Output<boolean>;
+    declare public readonly isDefault: pulumi.Output<boolean>;
     /**
      * Name of the Staged Upgrade Group
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
 
     /**
      * Create a FirmwareUpgradesStagedGroups resource with the given unique name, arguments, and options.
@@ -81,23 +81,23 @@ export class FirmwareUpgradesStagedGroups extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as FirmwareUpgradesStagedGroupsState | undefined;
-            resourceInputs["assignedDevices"] = state ? state.assignedDevices : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["groupId"] = state ? state.groupId : undefined;
-            resourceInputs["isDefault"] = state ? state.isDefault : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
+            resourceInputs["assignedDevices"] = state?.assignedDevices;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["groupId"] = state?.groupId;
+            resourceInputs["isDefault"] = state?.isDefault;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["networkId"] = state?.networkId;
         } else {
             const args = argsOrState as FirmwareUpgradesStagedGroupsArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["assignedDevices"] = args ? args.assignedDevices : undefined;
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["groupId"] = args ? args.groupId : undefined;
-            resourceInputs["isDefault"] = args ? args.isDefault : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
+            resourceInputs["assignedDevices"] = args?.assignedDevices;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["groupId"] = args?.groupId;
+            resourceInputs["isDefault"] = args?.isDefault;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["networkId"] = args?.networkId;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(FirmwareUpgradesStagedGroups.__pulumiType, name, resourceInputs, opts);

@@ -64,39 +64,39 @@ export class WebhooksPayloadTemplates extends pulumi.CustomResource {
     /**
      * The body of the payload template, in liquid template
      */
-    public readonly body!: pulumi.Output<string>;
+    declare public readonly body: pulumi.Output<string>;
     /**
      * A file containing liquid template used for the body of the webhook message. Either *body* or *bodyFile* must be specified.
      */
-    public readonly bodyFile!: pulumi.Output<string>;
+    declare public readonly bodyFile: pulumi.Output<string>;
     /**
      * The payload template headers, will be rendered as a key-value pair in the webhook.
      */
-    public readonly headers!: pulumi.Output<outputs.networks.WebhooksPayloadTemplatesHeader[]>;
+    declare public readonly headers: pulumi.Output<outputs.networks.WebhooksPayloadTemplatesHeader[]>;
     /**
      * A file containing the liquid template used with the webhook headers.
      */
-    public readonly headersFile!: pulumi.Output<string>;
+    declare public readonly headersFile: pulumi.Output<string>;
     /**
      * The name of the payload template
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * Webhook payload template Id
      */
-    public readonly payloadTemplateId!: pulumi.Output<string>;
+    declare public readonly payloadTemplateId: pulumi.Output<string>;
     /**
      * Information on which entities have access to the template
      */
-    public /*out*/ readonly sharing!: pulumi.Output<outputs.networks.WebhooksPayloadTemplatesSharing>;
+    declare public /*out*/ readonly sharing: pulumi.Output<outputs.networks.WebhooksPayloadTemplatesSharing>;
     /**
      * The type of the payload template
      */
-    public /*out*/ readonly type!: pulumi.Output<string>;
+    declare public /*out*/ readonly type: pulumi.Output<string>;
 
     /**
      * Create a WebhooksPayloadTemplates resource with the given unique name, arguments, and options.
@@ -111,27 +111,27 @@ export class WebhooksPayloadTemplates extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as WebhooksPayloadTemplatesState | undefined;
-            resourceInputs["body"] = state ? state.body : undefined;
-            resourceInputs["bodyFile"] = state ? state.bodyFile : undefined;
-            resourceInputs["headers"] = state ? state.headers : undefined;
-            resourceInputs["headersFile"] = state ? state.headersFile : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["payloadTemplateId"] = state ? state.payloadTemplateId : undefined;
-            resourceInputs["sharing"] = state ? state.sharing : undefined;
-            resourceInputs["type"] = state ? state.type : undefined;
+            resourceInputs["body"] = state?.body;
+            resourceInputs["bodyFile"] = state?.bodyFile;
+            resourceInputs["headers"] = state?.headers;
+            resourceInputs["headersFile"] = state?.headersFile;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["payloadTemplateId"] = state?.payloadTemplateId;
+            resourceInputs["sharing"] = state?.sharing;
+            resourceInputs["type"] = state?.type;
         } else {
             const args = argsOrState as WebhooksPayloadTemplatesArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["body"] = args ? args.body : undefined;
-            resourceInputs["bodyFile"] = args ? args.bodyFile : undefined;
-            resourceInputs["headers"] = args ? args.headers : undefined;
-            resourceInputs["headersFile"] = args ? args.headersFile : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["payloadTemplateId"] = args ? args.payloadTemplateId : undefined;
+            resourceInputs["body"] = args?.body;
+            resourceInputs["bodyFile"] = args?.bodyFile;
+            resourceInputs["headers"] = args?.headers;
+            resourceInputs["headersFile"] = args?.headersFile;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["payloadTemplateId"] = args?.payloadTemplateId;
             resourceInputs["sharing"] = undefined /*out*/;
             resourceInputs["type"] = undefined /*out*/;
         }

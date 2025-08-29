@@ -46,15 +46,15 @@ export class SensorRelationships extends pulumi.CustomResource {
     /**
      * A role defined between an MT sensor and an MV camera that adds the camera's livestream to the sensor's details page. Snapshots from the camera will also appear in alert notifications that the sensor triggers.
      */
-    public readonly livestream!: pulumi.Output<outputs.devices.SensorRelationshipsLivestream>;
+    declare public readonly livestream: pulumi.Output<outputs.devices.SensorRelationshipsLivestream>;
     /**
      * A role defined between an MT sensor and an MV camera that adds the camera's r.Livestream to the sensor's details page. Snapshots from the camera will also appear in alert notifications that the sensor triggers.
      */
-    public readonly livestreamRequests!: pulumi.Output<outputs.devices.SensorRelationshipsLivestreamRequest[]>;
+    declare public readonly livestreamRequests: pulumi.Output<outputs.devices.SensorRelationshipsLivestreamRequest[]>;
     /**
      * serial path parameter.
      */
-    public readonly serial!: pulumi.Output<string>;
+    declare public readonly serial: pulumi.Output<string>;
 
     /**
      * Create a SensorRelationships resource with the given unique name, arguments, and options.
@@ -69,17 +69,17 @@ export class SensorRelationships extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SensorRelationshipsState | undefined;
-            resourceInputs["livestream"] = state ? state.livestream : undefined;
-            resourceInputs["livestreamRequests"] = state ? state.livestreamRequests : undefined;
-            resourceInputs["serial"] = state ? state.serial : undefined;
+            resourceInputs["livestream"] = state?.livestream;
+            resourceInputs["livestreamRequests"] = state?.livestreamRequests;
+            resourceInputs["serial"] = state?.serial;
         } else {
             const args = argsOrState as SensorRelationshipsArgs | undefined;
-            if ((!args || args.serial === undefined) && !opts.urn) {
+            if (args?.serial === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serial'");
             }
-            resourceInputs["livestream"] = args ? args.livestream : undefined;
-            resourceInputs["livestreamRequests"] = args ? args.livestreamRequests : undefined;
-            resourceInputs["serial"] = args ? args.serial : undefined;
+            resourceInputs["livestream"] = args?.livestream;
+            resourceInputs["livestreamRequests"] = args?.livestreamRequests;
+            resourceInputs["serial"] = args?.serial;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(SensorRelationships.__pulumiType, name, resourceInputs, opts);

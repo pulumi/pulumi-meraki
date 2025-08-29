@@ -46,11 +46,11 @@ export class ApplianceFirewallSettings extends pulumi.CustomResource {
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * Spoofing protection settings
      */
-    public readonly spoofingProtection!: pulumi.Output<outputs.networks.ApplianceFirewallSettingsSpoofingProtection>;
+    declare public readonly spoofingProtection: pulumi.Output<outputs.networks.ApplianceFirewallSettingsSpoofingProtection>;
 
     /**
      * Create a ApplianceFirewallSettings resource with the given unique name, arguments, and options.
@@ -65,15 +65,15 @@ export class ApplianceFirewallSettings extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ApplianceFirewallSettingsState | undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["spoofingProtection"] = state ? state.spoofingProtection : undefined;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["spoofingProtection"] = state?.spoofingProtection;
         } else {
             const args = argsOrState as ApplianceFirewallSettingsArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["spoofingProtection"] = args ? args.spoofingProtection : undefined;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["spoofingProtection"] = args?.spoofingProtection;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(ApplianceFirewallSettings.__pulumiType, name, resourceInputs, opts);

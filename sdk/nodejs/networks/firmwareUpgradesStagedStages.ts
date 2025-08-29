@@ -61,15 +61,15 @@ export class FirmwareUpgradesStagedStages extends pulumi.CustomResource {
     /**
      * The Staged Upgrade Group
      */
-    public /*out*/ readonly group!: pulumi.Output<outputs.networks.FirmwareUpgradesStagedStagesGroup>;
+    declare public /*out*/ readonly group: pulumi.Output<outputs.networks.FirmwareUpgradesStagedStagesGroup>;
     /**
      * Array of Staged Upgrade Groups
      */
-    public readonly jsons!: pulumi.Output<outputs.networks.FirmwareUpgradesStagedStagesJson[]>;
+    declare public readonly jsons: pulumi.Output<outputs.networks.FirmwareUpgradesStagedStagesJson[]>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
 
     /**
      * Create a FirmwareUpgradesStagedStages resource with the given unique name, arguments, and options.
@@ -84,16 +84,16 @@ export class FirmwareUpgradesStagedStages extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as FirmwareUpgradesStagedStagesState | undefined;
-            resourceInputs["group"] = state ? state.group : undefined;
-            resourceInputs["jsons"] = state ? state.jsons : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
+            resourceInputs["group"] = state?.group;
+            resourceInputs["jsons"] = state?.jsons;
+            resourceInputs["networkId"] = state?.networkId;
         } else {
             const args = argsOrState as FirmwareUpgradesStagedStagesArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["jsons"] = args ? args.jsons : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
+            resourceInputs["jsons"] = args?.jsons;
+            resourceInputs["networkId"] = args?.networkId;
             resourceInputs["group"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

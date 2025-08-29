@@ -41,8 +41,8 @@ export class InventoryOnboardingCloudMonitoringExportEvents extends pulumi.Custo
     /**
      * organizationId path parameter. Organization ID
      */
-    public readonly organizationId!: pulumi.Output<string>;
-    public readonly parameters!: pulumi.Output<outputs.organizations.InventoryOnboardingCloudMonitoringExportEventsParameters>;
+    declare public readonly organizationId: pulumi.Output<string>;
+    declare public readonly parameters: pulumi.Output<outputs.organizations.InventoryOnboardingCloudMonitoringExportEventsParameters>;
 
     /**
      * Create a InventoryOnboardingCloudMonitoringExportEvents resource with the given unique name, arguments, and options.
@@ -57,18 +57,18 @@ export class InventoryOnboardingCloudMonitoringExportEvents extends pulumi.Custo
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as InventoryOnboardingCloudMonitoringExportEventsState | undefined;
-            resourceInputs["organizationId"] = state ? state.organizationId : undefined;
-            resourceInputs["parameters"] = state ? state.parameters : undefined;
+            resourceInputs["organizationId"] = state?.organizationId;
+            resourceInputs["parameters"] = state?.parameters;
         } else {
             const args = argsOrState as InventoryOnboardingCloudMonitoringExportEventsArgs | undefined;
-            if ((!args || args.organizationId === undefined) && !opts.urn) {
+            if (args?.organizationId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'organizationId'");
             }
-            if ((!args || args.parameters === undefined) && !opts.urn) {
+            if (args?.parameters === undefined && !opts.urn) {
                 throw new Error("Missing required property 'parameters'");
             }
-            resourceInputs["organizationId"] = args ? args.organizationId : undefined;
-            resourceInputs["parameters"] = args ? args.parameters : undefined;
+            resourceInputs["organizationId"] = args?.organizationId;
+            resourceInputs["parameters"] = args?.parameters;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(InventoryOnboardingCloudMonitoringExportEvents.__pulumiType, name, resourceInputs, opts);

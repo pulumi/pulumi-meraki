@@ -52,11 +52,11 @@ export class SmUserAccessDevicesDelete extends pulumi.CustomResource {
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * userAccessDeviceId path parameter. User access device ID
      */
-    public readonly userAccessDeviceId!: pulumi.Output<string>;
+    declare public readonly userAccessDeviceId: pulumi.Output<string>;
 
     /**
      * Create a SmUserAccessDevicesDelete resource with the given unique name, arguments, and options.
@@ -71,18 +71,18 @@ export class SmUserAccessDevicesDelete extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SmUserAccessDevicesDeleteState | undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["userAccessDeviceId"] = state ? state.userAccessDeviceId : undefined;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["userAccessDeviceId"] = state?.userAccessDeviceId;
         } else {
             const args = argsOrState as SmUserAccessDevicesDeleteArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            if ((!args || args.userAccessDeviceId === undefined) && !opts.urn) {
+            if (args?.userAccessDeviceId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'userAccessDeviceId'");
             }
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["userAccessDeviceId"] = args ? args.userAccessDeviceId : undefined;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["userAccessDeviceId"] = args?.userAccessDeviceId;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(SmUserAccessDevicesDelete.__pulumiType, name, resourceInputs, opts);

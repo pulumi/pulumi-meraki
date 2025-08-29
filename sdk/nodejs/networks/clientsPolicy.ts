@@ -57,23 +57,23 @@ export class ClientsPolicy extends pulumi.CustomResource {
     /**
      * clientId path parameter. Client ID
      */
-    public readonly clientId!: pulumi.Output<string>;
+    declare public readonly clientId: pulumi.Output<string>;
     /**
      * The name of the client's policy
      */
-    public readonly devicePolicy!: pulumi.Output<string>;
+    declare public readonly devicePolicy: pulumi.Output<string>;
     /**
      * The group policy identifier of the client
      */
-    public readonly groupPolicyId!: pulumi.Output<string>;
+    declare public readonly groupPolicyId: pulumi.Output<string>;
     /**
      * The MAC address of the client
      */
-    public /*out*/ readonly mac!: pulumi.Output<string>;
+    declare public /*out*/ readonly mac: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
 
     /**
      * Create a ClientsPolicy resource with the given unique name, arguments, and options.
@@ -88,23 +88,23 @@ export class ClientsPolicy extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ClientsPolicyState | undefined;
-            resourceInputs["clientId"] = state ? state.clientId : undefined;
-            resourceInputs["devicePolicy"] = state ? state.devicePolicy : undefined;
-            resourceInputs["groupPolicyId"] = state ? state.groupPolicyId : undefined;
-            resourceInputs["mac"] = state ? state.mac : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
+            resourceInputs["clientId"] = state?.clientId;
+            resourceInputs["devicePolicy"] = state?.devicePolicy;
+            resourceInputs["groupPolicyId"] = state?.groupPolicyId;
+            resourceInputs["mac"] = state?.mac;
+            resourceInputs["networkId"] = state?.networkId;
         } else {
             const args = argsOrState as ClientsPolicyArgs | undefined;
-            if ((!args || args.clientId === undefined) && !opts.urn) {
+            if (args?.clientId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'clientId'");
             }
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["clientId"] = args ? args.clientId : undefined;
-            resourceInputs["devicePolicy"] = args ? args.devicePolicy : undefined;
-            resourceInputs["groupPolicyId"] = args ? args.groupPolicyId : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
+            resourceInputs["clientId"] = args?.clientId;
+            resourceInputs["devicePolicy"] = args?.devicePolicy;
+            resourceInputs["groupPolicyId"] = args?.groupPolicyId;
+            resourceInputs["networkId"] = args?.networkId;
             resourceInputs["mac"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

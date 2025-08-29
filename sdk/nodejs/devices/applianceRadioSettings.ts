@@ -47,19 +47,19 @@ export class ApplianceRadioSettings extends pulumi.CustomResource {
     /**
      * Manual radio settings for 5 GHz
      */
-    public readonly fiveGhzSettings!: pulumi.Output<outputs.devices.ApplianceRadioSettingsFiveGhzSettings>;
+    declare public readonly fiveGhzSettings: pulumi.Output<outputs.devices.ApplianceRadioSettingsFiveGhzSettings>;
     /**
      * RF Profile ID
      */
-    public readonly rfProfileId!: pulumi.Output<string>;
+    declare public readonly rfProfileId: pulumi.Output<string>;
     /**
      * The device serial
      */
-    public readonly serial!: pulumi.Output<string>;
+    declare public readonly serial: pulumi.Output<string>;
     /**
      * Manual radio settings for 2.4 GHz
      */
-    public readonly twoFourGhzSettings!: pulumi.Output<outputs.devices.ApplianceRadioSettingsTwoFourGhzSettings>;
+    declare public readonly twoFourGhzSettings: pulumi.Output<outputs.devices.ApplianceRadioSettingsTwoFourGhzSettings>;
 
     /**
      * Create a ApplianceRadioSettings resource with the given unique name, arguments, and options.
@@ -74,19 +74,19 @@ export class ApplianceRadioSettings extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ApplianceRadioSettingsState | undefined;
-            resourceInputs["fiveGhzSettings"] = state ? state.fiveGhzSettings : undefined;
-            resourceInputs["rfProfileId"] = state ? state.rfProfileId : undefined;
-            resourceInputs["serial"] = state ? state.serial : undefined;
-            resourceInputs["twoFourGhzSettings"] = state ? state.twoFourGhzSettings : undefined;
+            resourceInputs["fiveGhzSettings"] = state?.fiveGhzSettings;
+            resourceInputs["rfProfileId"] = state?.rfProfileId;
+            resourceInputs["serial"] = state?.serial;
+            resourceInputs["twoFourGhzSettings"] = state?.twoFourGhzSettings;
         } else {
             const args = argsOrState as ApplianceRadioSettingsArgs | undefined;
-            if ((!args || args.serial === undefined) && !opts.urn) {
+            if (args?.serial === undefined && !opts.urn) {
                 throw new Error("Missing required property 'serial'");
             }
-            resourceInputs["fiveGhzSettings"] = args ? args.fiveGhzSettings : undefined;
-            resourceInputs["rfProfileId"] = args ? args.rfProfileId : undefined;
-            resourceInputs["serial"] = args ? args.serial : undefined;
-            resourceInputs["twoFourGhzSettings"] = args ? args.twoFourGhzSettings : undefined;
+            resourceInputs["fiveGhzSettings"] = args?.fiveGhzSettings;
+            resourceInputs["rfProfileId"] = args?.rfProfileId;
+            resourceInputs["serial"] = args?.serial;
+            resourceInputs["twoFourGhzSettings"] = args?.twoFourGhzSettings;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(ApplianceRadioSettings.__pulumiType, name, resourceInputs, opts);

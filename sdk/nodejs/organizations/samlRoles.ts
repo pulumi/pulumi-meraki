@@ -66,31 +66,31 @@ export class SamlRoles extends pulumi.CustomResource {
     /**
      * The list of camera access privileges for SAML administrator
      */
-    public /*out*/ readonly cameras!: pulumi.Output<outputs.organizations.SamlRolesCamera[]>;
+    declare public /*out*/ readonly cameras: pulumi.Output<outputs.organizations.SamlRolesCamera[]>;
     /**
      * The list of networks that the SAML administrator has privileges on
      */
-    public readonly networks!: pulumi.Output<outputs.organizations.SamlRolesNetwork[]>;
+    declare public readonly networks: pulumi.Output<outputs.organizations.SamlRolesNetwork[]>;
     /**
      * The privilege of the SAML administrator on the organization
      */
-    public readonly orgAccess!: pulumi.Output<string>;
+    declare public readonly orgAccess: pulumi.Output<string>;
     /**
      * organizationId path parameter. Organization ID
      */
-    public readonly organizationId!: pulumi.Output<string>;
+    declare public readonly organizationId: pulumi.Output<string>;
     /**
      * The role of the SAML administrator
      */
-    public readonly role!: pulumi.Output<string>;
+    declare public readonly role: pulumi.Output<string>;
     /**
      * samlRoleId path parameter. Saml role ID
      */
-    public readonly samlRoleId!: pulumi.Output<string | undefined>;
+    declare public readonly samlRoleId: pulumi.Output<string | undefined>;
     /**
      * The list of tags that the SAML administrator has privleges on
      */
-    public readonly tags!: pulumi.Output<outputs.organizations.SamlRolesTag[]>;
+    declare public readonly tags: pulumi.Output<outputs.organizations.SamlRolesTag[]>;
 
     /**
      * Create a SamlRoles resource with the given unique name, arguments, and options.
@@ -105,24 +105,24 @@ export class SamlRoles extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as SamlRolesState | undefined;
-            resourceInputs["cameras"] = state ? state.cameras : undefined;
-            resourceInputs["networks"] = state ? state.networks : undefined;
-            resourceInputs["orgAccess"] = state ? state.orgAccess : undefined;
-            resourceInputs["organizationId"] = state ? state.organizationId : undefined;
-            resourceInputs["role"] = state ? state.role : undefined;
-            resourceInputs["samlRoleId"] = state ? state.samlRoleId : undefined;
-            resourceInputs["tags"] = state ? state.tags : undefined;
+            resourceInputs["cameras"] = state?.cameras;
+            resourceInputs["networks"] = state?.networks;
+            resourceInputs["orgAccess"] = state?.orgAccess;
+            resourceInputs["organizationId"] = state?.organizationId;
+            resourceInputs["role"] = state?.role;
+            resourceInputs["samlRoleId"] = state?.samlRoleId;
+            resourceInputs["tags"] = state?.tags;
         } else {
             const args = argsOrState as SamlRolesArgs | undefined;
-            if ((!args || args.organizationId === undefined) && !opts.urn) {
+            if (args?.organizationId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'organizationId'");
             }
-            resourceInputs["networks"] = args ? args.networks : undefined;
-            resourceInputs["orgAccess"] = args ? args.orgAccess : undefined;
-            resourceInputs["organizationId"] = args ? args.organizationId : undefined;
-            resourceInputs["role"] = args ? args.role : undefined;
-            resourceInputs["samlRoleId"] = args ? args.samlRoleId : undefined;
-            resourceInputs["tags"] = args ? args.tags : undefined;
+            resourceInputs["networks"] = args?.networks;
+            resourceInputs["orgAccess"] = args?.orgAccess;
+            resourceInputs["organizationId"] = args?.organizationId;
+            resourceInputs["role"] = args?.role;
+            resourceInputs["samlRoleId"] = args?.samlRoleId;
+            resourceInputs["tags"] = args?.tags;
             resourceInputs["cameras"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

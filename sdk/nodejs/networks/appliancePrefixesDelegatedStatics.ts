@@ -62,31 +62,31 @@ export class AppliancePrefixesDelegatedStatics extends pulumi.CustomResource {
     /**
      * Prefix creation time.
      */
-    public /*out*/ readonly createdAt!: pulumi.Output<string>;
+    declare public /*out*/ readonly createdAt: pulumi.Output<string>;
     /**
      * Identifying description for the prefix.
      */
-    public readonly description!: pulumi.Output<string>;
+    declare public readonly description: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * WAN1/WAN2/Independent prefix.
      */
-    public readonly origin!: pulumi.Output<outputs.networks.AppliancePrefixesDelegatedStaticsOrigin>;
+    declare public readonly origin: pulumi.Output<outputs.networks.AppliancePrefixesDelegatedStaticsOrigin>;
     /**
      * IPv6 prefix/prefix length.
      */
-    public readonly prefix!: pulumi.Output<string>;
+    declare public readonly prefix: pulumi.Output<string>;
     /**
      * Static delegated prefix id.
      */
-    public readonly staticDelegatedPrefixId!: pulumi.Output<string>;
+    declare public readonly staticDelegatedPrefixId: pulumi.Output<string>;
     /**
      * Prefix Updated time.
      */
-    public /*out*/ readonly updatedAt!: pulumi.Output<string>;
+    declare public /*out*/ readonly updatedAt: pulumi.Output<string>;
 
     /**
      * Create a AppliancePrefixesDelegatedStatics resource with the given unique name, arguments, and options.
@@ -101,23 +101,23 @@ export class AppliancePrefixesDelegatedStatics extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as AppliancePrefixesDelegatedStaticsState | undefined;
-            resourceInputs["createdAt"] = state ? state.createdAt : undefined;
-            resourceInputs["description"] = state ? state.description : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["origin"] = state ? state.origin : undefined;
-            resourceInputs["prefix"] = state ? state.prefix : undefined;
-            resourceInputs["staticDelegatedPrefixId"] = state ? state.staticDelegatedPrefixId : undefined;
-            resourceInputs["updatedAt"] = state ? state.updatedAt : undefined;
+            resourceInputs["createdAt"] = state?.createdAt;
+            resourceInputs["description"] = state?.description;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["origin"] = state?.origin;
+            resourceInputs["prefix"] = state?.prefix;
+            resourceInputs["staticDelegatedPrefixId"] = state?.staticDelegatedPrefixId;
+            resourceInputs["updatedAt"] = state?.updatedAt;
         } else {
             const args = argsOrState as AppliancePrefixesDelegatedStaticsArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["description"] = args ? args.description : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["origin"] = args ? args.origin : undefined;
-            resourceInputs["prefix"] = args ? args.prefix : undefined;
-            resourceInputs["staticDelegatedPrefixId"] = args ? args.staticDelegatedPrefixId : undefined;
+            resourceInputs["description"] = args?.description;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["origin"] = args?.origin;
+            resourceInputs["prefix"] = args?.prefix;
+            resourceInputs["staticDelegatedPrefixId"] = args?.staticDelegatedPrefixId;
             resourceInputs["createdAt"] = undefined /*out*/;
             resourceInputs["updatedAt"] = undefined /*out*/;
         }

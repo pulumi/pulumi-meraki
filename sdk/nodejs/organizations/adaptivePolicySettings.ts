@@ -60,11 +60,11 @@ export class AdaptivePolicySettings extends pulumi.CustomResource {
     /**
      * List of network IDs with adaptive policy enabled
      */
-    public readonly enabledNetworks!: pulumi.Output<string[]>;
+    declare public readonly enabledNetworks: pulumi.Output<string[]>;
     /**
      * organizationId path parameter. Organization ID
      */
-    public readonly organizationId!: pulumi.Output<string>;
+    declare public readonly organizationId: pulumi.Output<string>;
 
     /**
      * Create a AdaptivePolicySettings resource with the given unique name, arguments, and options.
@@ -79,15 +79,15 @@ export class AdaptivePolicySettings extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as AdaptivePolicySettingsState | undefined;
-            resourceInputs["enabledNetworks"] = state ? state.enabledNetworks : undefined;
-            resourceInputs["organizationId"] = state ? state.organizationId : undefined;
+            resourceInputs["enabledNetworks"] = state?.enabledNetworks;
+            resourceInputs["organizationId"] = state?.organizationId;
         } else {
             const args = argsOrState as AdaptivePolicySettingsArgs | undefined;
-            if ((!args || args.organizationId === undefined) && !opts.urn) {
+            if (args?.organizationId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'organizationId'");
             }
-            resourceInputs["enabledNetworks"] = args ? args.enabledNetworks : undefined;
-            resourceInputs["organizationId"] = args ? args.organizationId : undefined;
+            resourceInputs["enabledNetworks"] = args?.enabledNetworks;
+            resourceInputs["organizationId"] = args?.organizationId;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(AdaptivePolicySettings.__pulumiType, name, resourceInputs, opts);

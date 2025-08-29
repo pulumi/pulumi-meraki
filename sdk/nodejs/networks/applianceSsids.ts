@@ -77,59 +77,59 @@ export class ApplianceSsids extends pulumi.CustomResource {
     /**
      * The association control method for the SSID.
      */
-    public readonly authMode!: pulumi.Output<string>;
+    declare public readonly authMode: pulumi.Output<string>;
     /**
      * The VLAN ID of the VLAN associated to this SSID.
      */
-    public readonly defaultVlanId!: pulumi.Output<number>;
+    declare public readonly defaultVlanId: pulumi.Output<number>;
     /**
      * DHCP Enforced Deauthentication enables the disassociation of wireless clients in addition to Mandatory DHCP. This param is only valid on firmware versions >= MX 17.0 where the associated LAN has Mandatory DHCP Enabled
      */
-    public readonly dhcpEnforcedDeauthentication!: pulumi.Output<outputs.networks.ApplianceSsidsDhcpEnforcedDeauthentication>;
+    declare public readonly dhcpEnforcedDeauthentication: pulumi.Output<outputs.networks.ApplianceSsidsDhcpEnforcedDeauthentication>;
     /**
      * The current setting for Protected Management Frames (802.11w).
      */
-    public readonly dot11w!: pulumi.Output<outputs.networks.ApplianceSsidsDot11w>;
+    declare public readonly dot11w: pulumi.Output<outputs.networks.ApplianceSsidsDot11w>;
     /**
      * Whether or not the SSID is enabled.
      */
-    public readonly enabled!: pulumi.Output<boolean>;
+    declare public readonly enabled: pulumi.Output<boolean>;
     /**
      * The psk encryption mode for the SSID.
      */
-    public readonly encryptionMode!: pulumi.Output<string>;
+    declare public readonly encryptionMode: pulumi.Output<string>;
     /**
      * The name of the SSID.
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * The number of the SSID.
      */
-    public readonly number!: pulumi.Output<number>;
+    declare public readonly number: pulumi.Output<number>;
     /**
      * The passkey for the SSID. This param is only valid if the authMode is 'psk'.
      */
-    public readonly psk!: pulumi.Output<string>;
+    declare public readonly psk: pulumi.Output<string>;
     /**
      * The RADIUS 802.1x servers to be used for authentication.
      */
-    public readonly radiusServers!: pulumi.Output<outputs.networks.ApplianceSsidsRadiusServer[]>;
+    declare public readonly radiusServers: pulumi.Output<outputs.networks.ApplianceSsidsRadiusServer[]>;
     /**
      * The RADIUS 802.1x servers to be used for authentication.
      */
-    public /*out*/ readonly radiusServersResponses!: pulumi.Output<outputs.networks.ApplianceSsidsRadiusServersResponse[]>;
+    declare public /*out*/ readonly radiusServersResponses: pulumi.Output<outputs.networks.ApplianceSsidsRadiusServersResponse[]>;
     /**
      * Boolean indicating whether the MX should advertise or hide this SSID.
      */
-    public readonly visible!: pulumi.Output<boolean>;
+    declare public readonly visible: pulumi.Output<boolean>;
     /**
      * WPA encryption mode for the SSID.
      */
-    public readonly wpaEncryptionMode!: pulumi.Output<string>;
+    declare public readonly wpaEncryptionMode: pulumi.Output<string>;
 
     /**
      * Create a ApplianceSsids resource with the given unique name, arguments, and options.
@@ -144,41 +144,41 @@ export class ApplianceSsids extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ApplianceSsidsState | undefined;
-            resourceInputs["authMode"] = state ? state.authMode : undefined;
-            resourceInputs["defaultVlanId"] = state ? state.defaultVlanId : undefined;
-            resourceInputs["dhcpEnforcedDeauthentication"] = state ? state.dhcpEnforcedDeauthentication : undefined;
-            resourceInputs["dot11w"] = state ? state.dot11w : undefined;
-            resourceInputs["enabled"] = state ? state.enabled : undefined;
-            resourceInputs["encryptionMode"] = state ? state.encryptionMode : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["number"] = state ? state.number : undefined;
-            resourceInputs["psk"] = state ? state.psk : undefined;
-            resourceInputs["radiusServers"] = state ? state.radiusServers : undefined;
-            resourceInputs["radiusServersResponses"] = state ? state.radiusServersResponses : undefined;
-            resourceInputs["visible"] = state ? state.visible : undefined;
-            resourceInputs["wpaEncryptionMode"] = state ? state.wpaEncryptionMode : undefined;
+            resourceInputs["authMode"] = state?.authMode;
+            resourceInputs["defaultVlanId"] = state?.defaultVlanId;
+            resourceInputs["dhcpEnforcedDeauthentication"] = state?.dhcpEnforcedDeauthentication;
+            resourceInputs["dot11w"] = state?.dot11w;
+            resourceInputs["enabled"] = state?.enabled;
+            resourceInputs["encryptionMode"] = state?.encryptionMode;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["number"] = state?.number;
+            resourceInputs["psk"] = state?.psk;
+            resourceInputs["radiusServers"] = state?.radiusServers;
+            resourceInputs["radiusServersResponses"] = state?.radiusServersResponses;
+            resourceInputs["visible"] = state?.visible;
+            resourceInputs["wpaEncryptionMode"] = state?.wpaEncryptionMode;
         } else {
             const args = argsOrState as ApplianceSsidsArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            if ((!args || args.number === undefined) && !opts.urn) {
+            if (args?.number === undefined && !opts.urn) {
                 throw new Error("Missing required property 'number'");
             }
-            resourceInputs["authMode"] = args ? args.authMode : undefined;
-            resourceInputs["defaultVlanId"] = args ? args.defaultVlanId : undefined;
-            resourceInputs["dhcpEnforcedDeauthentication"] = args ? args.dhcpEnforcedDeauthentication : undefined;
-            resourceInputs["dot11w"] = args ? args.dot11w : undefined;
-            resourceInputs["enabled"] = args ? args.enabled : undefined;
-            resourceInputs["encryptionMode"] = args ? args.encryptionMode : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["number"] = args ? args.number : undefined;
-            resourceInputs["psk"] = args ? args.psk : undefined;
-            resourceInputs["radiusServers"] = args ? args.radiusServers : undefined;
-            resourceInputs["visible"] = args ? args.visible : undefined;
-            resourceInputs["wpaEncryptionMode"] = args ? args.wpaEncryptionMode : undefined;
+            resourceInputs["authMode"] = args?.authMode;
+            resourceInputs["defaultVlanId"] = args?.defaultVlanId;
+            resourceInputs["dhcpEnforcedDeauthentication"] = args?.dhcpEnforcedDeauthentication;
+            resourceInputs["dot11w"] = args?.dot11w;
+            resourceInputs["enabled"] = args?.enabled;
+            resourceInputs["encryptionMode"] = args?.encryptionMode;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["number"] = args?.number;
+            resourceInputs["psk"] = args?.psk;
+            resourceInputs["radiusServers"] = args?.radiusServers;
+            resourceInputs["visible"] = args?.visible;
+            resourceInputs["wpaEncryptionMode"] = args?.wpaEncryptionMode;
             resourceInputs["radiusServersResponses"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);

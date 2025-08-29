@@ -46,23 +46,23 @@ export class ApplianceSingleLan extends pulumi.CustomResource {
     /**
      * The local IP of the appliance on the single LAN
      */
-    public readonly applianceIp!: pulumi.Output<string>;
+    declare public readonly applianceIp: pulumi.Output<string>;
     /**
      * IPv6 configuration on the single LAN
      */
-    public readonly ipv6!: pulumi.Output<outputs.networks.ApplianceSingleLanIpv6>;
+    declare public readonly ipv6: pulumi.Output<outputs.networks.ApplianceSingleLanIpv6>;
     /**
      * Mandatory DHCP will enforce that clients connecting to this single LAN must use the IP address assigned by the DHCP server. Clients who use a static IP address won't be able to associate. Only available on firmware versions 17.0 and above
      */
-    public readonly mandatoryDhcp!: pulumi.Output<outputs.networks.ApplianceSingleLanMandatoryDhcp>;
+    declare public readonly mandatoryDhcp: pulumi.Output<outputs.networks.ApplianceSingleLanMandatoryDhcp>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * The subnet of the single LAN
      */
-    public readonly subnet!: pulumi.Output<string>;
+    declare public readonly subnet: pulumi.Output<string>;
 
     /**
      * Create a ApplianceSingleLan resource with the given unique name, arguments, and options.
@@ -77,21 +77,21 @@ export class ApplianceSingleLan extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ApplianceSingleLanState | undefined;
-            resourceInputs["applianceIp"] = state ? state.applianceIp : undefined;
-            resourceInputs["ipv6"] = state ? state.ipv6 : undefined;
-            resourceInputs["mandatoryDhcp"] = state ? state.mandatoryDhcp : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["subnet"] = state ? state.subnet : undefined;
+            resourceInputs["applianceIp"] = state?.applianceIp;
+            resourceInputs["ipv6"] = state?.ipv6;
+            resourceInputs["mandatoryDhcp"] = state?.mandatoryDhcp;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["subnet"] = state?.subnet;
         } else {
             const args = argsOrState as ApplianceSingleLanArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["applianceIp"] = args ? args.applianceIp : undefined;
-            resourceInputs["ipv6"] = args ? args.ipv6 : undefined;
-            resourceInputs["mandatoryDhcp"] = args ? args.mandatoryDhcp : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["subnet"] = args ? args.subnet : undefined;
+            resourceInputs["applianceIp"] = args?.applianceIp;
+            resourceInputs["ipv6"] = args?.ipv6;
+            resourceInputs["mandatoryDhcp"] = args?.mandatoryDhcp;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["subnet"] = args?.subnet;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(ApplianceSingleLan.__pulumiType, name, resourceInputs, opts);

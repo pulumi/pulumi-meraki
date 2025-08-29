@@ -52,11 +52,11 @@ export class PiiRequestsDelete extends pulumi.CustomResource {
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * requestId path parameter. Request ID
      */
-    public readonly requestId!: pulumi.Output<string>;
+    declare public readonly requestId: pulumi.Output<string>;
 
     /**
      * Create a PiiRequestsDelete resource with the given unique name, arguments, and options.
@@ -71,18 +71,18 @@ export class PiiRequestsDelete extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as PiiRequestsDeleteState | undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["requestId"] = state ? state.requestId : undefined;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["requestId"] = state?.requestId;
         } else {
             const args = argsOrState as PiiRequestsDeleteArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            if ((!args || args.requestId === undefined) && !opts.urn) {
+            if (args?.requestId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'requestId'");
             }
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["requestId"] = args ? args.requestId : undefined;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["requestId"] = args?.requestId;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(PiiRequestsDelete.__pulumiType, name, resourceInputs, opts);

@@ -55,11 +55,11 @@ export class ApplianceVlansSettings extends pulumi.CustomResource {
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * Boolean indicating whether VLANs are enabled (true) or disabled (false) for the network
      */
-    public readonly vlansEnabled!: pulumi.Output<boolean>;
+    declare public readonly vlansEnabled: pulumi.Output<boolean>;
 
     /**
      * Create a ApplianceVlansSettings resource with the given unique name, arguments, and options.
@@ -74,15 +74,15 @@ export class ApplianceVlansSettings extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ApplianceVlansSettingsState | undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["vlansEnabled"] = state ? state.vlansEnabled : undefined;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["vlansEnabled"] = state?.vlansEnabled;
         } else {
             const args = argsOrState as ApplianceVlansSettingsArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["vlansEnabled"] = args ? args.vlansEnabled : undefined;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["vlansEnabled"] = args?.vlansEnabled;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(ApplianceVlansSettings.__pulumiType, name, resourceInputs, opts);

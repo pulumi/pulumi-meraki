@@ -61,11 +61,11 @@ export class CellularGatewayConnectivityMonitoringDestinations extends pulumi.Cu
     /**
      * The list of connectivity monitoring destinations
      */
-    public readonly destinations!: pulumi.Output<outputs.networks.CellularGatewayConnectivityMonitoringDestinationsDestination[]>;
+    declare public readonly destinations: pulumi.Output<outputs.networks.CellularGatewayConnectivityMonitoringDestinationsDestination[]>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
 
     /**
      * Create a CellularGatewayConnectivityMonitoringDestinations resource with the given unique name, arguments, and options.
@@ -80,15 +80,15 @@ export class CellularGatewayConnectivityMonitoringDestinations extends pulumi.Cu
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as CellularGatewayConnectivityMonitoringDestinationsState | undefined;
-            resourceInputs["destinations"] = state ? state.destinations : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
+            resourceInputs["destinations"] = state?.destinations;
+            resourceInputs["networkId"] = state?.networkId;
         } else {
             const args = argsOrState as CellularGatewayConnectivityMonitoringDestinationsArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["destinations"] = args ? args.destinations : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
+            resourceInputs["destinations"] = args?.destinations;
+            resourceInputs["networkId"] = args?.networkId;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(CellularGatewayConnectivityMonitoringDestinations.__pulumiType, name, resourceInputs, opts);

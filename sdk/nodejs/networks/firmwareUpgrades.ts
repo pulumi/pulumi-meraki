@@ -46,19 +46,19 @@ export class FirmwareUpgrades extends pulumi.CustomResource {
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * The network devices to be updated
      */
-    public readonly products!: pulumi.Output<outputs.networks.FirmwareUpgradesProducts>;
+    declare public readonly products: pulumi.Output<outputs.networks.FirmwareUpgradesProducts>;
     /**
      * The timezone for the network
      */
-    public readonly timezone!: pulumi.Output<string>;
+    declare public readonly timezone: pulumi.Output<string>;
     /**
      * Upgrade window for devices in network
      */
-    public readonly upgradeWindow!: pulumi.Output<outputs.networks.FirmwareUpgradesUpgradeWindow>;
+    declare public readonly upgradeWindow: pulumi.Output<outputs.networks.FirmwareUpgradesUpgradeWindow>;
 
     /**
      * Create a FirmwareUpgrades resource with the given unique name, arguments, and options.
@@ -73,19 +73,19 @@ export class FirmwareUpgrades extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as FirmwareUpgradesState | undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["products"] = state ? state.products : undefined;
-            resourceInputs["timezone"] = state ? state.timezone : undefined;
-            resourceInputs["upgradeWindow"] = state ? state.upgradeWindow : undefined;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["products"] = state?.products;
+            resourceInputs["timezone"] = state?.timezone;
+            resourceInputs["upgradeWindow"] = state?.upgradeWindow;
         } else {
             const args = argsOrState as FirmwareUpgradesArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["products"] = args ? args.products : undefined;
-            resourceInputs["timezone"] = args ? args.timezone : undefined;
-            resourceInputs["upgradeWindow"] = args ? args.upgradeWindow : undefined;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["products"] = args?.products;
+            resourceInputs["timezone"] = args?.timezone;
+            resourceInputs["upgradeWindow"] = args?.upgradeWindow;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(FirmwareUpgrades.__pulumiType, name, resourceInputs, opts);

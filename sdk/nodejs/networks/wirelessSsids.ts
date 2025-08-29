@@ -46,264 +46,264 @@ export class WirelessSsids extends pulumi.CustomResource {
     /**
      * The current setting for Active Directory. Only valid if splashPage is 'Password-protected with Active Directory'
      */
-    public readonly activeDirectory!: pulumi.Output<outputs.networks.WirelessSsidsActiveDirectory | undefined>;
-    public /*out*/ readonly adminSplashUrl!: pulumi.Output<string>;
+    declare public readonly activeDirectory: pulumi.Output<outputs.networks.WirelessSsidsActiveDirectory | undefined>;
+    declare public /*out*/ readonly adminSplashUrl: pulumi.Output<string>;
     /**
      * Boolean indicating whether or not adult content will be blocked
      */
-    public readonly adultContentFilteringEnabled!: pulumi.Output<boolean | undefined>;
+    declare public readonly adultContentFilteringEnabled: pulumi.Output<boolean | undefined>;
     /**
      * The list of tags and VLAN IDs used for VLAN tagging. This param is only valid when the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
      */
-    public readonly apTagsAndVlanIds!: pulumi.Output<outputs.networks.WirelessSsidsApTagsAndVlanId[] | undefined>;
+    declare public readonly apTagsAndVlanIds: pulumi.Output<outputs.networks.WirelessSsidsApTagsAndVlanId[] | undefined>;
     /**
      * The association control method for the SSID
      */
-    public readonly authMode!: pulumi.Output<string>;
+    declare public readonly authMode: pulumi.Output<string>;
     /**
      * List of tags for this SSID. If availableOnAllAps is false, then the SSID is only broadcast by APs with tags matching any of the tags in this list
      */
-    public readonly availabilityTags!: pulumi.Output<string[] | undefined>;
+    declare public readonly availabilityTags: pulumi.Output<string[] | undefined>;
     /**
      * Whether all APs broadcast the SSID or if it's restricted to APs matching any availability tags
      */
-    public readonly availableOnAllAps!: pulumi.Output<boolean>;
+    declare public readonly availableOnAllAps: pulumi.Output<boolean>;
     /**
      * The client-serving radio frequencies of this SSID in the default indoor RF profile
      */
-    public readonly bandSelection!: pulumi.Output<string>;
+    declare public readonly bandSelection: pulumi.Output<string>;
     /**
      * The concentrator to use when the ipAssignmentMode is 'Layer 3 roaming with a concentrator' or 'VPN'.
      */
-    public readonly concentratorNetworkId!: pulumi.Output<string | undefined>;
+    declare public readonly concentratorNetworkId: pulumi.Output<string | undefined>;
     /**
      * The default VLAN ID used for 'all other APs'. This param is only valid when the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
      */
-    public readonly defaultVlanId!: pulumi.Output<number | undefined>;
+    declare public readonly defaultVlanId: pulumi.Output<number | undefined>;
     /**
      * Disassociate clients when 'VPN' concentrator failover occurs in order to trigger clients to re-associate and generate new DHCP requests. This param is only valid if ipAssignmentMode is 'VPN'.
      */
-    public readonly disassociateClientsOnVpnFailover!: pulumi.Output<boolean | undefined>;
+    declare public readonly disassociateClientsOnVpnFailover: pulumi.Output<boolean | undefined>;
     /**
      * DNS servers rewrite settings
      */
-    public readonly dnsRewrite!: pulumi.Output<outputs.networks.WirelessSsidsDnsRewrite | undefined>;
+    declare public readonly dnsRewrite: pulumi.Output<outputs.networks.WirelessSsidsDnsRewrite | undefined>;
     /**
      * The current setting for 802.11r
      */
-    public readonly dot11r!: pulumi.Output<outputs.networks.WirelessSsidsDot11r | undefined>;
+    declare public readonly dot11r: pulumi.Output<outputs.networks.WirelessSsidsDot11r | undefined>;
     /**
      * The current setting for Protected Management Frames (802.11w).
      */
-    public readonly dot11w!: pulumi.Output<outputs.networks.WirelessSsidsDot11w | undefined>;
+    declare public readonly dot11w: pulumi.Output<outputs.networks.WirelessSsidsDot11w | undefined>;
     /**
      * Whether or not the SSID is enabled
      */
-    public readonly enabled!: pulumi.Output<boolean>;
+    declare public readonly enabled: pulumi.Output<boolean>;
     /**
      * The psk encryption mode for the SSID
      */
-    public readonly encryptionMode!: pulumi.Output<string>;
+    declare public readonly encryptionMode: pulumi.Output<string>;
     /**
      * Whether or not an SSID is accessible by 'enterprise' administrators ('access disabled' or 'access enabled')
      */
-    public readonly enterpriseAdminAccess!: pulumi.Output<string | undefined>;
+    declare public readonly enterpriseAdminAccess: pulumi.Output<string | undefined>;
     /**
      * Ethernet over GRE settings
      */
-    public readonly gre!: pulumi.Output<outputs.networks.WirelessSsidsGre | undefined>;
+    declare public readonly gre: pulumi.Output<outputs.networks.WirelessSsidsGre | undefined>;
     /**
      * The client IP assignment mode
      */
-    public readonly ipAssignmentMode!: pulumi.Output<string>;
+    declare public readonly ipAssignmentMode: pulumi.Output<string>;
     /**
      * Boolean indicating whether Layer 2 LAN isolation should be enabled or disabled. Only configurable when ipAssignmentMode is 'Bridge mode'.
      */
-    public readonly lanIsolationEnabled!: pulumi.Output<boolean | undefined>;
+    declare public readonly lanIsolationEnabled: pulumi.Output<boolean | undefined>;
     /**
      * The current setting for LDAP. Only valid if splashPage is 'Password-protected with LDAP'.
      */
-    public readonly ldap!: pulumi.Output<outputs.networks.WirelessSsidsLdap | undefined>;
+    declare public readonly ldap: pulumi.Output<outputs.networks.WirelessSsidsLdap | undefined>;
     /**
      * The current setting for Local Authentication, a built-in RADIUS server on the access point. Only valid if authMode is '8021x-localradius'.
      */
-    public readonly localRadius!: pulumi.Output<outputs.networks.WirelessSsidsLocalRadius | undefined>;
+    declare public readonly localRadius: pulumi.Output<outputs.networks.WirelessSsidsLocalRadius | undefined>;
     /**
      * Whether clients connecting to this SSID must use the IP address assigned by the DHCP server
      */
-    public readonly mandatoryDhcpEnabled!: pulumi.Output<boolean>;
+    declare public readonly mandatoryDhcpEnabled: pulumi.Output<boolean>;
     /**
      * The minimum bitrate in Mbps of this SSID in the default indoor RF profile
      */
-    public readonly minBitrate!: pulumi.Output<number>;
+    declare public readonly minBitrate: pulumi.Output<number>;
     /**
      * The name of the SSID
      */
-    public readonly name!: pulumi.Output<string>;
+    declare public readonly name: pulumi.Output<string>;
     /**
      * Named VLAN settings.
      */
-    public readonly namedVlans!: pulumi.Output<outputs.networks.WirelessSsidsNamedVlans | undefined>;
+    declare public readonly namedVlans: pulumi.Output<outputs.networks.WirelessSsidsNamedVlans | undefined>;
     /**
      * networkId path parameter. Network ID
      */
-    public readonly networkId!: pulumi.Output<string>;
+    declare public readonly networkId: pulumi.Output<string>;
     /**
      * Unique identifier of the SSID
      */
-    public readonly number!: pulumi.Output<number>;
+    declare public readonly number: pulumi.Output<number>;
     /**
      * The OAuth settings of this SSID. Only valid if splashPage is 'Google OAuth'.
      */
-    public readonly oauth!: pulumi.Output<outputs.networks.WirelessSsidsOauth | undefined>;
+    declare public readonly oauth: pulumi.Output<outputs.networks.WirelessSsidsOauth | undefined>;
     /**
      * The download bandwidth limit in Kbps. (0 represents no limit.)
      */
-    public readonly perClientBandwidthLimitDown!: pulumi.Output<number>;
+    declare public readonly perClientBandwidthLimitDown: pulumi.Output<number>;
     /**
      * The upload bandwidth limit in Kbps. (0 represents no limit.)
      */
-    public readonly perClientBandwidthLimitUp!: pulumi.Output<number>;
+    declare public readonly perClientBandwidthLimitUp: pulumi.Output<number>;
     /**
      * The total download bandwidth limit in Kbps (0 represents no limit)
      */
-    public readonly perSsidBandwidthLimitDown!: pulumi.Output<number>;
+    declare public readonly perSsidBandwidthLimitDown: pulumi.Output<number>;
     /**
      * The total upload bandwidth limit in Kbps (0 represents no limit)
      */
-    public readonly perSsidBandwidthLimitUp!: pulumi.Output<number>;
+    declare public readonly perSsidBandwidthLimitUp: pulumi.Output<number>;
     /**
      * The passkey for the SSID. This param is only valid if the authMode is 'psk'
      */
-    public readonly psk!: pulumi.Output<string | undefined>;
+    declare public readonly psk: pulumi.Output<string | undefined>;
     /**
      * Whether or not RADIUS accounting is enabled
      */
-    public readonly radiusAccountingEnabled!: pulumi.Output<boolean>;
+    declare public readonly radiusAccountingEnabled: pulumi.Output<boolean>;
     /**
      * The interval (in seconds) in which accounting information is updated and sent to the RADIUS accounting server.
      */
-    public readonly radiusAccountingInterimInterval!: pulumi.Output<number | undefined>;
+    declare public readonly radiusAccountingInterimInterval: pulumi.Output<number | undefined>;
     /**
      * List of RADIUS accounting 802.1X servers to be used for authentication
      */
-    public readonly radiusAccountingServers!: pulumi.Output<outputs.networks.WirelessSsidsRadiusAccountingServer[] | undefined>;
+    declare public readonly radiusAccountingServers: pulumi.Output<outputs.networks.WirelessSsidsRadiusAccountingServer[] | undefined>;
     /**
      * List of RADIUS accounting 802.1X servers to be used for authentication
      */
-    public /*out*/ readonly radiusAccountingServersResponses!: pulumi.Output<outputs.networks.WirelessSsidsRadiusAccountingServersResponse[]>;
+    declare public /*out*/ readonly radiusAccountingServersResponses: pulumi.Output<outputs.networks.WirelessSsidsRadiusAccountingServersResponse[]>;
     /**
      * RADIUS attribute used to look up group policies
      */
-    public readonly radiusAttributeForGroupPolicies!: pulumi.Output<string>;
+    declare public readonly radiusAttributeForGroupPolicies: pulumi.Output<string>;
     /**
      * The template of the NAS identifier to be used for RADIUS authentication (ex. $NODE*MAC$:$VAP*NUM$).
      */
-    public readonly radiusAuthenticationNasId!: pulumi.Output<string | undefined>;
+    declare public readonly radiusAuthenticationNasId: pulumi.Output<string | undefined>;
     /**
      * The template of the called station identifier to be used for RADIUS (ex. $NODE*MAC$:$VAP*NUM$).
      */
-    public readonly radiusCalledStationId!: pulumi.Output<string | undefined>;
+    declare public readonly radiusCalledStationId: pulumi.Output<string | undefined>;
     /**
      * If true, Meraki devices will act as a RADIUS Dynamic Authorization Server and will respond to RADIUS Change-of-Authorization and Disconnect messages sent by the RADIUS server.
      */
-    public readonly radiusCoaEnabled!: pulumi.Output<boolean | undefined>;
+    declare public readonly radiusCoaEnabled: pulumi.Output<boolean | undefined>;
     /**
      * Policy which determines how authentication requests should be handled in the event that all of the configured RADIUS servers are unreachable
      */
-    public readonly radiusFailoverPolicy!: pulumi.Output<string>;
+    declare public readonly radiusFailoverPolicy: pulumi.Output<string>;
     /**
      * Whether or not higher priority RADIUS servers should be retried after 60 seconds.
      */
-    public readonly radiusFallbackEnabled!: pulumi.Output<boolean | undefined>;
+    declare public readonly radiusFallbackEnabled: pulumi.Output<boolean | undefined>;
     /**
      * Whether or not RADIUS Guest VLAN is enabled. This param is only valid if the authMode is 'open-with-radius' and addressing mode is not set to 'isolated' or 'nat' mode
      */
-    public readonly radiusGuestVlanEnabled!: pulumi.Output<boolean | undefined>;
+    declare public readonly radiusGuestVlanEnabled: pulumi.Output<boolean | undefined>;
     /**
      * VLAN ID of the RADIUS Guest VLAN. This param is only valid if the authMode is 'open-with-radius' and addressing mode is not set to 'isolated' or 'nat' mode
      */
-    public readonly radiusGuestVlanId!: pulumi.Output<number | undefined>;
+    declare public readonly radiusGuestVlanId: pulumi.Output<number | undefined>;
     /**
      * Policy which determines which RADIUS server will be contacted first in an authentication attempt, and the ordering of any necessary retry attempts
      */
-    public readonly radiusLoadBalancingPolicy!: pulumi.Output<string>;
+    declare public readonly radiusLoadBalancingPolicy: pulumi.Output<string>;
     /**
      * If true, the RADIUS response can override VLAN tag. This is not valid when ipAssignmentMode is 'NAT mode'.
      */
-    public readonly radiusOverride!: pulumi.Output<boolean | undefined>;
+    declare public readonly radiusOverride: pulumi.Output<boolean | undefined>;
     /**
      * If true, Meraki devices will proxy RADIUS messages through the Meraki cloud to the configured RADIUS auth and accounting servers.
      */
-    public readonly radiusProxyEnabled!: pulumi.Output<boolean | undefined>;
+    declare public readonly radiusProxyEnabled: pulumi.Output<boolean | undefined>;
     /**
      * The maximum number of transmit attempts after which a RADIUS server is failed over (must be between 1-5).
      */
-    public readonly radiusServerAttemptsLimit!: pulumi.Output<number | undefined>;
+    declare public readonly radiusServerAttemptsLimit: pulumi.Output<number | undefined>;
     /**
      * The amount of time for which a RADIUS client waits for a reply from the RADIUS server (must be between 1-10 seconds).
      */
-    public readonly radiusServerTimeout!: pulumi.Output<number | undefined>;
+    declare public readonly radiusServerTimeout: pulumi.Output<number | undefined>;
     /**
      * The RADIUS 802.1X servers to be used for authentication. This param is only valid if the authMode is 'open-with-radius', '8021x-radius' or 'ipsk-with-radius'
      */
-    public readonly radiusServers!: pulumi.Output<outputs.networks.WirelessSsidsRadiusServer[] | undefined>;
+    declare public readonly radiusServers: pulumi.Output<outputs.networks.WirelessSsidsRadiusServer[] | undefined>;
     /**
      * The RADIUS 802.1X servers to be used for authentication. This param is only valid if the authMode is 'open-with-radius', '8021x-radius' or 'ipsk-with-radius'
      */
-    public /*out*/ readonly radiusServersResponses!: pulumi.Output<outputs.networks.WirelessSsidsRadiusServersResponse[]>;
+    declare public /*out*/ readonly radiusServersResponses: pulumi.Output<outputs.networks.WirelessSsidsRadiusServersResponse[]>;
     /**
      * If true, Meraki devices will periodically send Access-Request messages to configured RADIUS servers using identity 'meraki*8021x*test' to ensure that the RADIUS servers are reachable.
      */
-    public readonly radiusTestingEnabled!: pulumi.Output<boolean | undefined>;
+    declare public readonly radiusTestingEnabled: pulumi.Output<boolean | undefined>;
     /**
      * The secondary concentrator to use when the ipAssignmentMode is 'VPN'. If configured, the APs will switch to using this concentrator if the primary concentrator is unreachable. This param is optional. ('disabled' represents no secondary concentrator.)
      */
-    public readonly secondaryConcentratorNetworkId!: pulumi.Output<string | undefined>;
+    declare public readonly secondaryConcentratorNetworkId: pulumi.Output<string | undefined>;
     /**
      * The SpeedBurst setting for this SSID'
      */
-    public readonly speedBurst!: pulumi.Output<outputs.networks.WirelessSsidsSpeedBurst | undefined>;
+    declare public readonly speedBurst: pulumi.Output<outputs.networks.WirelessSsidsSpeedBurst | undefined>;
     /**
      * Array of valid sponsor email domains for sponsored guest splash type.
      */
-    public readonly splashGuestSponsorDomains!: pulumi.Output<string[] | undefined>;
+    declare public readonly splashGuestSponsorDomains: pulumi.Output<string[] | undefined>;
     /**
      * The type of splash page for the SSID
      */
-    public readonly splashPage!: pulumi.Output<string>;
+    declare public readonly splashPage: pulumi.Output<string>;
     /**
      * Splash page timeout
      */
-    public /*out*/ readonly splashTimeout!: pulumi.Output<string>;
+    declare public /*out*/ readonly splashTimeout: pulumi.Output<string>;
     /**
      * SSID Administrator access status
      */
-    public /*out*/ readonly ssidAdminAccessible!: pulumi.Output<boolean>;
+    declare public /*out*/ readonly ssidAdminAccessible: pulumi.Output<boolean>;
     /**
      * Whether or not traffic should be directed to use specific VLANs. This param is only valid if the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
      */
-    public readonly useVlanTagging!: pulumi.Output<boolean | undefined>;
+    declare public readonly useVlanTagging: pulumi.Output<boolean | undefined>;
     /**
      * Whether the SSID is advertised or hidden by the AP
      */
-    public readonly visible!: pulumi.Output<boolean>;
+    declare public readonly visible: pulumi.Output<boolean>;
     /**
      * The VLAN ID used for VLAN tagging. This param is only valid when the ipAssignmentMode is 'Layer 3 roaming with a concentrator' or 'VPN'
      */
-    public readonly vlanId!: pulumi.Output<number | undefined>;
+    declare public readonly vlanId: pulumi.Output<number | undefined>;
     /**
      * Allow users to access a configurable list of IP ranges prior to sign-on
      */
-    public readonly walledGardenEnabled!: pulumi.Output<boolean | undefined>;
+    declare public readonly walledGardenEnabled: pulumi.Output<boolean | undefined>;
     /**
      * Domain names and IP address ranges available in Walled Garden mode
      */
-    public readonly walledGardenRanges!: pulumi.Output<string[] | undefined>;
+    declare public readonly walledGardenRanges: pulumi.Output<string[] | undefined>;
     /**
      * The types of WPA encryption
      */
-    public readonly wpaEncryptionMode!: pulumi.Output<string>;
+    declare public readonly wpaEncryptionMode: pulumi.Output<string>;
 
     /**
      * Create a WirelessSsids resource with the given unique name, arguments, and options.
@@ -318,141 +318,141 @@ export class WirelessSsids extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as WirelessSsidsState | undefined;
-            resourceInputs["activeDirectory"] = state ? state.activeDirectory : undefined;
-            resourceInputs["adminSplashUrl"] = state ? state.adminSplashUrl : undefined;
-            resourceInputs["adultContentFilteringEnabled"] = state ? state.adultContentFilteringEnabled : undefined;
-            resourceInputs["apTagsAndVlanIds"] = state ? state.apTagsAndVlanIds : undefined;
-            resourceInputs["authMode"] = state ? state.authMode : undefined;
-            resourceInputs["availabilityTags"] = state ? state.availabilityTags : undefined;
-            resourceInputs["availableOnAllAps"] = state ? state.availableOnAllAps : undefined;
-            resourceInputs["bandSelection"] = state ? state.bandSelection : undefined;
-            resourceInputs["concentratorNetworkId"] = state ? state.concentratorNetworkId : undefined;
-            resourceInputs["defaultVlanId"] = state ? state.defaultVlanId : undefined;
-            resourceInputs["disassociateClientsOnVpnFailover"] = state ? state.disassociateClientsOnVpnFailover : undefined;
-            resourceInputs["dnsRewrite"] = state ? state.dnsRewrite : undefined;
-            resourceInputs["dot11r"] = state ? state.dot11r : undefined;
-            resourceInputs["dot11w"] = state ? state.dot11w : undefined;
-            resourceInputs["enabled"] = state ? state.enabled : undefined;
-            resourceInputs["encryptionMode"] = state ? state.encryptionMode : undefined;
-            resourceInputs["enterpriseAdminAccess"] = state ? state.enterpriseAdminAccess : undefined;
-            resourceInputs["gre"] = state ? state.gre : undefined;
-            resourceInputs["ipAssignmentMode"] = state ? state.ipAssignmentMode : undefined;
-            resourceInputs["lanIsolationEnabled"] = state ? state.lanIsolationEnabled : undefined;
-            resourceInputs["ldap"] = state ? state.ldap : undefined;
-            resourceInputs["localRadius"] = state ? state.localRadius : undefined;
-            resourceInputs["mandatoryDhcpEnabled"] = state ? state.mandatoryDhcpEnabled : undefined;
-            resourceInputs["minBitrate"] = state ? state.minBitrate : undefined;
-            resourceInputs["name"] = state ? state.name : undefined;
-            resourceInputs["namedVlans"] = state ? state.namedVlans : undefined;
-            resourceInputs["networkId"] = state ? state.networkId : undefined;
-            resourceInputs["number"] = state ? state.number : undefined;
-            resourceInputs["oauth"] = state ? state.oauth : undefined;
-            resourceInputs["perClientBandwidthLimitDown"] = state ? state.perClientBandwidthLimitDown : undefined;
-            resourceInputs["perClientBandwidthLimitUp"] = state ? state.perClientBandwidthLimitUp : undefined;
-            resourceInputs["perSsidBandwidthLimitDown"] = state ? state.perSsidBandwidthLimitDown : undefined;
-            resourceInputs["perSsidBandwidthLimitUp"] = state ? state.perSsidBandwidthLimitUp : undefined;
-            resourceInputs["psk"] = state ? state.psk : undefined;
-            resourceInputs["radiusAccountingEnabled"] = state ? state.radiusAccountingEnabled : undefined;
-            resourceInputs["radiusAccountingInterimInterval"] = state ? state.radiusAccountingInterimInterval : undefined;
-            resourceInputs["radiusAccountingServers"] = state ? state.radiusAccountingServers : undefined;
-            resourceInputs["radiusAccountingServersResponses"] = state ? state.radiusAccountingServersResponses : undefined;
-            resourceInputs["radiusAttributeForGroupPolicies"] = state ? state.radiusAttributeForGroupPolicies : undefined;
-            resourceInputs["radiusAuthenticationNasId"] = state ? state.radiusAuthenticationNasId : undefined;
-            resourceInputs["radiusCalledStationId"] = state ? state.radiusCalledStationId : undefined;
-            resourceInputs["radiusCoaEnabled"] = state ? state.radiusCoaEnabled : undefined;
-            resourceInputs["radiusFailoverPolicy"] = state ? state.radiusFailoverPolicy : undefined;
-            resourceInputs["radiusFallbackEnabled"] = state ? state.radiusFallbackEnabled : undefined;
-            resourceInputs["radiusGuestVlanEnabled"] = state ? state.radiusGuestVlanEnabled : undefined;
-            resourceInputs["radiusGuestVlanId"] = state ? state.radiusGuestVlanId : undefined;
-            resourceInputs["radiusLoadBalancingPolicy"] = state ? state.radiusLoadBalancingPolicy : undefined;
-            resourceInputs["radiusOverride"] = state ? state.radiusOverride : undefined;
-            resourceInputs["radiusProxyEnabled"] = state ? state.radiusProxyEnabled : undefined;
-            resourceInputs["radiusServerAttemptsLimit"] = state ? state.radiusServerAttemptsLimit : undefined;
-            resourceInputs["radiusServerTimeout"] = state ? state.radiusServerTimeout : undefined;
-            resourceInputs["radiusServers"] = state ? state.radiusServers : undefined;
-            resourceInputs["radiusServersResponses"] = state ? state.radiusServersResponses : undefined;
-            resourceInputs["radiusTestingEnabled"] = state ? state.radiusTestingEnabled : undefined;
-            resourceInputs["secondaryConcentratorNetworkId"] = state ? state.secondaryConcentratorNetworkId : undefined;
-            resourceInputs["speedBurst"] = state ? state.speedBurst : undefined;
-            resourceInputs["splashGuestSponsorDomains"] = state ? state.splashGuestSponsorDomains : undefined;
-            resourceInputs["splashPage"] = state ? state.splashPage : undefined;
-            resourceInputs["splashTimeout"] = state ? state.splashTimeout : undefined;
-            resourceInputs["ssidAdminAccessible"] = state ? state.ssidAdminAccessible : undefined;
-            resourceInputs["useVlanTagging"] = state ? state.useVlanTagging : undefined;
-            resourceInputs["visible"] = state ? state.visible : undefined;
-            resourceInputs["vlanId"] = state ? state.vlanId : undefined;
-            resourceInputs["walledGardenEnabled"] = state ? state.walledGardenEnabled : undefined;
-            resourceInputs["walledGardenRanges"] = state ? state.walledGardenRanges : undefined;
-            resourceInputs["wpaEncryptionMode"] = state ? state.wpaEncryptionMode : undefined;
+            resourceInputs["activeDirectory"] = state?.activeDirectory;
+            resourceInputs["adminSplashUrl"] = state?.adminSplashUrl;
+            resourceInputs["adultContentFilteringEnabled"] = state?.adultContentFilteringEnabled;
+            resourceInputs["apTagsAndVlanIds"] = state?.apTagsAndVlanIds;
+            resourceInputs["authMode"] = state?.authMode;
+            resourceInputs["availabilityTags"] = state?.availabilityTags;
+            resourceInputs["availableOnAllAps"] = state?.availableOnAllAps;
+            resourceInputs["bandSelection"] = state?.bandSelection;
+            resourceInputs["concentratorNetworkId"] = state?.concentratorNetworkId;
+            resourceInputs["defaultVlanId"] = state?.defaultVlanId;
+            resourceInputs["disassociateClientsOnVpnFailover"] = state?.disassociateClientsOnVpnFailover;
+            resourceInputs["dnsRewrite"] = state?.dnsRewrite;
+            resourceInputs["dot11r"] = state?.dot11r;
+            resourceInputs["dot11w"] = state?.dot11w;
+            resourceInputs["enabled"] = state?.enabled;
+            resourceInputs["encryptionMode"] = state?.encryptionMode;
+            resourceInputs["enterpriseAdminAccess"] = state?.enterpriseAdminAccess;
+            resourceInputs["gre"] = state?.gre;
+            resourceInputs["ipAssignmentMode"] = state?.ipAssignmentMode;
+            resourceInputs["lanIsolationEnabled"] = state?.lanIsolationEnabled;
+            resourceInputs["ldap"] = state?.ldap;
+            resourceInputs["localRadius"] = state?.localRadius;
+            resourceInputs["mandatoryDhcpEnabled"] = state?.mandatoryDhcpEnabled;
+            resourceInputs["minBitrate"] = state?.minBitrate;
+            resourceInputs["name"] = state?.name;
+            resourceInputs["namedVlans"] = state?.namedVlans;
+            resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["number"] = state?.number;
+            resourceInputs["oauth"] = state?.oauth;
+            resourceInputs["perClientBandwidthLimitDown"] = state?.perClientBandwidthLimitDown;
+            resourceInputs["perClientBandwidthLimitUp"] = state?.perClientBandwidthLimitUp;
+            resourceInputs["perSsidBandwidthLimitDown"] = state?.perSsidBandwidthLimitDown;
+            resourceInputs["perSsidBandwidthLimitUp"] = state?.perSsidBandwidthLimitUp;
+            resourceInputs["psk"] = state?.psk;
+            resourceInputs["radiusAccountingEnabled"] = state?.radiusAccountingEnabled;
+            resourceInputs["radiusAccountingInterimInterval"] = state?.radiusAccountingInterimInterval;
+            resourceInputs["radiusAccountingServers"] = state?.radiusAccountingServers;
+            resourceInputs["radiusAccountingServersResponses"] = state?.radiusAccountingServersResponses;
+            resourceInputs["radiusAttributeForGroupPolicies"] = state?.radiusAttributeForGroupPolicies;
+            resourceInputs["radiusAuthenticationNasId"] = state?.radiusAuthenticationNasId;
+            resourceInputs["radiusCalledStationId"] = state?.radiusCalledStationId;
+            resourceInputs["radiusCoaEnabled"] = state?.radiusCoaEnabled;
+            resourceInputs["radiusFailoverPolicy"] = state?.radiusFailoverPolicy;
+            resourceInputs["radiusFallbackEnabled"] = state?.radiusFallbackEnabled;
+            resourceInputs["radiusGuestVlanEnabled"] = state?.radiusGuestVlanEnabled;
+            resourceInputs["radiusGuestVlanId"] = state?.radiusGuestVlanId;
+            resourceInputs["radiusLoadBalancingPolicy"] = state?.radiusLoadBalancingPolicy;
+            resourceInputs["radiusOverride"] = state?.radiusOverride;
+            resourceInputs["radiusProxyEnabled"] = state?.radiusProxyEnabled;
+            resourceInputs["radiusServerAttemptsLimit"] = state?.radiusServerAttemptsLimit;
+            resourceInputs["radiusServerTimeout"] = state?.radiusServerTimeout;
+            resourceInputs["radiusServers"] = state?.radiusServers;
+            resourceInputs["radiusServersResponses"] = state?.radiusServersResponses;
+            resourceInputs["radiusTestingEnabled"] = state?.radiusTestingEnabled;
+            resourceInputs["secondaryConcentratorNetworkId"] = state?.secondaryConcentratorNetworkId;
+            resourceInputs["speedBurst"] = state?.speedBurst;
+            resourceInputs["splashGuestSponsorDomains"] = state?.splashGuestSponsorDomains;
+            resourceInputs["splashPage"] = state?.splashPage;
+            resourceInputs["splashTimeout"] = state?.splashTimeout;
+            resourceInputs["ssidAdminAccessible"] = state?.ssidAdminAccessible;
+            resourceInputs["useVlanTagging"] = state?.useVlanTagging;
+            resourceInputs["visible"] = state?.visible;
+            resourceInputs["vlanId"] = state?.vlanId;
+            resourceInputs["walledGardenEnabled"] = state?.walledGardenEnabled;
+            resourceInputs["walledGardenRanges"] = state?.walledGardenRanges;
+            resourceInputs["wpaEncryptionMode"] = state?.wpaEncryptionMode;
         } else {
             const args = argsOrState as WirelessSsidsArgs | undefined;
-            if ((!args || args.networkId === undefined) && !opts.urn) {
+            if (args?.networkId === undefined && !opts.urn) {
                 throw new Error("Missing required property 'networkId'");
             }
-            if ((!args || args.number === undefined) && !opts.urn) {
+            if (args?.number === undefined && !opts.urn) {
                 throw new Error("Missing required property 'number'");
             }
-            resourceInputs["activeDirectory"] = args ? args.activeDirectory : undefined;
-            resourceInputs["adultContentFilteringEnabled"] = args ? args.adultContentFilteringEnabled : undefined;
-            resourceInputs["apTagsAndVlanIds"] = args ? args.apTagsAndVlanIds : undefined;
-            resourceInputs["authMode"] = args ? args.authMode : undefined;
-            resourceInputs["availabilityTags"] = args ? args.availabilityTags : undefined;
-            resourceInputs["availableOnAllAps"] = args ? args.availableOnAllAps : undefined;
-            resourceInputs["bandSelection"] = args ? args.bandSelection : undefined;
-            resourceInputs["concentratorNetworkId"] = args ? args.concentratorNetworkId : undefined;
-            resourceInputs["defaultVlanId"] = args ? args.defaultVlanId : undefined;
-            resourceInputs["disassociateClientsOnVpnFailover"] = args ? args.disassociateClientsOnVpnFailover : undefined;
-            resourceInputs["dnsRewrite"] = args ? args.dnsRewrite : undefined;
-            resourceInputs["dot11r"] = args ? args.dot11r : undefined;
-            resourceInputs["dot11w"] = args ? args.dot11w : undefined;
-            resourceInputs["enabled"] = args ? args.enabled : undefined;
-            resourceInputs["encryptionMode"] = args ? args.encryptionMode : undefined;
-            resourceInputs["enterpriseAdminAccess"] = args ? args.enterpriseAdminAccess : undefined;
-            resourceInputs["gre"] = args ? args.gre : undefined;
-            resourceInputs["ipAssignmentMode"] = args ? args.ipAssignmentMode : undefined;
-            resourceInputs["lanIsolationEnabled"] = args ? args.lanIsolationEnabled : undefined;
-            resourceInputs["ldap"] = args ? args.ldap : undefined;
-            resourceInputs["localRadius"] = args ? args.localRadius : undefined;
-            resourceInputs["mandatoryDhcpEnabled"] = args ? args.mandatoryDhcpEnabled : undefined;
-            resourceInputs["minBitrate"] = args ? args.minBitrate : undefined;
-            resourceInputs["name"] = args ? args.name : undefined;
-            resourceInputs["namedVlans"] = args ? args.namedVlans : undefined;
-            resourceInputs["networkId"] = args ? args.networkId : undefined;
-            resourceInputs["number"] = args ? args.number : undefined;
-            resourceInputs["oauth"] = args ? args.oauth : undefined;
-            resourceInputs["perClientBandwidthLimitDown"] = args ? args.perClientBandwidthLimitDown : undefined;
-            resourceInputs["perClientBandwidthLimitUp"] = args ? args.perClientBandwidthLimitUp : undefined;
-            resourceInputs["perSsidBandwidthLimitDown"] = args ? args.perSsidBandwidthLimitDown : undefined;
-            resourceInputs["perSsidBandwidthLimitUp"] = args ? args.perSsidBandwidthLimitUp : undefined;
-            resourceInputs["psk"] = args ? args.psk : undefined;
-            resourceInputs["radiusAccountingEnabled"] = args ? args.radiusAccountingEnabled : undefined;
-            resourceInputs["radiusAccountingInterimInterval"] = args ? args.radiusAccountingInterimInterval : undefined;
-            resourceInputs["radiusAccountingServers"] = args ? args.radiusAccountingServers : undefined;
-            resourceInputs["radiusAttributeForGroupPolicies"] = args ? args.radiusAttributeForGroupPolicies : undefined;
-            resourceInputs["radiusAuthenticationNasId"] = args ? args.radiusAuthenticationNasId : undefined;
-            resourceInputs["radiusCalledStationId"] = args ? args.radiusCalledStationId : undefined;
-            resourceInputs["radiusCoaEnabled"] = args ? args.radiusCoaEnabled : undefined;
-            resourceInputs["radiusFailoverPolicy"] = args ? args.radiusFailoverPolicy : undefined;
-            resourceInputs["radiusFallbackEnabled"] = args ? args.radiusFallbackEnabled : undefined;
-            resourceInputs["radiusGuestVlanEnabled"] = args ? args.radiusGuestVlanEnabled : undefined;
-            resourceInputs["radiusGuestVlanId"] = args ? args.radiusGuestVlanId : undefined;
-            resourceInputs["radiusLoadBalancingPolicy"] = args ? args.radiusLoadBalancingPolicy : undefined;
-            resourceInputs["radiusOverride"] = args ? args.radiusOverride : undefined;
-            resourceInputs["radiusProxyEnabled"] = args ? args.radiusProxyEnabled : undefined;
-            resourceInputs["radiusServerAttemptsLimit"] = args ? args.radiusServerAttemptsLimit : undefined;
-            resourceInputs["radiusServerTimeout"] = args ? args.radiusServerTimeout : undefined;
-            resourceInputs["radiusServers"] = args ? args.radiusServers : undefined;
-            resourceInputs["radiusTestingEnabled"] = args ? args.radiusTestingEnabled : undefined;
-            resourceInputs["secondaryConcentratorNetworkId"] = args ? args.secondaryConcentratorNetworkId : undefined;
-            resourceInputs["speedBurst"] = args ? args.speedBurst : undefined;
-            resourceInputs["splashGuestSponsorDomains"] = args ? args.splashGuestSponsorDomains : undefined;
-            resourceInputs["splashPage"] = args ? args.splashPage : undefined;
-            resourceInputs["useVlanTagging"] = args ? args.useVlanTagging : undefined;
-            resourceInputs["visible"] = args ? args.visible : undefined;
-            resourceInputs["vlanId"] = args ? args.vlanId : undefined;
-            resourceInputs["walledGardenEnabled"] = args ? args.walledGardenEnabled : undefined;
-            resourceInputs["walledGardenRanges"] = args ? args.walledGardenRanges : undefined;
-            resourceInputs["wpaEncryptionMode"] = args ? args.wpaEncryptionMode : undefined;
+            resourceInputs["activeDirectory"] = args?.activeDirectory;
+            resourceInputs["adultContentFilteringEnabled"] = args?.adultContentFilteringEnabled;
+            resourceInputs["apTagsAndVlanIds"] = args?.apTagsAndVlanIds;
+            resourceInputs["authMode"] = args?.authMode;
+            resourceInputs["availabilityTags"] = args?.availabilityTags;
+            resourceInputs["availableOnAllAps"] = args?.availableOnAllAps;
+            resourceInputs["bandSelection"] = args?.bandSelection;
+            resourceInputs["concentratorNetworkId"] = args?.concentratorNetworkId;
+            resourceInputs["defaultVlanId"] = args?.defaultVlanId;
+            resourceInputs["disassociateClientsOnVpnFailover"] = args?.disassociateClientsOnVpnFailover;
+            resourceInputs["dnsRewrite"] = args?.dnsRewrite;
+            resourceInputs["dot11r"] = args?.dot11r;
+            resourceInputs["dot11w"] = args?.dot11w;
+            resourceInputs["enabled"] = args?.enabled;
+            resourceInputs["encryptionMode"] = args?.encryptionMode;
+            resourceInputs["enterpriseAdminAccess"] = args?.enterpriseAdminAccess;
+            resourceInputs["gre"] = args?.gre;
+            resourceInputs["ipAssignmentMode"] = args?.ipAssignmentMode;
+            resourceInputs["lanIsolationEnabled"] = args?.lanIsolationEnabled;
+            resourceInputs["ldap"] = args?.ldap;
+            resourceInputs["localRadius"] = args?.localRadius;
+            resourceInputs["mandatoryDhcpEnabled"] = args?.mandatoryDhcpEnabled;
+            resourceInputs["minBitrate"] = args?.minBitrate;
+            resourceInputs["name"] = args?.name;
+            resourceInputs["namedVlans"] = args?.namedVlans;
+            resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["number"] = args?.number;
+            resourceInputs["oauth"] = args?.oauth;
+            resourceInputs["perClientBandwidthLimitDown"] = args?.perClientBandwidthLimitDown;
+            resourceInputs["perClientBandwidthLimitUp"] = args?.perClientBandwidthLimitUp;
+            resourceInputs["perSsidBandwidthLimitDown"] = args?.perSsidBandwidthLimitDown;
+            resourceInputs["perSsidBandwidthLimitUp"] = args?.perSsidBandwidthLimitUp;
+            resourceInputs["psk"] = args?.psk;
+            resourceInputs["radiusAccountingEnabled"] = args?.radiusAccountingEnabled;
+            resourceInputs["radiusAccountingInterimInterval"] = args?.radiusAccountingInterimInterval;
+            resourceInputs["radiusAccountingServers"] = args?.radiusAccountingServers;
+            resourceInputs["radiusAttributeForGroupPolicies"] = args?.radiusAttributeForGroupPolicies;
+            resourceInputs["radiusAuthenticationNasId"] = args?.radiusAuthenticationNasId;
+            resourceInputs["radiusCalledStationId"] = args?.radiusCalledStationId;
+            resourceInputs["radiusCoaEnabled"] = args?.radiusCoaEnabled;
+            resourceInputs["radiusFailoverPolicy"] = args?.radiusFailoverPolicy;
+            resourceInputs["radiusFallbackEnabled"] = args?.radiusFallbackEnabled;
+            resourceInputs["radiusGuestVlanEnabled"] = args?.radiusGuestVlanEnabled;
+            resourceInputs["radiusGuestVlanId"] = args?.radiusGuestVlanId;
+            resourceInputs["radiusLoadBalancingPolicy"] = args?.radiusLoadBalancingPolicy;
+            resourceInputs["radiusOverride"] = args?.radiusOverride;
+            resourceInputs["radiusProxyEnabled"] = args?.radiusProxyEnabled;
+            resourceInputs["radiusServerAttemptsLimit"] = args?.radiusServerAttemptsLimit;
+            resourceInputs["radiusServerTimeout"] = args?.radiusServerTimeout;
+            resourceInputs["radiusServers"] = args?.radiusServers;
+            resourceInputs["radiusTestingEnabled"] = args?.radiusTestingEnabled;
+            resourceInputs["secondaryConcentratorNetworkId"] = args?.secondaryConcentratorNetworkId;
+            resourceInputs["speedBurst"] = args?.speedBurst;
+            resourceInputs["splashGuestSponsorDomains"] = args?.splashGuestSponsorDomains;
+            resourceInputs["splashPage"] = args?.splashPage;
+            resourceInputs["useVlanTagging"] = args?.useVlanTagging;
+            resourceInputs["visible"] = args?.visible;
+            resourceInputs["vlanId"] = args?.vlanId;
+            resourceInputs["walledGardenEnabled"] = args?.walledGardenEnabled;
+            resourceInputs["walledGardenRanges"] = args?.walledGardenRanges;
+            resourceInputs["wpaEncryptionMode"] = args?.wpaEncryptionMode;
             resourceInputs["adminSplashUrl"] = undefined /*out*/;
             resourceInputs["radiusAccountingServersResponses"] = undefined /*out*/;
             resourceInputs["radiusServersResponses"] = undefined /*out*/;
