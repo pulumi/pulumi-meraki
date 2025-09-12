@@ -9,6 +9,8 @@ plugins:
     kind: converter
 team: ecosystem
 providerDefaultBranch: main
+esc:
+  enabled: true
 env:
   MERAKI_ORG_ID: ${{ secrets.MERAKI_ORG_ID }}
   MERAKI_DASHBOARD_API_KEY: ${{ secrets.MERAKI_DASHBOARD_API_KEY }}
