@@ -2,18 +2,18 @@ provider: meraki
 major-version: 0
 makeTemplate: bridged
 plugins:
-  - name: std
-    version: "1.6.2"
-  - name: terraform
-    version: "1.0.16"
-    kind: converter
+    - name: std
+      version: "1.6.2"
+    - name: terraform
+      version: "1.0.16"
+      kind: converter
 team: ecosystem
 providerDefaultBranch: main
 esc:
-  enabled: true
+    enabled: true
 env:
-  MERAKI_ORG_ID: ${{ secrets.MERAKI_ORG_ID }}
-  MERAKI_DASHBOARD_API_KEY: ${{ secrets.MERAKI_DASHBOARD_API_KEY }}
+    MERAKI_ORG_ID: ${{ secrets.MERAKI_ORG_ID }}
+    MERAKI_DASHBOARD_API_KEY: ${{ secrets.MERAKI_DASHBOARD_API_KEY }}
 pulumiConvert: 1
 registryDocs: true
 checkUpstreamUpgrade: false
