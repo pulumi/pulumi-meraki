@@ -12,6 +12,48 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.FirmwareUpgradesStagedGroups("example", new()
+    ///     {
+    ///         AssignedDevices = new Meraki.Networks.Inputs.FirmwareUpgradesStagedGroupsAssignedDevicesArgs
+    ///         {
+    ///             Devices = new[]
+    ///             {
+    ///                 new Meraki.Networks.Inputs.FirmwareUpgradesStagedGroupsAssignedDevicesDeviceArgs
+    ///                 {
+    ///                     Name = "Device Name",
+    ///                     Serial = "Q234-ABCD-5678",
+    ///                 },
+    ///             },
+    ///             Switch_stacks = new[]
+    ///             {
+    ///                 
+    ///                 {
+    ///                     { "id", "1234" },
+    ///                     { "name", "Stack Name" },
+    ///                 },
+    ///             },
+    ///         },
+    ///         Description = "The description of the group",
+    ///         IsDefault = false,
+    ///         Name = "My Staged Upgrade Group",
+    ///         NetworkId = "string",
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksFirmwareUpgradesStagedGroupsExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

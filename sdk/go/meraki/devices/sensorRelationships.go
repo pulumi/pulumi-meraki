@@ -14,6 +14,38 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/devices"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := devices.NewSensorRelationships(ctx, "example", &devices.SensorRelationshipsArgs{
+//				Livestream: &devices.SensorRelationshipsLivestreamArgs{
+//					Related_devices: []map[string]interface{}{
+//						map[string]interface{}{
+//							"serial": "string",
+//						},
+//					},
+//				},
+//				Serial: pulumi.String("string"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiDevicesSensorRelationshipsExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

@@ -14,6 +14,42 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewWirelessSsidsEapOverride(ctx, "example", &networks.WirelessSsidsEapOverrideArgs{
+//				EapolKey: &networks.WirelessSsidsEapOverrideEapolKeyArgs{
+//					Retries:       pulumi.Int(5),
+//					Timeout_in_ms: 5000,
+//				},
+//				Identity: &networks.WirelessSsidsEapOverrideIdentityArgs{
+//					Retries: pulumi.Int(5),
+//					Timeout: pulumi.Int(5),
+//				},
+//				MaxRetries: pulumi.Int(5),
+//				NetworkId:  pulumi.String("string"),
+//				Number:     pulumi.String("string"),
+//				Timeout:    pulumi.Int(5),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksWirelessSsidsEapOverrideExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

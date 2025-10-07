@@ -12,6 +12,33 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.ApplianceFirewallSettings("example", new()
+    ///     {
+    ///         NetworkId = "string",
+    ///         SpoofingProtection = new Meraki.Networks.Inputs.ApplianceFirewallSettingsSpoofingProtectionArgs
+    ///         {
+    ///             Ip_source_guard = 
+    ///             {
+    ///                 { "mode", "block" },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksApplianceFirewallSettingsExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

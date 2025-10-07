@@ -12,6 +12,53 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.WirelessSsidsVpn("example", new()
+    ///     {
+    ///         Concentrator = new Meraki.Networks.Inputs.WirelessSsidsVpnConcentratorArgs
+    ///         {
+    ///             Network_id = "N_123",
+    ///             Vlan_id = 44,
+    ///         },
+    ///         Failover = new Meraki.Networks.Inputs.WirelessSsidsVpnFailoverArgs
+    ///         {
+    ///             Heartbeat_interval = 10,
+    ///             Idle_timeout = 30,
+    ///             Request_ip = "1.1.1.1",
+    ///         },
+    ///         NetworkId = "string",
+    ///         Number = "string",
+    ///         SplitTunnel = new Meraki.Networks.Inputs.WirelessSsidsVpnSplitTunnelArgs
+    ///         {
+    ///             Enabled = true,
+    ///             Rules = new[]
+    ///             {
+    ///                 new Meraki.Networks.Inputs.WirelessSsidsVpnSplitTunnelRuleArgs
+    ///                 {
+    ///                     Comment = "split tunnel rule 1",
+    ///                     DestCidr = "1.1.1.1/32",
+    ///                     DestPort = "any",
+    ///                     Policy = "allow",
+    ///                     Protocol = "Any",
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksWirelessSsidsVpnExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

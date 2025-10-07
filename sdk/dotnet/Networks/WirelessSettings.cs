@@ -12,6 +12,39 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.WirelessSettings("example", new()
+    ///     {
+    ///         Ipv6BridgeEnabled = false,
+    ///         LedLightsOn = false,
+    ///         LocationAnalyticsEnabled = false,
+    ///         MeshingEnabled = true,
+    ///         NamedVlans = new Meraki.Networks.Inputs.WirelessSettingsNamedVlansArgs
+    ///         {
+    ///             Pool_dhcp_monitoring = 
+    ///             {
+    ///                 { "duration", 5 },
+    ///                 { "enabled", true },
+    ///             },
+    ///         },
+    ///         NetworkId = "string",
+    ///         Upgradestrategy = "minimizeUpgradeTime",
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksWirelessSettingsExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

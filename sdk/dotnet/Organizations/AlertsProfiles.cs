@@ -12,6 +12,55 @@ namespace Pulumi.Meraki.Organizations
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Organizations.AlertsProfiles("example", new()
+    ///     {
+    ///         AlertCondition = new Meraki.Organizations.Inputs.AlertsProfilesAlertConditionArgs
+    ///         {
+    ///             Bit_rate_bps = 10000,
+    ///             Duration = 60,
+    ///             Interface = "wan1",
+    ///             Jitter_ms = 100,
+    ///             Latency_ms = 100,
+    ///             Loss_ratio = 0.1,
+    ///             Mos = 3.5,
+    ///             Window = 600,
+    ///         },
+    ///         Description = "WAN 1 high utilization",
+    ///         NetworkTags = new[]
+    ///         {
+    ///             "tag1",
+    ///             "tag2",
+    ///         },
+    ///         OrganizationId = "string",
+    ///         Recipients = new Meraki.Organizations.Inputs.AlertsProfilesRecipientsArgs
+    ///         {
+    ///             Emails = new[]
+    ///             {
+    ///                 "admin@example.org",
+    ///             },
+    ///             Http_server_ids = new[]
+    ///             {
+    ///                 "aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vcGF0aA==",
+    ///             },
+    ///         },
+    ///         Type = "wanUtilization",
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiOrganizationsAlertsProfilesExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

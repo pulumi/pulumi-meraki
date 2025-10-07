@@ -220,6 +220,21 @@ class CameraWirelessProfiles(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.CameraWirelessProfiles("example",
+            name="wireless profile A",
+            network_id="string",
+            ssid={
+                "auth_mode": "8021x-radius",
+                "encryption_mode": "wpa-eap",
+                "name": "ssid test",
+            })
+        pulumi.export("merakiNetworksCameraWirelessProfilesExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -242,6 +257,21 @@ class CameraWirelessProfiles(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.CameraWirelessProfiles("example",
+            name="wireless profile A",
+            network_id="string",
+            ssid={
+                "auth_mode": "8021x-radius",
+                "encryption_mode": "wpa-eap",
+                "name": "ssid test",
+            })
+        pulumi.export("merakiNetworksCameraWirelessProfilesExample", example)
+        ```
 
         ## Import
 

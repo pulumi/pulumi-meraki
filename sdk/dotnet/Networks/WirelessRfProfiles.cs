@@ -12,6 +12,394 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.WirelessRfProfiles("example", new()
+    ///     {
+    ///         ApBandSettings = new Meraki.Networks.Inputs.WirelessRfProfilesApBandSettingsArgs
+    ///         {
+    ///             Band_operation_mode = "dual",
+    ///             Band_steering_enabled = true,
+    ///             Bands = new Meraki.Networks.Inputs.WirelessRfProfilesApBandSettingsBandsArgs
+    ///             {
+    ///                 Enabled = new[]
+    ///                 {
+    ///                     "2.4",
+    ///                     "5",
+    ///                 },
+    ///             },
+    ///         },
+    ///         BandSelectionType = "ap",
+    ///         ClientBalancingEnabled = true,
+    ///         FiveGhzSettings = new Meraki.Networks.Inputs.WirelessRfProfilesFiveGhzSettingsArgs
+    ///         {
+    ///             Channel_width = "auto",
+    ///             Max_power = 30,
+    ///             Min_bitrate = 12,
+    ///             Min_power = 8,
+    ///             Rxsop = -95,
+    ///             Valid_auto_channels = new[]
+    ///             {
+    ///                 36,
+    ///                 40,
+    ///                 44,
+    ///                 48,
+    ///                 52,
+    ///                 56,
+    ///                 60,
+    ///                 64,
+    ///                 100,
+    ///                 104,
+    ///                 108,
+    ///                 112,
+    ///                 116,
+    ///                 120,
+    ///                 124,
+    ///                 128,
+    ///                 132,
+    ///                 136,
+    ///                 140,
+    ///                 144,
+    ///                 149,
+    ///                 153,
+    ///                 157,
+    ///                 161,
+    ///                 165,
+    ///             },
+    ///         },
+    ///         FlexRadios = new Meraki.Networks.Inputs.WirelessRfProfilesFlexRadiosArgs
+    ///         {
+    ///             By_model = new[]
+    ///             {
+    ///                 
+    ///                 {
+    ///                     { "bands", new[]
+    ///                     {
+    ///                         "5",
+    ///                     } },
+    ///                     { "model", "MR34" },
+    ///                 },
+    ///             },
+    ///         },
+    ///         MinBitrateType = "band",
+    ///         Name = "Main Office",
+    ///         NetworkId = "string",
+    ///         PerSsidSettings = new Meraki.Networks.Inputs.WirelessRfProfilesPerSsidSettingsArgs
+    ///         {
+    ///             Status_0 = 
+    ///             {
+    ///                 { "bandOperationMode", "dual" },
+    ///                 { "bandSteeringEnabled", true },
+    ///                 { "bands", 
+    ///                 {
+    ///                     { "enabled", new[]
+    ///                     {
+    ///                         "2.4",
+    ///                         "5",
+    ///                     } },
+    ///                 } },
+    ///                 { "minBitrate", 11 },
+    ///             },
+    ///             Status_1 = 
+    ///             {
+    ///                 { "bandOperationMode", "dual" },
+    ///                 { "bandSteeringEnabled", true },
+    ///                 { "bands", 
+    ///                 {
+    ///                     { "enabled", new[]
+    ///                     {
+    ///                         "2.4",
+    ///                         "5",
+    ///                     } },
+    ///                 } },
+    ///                 { "minBitrate", 11 },
+    ///             },
+    ///             Status_10 = 
+    ///             {
+    ///                 { "bandOperationMode", "dual" },
+    ///                 { "bandSteeringEnabled", true },
+    ///                 { "bands", 
+    ///                 {
+    ///                     { "enabled", new[]
+    ///                     {
+    ///                         "2.4",
+    ///                         "5",
+    ///                     } },
+    ///                 } },
+    ///                 { "minBitrate", 11 },
+    ///             },
+    ///             Status_11 = 
+    ///             {
+    ///                 { "bandOperationMode", "dual" },
+    ///                 { "bandSteeringEnabled", true },
+    ///                 { "bands", 
+    ///                 {
+    ///                     { "enabled", new[]
+    ///                     {
+    ///                         "2.4",
+    ///                         "5",
+    ///                     } },
+    ///                 } },
+    ///                 { "minBitrate", 11 },
+    ///             },
+    ///             Status_12 = 
+    ///             {
+    ///                 { "bandOperationMode", "dual" },
+    ///                 { "bandSteeringEnabled", true },
+    ///                 { "bands", 
+    ///                 {
+    ///                     { "enabled", new[]
+    ///                     {
+    ///                         "2.4",
+    ///                         "5",
+    ///                     } },
+    ///                 } },
+    ///                 { "minBitrate", 11 },
+    ///             },
+    ///             Status_13 = 
+    ///             {
+    ///                 { "bandOperationMode", "dual" },
+    ///                 { "bandSteeringEnabled", true },
+    ///                 { "bands", 
+    ///                 {
+    ///                     { "enabled", new[]
+    ///                     {
+    ///                         "2.4",
+    ///                         "5",
+    ///                     } },
+    ///                 } },
+    ///                 { "minBitrate", 11 },
+    ///             },
+    ///             Status_14 = 
+    ///             {
+    ///                 { "bandOperationMode", "dual" },
+    ///                 { "bandSteeringEnabled", true },
+    ///                 { "bands", 
+    ///                 {
+    ///                     { "enabled", new[]
+    ///                     {
+    ///                         "2.4",
+    ///                         "5",
+    ///                     } },
+    ///                 } },
+    ///                 { "minBitrate", 11 },
+    ///             },
+    ///             Status_2 = 
+    ///             {
+    ///                 { "bandOperationMode", "dual" },
+    ///                 { "bandSteeringEnabled", true },
+    ///                 { "bands", 
+    ///                 {
+    ///                     { "enabled", new[]
+    ///                     {
+    ///                         "2.4",
+    ///                         "5",
+    ///                     } },
+    ///                 } },
+    ///                 { "minBitrate", 11 },
+    ///             },
+    ///             Status_3 = 
+    ///             {
+    ///                 { "bandOperationMode", "dual" },
+    ///                 { "bandSteeringEnabled", true },
+    ///                 { "bands", 
+    ///                 {
+    ///                     { "enabled", new[]
+    ///                     {
+    ///                         "2.4",
+    ///                         "5",
+    ///                     } },
+    ///                 } },
+    ///                 { "minBitrate", 11 },
+    ///             },
+    ///             Status_4 = 
+    ///             {
+    ///                 { "bandOperationMode", "dual" },
+    ///                 { "bandSteeringEnabled", true },
+    ///                 { "bands", 
+    ///                 {
+    ///                     { "enabled", new[]
+    ///                     {
+    ///                         "2.4",
+    ///                         "5",
+    ///                     } },
+    ///                 } },
+    ///                 { "minBitrate", 11 },
+    ///             },
+    ///             Status_5 = 
+    ///             {
+    ///                 { "bandOperationMode", "dual" },
+    ///                 { "bandSteeringEnabled", true },
+    ///                 { "bands", 
+    ///                 {
+    ///                     { "enabled", new[]
+    ///                     {
+    ///                         "2.4",
+    ///                         "5",
+    ///                     } },
+    ///                 } },
+    ///                 { "minBitrate", 11 },
+    ///             },
+    ///             Status_6 = 
+    ///             {
+    ///                 { "bandOperationMode", "dual" },
+    ///                 { "bandSteeringEnabled", true },
+    ///                 { "bands", 
+    ///                 {
+    ///                     { "enabled", new[]
+    ///                     {
+    ///                         "2.4",
+    ///                         "5",
+    ///                     } },
+    ///                 } },
+    ///                 { "minBitrate", 11 },
+    ///             },
+    ///             Status_7 = 
+    ///             {
+    ///                 { "bandOperationMode", "dual" },
+    ///                 { "bandSteeringEnabled", true },
+    ///                 { "bands", 
+    ///                 {
+    ///                     { "enabled", new[]
+    ///                     {
+    ///                         "2.4",
+    ///                         "5",
+    ///                     } },
+    ///                 } },
+    ///                 { "minBitrate", 11 },
+    ///             },
+    ///             Status_8 = 
+    ///             {
+    ///                 { "bandOperationMode", "dual" },
+    ///                 { "bandSteeringEnabled", true },
+    ///                 { "bands", 
+    ///                 {
+    ///                     { "enabled", new[]
+    ///                     {
+    ///                         "2.4",
+    ///                         "5",
+    ///                     } },
+    ///                 } },
+    ///                 { "minBitrate", 11 },
+    ///             },
+    ///             Status_9 = 
+    ///             {
+    ///                 { "bandOperationMode", "dual" },
+    ///                 { "bandSteeringEnabled", true },
+    ///                 { "bands", 
+    ///                 {
+    ///                     { "enabled", new[]
+    ///                     {
+    ///                         "2.4",
+    ///                         "5",
+    ///                     } },
+    ///                 } },
+    ///                 { "minBitrate", 11 },
+    ///             },
+    ///         },
+    ///         SixGhzSettings = new Meraki.Networks.Inputs.WirelessRfProfilesSixGhzSettingsArgs
+    ///         {
+    ///             Channel_width = "auto",
+    ///             Max_power = 30,
+    ///             Min_bitrate = 12,
+    ///             Min_power = 8,
+    ///             Rxsop = -95,
+    ///             Valid_auto_channels = new[]
+    ///             {
+    ///                 1,
+    ///                 5,
+    ///                 9,
+    ///                 13,
+    ///                 17,
+    ///                 21,
+    ///                 25,
+    ///                 29,
+    ///                 33,
+    ///                 37,
+    ///                 41,
+    ///                 45,
+    ///                 49,
+    ///                 53,
+    ///                 57,
+    ///                 61,
+    ///                 65,
+    ///                 69,
+    ///                 73,
+    ///                 77,
+    ///                 81,
+    ///                 85,
+    ///                 89,
+    ///                 93,
+    ///                 97,
+    ///                 101,
+    ///                 105,
+    ///                 109,
+    ///                 113,
+    ///                 117,
+    ///                 121,
+    ///                 125,
+    ///                 129,
+    ///                 133,
+    ///                 137,
+    ///                 141,
+    ///                 145,
+    ///                 149,
+    ///                 153,
+    ///                 157,
+    ///                 161,
+    ///                 165,
+    ///                 169,
+    ///                 173,
+    ///                 177,
+    ///                 181,
+    ///                 185,
+    ///                 189,
+    ///                 193,
+    ///                 197,
+    ///                 201,
+    ///                 205,
+    ///                 209,
+    ///                 213,
+    ///                 217,
+    ///                 221,
+    ///                 225,
+    ///                 229,
+    ///                 233,
+    ///             },
+    ///         },
+    ///         Transmission = new Meraki.Networks.Inputs.WirelessRfProfilesTransmissionArgs
+    ///         {
+    ///             Enabled = true,
+    ///         },
+    ///         TwoFourGhzSettings = new Meraki.Networks.Inputs.WirelessRfProfilesTwoFourGhzSettingsArgs
+    ///         {
+    ///             Ax_enabled = true,
+    ///             Max_power = 30,
+    ///             Min_bitrate = 11,
+    ///             Min_power = 5,
+    ///             Rxsop = -95,
+    ///             Valid_auto_channels = new[]
+    ///             {
+    ///                 1,
+    ///                 6,
+    ///                 11,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksWirelessRfProfilesExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

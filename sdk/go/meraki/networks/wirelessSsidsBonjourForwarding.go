@@ -14,6 +14,45 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewWirelessSsidsBonjourForwarding(ctx, "example", &networks.WirelessSsidsBonjourForwardingArgs{
+//				Enabled: pulumi.Bool(true),
+//				Exception: &networks.WirelessSsidsBonjourForwardingExceptionArgs{
+//					Enabled: pulumi.Bool(true),
+//				},
+//				NetworkId: pulumi.String("string"),
+//				Number:    pulumi.String("string"),
+//				Rules: networks.WirelessSsidsBonjourForwardingRuleArray{
+//					&networks.WirelessSsidsBonjourForwardingRuleArgs{
+//						Description: pulumi.String("A simple bonjour rule"),
+//						Services: pulumi.StringArray{
+//							pulumi.String("All Services"),
+//						},
+//						Vlan_id: "1",
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksWirelessSsidsBonjourForwardingExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

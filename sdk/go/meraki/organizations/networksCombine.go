@@ -14,6 +14,41 @@ import (
 
 // ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
 // already existed previously.
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/organizations"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := organizations.NewNetworksCombine(ctx, "example", &organizations.NetworksCombineArgs{
+//				OrganizationId: pulumi.String("string"),
+//				Parameters: &organizations.NetworksCombineParametersArgs{
+//					Enrollment_string: "my-enrollment-string",
+//					Name:              pulumi.String("Long Island Office"),
+//					Network_ids: []string{
+//						"N_1234",
+//						"N_5678",
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiOrganizationsNetworksCombineExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
 type NetworksCombine struct {
 	pulumi.CustomResourceState
 

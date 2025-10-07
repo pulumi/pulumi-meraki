@@ -21,6 +21,100 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.ApplianceTrafficShapingUplinkSelection;
+ * import com.pulumi.meraki.networks.ApplianceTrafficShapingUplinkSelectionArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackImmediateArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ApplianceTrafficShapingUplinkSelection("example", ApplianceTrafficShapingUplinkSelectionArgs.builder()
+ *             .activeActiveAutoVpnEnabled(true)
+ *             .defaultUplink("wan1")
+ *             .failoverAndFailback(ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgs.builder()
+ *                 .immediate(ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackImmediateArgs.builder()
+ *                     .enabled(true)
+ *                     .build())
+ *                 .build())
+ *             .loadBalancingEnabled(true)
+ *             .networkId("string")
+ *             .vpnTrafficUplinkPreferences(ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgs.builder()
+ *                 .fail_over_criterion("poorPerformance")
+ *                 .performance_class(Map.ofEntries(
+ *                     Map.entry("builtinPerformanceClassName", "VoIP"),
+ *                     Map.entry("customPerformanceClassId", "123456"),
+ *                     Map.entry("type", "custom")
+ *                 ))
+ *                 .preferred_uplink("bestForVoIP")
+ *                 .traffic_filters(List.of(Map.ofEntries(
+ *                     Map.entry("type", "applicationCategory"),
+ *                     Map.entry("value", Map.ofEntries(
+ *                         Map.entry("destination", Map.ofEntries(
+ *                             Map.entry("cidr", "any"),
+ *                             Map.entry("fqdn", "www.google.com"),
+ *                             Map.entry("host", 254),
+ *                             Map.entry("network", "L_12345678"),
+ *                             Map.entry("port", "1-1024"),
+ *                             Map.entry("vlan", 10)
+ *                         )),
+ *                         Map.entry("id", "meraki:layer7/category/1"),
+ *                         Map.entry("protocol", "tcp"),
+ *                         Map.entry("source", Map.ofEntries(
+ *                             Map.entry("cidr", "192.168.1.0/24"),
+ *                             Map.entry("host", 200),
+ *                             Map.entry("network", "L_23456789"),
+ *                             Map.entry("port", "any"),
+ *                             Map.entry("vlan", 20)
+ *                         ))
+ *                     ))
+ *                 )))
+ *                 .build())
+ *             .wanTrafficUplinkPreferences(ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgs.builder()
+ *                 .preferred_uplink("wan1")
+ *                 .traffic_filters(List.of(Map.ofEntries(
+ *                     Map.entry("type", "custom"),
+ *                     Map.entry("value", Map.ofEntries(
+ *                         Map.entry("destination", Map.ofEntries(
+ *                             Map.entry("cidr", "any"),
+ *                             Map.entry("port", "any")
+ *                         )),
+ *                         Map.entry("protocol", "tcp"),
+ *                         Map.entry("source", Map.ofEntries(
+ *                             Map.entry("cidr", "192.168.1.0/24"),
+ *                             Map.entry("host", 254),
+ *                             Map.entry("port", "1-1024"),
+ *                             Map.entry("vlan", 10)
+ *                         ))
+ *                     ))
+ *                 )))
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksApplianceTrafficShapingUplinkSelectionExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

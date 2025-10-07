@@ -12,6 +12,59 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.SwitchRoutingOspf("example", new()
+    ///     {
+    ///         Areas = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.SwitchRoutingOspfAreaArgs
+    ///             {
+    ///                 Area_id = "1284392014819",
+    ///                 Area_name = "Backbone",
+    ///                 Area_type = "normal",
+    ///             },
+    ///         },
+    ///         DeadTimerInSeconds = 40,
+    ///         Enabled = true,
+    ///         HelloTimerInSeconds = 10,
+    ///         Md5AuthenticationEnabled = true,
+    ///         Md5AuthenticationKey = new Meraki.Networks.Inputs.SwitchRoutingOspfMd5AuthenticationKeyArgs
+    ///         {
+    ///             Id = 1234,
+    ///             Passphrase = "abc1234",
+    ///         },
+    ///         NetworkId = "string",
+    ///         V3 = new Meraki.Networks.Inputs.SwitchRoutingOspfV3Args
+    ///         {
+    ///             Areas = new[]
+    ///             {
+    ///                 new Meraki.Networks.Inputs.SwitchRoutingOspfV3AreaArgs
+    ///                 {
+    ///                     AreaId = 1284392014819,
+    ///                     AreaName = "V3 Backbone",
+    ///                     AreaType = "normal",
+    ///                 },
+    ///             },
+    ///             Dead_timer_in_seconds = 40,
+    ///             Enabled = true,
+    ///             Hello_timer_in_seconds = 10,
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksSwitchRoutingOspfExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

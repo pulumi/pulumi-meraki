@@ -208,6 +208,28 @@ class SwitchAlternateManagementInterface(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.SwitchAlternateManagementInterface("example",
+            enabled=True,
+            network_id="string",
+            protocols=[
+                "radius",
+                "snmp",
+                "syslog",
+            ],
+            switches=[{
+                "alternate_management_ip": "1.2.3.4",
+                "gateway": "1.2.3.5",
+                "serial": "Q234-ABCD-5678",
+                "subnet_mask": "255.255.255.0",
+            }],
+            vlan_id=100)
+        pulumi.export("merakiNetworksSwitchAlternateManagementInterfaceExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -230,6 +252,28 @@ class SwitchAlternateManagementInterface(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.SwitchAlternateManagementInterface("example",
+            enabled=True,
+            network_id="string",
+            protocols=[
+                "radius",
+                "snmp",
+                "syslog",
+            ],
+            switches=[{
+                "alternate_management_ip": "1.2.3.4",
+                "gateway": "1.2.3.5",
+                "serial": "Q234-ABCD-5678",
+                "subnet_mask": "255.255.255.0",
+            }],
+            vlan_id=100)
+        pulumi.export("merakiNetworksSwitchAlternateManagementInterfaceExample", example)
+        ```
 
         ## Import
 

@@ -12,6 +12,49 @@ namespace Pulumi.Meraki.Organizations
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Organizations.ActionBatches("example", new()
+    ///     {
+    ///         Actions = new[]
+    ///         {
+    ///             new Meraki.Organizations.Inputs.ActionBatchesActionArgs
+    ///             {
+    ///                 Operation = "create",
+    ///                 Resource = "/devices/QXXX-XXXX-XXXX/switch/ports/3",
+    ///             },
+    ///         },
+    ///         Callback = new Meraki.Organizations.Inputs.ActionBatchesCallbackArgs
+    ///         {
+    ///             Http_server = 
+    ///             {
+    ///                 { "id", "aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M=" },
+    ///             },
+    ///             Payload_template = 
+    ///             {
+    ///                 { "id", "wpt_2100" },
+    ///             },
+    ///             Shared_secret = "secret",
+    ///             Url = "https://webhook.site/28efa24e-f830-4d9f-a12b-fbb9e5035031",
+    ///         },
+    ///         Confirmed = true,
+    ///         OrganizationId = "string",
+    ///         Synchronous = true,
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiOrganizationsActionBatchesExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

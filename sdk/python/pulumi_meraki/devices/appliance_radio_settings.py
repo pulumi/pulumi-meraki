@@ -176,6 +176,27 @@ class ApplianceRadioSettings(pulumi.CustomResource):
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
         already existed previously.
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.devices.ApplianceRadioSettings("example",
+            five_ghz_settings={
+                "channel": 149,
+                "channel_width": "20",
+                "target_power": 15,
+            },
+            rf_profile_id="1234",
+            serial="string",
+            two_four_ghz_settings={
+                "channel": 11,
+                "target_power": 21,
+            })
+        pulumi.export("merakiDevicesApplianceRadioSettingsExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -198,6 +219,27 @@ class ApplianceRadioSettings(pulumi.CustomResource):
         """
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
         already existed previously.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.devices.ApplianceRadioSettings("example",
+            five_ghz_settings={
+                "channel": 149,
+                "channel_width": "20",
+                "target_power": 15,
+            },
+            rf_profile_id="1234",
+            serial="string",
+            two_four_ghz_settings={
+                "channel": 11,
+                "target_power": 21,
+            })
+        pulumi.export("merakiDevicesApplianceRadioSettingsExample", example)
+        ```
 
         ## Import
 

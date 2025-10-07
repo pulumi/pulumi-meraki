@@ -9,6 +9,25 @@ import * as utilities from "../utilities";
 /**
  * ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
  * already existed previously.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.organizations.LicensesMove("example", {
+ *     organizationId: "string",
+ *     parameters: {
+ *         dest_organization_id: "2930418",
+ *         license_ids: [
+ *             "123",
+ *             "456",
+ *         ],
+ *     },
+ * });
+ * export const merakiOrganizationsLicensesMoveExample = example;
+ * ```
  */
 export class LicensesMove extends pulumi.CustomResource {
     /**

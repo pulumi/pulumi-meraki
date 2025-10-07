@@ -113,6 +113,34 @@ class SmDevicesCheckin(pulumi.CustomResource):
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
         already existed previously.
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.SmDevicesCheckin("example",
+            network_id="string",
+            parameters={
+                "ids": [
+                    "1284392014819",
+                    "2983092129865",
+                ],
+                "scope": [
+                    "withAny",
+                    "tag1",
+                    "tag2",
+                ],
+                "serials": [
+                    "XY0XX0Y0X0",
+                    "A01B01CD00E",
+                    "X02YZ1ZYZX",
+                ],
+                "wifi_macs": ["00:11:22:33:44:55"],
+            })
+        pulumi.export("merakiNetworksSmDevicesCheckinExample", example)
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -126,6 +154,34 @@ class SmDevicesCheckin(pulumi.CustomResource):
         """
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
         already existed previously.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.SmDevicesCheckin("example",
+            network_id="string",
+            parameters={
+                "ids": [
+                    "1284392014819",
+                    "2983092129865",
+                ],
+                "scope": [
+                    "withAny",
+                    "tag1",
+                    "tag2",
+                ],
+                "serials": [
+                    "XY0XX0Y0X0",
+                    "A01B01CD00E",
+                    "X02YZ1ZYZX",
+                ],
+                "wifi_macs": ["00:11:22:33:44:55"],
+            })
+        pulumi.export("merakiNetworksSmDevicesCheckinExample", example)
+        ```
 
         :param str resource_name: The name of the resource.
         :param SmDevicesCheckinArgs args: The arguments to use to populate this resource's properties.

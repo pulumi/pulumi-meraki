@@ -14,6 +14,58 @@ import (
 
 // ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
 // already existed previously.
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewSmDevicesReboot(ctx, "example", &networks.SmDevicesRebootArgs{
+//				NetworkId: pulumi.String("string"),
+//				Parameters: &networks.SmDevicesRebootParametersArgs{
+//					Ids: pulumi.StringArray{
+//						pulumi.String("1284392014819"),
+//						pulumi.String("2983092129865"),
+//					},
+//					Kext_paths: []string{
+//						"test",
+//					},
+//					Notify_user:                     true,
+//					Rebuild_kernel_cache:            true,
+//					Request_requires_network_tether: true,
+//					Scope: []string{
+//						"withAny",
+//						"tag1",
+//						"tag2",
+//					},
+//					Serials: pulumi.StringArray{
+//						pulumi.String("XY0XX0Y0X0"),
+//						pulumi.String("A01B01CD00E"),
+//						pulumi.String("X02YZ1ZYZX"),
+//					},
+//					Wifi_macs: []string{
+//						"00:11:22:33:44:55",
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksSmDevicesRebootExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
 type SmDevicesReboot struct {
 	pulumi.CustomResourceState
 

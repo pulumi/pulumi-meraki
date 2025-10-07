@@ -12,6 +12,40 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.MerakiAuthUsers("example", new()
+    ///     {
+    ///         AccountType = "802.1X",
+    ///         Authorizations = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.MerakiAuthUsersAuthorizationArgs
+    ///             {
+    ///                 Expires_at = "2018-03-13T00:00:00.090210Z",
+    ///                 Ssid_number = 1,
+    ///             },
+    ///         },
+    ///         Email = "miles@meraki.com",
+    ///         EmailPasswordToUser = false,
+    ///         IsAdmin = false,
+    ///         Name = "Miles Meraki",
+    ///         NetworkId = "string",
+    ///         Password = "secret",
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksMerakiAuthUsersExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

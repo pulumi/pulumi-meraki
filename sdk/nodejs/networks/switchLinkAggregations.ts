@@ -9,6 +9,20 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.SwitchLinkAggregations("example", {
+ *     networkId: "string",
+ *     switchPorts: [{
+ *         port_id: "1",
+ *         serial: "Q234-ABCD-0001",
+ *     }],
+ * });
+ * export const merakiNetworksSwitchLinkAggregationsExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

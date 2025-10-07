@@ -207,6 +207,23 @@ class WirelessSsidsSchedules(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.WirelessSsidsSchedules("example",
+            enabled=True,
+            network_id="string",
+            number="string",
+            ranges=[{
+                "end_day": "Tuesday",
+                "end_time": "05:00",
+                "start_day": "Tuesday",
+                "start_time": "01:00",
+            }])
+        pulumi.export("merakiNetworksWirelessSsidsSchedulesExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -229,6 +246,23 @@ class WirelessSsidsSchedules(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.WirelessSsidsSchedules("example",
+            enabled=True,
+            network_id="string",
+            number="string",
+            ranges=[{
+                "end_day": "Tuesday",
+                "end_time": "05:00",
+                "start_day": "Tuesday",
+                "start_time": "01:00",
+            }])
+        pulumi.export("merakiNetworksWirelessSsidsSchedulesExample", example)
+        ```
 
         ## Import
 

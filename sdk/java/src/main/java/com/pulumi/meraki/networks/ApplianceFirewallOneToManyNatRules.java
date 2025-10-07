@@ -18,6 +18,51 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.ApplianceFirewallOneToManyNatRules;
+ * import com.pulumi.meraki.networks.ApplianceFirewallOneToManyNatRulesArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceFirewallOneToManyNatRulesRuleArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ApplianceFirewallOneToManyNatRules("example", ApplianceFirewallOneToManyNatRulesArgs.builder()
+ *             .networkId("string")
+ *             .rules(ApplianceFirewallOneToManyNatRulesRuleArgs.builder()
+ *                 .port_rules(List.of(Map.ofEntries(
+ *                     Map.entry("allowedIps", List.of("any")),
+ *                     Map.entry("localIp", "192.168.128.1"),
+ *                     Map.entry("localPort", "443"),
+ *                     Map.entry("name", "Rule 1"),
+ *                     Map.entry("protocol", "tcp"),
+ *                     Map.entry("publicPort", "9443")
+ *                 )))
+ *                 .public_ip("146.11.11.13")
+ *                 .uplink("internet1")
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksApplianceFirewallOneToManyNatRulesExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

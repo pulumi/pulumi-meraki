@@ -19,6 +19,62 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.devices.ManagementInterface;
+ * import com.pulumi.meraki.devices.ManagementInterfaceArgs;
+ * import com.pulumi.meraki.devices.inputs.ManagementInterfaceWan1Args;
+ * import com.pulumi.meraki.devices.inputs.ManagementInterfaceWan2Args;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ManagementInterface("example", ManagementInterfaceArgs.builder()
+ *             .serial("string")
+ *             .wan1(ManagementInterfaceWan1Args.builder()
+ *                 .static_dns(List.of(                
+ *                     "1.2.3.2",
+ *                     "1.2.3.3"))
+ *                 .static_gateway_ip("1.2.3.1")
+ *                 .static_ip("1.2.3.4")
+ *                 .static_subnet_mask("255.255.255.0")
+ *                 .using_static_ip(true)
+ *                 .vlan(7)
+ *                 .wan_enabled("not configured")
+ *                 .build())
+ *             .wan2(ManagementInterfaceWan2Args.builder()
+ *                 .static_dns(List.of(                
+ *                     "1.2.3.2",
+ *                     "1.2.3.3"))
+ *                 .static_gateway_ip("1.2.3.1")
+ *                 .static_ip("1.2.3.4")
+ *                 .static_subnet_mask("255.255.255.0")
+ *                 .using_static_ip(false)
+ *                 .vlan(2)
+ *                 .wan_enabled("enabled")
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiDevicesManagementInterfaceExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

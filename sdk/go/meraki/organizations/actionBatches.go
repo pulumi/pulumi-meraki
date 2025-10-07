@@ -14,6 +14,49 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/organizations"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := organizations.NewActionBatches(ctx, "example", &organizations.ActionBatchesArgs{
+//				Actions: organizations.ActionBatchesActionArray{
+//					&organizations.ActionBatchesActionArgs{
+//						Operation: pulumi.String("create"),
+//						Resource:  pulumi.String("/devices/QXXX-XXXX-XXXX/switch/ports/3"),
+//					},
+//				},
+//				Callback: &organizations.ActionBatchesCallbackArgs{
+//					Http_server: map[string]interface{}{
+//						"id": "aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M=",
+//					},
+//					Payload_template: map[string]interface{}{
+//						"id": "wpt_2100",
+//					},
+//					Shared_secret: "secret",
+//					Url:           pulumi.String("https://webhook.site/28efa24e-f830-4d9f-a12b-fbb9e5035031"),
+//				},
+//				Confirmed:      pulumi.Bool(true),
+//				OrganizationId: pulumi.String("string"),
+//				Synchronous:    pulumi.Bool(true),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiOrganizationsActionBatchesExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

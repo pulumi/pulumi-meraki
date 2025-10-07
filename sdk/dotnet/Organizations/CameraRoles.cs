@@ -12,6 +12,52 @@ namespace Pulumi.Meraki.Organizations
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Organizations.CameraRoles("example", new()
+    ///     {
+    ///         AppliedOnDevices = new[]
+    ///         {
+    ///             new Meraki.Organizations.Inputs.CameraRolesAppliedOnDeviceArgs
+    ///             {
+    ///                 Id = "",
+    ///                 Permission_scope_id = "1",
+    ///                 Tag = "reception-desk",
+    ///             },
+    ///         },
+    ///         AppliedOnNetworks = new[]
+    ///         {
+    ///             new Meraki.Organizations.Inputs.CameraRolesAppliedOnNetworkArgs
+    ///             {
+    ///                 Id = "",
+    ///                 Permission_scope_id = "2",
+    ///                 Tag = "building-a",
+    ///             },
+    ///         },
+    ///         AppliedOrgWides = new[]
+    ///         {
+    ///             new Meraki.Organizations.Inputs.CameraRolesAppliedOrgWideArgs
+    ///             {
+    ///                 Permission_scope_id = "2",
+    ///             },
+    ///         },
+    ///         Name = "Security_Guard",
+    ///         OrganizationId = "string",
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiOrganizationsCameraRolesExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

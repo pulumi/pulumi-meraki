@@ -12,6 +12,43 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.ApplianceVpnSiteToSiteVpn("example", new()
+    ///     {
+    ///         Hubs = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.ApplianceVpnSiteToSiteVpnHubArgs
+    ///             {
+    ///                 Hub_id = "N_4901849",
+    ///                 Use_default_route = true,
+    ///             },
+    ///         },
+    ///         Mode = "spoke",
+    ///         NetworkId = "string",
+    ///         Subnets = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.ApplianceVpnSiteToSiteVpnSubnetArgs
+    ///             {
+    ///                 Local_subnet = "192.168.1.0/24",
+    ///                 Use_vpn = true,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksApplianceVpnSiteToSiteVpnExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

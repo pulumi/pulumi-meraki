@@ -175,6 +175,30 @@ class ApplianceSecurityIntrusion(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.ApplianceSecurityIntrusion("example",
+            ids_rulesets="balanced",
+            mode="prevention",
+            network_id="string",
+            protected_networks={
+                "excluded_cidr": [
+                    "10.0.0.0/8",
+                    "127.0.0.0/8",
+                ],
+                "included_cidr": [
+                    "10.0.0.0/8",
+                    "127.0.0.0/8",
+                    "169.254.0.0/16",
+                    "172.16.0.0/12",
+                ],
+                "use_default": False,
+            })
+        pulumi.export("merakiNetworksApplianceSecurityIntrusionExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -196,6 +220,30 @@ class ApplianceSecurityIntrusion(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.ApplianceSecurityIntrusion("example",
+            ids_rulesets="balanced",
+            mode="prevention",
+            network_id="string",
+            protected_networks={
+                "excluded_cidr": [
+                    "10.0.0.0/8",
+                    "127.0.0.0/8",
+                ],
+                "included_cidr": [
+                    "10.0.0.0/8",
+                    "127.0.0.0/8",
+                    "169.254.0.0/16",
+                    "172.16.0.0/12",
+                ],
+                "use_default": False,
+            })
+        pulumi.export("merakiNetworksApplianceSecurityIntrusionExample", example)
+        ```
 
         ## Import
 

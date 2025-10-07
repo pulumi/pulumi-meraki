@@ -19,6 +19,50 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.SwitchAccessControlLists;
+ * import com.pulumi.meraki.networks.SwitchAccessControlListsArgs;
+ * import com.pulumi.meraki.networks.inputs.SwitchAccessControlListsRuleArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SwitchAccessControlLists("example", SwitchAccessControlListsArgs.builder()
+ *             .networkId("string")
+ *             .rules(SwitchAccessControlListsRuleArgs.builder()
+ *                 .comment("Deny SSH")
+ *                 .dst_cidr("172.16.30/24")
+ *                 .dst_port("22")
+ *                 .ip_version("ipv4")
+ *                 .policy("deny")
+ *                 .protocol("tcp")
+ *                 .src_cidr("10.1.10.0/24")
+ *                 .src_port("any")
+ *                 .vlan("10")
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksSwitchAccessControlListsExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

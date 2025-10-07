@@ -12,6 +12,53 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.ApplianceSingleLan("example", new()
+    ///     {
+    ///         ApplianceIp = "string",
+    ///         Ipv6 = new Meraki.Networks.Inputs.ApplianceSingleLanIpv6Args
+    ///         {
+    ///             Enabled = false,
+    ///             Prefix_assignments = new[]
+    ///             {
+    ///                 
+    ///                 {
+    ///                     { "autonomous", false },
+    ///                     { "origin", 
+    ///                     {
+    ///                         { "interfaces", new[]
+    ///                         {
+    ///                             "string",
+    ///                         } },
+    ///                         { "type", "string" },
+    ///                     } },
+    ///                     { "staticApplianceIp6", "string" },
+    ///                     { "staticPrefix", "string" },
+    ///                 },
+    ///             },
+    ///         },
+    ///         MandatoryDhcp = new Meraki.Networks.Inputs.ApplianceSingleLanMandatoryDhcpArgs
+    ///         {
+    ///             Enabled = false,
+    ///         },
+    ///         NetworkId = "string",
+    ///         Subnet = "string",
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksApplianceSingleLanExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

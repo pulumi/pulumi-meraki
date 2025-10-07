@@ -12,6 +12,42 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.ApplianceFirewallPortForwardingRules("example", new()
+    ///     {
+    ///         NetworkId = "string",
+    ///         Rules = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.ApplianceFirewallPortForwardingRulesRuleArgs
+    ///             {
+    ///                 Allowed_ips = new[]
+    ///                 {
+    ///                     "any",
+    ///                 },
+    ///                 Lan_ip = "192.168.128.1",
+    ///                 Local_port = "442-443",
+    ///                 Name = "Description of Port Forwarding Rule",
+    ///                 Protocol = "tcp",
+    ///                 Public_port = "8100-8101",
+    ///                 Uplink = "both",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksApplianceFirewallPortForwardingRulesExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

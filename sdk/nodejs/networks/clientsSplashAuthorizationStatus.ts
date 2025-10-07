@@ -9,6 +9,25 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.ClientsSplashAuthorizationStatus("example", {
+ *     clientId: "string",
+ *     networkId: "string",
+ *     ssids: {
+ *         status_0: {
+ *             isAuthorized: true,
+ *         },
+ *         status_2: {
+ *             isAuthorized: false,
+ *         },
+ *     },
+ * });
+ * export const merakiNetworksClientsSplashAuthorizationStatusExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

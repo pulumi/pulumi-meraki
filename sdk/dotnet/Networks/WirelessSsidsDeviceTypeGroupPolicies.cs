@@ -12,6 +12,36 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.WirelessSsidsDeviceTypeGroupPolicies("example", new()
+    ///     {
+    ///         DeviceTypePolicies = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgs
+    ///             {
+    ///                 Device_policy = "Allowed",
+    ///                 Device_type = "Android",
+    ///             },
+    ///         },
+    ///         Enabled = true,
+    ///         NetworkId = "string",
+    ///         Number = "string",
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksWirelessSsidsDeviceTypeGroupPoliciesExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

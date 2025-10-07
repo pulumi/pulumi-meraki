@@ -109,6 +109,19 @@ class ApplianceSecurityIntrusion(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.organizations.ApplianceSecurityIntrusion("example",
+            allowed_rules=[{
+                "message": "SQL sa login failed",
+                "rule_id": "meraki:intrusion/snort/GID/01/SID/688",
+            }],
+            organization_id="string")
+        pulumi.export("merakiOrganizationsApplianceSecurityIntrusionExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -128,6 +141,19 @@ class ApplianceSecurityIntrusion(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.organizations.ApplianceSecurityIntrusion("example",
+            allowed_rules=[{
+                "message": "SQL sa login failed",
+                "rule_id": "meraki:intrusion/snort/GID/01/SID/688",
+            }],
+            organization_id="string")
+        pulumi.export("merakiOrganizationsApplianceSecurityIntrusionExample", example)
+        ```
 
         ## Import
 

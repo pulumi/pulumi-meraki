@@ -113,6 +113,21 @@ class LicensesRenewSeats(pulumi.CustomResource):
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
         already existed previously.
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.organizations.LicensesRenewSeats("example",
+            organization_id="string",
+            parameters={
+                "license_id_to_renew": "123",
+                "unused_license_id": "1234",
+            })
+        pulumi.export("merakiOrganizationsLicensesRenewSeatsExample", example)
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
@@ -126,6 +141,21 @@ class LicensesRenewSeats(pulumi.CustomResource):
         """
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
         already existed previously.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.organizations.LicensesRenewSeats("example",
+            organization_id="string",
+            parameters={
+                "license_id_to_renew": "123",
+                "unused_license_id": "1234",
+            })
+        pulumi.export("merakiOrganizationsLicensesRenewSeatsExample", example)
+        ```
 
         :param str resource_name: The name of the resource.
         :param LicensesRenewSeatsArgs args: The arguments to use to populate this resource's properties.

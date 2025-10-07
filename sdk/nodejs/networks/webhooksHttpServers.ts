@@ -9,6 +9,23 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.WebhooksHttpServers("example", {
+ *     name: "Example Webhook Server",
+ *     networkId: "string",
+ *     payloadTemplate: {
+ *         name: "Meraki (included)",
+ *         payload_template_id: "wpt_00001",
+ *     },
+ *     sharedSecret: "shhh",
+ *     url: "https://example.com",
+ * });
+ * export const merakiNetworksWebhooksHttpServersExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

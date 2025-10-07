@@ -113,6 +113,28 @@ class ApplianceTrafficShapingVpnExclusions(pulumi.CustomResource):
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
         already existed previously.
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.ApplianceTrafficShapingVpnExclusions("example",
+            network_id="string",
+            parameters={
+                "custom": [{
+                    "destination": "192.168.3.0/24",
+                    "port": "8000",
+                    "protocol": "tcp",
+                }],
+                "major_applications": [{
+                    "id": "meraki:vpnExclusion/application/2",
+                    "name": "Office 365 Sharepoint",
+                }],
+            })
+        pulumi.export("merakiNetworksApplianceTrafficShapingVpnExclusionsExample", example)
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -126,6 +148,28 @@ class ApplianceTrafficShapingVpnExclusions(pulumi.CustomResource):
         """
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
         already existed previously.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.ApplianceTrafficShapingVpnExclusions("example",
+            network_id="string",
+            parameters={
+                "custom": [{
+                    "destination": "192.168.3.0/24",
+                    "port": "8000",
+                    "protocol": "tcp",
+                }],
+                "major_applications": [{
+                    "id": "meraki:vpnExclusion/application/2",
+                    "name": "Office 365 Sharepoint",
+                }],
+            })
+        pulumi.export("merakiNetworksApplianceTrafficShapingVpnExclusionsExample", example)
+        ```
 
         :param str resource_name: The name of the resource.
         :param ApplianceTrafficShapingVpnExclusionsArgs args: The arguments to use to populate this resource's properties.

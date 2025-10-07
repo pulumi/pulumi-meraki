@@ -24,6 +24,63 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.ApplianceVlans;
+ * import com.pulumi.meraki.networks.ApplianceVlansArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceVlansIpv6Args;
+ * import com.pulumi.meraki.networks.inputs.ApplianceVlansMandatoryDhcpArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ApplianceVlans("example", ApplianceVlansArgs.builder()
+ *             .applianceIp("192.168.1.2")
+ *             .cidr("192.168.1.0/24")
+ *             .groupPolicyId("101")
+ *             .vlanId("1234")
+ *             .ipv6(ApplianceVlansIpv6Args.builder()
+ *                 .enabled(true)
+ *                 .prefix_assignments(List.of(Map.ofEntries(
+ *                     Map.entry("autonomous", false),
+ *                     Map.entry("origin", Map.ofEntries(
+ *                         Map.entry("interfaces", List.of("wan0")),
+ *                         Map.entry("type", "internet")
+ *                     )),
+ *                     Map.entry("staticApplianceIp6", "2001:db8:3c4d:15::1"),
+ *                     Map.entry("staticPrefix", "2001:db8:3c4d:15::/64")
+ *                 )))
+ *                 .build())
+ *             .mandatoryDhcp(ApplianceVlansMandatoryDhcpArgs.builder()
+ *                 .enabled(true)
+ *                 .build())
+ *             .mask(28)
+ *             .name("My VLAN")
+ *             .networkId("string")
+ *             .subnet("192.168.1.0/24")
+ *             .templateVlanType("same")
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksApplianceVlansExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

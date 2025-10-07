@@ -14,6 +14,44 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewApplianceFirewallPortForwardingRules(ctx, "example", &networks.ApplianceFirewallPortForwardingRulesArgs{
+//				NetworkId: pulumi.String("string"),
+//				Rules: networks.ApplianceFirewallPortForwardingRulesRuleArray{
+//					&networks.ApplianceFirewallPortForwardingRulesRuleArgs{
+//						Allowed_ips: []string{
+//							"any",
+//						},
+//						Lan_ip:      "192.168.128.1",
+//						Local_port:  "442-443",
+//						Name:        pulumi.String("Description of Port Forwarding Rule"),
+//						Protocol:    pulumi.String("tcp"),
+//						Public_port: "8100-8101",
+//						Uplink:      pulumi.String("both"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksApplianceFirewallPortForwardingRulesExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

@@ -9,6 +9,35 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.AlertsSettings("example", {
+ *     alerts: [{
+ *         alert_destinations: {
+ *             allAdmins: false,
+ *             emails: ["miles@meraki.com"],
+ *             httpServerIds: ["aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M="],
+ *             snmp: false,
+ *         },
+ *         enabled: true,
+ *         filters: {
+ *             timeout: 60,
+ *         },
+ *         type: "gatewayDown",
+ *     }],
+ *     defaultDestinations: {
+ *         all_admins: true,
+ *         emails: ["miles@meraki.com"],
+ *         http_server_ids: ["aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M="],
+ *         snmp: true,
+ *     },
+ *     networkId: "string",
+ * });
+ * export const merakiNetworksAlertsSettingsExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

@@ -12,6 +12,39 @@ namespace Pulumi.Meraki.Organizations
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Organizations.AdaptivePolicyAcls("example", new()
+    ///     {
+    ///         Description = "Blocks sensitive web traffic",
+    ///         IpVersion = "ipv6",
+    ///         Name = "Block sensitive web traffic",
+    ///         OrganizationId = "string",
+    ///         Rules = new[]
+    ///         {
+    ///             new Meraki.Organizations.Inputs.AdaptivePolicyAclsRuleArgs
+    ///             {
+    ///                 Dst_port = "22-30",
+    ///                 Policy = "deny",
+    ///                 Protocol = "tcp",
+    ///                 Src_port = "1,33",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiOrganizationsAdaptivePolicyAclsExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

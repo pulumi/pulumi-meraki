@@ -20,6 +20,51 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.SwitchAlternateManagementInterface;
+ * import com.pulumi.meraki.networks.SwitchAlternateManagementInterfaceArgs;
+ * import com.pulumi.meraki.networks.inputs.SwitchAlternateManagementInterfaceSwitchArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SwitchAlternateManagementInterface("example", SwitchAlternateManagementInterfaceArgs.builder()
+ *             .enabled(true)
+ *             .networkId("string")
+ *             .protocols(            
+ *                 "radius",
+ *                 "snmp",
+ *                 "syslog")
+ *             .switches(SwitchAlternateManagementInterfaceSwitchArgs.builder()
+ *                 .alternate_management_ip("1.2.3.4")
+ *                 .gateway("1.2.3.5")
+ *                 .serial("Q234-ABCD-5678")
+ *                 .subnet_mask("255.255.255.0")
+ *                 .build())
+ *             .vlanId(100)
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksSwitchAlternateManagementInterfaceExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

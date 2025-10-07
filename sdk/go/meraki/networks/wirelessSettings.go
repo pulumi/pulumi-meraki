@@ -14,6 +14,42 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewWirelessSettings(ctx, "example", &networks.WirelessSettingsArgs{
+//				Ipv6BridgeEnabled:        pulumi.Bool(false),
+//				LedLightsOn:              pulumi.Bool(false),
+//				LocationAnalyticsEnabled: pulumi.Bool(false),
+//				MeshingEnabled:           pulumi.Bool(true),
+//				NamedVlans: &networks.WirelessSettingsNamedVlansArgs{
+//					Pool_dhcp_monitoring: map[string]interface{}{
+//						"duration": 5,
+//						"enabled":  true,
+//					},
+//				},
+//				NetworkId:       pulumi.String("string"),
+//				Upgradestrategy: pulumi.String("minimizeUpgradeTime"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksWirelessSettingsExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

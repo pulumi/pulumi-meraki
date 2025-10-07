@@ -14,6 +14,46 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewApplianceSecurityIntrusion(ctx, "example", &networks.ApplianceSecurityIntrusionArgs{
+//				IdsRulesets: pulumi.String("balanced"),
+//				Mode:        pulumi.String("prevention"),
+//				NetworkId:   pulumi.String("string"),
+//				ProtectedNetworks: &networks.ApplianceSecurityIntrusionProtectedNetworksArgs{
+//					Excluded_cidr: []string{
+//						"10.0.0.0/8",
+//						"127.0.0.0/8",
+//					},
+//					Included_cidr: []string{
+//						"10.0.0.0/8",
+//						"127.0.0.0/8",
+//						"169.254.0.0/16",
+//						"172.16.0.0/12",
+//					},
+//					Use_default: false,
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksApplianceSecurityIntrusionExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

@@ -9,6 +9,25 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.ApplianceVpnSiteToSiteVpn("example", {
+ *     hubs: [{
+ *         hub_id: "N_4901849",
+ *         use_default_route: true,
+ *     }],
+ *     mode: "spoke",
+ *     networkId: "string",
+ *     subnets: [{
+ *         local_subnet: "192.168.1.0/24",
+ *         use_vpn: true,
+ *     }],
+ * });
+ * export const merakiNetworksApplianceVpnSiteToSiteVpnExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

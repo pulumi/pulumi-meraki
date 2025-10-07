@@ -14,6 +14,52 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewApplianceSingleLan(ctx, "example", &networks.ApplianceSingleLanArgs{
+//				ApplianceIp: pulumi.String("string"),
+//				Ipv6: &networks.ApplianceSingleLanIpv6Args{
+//					Enabled: pulumi.Bool(false),
+//					Prefix_assignments: []map[string]interface{}{
+//						map[string]interface{}{
+//							"autonomous": false,
+//							"origin": map[string]interface{}{
+//								"interfaces": []string{
+//									"string",
+//								},
+//								"type": "string",
+//							},
+//							"staticApplianceIp6": "string",
+//							"staticPrefix":       "string",
+//						},
+//					},
+//				},
+//				MandatoryDhcp: &networks.ApplianceSingleLanMandatoryDhcpArgs{
+//					Enabled: pulumi.Bool(false),
+//				},
+//				NetworkId: pulumi.String("string"),
+//				Subnet:    pulumi.String("string"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksApplianceSingleLanExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

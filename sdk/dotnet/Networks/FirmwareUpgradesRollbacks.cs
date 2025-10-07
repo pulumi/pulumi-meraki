@@ -12,6 +12,45 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ~&gt;Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
     /// already existed previously.
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.FirmwareUpgradesRollbacks("example", new()
+    ///     {
+    ///         NetworkId = "string",
+    ///         Parameters = new Meraki.Networks.Inputs.FirmwareUpgradesRollbacksParametersArgs
+    ///         {
+    ///             Product = "switch",
+    ///             Reasons = new[]
+    ///             {
+    ///                 new Meraki.Networks.Inputs.FirmwareUpgradesRollbacksParametersReasonArgs
+    ///                 {
+    ///                     Category = "performance",
+    ///                     Comment = "Network was slower with the upgrade",
+    ///                 },
+    ///             },
+    ///             Time = "2020-10-21T02:00:00Z",
+    ///             To_version = 
+    ///             {
+    ///                 { "id", "7857" },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksFirmwareUpgradesRollbacksExample"] = example,
+    ///     };
+    /// });
+    /// ```
     /// </summary>
     [MerakiResourceType("meraki:networks/firmwareUpgradesRollbacks:FirmwareUpgradesRollbacks")]
     public partial class FirmwareUpgradesRollbacks : global::Pulumi.CustomResource

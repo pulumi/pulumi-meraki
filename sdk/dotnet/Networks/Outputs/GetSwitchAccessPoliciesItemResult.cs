@@ -74,7 +74,7 @@ namespace Pulumi.Meraki.Networks.Outputs
         /// </summary>
         public readonly bool RadiusTestingEnabled;
         /// <summary>
-        /// Enable to restrict access for clients to a response_objectific set of IP addresses or hostnames prior to authentication
+        /// Enable to restrict access for clients to a ResponseObjectific set of IP addresses or hostnames prior to authentication
         /// </summary>
         public readonly bool UrlRedirectWalledGardenEnabled;
         /// <summary>

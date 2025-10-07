@@ -9,6 +9,39 @@ import * as utilities from "../utilities";
 /**
  * ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
  * already existed previously.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.SmDevicesReboot("example", {
+ *     networkId: "string",
+ *     parameters: {
+ *         ids: [
+ *             "1284392014819",
+ *             "2983092129865",
+ *         ],
+ *         kext_paths: ["test"],
+ *         notify_user: true,
+ *         rebuild_kernel_cache: true,
+ *         request_requires_network_tether: true,
+ *         scope: [
+ *             "withAny",
+ *             "tag1",
+ *             "tag2",
+ *         ],
+ *         serials: [
+ *             "XY0XX0Y0X0",
+ *             "A01B01CD00E",
+ *             "X02YZ1ZYZX",
+ *         ],
+ *         wifi_macs: ["00:11:22:33:44:55"],
+ *     },
+ * });
+ * export const merakiNetworksSmDevicesRebootExample = example;
+ * ```
  */
 export class SmDevicesReboot extends pulumi.CustomResource {
     /**

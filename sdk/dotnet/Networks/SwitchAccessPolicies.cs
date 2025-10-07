@@ -12,6 +12,75 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.SwitchAccessPolicies("example", new()
+    ///     {
+    ///         AccessPolicyType = "Hybrid authentication",
+    ///         Dot1x = new Meraki.Networks.Inputs.SwitchAccessPoliciesDot1xArgs
+    ///         {
+    ///             Control_direction = "inbound",
+    ///         },
+    ///         GuestPortBouncing = false,
+    ///         GuestVlanId = 100,
+    ///         HostMode = "Single-Host",
+    ///         IncreaseAccessSpeed = false,
+    ///         Name = "Access policy #1",
+    ///         NetworkId = "string",
+    ///         Radius = new Meraki.Networks.Inputs.SwitchAccessPoliciesRadiusArgs
+    ///         {
+    ///             Critical_auth = 
+    ///             {
+    ///                 { "dataVlanId", 100 },
+    ///                 { "suspendPortBounce", true },
+    ///                 { "voiceVlanId", 100 },
+    ///             },
+    ///             Failed_auth_vlan_id = 100,
+    ///             Re_authentication_interval = 120,
+    ///         },
+    ///         RadiusAccountingEnabled = true,
+    ///         RadiusAccountingServers = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.SwitchAccessPoliciesRadiusAccountingServerArgs
+    ///             {
+    ///                 Host = "1.2.3.4",
+    ///                 Port = 22,
+    ///                 Secret = "secret",
+    ///             },
+    ///         },
+    ///         RadiusCoaSupportEnabled = false,
+    ///         RadiusGroupAttribute = "11",
+    ///         RadiusServers = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.SwitchAccessPoliciesRadiusServerArgs
+    ///             {
+    ///                 Host = "1.2.3.4",
+    ///                 Port = 22,
+    ///                 Secret = "secret",
+    ///             },
+    ///         },
+    ///         RadiusTestingEnabled = false,
+    ///         UrlRedirectWalledGardenEnabled = true,
+    ///         UrlRedirectWalledGardenRanges = new[]
+    ///         {
+    ///             "192.168.1.0/24",
+    ///         },
+    ///         VoiceVlanClients = true,
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksSwitchAccessPoliciesExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh
@@ -136,7 +205,7 @@ namespace Pulumi.Meraki.Networks
         public Output<bool> RadiusTestingEnabled { get; private set; } = null!;
 
         /// <summary>
-        /// Enable to restrict access for clients to a response_objectific set of IP addresses or hostnames prior to authentication
+        /// Enable to restrict access for clients to a ResponseObjectific set of IP addresses or hostnames prior to authentication
         /// </summary>
         [Output("urlRedirectWalledGardenEnabled")]
         public Output<bool> UrlRedirectWalledGardenEnabled { get; private set; } = null!;
@@ -309,7 +378,7 @@ namespace Pulumi.Meraki.Networks
         public Input<bool>? RadiusTestingEnabled { get; set; }
 
         /// <summary>
-        /// Enable to restrict access for clients to a response_objectific set of IP addresses or hostnames prior to authentication
+        /// Enable to restrict access for clients to a ResponseObjectific set of IP addresses or hostnames prior to authentication
         /// </summary>
         [Input("urlRedirectWalledGardenEnabled")]
         public Input<bool>? UrlRedirectWalledGardenEnabled { get; set; }
@@ -479,7 +548,7 @@ namespace Pulumi.Meraki.Networks
         public Input<bool>? RadiusTestingEnabled { get; set; }
 
         /// <summary>
-        /// Enable to restrict access for clients to a response_objectific set of IP addresses or hostnames prior to authentication
+        /// Enable to restrict access for clients to a ResponseObjectific set of IP addresses or hostnames prior to authentication
         /// </summary>
         [Input("urlRedirectWalledGardenEnabled")]
         public Input<bool>? UrlRedirectWalledGardenEnabled { get; set; }

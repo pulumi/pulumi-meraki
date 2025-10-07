@@ -12,6 +12,134 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.SensorAlertsProfiles("example", new()
+    ///     {
+    ///         Conditions = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.SensorAlertsProfilesConditionArgs
+    ///             {
+    ///                 Direction = "above",
+    ///                 Duration = 60,
+    ///                 Metric = "temperature",
+    ///                 Threshold = new Meraki.Networks.Inputs.SensorAlertsProfilesConditionThresholdArgs
+    ///                 {
+    ///                     ApparentPower = new Meraki.Networks.Inputs.SensorAlertsProfilesConditionThresholdApparentPowerArgs
+    ///                     {
+    ///                         Draw = 17.2,
+    ///                     },
+    ///                     Current = new Meraki.Networks.Inputs.SensorAlertsProfilesConditionThresholdCurrentArgs
+    ///                     {
+    ///                         Draw = 0.14,
+    ///                     },
+    ///                     Door = new Meraki.Networks.Inputs.SensorAlertsProfilesConditionThresholdDoorArgs
+    ///                     {
+    ///                         Open = true,
+    ///                     },
+    ///                     Frequency = new Meraki.Networks.Inputs.SensorAlertsProfilesConditionThresholdFrequencyArgs
+    ///                     {
+    ///                         Level = 58.8,
+    ///                     },
+    ///                     Humidity = new Meraki.Networks.Inputs.SensorAlertsProfilesConditionThresholdHumidityArgs
+    ///                     {
+    ///                         Quality = "inadequate",
+    ///                         RelativePercentage = 65,
+    ///                     },
+    ///                     IndoorAirQuality = new Meraki.Networks.Inputs.SensorAlertsProfilesConditionThresholdIndoorAirQualityArgs
+    ///                     {
+    ///                         Quality = "fair",
+    ///                         Score = 80,
+    ///                     },
+    ///                     Noise = new Meraki.Networks.Inputs.SensorAlertsProfilesConditionThresholdNoiseArgs
+    ///                     {
+    ///                         Ambient = new Meraki.Networks.Inputs.SensorAlertsProfilesConditionThresholdNoiseAmbientArgs
+    ///                         {
+    ///                             Level = 120,
+    ///                             Quality = "poor",
+    ///                         },
+    ///                     },
+    ///                     Pm25 = new Meraki.Networks.Inputs.SensorAlertsProfilesConditionThresholdPm25Args
+    ///                     {
+    ///                         Concentration = 90,
+    ///                         Quality = "fair",
+    ///                     },
+    ///                     PowerFactor = new Meraki.Networks.Inputs.SensorAlertsProfilesConditionThresholdPowerFactorArgs
+    ///                     {
+    ///                         Percentage = 81,
+    ///                     },
+    ///                     RealPower = new Meraki.Networks.Inputs.SensorAlertsProfilesConditionThresholdRealPowerArgs
+    ///                     {
+    ///                         Draw = 14.1,
+    ///                     },
+    ///                     Temperature = new Meraki.Networks.Inputs.SensorAlertsProfilesConditionThresholdTemperatureArgs
+    ///                     {
+    ///                         Celsius = 20.5,
+    ///                         Fahrenheit = 70,
+    ///                         Quality = "good",
+    ///                     },
+    ///                     Tvoc = new Meraki.Networks.Inputs.SensorAlertsProfilesConditionThresholdTvocArgs
+    ///                     {
+    ///                         Concentration = 400,
+    ///                         Quality = "poor",
+    ///                     },
+    ///                     UpstreamPower = new Meraki.Networks.Inputs.SensorAlertsProfilesConditionThresholdUpstreamPowerArgs
+    ///                     {
+    ///                         OutageDetected = true,
+    ///                     },
+    ///                     Voltage = new Meraki.Networks.Inputs.SensorAlertsProfilesConditionThresholdVoltageArgs
+    ///                     {
+    ///                         Level = 119.5,
+    ///                     },
+    ///                     Water = new Meraki.Networks.Inputs.SensorAlertsProfilesConditionThresholdWaterArgs
+    ///                     {
+    ///                         Present = true,
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         Name = "My Sensor Alert Profile",
+    ///         NetworkId = "string",
+    ///         Recipients = new Meraki.Networks.Inputs.SensorAlertsProfilesRecipientsArgs
+    ///         {
+    ///             Emails = new[]
+    ///             {
+    ///                 "miles@meraki.com",
+    ///             },
+    ///             Http_server_ids = new[]
+    ///             {
+    ///                 "aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M=",
+    ///             },
+    ///             Sms_numbers = new[]
+    ///             {
+    ///                 "+15555555555",
+    ///             },
+    ///         },
+    ///         Schedule = new Meraki.Networks.Inputs.SensorAlertsProfilesScheduleArgs
+    ///         {
+    ///             Id = "5",
+    ///         },
+    ///         Serials = new[]
+    ///         {
+    ///             "Q234-ABCD-0001",
+    ///             "Q234-ABCD-0002",
+    ///             "Q234-ABCD-0003",
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksSensorAlertsProfilesExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

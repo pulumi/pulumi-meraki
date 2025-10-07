@@ -241,6 +241,42 @@ class ApplianceRfProfiles(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.ApplianceRfProfiles("example",
+            five_ghz_settings={
+                "ax_enabled": True,
+                "min_bitrate": 48,
+            },
+            name="MX RF Profile",
+            network_id="string",
+            per_ssid_settings={
+                "status_1": {
+                    "bandOperationMode": "dual",
+                    "bandSteeringEnabled": True,
+                },
+                "status_2": {
+                    "bandOperationMode": "dual",
+                    "bandSteeringEnabled": True,
+                },
+                "status_3": {
+                    "bandOperationMode": "dual",
+                    "bandSteeringEnabled": True,
+                },
+                "status_4": {
+                    "bandOperationMode": "dual",
+                    "bandSteeringEnabled": True,
+                },
+            },
+            two_four_ghz_settings={
+                "ax_enabled": True,
+                "min_bitrate": 12,
+            })
+        pulumi.export("merakiNetworksApplianceRfProfilesExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -264,6 +300,42 @@ class ApplianceRfProfiles(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.ApplianceRfProfiles("example",
+            five_ghz_settings={
+                "ax_enabled": True,
+                "min_bitrate": 48,
+            },
+            name="MX RF Profile",
+            network_id="string",
+            per_ssid_settings={
+                "status_1": {
+                    "bandOperationMode": "dual",
+                    "bandSteeringEnabled": True,
+                },
+                "status_2": {
+                    "bandOperationMode": "dual",
+                    "bandSteeringEnabled": True,
+                },
+                "status_3": {
+                    "bandOperationMode": "dual",
+                    "bandSteeringEnabled": True,
+                },
+                "status_4": {
+                    "bandOperationMode": "dual",
+                    "bandSteeringEnabled": True,
+                },
+            },
+            two_four_ghz_settings={
+                "ax_enabled": True,
+                "min_bitrate": 12,
+            })
+        pulumi.export("merakiNetworksApplianceRfProfilesExample", example)
+        ```
 
         ## Import
 

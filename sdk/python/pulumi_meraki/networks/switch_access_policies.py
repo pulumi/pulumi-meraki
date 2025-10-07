@@ -718,6 +718,50 @@ class SwitchAccessPolicies(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.SwitchAccessPolicies("example",
+            access_policy_type="Hybrid authentication",
+            dot1x={
+                "control_direction": "inbound",
+            },
+            guest_port_bouncing=False,
+            guest_vlan_id=100,
+            host_mode="Single-Host",
+            increase_access_speed=False,
+            name="Access policy #1",
+            network_id="string",
+            radius={
+                "critical_auth": {
+                    "dataVlanId": 100,
+                    "suspendPortBounce": True,
+                    "voiceVlanId": 100,
+                },
+                "failed_auth_vlan_id": 100,
+                "re_authentication_interval": 120,
+            },
+            radius_accounting_enabled=True,
+            radius_accounting_servers=[{
+                "host": "1.2.3.4",
+                "port": 22,
+                "secret": "secret",
+            }],
+            radius_coa_support_enabled=False,
+            radius_group_attribute="11",
+            radius_servers=[{
+                "host": "1.2.3.4",
+                "port": 22,
+                "secret": "secret",
+            }],
+            radius_testing_enabled=False,
+            url_redirect_walled_garden_enabled=True,
+            url_redirect_walled_garden_ranges=["192.168.1.0/24"],
+            voice_vlan_clients=True)
+        pulumi.export("merakiNetworksSwitchAccessPoliciesExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -754,6 +798,50 @@ class SwitchAccessPolicies(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.SwitchAccessPolicies("example",
+            access_policy_type="Hybrid authentication",
+            dot1x={
+                "control_direction": "inbound",
+            },
+            guest_port_bouncing=False,
+            guest_vlan_id=100,
+            host_mode="Single-Host",
+            increase_access_speed=False,
+            name="Access policy #1",
+            network_id="string",
+            radius={
+                "critical_auth": {
+                    "dataVlanId": 100,
+                    "suspendPortBounce": True,
+                    "voiceVlanId": 100,
+                },
+                "failed_auth_vlan_id": 100,
+                "re_authentication_interval": 120,
+            },
+            radius_accounting_enabled=True,
+            radius_accounting_servers=[{
+                "host": "1.2.3.4",
+                "port": 22,
+                "secret": "secret",
+            }],
+            radius_coa_support_enabled=False,
+            radius_group_attribute="11",
+            radius_servers=[{
+                "host": "1.2.3.4",
+                "port": 22,
+                "secret": "secret",
+            }],
+            radius_testing_enabled=False,
+            url_redirect_walled_garden_enabled=True,
+            url_redirect_walled_garden_ranges=["192.168.1.0/24"],
+            voice_vlan_clients=True)
+        pulumi.export("merakiNetworksSwitchAccessPoliciesExample", example)
+        ```
 
         ## Import
 

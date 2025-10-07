@@ -14,6 +14,311 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewWirelessSsids(ctx, "example", &networks.WirelessSsidsArgs{
+//				ActiveDirectory: &networks.WirelessSsidsActiveDirectoryArgs{
+//					Credentials: &networks.WirelessSsidsActiveDirectoryCredentialsArgs{
+//						LogonName: pulumi.String("user"),
+//						Password:  pulumi.String("password"),
+//					},
+//					Servers: networks.WirelessSsidsActiveDirectoryServerArray{
+//						&networks.WirelessSsidsActiveDirectoryServerArgs{
+//							Host: pulumi.String("127.0.0.1"),
+//							Port: pulumi.Int(3268),
+//						},
+//					},
+//				},
+//				AdultContentFilteringEnabled: pulumi.Bool(false),
+//				ApTagsAndVlanIds: networks.WirelessSsidsApTagsAndVlanIdArray{
+//					&networks.WirelessSsidsApTagsAndVlanIdArgs{
+//						Tags: pulumi.StringArray{
+//							pulumi.String("tag1"),
+//							pulumi.String("tag2"),
+//						},
+//						Vlan_id: 100,
+//					},
+//				},
+//				AuthMode: pulumi.String("8021x-radius"),
+//				AvailabilityTags: pulumi.StringArray{
+//					pulumi.String("tag1"),
+//					pulumi.String("tag2"),
+//				},
+//				AvailableOnAllAps:                pulumi.Bool(false),
+//				BandSelection:                    pulumi.String("5 GHz band only"),
+//				ConcentratorNetworkId:            pulumi.String("N_24329156"),
+//				DefaultVlanId:                    pulumi.Int(1),
+//				DisassociateClientsOnVpnFailover: pulumi.Bool(false),
+//				DnsRewrite: &networks.WirelessSsidsDnsRewriteArgs{
+//					Dns_custom_nameservers: []string{
+//						"8.8.8.8",
+//						"8.8.4.4",
+//					},
+//					Enabled: pulumi.Bool(true),
+//				},
+//				Dot11r: &networks.WirelessSsidsDot11rArgs{
+//					Adaptive: pulumi.Bool(true),
+//					Enabled:  pulumi.Bool(true),
+//				},
+//				Dot11w: &networks.WirelessSsidsDot11wArgs{
+//					Enabled:  pulumi.Bool(true),
+//					Required: pulumi.Bool(false),
+//				},
+//				Enabled:               pulumi.Bool(true),
+//				EncryptionMode:        pulumi.String("wpa"),
+//				EnterpriseAdminAccess: pulumi.String("access enabled"),
+//				Gre: &networks.WirelessSsidsGreArgs{
+//					Concentrator: &networks.WirelessSsidsGreConcentratorArgs{
+//						Host: pulumi.String("192.168.1.1"),
+//					},
+//					Key: pulumi.Int(5),
+//				},
+//				IpAssignmentMode:    pulumi.String("NAT mode"),
+//				LanIsolationEnabled: pulumi.Bool(true),
+//				Ldap: &networks.WirelessSsidsLdapArgs{
+//					Base_distinguished_name: "dc=example,dc=com",
+//					Credentials: &networks.WirelessSsidsLdapCredentialsArgs{
+//						DistinguishedName: pulumi.String("cn=user,dc=example,dc=com"),
+//						Password:          pulumi.String("password"),
+//					},
+//					Server_ca_certificate: map[string]interface{}{
+//						"contents": `          "-----BEGIN CERTIFICATE-----
+//	        MIIDyTCCArGgAwIBAgIKBBNXOVCGU1YztjANBgkqhkiG9w0BAQsFADAnMQ4wDAYD
+//	        VQQKEwVDaXNjbzEVMBMGA1UEAxMMQUNUMiBTVURJIENBMB4XDTIxMDUzMTEzNTUx
+//	        NVoXDTI5MDUxNDIwMjU0MVowbTEpMCcGA1UEBRMgUElEOkM5MjAwTC0yNFAtNEcg
+//	        U046SkFFMjUyMjBSMksxDjAMBgNVBAoTBUNpc2NvMRgwFgYDVQQLEw9BQ1QtMiBM
+//	        aXRlIFNVREkxFjAUBgNVBAMTDUM5MjAwTC0yNFAtNEcwggEiMA0GCSqGSIb3DQEB
+//	        AQUAA4IBDwAwggEKAoIBAQDaUPxW76gT5MdoEAt+UrDFiYA9RYh2iHicDViBEyow
+//	        TR1TuP36bHh13X3vtGiDsCD88Ci2TZIqd/EDkkc7v9ipUUYVVH+YDrPt2Aukb1PH
+//	        D6K0R+KhgEzRo5x54TlU6oWvjUpwNZUwwdhMWIQaUVkMyZBYNy0jGPLO8jwZhyBg
+//	        1Fneybr9pwedGbLrAaz+gdEikB8B4a/fvPjVfL5Ngb4QRjFqWuE+X3nLc0kHedep
+//	        6nfgpUNXMlStVm5nIXKP6OjmzfCHPYh9L2Ehs1TrSk1ser9Ofx0ZMVL/jBZR2EIj
+//	        OZ8tH6KlX2/B2pbSPIO6kD5c4UA8Cf1SbDJCwJ/kI9ihAgMBAAGjgbAwga0wDgYD
+//	        VR0PAQH/BAQDAgXgMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUSNjx8cJw1Vu7
+//	        fHMJk6+4uDAD+H8wTQYDVR0RBEYwRKBCBgkrBgEEAQkVAgOgNRMzQ2hpcElEPVVV
+//	        VUNNaElGcUVFMklFUUVBQWNBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUE9MB0GA1Ud
+//	        DgQWBBRdhMkFD/z5hokaQeLbaRsp4hkvbzANBgkqhkiG9w0BAQsFAAOCAQEAMtuh
+//	        YpBz4xEZ7YdJsLpw67Q0TTJGnTBRpzAeY1urYDoDz8TSx556XG7z3IRzuED5KVSp
+//	        OwmH/iZ+tDfYQ3W3ElWTW93871DkuW4WQIfbnoHg/F7bF0DKYVkD3rpZjyz3NhzH
+//	        d7cjTdJXQ85bTAOXDuxKH3qewrXxxOGXgh3I6NUq0UwMTWh84lND7Jl+ZAQkYNS2
+//	        iHanTZFQBk3ML0NUb7fKDYGRTZRqwQ/upIO4S6LV1cxH/6V0qbMy3sCSHZoMLrW3
+//	        0m3M6yKpe5+VZzHZwmWdUf3Ot+zKjhveK5/YNsMIASdvtvymxUizq2Hr1hvR/kPc
+//	        p1vuyWxipU8JfzOh/A==
+//	        -----END CERTIFICATE-----
+//	        "
+//
+// `,
+//
+//					},
+//					Servers: networks.WirelessSsidsLdapServerArray{
+//						&networks.WirelessSsidsLdapServerArgs{
+//							Host: pulumi.String("127.0.0.1"),
+//							Port: pulumi.Int(389),
+//						},
+//					},
+//				},
+//				LocalRadius: &networks.WirelessSsidsLocalRadiusArgs{
+//					Cache_timeout: 60,
+//					Certificate_authentication: map[string]interface{}{
+//						"clientRootCaCertificate": map[string]interface{}{
+//							"contents": `          "-----BEGIN CERTIFICATE-----
+//	        MIIDyTCCArGgAwIBAgIKBBNXOVCGU1YztjANBgkqhkiG9w0BAQsFADAnMQ4wDAYD
+//	        VQQKEwVDaXNjbzEVMBMGA1UEAxMMQUNUMiBTVURJIENBMB4XDTIxMDUzMTEzNTUx
+//	        NVoXDTI5MDUxNDIwMjU0MVowbTEpMCcGA1UEBRMgUElEOkM5MjAwTC0yNFAtNEcg
+//	        U046SkFFMjUyMjBSMksxDjAMBgNVBAoTBUNpc2NvMRgwFgYDVQQLEw9BQ1QtMiBM
+//	        aXRlIFNVREkxFjAUBgNVBAMTDUM5MjAwTC0yNFAtNEcwggEiMA0GCSqGSIb3DQEB
+//	        AQUAA4IBDwAwggEKAoIBAQDaUPxW76gT5MdoEAt+UrDFiYA9RYh2iHicDViBEyow
+//	        TR1TuP36bHh13X3vtGiDsCD88Ci2TZIqd/EDkkc7v9ipUUYVVH+YDrPt2Aukb1PH
+//	        D6K0R+KhgEzRo5x54TlU6oWvjUpwNZUwwdhMWIQaUVkMyZBYNy0jGPLO8jwZhyBg
+//	        1Fneybr9pwedGbLrAaz+gdEikB8B4a/fvPjVfL5Ngb4QRjFqWuE+X3nLc0kHedep
+//	        6nfgpUNXMlStVm5nIXKP6OjmzfCHPYh9L2Ehs1TrSk1ser9Ofx0ZMVL/jBZR2EIj
+//	        OZ8tH6KlX2/B2pbSPIO6kD5c4UA8Cf1SbDJCwJ/kI9ihAgMBAAGjgbAwga0wDgYD
+//	        VR0PAQH/BAQDAgXgMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUSNjx8cJw1Vu7
+//	        fHMJk6+4uDAD+H8wTQYDVR0RBEYwRKBCBgkrBgEEAQkVAgOgNRMzQ2hpcElEPVVV
+//	        VUNNaElGcUVFMklFUUVBQWNBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUE9MB0GA1Ud
+//	        DgQWBBRdhMkFD/z5hokaQeLbaRsp4hkvbzANBgkqhkiG9w0BAQsFAAOCAQEAMtuh
+//	        YpBz4xEZ7YdJsLpw67Q0TTJGnTBRpzAeY1urYDoDz8TSx556XG7z3IRzuED5KVSp
+//	        OwmH/iZ+tDfYQ3W3ElWTW93871DkuW4WQIfbnoHg/F7bF0DKYVkD3rpZjyz3NhzH
+//	        d7cjTdJXQ85bTAOXDuxKH3qewrXxxOGXgh3I6NUq0UwMTWh84lND7Jl+ZAQkYNS2
+//	        iHanTZFQBk3ML0NUb7fKDYGRTZRqwQ/upIO4S6LV1cxH/6V0qbMy3sCSHZoMLrW3
+//	        0m3M6yKpe5+VZzHZwmWdUf3Ot+zKjhveK5/YNsMIASdvtvymxUizq2Hr1hvR/kPc
+//	        p1vuyWxipU8JfzOh/A==
+//	        -----END CERTIFICATE-----
+//	        "
+//
+// `,
+//
+//						},
+//						"enabled":          true,
+//						"ocspResponderUrl": "http://ocsp-server.example.com",
+//						"useLdap":          false,
+//						"useOcsp":          true,
+//					},
+//					Password_authentication: map[string]interface{}{
+//						"enabled": false,
+//					},
+//				},
+//				MandatoryDhcpEnabled: pulumi.Bool(false),
+//				MinBitrate:           pulumi.Int(5.5),
+//				Name:                 pulumi.String("My SSID"),
+//				NamedVlans: &networks.WirelessSsidsNamedVlansArgs{
+//					Radius: &networks.WirelessSsidsNamedVlansRadiusArgs{
+//						GuestVlan: &networks.WirelessSsidsNamedVlansRadiusGuestVlanArgs{
+//							Enabled: pulumi.Bool(true),
+//							Name:    pulumi.String("Guest VLAN"),
+//						},
+//					},
+//					Tagging: &networks.WirelessSsidsNamedVlansTaggingArgs{
+//						ByApTags: networks.WirelessSsidsNamedVlansTaggingByApTagArray{
+//							&networks.WirelessSsidsNamedVlansTaggingByApTagArgs{
+//								Tags: pulumi.StringArray{
+//									pulumi.String("tag1"),
+//									pulumi.String("tag2"),
+//								},
+//								VlanName: pulumi.String("My VLAN"),
+//							},
+//						},
+//						DefaultVlanName: pulumi.String("My VLAN"),
+//						Enabled:         pulumi.Bool(true),
+//					},
+//				},
+//				NetworkId: pulumi.String("string"),
+//				Number:    pulumi.Int("string"),
+//				Oauth: &networks.WirelessSsidsOauthArgs{
+//					Allowed_domains: []string{
+//						"example.com",
+//					},
+//				},
+//				PerClientBandwidthLimitDown:     pulumi.Int(1),
+//				PerClientBandwidthLimitUp:       pulumi.Int(1),
+//				PerSsidBandwidthLimitDown:       pulumi.Int(1),
+//				PerSsidBandwidthLimitUp:         pulumi.Int(1),
+//				Psk:                             pulumi.String("deadbeef"),
+//				RadiusAccountingEnabled:         pulumi.Bool(true),
+//				RadiusAccountingInterimInterval: pulumi.Int(5),
+//				RadiusAccountingServers: networks.WirelessSsidsRadiusAccountingServerArray{
+//					&networks.WirelessSsidsRadiusAccountingServerArgs{
+//						Ca_certificate: `          "-----BEGIN CERTIFICATE-----
+//	        MIIDyTCCArGgAwIBAgIKBBNXOVCGU1YztjANBgkqhkiG9w0BAQsFADAnMQ4wDAYD
+//	        VQQKEwVDaXNjbzEVMBMGA1UEAxMMQUNUMiBTVURJIENBMB4XDTIxMDUzMTEzNTUx
+//	        NVoXDTI5MDUxNDIwMjU0MVowbTEpMCcGA1UEBRMgUElEOkM5MjAwTC0yNFAtNEcg
+//	        U046SkFFMjUyMjBSMksxDjAMBgNVBAoTBUNpc2NvMRgwFgYDVQQLEw9BQ1QtMiBM
+//	        aXRlIFNVREkxFjAUBgNVBAMTDUM5MjAwTC0yNFAtNEcwggEiMA0GCSqGSIb3DQEB
+//	        AQUAA4IBDwAwggEKAoIBAQDaUPxW76gT5MdoEAt+UrDFiYA9RYh2iHicDViBEyow
+//	        TR1TuP36bHh13X3vtGiDsCD88Ci2TZIqd/EDkkc7v9ipUUYVVH+YDrPt2Aukb1PH
+//	        D6K0R+KhgEzRo5x54TlU6oWvjUpwNZUwwdhMWIQaUVkMyZBYNy0jGPLO8jwZhyBg
+//	        1Fneybr9pwedGbLrAaz+gdEikB8B4a/fvPjVfL5Ngb4QRjFqWuE+X3nLc0kHedep
+//	        6nfgpUNXMlStVm5nIXKP6OjmzfCHPYh9L2Ehs1TrSk1ser9Ofx0ZMVL/jBZR2EIj
+//	        OZ8tH6KlX2/B2pbSPIO6kD5c4UA8Cf1SbDJCwJ/kI9ihAgMBAAGjgbAwga0wDgYD
+//	        VR0PAQH/BAQDAgXgMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUSNjx8cJw1Vu7
+//	        fHMJk6+4uDAD+H8wTQYDVR0RBEYwRKBCBgkrBgEEAQkVAgOgNRMzQ2hpcElEPVVV
+//	        VUNNaElGcUVFMklFUUVBQWNBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUE9MB0GA1Ud
+//	        DgQWBBRdhMkFD/z5hokaQeLbaRsp4hkvbzANBgkqhkiG9w0BAQsFAAOCAQEAMtuh
+//	        YpBz4xEZ7YdJsLpw67Q0TTJGnTBRpzAeY1urYDoDz8TSx556XG7z3IRzuED5KVSp
+//	        OwmH/iZ+tDfYQ3W3ElWTW93871DkuW4WQIfbnoHg/F7bF0DKYVkD3rpZjyz3NhzH
+//	        d7cjTdJXQ85bTAOXDuxKH3qewrXxxOGXgh3I6NUq0UwMTWh84lND7Jl+ZAQkYNS2
+//	        iHanTZFQBk3ML0NUb7fKDYGRTZRqwQ/upIO4S6LV1cxH/6V0qbMy3sCSHZoMLrW3
+//	        0m3M6yKpe5+VZzHZwmWdUf3Ot+zKjhveK5/YNsMIASdvtvymxUizq2Hr1hvR/kPc
+//	        p1vuyWxipU8JfzOh/A==
+//	        -----END CERTIFICATE-----
+//	        "
+//
+// `,
+//
+//						Host:           pulumi.String("0.0.0.0"),
+//						Port:           pulumi.Int(3000),
+//						Radsec_enabled: true,
+//						Secret:         pulumi.String("secret-string"),
+//					},
+//				},
+//				RadiusAttributeForGroupPolicies: pulumi.String("Filter-Id"),
+//				RadiusAuthenticationNasId:       pulumi.String("00-11-22-33-44-55:AP1"),
+//				RadiusCalledStationId:           pulumi.String("00-11-22-33-44-55:AP1"),
+//				RadiusCoaEnabled:                pulumi.Bool(true),
+//				RadiusFailoverPolicy:            pulumi.String("Deny access"),
+//				RadiusFallbackEnabled:           pulumi.Bool(true),
+//				RadiusGuestVlanEnabled:          pulumi.Bool(true),
+//				RadiusGuestVlanId:               pulumi.Int(1),
+//				RadiusLoadBalancingPolicy:       pulumi.String("Round robin"),
+//				RadiusOverride:                  pulumi.Bool(false),
+//				RadiusProxyEnabled:              pulumi.Bool(false),
+//				RadiusServerAttemptsLimit:       pulumi.Int(5),
+//				RadiusServerTimeout:             pulumi.Int(5),
+//				RadiusServers: networks.WirelessSsidsRadiusServerArray{
+//					&networks.WirelessSsidsRadiusServerArgs{
+//						Ca_certificate: `          "-----BEGIN CERTIFICATE-----
+//	        MIIDyTCCArGgAwIBAgIKBBNXOVCGU1YztjANBgkqhkiG9w0BAQsFADAnMQ4wDAYD
+//	        VQQKEwVDaXNjbzEVMBMGA1UEAxMMQUNUMiBTVURJIENBMB4XDTIxMDUzMTEzNTUx
+//	        NVoXDTI5MDUxNDIwMjU0MVowbTEpMCcGA1UEBRMgUElEOkM5MjAwTC0yNFAtNEcg
+//	        U046SkFFMjUyMjBSMksxDjAMBgNVBAoTBUNpc2NvMRgwFgYDVQQLEw9BQ1QtMiBM
+//	        aXRlIFNVREkxFjAUBgNVBAMTDUM5MjAwTC0yNFAtNEcwggEiMA0GCSqGSIb3DQEB
+//	        AQUAA4IBDwAwggEKAoIBAQDaUPxW76gT5MdoEAt+UrDFiYA9RYh2iHicDViBEyow
+//	        TR1TuP36bHh13X3vtGiDsCD88Ci2TZIqd/EDkkc7v9ipUUYVVH+YDrPt2Aukb1PH
+//	        D6K0R+KhgEzRo5x54TlU6oWvjUpwNZUwwdhMWIQaUVkMyZBYNy0jGPLO8jwZhyBg
+//	        1Fneybr9pwedGbLrAaz+gdEikB8B4a/fvPjVfL5Ngb4QRjFqWuE+X3nLc0kHedep
+//	        6nfgpUNXMlStVm5nIXKP6OjmzfCHPYh9L2Ehs1TrSk1ser9Ofx0ZMVL/jBZR2EIj
+//	        OZ8tH6KlX2/B2pbSPIO6kD5c4UA8Cf1SbDJCwJ/kI9ihAgMBAAGjgbAwga0wDgYD
+//	        VR0PAQH/BAQDAgXgMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUSNjx8cJw1Vu7
+//	        fHMJk6+4uDAD+H8wTQYDVR0RBEYwRKBCBgkrBgEEAQkVAgOgNRMzQ2hpcElEPVVV
+//	        VUNNaElGcUVFMklFUUVBQWNBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUE9MB0GA1Ud
+//	        DgQWBBRdhMkFD/z5hokaQeLbaRsp4hkvbzANBgkqhkiG9w0BAQsFAAOCAQEAMtuh
+//	        YpBz4xEZ7YdJsLpw67Q0TTJGnTBRpzAeY1urYDoDz8TSx556XG7z3IRzuED5KVSp
+//	        OwmH/iZ+tDfYQ3W3ElWTW93871DkuW4WQIfbnoHg/F7bF0DKYVkD3rpZjyz3NhzH
+//	        d7cjTdJXQ85bTAOXDuxKH3qewrXxxOGXgh3I6NUq0UwMTWh84lND7Jl+ZAQkYNS2
+//	        iHanTZFQBk3ML0NUb7fKDYGRTZRqwQ/upIO4S6LV1cxH/6V0qbMy3sCSHZoMLrW3
+//	        0m3M6yKpe5+VZzHZwmWdUf3Ot+zKjhveK5/YNsMIASdvtvymxUizq2Hr1hvR/kPc
+//	        p1vuyWxipU8JfzOh/A==
+//	        -----END CERTIFICATE-----
+//	        "
+//
+// `,
+//
+//						Host:                        pulumi.String("0.0.0.0"),
+//						Open_roaming_certificate_id: 2,
+//						Port:                        pulumi.Int(3000),
+//						Radsec_enabled:              true,
+//						Secret:                      pulumi.String("secret-string"),
+//					},
+//				},
+//				RadiusTestingEnabled:           pulumi.Bool(true),
+//				SecondaryConcentratorNetworkId: pulumi.String("disabled"),
+//				SpeedBurst: &networks.WirelessSsidsSpeedBurstArgs{
+//					Enabled: pulumi.Bool(true),
+//				},
+//				SplashGuestSponsorDomains: pulumi.StringArray{
+//					pulumi.String("example.com"),
+//				},
+//				SplashPage:          pulumi.String("Click-through splash page"),
+//				UseVlanTagging:      pulumi.Bool(false),
+//				Visible:             pulumi.Bool(true),
+//				VlanId:              pulumi.Int(10),
+//				WalledGardenEnabled: pulumi.Bool(true),
+//				WalledGardenRanges: pulumi.StringArray{
+//					pulumi.String("example.com"),
+//					pulumi.String("1.1.1.1/32"),
+//				},
+//				WpaEncryptionMode: pulumi.String("WPA2 only"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksWirelessSsidsExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

@@ -18,6 +18,52 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.ApplianceFirewallOneToOneNatRules;
+ * import com.pulumi.meraki.networks.ApplianceFirewallOneToOneNatRulesArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceFirewallOneToOneNatRulesRuleArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ApplianceFirewallOneToOneNatRules("example", ApplianceFirewallOneToOneNatRulesArgs.builder()
+ *             .networkId("string")
+ *             .rules(ApplianceFirewallOneToOneNatRulesRuleArgs.builder()
+ *                 .allowed_inbound(List.of(Map.ofEntries(
+ *                     Map.entry("allowedIps", List.of(                    
+ *                         "10.82.112.0/24",
+ *                         "10.82.0.0/16")),
+ *                     Map.entry("destinationPorts", List.of("80")),
+ *                     Map.entry("protocol", "tcp")
+ *                 )))
+ *                 .lan_ip("192.168.128.22")
+ *                 .name("Service behind NAT")
+ *                 .public_ip("146.12.3.33")
+ *                 .uplink("internet1")
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksApplianceFirewallOneToOneNatRulesExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

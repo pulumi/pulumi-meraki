@@ -9,6 +9,38 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.devices.SwitchRoutingInterfaces("example", {
+ *     defaultGateway: "192.168.1.1",
+ *     interfaceIp: "192.168.1.2",
+ *     ipv6: {
+ *         address: "1:2:3:4::1",
+ *         assignment_mode: "static",
+ *         gateway: "1:2:3:4::2",
+ *         prefix: "1:2:3:4::/48",
+ *     },
+ *     multicastRouting: "disabled",
+ *     name: "L3 interface",
+ *     ospfSettings: {
+ *         area: "0",
+ *         cost: 1,
+ *         is_passive_enabled: true,
+ *     },
+ *     ospfV3: {
+ *         area: "1",
+ *         cost: 2,
+ *         is_passive_enabled: true,
+ *     },
+ *     serial: "string",
+ *     subnet: "192.168.1.0/24",
+ *     vlanId: 100,
+ * });
+ * export const merakiDevicesSwitchRoutingInterfacesExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

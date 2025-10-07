@@ -113,6 +113,28 @@ class FirmwareUpgradesRollbacks(pulumi.CustomResource):
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
         already existed previously.
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.FirmwareUpgradesRollbacks("example",
+            network_id="string",
+            parameters={
+                "product": "switch",
+                "reasons": [{
+                    "category": "performance",
+                    "comment": "Network was slower with the upgrade",
+                }],
+                "time": "2020-10-21T02:00:00Z",
+                "to_version": {
+                    "id": "7857",
+                },
+            })
+        pulumi.export("merakiNetworksFirmwareUpgradesRollbacksExample", example)
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -126,6 +148,28 @@ class FirmwareUpgradesRollbacks(pulumi.CustomResource):
         """
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
         already existed previously.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.FirmwareUpgradesRollbacks("example",
+            network_id="string",
+            parameters={
+                "product": "switch",
+                "reasons": [{
+                    "category": "performance",
+                    "comment": "Network was slower with the upgrade",
+                }],
+                "time": "2020-10-21T02:00:00Z",
+                "to_version": {
+                    "id": "7857",
+                },
+            })
+        pulumi.export("merakiNetworksFirmwareUpgradesRollbacksExample", example)
+        ```
 
         :param str resource_name: The name of the resource.
         :param FirmwareUpgradesRollbacksArgs args: The arguments to use to populate this resource's properties.

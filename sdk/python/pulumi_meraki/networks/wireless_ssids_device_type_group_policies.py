@@ -174,6 +174,21 @@ class WirelessSsidsDeviceTypeGroupPolicies(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.WirelessSsidsDeviceTypeGroupPolicies("example",
+            device_type_policies=[{
+                "device_policy": "Allowed",
+                "device_type": "Android",
+            }],
+            enabled=True,
+            network_id="string",
+            number="string")
+        pulumi.export("merakiNetworksWirelessSsidsDeviceTypeGroupPoliciesExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -195,6 +210,21 @@ class WirelessSsidsDeviceTypeGroupPolicies(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.WirelessSsidsDeviceTypeGroupPolicies("example",
+            device_type_policies=[{
+                "device_policy": "Allowed",
+                "device_type": "Android",
+            }],
+            enabled=True,
+            network_id="string",
+            number="string")
+        pulumi.export("merakiNetworksWirelessSsidsDeviceTypeGroupPoliciesExample", example)
+        ```
 
         ## Import
 

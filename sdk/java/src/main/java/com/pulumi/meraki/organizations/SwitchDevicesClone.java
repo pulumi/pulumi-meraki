@@ -18,6 +18,48 @@ import javax.annotation.Nullable;
  * ~&gt;Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
  * already existed previously.
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.organizations.SwitchDevicesClone;
+ * import com.pulumi.meraki.organizations.SwitchDevicesCloneArgs;
+ * import com.pulumi.meraki.organizations.inputs.SwitchDevicesCloneParametersArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SwitchDevicesClone("example", SwitchDevicesCloneArgs.builder()
+ *             .organizationId("string")
+ *             .parameters(SwitchDevicesCloneParametersArgs.builder()
+ *                 .source_serial("Q234-ABCD-5678")
+ *                 .target_serials(List.of(                
+ *                     "Q234-ABCD-0001",
+ *                     "Q234-ABCD-0002",
+ *                     "Q234-ABCD-0003"))
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiOrganizationsSwitchDevicesCloneExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="meraki:organizations/switchDevicesClone:SwitchDevicesClone")
 public class SwitchDevicesClone extends com.pulumi.resources.CustomResource {

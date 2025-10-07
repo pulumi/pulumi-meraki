@@ -140,6 +140,43 @@ class ApplianceFirewallL7FirewallRules(pulumi.CustomResource):
         pulumi.export("merakiNetworksApplianceFirewallL7FirewallRulesExample", example)
         ```
 
+        ### 2
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.ApplianceFirewallL7FirewallRules("example",
+            network_id="string",
+            rules=[{
+                "policy": "deny",
+                "type": "applicationCategory",
+                "value_obj": {
+                    "name": "Sports",
+                    "id": "meraki:layer7/category/5",
+                },
+            }])
+        pulumi.export("merakiNetworksApplianceFirewallL7FirewallRulesExample", example)
+        ```
+
+        ### 3
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.ApplianceFirewallL7FirewallRules("example",
+            network_id="string",
+            rules=[{
+                "policy": "deny",
+                "type": "blockedCountries",
+                "value_list": [
+                    "IT",
+                    "IL",
+                    "US",
+                ],
+            }])
+        pulumi.export("merakiNetworksApplianceFirewallL7FirewallRulesExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -171,6 +208,43 @@ class ApplianceFirewallL7FirewallRules(pulumi.CustomResource):
                 "policy": "deny",
                 "type": "host",
                 "value": "google.com",
+            }])
+        pulumi.export("merakiNetworksApplianceFirewallL7FirewallRulesExample", example)
+        ```
+
+        ### 2
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.ApplianceFirewallL7FirewallRules("example",
+            network_id="string",
+            rules=[{
+                "policy": "deny",
+                "type": "applicationCategory",
+                "value_obj": {
+                    "name": "Sports",
+                    "id": "meraki:layer7/category/5",
+                },
+            }])
+        pulumi.export("merakiNetworksApplianceFirewallL7FirewallRulesExample", example)
+        ```
+
+        ### 3
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.ApplianceFirewallL7FirewallRules("example",
+            network_id="string",
+            rules=[{
+                "policy": "deny",
+                "type": "blockedCountries",
+                "value_list": [
+                    "IT",
+                    "IL",
+                    "US",
+                ],
             }])
         pulumi.export("merakiNetworksApplianceFirewallL7FirewallRulesExample", example)
         ```

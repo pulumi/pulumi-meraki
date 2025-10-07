@@ -14,6 +14,41 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/devices"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := devices.NewWirelessRadioSettings(ctx, "example", &devices.WirelessRadioSettingsArgs{
+//				FiveGhzSettings: &devices.WirelessRadioSettingsFiveGhzSettingsArgs{
+//					Channel:       pulumi.Int(149),
+//					Channel_width: 20,
+//					Target_power:  15,
+//				},
+//				RfProfileId: pulumi.String("1234"),
+//				Serial:      pulumi.String("string"),
+//				TwoFourGhzSettings: &devices.WirelessRadioSettingsTwoFourGhzSettingsArgs{
+//					Channel:      pulumi.Int(11),
+//					Target_power: 21,
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiDevicesWirelessRadioSettingsExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

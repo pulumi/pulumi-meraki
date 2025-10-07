@@ -14,6 +14,58 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewApplianceVlans(ctx, "example", &networks.ApplianceVlansArgs{
+//				ApplianceIp:   pulumi.String("192.168.1.2"),
+//				Cidr:          pulumi.String("192.168.1.0/24"),
+//				GroupPolicyId: pulumi.String("101"),
+//				VlanId:        pulumi.String("1234"),
+//				Ipv6: &networks.ApplianceVlansIpv6Args{
+//					Enabled: pulumi.Bool(true),
+//					Prefix_assignments: []map[string]interface{}{
+//						map[string]interface{}{
+//							"autonomous": false,
+//							"origin": map[string]interface{}{
+//								"interfaces": []string{
+//									"wan0",
+//								},
+//								"type": "internet",
+//							},
+//							"staticApplianceIp6": "2001:db8:3c4d:15::1",
+//							"staticPrefix":       "2001:db8:3c4d:15::/64",
+//						},
+//					},
+//				},
+//				MandatoryDhcp: &networks.ApplianceVlansMandatoryDhcpArgs{
+//					Enabled: pulumi.Bool(true),
+//				},
+//				Mask:             pulumi.Int(28),
+//				Name:             pulumi.String("My VLAN"),
+//				NetworkId:        pulumi.String("string"),
+//				Subnet:           pulumi.String("192.168.1.0/24"),
+//				TemplateVlanType: pulumi.String("same"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksApplianceVlansExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

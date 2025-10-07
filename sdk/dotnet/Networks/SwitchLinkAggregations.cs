@@ -12,6 +12,34 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.SwitchLinkAggregations("example", new()
+    ///     {
+    ///         NetworkId = "string",
+    ///         SwitchPorts = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.SwitchLinkAggregationsSwitchPortArgs
+    ///             {
+    ///                 Port_id = "1",
+    ///                 Serial = "Q234-ABCD-0001",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksSwitchLinkAggregationsExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

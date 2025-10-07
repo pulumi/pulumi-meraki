@@ -14,6 +14,37 @@ import (
 
 // ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
 // already existed previously.
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewBind(ctx, "example", &networks.BindArgs{
+//				NetworkId: pulumi.String("string"),
+//				Parameters: &networks.BindParametersArgs{
+//					Auto_bind:          false,
+//					Config_template_id: "N_23952905",
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksBindExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
 type Bind struct {
 	pulumi.CustomResourceState
 

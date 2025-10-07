@@ -9,6 +9,29 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.FirmwareUpgradesStagedGroups("example", {
+ *     assignedDevices: {
+ *         devices: [{
+ *             name: "Device Name",
+ *             serial: "Q234-ABCD-5678",
+ *         }],
+ *         switch_stacks: [{
+ *             id: "1234",
+ *             name: "Stack Name",
+ *         }],
+ *     },
+ *     description: "The description of the group",
+ *     isDefault: false,
+ *     name: "My Staged Upgrade Group",
+ *     networkId: "string",
+ * });
+ * export const merakiNetworksFirmwareUpgradesStagedGroupsExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

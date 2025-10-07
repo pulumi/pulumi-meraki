@@ -223,6 +223,28 @@ class VlanProfiles(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.VlanProfiles("example",
+            iname="string",
+            name="My VLAN profile name",
+            network_id="string",
+            vlan_groups=[{
+                "name": "named-group-1",
+                "vlan_ids": "2,5-7",
+            }],
+            vlan_names=[{
+                "adaptive_policy_group": {
+                    "id": "791",
+                },
+                "name": "named-1",
+                "vlan_id": "1",
+            }])
+        pulumi.export("merakiNetworksVlanProfilesExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -245,6 +267,28 @@ class VlanProfiles(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.VlanProfiles("example",
+            iname="string",
+            name="My VLAN profile name",
+            network_id="string",
+            vlan_groups=[{
+                "name": "named-group-1",
+                "vlan_ids": "2,5-7",
+            }],
+            vlan_names=[{
+                "adaptive_policy_group": {
+                    "id": "791",
+                },
+                "name": "named-1",
+                "vlan_id": "1",
+            }])
+        pulumi.export("merakiNetworksVlanProfilesExample", example)
+        ```
 
         ## Import
 

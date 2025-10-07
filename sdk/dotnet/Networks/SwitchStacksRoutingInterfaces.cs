@@ -12,6 +12,46 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.SwitchStacksRoutingInterfaces("example", new()
+    ///     {
+    ///         DefaultGateway = "192.168.1.1",
+    ///         InterfaceIp = "192.168.1.2",
+    ///         Ipv6 = new Meraki.Networks.Inputs.SwitchStacksRoutingInterfacesIpv6Args
+    ///         {
+    ///             Address = "1:2:3:4::1",
+    ///             Assignment_mode = "static",
+    ///             Gateway = "1:2:3:4::2",
+    ///             Prefix = "1:2:3:4::/48",
+    ///         },
+    ///         MulticastRouting = "disabled",
+    ///         Name = "L3 interface",
+    ///         NetworkId = "string",
+    ///         OspfSettings = new Meraki.Networks.Inputs.SwitchStacksRoutingInterfacesOspfSettingsArgs
+    ///         {
+    ///             Area = "0",
+    ///             Cost = 1,
+    ///             Is_passive_enabled = true,
+    ///         },
+    ///         Subnet = "192.168.1.0/24",
+    ///         SwitchStackId = "string",
+    ///         VlanId = 100,
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksSwitchStacksRoutingInterfacesExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

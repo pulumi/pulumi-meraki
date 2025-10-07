@@ -14,6 +14,41 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/devices"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := devices.NewCellularGatewayPortForwardingRules(ctx, "example", &devices.CellularGatewayPortForwardingRulesArgs{
+//				Rules: devices.CellularGatewayPortForwardingRulesRuleArray{
+//					&devices.CellularGatewayPortForwardingRulesRuleArgs{
+//						Access:      pulumi.String("any"),
+//						Lan_ip:      "172.31.128.5",
+//						Local_port:  "4",
+//						Name:        pulumi.String("test"),
+//						Protocol:    pulumi.String("tcp"),
+//						Public_port: "11-12",
+//					},
+//				},
+//				Serial: pulumi.String("string"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiDevicesCellularGatewayPortForwardingRulesExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

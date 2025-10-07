@@ -158,6 +158,39 @@ class FirmwareUpgradesStagedEvents(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.FirmwareUpgradesStagedEvents("example",
+            network_id="string",
+            products={
+                "switch": {
+                    "next_upgrade": {
+                        "to_version": {
+                            "id": "1234",
+                        },
+                    },
+                },
+                "switch_catalyst": {
+                    "nextUpgrade": {
+                        "toVersion": {
+                            "id": "4321",
+                        },
+                    },
+                },
+            },
+            stages=[{
+                "group": {
+                    "id": "1234",
+                },
+                "milestones": {
+                    "scheduled_for": "2018-02-11T00:00:00Z",
+                },
+            }])
+        pulumi.export("merakiNetworksFirmwareUpgradesStagedEventsExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -178,6 +211,39 @@ class FirmwareUpgradesStagedEvents(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.FirmwareUpgradesStagedEvents("example",
+            network_id="string",
+            products={
+                "switch": {
+                    "next_upgrade": {
+                        "to_version": {
+                            "id": "1234",
+                        },
+                    },
+                },
+                "switch_catalyst": {
+                    "nextUpgrade": {
+                        "toVersion": {
+                            "id": "4321",
+                        },
+                    },
+                },
+            },
+            stages=[{
+                "group": {
+                    "id": "1234",
+                },
+                "milestones": {
+                    "scheduled_for": "2018-02-11T00:00:00Z",
+                },
+            }])
+        pulumi.export("merakiNetworksFirmwareUpgradesStagedEventsExample", example)
+        ```
 
         ## Import
 

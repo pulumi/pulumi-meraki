@@ -12,6 +12,337 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.WirelessSsids("example", new()
+    ///     {
+    ///         ActiveDirectory = new Meraki.Networks.Inputs.WirelessSsidsActiveDirectoryArgs
+    ///         {
+    ///             Credentials = new Meraki.Networks.Inputs.WirelessSsidsActiveDirectoryCredentialsArgs
+    ///             {
+    ///                 LogonName = "user",
+    ///                 Password = "password",
+    ///             },
+    ///             Servers = new[]
+    ///             {
+    ///                 new Meraki.Networks.Inputs.WirelessSsidsActiveDirectoryServerArgs
+    ///                 {
+    ///                     Host = "127.0.0.1",
+    ///                     Port = 3268,
+    ///                 },
+    ///             },
+    ///         },
+    ///         AdultContentFilteringEnabled = false,
+    ///         ApTagsAndVlanIds = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.WirelessSsidsApTagsAndVlanIdArgs
+    ///             {
+    ///                 Tags = new[]
+    ///                 {
+    ///                     "tag1",
+    ///                     "tag2",
+    ///                 },
+    ///                 Vlan_id = 100,
+    ///             },
+    ///         },
+    ///         AuthMode = "8021x-radius",
+    ///         AvailabilityTags = new[]
+    ///         {
+    ///             "tag1",
+    ///             "tag2",
+    ///         },
+    ///         AvailableOnAllAps = false,
+    ///         BandSelection = "5 GHz band only",
+    ///         ConcentratorNetworkId = "N_24329156",
+    ///         DefaultVlanId = 1,
+    ///         DisassociateClientsOnVpnFailover = false,
+    ///         DnsRewrite = new Meraki.Networks.Inputs.WirelessSsidsDnsRewriteArgs
+    ///         {
+    ///             Dns_custom_nameservers = new[]
+    ///             {
+    ///                 "8.8.8.8",
+    ///                 "8.8.4.4",
+    ///             },
+    ///             Enabled = true,
+    ///         },
+    ///         Dot11r = new Meraki.Networks.Inputs.WirelessSsidsDot11rArgs
+    ///         {
+    ///             Adaptive = true,
+    ///             Enabled = true,
+    ///         },
+    ///         Dot11w = new Meraki.Networks.Inputs.WirelessSsidsDot11wArgs
+    ///         {
+    ///             Enabled = true,
+    ///             Required = false,
+    ///         },
+    ///         Enabled = true,
+    ///         EncryptionMode = "wpa",
+    ///         EnterpriseAdminAccess = "access enabled",
+    ///         Gre = new Meraki.Networks.Inputs.WirelessSsidsGreArgs
+    ///         {
+    ///             Concentrator = new Meraki.Networks.Inputs.WirelessSsidsGreConcentratorArgs
+    ///             {
+    ///                 Host = "192.168.1.1",
+    ///             },
+    ///             Key = 5,
+    ///         },
+    ///         IpAssignmentMode = "NAT mode",
+    ///         LanIsolationEnabled = true,
+    ///         Ldap = new Meraki.Networks.Inputs.WirelessSsidsLdapArgs
+    ///         {
+    ///             Base_distinguished_name = "dc=example,dc=com",
+    ///             Credentials = new Meraki.Networks.Inputs.WirelessSsidsLdapCredentialsArgs
+    ///             {
+    ///                 DistinguishedName = "cn=user,dc=example,dc=com",
+    ///                 Password = "password",
+    ///             },
+    ///             Server_ca_certificate = 
+    ///             {
+    ///                 { "contents", @"          ""-----BEGIN CERTIFICATE-----
+    ///         MIIDyTCCArGgAwIBAgIKBBNXOVCGU1YztjANBgkqhkiG9w0BAQsFADAnMQ4wDAYD
+    ///         VQQKEwVDaXNjbzEVMBMGA1UEAxMMQUNUMiBTVURJIENBMB4XDTIxMDUzMTEzNTUx
+    ///         NVoXDTI5MDUxNDIwMjU0MVowbTEpMCcGA1UEBRMgUElEOkM5MjAwTC0yNFAtNEcg
+    ///         U046SkFFMjUyMjBSMksxDjAMBgNVBAoTBUNpc2NvMRgwFgYDVQQLEw9BQ1QtMiBM
+    ///         aXRlIFNVREkxFjAUBgNVBAMTDUM5MjAwTC0yNFAtNEcwggEiMA0GCSqGSIb3DQEB
+    ///         AQUAA4IBDwAwggEKAoIBAQDaUPxW76gT5MdoEAt+UrDFiYA9RYh2iHicDViBEyow
+    ///         TR1TuP36bHh13X3vtGiDsCD88Ci2TZIqd/EDkkc7v9ipUUYVVH+YDrPt2Aukb1PH
+    ///         D6K0R+KhgEzRo5x54TlU6oWvjUpwNZUwwdhMWIQaUVkMyZBYNy0jGPLO8jwZhyBg
+    ///         1Fneybr9pwedGbLrAaz+gdEikB8B4a/fvPjVfL5Ngb4QRjFqWuE+X3nLc0kHedep
+    ///         6nfgpUNXMlStVm5nIXKP6OjmzfCHPYh9L2Ehs1TrSk1ser9Ofx0ZMVL/jBZR2EIj
+    ///         OZ8tH6KlX2/B2pbSPIO6kD5c4UA8Cf1SbDJCwJ/kI9ihAgMBAAGjgbAwga0wDgYD
+    ///         VR0PAQH/BAQDAgXgMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUSNjx8cJw1Vu7
+    ///         fHMJk6+4uDAD+H8wTQYDVR0RBEYwRKBCBgkrBgEEAQkVAgOgNRMzQ2hpcElEPVVV
+    ///         VUNNaElGcUVFMklFUUVBQWNBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUE9MB0GA1Ud
+    ///         DgQWBBRdhMkFD/z5hokaQeLbaRsp4hkvbzANBgkqhkiG9w0BAQsFAAOCAQEAMtuh
+    ///         YpBz4xEZ7YdJsLpw67Q0TTJGnTBRpzAeY1urYDoDz8TSx556XG7z3IRzuED5KVSp
+    ///         OwmH/iZ+tDfYQ3W3ElWTW93871DkuW4WQIfbnoHg/F7bF0DKYVkD3rpZjyz3NhzH
+    ///         d7cjTdJXQ85bTAOXDuxKH3qewrXxxOGXgh3I6NUq0UwMTWh84lND7Jl+ZAQkYNS2
+    ///         iHanTZFQBk3ML0NUb7fKDYGRTZRqwQ/upIO4S6LV1cxH/6V0qbMy3sCSHZoMLrW3
+    ///         0m3M6yKpe5+VZzHZwmWdUf3Ot+zKjhveK5/YNsMIASdvtvymxUizq2Hr1hvR/kPc
+    ///         p1vuyWxipU8JfzOh/A==
+    ///         -----END CERTIFICATE-----
+    ///         ""
+    /// " },
+    ///             },
+    ///             Servers = new[]
+    ///             {
+    ///                 new Meraki.Networks.Inputs.WirelessSsidsLdapServerArgs
+    ///                 {
+    ///                     Host = "127.0.0.1",
+    ///                     Port = 389,
+    ///                 },
+    ///             },
+    ///         },
+    ///         LocalRadius = new Meraki.Networks.Inputs.WirelessSsidsLocalRadiusArgs
+    ///         {
+    ///             Cache_timeout = 60,
+    ///             Certificate_authentication = 
+    ///             {
+    ///                 { "clientRootCaCertificate", 
+    ///                 {
+    ///                     { "contents", @"          ""-----BEGIN CERTIFICATE-----
+    ///         MIIDyTCCArGgAwIBAgIKBBNXOVCGU1YztjANBgkqhkiG9w0BAQsFADAnMQ4wDAYD
+    ///         VQQKEwVDaXNjbzEVMBMGA1UEAxMMQUNUMiBTVURJIENBMB4XDTIxMDUzMTEzNTUx
+    ///         NVoXDTI5MDUxNDIwMjU0MVowbTEpMCcGA1UEBRMgUElEOkM5MjAwTC0yNFAtNEcg
+    ///         U046SkFFMjUyMjBSMksxDjAMBgNVBAoTBUNpc2NvMRgwFgYDVQQLEw9BQ1QtMiBM
+    ///         aXRlIFNVREkxFjAUBgNVBAMTDUM5MjAwTC0yNFAtNEcwggEiMA0GCSqGSIb3DQEB
+    ///         AQUAA4IBDwAwggEKAoIBAQDaUPxW76gT5MdoEAt+UrDFiYA9RYh2iHicDViBEyow
+    ///         TR1TuP36bHh13X3vtGiDsCD88Ci2TZIqd/EDkkc7v9ipUUYVVH+YDrPt2Aukb1PH
+    ///         D6K0R+KhgEzRo5x54TlU6oWvjUpwNZUwwdhMWIQaUVkMyZBYNy0jGPLO8jwZhyBg
+    ///         1Fneybr9pwedGbLrAaz+gdEikB8B4a/fvPjVfL5Ngb4QRjFqWuE+X3nLc0kHedep
+    ///         6nfgpUNXMlStVm5nIXKP6OjmzfCHPYh9L2Ehs1TrSk1ser9Ofx0ZMVL/jBZR2EIj
+    ///         OZ8tH6KlX2/B2pbSPIO6kD5c4UA8Cf1SbDJCwJ/kI9ihAgMBAAGjgbAwga0wDgYD
+    ///         VR0PAQH/BAQDAgXgMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUSNjx8cJw1Vu7
+    ///         fHMJk6+4uDAD+H8wTQYDVR0RBEYwRKBCBgkrBgEEAQkVAgOgNRMzQ2hpcElEPVVV
+    ///         VUNNaElGcUVFMklFUUVBQWNBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUE9MB0GA1Ud
+    ///         DgQWBBRdhMkFD/z5hokaQeLbaRsp4hkvbzANBgkqhkiG9w0BAQsFAAOCAQEAMtuh
+    ///         YpBz4xEZ7YdJsLpw67Q0TTJGnTBRpzAeY1urYDoDz8TSx556XG7z3IRzuED5KVSp
+    ///         OwmH/iZ+tDfYQ3W3ElWTW93871DkuW4WQIfbnoHg/F7bF0DKYVkD3rpZjyz3NhzH
+    ///         d7cjTdJXQ85bTAOXDuxKH3qewrXxxOGXgh3I6NUq0UwMTWh84lND7Jl+ZAQkYNS2
+    ///         iHanTZFQBk3ML0NUb7fKDYGRTZRqwQ/upIO4S6LV1cxH/6V0qbMy3sCSHZoMLrW3
+    ///         0m3M6yKpe5+VZzHZwmWdUf3Ot+zKjhveK5/YNsMIASdvtvymxUizq2Hr1hvR/kPc
+    ///         p1vuyWxipU8JfzOh/A==
+    ///         -----END CERTIFICATE-----
+    ///         ""
+    /// " },
+    ///                 } },
+    ///                 { "enabled", true },
+    ///                 { "ocspResponderUrl", "http://ocsp-server.example.com" },
+    ///                 { "useLdap", false },
+    ///                 { "useOcsp", true },
+    ///             },
+    ///             Password_authentication = 
+    ///             {
+    ///                 { "enabled", false },
+    ///             },
+    ///         },
+    ///         MandatoryDhcpEnabled = false,
+    ///         MinBitrate = 5.5,
+    ///         Name = "My SSID",
+    ///         NamedVlans = new Meraki.Networks.Inputs.WirelessSsidsNamedVlansArgs
+    ///         {
+    ///             Radius = new Meraki.Networks.Inputs.WirelessSsidsNamedVlansRadiusArgs
+    ///             {
+    ///                 GuestVlan = new Meraki.Networks.Inputs.WirelessSsidsNamedVlansRadiusGuestVlanArgs
+    ///                 {
+    ///                     Enabled = true,
+    ///                     Name = "Guest VLAN",
+    ///                 },
+    ///             },
+    ///             Tagging = new Meraki.Networks.Inputs.WirelessSsidsNamedVlansTaggingArgs
+    ///             {
+    ///                 ByApTags = new[]
+    ///                 {
+    ///                     new Meraki.Networks.Inputs.WirelessSsidsNamedVlansTaggingByApTagArgs
+    ///                     {
+    ///                         Tags = new[]
+    ///                         {
+    ///                             "tag1",
+    ///                             "tag2",
+    ///                         },
+    ///                         VlanName = "My VLAN",
+    ///                     },
+    ///                 },
+    ///                 DefaultVlanName = "My VLAN",
+    ///                 Enabled = true,
+    ///             },
+    ///         },
+    ///         NetworkId = "string",
+    ///         Number = "string",
+    ///         Oauth = new Meraki.Networks.Inputs.WirelessSsidsOauthArgs
+    ///         {
+    ///             Allowed_domains = new[]
+    ///             {
+    ///                 "example.com",
+    ///             },
+    ///         },
+    ///         PerClientBandwidthLimitDown = 1,
+    ///         PerClientBandwidthLimitUp = 1,
+    ///         PerSsidBandwidthLimitDown = 1,
+    ///         PerSsidBandwidthLimitUp = 1,
+    ///         Psk = "deadbeef",
+    ///         RadiusAccountingEnabled = true,
+    ///         RadiusAccountingInterimInterval = 5,
+    ///         RadiusAccountingServers = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.WirelessSsidsRadiusAccountingServerArgs
+    ///             {
+    ///                 Ca_certificate = @"          ""-----BEGIN CERTIFICATE-----
+    ///         MIIDyTCCArGgAwIBAgIKBBNXOVCGU1YztjANBgkqhkiG9w0BAQsFADAnMQ4wDAYD
+    ///         VQQKEwVDaXNjbzEVMBMGA1UEAxMMQUNUMiBTVURJIENBMB4XDTIxMDUzMTEzNTUx
+    ///         NVoXDTI5MDUxNDIwMjU0MVowbTEpMCcGA1UEBRMgUElEOkM5MjAwTC0yNFAtNEcg
+    ///         U046SkFFMjUyMjBSMksxDjAMBgNVBAoTBUNpc2NvMRgwFgYDVQQLEw9BQ1QtMiBM
+    ///         aXRlIFNVREkxFjAUBgNVBAMTDUM5MjAwTC0yNFAtNEcwggEiMA0GCSqGSIb3DQEB
+    ///         AQUAA4IBDwAwggEKAoIBAQDaUPxW76gT5MdoEAt+UrDFiYA9RYh2iHicDViBEyow
+    ///         TR1TuP36bHh13X3vtGiDsCD88Ci2TZIqd/EDkkc7v9ipUUYVVH+YDrPt2Aukb1PH
+    ///         D6K0R+KhgEzRo5x54TlU6oWvjUpwNZUwwdhMWIQaUVkMyZBYNy0jGPLO8jwZhyBg
+    ///         1Fneybr9pwedGbLrAaz+gdEikB8B4a/fvPjVfL5Ngb4QRjFqWuE+X3nLc0kHedep
+    ///         6nfgpUNXMlStVm5nIXKP6OjmzfCHPYh9L2Ehs1TrSk1ser9Ofx0ZMVL/jBZR2EIj
+    ///         OZ8tH6KlX2/B2pbSPIO6kD5c4UA8Cf1SbDJCwJ/kI9ihAgMBAAGjgbAwga0wDgYD
+    ///         VR0PAQH/BAQDAgXgMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUSNjx8cJw1Vu7
+    ///         fHMJk6+4uDAD+H8wTQYDVR0RBEYwRKBCBgkrBgEEAQkVAgOgNRMzQ2hpcElEPVVV
+    ///         VUNNaElGcUVFMklFUUVBQWNBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUE9MB0GA1Ud
+    ///         DgQWBBRdhMkFD/z5hokaQeLbaRsp4hkvbzANBgkqhkiG9w0BAQsFAAOCAQEAMtuh
+    ///         YpBz4xEZ7YdJsLpw67Q0TTJGnTBRpzAeY1urYDoDz8TSx556XG7z3IRzuED5KVSp
+    ///         OwmH/iZ+tDfYQ3W3ElWTW93871DkuW4WQIfbnoHg/F7bF0DKYVkD3rpZjyz3NhzH
+    ///         d7cjTdJXQ85bTAOXDuxKH3qewrXxxOGXgh3I6NUq0UwMTWh84lND7Jl+ZAQkYNS2
+    ///         iHanTZFQBk3ML0NUb7fKDYGRTZRqwQ/upIO4S6LV1cxH/6V0qbMy3sCSHZoMLrW3
+    ///         0m3M6yKpe5+VZzHZwmWdUf3Ot+zKjhveK5/YNsMIASdvtvymxUizq2Hr1hvR/kPc
+    ///         p1vuyWxipU8JfzOh/A==
+    ///         -----END CERTIFICATE-----
+    ///         ""
+    /// ",
+    ///                 Host = "0.0.0.0",
+    ///                 Port = 3000,
+    ///                 Radsec_enabled = true,
+    ///                 Secret = "secret-string",
+    ///             },
+    ///         },
+    ///         RadiusAttributeForGroupPolicies = "Filter-Id",
+    ///         RadiusAuthenticationNasId = "00-11-22-33-44-55:AP1",
+    ///         RadiusCalledStationId = "00-11-22-33-44-55:AP1",
+    ///         RadiusCoaEnabled = true,
+    ///         RadiusFailoverPolicy = "Deny access",
+    ///         RadiusFallbackEnabled = true,
+    ///         RadiusGuestVlanEnabled = true,
+    ///         RadiusGuestVlanId = 1,
+    ///         RadiusLoadBalancingPolicy = "Round robin",
+    ///         RadiusOverride = false,
+    ///         RadiusProxyEnabled = false,
+    ///         RadiusServerAttemptsLimit = 5,
+    ///         RadiusServerTimeout = 5,
+    ///         RadiusServers = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.WirelessSsidsRadiusServerArgs
+    ///             {
+    ///                 Ca_certificate = @"          ""-----BEGIN CERTIFICATE-----
+    ///         MIIDyTCCArGgAwIBAgIKBBNXOVCGU1YztjANBgkqhkiG9w0BAQsFADAnMQ4wDAYD
+    ///         VQQKEwVDaXNjbzEVMBMGA1UEAxMMQUNUMiBTVURJIENBMB4XDTIxMDUzMTEzNTUx
+    ///         NVoXDTI5MDUxNDIwMjU0MVowbTEpMCcGA1UEBRMgUElEOkM5MjAwTC0yNFAtNEcg
+    ///         U046SkFFMjUyMjBSMksxDjAMBgNVBAoTBUNpc2NvMRgwFgYDVQQLEw9BQ1QtMiBM
+    ///         aXRlIFNVREkxFjAUBgNVBAMTDUM5MjAwTC0yNFAtNEcwggEiMA0GCSqGSIb3DQEB
+    ///         AQUAA4IBDwAwggEKAoIBAQDaUPxW76gT5MdoEAt+UrDFiYA9RYh2iHicDViBEyow
+    ///         TR1TuP36bHh13X3vtGiDsCD88Ci2TZIqd/EDkkc7v9ipUUYVVH+YDrPt2Aukb1PH
+    ///         D6K0R+KhgEzRo5x54TlU6oWvjUpwNZUwwdhMWIQaUVkMyZBYNy0jGPLO8jwZhyBg
+    ///         1Fneybr9pwedGbLrAaz+gdEikB8B4a/fvPjVfL5Ngb4QRjFqWuE+X3nLc0kHedep
+    ///         6nfgpUNXMlStVm5nIXKP6OjmzfCHPYh9L2Ehs1TrSk1ser9Ofx0ZMVL/jBZR2EIj
+    ///         OZ8tH6KlX2/B2pbSPIO6kD5c4UA8Cf1SbDJCwJ/kI9ihAgMBAAGjgbAwga0wDgYD
+    ///         VR0PAQH/BAQDAgXgMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUSNjx8cJw1Vu7
+    ///         fHMJk6+4uDAD+H8wTQYDVR0RBEYwRKBCBgkrBgEEAQkVAgOgNRMzQ2hpcElEPVVV
+    ///         VUNNaElGcUVFMklFUUVBQWNBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUE9MB0GA1Ud
+    ///         DgQWBBRdhMkFD/z5hokaQeLbaRsp4hkvbzANBgkqhkiG9w0BAQsFAAOCAQEAMtuh
+    ///         YpBz4xEZ7YdJsLpw67Q0TTJGnTBRpzAeY1urYDoDz8TSx556XG7z3IRzuED5KVSp
+    ///         OwmH/iZ+tDfYQ3W3ElWTW93871DkuW4WQIfbnoHg/F7bF0DKYVkD3rpZjyz3NhzH
+    ///         d7cjTdJXQ85bTAOXDuxKH3qewrXxxOGXgh3I6NUq0UwMTWh84lND7Jl+ZAQkYNS2
+    ///         iHanTZFQBk3ML0NUb7fKDYGRTZRqwQ/upIO4S6LV1cxH/6V0qbMy3sCSHZoMLrW3
+    ///         0m3M6yKpe5+VZzHZwmWdUf3Ot+zKjhveK5/YNsMIASdvtvymxUizq2Hr1hvR/kPc
+    ///         p1vuyWxipU8JfzOh/A==
+    ///         -----END CERTIFICATE-----
+    ///         ""
+    /// ",
+    ///                 Host = "0.0.0.0",
+    ///                 Open_roaming_certificate_id = 2,
+    ///                 Port = 3000,
+    ///                 Radsec_enabled = true,
+    ///                 Secret = "secret-string",
+    ///             },
+    ///         },
+    ///         RadiusTestingEnabled = true,
+    ///         SecondaryConcentratorNetworkId = "disabled",
+    ///         SpeedBurst = new Meraki.Networks.Inputs.WirelessSsidsSpeedBurstArgs
+    ///         {
+    ///             Enabled = true,
+    ///         },
+    ///         SplashGuestSponsorDomains = new[]
+    ///         {
+    ///             "example.com",
+    ///         },
+    ///         SplashPage = "Click-through splash page",
+    ///         UseVlanTagging = false,
+    ///         Visible = true,
+    ///         VlanId = 10,
+    ///         WalledGardenEnabled = true,
+    ///         WalledGardenRanges = new[]
+    ///         {
+    ///             "example.com",
+    ///             "1.1.1.1/32",
+    ///         },
+    ///         WpaEncryptionMode = "WPA2 only",
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksWirelessSsidsExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

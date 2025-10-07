@@ -9,6 +9,27 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.SwitchAccessControlLists("example", {
+ *     networkId: "string",
+ *     rules: [{
+ *         comment: "Deny SSH",
+ *         dst_cidr: "172.16.30/24",
+ *         dst_port: "22",
+ *         ip_version: "ipv4",
+ *         policy: "deny",
+ *         protocol: "tcp",
+ *         src_cidr: "10.1.10.0/24",
+ *         src_port: "any",
+ *         vlan: "10",
+ *     }],
+ * });
+ * export const merakiNetworksSwitchAccessControlListsExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

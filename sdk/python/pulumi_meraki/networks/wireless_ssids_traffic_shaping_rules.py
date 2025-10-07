@@ -215,6 +215,33 @@ class WirelessSsidsTrafficShapingRules(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.WirelessSsidsTrafficShapingRules("example",
+            default_rules_enabled=True,
+            network_id="string",
+            number="string",
+            rules=[{
+                "definitions": [{
+                    "type": "host",
+                    "value": "google.com",
+                }],
+                "dscp_tag_value": 1,
+                "pcp_tag_value": 1,
+                "per_client_bandwidth_limits": {
+                    "bandwidthLimits": {
+                        "limitDown": 1000000,
+                        "limitUp": 1000000,
+                    },
+                    "settings": "custom",
+                },
+            }],
+            traffic_shaping_enabled=True)
+        pulumi.export("merakiNetworksWirelessSsidsTrafficShapingRulesExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -239,6 +266,33 @@ class WirelessSsidsTrafficShapingRules(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.WirelessSsidsTrafficShapingRules("example",
+            default_rules_enabled=True,
+            network_id="string",
+            number="string",
+            rules=[{
+                "definitions": [{
+                    "type": "host",
+                    "value": "google.com",
+                }],
+                "dscp_tag_value": 1,
+                "pcp_tag_value": 1,
+                "per_client_bandwidth_limits": {
+                    "bandwidthLimits": {
+                        "limitDown": 1000000,
+                        "limitUp": 1000000,
+                    },
+                    "settings": "custom",
+                },
+            }],
+            traffic_shaping_enabled=True)
+        pulumi.export("merakiNetworksWirelessSsidsTrafficShapingRulesExample", example)
+        ```
 
         ## Import
 

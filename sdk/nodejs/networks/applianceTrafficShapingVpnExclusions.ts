@@ -9,6 +9,29 @@ import * as utilities from "../utilities";
 /**
  * ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
  * already existed previously.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.ApplianceTrafficShapingVpnExclusions("example", {
+ *     networkId: "string",
+ *     parameters: {
+ *         custom: [{
+ *             destination: "192.168.3.0/24",
+ *             port: "8000",
+ *             protocol: "tcp",
+ *         }],
+ *         major_applications: [{
+ *             id: "meraki:vpnExclusion/application/2",
+ *             name: "Office 365 Sharepoint",
+ *         }],
+ *     },
+ * });
+ * export const merakiNetworksApplianceTrafficShapingVpnExclusionsExample = example;
+ * ```
  */
 export class ApplianceTrafficShapingVpnExclusions extends pulumi.CustomResource {
     /**

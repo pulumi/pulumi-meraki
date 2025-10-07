@@ -14,6 +14,41 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewWirelessSsidsSchedules(ctx, "example", &networks.WirelessSsidsSchedulesArgs{
+//				Enabled:   pulumi.Bool(true),
+//				NetworkId: pulumi.String("string"),
+//				Number:    pulumi.String("string"),
+//				Ranges: networks.WirelessSsidsSchedulesRangeArray{
+//					&networks.WirelessSsidsSchedulesRangeArgs{
+//						End_day:    "Tuesday",
+//						End_time:   "05:00",
+//						Start_day:  "Tuesday",
+//						Start_time: "01:00",
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksWirelessSsidsSchedulesExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

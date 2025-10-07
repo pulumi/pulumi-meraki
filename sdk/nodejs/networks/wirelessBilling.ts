@@ -9,6 +9,26 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.WirelessBilling("example", {
+ *     currency: "USD",
+ *     networkId: "string",
+ *     plans: [{
+ *         bandwidth_limits: {
+ *             limitDown: 1000000,
+ *             limitUp: 1000000,
+ *         },
+ *         id: "1",
+ *         price: 5,
+ *         time_limit: "1 hour",
+ *     }],
+ * });
+ * export const merakiNetworksWirelessBillingExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

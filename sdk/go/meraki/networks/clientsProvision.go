@@ -14,6 +14,108 @@ import (
 
 // ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
 // already existed previously.
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewClientsProvision(ctx, "example", &networks.ClientsProvisionArgs{
+//				NetworkId: pulumi.String("string"),
+//				Parameters: &networks.ClientsProvisionParametersArgs{
+//					Clients: networks.ClientsProvisionParametersClientArray{
+//						&networks.ClientsProvisionParametersClientArgs{
+//							Mac:  pulumi.String("00:11:22:33:44:55"),
+//							Name: pulumi.String("Miles's phone"),
+//						},
+//					},
+//					Device_policy:   "Group policy",
+//					Group_policy_id: "101",
+//					Policies_by_security_appliance: map[string]interface{}{
+//						"devicePolicy": "Normal",
+//					},
+//					Policies_by_ssid: map[string]interface{}{
+//						"status0": map[string]interface{}{
+//							"devicePolicy":  "Group policy",
+//							"groupPolicyId": "101",
+//						},
+//						"status1": map[string]interface{}{
+//							"devicePolicy":  "Group policy",
+//							"groupPolicyId": "101",
+//						},
+//						"status10": map[string]interface{}{
+//							"devicePolicy":  "Group policy",
+//							"groupPolicyId": "101",
+//						},
+//						"status11": map[string]interface{}{
+//							"devicePolicy":  "Group policy",
+//							"groupPolicyId": "101",
+//						},
+//						"status12": map[string]interface{}{
+//							"devicePolicy":  "Group policy",
+//							"groupPolicyId": "101",
+//						},
+//						"status13": map[string]interface{}{
+//							"devicePolicy":  "Group policy",
+//							"groupPolicyId": "101",
+//						},
+//						"status14": map[string]interface{}{
+//							"devicePolicy":  "Group policy",
+//							"groupPolicyId": "101",
+//						},
+//						"status2": map[string]interface{}{
+//							"devicePolicy":  "Group policy",
+//							"groupPolicyId": "101",
+//						},
+//						"status3": map[string]interface{}{
+//							"devicePolicy":  "Group policy",
+//							"groupPolicyId": "101",
+//						},
+//						"status4": map[string]interface{}{
+//							"devicePolicy":  "Group policy",
+//							"groupPolicyId": "101",
+//						},
+//						"status5": map[string]interface{}{
+//							"devicePolicy":  "Group policy",
+//							"groupPolicyId": "101",
+//						},
+//						"status6": map[string]interface{}{
+//							"devicePolicy":  "Group policy",
+//							"groupPolicyId": "101",
+//						},
+//						"status7": map[string]interface{}{
+//							"devicePolicy":  "Group policy",
+//							"groupPolicyId": "101",
+//						},
+//						"status8": map[string]interface{}{
+//							"devicePolicy":  "Group policy",
+//							"groupPolicyId": "101",
+//						},
+//						"status9": map[string]interface{}{
+//							"devicePolicy":  "Group policy",
+//							"groupPolicyId": "101",
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksClientsProvisionExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
 type ClientsProvision struct {
 	pulumi.CustomResourceState
 

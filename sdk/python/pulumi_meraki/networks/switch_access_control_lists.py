@@ -142,6 +142,26 @@ class SwitchAccessControlLists(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.SwitchAccessControlLists("example",
+            network_id="string",
+            rules=[{
+                "comment": "Deny SSH",
+                "dst_cidr": "172.16.30/24",
+                "dst_port": "22",
+                "ip_version": "ipv4",
+                "policy": "deny",
+                "protocol": "tcp",
+                "src_cidr": "10.1.10.0/24",
+                "src_port": "any",
+                "vlan": "10",
+            }])
+        pulumi.export("merakiNetworksSwitchAccessControlListsExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -162,6 +182,26 @@ class SwitchAccessControlLists(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.SwitchAccessControlLists("example",
+            network_id="string",
+            rules=[{
+                "comment": "Deny SSH",
+                "dst_cidr": "172.16.30/24",
+                "dst_port": "22",
+                "ip_version": "ipv4",
+                "policy": "deny",
+                "protocol": "tcp",
+                "src_cidr": "10.1.10.0/24",
+                "src_port": "any",
+                "vlan": "10",
+            }])
+        pulumi.export("merakiNetworksSwitchAccessControlListsExample", example)
+        ```
 
         ## Import
 

@@ -9,6 +9,28 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.SwitchSettings("example", {
+ *     macBlocklist: {
+ *         enabled: false,
+ *     },
+ *     networkId: "string",
+ *     powerExceptions: [{
+ *         power_type: "string",
+ *         serial: "string",
+ *     }],
+ *     uplinkClientSampling: {
+ *         enabled: false,
+ *     },
+ *     useCombinedPower: false,
+ *     vlan: 1,
+ * });
+ * export const merakiNetworksSwitchSettingsExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

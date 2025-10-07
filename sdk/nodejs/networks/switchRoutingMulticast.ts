@@ -9,6 +9,38 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.SwitchRoutingMulticast("example", {
+ *     defaultSettings: {
+ *         flood_unknown_multicast_traffic_enabled: true,
+ *         igmp_snooping_enabled: true,
+ *     },
+ *     networkId: "string",
+ *     overrides: [{
+ *         flood_unknown_multicast_traffic_enabled: true,
+ *         igmp_snooping_enabled: true,
+ *         stacks: [
+ *             "789102",
+ *             "123456",
+ *             "129102",
+ *         ],
+ *         switch_profiles: [
+ *             "1234",
+ *             "4567",
+ *         ],
+ *         switches: [
+ *             "Q234-ABCD-0001",
+ *             "Q234-ABCD-0002",
+ *             "Q234-ABCD-0003",
+ *         ],
+ *     }],
+ * });
+ * export const merakiNetworksSwitchRoutingMulticastExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh
