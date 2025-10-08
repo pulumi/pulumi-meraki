@@ -12,6 +12,94 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.WirelessSsidsSplashSettings("example", new()
+    ///     {
+    ///         AllowSimultaneousLogins = false,
+    ///         Billing = new Meraki.Networks.Inputs.WirelessSsidsSplashSettingsBillingArgs
+    ///         {
+    ///             Free_access = 
+    ///             {
+    ///                 { "durationInMinutes", 120 },
+    ///                 { "enabled", true },
+    ///             },
+    ///             Prepaid_access_fast_login_enabled = true,
+    ///             Reply_to_email_address = "user@email.com",
+    ///         },
+    ///         BlockAllTrafficBeforeSignOn = false,
+    ///         ControllerDisconnectionBehavior = "default",
+    ///         GuestSponsorship = new Meraki.Networks.Inputs.WirelessSsidsSplashSettingsGuestSponsorshipArgs
+    ///         {
+    ///             Duration_in_minutes = 30,
+    ///             Guest_can_request_timeframe = false,
+    ///         },
+    ///         NetworkId = "string",
+    ///         Number = "string",
+    ///         RedirectUrl = "https://example.com",
+    ///         SentryEnrollment = new Meraki.Networks.Inputs.WirelessSsidsSplashSettingsSentryEnrollmentArgs
+    ///         {
+    ///             Enforced_systems = new[]
+    ///             {
+    ///                 "iOS",
+    ///             },
+    ///             Strength = "focused",
+    ///             Systems_manager_network = 
+    ///             {
+    ///                 { "id", "N_1234" },
+    ///             },
+    ///         },
+    ///         SplashImage = new Meraki.Networks.Inputs.WirelessSsidsSplashSettingsSplashImageArgs
+    ///         {
+    ///             Extension = "jpg",
+    ///             Image = new Meraki.Networks.Inputs.WirelessSsidsSplashSettingsSplashImageImageArgs
+    ///             {
+    ///                 Contents = "Q2lzY28gTWVyYWtp",
+    ///                 Format = "jpg",
+    ///             },
+    ///             Md5 = "542cccac8d7dedee0f185311d154d194",
+    ///         },
+    ///         SplashLogo = new Meraki.Networks.Inputs.WirelessSsidsSplashSettingsSplashLogoArgs
+    ///         {
+    ///             Extension = "jpg",
+    ///             Image = new Meraki.Networks.Inputs.WirelessSsidsSplashSettingsSplashLogoImageArgs
+    ///             {
+    ///                 Contents = "Q2lzY28gTWVyYWtp",
+    ///                 Format = "jpg",
+    ///             },
+    ///             Md5 = "abcd1234",
+    ///         },
+    ///         SplashPrepaidFront = new Meraki.Networks.Inputs.WirelessSsidsSplashSettingsSplashPrepaidFrontArgs
+    ///         {
+    ///             Extension = "jpg",
+    ///             Image = new Meraki.Networks.Inputs.WirelessSsidsSplashSettingsSplashPrepaidFrontImageArgs
+    ///             {
+    ///                 Contents = "Q2lzY28gTWVyYWtp",
+    ///                 Format = "jpg",
+    ///             },
+    ///             Md5 = "542cccac8d7dedee0f185311d154d194",
+    ///         },
+    ///         SplashTimeout = 1440,
+    ///         SplashUrl = "https://www.custom_splash_url.com",
+    ///         ThemeId = "c3ddcb4f16785ee747ab5ffc10867d6c8ea704be",
+    ///         UseRedirectUrl = true,
+    ///         UseSplashUrl = true,
+    ///         WelcomeMessage = "Welcome!",
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksWirelessSsidsSplashSettingsExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

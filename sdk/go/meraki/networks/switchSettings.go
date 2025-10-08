@@ -14,6 +14,45 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewSwitchSettings(ctx, "example", &networks.SwitchSettingsArgs{
+//				MacBlocklist: &networks.SwitchSettingsMacBlocklistArgs{
+//					Enabled: pulumi.Bool(false),
+//				},
+//				NetworkId: pulumi.String("string"),
+//				PowerExceptions: networks.SwitchSettingsPowerExceptionArray{
+//					&networks.SwitchSettingsPowerExceptionArgs{
+//						Power_type: "string",
+//						Serial:     pulumi.String("string"),
+//					},
+//				},
+//				UplinkClientSampling: &networks.SwitchSettingsUplinkClientSamplingArgs{
+//					Enabled: pulumi.Bool(false),
+//				},
+//				UseCombinedPower: pulumi.Bool(false),
+//				Vlan:             pulumi.Int(1),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksSwitchSettingsExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

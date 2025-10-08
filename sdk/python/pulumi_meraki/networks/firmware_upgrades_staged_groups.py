@@ -241,6 +241,28 @@ class FirmwareUpgradesStagedGroups(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.FirmwareUpgradesStagedGroups("example",
+            assigned_devices={
+                "devices": [{
+                    "name": "Device Name",
+                    "serial": "Q234-ABCD-5678",
+                }],
+                "switch_stacks": [{
+                    "id": "1234",
+                    "name": "Stack Name",
+                }],
+            },
+            description="The description of the group",
+            is_default=False,
+            name="My Staged Upgrade Group",
+            network_id="string")
+        pulumi.export("merakiNetworksFirmwareUpgradesStagedGroupsExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -264,6 +286,28 @@ class FirmwareUpgradesStagedGroups(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.FirmwareUpgradesStagedGroups("example",
+            assigned_devices={
+                "devices": [{
+                    "name": "Device Name",
+                    "serial": "Q234-ABCD-5678",
+                }],
+                "switch_stacks": [{
+                    "id": "1234",
+                    "name": "Stack Name",
+                }],
+            },
+            description="The description of the group",
+            is_default=False,
+            name="My Staged Upgrade Group",
+            network_id="string")
+        pulumi.export("merakiNetworksFirmwareUpgradesStagedGroupsExample", example)
+        ```
 
         ## Import
 

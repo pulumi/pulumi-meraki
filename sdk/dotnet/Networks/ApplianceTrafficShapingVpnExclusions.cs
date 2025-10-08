@@ -12,6 +12,48 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ~&gt;Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
     /// already existed previously.
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.ApplianceTrafficShapingVpnExclusions("example", new()
+    ///     {
+    ///         NetworkId = "string",
+    ///         Parameters = new Meraki.Networks.Inputs.ApplianceTrafficShapingVpnExclusionsParametersArgs
+    ///         {
+    ///             Custom = new[]
+    ///             {
+    ///                 
+    ///                 {
+    ///                     { "destination", "192.168.3.0/24" },
+    ///                     { "port", "8000" },
+    ///                     { "protocol", "tcp" },
+    ///                 },
+    ///             },
+    ///             Major_applications = new[]
+    ///             {
+    ///                 
+    ///                 {
+    ///                     { "id", "meraki:vpnExclusion/application/2" },
+    ///                     { "name", "Office 365 Sharepoint" },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksApplianceTrafficShapingVpnExclusionsExample"] = example,
+    ///     };
+    /// });
+    /// ```
     /// </summary>
     [MerakiResourceType("meraki:networks/applianceTrafficShapingVpnExclusions:ApplianceTrafficShapingVpnExclusions")]
     public partial class ApplianceTrafficShapingVpnExclusions : global::Pulumi.CustomResource

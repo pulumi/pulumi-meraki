@@ -12,6 +12,35 @@ namespace Pulumi.Meraki.Organizations
     /// <summary>
     /// ~&gt;Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
     /// already existed previously.
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Organizations.InventoryOnboardingCloudMonitoringExportEvents("example", new()
+    ///     {
+    ///         OrganizationId = "string",
+    ///         Parameters = new Meraki.Organizations.Inputs.InventoryOnboardingCloudMonitoringExportEventsParametersArgs
+    ///         {
+    ///             Log_event = "download",
+    ///             Request = "r=cb",
+    ///             Target_os = "mac",
+    ///             Timestamp = 1526087474,
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiOrganizationsInventoryOnboardingCloudMonitoringExportEventsExample"] = example,
+    ///     };
+    /// });
+    /// ```
     /// </summary>
     [MerakiResourceType("meraki:organizations/inventoryOnboardingCloudMonitoringExportEvents:InventoryOnboardingCloudMonitoringExportEvents")]
     public partial class InventoryOnboardingCloudMonitoringExportEvents : global::Pulumi.CustomResource

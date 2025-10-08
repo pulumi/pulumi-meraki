@@ -9,6 +9,32 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.WirelessAlternateManagementInterface("example", {
+ *     accessPoints: [{
+ *         alternate_management_ip: "1.2.3.4",
+ *         dns1: "8.8.8.8",
+ *         dns2: "8.8.4.4",
+ *         gateway: "1.2.3.5",
+ *         serial: "Q234-ABCD-5678",
+ *         subnet_mask: "255.255.255.0",
+ *     }],
+ *     enabled: true,
+ *     networkId: "string",
+ *     protocols: [
+ *         "radius",
+ *         "snmp",
+ *         "syslog",
+ *         "ldap",
+ *     ],
+ *     vlanId: 100,
+ * });
+ * export const merakiNetworksWirelessAlternateManagementInterfaceExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

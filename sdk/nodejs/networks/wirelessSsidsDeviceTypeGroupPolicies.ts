@@ -9,6 +9,22 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.WirelessSsidsDeviceTypeGroupPolicies("example", {
+ *     deviceTypePolicies: [{
+ *         device_policy: "Allowed",
+ *         device_type: "Android",
+ *     }],
+ *     enabled: true,
+ *     networkId: "string",
+ *     number: "string",
+ * });
+ * export const merakiNetworksWirelessSsidsDeviceTypeGroupPoliciesExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

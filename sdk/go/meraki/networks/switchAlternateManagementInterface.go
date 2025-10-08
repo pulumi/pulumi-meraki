@@ -14,6 +14,46 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewSwitchAlternateManagementInterface(ctx, "example", &networks.SwitchAlternateManagementInterfaceArgs{
+//				Enabled:   pulumi.Bool(true),
+//				NetworkId: pulumi.String("string"),
+//				Protocols: pulumi.StringArray{
+//					pulumi.String("radius"),
+//					pulumi.String("snmp"),
+//					pulumi.String("syslog"),
+//				},
+//				Switches: networks.SwitchAlternateManagementInterfaceSwitchArray{
+//					&networks.SwitchAlternateManagementInterfaceSwitchArgs{
+//						Alternate_management_ip: "1.2.3.4",
+//						Gateway:                 pulumi.String("1.2.3.5"),
+//						Serial:                  pulumi.String("Q234-ABCD-5678"),
+//						Subnet_mask:             "255.255.255.0",
+//					},
+//				},
+//				VlanId: pulumi.Int(100),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksSwitchAlternateManagementInterfaceExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

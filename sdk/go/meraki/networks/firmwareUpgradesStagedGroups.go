@@ -14,6 +14,48 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewFirmwareUpgradesStagedGroups(ctx, "example", &networks.FirmwareUpgradesStagedGroupsArgs{
+//				AssignedDevices: &networks.FirmwareUpgradesStagedGroupsAssignedDevicesArgs{
+//					Devices: networks.FirmwareUpgradesStagedGroupsAssignedDevicesDeviceArray{
+//						&networks.FirmwareUpgradesStagedGroupsAssignedDevicesDeviceArgs{
+//							Name:   pulumi.String("Device Name"),
+//							Serial: pulumi.String("Q234-ABCD-5678"),
+//						},
+//					},
+//					Switch_stacks: []map[string]interface{}{
+//						map[string]interface{}{
+//							"id":   "1234",
+//							"name": "Stack Name",
+//						},
+//					},
+//				},
+//				Description: pulumi.String("The description of the group"),
+//				IsDefault:   pulumi.Bool(false),
+//				Name:        pulumi.String("My Staged Upgrade Group"),
+//				NetworkId:   pulumi.String("string"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksFirmwareUpgradesStagedGroupsExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

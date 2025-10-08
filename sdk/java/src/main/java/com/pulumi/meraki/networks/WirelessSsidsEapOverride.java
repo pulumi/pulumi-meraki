@@ -19,6 +19,51 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.WirelessSsidsEapOverride;
+ * import com.pulumi.meraki.networks.WirelessSsidsEapOverrideArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsEapOverrideEapolKeyArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsEapOverrideIdentityArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new WirelessSsidsEapOverride("example", WirelessSsidsEapOverrideArgs.builder()
+ *             .eapolKey(WirelessSsidsEapOverrideEapolKeyArgs.builder()
+ *                 .retries(5)
+ *                 .timeout_in_ms(5000)
+ *                 .build())
+ *             .identity(WirelessSsidsEapOverrideIdentityArgs.builder()
+ *                 .retries(5)
+ *                 .timeout(5)
+ *                 .build())
+ *             .maxRetries(5)
+ *             .networkId("string")
+ *             .number("string")
+ *             .timeout(5)
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksWirelessSsidsEapOverrideExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

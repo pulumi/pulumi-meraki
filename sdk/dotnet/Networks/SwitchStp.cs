@@ -12,6 +12,40 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.SwitchStp("example", new()
+    ///     {
+    ///         NetworkId = "string",
+    ///         RstpEnabled = true,
+    ///         StpBridgePriorities = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.SwitchStpStpBridgePriorityArgs
+    ///             {
+    ///                 Stp_priority = 4096,
+    ///                 Switches = new[]
+    ///                 {
+    ///                     "Q234-ABCD-0001",
+    ///                     "Q234-ABCD-0002",
+    ///                     "Q234-ABCD-0003",
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksSwitchStpExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

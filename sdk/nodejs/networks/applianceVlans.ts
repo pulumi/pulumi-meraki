@@ -9,6 +9,39 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.ApplianceVlans("example", {
+ *     applianceIp: "192.168.1.2",
+ *     cidr: "192.168.1.0/24",
+ *     groupPolicyId: "101",
+ *     vlanId: "1234",
+ *     ipv6: {
+ *         enabled: true,
+ *         prefix_assignments: [{
+ *             autonomous: false,
+ *             origin: {
+ *                 interfaces: ["wan0"],
+ *                 type: "internet",
+ *             },
+ *             staticApplianceIp6: "2001:db8:3c4d:15::1",
+ *             staticPrefix: "2001:db8:3c4d:15::/64",
+ *         }],
+ *     },
+ *     mandatoryDhcp: {
+ *         enabled: true,
+ *     },
+ *     mask: 28,
+ *     name: "My VLAN",
+ *     networkId: "string",
+ *     subnet: "192.168.1.0/24",
+ *     templateVlanType: "same",
+ * });
+ * export const merakiNetworksApplianceVlansExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

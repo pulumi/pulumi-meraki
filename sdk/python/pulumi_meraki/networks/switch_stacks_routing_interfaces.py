@@ -437,6 +437,33 @@ class SwitchStacksRoutingInterfaces(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.SwitchStacksRoutingInterfaces("example",
+            default_gateway="192.168.1.1",
+            interface_ip="192.168.1.2",
+            ipv6={
+                "address": "1:2:3:4::1",
+                "assignment_mode": "static",
+                "gateway": "1:2:3:4::2",
+                "prefix": "1:2:3:4::/48",
+            },
+            multicast_routing="disabled",
+            name="L3 interface",
+            network_id="string",
+            ospf_settings={
+                "area": "0",
+                "cost": 1,
+                "is_passive_enabled": True,
+            },
+            subnet="192.168.1.0/24",
+            switch_stack_id="string",
+            vlan_id=100)
+        pulumi.export("merakiNetworksSwitchStacksRoutingInterfacesExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -465,6 +492,33 @@ class SwitchStacksRoutingInterfaces(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.SwitchStacksRoutingInterfaces("example",
+            default_gateway="192.168.1.1",
+            interface_ip="192.168.1.2",
+            ipv6={
+                "address": "1:2:3:4::1",
+                "assignment_mode": "static",
+                "gateway": "1:2:3:4::2",
+                "prefix": "1:2:3:4::/48",
+            },
+            multicast_routing="disabled",
+            name="L3 interface",
+            network_id="string",
+            ospf_settings={
+                "area": "0",
+                "cost": 1,
+                "is_passive_enabled": True,
+            },
+            subnet="192.168.1.0/24",
+            switch_stack_id="string",
+            vlan_id=100)
+        pulumi.export("merakiNetworksSwitchStacksRoutingInterfacesExample", example)
+        ```
 
         ## Import
 

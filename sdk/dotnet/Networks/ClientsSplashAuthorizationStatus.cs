@@ -12,6 +12,38 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.ClientsSplashAuthorizationStatus("example", new()
+    ///     {
+    ///         ClientId = "string",
+    ///         NetworkId = "string",
+    ///         Ssids = new Meraki.Networks.Inputs.ClientsSplashAuthorizationStatusSsidsArgs
+    ///         {
+    ///             Status_0 = 
+    ///             {
+    ///                 { "isAuthorized", true },
+    ///             },
+    ///             Status_2 = 
+    ///             {
+    ///                 { "isAuthorized", false },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksClientsSplashAuthorizationStatusExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

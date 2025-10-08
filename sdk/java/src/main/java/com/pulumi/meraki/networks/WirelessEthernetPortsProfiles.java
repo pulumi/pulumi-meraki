@@ -20,6 +20,53 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.WirelessEthernetPortsProfiles;
+ * import com.pulumi.meraki.networks.WirelessEthernetPortsProfilesArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessEthernetPortsProfilesPortArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessEthernetPortsProfilesUsbPortArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new WirelessEthernetPortsProfiles("example", WirelessEthernetPortsProfilesArgs.builder()
+ *             .name("string")
+ *             .networkId("string")
+ *             .ports(WirelessEthernetPortsProfilesPortArgs.builder()
+ *                 .enabled(false)
+ *                 .name("string")
+ *                 .psk_group_id("string")
+ *                 .ssid(1)
+ *                 .build())
+ *             .profileId("string")
+ *             .usbPorts(WirelessEthernetPortsProfilesUsbPortArgs.builder()
+ *                 .enabled(false)
+ *                 .name("string")
+ *                 .ssid(1)
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksWirelessEthernetPortsProfilesExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

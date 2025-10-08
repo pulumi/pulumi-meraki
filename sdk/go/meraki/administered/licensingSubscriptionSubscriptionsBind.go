@@ -14,6 +14,40 @@ import (
 
 // ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
 // already existed previously.
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/administered"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := administered.NewLicensingSubscriptionSubscriptionsBind(ctx, "example", &administered.LicensingSubscriptionSubscriptionsBindArgs{
+//				SubscriptionId: pulumi.String("string"),
+//				Validate:       pulumi.Bool(false),
+//				Parameters: &administered.LicensingSubscriptionSubscriptionsBindParametersArgs{
+//					Network_ids: []string{
+//						"L_1234",
+//						"N_5678",
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiAdministeredLicensingSubscriptionSubscriptionsBindExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
 type LicensingSubscriptionSubscriptionsBind struct {
 	pulumi.CustomResourceState
 

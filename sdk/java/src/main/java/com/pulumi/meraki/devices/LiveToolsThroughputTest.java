@@ -19,6 +19,45 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.devices.LiveToolsThroughputTest;
+ * import com.pulumi.meraki.devices.LiveToolsThroughputTestArgs;
+ * import com.pulumi.meraki.devices.inputs.LiveToolsThroughputTestCallbackArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new LiveToolsThroughputTest("example", LiveToolsThroughputTestArgs.builder()
+ *             .callback(LiveToolsThroughputTestCallbackArgs.builder()
+ *                 .http_server(Map.of("id", "aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M="))
+ *                 .payload_template(Map.of("id", "wpt_2100"))
+ *                 .shared_secret("secret")
+ *                 .url("https://webhook.site/28efa24e-f830-4d9f-a12b-fbb9e5035031")
+ *                 .build())
+ *             .serial("string")
+ *             .build());
+ * 
+ *         ctx.export("merakiDevicesLiveToolsThroughputTestExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

@@ -9,6 +9,27 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.WirelessSettings("example", {
+ *     ipv6BridgeEnabled: false,
+ *     ledLightsOn: false,
+ *     locationAnalyticsEnabled: false,
+ *     meshingEnabled: true,
+ *     namedVlans: {
+ *         pool_dhcp_monitoring: {
+ *             duration: 5,
+ *             enabled: true,
+ *         },
+ *     },
+ *     networkId: "string",
+ *     upgradestrategy: "minimizeUpgradeTime",
+ * });
+ * export const merakiNetworksWirelessSettingsExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

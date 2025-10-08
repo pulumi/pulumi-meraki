@@ -9,6 +9,34 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.WirelessSsidsTrafficShapingRules("example", {
+ *     defaultRulesEnabled: true,
+ *     networkId: "string",
+ *     number: "string",
+ *     rules: [{
+ *         definitions: [{
+ *             type: "host",
+ *             value: "google.com",
+ *         }],
+ *         dscp_tag_value: 1,
+ *         pcp_tag_value: 1,
+ *         per_client_bandwidth_limits: {
+ *             bandwidthLimits: {
+ *                 limitDown: 1000000,
+ *                 limitUp: 1000000,
+ *             },
+ *             settings: "custom",
+ *         },
+ *     }],
+ *     trafficShapingEnabled: true,
+ * });
+ * export const merakiNetworksWirelessSsidsTrafficShapingRulesExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

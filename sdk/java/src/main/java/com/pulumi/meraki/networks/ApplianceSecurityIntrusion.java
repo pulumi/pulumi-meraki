@@ -17,6 +17,52 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.ApplianceSecurityIntrusion;
+ * import com.pulumi.meraki.networks.ApplianceSecurityIntrusionArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceSecurityIntrusionProtectedNetworksArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ApplianceSecurityIntrusion("example", ApplianceSecurityIntrusionArgs.builder()
+ *             .idsRulesets("balanced")
+ *             .mode("prevention")
+ *             .networkId("string")
+ *             .protectedNetworks(ApplianceSecurityIntrusionProtectedNetworksArgs.builder()
+ *                 .excluded_cidr(List.of(                
+ *                     "10.0.0.0/8",
+ *                     "127.0.0.0/8"))
+ *                 .included_cidr(List.of(                
+ *                     "10.0.0.0/8",
+ *                     "127.0.0.0/8",
+ *                     "169.254.0.0/16",
+ *                     "172.16.0.0/12"))
+ *                 .use_default(false)
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksApplianceSecurityIntrusionExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

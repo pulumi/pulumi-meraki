@@ -18,6 +18,121 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.FirmwareUpgrades;
+ * import com.pulumi.meraki.networks.FirmwareUpgradesArgs;
+ * import com.pulumi.meraki.networks.inputs.FirmwareUpgradesProductsArgs;
+ * import com.pulumi.meraki.networks.inputs.FirmwareUpgradesProductsApplianceArgs;
+ * import com.pulumi.meraki.networks.inputs.FirmwareUpgradesProductsApplianceNextUpgradeArgs;
+ * import com.pulumi.meraki.networks.inputs.FirmwareUpgradesProductsApplianceNextUpgradeToVersionArgs;
+ * import com.pulumi.meraki.networks.inputs.FirmwareUpgradesProductsCameraArgs;
+ * import com.pulumi.meraki.networks.inputs.FirmwareUpgradesProductsCameraNextUpgradeArgs;
+ * import com.pulumi.meraki.networks.inputs.FirmwareUpgradesProductsCameraNextUpgradeToVersionArgs;
+ * import com.pulumi.meraki.networks.inputs.FirmwareUpgradesProductsSensorArgs;
+ * import com.pulumi.meraki.networks.inputs.FirmwareUpgradesProductsSensorNextUpgradeArgs;
+ * import com.pulumi.meraki.networks.inputs.FirmwareUpgradesProductsSensorNextUpgradeToVersionArgs;
+ * import com.pulumi.meraki.networks.inputs.FirmwareUpgradesProductsSwitchArgs;
+ * import com.pulumi.meraki.networks.inputs.FirmwareUpgradesProductsSwitchNextUpgradeArgs;
+ * import com.pulumi.meraki.networks.inputs.FirmwareUpgradesProductsSwitchNextUpgradeToVersionArgs;
+ * import com.pulumi.meraki.networks.inputs.FirmwareUpgradesProductsWirelessArgs;
+ * import com.pulumi.meraki.networks.inputs.FirmwareUpgradesProductsWirelessNextUpgradeArgs;
+ * import com.pulumi.meraki.networks.inputs.FirmwareUpgradesProductsWirelessNextUpgradeToVersionArgs;
+ * import com.pulumi.meraki.networks.inputs.FirmwareUpgradesUpgradeWindowArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new FirmwareUpgrades("example", FirmwareUpgradesArgs.builder()
+ *             .networkId("string")
+ *             .products(FirmwareUpgradesProductsArgs.builder()
+ *                 .appliance(FirmwareUpgradesProductsApplianceArgs.builder()
+ *                     .nextUpgrade(FirmwareUpgradesProductsApplianceNextUpgradeArgs.builder()
+ *                         .time("2019-03-17T17:22:52Z")
+ *                         .toVersion(FirmwareUpgradesProductsApplianceNextUpgradeToVersionArgs.builder()
+ *                             .id("1001")
+ *                             .build())
+ *                         .build())
+ *                     .participateInNextBetaRelease(false)
+ *                     .build())
+ *                 .camera(FirmwareUpgradesProductsCameraArgs.builder()
+ *                     .nextUpgrade(FirmwareUpgradesProductsCameraNextUpgradeArgs.builder()
+ *                         .time("2019-03-17T17:22:52Z")
+ *                         .toVersion(FirmwareUpgradesProductsCameraNextUpgradeToVersionArgs.builder()
+ *                             .id("1003")
+ *                             .build())
+ *                         .build())
+ *                     .participateInNextBetaRelease(false)
+ *                     .build())
+ *                 .cellular_gateway(Map.ofEntries(
+ *                     Map.entry("nextUpgrade", Map.ofEntries(
+ *                         Map.entry("time", "2019-03-17T17:22:52Z"),
+ *                         Map.entry("toVersion", Map.of("id", "1004"))
+ *                     )),
+ *                     Map.entry("participateInNextBetaRelease", false)
+ *                 ))
+ *                 .sensor(FirmwareUpgradesProductsSensorArgs.builder()
+ *                     .nextUpgrade(FirmwareUpgradesProductsSensorNextUpgradeArgs.builder()
+ *                         .time("2019-03-17T17:22:52Z")
+ *                         .toVersion(FirmwareUpgradesProductsSensorNextUpgradeToVersionArgs.builder()
+ *                             .id("1005")
+ *                             .build())
+ *                         .build())
+ *                     .participateInNextBetaRelease(false)
+ *                     .build())
+ *                 .switch_(FirmwareUpgradesProductsSwitchArgs.builder()
+ *                     .nextUpgrade(FirmwareUpgradesProductsSwitchNextUpgradeArgs.builder()
+ *                         .time("2019-03-17T17:22:52Z")
+ *                         .toVersion(FirmwareUpgradesProductsSwitchNextUpgradeToVersionArgs.builder()
+ *                             .id("1002")
+ *                             .build())
+ *                         .build())
+ *                     .participateInNextBetaRelease(false)
+ *                     .build())
+ *                 .switch_catalyst(Map.ofEntries(
+ *                     Map.entry("nextUpgrade", Map.ofEntries(
+ *                         Map.entry("time", "2019-03-17T17:22:52Z"),
+ *                         Map.entry("toVersion", Map.of("id", "1234"))
+ *                     )),
+ *                     Map.entry("participateInNextBetaRelease", false)
+ *                 ))
+ *                 .wireless(FirmwareUpgradesProductsWirelessArgs.builder()
+ *                     .nextUpgrade(FirmwareUpgradesProductsWirelessNextUpgradeArgs.builder()
+ *                         .time("2019-03-17T17:22:52Z")
+ *                         .toVersion(FirmwareUpgradesProductsWirelessNextUpgradeToVersionArgs.builder()
+ *                             .id("1000")
+ *                             .build())
+ *                         .build())
+ *                     .participateInNextBetaRelease(false)
+ *                     .build())
+ *                 .build())
+ *             .timezone("America/Los_Angeles")
+ *             .upgradeWindow(FirmwareUpgradesUpgradeWindowArgs.builder()
+ *                 .day_of_week("sun")
+ *                 .hour_of_day("4:00")
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksFirmwareUpgradesExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

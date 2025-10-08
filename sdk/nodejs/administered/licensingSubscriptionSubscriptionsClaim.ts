@@ -9,6 +9,24 @@ import * as utilities from "../utilities";
 /**
  * ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
  * already existed previously.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.administered.LicensingSubscriptionSubscriptionsClaim("example", {
+ *     validate: false,
+ *     parameters: {
+ *         claim_key: "S2345-6789A-BCDEF-GHJKM",
+ *         description: "Subscription for all main offices",
+ *         name: "Corporate subscription",
+ *         organization_id: "12345678910",
+ *     },
+ * });
+ * export const merakiAdministeredLicensingSubscriptionSubscriptionsClaimExample = example;
+ * ```
  */
 export class LicensingSubscriptionSubscriptionsClaim extends pulumi.CustomResource {
     /**

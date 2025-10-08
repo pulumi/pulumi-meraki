@@ -12,6 +12,109 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.ApplianceTrafficShapingUplinkSelection("example", new()
+    ///     {
+    ///         ActiveActiveAutoVpnEnabled = true,
+    ///         DefaultUplink = "wan1",
+    ///         FailoverAndFailback = new Meraki.Networks.Inputs.ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgs
+    ///         {
+    ///             Immediate = new Meraki.Networks.Inputs.ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackImmediateArgs
+    ///             {
+    ///                 Enabled = true,
+    ///             },
+    ///         },
+    ///         LoadBalancingEnabled = true,
+    ///         NetworkId = "string",
+    ///         VpnTrafficUplinkPreferences = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgs
+    ///             {
+    ///                 Fail_over_criterion = "poorPerformance",
+    ///                 Performance_class = 
+    ///                 {
+    ///                     { "builtinPerformanceClassName", "VoIP" },
+    ///                     { "customPerformanceClassId", "123456" },
+    ///                     { "type", "custom" },
+    ///                 },
+    ///                 Preferred_uplink = "bestForVoIP",
+    ///                 Traffic_filters = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "type", "applicationCategory" },
+    ///                         { "value", 
+    ///                         {
+    ///                             { "destination", 
+    ///                             {
+    ///                                 { "cidr", "any" },
+    ///                                 { "fqdn", "www.google.com" },
+    ///                                 { "host", 254 },
+    ///                                 { "network", "L_12345678" },
+    ///                                 { "port", "1-1024" },
+    ///                                 { "vlan", 10 },
+    ///                             } },
+    ///                             { "id", "meraki:layer7/category/1" },
+    ///                             { "protocol", "tcp" },
+    ///                             { "source", 
+    ///                             {
+    ///                                 { "cidr", "192.168.1.0/24" },
+    ///                                 { "host", 200 },
+    ///                                 { "network", "L_23456789" },
+    ///                                 { "port", "any" },
+    ///                                 { "vlan", 20 },
+    ///                             } },
+    ///                         } },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         WanTrafficUplinkPreferences = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgs
+    ///             {
+    ///                 Preferred_uplink = "wan1",
+    ///                 Traffic_filters = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "type", "custom" },
+    ///                         { "value", 
+    ///                         {
+    ///                             { "destination", 
+    ///                             {
+    ///                                 { "cidr", "any" },
+    ///                                 { "port", "any" },
+    ///                             } },
+    ///                             { "protocol", "tcp" },
+    ///                             { "source", 
+    ///                             {
+    ///                                 { "cidr", "192.168.1.0/24" },
+    ///                                 { "host", 254 },
+    ///                                 { "port", "1-1024" },
+    ///                                 { "vlan", 10 },
+    ///                             } },
+    ///                         } },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksApplianceTrafficShapingUplinkSelectionExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

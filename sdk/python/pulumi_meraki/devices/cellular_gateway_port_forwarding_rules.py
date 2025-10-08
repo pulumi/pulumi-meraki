@@ -109,6 +109,23 @@ class CellularGatewayPortForwardingRules(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.devices.CellularGatewayPortForwardingRules("example",
+            rules=[{
+                "access": "any",
+                "lan_ip": "172.31.128.5",
+                "local_port": "4",
+                "name": "test",
+                "protocol": "tcp",
+                "public_port": "11-12",
+            }],
+            serial="string")
+        pulumi.export("merakiDevicesCellularGatewayPortForwardingRulesExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -128,6 +145,23 @@ class CellularGatewayPortForwardingRules(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.devices.CellularGatewayPortForwardingRules("example",
+            rules=[{
+                "access": "any",
+                "lan_ip": "172.31.128.5",
+                "local_port": "4",
+                "name": "test",
+                "protocol": "tcp",
+                "public_port": "11-12",
+            }],
+            serial="string")
+        pulumi.export("merakiDevicesCellularGatewayPortForwardingRulesExample", example)
+        ```
 
         ## Import
 

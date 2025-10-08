@@ -19,6 +19,59 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.SwitchRoutingMulticast;
+ * import com.pulumi.meraki.networks.SwitchRoutingMulticastArgs;
+ * import com.pulumi.meraki.networks.inputs.SwitchRoutingMulticastDefaultSettingsArgs;
+ * import com.pulumi.meraki.networks.inputs.SwitchRoutingMulticastOverrideArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SwitchRoutingMulticast("example", SwitchRoutingMulticastArgs.builder()
+ *             .defaultSettings(SwitchRoutingMulticastDefaultSettingsArgs.builder()
+ *                 .flood_unknown_multicast_traffic_enabled(true)
+ *                 .igmp_snooping_enabled(true)
+ *                 .build())
+ *             .networkId("string")
+ *             .overrides(SwitchRoutingMulticastOverrideArgs.builder()
+ *                 .flood_unknown_multicast_traffic_enabled(true)
+ *                 .igmp_snooping_enabled(true)
+ *                 .stacks(                
+ *                     "789102",
+ *                     "123456",
+ *                     "129102")
+ *                 .switch_profiles(List.of(                
+ *                     "1234",
+ *                     "4567"))
+ *                 .switches(                
+ *                     "Q234-ABCD-0001",
+ *                     "Q234-ABCD-0002",
+ *                     "Q234-ABCD-0003")
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksSwitchRoutingMulticastExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

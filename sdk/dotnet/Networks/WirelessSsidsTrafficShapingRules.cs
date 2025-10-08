@@ -12,6 +12,54 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.WirelessSsidsTrafficShapingRules("example", new()
+    ///     {
+    ///         DefaultRulesEnabled = true,
+    ///         NetworkId = "string",
+    ///         Number = "string",
+    ///         Rules = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.WirelessSsidsTrafficShapingRulesRuleArgs
+    ///             {
+    ///                 Definitions = new[]
+    ///                 {
+    ///                     new Meraki.Networks.Inputs.WirelessSsidsTrafficShapingRulesRuleDefinitionArgs
+    ///                     {
+    ///                         Type = "host",
+    ///                         Value = "google.com",
+    ///                     },
+    ///                 },
+    ///                 Dscp_tag_value = 1,
+    ///                 Pcp_tag_value = 1,
+    ///                 Per_client_bandwidth_limits = 
+    ///                 {
+    ///                     { "bandwidthLimits", 
+    ///                     {
+    ///                         { "limitDown", 1000000 },
+    ///                         { "limitUp", 1000000 },
+    ///                     } },
+    ///                     { "settings", "custom" },
+    ///                 },
+    ///             },
+    ///         },
+    ///         TrafficShapingEnabled = true,
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksWirelessSsidsTrafficShapingRulesExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

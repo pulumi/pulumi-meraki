@@ -175,6 +175,24 @@ class ApplianceVpnSiteToSiteVpn(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.ApplianceVpnSiteToSiteVpn("example",
+            hubs=[{
+                "hub_id": "N_4901849",
+                "use_default_route": True,
+            }],
+            mode="spoke",
+            network_id="string",
+            subnets=[{
+                "local_subnet": "192.168.1.0/24",
+                "use_vpn": True,
+            }])
+        pulumi.export("merakiNetworksApplianceVpnSiteToSiteVpnExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -196,6 +214,24 @@ class ApplianceVpnSiteToSiteVpn(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.ApplianceVpnSiteToSiteVpn("example",
+            hubs=[{
+                "hub_id": "N_4901849",
+                "use_default_route": True,
+            }],
+            mode="spoke",
+            network_id="string",
+            subnets=[{
+                "local_subnet": "192.168.1.0/24",
+                "use_vpn": True,
+            }])
+        pulumi.export("merakiNetworksApplianceVpnSiteToSiteVpnExample", example)
+        ```
 
         ## Import
 

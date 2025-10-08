@@ -14,6 +14,42 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/organizations"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := organizations.NewAdaptivePolicyAcls(ctx, "example", &organizations.AdaptivePolicyAclsArgs{
+//				Description:    pulumi.String("Blocks sensitive web traffic"),
+//				IpVersion:      pulumi.String("ipv6"),
+//				Name:           pulumi.String("Block sensitive web traffic"),
+//				OrganizationId: pulumi.String("string"),
+//				Rules: organizations.AdaptivePolicyAclsRuleArray{
+//					&organizations.AdaptivePolicyAclsRuleArgs{
+//						Dst_port: "22-30",
+//						Policy:   pulumi.String("deny"),
+//						Protocol: pulumi.String("tcp"),
+//						Src_port: "1,33",
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiOrganizationsAdaptivePolicyAclsExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

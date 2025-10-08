@@ -9,6 +9,20 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.ApplianceTrafficShaping("example", {
+ *     globalBandwidthLimits: {
+ *         limit_down: 5120,
+ *         limit_up: 2048,
+ *     },
+ *     networkId: "string",
+ * });
+ * export const merakiNetworksApplianceTrafficShapingExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

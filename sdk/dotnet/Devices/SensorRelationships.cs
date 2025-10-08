@@ -12,6 +12,36 @@ namespace Pulumi.Meraki.Devices
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Devices.SensorRelationships("example", new()
+    ///     {
+    ///         Livestream = new Meraki.Devices.Inputs.SensorRelationshipsLivestreamArgs
+    ///         {
+    ///             Related_devices = new[]
+    ///             {
+    ///                 
+    ///                 {
+    ///                     { "serial", "string" },
+    ///                 },
+    ///             },
+    ///         },
+    ///         Serial = "string",
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiDevicesSensorRelationshipsExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

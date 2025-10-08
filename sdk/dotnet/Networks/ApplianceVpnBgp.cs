@@ -12,6 +12,41 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.ApplianceVpnBgp("example", new()
+    ///     {
+    ///         AsNumber = 64515,
+    ///         Enabled = true,
+    ///         IbgpHoldTimer = 120,
+    ///         Neighbors = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.ApplianceVpnBgpNeighborArgs
+    ///             {
+    ///                 Allow_transit = true,
+    ///                 Ebgp_hold_timer = 180,
+    ///                 Ebgp_multihop = 2,
+    ///                 Ip = "10.10.10.22",
+    ///                 Receive_limit = 120,
+    ///                 Remote_as_number = 64343,
+    ///             },
+    ///         },
+    ///         NetworkId = "string",
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksApplianceVpnBgpExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

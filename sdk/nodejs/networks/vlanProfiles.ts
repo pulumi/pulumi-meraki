@@ -9,6 +9,29 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.VlanProfiles("example", {
+ *     iname: "string",
+ *     name: "My VLAN profile name",
+ *     networkId: "string",
+ *     vlanGroups: [{
+ *         name: "named-group-1",
+ *         vlan_ids: "2,5-7",
+ *     }],
+ *     vlanNames: [{
+ *         adaptive_policy_group: {
+ *             id: "791",
+ *         },
+ *         name: "named-1",
+ *         vlan_id: "1",
+ *     }],
+ * });
+ * export const merakiNetworksVlanProfilesExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

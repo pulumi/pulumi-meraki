@@ -14,6 +14,97 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewApplianceTrafficShapingUplinkSelection(ctx, "example", &networks.ApplianceTrafficShapingUplinkSelectionArgs{
+//				ActiveActiveAutoVpnEnabled: pulumi.Bool(true),
+//				DefaultUplink:              pulumi.String("wan1"),
+//				FailoverAndFailback: &networks.ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgs{
+//					Immediate: &networks.ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackImmediateArgs{
+//						Enabled: pulumi.Bool(true),
+//					},
+//				},
+//				LoadBalancingEnabled: pulumi.Bool(true),
+//				NetworkId:            pulumi.String("string"),
+//				VpnTrafficUplinkPreferences: networks.ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArray{
+//					&networks.ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgs{
+//						Fail_over_criterion: "poorPerformance",
+//						Performance_class: map[string]interface{}{
+//							"builtinPerformanceClassName": "VoIP",
+//							"customPerformanceClassId":    "123456",
+//							"type":                        "custom",
+//						},
+//						Preferred_uplink: "bestForVoIP",
+//						Traffic_filters: []map[string]interface{}{
+//							map[string]interface{}{
+//								"type": "applicationCategory",
+//								"value": map[string]interface{}{
+//									"destination": map[string]interface{}{
+//										"cidr":    "any",
+//										"fqdn":    "www.google.com",
+//										"host":    254,
+//										"network": "L_12345678",
+//										"port":    "1-1024",
+//										"vlan":    10,
+//									},
+//									"id":       "meraki:layer7/category/1",
+//									"protocol": "tcp",
+//									"source": map[string]interface{}{
+//										"cidr":    "192.168.1.0/24",
+//										"host":    200,
+//										"network": "L_23456789",
+//										"port":    "any",
+//										"vlan":    20,
+//									},
+//								},
+//							},
+//						},
+//					},
+//				},
+//				WanTrafficUplinkPreferences: networks.ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArray{
+//					&networks.ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgs{
+//						Preferred_uplink: "wan1",
+//						Traffic_filters: []map[string]interface{}{
+//							map[string]interface{}{
+//								"type": "custom",
+//								"value": map[string]interface{}{
+//									"destination": map[string]interface{}{
+//										"cidr": "any",
+//										"port": "any",
+//									},
+//									"protocol": "tcp",
+//									"source": map[string]interface{}{
+//										"cidr": "192.168.1.0/24",
+//										"host": 254,
+//										"port": "1-1024",
+//										"vlan": 10,
+//									},
+//								},
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksApplianceTrafficShapingUplinkSelectionExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

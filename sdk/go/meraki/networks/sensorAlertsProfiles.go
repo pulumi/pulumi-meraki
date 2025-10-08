@@ -14,6 +14,114 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewSensorAlertsProfiles(ctx, "example", &networks.SensorAlertsProfilesArgs{
+//				Conditions: networks.SensorAlertsProfilesConditionArray{
+//					&networks.SensorAlertsProfilesConditionArgs{
+//						Direction: pulumi.String("above"),
+//						Duration:  pulumi.Int(60),
+//						Metric:    pulumi.String("temperature"),
+//						Threshold: &networks.SensorAlertsProfilesConditionThresholdArgs{
+//							ApparentPower: &networks.SensorAlertsProfilesConditionThresholdApparentPowerArgs{
+//								Draw: pulumi.Float64(17.2),
+//							},
+//							Current: &networks.SensorAlertsProfilesConditionThresholdCurrentArgs{
+//								Draw: pulumi.Float64(0.14),
+//							},
+//							Door: &networks.SensorAlertsProfilesConditionThresholdDoorArgs{
+//								Open: pulumi.Bool(true),
+//							},
+//							Frequency: &networks.SensorAlertsProfilesConditionThresholdFrequencyArgs{
+//								Level: pulumi.Float64(58.8),
+//							},
+//							Humidity: &networks.SensorAlertsProfilesConditionThresholdHumidityArgs{
+//								Quality:            pulumi.String("inadequate"),
+//								RelativePercentage: pulumi.Int(65),
+//							},
+//							IndoorAirQuality: &networks.SensorAlertsProfilesConditionThresholdIndoorAirQualityArgs{
+//								Quality: pulumi.String("fair"),
+//								Score:   pulumi.Int(80),
+//							},
+//							Noise: &networks.SensorAlertsProfilesConditionThresholdNoiseArgs{
+//								Ambient: &networks.SensorAlertsProfilesConditionThresholdNoiseAmbientArgs{
+//									Level:   pulumi.Int(120),
+//									Quality: pulumi.String("poor"),
+//								},
+//							},
+//							Pm25: &networks.SensorAlertsProfilesConditionThresholdPm25Args{
+//								Concentration: pulumi.Int(90),
+//								Quality:       pulumi.String("fair"),
+//							},
+//							PowerFactor: &networks.SensorAlertsProfilesConditionThresholdPowerFactorArgs{
+//								Percentage: pulumi.Int(81),
+//							},
+//							RealPower: &networks.SensorAlertsProfilesConditionThresholdRealPowerArgs{
+//								Draw: pulumi.Float64(14.1),
+//							},
+//							Temperature: &networks.SensorAlertsProfilesConditionThresholdTemperatureArgs{
+//								Celsius:    pulumi.Float64(20.5),
+//								Fahrenheit: pulumi.Float64(70),
+//								Quality:    pulumi.String("good"),
+//							},
+//							Tvoc: &networks.SensorAlertsProfilesConditionThresholdTvocArgs{
+//								Concentration: pulumi.Int(400),
+//								Quality:       pulumi.String("poor"),
+//							},
+//							UpstreamPower: &networks.SensorAlertsProfilesConditionThresholdUpstreamPowerArgs{
+//								OutageDetected: pulumi.Bool(true),
+//							},
+//							Voltage: &networks.SensorAlertsProfilesConditionThresholdVoltageArgs{
+//								Level: pulumi.Float64(119.5),
+//							},
+//							Water: &networks.SensorAlertsProfilesConditionThresholdWaterArgs{
+//								Present: pulumi.Bool(true),
+//							},
+//						},
+//					},
+//				},
+//				Name:      pulumi.String("My Sensor Alert Profile"),
+//				NetworkId: pulumi.String("string"),
+//				Recipients: &networks.SensorAlertsProfilesRecipientsArgs{
+//					Emails: pulumi.StringArray{
+//						pulumi.String("miles@meraki.com"),
+//					},
+//					Http_server_ids: []string{
+//						"aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M=",
+//					},
+//					Sms_numbers: []string{
+//						"+15555555555",
+//					},
+//				},
+//				Schedule: &networks.SensorAlertsProfilesScheduleArgs{
+//					Id: pulumi.String("5"),
+//				},
+//				Serials: pulumi.StringArray{
+//					pulumi.String("Q234-ABCD-0001"),
+//					pulumi.String("Q234-ABCD-0002"),
+//					pulumi.String("Q234-ABCD-0003"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksSensorAlertsProfilesExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

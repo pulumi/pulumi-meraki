@@ -14,6 +14,74 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/organizations"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := organizations.NewApplianceVpnThirdPartyVpnpeers(ctx, "example", &organizations.ApplianceVpnThirdPartyVpnpeersArgs{
+//				OrganizationId: pulumi.String("string"),
+//				Peers: organizations.ApplianceVpnThirdPartyVpnpeersPeerArray{
+//					&organizations.ApplianceVpnThirdPartyVpnpeersPeerArgs{
+//						Ike_version: "2",
+//						Ipsec_policies: map[string]interface{}{
+//							"childAuthAlgo": []string{
+//								"sha1",
+//							},
+//							"childCipherAlgo": []string{
+//								"aes128",
+//							},
+//							"childLifetime": 28800,
+//							"childPfsGroup": []string{
+//								"disabled",
+//							},
+//							"ikeAuthAlgo": []string{
+//								"sha1",
+//							},
+//							"ikeCipherAlgo": []string{
+//								"tripledes",
+//							},
+//							"ikeDiffieHellmanGroup": []string{
+//								"group2",
+//							},
+//							"ikeLifetime": 28800,
+//							"ikePrfAlgo": []string{
+//								"prfsha1",
+//							},
+//						},
+//						Ipsec_policies_preset: "default",
+//						Local_id:              "myMXId@meraki.com",
+//						Name:                  pulumi.String("Peer Name"),
+//						Network_tags: []string{
+//							"none",
+//						},
+//						Private_subnets: []string{
+//							"192.168.1.0/24",
+//							"192.168.128.0/24",
+//						},
+//						Public_ip: "123.123.123.1",
+//						Remote_id: "miles@meraki.com",
+//						Secret:    pulumi.String("Sample Password"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiOrganizationsApplianceVpnThirdPartyVpnpeersExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

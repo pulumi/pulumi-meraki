@@ -20,6 +20,63 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.organizations.ApplianceVpnThirdPartyVpnpeers;
+ * import com.pulumi.meraki.organizations.ApplianceVpnThirdPartyVpnpeersArgs;
+ * import com.pulumi.meraki.organizations.inputs.ApplianceVpnThirdPartyVpnpeersPeerArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App }{{@code
+ *     public static void main(String[] args) }{{@code
+ *         Pulumi.run(App::stack);
+ *     }}{@code
+ * 
+ *     public static void stack(Context ctx) }{{@code
+ *         var example = new ApplianceVpnThirdPartyVpnpeers("example", ApplianceVpnThirdPartyVpnpeersArgs.builder()
+ *             .organizationId("string")
+ *             .peers(ApplianceVpnThirdPartyVpnpeersPeerArgs.builder()
+ *                 .ike_version("2")
+ *                 .ipsec_policies(Map.ofEntries(
+ *                     Map.entry("childAuthAlgo", List.of("sha1")),
+ *                     Map.entry("childCipherAlgo", List.of("aes128")),
+ *                     Map.entry("childLifetime", 28800),
+ *                     Map.entry("childPfsGroup", List.of("disabled")),
+ *                     Map.entry("ikeAuthAlgo", List.of("sha1")),
+ *                     Map.entry("ikeCipherAlgo", List.of("tripledes")),
+ *                     Map.entry("ikeDiffieHellmanGroup", List.of("group2")),
+ *                     Map.entry("ikeLifetime", 28800),
+ *                     Map.entry("ikePrfAlgo", List.of("prfsha1"))
+ *                 ))
+ *                 .ipsec_policies_preset("default")
+ *                 .local_id("myMXId}{@literal @}{@code meraki.com")
+ *                 .name("Peer Name")
+ *                 .network_tags(List.of("none"))
+ *                 .private_subnets(List.of(                
+ *                     "192.168.1.0/24",
+ *                     "192.168.128.0/24"))
+ *                 .public_ip("123.123.123.1")
+ *                 .remote_id("miles}{@literal @}{@code meraki.com")
+ *                 .secret("Sample Password")
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiOrganizationsApplianceVpnThirdPartyVpnpeersExample", example);
+ *     }}{@code
+ * }}{@code
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

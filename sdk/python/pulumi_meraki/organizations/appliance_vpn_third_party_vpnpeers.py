@@ -125,6 +125,40 @@ class ApplianceVpnThirdPartyVpnpeers(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.organizations.ApplianceVpnThirdPartyVpnpeers("example",
+            organization_id="string",
+            peers=[{
+                "ike_version": "2",
+                "ipsec_policies": {
+                    "childAuthAlgo": ["sha1"],
+                    "childCipherAlgo": ["aes128"],
+                    "childLifetime": 28800,
+                    "childPfsGroup": ["disabled"],
+                    "ikeAuthAlgo": ["sha1"],
+                    "ikeCipherAlgo": ["tripledes"],
+                    "ikeDiffieHellmanGroup": ["group2"],
+                    "ikeLifetime": 28800,
+                    "ikePrfAlgo": ["prfsha1"],
+                },
+                "ipsec_policies_preset": "default",
+                "local_id": "myMXId@meraki.com",
+                "name": "Peer Name",
+                "network_tags": ["none"],
+                "private_subnets": [
+                    "192.168.1.0/24",
+                    "192.168.128.0/24",
+                ],
+                "public_ip": "123.123.123.1",
+                "remote_id": "miles@meraki.com",
+                "secret": "Sample Password",
+            }])
+        pulumi.export("merakiOrganizationsApplianceVpnThirdPartyVpnpeersExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -144,6 +178,40 @@ class ApplianceVpnThirdPartyVpnpeers(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.organizations.ApplianceVpnThirdPartyVpnpeers("example",
+            organization_id="string",
+            peers=[{
+                "ike_version": "2",
+                "ipsec_policies": {
+                    "childAuthAlgo": ["sha1"],
+                    "childCipherAlgo": ["aes128"],
+                    "childLifetime": 28800,
+                    "childPfsGroup": ["disabled"],
+                    "ikeAuthAlgo": ["sha1"],
+                    "ikeCipherAlgo": ["tripledes"],
+                    "ikeDiffieHellmanGroup": ["group2"],
+                    "ikeLifetime": 28800,
+                    "ikePrfAlgo": ["prfsha1"],
+                },
+                "ipsec_policies_preset": "default",
+                "local_id": "myMXId@meraki.com",
+                "name": "Peer Name",
+                "network_tags": ["none"],
+                "private_subnets": [
+                    "192.168.1.0/24",
+                    "192.168.128.0/24",
+                ],
+                "public_ip": "123.123.123.1",
+                "remote_id": "miles@meraki.com",
+                "secret": "Sample Password",
+            }])
+        pulumi.export("merakiOrganizationsApplianceVpnThirdPartyVpnpeersExample", example)
+        ```
 
         ## Import
 

@@ -9,6 +9,24 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.devices.CellularGatewayPortForwardingRules("example", {
+ *     rules: [{
+ *         access: "any",
+ *         lan_ip: "172.31.128.5",
+ *         local_port: "4",
+ *         name: "test",
+ *         protocol: "tcp",
+ *         public_port: "11-12",
+ *     }],
+ *     serial: "string",
+ * });
+ * export const merakiDevicesCellularGatewayPortForwardingRulesExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

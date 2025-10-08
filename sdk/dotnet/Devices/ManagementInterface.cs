@@ -12,6 +12,54 @@ namespace Pulumi.Meraki.Devices
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Devices.ManagementInterface("example", new()
+    ///     {
+    ///         Serial = "string",
+    ///         Wan1 = new Meraki.Devices.Inputs.ManagementInterfaceWan1Args
+    ///         {
+    ///             Static_dns = new[]
+    ///             {
+    ///                 "1.2.3.2",
+    ///                 "1.2.3.3",
+    ///             },
+    ///             Static_gateway_ip = "1.2.3.1",
+    ///             Static_ip = "1.2.3.4",
+    ///             Static_subnet_mask = "255.255.255.0",
+    ///             Using_static_ip = true,
+    ///             Vlan = 7,
+    ///             Wan_enabled = "not configured",
+    ///         },
+    ///         Wan2 = new Meraki.Devices.Inputs.ManagementInterfaceWan2Args
+    ///         {
+    ///             Static_dns = new[]
+    ///             {
+    ///                 "1.2.3.2",
+    ///                 "1.2.3.3",
+    ///             },
+    ///             Static_gateway_ip = "1.2.3.1",
+    ///             Static_ip = "1.2.3.4",
+    ///             Static_subnet_mask = "255.255.255.0",
+    ///             Using_static_ip = false,
+    ///             Vlan = 2,
+    ///             Wan_enabled = "enabled",
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiDevicesManagementInterfaceExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

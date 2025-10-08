@@ -14,6 +14,339 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewWirelessRfProfiles(ctx, "example", &networks.WirelessRfProfilesArgs{
+//				ApBandSettings: &networks.WirelessRfProfilesApBandSettingsArgs{
+//					Band_operation_mode:   "dual",
+//					Band_steering_enabled: true,
+//					Bands: &networks.WirelessRfProfilesApBandSettingsBandsArgs{
+//						Enabled: []string{
+//							"2.4",
+//							"5",
+//						},
+//					},
+//				},
+//				BandSelectionType:      pulumi.String("ap"),
+//				ClientBalancingEnabled: pulumi.Bool(true),
+//				FiveGhzSettings: &networks.WirelessRfProfilesFiveGhzSettingsArgs{
+//					Channel_width: "auto",
+//					Max_power:     30,
+//					Min_bitrate:   12,
+//					Min_power:     8,
+//					Rxsop:         pulumi.Int(-95),
+//					Valid_auto_channels: []float64{
+//						36,
+//						40,
+//						44,
+//						48,
+//						52,
+//						56,
+//						60,
+//						64,
+//						100,
+//						104,
+//						108,
+//						112,
+//						116,
+//						120,
+//						124,
+//						128,
+//						132,
+//						136,
+//						140,
+//						144,
+//						149,
+//						153,
+//						157,
+//						161,
+//						165,
+//					},
+//				},
+//				FlexRadios: &networks.WirelessRfProfilesFlexRadiosArgs{
+//					By_model: []map[string]interface{}{
+//						map[string]interface{}{
+//							"bands": []string{
+//								"5",
+//							},
+//							"model": "MR34",
+//						},
+//					},
+//				},
+//				MinBitrateType: pulumi.String("band"),
+//				Name:           pulumi.String("Main Office"),
+//				NetworkId:      pulumi.String("string"),
+//				PerSsidSettings: &networks.WirelessRfProfilesPerSsidSettingsArgs{
+//					Status_0: map[string]interface{}{
+//						"bandOperationMode":   "dual",
+//						"bandSteeringEnabled": true,
+//						"bands": map[string]interface{}{
+//							"enabled": []string{
+//								"2.4",
+//								"5",
+//							},
+//						},
+//						"minBitrate": 11,
+//					},
+//					Status_1: map[string]interface{}{
+//						"bandOperationMode":   "dual",
+//						"bandSteeringEnabled": true,
+//						"bands": map[string]interface{}{
+//							"enabled": []string{
+//								"2.4",
+//								"5",
+//							},
+//						},
+//						"minBitrate": 11,
+//					},
+//					Status_10: map[string]interface{}{
+//						"bandOperationMode":   "dual",
+//						"bandSteeringEnabled": true,
+//						"bands": map[string]interface{}{
+//							"enabled": []string{
+//								"2.4",
+//								"5",
+//							},
+//						},
+//						"minBitrate": 11,
+//					},
+//					Status_11: map[string]interface{}{
+//						"bandOperationMode":   "dual",
+//						"bandSteeringEnabled": true,
+//						"bands": map[string]interface{}{
+//							"enabled": []string{
+//								"2.4",
+//								"5",
+//							},
+//						},
+//						"minBitrate": 11,
+//					},
+//					Status_12: map[string]interface{}{
+//						"bandOperationMode":   "dual",
+//						"bandSteeringEnabled": true,
+//						"bands": map[string]interface{}{
+//							"enabled": []string{
+//								"2.4",
+//								"5",
+//							},
+//						},
+//						"minBitrate": 11,
+//					},
+//					Status_13: map[string]interface{}{
+//						"bandOperationMode":   "dual",
+//						"bandSteeringEnabled": true,
+//						"bands": map[string]interface{}{
+//							"enabled": []string{
+//								"2.4",
+//								"5",
+//							},
+//						},
+//						"minBitrate": 11,
+//					},
+//					Status_14: map[string]interface{}{
+//						"bandOperationMode":   "dual",
+//						"bandSteeringEnabled": true,
+//						"bands": map[string]interface{}{
+//							"enabled": []string{
+//								"2.4",
+//								"5",
+//							},
+//						},
+//						"minBitrate": 11,
+//					},
+//					Status_2: map[string]interface{}{
+//						"bandOperationMode":   "dual",
+//						"bandSteeringEnabled": true,
+//						"bands": map[string]interface{}{
+//							"enabled": []string{
+//								"2.4",
+//								"5",
+//							},
+//						},
+//						"minBitrate": 11,
+//					},
+//					Status_3: map[string]interface{}{
+//						"bandOperationMode":   "dual",
+//						"bandSteeringEnabled": true,
+//						"bands": map[string]interface{}{
+//							"enabled": []string{
+//								"2.4",
+//								"5",
+//							},
+//						},
+//						"minBitrate": 11,
+//					},
+//					Status_4: map[string]interface{}{
+//						"bandOperationMode":   "dual",
+//						"bandSteeringEnabled": true,
+//						"bands": map[string]interface{}{
+//							"enabled": []string{
+//								"2.4",
+//								"5",
+//							},
+//						},
+//						"minBitrate": 11,
+//					},
+//					Status_5: map[string]interface{}{
+//						"bandOperationMode":   "dual",
+//						"bandSteeringEnabled": true,
+//						"bands": map[string]interface{}{
+//							"enabled": []string{
+//								"2.4",
+//								"5",
+//							},
+//						},
+//						"minBitrate": 11,
+//					},
+//					Status_6: map[string]interface{}{
+//						"bandOperationMode":   "dual",
+//						"bandSteeringEnabled": true,
+//						"bands": map[string]interface{}{
+//							"enabled": []string{
+//								"2.4",
+//								"5",
+//							},
+//						},
+//						"minBitrate": 11,
+//					},
+//					Status_7: map[string]interface{}{
+//						"bandOperationMode":   "dual",
+//						"bandSteeringEnabled": true,
+//						"bands": map[string]interface{}{
+//							"enabled": []string{
+//								"2.4",
+//								"5",
+//							},
+//						},
+//						"minBitrate": 11,
+//					},
+//					Status_8: map[string]interface{}{
+//						"bandOperationMode":   "dual",
+//						"bandSteeringEnabled": true,
+//						"bands": map[string]interface{}{
+//							"enabled": []string{
+//								"2.4",
+//								"5",
+//							},
+//						},
+//						"minBitrate": 11,
+//					},
+//					Status_9: map[string]interface{}{
+//						"bandOperationMode":   "dual",
+//						"bandSteeringEnabled": true,
+//						"bands": map[string]interface{}{
+//							"enabled": []string{
+//								"2.4",
+//								"5",
+//							},
+//						},
+//						"minBitrate": 11,
+//					},
+//				},
+//				SixGhzSettings: &networks.WirelessRfProfilesSixGhzSettingsArgs{
+//					Channel_width: "auto",
+//					Max_power:     30,
+//					Min_bitrate:   12,
+//					Min_power:     8,
+//					Rxsop:         pulumi.Int(-95),
+//					Valid_auto_channels: []float64{
+//						1,
+//						5,
+//						9,
+//						13,
+//						17,
+//						21,
+//						25,
+//						29,
+//						33,
+//						37,
+//						41,
+//						45,
+//						49,
+//						53,
+//						57,
+//						61,
+//						65,
+//						69,
+//						73,
+//						77,
+//						81,
+//						85,
+//						89,
+//						93,
+//						97,
+//						101,
+//						105,
+//						109,
+//						113,
+//						117,
+//						121,
+//						125,
+//						129,
+//						133,
+//						137,
+//						141,
+//						145,
+//						149,
+//						153,
+//						157,
+//						161,
+//						165,
+//						169,
+//						173,
+//						177,
+//						181,
+//						185,
+//						189,
+//						193,
+//						197,
+//						201,
+//						205,
+//						209,
+//						213,
+//						217,
+//						221,
+//						225,
+//						229,
+//						233,
+//					},
+//				},
+//				Transmission: &networks.WirelessRfProfilesTransmissionArgs{
+//					Enabled: pulumi.Bool(true),
+//				},
+//				TwoFourGhzSettings: &networks.WirelessRfProfilesTwoFourGhzSettingsArgs{
+//					Ax_enabled:  true,
+//					Max_power:   30,
+//					Min_bitrate: 11,
+//					Min_power:   5,
+//					Rxsop:       pulumi.Int(-95),
+//					Valid_auto_channels: []float64{
+//						1,
+//						6,
+//						11,
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksWirelessRfProfilesExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

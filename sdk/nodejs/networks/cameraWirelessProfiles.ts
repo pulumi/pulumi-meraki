@@ -9,6 +9,22 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.CameraWirelessProfiles("example", {
+ *     name: "wireless profile A",
+ *     networkId: "string",
+ *     ssid: {
+ *         auth_mode: "8021x-radius",
+ *         encryption_mode: "wpa-eap",
+ *         name: "ssid test",
+ *     },
+ * });
+ * export const merakiNetworksCameraWirelessProfilesExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

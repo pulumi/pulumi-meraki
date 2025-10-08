@@ -14,6 +14,48 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewWirelessEthernetPortsProfiles(ctx, "example", &networks.WirelessEthernetPortsProfilesArgs{
+//				Name:      pulumi.String("string"),
+//				NetworkId: pulumi.String("string"),
+//				Ports: networks.WirelessEthernetPortsProfilesPortArray{
+//					&networks.WirelessEthernetPortsProfilesPortArgs{
+//						Enabled:      pulumi.Bool(false),
+//						Name:         pulumi.String("string"),
+//						Psk_group_id: "string",
+//						Ssid:         pulumi.Int(1),
+//					},
+//				},
+//				ProfileId: pulumi.String("string"),
+//				UsbPorts: networks.WirelessEthernetPortsProfilesUsbPortArray{
+//					&networks.WirelessEthernetPortsProfilesUsbPortArgs{
+//						Enabled: pulumi.Bool(false),
+//						Name:    pulumi.String("string"),
+//						Ssid:    pulumi.Int(1),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksWirelessEthernetPortsProfilesExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

@@ -12,6 +12,38 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.WirelessSsidsSchedules("example", new()
+    ///     {
+    ///         Enabled = true,
+    ///         NetworkId = "string",
+    ///         Number = "string",
+    ///         Ranges = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.WirelessSsidsSchedulesRangeArgs
+    ///             {
+    ///                 End_day = "Tuesday",
+    ///                 End_time = "05:00",
+    ///                 Start_day = "Tuesday",
+    ///                 Start_time = "01:00",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksWirelessSsidsSchedulesExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

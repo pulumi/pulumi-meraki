@@ -12,6 +12,48 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.VlanProfiles("example", new()
+    ///     {
+    ///         Iname = "string",
+    ///         Name = "My VLAN profile name",
+    ///         NetworkId = "string",
+    ///         VlanGroups = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.VlanProfilesVlanGroupArgs
+    ///             {
+    ///                 Name = "named-group-1",
+    ///                 Vlan_ids = "2,5-7",
+    ///             },
+    ///         },
+    ///         VlanNames = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.VlanProfilesVlanNameArgs
+    ///             {
+    ///                 Adaptive_policy_group = 
+    ///                 {
+    ///                     { "id", "791" },
+    ///                 },
+    ///                 Name = "named-1",
+    ///                 Vlan_id = "1",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksVlanProfilesExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

@@ -13,6 +13,40 @@ namespace Pulumi.Meraki.Devices
     /// ~&gt;Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
     /// already existed previously.
     /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Devices.ApplianceRadioSettings("example", new()
+    ///     {
+    ///         FiveGhzSettings = new Meraki.Devices.Inputs.ApplianceRadioSettingsFiveGhzSettingsArgs
+    ///         {
+    ///             Channel = 149,
+    ///             Channel_width = "20",
+    ///             Target_power = 15,
+    ///         },
+    ///         RfProfileId = "1234",
+    ///         Serial = "string",
+    ///         TwoFourGhzSettings = new Meraki.Devices.Inputs.ApplianceRadioSettingsTwoFourGhzSettingsArgs
+    ///         {
+    ///             Channel = 11,
+    ///             Target_power = 21,
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiDevicesApplianceRadioSettingsExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

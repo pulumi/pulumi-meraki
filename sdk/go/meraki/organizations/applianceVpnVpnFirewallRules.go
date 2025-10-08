@@ -14,6 +14,44 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/organizations"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := organizations.NewApplianceVpnVpnFirewallRules(ctx, "example", &organizations.ApplianceVpnVpnFirewallRulesArgs{
+//				OrganizationId: pulumi.String("string"),
+//				Rules: organizations.ApplianceVpnVpnFirewallRulesRuleArray{
+//					&organizations.ApplianceVpnVpnFirewallRulesRuleArgs{
+//						Comment:        pulumi.String("Allow TCP traffic to subnet with HTTP servers."),
+//						Dest_cidr:      "192.168.1.0/24",
+//						Dest_port:      "443",
+//						Policy:         pulumi.String("allow"),
+//						Protocol:       pulumi.String("tcp"),
+//						Src_cidr:       "Any",
+//						Src_port:       "Any",
+//						Syslog_enabled: false,
+//					},
+//				},
+//				SyslogDefaultRule: pulumi.Bool(false),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiOrganizationsApplianceVpnVpnFirewallRulesExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

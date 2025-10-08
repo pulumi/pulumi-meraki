@@ -9,6 +9,24 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.WirelessSsidsSchedules("example", {
+ *     enabled: true,
+ *     networkId: "string",
+ *     number: "string",
+ *     ranges: [{
+ *         end_day: "Tuesday",
+ *         end_time: "05:00",
+ *         start_day: "Tuesday",
+ *         start_time: "01:00",
+ *     }],
+ * });
+ * export const merakiNetworksWirelessSsidsSchedulesExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

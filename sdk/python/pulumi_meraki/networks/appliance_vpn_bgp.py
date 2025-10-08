@@ -208,6 +208,26 @@ class ApplianceVpnBgp(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.ApplianceVpnBgp("example",
+            as_number=64515,
+            enabled=True,
+            ibgp_hold_timer=120,
+            neighbors=[{
+                "allow_transit": True,
+                "ebgp_hold_timer": 180,
+                "ebgp_multihop": 2,
+                "ip": "10.10.10.22",
+                "receive_limit": 120,
+                "remote_as_number": 64343,
+            }],
+            network_id="string")
+        pulumi.export("merakiNetworksApplianceVpnBgpExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -230,6 +250,26 @@ class ApplianceVpnBgp(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.ApplianceVpnBgp("example",
+            as_number=64515,
+            enabled=True,
+            ibgp_hold_timer=120,
+            neighbors=[{
+                "allow_transit": True,
+                "ebgp_hold_timer": 180,
+                "ebgp_multihop": 2,
+                "ip": "10.10.10.22",
+                "receive_limit": 120,
+                "remote_as_number": 64343,
+            }],
+            network_id="string")
+        pulumi.export("merakiNetworksApplianceVpnBgpExample", example)
+        ```
 
         ## Import
 

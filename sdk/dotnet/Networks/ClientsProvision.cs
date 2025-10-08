@@ -12,6 +12,123 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ~&gt;Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
     /// already existed previously.
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.ClientsProvision("example", new()
+    ///     {
+    ///         NetworkId = "string",
+    ///         Parameters = new Meraki.Networks.Inputs.ClientsProvisionParametersArgs
+    ///         {
+    ///             Clients = new[]
+    ///             {
+    ///                 new Meraki.Networks.Inputs.ClientsProvisionParametersClientArgs
+    ///                 {
+    ///                     Mac = "00:11:22:33:44:55",
+    ///                     Name = "Miles's phone",
+    ///                 },
+    ///             },
+    ///             Device_policy = "Group policy",
+    ///             Group_policy_id = "101",
+    ///             Policies_by_security_appliance = 
+    ///             {
+    ///                 { "devicePolicy", "Normal" },
+    ///             },
+    ///             Policies_by_ssid = 
+    ///             {
+    ///                 { "status0", 
+    ///                 {
+    ///                     { "devicePolicy", "Group policy" },
+    ///                     { "groupPolicyId", "101" },
+    ///                 } },
+    ///                 { "status1", 
+    ///                 {
+    ///                     { "devicePolicy", "Group policy" },
+    ///                     { "groupPolicyId", "101" },
+    ///                 } },
+    ///                 { "status10", 
+    ///                 {
+    ///                     { "devicePolicy", "Group policy" },
+    ///                     { "groupPolicyId", "101" },
+    ///                 } },
+    ///                 { "status11", 
+    ///                 {
+    ///                     { "devicePolicy", "Group policy" },
+    ///                     { "groupPolicyId", "101" },
+    ///                 } },
+    ///                 { "status12", 
+    ///                 {
+    ///                     { "devicePolicy", "Group policy" },
+    ///                     { "groupPolicyId", "101" },
+    ///                 } },
+    ///                 { "status13", 
+    ///                 {
+    ///                     { "devicePolicy", "Group policy" },
+    ///                     { "groupPolicyId", "101" },
+    ///                 } },
+    ///                 { "status14", 
+    ///                 {
+    ///                     { "devicePolicy", "Group policy" },
+    ///                     { "groupPolicyId", "101" },
+    ///                 } },
+    ///                 { "status2", 
+    ///                 {
+    ///                     { "devicePolicy", "Group policy" },
+    ///                     { "groupPolicyId", "101" },
+    ///                 } },
+    ///                 { "status3", 
+    ///                 {
+    ///                     { "devicePolicy", "Group policy" },
+    ///                     { "groupPolicyId", "101" },
+    ///                 } },
+    ///                 { "status4", 
+    ///                 {
+    ///                     { "devicePolicy", "Group policy" },
+    ///                     { "groupPolicyId", "101" },
+    ///                 } },
+    ///                 { "status5", 
+    ///                 {
+    ///                     { "devicePolicy", "Group policy" },
+    ///                     { "groupPolicyId", "101" },
+    ///                 } },
+    ///                 { "status6", 
+    ///                 {
+    ///                     { "devicePolicy", "Group policy" },
+    ///                     { "groupPolicyId", "101" },
+    ///                 } },
+    ///                 { "status7", 
+    ///                 {
+    ///                     { "devicePolicy", "Group policy" },
+    ///                     { "groupPolicyId", "101" },
+    ///                 } },
+    ///                 { "status8", 
+    ///                 {
+    ///                     { "devicePolicy", "Group policy" },
+    ///                     { "groupPolicyId", "101" },
+    ///                 } },
+    ///                 { "status9", 
+    ///                 {
+    ///                     { "devicePolicy", "Group policy" },
+    ///                     { "groupPolicyId", "101" },
+    ///                 } },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksClientsProvisionExample"] = example,
+    ///     };
+    /// });
+    /// ```
     /// </summary>
     [MerakiResourceType("meraki:networks/clientsProvision:ClientsProvision")]
     public partial class ClientsProvision : global::Pulumi.CustomResource

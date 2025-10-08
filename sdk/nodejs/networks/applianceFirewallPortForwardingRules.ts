@@ -9,6 +9,25 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.ApplianceFirewallPortForwardingRules("example", {
+ *     networkId: "string",
+ *     rules: [{
+ *         allowed_ips: ["any"],
+ *         lan_ip: "192.168.128.1",
+ *         local_port: "442-443",
+ *         name: "Description of Port Forwarding Rule",
+ *         protocol: "tcp",
+ *         public_port: "8100-8101",
+ *         uplink: "both",
+ *     }],
+ * });
+ * export const merakiNetworksApplianceFirewallPortForwardingRulesExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

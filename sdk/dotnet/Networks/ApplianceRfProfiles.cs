@@ -12,6 +12,60 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.ApplianceRfProfiles("example", new()
+    ///     {
+    ///         FiveGhzSettings = new Meraki.Networks.Inputs.ApplianceRfProfilesFiveGhzSettingsArgs
+    ///         {
+    ///             Ax_enabled = true,
+    ///             Min_bitrate = 48,
+    ///         },
+    ///         Name = "MX RF Profile",
+    ///         NetworkId = "string",
+    ///         PerSsidSettings = new Meraki.Networks.Inputs.ApplianceRfProfilesPerSsidSettingsArgs
+    ///         {
+    ///             Status_1 = 
+    ///             {
+    ///                 { "bandOperationMode", "dual" },
+    ///                 { "bandSteeringEnabled", true },
+    ///             },
+    ///             Status_2 = 
+    ///             {
+    ///                 { "bandOperationMode", "dual" },
+    ///                 { "bandSteeringEnabled", true },
+    ///             },
+    ///             Status_3 = 
+    ///             {
+    ///                 { "bandOperationMode", "dual" },
+    ///                 { "bandSteeringEnabled", true },
+    ///             },
+    ///             Status_4 = 
+    ///             {
+    ///                 { "bandOperationMode", "dual" },
+    ///                 { "bandSteeringEnabled", true },
+    ///             },
+    ///         },
+    ///         TwoFourGhzSettings = new Meraki.Networks.Inputs.ApplianceRfProfilesTwoFourGhzSettingsArgs
+    ///         {
+    ///             Ax_enabled = true,
+    ///             Min_bitrate = 12,
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksApplianceRfProfilesExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

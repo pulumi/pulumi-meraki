@@ -12,6 +12,38 @@ namespace Pulumi.Meraki.Organizations
     /// <summary>
     /// ~&gt;Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
     /// already existed previously.
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Organizations.SwitchDevicesClone("example", new()
+    ///     {
+    ///         OrganizationId = "string",
+    ///         Parameters = new Meraki.Organizations.Inputs.SwitchDevicesCloneParametersArgs
+    ///         {
+    ///             Source_serial = "Q234-ABCD-5678",
+    ///             Target_serials = new[]
+    ///             {
+    ///                 "Q234-ABCD-0001",
+    ///                 "Q234-ABCD-0002",
+    ///                 "Q234-ABCD-0003",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiOrganizationsSwitchDevicesCloneExample"] = example,
+    ///     };
+    /// });
+    /// ```
     /// </summary>
     [MerakiResourceType("meraki:organizations/switchDevicesClone:SwitchDevicesClone")]
     public partial class SwitchDevicesClone : global::Pulumi.CustomResource

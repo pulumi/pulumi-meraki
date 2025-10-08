@@ -20,6 +20,68 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.ApplianceRfProfiles;
+ * import com.pulumi.meraki.networks.ApplianceRfProfilesArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceRfProfilesFiveGhzSettingsArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceRfProfilesPerSsidSettingsArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceRfProfilesTwoFourGhzSettingsArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ApplianceRfProfiles("example", ApplianceRfProfilesArgs.builder()
+ *             .fiveGhzSettings(ApplianceRfProfilesFiveGhzSettingsArgs.builder()
+ *                 .ax_enabled(true)
+ *                 .min_bitrate(48)
+ *                 .build())
+ *             .name("MX RF Profile")
+ *             .networkId("string")
+ *             .perSsidSettings(ApplianceRfProfilesPerSsidSettingsArgs.builder()
+ *                 .status_1(Map.ofEntries(
+ *                     Map.entry("bandOperationMode", "dual"),
+ *                     Map.entry("bandSteeringEnabled", true)
+ *                 ))
+ *                 .status_2(Map.ofEntries(
+ *                     Map.entry("bandOperationMode", "dual"),
+ *                     Map.entry("bandSteeringEnabled", true)
+ *                 ))
+ *                 .status_3(Map.ofEntries(
+ *                     Map.entry("bandOperationMode", "dual"),
+ *                     Map.entry("bandSteeringEnabled", true)
+ *                 ))
+ *                 .status_4(Map.ofEntries(
+ *                     Map.entry("bandOperationMode", "dual"),
+ *                     Map.entry("bandSteeringEnabled", true)
+ *                 ))
+ *                 .build())
+ *             .twoFourGhzSettings(ApplianceRfProfilesTwoFourGhzSettingsArgs.builder()
+ *                 .ax_enabled(true)
+ *                 .min_bitrate(12)
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksApplianceRfProfilesExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

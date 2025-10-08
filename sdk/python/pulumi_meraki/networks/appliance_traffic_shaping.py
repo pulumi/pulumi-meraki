@@ -109,6 +109,19 @@ class ApplianceTrafficShaping(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.ApplianceTrafficShaping("example",
+            global_bandwidth_limits={
+                "limit_down": 5120,
+                "limit_up": 2048,
+            },
+            network_id="string")
+        pulumi.export("merakiNetworksApplianceTrafficShapingExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -128,6 +141,19 @@ class ApplianceTrafficShaping(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.ApplianceTrafficShaping("example",
+            global_bandwidth_limits={
+                "limit_down": 5120,
+                "limit_up": 2048,
+            },
+            network_id="string")
+        pulumi.export("merakiNetworksApplianceTrafficShapingExample", example)
+        ```
 
         ## Import
 

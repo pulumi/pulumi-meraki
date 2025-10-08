@@ -22,6 +22,53 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.SwitchSettings;
+ * import com.pulumi.meraki.networks.SwitchSettingsArgs;
+ * import com.pulumi.meraki.networks.inputs.SwitchSettingsMacBlocklistArgs;
+ * import com.pulumi.meraki.networks.inputs.SwitchSettingsPowerExceptionArgs;
+ * import com.pulumi.meraki.networks.inputs.SwitchSettingsUplinkClientSamplingArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SwitchSettings("example", SwitchSettingsArgs.builder()
+ *             .macBlocklist(SwitchSettingsMacBlocklistArgs.builder()
+ *                 .enabled(false)
+ *                 .build())
+ *             .networkId("string")
+ *             .powerExceptions(SwitchSettingsPowerExceptionArgs.builder()
+ *                 .power_type("string")
+ *                 .serial("string")
+ *                 .build())
+ *             .uplinkClientSampling(SwitchSettingsUplinkClientSamplingArgs.builder()
+ *                 .enabled(false)
+ *                 .build())
+ *             .useCombinedPower(false)
+ *             .vlan(1)
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksSwitchSettingsExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

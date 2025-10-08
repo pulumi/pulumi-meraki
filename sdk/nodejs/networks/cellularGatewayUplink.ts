@@ -9,6 +9,20 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.CellularGatewayUplink("example", {
+ *     bandwidthLimits: {
+ *         limit_down: 1000000,
+ *         limit_up: 1000000,
+ *     },
+ *     networkId: "string",
+ * });
+ * export const merakiNetworksCellularGatewayUplinkExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

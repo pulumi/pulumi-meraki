@@ -14,6 +14,44 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewSwitchAccessControlLists(ctx, "example", &networks.SwitchAccessControlListsArgs{
+//				NetworkId: pulumi.String("string"),
+//				Rules: networks.SwitchAccessControlListsRuleArray{
+//					&networks.SwitchAccessControlListsRuleArgs{
+//						Comment:    pulumi.String("Deny SSH"),
+//						Dst_cidr:   "172.16.30/24",
+//						Dst_port:   "22",
+//						Ip_version: "ipv4",
+//						Policy:     pulumi.String("deny"),
+//						Protocol:   pulumi.String("tcp"),
+//						Src_cidr:   "10.1.10.0/24",
+//						Src_port:   "any",
+//						Vlan:       pulumi.String("10"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksSwitchAccessControlListsExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

@@ -9,6 +9,29 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.SwitchAlternateManagementInterface("example", {
+ *     enabled: true,
+ *     networkId: "string",
+ *     protocols: [
+ *         "radius",
+ *         "snmp",
+ *         "syslog",
+ *     ],
+ *     switches: [{
+ *         alternate_management_ip: "1.2.3.4",
+ *         gateway: "1.2.3.5",
+ *         serial: "Q234-ABCD-5678",
+ *         subnet_mask: "255.255.255.0",
+ *     }],
+ *     vlanId: 100,
+ * });
+ * export const merakiNetworksSwitchAlternateManagementInterfaceExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

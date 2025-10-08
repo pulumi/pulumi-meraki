@@ -12,6 +12,31 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.CellularGatewayUplink("example", new()
+    ///     {
+    ///         BandwidthLimits = new Meraki.Networks.Inputs.CellularGatewayUplinkBandwidthLimitsArgs
+    ///         {
+    ///             Limit_down = 1000000,
+    ///             Limit_up = 1000000,
+    ///         },
+    ///         NetworkId = "string",
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksCellularGatewayUplinkExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

@@ -19,6 +19,44 @@ import javax.annotation.Nullable;
  * ~&gt;Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
  * already existed previously.
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.WirelessEthernetPortsProfilesSetDefault;
+ * import com.pulumi.meraki.networks.WirelessEthernetPortsProfilesSetDefaultArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessEthernetPortsProfilesSetDefaultParametersArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new WirelessEthernetPortsProfilesSetDefault("example", WirelessEthernetPortsProfilesSetDefaultArgs.builder()
+ *             .networkId("string")
+ *             .parameters(WirelessEthernetPortsProfilesSetDefaultParametersArgs.builder()
+ *                 .profile_id("1001")
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksWirelessEthernetPortsProfilesSetDefaultExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="meraki:networks/wirelessEthernetPortsProfilesSetDefault:WirelessEthernetPortsProfilesSetDefault")
 public class WirelessEthernetPortsProfilesSetDefault extends com.pulumi.resources.CustomResource {

@@ -12,6 +12,41 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.SwitchAccessControlLists("example", new()
+    ///     {
+    ///         NetworkId = "string",
+    ///         Rules = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.SwitchAccessControlListsRuleArgs
+    ///             {
+    ///                 Comment = "Deny SSH",
+    ///                 Dst_cidr = "172.16.30/24",
+    ///                 Dst_port = "22",
+    ///                 Ip_version = "ipv4",
+    ///                 Policy = "deny",
+    ///                 Protocol = "tcp",
+    ///                 Src_cidr = "10.1.10.0/24",
+    ///                 Src_port = "any",
+    ///                 Vlan = "10",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksSwitchAccessControlListsExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

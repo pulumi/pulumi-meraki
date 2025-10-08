@@ -113,6 +113,23 @@ class SmDevicesWipe(pulumi.CustomResource):
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
         already existed previously.
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.SmDevicesWipe("example",
+            network_id="string",
+            parameters={
+                "id": "1284392014819",
+                "pin": 123456,
+                "serial": "XY0XX0Y0X0",
+                "wifi_mac": "00:11:22:33:44:55",
+            })
+        pulumi.export("merakiNetworksSmDevicesWipeExample", example)
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -126,6 +143,23 @@ class SmDevicesWipe(pulumi.CustomResource):
         """
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
         already existed previously.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.SmDevicesWipe("example",
+            network_id="string",
+            parameters={
+                "id": "1284392014819",
+                "pin": 123456,
+                "serial": "XY0XX0Y0X0",
+                "wifi_mac": "00:11:22:33:44:55",
+            })
+        pulumi.export("merakiNetworksSmDevicesWipeExample", example)
+        ```
 
         :param str resource_name: The name of the resource.
         :param SmDevicesWipeArgs args: The arguments to use to populate this resource's properties.

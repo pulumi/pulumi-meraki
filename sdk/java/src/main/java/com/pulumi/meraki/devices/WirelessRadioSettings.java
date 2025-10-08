@@ -18,6 +18,50 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.devices.WirelessRadioSettings;
+ * import com.pulumi.meraki.devices.WirelessRadioSettingsArgs;
+ * import com.pulumi.meraki.devices.inputs.WirelessRadioSettingsFiveGhzSettingsArgs;
+ * import com.pulumi.meraki.devices.inputs.WirelessRadioSettingsTwoFourGhzSettingsArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new WirelessRadioSettings("example", WirelessRadioSettingsArgs.builder()
+ *             .fiveGhzSettings(WirelessRadioSettingsFiveGhzSettingsArgs.builder()
+ *                 .channel(149)
+ *                 .channel_width(20)
+ *                 .target_power(15)
+ *                 .build())
+ *             .rfProfileId("1234")
+ *             .serial("string")
+ *             .twoFourGhzSettings(WirelessRadioSettingsTwoFourGhzSettingsArgs.builder()
+ *                 .channel(11)
+ *                 .target_power(21)
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiDevicesWirelessRadioSettingsExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

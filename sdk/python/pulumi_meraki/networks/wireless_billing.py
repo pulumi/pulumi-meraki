@@ -142,6 +142,25 @@ class WirelessBilling(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.WirelessBilling("example",
+            currency="USD",
+            network_id="string",
+            plans=[{
+                "bandwidth_limits": {
+                    "limitDown": 1000000,
+                    "limitUp": 1000000,
+                },
+                "id": "1",
+                "price": 5,
+                "time_limit": "1 hour",
+            }])
+        pulumi.export("merakiNetworksWirelessBillingExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -162,6 +181,25 @@ class WirelessBilling(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.WirelessBilling("example",
+            currency="USD",
+            network_id="string",
+            plans=[{
+                "bandwidth_limits": {
+                    "limitDown": 1000000,
+                    "limitUp": 1000000,
+                },
+                "id": "1",
+                "price": 5,
+                "time_limit": "1 hour",
+            }])
+        pulumi.export("merakiNetworksWirelessBillingExample", example)
+        ```
 
         ## Import
 

@@ -207,6 +207,24 @@ class WirelessSsidsFirewallL3FirewallRules(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.WirelessSsidsFirewallL3FirewallRules("example",
+            allow_lan_access=True,
+            network_id="string",
+            number="string",
+            rules=[{
+                "comment": "Allow TCP traffic to subnet with HTTP servers.",
+                "dest_cidr": "192.168.1.0/24",
+                "dest_port": "443",
+                "policy": "allow",
+                "protocol": "tcp",
+            }])
+        pulumi.export("merakiNetworksWirelessSsidsFirewallL3FirewallRulesExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -229,6 +247,24 @@ class WirelessSsidsFirewallL3FirewallRules(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.WirelessSsidsFirewallL3FirewallRules("example",
+            allow_lan_access=True,
+            network_id="string",
+            number="string",
+            rules=[{
+                "comment": "Allow TCP traffic to subnet with HTTP servers.",
+                "dest_cidr": "192.168.1.0/24",
+                "dest_port": "443",
+                "policy": "allow",
+                "protocol": "tcp",
+            }])
+        pulumi.export("merakiNetworksWirelessSsidsFirewallL3FirewallRulesExample", example)
+        ```
 
         ## Import
 

@@ -19,6 +19,57 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.WirelessSsidsTrafficShapingRules;
+ * import com.pulumi.meraki.networks.WirelessSsidsTrafficShapingRulesArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsTrafficShapingRulesRuleArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new WirelessSsidsTrafficShapingRules("example", WirelessSsidsTrafficShapingRulesArgs.builder()
+ *             .defaultRulesEnabled(true)
+ *             .networkId("string")
+ *             .number("string")
+ *             .rules(WirelessSsidsTrafficShapingRulesRuleArgs.builder()
+ *                 .definitions(WirelessSsidsTrafficShapingRulesRuleDefinitionArgs.builder()
+ *                     .type("host")
+ *                     .value("google.com")
+ *                     .build())
+ *                 .dscp_tag_value(1)
+ *                 .pcp_tag_value(1)
+ *                 .per_client_bandwidth_limits(Map.ofEntries(
+ *                     Map.entry("bandwidthLimits", Map.ofEntries(
+ *                         Map.entry("limitDown", 1000000),
+ *                         Map.entry("limitUp", 1000000)
+ *                     )),
+ *                     Map.entry("settings", "custom")
+ *                 ))
+ *                 .build())
+ *             .trafficShapingEnabled(true)
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksWirelessSsidsTrafficShapingRulesExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

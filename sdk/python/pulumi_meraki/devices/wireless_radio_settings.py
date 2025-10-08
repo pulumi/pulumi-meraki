@@ -175,6 +175,25 @@ class WirelessRadioSettings(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.devices.WirelessRadioSettings("example",
+            five_ghz_settings={
+                "channel": 149,
+                "channel_width": 20,
+                "target_power": 15,
+            },
+            rf_profile_id="1234",
+            serial="string",
+            two_four_ghz_settings={
+                "channel": 11,
+                "target_power": 21,
+            })
+        pulumi.export("merakiDevicesWirelessRadioSettingsExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -196,6 +215,25 @@ class WirelessRadioSettings(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.devices.WirelessRadioSettings("example",
+            five_ghz_settings={
+                "channel": 149,
+                "channel_width": 20,
+                "target_power": 15,
+            },
+            rf_profile_id="1234",
+            serial="string",
+            two_four_ghz_settings={
+                "channel": 11,
+                "target_power": 21,
+            })
+        pulumi.export("merakiDevicesWirelessRadioSettingsExample", example)
+        ```
 
         ## Import
 

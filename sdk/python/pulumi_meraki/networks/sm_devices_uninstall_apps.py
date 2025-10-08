@@ -133,6 +133,24 @@ class SmDevicesUninstallApps(pulumi.CustomResource):
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
         already existed previously.
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.SmDevicesUninstallApps("example",
+            device_id="string",
+            network_id="string",
+            parameters={
+                "app_ids": [
+                    "1284392014819",
+                    "2983092129865",
+                ],
+            })
+        pulumi.export("merakiNetworksSmDevicesUninstallAppsExample", example)
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device_id: deviceId path parameter. Device ID
@@ -147,6 +165,24 @@ class SmDevicesUninstallApps(pulumi.CustomResource):
         """
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
         already existed previously.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.SmDevicesUninstallApps("example",
+            device_id="string",
+            network_id="string",
+            parameters={
+                "app_ids": [
+                    "1284392014819",
+                    "2983092129865",
+                ],
+            })
+        pulumi.export("merakiNetworksSmDevicesUninstallAppsExample", example)
+        ```
 
         :param str resource_name: The name of the resource.
         :param SmDevicesUninstallAppsArgs args: The arguments to use to populate this resource's properties.

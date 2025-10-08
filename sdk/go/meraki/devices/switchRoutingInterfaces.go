@@ -14,6 +14,53 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/devices"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := devices.NewSwitchRoutingInterfaces(ctx, "example", &devices.SwitchRoutingInterfacesArgs{
+//				DefaultGateway: pulumi.String("192.168.1.1"),
+//				InterfaceIp:    pulumi.String("192.168.1.2"),
+//				Ipv6: &devices.SwitchRoutingInterfacesIpv6Args{
+//					Address:         pulumi.String("1:2:3:4::1"),
+//					Assignment_mode: "static",
+//					Gateway:         pulumi.String("1:2:3:4::2"),
+//					Prefix:          pulumi.String("1:2:3:4::/48"),
+//				},
+//				MulticastRouting: pulumi.String("disabled"),
+//				Name:             pulumi.String("L3 interface"),
+//				OspfSettings: &devices.SwitchRoutingInterfacesOspfSettingsArgs{
+//					Area:               pulumi.String("0"),
+//					Cost:               pulumi.Int(1),
+//					Is_passive_enabled: true,
+//				},
+//				OspfV3: &devices.SwitchRoutingInterfacesOspfV3Args{
+//					Area:               pulumi.String("1"),
+//					Cost:               pulumi.Int(2),
+//					Is_passive_enabled: true,
+//				},
+//				Serial: pulumi.String("string"),
+//				Subnet: pulumi.String("192.168.1.0/24"),
+//				VlanId: pulumi.Int(100),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiDevicesSwitchRoutingInterfacesExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

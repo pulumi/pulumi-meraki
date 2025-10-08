@@ -113,6 +113,24 @@ class LicensesMove(pulumi.CustomResource):
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
         already existed previously.
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.organizations.LicensesMove("example",
+            organization_id="string",
+            parameters={
+                "dest_organization_id": "2930418",
+                "license_ids": [
+                    "123",
+                    "456",
+                ],
+            })
+        pulumi.export("merakiOrganizationsLicensesMoveExample", example)
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
@@ -126,6 +144,24 @@ class LicensesMove(pulumi.CustomResource):
         """
         ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
         already existed previously.
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.organizations.LicensesMove("example",
+            organization_id="string",
+            parameters={
+                "dest_organization_id": "2930418",
+                "license_ids": [
+                    "123",
+                    "456",
+                ],
+            })
+        pulumi.export("merakiOrganizationsLicensesMoveExample", example)
+        ```
 
         :param str resource_name: The name of the resource.
         :param LicensesMoveArgs args: The arguments to use to populate this resource's properties.

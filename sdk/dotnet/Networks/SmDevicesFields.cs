@@ -12,6 +12,39 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ~&gt;Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
     /// already existed previously.
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.SmDevicesFields("example", new()
+    ///     {
+    ///         NetworkId = "string",
+    ///         Parameters = new Meraki.Networks.Inputs.SmDevicesFieldsParametersArgs
+    ///         {
+    ///             Device_fields = 
+    ///             {
+    ///                 { "name", "Miles's phone" },
+    ///                 { "notes", "Here's some info about my device" },
+    ///             },
+    ///             Id = "1284392014819",
+    ///             Serial = "XY0XX0Y0X0",
+    ///             Wifi_mac = "00:11:22:33:44:55",
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksSmDevicesFieldsExample"] = example,
+    ///     };
+    /// });
+    /// ```
     /// </summary>
     [MerakiResourceType("meraki:networks/smDevicesFields:SmDevicesFields")]
     public partial class SmDevicesFields : global::Pulumi.CustomResource

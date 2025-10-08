@@ -14,6 +14,37 @@ import (
 
 // ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
 // already existed previously.
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/organizations"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := organizations.NewLicensesRenewSeats(ctx, "example", &organizations.LicensesRenewSeatsArgs{
+//				OrganizationId: pulumi.String("string"),
+//				Parameters: &organizations.LicensesRenewSeatsParametersArgs{
+//					License_id_to_renew: "123",
+//					Unused_license_id:   "1234",
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiOrganizationsLicensesRenewSeatsExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
 type LicensesRenewSeats struct {
 	pulumi.CustomResourceState
 

@@ -12,6 +12,56 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.SwitchRoutingMulticast("example", new()
+    ///     {
+    ///         DefaultSettings = new Meraki.Networks.Inputs.SwitchRoutingMulticastDefaultSettingsArgs
+    ///         {
+    ///             Flood_unknown_multicast_traffic_enabled = true,
+    ///             Igmp_snooping_enabled = true,
+    ///         },
+    ///         NetworkId = "string",
+    ///         Overrides = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.SwitchRoutingMulticastOverrideArgs
+    ///             {
+    ///                 Flood_unknown_multicast_traffic_enabled = true,
+    ///                 Igmp_snooping_enabled = true,
+    ///                 Stacks = new[]
+    ///                 {
+    ///                     "789102",
+    ///                     "123456",
+    ///                     "129102",
+    ///                 },
+    ///                 Switch_profiles = new[]
+    ///                 {
+    ///                     "1234",
+    ///                     "4567",
+    ///                 },
+    ///                 Switches = new[]
+    ///                 {
+    ///                     "Q234-ABCD-0001",
+    ///                     "Q234-ABCD-0002",
+    ///                     "Q234-ABCD-0003",
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksSwitchRoutingMulticastExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

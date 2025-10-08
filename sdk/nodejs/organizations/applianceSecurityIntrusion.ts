@@ -9,6 +9,20 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.organizations.ApplianceSecurityIntrusion("example", {
+ *     allowedRules: [{
+ *         message: "SQL sa login failed",
+ *         rule_id: "meraki:intrusion/snort/GID/01/SID/688",
+ *     }],
+ *     organizationId: "string",
+ * });
+ * export const merakiOrganizationsApplianceSecurityIntrusionExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

@@ -12,6 +12,34 @@ namespace Pulumi.Meraki.Organizations
     /// <summary>
     /// ~&gt;Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
     /// already existed previously.
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Organizations.LicensesMoveSeats("example", new()
+    ///     {
+    ///         OrganizationId = "string",
+    ///         Parameters = new Meraki.Organizations.Inputs.LicensesMoveSeatsParametersArgs
+    ///         {
+    ///             Dest_organization_id = "2930418",
+    ///             License_id = "1234",
+    ///             Seat_count = 20,
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiOrganizationsLicensesMoveSeatsExample"] = example,
+    ///     };
+    /// });
+    /// ```
     /// </summary>
     [MerakiResourceType("meraki:organizations/licensesMoveSeats:LicensesMoveSeats")]
     public partial class LicensesMoveSeats : global::Pulumi.CustomResource

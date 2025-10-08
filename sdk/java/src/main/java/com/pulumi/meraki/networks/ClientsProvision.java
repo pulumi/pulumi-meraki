@@ -19,6 +19,112 @@ import javax.annotation.Nullable;
  * ~&gt;Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
  * already existed previously.
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.ClientsProvision;
+ * import com.pulumi.meraki.networks.ClientsProvisionArgs;
+ * import com.pulumi.meraki.networks.inputs.ClientsProvisionParametersArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ClientsProvision("example", ClientsProvisionArgs.builder()
+ *             .networkId("string")
+ *             .parameters(ClientsProvisionParametersArgs.builder()
+ *                 .clients(ClientsProvisionParametersClientArgs.builder()
+ *                     .mac("00:11:22:33:44:55")
+ *                     .name("Miles's phone")
+ *                     .build())
+ *                 .device_policy("Group policy")
+ *                 .group_policy_id("101")
+ *                 .policies_by_security_appliance(Map.of("devicePolicy", "Normal"))
+ *                 .policies_by_ssid(Map.ofEntries(
+ *                     Map.entry("status0", Map.ofEntries(
+ *                         Map.entry("devicePolicy", "Group policy"),
+ *                         Map.entry("groupPolicyId", "101")
+ *                     )),
+ *                     Map.entry("status1", Map.ofEntries(
+ *                         Map.entry("devicePolicy", "Group policy"),
+ *                         Map.entry("groupPolicyId", "101")
+ *                     )),
+ *                     Map.entry("status10", Map.ofEntries(
+ *                         Map.entry("devicePolicy", "Group policy"),
+ *                         Map.entry("groupPolicyId", "101")
+ *                     )),
+ *                     Map.entry("status11", Map.ofEntries(
+ *                         Map.entry("devicePolicy", "Group policy"),
+ *                         Map.entry("groupPolicyId", "101")
+ *                     )),
+ *                     Map.entry("status12", Map.ofEntries(
+ *                         Map.entry("devicePolicy", "Group policy"),
+ *                         Map.entry("groupPolicyId", "101")
+ *                     )),
+ *                     Map.entry("status13", Map.ofEntries(
+ *                         Map.entry("devicePolicy", "Group policy"),
+ *                         Map.entry("groupPolicyId", "101")
+ *                     )),
+ *                     Map.entry("status14", Map.ofEntries(
+ *                         Map.entry("devicePolicy", "Group policy"),
+ *                         Map.entry("groupPolicyId", "101")
+ *                     )),
+ *                     Map.entry("status2", Map.ofEntries(
+ *                         Map.entry("devicePolicy", "Group policy"),
+ *                         Map.entry("groupPolicyId", "101")
+ *                     )),
+ *                     Map.entry("status3", Map.ofEntries(
+ *                         Map.entry("devicePolicy", "Group policy"),
+ *                         Map.entry("groupPolicyId", "101")
+ *                     )),
+ *                     Map.entry("status4", Map.ofEntries(
+ *                         Map.entry("devicePolicy", "Group policy"),
+ *                         Map.entry("groupPolicyId", "101")
+ *                     )),
+ *                     Map.entry("status5", Map.ofEntries(
+ *                         Map.entry("devicePolicy", "Group policy"),
+ *                         Map.entry("groupPolicyId", "101")
+ *                     )),
+ *                     Map.entry("status6", Map.ofEntries(
+ *                         Map.entry("devicePolicy", "Group policy"),
+ *                         Map.entry("groupPolicyId", "101")
+ *                     )),
+ *                     Map.entry("status7", Map.ofEntries(
+ *                         Map.entry("devicePolicy", "Group policy"),
+ *                         Map.entry("groupPolicyId", "101")
+ *                     )),
+ *                     Map.entry("status8", Map.ofEntries(
+ *                         Map.entry("devicePolicy", "Group policy"),
+ *                         Map.entry("groupPolicyId", "101")
+ *                     )),
+ *                     Map.entry("status9", Map.ofEntries(
+ *                         Map.entry("devicePolicy", "Group policy"),
+ *                         Map.entry("groupPolicyId", "101")
+ *                     ))
+ *                 ))
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksClientsProvisionExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="meraki:networks/clientsProvision:ClientsProvision")
 public class ClientsProvision extends com.pulumi.resources.CustomResource {

@@ -9,6 +9,40 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.FirmwareUpgradesStagedEvents("example", {
+ *     networkId: "string",
+ *     products: {
+ *         "switch": {
+ *             nextUpgrade: {
+ *                 toVersion: {
+ *                     id: "1234",
+ *                 },
+ *             },
+ *         },
+ *         switch_catalyst: {
+ *             nextUpgrade: {
+ *                 toVersion: {
+ *                     id: "4321",
+ *                 },
+ *             },
+ *         },
+ *     },
+ *     stages: [{
+ *         group: {
+ *             id: "1234",
+ *         },
+ *         milestones: {
+ *             scheduledFor: "2018-02-11T00:00:00Z",
+ *         },
+ *     }],
+ * });
+ * export const merakiNetworksFirmwareUpgradesStagedEventsExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

@@ -14,6 +14,64 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/organizations"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := organizations.NewBrandingPolicies(ctx, "example", &organizations.BrandingPoliciesArgs{
+//				AdminSettings: &organizations.BrandingPoliciesAdminSettingsArgs{
+//					Applies_to: "All admins of networks...",
+//					Values: pulumi.StringArray{
+//						pulumi.String("N_1234"),
+//						pulumi.String("L_5678"),
+//					},
+//				},
+//				CustomLogo: &organizations.BrandingPoliciesCustomLogoArgs{
+//					Enabled: pulumi.Bool(true),
+//					Image: &organizations.BrandingPoliciesCustomLogoImageArgs{
+//						Contents: pulumi.String("Hyperg26C8F4h8CvcoUqpA=="),
+//						Format:   pulumi.String("jpg"),
+//					},
+//				},
+//				Enabled: pulumi.Bool(true),
+//				HelpSettings: &organizations.BrandingPoliciesHelpSettingsArgs{
+//					Api_docs_subtab:                        "default or inherit",
+//					Cases_subtab:                           "hide",
+//					Cisco_meraki_product_documentation:     "show",
+//					Community_subtab:                       "show",
+//					Data_protection_requests_subtab:        "default or inherit",
+//					Firewall_info_subtab:                   "hide",
+//					Get_help_subtab:                        "default or inherit",
+//					Get_help_subtab_knowledge_base_search:  "<h1>Some custom HTML content</h1>",
+//					Hardware_replacements_subtab:           "hide",
+//					Help_tab:                               "show",
+//					Help_widget:                            "hide",
+//					New_features_subtab:                    "show",
+//					Sm_forums:                              "hide",
+//					Support_contact_info:                   "show",
+//					Universal_search_knowledge_base_search: "hide",
+//				},
+//				Name:           pulumi.String("My Branding Policy"),
+//				OrganizationId: pulumi.String("string"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiOrganizationsBrandingPoliciesExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

@@ -14,6 +14,57 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewFirmwareUpgradesStagedEvents(ctx, "example", &networks.FirmwareUpgradesStagedEventsArgs{
+//				NetworkId: pulumi.String("string"),
+//				Products: &networks.FirmwareUpgradesStagedEventsProductsArgs{
+//					Switch: &networks.FirmwareUpgradesStagedEventsProductsSwitchArgs{
+//						NextUpgrade: &networks.FirmwareUpgradesStagedEventsProductsSwitchNextUpgradeArgs{
+//							ToVersion: &networks.FirmwareUpgradesStagedEventsProductsSwitchNextUpgradeToVersionArgs{
+//								Id: pulumi.String("1234"),
+//							},
+//						},
+//					},
+//					Switch_catalyst: map[string]interface{}{
+//						"nextUpgrade": map[string]interface{}{
+//							"toVersion": map[string]interface{}{
+//								"id": "4321",
+//							},
+//						},
+//					},
+//				},
+//				Stages: networks.FirmwareUpgradesStagedEventsStageArray{
+//					&networks.FirmwareUpgradesStagedEventsStageArgs{
+//						Group: &networks.FirmwareUpgradesStagedEventsStageGroupArgs{
+//							Id: pulumi.String("1234"),
+//						},
+//						Milestones: &networks.FirmwareUpgradesStagedEventsStageMilestonesArgs{
+//							ScheduledFor: pulumi.String("2018-02-11T00:00:00Z"),
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksFirmwareUpgradesStagedEventsExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

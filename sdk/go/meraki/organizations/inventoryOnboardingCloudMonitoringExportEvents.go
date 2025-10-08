@@ -14,6 +14,39 @@ import (
 
 // ~>Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
 // already existed previously.
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/organizations"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := organizations.NewInventoryOnboardingCloudMonitoringExportEvents(ctx, "example", &organizations.InventoryOnboardingCloudMonitoringExportEventsArgs{
+//				OrganizationId: pulumi.String("string"),
+//				Parameters: &organizations.InventoryOnboardingCloudMonitoringExportEventsParametersArgs{
+//					Log_event: "download",
+//					Request:   pulumi.String("r=cb"),
+//					Target_os: "mac",
+//					Timestamp: pulumi.Int(1526087474),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiOrganizationsInventoryOnboardingCloudMonitoringExportEventsExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
 type InventoryOnboardingCloudMonitoringExportEvents struct {
 	pulumi.CustomResourceState
 

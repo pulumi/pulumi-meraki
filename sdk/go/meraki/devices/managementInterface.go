@@ -14,6 +14,55 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/devices"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := devices.NewManagementInterface(ctx, "example", &devices.ManagementInterfaceArgs{
+//				Serial: pulumi.String("string"),
+//				Wan1: &devices.ManagementInterfaceWan1Args{
+//					Static_dns: []string{
+//						"1.2.3.2",
+//						"1.2.3.3",
+//					},
+//					Static_gateway_ip:  "1.2.3.1",
+//					Static_ip:          "1.2.3.4",
+//					Static_subnet_mask: "255.255.255.0",
+//					Using_static_ip:    true,
+//					Vlan:               pulumi.Int(7),
+//					Wan_enabled:        "not configured",
+//				},
+//				Wan2: &devices.ManagementInterfaceWan2Args{
+//					Static_dns: []string{
+//						"1.2.3.2",
+//						"1.2.3.3",
+//					},
+//					Static_gateway_ip:  "1.2.3.1",
+//					Static_ip:          "1.2.3.4",
+//					Static_subnet_mask: "255.255.255.0",
+//					Using_static_ip:    false,
+//					Vlan:               pulumi.Int(2),
+//					Wan_enabled:        "enabled",
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiDevicesManagementInterfaceExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

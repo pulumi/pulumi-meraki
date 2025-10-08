@@ -14,6 +14,60 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewAlertsSettings(ctx, "example", &networks.AlertsSettingsArgs{
+//				Alerts: networks.AlertsSettingsAlertArray{
+//					&networks.AlertsSettingsAlertArgs{
+//						Alert_destinations: map[string]interface{}{
+//							"allAdmins": false,
+//							"emails": []string{
+//								"miles@meraki.com",
+//							},
+//							"httpServerIds": []string{
+//								"aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M=",
+//							},
+//							"snmp": false,
+//						},
+//						Enabled: pulumi.Bool(true),
+//						Filters: &networks.AlertsSettingsAlertFiltersArgs{
+//							Timeout: pulumi.Int(60),
+//						},
+//						Type: pulumi.String("gatewayDown"),
+//					},
+//				},
+//				DefaultDestinations: &networks.AlertsSettingsDefaultDestinationsArgs{
+//					All_admins: true,
+//					Emails: pulumi.StringArray{
+//						pulumi.String("miles@meraki.com"),
+//					},
+//					Http_server_ids: []string{
+//						"aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M=",
+//					},
+//					Snmp: pulumi.Bool(true),
+//				},
+//				NetworkId: pulumi.String("string"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksAlertsSettingsExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

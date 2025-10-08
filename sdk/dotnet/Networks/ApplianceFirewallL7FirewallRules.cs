@@ -42,6 +42,75 @@ namespace Pulumi.Meraki.Networks
     /// });
     /// ```
     /// 
+    /// ### 2
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.ApplianceFirewallL7FirewallRules("example", new()
+    ///     {
+    ///         NetworkId = "string",
+    ///         Rules = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.ApplianceFirewallL7FirewallRulesRuleArgs
+    ///             {
+    ///                 Policy = "deny",
+    ///                 Type = "applicationCategory",
+    ///                 Value_obj = 
+    ///                 {
+    ///                     { "name", "Sports" },
+    ///                     { "id", "meraki:layer7/category/5" },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksApplianceFirewallL7FirewallRulesExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
+    /// ### 3
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.ApplianceFirewallL7FirewallRules("example", new()
+    ///     {
+    ///         NetworkId = "string",
+    ///         Rules = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.ApplianceFirewallL7FirewallRulesRuleArgs
+    ///             {
+    ///                 Policy = "deny",
+    ///                 Type = "blockedCountries",
+    ///                 Value_list = new[]
+    ///                 {
+    ///                     "IT",
+    ///                     "IL",
+    ///                     "US",
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksApplianceFirewallL7FirewallRulesExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

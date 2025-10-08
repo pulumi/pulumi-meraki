@@ -19,6 +19,46 @@ import javax.annotation.Nullable;
  * ~&gt;Warning: This resource does not represent a real-world entity in Meraki Dashboard, therefore changing or deleting this resource on its own has no immediate effect. Instead, it is a task part of a Meraki Dashboard workflow. It is executed in Meraki without any additional verification. It does not check if it was executed before or if a similar configuration or action
  * already existed previously.
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.organizations.LicensesAssignSeats;
+ * import com.pulumi.meraki.organizations.LicensesAssignSeatsArgs;
+ * import com.pulumi.meraki.organizations.inputs.LicensesAssignSeatsParametersArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new LicensesAssignSeats("example", LicensesAssignSeatsArgs.builder()
+ *             .organizationId("string")
+ *             .parameters(LicensesAssignSeatsParametersArgs.builder()
+ *                 .license_id("1234")
+ *                 .network_id("N_24329156")
+ *                 .seat_count(20)
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiOrganizationsLicensesAssignSeatsExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="meraki:organizations/licensesAssignSeats:LicensesAssignSeats")
 public class LicensesAssignSeats extends com.pulumi.resources.CustomResource {

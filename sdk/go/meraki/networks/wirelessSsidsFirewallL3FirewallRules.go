@@ -14,6 +14,42 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewWirelessSsidsFirewallL3FirewallRules(ctx, "example", &networks.WirelessSsidsFirewallL3FirewallRulesArgs{
+//				AllowLanAccess: pulumi.Bool(true),
+//				NetworkId:      pulumi.String("string"),
+//				Number:         pulumi.String("string"),
+//				Rules: networks.WirelessSsidsFirewallL3FirewallRulesRuleArray{
+//					&networks.WirelessSsidsFirewallL3FirewallRulesRuleArgs{
+//						Comment:   pulumi.String("Allow TCP traffic to subnet with HTTP servers."),
+//						Dest_cidr: "192.168.1.0/24",
+//						Dest_port: "443",
+//						Policy:    pulumi.String("allow"),
+//						Protocol:  pulumi.String("tcp"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksWirelessSsidsFirewallL3FirewallRulesExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

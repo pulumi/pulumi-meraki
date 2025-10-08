@@ -12,6 +12,39 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.WirelessSsidsEapOverride("example", new()
+    ///     {
+    ///         EapolKey = new Meraki.Networks.Inputs.WirelessSsidsEapOverrideEapolKeyArgs
+    ///         {
+    ///             Retries = 5,
+    ///             Timeout_in_ms = 5000,
+    ///         },
+    ///         Identity = new Meraki.Networks.Inputs.WirelessSsidsEapOverrideIdentityArgs
+    ///         {
+    ///             Retries = 5,
+    ///             Timeout = 5,
+    ///         },
+    ///         MaxRetries = 5,
+    ///         NetworkId = "string",
+    ///         Number = "string",
+    ///         Timeout = 5,
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksWirelessSsidsEapOverrideExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

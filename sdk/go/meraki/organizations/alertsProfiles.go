@@ -14,6 +14,55 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/organizations"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := organizations.NewAlertsProfiles(ctx, "example", &organizations.AlertsProfilesArgs{
+//				AlertCondition: &organizations.AlertsProfilesAlertConditionArgs{
+//					Bit_rate_bps: 10000,
+//					Duration:     pulumi.Int(60),
+//					Interface:    pulumi.String("wan1"),
+//					Jitter_ms:    100,
+//					Latency_ms:   100,
+//					Loss_ratio:   0.1,
+//					Mos:          pulumi.Float64(3.5),
+//					Window:       pulumi.Int(600),
+//				},
+//				Description: pulumi.String("WAN 1 high utilization"),
+//				NetworkTags: pulumi.StringArray{
+//					pulumi.String("tag1"),
+//					pulumi.String("tag2"),
+//				},
+//				OrganizationId: pulumi.String("string"),
+//				Recipients: &organizations.AlertsProfilesRecipientsArgs{
+//					Emails: pulumi.StringArray{
+//						pulumi.String("admin@example.org"),
+//					},
+//					Http_server_ids: []string{
+//						"aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vcGF0aA==",
+//					},
+//				},
+//				Type: pulumi.String("wanUtilization"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiOrganizationsAlertsProfilesExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

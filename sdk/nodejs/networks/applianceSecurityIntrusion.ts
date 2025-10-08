@@ -9,6 +9,31 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.ApplianceSecurityIntrusion("example", {
+ *     idsRulesets: "balanced",
+ *     mode: "prevention",
+ *     networkId: "string",
+ *     protectedNetworks: {
+ *         excluded_cidr: [
+ *             "10.0.0.0/8",
+ *             "127.0.0.0/8",
+ *         ],
+ *         included_cidr: [
+ *             "10.0.0.0/8",
+ *             "127.0.0.0/8",
+ *             "169.254.0.0/16",
+ *             "172.16.0.0/12",
+ *         ],
+ *         use_default: false,
+ *     },
+ * });
+ * export const merakiNetworksApplianceSecurityIntrusionExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

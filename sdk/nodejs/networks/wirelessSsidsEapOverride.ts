@@ -9,6 +9,27 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.WirelessSsidsEapOverride("example", {
+ *     eapolKey: {
+ *         retries: 5,
+ *         timeout_in_ms: 5000,
+ *     },
+ *     identity: {
+ *         retries: 5,
+ *         timeout: 5,
+ *     },
+ *     maxRetries: 5,
+ *     networkId: "string",
+ *     number: "string",
+ *     timeout: 5,
+ * });
+ * export const merakiNetworksWirelessSsidsEapOverrideExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

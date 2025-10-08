@@ -12,6 +12,33 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.CameraWirelessProfiles("example", new()
+    ///     {
+    ///         Name = "wireless profile A",
+    ///         NetworkId = "string",
+    ///         Ssid = new Meraki.Networks.Inputs.CameraWirelessProfilesSsidArgs
+    ///         {
+    ///             Auth_mode = "8021x-radius",
+    ///             Encryption_mode = "wpa-eap",
+    ///             Name = "ssid test",
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksCameraWirelessProfilesExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

@@ -18,6 +18,48 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.organizations.AdaptivePolicyAcls;
+ * import com.pulumi.meraki.organizations.AdaptivePolicyAclsArgs;
+ * import com.pulumi.meraki.organizations.inputs.AdaptivePolicyAclsRuleArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new AdaptivePolicyAcls("example", AdaptivePolicyAclsArgs.builder()
+ *             .description("Blocks sensitive web traffic")
+ *             .ipVersion("ipv6")
+ *             .name("Block sensitive web traffic")
+ *             .organizationId("string")
+ *             .rules(AdaptivePolicyAclsRuleArgs.builder()
+ *                 .dst_port("22-30")
+ *                 .policy("deny")
+ *                 .protocol("tcp")
+ *                 .src_port("1,33")
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiOrganizationsAdaptivePolicyAclsExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh
