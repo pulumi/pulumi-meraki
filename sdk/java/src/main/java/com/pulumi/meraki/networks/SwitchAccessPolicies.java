@@ -303,14 +303,14 @@ public class SwitchAccessPolicies extends com.pulumi.resources.CustomResource {
         return this.radiusTestingEnabled;
     }
     /**
-     * Enable to restrict access for clients to a response_objectific set of IP addresses or hostnames prior to authentication
+     * Enable to restrict access for clients to a responseObjectific set of IP addresses or hostnames prior to authentication
      * 
      */
     @Export(name="urlRedirectWalledGardenEnabled", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> urlRedirectWalledGardenEnabled;
 
     /**
-     * @return Enable to restrict access for clients to a response_objectific set of IP addresses or hostnames prior to authentication
+     * @return Enable to restrict access for clients to a responseObjectific set of IP addresses or hostnames prior to authentication
      * 
      */
     public Output<Boolean> urlRedirectWalledGardenEnabled() {

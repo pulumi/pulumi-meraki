@@ -311,14 +311,14 @@ public final class SwitchAccessPoliciesState extends com.pulumi.resources.Resour
     }
 
     /**
-     * Enable to restrict access for clients to a response_objectific set of IP addresses or hostnames prior to authentication
+     * Enable to restrict access for clients to a responseObjectific set of IP addresses or hostnames prior to authentication
      * 
      */
     @Import(name="urlRedirectWalledGardenEnabled")
     private @Nullable Output<Boolean> urlRedirectWalledGardenEnabled;
 
     /**
-     * @return Enable to restrict access for clients to a response_objectific set of IP addresses or hostnames prior to authentication
+     * @return Enable to restrict access for clients to a responseObjectific set of IP addresses or hostnames prior to authentication
      * 
      */
     public Optional<Output<Boolean>> urlRedirectWalledGardenEnabled() {
@@ -840,7 +840,7 @@ public final class SwitchAccessPoliciesState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param urlRedirectWalledGardenEnabled Enable to restrict access for clients to a response_objectific set of IP addresses or hostnames prior to authentication
+         * @param urlRedirectWalledGardenEnabled Enable to restrict access for clients to a responseObjectific set of IP addresses or hostnames prior to authentication
          * 
          * @return builder
          * 
@@ -851,7 +851,7 @@ public final class SwitchAccessPoliciesState extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param urlRedirectWalledGardenEnabled Enable to restrict access for clients to a response_objectific set of IP addresses or hostnames prior to authentication
+         * @param urlRedirectWalledGardenEnabled Enable to restrict access for clients to a responseObjectific set of IP addresses or hostnames prior to authentication
          * 
          * @return builder
          * 

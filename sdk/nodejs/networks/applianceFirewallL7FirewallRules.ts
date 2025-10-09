@@ -25,6 +25,10 @@ import * as utilities from "../utilities";
  * export const merakiNetworksApplianceFirewallL7FirewallRulesExample = example;
  * ```
  *
+ * ### 2
+ *
+ * ### 3
+ *
  * ## Import
  *
  * ```sh

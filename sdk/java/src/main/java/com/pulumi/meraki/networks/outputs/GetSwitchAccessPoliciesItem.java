@@ -94,7 +94,7 @@ public final class GetSwitchAccessPoliciesItem {
      */
     private Boolean radiusTestingEnabled;
     /**
-     * @return Enable to restrict access for clients to a response_objectific set of IP addresses or hostnames prior to authentication
+     * @return Enable to restrict access for clients to a responseObjectific set of IP addresses or hostnames prior to authentication
      * 
      */
     private Boolean urlRedirectWalledGardenEnabled;
@@ -216,7 +216,7 @@ public final class GetSwitchAccessPoliciesItem {
         return this.radiusTestingEnabled;
     }
     /**
-     * @return Enable to restrict access for clients to a response_objectific set of IP addresses or hostnames prior to authentication
+     * @return Enable to restrict access for clients to a responseObjectific set of IP addresses or hostnames prior to authentication
      * 
      */
     public Boolean urlRedirectWalledGardenEnabled() {
