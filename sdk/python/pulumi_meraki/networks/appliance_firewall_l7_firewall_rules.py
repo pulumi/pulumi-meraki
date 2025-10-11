@@ -140,6 +140,10 @@ class ApplianceFirewallL7FirewallRules(pulumi.CustomResource):
         pulumi.export("merakiNetworksApplianceFirewallL7FirewallRulesExample", example)
         ```
 
+        ### 2
+
+        ### 3
+
         ## Import
 
         ```sh
@@ -174,6 +178,10 @@ class ApplianceFirewallL7FirewallRules(pulumi.CustomResource):
             }])
         pulumi.export("merakiNetworksApplianceFirewallL7FirewallRulesExample", example)
         ```
+
+        ### 2
+
+        ### 3
 
         ## Import
 

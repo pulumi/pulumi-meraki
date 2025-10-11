@@ -25,13 +25,13 @@ namespace Pulumi.Meraki
         public Output<string?> MerakiBaseUrl { get; private set; } = null!;
 
         /// <summary>
-        /// Cisco Meraki meraki_dashboard_api_key to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
+        /// Cisco Meraki MerakiDashboardApiKey to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
         /// </summary>
         [Output("merakiDashboardApiKey")]
         public Output<string?> MerakiDashboardApiKey { get; private set; } = null!;
 
         /// <summary>
-        /// Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to `false`.
+        /// Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to `False`.
         /// </summary>
         [Output("merakiDebug")]
         public Output<string?> MerakiDebug { get; private set; } = null!;
@@ -85,7 +85,7 @@ namespace Pulumi.Meraki
         private Input<string>? _merakiDashboardApiKey;
 
         /// <summary>
-        /// Cisco Meraki meraki_dashboard_api_key to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
+        /// Cisco Meraki MerakiDashboardApiKey to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
         /// </summary>
         public Input<string>? MerakiDashboardApiKey
         {
@@ -98,7 +98,7 @@ namespace Pulumi.Meraki
         }
 
         /// <summary>
-        /// Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to `false`.
+        /// Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to `False`.
         /// </summary>
         [Input("merakiDebug")]
         public Input<string>? MerakiDebug { get; set; }

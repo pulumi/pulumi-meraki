@@ -38,14 +38,14 @@ public class Provider extends com.pulumi.resources.ProviderResource {
         return Codegen.optional(this.merakiBaseUrl);
     }
     /**
-     * Cisco Meraki meraki_dashboard_api_key to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
+     * Cisco Meraki merakiDashboardApiKey to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
      * 
      */
     @Export(name="merakiDashboardApiKey", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> merakiDashboardApiKey;
 
     /**
-     * @return Cisco Meraki meraki_dashboard_api_key to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
+     * @return Cisco Meraki merakiDashboardApiKey to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
      * 
      */
     public Output<Optional<String>> merakiDashboardApiKey() {

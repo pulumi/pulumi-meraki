@@ -19,7 +19,7 @@ public final class Config {
         return Codegen.stringProp("merakiBaseUrl").config(config).get();
     }
 /**
- * Cisco Meraki meraki_dashboard_api_key to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
+ * Cisco Meraki merakiDashboardApiKey to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
  * 
  */
     public Optional<String> merakiDashboardApiKey() {

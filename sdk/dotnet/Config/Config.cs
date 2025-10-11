@@ -44,7 +44,7 @@ namespace Pulumi.Meraki
 
         private static readonly __Value<string?> _merakiDashboardApiKey = new __Value<string?>(() => __config.Get("merakiDashboardApiKey"));
         /// <summary>
-        /// Cisco Meraki meraki_dashboard_api_key to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
+        /// Cisco Meraki MerakiDashboardApiKey to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
         /// </summary>
         public static string? MerakiDashboardApiKey
         {
@@ -54,7 +54,7 @@ namespace Pulumi.Meraki
 
         private static readonly __Value<string?> _merakiDebug = new __Value<string?>(() => __config.Get("merakiDebug"));
         /// <summary>
-        /// Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to `false`.
+        /// Flag for Cisco Meraki to enable debugging. If not set, it uses the MERAKI_DEBUG environment variable defaults to `False`.
         /// </summary>
         public static string? MerakiDebug
         {

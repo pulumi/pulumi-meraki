@@ -136,7 +136,7 @@ namespace Pulumi.Meraki.Networks
         public Output<bool> RadiusTestingEnabled { get; private set; } = null!;
 
         /// <summary>
-        /// Enable to restrict access for clients to a response_objectific set of IP addresses or hostnames prior to authentication
+        /// Enable to restrict access for clients to a ResponseObjectific set of IP addresses or hostnames prior to authentication
         /// </summary>
         [Output("urlRedirectWalledGardenEnabled")]
         public Output<bool> UrlRedirectWalledGardenEnabled { get; private set; } = null!;
@@ -309,7 +309,7 @@ namespace Pulumi.Meraki.Networks
         public Input<bool>? RadiusTestingEnabled { get; set; }
 
         /// <summary>
-        /// Enable to restrict access for clients to a response_objectific set of IP addresses or hostnames prior to authentication
+        /// Enable to restrict access for clients to a ResponseObjectific set of IP addresses or hostnames prior to authentication
         /// </summary>
         [Input("urlRedirectWalledGardenEnabled")]
         public Input<bool>? UrlRedirectWalledGardenEnabled { get; set; }
@@ -479,7 +479,7 @@ namespace Pulumi.Meraki.Networks
         public Input<bool>? RadiusTestingEnabled { get; set; }
 
         /// <summary>
-        /// Enable to restrict access for clients to a response_objectific set of IP addresses or hostnames prior to authentication
+        /// Enable to restrict access for clients to a ResponseObjectific set of IP addresses or hostnames prior to authentication
         /// </summary>
         [Input("urlRedirectWalledGardenEnabled")]
         public Input<bool>? UrlRedirectWalledGardenEnabled { get; set; }

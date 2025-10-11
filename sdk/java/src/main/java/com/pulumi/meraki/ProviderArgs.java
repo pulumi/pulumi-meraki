@@ -32,14 +32,14 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Cisco Meraki meraki_dashboard_api_key to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
+     * Cisco Meraki merakiDashboardApiKey to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
      * 
      */
     @Import(name="merakiDashboardApiKey")
     private @Nullable Output<String> merakiDashboardApiKey;
 
     /**
-     * @return Cisco Meraki meraki_dashboard_api_key to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
+     * @return Cisco Meraki merakiDashboardApiKey to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
      * 
      */
     public Optional<Output<String>> merakiDashboardApiKey() {
@@ -125,7 +125,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param merakiDashboardApiKey Cisco Meraki meraki_dashboard_api_key to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
+         * @param merakiDashboardApiKey Cisco Meraki merakiDashboardApiKey to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
          * 
          * @return builder
          * 
@@ -136,7 +136,7 @@ public final class ProviderArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param merakiDashboardApiKey Cisco Meraki meraki_dashboard_api_key to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
+         * @param merakiDashboardApiKey Cisco Meraki merakiDashboardApiKey to authenticate. If not set, it uses the MERAKI_DASHBOARD_API_KEY environment variable.
          * 
          * @return builder
          * 
