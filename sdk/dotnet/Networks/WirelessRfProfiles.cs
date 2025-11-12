@@ -12,6 +12,394 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.WirelessRfProfiles("example", new()
+    ///     {
+    ///         ApBandSettings = new Meraki.Networks.Inputs.WirelessRfProfilesApBandSettingsArgs
+    ///         {
+    ///             BandOperationMode = "dual",
+    ///             BandSteeringEnabled = true,
+    ///             Bands = new Meraki.Networks.Inputs.WirelessRfProfilesApBandSettingsBandsArgs
+    ///             {
+    ///                 Enableds = new[]
+    ///                 {
+    ///                     "2.4",
+    ///                     "5",
+    ///                 },
+    ///             },
+    ///         },
+    ///         BandSelectionType = "ap",
+    ///         ClientBalancingEnabled = true,
+    ///         FiveGhzSettings = new Meraki.Networks.Inputs.WirelessRfProfilesFiveGhzSettingsArgs
+    ///         {
+    ///             ChannelWidth = "auto",
+    ///             MaxPower = 30,
+    ///             MinBitrate = 12,
+    ///             MinPower = 8,
+    ///             Rxsop = -95,
+    ///             ValidAutoChannels = new[]
+    ///             {
+    ///                 36,
+    ///                 40,
+    ///                 44,
+    ///                 48,
+    ///                 52,
+    ///                 56,
+    ///                 60,
+    ///                 64,
+    ///                 100,
+    ///                 104,
+    ///                 108,
+    ///                 112,
+    ///                 116,
+    ///                 120,
+    ///                 124,
+    ///                 128,
+    ///                 132,
+    ///                 136,
+    ///                 140,
+    ///                 144,
+    ///                 149,
+    ///                 153,
+    ///                 157,
+    ///                 161,
+    ///                 165,
+    ///             },
+    ///         },
+    ///         FlexRadios = new Meraki.Networks.Inputs.WirelessRfProfilesFlexRadiosArgs
+    ///         {
+    ///             ByModels = new[]
+    ///             {
+    ///                 new Meraki.Networks.Inputs.WirelessRfProfilesFlexRadiosByModelArgs
+    ///                 {
+    ///                     Bands = new[]
+    ///                     {
+    ///                         "5",
+    ///                     },
+    ///                     Model = "MR34",
+    ///                 },
+    ///             },
+    ///         },
+    ///         MinBitrateType = "band",
+    ///         Name = "Main Office",
+    ///         NetworkId = "string",
+    ///         PerSsidSettings = new Meraki.Networks.Inputs.WirelessRfProfilesPerSsidSettingsArgs
+    ///         {
+    ///             Status0 = new Meraki.Networks.Inputs.WirelessRfProfilesPerSsidSettingsStatus0Args
+    ///             {
+    ///                 BandOperationMode = "dual",
+    ///                 BandSteeringEnabled = true,
+    ///                 Bands = new Meraki.Networks.Inputs.WirelessRfProfilesPerSsidSettingsStatus0BandsArgs
+    ///                 {
+    ///                     Enableds = new[]
+    ///                     {
+    ///                         "2.4",
+    ///                         "5",
+    ///                     },
+    ///                 },
+    ///                 MinBitrate = 11,
+    ///             },
+    ///             Status1 = new Meraki.Networks.Inputs.WirelessRfProfilesPerSsidSettingsStatus1Args
+    ///             {
+    ///                 BandOperationMode = "dual",
+    ///                 BandSteeringEnabled = true,
+    ///                 Bands = new Meraki.Networks.Inputs.WirelessRfProfilesPerSsidSettingsStatus1BandsArgs
+    ///                 {
+    ///                     Enableds = new[]
+    ///                     {
+    ///                         "2.4",
+    ///                         "5",
+    ///                     },
+    ///                 },
+    ///                 MinBitrate = 11,
+    ///             },
+    ///             Status10 = new Meraki.Networks.Inputs.WirelessRfProfilesPerSsidSettingsStatus10Args
+    ///             {
+    ///                 BandOperationMode = "dual",
+    ///                 BandSteeringEnabled = true,
+    ///                 Bands = new Meraki.Networks.Inputs.WirelessRfProfilesPerSsidSettingsStatus10BandsArgs
+    ///                 {
+    ///                     Enableds = new[]
+    ///                     {
+    ///                         "2.4",
+    ///                         "5",
+    ///                     },
+    ///                 },
+    ///                 MinBitrate = 11,
+    ///             },
+    ///             Status11 = new Meraki.Networks.Inputs.WirelessRfProfilesPerSsidSettingsStatus11Args
+    ///             {
+    ///                 BandOperationMode = "dual",
+    ///                 BandSteeringEnabled = true,
+    ///                 Bands = new Meraki.Networks.Inputs.WirelessRfProfilesPerSsidSettingsStatus11BandsArgs
+    ///                 {
+    ///                     Enableds = new[]
+    ///                     {
+    ///                         "2.4",
+    ///                         "5",
+    ///                     },
+    ///                 },
+    ///                 MinBitrate = 11,
+    ///             },
+    ///             Status12 = new Meraki.Networks.Inputs.WirelessRfProfilesPerSsidSettingsStatus12Args
+    ///             {
+    ///                 BandOperationMode = "dual",
+    ///                 BandSteeringEnabled = true,
+    ///                 Bands = new Meraki.Networks.Inputs.WirelessRfProfilesPerSsidSettingsStatus12BandsArgs
+    ///                 {
+    ///                     Enableds = new[]
+    ///                     {
+    ///                         "2.4",
+    ///                         "5",
+    ///                     },
+    ///                 },
+    ///                 MinBitrate = 11,
+    ///             },
+    ///             Status13 = new Meraki.Networks.Inputs.WirelessRfProfilesPerSsidSettingsStatus13Args
+    ///             {
+    ///                 BandOperationMode = "dual",
+    ///                 BandSteeringEnabled = true,
+    ///                 Bands = new Meraki.Networks.Inputs.WirelessRfProfilesPerSsidSettingsStatus13BandsArgs
+    ///                 {
+    ///                     Enableds = new[]
+    ///                     {
+    ///                         "2.4",
+    ///                         "5",
+    ///                     },
+    ///                 },
+    ///                 MinBitrate = 11,
+    ///             },
+    ///             Status14 = new Meraki.Networks.Inputs.WirelessRfProfilesPerSsidSettingsStatus14Args
+    ///             {
+    ///                 BandOperationMode = "dual",
+    ///                 BandSteeringEnabled = true,
+    ///                 Bands = new Meraki.Networks.Inputs.WirelessRfProfilesPerSsidSettingsStatus14BandsArgs
+    ///                 {
+    ///                     Enableds = new[]
+    ///                     {
+    ///                         "2.4",
+    ///                         "5",
+    ///                     },
+    ///                 },
+    ///                 MinBitrate = 11,
+    ///             },
+    ///             Status2 = new Meraki.Networks.Inputs.WirelessRfProfilesPerSsidSettingsStatus2Args
+    ///             {
+    ///                 BandOperationMode = "dual",
+    ///                 BandSteeringEnabled = true,
+    ///                 Bands = new Meraki.Networks.Inputs.WirelessRfProfilesPerSsidSettingsStatus2BandsArgs
+    ///                 {
+    ///                     Enableds = new[]
+    ///                     {
+    ///                         "2.4",
+    ///                         "5",
+    ///                     },
+    ///                 },
+    ///                 MinBitrate = 11,
+    ///             },
+    ///             Status3 = new Meraki.Networks.Inputs.WirelessRfProfilesPerSsidSettingsStatus3Args
+    ///             {
+    ///                 BandOperationMode = "dual",
+    ///                 BandSteeringEnabled = true,
+    ///                 Bands = new Meraki.Networks.Inputs.WirelessRfProfilesPerSsidSettingsStatus3BandsArgs
+    ///                 {
+    ///                     Enableds = new[]
+    ///                     {
+    ///                         "2.4",
+    ///                         "5",
+    ///                     },
+    ///                 },
+    ///                 MinBitrate = 11,
+    ///             },
+    ///             Status4 = new Meraki.Networks.Inputs.WirelessRfProfilesPerSsidSettingsStatus4Args
+    ///             {
+    ///                 BandOperationMode = "dual",
+    ///                 BandSteeringEnabled = true,
+    ///                 Bands = new Meraki.Networks.Inputs.WirelessRfProfilesPerSsidSettingsStatus4BandsArgs
+    ///                 {
+    ///                     Enableds = new[]
+    ///                     {
+    ///                         "2.4",
+    ///                         "5",
+    ///                     },
+    ///                 },
+    ///                 MinBitrate = 11,
+    ///             },
+    ///             Status5 = new Meraki.Networks.Inputs.WirelessRfProfilesPerSsidSettingsStatus5Args
+    ///             {
+    ///                 BandOperationMode = "dual",
+    ///                 BandSteeringEnabled = true,
+    ///                 Bands = new Meraki.Networks.Inputs.WirelessRfProfilesPerSsidSettingsStatus5BandsArgs
+    ///                 {
+    ///                     Enableds = new[]
+    ///                     {
+    ///                         "2.4",
+    ///                         "5",
+    ///                     },
+    ///                 },
+    ///                 MinBitrate = 11,
+    ///             },
+    ///             Status6 = new Meraki.Networks.Inputs.WirelessRfProfilesPerSsidSettingsStatus6Args
+    ///             {
+    ///                 BandOperationMode = "dual",
+    ///                 BandSteeringEnabled = true,
+    ///                 Bands = new Meraki.Networks.Inputs.WirelessRfProfilesPerSsidSettingsStatus6BandsArgs
+    ///                 {
+    ///                     Enableds = new[]
+    ///                     {
+    ///                         "2.4",
+    ///                         "5",
+    ///                     },
+    ///                 },
+    ///                 MinBitrate = 11,
+    ///             },
+    ///             Status7 = new Meraki.Networks.Inputs.WirelessRfProfilesPerSsidSettingsStatus7Args
+    ///             {
+    ///                 BandOperationMode = "dual",
+    ///                 BandSteeringEnabled = true,
+    ///                 Bands = new Meraki.Networks.Inputs.WirelessRfProfilesPerSsidSettingsStatus7BandsArgs
+    ///                 {
+    ///                     Enableds = new[]
+    ///                     {
+    ///                         "2.4",
+    ///                         "5",
+    ///                     },
+    ///                 },
+    ///                 MinBitrate = 11,
+    ///             },
+    ///             Status8 = new Meraki.Networks.Inputs.WirelessRfProfilesPerSsidSettingsStatus8Args
+    ///             {
+    ///                 BandOperationMode = "dual",
+    ///                 BandSteeringEnabled = true,
+    ///                 Bands = new Meraki.Networks.Inputs.WirelessRfProfilesPerSsidSettingsStatus8BandsArgs
+    ///                 {
+    ///                     Enableds = new[]
+    ///                     {
+    ///                         "2.4",
+    ///                         "5",
+    ///                     },
+    ///                 },
+    ///                 MinBitrate = 11,
+    ///             },
+    ///             Status9 = new Meraki.Networks.Inputs.WirelessRfProfilesPerSsidSettingsStatus9Args
+    ///             {
+    ///                 BandOperationMode = "dual",
+    ///                 BandSteeringEnabled = true,
+    ///                 Bands = new Meraki.Networks.Inputs.WirelessRfProfilesPerSsidSettingsStatus9BandsArgs
+    ///                 {
+    ///                     Enableds = new[]
+    ///                     {
+    ///                         "2.4",
+    ///                         "5",
+    ///                     },
+    ///                 },
+    ///                 MinBitrate = 11,
+    ///             },
+    ///         },
+    ///         SixGhzSettings = new Meraki.Networks.Inputs.WirelessRfProfilesSixGhzSettingsArgs
+    ///         {
+    ///             ChannelWidth = "auto",
+    ///             MaxPower = 30,
+    ///             MinBitrate = 12,
+    ///             MinPower = 8,
+    ///             Rxsop = -95,
+    ///             ValidAutoChannels = new[]
+    ///             {
+    ///                 1,
+    ///                 5,
+    ///                 9,
+    ///                 13,
+    ///                 17,
+    ///                 21,
+    ///                 25,
+    ///                 29,
+    ///                 33,
+    ///                 37,
+    ///                 41,
+    ///                 45,
+    ///                 49,
+    ///                 53,
+    ///                 57,
+    ///                 61,
+    ///                 65,
+    ///                 69,
+    ///                 73,
+    ///                 77,
+    ///                 81,
+    ///                 85,
+    ///                 89,
+    ///                 93,
+    ///                 97,
+    ///                 101,
+    ///                 105,
+    ///                 109,
+    ///                 113,
+    ///                 117,
+    ///                 121,
+    ///                 125,
+    ///                 129,
+    ///                 133,
+    ///                 137,
+    ///                 141,
+    ///                 145,
+    ///                 149,
+    ///                 153,
+    ///                 157,
+    ///                 161,
+    ///                 165,
+    ///                 169,
+    ///                 173,
+    ///                 177,
+    ///                 181,
+    ///                 185,
+    ///                 189,
+    ///                 193,
+    ///                 197,
+    ///                 201,
+    ///                 205,
+    ///                 209,
+    ///                 213,
+    ///                 217,
+    ///                 221,
+    ///                 225,
+    ///                 229,
+    ///                 233,
+    ///             },
+    ///         },
+    ///         Transmission = new Meraki.Networks.Inputs.WirelessRfProfilesTransmissionArgs
+    ///         {
+    ///             Enabled = true,
+    ///         },
+    ///         TwoFourGhzSettings = new Meraki.Networks.Inputs.WirelessRfProfilesTwoFourGhzSettingsArgs
+    ///         {
+    ///             AxEnabled = true,
+    ///             MaxPower = 30,
+    ///             MinBitrate = 11,
+    ///             MinPower = 5,
+    ///             Rxsop = -95,
+    ///             ValidAutoChannels = new[]
+    ///             {
+    ///                 1,
+    ///                 6,
+    ///                 11,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksWirelessRfProfilesExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

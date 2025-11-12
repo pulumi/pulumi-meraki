@@ -11,6 +11,27 @@ import * as utilities from "../utilities";
  * already existed previously.
  *
  * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.FirmwareUpgradesRollbacks("example", {
+ *     networkId: "string",
+ *     parameters: {
+ *         product: "switch",
+ *         reasons: [{
+ *             category: "performance",
+ *             comment: "Network was slower with the upgrade",
+ *         }],
+ *         time: "2020-10-21T02:00:00Z",
+ *         toVersion: {
+ *             id: "7857",
+ *         },
+ *     },
+ * });
+ * export const merakiNetworksFirmwareUpgradesRollbacksExample = example;
+ * ```
  */
 export class FirmwareUpgradesRollbacks extends pulumi.CustomResource {
     /**

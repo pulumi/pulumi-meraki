@@ -22,6 +22,64 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.SwitchRoutingOspf;
+ * import com.pulumi.meraki.networks.SwitchRoutingOspfArgs;
+ * import com.pulumi.meraki.networks.inputs.SwitchRoutingOspfAreaArgs;
+ * import com.pulumi.meraki.networks.inputs.SwitchRoutingOspfMd5AuthenticationKeyArgs;
+ * import com.pulumi.meraki.networks.inputs.SwitchRoutingOspfV3Args;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SwitchRoutingOspf("example", SwitchRoutingOspfArgs.builder()
+ *             .areas(SwitchRoutingOspfAreaArgs.builder()
+ *                 .areaId(1284392014819)
+ *                 .areaName("Backbone")
+ *                 .areaType("normal")
+ *                 .build())
+ *             .deadTimerInSeconds(40)
+ *             .enabled(true)
+ *             .helloTimerInSeconds(10)
+ *             .md5AuthenticationEnabled(true)
+ *             .md5AuthenticationKey(SwitchRoutingOspfMd5AuthenticationKeyArgs.builder()
+ *                 .id(1234)
+ *                 .passphrase("abc1234")
+ *                 .build())
+ *             .networkId("string")
+ *             .v3(SwitchRoutingOspfV3Args.builder()
+ *                 .areas(SwitchRoutingOspfV3AreaArgs.builder()
+ *                     .areaId(1284392014819)
+ *                     .areaName("V3 Backbone")
+ *                     .areaType("normal")
+ *                     .build())
+ *                 .deadTimerInSeconds(40)
+ *                 .enabled(true)
+ *                 .helloTimerInSeconds(10)
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksSwitchRoutingOspfExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

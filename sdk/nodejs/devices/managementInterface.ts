@@ -9,6 +9,40 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.devices.ManagementInterface("example", {
+ *     serial: "string",
+ *     wan1: {
+ *         staticDns: [
+ *             "1.2.3.2",
+ *             "1.2.3.3",
+ *         ],
+ *         staticGatewayIp: "1.2.3.1",
+ *         staticIp: "1.2.3.4",
+ *         staticSubnetMask: "255.255.255.0",
+ *         usingStaticIp: true,
+ *         vlan: 7,
+ *         wanEnabled: "not configured",
+ *     },
+ *     wan2: {
+ *         staticDns: [
+ *             "1.2.3.2",
+ *             "1.2.3.3",
+ *         ],
+ *         staticGatewayIp: "1.2.3.1",
+ *         staticIp: "1.2.3.4",
+ *         staticSubnetMask: "255.255.255.0",
+ *         usingStaticIp: false,
+ *         vlan: 2,
+ *         wanEnabled: "enabled",
+ *     },
+ * });
+ * export const merakiDevicesManagementInterfaceExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

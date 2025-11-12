@@ -14,6 +14,339 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewWirelessRfProfiles(ctx, "example", &networks.WirelessRfProfilesArgs{
+//				ApBandSettings: &networks.WirelessRfProfilesApBandSettingsArgs{
+//					BandOperationMode:   pulumi.String("dual"),
+//					BandSteeringEnabled: pulumi.Bool(true),
+//					Bands: &networks.WirelessRfProfilesApBandSettingsBandsArgs{
+//						Enableds: pulumi.StringArray{
+//							pulumi.String("2.4"),
+//							pulumi.String("5"),
+//						},
+//					},
+//				},
+//				BandSelectionType:      pulumi.String("ap"),
+//				ClientBalancingEnabled: pulumi.Bool(true),
+//				FiveGhzSettings: &networks.WirelessRfProfilesFiveGhzSettingsArgs{
+//					ChannelWidth: pulumi.String("auto"),
+//					MaxPower:     pulumi.Int(30),
+//					MinBitrate:   pulumi.Int(12),
+//					MinPower:     pulumi.Int(8),
+//					Rxsop:        pulumi.Int(-95),
+//					ValidAutoChannels: pulumi.IntArray{
+//						pulumi.Int(36),
+//						pulumi.Int(40),
+//						pulumi.Int(44),
+//						pulumi.Int(48),
+//						pulumi.Int(52),
+//						pulumi.Int(56),
+//						pulumi.Int(60),
+//						pulumi.Int(64),
+//						pulumi.Int(100),
+//						pulumi.Int(104),
+//						pulumi.Int(108),
+//						pulumi.Int(112),
+//						pulumi.Int(116),
+//						pulumi.Int(120),
+//						pulumi.Int(124),
+//						pulumi.Int(128),
+//						pulumi.Int(132),
+//						pulumi.Int(136),
+//						pulumi.Int(140),
+//						pulumi.Int(144),
+//						pulumi.Int(149),
+//						pulumi.Int(153),
+//						pulumi.Int(157),
+//						pulumi.Int(161),
+//						pulumi.Int(165),
+//					},
+//				},
+//				FlexRadios: &networks.WirelessRfProfilesFlexRadiosArgs{
+//					ByModels: networks.WirelessRfProfilesFlexRadiosByModelArray{
+//						&networks.WirelessRfProfilesFlexRadiosByModelArgs{
+//							Bands: pulumi.StringArray{
+//								pulumi.String("5"),
+//							},
+//							Model: pulumi.String("MR34"),
+//						},
+//					},
+//				},
+//				MinBitrateType: pulumi.String("band"),
+//				Name:           pulumi.String("Main Office"),
+//				NetworkId:      pulumi.String("string"),
+//				PerSsidSettings: &networks.WirelessRfProfilesPerSsidSettingsArgs{
+//					Status0: &networks.WirelessRfProfilesPerSsidSettingsStatus0Args{
+//						BandOperationMode:   pulumi.String("dual"),
+//						BandSteeringEnabled: pulumi.Bool(true),
+//						Bands: &networks.WirelessRfProfilesPerSsidSettingsStatus0BandsArgs{
+//							Enableds: pulumi.StringArray{
+//								pulumi.String("2.4"),
+//								pulumi.String("5"),
+//							},
+//						},
+//						MinBitrate: pulumi.Int(11),
+//					},
+//					Status1: &networks.WirelessRfProfilesPerSsidSettingsStatus1Args{
+//						BandOperationMode:   pulumi.String("dual"),
+//						BandSteeringEnabled: pulumi.Bool(true),
+//						Bands: &networks.WirelessRfProfilesPerSsidSettingsStatus1BandsArgs{
+//							Enableds: pulumi.StringArray{
+//								pulumi.String("2.4"),
+//								pulumi.String("5"),
+//							},
+//						},
+//						MinBitrate: pulumi.Int(11),
+//					},
+//					Status10: &networks.WirelessRfProfilesPerSsidSettingsStatus10Args{
+//						BandOperationMode:   pulumi.String("dual"),
+//						BandSteeringEnabled: pulumi.Bool(true),
+//						Bands: &networks.WirelessRfProfilesPerSsidSettingsStatus10BandsArgs{
+//							Enableds: pulumi.StringArray{
+//								pulumi.String("2.4"),
+//								pulumi.String("5"),
+//							},
+//						},
+//						MinBitrate: pulumi.Int(11),
+//					},
+//					Status11: &networks.WirelessRfProfilesPerSsidSettingsStatus11Args{
+//						BandOperationMode:   pulumi.String("dual"),
+//						BandSteeringEnabled: pulumi.Bool(true),
+//						Bands: &networks.WirelessRfProfilesPerSsidSettingsStatus11BandsArgs{
+//							Enableds: pulumi.StringArray{
+//								pulumi.String("2.4"),
+//								pulumi.String("5"),
+//							},
+//						},
+//						MinBitrate: pulumi.Int(11),
+//					},
+//					Status12: &networks.WirelessRfProfilesPerSsidSettingsStatus12Args{
+//						BandOperationMode:   pulumi.String("dual"),
+//						BandSteeringEnabled: pulumi.Bool(true),
+//						Bands: &networks.WirelessRfProfilesPerSsidSettingsStatus12BandsArgs{
+//							Enableds: pulumi.StringArray{
+//								pulumi.String("2.4"),
+//								pulumi.String("5"),
+//							},
+//						},
+//						MinBitrate: pulumi.Int(11),
+//					},
+//					Status13: &networks.WirelessRfProfilesPerSsidSettingsStatus13Args{
+//						BandOperationMode:   pulumi.String("dual"),
+//						BandSteeringEnabled: pulumi.Bool(true),
+//						Bands: &networks.WirelessRfProfilesPerSsidSettingsStatus13BandsArgs{
+//							Enableds: pulumi.StringArray{
+//								pulumi.String("2.4"),
+//								pulumi.String("5"),
+//							},
+//						},
+//						MinBitrate: pulumi.Int(11),
+//					},
+//					Status14: &networks.WirelessRfProfilesPerSsidSettingsStatus14Args{
+//						BandOperationMode:   pulumi.String("dual"),
+//						BandSteeringEnabled: pulumi.Bool(true),
+//						Bands: &networks.WirelessRfProfilesPerSsidSettingsStatus14BandsArgs{
+//							Enableds: pulumi.StringArray{
+//								pulumi.String("2.4"),
+//								pulumi.String("5"),
+//							},
+//						},
+//						MinBitrate: pulumi.Int(11),
+//					},
+//					Status2: &networks.WirelessRfProfilesPerSsidSettingsStatus2Args{
+//						BandOperationMode:   pulumi.String("dual"),
+//						BandSteeringEnabled: pulumi.Bool(true),
+//						Bands: &networks.WirelessRfProfilesPerSsidSettingsStatus2BandsArgs{
+//							Enableds: pulumi.StringArray{
+//								pulumi.String("2.4"),
+//								pulumi.String("5"),
+//							},
+//						},
+//						MinBitrate: pulumi.Int(11),
+//					},
+//					Status3: &networks.WirelessRfProfilesPerSsidSettingsStatus3Args{
+//						BandOperationMode:   pulumi.String("dual"),
+//						BandSteeringEnabled: pulumi.Bool(true),
+//						Bands: &networks.WirelessRfProfilesPerSsidSettingsStatus3BandsArgs{
+//							Enableds: pulumi.StringArray{
+//								pulumi.String("2.4"),
+//								pulumi.String("5"),
+//							},
+//						},
+//						MinBitrate: pulumi.Int(11),
+//					},
+//					Status4: &networks.WirelessRfProfilesPerSsidSettingsStatus4Args{
+//						BandOperationMode:   pulumi.String("dual"),
+//						BandSteeringEnabled: pulumi.Bool(true),
+//						Bands: &networks.WirelessRfProfilesPerSsidSettingsStatus4BandsArgs{
+//							Enableds: pulumi.StringArray{
+//								pulumi.String("2.4"),
+//								pulumi.String("5"),
+//							},
+//						},
+//						MinBitrate: pulumi.Int(11),
+//					},
+//					Status5: &networks.WirelessRfProfilesPerSsidSettingsStatus5Args{
+//						BandOperationMode:   pulumi.String("dual"),
+//						BandSteeringEnabled: pulumi.Bool(true),
+//						Bands: &networks.WirelessRfProfilesPerSsidSettingsStatus5BandsArgs{
+//							Enableds: pulumi.StringArray{
+//								pulumi.String("2.4"),
+//								pulumi.String("5"),
+//							},
+//						},
+//						MinBitrate: pulumi.Int(11),
+//					},
+//					Status6: &networks.WirelessRfProfilesPerSsidSettingsStatus6Args{
+//						BandOperationMode:   pulumi.String("dual"),
+//						BandSteeringEnabled: pulumi.Bool(true),
+//						Bands: &networks.WirelessRfProfilesPerSsidSettingsStatus6BandsArgs{
+//							Enableds: pulumi.StringArray{
+//								pulumi.String("2.4"),
+//								pulumi.String("5"),
+//							},
+//						},
+//						MinBitrate: pulumi.Int(11),
+//					},
+//					Status7: &networks.WirelessRfProfilesPerSsidSettingsStatus7Args{
+//						BandOperationMode:   pulumi.String("dual"),
+//						BandSteeringEnabled: pulumi.Bool(true),
+//						Bands: &networks.WirelessRfProfilesPerSsidSettingsStatus7BandsArgs{
+//							Enableds: pulumi.StringArray{
+//								pulumi.String("2.4"),
+//								pulumi.String("5"),
+//							},
+//						},
+//						MinBitrate: pulumi.Int(11),
+//					},
+//					Status8: &networks.WirelessRfProfilesPerSsidSettingsStatus8Args{
+//						BandOperationMode:   pulumi.String("dual"),
+//						BandSteeringEnabled: pulumi.Bool(true),
+//						Bands: &networks.WirelessRfProfilesPerSsidSettingsStatus8BandsArgs{
+//							Enableds: pulumi.StringArray{
+//								pulumi.String("2.4"),
+//								pulumi.String("5"),
+//							},
+//						},
+//						MinBitrate: pulumi.Int(11),
+//					},
+//					Status9: &networks.WirelessRfProfilesPerSsidSettingsStatus9Args{
+//						BandOperationMode:   pulumi.String("dual"),
+//						BandSteeringEnabled: pulumi.Bool(true),
+//						Bands: &networks.WirelessRfProfilesPerSsidSettingsStatus9BandsArgs{
+//							Enableds: pulumi.StringArray{
+//								pulumi.String("2.4"),
+//								pulumi.String("5"),
+//							},
+//						},
+//						MinBitrate: pulumi.Int(11),
+//					},
+//				},
+//				SixGhzSettings: &networks.WirelessRfProfilesSixGhzSettingsArgs{
+//					ChannelWidth: pulumi.String("auto"),
+//					MaxPower:     pulumi.Int(30),
+//					MinBitrate:   pulumi.Int(12),
+//					MinPower:     pulumi.Int(8),
+//					Rxsop:        pulumi.Int(-95),
+//					ValidAutoChannels: pulumi.IntArray{
+//						pulumi.Int(1),
+//						pulumi.Int(5),
+//						pulumi.Int(9),
+//						pulumi.Int(13),
+//						pulumi.Int(17),
+//						pulumi.Int(21),
+//						pulumi.Int(25),
+//						pulumi.Int(29),
+//						pulumi.Int(33),
+//						pulumi.Int(37),
+//						pulumi.Int(41),
+//						pulumi.Int(45),
+//						pulumi.Int(49),
+//						pulumi.Int(53),
+//						pulumi.Int(57),
+//						pulumi.Int(61),
+//						pulumi.Int(65),
+//						pulumi.Int(69),
+//						pulumi.Int(73),
+//						pulumi.Int(77),
+//						pulumi.Int(81),
+//						pulumi.Int(85),
+//						pulumi.Int(89),
+//						pulumi.Int(93),
+//						pulumi.Int(97),
+//						pulumi.Int(101),
+//						pulumi.Int(105),
+//						pulumi.Int(109),
+//						pulumi.Int(113),
+//						pulumi.Int(117),
+//						pulumi.Int(121),
+//						pulumi.Int(125),
+//						pulumi.Int(129),
+//						pulumi.Int(133),
+//						pulumi.Int(137),
+//						pulumi.Int(141),
+//						pulumi.Int(145),
+//						pulumi.Int(149),
+//						pulumi.Int(153),
+//						pulumi.Int(157),
+//						pulumi.Int(161),
+//						pulumi.Int(165),
+//						pulumi.Int(169),
+//						pulumi.Int(173),
+//						pulumi.Int(177),
+//						pulumi.Int(181),
+//						pulumi.Int(185),
+//						pulumi.Int(189),
+//						pulumi.Int(193),
+//						pulumi.Int(197),
+//						pulumi.Int(201),
+//						pulumi.Int(205),
+//						pulumi.Int(209),
+//						pulumi.Int(213),
+//						pulumi.Int(217),
+//						pulumi.Int(221),
+//						pulumi.Int(225),
+//						pulumi.Int(229),
+//						pulumi.Int(233),
+//					},
+//				},
+//				Transmission: &networks.WirelessRfProfilesTransmissionArgs{
+//					Enabled: pulumi.Bool(true),
+//				},
+//				TwoFourGhzSettings: &networks.WirelessRfProfilesTwoFourGhzSettingsArgs{
+//					AxEnabled:  pulumi.Bool(true),
+//					MaxPower:   pulumi.Int(30),
+//					MinBitrate: pulumi.Float64(11),
+//					MinPower:   pulumi.Int(5),
+//					Rxsop:      pulumi.Int(-95),
+//					ValidAutoChannels: pulumi.IntArray{
+//						pulumi.Int(1),
+//						pulumi.Int(6),
+//						pulumi.Int(11),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksWirelessRfProfilesExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

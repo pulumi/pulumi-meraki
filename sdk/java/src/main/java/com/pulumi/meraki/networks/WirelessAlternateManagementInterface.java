@@ -20,6 +20,54 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.WirelessAlternateManagementInterface;
+ * import com.pulumi.meraki.networks.WirelessAlternateManagementInterfaceArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessAlternateManagementInterfaceAccessPointArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new WirelessAlternateManagementInterface("example", WirelessAlternateManagementInterfaceArgs.builder()
+ *             .accessPoints(WirelessAlternateManagementInterfaceAccessPointArgs.builder()
+ *                 .alternateManagementIp("1.2.3.4")
+ *                 .dns1("8.8.8.8")
+ *                 .dns2("8.8.4.4")
+ *                 .gateway("1.2.3.5")
+ *                 .serial("Q234-ABCD-5678")
+ *                 .subnetMask("255.255.255.0")
+ *                 .build())
+ *             .enabled(true)
+ *             .networkId("string")
+ *             .protocols(            
+ *                 "radius",
+ *                 "snmp",
+ *                 "syslog",
+ *                 "ldap")
+ *             .vlanId(100)
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksWirelessAlternateManagementInterfaceExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

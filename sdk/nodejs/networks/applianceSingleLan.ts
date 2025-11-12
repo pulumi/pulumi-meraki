@@ -9,6 +9,33 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.ApplianceSingleLan("example", {
+ *     applianceIp: "string",
+ *     ipv6: {
+ *         enabled: false,
+ *         prefixAssignments: [{
+ *             autonomous: false,
+ *             origin: {
+ *                 interfaces: ["string"],
+ *                 type: "string",
+ *             },
+ *             staticApplianceIp6: "string",
+ *             staticPrefix: "string",
+ *         }],
+ *     },
+ *     mandatoryDhcp: {
+ *         enabled: false,
+ *     },
+ *     networkId: "string",
+ *     subnet: "string",
+ * });
+ * export const merakiNetworksApplianceSingleLanExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

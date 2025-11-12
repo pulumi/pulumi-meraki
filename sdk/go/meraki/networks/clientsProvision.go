@@ -16,6 +16,106 @@ import (
 // already existed previously.
 //
 // ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewClientsProvision(ctx, "example", &networks.ClientsProvisionArgs{
+//				NetworkId: pulumi.String("string"),
+//				Parameters: &networks.ClientsProvisionParametersArgs{
+//					Clients: networks.ClientsProvisionParametersClientArray{
+//						&networks.ClientsProvisionParametersClientArgs{
+//							Mac:  pulumi.String("00:11:22:33:44:55"),
+//							Name: pulumi.String("Miles's phone"),
+//						},
+//					},
+//					DevicePolicy:  pulumi.String("Group policy"),
+//					GroupPolicyId: pulumi.String("101"),
+//					PoliciesBySecurityAppliance: &networks.ClientsProvisionParametersPoliciesBySecurityApplianceArgs{
+//						DevicePolicy: pulumi.String("Normal"),
+//					},
+//					PoliciesBySsid: &networks.ClientsProvisionParametersPoliciesBySsidArgs{
+//						Status0: &networks.ClientsProvisionParametersPoliciesBySsidStatus0Args{
+//							DevicePolicy:  pulumi.String("Group policy"),
+//							GroupPolicyId: pulumi.String("101"),
+//						},
+//						Status1: &networks.ClientsProvisionParametersPoliciesBySsidStatus1Args{
+//							DevicePolicy:  pulumi.String("Group policy"),
+//							GroupPolicyId: pulumi.String("101"),
+//						},
+//						Status10: &networks.ClientsProvisionParametersPoliciesBySsidStatus10Args{
+//							DevicePolicy:  pulumi.String("Group policy"),
+//							GroupPolicyId: pulumi.String("101"),
+//						},
+//						Status11: &networks.ClientsProvisionParametersPoliciesBySsidStatus11Args{
+//							DevicePolicy:  pulumi.String("Group policy"),
+//							GroupPolicyId: pulumi.String("101"),
+//						},
+//						Status12: &networks.ClientsProvisionParametersPoliciesBySsidStatus12Args{
+//							DevicePolicy:  pulumi.String("Group policy"),
+//							GroupPolicyId: pulumi.String("101"),
+//						},
+//						Status13: &networks.ClientsProvisionParametersPoliciesBySsidStatus13Args{
+//							DevicePolicy:  pulumi.String("Group policy"),
+//							GroupPolicyId: pulumi.String("101"),
+//						},
+//						Status14: &networks.ClientsProvisionParametersPoliciesBySsidStatus14Args{
+//							DevicePolicy:  pulumi.String("Group policy"),
+//							GroupPolicyId: pulumi.String("101"),
+//						},
+//						Status2: &networks.ClientsProvisionParametersPoliciesBySsidStatus2Args{
+//							DevicePolicy:  pulumi.String("Group policy"),
+//							GroupPolicyId: pulumi.String("101"),
+//						},
+//						Status3: &networks.ClientsProvisionParametersPoliciesBySsidStatus3Args{
+//							DevicePolicy:  pulumi.String("Group policy"),
+//							GroupPolicyId: pulumi.String("101"),
+//						},
+//						Status4: &networks.ClientsProvisionParametersPoliciesBySsidStatus4Args{
+//							DevicePolicy:  pulumi.String("Group policy"),
+//							GroupPolicyId: pulumi.String("101"),
+//						},
+//						Status5: &networks.ClientsProvisionParametersPoliciesBySsidStatus5Args{
+//							DevicePolicy:  pulumi.String("Group policy"),
+//							GroupPolicyId: pulumi.String("101"),
+//						},
+//						Status6: &networks.ClientsProvisionParametersPoliciesBySsidStatus6Args{
+//							DevicePolicy:  pulumi.String("Group policy"),
+//							GroupPolicyId: pulumi.String("101"),
+//						},
+//						Status7: &networks.ClientsProvisionParametersPoliciesBySsidStatus7Args{
+//							DevicePolicy:  pulumi.String("Group policy"),
+//							GroupPolicyId: pulumi.String("101"),
+//						},
+//						Status8: &networks.ClientsProvisionParametersPoliciesBySsidStatus8Args{
+//							DevicePolicy:  pulumi.String("Group policy"),
+//							GroupPolicyId: pulumi.String("101"),
+//						},
+//						Status9: &networks.ClientsProvisionParametersPoliciesBySsidStatus9Args{
+//							DevicePolicy:  pulumi.String("Group policy"),
+//							GroupPolicyId: pulumi.String("101"),
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksClientsProvisionExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
 type ClientsProvision struct {
 	pulumi.CustomResourceState
 

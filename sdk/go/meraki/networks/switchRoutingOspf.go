@@ -14,6 +14,58 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewSwitchRoutingOspf(ctx, "example", &networks.SwitchRoutingOspfArgs{
+//				Areas: networks.SwitchRoutingOspfAreaArray{
+//					&networks.SwitchRoutingOspfAreaArgs{
+//						AreaId:   pulumi.Int(1284392014819),
+//						AreaName: pulumi.String("Backbone"),
+//						AreaType: pulumi.String("normal"),
+//					},
+//				},
+//				DeadTimerInSeconds:       pulumi.Int(40),
+//				Enabled:                  pulumi.Bool(true),
+//				HelloTimerInSeconds:      pulumi.Int(10),
+//				Md5AuthenticationEnabled: pulumi.Bool(true),
+//				Md5AuthenticationKey: &networks.SwitchRoutingOspfMd5AuthenticationKeyArgs{
+//					Id:         pulumi.Int(1234),
+//					Passphrase: pulumi.String("abc1234"),
+//				},
+//				NetworkId: pulumi.String("string"),
+//				V3: &networks.SwitchRoutingOspfV3Args{
+//					Areas: networks.SwitchRoutingOspfV3AreaArray{
+//						&networks.SwitchRoutingOspfV3AreaArgs{
+//							AreaId:   pulumi.Int(1284392014819),
+//							AreaName: pulumi.String("V3 Backbone"),
+//							AreaType: pulumi.String("normal"),
+//						},
+//					},
+//					DeadTimerInSeconds:  pulumi.Int(40),
+//					Enabled:             pulumi.Bool(true),
+//					HelloTimerInSeconds: pulumi.Int(10),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksSwitchRoutingOspfExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

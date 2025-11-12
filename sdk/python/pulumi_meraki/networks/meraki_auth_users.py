@@ -356,6 +356,25 @@ class MerakiAuthUsers(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.MerakiAuthUsers("example",
+            account_type="802.1X",
+            authorizations=[{
+                "expires_at": "2018-03-13T00:00:00.090210Z",
+                "ssid_number": 1,
+            }],
+            email="miles@meraki.com",
+            email_password_to_user=False,
+            is_admin=False,
+            name="Miles Meraki",
+            network_id="string",
+            password="secret")
+        pulumi.export("merakiNetworksMerakiAuthUsersExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -382,6 +401,25 @@ class MerakiAuthUsers(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.MerakiAuthUsers("example",
+            account_type="802.1X",
+            authorizations=[{
+                "expires_at": "2018-03-13T00:00:00.090210Z",
+                "ssid_number": 1,
+            }],
+            email="miles@meraki.com",
+            email_password_to_user=False,
+            is_admin=False,
+            name="Miles Meraki",
+            network_id="string",
+            password="secret")
+        pulumi.export("merakiNetworksMerakiAuthUsersExample", example)
+        ```
 
         ## Import
 

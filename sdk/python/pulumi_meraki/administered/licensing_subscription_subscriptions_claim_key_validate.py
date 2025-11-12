@@ -83,6 +83,16 @@ class LicensingSubscriptionSubscriptionsClaimKeyValidate(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.administered.LicensingSubscriptionSubscriptionsClaimKeyValidate("example", parameters={
+            "claim_key": "S2345-6789A-BCDEF-GHJKM",
+        })
+        pulumi.export("merakiAdministeredLicensingSubscriptionSubscriptionsClaimKeyValidateExample", example)
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         """
@@ -97,6 +107,16 @@ class LicensingSubscriptionSubscriptionsClaimKeyValidate(pulumi.CustomResource):
         already existed previously.
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.administered.LicensingSubscriptionSubscriptionsClaimKeyValidate("example", parameters={
+            "claim_key": "S2345-6789A-BCDEF-GHJKM",
+        })
+        pulumi.export("merakiAdministeredLicensingSubscriptionSubscriptionsClaimKeyValidateExample", example)
+        ```
 
         :param str resource_name: The name of the resource.
         :param LicensingSubscriptionSubscriptionsClaimKeyValidateArgs args: The arguments to use to populate this resource's properties.

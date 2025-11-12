@@ -14,6 +14,36 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewApplianceFirewallSettings(ctx, "example", &networks.ApplianceFirewallSettingsArgs{
+//				NetworkId: pulumi.String("string"),
+//				SpoofingProtection: &networks.ApplianceFirewallSettingsSpoofingProtectionArgs{
+//					IpSourceGuard: &networks.ApplianceFirewallSettingsSpoofingProtectionIpSourceGuardArgs{
+//						Mode: pulumi.String("block"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksApplianceFirewallSettingsExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

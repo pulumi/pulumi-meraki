@@ -9,6 +9,41 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.organizations.ApplianceVpnThirdPartyVpnpeers("example", {
+ *     organizationId: "string",
+ *     peers: [{
+ *         ikeVersion: "2",
+ *         ipsecPolicies: {
+ *             childAuthAlgo: ["sha1"],
+ *             childCipherAlgo: ["aes128"],
+ *             childLifetime: 28800,
+ *             childPfsGroup: ["disabled"],
+ *             ikeAuthAlgo: ["sha1"],
+ *             ikeCipherAlgo: ["tripledes"],
+ *             ikeDiffieHellmanGroup: ["group2"],
+ *             ikeLifetime: 28800,
+ *             ikePrfAlgo: ["prfsha1"],
+ *         },
+ *         ipsecPoliciesPreset: "default",
+ *         localId: "myMXId@meraki.com",
+ *         name: "Peer Name",
+ *         networkTags: ["none"],
+ *         privateSubnets: [
+ *             "192.168.1.0/24",
+ *             "192.168.128.0/24",
+ *         ],
+ *         publicIp: "123.123.123.1",
+ *         remoteId: "miles@meraki.com",
+ *         secret: "Sample Password",
+ *     }],
+ * });
+ * export const merakiOrganizationsApplianceVpnThirdPartyVpnpeersExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

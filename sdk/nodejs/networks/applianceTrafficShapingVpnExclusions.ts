@@ -11,6 +11,27 @@ import * as utilities from "../utilities";
  * already existed previously.
  *
  * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.ApplianceTrafficShapingVpnExclusions("example", {
+ *     networkId: "string",
+ *     parameters: {
+ *         customs: [{
+ *             destination: "192.168.3.0/24",
+ *             port: "8000",
+ *             protocol: "tcp",
+ *         }],
+ *         majorApplications: [{
+ *             id: "meraki:vpnExclusion/application/2",
+ *             name: "Office 365 Sharepoint",
+ *         }],
+ *     },
+ * });
+ * export const merakiNetworksApplianceTrafficShapingVpnExclusionsExample = example;
+ * ```
  */
 export class ApplianceTrafficShapingVpnExclusions extends pulumi.CustomResource {
     /**

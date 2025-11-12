@@ -14,6 +14,32 @@ namespace Pulumi.Meraki.Organizations
     /// already existed previously.
     /// 
     /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Organizations.LicensesMoveSeats("example", new()
+    ///     {
+    ///         OrganizationId = "string",
+    ///         Parameters = new Meraki.Organizations.Inputs.LicensesMoveSeatsParametersArgs
+    ///         {
+    ///             DestOrganizationId = "2930418",
+    ///             LicenseId = "1234",
+    ///             SeatCount = 20,
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiOrganizationsLicensesMoveSeatsExample"] = example,
+    ///     };
+    /// });
+    /// ```
     /// </summary>
     [MerakiResourceType("meraki:organizations/licensesMoveSeats:LicensesMoveSeats")]
     public partial class LicensesMoveSeats : global::Pulumi.CustomResource

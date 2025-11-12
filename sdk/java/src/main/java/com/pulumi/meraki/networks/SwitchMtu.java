@@ -19,6 +19,47 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.SwitchMtu;
+ * import com.pulumi.meraki.networks.SwitchMtuArgs;
+ * import com.pulumi.meraki.networks.inputs.SwitchMtuOverrideArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SwitchMtu("example", SwitchMtuArgs.builder()
+ *             .defaultMtuSize(9578)
+ *             .networkId("string")
+ *             .overrides(SwitchMtuOverrideArgs.builder()
+ *                 .mtuSize(1500)
+ *                 .switches(                
+ *                     "Q234-ABCD-0001",
+ *                     "Q234-ABCD-0002",
+ *                     "Q234-ABCD-0003")
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksSwitchMtuExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

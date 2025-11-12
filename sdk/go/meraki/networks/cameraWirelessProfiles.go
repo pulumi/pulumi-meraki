@@ -14,6 +14,37 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewCameraWirelessProfiles(ctx, "example", &networks.CameraWirelessProfilesArgs{
+//				Name:      pulumi.String("wireless profile A"),
+//				NetworkId: pulumi.String("string"),
+//				Ssid: &networks.CameraWirelessProfilesSsidArgs{
+//					AuthMode:       pulumi.String("8021x-radius"),
+//					EncryptionMode: pulumi.String("wpa-eap"),
+//					Name:           pulumi.String("ssid test"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksCameraWirelessProfilesExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

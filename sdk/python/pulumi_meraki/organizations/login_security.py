@@ -505,6 +505,39 @@ class LoginSecurity(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.organizations.LoginSecurity("example",
+            account_lockout_attempts=3,
+            api_authentication={
+                "ip_restrictions_for_keys": {
+                    "enabled": True,
+                    "ranges": [
+                        "192.195.83.1",
+                        "192.168.33.33",
+                    ],
+                },
+            },
+            enforce_account_lockout=True,
+            enforce_different_passwords=True,
+            enforce_idle_timeout=True,
+            enforce_login_ip_ranges=True,
+            enforce_password_expiration=True,
+            enforce_strong_passwords=True,
+            enforce_two_factor_auth=True,
+            idle_timeout_minutes=30,
+            login_ip_ranges=[
+                "192.195.83.1",
+                "192.195.83.255",
+            ],
+            num_different_passwords=3,
+            organization_id="string",
+            password_expiration_days=90)
+        pulumi.export("merakiOrganizationsLoginSecurityExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -536,6 +569,39 @@ class LoginSecurity(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.organizations.LoginSecurity("example",
+            account_lockout_attempts=3,
+            api_authentication={
+                "ip_restrictions_for_keys": {
+                    "enabled": True,
+                    "ranges": [
+                        "192.195.83.1",
+                        "192.168.33.33",
+                    ],
+                },
+            },
+            enforce_account_lockout=True,
+            enforce_different_passwords=True,
+            enforce_idle_timeout=True,
+            enforce_login_ip_ranges=True,
+            enforce_password_expiration=True,
+            enforce_strong_passwords=True,
+            enforce_two_factor_auth=True,
+            idle_timeout_minutes=30,
+            login_ip_ranges=[
+                "192.195.83.1",
+                "192.195.83.255",
+            ],
+            num_different_passwords=3,
+            organization_id="string",
+            password_expiration_days=90)
+        pulumi.export("merakiOrganizationsLoginSecurityExample", example)
+        ```
 
         ## Import
 

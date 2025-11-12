@@ -17,6 +17,50 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.ClientsSplashAuthorizationStatus;
+ * import com.pulumi.meraki.networks.ClientsSplashAuthorizationStatusArgs;
+ * import com.pulumi.meraki.networks.inputs.ClientsSplashAuthorizationStatusSsidsArgs;
+ * import com.pulumi.meraki.networks.inputs.ClientsSplashAuthorizationStatusSsidsStatus0Args;
+ * import com.pulumi.meraki.networks.inputs.ClientsSplashAuthorizationStatusSsidsStatus2Args;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ClientsSplashAuthorizationStatus("example", ClientsSplashAuthorizationStatusArgs.builder()
+ *             .clientId("string")
+ *             .networkId("string")
+ *             .ssids(ClientsSplashAuthorizationStatusSsidsArgs.builder()
+ *                 .status0(ClientsSplashAuthorizationStatusSsidsStatus0Args.builder()
+ *                     .isAuthorized(true)
+ *                     .build())
+ *                 .status2(ClientsSplashAuthorizationStatusSsidsStatus2Args.builder()
+ *                     .isAuthorized(false)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksClientsSplashAuthorizationStatusExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

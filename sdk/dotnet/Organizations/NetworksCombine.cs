@@ -14,6 +14,36 @@ namespace Pulumi.Meraki.Organizations
     /// already existed previously.
     /// 
     /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Organizations.NetworksCombine("example", new()
+    ///     {
+    ///         OrganizationId = "string",
+    ///         Parameters = new Meraki.Organizations.Inputs.NetworksCombineParametersArgs
+    ///         {
+    ///             EnrollmentString = "my-enrollment-string",
+    ///             Name = "Long Island Office",
+    ///             NetworkIds = new[]
+    ///             {
+    ///                 "N_1234",
+    ///                 "N_5678",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiOrganizationsNetworksCombineExample"] = example,
+    ///     };
+    /// });
+    /// ```
     /// </summary>
     [MerakiResourceType("meraki:organizations/networksCombine:NetworksCombine")]
     public partial class NetworksCombine : global::Pulumi.CustomResource

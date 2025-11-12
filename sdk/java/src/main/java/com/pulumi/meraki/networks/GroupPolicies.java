@@ -22,6 +22,162 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.GroupPolicies;
+ * import com.pulumi.meraki.networks.GroupPoliciesArgs;
+ * import com.pulumi.meraki.networks.inputs.GroupPoliciesBandwidthArgs;
+ * import com.pulumi.meraki.networks.inputs.GroupPoliciesBandwidthBandwidthLimitsArgs;
+ * import com.pulumi.meraki.networks.inputs.GroupPoliciesBonjourForwardingArgs;
+ * import com.pulumi.meraki.networks.inputs.GroupPoliciesContentFilteringArgs;
+ * import com.pulumi.meraki.networks.inputs.GroupPoliciesContentFilteringAllowedUrlPatternsArgs;
+ * import com.pulumi.meraki.networks.inputs.GroupPoliciesContentFilteringBlockedUrlCategoriesArgs;
+ * import com.pulumi.meraki.networks.inputs.GroupPoliciesContentFilteringBlockedUrlPatternsArgs;
+ * import com.pulumi.meraki.networks.inputs.GroupPoliciesFirewallAndTrafficShapingArgs;
+ * import com.pulumi.meraki.networks.inputs.GroupPoliciesSchedulingArgs;
+ * import com.pulumi.meraki.networks.inputs.GroupPoliciesSchedulingFridayArgs;
+ * import com.pulumi.meraki.networks.inputs.GroupPoliciesSchedulingMondayArgs;
+ * import com.pulumi.meraki.networks.inputs.GroupPoliciesSchedulingSaturdayArgs;
+ * import com.pulumi.meraki.networks.inputs.GroupPoliciesSchedulingSundayArgs;
+ * import com.pulumi.meraki.networks.inputs.GroupPoliciesSchedulingThursdayArgs;
+ * import com.pulumi.meraki.networks.inputs.GroupPoliciesSchedulingTuesdayArgs;
+ * import com.pulumi.meraki.networks.inputs.GroupPoliciesSchedulingWednesdayArgs;
+ * import com.pulumi.meraki.networks.inputs.GroupPoliciesVlanTaggingArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new GroupPolicies("example", GroupPoliciesArgs.builder()
+ *             .bandwidth(GroupPoliciesBandwidthArgs.builder()
+ *                 .bandwidthLimits(GroupPoliciesBandwidthBandwidthLimitsArgs.builder()
+ *                     .limitDown(1000000)
+ *                     .limitUp(1000000)
+ *                     .build())
+ *                 .settings("custom")
+ *                 .build())
+ *             .bonjourForwarding(GroupPoliciesBonjourForwardingArgs.builder()
+ *                 .rules(GroupPoliciesBonjourForwardingRuleArgs.builder()
+ *                     .description("A simple bonjour rule")
+ *                     .services("All Services")
+ *                     .vlanId("1")
+ *                     .build())
+ *                 .settings("custom")
+ *                 .build())
+ *             .contentFiltering(GroupPoliciesContentFilteringArgs.builder()
+ *                 .allowedUrlPatterns(GroupPoliciesContentFilteringAllowedUrlPatternsArgs.builder()
+ *                     .settings("network default")
+ *                     .build())
+ *                 .blockedUrlCategories(GroupPoliciesContentFilteringBlockedUrlCategoriesArgs.builder()
+ *                     .categories(                    
+ *                         "meraki:contentFiltering/category/1",
+ *                         "meraki:contentFiltering/category/7")
+ *                     .settings("override")
+ *                     .build())
+ *                 .blockedUrlPatterns(GroupPoliciesContentFilteringBlockedUrlPatternsArgs.builder()
+ *                     .patterns(                    
+ *                         "http://www.example.com",
+ *                         "http://www.betting.com")
+ *                     .settings("append")
+ *                     .build())
+ *                 .build())
+ *             .firewallAndTrafficShaping(GroupPoliciesFirewallAndTrafficShapingArgs.builder()
+ *                 .l3FirewallRules(GroupPoliciesFirewallAndTrafficShapingL3FirewallRuleArgs.builder()
+ *                     .comment("Allow TCP traffic to subnet with HTTP servers.")
+ *                     .destCidr("192.168.1.0/24")
+ *                     .destPort("443")
+ *                     .policy("allow")
+ *                     .protocol("tcp")
+ *                     .build())
+ *                 .l7FirewallRules(GroupPoliciesFirewallAndTrafficShapingL7FirewallRuleArgs.builder()
+ *                     .policy("deny")
+ *                     .type("host")
+ *                     .value("google.com")
+ *                     .build())
+ *                 .settings("custom")
+ *                 .trafficShapingRules(GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleArgs.builder()
+ *                     .definitions(GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleDefinitionArgs.builder()
+ *                         .type("host")
+ *                         .value("google.com")
+ *                         .build())
+ *                     .dscpTagValue(1)
+ *                     .pcpTagValue(1)
+ *                     .perClientBandwidthLimits(GroupPoliciesFirewallAndTrafficShapingTrafficShapingRulePerClientBandwidthLimitsArgs.builder()
+ *                         .bandwidthLimits(GroupPoliciesFirewallAndTrafficShapingTrafficShapingRulePerClientBandwidthLimitsBandwidthLimitsArgs.builder()
+ *                             .limitDown(1000000)
+ *                             .limitUp(1000000)
+ *                             .build())
+ *                         .settings("custom")
+ *                         .build())
+ *                     .priority("normal")
+ *                     .build())
+ *                 .build())
+ *             .name("No video streaming")
+ *             .networkId("string")
+ *             .scheduling(GroupPoliciesSchedulingArgs.builder()
+ *                 .enabled(true)
+ *                 .friday(GroupPoliciesSchedulingFridayArgs.builder()
+ *                     .active(true)
+ *                     .from("9:00")
+ *                     .to("17:00")
+ *                     .build())
+ *                 .monday(GroupPoliciesSchedulingMondayArgs.builder()
+ *                     .active(true)
+ *                     .from("9:00")
+ *                     .to("17:00")
+ *                     .build())
+ *                 .saturday(GroupPoliciesSchedulingSaturdayArgs.builder()
+ *                     .active(true)
+ *                     .from("9:00")
+ *                     .to("17:00")
+ *                     .build())
+ *                 .sunday(GroupPoliciesSchedulingSundayArgs.builder()
+ *                     .active(true)
+ *                     .from("9:00")
+ *                     .to("17:00")
+ *                     .build())
+ *                 .thursday(GroupPoliciesSchedulingThursdayArgs.builder()
+ *                     .active(true)
+ *                     .from("9:00")
+ *                     .to("17:00")
+ *                     .build())
+ *                 .tuesday(GroupPoliciesSchedulingTuesdayArgs.builder()
+ *                     .active(true)
+ *                     .from("9:00")
+ *                     .to("17:00")
+ *                     .build())
+ *                 .wednesday(GroupPoliciesSchedulingWednesdayArgs.builder()
+ *                     .active(true)
+ *                     .from("9:00")
+ *                     .to("17:00")
+ *                     .build())
+ *                 .build())
+ *             .splashAuthSettings("bypass")
+ *             .vlanTagging(GroupPoliciesVlanTaggingArgs.builder()
+ *                 .settings("custom")
+ *                 .vlanId("1")
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksGroupPoliciesExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

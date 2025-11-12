@@ -11,6 +11,23 @@ import * as utilities from "../utilities";
  * already existed previously.
  *
  * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.administered.LicensingSubscriptionSubscriptionsBind("example", {
+ *     subscriptionId: "string",
+ *     validate: false,
+ *     parameters: {
+ *         networkIds: [
+ *             "L_1234",
+ *             "N_5678",
+ *         ],
+ *     },
+ * });
+ * export const merakiAdministeredLicensingSubscriptionSubscriptionsBindExample = example;
+ * ```
  */
 export class LicensingSubscriptionSubscriptionsBind extends pulumi.CustomResource {
     /**

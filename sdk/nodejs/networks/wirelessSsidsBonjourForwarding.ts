@@ -9,6 +9,26 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.WirelessSsidsBonjourForwarding("example", {
+ *     enabled: true,
+ *     exception: {
+ *         enabled: true,
+ *     },
+ *     networkId: "string",
+ *     number: "string",
+ *     rules: [{
+ *         description: "A simple bonjour rule",
+ *         services: ["All Services"],
+ *         vlanId: "1",
+ *     }],
+ * });
+ * export const merakiNetworksWirelessSsidsBonjourForwardingExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

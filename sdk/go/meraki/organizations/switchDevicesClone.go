@@ -16,6 +16,39 @@ import (
 // already existed previously.
 //
 // ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/organizations"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := organizations.NewSwitchDevicesClone(ctx, "example", &organizations.SwitchDevicesCloneArgs{
+//				OrganizationId: pulumi.String("string"),
+//				Parameters: &organizations.SwitchDevicesCloneParametersArgs{
+//					SourceSerial: pulumi.String("Q234-ABCD-5678"),
+//					TargetSerials: pulumi.StringArray{
+//						pulumi.String("Q234-ABCD-0001"),
+//						pulumi.String("Q234-ABCD-0002"),
+//						pulumi.String("Q234-ABCD-0003"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiOrganizationsSwitchDevicesCloneExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
 type SwitchDevicesClone struct {
 	pulumi.CustomResourceState
 

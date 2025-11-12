@@ -14,6 +14,37 @@ namespace Pulumi.Meraki.Networks
     /// already existed previously.
     /// 
     /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.SmDevicesFields("example", new()
+    ///     {
+    ///         NetworkId = "string",
+    ///         Parameters = new Meraki.Networks.Inputs.SmDevicesFieldsParametersArgs
+    ///         {
+    ///             DeviceFields = new Meraki.Networks.Inputs.SmDevicesFieldsParametersDeviceFieldsArgs
+    ///             {
+    ///                 Name = "Miles's phone",
+    ///                 Notes = "Here's some info about my device",
+    ///             },
+    ///             Id = "1284392014819",
+    ///             Serial = "XY0XX0Y0X0",
+    ///             WifiMac = "00:11:22:33:44:55",
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksSmDevicesFieldsExample"] = example,
+    ///     };
+    /// });
+    /// ```
     /// </summary>
     [MerakiResourceType("meraki:networks/smDevicesFields:SmDevicesFields")]
     public partial class SmDevicesFields : global::Pulumi.CustomResource

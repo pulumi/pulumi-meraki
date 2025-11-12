@@ -150,6 +150,31 @@ class ApplianceTrafficShapingRules(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.ApplianceTrafficShapingRules("example",
+            default_rules_enabled=True,
+            network_id="string",
+            rules=[{
+                "definitions": [{
+                    "type": "host",
+                    "value": "google.com",
+                }],
+                "dscp_tag_value": 1,
+                "per_client_bandwidth_limits": {
+                    "bandwidth_limits": {
+                        "limit_down": 1000000,
+                        "limit_up": 1000000,
+                    },
+                    "settings": "custom",
+                },
+                "priority": "normal",
+            }])
+        pulumi.export("merakiNetworksApplianceTrafficShapingRulesExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -172,6 +197,31 @@ class ApplianceTrafficShapingRules(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.ApplianceTrafficShapingRules("example",
+            default_rules_enabled=True,
+            network_id="string",
+            rules=[{
+                "definitions": [{
+                    "type": "host",
+                    "value": "google.com",
+                }],
+                "dscp_tag_value": 1,
+                "per_client_bandwidth_limits": {
+                    "bandwidth_limits": {
+                        "limit_down": 1000000,
+                        "limit_up": 1000000,
+                    },
+                    "settings": "custom",
+                },
+                "priority": "normal",
+            }])
+        pulumi.export("merakiNetworksApplianceTrafficShapingRulesExample", example)
+        ```
 
         ## Import
 

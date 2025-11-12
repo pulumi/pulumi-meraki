@@ -12,6 +12,63 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.FirmwareUpgradesStagedEvents("example", new()
+    ///     {
+    ///         NetworkId = "string",
+    ///         Products = new Meraki.Networks.Inputs.FirmwareUpgradesStagedEventsProductsArgs
+    ///         {
+    ///             Switch = new Meraki.Networks.Inputs.FirmwareUpgradesStagedEventsProductsSwitchArgs
+    ///             {
+    ///                 NextUpgrade = new Meraki.Networks.Inputs.FirmwareUpgradesStagedEventsProductsSwitchNextUpgradeArgs
+    ///                 {
+    ///                     ToVersion = new Meraki.Networks.Inputs.FirmwareUpgradesStagedEventsProductsSwitchNextUpgradeToVersionArgs
+    ///                     {
+    ///                         Id = "1234",
+    ///                     },
+    ///                 },
+    ///             },
+    ///             SwitchCatalyst = new Meraki.Networks.Inputs.FirmwareUpgradesStagedEventsProductsSwitchCatalystArgs
+    ///             {
+    ///                 NextUpgrade = new Meraki.Networks.Inputs.FirmwareUpgradesStagedEventsProductsSwitchCatalystNextUpgradeArgs
+    ///                 {
+    ///                     ToVersion = new Meraki.Networks.Inputs.FirmwareUpgradesStagedEventsProductsSwitchCatalystNextUpgradeToVersionArgs
+    ///                     {
+    ///                         Id = "4321",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         Stages = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.FirmwareUpgradesStagedEventsStageArgs
+    ///             {
+    ///                 Group = new Meraki.Networks.Inputs.FirmwareUpgradesStagedEventsStageGroupArgs
+    ///                 {
+    ///                     Id = "1234",
+    ///                 },
+    ///                 Milestones = new Meraki.Networks.Inputs.FirmwareUpgradesStagedEventsStageMilestonesArgs
+    ///                 {
+    ///                     ScheduledFor = "2018-02-11T00:00:00Z",
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksFirmwareUpgradesStagedEventsExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

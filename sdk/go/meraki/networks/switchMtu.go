@@ -14,6 +14,42 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewSwitchMtu(ctx, "example", &networks.SwitchMtuArgs{
+//				DefaultMtuSize: pulumi.Int(9578),
+//				NetworkId:      pulumi.String("string"),
+//				Overrides: networks.SwitchMtuOverrideArray{
+//					&networks.SwitchMtuOverrideArgs{
+//						MtuSize: pulumi.Int(1500),
+//						Switches: pulumi.StringArray{
+//							pulumi.String("Q234-ABCD-0001"),
+//							pulumi.String("Q234-ABCD-0002"),
+//							pulumi.String("Q234-ABCD-0003"),
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksSwitchMtuExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

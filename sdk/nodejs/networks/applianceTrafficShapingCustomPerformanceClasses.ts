@@ -11,6 +11,22 @@ import * as utilities from "../utilities";
  * already existed previously.
  *
  * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.ApplianceTrafficShapingCustomPerformanceClasses("example", {
+ *     networkId: "string",
+ *     parameters: {
+ *         maxJitter: 100,
+ *         maxLatency: 100,
+ *         maxLossPercentage: 5,
+ *         name: "myCustomPerformanceClass",
+ *     },
+ * });
+ * export const merakiNetworksApplianceTrafficShapingCustomPerformanceClassesExample = example;
+ * ```
  */
 export class ApplianceTrafficShapingCustomPerformanceClasses extends pulumi.CustomResource {
     /**

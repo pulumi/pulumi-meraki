@@ -12,6 +12,44 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.SwitchSettings("example", new()
+    ///     {
+    ///         MacBlocklist = new Meraki.Networks.Inputs.SwitchSettingsMacBlocklistArgs
+    ///         {
+    ///             Enabled = false,
+    ///         },
+    ///         NetworkId = "string",
+    ///         PowerExceptions = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.SwitchSettingsPowerExceptionArgs
+    ///             {
+    ///                 PowerType = "string",
+    ///                 Serial = "string",
+    ///             },
+    ///         },
+    ///         UplinkClientSampling = new Meraki.Networks.Inputs.SwitchSettingsUplinkClientSamplingArgs
+    ///         {
+    ///             Enabled = false,
+    ///         },
+    ///         UseCombinedPower = false,
+    ///         Vlan = 1,
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksSwitchSettingsExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

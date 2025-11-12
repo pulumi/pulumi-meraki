@@ -12,6 +12,52 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.ApplianceTrafficShapingRules("example", new()
+    ///     {
+    ///         DefaultRulesEnabled = true,
+    ///         NetworkId = "string",
+    ///         Rules = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.ApplianceTrafficShapingRulesRuleArgs
+    ///             {
+    ///                 Definitions = new[]
+    ///                 {
+    ///                     new Meraki.Networks.Inputs.ApplianceTrafficShapingRulesRuleDefinitionArgs
+    ///                     {
+    ///                         Type = "host",
+    ///                         Value = "google.com",
+    ///                     },
+    ///                 },
+    ///                 DscpTagValue = 1,
+    ///                 PerClientBandwidthLimits = new Meraki.Networks.Inputs.ApplianceTrafficShapingRulesRulePerClientBandwidthLimitsArgs
+    ///                 {
+    ///                     BandwidthLimits = new Meraki.Networks.Inputs.ApplianceTrafficShapingRulesRulePerClientBandwidthLimitsBandwidthLimitsArgs
+    ///                     {
+    ///                         LimitDown = 1000000,
+    ///                         LimitUp = 1000000,
+    ///                     },
+    ///                     Settings = "custom",
+    ///                 },
+    ///                 Priority = "normal",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksApplianceTrafficShapingRulesExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

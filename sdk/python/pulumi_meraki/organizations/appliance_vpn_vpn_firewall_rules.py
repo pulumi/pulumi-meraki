@@ -142,6 +142,26 @@ class ApplianceVpnVpnFirewallRules(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.organizations.ApplianceVpnVpnFirewallRules("example",
+            organization_id="string",
+            rules=[{
+                "comment": "Allow TCP traffic to subnet with HTTP servers.",
+                "dest_cidr": "192.168.1.0/24",
+                "dest_port": "443",
+                "policy": "allow",
+                "protocol": "tcp",
+                "src_cidr": "Any",
+                "src_port": "Any",
+                "syslog_enabled": False,
+            }],
+            syslog_default_rule=False)
+        pulumi.export("merakiOrganizationsApplianceVpnVpnFirewallRulesExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -162,6 +182,26 @@ class ApplianceVpnVpnFirewallRules(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.organizations.ApplianceVpnVpnFirewallRules("example",
+            organization_id="string",
+            rules=[{
+                "comment": "Allow TCP traffic to subnet with HTTP servers.",
+                "dest_cidr": "192.168.1.0/24",
+                "dest_port": "443",
+                "policy": "allow",
+                "protocol": "tcp",
+                "src_cidr": "Any",
+                "src_port": "Any",
+                "syslog_enabled": False,
+            }],
+            syslog_default_rule=False)
+        pulumi.export("merakiOrganizationsApplianceVpnVpnFirewallRulesExample", example)
+        ```
 
         ## Import
 

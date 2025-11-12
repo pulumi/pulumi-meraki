@@ -241,6 +241,29 @@ class CameraRoles(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.organizations.CameraRoles("example",
+            applied_on_devices=[{
+                "id": "",
+                "permission_scope_id": "1",
+                "tag": "reception-desk",
+            }],
+            applied_on_networks=[{
+                "id": "",
+                "permission_scope_id": "2",
+                "tag": "building-a",
+            }],
+            applied_org_wides=[{
+                "permission_scope_id": "2",
+            }],
+            name="Security_Guard",
+            organization_id="string")
+        pulumi.export("merakiOrganizationsCameraRolesExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -264,6 +287,29 @@ class CameraRoles(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.organizations.CameraRoles("example",
+            applied_on_devices=[{
+                "id": "",
+                "permission_scope_id": "1",
+                "tag": "reception-desk",
+            }],
+            applied_on_networks=[{
+                "id": "",
+                "permission_scope_id": "2",
+                "tag": "building-a",
+            }],
+            applied_org_wides=[{
+                "permission_scope_id": "2",
+            }],
+            name="Security_Guard",
+            organization_id="string")
+        pulumi.export("merakiOrganizationsCameraRolesExample", example)
+        ```
 
         ## Import
 

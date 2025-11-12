@@ -14,6 +14,40 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewClientsSplashAuthorizationStatus(ctx, "example", &networks.ClientsSplashAuthorizationStatusArgs{
+//				ClientId:  pulumi.String("string"),
+//				NetworkId: pulumi.String("string"),
+//				Ssids: &networks.ClientsSplashAuthorizationStatusSsidsArgs{
+//					Status0: &networks.ClientsSplashAuthorizationStatusSsidsStatus0Args{
+//						IsAuthorized: pulumi.Bool(true),
+//					},
+//					Status2: &networks.ClientsSplashAuthorizationStatusSsidsStatus2Args{
+//						IsAuthorized: pulumi.Bool(false),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksClientsSplashAuthorizationStatusExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

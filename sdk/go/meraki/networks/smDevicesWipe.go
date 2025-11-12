@@ -16,6 +16,37 @@ import (
 // already existed previously.
 //
 // ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewSmDevicesWipe(ctx, "example", &networks.SmDevicesWipeArgs{
+//				NetworkId: pulumi.String("string"),
+//				Parameters: &networks.SmDevicesWipeParametersArgs{
+//					Id:      pulumi.String("1284392014819"),
+//					Pin:     pulumi.Int(123456),
+//					Serial:  pulumi.String("XY0XX0Y0X0"),
+//					WifiMac: pulumi.String("00:11:22:33:44:55"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksSmDevicesWipeExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
 type SmDevicesWipe struct {
 	pulumi.CustomResourceState
 

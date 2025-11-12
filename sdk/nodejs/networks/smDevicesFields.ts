@@ -11,6 +11,25 @@ import * as utilities from "../utilities";
  * already existed previously.
  *
  * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.SmDevicesFields("example", {
+ *     networkId: "string",
+ *     parameters: {
+ *         deviceFields: {
+ *             name: "Miles's phone",
+ *             notes: "Here's some info about my device",
+ *         },
+ *         id: "1284392014819",
+ *         serial: "XY0XX0Y0X0",
+ *         wifiMac: "00:11:22:33:44:55",
+ *     },
+ * });
+ * export const merakiNetworksSmDevicesFieldsExample = example;
+ * ```
  */
 export class SmDevicesFields extends pulumi.CustomResource {
     /**

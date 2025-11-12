@@ -191,6 +191,34 @@ class AlertsSettings(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.AlertsSettings("example",
+            alerts=[{
+                "alert_destinations": {
+                    "all_admins": False,
+                    "emails": ["miles@meraki.com"],
+                    "http_server_ids": ["aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M="],
+                    "snmp": False,
+                },
+                "enabled": True,
+                "filters": {
+                    "timeout": 60,
+                },
+                "type": "gatewayDown",
+            }],
+            default_destinations={
+                "all_admins": True,
+                "emails": ["miles@meraki.com"],
+                "http_server_ids": ["aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M="],
+                "snmp": True,
+            },
+            network_id="string")
+        pulumi.export("merakiNetworksAlertsSettingsExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -212,6 +240,34 @@ class AlertsSettings(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.AlertsSettings("example",
+            alerts=[{
+                "alert_destinations": {
+                    "all_admins": False,
+                    "emails": ["miles@meraki.com"],
+                    "http_server_ids": ["aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M="],
+                    "snmp": False,
+                },
+                "enabled": True,
+                "filters": {
+                    "timeout": 60,
+                },
+                "type": "gatewayDown",
+            }],
+            default_destinations={
+                "all_admins": True,
+                "emails": ["miles@meraki.com"],
+                "http_server_ids": ["aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M="],
+                "snmp": True,
+            },
+            network_id="string")
+        pulumi.export("merakiNetworksAlertsSettingsExample", example)
+        ```
 
         ## Import
 

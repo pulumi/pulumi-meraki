@@ -12,6 +12,40 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.ApplianceFirewallCellularFirewallRules("example", new()
+    ///     {
+    ///         NetworkId = "string",
+    ///         Rules = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.ApplianceFirewallCellularFirewallRulesRuleArgs
+    ///             {
+    ///                 Comment = "Allow TCP traffic to subnet with HTTP servers.",
+    ///                 DestCidr = "192.168.1.0/24",
+    ///                 DestPort = "443",
+    ///                 Policy = "allow",
+    ///                 Protocol = "tcp",
+    ///                 SrcCidr = "Any",
+    ///                 SrcPort = "Any",
+    ///                 SyslogEnabled = false,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksApplianceFirewallCellularFirewallRulesExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

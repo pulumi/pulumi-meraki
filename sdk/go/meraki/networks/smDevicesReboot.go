@@ -16,6 +16,56 @@ import (
 // already existed previously.
 //
 // ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewSmDevicesReboot(ctx, "example", &networks.SmDevicesRebootArgs{
+//				NetworkId: pulumi.String("string"),
+//				Parameters: &networks.SmDevicesRebootParametersArgs{
+//					Ids: pulumi.StringArray{
+//						pulumi.String("1284392014819"),
+//						pulumi.String("2983092129865"),
+//					},
+//					KextPaths: pulumi.StringArray{
+//						pulumi.String("test"),
+//					},
+//					NotifyUser:                   pulumi.Bool(true),
+//					RebuildKernelCache:           pulumi.Bool(true),
+//					RequestRequiresNetworkTether: pulumi.Bool(true),
+//					Scopes: pulumi.StringArray{
+//						pulumi.String("withAny"),
+//						pulumi.String("tag1"),
+//						pulumi.String("tag2"),
+//					},
+//					Serials: pulumi.StringArray{
+//						pulumi.String("XY0XX0Y0X0"),
+//						pulumi.String("A01B01CD00E"),
+//						pulumi.String("X02YZ1ZYZX"),
+//					},
+//					WifiMacs: pulumi.StringArray{
+//						pulumi.String("00:11:22:33:44:55"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksSmDevicesRebootExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
 type SmDevicesReboot struct {
 	pulumi.CustomResourceState
 

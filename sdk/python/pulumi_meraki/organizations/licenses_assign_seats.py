@@ -115,6 +115,20 @@ class LicensesAssignSeats(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.organizations.LicensesAssignSeats("example",
+            organization_id="string",
+            parameters={
+                "license_id": "1234",
+                "network_id": "N_24329156",
+                "seat_count": 20,
+            })
+        pulumi.export("merakiOrganizationsLicensesAssignSeatsExample", example)
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
@@ -130,6 +144,20 @@ class LicensesAssignSeats(pulumi.CustomResource):
         already existed previously.
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.organizations.LicensesAssignSeats("example",
+            organization_id="string",
+            parameters={
+                "license_id": "1234",
+                "network_id": "N_24329156",
+                "seat_count": 20,
+            })
+        pulumi.export("merakiOrganizationsLicensesAssignSeatsExample", example)
+        ```
 
         :param str resource_name: The name of the resource.
         :param LicensesAssignSeatsArgs args: The arguments to use to populate this resource's properties.

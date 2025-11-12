@@ -12,6 +12,49 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.ApplianceFirewallOneToManyNatRules("example", new()
+    ///     {
+    ///         NetworkId = "string",
+    ///         Rules = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.ApplianceFirewallOneToManyNatRulesRuleArgs
+    ///             {
+    ///                 PortRules = new[]
+    ///                 {
+    ///                     new Meraki.Networks.Inputs.ApplianceFirewallOneToManyNatRulesRulePortRuleArgs
+    ///                     {
+    ///                         AllowedIps = new[]
+    ///                         {
+    ///                             "any",
+    ///                         },
+    ///                         LocalIp = "192.168.128.1",
+    ///                         LocalPort = "443",
+    ///                         Name = "Rule 1",
+    ///                         Protocol = "tcp",
+    ///                         PublicPort = "9443",
+    ///                     },
+    ///                 },
+    ///                 PublicIp = "146.11.11.13",
+    ///                 Uplink = "internet1",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksApplianceFirewallOneToManyNatRulesExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

@@ -103,6 +103,23 @@ class SwitchDevicesClone(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.organizations.SwitchDevicesClone("example",
+            organization_id="string",
+            parameters={
+                "source_serial": "Q234-ABCD-5678",
+                "target_serials": [
+                    "Q234-ABCD-0001",
+                    "Q234-ABCD-0002",
+                    "Q234-ABCD-0003",
+                ],
+            })
+        pulumi.export("merakiOrganizationsSwitchDevicesCloneExample", example)
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
@@ -118,6 +135,23 @@ class SwitchDevicesClone(pulumi.CustomResource):
         already existed previously.
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.organizations.SwitchDevicesClone("example",
+            organization_id="string",
+            parameters={
+                "source_serial": "Q234-ABCD-5678",
+                "target_serials": [
+                    "Q234-ABCD-0001",
+                    "Q234-ABCD-0002",
+                    "Q234-ABCD-0003",
+                ],
+            })
+        pulumi.export("merakiOrganizationsSwitchDevicesCloneExample", example)
+        ```
 
         :param str resource_name: The name of the resource.
         :param SwitchDevicesCloneArgs args: The arguments to use to populate this resource's properties.

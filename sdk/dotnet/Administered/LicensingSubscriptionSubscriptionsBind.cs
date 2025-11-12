@@ -14,6 +14,35 @@ namespace Pulumi.Meraki.Administered
     /// already existed previously.
     /// 
     /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Administered.LicensingSubscriptionSubscriptionsBind("example", new()
+    ///     {
+    ///         SubscriptionId = "string",
+    ///         Validate = false,
+    ///         Parameters = new Meraki.Administered.Inputs.LicensingSubscriptionSubscriptionsBindParametersArgs
+    ///         {
+    ///             NetworkIds = new[]
+    ///             {
+    ///                 "L_1234",
+    ///                 "N_5678",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiAdministeredLicensingSubscriptionSubscriptionsBindExample"] = example,
+    ///     };
+    /// });
+    /// ```
     /// </summary>
     [MerakiResourceType("meraki:administered/licensingSubscriptionSubscriptionsBind:LicensingSubscriptionSubscriptionsBind")]
     public partial class LicensingSubscriptionSubscriptionsBind : global::Pulumi.CustomResource

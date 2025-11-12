@@ -14,6 +14,41 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/devices"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := devices.NewLiveToolsThroughputTest(ctx, "example", &devices.LiveToolsThroughputTestArgs{
+//				Callback: &devices.LiveToolsThroughputTestCallbackArgs{
+//					HttpServer: &devices.LiveToolsThroughputTestCallbackHttpServerArgs{
+//						Id: pulumi.String("aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M="),
+//					},
+//					PayloadTemplate: &devices.LiveToolsThroughputTestCallbackPayloadTemplateArgs{
+//						Id: pulumi.String("wpt_2100"),
+//					},
+//					SharedSecret: pulumi.String("secret"),
+//					Url:          pulumi.String("https://webhook.site/28efa24e-f830-4d9f-a12b-fbb9e5035031"),
+//				},
+//				Serial: pulumi.String("string"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiDevicesLiveToolsThroughputTestExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

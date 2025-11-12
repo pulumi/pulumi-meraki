@@ -9,6 +9,86 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.FirmwareUpgrades("example", {
+ *     networkId: "string",
+ *     products: {
+ *         appliance: {
+ *             nextUpgrade: {
+ *                 time: "2019-03-17T17:22:52Z",
+ *                 toVersion: {
+ *                     id: "1001",
+ *                 },
+ *             },
+ *             participateInNextBetaRelease: false,
+ *         },
+ *         camera: {
+ *             nextUpgrade: {
+ *                 time: "2019-03-17T17:22:52Z",
+ *                 toVersion: {
+ *                     id: "1003",
+ *                 },
+ *             },
+ *             participateInNextBetaRelease: false,
+ *         },
+ *         cellularGateway: {
+ *             nextUpgrade: {
+ *                 time: "2019-03-17T17:22:52Z",
+ *                 toVersion: {
+ *                     id: "1004",
+ *                 },
+ *             },
+ *             participateInNextBetaRelease: false,
+ *         },
+ *         sensor: {
+ *             nextUpgrade: {
+ *                 time: "2019-03-17T17:22:52Z",
+ *                 toVersion: {
+ *                     id: "1005",
+ *                 },
+ *             },
+ *             participateInNextBetaRelease: false,
+ *         },
+ *         "switch": {
+ *             nextUpgrade: {
+ *                 time: "2019-03-17T17:22:52Z",
+ *                 toVersion: {
+ *                     id: "1002",
+ *                 },
+ *             },
+ *             participateInNextBetaRelease: false,
+ *         },
+ *         switchCatalyst: {
+ *             nextUpgrade: {
+ *                 time: "2019-03-17T17:22:52Z",
+ *                 toVersion: {
+ *                     id: "1234",
+ *                 },
+ *             },
+ *             participateInNextBetaRelease: false,
+ *         },
+ *         wireless: {
+ *             nextUpgrade: {
+ *                 time: "2019-03-17T17:22:52Z",
+ *                 toVersion: {
+ *                     id: "1000",
+ *                 },
+ *             },
+ *             participateInNextBetaRelease: false,
+ *         },
+ *     },
+ *     timezone: "America/Los_Angeles",
+ *     upgradeWindow: {
+ *         dayOfWeek: "sun",
+ *         hourOfDay: "4:00",
+ *     },
+ * });
+ * export const merakiNetworksFirmwareUpgradesExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

@@ -16,6 +16,38 @@ import (
 // already existed previously.
 //
 // ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/organizations"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := organizations.NewLicensesMove(ctx, "example", &organizations.LicensesMoveArgs{
+//				OrganizationId: pulumi.String("string"),
+//				Parameters: &organizations.LicensesMoveParametersArgs{
+//					DestOrganizationId: pulumi.String("2930418"),
+//					LicenseIds: pulumi.StringArray{
+//						pulumi.String("123"),
+//						pulumi.String("456"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiOrganizationsLicensesMoveExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
 type LicensesMove struct {
 	pulumi.CustomResourceState
 

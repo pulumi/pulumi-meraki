@@ -12,6 +12,75 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.SwitchAccessPolicies("example", new()
+    ///     {
+    ///         AccessPolicyType = "Hybrid authentication",
+    ///         Dot1x = new Meraki.Networks.Inputs.SwitchAccessPoliciesDot1xArgs
+    ///         {
+    ///             ControlDirection = "inbound",
+    ///         },
+    ///         GuestPortBouncing = false,
+    ///         GuestVlanId = 100,
+    ///         HostMode = "Single-Host",
+    ///         IncreaseAccessSpeed = false,
+    ///         Name = "Access policy #1",
+    ///         NetworkId = "string",
+    ///         Radius = new Meraki.Networks.Inputs.SwitchAccessPoliciesRadiusArgs
+    ///         {
+    ///             CriticalAuth = new Meraki.Networks.Inputs.SwitchAccessPoliciesRadiusCriticalAuthArgs
+    ///             {
+    ///                 DataVlanId = 100,
+    ///                 SuspendPortBounce = true,
+    ///                 VoiceVlanId = 100,
+    ///             },
+    ///             FailedAuthVlanId = 100,
+    ///             ReAuthenticationInterval = 120,
+    ///         },
+    ///         RadiusAccountingEnabled = true,
+    ///         RadiusAccountingServers = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.SwitchAccessPoliciesRadiusAccountingServerArgs
+    ///             {
+    ///                 Host = "1.2.3.4",
+    ///                 Port = 22,
+    ///                 Secret = "secret",
+    ///             },
+    ///         },
+    ///         RadiusCoaSupportEnabled = false,
+    ///         RadiusGroupAttribute = "11",
+    ///         RadiusServers = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.SwitchAccessPoliciesRadiusServerArgs
+    ///             {
+    ///                 Host = "1.2.3.4",
+    ///                 Port = 22,
+    ///                 Secret = "secret",
+    ///             },
+    ///         },
+    ///         RadiusTestingEnabled = false,
+    ///         UrlRedirectWalledGardenEnabled = true,
+    ///         UrlRedirectWalledGardenRanges = new[]
+    ///         {
+    ///             "192.168.1.0/24",
+    ///         },
+    ///         VoiceVlanClients = true,
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksSwitchAccessPoliciesExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

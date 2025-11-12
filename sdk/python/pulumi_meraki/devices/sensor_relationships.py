@@ -142,6 +142,20 @@ class SensorRelationships(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.devices.SensorRelationships("example",
+            livestream={
+                "related_devices": [{
+                    "serial": "string",
+                }],
+            },
+            serial="string")
+        pulumi.export("merakiDevicesSensorRelationshipsExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -162,6 +176,20 @@ class SensorRelationships(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.devices.SensorRelationships("example",
+            livestream={
+                "related_devices": [{
+                    "serial": "string",
+                }],
+            },
+            serial="string")
+        pulumi.export("merakiDevicesSensorRelationshipsExample", example)
+        ```
 
         ## Import
 

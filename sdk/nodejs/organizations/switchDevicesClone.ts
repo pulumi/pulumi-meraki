@@ -11,6 +11,24 @@ import * as utilities from "../utilities";
  * already existed previously.
  *
  * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.organizations.SwitchDevicesClone("example", {
+ *     organizationId: "string",
+ *     parameters: {
+ *         sourceSerial: "Q234-ABCD-5678",
+ *         targetSerials: [
+ *             "Q234-ABCD-0001",
+ *             "Q234-ABCD-0002",
+ *             "Q234-ABCD-0003",
+ *         ],
+ *     },
+ * });
+ * export const merakiOrganizationsSwitchDevicesCloneExample = example;
+ * ```
  */
 export class SwitchDevicesClone extends pulumi.CustomResource {
     /**

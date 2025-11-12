@@ -12,6 +12,41 @@ namespace Pulumi.Meraki.Devices
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Devices.LiveToolsWakeOnLan("example", new()
+    ///     {
+    ///         Callback = new Meraki.Devices.Inputs.LiveToolsWakeOnLanCallbackArgs
+    ///         {
+    ///             HttpServer = new Meraki.Devices.Inputs.LiveToolsWakeOnLanCallbackHttpServerArgs
+    ///             {
+    ///                 Id = "aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M=",
+    ///             },
+    ///             PayloadTemplate = new Meraki.Devices.Inputs.LiveToolsWakeOnLanCallbackPayloadTemplateArgs
+    ///             {
+    ///                 Id = "wpt_2100",
+    ///             },
+    ///             SharedSecret = "secret",
+    ///             Url = "https://webhook.site/28efa24e-f830-4d9f-a12b-fbb9e5035031",
+    ///         },
+    ///         Mac = "00:11:22:33:44:55",
+    ///         Serial = "string",
+    ///         VlanId = 12,
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiDevicesLiveToolsWakeOnLanExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

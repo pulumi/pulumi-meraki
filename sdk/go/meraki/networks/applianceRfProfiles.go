@@ -14,6 +14,58 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewApplianceRfProfiles(ctx, "example", &networks.ApplianceRfProfilesArgs{
+//				FiveGhzSettings: &networks.ApplianceRfProfilesFiveGhzSettingsArgs{
+//					AxEnabled:  pulumi.Bool(true),
+//					MinBitrate: pulumi.Int(48),
+//				},
+//				Name:      pulumi.String("MX RF Profile"),
+//				NetworkId: pulumi.String("string"),
+//				PerSsidSettings: &networks.ApplianceRfProfilesPerSsidSettingsArgs{
+//					Status1: &networks.ApplianceRfProfilesPerSsidSettingsStatus1Args{
+//						BandOperationMode:   pulumi.String("dual"),
+//						BandSteeringEnabled: pulumi.Bool(true),
+//					},
+//					Status2: &networks.ApplianceRfProfilesPerSsidSettingsStatus2Args{
+//						BandOperationMode:   pulumi.String("dual"),
+//						BandSteeringEnabled: pulumi.Bool(true),
+//					},
+//					Status3: &networks.ApplianceRfProfilesPerSsidSettingsStatus3Args{
+//						BandOperationMode:   pulumi.String("dual"),
+//						BandSteeringEnabled: pulumi.Bool(true),
+//					},
+//					Status4: &networks.ApplianceRfProfilesPerSsidSettingsStatus4Args{
+//						BandOperationMode:   pulumi.String("dual"),
+//						BandSteeringEnabled: pulumi.Bool(true),
+//					},
+//				},
+//				TwoFourGhzSettings: &networks.ApplianceRfProfilesTwoFourGhzSettingsArgs{
+//					AxEnabled:  pulumi.Bool(true),
+//					MinBitrate: pulumi.Float64(12),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksApplianceRfProfilesExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

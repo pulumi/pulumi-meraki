@@ -9,6 +9,26 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.MerakiAuthUsers("example", {
+ *     accountType: "802.1X",
+ *     authorizations: [{
+ *         expiresAt: "2018-03-13T00:00:00.090210Z",
+ *         ssidNumber: 1,
+ *     }],
+ *     email: "miles@meraki.com",
+ *     emailPasswordToUser: false,
+ *     isAdmin: false,
+ *     name: "Miles Meraki",
+ *     networkId: "string",
+ *     password: "secret",
+ * });
+ * export const merakiNetworksMerakiAuthUsersExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

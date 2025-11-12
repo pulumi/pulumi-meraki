@@ -9,6 +9,32 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.ApplianceTrafficShapingRules("example", {
+ *     defaultRulesEnabled: true,
+ *     networkId: "string",
+ *     rules: [{
+ *         definitions: [{
+ *             type: "host",
+ *             value: "google.com",
+ *         }],
+ *         dscpTagValue: 1,
+ *         perClientBandwidthLimits: {
+ *             bandwidthLimits: {
+ *                 limitDown: 1000000,
+ *                 limitUp: 1000000,
+ *             },
+ *             settings: "custom",
+ *         },
+ *         priority: "normal",
+ *     }],
+ * });
+ * export const merakiNetworksApplianceTrafficShapingRulesExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

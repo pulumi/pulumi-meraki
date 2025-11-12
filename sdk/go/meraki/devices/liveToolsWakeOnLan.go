@@ -14,6 +14,43 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/devices"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := devices.NewLiveToolsWakeOnLan(ctx, "example", &devices.LiveToolsWakeOnLanArgs{
+//				Callback: &devices.LiveToolsWakeOnLanCallbackArgs{
+//					HttpServer: &devices.LiveToolsWakeOnLanCallbackHttpServerArgs{
+//						Id: pulumi.String("aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M="),
+//					},
+//					PayloadTemplate: &devices.LiveToolsWakeOnLanCallbackPayloadTemplateArgs{
+//						Id: pulumi.String("wpt_2100"),
+//					},
+//					SharedSecret: pulumi.String("secret"),
+//					Url:          pulumi.String("https://webhook.site/28efa24e-f830-4d9f-a12b-fbb9e5035031"),
+//				},
+//				Mac:    pulumi.String("00:11:22:33:44:55"),
+//				Serial: pulumi.String("string"),
+//				VlanId: pulumi.Int(12),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiDevicesLiveToolsWakeOnLanExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

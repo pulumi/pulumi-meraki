@@ -20,6 +20,46 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.organizations.SwitchDevicesClone;
+ * import com.pulumi.meraki.organizations.SwitchDevicesCloneArgs;
+ * import com.pulumi.meraki.organizations.inputs.SwitchDevicesCloneParametersArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SwitchDevicesClone("example", SwitchDevicesCloneArgs.builder()
+ *             .organizationId("string")
+ *             .parameters(SwitchDevicesCloneParametersArgs.builder()
+ *                 .sourceSerial("Q234-ABCD-5678")
+ *                 .targetSerials(                
+ *                     "Q234-ABCD-0001",
+ *                     "Q234-ABCD-0002",
+ *                     "Q234-ABCD-0003")
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiOrganizationsSwitchDevicesCloneExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="meraki:organizations/switchDevicesClone:SwitchDevicesClone")
 public class SwitchDevicesClone extends com.pulumi.resources.CustomResource {

@@ -12,6 +12,119 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.FirmwareUpgrades("example", new()
+    ///     {
+    ///         NetworkId = "string",
+    ///         Products = new Meraki.Networks.Inputs.FirmwareUpgradesProductsArgs
+    ///         {
+    ///             Appliance = new Meraki.Networks.Inputs.FirmwareUpgradesProductsApplianceArgs
+    ///             {
+    ///                 NextUpgrade = new Meraki.Networks.Inputs.FirmwareUpgradesProductsApplianceNextUpgradeArgs
+    ///                 {
+    ///                     Time = "2019-03-17T17:22:52Z",
+    ///                     ToVersion = new Meraki.Networks.Inputs.FirmwareUpgradesProductsApplianceNextUpgradeToVersionArgs
+    ///                     {
+    ///                         Id = "1001",
+    ///                     },
+    ///                 },
+    ///                 ParticipateInNextBetaRelease = false,
+    ///             },
+    ///             Camera = new Meraki.Networks.Inputs.FirmwareUpgradesProductsCameraArgs
+    ///             {
+    ///                 NextUpgrade = new Meraki.Networks.Inputs.FirmwareUpgradesProductsCameraNextUpgradeArgs
+    ///                 {
+    ///                     Time = "2019-03-17T17:22:52Z",
+    ///                     ToVersion = new Meraki.Networks.Inputs.FirmwareUpgradesProductsCameraNextUpgradeToVersionArgs
+    ///                     {
+    ///                         Id = "1003",
+    ///                     },
+    ///                 },
+    ///                 ParticipateInNextBetaRelease = false,
+    ///             },
+    ///             CellularGateway = new Meraki.Networks.Inputs.FirmwareUpgradesProductsCellularGatewayArgs
+    ///             {
+    ///                 NextUpgrade = new Meraki.Networks.Inputs.FirmwareUpgradesProductsCellularGatewayNextUpgradeArgs
+    ///                 {
+    ///                     Time = "2019-03-17T17:22:52Z",
+    ///                     ToVersion = new Meraki.Networks.Inputs.FirmwareUpgradesProductsCellularGatewayNextUpgradeToVersionArgs
+    ///                     {
+    ///                         Id = "1004",
+    ///                     },
+    ///                 },
+    ///                 ParticipateInNextBetaRelease = false,
+    ///             },
+    ///             Sensor = new Meraki.Networks.Inputs.FirmwareUpgradesProductsSensorArgs
+    ///             {
+    ///                 NextUpgrade = new Meraki.Networks.Inputs.FirmwareUpgradesProductsSensorNextUpgradeArgs
+    ///                 {
+    ///                     Time = "2019-03-17T17:22:52Z",
+    ///                     ToVersion = new Meraki.Networks.Inputs.FirmwareUpgradesProductsSensorNextUpgradeToVersionArgs
+    ///                     {
+    ///                         Id = "1005",
+    ///                     },
+    ///                 },
+    ///                 ParticipateInNextBetaRelease = false,
+    ///             },
+    ///             Switch = new Meraki.Networks.Inputs.FirmwareUpgradesProductsSwitchArgs
+    ///             {
+    ///                 NextUpgrade = new Meraki.Networks.Inputs.FirmwareUpgradesProductsSwitchNextUpgradeArgs
+    ///                 {
+    ///                     Time = "2019-03-17T17:22:52Z",
+    ///                     ToVersion = new Meraki.Networks.Inputs.FirmwareUpgradesProductsSwitchNextUpgradeToVersionArgs
+    ///                     {
+    ///                         Id = "1002",
+    ///                     },
+    ///                 },
+    ///                 ParticipateInNextBetaRelease = false,
+    ///             },
+    ///             SwitchCatalyst = new Meraki.Networks.Inputs.FirmwareUpgradesProductsSwitchCatalystArgs
+    ///             {
+    ///                 NextUpgrade = new Meraki.Networks.Inputs.FirmwareUpgradesProductsSwitchCatalystNextUpgradeArgs
+    ///                 {
+    ///                     Time = "2019-03-17T17:22:52Z",
+    ///                     ToVersion = new Meraki.Networks.Inputs.FirmwareUpgradesProductsSwitchCatalystNextUpgradeToVersionArgs
+    ///                     {
+    ///                         Id = "1234",
+    ///                     },
+    ///                 },
+    ///                 ParticipateInNextBetaRelease = false,
+    ///             },
+    ///             Wireless = new Meraki.Networks.Inputs.FirmwareUpgradesProductsWirelessArgs
+    ///             {
+    ///                 NextUpgrade = new Meraki.Networks.Inputs.FirmwareUpgradesProductsWirelessNextUpgradeArgs
+    ///                 {
+    ///                     Time = "2019-03-17T17:22:52Z",
+    ///                     ToVersion = new Meraki.Networks.Inputs.FirmwareUpgradesProductsWirelessNextUpgradeToVersionArgs
+    ///                     {
+    ///                         Id = "1000",
+    ///                     },
+    ///                 },
+    ///                 ParticipateInNextBetaRelease = false,
+    ///             },
+    ///         },
+    ///         Timezone = "America/Los_Angeles",
+    ///         UpgradeWindow = new Meraki.Networks.Inputs.FirmwareUpgradesUpgradeWindowArgs
+    ///         {
+    ///             DayOfWeek = "sun",
+    ///             HourOfDay = "4:00",
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksFirmwareUpgradesExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

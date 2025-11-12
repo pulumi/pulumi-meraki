@@ -11,6 +11,23 @@ import * as utilities from "../utilities";
  * already existed previously.
  *
  * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.VlanProfilesAssignmentsReassign("example", {
+ *     networkId: "string",
+ *     parameters: {
+ *         serials: ["Q234-ABCD-5678"],
+ *         stackIds: ["1234"],
+ *         vlanProfile: {
+ *             iname: "Profile1",
+ *         },
+ *     },
+ * });
+ * export const merakiNetworksVlanProfilesAssignmentsReassignExample = example;
+ * ```
  */
 export class VlanProfilesAssignmentsReassign extends pulumi.CustomResource {
     /**

@@ -9,6 +9,272 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.WirelessSsids("example", {
+ *     activeDirectory: {
+ *         credentials: {
+ *             logonName: "user",
+ *             password: "password",
+ *         },
+ *         servers: [{
+ *             host: "127.0.0.1",
+ *             port: 3268,
+ *         }],
+ *     },
+ *     adultContentFilteringEnabled: false,
+ *     apTagsAndVlanIds: [{
+ *         tags: [
+ *             "tag1",
+ *             "tag2",
+ *         ],
+ *         vlanId: 100,
+ *     }],
+ *     authMode: "8021x-radius",
+ *     availabilityTags: [
+ *         "tag1",
+ *         "tag2",
+ *     ],
+ *     availableOnAllAps: false,
+ *     bandSelection: "5 GHz band only",
+ *     concentratorNetworkId: "N_24329156",
+ *     defaultVlanId: 1,
+ *     disassociateClientsOnVpnFailover: false,
+ *     dnsRewrite: {
+ *         dnsCustomNameservers: [
+ *             "8.8.8.8",
+ *             "8.8.4.4",
+ *         ],
+ *         enabled: true,
+ *     },
+ *     dot11r: {
+ *         adaptive: true,
+ *         enabled: true,
+ *     },
+ *     dot11w: {
+ *         enabled: true,
+ *         required: false,
+ *     },
+ *     enabled: true,
+ *     encryptionMode: "wpa",
+ *     enterpriseAdminAccess: "access enabled",
+ *     gre: {
+ *         concentrator: {
+ *             host: "192.168.1.1",
+ *         },
+ *         key: 5,
+ *     },
+ *     ipAssignmentMode: "NAT mode",
+ *     lanIsolationEnabled: true,
+ *     ldap: {
+ *         baseDistinguishedName: "dc=example,dc=com",
+ *         credentials: {
+ *             distinguishedName: "cn=user,dc=example,dc=com",
+ *             password: "password",
+ *         },
+ *         serverCaCertificate: {
+ *             contents: `          \\"-----BEGIN CERTIFICATE-----
+ *         MIIDyTCCArGgAwIBAgIKBBNXOVCGU1YztjANBgkqhkiG9w0BAQsFADAnMQ4wDAYD
+ *         VQQKEwVDaXNjbzEVMBMGA1UEAxMMQUNUMiBTVURJIENBMB4XDTIxMDUzMTEzNTUx
+ *         NVoXDTI5MDUxNDIwMjU0MVowbTEpMCcGA1UEBRMgUElEOkM5MjAwTC0yNFAtNEcg
+ *         U046SkFFMjUyMjBSMksxDjAMBgNVBAoTBUNpc2NvMRgwFgYDVQQLEw9BQ1QtMiBM
+ *         aXRlIFNVREkxFjAUBgNVBAMTDUM5MjAwTC0yNFAtNEcwggEiMA0GCSqGSIb3DQEB
+ *         AQUAA4IBDwAwggEKAoIBAQDaUPxW76gT5MdoEAt+UrDFiYA9RYh2iHicDViBEyow
+ *         TR1TuP36bHh13X3vtGiDsCD88Ci2TZIqd/EDkkc7v9ipUUYVVH+YDrPt2Aukb1PH
+ *         D6K0R+KhgEzRo5x54TlU6oWvjUpwNZUwwdhMWIQaUVkMyZBYNy0jGPLO8jwZhyBg
+ *         1Fneybr9pwedGbLrAaz+gdEikB8B4a/fvPjVfL5Ngb4QRjFqWuE+X3nLc0kHedep
+ *         6nfgpUNXMlStVm5nIXKP6OjmzfCHPYh9L2Ehs1TrSk1ser9Ofx0ZMVL/jBZR2EIj
+ *         OZ8tH6KlX2/B2pbSPIO6kD5c4UA8Cf1SbDJCwJ/kI9ihAgMBAAGjgbAwga0wDgYD
+ *         VR0PAQH/BAQDAgXgMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUSNjx8cJw1Vu7
+ *         fHMJk6+4uDAD+H8wTQYDVR0RBEYwRKBCBgkrBgEEAQkVAgOgNRMzQ2hpcElEPVVV
+ *         VUNNaElGcUVFMklFUUVBQWNBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUE9MB0GA1Ud
+ *         DgQWBBRdhMkFD/z5hokaQeLbaRsp4hkvbzANBgkqhkiG9w0BAQsFAAOCAQEAMtuh
+ *         YpBz4xEZ7YdJsLpw67Q0TTJGnTBRpzAeY1urYDoDz8TSx556XG7z3IRzuED5KVSp
+ *         OwmH/iZ+tDfYQ3W3ElWTW93871DkuW4WQIfbnoHg/F7bF0DKYVkD3rpZjyz3NhzH
+ *         d7cjTdJXQ85bTAOXDuxKH3qewrXxxOGXgh3I6NUq0UwMTWh84lND7Jl+ZAQkYNS2
+ *         iHanTZFQBk3ML0NUb7fKDYGRTZRqwQ/upIO4S6LV1cxH/6V0qbMy3sCSHZoMLrW3
+ *         0m3M6yKpe5+VZzHZwmWdUf3Ot+zKjhveK5/YNsMIASdvtvymxUizq2Hr1hvR/kPc
+ *         p1vuyWxipU8JfzOh/A==
+ *         -----END CERTIFICATE-----
+ *         \\"
+ * `,
+ *         },
+ *         servers: [{
+ *             host: "127.0.0.1",
+ *             port: 389,
+ *         }],
+ *     },
+ *     localRadius: {
+ *         cacheTimeout: 60,
+ *         certificateAuthentication: {
+ *             clientRootCaCertificate: {
+ *                 contents: `          \\"-----BEGIN CERTIFICATE-----
+ *         MIIDyTCCArGgAwIBAgIKBBNXOVCGU1YztjANBgkqhkiG9w0BAQsFADAnMQ4wDAYD
+ *         VQQKEwVDaXNjbzEVMBMGA1UEAxMMQUNUMiBTVURJIENBMB4XDTIxMDUzMTEzNTUx
+ *         NVoXDTI5MDUxNDIwMjU0MVowbTEpMCcGA1UEBRMgUElEOkM5MjAwTC0yNFAtNEcg
+ *         U046SkFFMjUyMjBSMksxDjAMBgNVBAoTBUNpc2NvMRgwFgYDVQQLEw9BQ1QtMiBM
+ *         aXRlIFNVREkxFjAUBgNVBAMTDUM5MjAwTC0yNFAtNEcwggEiMA0GCSqGSIb3DQEB
+ *         AQUAA4IBDwAwggEKAoIBAQDaUPxW76gT5MdoEAt+UrDFiYA9RYh2iHicDViBEyow
+ *         TR1TuP36bHh13X3vtGiDsCD88Ci2TZIqd/EDkkc7v9ipUUYVVH+YDrPt2Aukb1PH
+ *         D6K0R+KhgEzRo5x54TlU6oWvjUpwNZUwwdhMWIQaUVkMyZBYNy0jGPLO8jwZhyBg
+ *         1Fneybr9pwedGbLrAaz+gdEikB8B4a/fvPjVfL5Ngb4QRjFqWuE+X3nLc0kHedep
+ *         6nfgpUNXMlStVm5nIXKP6OjmzfCHPYh9L2Ehs1TrSk1ser9Ofx0ZMVL/jBZR2EIj
+ *         OZ8tH6KlX2/B2pbSPIO6kD5c4UA8Cf1SbDJCwJ/kI9ihAgMBAAGjgbAwga0wDgYD
+ *         VR0PAQH/BAQDAgXgMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUSNjx8cJw1Vu7
+ *         fHMJk6+4uDAD+H8wTQYDVR0RBEYwRKBCBgkrBgEEAQkVAgOgNRMzQ2hpcElEPVVV
+ *         VUNNaElGcUVFMklFUUVBQWNBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUE9MB0GA1Ud
+ *         DgQWBBRdhMkFD/z5hokaQeLbaRsp4hkvbzANBgkqhkiG9w0BAQsFAAOCAQEAMtuh
+ *         YpBz4xEZ7YdJsLpw67Q0TTJGnTBRpzAeY1urYDoDz8TSx556XG7z3IRzuED5KVSp
+ *         OwmH/iZ+tDfYQ3W3ElWTW93871DkuW4WQIfbnoHg/F7bF0DKYVkD3rpZjyz3NhzH
+ *         d7cjTdJXQ85bTAOXDuxKH3qewrXxxOGXgh3I6NUq0UwMTWh84lND7Jl+ZAQkYNS2
+ *         iHanTZFQBk3ML0NUb7fKDYGRTZRqwQ/upIO4S6LV1cxH/6V0qbMy3sCSHZoMLrW3
+ *         0m3M6yKpe5+VZzHZwmWdUf3Ot+zKjhveK5/YNsMIASdvtvymxUizq2Hr1hvR/kPc
+ *         p1vuyWxipU8JfzOh/A==
+ *         -----END CERTIFICATE-----
+ *         \\"
+ * `,
+ *             },
+ *             enabled: true,
+ *             ocspResponderUrl: "http://ocsp-server.example.com",
+ *             useLdap: false,
+ *             useOcsp: true,
+ *         },
+ *         passwordAuthentication: {
+ *             enabled: false,
+ *         },
+ *     },
+ *     mandatoryDhcpEnabled: false,
+ *     minBitrate: 5.5,
+ *     name: "My SSID",
+ *     namedVlans: {
+ *         radius: {
+ *             guestVlan: {
+ *                 enabled: true,
+ *                 name: "Guest VLAN",
+ *             },
+ *         },
+ *         tagging: {
+ *             byApTags: [{
+ *                 tags: [
+ *                     "tag1",
+ *                     "tag2",
+ *                 ],
+ *                 vlanName: "My VLAN",
+ *             }],
+ *             defaultVlanName: "My VLAN",
+ *             enabled: true,
+ *         },
+ *     },
+ *     networkId: "string",
+ *     number: "string",
+ *     oauth: {
+ *         allowedDomains: ["example.com"],
+ *     },
+ *     perClientBandwidthLimitDown: 1,
+ *     perClientBandwidthLimitUp: 1,
+ *     perSsidBandwidthLimitDown: 1,
+ *     perSsidBandwidthLimitUp: 1,
+ *     psk: "deadbeef",
+ *     radiusAccountingEnabled: true,
+ *     radiusAccountingInterimInterval: 5,
+ *     radiusAccountingServers: [{
+ *         caCertificate: `          \\"-----BEGIN CERTIFICATE-----
+ *         MIIDyTCCArGgAwIBAgIKBBNXOVCGU1YztjANBgkqhkiG9w0BAQsFADAnMQ4wDAYD
+ *         VQQKEwVDaXNjbzEVMBMGA1UEAxMMQUNUMiBTVURJIENBMB4XDTIxMDUzMTEzNTUx
+ *         NVoXDTI5MDUxNDIwMjU0MVowbTEpMCcGA1UEBRMgUElEOkM5MjAwTC0yNFAtNEcg
+ *         U046SkFFMjUyMjBSMksxDjAMBgNVBAoTBUNpc2NvMRgwFgYDVQQLEw9BQ1QtMiBM
+ *         aXRlIFNVREkxFjAUBgNVBAMTDUM5MjAwTC0yNFAtNEcwggEiMA0GCSqGSIb3DQEB
+ *         AQUAA4IBDwAwggEKAoIBAQDaUPxW76gT5MdoEAt+UrDFiYA9RYh2iHicDViBEyow
+ *         TR1TuP36bHh13X3vtGiDsCD88Ci2TZIqd/EDkkc7v9ipUUYVVH+YDrPt2Aukb1PH
+ *         D6K0R+KhgEzRo5x54TlU6oWvjUpwNZUwwdhMWIQaUVkMyZBYNy0jGPLO8jwZhyBg
+ *         1Fneybr9pwedGbLrAaz+gdEikB8B4a/fvPjVfL5Ngb4QRjFqWuE+X3nLc0kHedep
+ *         6nfgpUNXMlStVm5nIXKP6OjmzfCHPYh9L2Ehs1TrSk1ser9Ofx0ZMVL/jBZR2EIj
+ *         OZ8tH6KlX2/B2pbSPIO6kD5c4UA8Cf1SbDJCwJ/kI9ihAgMBAAGjgbAwga0wDgYD
+ *         VR0PAQH/BAQDAgXgMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUSNjx8cJw1Vu7
+ *         fHMJk6+4uDAD+H8wTQYDVR0RBEYwRKBCBgkrBgEEAQkVAgOgNRMzQ2hpcElEPVVV
+ *         VUNNaElGcUVFMklFUUVBQWNBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUE9MB0GA1Ud
+ *         DgQWBBRdhMkFD/z5hokaQeLbaRsp4hkvbzANBgkqhkiG9w0BAQsFAAOCAQEAMtuh
+ *         YpBz4xEZ7YdJsLpw67Q0TTJGnTBRpzAeY1urYDoDz8TSx556XG7z3IRzuED5KVSp
+ *         OwmH/iZ+tDfYQ3W3ElWTW93871DkuW4WQIfbnoHg/F7bF0DKYVkD3rpZjyz3NhzH
+ *         d7cjTdJXQ85bTAOXDuxKH3qewrXxxOGXgh3I6NUq0UwMTWh84lND7Jl+ZAQkYNS2
+ *         iHanTZFQBk3ML0NUb7fKDYGRTZRqwQ/upIO4S6LV1cxH/6V0qbMy3sCSHZoMLrW3
+ *         0m3M6yKpe5+VZzHZwmWdUf3Ot+zKjhveK5/YNsMIASdvtvymxUizq2Hr1hvR/kPc
+ *         p1vuyWxipU8JfzOh/A==
+ *         -----END CERTIFICATE-----
+ *         \\"
+ * `,
+ *         host: "0.0.0.0",
+ *         port: 3000,
+ *         radsecEnabled: true,
+ *         secret: "secret-string",
+ *     }],
+ *     radiusAttributeForGroupPolicies: "Filter-Id",
+ *     radiusAuthenticationNasId: "00-11-22-33-44-55:AP1",
+ *     radiusCalledStationId: "00-11-22-33-44-55:AP1",
+ *     radiusCoaEnabled: true,
+ *     radiusFailoverPolicy: "Deny access",
+ *     radiusFallbackEnabled: true,
+ *     radiusGuestVlanEnabled: true,
+ *     radiusGuestVlanId: 1,
+ *     radiusLoadBalancingPolicy: "Round robin",
+ *     radiusOverride: false,
+ *     radiusProxyEnabled: false,
+ *     radiusServerAttemptsLimit: 5,
+ *     radiusServerTimeout: 5,
+ *     radiusServers: [{
+ *         caCertificate: `          \\"-----BEGIN CERTIFICATE-----
+ *         MIIDyTCCArGgAwIBAgIKBBNXOVCGU1YztjANBgkqhkiG9w0BAQsFADAnMQ4wDAYD
+ *         VQQKEwVDaXNjbzEVMBMGA1UEAxMMQUNUMiBTVURJIENBMB4XDTIxMDUzMTEzNTUx
+ *         NVoXDTI5MDUxNDIwMjU0MVowbTEpMCcGA1UEBRMgUElEOkM5MjAwTC0yNFAtNEcg
+ *         U046SkFFMjUyMjBSMksxDjAMBgNVBAoTBUNpc2NvMRgwFgYDVQQLEw9BQ1QtMiBM
+ *         aXRlIFNVREkxFjAUBgNVBAMTDUM5MjAwTC0yNFAtNEcwggEiMA0GCSqGSIb3DQEB
+ *         AQUAA4IBDwAwggEKAoIBAQDaUPxW76gT5MdoEAt+UrDFiYA9RYh2iHicDViBEyow
+ *         TR1TuP36bHh13X3vtGiDsCD88Ci2TZIqd/EDkkc7v9ipUUYVVH+YDrPt2Aukb1PH
+ *         D6K0R+KhgEzRo5x54TlU6oWvjUpwNZUwwdhMWIQaUVkMyZBYNy0jGPLO8jwZhyBg
+ *         1Fneybr9pwedGbLrAaz+gdEikB8B4a/fvPjVfL5Ngb4QRjFqWuE+X3nLc0kHedep
+ *         6nfgpUNXMlStVm5nIXKP6OjmzfCHPYh9L2Ehs1TrSk1ser9Ofx0ZMVL/jBZR2EIj
+ *         OZ8tH6KlX2/B2pbSPIO6kD5c4UA8Cf1SbDJCwJ/kI9ihAgMBAAGjgbAwga0wDgYD
+ *         VR0PAQH/BAQDAgXgMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUSNjx8cJw1Vu7
+ *         fHMJk6+4uDAD+H8wTQYDVR0RBEYwRKBCBgkrBgEEAQkVAgOgNRMzQ2hpcElEPVVV
+ *         VUNNaElGcUVFMklFUUVBQWNBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUE9MB0GA1Ud
+ *         DgQWBBRdhMkFD/z5hokaQeLbaRsp4hkvbzANBgkqhkiG9w0BAQsFAAOCAQEAMtuh
+ *         YpBz4xEZ7YdJsLpw67Q0TTJGnTBRpzAeY1urYDoDz8TSx556XG7z3IRzuED5KVSp
+ *         OwmH/iZ+tDfYQ3W3ElWTW93871DkuW4WQIfbnoHg/F7bF0DKYVkD3rpZjyz3NhzH
+ *         d7cjTdJXQ85bTAOXDuxKH3qewrXxxOGXgh3I6NUq0UwMTWh84lND7Jl+ZAQkYNS2
+ *         iHanTZFQBk3ML0NUb7fKDYGRTZRqwQ/upIO4S6LV1cxH/6V0qbMy3sCSHZoMLrW3
+ *         0m3M6yKpe5+VZzHZwmWdUf3Ot+zKjhveK5/YNsMIASdvtvymxUizq2Hr1hvR/kPc
+ *         p1vuyWxipU8JfzOh/A==
+ *         -----END CERTIFICATE-----
+ *         \\"
+ * `,
+ *         host: "0.0.0.0",
+ *         openRoamingCertificateId: 2,
+ *         port: 3000,
+ *         radsecEnabled: true,
+ *         secret: "secret-string",
+ *     }],
+ *     radiusTestingEnabled: true,
+ *     secondaryConcentratorNetworkId: "disabled",
+ *     speedBurst: {
+ *         enabled: true,
+ *     },
+ *     splashGuestSponsorDomains: ["example.com"],
+ *     splashPage: "Click-through splash page",
+ *     useVlanTagging: false,
+ *     visible: true,
+ *     vlanId: 10,
+ *     walledGardenEnabled: true,
+ *     walledGardenRanges: [
+ *         "example.com",
+ *         "1.1.1.1/32",
+ *     ],
+ *     wpaEncryptionMode: "WPA2 only",
+ * });
+ * export const merakiNetworksWirelessSsidsExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

@@ -16,6 +16,44 @@ import (
 // already existed previously.
 //
 // ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewFirmwareUpgradesRollbacks(ctx, "example", &networks.FirmwareUpgradesRollbacksArgs{
+//				NetworkId: pulumi.String("string"),
+//				Parameters: &networks.FirmwareUpgradesRollbacksParametersArgs{
+//					Product: pulumi.String("switch"),
+//					Reasons: networks.FirmwareUpgradesRollbacksParametersReasonArray{
+//						&networks.FirmwareUpgradesRollbacksParametersReasonArgs{
+//							Category: pulumi.String("performance"),
+//							Comment:  pulumi.String("Network was slower with the upgrade"),
+//						},
+//					},
+//					Time: pulumi.String("2020-10-21T02:00:00Z"),
+//					ToVersion: &networks.FirmwareUpgradesRollbacksParametersToVersionArgs{
+//						Id: pulumi.String("7857"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksFirmwareUpgradesRollbacksExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
 type FirmwareUpgradesRollbacks struct {
 	pulumi.CustomResourceState
 

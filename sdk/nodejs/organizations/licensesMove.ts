@@ -11,6 +11,23 @@ import * as utilities from "../utilities";
  * already existed previously.
  *
  * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.organizations.LicensesMove("example", {
+ *     organizationId: "string",
+ *     parameters: {
+ *         destOrganizationId: "2930418",
+ *         licenseIds: [
+ *             "123",
+ *             "456",
+ *         ],
+ *     },
+ * });
+ * export const merakiOrganizationsLicensesMoveExample = example;
+ * ```
  */
 export class LicensesMove extends pulumi.CustomResource {
     /**

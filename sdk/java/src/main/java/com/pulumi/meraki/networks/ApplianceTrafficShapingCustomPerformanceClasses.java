@@ -20,6 +20,45 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.ApplianceTrafficShapingCustomPerformanceClasses;
+ * import com.pulumi.meraki.networks.ApplianceTrafficShapingCustomPerformanceClassesArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceTrafficShapingCustomPerformanceClassesParametersArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ApplianceTrafficShapingCustomPerformanceClasses("example", ApplianceTrafficShapingCustomPerformanceClassesArgs.builder()
+ *             .networkId("string")
+ *             .parameters(ApplianceTrafficShapingCustomPerformanceClassesParametersArgs.builder()
+ *                 .maxJitter(100)
+ *                 .maxLatency(100)
+ *                 .maxLossPercentage(5)
+ *                 .name("myCustomPerformanceClass")
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksApplianceTrafficShapingCustomPerformanceClassesExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="meraki:networks/applianceTrafficShapingCustomPerformanceClasses:ApplianceTrafficShapingCustomPerformanceClasses")
 public class ApplianceTrafficShapingCustomPerformanceClasses extends com.pulumi.resources.CustomResource {

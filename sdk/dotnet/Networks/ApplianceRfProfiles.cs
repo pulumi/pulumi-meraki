@@ -12,6 +12,60 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.ApplianceRfProfiles("example", new()
+    ///     {
+    ///         FiveGhzSettings = new Meraki.Networks.Inputs.ApplianceRfProfilesFiveGhzSettingsArgs
+    ///         {
+    ///             AxEnabled = true,
+    ///             MinBitrate = 48,
+    ///         },
+    ///         Name = "MX RF Profile",
+    ///         NetworkId = "string",
+    ///         PerSsidSettings = new Meraki.Networks.Inputs.ApplianceRfProfilesPerSsidSettingsArgs
+    ///         {
+    ///             Status1 = new Meraki.Networks.Inputs.ApplianceRfProfilesPerSsidSettingsStatus1Args
+    ///             {
+    ///                 BandOperationMode = "dual",
+    ///                 BandSteeringEnabled = true,
+    ///             },
+    ///             Status2 = new Meraki.Networks.Inputs.ApplianceRfProfilesPerSsidSettingsStatus2Args
+    ///             {
+    ///                 BandOperationMode = "dual",
+    ///                 BandSteeringEnabled = true,
+    ///             },
+    ///             Status3 = new Meraki.Networks.Inputs.ApplianceRfProfilesPerSsidSettingsStatus3Args
+    ///             {
+    ///                 BandOperationMode = "dual",
+    ///                 BandSteeringEnabled = true,
+    ///             },
+    ///             Status4 = new Meraki.Networks.Inputs.ApplianceRfProfilesPerSsidSettingsStatus4Args
+    ///             {
+    ///                 BandOperationMode = "dual",
+    ///                 BandSteeringEnabled = true,
+    ///             },
+    ///         },
+    ///         TwoFourGhzSettings = new Meraki.Networks.Inputs.ApplianceRfProfilesTwoFourGhzSettingsArgs
+    ///         {
+    ///             AxEnabled = true,
+    ///             MinBitrate = 12,
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksApplianceRfProfilesExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

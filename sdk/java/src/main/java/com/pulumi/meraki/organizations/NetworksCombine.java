@@ -21,6 +21,46 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.organizations.NetworksCombine;
+ * import com.pulumi.meraki.organizations.NetworksCombineArgs;
+ * import com.pulumi.meraki.organizations.inputs.NetworksCombineParametersArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new NetworksCombine("example", NetworksCombineArgs.builder()
+ *             .organizationId("string")
+ *             .parameters(NetworksCombineParametersArgs.builder()
+ *                 .enrollmentString("my-enrollment-string")
+ *                 .name("Long Island Office")
+ *                 .networkIds(                
+ *                     "N_1234",
+ *                     "N_5678")
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiOrganizationsNetworksCombineExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="meraki:organizations/networksCombine:NetworksCombine")
 public class NetworksCombine extends com.pulumi.resources.CustomResource {

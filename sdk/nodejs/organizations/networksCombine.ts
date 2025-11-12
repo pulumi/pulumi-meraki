@@ -11,6 +11,24 @@ import * as utilities from "../utilities";
  * already existed previously.
  *
  * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.organizations.NetworksCombine("example", {
+ *     organizationId: "string",
+ *     parameters: {
+ *         enrollmentString: "my-enrollment-string",
+ *         name: "Long Island Office",
+ *         networkIds: [
+ *             "N_1234",
+ *             "N_5678",
+ *         ],
+ *     },
+ * });
+ * export const merakiOrganizationsNetworksCombineExample = example;
+ * ```
  */
 export class NetworksCombine extends pulumi.CustomResource {
     /**

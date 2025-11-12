@@ -16,6 +16,40 @@ import (
 // already existed previously.
 //
 // ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewSmDevicesFields(ctx, "example", &networks.SmDevicesFieldsArgs{
+//				NetworkId: pulumi.String("string"),
+//				Parameters: &networks.SmDevicesFieldsParametersArgs{
+//					DeviceFields: &networks.SmDevicesFieldsParametersDeviceFieldsArgs{
+//						Name:  pulumi.String("Miles's phone"),
+//						Notes: pulumi.String("Here's some info about my device"),
+//					},
+//					Id:      pulumi.String("1284392014819"),
+//					Serial:  pulumi.String("XY0XX0Y0X0"),
+//					WifiMac: pulumi.String("00:11:22:33:44:55"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksSmDevicesFieldsExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
 type SmDevicesFields struct {
 	pulumi.CustomResourceState
 

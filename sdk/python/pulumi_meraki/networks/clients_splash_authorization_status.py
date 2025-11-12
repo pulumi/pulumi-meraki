@@ -141,6 +141,24 @@ class ClientsSplashAuthorizationStatus(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.ClientsSplashAuthorizationStatus("example",
+            client_id="string",
+            network_id="string",
+            ssids={
+                "status0": {
+                    "is_authorized": True,
+                },
+                "status2": {
+                    "is_authorized": False,
+                },
+            })
+        pulumi.export("merakiNetworksClientsSplashAuthorizationStatusExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -161,6 +179,24 @@ class ClientsSplashAuthorizationStatus(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.ClientsSplashAuthorizationStatus("example",
+            client_id="string",
+            network_id="string",
+            ssids={
+                "status0": {
+                    "is_authorized": True,
+                },
+                "status2": {
+                    "is_authorized": False,
+                },
+            })
+        pulumi.export("merakiNetworksClientsSplashAuthorizationStatusExample", example)
+        ```
 
         ## Import
 

@@ -14,6 +14,73 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewWirelessSsidsHotspot20(ctx, "example", &networks.WirelessSsidsHotspot20Args{
+//				Domains: pulumi.StringArray{
+//					pulumi.String("meraki.local"),
+//					pulumi.String("domain2.com"),
+//				},
+//				Enabled: pulumi.Bool(true),
+//				MccMncs: networks.WirelessSsidsHotspot20MccMncArray{
+//					&networks.WirelessSsidsHotspot20MccMncArgs{
+//						Mcc: pulumi.String("123"),
+//						Mnc: pulumi.String("456"),
+//					},
+//				},
+//				NaiRealms: networks.WirelessSsidsHotspot20NaiRealmArray{
+//					&networks.WirelessSsidsHotspot20NaiRealmArgs{
+//						Format: pulumi.String("1"),
+//						Methods: networks.WirelessSsidsHotspot20NaiRealmMethodArray{
+//							&networks.WirelessSsidsHotspot20NaiRealmMethodArgs{
+//								AuthenticationTypes: &networks.WirelessSsidsHotspot20NaiRealmMethodAuthenticationTypesArgs{
+//									EapinnerAuthentication: []string{
+//										"EAP-TTLS with MSCHAPv2",
+//									},
+//									NonEapinnerAuthentication: []string{
+//										"MSCHAP",
+//									},
+//								},
+//								Id: pulumi.String("1"),
+//							},
+//						},
+//					},
+//				},
+//				NetworkAccessType: pulumi.String("Private network"),
+//				NetworkId:         pulumi.String("string"),
+//				Number:            pulumi.String("string"),
+//				Operator: &networks.WirelessSsidsHotspot20OperatorArgs{
+//					Name: pulumi.String("Meraki Product Management"),
+//				},
+//				RoamConsortOis: pulumi.StringArray{
+//					pulumi.String("ABC123"),
+//					pulumi.String("456EFG"),
+//				},
+//				Venue: &networks.WirelessSsidsHotspot20VenueArgs{
+//					Name: pulumi.String("SF Branch"),
+//					Type: pulumi.String("Unspecified Assembly"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksWirelessSsidsHotspot20Example", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

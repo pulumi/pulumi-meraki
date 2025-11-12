@@ -12,6 +12,38 @@ namespace Pulumi.Meraki.Devices
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Devices.WirelessRadioSettings("example", new()
+    ///     {
+    ///         FiveGhzSettings = new Meraki.Devices.Inputs.WirelessRadioSettingsFiveGhzSettingsArgs
+    ///         {
+    ///             Channel = 149,
+    ///             ChannelWidth = "20",
+    ///             TargetPower = 15,
+    ///         },
+    ///         RfProfileId = "1234",
+    ///         Serial = "string",
+    ///         TwoFourGhzSettings = new Meraki.Devices.Inputs.WirelessRadioSettingsTwoFourGhzSettingsArgs
+    ///         {
+    ///             Channel = 11,
+    ///             TargetPower = 21,
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiDevicesWirelessRadioSettingsExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

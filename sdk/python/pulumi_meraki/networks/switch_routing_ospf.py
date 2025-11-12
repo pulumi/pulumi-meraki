@@ -307,6 +307,38 @@ class SwitchRoutingOspf(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.SwitchRoutingOspf("example",
+            areas=[{
+                "area_id": 1284392014819,
+                "area_name": "Backbone",
+                "area_type": "normal",
+            }],
+            dead_timer_in_seconds=40,
+            enabled=True,
+            hello_timer_in_seconds=10,
+            md5_authentication_enabled=True,
+            md5_authentication_key={
+                "id": 1234,
+                "passphrase": "abc1234",
+            },
+            network_id="string",
+            v3={
+                "areas": [{
+                    "area_id": 1284392014819,
+                    "area_name": "V3 Backbone",
+                    "area_type": "normal",
+                }],
+                "dead_timer_in_seconds": 40,
+                "enabled": True,
+                "hello_timer_in_seconds": 10,
+            })
+        pulumi.export("merakiNetworksSwitchRoutingOspfExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -332,6 +364,38 @@ class SwitchRoutingOspf(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.SwitchRoutingOspf("example",
+            areas=[{
+                "area_id": 1284392014819,
+                "area_name": "Backbone",
+                "area_type": "normal",
+            }],
+            dead_timer_in_seconds=40,
+            enabled=True,
+            hello_timer_in_seconds=10,
+            md5_authentication_enabled=True,
+            md5_authentication_key={
+                "id": 1234,
+                "passphrase": "abc1234",
+            },
+            network_id="string",
+            v3={
+                "areas": [{
+                    "area_id": 1284392014819,
+                    "area_name": "V3 Backbone",
+                    "area_type": "normal",
+                }],
+                "dead_timer_in_seconds": 40,
+                "enabled": True,
+                "hello_timer_in_seconds": 10,
+            })
+        pulumi.export("merakiNetworksSwitchRoutingOspfExample", example)
+        ```
 
         ## Import
 
