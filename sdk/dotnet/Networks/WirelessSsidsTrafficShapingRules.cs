@@ -12,6 +12,54 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.WirelessSsidsTrafficShapingRules("example", new()
+    ///     {
+    ///         DefaultRulesEnabled = true,
+    ///         NetworkId = "string",
+    ///         Number = "string",
+    ///         Rules = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.WirelessSsidsTrafficShapingRulesRuleArgs
+    ///             {
+    ///                 Definitions = new[]
+    ///                 {
+    ///                     new Meraki.Networks.Inputs.WirelessSsidsTrafficShapingRulesRuleDefinitionArgs
+    ///                     {
+    ///                         Type = "host",
+    ///                         Value = "google.com",
+    ///                     },
+    ///                 },
+    ///                 DscpTagValue = 1,
+    ///                 PcpTagValue = 1,
+    ///                 PerClientBandwidthLimits = new Meraki.Networks.Inputs.WirelessSsidsTrafficShapingRulesRulePerClientBandwidthLimitsArgs
+    ///                 {
+    ///                     BandwidthLimits = new Meraki.Networks.Inputs.WirelessSsidsTrafficShapingRulesRulePerClientBandwidthLimitsBandwidthLimitsArgs
+    ///                     {
+    ///                         LimitDown = 1000000,
+    ///                         LimitUp = 1000000,
+    ///                     },
+    ///                     Settings = "custom",
+    ///                 },
+    ///             },
+    ///         },
+    ///         TrafficShapingEnabled = true,
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksWirelessSsidsTrafficShapingRulesExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

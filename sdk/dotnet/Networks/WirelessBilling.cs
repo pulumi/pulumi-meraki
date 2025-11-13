@@ -12,6 +12,41 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.WirelessBilling("example", new()
+    ///     {
+    ///         Currency = "USD",
+    ///         NetworkId = "string",
+    ///         Plans = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.WirelessBillingPlanArgs
+    ///             {
+    ///                 BandwidthLimits = new Meraki.Networks.Inputs.WirelessBillingPlanBandwidthLimitsArgs
+    ///                 {
+    ///                     LimitDown = 1000000,
+    ///                     LimitUp = 1000000,
+    ///                 },
+    ///                 Id = "1",
+    ///                 Price = 5,
+    ///                 TimeLimit = "1 hour",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksWirelessBillingExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

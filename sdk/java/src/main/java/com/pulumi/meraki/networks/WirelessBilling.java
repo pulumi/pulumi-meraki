@@ -18,6 +18,50 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.WirelessBilling;
+ * import com.pulumi.meraki.networks.WirelessBillingArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessBillingPlanArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessBillingPlanBandwidthLimitsArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new WirelessBilling("example", WirelessBillingArgs.builder()
+ *             .currency("USD")
+ *             .networkId("string")
+ *             .plans(WirelessBillingPlanArgs.builder()
+ *                 .bandwidthLimits(WirelessBillingPlanBandwidthLimitsArgs.builder()
+ *                     .limitDown(1000000)
+ *                     .limitUp(1000000)
+ *                     .build())
+ *                 .id("1")
+ *                 .price(5.0)
+ *                 .timeLimit("1 hour")
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksWirelessBillingExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

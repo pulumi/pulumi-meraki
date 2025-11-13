@@ -14,6 +14,43 @@ namespace Pulumi.Meraki.Networks
     /// already existed previously.
     /// 
     /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.FirmwareUpgradesRollbacks("example", new()
+    ///     {
+    ///         NetworkId = "string",
+    ///         Parameters = new Meraki.Networks.Inputs.FirmwareUpgradesRollbacksParametersArgs
+    ///         {
+    ///             Product = "switch",
+    ///             Reasons = new[]
+    ///             {
+    ///                 new Meraki.Networks.Inputs.FirmwareUpgradesRollbacksParametersReasonArgs
+    ///                 {
+    ///                     Category = "performance",
+    ///                     Comment = "Network was slower with the upgrade",
+    ///                 },
+    ///             },
+    ///             Time = "2020-10-21T02:00:00Z",
+    ///             ToVersion = new Meraki.Networks.Inputs.FirmwareUpgradesRollbacksParametersToVersionArgs
+    ///             {
+    ///                 Id = "7857",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksFirmwareUpgradesRollbacksExample"] = example,
+    ///     };
+    /// });
+    /// ```
     /// </summary>
     [MerakiResourceType("meraki:networks/firmwareUpgradesRollbacks:FirmwareUpgradesRollbacks")]
     public partial class FirmwareUpgradesRollbacks : global::Pulumi.CustomResource

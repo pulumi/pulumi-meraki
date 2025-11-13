@@ -14,6 +14,87 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewWirelessSsidsSplashSettings(ctx, "example", &networks.WirelessSsidsSplashSettingsArgs{
+//				AllowSimultaneousLogins: pulumi.Bool(false),
+//				Billing: &networks.WirelessSsidsSplashSettingsBillingArgs{
+//					FreeAccess: &networks.WirelessSsidsSplashSettingsBillingFreeAccessArgs{
+//						DurationInMinutes: pulumi.Int(120),
+//						Enabled:           pulumi.Bool(true),
+//					},
+//					PrepaidAccessFastLoginEnabled: pulumi.Bool(true),
+//					ReplyToEmailAddress:           pulumi.String("user@email.com"),
+//				},
+//				BlockAllTrafficBeforeSignOn:     pulumi.Bool(false),
+//				ControllerDisconnectionBehavior: pulumi.String("default"),
+//				GuestSponsorship: &networks.WirelessSsidsSplashSettingsGuestSponsorshipArgs{
+//					DurationInMinutes:        pulumi.Int(30),
+//					GuestCanRequestTimeframe: pulumi.Bool(false),
+//				},
+//				NetworkId:   pulumi.String("string"),
+//				Number:      pulumi.String("string"),
+//				RedirectUrl: pulumi.String("https://example.com"),
+//				SentryEnrollment: &networks.WirelessSsidsSplashSettingsSentryEnrollmentArgs{
+//					EnforcedSystems: pulumi.StringArray{
+//						pulumi.String("iOS"),
+//					},
+//					Strength: pulumi.String("focused"),
+//					SystemsManagerNetwork: &networks.WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkArgs{
+//						Id: pulumi.String("N_1234"),
+//					},
+//				},
+//				SplashImage: &networks.WirelessSsidsSplashSettingsSplashImageArgs{
+//					Extension: pulumi.String("jpg"),
+//					Image: &networks.WirelessSsidsSplashSettingsSplashImageImageArgs{
+//						Contents: pulumi.String("Q2lzY28gTWVyYWtp"),
+//						Format:   pulumi.String("jpg"),
+//					},
+//					Md5: pulumi.String("542cccac8d7dedee0f185311d154d194"),
+//				},
+//				SplashLogo: &networks.WirelessSsidsSplashSettingsSplashLogoArgs{
+//					Extension: pulumi.String("jpg"),
+//					Image: &networks.WirelessSsidsSplashSettingsSplashLogoImageArgs{
+//						Contents: pulumi.String("Q2lzY28gTWVyYWtp"),
+//						Format:   pulumi.String("jpg"),
+//					},
+//					Md5: pulumi.String("abcd1234"),
+//				},
+//				SplashPrepaidFront: &networks.WirelessSsidsSplashSettingsSplashPrepaidFrontArgs{
+//					Extension: pulumi.String("jpg"),
+//					Image: &networks.WirelessSsidsSplashSettingsSplashPrepaidFrontImageArgs{
+//						Contents: pulumi.String("Q2lzY28gTWVyYWtp"),
+//						Format:   pulumi.String("jpg"),
+//					},
+//					Md5: pulumi.String("542cccac8d7dedee0f185311d154d194"),
+//				},
+//				SplashTimeout:  pulumi.Int(1440),
+//				SplashUrl:      pulumi.String("https://www.custom_splash_url.com"),
+//				ThemeId:        pulumi.String("c3ddcb4f16785ee747ab5ffc10867d6c8ea704be"),
+//				UseRedirectUrl: pulumi.Bool(true),
+//				UseSplashUrl:   pulumi.Bool(true),
+//				WelcomeMessage: pulumi.String("Welcome!"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksWirelessSsidsSplashSettingsExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

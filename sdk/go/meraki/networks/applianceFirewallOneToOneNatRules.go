@@ -14,6 +14,51 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewApplianceFirewallOneToOneNatRules(ctx, "example", &networks.ApplianceFirewallOneToOneNatRulesArgs{
+//				NetworkId: pulumi.String("string"),
+//				Rules: networks.ApplianceFirewallOneToOneNatRulesRuleArray{
+//					&networks.ApplianceFirewallOneToOneNatRulesRuleArgs{
+//						AllowedInbound: []map[string]interface{}{
+//							map[string]interface{}{
+//								"allowedIps": []string{
+//									"10.82.112.0/24",
+//									"10.82.0.0/16",
+//								},
+//								"destinationPorts": []string{
+//									"80",
+//								},
+//								"protocol": "tcp",
+//							},
+//						},
+//						LanIp:    pulumi.String("192.168.128.22"),
+//						Name:     pulumi.String("Service behind NAT"),
+//						PublicIp: pulumi.String("146.12.3.33"),
+//						Uplink:   pulumi.String("internet1"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksApplianceFirewallOneToOneNatRulesExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

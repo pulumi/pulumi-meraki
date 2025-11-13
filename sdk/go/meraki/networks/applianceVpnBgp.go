@@ -14,6 +14,44 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewApplianceVpnBgp(ctx, "example", &networks.ApplianceVpnBgpArgs{
+//				AsNumber:      pulumi.Int(64515),
+//				Enabled:       pulumi.Bool(true),
+//				IbgpHoldTimer: pulumi.Int(120),
+//				Neighbors: networks.ApplianceVpnBgpNeighborArray{
+//					&networks.ApplianceVpnBgpNeighborArgs{
+//						AllowTransit:   pulumi.Bool(true),
+//						EbgpHoldTimer:  pulumi.Int(180),
+//						EbgpMultihop:   pulumi.Int(2),
+//						Ip:             pulumi.String("10.10.10.22"),
+//						ReceiveLimit:   pulumi.Int(120),
+//						RemoteAsNumber: pulumi.Int(64343),
+//					},
+//				},
+//				NetworkId: pulumi.String("string"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksApplianceVpnBgpExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

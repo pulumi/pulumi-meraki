@@ -119,6 +119,33 @@ class SmDevicesModifyTags(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.SmDevicesModifyTags("example",
+            network_id="string",
+            parameters={
+                "ids": [
+                    "1284392014819",
+                    "2983092129865",
+                ],
+                "scopes": ["withAny, old_tag"],
+                "serials": [
+                    "XY0XX0Y0X0",
+                    "A01B01CD00E",
+                    "X02YZ1ZYZX",
+                ],
+                "tags": [
+                    "tag1",
+                    "tag2",
+                ],
+                "update_action": "add",
+                "wifi_macs": ["00:11:22:33:44:55"],
+            })
+        pulumi.export("merakiNetworksSmDevicesModifyTagsExample", example)
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -134,6 +161,33 @@ class SmDevicesModifyTags(pulumi.CustomResource):
         already existed previously.
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.SmDevicesModifyTags("example",
+            network_id="string",
+            parameters={
+                "ids": [
+                    "1284392014819",
+                    "2983092129865",
+                ],
+                "scopes": ["withAny, old_tag"],
+                "serials": [
+                    "XY0XX0Y0X0",
+                    "A01B01CD00E",
+                    "X02YZ1ZYZX",
+                ],
+                "tags": [
+                    "tag1",
+                    "tag2",
+                ],
+                "update_action": "add",
+                "wifi_macs": ["00:11:22:33:44:55"],
+            })
+        pulumi.export("merakiNetworksSmDevicesModifyTagsExample", example)
+        ```
 
         :param str resource_name: The name of the resource.
         :param SmDevicesModifyTagsArgs args: The arguments to use to populate this resource's properties.

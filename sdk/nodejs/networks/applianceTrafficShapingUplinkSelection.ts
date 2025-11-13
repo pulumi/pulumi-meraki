@@ -9,6 +9,74 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.ApplianceTrafficShapingUplinkSelection("example", {
+ *     activeActiveAutoVpnEnabled: true,
+ *     defaultUplink: "wan1",
+ *     failoverAndFailback: {
+ *         immediate: {
+ *             enabled: true,
+ *         },
+ *     },
+ *     loadBalancingEnabled: true,
+ *     networkId: "string",
+ *     vpnTrafficUplinkPreferences: [{
+ *         failOverCriterion: "poorPerformance",
+ *         performanceClass: {
+ *             builtinPerformanceClassName: "VoIP",
+ *             customPerformanceClassId: "123456",
+ *             type: "custom",
+ *         },
+ *         preferredUplink: "bestForVoIP",
+ *         trafficFilters: [{
+ *             type: "applicationCategory",
+ *             value: {
+ *                 destination: {
+ *                     cidr: "any",
+ *                     fqdn: "www.google.com",
+ *                     host: 254,
+ *                     network: "L_12345678",
+ *                     port: "1-1024",
+ *                     vlan: 10,
+ *                 },
+ *                 id: "meraki:layer7/category/1",
+ *                 protocol: "tcp",
+ *                 source: {
+ *                     cidr: "192.168.1.0/24",
+ *                     host: 200,
+ *                     network: "L_23456789",
+ *                     port: "any",
+ *                     vlan: 20,
+ *                 },
+ *             },
+ *         }],
+ *     }],
+ *     wanTrafficUplinkPreferences: [{
+ *         preferredUplink: "wan1",
+ *         trafficFilters: [{
+ *             type: "custom",
+ *             value: {
+ *                 destination: {
+ *                     cidr: "any",
+ *                     port: "any",
+ *                 },
+ *                 protocol: "tcp",
+ *                 source: {
+ *                     cidr: "192.168.1.0/24",
+ *                     host: 254,
+ *                     port: "1-1024",
+ *                     vlan: 10,
+ *                 },
+ *             },
+ *         }],
+ *     }],
+ * });
+ * export const merakiNetworksApplianceTrafficShapingUplinkSelectionExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

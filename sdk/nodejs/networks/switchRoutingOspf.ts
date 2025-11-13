@@ -9,6 +9,39 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.SwitchRoutingOspf("example", {
+ *     areas: [{
+ *         areaId: 1284392014819,
+ *         areaName: "Backbone",
+ *         areaType: "normal",
+ *     }],
+ *     deadTimerInSeconds: 40,
+ *     enabled: true,
+ *     helloTimerInSeconds: 10,
+ *     md5AuthenticationEnabled: true,
+ *     md5AuthenticationKey: {
+ *         id: 1234,
+ *         passphrase: "abc1234",
+ *     },
+ *     networkId: "string",
+ *     v3: {
+ *         areas: [{
+ *             areaId: 1284392014819,
+ *             areaName: "V3 Backbone",
+ *             areaType: "normal",
+ *         }],
+ *         deadTimerInSeconds: 40,
+ *         enabled: true,
+ *         helloTimerInSeconds: 10,
+ *     },
+ * });
+ * export const merakiNetworksSwitchRoutingOspfExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

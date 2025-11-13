@@ -12,6 +12,44 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.WirelessSsidsBonjourForwarding("example", new()
+    ///     {
+    ///         Enabled = true,
+    ///         Exception = new Meraki.Networks.Inputs.WirelessSsidsBonjourForwardingExceptionArgs
+    ///         {
+    ///             Enabled = true,
+    ///         },
+    ///         NetworkId = "string",
+    ///         Number = "string",
+    ///         Rules = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.WirelessSsidsBonjourForwardingRuleArgs
+    ///             {
+    ///                 Description = "A simple bonjour rule",
+    ///                 Services = new[]
+    ///                 {
+    ///                     "All Services",
+    ///                 },
+    ///                 VlanId = "1",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksWirelessSsidsBonjourForwardingExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

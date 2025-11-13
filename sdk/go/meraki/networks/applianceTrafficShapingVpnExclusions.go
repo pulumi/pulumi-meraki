@@ -16,6 +16,46 @@ import (
 // already existed previously.
 //
 // ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewApplianceTrafficShapingVpnExclusions(ctx, "example", &networks.ApplianceTrafficShapingVpnExclusionsArgs{
+//				NetworkId: pulumi.String("string"),
+//				Parameters: &networks.ApplianceTrafficShapingVpnExclusionsParametersArgs{
+//					Customs: networks.ApplianceTrafficShapingVpnExclusionsParametersCustomArray{
+//						&networks.ApplianceTrafficShapingVpnExclusionsParametersCustomArgs{
+//							Destination: pulumi.String("192.168.3.0/24"),
+//							Port:        pulumi.String("8000"),
+//							Protocol:    pulumi.String("tcp"),
+//						},
+//					},
+//					MajorApplications: networks.ApplianceTrafficShapingVpnExclusionsParametersMajorApplicationArray{
+//						&networks.ApplianceTrafficShapingVpnExclusionsParametersMajorApplicationArgs{
+//							Id:   pulumi.String("meraki:vpnExclusion/application/2"),
+//							Name: pulumi.String("Office 365 Sharepoint"),
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksApplianceTrafficShapingVpnExclusionsExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
 type ApplianceTrafficShapingVpnExclusions struct {
 	pulumi.CustomResourceState
 

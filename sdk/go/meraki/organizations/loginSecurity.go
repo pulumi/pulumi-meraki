@@ -14,6 +14,55 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/organizations"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := organizations.NewLoginSecurity(ctx, "example", &organizations.LoginSecurityArgs{
+//				AccountLockoutAttempts: pulumi.Int(3),
+//				ApiAuthentication: &organizations.LoginSecurityApiAuthenticationArgs{
+//					IpRestrictionsForKeys: &organizations.LoginSecurityApiAuthenticationIpRestrictionsForKeysArgs{
+//						Enabled: pulumi.Bool(true),
+//						Ranges: pulumi.StringArray{
+//							pulumi.String("192.195.83.1"),
+//							pulumi.String("192.168.33.33"),
+//						},
+//					},
+//				},
+//				EnforceAccountLockout:     pulumi.Bool(true),
+//				EnforceDifferentPasswords: pulumi.Bool(true),
+//				EnforceIdleTimeout:        pulumi.Bool(true),
+//				EnforceLoginIpRanges:      pulumi.Bool(true),
+//				EnforcePasswordExpiration: pulumi.Bool(true),
+//				EnforceStrongPasswords:    pulumi.Bool(true),
+//				EnforceTwoFactorAuth:      pulumi.Bool(true),
+//				IdleTimeoutMinutes:        pulumi.Int(30),
+//				LoginIpRanges: pulumi.StringArray{
+//					pulumi.String("192.195.83.1"),
+//					pulumi.String("192.195.83.255"),
+//				},
+//				NumDifferentPasswords:  pulumi.Int(3),
+//				OrganizationId:         pulumi.String("string"),
+//				PasswordExpirationDays: pulumi.Int(90),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiOrganizationsLoginSecurityExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

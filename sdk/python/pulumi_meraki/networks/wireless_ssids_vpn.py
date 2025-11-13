@@ -207,6 +207,35 @@ class WirelessSsidsVpn(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.WirelessSsidsVpn("example",
+            concentrator={
+                "network_id": "N_123",
+                "vlan_id": 44,
+            },
+            failover={
+                "heartbeat_interval": 10,
+                "idle_timeout": 30,
+                "request_ip": "1.1.1.1",
+            },
+            network_id="string",
+            number="string",
+            split_tunnel={
+                "enabled": True,
+                "rules": [{
+                    "comment": "split tunnel rule 1",
+                    "dest_cidr": "1.1.1.1/32",
+                    "dest_port": "any",
+                    "policy": "allow",
+                    "protocol": "Any",
+                }],
+            })
+        pulumi.export("merakiNetworksWirelessSsidsVpnExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -229,6 +258,35 @@ class WirelessSsidsVpn(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.WirelessSsidsVpn("example",
+            concentrator={
+                "network_id": "N_123",
+                "vlan_id": 44,
+            },
+            failover={
+                "heartbeat_interval": 10,
+                "idle_timeout": 30,
+                "request_ip": "1.1.1.1",
+            },
+            network_id="string",
+            number="string",
+            split_tunnel={
+                "enabled": True,
+                "rules": [{
+                    "comment": "split tunnel rule 1",
+                    "dest_cidr": "1.1.1.1/32",
+                    "dest_port": "any",
+                    "policy": "allow",
+                    "protocol": "Any",
+                }],
+            })
+        pulumi.export("merakiNetworksWirelessSsidsVpnExample", example)
+        ```
 
         ## Import
 

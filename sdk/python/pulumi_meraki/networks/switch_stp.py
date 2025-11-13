@@ -158,6 +158,24 @@ class SwitchStp(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.SwitchStp("example",
+            network_id="string",
+            rstp_enabled=True,
+            stp_bridge_priorities=[{
+                "stp_priority": 4096,
+                "switches": [
+                    "Q234-ABCD-0001",
+                    "Q234-ABCD-0002",
+                    "Q234-ABCD-0003",
+                ],
+            }])
+        pulumi.export("merakiNetworksSwitchStpExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -178,6 +196,24 @@ class SwitchStp(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.SwitchStp("example",
+            network_id="string",
+            rstp_enabled=True,
+            stp_bridge_priorities=[{
+                "stp_priority": 4096,
+                "switches": [
+                    "Q234-ABCD-0001",
+                    "Q234-ABCD-0002",
+                    "Q234-ABCD-0003",
+                ],
+            }])
+        pulumi.export("merakiNetworksSwitchStpExample", example)
+        ```
 
         ## Import
 

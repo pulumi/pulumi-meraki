@@ -21,6 +21,48 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.WirelessSsidsFirewallL3FirewallRules;
+ * import com.pulumi.meraki.networks.WirelessSsidsFirewallL3FirewallRulesArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsFirewallL3FirewallRulesRuleArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new WirelessSsidsFirewallL3FirewallRules("example", WirelessSsidsFirewallL3FirewallRulesArgs.builder()
+ *             .allowLanAccess(true)
+ *             .networkId("string")
+ *             .number("string")
+ *             .rules(WirelessSsidsFirewallL3FirewallRulesRuleArgs.builder()
+ *                 .comment("Allow TCP traffic to subnet with HTTP servers.")
+ *                 .destCidr("192.168.1.0/24")
+ *                 .destPort("443")
+ *                 .policy("allow")
+ *                 .protocol("tcp")
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksWirelessSsidsFirewallL3FirewallRulesExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

@@ -119,6 +119,24 @@ class SmDevicesFields(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.SmDevicesFields("example",
+            network_id="string",
+            parameters={
+                "device_fields": {
+                    "name": "Miles's phone",
+                    "notes": "Here's some info about my device",
+                },
+                "id": "1284392014819",
+                "serial": "XY0XX0Y0X0",
+                "wifi_mac": "00:11:22:33:44:55",
+            })
+        pulumi.export("merakiNetworksSmDevicesFieldsExample", example)
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -134,6 +152,24 @@ class SmDevicesFields(pulumi.CustomResource):
         already existed previously.
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.SmDevicesFields("example",
+            network_id="string",
+            parameters={
+                "device_fields": {
+                    "name": "Miles's phone",
+                    "notes": "Here's some info about my device",
+                },
+                "id": "1284392014819",
+                "serial": "XY0XX0Y0X0",
+                "wifi_mac": "00:11:22:33:44:55",
+            })
+        pulumi.export("merakiNetworksSmDevicesFieldsExample", example)
+        ```
 
         :param str resource_name: The name of the resource.
         :param SmDevicesFieldsArgs args: The arguments to use to populate this resource's properties.

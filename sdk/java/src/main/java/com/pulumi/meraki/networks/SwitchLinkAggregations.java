@@ -19,6 +19,43 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.SwitchLinkAggregations;
+ * import com.pulumi.meraki.networks.SwitchLinkAggregationsArgs;
+ * import com.pulumi.meraki.networks.inputs.SwitchLinkAggregationsSwitchPortArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SwitchLinkAggregations("example", SwitchLinkAggregationsArgs.builder()
+ *             .networkId("string")
+ *             .switchPorts(SwitchLinkAggregationsSwitchPortArgs.builder()
+ *                 .portId("1")
+ *                 .serial("Q234-ABCD-0001")
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksSwitchLinkAggregationsExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

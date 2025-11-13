@@ -11,6 +11,22 @@ import * as utilities from "../utilities";
  * already existed previously.
  *
  * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.organizations.InventoryOnboardingCloudMonitoringExportEvents("example", {
+ *     organizationId: "string",
+ *     parameters: {
+ *         logEvent: "download",
+ *         request: "r=cb",
+ *         targetOs: "mac",
+ *         timestamp: 1526087474,
+ *     },
+ * });
+ * export const merakiOrganizationsInventoryOnboardingCloudMonitoringExportEventsExample = example;
+ * ```
  */
 export class InventoryOnboardingCloudMonitoringExportEvents extends pulumi.CustomResource {
     /**

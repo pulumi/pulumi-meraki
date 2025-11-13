@@ -14,6 +14,36 @@ namespace Pulumi.Meraki.Organizations
     /// already existed previously.
     /// 
     /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Organizations.SwitchDevicesClone("example", new()
+    ///     {
+    ///         OrganizationId = "string",
+    ///         Parameters = new Meraki.Organizations.Inputs.SwitchDevicesCloneParametersArgs
+    ///         {
+    ///             SourceSerial = "Q234-ABCD-5678",
+    ///             TargetSerials = new[]
+    ///             {
+    ///                 "Q234-ABCD-0001",
+    ///                 "Q234-ABCD-0002",
+    ///                 "Q234-ABCD-0003",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiOrganizationsSwitchDevicesCloneExample"] = example,
+    ///     };
+    /// });
+    /// ```
     /// </summary>
     [MerakiResourceType("meraki:organizations/switchDevicesClone:SwitchDevicesClone")]
     public partial class SwitchDevicesClone : global::Pulumi.CustomResource

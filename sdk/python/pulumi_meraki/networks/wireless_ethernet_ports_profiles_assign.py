@@ -115,6 +115,23 @@ class WirelessEthernetPortsProfilesAssign(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.WirelessEthernetPortsProfilesAssign("example",
+            network_id="string",
+            parameters={
+                "profile_id": "1001",
+                "serials": [
+                    "Q234-ABCD-0001",
+                    "Q234-ABCD-0002",
+                    "Q234-ABCD-0003",
+                ],
+            })
+        pulumi.export("merakiNetworksWirelessEthernetPortsProfilesAssignExample", example)
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -130,6 +147,23 @@ class WirelessEthernetPortsProfilesAssign(pulumi.CustomResource):
         already existed previously.
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.WirelessEthernetPortsProfilesAssign("example",
+            network_id="string",
+            parameters={
+                "profile_id": "1001",
+                "serials": [
+                    "Q234-ABCD-0001",
+                    "Q234-ABCD-0002",
+                    "Q234-ABCD-0003",
+                ],
+            })
+        pulumi.export("merakiNetworksWirelessEthernetPortsProfilesAssignExample", example)
+        ```
 
         :param str resource_name: The name of the resource.
         :param WirelessEthernetPortsProfilesAssignArgs args: The arguments to use to populate this resource's properties.

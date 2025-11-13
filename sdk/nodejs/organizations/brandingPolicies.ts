@@ -9,6 +9,49 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.organizations.BrandingPolicies("example", {
+ *     adminSettings: {
+ *         appliesTo: "All admins of networks...",
+ *         values: [
+ *             "N_1234",
+ *             "L_5678",
+ *         ],
+ *     },
+ *     customLogo: {
+ *         enabled: true,
+ *         image: {
+ *             contents: "Hyperg26C8F4h8CvcoUqpA==",
+ *             format: "jpg",
+ *         },
+ *     },
+ *     enabled: true,
+ *     helpSettings: {
+ *         apiDocsSubtab: "default or inherit",
+ *         casesSubtab: "hide",
+ *         ciscoMerakiProductDocumentation: "show",
+ *         communitySubtab: "show",
+ *         dataProtectionRequestsSubtab: "default or inherit",
+ *         firewallInfoSubtab: "hide",
+ *         getHelpSubtab: "default or inherit",
+ *         getHelpSubtabKnowledgeBaseSearch: "<h1>Some custom HTML content</h1>",
+ *         hardwareReplacementsSubtab: "hide",
+ *         helpTab: "show",
+ *         helpWidget: "hide",
+ *         newFeaturesSubtab: "show",
+ *         smForums: "hide",
+ *         supportContactInfo: "show",
+ *         universalSearchKnowledgeBaseSearch: "hide",
+ *     },
+ *     name: "My Branding Policy",
+ *     organizationId: "string",
+ * });
+ * export const merakiOrganizationsBrandingPoliciesExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

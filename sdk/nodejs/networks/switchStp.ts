@@ -9,6 +9,25 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.SwitchStp("example", {
+ *     networkId: "string",
+ *     rstpEnabled: true,
+ *     stpBridgePriorities: [{
+ *         stpPriority: 4096,
+ *         switches: [
+ *             "Q234-ABCD-0001",
+ *             "Q234-ABCD-0002",
+ *             "Q234-ABCD-0003",
+ *         ],
+ *     }],
+ * });
+ * export const merakiNetworksSwitchStpExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

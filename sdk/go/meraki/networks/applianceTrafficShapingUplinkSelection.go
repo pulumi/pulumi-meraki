@@ -14,6 +14,97 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewApplianceTrafficShapingUplinkSelection(ctx, "example", &networks.ApplianceTrafficShapingUplinkSelectionArgs{
+//				ActiveActiveAutoVpnEnabled: pulumi.Bool(true),
+//				DefaultUplink:              pulumi.String("wan1"),
+//				FailoverAndFailback: &networks.ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgs{
+//					Immediate: &networks.ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackImmediateArgs{
+//						Enabled: pulumi.Bool(true),
+//					},
+//				},
+//				LoadBalancingEnabled: pulumi.Bool(true),
+//				NetworkId:            pulumi.String("string"),
+//				VpnTrafficUplinkPreferences: networks.ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArray{
+//					&networks.ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgs{
+//						FailOverCriterion: pulumi.String("poorPerformance"),
+//						PerformanceClass: &networks.ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferencePerformanceClassArgs{
+//							BuiltinPerformanceClassName: pulumi.String("VoIP"),
+//							CustomPerformanceClassId:    pulumi.String("123456"),
+//							Type:                        pulumi.String("custom"),
+//						},
+//						PreferredUplink: pulumi.String("bestForVoIP"),
+//						TrafficFilters: networks.ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterArray{
+//							&networks.ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterArgs{
+//								Type: pulumi.String("applicationCategory"),
+//								Value: &networks.ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterValueArgs{
+//									Destination: &networks.ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterValueDestinationArgs{
+//										Cidr:    pulumi.String("any"),
+//										Fqdn:    pulumi.String("www.google.com"),
+//										Host:    pulumi.Int(254),
+//										Network: pulumi.String("L_12345678"),
+//										Port:    pulumi.String("1-1024"),
+//										Vlan:    pulumi.Int(10),
+//									},
+//									Id:       pulumi.String("meraki:layer7/category/1"),
+//									Protocol: pulumi.String("tcp"),
+//									Source: &networks.ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterValueSourceArgs{
+//										Cidr:    pulumi.String("192.168.1.0/24"),
+//										Host:    pulumi.Int(200),
+//										Network: pulumi.String("L_23456789"),
+//										Port:    pulumi.String("any"),
+//										Vlan:    pulumi.Int(20),
+//									},
+//								},
+//							},
+//						},
+//					},
+//				},
+//				WanTrafficUplinkPreferences: networks.ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArray{
+//					&networks.ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgs{
+//						PreferredUplink: pulumi.String("wan1"),
+//						TrafficFilters: networks.ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterArray{
+//							&networks.ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterArgs{
+//								Type: pulumi.String("custom"),
+//								Value: &networks.ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterValueArgs{
+//									Destination: &networks.ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterValueDestinationArgs{
+//										Cidr: pulumi.String("any"),
+//										Port: pulumi.String("any"),
+//									},
+//									Protocol: pulumi.String("tcp"),
+//									Source: &networks.ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterValueSourceArgs{
+//										Cidr: pulumi.String("192.168.1.0/24"),
+//										Host: pulumi.Int(254),
+//										Port: pulumi.String("1-1024"),
+//										Vlan: pulumi.Int(10),
+//									},
+//								},
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksApplianceTrafficShapingUplinkSelectionExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

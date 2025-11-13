@@ -12,6 +12,40 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.SwitchMtu("example", new()
+    ///     {
+    ///         DefaultMtuSize = 9578,
+    ///         NetworkId = "string",
+    ///         Overrides = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.SwitchMtuOverrideArgs
+    ///             {
+    ///                 MtuSize = 1500,
+    ///                 Switches = new[]
+    ///                 {
+    ///                     "Q234-ABCD-0001",
+    ///                     "Q234-ABCD-0002",
+    ///                     "Q234-ABCD-0003",
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksSwitchMtuExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

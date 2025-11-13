@@ -12,6 +12,64 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.AlertsSettings("example", new()
+    ///     {
+    ///         Alerts = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.AlertsSettingsAlertArgs
+    ///             {
+    ///                 AlertDestinations = new Meraki.Networks.Inputs.AlertsSettingsAlertAlertDestinationsArgs
+    ///                 {
+    ///                     AllAdmins = false,
+    ///                     Emails = new[]
+    ///                     {
+    ///                         "miles@meraki.com",
+    ///                     },
+    ///                     HttpServerIds = new[]
+    ///                     {
+    ///                         "aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M=",
+    ///                     },
+    ///                     Snmp = false,
+    ///                 },
+    ///                 Enabled = true,
+    ///                 Filters = new Meraki.Networks.Inputs.AlertsSettingsAlertFiltersArgs
+    ///                 {
+    ///                     Timeout = 60,
+    ///                 },
+    ///                 Type = "gatewayDown",
+    ///             },
+    ///         },
+    ///         DefaultDestinations = new Meraki.Networks.Inputs.AlertsSettingsDefaultDestinationsArgs
+    ///         {
+    ///             AllAdmins = true,
+    ///             Emails = new[]
+    ///             {
+    ///                 "miles@meraki.com",
+    ///             },
+    ///             HttpServerIds = new[]
+    ///             {
+    ///                 "aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M=",
+    ///             },
+    ///             Snmp = true,
+    ///         },
+    ///         NetworkId = "string",
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksAlertsSettingsExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

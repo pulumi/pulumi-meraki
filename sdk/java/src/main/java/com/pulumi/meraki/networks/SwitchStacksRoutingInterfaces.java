@@ -20,6 +20,58 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.SwitchStacksRoutingInterfaces;
+ * import com.pulumi.meraki.networks.SwitchStacksRoutingInterfacesArgs;
+ * import com.pulumi.meraki.networks.inputs.SwitchStacksRoutingInterfacesIpv6Args;
+ * import com.pulumi.meraki.networks.inputs.SwitchStacksRoutingInterfacesOspfSettingsArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SwitchStacksRoutingInterfaces("example", SwitchStacksRoutingInterfacesArgs.builder()
+ *             .defaultGateway("192.168.1.1")
+ *             .interfaceIp("192.168.1.2")
+ *             .ipv6(SwitchStacksRoutingInterfacesIpv6Args.builder()
+ *                 .address("1:2:3:4::1")
+ *                 .assignmentMode("static")
+ *                 .gateway("1:2:3:4::2")
+ *                 .prefix("1:2:3:4::/48")
+ *                 .build())
+ *             .multicastRouting("disabled")
+ *             .name("L3 interface")
+ *             .networkId("string")
+ *             .ospfSettings(SwitchStacksRoutingInterfacesOspfSettingsArgs.builder()
+ *                 .area("0")
+ *                 .cost(1)
+ *                 .isPassiveEnabled(true)
+ *                 .build())
+ *             .subnet("192.168.1.0/24")
+ *             .switchStackId("string")
+ *             .vlanId(100)
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksSwitchStacksRoutingInterfacesExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

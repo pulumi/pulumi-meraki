@@ -9,6 +9,32 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.organizations.ActionBatches("example", {
+ *     actions: [{
+ *         operation: "create",
+ *         resource: "/devices/QXXX-XXXX-XXXX/switch/ports/3",
+ *     }],
+ *     callback: {
+ *         httpServer: {
+ *             id: "aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M=",
+ *         },
+ *         payloadTemplate: {
+ *             id: "wpt_2100",
+ *         },
+ *         sharedSecret: "secret",
+ *         url: "https://webhook.site/28efa24e-f830-4d9f-a12b-fbb9e5035031",
+ *     },
+ *     confirmed: true,
+ *     organizationId: "string",
+ *     synchronous: true,
+ * });
+ * export const merakiOrganizationsActionBatchesExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

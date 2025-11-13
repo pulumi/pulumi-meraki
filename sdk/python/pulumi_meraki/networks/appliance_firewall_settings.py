@@ -109,6 +109,20 @@ class ApplianceFirewallSettings(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.ApplianceFirewallSettings("example",
+            network_id="string",
+            spoofing_protection={
+                "ip_source_guard": {
+                    "mode": "block",
+                },
+            })
+        pulumi.export("merakiNetworksApplianceFirewallSettingsExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -128,6 +142,20 @@ class ApplianceFirewallSettings(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.ApplianceFirewallSettings("example",
+            network_id="string",
+            spoofing_protection={
+                "ip_source_guard": {
+                    "mode": "block",
+                },
+            })
+        pulumi.export("merakiNetworksApplianceFirewallSettingsExample", example)
+        ```
 
         ## Import
 

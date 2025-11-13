@@ -12,6 +12,109 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.ApplianceTrafficShapingUplinkSelection("example", new()
+    ///     {
+    ///         ActiveActiveAutoVpnEnabled = true,
+    ///         DefaultUplink = "wan1",
+    ///         FailoverAndFailback = new Meraki.Networks.Inputs.ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgs
+    ///         {
+    ///             Immediate = new Meraki.Networks.Inputs.ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackImmediateArgs
+    ///             {
+    ///                 Enabled = true,
+    ///             },
+    ///         },
+    ///         LoadBalancingEnabled = true,
+    ///         NetworkId = "string",
+    ///         VpnTrafficUplinkPreferences = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgs
+    ///             {
+    ///                 FailOverCriterion = "poorPerformance",
+    ///                 PerformanceClass = new Meraki.Networks.Inputs.ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferencePerformanceClassArgs
+    ///                 {
+    ///                     BuiltinPerformanceClassName = "VoIP",
+    ///                     CustomPerformanceClassId = "123456",
+    ///                     Type = "custom",
+    ///                 },
+    ///                 PreferredUplink = "bestForVoIP",
+    ///                 TrafficFilters = new[]
+    ///                 {
+    ///                     new Meraki.Networks.Inputs.ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterArgs
+    ///                     {
+    ///                         Type = "applicationCategory",
+    ///                         Value = new Meraki.Networks.Inputs.ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterValueArgs
+    ///                         {
+    ///                             Destination = new Meraki.Networks.Inputs.ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterValueDestinationArgs
+    ///                             {
+    ///                                 Cidr = "any",
+    ///                                 Fqdn = "www.google.com",
+    ///                                 Host = 254,
+    ///                                 Network = "L_12345678",
+    ///                                 Port = "1-1024",
+    ///                                 Vlan = 10,
+    ///                             },
+    ///                             Id = "meraki:layer7/category/1",
+    ///                             Protocol = "tcp",
+    ///                             Source = new Meraki.Networks.Inputs.ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterValueSourceArgs
+    ///                             {
+    ///                                 Cidr = "192.168.1.0/24",
+    ///                                 Host = 200,
+    ///                                 Network = "L_23456789",
+    ///                                 Port = "any",
+    ///                                 Vlan = 20,
+    ///                             },
+    ///                         },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         WanTrafficUplinkPreferences = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgs
+    ///             {
+    ///                 PreferredUplink = "wan1",
+    ///                 TrafficFilters = new[]
+    ///                 {
+    ///                     new Meraki.Networks.Inputs.ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterArgs
+    ///                     {
+    ///                         Type = "custom",
+    ///                         Value = new Meraki.Networks.Inputs.ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterValueArgs
+    ///                         {
+    ///                             Destination = new Meraki.Networks.Inputs.ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterValueDestinationArgs
+    ///                             {
+    ///                                 Cidr = "any",
+    ///                                 Port = "any",
+    ///                             },
+    ///                             Protocol = "tcp",
+    ///                             Source = new Meraki.Networks.Inputs.ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterValueSourceArgs
+    ///                             {
+    ///                                 Cidr = "192.168.1.0/24",
+    ///                                 Host = 254,
+    ///                                 Port = "1-1024",
+    ///                                 Vlan = 10,
+    ///                             },
+    ///                         },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksApplianceTrafficShapingUplinkSelectionExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

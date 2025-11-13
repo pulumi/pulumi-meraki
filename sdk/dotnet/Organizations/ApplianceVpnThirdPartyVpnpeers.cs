@@ -12,6 +12,81 @@ namespace Pulumi.Meraki.Organizations
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Organizations.ApplianceVpnThirdPartyVpnpeers("example", new()
+    ///     {
+    ///         OrganizationId = "string",
+    ///         Peers = new[]
+    ///         {
+    ///             new Meraki.Organizations.Inputs.ApplianceVpnThirdPartyVpnpeersPeerArgs
+    ///             {
+    ///                 IkeVersion = "2",
+    ///                 IpsecPolicies = new Meraki.Organizations.Inputs.ApplianceVpnThirdPartyVpnpeersPeerIpsecPoliciesArgs
+    ///                 {
+    ///                     ChildAuthAlgo = new[]
+    ///                     {
+    ///                         "sha1",
+    ///                     },
+    ///                     ChildCipherAlgo = new[]
+    ///                     {
+    ///                         "aes128",
+    ///                     },
+    ///                     ChildLifetime = 28800,
+    ///                     ChildPfsGroup = new[]
+    ///                     {
+    ///                         "disabled",
+    ///                     },
+    ///                     IkeAuthAlgo = new[]
+    ///                     {
+    ///                         "sha1",
+    ///                     },
+    ///                     IkeCipherAlgo = new[]
+    ///                     {
+    ///                         "tripledes",
+    ///                     },
+    ///                     IkeDiffieHellmanGroup = new[]
+    ///                     {
+    ///                         "group2",
+    ///                     },
+    ///                     IkeLifetime = 28800,
+    ///                     IkePrfAlgo = new[]
+    ///                     {
+    ///                         "prfsha1",
+    ///                     },
+    ///                 },
+    ///                 IpsecPoliciesPreset = "default",
+    ///                 LocalId = "myMXId@meraki.com",
+    ///                 Name = "Peer Name",
+    ///                 NetworkTags = new[]
+    ///                 {
+    ///                     "none",
+    ///                 },
+    ///                 PrivateSubnets = new[]
+    ///                 {
+    ///                     "192.168.1.0/24",
+    ///                     "192.168.128.0/24",
+    ///                 },
+    ///                 PublicIp = "123.123.123.1",
+    ///                 RemoteId = "miles@meraki.com",
+    ///                 Secret = "Sample Password",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiOrganizationsApplianceVpnThirdPartyVpnpeersExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

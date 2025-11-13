@@ -12,6 +12,44 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.SwitchAlternateManagementInterface("example", new()
+    ///     {
+    ///         Enabled = true,
+    ///         NetworkId = "string",
+    ///         Protocols = new[]
+    ///         {
+    ///             "radius",
+    ///             "snmp",
+    ///             "syslog",
+    ///         },
+    ///         Switches = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.SwitchAlternateManagementInterfaceSwitchArgs
+    ///             {
+    ///                 AlternateManagementIp = "1.2.3.4",
+    ///                 Gateway = "1.2.3.5",
+    ///                 Serial = "Q234-ABCD-5678",
+    ///                 SubnetMask = "255.255.255.0",
+    ///             },
+    ///         },
+    ///         VlanId = 100,
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksSwitchAlternateManagementInterfaceExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

@@ -14,6 +14,46 @@ namespace Pulumi.Meraki.Networks
     /// already existed previously.
     /// 
     /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.ApplianceTrafficShapingVpnExclusions("example", new()
+    ///     {
+    ///         NetworkId = "string",
+    ///         Parameters = new Meraki.Networks.Inputs.ApplianceTrafficShapingVpnExclusionsParametersArgs
+    ///         {
+    ///             Customs = new[]
+    ///             {
+    ///                 new Meraki.Networks.Inputs.ApplianceTrafficShapingVpnExclusionsParametersCustomArgs
+    ///                 {
+    ///                     Destination = "192.168.3.0/24",
+    ///                     Port = "8000",
+    ///                     Protocol = "tcp",
+    ///                 },
+    ///             },
+    ///             MajorApplications = new[]
+    ///             {
+    ///                 new Meraki.Networks.Inputs.ApplianceTrafficShapingVpnExclusionsParametersMajorApplicationArgs
+    ///                 {
+    ///                     Id = "meraki:vpnExclusion/application/2",
+    ///                     Name = "Office 365 Sharepoint",
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksApplianceTrafficShapingVpnExclusionsExample"] = example,
+    ///     };
+    /// });
+    /// ```
     /// </summary>
     [MerakiResourceType("meraki:networks/applianceTrafficShapingVpnExclusions:ApplianceTrafficShapingVpnExclusions")]
     public partial class ApplianceTrafficShapingVpnExclusions : global::Pulumi.CustomResource

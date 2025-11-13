@@ -11,6 +11,19 @@ import * as utilities from "../utilities";
  * already existed previously.
  *
  * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.Unbind("example", {
+ *     networkId: "string",
+ *     parameters: {
+ *         retainConfigs: true,
+ *     },
+ * });
+ * export const merakiNetworksUnbindExample = example;
+ * ```
  */
 export class Unbind extends pulumi.CustomResource {
     /**

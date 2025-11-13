@@ -14,6 +14,41 @@ namespace Pulumi.Meraki.Networks
     /// already existed previously.
     /// 
     /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.VlanProfilesAssignmentsReassign("example", new()
+    ///     {
+    ///         NetworkId = "string",
+    ///         Parameters = new Meraki.Networks.Inputs.VlanProfilesAssignmentsReassignParametersArgs
+    ///         {
+    ///             Serials = new[]
+    ///             {
+    ///                 "Q234-ABCD-5678",
+    ///             },
+    ///             StackIds = new[]
+    ///             {
+    ///                 "1234",
+    ///             },
+    ///             VlanProfile = new Meraki.Networks.Inputs.VlanProfilesAssignmentsReassignParametersVlanProfileArgs
+    ///             {
+    ///                 Iname = "Profile1",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksVlanProfilesAssignmentsReassignExample"] = example,
+    ///     };
+    /// });
+    /// ```
     /// </summary>
     [MerakiResourceType("meraki:networks/vlanProfilesAssignmentsReassign:VlanProfilesAssignmentsReassign")]
     public partial class VlanProfilesAssignmentsReassign : global::Pulumi.CustomResource

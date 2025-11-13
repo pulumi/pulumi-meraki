@@ -14,6 +14,35 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewCellularGatewayUplink(ctx, "example", &networks.CellularGatewayUplinkArgs{
+//				BandwidthLimits: &networks.CellularGatewayUplinkBandwidthLimitsArgs{
+//					LimitDown: pulumi.Int(1000000),
+//					LimitUp:   pulumi.Int(1000000),
+//				},
+//				NetworkId: pulumi.String("string"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksCellularGatewayUplinkExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

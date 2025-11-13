@@ -14,6 +14,39 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewWirelessSsidsDeviceTypeGroupPolicies(ctx, "example", &networks.WirelessSsidsDeviceTypeGroupPoliciesArgs{
+//				DeviceTypePolicies: networks.WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArray{
+//					&networks.WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgs{
+//						DevicePolicy: pulumi.String("Allowed"),
+//						DeviceType:   pulumi.String("Android"),
+//					},
+//				},
+//				Enabled:   pulumi.Bool(true),
+//				NetworkId: pulumi.String("string"),
+//				Number:    pulumi.String("string"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksWirelessSsidsDeviceTypeGroupPoliciesExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

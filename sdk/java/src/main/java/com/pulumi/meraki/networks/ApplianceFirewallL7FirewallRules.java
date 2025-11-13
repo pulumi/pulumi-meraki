@@ -60,8 +60,89 @@ import javax.annotation.Nullable;
  * </pre>
  * 
  * ### 2
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.ApplianceFirewallL7FirewallRules;
+ * import com.pulumi.meraki.networks.ApplianceFirewallL7FirewallRulesArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceFirewallL7FirewallRulesRuleArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceFirewallL7FirewallRulesRuleValueObjArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ApplianceFirewallL7FirewallRules("example", ApplianceFirewallL7FirewallRulesArgs.builder()
+ *             .networkId("string")
+ *             .rules(ApplianceFirewallL7FirewallRulesRuleArgs.builder()
+ *                 .policy("deny")
+ *                 .type("applicationCategory")
+ *                 .valueObj(ApplianceFirewallL7FirewallRulesRuleValueObjArgs.builder()
+ *                     .name("Sports")
+ *                     .id("meraki:layer7/category/5")
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksApplianceFirewallL7FirewallRulesExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
  * 
  * ### 3
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.ApplianceFirewallL7FirewallRules;
+ * import com.pulumi.meraki.networks.ApplianceFirewallL7FirewallRulesArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceFirewallL7FirewallRulesRuleArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ApplianceFirewallL7FirewallRules("example", ApplianceFirewallL7FirewallRulesArgs.builder()
+ *             .networkId("string")
+ *             .rules(ApplianceFirewallL7FirewallRulesRuleArgs.builder()
+ *                 .policy("deny")
+ *                 .type("blockedCountries")
+ *                 .valueList(List.of(                
+ *                     "IT",
+ *                     "IL",
+ *                     "US"))
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksApplianceFirewallL7FirewallRulesExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
  * 
  * ## Import
  * 

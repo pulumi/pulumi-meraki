@@ -26,8 +26,43 @@ import * as utilities from "../utilities";
  * ```
  *
  * ### 2
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.ApplianceFirewallL7FirewallRules("example", {
+ *     networkId: "string",
+ *     rules: [{
+ *         policy: "deny",
+ *         type: "applicationCategory",
+ *         valueObj: {
+ *             name: "Sports",
+ *             id: "meraki:layer7/category/5",
+ *         },
+ *     }],
+ * });
+ * export const merakiNetworksApplianceFirewallL7FirewallRulesExample = example;
+ * ```
  *
  * ### 3
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.ApplianceFirewallL7FirewallRules("example", {
+ *     networkId: "string",
+ *     rules: [{
+ *         policy: "deny",
+ *         type: "blockedCountries",
+ *         valueList: [
+ *             "IT",
+ *             "IL",
+ *             "US",
+ *         ],
+ *     }],
+ * });
+ * export const merakiNetworksApplianceFirewallL7FirewallRulesExample = example;
+ * ```
  *
  * ## Import
  *

@@ -18,6 +18,48 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.ApplianceFirewallPortForwardingRules;
+ * import com.pulumi.meraki.networks.ApplianceFirewallPortForwardingRulesArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceFirewallPortForwardingRulesRuleArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ApplianceFirewallPortForwardingRules("example", ApplianceFirewallPortForwardingRulesArgs.builder()
+ *             .networkId("string")
+ *             .rules(ApplianceFirewallPortForwardingRulesRuleArgs.builder()
+ *                 .allowedIps("any")
+ *                 .lanIp("192.168.128.1")
+ *                 .localPort("442-443")
+ *                 .name("Description of Port Forwarding Rule")
+ *                 .protocol("tcp")
+ *                 .publicPort("8100-8101")
+ *                 .uplink("both")
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksApplianceFirewallPortForwardingRulesExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

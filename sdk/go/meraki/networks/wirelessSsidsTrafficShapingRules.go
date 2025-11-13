@@ -14,6 +14,53 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewWirelessSsidsTrafficShapingRules(ctx, "example", &networks.WirelessSsidsTrafficShapingRulesArgs{
+//				DefaultRulesEnabled: pulumi.Bool(true),
+//				NetworkId:           pulumi.String("string"),
+//				Number:              pulumi.String("string"),
+//				Rules: networks.WirelessSsidsTrafficShapingRulesRuleArray{
+//					&networks.WirelessSsidsTrafficShapingRulesRuleArgs{
+//						Definitions: networks.WirelessSsidsTrafficShapingRulesRuleDefinitionArray{
+//							&networks.WirelessSsidsTrafficShapingRulesRuleDefinitionArgs{
+//								Type:  pulumi.String("host"),
+//								Value: pulumi.String("google.com"),
+//							},
+//						},
+//						DscpTagValue: pulumi.Int(1),
+//						PcpTagValue:  pulumi.Int(1),
+//						PerClientBandwidthLimits: &networks.WirelessSsidsTrafficShapingRulesRulePerClientBandwidthLimitsArgs{
+//							BandwidthLimits: &networks.WirelessSsidsTrafficShapingRulesRulePerClientBandwidthLimitsBandwidthLimitsArgs{
+//								LimitDown: pulumi.Int(1000000),
+//								LimitUp:   pulumi.Int(1000000),
+//							},
+//							Settings: pulumi.String("custom"),
+//						},
+//					},
+//				},
+//				TrafficShapingEnabled: pulumi.Bool(true),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksWirelessSsidsTrafficShapingRulesExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

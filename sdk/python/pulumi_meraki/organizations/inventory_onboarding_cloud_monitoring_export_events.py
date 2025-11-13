@@ -103,6 +103,21 @@ class InventoryOnboardingCloudMonitoringExportEvents(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.organizations.InventoryOnboardingCloudMonitoringExportEvents("example",
+            organization_id="string",
+            parameters={
+                "log_event": "download",
+                "request": "r=cb",
+                "target_os": "mac",
+                "timestamp": 1526087474,
+            })
+        pulumi.export("merakiOrganizationsInventoryOnboardingCloudMonitoringExportEventsExample", example)
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
@@ -118,6 +133,21 @@ class InventoryOnboardingCloudMonitoringExportEvents(pulumi.CustomResource):
         already existed previously.
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.organizations.InventoryOnboardingCloudMonitoringExportEvents("example",
+            organization_id="string",
+            parameters={
+                "log_event": "download",
+                "request": "r=cb",
+                "target_os": "mac",
+                "timestamp": 1526087474,
+            })
+        pulumi.export("merakiOrganizationsInventoryOnboardingCloudMonitoringExportEventsExample", example)
+        ```
 
         :param str resource_name: The name of the resource.
         :param InventoryOnboardingCloudMonitoringExportEventsArgs args: The arguments to use to populate this resource's properties.

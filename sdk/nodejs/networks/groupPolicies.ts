@@ -9,6 +9,125 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.GroupPolicies("example", {
+ *     bandwidth: {
+ *         bandwidthLimits: {
+ *             limitDown: 1000000,
+ *             limitUp: 1000000,
+ *         },
+ *         settings: "custom",
+ *     },
+ *     bonjourForwarding: {
+ *         rules: [{
+ *             description: "A simple bonjour rule",
+ *             services: ["All Services"],
+ *             vlanId: "1",
+ *         }],
+ *         settings: "custom",
+ *     },
+ *     contentFiltering: {
+ *         allowedUrlPatterns: {
+ *             settings: "network default",
+ *         },
+ *         blockedUrlCategories: {
+ *             categories: [
+ *                 "meraki:contentFiltering/category/1",
+ *                 "meraki:contentFiltering/category/7",
+ *             ],
+ *             settings: "override",
+ *         },
+ *         blockedUrlPatterns: {
+ *             patterns: [
+ *                 "http://www.example.com",
+ *                 "http://www.betting.com",
+ *             ],
+ *             settings: "append",
+ *         },
+ *     },
+ *     firewallAndTrafficShaping: {
+ *         l3FirewallRules: [{
+ *             comment: "Allow TCP traffic to subnet with HTTP servers.",
+ *             destCidr: "192.168.1.0/24",
+ *             destPort: "443",
+ *             policy: "allow",
+ *             protocol: "tcp",
+ *         }],
+ *         l7FirewallRules: [{
+ *             policy: "deny",
+ *             type: "host",
+ *             value: "google.com",
+ *         }],
+ *         settings: "custom",
+ *         trafficShapingRules: [{
+ *             definitions: [{
+ *                 type: "host",
+ *                 value: "google.com",
+ *             }],
+ *             dscpTagValue: 1,
+ *             pcpTagValue: 1,
+ *             perClientBandwidthLimits: {
+ *                 bandwidthLimits: {
+ *                     limitDown: 1000000,
+ *                     limitUp: 1000000,
+ *                 },
+ *                 settings: "custom",
+ *             },
+ *             priority: "normal",
+ *         }],
+ *     },
+ *     name: "No video streaming",
+ *     networkId: "string",
+ *     scheduling: {
+ *         enabled: true,
+ *         friday: {
+ *             active: true,
+ *             from: "9:00",
+ *             to: "17:00",
+ *         },
+ *         monday: {
+ *             active: true,
+ *             from: "9:00",
+ *             to: "17:00",
+ *         },
+ *         saturday: {
+ *             active: true,
+ *             from: "9:00",
+ *             to: "17:00",
+ *         },
+ *         sunday: {
+ *             active: true,
+ *             from: "9:00",
+ *             to: "17:00",
+ *         },
+ *         thursday: {
+ *             active: true,
+ *             from: "9:00",
+ *             to: "17:00",
+ *         },
+ *         tuesday: {
+ *             active: true,
+ *             from: "9:00",
+ *             to: "17:00",
+ *         },
+ *         wednesday: {
+ *             active: true,
+ *             from: "9:00",
+ *             to: "17:00",
+ *         },
+ *     },
+ *     splashAuthSettings: "bypass",
+ *     vlanTagging: {
+ *         settings: "custom",
+ *         vlanId: "1",
+ *     },
+ * });
+ * export const merakiNetworksGroupPoliciesExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

@@ -48,8 +48,77 @@ import (
 // ```
 //
 // ### 2
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewApplianceFirewallL7FirewallRules(ctx, "example", &networks.ApplianceFirewallL7FirewallRulesArgs{
+//				NetworkId: pulumi.String("string"),
+//				Rules: networks.ApplianceFirewallL7FirewallRulesRuleArray{
+//					&networks.ApplianceFirewallL7FirewallRulesRuleArgs{
+//						Policy: pulumi.String("deny"),
+//						Type:   pulumi.String("applicationCategory"),
+//						ValueObj: &networks.ApplianceFirewallL7FirewallRulesRuleValueObjArgs{
+//							Name: pulumi.String("Sports"),
+//							Id:   pulumi.String("meraki:layer7/category/5"),
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksApplianceFirewallL7FirewallRulesExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
 //
 // ### 3
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewApplianceFirewallL7FirewallRules(ctx, "example", &networks.ApplianceFirewallL7FirewallRulesArgs{
+//				NetworkId: pulumi.String("string"),
+//				Rules: networks.ApplianceFirewallL7FirewallRulesRuleArray{
+//					&networks.ApplianceFirewallL7FirewallRulesRuleArgs{
+//						Policy: pulumi.String("deny"),
+//						Type:   pulumi.String("blockedCountries"),
+//						ValueList: []string{
+//							"IT",
+//							"IL",
+//							"US",
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksApplianceFirewallL7FirewallRulesExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
 //
 // ## Import
 //

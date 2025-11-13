@@ -21,6 +21,44 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.organizations.LicensesMoveSeats;
+ * import com.pulumi.meraki.organizations.LicensesMoveSeatsArgs;
+ * import com.pulumi.meraki.organizations.inputs.LicensesMoveSeatsParametersArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new LicensesMoveSeats("example", LicensesMoveSeatsArgs.builder()
+ *             .organizationId("string")
+ *             .parameters(LicensesMoveSeatsParametersArgs.builder()
+ *                 .destOrganizationId("2930418")
+ *                 .licenseId("1234")
+ *                 .seatCount(20)
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiOrganizationsLicensesMoveSeatsExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="meraki:organizations/licensesMoveSeats:LicensesMoveSeats")
 public class LicensesMoveSeats extends com.pulumi.resources.CustomResource {

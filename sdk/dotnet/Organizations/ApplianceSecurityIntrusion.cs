@@ -12,6 +12,34 @@ namespace Pulumi.Meraki.Organizations
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Organizations.ApplianceSecurityIntrusion("example", new()
+    ///     {
+    ///         AllowedRules = new[]
+    ///         {
+    ///             new Meraki.Organizations.Inputs.ApplianceSecurityIntrusionAllowedRuleArgs
+    ///             {
+    ///                 Message = "SQL sa login failed",
+    ///                 RuleId = "meraki:intrusion/snort/GID/01/SID/688",
+    ///             },
+    ///         },
+    ///         OrganizationId = "string",
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiOrganizationsApplianceSecurityIntrusionExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

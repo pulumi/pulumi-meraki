@@ -14,6 +14,48 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewVlanProfiles(ctx, "example", &networks.VlanProfilesArgs{
+//				Iname:     pulumi.String("string"),
+//				Name:      pulumi.String("My VLAN profile name"),
+//				NetworkId: pulumi.String("string"),
+//				VlanGroups: networks.VlanProfilesVlanGroupArray{
+//					&networks.VlanProfilesVlanGroupArgs{
+//						Name:    pulumi.String("named-group-1"),
+//						VlanIds: pulumi.String("2,5-7"),
+//					},
+//				},
+//				VlanNames: networks.VlanProfilesVlanNameArray{
+//					&networks.VlanProfilesVlanNameArgs{
+//						AdaptivePolicyGroup: &networks.VlanProfilesVlanNameAdaptivePolicyGroupArgs{
+//							Id: pulumi.String("791"),
+//						},
+//						Name:   pulumi.String("named-1"),
+//						VlanId: pulumi.String("1"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksVlanProfilesExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

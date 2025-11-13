@@ -11,6 +11,23 @@ import * as utilities from "../utilities";
  * already existed previously.
  *
  * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.SmDevicesUninstallApps("example", {
+ *     deviceId: "string",
+ *     networkId: "string",
+ *     parameters: {
+ *         appIds: [
+ *             "1284392014819",
+ *             "2983092129865",
+ *         ],
+ *     },
+ * });
+ * export const merakiNetworksSmDevicesUninstallAppsExample = example;
+ * ```
  */
 export class SmDevicesUninstallApps extends pulumi.CustomResource {
     /**

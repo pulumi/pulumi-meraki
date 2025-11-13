@@ -35,6 +35,316 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.WirelessSsids;
+ * import com.pulumi.meraki.networks.WirelessSsidsArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsActiveDirectoryArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsActiveDirectoryCredentialsArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsApTagsAndVlanIdArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsDnsRewriteArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsDot11rArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsDot11wArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsGreArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsGreConcentratorArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsLdapArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsLdapCredentialsArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsLdapServerCaCertificateArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsLocalRadiusArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsLocalRadiusCertificateAuthenticationArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsLocalRadiusPasswordAuthenticationArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsNamedVlansArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsNamedVlansRadiusArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsNamedVlansRadiusGuestVlanArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsNamedVlansTaggingArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsOauthArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsRadiusAccountingServerArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsRadiusServerArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsSpeedBurstArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new WirelessSsids("example", WirelessSsidsArgs.builder()
+ *             .activeDirectory(WirelessSsidsActiveDirectoryArgs.builder()
+ *                 .credentials(WirelessSsidsActiveDirectoryCredentialsArgs.builder()
+ *                     .logonName("user")
+ *                     .password("password")
+ *                     .build())
+ *                 .servers(WirelessSsidsActiveDirectoryServerArgs.builder()
+ *                     .host("127.0.0.1")
+ *                     .port(3268)
+ *                     .build())
+ *                 .build())
+ *             .adultContentFilteringEnabled(false)
+ *             .apTagsAndVlanIds(WirelessSsidsApTagsAndVlanIdArgs.builder()
+ *                 .tags(                
+ *                     "tag1",
+ *                     "tag2")
+ *                 .vlanId(100)
+ *                 .build())
+ *             .authMode("8021x-radius")
+ *             .availabilityTags(            
+ *                 "tag1",
+ *                 "tag2")
+ *             .availableOnAllAps(false)
+ *             .bandSelection("5 GHz band only")
+ *             .concentratorNetworkId("N_24329156")
+ *             .defaultVlanId(1)
+ *             .disassociateClientsOnVpnFailover(false)
+ *             .dnsRewrite(WirelessSsidsDnsRewriteArgs.builder()
+ *                 .dnsCustomNameservers(                
+ *                     "8.8.8.8",
+ *                     "8.8.4.4")
+ *                 .enabled(true)
+ *                 .build())
+ *             .dot11r(WirelessSsidsDot11rArgs.builder()
+ *                 .adaptive(true)
+ *                 .enabled(true)
+ *                 .build())
+ *             .dot11w(WirelessSsidsDot11wArgs.builder()
+ *                 .enabled(true)
+ *                 .required(false)
+ *                 .build())
+ *             .enabled(true)
+ *             .encryptionMode("wpa")
+ *             .enterpriseAdminAccess("access enabled")
+ *             .gre(WirelessSsidsGreArgs.builder()
+ *                 .concentrator(WirelessSsidsGreConcentratorArgs.builder()
+ *                     .host("192.168.1.1")
+ *                     .build())
+ *                 .key(5)
+ *                 .build())
+ *             .ipAssignmentMode("NAT mode")
+ *             .lanIsolationEnabled(true)
+ *             .ldap(WirelessSsidsLdapArgs.builder()
+ *                 .baseDistinguishedName("dc=example,dc=com")
+ *                 .credentials(WirelessSsidsLdapCredentialsArgs.builder()
+ *                     .distinguishedName("cn=user,dc=example,dc=com")
+ *                     .password("password")
+ *                     .build())
+ *                 .serverCaCertificate(WirelessSsidsLdapServerCaCertificateArgs.builder()
+ *                     .contents("""
+ *           \"-----BEGIN CERTIFICATE-----
+ *         MIIDyTCCArGgAwIBAgIKBBNXOVCGU1YztjANBgkqhkiG9w0BAQsFADAnMQ4wDAYD
+ *         VQQKEwVDaXNjbzEVMBMGA1UEAxMMQUNUMiBTVURJIENBMB4XDTIxMDUzMTEzNTUx
+ *         NVoXDTI5MDUxNDIwMjU0MVowbTEpMCcGA1UEBRMgUElEOkM5MjAwTC0yNFAtNEcg
+ *         U046SkFFMjUyMjBSMksxDjAMBgNVBAoTBUNpc2NvMRgwFgYDVQQLEw9BQ1QtMiBM
+ *         aXRlIFNVREkxFjAUBgNVBAMTDUM5MjAwTC0yNFAtNEcwggEiMA0GCSqGSIb3DQEB
+ *         AQUAA4IBDwAwggEKAoIBAQDaUPxW76gT5MdoEAt+UrDFiYA9RYh2iHicDViBEyow
+ *         TR1TuP36bHh13X3vtGiDsCD88Ci2TZIqd/EDkkc7v9ipUUYVVH+YDrPt2Aukb1PH
+ *         D6K0R+KhgEzRo5x54TlU6oWvjUpwNZUwwdhMWIQaUVkMyZBYNy0jGPLO8jwZhyBg
+ *         1Fneybr9pwedGbLrAaz+gdEikB8B4a/fvPjVfL5Ngb4QRjFqWuE+X3nLc0kHedep
+ *         6nfgpUNXMlStVm5nIXKP6OjmzfCHPYh9L2Ehs1TrSk1ser9Ofx0ZMVL/jBZR2EIj
+ *         OZ8tH6KlX2/B2pbSPIO6kD5c4UA8Cf1SbDJCwJ/kI9ihAgMBAAGjgbAwga0wDgYD
+ *         VR0PAQH/BAQDAgXgMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUSNjx8cJw1Vu7
+ *         fHMJk6+4uDAD+H8wTQYDVR0RBEYwRKBCBgkrBgEEAQkVAgOgNRMzQ2hpcElEPVVV
+ *         VUNNaElGcUVFMklFUUVBQWNBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUE9MB0GA1Ud
+ *         DgQWBBRdhMkFD/z5hokaQeLbaRsp4hkvbzANBgkqhkiG9w0BAQsFAAOCAQEAMtuh
+ *         YpBz4xEZ7YdJsLpw67Q0TTJGnTBRpzAeY1urYDoDz8TSx556XG7z3IRzuED5KVSp
+ *         OwmH/iZ+tDfYQ3W3ElWTW93871DkuW4WQIfbnoHg/F7bF0DKYVkD3rpZjyz3NhzH
+ *         d7cjTdJXQ85bTAOXDuxKH3qewrXxxOGXgh3I6NUq0UwMTWh84lND7Jl+ZAQkYNS2
+ *         iHanTZFQBk3ML0NUb7fKDYGRTZRqwQ/upIO4S6LV1cxH/6V0qbMy3sCSHZoMLrW3
+ *         0m3M6yKpe5+VZzHZwmWdUf3Ot+zKjhveK5/YNsMIASdvtvymxUizq2Hr1hvR/kPc
+ *         p1vuyWxipU8JfzOh/A==
+ *         -----END CERTIFICATE-----
+ *         \"
+ *                     """)
+ *                     .build())
+ *                 .servers(WirelessSsidsLdapServerArgs.builder()
+ *                     .host("127.0.0.1")
+ *                     .port(389)
+ *                     .build())
+ *                 .build())
+ *             .localRadius(WirelessSsidsLocalRadiusArgs.builder()
+ *                 .cacheTimeout(60)
+ *                 .certificateAuthentication(WirelessSsidsLocalRadiusCertificateAuthenticationArgs.builder()
+ *                     .clientRootCaCertificate(WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateArgs.builder()
+ *                         .contents("""
+ *           \"-----BEGIN CERTIFICATE-----
+ *         MIIDyTCCArGgAwIBAgIKBBNXOVCGU1YztjANBgkqhkiG9w0BAQsFADAnMQ4wDAYD
+ *         VQQKEwVDaXNjbzEVMBMGA1UEAxMMQUNUMiBTVURJIENBMB4XDTIxMDUzMTEzNTUx
+ *         NVoXDTI5MDUxNDIwMjU0MVowbTEpMCcGA1UEBRMgUElEOkM5MjAwTC0yNFAtNEcg
+ *         U046SkFFMjUyMjBSMksxDjAMBgNVBAoTBUNpc2NvMRgwFgYDVQQLEw9BQ1QtMiBM
+ *         aXRlIFNVREkxFjAUBgNVBAMTDUM5MjAwTC0yNFAtNEcwggEiMA0GCSqGSIb3DQEB
+ *         AQUAA4IBDwAwggEKAoIBAQDaUPxW76gT5MdoEAt+UrDFiYA9RYh2iHicDViBEyow
+ *         TR1TuP36bHh13X3vtGiDsCD88Ci2TZIqd/EDkkc7v9ipUUYVVH+YDrPt2Aukb1PH
+ *         D6K0R+KhgEzRo5x54TlU6oWvjUpwNZUwwdhMWIQaUVkMyZBYNy0jGPLO8jwZhyBg
+ *         1Fneybr9pwedGbLrAaz+gdEikB8B4a/fvPjVfL5Ngb4QRjFqWuE+X3nLc0kHedep
+ *         6nfgpUNXMlStVm5nIXKP6OjmzfCHPYh9L2Ehs1TrSk1ser9Ofx0ZMVL/jBZR2EIj
+ *         OZ8tH6KlX2/B2pbSPIO6kD5c4UA8Cf1SbDJCwJ/kI9ihAgMBAAGjgbAwga0wDgYD
+ *         VR0PAQH/BAQDAgXgMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUSNjx8cJw1Vu7
+ *         fHMJk6+4uDAD+H8wTQYDVR0RBEYwRKBCBgkrBgEEAQkVAgOgNRMzQ2hpcElEPVVV
+ *         VUNNaElGcUVFMklFUUVBQWNBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUE9MB0GA1Ud
+ *         DgQWBBRdhMkFD/z5hokaQeLbaRsp4hkvbzANBgkqhkiG9w0BAQsFAAOCAQEAMtuh
+ *         YpBz4xEZ7YdJsLpw67Q0TTJGnTBRpzAeY1urYDoDz8TSx556XG7z3IRzuED5KVSp
+ *         OwmH/iZ+tDfYQ3W3ElWTW93871DkuW4WQIfbnoHg/F7bF0DKYVkD3rpZjyz3NhzH
+ *         d7cjTdJXQ85bTAOXDuxKH3qewrXxxOGXgh3I6NUq0UwMTWh84lND7Jl+ZAQkYNS2
+ *         iHanTZFQBk3ML0NUb7fKDYGRTZRqwQ/upIO4S6LV1cxH/6V0qbMy3sCSHZoMLrW3
+ *         0m3M6yKpe5+VZzHZwmWdUf3Ot+zKjhveK5/YNsMIASdvtvymxUizq2Hr1hvR/kPc
+ *         p1vuyWxipU8JfzOh/A==
+ *         -----END CERTIFICATE-----
+ *         \"
+ *                         """)
+ *                         .build())
+ *                     .enabled(true)
+ *                     .ocspResponderUrl("http://ocsp-server.example.com")
+ *                     .useLdap(false)
+ *                     .useOcsp(true)
+ *                     .build())
+ *                 .passwordAuthentication(WirelessSsidsLocalRadiusPasswordAuthenticationArgs.builder()
+ *                     .enabled(false)
+ *                     .build())
+ *                 .build())
+ *             .mandatoryDhcpEnabled(false)
+ *             .minBitrate(5.5)
+ *             .name("My SSID")
+ *             .namedVlans(WirelessSsidsNamedVlansArgs.builder()
+ *                 .radius(WirelessSsidsNamedVlansRadiusArgs.builder()
+ *                     .guestVlan(WirelessSsidsNamedVlansRadiusGuestVlanArgs.builder()
+ *                         .enabled(true)
+ *                         .name("Guest VLAN")
+ *                         .build())
+ *                     .build())
+ *                 .tagging(WirelessSsidsNamedVlansTaggingArgs.builder()
+ *                     .byApTags(WirelessSsidsNamedVlansTaggingByApTagArgs.builder()
+ *                         .tags(                        
+ *                             "tag1",
+ *                             "tag2")
+ *                         .vlanName("My VLAN")
+ *                         .build())
+ *                     .defaultVlanName("My VLAN")
+ *                     .enabled(true)
+ *                     .build())
+ *                 .build())
+ *             .networkId("string")
+ *             .number("string")
+ *             .oauth(WirelessSsidsOauthArgs.builder()
+ *                 .allowedDomains("example.com")
+ *                 .build())
+ *             .perClientBandwidthLimitDown(1)
+ *             .perClientBandwidthLimitUp(1)
+ *             .perSsidBandwidthLimitDown(1)
+ *             .perSsidBandwidthLimitUp(1)
+ *             .psk("deadbeef")
+ *             .radiusAccountingEnabled(true)
+ *             .radiusAccountingInterimInterval(5)
+ *             .radiusAccountingServers(WirelessSsidsRadiusAccountingServerArgs.builder()
+ *                 .caCertificate("""
+ *           \"-----BEGIN CERTIFICATE-----
+ *         MIIDyTCCArGgAwIBAgIKBBNXOVCGU1YztjANBgkqhkiG9w0BAQsFADAnMQ4wDAYD
+ *         VQQKEwVDaXNjbzEVMBMGA1UEAxMMQUNUMiBTVURJIENBMB4XDTIxMDUzMTEzNTUx
+ *         NVoXDTI5MDUxNDIwMjU0MVowbTEpMCcGA1UEBRMgUElEOkM5MjAwTC0yNFAtNEcg
+ *         U046SkFFMjUyMjBSMksxDjAMBgNVBAoTBUNpc2NvMRgwFgYDVQQLEw9BQ1QtMiBM
+ *         aXRlIFNVREkxFjAUBgNVBAMTDUM5MjAwTC0yNFAtNEcwggEiMA0GCSqGSIb3DQEB
+ *         AQUAA4IBDwAwggEKAoIBAQDaUPxW76gT5MdoEAt+UrDFiYA9RYh2iHicDViBEyow
+ *         TR1TuP36bHh13X3vtGiDsCD88Ci2TZIqd/EDkkc7v9ipUUYVVH+YDrPt2Aukb1PH
+ *         D6K0R+KhgEzRo5x54TlU6oWvjUpwNZUwwdhMWIQaUVkMyZBYNy0jGPLO8jwZhyBg
+ *         1Fneybr9pwedGbLrAaz+gdEikB8B4a/fvPjVfL5Ngb4QRjFqWuE+X3nLc0kHedep
+ *         6nfgpUNXMlStVm5nIXKP6OjmzfCHPYh9L2Ehs1TrSk1ser9Ofx0ZMVL/jBZR2EIj
+ *         OZ8tH6KlX2/B2pbSPIO6kD5c4UA8Cf1SbDJCwJ/kI9ihAgMBAAGjgbAwga0wDgYD
+ *         VR0PAQH/BAQDAgXgMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUSNjx8cJw1Vu7
+ *         fHMJk6+4uDAD+H8wTQYDVR0RBEYwRKBCBgkrBgEEAQkVAgOgNRMzQ2hpcElEPVVV
+ *         VUNNaElGcUVFMklFUUVBQWNBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUE9MB0GA1Ud
+ *         DgQWBBRdhMkFD/z5hokaQeLbaRsp4hkvbzANBgkqhkiG9w0BAQsFAAOCAQEAMtuh
+ *         YpBz4xEZ7YdJsLpw67Q0TTJGnTBRpzAeY1urYDoDz8TSx556XG7z3IRzuED5KVSp
+ *         OwmH/iZ+tDfYQ3W3ElWTW93871DkuW4WQIfbnoHg/F7bF0DKYVkD3rpZjyz3NhzH
+ *         d7cjTdJXQ85bTAOXDuxKH3qewrXxxOGXgh3I6NUq0UwMTWh84lND7Jl+ZAQkYNS2
+ *         iHanTZFQBk3ML0NUb7fKDYGRTZRqwQ/upIO4S6LV1cxH/6V0qbMy3sCSHZoMLrW3
+ *         0m3M6yKpe5+VZzHZwmWdUf3Ot+zKjhveK5/YNsMIASdvtvymxUizq2Hr1hvR/kPc
+ *         p1vuyWxipU8JfzOh/A==
+ *         -----END CERTIFICATE-----
+ *         \"
+ *                 """)
+ *                 .host("0.0.0.0")
+ *                 .port(3000)
+ *                 .radsecEnabled(true)
+ *                 .secret("secret-string")
+ *                 .build())
+ *             .radiusAttributeForGroupPolicies("Filter-Id")
+ *             .radiusAuthenticationNasId("00-11-22-33-44-55:AP1")
+ *             .radiusCalledStationId("00-11-22-33-44-55:AP1")
+ *             .radiusCoaEnabled(true)
+ *             .radiusFailoverPolicy("Deny access")
+ *             .radiusFallbackEnabled(true)
+ *             .radiusGuestVlanEnabled(true)
+ *             .radiusGuestVlanId(1)
+ *             .radiusLoadBalancingPolicy("Round robin")
+ *             .radiusOverride(false)
+ *             .radiusProxyEnabled(false)
+ *             .radiusServerAttemptsLimit(5)
+ *             .radiusServerTimeout(5)
+ *             .radiusServers(WirelessSsidsRadiusServerArgs.builder()
+ *                 .caCertificate("""
+ *           \"-----BEGIN CERTIFICATE-----
+ *         MIIDyTCCArGgAwIBAgIKBBNXOVCGU1YztjANBgkqhkiG9w0BAQsFADAnMQ4wDAYD
+ *         VQQKEwVDaXNjbzEVMBMGA1UEAxMMQUNUMiBTVURJIENBMB4XDTIxMDUzMTEzNTUx
+ *         NVoXDTI5MDUxNDIwMjU0MVowbTEpMCcGA1UEBRMgUElEOkM5MjAwTC0yNFAtNEcg
+ *         U046SkFFMjUyMjBSMksxDjAMBgNVBAoTBUNpc2NvMRgwFgYDVQQLEw9BQ1QtMiBM
+ *         aXRlIFNVREkxFjAUBgNVBAMTDUM5MjAwTC0yNFAtNEcwggEiMA0GCSqGSIb3DQEB
+ *         AQUAA4IBDwAwggEKAoIBAQDaUPxW76gT5MdoEAt+UrDFiYA9RYh2iHicDViBEyow
+ *         TR1TuP36bHh13X3vtGiDsCD88Ci2TZIqd/EDkkc7v9ipUUYVVH+YDrPt2Aukb1PH
+ *         D6K0R+KhgEzRo5x54TlU6oWvjUpwNZUwwdhMWIQaUVkMyZBYNy0jGPLO8jwZhyBg
+ *         1Fneybr9pwedGbLrAaz+gdEikB8B4a/fvPjVfL5Ngb4QRjFqWuE+X3nLc0kHedep
+ *         6nfgpUNXMlStVm5nIXKP6OjmzfCHPYh9L2Ehs1TrSk1ser9Ofx0ZMVL/jBZR2EIj
+ *         OZ8tH6KlX2/B2pbSPIO6kD5c4UA8Cf1SbDJCwJ/kI9ihAgMBAAGjgbAwga0wDgYD
+ *         VR0PAQH/BAQDAgXgMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUSNjx8cJw1Vu7
+ *         fHMJk6+4uDAD+H8wTQYDVR0RBEYwRKBCBgkrBgEEAQkVAgOgNRMzQ2hpcElEPVVV
+ *         VUNNaElGcUVFMklFUUVBQWNBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUE9MB0GA1Ud
+ *         DgQWBBRdhMkFD/z5hokaQeLbaRsp4hkvbzANBgkqhkiG9w0BAQsFAAOCAQEAMtuh
+ *         YpBz4xEZ7YdJsLpw67Q0TTJGnTBRpzAeY1urYDoDz8TSx556XG7z3IRzuED5KVSp
+ *         OwmH/iZ+tDfYQ3W3ElWTW93871DkuW4WQIfbnoHg/F7bF0DKYVkD3rpZjyz3NhzH
+ *         d7cjTdJXQ85bTAOXDuxKH3qewrXxxOGXgh3I6NUq0UwMTWh84lND7Jl+ZAQkYNS2
+ *         iHanTZFQBk3ML0NUb7fKDYGRTZRqwQ/upIO4S6LV1cxH/6V0qbMy3sCSHZoMLrW3
+ *         0m3M6yKpe5+VZzHZwmWdUf3Ot+zKjhveK5/YNsMIASdvtvymxUizq2Hr1hvR/kPc
+ *         p1vuyWxipU8JfzOh/A==
+ *         -----END CERTIFICATE-----
+ *         \"
+ *                 """)
+ *                 .host("0.0.0.0")
+ *                 .openRoamingCertificateId(2)
+ *                 .port(3000)
+ *                 .radsecEnabled(true)
+ *                 .secret("secret-string")
+ *                 .build())
+ *             .radiusTestingEnabled(true)
+ *             .secondaryConcentratorNetworkId("disabled")
+ *             .speedBurst(WirelessSsidsSpeedBurstArgs.builder()
+ *                 .enabled(true)
+ *                 .build())
+ *             .splashGuestSponsorDomains("example.com")
+ *             .splashPage("Click-through splash page")
+ *             .useVlanTagging(false)
+ *             .visible(true)
+ *             .vlanId(10)
+ *             .walledGardenEnabled(true)
+ *             .walledGardenRanges(            
+ *                 "example.com",
+ *                 "1.1.1.1/32")
+ *             .wpaEncryptionMode("WPA2 only")
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksWirelessSsidsExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

@@ -9,6 +9,21 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.ApplianceFirewallSettings("example", {
+ *     networkId: "string",
+ *     spoofingProtection: {
+ *         ipSourceGuard: {
+ *             mode: "block",
+ *         },
+ *     },
+ * });
+ * export const merakiNetworksApplianceFirewallSettingsExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

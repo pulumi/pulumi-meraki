@@ -109,6 +109,19 @@ class CellularGatewayUplink(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.CellularGatewayUplink("example",
+            bandwidth_limits={
+                "limit_down": 1000000,
+                "limit_up": 1000000,
+            },
+            network_id="string")
+        pulumi.export("merakiNetworksCellularGatewayUplinkExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -128,6 +141,19 @@ class CellularGatewayUplink(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.CellularGatewayUplink("example",
+            bandwidth_limits={
+                "limit_down": 1000000,
+                "limit_up": 1000000,
+            },
+            network_id="string")
+        pulumi.export("merakiNetworksCellularGatewayUplinkExample", example)
+        ```
 
         ## Import
 

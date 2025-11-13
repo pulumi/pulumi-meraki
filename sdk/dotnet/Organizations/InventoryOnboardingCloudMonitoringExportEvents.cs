@@ -14,6 +14,33 @@ namespace Pulumi.Meraki.Organizations
     /// already existed previously.
     /// 
     /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Organizations.InventoryOnboardingCloudMonitoringExportEvents("example", new()
+    ///     {
+    ///         OrganizationId = "string",
+    ///         Parameters = new Meraki.Organizations.Inputs.InventoryOnboardingCloudMonitoringExportEventsParametersArgs
+    ///         {
+    ///             LogEvent = "download",
+    ///             Request = "r=cb",
+    ///             TargetOs = "mac",
+    ///             Timestamp = 1526087474,
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiOrganizationsInventoryOnboardingCloudMonitoringExportEventsExample"] = example,
+    ///     };
+    /// });
+    /// ```
     /// </summary>
     [MerakiResourceType("meraki:organizations/inventoryOnboardingCloudMonitoringExportEvents:InventoryOnboardingCloudMonitoringExportEvents")]
     public partial class InventoryOnboardingCloudMonitoringExportEvents : global::Pulumi.CustomResource

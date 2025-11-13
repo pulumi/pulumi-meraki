@@ -12,6 +12,81 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.WirelessSsidsHotspot20("example", new()
+    ///     {
+    ///         Domains = new[]
+    ///         {
+    ///             "meraki.local",
+    ///             "domain2.com",
+    ///         },
+    ///         Enabled = true,
+    ///         MccMncs = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.WirelessSsidsHotspot20MccMncArgs
+    ///             {
+    ///                 Mcc = "123",
+    ///                 Mnc = "456",
+    ///             },
+    ///         },
+    ///         NaiRealms = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.WirelessSsidsHotspot20NaiRealmArgs
+    ///             {
+    ///                 Format = "1",
+    ///                 Methods = new[]
+    ///                 {
+    ///                     new Meraki.Networks.Inputs.WirelessSsidsHotspot20NaiRealmMethodArgs
+    ///                     {
+    ///                         AuthenticationTypes = new Meraki.Networks.Inputs.WirelessSsidsHotspot20NaiRealmMethodAuthenticationTypesArgs
+    ///                         {
+    ///                             EapinnerAuthentication = new[]
+    ///                             {
+    ///                                 "EAP-TTLS with MSCHAPv2",
+    ///                             },
+    ///                             NonEapinnerAuthentication = new[]
+    ///                             {
+    ///                                 "MSCHAP",
+    ///                             },
+    ///                         },
+    ///                         Id = "1",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         NetworkAccessType = "Private network",
+    ///         NetworkId = "string",
+    ///         Number = "string",
+    ///         Operator = new Meraki.Networks.Inputs.WirelessSsidsHotspot20OperatorArgs
+    ///         {
+    ///             Name = "Meraki Product Management",
+    ///         },
+    ///         RoamConsortOis = new[]
+    ///         {
+    ///             "ABC123",
+    ///             "456EFG",
+    ///         },
+    ///         Venue = new Meraki.Networks.Inputs.WirelessSsidsHotspot20VenueArgs
+    ///         {
+    ///             Name = "SF Branch",
+    ///             Type = "Unspecified Assembly",
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksWirelessSsidsHotspot20Example"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

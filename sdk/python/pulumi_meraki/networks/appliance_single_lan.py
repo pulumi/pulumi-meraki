@@ -208,6 +208,32 @@ class ApplianceSingleLan(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.ApplianceSingleLan("example",
+            appliance_ip="string",
+            ipv6={
+                "enabled": False,
+                "prefix_assignments": [{
+                    "autonomous": False,
+                    "origin": {
+                        "interfaces": ["string"],
+                        "type": "string",
+                    },
+                    "static_appliance_ip6": "string",
+                    "static_prefix": "string",
+                }],
+            },
+            mandatory_dhcp={
+                "enabled": False,
+            },
+            network_id="string",
+            subnet="string")
+        pulumi.export("merakiNetworksApplianceSingleLanExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -230,6 +256,32 @@ class ApplianceSingleLan(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.ApplianceSingleLan("example",
+            appliance_ip="string",
+            ipv6={
+                "enabled": False,
+                "prefix_assignments": [{
+                    "autonomous": False,
+                    "origin": {
+                        "interfaces": ["string"],
+                        "type": "string",
+                    },
+                    "static_appliance_ip6": "string",
+                    "static_prefix": "string",
+                }],
+            },
+            mandatory_dhcp={
+                "enabled": False,
+            },
+            network_id="string",
+            subnet="string")
+        pulumi.export("merakiNetworksApplianceSingleLanExample", example)
+        ```
 
         ## Import
 

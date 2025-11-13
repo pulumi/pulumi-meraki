@@ -20,6 +20,64 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.organizations.ApplianceVpnThirdPartyVpnpeers;
+ * import com.pulumi.meraki.organizations.ApplianceVpnThirdPartyVpnpeersArgs;
+ * import com.pulumi.meraki.organizations.inputs.ApplianceVpnThirdPartyVpnpeersPeerArgs;
+ * import com.pulumi.meraki.organizations.inputs.ApplianceVpnThirdPartyVpnpeersPeerIpsecPoliciesArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App }{{@code
+ *     public static void main(String[] args) }{{@code
+ *         Pulumi.run(App::stack);
+ *     }}{@code
+ * 
+ *     public static void stack(Context ctx) }{{@code
+ *         var example = new ApplianceVpnThirdPartyVpnpeers("example", ApplianceVpnThirdPartyVpnpeersArgs.builder()
+ *             .organizationId("string")
+ *             .peers(ApplianceVpnThirdPartyVpnpeersPeerArgs.builder()
+ *                 .ikeVersion("2")
+ *                 .ipsecPolicies(ApplianceVpnThirdPartyVpnpeersPeerIpsecPoliciesArgs.builder()
+ *                     .childAuthAlgo(List.of("sha1"))
+ *                     .childCipherAlgo(List.of("aes128"))
+ *                     .childLifetime(28800)
+ *                     .childPfsGroup(List.of("disabled"))
+ *                     .ikeAuthAlgo(List.of("sha1"))
+ *                     .ikeCipherAlgo(List.of("tripledes"))
+ *                     .ikeDiffieHellmanGroup(List.of("group2"))
+ *                     .ikeLifetime(28800)
+ *                     .ikePrfAlgo(List.of("prfsha1"))
+ *                     .build())
+ *                 .ipsecPoliciesPreset("default")
+ *                 .localId("myMXId}{@literal @}{@code meraki.com")
+ *                 .name("Peer Name")
+ *                 .networkTags("none")
+ *                 .privateSubnets(                
+ *                     "192.168.1.0/24",
+ *                     "192.168.128.0/24")
+ *                 .publicIp("123.123.123.1")
+ *                 .remoteId("miles}{@literal @}{@code meraki.com")
+ *                 .secret("Sample Password")
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiOrganizationsApplianceVpnThirdPartyVpnpeersExample", example);
+ *     }}{@code
+ * }}{@code
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

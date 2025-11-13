@@ -20,6 +20,62 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.organizations.LoginSecurity;
+ * import com.pulumi.meraki.organizations.LoginSecurityArgs;
+ * import com.pulumi.meraki.organizations.inputs.LoginSecurityApiAuthenticationArgs;
+ * import com.pulumi.meraki.organizations.inputs.LoginSecurityApiAuthenticationIpRestrictionsForKeysArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new LoginSecurity("example", LoginSecurityArgs.builder()
+ *             .accountLockoutAttempts(3)
+ *             .apiAuthentication(LoginSecurityApiAuthenticationArgs.builder()
+ *                 .ipRestrictionsForKeys(LoginSecurityApiAuthenticationIpRestrictionsForKeysArgs.builder()
+ *                     .enabled(true)
+ *                     .ranges(                    
+ *                         "192.195.83.1",
+ *                         "192.168.33.33")
+ *                     .build())
+ *                 .build())
+ *             .enforceAccountLockout(true)
+ *             .enforceDifferentPasswords(true)
+ *             .enforceIdleTimeout(true)
+ *             .enforceLoginIpRanges(true)
+ *             .enforcePasswordExpiration(true)
+ *             .enforceStrongPasswords(true)
+ *             .enforceTwoFactorAuth(true)
+ *             .idleTimeoutMinutes(30)
+ *             .loginIpRanges(            
+ *                 "192.195.83.1",
+ *                 "192.195.83.255")
+ *             .numDifferentPasswords(3)
+ *             .organizationId("string")
+ *             .passwordExpirationDays(90)
+ *             .build());
+ * 
+ *         ctx.export("merakiOrganizationsLoginSecurityExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

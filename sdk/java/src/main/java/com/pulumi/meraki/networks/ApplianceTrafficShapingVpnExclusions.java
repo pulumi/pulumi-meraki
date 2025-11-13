@@ -21,6 +21,50 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.ApplianceTrafficShapingVpnExclusions;
+ * import com.pulumi.meraki.networks.ApplianceTrafficShapingVpnExclusionsArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceTrafficShapingVpnExclusionsParametersArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ApplianceTrafficShapingVpnExclusions("example", ApplianceTrafficShapingVpnExclusionsArgs.builder()
+ *             .networkId("string")
+ *             .parameters(ApplianceTrafficShapingVpnExclusionsParametersArgs.builder()
+ *                 .customs(ApplianceTrafficShapingVpnExclusionsParametersCustomArgs.builder()
+ *                     .destination("192.168.3.0/24")
+ *                     .port("8000")
+ *                     .protocol("tcp")
+ *                     .build())
+ *                 .majorApplications(ApplianceTrafficShapingVpnExclusionsParametersMajorApplicationArgs.builder()
+ *                     .id("meraki:vpnExclusion/application/2")
+ *                     .name("Office 365 Sharepoint")
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksApplianceTrafficShapingVpnExclusionsExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="meraki:networks/applianceTrafficShapingVpnExclusions:ApplianceTrafficShapingVpnExclusions")
 public class ApplianceTrafficShapingVpnExclusions extends com.pulumi.resources.CustomResource {

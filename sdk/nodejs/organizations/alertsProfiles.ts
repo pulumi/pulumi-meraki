@@ -9,6 +9,36 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.organizations.AlertsProfiles("example", {
+ *     alertCondition: {
+ *         bitRateBps: 10000,
+ *         duration: 60,
+ *         "interface": "wan1",
+ *         jitterMs: 100,
+ *         latencyMs: 100,
+ *         lossRatio: 0.1,
+ *         mos: 3.5,
+ *         window: 600,
+ *     },
+ *     description: "WAN 1 high utilization",
+ *     networkTags: [
+ *         "tag1",
+ *         "tag2",
+ *     ],
+ *     organizationId: "string",
+ *     recipients: {
+ *         emails: ["admin@example.org"],
+ *         httpServerIds: ["aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vcGF0aA=="],
+ *     },
+ *     type: "wanUtilization",
+ * });
+ * export const merakiOrganizationsAlertsProfilesExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

@@ -20,6 +20,47 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.WirelessSsidsSchedules;
+ * import com.pulumi.meraki.networks.WirelessSsidsSchedulesArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsSchedulesRangeArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new WirelessSsidsSchedules("example", WirelessSsidsSchedulesArgs.builder()
+ *             .enabled(true)
+ *             .networkId("string")
+ *             .number("string")
+ *             .ranges(WirelessSsidsSchedulesRangeArgs.builder()
+ *                 .endDay("Tuesday")
+ *                 .endTime("05:00")
+ *                 .startDay("Tuesday")
+ *                 .startTime("01:00")
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksWirelessSsidsSchedulesExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

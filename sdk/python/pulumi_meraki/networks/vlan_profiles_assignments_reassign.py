@@ -115,6 +115,22 @@ class VlanProfilesAssignmentsReassign(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.VlanProfilesAssignmentsReassign("example",
+            network_id="string",
+            parameters={
+                "serials": ["Q234-ABCD-5678"],
+                "stack_ids": ["1234"],
+                "vlan_profile": {
+                    "iname": "Profile1",
+                },
+            })
+        pulumi.export("merakiNetworksVlanProfilesAssignmentsReassignExample", example)
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -130,6 +146,22 @@ class VlanProfilesAssignmentsReassign(pulumi.CustomResource):
         already existed previously.
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.VlanProfilesAssignmentsReassign("example",
+            network_id="string",
+            parameters={
+                "serials": ["Q234-ABCD-5678"],
+                "stack_ids": ["1234"],
+                "vlan_profile": {
+                    "iname": "Profile1",
+                },
+            })
+        pulumi.export("merakiNetworksVlanProfilesAssignmentsReassignExample", example)
+        ```
 
         :param str resource_name: The name of the resource.
         :param VlanProfilesAssignmentsReassignArgs args: The arguments to use to populate this resource's properties.

@@ -12,6 +12,59 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.ApplianceVlans("example", new()
+    ///     {
+    ///         ApplianceIp = "192.168.1.2",
+    ///         Cidr = "192.168.1.0/24",
+    ///         GroupPolicyId = "101",
+    ///         VlanId = "1234",
+    ///         Ipv6 = new Meraki.Networks.Inputs.ApplianceVlansIpv6Args
+    ///         {
+    ///             Enabled = true,
+    ///             PrefixAssignments = new[]
+    ///             {
+    ///                 new Meraki.Networks.Inputs.ApplianceVlansIpv6PrefixAssignmentArgs
+    ///                 {
+    ///                     Autonomous = false,
+    ///                     Origin = new Meraki.Networks.Inputs.ApplianceVlansIpv6PrefixAssignmentOriginArgs
+    ///                     {
+    ///                         Interfaces = new[]
+    ///                         {
+    ///                             "wan0",
+    ///                         },
+    ///                         Type = "internet",
+    ///                     },
+    ///                     StaticApplianceIp6 = "2001:db8:3c4d:15::1",
+    ///                     StaticPrefix = "2001:db8:3c4d:15::/64",
+    ///                 },
+    ///             },
+    ///         },
+    ///         MandatoryDhcp = new Meraki.Networks.Inputs.ApplianceVlansMandatoryDhcpArgs
+    ///         {
+    ///             Enabled = true,
+    ///         },
+    ///         Mask = 28,
+    ///         Name = "My VLAN",
+    ///         NetworkId = "string",
+    ///         Subnet = "192.168.1.0/24",
+    ///         TemplateVlanType = "same",
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksApplianceVlansExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

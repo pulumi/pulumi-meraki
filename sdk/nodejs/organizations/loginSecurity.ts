@@ -9,6 +9,40 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.organizations.LoginSecurity("example", {
+ *     accountLockoutAttempts: 3,
+ *     apiAuthentication: {
+ *         ipRestrictionsForKeys: {
+ *             enabled: true,
+ *             ranges: [
+ *                 "192.195.83.1",
+ *                 "192.168.33.33",
+ *             ],
+ *         },
+ *     },
+ *     enforceAccountLockout: true,
+ *     enforceDifferentPasswords: true,
+ *     enforceIdleTimeout: true,
+ *     enforceLoginIpRanges: true,
+ *     enforcePasswordExpiration: true,
+ *     enforceStrongPasswords: true,
+ *     enforceTwoFactorAuth: true,
+ *     idleTimeoutMinutes: 30,
+ *     loginIpRanges: [
+ *         "192.195.83.1",
+ *         "192.195.83.255",
+ *     ],
+ *     numDifferentPasswords: 3,
+ *     organizationId: "string",
+ *     passwordExpirationDays: 90,
+ * });
+ * export const merakiOrganizationsLoginSecurityExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

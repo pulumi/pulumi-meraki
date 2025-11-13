@@ -14,6 +14,121 @@ namespace Pulumi.Meraki.Networks
     /// already existed previously.
     /// 
     /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.ClientsProvision("example", new()
+    ///     {
+    ///         NetworkId = "string",
+    ///         Parameters = new Meraki.Networks.Inputs.ClientsProvisionParametersArgs
+    ///         {
+    ///             Clients = new[]
+    ///             {
+    ///                 new Meraki.Networks.Inputs.ClientsProvisionParametersClientArgs
+    ///                 {
+    ///                     Mac = "00:11:22:33:44:55",
+    ///                     Name = "Miles's phone",
+    ///                 },
+    ///             },
+    ///             DevicePolicy = "Group policy",
+    ///             GroupPolicyId = "101",
+    ///             PoliciesBySecurityAppliance = new Meraki.Networks.Inputs.ClientsProvisionParametersPoliciesBySecurityApplianceArgs
+    ///             {
+    ///                 DevicePolicy = "Normal",
+    ///             },
+    ///             PoliciesBySsid = new Meraki.Networks.Inputs.ClientsProvisionParametersPoliciesBySsidArgs
+    ///             {
+    ///                 Status0 = new Meraki.Networks.Inputs.ClientsProvisionParametersPoliciesBySsidStatus0Args
+    ///                 {
+    ///                     DevicePolicy = "Group policy",
+    ///                     GroupPolicyId = "101",
+    ///                 },
+    ///                 Status1 = new Meraki.Networks.Inputs.ClientsProvisionParametersPoliciesBySsidStatus1Args
+    ///                 {
+    ///                     DevicePolicy = "Group policy",
+    ///                     GroupPolicyId = "101",
+    ///                 },
+    ///                 Status10 = new Meraki.Networks.Inputs.ClientsProvisionParametersPoliciesBySsidStatus10Args
+    ///                 {
+    ///                     DevicePolicy = "Group policy",
+    ///                     GroupPolicyId = "101",
+    ///                 },
+    ///                 Status11 = new Meraki.Networks.Inputs.ClientsProvisionParametersPoliciesBySsidStatus11Args
+    ///                 {
+    ///                     DevicePolicy = "Group policy",
+    ///                     GroupPolicyId = "101",
+    ///                 },
+    ///                 Status12 = new Meraki.Networks.Inputs.ClientsProvisionParametersPoliciesBySsidStatus12Args
+    ///                 {
+    ///                     DevicePolicy = "Group policy",
+    ///                     GroupPolicyId = "101",
+    ///                 },
+    ///                 Status13 = new Meraki.Networks.Inputs.ClientsProvisionParametersPoliciesBySsidStatus13Args
+    ///                 {
+    ///                     DevicePolicy = "Group policy",
+    ///                     GroupPolicyId = "101",
+    ///                 },
+    ///                 Status14 = new Meraki.Networks.Inputs.ClientsProvisionParametersPoliciesBySsidStatus14Args
+    ///                 {
+    ///                     DevicePolicy = "Group policy",
+    ///                     GroupPolicyId = "101",
+    ///                 },
+    ///                 Status2 = new Meraki.Networks.Inputs.ClientsProvisionParametersPoliciesBySsidStatus2Args
+    ///                 {
+    ///                     DevicePolicy = "Group policy",
+    ///                     GroupPolicyId = "101",
+    ///                 },
+    ///                 Status3 = new Meraki.Networks.Inputs.ClientsProvisionParametersPoliciesBySsidStatus3Args
+    ///                 {
+    ///                     DevicePolicy = "Group policy",
+    ///                     GroupPolicyId = "101",
+    ///                 },
+    ///                 Status4 = new Meraki.Networks.Inputs.ClientsProvisionParametersPoliciesBySsidStatus4Args
+    ///                 {
+    ///                     DevicePolicy = "Group policy",
+    ///                     GroupPolicyId = "101",
+    ///                 },
+    ///                 Status5 = new Meraki.Networks.Inputs.ClientsProvisionParametersPoliciesBySsidStatus5Args
+    ///                 {
+    ///                     DevicePolicy = "Group policy",
+    ///                     GroupPolicyId = "101",
+    ///                 },
+    ///                 Status6 = new Meraki.Networks.Inputs.ClientsProvisionParametersPoliciesBySsidStatus6Args
+    ///                 {
+    ///                     DevicePolicy = "Group policy",
+    ///                     GroupPolicyId = "101",
+    ///                 },
+    ///                 Status7 = new Meraki.Networks.Inputs.ClientsProvisionParametersPoliciesBySsidStatus7Args
+    ///                 {
+    ///                     DevicePolicy = "Group policy",
+    ///                     GroupPolicyId = "101",
+    ///                 },
+    ///                 Status8 = new Meraki.Networks.Inputs.ClientsProvisionParametersPoliciesBySsidStatus8Args
+    ///                 {
+    ///                     DevicePolicy = "Group policy",
+    ///                     GroupPolicyId = "101",
+    ///                 },
+    ///                 Status9 = new Meraki.Networks.Inputs.ClientsProvisionParametersPoliciesBySsidStatus9Args
+    ///                 {
+    ///                     DevicePolicy = "Group policy",
+    ///                     GroupPolicyId = "101",
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksClientsProvisionExample"] = example,
+    ///     };
+    /// });
+    /// ```
     /// </summary>
     [MerakiResourceType("meraki:networks/clientsProvision:ClientsProvision")]
     public partial class ClientsProvision : global::Pulumi.CustomResource

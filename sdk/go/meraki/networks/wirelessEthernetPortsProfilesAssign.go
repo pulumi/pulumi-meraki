@@ -16,6 +16,39 @@ import (
 // already existed previously.
 //
 // ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewWirelessEthernetPortsProfilesAssign(ctx, "example", &networks.WirelessEthernetPortsProfilesAssignArgs{
+//				NetworkId: pulumi.String("string"),
+//				Parameters: &networks.WirelessEthernetPortsProfilesAssignParametersArgs{
+//					ProfileId: pulumi.String("1001"),
+//					Serials: pulumi.StringArray{
+//						pulumi.String("Q234-ABCD-0001"),
+//						pulumi.String("Q234-ABCD-0002"),
+//						pulumi.String("Q234-ABCD-0003"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksWirelessEthernetPortsProfilesAssignExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
 type WirelessEthernetPortsProfilesAssign struct {
 	pulumi.CustomResourceState
 

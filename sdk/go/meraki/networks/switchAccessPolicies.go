@@ -14,6 +14,72 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewSwitchAccessPolicies(ctx, "example", &networks.SwitchAccessPoliciesArgs{
+//				AccessPolicyType: pulumi.String("Hybrid authentication"),
+//				Dot1x: &networks.SwitchAccessPoliciesDot1xArgs{
+//					ControlDirection: pulumi.String("inbound"),
+//				},
+//				GuestPortBouncing:   pulumi.Bool(false),
+//				GuestVlanId:         pulumi.Int(100),
+//				HostMode:            pulumi.String("Single-Host"),
+//				IncreaseAccessSpeed: pulumi.Bool(false),
+//				Name:                pulumi.String("Access policy #1"),
+//				NetworkId:           pulumi.String("string"),
+//				Radius: &networks.SwitchAccessPoliciesRadiusArgs{
+//					CriticalAuth: &networks.SwitchAccessPoliciesRadiusCriticalAuthArgs{
+//						DataVlanId:        pulumi.Int(100),
+//						SuspendPortBounce: pulumi.Bool(true),
+//						VoiceVlanId:       pulumi.Int(100),
+//					},
+//					FailedAuthVlanId:         pulumi.Int(100),
+//					ReAuthenticationInterval: pulumi.Int(120),
+//				},
+//				RadiusAccountingEnabled: pulumi.Bool(true),
+//				RadiusAccountingServers: networks.SwitchAccessPoliciesRadiusAccountingServerArray{
+//					&networks.SwitchAccessPoliciesRadiusAccountingServerArgs{
+//						Host:   pulumi.String("1.2.3.4"),
+//						Port:   pulumi.Int(22),
+//						Secret: pulumi.String("secret"),
+//					},
+//				},
+//				RadiusCoaSupportEnabled: pulumi.Bool(false),
+//				RadiusGroupAttribute:    pulumi.String("11"),
+//				RadiusServers: networks.SwitchAccessPoliciesRadiusServerArray{
+//					&networks.SwitchAccessPoliciesRadiusServerArgs{
+//						Host:   pulumi.String("1.2.3.4"),
+//						Port:   pulumi.Int(22),
+//						Secret: pulumi.String("secret"),
+//					},
+//				},
+//				RadiusTestingEnabled:           pulumi.Bool(false),
+//				UrlRedirectWalledGardenEnabled: pulumi.Bool(true),
+//				UrlRedirectWalledGardenRanges: pulumi.StringArray{
+//					pulumi.String("192.168.1.0/24"),
+//				},
+//				VoiceVlanClients: pulumi.Bool(true),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksSwitchAccessPoliciesExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

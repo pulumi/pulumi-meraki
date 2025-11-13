@@ -14,6 +14,43 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewWirelessBilling(ctx, "example", &networks.WirelessBillingArgs{
+//				Currency:  pulumi.String("USD"),
+//				NetworkId: pulumi.String("string"),
+//				Plans: networks.WirelessBillingPlanArray{
+//					&networks.WirelessBillingPlanArgs{
+//						BandwidthLimits: &networks.WirelessBillingPlanBandwidthLimitsArgs{
+//							LimitDown: pulumi.Int(1000000),
+//							LimitUp:   pulumi.Int(1000000),
+//						},
+//						Id:        pulumi.String("1"),
+//						Price:     pulumi.Float64(5),
+//						TimeLimit: pulumi.String("1 hour"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksWirelessBillingExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

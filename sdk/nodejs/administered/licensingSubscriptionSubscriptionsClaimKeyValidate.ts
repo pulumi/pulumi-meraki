@@ -11,6 +11,16 @@ import * as utilities from "../utilities";
  * already existed previously.
  *
  * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.administered.LicensingSubscriptionSubscriptionsClaimKeyValidate("example", {parameters: {
+ *     claimKey: "S2345-6789A-BCDEF-GHJKM",
+ * }});
+ * export const merakiAdministeredLicensingSubscriptionSubscriptionsClaimKeyValidateExample = example;
+ * ```
  */
 export class LicensingSubscriptionSubscriptionsClaimKeyValidate extends pulumi.CustomResource {
     /**

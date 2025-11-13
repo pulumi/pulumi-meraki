@@ -9,6 +9,36 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.WirelessSsidsVpn("example", {
+ *     concentrator: {
+ *         networkId: "N_123",
+ *         vlanId: 44,
+ *     },
+ *     failover: {
+ *         heartbeatInterval: 10,
+ *         idleTimeout: 30,
+ *         requestIp: "1.1.1.1",
+ *     },
+ *     networkId: "string",
+ *     number: "string",
+ *     splitTunnel: {
+ *         enabled: true,
+ *         rules: [{
+ *             comment: "split tunnel rule 1",
+ *             destCidr: "1.1.1.1/32",
+ *             destPort: "any",
+ *             policy: "allow",
+ *             protocol: "Any",
+ *         }],
+ *     },
+ * });
+ * export const merakiNetworksWirelessSsidsVpnExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

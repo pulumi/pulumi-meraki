@@ -12,6 +12,64 @@ namespace Pulumi.Meraki.Organizations
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Organizations.BrandingPolicies("example", new()
+    ///     {
+    ///         AdminSettings = new Meraki.Organizations.Inputs.BrandingPoliciesAdminSettingsArgs
+    ///         {
+    ///             AppliesTo = "All admins of networks...",
+    ///             Values = new[]
+    ///             {
+    ///                 "N_1234",
+    ///                 "L_5678",
+    ///             },
+    ///         },
+    ///         CustomLogo = new Meraki.Organizations.Inputs.BrandingPoliciesCustomLogoArgs
+    ///         {
+    ///             Enabled = true,
+    ///             Image = new Meraki.Organizations.Inputs.BrandingPoliciesCustomLogoImageArgs
+    ///             {
+    ///                 Contents = "Hyperg26C8F4h8CvcoUqpA==",
+    ///                 Format = "jpg",
+    ///             },
+    ///         },
+    ///         Enabled = true,
+    ///         HelpSettings = new Meraki.Organizations.Inputs.BrandingPoliciesHelpSettingsArgs
+    ///         {
+    ///             ApiDocsSubtab = "default or inherit",
+    ///             CasesSubtab = "hide",
+    ///             CiscoMerakiProductDocumentation = "show",
+    ///             CommunitySubtab = "show",
+    ///             DataProtectionRequestsSubtab = "default or inherit",
+    ///             FirewallInfoSubtab = "hide",
+    ///             GetHelpSubtab = "default or inherit",
+    ///             GetHelpSubtabKnowledgeBaseSearch = "&lt;h1&gt;Some custom HTML content&lt;/h1&gt;",
+    ///             HardwareReplacementsSubtab = "hide",
+    ///             HelpTab = "show",
+    ///             HelpWidget = "hide",
+    ///             NewFeaturesSubtab = "show",
+    ///             SmForums = "hide",
+    ///             SupportContactInfo = "show",
+    ///             UniversalSearchKnowledgeBaseSearch = "hide",
+    ///         },
+    ///         Name = "My Branding Policy",
+    ///         OrganizationId = "string",
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiOrganizationsBrandingPoliciesExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh
