@@ -16,6 +16,38 @@ import (
 // already existed previously.
 //
 // ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewSmDevicesUninstallApps(ctx, "example", &networks.SmDevicesUninstallAppsArgs{
+//				DeviceId:  pulumi.String("string"),
+//				NetworkId: pulumi.String("string"),
+//				Parameters: &networks.SmDevicesUninstallAppsParametersArgs{
+//					AppIds: pulumi.StringArray{
+//						pulumi.String("1284392014819"),
+//						pulumi.String("2983092129865"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksSmDevicesUninstallAppsExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
 type SmDevicesUninstallApps struct {
 	pulumi.CustomResourceState
 

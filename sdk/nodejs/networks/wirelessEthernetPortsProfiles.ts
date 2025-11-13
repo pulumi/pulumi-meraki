@@ -9,6 +9,29 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.WirelessEthernetPortsProfiles("example", {
+ *     name: "string",
+ *     networkId: "string",
+ *     ports: [{
+ *         enabled: false,
+ *         name: "string",
+ *         pskGroupId: "string",
+ *         ssid: 1,
+ *     }],
+ *     profileId: "string",
+ *     usbPorts: [{
+ *         enabled: false,
+ *         name: "string",
+ *         ssid: 1,
+ *     }],
+ * });
+ * export const merakiNetworksWirelessEthernetPortsProfilesExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

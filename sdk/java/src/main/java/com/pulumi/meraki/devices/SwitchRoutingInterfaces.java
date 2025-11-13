@@ -20,6 +20,63 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.devices.SwitchRoutingInterfaces;
+ * import com.pulumi.meraki.devices.SwitchRoutingInterfacesArgs;
+ * import com.pulumi.meraki.devices.inputs.SwitchRoutingInterfacesIpv6Args;
+ * import com.pulumi.meraki.devices.inputs.SwitchRoutingInterfacesOspfSettingsArgs;
+ * import com.pulumi.meraki.devices.inputs.SwitchRoutingInterfacesOspfV3Args;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SwitchRoutingInterfaces("example", SwitchRoutingInterfacesArgs.builder()
+ *             .defaultGateway("192.168.1.1")
+ *             .interfaceIp("192.168.1.2")
+ *             .ipv6(SwitchRoutingInterfacesIpv6Args.builder()
+ *                 .address("1:2:3:4::1")
+ *                 .assignmentMode("static")
+ *                 .gateway("1:2:3:4::2")
+ *                 .prefix("1:2:3:4::/48")
+ *                 .build())
+ *             .multicastRouting("disabled")
+ *             .name("L3 interface")
+ *             .ospfSettings(SwitchRoutingInterfacesOspfSettingsArgs.builder()
+ *                 .area("0")
+ *                 .cost(1)
+ *                 .isPassiveEnabled(true)
+ *                 .build())
+ *             .ospfV3(SwitchRoutingInterfacesOspfV3Args.builder()
+ *                 .area("1")
+ *                 .cost(2)
+ *                 .isPassiveEnabled(true)
+ *                 .build())
+ *             .serial("string")
+ *             .subnet("192.168.1.0/24")
+ *             .vlanId(100)
+ *             .build());
+ * 
+ *         ctx.export("merakiDevicesSwitchRoutingInterfacesExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

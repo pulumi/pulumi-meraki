@@ -751,6 +751,38 @@ class ApplianceVlans(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.ApplianceVlans("example",
+            appliance_ip="192.168.1.2",
+            cidr="192.168.1.0/24",
+            group_policy_id="101",
+            vlan_id="1234",
+            ipv6={
+                "enabled": True,
+                "prefix_assignments": [{
+                    "autonomous": False,
+                    "origin": {
+                        "interfaces": ["wan0"],
+                        "type": "internet",
+                    },
+                    "static_appliance_ip6": "2001:db8:3c4d:15::1",
+                    "static_prefix": "2001:db8:3c4d:15::/64",
+                }],
+            },
+            mandatory_dhcp={
+                "enabled": True,
+            },
+            mask=28,
+            name="My VLAN",
+            network_id="string",
+            subnet="192.168.1.0/24",
+            template_vlan_type="same")
+        pulumi.export("merakiNetworksApplianceVlansExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -789,6 +821,38 @@ class ApplianceVlans(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.ApplianceVlans("example",
+            appliance_ip="192.168.1.2",
+            cidr="192.168.1.0/24",
+            group_policy_id="101",
+            vlan_id="1234",
+            ipv6={
+                "enabled": True,
+                "prefix_assignments": [{
+                    "autonomous": False,
+                    "origin": {
+                        "interfaces": ["wan0"],
+                        "type": "internet",
+                    },
+                    "static_appliance_ip6": "2001:db8:3c4d:15::1",
+                    "static_prefix": "2001:db8:3c4d:15::/64",
+                }],
+            },
+            mandatory_dhcp={
+                "enabled": True,
+            },
+            mask=28,
+            name="My VLAN",
+            network_id="string",
+            subnet="192.168.1.0/24",
+            template_vlan_type="same")
+        pulumi.export("merakiNetworksApplianceVlansExample", example)
+        ```
 
         ## Import
 

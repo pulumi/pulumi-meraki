@@ -19,6 +19,57 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.ApplianceTrafficShapingRules;
+ * import com.pulumi.meraki.networks.ApplianceTrafficShapingRulesArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceTrafficShapingRulesRuleArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceTrafficShapingRulesRulePerClientBandwidthLimitsArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceTrafficShapingRulesRulePerClientBandwidthLimitsBandwidthLimitsArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ApplianceTrafficShapingRules("example", ApplianceTrafficShapingRulesArgs.builder()
+ *             .defaultRulesEnabled(true)
+ *             .networkId("string")
+ *             .rules(ApplianceTrafficShapingRulesRuleArgs.builder()
+ *                 .definitions(ApplianceTrafficShapingRulesRuleDefinitionArgs.builder()
+ *                     .type("host")
+ *                     .value("google.com")
+ *                     .build())
+ *                 .dscpTagValue(1)
+ *                 .perClientBandwidthLimits(ApplianceTrafficShapingRulesRulePerClientBandwidthLimitsArgs.builder()
+ *                     .bandwidthLimits(ApplianceTrafficShapingRulesRulePerClientBandwidthLimitsBandwidthLimitsArgs.builder()
+ *                         .limitDown(1000000)
+ *                         .limitUp(1000000)
+ *                         .build())
+ *                     .settings("custom")
+ *                     .build())
+ *                 .priority("normal")
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksApplianceTrafficShapingRulesExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

@@ -11,6 +11,33 @@ import * as utilities from "../utilities";
  * already existed previously.
  *
  * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.SmDevicesCheckin("example", {
+ *     networkId: "string",
+ *     parameters: {
+ *         ids: [
+ *             "1284392014819",
+ *             "2983092129865",
+ *         ],
+ *         scopes: [
+ *             "withAny",
+ *             "tag1",
+ *             "tag2",
+ *         ],
+ *         serials: [
+ *             "XY0XX0Y0X0",
+ *             "A01B01CD00E",
+ *             "X02YZ1ZYZX",
+ *         ],
+ *         wifiMacs: ["00:11:22:33:44:55"],
+ *     },
+ * });
+ * export const merakiNetworksSmDevicesCheckinExample = example;
+ * ```
  */
 export class SmDevicesCheckin extends pulumi.CustomResource {
     /**

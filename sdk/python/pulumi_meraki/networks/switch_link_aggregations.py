@@ -175,6 +175,19 @@ class SwitchLinkAggregations(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.SwitchLinkAggregations("example",
+            network_id="string",
+            switch_ports=[{
+                "port_id": "1",
+                "serial": "Q234-ABCD-0001",
+            }])
+        pulumi.export("merakiNetworksSwitchLinkAggregationsExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -196,6 +209,19 @@ class SwitchLinkAggregations(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.SwitchLinkAggregations("example",
+            network_id="string",
+            switch_ports=[{
+                "port_id": "1",
+                "serial": "Q234-ABCD-0001",
+            }])
+        pulumi.export("merakiNetworksSwitchLinkAggregationsExample", example)
+        ```
 
         ## Import
 

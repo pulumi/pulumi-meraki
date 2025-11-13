@@ -115,6 +115,19 @@ class LicensesRenewSeats(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.organizations.LicensesRenewSeats("example",
+            organization_id="string",
+            parameters={
+                "license_id_to_renew": "123",
+                "unused_license_id": "1234",
+            })
+        pulumi.export("merakiOrganizationsLicensesRenewSeatsExample", example)
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
@@ -130,6 +143,19 @@ class LicensesRenewSeats(pulumi.CustomResource):
         already existed previously.
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.organizations.LicensesRenewSeats("example",
+            organization_id="string",
+            parameters={
+                "license_id_to_renew": "123",
+                "unused_license_id": "1234",
+            })
+        pulumi.export("merakiOrganizationsLicensesRenewSeatsExample", example)
+        ```
 
         :param str resource_name: The name of the resource.
         :param LicensesRenewSeatsArgs args: The arguments to use to populate this resource's properties.

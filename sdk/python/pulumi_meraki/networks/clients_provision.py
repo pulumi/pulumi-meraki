@@ -115,6 +115,88 @@ class ClientsProvision(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.ClientsProvision("example",
+            network_id="string",
+            parameters={
+                "clients": [{
+                    "mac": "00:11:22:33:44:55",
+                    "name": "Miles's phone",
+                }],
+                "device_policy": "Group policy",
+                "group_policy_id": "101",
+                "policies_by_security_appliance": {
+                    "device_policy": "Normal",
+                },
+                "policies_by_ssid": {
+                    "status0": {
+                        "device_policy": "Group policy",
+                        "group_policy_id": "101",
+                    },
+                    "status1": {
+                        "device_policy": "Group policy",
+                        "group_policy_id": "101",
+                    },
+                    "status10": {
+                        "device_policy": "Group policy",
+                        "group_policy_id": "101",
+                    },
+                    "status11": {
+                        "device_policy": "Group policy",
+                        "group_policy_id": "101",
+                    },
+                    "status12": {
+                        "device_policy": "Group policy",
+                        "group_policy_id": "101",
+                    },
+                    "status13": {
+                        "device_policy": "Group policy",
+                        "group_policy_id": "101",
+                    },
+                    "status14": {
+                        "device_policy": "Group policy",
+                        "group_policy_id": "101",
+                    },
+                    "status2": {
+                        "device_policy": "Group policy",
+                        "group_policy_id": "101",
+                    },
+                    "status3": {
+                        "device_policy": "Group policy",
+                        "group_policy_id": "101",
+                    },
+                    "status4": {
+                        "device_policy": "Group policy",
+                        "group_policy_id": "101",
+                    },
+                    "status5": {
+                        "device_policy": "Group policy",
+                        "group_policy_id": "101",
+                    },
+                    "status6": {
+                        "device_policy": "Group policy",
+                        "group_policy_id": "101",
+                    },
+                    "status7": {
+                        "device_policy": "Group policy",
+                        "group_policy_id": "101",
+                    },
+                    "status8": {
+                        "device_policy": "Group policy",
+                        "group_policy_id": "101",
+                    },
+                    "status9": {
+                        "device_policy": "Group policy",
+                        "group_policy_id": "101",
+                    },
+                },
+            })
+        pulumi.export("merakiNetworksClientsProvisionExample", example)
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -130,6 +212,88 @@ class ClientsProvision(pulumi.CustomResource):
         already existed previously.
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.ClientsProvision("example",
+            network_id="string",
+            parameters={
+                "clients": [{
+                    "mac": "00:11:22:33:44:55",
+                    "name": "Miles's phone",
+                }],
+                "device_policy": "Group policy",
+                "group_policy_id": "101",
+                "policies_by_security_appliance": {
+                    "device_policy": "Normal",
+                },
+                "policies_by_ssid": {
+                    "status0": {
+                        "device_policy": "Group policy",
+                        "group_policy_id": "101",
+                    },
+                    "status1": {
+                        "device_policy": "Group policy",
+                        "group_policy_id": "101",
+                    },
+                    "status10": {
+                        "device_policy": "Group policy",
+                        "group_policy_id": "101",
+                    },
+                    "status11": {
+                        "device_policy": "Group policy",
+                        "group_policy_id": "101",
+                    },
+                    "status12": {
+                        "device_policy": "Group policy",
+                        "group_policy_id": "101",
+                    },
+                    "status13": {
+                        "device_policy": "Group policy",
+                        "group_policy_id": "101",
+                    },
+                    "status14": {
+                        "device_policy": "Group policy",
+                        "group_policy_id": "101",
+                    },
+                    "status2": {
+                        "device_policy": "Group policy",
+                        "group_policy_id": "101",
+                    },
+                    "status3": {
+                        "device_policy": "Group policy",
+                        "group_policy_id": "101",
+                    },
+                    "status4": {
+                        "device_policy": "Group policy",
+                        "group_policy_id": "101",
+                    },
+                    "status5": {
+                        "device_policy": "Group policy",
+                        "group_policy_id": "101",
+                    },
+                    "status6": {
+                        "device_policy": "Group policy",
+                        "group_policy_id": "101",
+                    },
+                    "status7": {
+                        "device_policy": "Group policy",
+                        "group_policy_id": "101",
+                    },
+                    "status8": {
+                        "device_policy": "Group policy",
+                        "group_policy_id": "101",
+                    },
+                    "status9": {
+                        "device_policy": "Group policy",
+                        "group_policy_id": "101",
+                    },
+                },
+            })
+        pulumi.export("merakiNetworksClientsProvisionExample", example)
+        ```
 
         :param str resource_name: The name of the resource.
         :param ClientsProvisionArgs args: The arguments to use to populate this resource's properties.

@@ -34,7 +34,7 @@ import (
 //				Parameters: &organizations.InventoryOnboardingCloudMonitoringPrepareParametersArgs{
 //					Devices: organizations.InventoryOnboardingCloudMonitoringPrepareParametersDeviceArray{
 //						&organizations.InventoryOnboardingCloudMonitoringPrepareParametersDeviceArgs{
-//							Sudi: pulumi.String(`          "-----BEGIN CERTIFICATE-----
+//							Sudi: pulumi.String(`          \"-----BEGIN CERTIFICATE-----
 //	        MIIDyTCCArGgAwIBAgIKBBNXOVCGU1YztjANBgkqhkiG9w0BAQsFADAnMQ4wDAYD
 //	        VQQKEwVDaXNjbzEVMBMGA1UEAxMMQUNUMiBTVURJIENBMB4XDTIxMDUzMTEzNTUx
 //	        NVoXDTI5MDUxNDIwMjU0MVowbTEpMCcGA1UEBRMgUElEOkM5MjAwTC0yNFAtNEcg
@@ -57,7 +57,7 @@ import (
 //	        0m3M6yKpe5+VZzHZwmWdUf3Ot+zKjhveK5/YNsMIASdvtvymxUizq2Hr1hvR/kPc
 //	        p1vuyWxipU8JfzOh/A==
 //	        -----END CERTIFICATE-----
-//	        "
+//	        \"
 //
 // `),
 //

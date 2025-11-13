@@ -14,6 +14,152 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewGroupPolicies(ctx, "example", &networks.GroupPoliciesArgs{
+//				Bandwidth: &networks.GroupPoliciesBandwidthArgs{
+//					BandwidthLimits: &networks.GroupPoliciesBandwidthBandwidthLimitsArgs{
+//						LimitDown: pulumi.Int(1000000),
+//						LimitUp:   pulumi.Int(1000000),
+//					},
+//					Settings: pulumi.String("custom"),
+//				},
+//				BonjourForwarding: &networks.GroupPoliciesBonjourForwardingArgs{
+//					Rules: networks.GroupPoliciesBonjourForwardingRuleArray{
+//						&networks.GroupPoliciesBonjourForwardingRuleArgs{
+//							Description: pulumi.String("A simple bonjour rule"),
+//							Services: pulumi.StringArray{
+//								pulumi.String("All Services"),
+//							},
+//							VlanId: pulumi.String("1"),
+//						},
+//					},
+//					Settings: pulumi.String("custom"),
+//				},
+//				ContentFiltering: &networks.GroupPoliciesContentFilteringArgs{
+//					AllowedUrlPatterns: &networks.GroupPoliciesContentFilteringAllowedUrlPatternsArgs{
+//						Settings: pulumi.String("network default"),
+//					},
+//					BlockedUrlCategories: &networks.GroupPoliciesContentFilteringBlockedUrlCategoriesArgs{
+//						Categories: pulumi.StringArray{
+//							pulumi.String("meraki:contentFiltering/category/1"),
+//							pulumi.String("meraki:contentFiltering/category/7"),
+//						},
+//						Settings: pulumi.String("override"),
+//					},
+//					BlockedUrlPatterns: &networks.GroupPoliciesContentFilteringBlockedUrlPatternsArgs{
+//						Patterns: pulumi.StringArray{
+//							pulumi.String("http://www.example.com"),
+//							pulumi.String("http://www.betting.com"),
+//						},
+//						Settings: pulumi.String("append"),
+//					},
+//				},
+//				FirewallAndTrafficShaping: &networks.GroupPoliciesFirewallAndTrafficShapingArgs{
+//					L3FirewallRules: networks.GroupPoliciesFirewallAndTrafficShapingL3FirewallRuleArray{
+//						&networks.GroupPoliciesFirewallAndTrafficShapingL3FirewallRuleArgs{
+//							Comment:  pulumi.String("Allow TCP traffic to subnet with HTTP servers."),
+//							DestCidr: pulumi.String("192.168.1.0/24"),
+//							DestPort: pulumi.String("443"),
+//							Policy:   pulumi.String("allow"),
+//							Protocol: pulumi.String("tcp"),
+//						},
+//					},
+//					L7FirewallRules: networks.GroupPoliciesFirewallAndTrafficShapingL7FirewallRuleArray{
+//						&networks.GroupPoliciesFirewallAndTrafficShapingL7FirewallRuleArgs{
+//							Policy: pulumi.String("deny"),
+//							Type:   pulumi.String("host"),
+//							Value:  pulumi.String("google.com"),
+//						},
+//					},
+//					Settings: pulumi.String("custom"),
+//					TrafficShapingRules: networks.GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleArray{
+//						&networks.GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleArgs{
+//							Definitions: networks.GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleDefinitionArray{
+//								&networks.GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleDefinitionArgs{
+//									Type:  pulumi.String("host"),
+//									Value: pulumi.String("google.com"),
+//								},
+//							},
+//							DscpTagValue: pulumi.Int(1),
+//							PcpTagValue:  pulumi.Int(1),
+//							PerClientBandwidthLimits: &networks.GroupPoliciesFirewallAndTrafficShapingTrafficShapingRulePerClientBandwidthLimitsArgs{
+//								BandwidthLimits: &networks.GroupPoliciesFirewallAndTrafficShapingTrafficShapingRulePerClientBandwidthLimitsBandwidthLimitsArgs{
+//									LimitDown: pulumi.Int(1000000),
+//									LimitUp:   pulumi.Int(1000000),
+//								},
+//								Settings: pulumi.String("custom"),
+//							},
+//							Priority: pulumi.String("normal"),
+//						},
+//					},
+//				},
+//				Name:      pulumi.String("No video streaming"),
+//				NetworkId: pulumi.String("string"),
+//				Scheduling: &networks.GroupPoliciesSchedulingArgs{
+//					Enabled: pulumi.Bool(true),
+//					Friday: &networks.GroupPoliciesSchedulingFridayArgs{
+//						Active: pulumi.Bool(true),
+//						From:   pulumi.String("9:00"),
+//						To:     pulumi.String("17:00"),
+//					},
+//					Monday: &networks.GroupPoliciesSchedulingMondayArgs{
+//						Active: pulumi.Bool(true),
+//						From:   pulumi.String("9:00"),
+//						To:     pulumi.String("17:00"),
+//					},
+//					Saturday: &networks.GroupPoliciesSchedulingSaturdayArgs{
+//						Active: pulumi.Bool(true),
+//						From:   pulumi.String("9:00"),
+//						To:     pulumi.String("17:00"),
+//					},
+//					Sunday: &networks.GroupPoliciesSchedulingSundayArgs{
+//						Active: pulumi.Bool(true),
+//						From:   pulumi.String("9:00"),
+//						To:     pulumi.String("17:00"),
+//					},
+//					Thursday: &networks.GroupPoliciesSchedulingThursdayArgs{
+//						Active: pulumi.Bool(true),
+//						From:   pulumi.String("9:00"),
+//						To:     pulumi.String("17:00"),
+//					},
+//					Tuesday: &networks.GroupPoliciesSchedulingTuesdayArgs{
+//						Active: pulumi.Bool(true),
+//						From:   pulumi.String("9:00"),
+//						To:     pulumi.String("17:00"),
+//					},
+//					Wednesday: &networks.GroupPoliciesSchedulingWednesdayArgs{
+//						Active: pulumi.Bool(true),
+//						From:   pulumi.String("9:00"),
+//						To:     pulumi.String("17:00"),
+//					},
+//				},
+//				SplashAuthSettings: pulumi.String("bypass"),
+//				VlanTagging: &networks.GroupPoliciesVlanTaggingArgs{
+//					Settings: pulumi.String("custom"),
+//					VlanId:   pulumi.String("1"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksGroupPoliciesExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

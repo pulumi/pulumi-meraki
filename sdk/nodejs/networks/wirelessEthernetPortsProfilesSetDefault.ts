@@ -11,6 +11,19 @@ import * as utilities from "../utilities";
  * already existed previously.
  *
  * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.WirelessEthernetPortsProfilesSetDefault("example", {
+ *     networkId: "string",
+ *     parameters: {
+ *         profileId: "1001",
+ *     },
+ * });
+ * export const merakiNetworksWirelessEthernetPortsProfilesSetDefaultExample = example;
+ * ```
  */
 export class WirelessEthernetPortsProfilesSetDefault extends pulumi.CustomResource {
     /**

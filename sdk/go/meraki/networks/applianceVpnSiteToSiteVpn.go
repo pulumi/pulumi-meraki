@@ -14,6 +14,44 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewApplianceVpnSiteToSiteVpn(ctx, "example", &networks.ApplianceVpnSiteToSiteVpnArgs{
+//				Hubs: networks.ApplianceVpnSiteToSiteVpnHubArray{
+//					&networks.ApplianceVpnSiteToSiteVpnHubArgs{
+//						HubId:           pulumi.String("N_4901849"),
+//						UseDefaultRoute: pulumi.Bool(true),
+//					},
+//				},
+//				Mode:      pulumi.String("spoke"),
+//				NetworkId: pulumi.String("string"),
+//				Subnets: networks.ApplianceVpnSiteToSiteVpnSubnetArray{
+//					&networks.ApplianceVpnSiteToSiteVpnSubnetArgs{
+//						LocalSubnet: pulumi.String("192.168.1.0/24"),
+//						UseVpn:      pulumi.Bool(true),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksApplianceVpnSiteToSiteVpnExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

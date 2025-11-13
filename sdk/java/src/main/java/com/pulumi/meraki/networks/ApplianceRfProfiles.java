@@ -20,6 +20,72 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.ApplianceRfProfiles;
+ * import com.pulumi.meraki.networks.ApplianceRfProfilesArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceRfProfilesFiveGhzSettingsArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceRfProfilesPerSsidSettingsArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceRfProfilesPerSsidSettingsStatus1Args;
+ * import com.pulumi.meraki.networks.inputs.ApplianceRfProfilesPerSsidSettingsStatus2Args;
+ * import com.pulumi.meraki.networks.inputs.ApplianceRfProfilesPerSsidSettingsStatus3Args;
+ * import com.pulumi.meraki.networks.inputs.ApplianceRfProfilesPerSsidSettingsStatus4Args;
+ * import com.pulumi.meraki.networks.inputs.ApplianceRfProfilesTwoFourGhzSettingsArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ApplianceRfProfiles("example", ApplianceRfProfilesArgs.builder()
+ *             .fiveGhzSettings(ApplianceRfProfilesFiveGhzSettingsArgs.builder()
+ *                 .axEnabled(true)
+ *                 .minBitrate(48)
+ *                 .build())
+ *             .name("MX RF Profile")
+ *             .networkId("string")
+ *             .perSsidSettings(ApplianceRfProfilesPerSsidSettingsArgs.builder()
+ *                 .status1(ApplianceRfProfilesPerSsidSettingsStatus1Args.builder()
+ *                     .bandOperationMode("dual")
+ *                     .bandSteeringEnabled(true)
+ *                     .build())
+ *                 .status2(ApplianceRfProfilesPerSsidSettingsStatus2Args.builder()
+ *                     .bandOperationMode("dual")
+ *                     .bandSteeringEnabled(true)
+ *                     .build())
+ *                 .status3(ApplianceRfProfilesPerSsidSettingsStatus3Args.builder()
+ *                     .bandOperationMode("dual")
+ *                     .bandSteeringEnabled(true)
+ *                     .build())
+ *                 .status4(ApplianceRfProfilesPerSsidSettingsStatus4Args.builder()
+ *                     .bandOperationMode("dual")
+ *                     .bandSteeringEnabled(true)
+ *                     .build())
+ *                 .build())
+ *             .twoFourGhzSettings(ApplianceRfProfilesTwoFourGhzSettingsArgs.builder()
+ *                 .axEnabled(true)
+ *                 .minBitrate(12.0)
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksApplianceRfProfilesExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

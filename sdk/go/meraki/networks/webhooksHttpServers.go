@@ -14,6 +14,38 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewWebhooksHttpServers(ctx, "example", &networks.WebhooksHttpServersArgs{
+//				Name:      pulumi.String("Example Webhook Server"),
+//				NetworkId: pulumi.String("string"),
+//				PayloadTemplate: &networks.WebhooksHttpServersPayloadTemplateArgs{
+//					Name:              pulumi.String("Meraki (included)"),
+//					PayloadTemplateId: pulumi.String("wpt_00001"),
+//				},
+//				SharedSecret: pulumi.String("shhh"),
+//				Url:          pulumi.String("https://example.com"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksWebhooksHttpServersExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

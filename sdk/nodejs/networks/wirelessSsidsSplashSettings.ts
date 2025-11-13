@@ -9,6 +9,70 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.WirelessSsidsSplashSettings("example", {
+ *     allowSimultaneousLogins: false,
+ *     billing: {
+ *         freeAccess: {
+ *             durationInMinutes: 120,
+ *             enabled: true,
+ *         },
+ *         prepaidAccessFastLoginEnabled: true,
+ *         replyToEmailAddress: "user@email.com",
+ *     },
+ *     blockAllTrafficBeforeSignOn: false,
+ *     controllerDisconnectionBehavior: "default",
+ *     guestSponsorship: {
+ *         durationInMinutes: 30,
+ *         guestCanRequestTimeframe: false,
+ *     },
+ *     networkId: "string",
+ *     number: "string",
+ *     redirectUrl: "https://example.com",
+ *     sentryEnrollment: {
+ *         enforcedSystems: ["iOS"],
+ *         strength: "focused",
+ *         systemsManagerNetwork: {
+ *             id: "N_1234",
+ *         },
+ *     },
+ *     splashImage: {
+ *         extension: "jpg",
+ *         image: {
+ *             contents: "Q2lzY28gTWVyYWtp",
+ *             format: "jpg",
+ *         },
+ *         md5: "542cccac8d7dedee0f185311d154d194",
+ *     },
+ *     splashLogo: {
+ *         extension: "jpg",
+ *         image: {
+ *             contents: "Q2lzY28gTWVyYWtp",
+ *             format: "jpg",
+ *         },
+ *         md5: "abcd1234",
+ *     },
+ *     splashPrepaidFront: {
+ *         extension: "jpg",
+ *         image: {
+ *             contents: "Q2lzY28gTWVyYWtp",
+ *             format: "jpg",
+ *         },
+ *         md5: "542cccac8d7dedee0f185311d154d194",
+ *     },
+ *     splashTimeout: 1440,
+ *     splashUrl: "https://www.custom_splash_url.com",
+ *     themeId: "c3ddcb4f16785ee747ab5ffc10867d6c8ea704be",
+ *     useRedirectUrl: true,
+ *     useSplashUrl: true,
+ *     welcomeMessage: "Welcome!",
+ * });
+ * export const merakiNetworksWirelessSsidsSplashSettingsExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

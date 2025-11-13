@@ -9,6 +9,30 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.organizations.CameraRoles("example", {
+ *     appliedOnDevices: [{
+ *         id: "",
+ *         permissionScopeId: "1",
+ *         tag: "reception-desk",
+ *     }],
+ *     appliedOnNetworks: [{
+ *         id: "",
+ *         permissionScopeId: "2",
+ *         tag: "building-a",
+ *     }],
+ *     appliedOrgWides: [{
+ *         permissionScopeId: "2",
+ *     }],
+ *     name: "Security_Guard",
+ *     organizationId: "string",
+ * });
+ * export const merakiOrganizationsCameraRolesExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

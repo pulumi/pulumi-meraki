@@ -25,6 +25,361 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.WirelessRfProfiles;
+ * import com.pulumi.meraki.networks.WirelessRfProfilesArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesApBandSettingsArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesApBandSettingsBandsArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesFiveGhzSettingsArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesFlexRadiosArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesPerSsidSettingsArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesPerSsidSettingsStatus0Args;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesPerSsidSettingsStatus0BandsArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesPerSsidSettingsStatus1Args;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesPerSsidSettingsStatus1BandsArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesPerSsidSettingsStatus10Args;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesPerSsidSettingsStatus10BandsArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesPerSsidSettingsStatus11Args;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesPerSsidSettingsStatus11BandsArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesPerSsidSettingsStatus12Args;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesPerSsidSettingsStatus12BandsArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesPerSsidSettingsStatus13Args;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesPerSsidSettingsStatus13BandsArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesPerSsidSettingsStatus14Args;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesPerSsidSettingsStatus14BandsArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesPerSsidSettingsStatus2Args;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesPerSsidSettingsStatus2BandsArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesPerSsidSettingsStatus3Args;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesPerSsidSettingsStatus3BandsArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesPerSsidSettingsStatus4Args;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesPerSsidSettingsStatus4BandsArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesPerSsidSettingsStatus5Args;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesPerSsidSettingsStatus5BandsArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesPerSsidSettingsStatus6Args;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesPerSsidSettingsStatus6BandsArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesPerSsidSettingsStatus7Args;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesPerSsidSettingsStatus7BandsArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesPerSsidSettingsStatus8Args;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesPerSsidSettingsStatus8BandsArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesPerSsidSettingsStatus9Args;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesPerSsidSettingsStatus9BandsArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesSixGhzSettingsArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesTransmissionArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessRfProfilesTwoFourGhzSettingsArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new WirelessRfProfiles("example", WirelessRfProfilesArgs.builder()
+ *             .apBandSettings(WirelessRfProfilesApBandSettingsArgs.builder()
+ *                 .bandOperationMode("dual")
+ *                 .bandSteeringEnabled(true)
+ *                 .bands(WirelessRfProfilesApBandSettingsBandsArgs.builder()
+ *                     .enableds(                    
+ *                         "2.4",
+ *                         "5")
+ *                     .build())
+ *                 .build())
+ *             .bandSelectionType("ap")
+ *             .clientBalancingEnabled(true)
+ *             .fiveGhzSettings(WirelessRfProfilesFiveGhzSettingsArgs.builder()
+ *                 .channelWidth("auto")
+ *                 .maxPower(30)
+ *                 .minBitrate(12)
+ *                 .minPower(8)
+ *                 .rxsop(-95)
+ *                 .validAutoChannels(                
+ *                     36,
+ *                     40,
+ *                     44,
+ *                     48,
+ *                     52,
+ *                     56,
+ *                     60,
+ *                     64,
+ *                     100,
+ *                     104,
+ *                     108,
+ *                     112,
+ *                     116,
+ *                     120,
+ *                     124,
+ *                     128,
+ *                     132,
+ *                     136,
+ *                     140,
+ *                     144,
+ *                     149,
+ *                     153,
+ *                     157,
+ *                     161,
+ *                     165)
+ *                 .build())
+ *             .flexRadios(WirelessRfProfilesFlexRadiosArgs.builder()
+ *                 .byModels(WirelessRfProfilesFlexRadiosByModelArgs.builder()
+ *                     .bands("5")
+ *                     .model("MR34")
+ *                     .build())
+ *                 .build())
+ *             .minBitrateType("band")
+ *             .name("Main Office")
+ *             .networkId("string")
+ *             .perSsidSettings(WirelessRfProfilesPerSsidSettingsArgs.builder()
+ *                 .status0(WirelessRfProfilesPerSsidSettingsStatus0Args.builder()
+ *                     .bandOperationMode("dual")
+ *                     .bandSteeringEnabled(true)
+ *                     .bands(WirelessRfProfilesPerSsidSettingsStatus0BandsArgs.builder()
+ *                         .enableds(                        
+ *                             "2.4",
+ *                             "5")
+ *                         .build())
+ *                     .minBitrate(11)
+ *                     .build())
+ *                 .status1(WirelessRfProfilesPerSsidSettingsStatus1Args.builder()
+ *                     .bandOperationMode("dual")
+ *                     .bandSteeringEnabled(true)
+ *                     .bands(WirelessRfProfilesPerSsidSettingsStatus1BandsArgs.builder()
+ *                         .enableds(                        
+ *                             "2.4",
+ *                             "5")
+ *                         .build())
+ *                     .minBitrate(11)
+ *                     .build())
+ *                 .status10(WirelessRfProfilesPerSsidSettingsStatus10Args.builder()
+ *                     .bandOperationMode("dual")
+ *                     .bandSteeringEnabled(true)
+ *                     .bands(WirelessRfProfilesPerSsidSettingsStatus10BandsArgs.builder()
+ *                         .enableds(                        
+ *                             "2.4",
+ *                             "5")
+ *                         .build())
+ *                     .minBitrate(11)
+ *                     .build())
+ *                 .status11(WirelessRfProfilesPerSsidSettingsStatus11Args.builder()
+ *                     .bandOperationMode("dual")
+ *                     .bandSteeringEnabled(true)
+ *                     .bands(WirelessRfProfilesPerSsidSettingsStatus11BandsArgs.builder()
+ *                         .enableds(                        
+ *                             "2.4",
+ *                             "5")
+ *                         .build())
+ *                     .minBitrate(11)
+ *                     .build())
+ *                 .status12(WirelessRfProfilesPerSsidSettingsStatus12Args.builder()
+ *                     .bandOperationMode("dual")
+ *                     .bandSteeringEnabled(true)
+ *                     .bands(WirelessRfProfilesPerSsidSettingsStatus12BandsArgs.builder()
+ *                         .enableds(                        
+ *                             "2.4",
+ *                             "5")
+ *                         .build())
+ *                     .minBitrate(11)
+ *                     .build())
+ *                 .status13(WirelessRfProfilesPerSsidSettingsStatus13Args.builder()
+ *                     .bandOperationMode("dual")
+ *                     .bandSteeringEnabled(true)
+ *                     .bands(WirelessRfProfilesPerSsidSettingsStatus13BandsArgs.builder()
+ *                         .enableds(                        
+ *                             "2.4",
+ *                             "5")
+ *                         .build())
+ *                     .minBitrate(11)
+ *                     .build())
+ *                 .status14(WirelessRfProfilesPerSsidSettingsStatus14Args.builder()
+ *                     .bandOperationMode("dual")
+ *                     .bandSteeringEnabled(true)
+ *                     .bands(WirelessRfProfilesPerSsidSettingsStatus14BandsArgs.builder()
+ *                         .enableds(                        
+ *                             "2.4",
+ *                             "5")
+ *                         .build())
+ *                     .minBitrate(11)
+ *                     .build())
+ *                 .status2(WirelessRfProfilesPerSsidSettingsStatus2Args.builder()
+ *                     .bandOperationMode("dual")
+ *                     .bandSteeringEnabled(true)
+ *                     .bands(WirelessRfProfilesPerSsidSettingsStatus2BandsArgs.builder()
+ *                         .enableds(                        
+ *                             "2.4",
+ *                             "5")
+ *                         .build())
+ *                     .minBitrate(11)
+ *                     .build())
+ *                 .status3(WirelessRfProfilesPerSsidSettingsStatus3Args.builder()
+ *                     .bandOperationMode("dual")
+ *                     .bandSteeringEnabled(true)
+ *                     .bands(WirelessRfProfilesPerSsidSettingsStatus3BandsArgs.builder()
+ *                         .enableds(                        
+ *                             "2.4",
+ *                             "5")
+ *                         .build())
+ *                     .minBitrate(11)
+ *                     .build())
+ *                 .status4(WirelessRfProfilesPerSsidSettingsStatus4Args.builder()
+ *                     .bandOperationMode("dual")
+ *                     .bandSteeringEnabled(true)
+ *                     .bands(WirelessRfProfilesPerSsidSettingsStatus4BandsArgs.builder()
+ *                         .enableds(                        
+ *                             "2.4",
+ *                             "5")
+ *                         .build())
+ *                     .minBitrate(11)
+ *                     .build())
+ *                 .status5(WirelessRfProfilesPerSsidSettingsStatus5Args.builder()
+ *                     .bandOperationMode("dual")
+ *                     .bandSteeringEnabled(true)
+ *                     .bands(WirelessRfProfilesPerSsidSettingsStatus5BandsArgs.builder()
+ *                         .enableds(                        
+ *                             "2.4",
+ *                             "5")
+ *                         .build())
+ *                     .minBitrate(11)
+ *                     .build())
+ *                 .status6(WirelessRfProfilesPerSsidSettingsStatus6Args.builder()
+ *                     .bandOperationMode("dual")
+ *                     .bandSteeringEnabled(true)
+ *                     .bands(WirelessRfProfilesPerSsidSettingsStatus6BandsArgs.builder()
+ *                         .enableds(                        
+ *                             "2.4",
+ *                             "5")
+ *                         .build())
+ *                     .minBitrate(11)
+ *                     .build())
+ *                 .status7(WirelessRfProfilesPerSsidSettingsStatus7Args.builder()
+ *                     .bandOperationMode("dual")
+ *                     .bandSteeringEnabled(true)
+ *                     .bands(WirelessRfProfilesPerSsidSettingsStatus7BandsArgs.builder()
+ *                         .enableds(                        
+ *                             "2.4",
+ *                             "5")
+ *                         .build())
+ *                     .minBitrate(11)
+ *                     .build())
+ *                 .status8(WirelessRfProfilesPerSsidSettingsStatus8Args.builder()
+ *                     .bandOperationMode("dual")
+ *                     .bandSteeringEnabled(true)
+ *                     .bands(WirelessRfProfilesPerSsidSettingsStatus8BandsArgs.builder()
+ *                         .enableds(                        
+ *                             "2.4",
+ *                             "5")
+ *                         .build())
+ *                     .minBitrate(11)
+ *                     .build())
+ *                 .status9(WirelessRfProfilesPerSsidSettingsStatus9Args.builder()
+ *                     .bandOperationMode("dual")
+ *                     .bandSteeringEnabled(true)
+ *                     .bands(WirelessRfProfilesPerSsidSettingsStatus9BandsArgs.builder()
+ *                         .enableds(                        
+ *                             "2.4",
+ *                             "5")
+ *                         .build())
+ *                     .minBitrate(11)
+ *                     .build())
+ *                 .build())
+ *             .sixGhzSettings(WirelessRfProfilesSixGhzSettingsArgs.builder()
+ *                 .channelWidth("auto")
+ *                 .maxPower(30)
+ *                 .minBitrate(12)
+ *                 .minPower(8)
+ *                 .rxsop(-95)
+ *                 .validAutoChannels(                
+ *                     1,
+ *                     5,
+ *                     9,
+ *                     13,
+ *                     17,
+ *                     21,
+ *                     25,
+ *                     29,
+ *                     33,
+ *                     37,
+ *                     41,
+ *                     45,
+ *                     49,
+ *                     53,
+ *                     57,
+ *                     61,
+ *                     65,
+ *                     69,
+ *                     73,
+ *                     77,
+ *                     81,
+ *                     85,
+ *                     89,
+ *                     93,
+ *                     97,
+ *                     101,
+ *                     105,
+ *                     109,
+ *                     113,
+ *                     117,
+ *                     121,
+ *                     125,
+ *                     129,
+ *                     133,
+ *                     137,
+ *                     141,
+ *                     145,
+ *                     149,
+ *                     153,
+ *                     157,
+ *                     161,
+ *                     165,
+ *                     169,
+ *                     173,
+ *                     177,
+ *                     181,
+ *                     185,
+ *                     189,
+ *                     193,
+ *                     197,
+ *                     201,
+ *                     205,
+ *                     209,
+ *                     213,
+ *                     217,
+ *                     221,
+ *                     225,
+ *                     229,
+ *                     233)
+ *                 .build())
+ *             .transmission(WirelessRfProfilesTransmissionArgs.builder()
+ *                 .enabled(true)
+ *                 .build())
+ *             .twoFourGhzSettings(WirelessRfProfilesTwoFourGhzSettingsArgs.builder()
+ *                 .axEnabled(true)
+ *                 .maxPower(30)
+ *                 .minBitrate(11.0)
+ *                 .minPower(5)
+ *                 .rxsop(-95)
+ *                 .validAutoChannels(                
+ *                     1,
+ *                     6,
+ *                     11)
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksWirelessRfProfilesExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

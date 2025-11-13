@@ -9,6 +9,30 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.ApplianceFirewallOneToOneNatRules("example", {
+ *     networkId: "string",
+ *     rules: [{
+ *         allowedInbound: [{
+ *             allowedIps: [
+ *                 "10.82.112.0/24",
+ *                 "10.82.0.0/16",
+ *             ],
+ *             destinationPorts: ["80"],
+ *             protocol: "tcp",
+ *         }],
+ *         lanIp: "192.168.128.22",
+ *         name: "Service behind NAT",
+ *         publicIp: "146.12.3.33",
+ *         uplink: "internet1",
+ *     }],
+ * });
+ * export const merakiNetworksApplianceFirewallOneToOneNatRulesExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

@@ -12,6 +12,44 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.ApplianceSecurityIntrusion("example", new()
+    ///     {
+    ///         IdsRulesets = "balanced",
+    ///         Mode = "prevention",
+    ///         NetworkId = "string",
+    ///         ProtectedNetworks = new Meraki.Networks.Inputs.ApplianceSecurityIntrusionProtectedNetworksArgs
+    ///         {
+    ///             ExcludedCidrs = new[]
+    ///             {
+    ///                 "10.0.0.0/8",
+    ///                 "127.0.0.0/8",
+    ///             },
+    ///             IncludedCidrs = new[]
+    ///             {
+    ///                 "10.0.0.0/8",
+    ///                 "127.0.0.0/8",
+    ///                 "169.254.0.0/16",
+    ///                 "172.16.0.0/12",
+    ///             },
+    ///             UseDefault = false,
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksApplianceSecurityIntrusionExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

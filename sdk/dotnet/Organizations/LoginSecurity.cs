@@ -12,6 +12,54 @@ namespace Pulumi.Meraki.Organizations
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Organizations.LoginSecurity("example", new()
+    ///     {
+    ///         AccountLockoutAttempts = 3,
+    ///         ApiAuthentication = new Meraki.Organizations.Inputs.LoginSecurityApiAuthenticationArgs
+    ///         {
+    ///             IpRestrictionsForKeys = new Meraki.Organizations.Inputs.LoginSecurityApiAuthenticationIpRestrictionsForKeysArgs
+    ///             {
+    ///                 Enabled = true,
+    ///                 Ranges = new[]
+    ///                 {
+    ///                     "192.195.83.1",
+    ///                     "192.168.33.33",
+    ///                 },
+    ///             },
+    ///         },
+    ///         EnforceAccountLockout = true,
+    ///         EnforceDifferentPasswords = true,
+    ///         EnforceIdleTimeout = true,
+    ///         EnforceLoginIpRanges = true,
+    ///         EnforcePasswordExpiration = true,
+    ///         EnforceStrongPasswords = true,
+    ///         EnforceTwoFactorAuth = true,
+    ///         IdleTimeoutMinutes = 30,
+    ///         LoginIpRanges = new[]
+    ///         {
+    ///             "192.195.83.1",
+    ///             "192.195.83.255",
+    ///         },
+    ///         NumDifferentPasswords = 3,
+    ///         OrganizationId = "string",
+    ///         PasswordExpirationDays = 90,
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiOrganizationsLoginSecurityExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

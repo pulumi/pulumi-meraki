@@ -115,6 +115,18 @@ class WirelessEthernetPortsProfilesSetDefault(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.WirelessEthernetPortsProfilesSetDefault("example",
+            network_id="string",
+            parameters={
+                "profile_id": "1001",
+            })
+        pulumi.export("merakiNetworksWirelessEthernetPortsProfilesSetDefaultExample", example)
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -130,6 +142,18 @@ class WirelessEthernetPortsProfilesSetDefault(pulumi.CustomResource):
         already existed previously.
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.WirelessEthernetPortsProfilesSetDefault("example",
+            network_id="string",
+            parameters={
+                "profile_id": "1001",
+            })
+        pulumi.export("merakiNetworksWirelessEthernetPortsProfilesSetDefaultExample", example)
+        ```
 
         :param str resource_name: The name of the resource.
         :param WirelessEthernetPortsProfilesSetDefaultArgs args: The arguments to use to populate this resource's properties.

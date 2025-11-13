@@ -9,6 +9,25 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.organizations.AdaptivePolicyAcls("example", {
+ *     description: "Blocks sensitive web traffic",
+ *     ipVersion: "ipv6",
+ *     name: "Block sensitive web traffic",
+ *     organizationId: "string",
+ *     rules: [{
+ *         dstPort: "22-30",
+ *         policy: "deny",
+ *         protocol: "tcp",
+ *         srcPort: "1,33",
+ *     }],
+ * });
+ * export const merakiOrganizationsAdaptivePolicyAclsExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

@@ -14,6 +14,36 @@ namespace Pulumi.Meraki.Networks
     /// already existed previously.
     /// 
     /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.SmDevicesInstallApps("example", new()
+    ///     {
+    ///         DeviceId = "string",
+    ///         NetworkId = "string",
+    ///         Parameters = new Meraki.Networks.Inputs.SmDevicesInstallAppsParametersArgs
+    ///         {
+    ///             AppIds = new[]
+    ///             {
+    ///                 "1284392014819",
+    ///                 "2983092129865",
+    ///             },
+    ///             Force = false,
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksSmDevicesInstallAppsExample"] = example,
+    ///     };
+    /// });
+    /// ```
     /// </summary>
     [MerakiResourceType("meraki:networks/smDevicesInstallApps:SmDevicesInstallApps")]
     public partial class SmDevicesInstallApps : global::Pulumi.CustomResource

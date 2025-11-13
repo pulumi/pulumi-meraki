@@ -14,6 +14,53 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewWirelessSsidsVpn(ctx, "example", &networks.WirelessSsidsVpnArgs{
+//				Concentrator: &networks.WirelessSsidsVpnConcentratorArgs{
+//					NetworkId: pulumi.String("N_123"),
+//					VlanId:    pulumi.Int(44),
+//				},
+//				Failover: &networks.WirelessSsidsVpnFailoverArgs{
+//					HeartbeatInterval: pulumi.Int(10),
+//					IdleTimeout:       pulumi.Int(30),
+//					RequestIp:         pulumi.String("1.1.1.1"),
+//				},
+//				NetworkId: pulumi.String("string"),
+//				Number:    pulumi.String("string"),
+//				SplitTunnel: &networks.WirelessSsidsVpnSplitTunnelArgs{
+//					Enabled: pulumi.Bool(true),
+//					Rules: networks.WirelessSsidsVpnSplitTunnelRuleArray{
+//						&networks.WirelessSsidsVpnSplitTunnelRuleArgs{
+//							Comment:  pulumi.String("split tunnel rule 1"),
+//							DestCidr: pulumi.String("1.1.1.1/32"),
+//							DestPort: pulumi.String("any"),
+//							Policy:   pulumi.String("allow"),
+//							Protocol: pulumi.String("Any"),
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksWirelessSsidsVpnExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

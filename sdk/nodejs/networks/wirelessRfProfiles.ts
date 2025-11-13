@@ -9,6 +9,320 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.WirelessRfProfiles("example", {
+ *     apBandSettings: {
+ *         bandOperationMode: "dual",
+ *         bandSteeringEnabled: true,
+ *         bands: {
+ *             enableds: [
+ *                 "2.4",
+ *                 "5",
+ *             ],
+ *         },
+ *     },
+ *     bandSelectionType: "ap",
+ *     clientBalancingEnabled: true,
+ *     fiveGhzSettings: {
+ *         channelWidth: "auto",
+ *         maxPower: 30,
+ *         minBitrate: 12,
+ *         minPower: 8,
+ *         rxsop: -95,
+ *         validAutoChannels: [
+ *             36,
+ *             40,
+ *             44,
+ *             48,
+ *             52,
+ *             56,
+ *             60,
+ *             64,
+ *             100,
+ *             104,
+ *             108,
+ *             112,
+ *             116,
+ *             120,
+ *             124,
+ *             128,
+ *             132,
+ *             136,
+ *             140,
+ *             144,
+ *             149,
+ *             153,
+ *             157,
+ *             161,
+ *             165,
+ *         ],
+ *     },
+ *     flexRadios: {
+ *         byModels: [{
+ *             bands: ["5"],
+ *             model: "MR34",
+ *         }],
+ *     },
+ *     minBitrateType: "band",
+ *     name: "Main Office",
+ *     networkId: "string",
+ *     perSsidSettings: {
+ *         status0: {
+ *             bandOperationMode: "dual",
+ *             bandSteeringEnabled: true,
+ *             bands: {
+ *                 enableds: [
+ *                     "2.4",
+ *                     "5",
+ *                 ],
+ *             },
+ *             minBitrate: 11,
+ *         },
+ *         status1: {
+ *             bandOperationMode: "dual",
+ *             bandSteeringEnabled: true,
+ *             bands: {
+ *                 enableds: [
+ *                     "2.4",
+ *                     "5",
+ *                 ],
+ *             },
+ *             minBitrate: 11,
+ *         },
+ *         status10: {
+ *             bandOperationMode: "dual",
+ *             bandSteeringEnabled: true,
+ *             bands: {
+ *                 enableds: [
+ *                     "2.4",
+ *                     "5",
+ *                 ],
+ *             },
+ *             minBitrate: 11,
+ *         },
+ *         status11: {
+ *             bandOperationMode: "dual",
+ *             bandSteeringEnabled: true,
+ *             bands: {
+ *                 enableds: [
+ *                     "2.4",
+ *                     "5",
+ *                 ],
+ *             },
+ *             minBitrate: 11,
+ *         },
+ *         status12: {
+ *             bandOperationMode: "dual",
+ *             bandSteeringEnabled: true,
+ *             bands: {
+ *                 enableds: [
+ *                     "2.4",
+ *                     "5",
+ *                 ],
+ *             },
+ *             minBitrate: 11,
+ *         },
+ *         status13: {
+ *             bandOperationMode: "dual",
+ *             bandSteeringEnabled: true,
+ *             bands: {
+ *                 enableds: [
+ *                     "2.4",
+ *                     "5",
+ *                 ],
+ *             },
+ *             minBitrate: 11,
+ *         },
+ *         status14: {
+ *             bandOperationMode: "dual",
+ *             bandSteeringEnabled: true,
+ *             bands: {
+ *                 enableds: [
+ *                     "2.4",
+ *                     "5",
+ *                 ],
+ *             },
+ *             minBitrate: 11,
+ *         },
+ *         status2: {
+ *             bandOperationMode: "dual",
+ *             bandSteeringEnabled: true,
+ *             bands: {
+ *                 enableds: [
+ *                     "2.4",
+ *                     "5",
+ *                 ],
+ *             },
+ *             minBitrate: 11,
+ *         },
+ *         status3: {
+ *             bandOperationMode: "dual",
+ *             bandSteeringEnabled: true,
+ *             bands: {
+ *                 enableds: [
+ *                     "2.4",
+ *                     "5",
+ *                 ],
+ *             },
+ *             minBitrate: 11,
+ *         },
+ *         status4: {
+ *             bandOperationMode: "dual",
+ *             bandSteeringEnabled: true,
+ *             bands: {
+ *                 enableds: [
+ *                     "2.4",
+ *                     "5",
+ *                 ],
+ *             },
+ *             minBitrate: 11,
+ *         },
+ *         status5: {
+ *             bandOperationMode: "dual",
+ *             bandSteeringEnabled: true,
+ *             bands: {
+ *                 enableds: [
+ *                     "2.4",
+ *                     "5",
+ *                 ],
+ *             },
+ *             minBitrate: 11,
+ *         },
+ *         status6: {
+ *             bandOperationMode: "dual",
+ *             bandSteeringEnabled: true,
+ *             bands: {
+ *                 enableds: [
+ *                     "2.4",
+ *                     "5",
+ *                 ],
+ *             },
+ *             minBitrate: 11,
+ *         },
+ *         status7: {
+ *             bandOperationMode: "dual",
+ *             bandSteeringEnabled: true,
+ *             bands: {
+ *                 enableds: [
+ *                     "2.4",
+ *                     "5",
+ *                 ],
+ *             },
+ *             minBitrate: 11,
+ *         },
+ *         status8: {
+ *             bandOperationMode: "dual",
+ *             bandSteeringEnabled: true,
+ *             bands: {
+ *                 enableds: [
+ *                     "2.4",
+ *                     "5",
+ *                 ],
+ *             },
+ *             minBitrate: 11,
+ *         },
+ *         status9: {
+ *             bandOperationMode: "dual",
+ *             bandSteeringEnabled: true,
+ *             bands: {
+ *                 enableds: [
+ *                     "2.4",
+ *                     "5",
+ *                 ],
+ *             },
+ *             minBitrate: 11,
+ *         },
+ *     },
+ *     sixGhzSettings: {
+ *         channelWidth: "auto",
+ *         maxPower: 30,
+ *         minBitrate: 12,
+ *         minPower: 8,
+ *         rxsop: -95,
+ *         validAutoChannels: [
+ *             1,
+ *             5,
+ *             9,
+ *             13,
+ *             17,
+ *             21,
+ *             25,
+ *             29,
+ *             33,
+ *             37,
+ *             41,
+ *             45,
+ *             49,
+ *             53,
+ *             57,
+ *             61,
+ *             65,
+ *             69,
+ *             73,
+ *             77,
+ *             81,
+ *             85,
+ *             89,
+ *             93,
+ *             97,
+ *             101,
+ *             105,
+ *             109,
+ *             113,
+ *             117,
+ *             121,
+ *             125,
+ *             129,
+ *             133,
+ *             137,
+ *             141,
+ *             145,
+ *             149,
+ *             153,
+ *             157,
+ *             161,
+ *             165,
+ *             169,
+ *             173,
+ *             177,
+ *             181,
+ *             185,
+ *             189,
+ *             193,
+ *             197,
+ *             201,
+ *             205,
+ *             209,
+ *             213,
+ *             217,
+ *             221,
+ *             225,
+ *             229,
+ *             233,
+ *         ],
+ *     },
+ *     transmission: {
+ *         enabled: true,
+ *     },
+ *     twoFourGhzSettings: {
+ *         axEnabled: true,
+ *         maxPower: 30,
+ *         minBitrate: 11,
+ *         minPower: 5,
+ *         rxsop: -95,
+ *         validAutoChannels: [
+ *             1,
+ *             6,
+ *             11,
+ *         ],
+ *     },
+ * });
+ * export const merakiNetworksWirelessRfProfilesExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

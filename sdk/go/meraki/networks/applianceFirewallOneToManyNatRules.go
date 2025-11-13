@@ -14,6 +14,49 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewApplianceFirewallOneToManyNatRules(ctx, "example", &networks.ApplianceFirewallOneToManyNatRulesArgs{
+//				NetworkId: pulumi.String("string"),
+//				Rules: networks.ApplianceFirewallOneToManyNatRulesRuleArray{
+//					&networks.ApplianceFirewallOneToManyNatRulesRuleArgs{
+//						PortRules: networks.ApplianceFirewallOneToManyNatRulesRulePortRuleArray{
+//							&networks.ApplianceFirewallOneToManyNatRulesRulePortRuleArgs{
+//								AllowedIps: pulumi.StringArray{
+//									pulumi.String("any"),
+//								},
+//								LocalIp:    pulumi.String("192.168.128.1"),
+//								LocalPort:  pulumi.String("443"),
+//								Name:       pulumi.String("Rule 1"),
+//								Protocol:   pulumi.String("tcp"),
+//								PublicPort: pulumi.String("9443"),
+//							},
+//						},
+//						PublicIp: pulumi.String("146.11.11.13"),
+//						Uplink:   pulumi.String("internet1"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksApplianceFirewallOneToManyNatRulesExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

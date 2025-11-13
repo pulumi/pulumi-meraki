@@ -14,6 +14,35 @@ namespace Pulumi.Meraki.Networks
     /// already existed previously.
     /// 
     /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.SmDevicesUninstallApps("example", new()
+    ///     {
+    ///         DeviceId = "string",
+    ///         NetworkId = "string",
+    ///         Parameters = new Meraki.Networks.Inputs.SmDevicesUninstallAppsParametersArgs
+    ///         {
+    ///             AppIds = new[]
+    ///             {
+    ///                 "1284392014819",
+    ///                 "2983092129865",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksSmDevicesUninstallAppsExample"] = example,
+    ///     };
+    /// });
+    /// ```
     /// </summary>
     [MerakiResourceType("meraki:networks/smDevicesUninstallApps:SmDevicesUninstallApps")]
     public partial class SmDevicesUninstallApps : global::Pulumi.CustomResource

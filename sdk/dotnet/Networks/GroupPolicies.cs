@@ -12,6 +12,179 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.GroupPolicies("example", new()
+    ///     {
+    ///         Bandwidth = new Meraki.Networks.Inputs.GroupPoliciesBandwidthArgs
+    ///         {
+    ///             BandwidthLimits = new Meraki.Networks.Inputs.GroupPoliciesBandwidthBandwidthLimitsArgs
+    ///             {
+    ///                 LimitDown = 1000000,
+    ///                 LimitUp = 1000000,
+    ///             },
+    ///             Settings = "custom",
+    ///         },
+    ///         BonjourForwarding = new Meraki.Networks.Inputs.GroupPoliciesBonjourForwardingArgs
+    ///         {
+    ///             Rules = new[]
+    ///             {
+    ///                 new Meraki.Networks.Inputs.GroupPoliciesBonjourForwardingRuleArgs
+    ///                 {
+    ///                     Description = "A simple bonjour rule",
+    ///                     Services = new[]
+    ///                     {
+    ///                         "All Services",
+    ///                     },
+    ///                     VlanId = "1",
+    ///                 },
+    ///             },
+    ///             Settings = "custom",
+    ///         },
+    ///         ContentFiltering = new Meraki.Networks.Inputs.GroupPoliciesContentFilteringArgs
+    ///         {
+    ///             AllowedUrlPatterns = new Meraki.Networks.Inputs.GroupPoliciesContentFilteringAllowedUrlPatternsArgs
+    ///             {
+    ///                 Settings = "network default",
+    ///             },
+    ///             BlockedUrlCategories = new Meraki.Networks.Inputs.GroupPoliciesContentFilteringBlockedUrlCategoriesArgs
+    ///             {
+    ///                 Categories = new[]
+    ///                 {
+    ///                     "meraki:contentFiltering/category/1",
+    ///                     "meraki:contentFiltering/category/7",
+    ///                 },
+    ///                 Settings = "override",
+    ///             },
+    ///             BlockedUrlPatterns = new Meraki.Networks.Inputs.GroupPoliciesContentFilteringBlockedUrlPatternsArgs
+    ///             {
+    ///                 Patterns = new[]
+    ///                 {
+    ///                     "http://www.example.com",
+    ///                     "http://www.betting.com",
+    ///                 },
+    ///                 Settings = "append",
+    ///             },
+    ///         },
+    ///         FirewallAndTrafficShaping = new Meraki.Networks.Inputs.GroupPoliciesFirewallAndTrafficShapingArgs
+    ///         {
+    ///             L3FirewallRules = new[]
+    ///             {
+    ///                 new Meraki.Networks.Inputs.GroupPoliciesFirewallAndTrafficShapingL3FirewallRuleArgs
+    ///                 {
+    ///                     Comment = "Allow TCP traffic to subnet with HTTP servers.",
+    ///                     DestCidr = "192.168.1.0/24",
+    ///                     DestPort = "443",
+    ///                     Policy = "allow",
+    ///                     Protocol = "tcp",
+    ///                 },
+    ///             },
+    ///             L7FirewallRules = new[]
+    ///             {
+    ///                 new Meraki.Networks.Inputs.GroupPoliciesFirewallAndTrafficShapingL7FirewallRuleArgs
+    ///                 {
+    ///                     Policy = "deny",
+    ///                     Type = "host",
+    ///                     Value = "google.com",
+    ///                 },
+    ///             },
+    ///             Settings = "custom",
+    ///             TrafficShapingRules = new[]
+    ///             {
+    ///                 new Meraki.Networks.Inputs.GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleArgs
+    ///                 {
+    ///                     Definitions = new[]
+    ///                     {
+    ///                         new Meraki.Networks.Inputs.GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleDefinitionArgs
+    ///                         {
+    ///                             Type = "host",
+    ///                             Value = "google.com",
+    ///                         },
+    ///                     },
+    ///                     DscpTagValue = 1,
+    ///                     PcpTagValue = 1,
+    ///                     PerClientBandwidthLimits = new Meraki.Networks.Inputs.GroupPoliciesFirewallAndTrafficShapingTrafficShapingRulePerClientBandwidthLimitsArgs
+    ///                     {
+    ///                         BandwidthLimits = new Meraki.Networks.Inputs.GroupPoliciesFirewallAndTrafficShapingTrafficShapingRulePerClientBandwidthLimitsBandwidthLimitsArgs
+    ///                         {
+    ///                             LimitDown = 1000000,
+    ///                             LimitUp = 1000000,
+    ///                         },
+    ///                         Settings = "custom",
+    ///                     },
+    ///                     Priority = "normal",
+    ///                 },
+    ///             },
+    ///         },
+    ///         Name = "No video streaming",
+    ///         NetworkId = "string",
+    ///         Scheduling = new Meraki.Networks.Inputs.GroupPoliciesSchedulingArgs
+    ///         {
+    ///             Enabled = true,
+    ///             Friday = new Meraki.Networks.Inputs.GroupPoliciesSchedulingFridayArgs
+    ///             {
+    ///                 Active = true,
+    ///                 From = "9:00",
+    ///                 To = "17:00",
+    ///             },
+    ///             Monday = new Meraki.Networks.Inputs.GroupPoliciesSchedulingMondayArgs
+    ///             {
+    ///                 Active = true,
+    ///                 From = "9:00",
+    ///                 To = "17:00",
+    ///             },
+    ///             Saturday = new Meraki.Networks.Inputs.GroupPoliciesSchedulingSaturdayArgs
+    ///             {
+    ///                 Active = true,
+    ///                 From = "9:00",
+    ///                 To = "17:00",
+    ///             },
+    ///             Sunday = new Meraki.Networks.Inputs.GroupPoliciesSchedulingSundayArgs
+    ///             {
+    ///                 Active = true,
+    ///                 From = "9:00",
+    ///                 To = "17:00",
+    ///             },
+    ///             Thursday = new Meraki.Networks.Inputs.GroupPoliciesSchedulingThursdayArgs
+    ///             {
+    ///                 Active = true,
+    ///                 From = "9:00",
+    ///                 To = "17:00",
+    ///             },
+    ///             Tuesday = new Meraki.Networks.Inputs.GroupPoliciesSchedulingTuesdayArgs
+    ///             {
+    ///                 Active = true,
+    ///                 From = "9:00",
+    ///                 To = "17:00",
+    ///             },
+    ///             Wednesday = new Meraki.Networks.Inputs.GroupPoliciesSchedulingWednesdayArgs
+    ///             {
+    ///                 Active = true,
+    ///                 From = "9:00",
+    ///                 To = "17:00",
+    ///             },
+    ///         },
+    ///         SplashAuthSettings = "bypass",
+    ///         VlanTagging = new Meraki.Networks.Inputs.GroupPoliciesVlanTaggingArgs
+    ///         {
+    ///             Settings = "custom",
+    ///             VlanId = "1",
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksGroupPoliciesExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

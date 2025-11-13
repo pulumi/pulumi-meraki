@@ -12,6 +12,47 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.WirelessEthernetPortsProfiles("example", new()
+    ///     {
+    ///         Name = "string",
+    ///         NetworkId = "string",
+    ///         Ports = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.WirelessEthernetPortsProfilesPortArgs
+    ///             {
+    ///                 Enabled = false,
+    ///                 Name = "string",
+    ///                 PskGroupId = "string",
+    ///                 Ssid = 1,
+    ///             },
+    ///         },
+    ///         ProfileId = "string",
+    ///         UsbPorts = new[]
+    ///         {
+    ///             new Meraki.Networks.Inputs.WirelessEthernetPortsProfilesUsbPortArgs
+    ///             {
+    ///                 Enabled = false,
+    ///                 Name = "string",
+    ///                 Ssid = 1,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksWirelessEthernetPortsProfilesExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

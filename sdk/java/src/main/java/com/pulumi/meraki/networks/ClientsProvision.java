@@ -21,6 +21,129 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.ClientsProvision;
+ * import com.pulumi.meraki.networks.ClientsProvisionArgs;
+ * import com.pulumi.meraki.networks.inputs.ClientsProvisionParametersArgs;
+ * import com.pulumi.meraki.networks.inputs.ClientsProvisionParametersPoliciesBySecurityApplianceArgs;
+ * import com.pulumi.meraki.networks.inputs.ClientsProvisionParametersPoliciesBySsidArgs;
+ * import com.pulumi.meraki.networks.inputs.ClientsProvisionParametersPoliciesBySsidStatus0Args;
+ * import com.pulumi.meraki.networks.inputs.ClientsProvisionParametersPoliciesBySsidStatus1Args;
+ * import com.pulumi.meraki.networks.inputs.ClientsProvisionParametersPoliciesBySsidStatus10Args;
+ * import com.pulumi.meraki.networks.inputs.ClientsProvisionParametersPoliciesBySsidStatus11Args;
+ * import com.pulumi.meraki.networks.inputs.ClientsProvisionParametersPoliciesBySsidStatus12Args;
+ * import com.pulumi.meraki.networks.inputs.ClientsProvisionParametersPoliciesBySsidStatus13Args;
+ * import com.pulumi.meraki.networks.inputs.ClientsProvisionParametersPoliciesBySsidStatus14Args;
+ * import com.pulumi.meraki.networks.inputs.ClientsProvisionParametersPoliciesBySsidStatus2Args;
+ * import com.pulumi.meraki.networks.inputs.ClientsProvisionParametersPoliciesBySsidStatus3Args;
+ * import com.pulumi.meraki.networks.inputs.ClientsProvisionParametersPoliciesBySsidStatus4Args;
+ * import com.pulumi.meraki.networks.inputs.ClientsProvisionParametersPoliciesBySsidStatus5Args;
+ * import com.pulumi.meraki.networks.inputs.ClientsProvisionParametersPoliciesBySsidStatus6Args;
+ * import com.pulumi.meraki.networks.inputs.ClientsProvisionParametersPoliciesBySsidStatus7Args;
+ * import com.pulumi.meraki.networks.inputs.ClientsProvisionParametersPoliciesBySsidStatus8Args;
+ * import com.pulumi.meraki.networks.inputs.ClientsProvisionParametersPoliciesBySsidStatus9Args;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ClientsProvision("example", ClientsProvisionArgs.builder()
+ *             .networkId("string")
+ *             .parameters(ClientsProvisionParametersArgs.builder()
+ *                 .clients(ClientsProvisionParametersClientArgs.builder()
+ *                     .mac("00:11:22:33:44:55")
+ *                     .name("Miles's phone")
+ *                     .build())
+ *                 .devicePolicy("Group policy")
+ *                 .groupPolicyId("101")
+ *                 .policiesBySecurityAppliance(ClientsProvisionParametersPoliciesBySecurityApplianceArgs.builder()
+ *                     .devicePolicy("Normal")
+ *                     .build())
+ *                 .policiesBySsid(ClientsProvisionParametersPoliciesBySsidArgs.builder()
+ *                     .status0(ClientsProvisionParametersPoliciesBySsidStatus0Args.builder()
+ *                         .devicePolicy("Group policy")
+ *                         .groupPolicyId("101")
+ *                         .build())
+ *                     .status1(ClientsProvisionParametersPoliciesBySsidStatus1Args.builder()
+ *                         .devicePolicy("Group policy")
+ *                         .groupPolicyId("101")
+ *                         .build())
+ *                     .status10(ClientsProvisionParametersPoliciesBySsidStatus10Args.builder()
+ *                         .devicePolicy("Group policy")
+ *                         .groupPolicyId("101")
+ *                         .build())
+ *                     .status11(ClientsProvisionParametersPoliciesBySsidStatus11Args.builder()
+ *                         .devicePolicy("Group policy")
+ *                         .groupPolicyId("101")
+ *                         .build())
+ *                     .status12(ClientsProvisionParametersPoliciesBySsidStatus12Args.builder()
+ *                         .devicePolicy("Group policy")
+ *                         .groupPolicyId("101")
+ *                         .build())
+ *                     .status13(ClientsProvisionParametersPoliciesBySsidStatus13Args.builder()
+ *                         .devicePolicy("Group policy")
+ *                         .groupPolicyId("101")
+ *                         .build())
+ *                     .status14(ClientsProvisionParametersPoliciesBySsidStatus14Args.builder()
+ *                         .devicePolicy("Group policy")
+ *                         .groupPolicyId("101")
+ *                         .build())
+ *                     .status2(ClientsProvisionParametersPoliciesBySsidStatus2Args.builder()
+ *                         .devicePolicy("Group policy")
+ *                         .groupPolicyId("101")
+ *                         .build())
+ *                     .status3(ClientsProvisionParametersPoliciesBySsidStatus3Args.builder()
+ *                         .devicePolicy("Group policy")
+ *                         .groupPolicyId("101")
+ *                         .build())
+ *                     .status4(ClientsProvisionParametersPoliciesBySsidStatus4Args.builder()
+ *                         .devicePolicy("Group policy")
+ *                         .groupPolicyId("101")
+ *                         .build())
+ *                     .status5(ClientsProvisionParametersPoliciesBySsidStatus5Args.builder()
+ *                         .devicePolicy("Group policy")
+ *                         .groupPolicyId("101")
+ *                         .build())
+ *                     .status6(ClientsProvisionParametersPoliciesBySsidStatus6Args.builder()
+ *                         .devicePolicy("Group policy")
+ *                         .groupPolicyId("101")
+ *                         .build())
+ *                     .status7(ClientsProvisionParametersPoliciesBySsidStatus7Args.builder()
+ *                         .devicePolicy("Group policy")
+ *                         .groupPolicyId("101")
+ *                         .build())
+ *                     .status8(ClientsProvisionParametersPoliciesBySsidStatus8Args.builder()
+ *                         .devicePolicy("Group policy")
+ *                         .groupPolicyId("101")
+ *                         .build())
+ *                     .status9(ClientsProvisionParametersPoliciesBySsidStatus9Args.builder()
+ *                         .devicePolicy("Group policy")
+ *                         .groupPolicyId("101")
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksClientsProvisionExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="meraki:networks/clientsProvision:ClientsProvision")
 public class ClientsProvision extends com.pulumi.resources.CustomResource {

@@ -14,6 +14,43 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewMerakiAuthUsers(ctx, "example", &networks.MerakiAuthUsersArgs{
+//				AccountType: pulumi.String("802.1X"),
+//				Authorizations: networks.MerakiAuthUsersAuthorizationArray{
+//					&networks.MerakiAuthUsersAuthorizationArgs{
+//						ExpiresAt:  pulumi.String("2018-03-13T00:00:00.090210Z"),
+//						SsidNumber: pulumi.Int(1),
+//					},
+//				},
+//				Email:               pulumi.String("miles@meraki.com"),
+//				EmailPasswordToUser: pulumi.Bool(false),
+//				IsAdmin:             pulumi.Bool(false),
+//				Name:                pulumi.String("Miles Meraki"),
+//				NetworkId:           pulumi.String("string"),
+//				Password:            pulumi.String("secret"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksMerakiAuthUsersExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

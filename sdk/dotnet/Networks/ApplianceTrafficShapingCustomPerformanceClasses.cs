@@ -14,6 +14,33 @@ namespace Pulumi.Meraki.Networks
     /// already existed previously.
     /// 
     /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.ApplianceTrafficShapingCustomPerformanceClasses("example", new()
+    ///     {
+    ///         NetworkId = "string",
+    ///         Parameters = new Meraki.Networks.Inputs.ApplianceTrafficShapingCustomPerformanceClassesParametersArgs
+    ///         {
+    ///             MaxJitter = 100,
+    ///             MaxLatency = 100,
+    ///             MaxLossPercentage = 5,
+    ///             Name = "myCustomPerformanceClass",
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksApplianceTrafficShapingCustomPerformanceClassesExample"] = example,
+    ///     };
+    /// });
+    /// ```
     /// </summary>
     [MerakiResourceType("meraki:networks/applianceTrafficShapingCustomPerformanceClasses:ApplianceTrafficShapingCustomPerformanceClasses")]
     public partial class ApplianceTrafficShapingCustomPerformanceClasses : global::Pulumi.CustomResource

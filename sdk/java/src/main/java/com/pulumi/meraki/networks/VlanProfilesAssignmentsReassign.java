@@ -21,6 +21,47 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.VlanProfilesAssignmentsReassign;
+ * import com.pulumi.meraki.networks.VlanProfilesAssignmentsReassignArgs;
+ * import com.pulumi.meraki.networks.inputs.VlanProfilesAssignmentsReassignParametersArgs;
+ * import com.pulumi.meraki.networks.inputs.VlanProfilesAssignmentsReassignParametersVlanProfileArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new VlanProfilesAssignmentsReassign("example", VlanProfilesAssignmentsReassignArgs.builder()
+ *             .networkId("string")
+ *             .parameters(VlanProfilesAssignmentsReassignParametersArgs.builder()
+ *                 .serials("Q234-ABCD-5678")
+ *                 .stackIds("1234")
+ *                 .vlanProfile(VlanProfilesAssignmentsReassignParametersVlanProfileArgs.builder()
+ *                     .iname("Profile1")
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksVlanProfilesAssignmentsReassignExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="meraki:networks/vlanProfilesAssignmentsReassign:VlanProfilesAssignmentsReassign")
 public class VlanProfilesAssignmentsReassign extends com.pulumi.resources.CustomResource {

@@ -9,6 +9,91 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.SensorAlertsProfiles("example", {
+ *     conditions: [{
+ *         direction: "above",
+ *         duration: 60,
+ *         metric: "temperature",
+ *         threshold: {
+ *             apparentPower: {
+ *                 draw: 17.2,
+ *             },
+ *             current: {
+ *                 draw: 0.14,
+ *             },
+ *             door: {
+ *                 open: true,
+ *             },
+ *             frequency: {
+ *                 level: 58.8,
+ *             },
+ *             humidity: {
+ *                 quality: "inadequate",
+ *                 relativePercentage: 65,
+ *             },
+ *             indoorAirQuality: {
+ *                 quality: "fair",
+ *                 score: 80,
+ *             },
+ *             noise: {
+ *                 ambient: {
+ *                     level: 120,
+ *                     quality: "poor",
+ *                 },
+ *             },
+ *             pm25: {
+ *                 concentration: 90,
+ *                 quality: "fair",
+ *             },
+ *             powerFactor: {
+ *                 percentage: 81,
+ *             },
+ *             realPower: {
+ *                 draw: 14.1,
+ *             },
+ *             temperature: {
+ *                 celsius: 20.5,
+ *                 fahrenheit: 70,
+ *                 quality: "good",
+ *             },
+ *             tvoc: {
+ *                 concentration: 400,
+ *                 quality: "poor",
+ *             },
+ *             upstreamPower: {
+ *                 outageDetected: true,
+ *             },
+ *             voltage: {
+ *                 level: 119.5,
+ *             },
+ *             water: {
+ *                 present: true,
+ *             },
+ *         },
+ *     }],
+ *     name: "My Sensor Alert Profile",
+ *     networkId: "string",
+ *     recipients: {
+ *         emails: ["miles@meraki.com"],
+ *         httpServerIds: ["aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M="],
+ *         smsNumbers: ["+15555555555"],
+ *     },
+ *     schedule: {
+ *         id: "5",
+ *     },
+ *     serials: [
+ *         "Q234-ABCD-0001",
+ *         "Q234-ABCD-0002",
+ *         "Q234-ABCD-0003",
+ *     ],
+ * });
+ * export const merakiNetworksSensorAlertsProfilesExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

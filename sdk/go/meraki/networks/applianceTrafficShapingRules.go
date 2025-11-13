@@ -14,6 +14,51 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewApplianceTrafficShapingRules(ctx, "example", &networks.ApplianceTrafficShapingRulesArgs{
+//				DefaultRulesEnabled: pulumi.Bool(true),
+//				NetworkId:           pulumi.String("string"),
+//				Rules: networks.ApplianceTrafficShapingRulesRuleArray{
+//					&networks.ApplianceTrafficShapingRulesRuleArgs{
+//						Definitions: networks.ApplianceTrafficShapingRulesRuleDefinitionArray{
+//							&networks.ApplianceTrafficShapingRulesRuleDefinitionArgs{
+//								Type:  pulumi.String("host"),
+//								Value: pulumi.String("google.com"),
+//							},
+//						},
+//						DscpTagValue: pulumi.Int(1),
+//						PerClientBandwidthLimits: &networks.ApplianceTrafficShapingRulesRulePerClientBandwidthLimitsArgs{
+//							BandwidthLimits: &networks.ApplianceTrafficShapingRulesRulePerClientBandwidthLimitsBandwidthLimitsArgs{
+//								LimitDown: pulumi.Int(1000000),
+//								LimitUp:   pulumi.Int(1000000),
+//							},
+//							Settings: pulumi.String("custom"),
+//						},
+//						Priority: pulumi.String("normal"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksApplianceTrafficShapingRulesExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

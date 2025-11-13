@@ -12,6 +12,38 @@ namespace Pulumi.Meraki.Devices
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Devices.CellularGatewayPortForwardingRules("example", new()
+    ///     {
+    ///         Rules = new[]
+    ///         {
+    ///             new Meraki.Devices.Inputs.CellularGatewayPortForwardingRulesRuleArgs
+    ///             {
+    ///                 Access = "any",
+    ///                 LanIp = "172.31.128.5",
+    ///                 LocalPort = "4",
+    ///                 Name = "test",
+    ///                 Protocol = "tcp",
+    ///                 PublicPort = "11-12",
+    ///             },
+    ///         },
+    ///         Serial = "string",
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiDevicesCellularGatewayPortForwardingRulesExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

@@ -16,6 +16,37 @@ import (
 // already existed previously.
 //
 // ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewApplianceTrafficShapingCustomPerformanceClasses(ctx, "example", &networks.ApplianceTrafficShapingCustomPerformanceClassesArgs{
+//				NetworkId: pulumi.String("string"),
+//				Parameters: &networks.ApplianceTrafficShapingCustomPerformanceClassesParametersArgs{
+//					MaxJitter:         pulumi.Int(100),
+//					MaxLatency:        pulumi.Int(100),
+//					MaxLossPercentage: pulumi.Int(5),
+//					Name:              pulumi.String("myCustomPerformanceClass"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksApplianceTrafficShapingCustomPerformanceClassesExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
 type ApplianceTrafficShapingCustomPerformanceClasses struct {
 	pulumi.CustomResourceState
 

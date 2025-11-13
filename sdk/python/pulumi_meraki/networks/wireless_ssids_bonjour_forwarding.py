@@ -207,6 +207,25 @@ class WirelessSsidsBonjourForwarding(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.WirelessSsidsBonjourForwarding("example",
+            enabled=True,
+            exception={
+                "enabled": True,
+            },
+            network_id="string",
+            number="string",
+            rules=[{
+                "description": "A simple bonjour rule",
+                "services": ["All Services"],
+                "vlan_id": "1",
+            }])
+        pulumi.export("merakiNetworksWirelessSsidsBonjourForwardingExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -229,6 +248,25 @@ class WirelessSsidsBonjourForwarding(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.WirelessSsidsBonjourForwarding("example",
+            enabled=True,
+            exception={
+                "enabled": True,
+            },
+            network_id="string",
+            number="string",
+            rules=[{
+                "description": "A simple bonjour rule",
+                "services": ["All Services"],
+                "vlan_id": "1",
+            }])
+        pulumi.export("merakiNetworksWirelessSsidsBonjourForwardingExample", example)
+        ```
 
         ## Import
 

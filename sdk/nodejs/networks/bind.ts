@@ -11,6 +11,20 @@ import * as utilities from "../utilities";
  * already existed previously.
  *
  * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.Bind("example", {
+ *     networkId: "string",
+ *     parameters: {
+ *         autoBind: false,
+ *         configTemplateId: "N_23952905",
+ *     },
+ * });
+ * export const merakiNetworksBindExample = example;
+ * ```
  */
 export class Bind extends pulumi.CustomResource {
     /**

@@ -11,6 +11,34 @@ import * as utilities from "../utilities";
  * already existed previously.
  *
  * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.SmDevicesModifyTags("example", {
+ *     networkId: "string",
+ *     parameters: {
+ *         ids: [
+ *             "1284392014819",
+ *             "2983092129865",
+ *         ],
+ *         scopes: ["withAny, old_tag"],
+ *         serials: [
+ *             "XY0XX0Y0X0",
+ *             "A01B01CD00E",
+ *             "X02YZ1ZYZX",
+ *         ],
+ *         tags: [
+ *             "tag1",
+ *             "tag2",
+ *         ],
+ *         updateAction: "add",
+ *         wifiMacs: ["00:11:22:33:44:55"],
+ *     },
+ * });
+ * export const merakiNetworksSmDevicesModifyTagsExample = example;
+ * ```
  */
 export class SmDevicesModifyTags extends pulumi.CustomResource {
     /**

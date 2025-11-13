@@ -290,6 +290,26 @@ class WirelessSettings(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.WirelessSettings("example",
+            ipv6_bridge_enabled=False,
+            led_lights_on=False,
+            location_analytics_enabled=False,
+            meshing_enabled=True,
+            named_vlans={
+                "pool_dhcp_monitoring": {
+                    "duration": 5,
+                    "enabled": True,
+                },
+            },
+            network_id="string",
+            upgradestrategy="minimizeUpgradeTime")
+        pulumi.export("merakiNetworksWirelessSettingsExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -314,6 +334,26 @@ class WirelessSettings(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.WirelessSettings("example",
+            ipv6_bridge_enabled=False,
+            led_lights_on=False,
+            location_analytics_enabled=False,
+            meshing_enabled=True,
+            named_vlans={
+                "pool_dhcp_monitoring": {
+                    "duration": 5,
+                    "enabled": True,
+                },
+            },
+            network_id="string",
+            upgradestrategy="minimizeUpgradeTime")
+        pulumi.export("merakiNetworksWirelessSettingsExample", example)
+        ```
 
         ## Import
 

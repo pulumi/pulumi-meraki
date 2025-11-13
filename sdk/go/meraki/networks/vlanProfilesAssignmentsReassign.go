@@ -16,6 +16,42 @@ import (
 // already existed previously.
 //
 // ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewVlanProfilesAssignmentsReassign(ctx, "example", &networks.VlanProfilesAssignmentsReassignArgs{
+//				NetworkId: pulumi.String("string"),
+//				Parameters: &networks.VlanProfilesAssignmentsReassignParametersArgs{
+//					Serials: pulumi.StringArray{
+//						pulumi.String("Q234-ABCD-5678"),
+//					},
+//					StackIds: pulumi.StringArray{
+//						pulumi.String("1234"),
+//					},
+//					VlanProfile: &networks.VlanProfilesAssignmentsReassignParametersVlanProfileArgs{
+//						Iname: pulumi.String("Profile1"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksVlanProfilesAssignmentsReassignExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
 type VlanProfilesAssignmentsReassign struct {
 	pulumi.CustomResourceState
 

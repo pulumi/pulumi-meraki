@@ -109,6 +109,29 @@ class ApplianceFirewallOneToOneNatRules(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.ApplianceFirewallOneToOneNatRules("example",
+            network_id="string",
+            rules=[{
+                "allowed_inbound": [{
+                    "allowedIps": [
+                        "10.82.112.0/24",
+                        "10.82.0.0/16",
+                    ],
+                    "destinationPorts": ["80"],
+                    "protocol": "tcp",
+                }],
+                "lan_ip": "192.168.128.22",
+                "name": "Service behind NAT",
+                "public_ip": "146.12.3.33",
+                "uplink": "internet1",
+            }])
+        pulumi.export("merakiNetworksApplianceFirewallOneToOneNatRulesExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -128,6 +151,29 @@ class ApplianceFirewallOneToOneNatRules(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.ApplianceFirewallOneToOneNatRules("example",
+            network_id="string",
+            rules=[{
+                "allowed_inbound": [{
+                    "allowedIps": [
+                        "10.82.112.0/24",
+                        "10.82.0.0/16",
+                    ],
+                    "destinationPorts": ["80"],
+                    "protocol": "tcp",
+                }],
+                "lan_ip": "192.168.128.22",
+                "name": "Service behind NAT",
+                "public_ip": "146.12.3.33",
+                "uplink": "internet1",
+            }])
+        pulumi.export("merakiNetworksApplianceFirewallOneToOneNatRulesExample", example)
+        ```
 
         ## Import
 

@@ -19,6 +19,51 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.WirelessSettings;
+ * import com.pulumi.meraki.networks.WirelessSettingsArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSettingsNamedVlansArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSettingsNamedVlansPoolDhcpMonitoringArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new WirelessSettings("example", WirelessSettingsArgs.builder()
+ *             .ipv6BridgeEnabled(false)
+ *             .ledLightsOn(false)
+ *             .locationAnalyticsEnabled(false)
+ *             .meshingEnabled(true)
+ *             .namedVlans(WirelessSettingsNamedVlansArgs.builder()
+ *                 .poolDhcpMonitoring(WirelessSettingsNamedVlansPoolDhcpMonitoringArgs.builder()
+ *                     .duration(5)
+ *                     .enabled(true)
+ *                     .build())
+ *                 .build())
+ *             .networkId("string")
+ *             .upgradestrategy("minimizeUpgradeTime")
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksWirelessSettingsExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

@@ -14,6 +14,55 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewSwitchRoutingMulticast(ctx, "example", &networks.SwitchRoutingMulticastArgs{
+//				DefaultSettings: &networks.SwitchRoutingMulticastDefaultSettingsArgs{
+//					FloodUnknownMulticastTrafficEnabled: pulumi.Bool(true),
+//					IgmpSnoopingEnabled:                 pulumi.Bool(true),
+//				},
+//				NetworkId: pulumi.String("string"),
+//				Overrides: networks.SwitchRoutingMulticastOverrideArray{
+//					&networks.SwitchRoutingMulticastOverrideArgs{
+//						FloodUnknownMulticastTrafficEnabled: pulumi.Bool(true),
+//						IgmpSnoopingEnabled:                 pulumi.Bool(true),
+//						Stacks: pulumi.StringArray{
+//							pulumi.String("789102"),
+//							pulumi.String("123456"),
+//							pulumi.String("129102"),
+//						},
+//						SwitchProfiles: pulumi.StringArray{
+//							pulumi.String("1234"),
+//							pulumi.String("4567"),
+//						},
+//						Switches: pulumi.StringArray{
+//							pulumi.String("Q234-ABCD-0001"),
+//							pulumi.String("Q234-ABCD-0002"),
+//							pulumi.String("Q234-ABCD-0003"),
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksSwitchRoutingMulticastExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

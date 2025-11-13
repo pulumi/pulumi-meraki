@@ -19,6 +19,59 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.WirelessSsidsTrafficShapingRules;
+ * import com.pulumi.meraki.networks.WirelessSsidsTrafficShapingRulesArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsTrafficShapingRulesRuleArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsTrafficShapingRulesRulePerClientBandwidthLimitsArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsTrafficShapingRulesRulePerClientBandwidthLimitsBandwidthLimitsArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new WirelessSsidsTrafficShapingRules("example", WirelessSsidsTrafficShapingRulesArgs.builder()
+ *             .defaultRulesEnabled(true)
+ *             .networkId("string")
+ *             .number("string")
+ *             .rules(WirelessSsidsTrafficShapingRulesRuleArgs.builder()
+ *                 .definitions(WirelessSsidsTrafficShapingRulesRuleDefinitionArgs.builder()
+ *                     .type("host")
+ *                     .value("google.com")
+ *                     .build())
+ *                 .dscpTagValue(1)
+ *                 .pcpTagValue(1)
+ *                 .perClientBandwidthLimits(WirelessSsidsTrafficShapingRulesRulePerClientBandwidthLimitsArgs.builder()
+ *                     .bandwidthLimits(WirelessSsidsTrafficShapingRulesRulePerClientBandwidthLimitsBandwidthLimitsArgs.builder()
+ *                         .limitDown(1000000)
+ *                         .limitUp(1000000)
+ *                         .build())
+ *                     .settings("custom")
+ *                     .build())
+ *                 .build())
+ *             .trafficShapingEnabled(true)
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksWirelessSsidsTrafficShapingRulesExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

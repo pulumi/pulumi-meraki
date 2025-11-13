@@ -12,6 +12,26 @@ import * as utilities from "../utilities";
  *
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.devices.ApplianceRadioSettings("example", {
+ *     fiveGhzSettings: {
+ *         channel: 149,
+ *         channelWidth: 20,
+ *         targetPower: 15,
+ *     },
+ *     rfProfileId: "1234",
+ *     serial: "string",
+ *     twoFourGhzSettings: {
+ *         channel: 11,
+ *         targetPower: 21,
+ *     },
+ * });
+ * export const merakiDevicesApplianceRadioSettingsExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

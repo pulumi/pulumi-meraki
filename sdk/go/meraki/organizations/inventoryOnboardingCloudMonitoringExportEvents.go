@@ -16,6 +16,37 @@ import (
 // already existed previously.
 //
 // ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/organizations"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := organizations.NewInventoryOnboardingCloudMonitoringExportEvents(ctx, "example", &organizations.InventoryOnboardingCloudMonitoringExportEventsArgs{
+//				OrganizationId: pulumi.String("string"),
+//				Parameters: &organizations.InventoryOnboardingCloudMonitoringExportEventsParametersArgs{
+//					LogEvent:  pulumi.String("download"),
+//					Request:   pulumi.String("r=cb"),
+//					TargetOs:  pulumi.String("mac"),
+//					Timestamp: pulumi.Int(1526087474),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiOrganizationsInventoryOnboardingCloudMonitoringExportEventsExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
 type InventoryOnboardingCloudMonitoringExportEvents struct {
 	pulumi.CustomResourceState
 

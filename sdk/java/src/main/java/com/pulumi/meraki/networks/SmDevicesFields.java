@@ -22,6 +22,49 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.SmDevicesFields;
+ * import com.pulumi.meraki.networks.SmDevicesFieldsArgs;
+ * import com.pulumi.meraki.networks.inputs.SmDevicesFieldsParametersArgs;
+ * import com.pulumi.meraki.networks.inputs.SmDevicesFieldsParametersDeviceFieldsArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SmDevicesFields("example", SmDevicesFieldsArgs.builder()
+ *             .networkId("string")
+ *             .parameters(SmDevicesFieldsParametersArgs.builder()
+ *                 .deviceFields(SmDevicesFieldsParametersDeviceFieldsArgs.builder()
+ *                     .name("Miles's phone")
+ *                     .notes("Here's some info about my device")
+ *                     .build())
+ *                 .id("1284392014819")
+ *                 .serial("XY0XX0Y0X0")
+ *                 .wifiMac("00:11:22:33:44:55")
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksSmDevicesFieldsExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="meraki:networks/smDevicesFields:SmDevicesFields")
 public class SmDevicesFields extends com.pulumi.resources.CustomResource {

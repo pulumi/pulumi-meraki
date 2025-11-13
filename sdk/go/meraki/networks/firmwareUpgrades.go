@@ -14,6 +14,101 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewFirmwareUpgrades(ctx, "example", &networks.FirmwareUpgradesArgs{
+//				NetworkId: pulumi.String("string"),
+//				Products: &networks.FirmwareUpgradesProductsArgs{
+//					Appliance: &networks.FirmwareUpgradesProductsApplianceArgs{
+//						NextUpgrade: &networks.FirmwareUpgradesProductsApplianceNextUpgradeArgs{
+//							Time: pulumi.String("2019-03-17T17:22:52Z"),
+//							ToVersion: &networks.FirmwareUpgradesProductsApplianceNextUpgradeToVersionArgs{
+//								Id: pulumi.String("1001"),
+//							},
+//						},
+//						ParticipateInNextBetaRelease: pulumi.Bool(false),
+//					},
+//					Camera: &networks.FirmwareUpgradesProductsCameraArgs{
+//						NextUpgrade: &networks.FirmwareUpgradesProductsCameraNextUpgradeArgs{
+//							Time: pulumi.String("2019-03-17T17:22:52Z"),
+//							ToVersion: &networks.FirmwareUpgradesProductsCameraNextUpgradeToVersionArgs{
+//								Id: pulumi.String("1003"),
+//							},
+//						},
+//						ParticipateInNextBetaRelease: pulumi.Bool(false),
+//					},
+//					CellularGateway: &networks.FirmwareUpgradesProductsCellularGatewayArgs{
+//						NextUpgrade: &networks.FirmwareUpgradesProductsCellularGatewayNextUpgradeArgs{
+//							Time: pulumi.String("2019-03-17T17:22:52Z"),
+//							ToVersion: &networks.FirmwareUpgradesProductsCellularGatewayNextUpgradeToVersionArgs{
+//								Id: pulumi.String("1004"),
+//							},
+//						},
+//						ParticipateInNextBetaRelease: pulumi.Bool(false),
+//					},
+//					Sensor: &networks.FirmwareUpgradesProductsSensorArgs{
+//						NextUpgrade: &networks.FirmwareUpgradesProductsSensorNextUpgradeArgs{
+//							Time: pulumi.String("2019-03-17T17:22:52Z"),
+//							ToVersion: &networks.FirmwareUpgradesProductsSensorNextUpgradeToVersionArgs{
+//								Id: pulumi.String("1005"),
+//							},
+//						},
+//						ParticipateInNextBetaRelease: pulumi.Bool(false),
+//					},
+//					Switch: &networks.FirmwareUpgradesProductsSwitchArgs{
+//						NextUpgrade: &networks.FirmwareUpgradesProductsSwitchNextUpgradeArgs{
+//							Time: pulumi.String("2019-03-17T17:22:52Z"),
+//							ToVersion: &networks.FirmwareUpgradesProductsSwitchNextUpgradeToVersionArgs{
+//								Id: pulumi.String("1002"),
+//							},
+//						},
+//						ParticipateInNextBetaRelease: pulumi.Bool(false),
+//					},
+//					SwitchCatalyst: &networks.FirmwareUpgradesProductsSwitchCatalystArgs{
+//						NextUpgrade: &networks.FirmwareUpgradesProductsSwitchCatalystNextUpgradeArgs{
+//							Time: pulumi.String("2019-03-17T17:22:52Z"),
+//							ToVersion: &networks.FirmwareUpgradesProductsSwitchCatalystNextUpgradeToVersionArgs{
+//								Id: pulumi.String("1234"),
+//							},
+//						},
+//						ParticipateInNextBetaRelease: pulumi.Bool(false),
+//					},
+//					Wireless: &networks.FirmwareUpgradesProductsWirelessArgs{
+//						NextUpgrade: &networks.FirmwareUpgradesProductsWirelessNextUpgradeArgs{
+//							Time: pulumi.String("2019-03-17T17:22:52Z"),
+//							ToVersion: &networks.FirmwareUpgradesProductsWirelessNextUpgradeToVersionArgs{
+//								Id: pulumi.String("1000"),
+//							},
+//						},
+//						ParticipateInNextBetaRelease: pulumi.Bool(false),
+//					},
+//				},
+//				Timezone: pulumi.String("America/Los_Angeles"),
+//				UpgradeWindow: &networks.FirmwareUpgradesUpgradeWindowArgs{
+//					DayOfWeek: pulumi.String("sun"),
+//					HourOfDay: pulumi.String("4:00"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksFirmwareUpgradesExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

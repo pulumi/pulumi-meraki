@@ -12,6 +12,34 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.WebhooksHttpServers("example", new()
+    ///     {
+    ///         Name = "Example Webhook Server",
+    ///         NetworkId = "string",
+    ///         PayloadTemplate = new Meraki.Networks.Inputs.WebhooksHttpServersPayloadTemplateArgs
+    ///         {
+    ///             Name = "Meraki (included)",
+    ///             PayloadTemplateId = "wpt_00001",
+    ///         },
+    ///         SharedSecret = "shhh",
+    ///         Url = "https://example.com",
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksWebhooksHttpServersExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

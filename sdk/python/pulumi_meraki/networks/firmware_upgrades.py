@@ -175,6 +175,85 @@ class FirmwareUpgrades(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.FirmwareUpgrades("example",
+            network_id="string",
+            products={
+                "appliance": {
+                    "next_upgrade": {
+                        "time": "2019-03-17T17:22:52Z",
+                        "to_version": {
+                            "id": "1001",
+                        },
+                    },
+                    "participate_in_next_beta_release": False,
+                },
+                "camera": {
+                    "next_upgrade": {
+                        "time": "2019-03-17T17:22:52Z",
+                        "to_version": {
+                            "id": "1003",
+                        },
+                    },
+                    "participate_in_next_beta_release": False,
+                },
+                "cellular_gateway": {
+                    "next_upgrade": {
+                        "time": "2019-03-17T17:22:52Z",
+                        "to_version": {
+                            "id": "1004",
+                        },
+                    },
+                    "participate_in_next_beta_release": False,
+                },
+                "sensor": {
+                    "next_upgrade": {
+                        "time": "2019-03-17T17:22:52Z",
+                        "to_version": {
+                            "id": "1005",
+                        },
+                    },
+                    "participate_in_next_beta_release": False,
+                },
+                "switch": {
+                    "next_upgrade": {
+                        "time": "2019-03-17T17:22:52Z",
+                        "to_version": {
+                            "id": "1002",
+                        },
+                    },
+                    "participate_in_next_beta_release": False,
+                },
+                "switch_catalyst": {
+                    "next_upgrade": {
+                        "time": "2019-03-17T17:22:52Z",
+                        "to_version": {
+                            "id": "1234",
+                        },
+                    },
+                    "participate_in_next_beta_release": False,
+                },
+                "wireless": {
+                    "next_upgrade": {
+                        "time": "2019-03-17T17:22:52Z",
+                        "to_version": {
+                            "id": "1000",
+                        },
+                    },
+                    "participate_in_next_beta_release": False,
+                },
+            },
+            timezone="America/Los_Angeles",
+            upgrade_window={
+                "day_of_week": "sun",
+                "hour_of_day": "4:00",
+            })
+        pulumi.export("merakiNetworksFirmwareUpgradesExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -196,6 +275,85 @@ class FirmwareUpgrades(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.FirmwareUpgrades("example",
+            network_id="string",
+            products={
+                "appliance": {
+                    "next_upgrade": {
+                        "time": "2019-03-17T17:22:52Z",
+                        "to_version": {
+                            "id": "1001",
+                        },
+                    },
+                    "participate_in_next_beta_release": False,
+                },
+                "camera": {
+                    "next_upgrade": {
+                        "time": "2019-03-17T17:22:52Z",
+                        "to_version": {
+                            "id": "1003",
+                        },
+                    },
+                    "participate_in_next_beta_release": False,
+                },
+                "cellular_gateway": {
+                    "next_upgrade": {
+                        "time": "2019-03-17T17:22:52Z",
+                        "to_version": {
+                            "id": "1004",
+                        },
+                    },
+                    "participate_in_next_beta_release": False,
+                },
+                "sensor": {
+                    "next_upgrade": {
+                        "time": "2019-03-17T17:22:52Z",
+                        "to_version": {
+                            "id": "1005",
+                        },
+                    },
+                    "participate_in_next_beta_release": False,
+                },
+                "switch": {
+                    "next_upgrade": {
+                        "time": "2019-03-17T17:22:52Z",
+                        "to_version": {
+                            "id": "1002",
+                        },
+                    },
+                    "participate_in_next_beta_release": False,
+                },
+                "switch_catalyst": {
+                    "next_upgrade": {
+                        "time": "2019-03-17T17:22:52Z",
+                        "to_version": {
+                            "id": "1234",
+                        },
+                    },
+                    "participate_in_next_beta_release": False,
+                },
+                "wireless": {
+                    "next_upgrade": {
+                        "time": "2019-03-17T17:22:52Z",
+                        "to_version": {
+                            "id": "1000",
+                        },
+                    },
+                    "participate_in_next_beta_release": False,
+                },
+            },
+            timezone="America/Los_Angeles",
+            upgrade_window={
+                "day_of_week": "sun",
+                "hour_of_day": "4:00",
+            })
+        pulumi.export("merakiNetworksFirmwareUpgradesExample", example)
+        ```
 
         ## Import
 

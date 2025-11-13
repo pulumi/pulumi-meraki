@@ -14,6 +14,33 @@ namespace Pulumi.Meraki.Administered
     /// already existed previously.
     /// 
     /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Administered.LicensingSubscriptionSubscriptionsClaim("example", new()
+    ///     {
+    ///         Validate = false,
+    ///         Parameters = new Meraki.Administered.Inputs.LicensingSubscriptionSubscriptionsClaimParametersArgs
+    ///         {
+    ///             ClaimKey = "S2345-6789A-BCDEF-GHJKM",
+    ///             Description = "Subscription for all main offices",
+    ///             Name = "Corporate subscription",
+    ///             OrganizationId = "12345678910",
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiAdministeredLicensingSubscriptionSubscriptionsClaimExample"] = example,
+    ///     };
+    /// });
+    /// ```
     /// </summary>
     [MerakiResourceType("meraki:administered/licensingSubscriptionSubscriptionsClaim:LicensingSubscriptionSubscriptionsClaim")]
     public partial class LicensingSubscriptionSubscriptionsClaim : global::Pulumi.CustomResource

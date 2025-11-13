@@ -148,6 +148,22 @@ class LicensingSubscriptionSubscriptionsBind(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.administered.LicensingSubscriptionSubscriptionsBind("example",
+            subscription_id="string",
+            validate=False,
+            parameters={
+                "network_ids": [
+                    "L_1234",
+                    "N_5678",
+                ],
+            })
+        pulumi.export("merakiAdministeredLicensingSubscriptionSubscriptionsBindExample", example)
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] subscription_id: subscriptionId path parameter. Subscription ID
@@ -164,6 +180,22 @@ class LicensingSubscriptionSubscriptionsBind(pulumi.CustomResource):
         already existed previously.
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.administered.LicensingSubscriptionSubscriptionsBind("example",
+            subscription_id="string",
+            validate=False,
+            parameters={
+                "network_ids": [
+                    "L_1234",
+                    "N_5678",
+                ],
+            })
+        pulumi.export("merakiAdministeredLicensingSubscriptionSubscriptionsBindExample", example)
+        ```
 
         :param str resource_name: The name of the resource.
         :param LicensingSubscriptionSubscriptionsBindArgs args: The arguments to use to populate this resource's properties.

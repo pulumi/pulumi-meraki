@@ -241,6 +241,27 @@ class SwitchSettings(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.SwitchSettings("example",
+            mac_blocklist={
+                "enabled": False,
+            },
+            network_id="string",
+            power_exceptions=[{
+                "power_type": "string",
+                "serial": "string",
+            }],
+            uplink_client_sampling={
+                "enabled": False,
+            },
+            use_combined_power=False,
+            vlan=1)
+        pulumi.export("merakiNetworksSwitchSettingsExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -264,6 +285,27 @@ class SwitchSettings(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.SwitchSettings("example",
+            mac_blocklist={
+                "enabled": False,
+            },
+            network_id="string",
+            power_exceptions=[{
+                "power_type": "string",
+                "serial": "string",
+            }],
+            uplink_client_sampling={
+                "enabled": False,
+            },
+            use_combined_power=False,
+            vlan=1)
+        pulumi.export("merakiNetworksSwitchSettingsExample", example)
+        ```
 
         ## Import
 

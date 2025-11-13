@@ -146,6 +146,24 @@ class SwitchMtu(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.SwitchMtu("example",
+            default_mtu_size=9578,
+            network_id="string",
+            overrides=[{
+                "mtu_size": 1500,
+                "switches": [
+                    "Q234-ABCD-0001",
+                    "Q234-ABCD-0002",
+                    "Q234-ABCD-0003",
+                ],
+            }])
+        pulumi.export("merakiNetworksSwitchMtuExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -167,6 +185,24 @@ class SwitchMtu(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.SwitchMtu("example",
+            default_mtu_size=9578,
+            network_id="string",
+            overrides=[{
+                "mtu_size": 1500,
+                "switches": [
+                    "Q234-ABCD-0001",
+                    "Q234-ABCD-0002",
+                    "Q234-ABCD-0003",
+                ],
+            }])
+        pulumi.export("merakiNetworksSwitchMtuExample", example)
+        ```
 
         ## Import
 

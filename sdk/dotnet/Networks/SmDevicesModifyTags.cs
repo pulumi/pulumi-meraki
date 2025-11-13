@@ -14,6 +14,54 @@ namespace Pulumi.Meraki.Networks
     /// already existed previously.
     /// 
     /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.SmDevicesModifyTags("example", new()
+    ///     {
+    ///         NetworkId = "string",
+    ///         Parameters = new Meraki.Networks.Inputs.SmDevicesModifyTagsParametersArgs
+    ///         {
+    ///             Ids = new[]
+    ///             {
+    ///                 "1284392014819",
+    ///                 "2983092129865",
+    ///             },
+    ///             Scopes = new[]
+    ///             {
+    ///                 "withAny, old_tag",
+    ///             },
+    ///             Serials = new[]
+    ///             {
+    ///                 "XY0XX0Y0X0",
+    ///                 "A01B01CD00E",
+    ///                 "X02YZ1ZYZX",
+    ///             },
+    ///             Tags = new[]
+    ///             {
+    ///                 "tag1",
+    ///                 "tag2",
+    ///             },
+    ///             UpdateAction = "add",
+    ///             WifiMacs = new[]
+    ///             {
+    ///                 "00:11:22:33:44:55",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksSmDevicesModifyTagsExample"] = example,
+    ///     };
+    /// });
+    /// ```
     /// </summary>
     [MerakiResourceType("meraki:networks/smDevicesModifyTags:SmDevicesModifyTags")]
     public partial class SmDevicesModifyTags : global::Pulumi.CustomResource

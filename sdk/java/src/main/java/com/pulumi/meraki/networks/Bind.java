@@ -21,6 +21,43 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.Bind;
+ * import com.pulumi.meraki.networks.BindArgs;
+ * import com.pulumi.meraki.networks.inputs.BindParametersArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new Bind("example", BindArgs.builder()
+ *             .networkId("string")
+ *             .parameters(BindParametersArgs.builder()
+ *                 .autoBind(false)
+ *                 .configTemplateId("N_23952905")
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksBindExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="meraki:networks/bind:Bind")
 public class Bind extends com.pulumi.resources.CustomResource {

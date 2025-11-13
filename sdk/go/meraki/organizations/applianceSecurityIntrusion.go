@@ -14,6 +14,37 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/organizations"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := organizations.NewApplianceSecurityIntrusion(ctx, "example", &organizations.ApplianceSecurityIntrusionArgs{
+//				AllowedRules: organizations.ApplianceSecurityIntrusionAllowedRuleArray{
+//					&organizations.ApplianceSecurityIntrusionAllowedRuleArgs{
+//						Message: pulumi.String("SQL sa login failed"),
+//						RuleId:  pulumi.String("meraki:intrusion/snort/GID/01/SID/688"),
+//					},
+//				},
+//				OrganizationId: pulumi.String("string"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiOrganizationsApplianceSecurityIntrusionExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

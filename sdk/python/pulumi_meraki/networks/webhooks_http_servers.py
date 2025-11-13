@@ -241,6 +241,22 @@ class WebhooksHttpServers(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.WebhooksHttpServers("example",
+            name="Example Webhook Server",
+            network_id="string",
+            payload_template={
+                "name": "Meraki (included)",
+                "payload_template_id": "wpt_00001",
+            },
+            shared_secret="shhh",
+            url="https://example.com")
+        pulumi.export("merakiNetworksWebhooksHttpServersExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -264,6 +280,22 @@ class WebhooksHttpServers(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.WebhooksHttpServers("example",
+            name="Example Webhook Server",
+            network_id="string",
+            payload_template={
+                "name": "Meraki (included)",
+                "payload_template_id": "wpt_00001",
+            },
+            shared_secret="shhh",
+            url="https://example.com")
+        pulumi.export("merakiNetworksWebhooksHttpServersExample", example)
+        ```
 
         ## Import
 

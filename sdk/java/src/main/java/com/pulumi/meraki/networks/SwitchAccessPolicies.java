@@ -27,6 +27,78 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.SwitchAccessPolicies;
+ * import com.pulumi.meraki.networks.SwitchAccessPoliciesArgs;
+ * import com.pulumi.meraki.networks.inputs.SwitchAccessPoliciesDot1xArgs;
+ * import com.pulumi.meraki.networks.inputs.SwitchAccessPoliciesRadiusArgs;
+ * import com.pulumi.meraki.networks.inputs.SwitchAccessPoliciesRadiusCriticalAuthArgs;
+ * import com.pulumi.meraki.networks.inputs.SwitchAccessPoliciesRadiusAccountingServerArgs;
+ * import com.pulumi.meraki.networks.inputs.SwitchAccessPoliciesRadiusServerArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new SwitchAccessPolicies("example", SwitchAccessPoliciesArgs.builder()
+ *             .accessPolicyType("Hybrid authentication")
+ *             .dot1x(SwitchAccessPoliciesDot1xArgs.builder()
+ *                 .controlDirection("inbound")
+ *                 .build())
+ *             .guestPortBouncing(false)
+ *             .guestVlanId(100)
+ *             .hostMode("Single-Host")
+ *             .increaseAccessSpeed(false)
+ *             .name("Access policy #1")
+ *             .networkId("string")
+ *             .radius(SwitchAccessPoliciesRadiusArgs.builder()
+ *                 .criticalAuth(SwitchAccessPoliciesRadiusCriticalAuthArgs.builder()
+ *                     .dataVlanId(100)
+ *                     .suspendPortBounce(true)
+ *                     .voiceVlanId(100)
+ *                     .build())
+ *                 .failedAuthVlanId(100)
+ *                 .reAuthenticationInterval(120)
+ *                 .build())
+ *             .radiusAccountingEnabled(true)
+ *             .radiusAccountingServers(SwitchAccessPoliciesRadiusAccountingServerArgs.builder()
+ *                 .host("1.2.3.4")
+ *                 .port(22)
+ *                 .secret("secret")
+ *                 .build())
+ *             .radiusCoaSupportEnabled(false)
+ *             .radiusGroupAttribute("11")
+ *             .radiusServers(SwitchAccessPoliciesRadiusServerArgs.builder()
+ *                 .host("1.2.3.4")
+ *                 .port(22)
+ *                 .secret("secret")
+ *                 .build())
+ *             .radiusTestingEnabled(false)
+ *             .urlRedirectWalledGardenEnabled(true)
+ *             .urlRedirectWalledGardenRanges("192.168.1.0/24")
+ *             .voiceVlanClients(true)
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksSwitchAccessPoliciesExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

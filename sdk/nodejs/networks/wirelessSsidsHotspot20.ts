@@ -9,6 +9,48 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.WirelessSsidsHotspot20("example", {
+ *     domains: [
+ *         "meraki.local",
+ *         "domain2.com",
+ *     ],
+ *     enabled: true,
+ *     mccMncs: [{
+ *         mcc: "123",
+ *         mnc: "456",
+ *     }],
+ *     naiRealms: [{
+ *         format: "1",
+ *         methods: [{
+ *             authenticationTypes: {
+ *                 eapinnerAuthentication: ["EAP-TTLS with MSCHAPv2"],
+ *                 nonEapinnerAuthentication: ["MSCHAP"],
+ *             },
+ *             id: "1",
+ *         }],
+ *     }],
+ *     networkAccessType: "Private network",
+ *     networkId: "string",
+ *     number: "string",
+ *     operator: {
+ *         name: "Meraki Product Management",
+ *     },
+ *     roamConsortOis: [
+ *         "ABC123",
+ *         "456EFG",
+ *     ],
+ *     venue: {
+ *         name: "SF Branch",
+ *         type: "Unspecified Assembly",
+ *     },
+ * });
+ * export const merakiNetworksWirelessSsidsHotspot20Example = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

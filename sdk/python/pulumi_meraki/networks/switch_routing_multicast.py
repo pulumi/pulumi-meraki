@@ -150,6 +150,37 @@ class SwitchRoutingMulticast(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.SwitchRoutingMulticast("example",
+            default_settings={
+                "flood_unknown_multicast_traffic_enabled": True,
+                "igmp_snooping_enabled": True,
+            },
+            network_id="string",
+            overrides=[{
+                "flood_unknown_multicast_traffic_enabled": True,
+                "igmp_snooping_enabled": True,
+                "stacks": [
+                    "789102",
+                    "123456",
+                    "129102",
+                ],
+                "switch_profiles": [
+                    "1234",
+                    "4567",
+                ],
+                "switches": [
+                    "Q234-ABCD-0001",
+                    "Q234-ABCD-0002",
+                    "Q234-ABCD-0003",
+                ],
+            }])
+        pulumi.export("merakiNetworksSwitchRoutingMulticastExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -172,6 +203,37 @@ class SwitchRoutingMulticast(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.SwitchRoutingMulticast("example",
+            default_settings={
+                "flood_unknown_multicast_traffic_enabled": True,
+                "igmp_snooping_enabled": True,
+            },
+            network_id="string",
+            overrides=[{
+                "flood_unknown_multicast_traffic_enabled": True,
+                "igmp_snooping_enabled": True,
+                "stacks": [
+                    "789102",
+                    "123456",
+                    "129102",
+                ],
+                "switch_profiles": [
+                    "1234",
+                    "4567",
+                ],
+                "switches": [
+                    "Q234-ABCD-0001",
+                    "Q234-ABCD-0002",
+                    "Q234-ABCD-0003",
+                ],
+            }])
+        pulumi.export("merakiNetworksSwitchRoutingMulticastExample", example)
+        ```
 
         ## Import
 

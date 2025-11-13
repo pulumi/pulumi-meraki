@@ -21,6 +21,101 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.ApplianceTrafficShapingUplinkSelection;
+ * import com.pulumi.meraki.networks.ApplianceTrafficShapingUplinkSelectionArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackImmediateArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferencePerformanceClassArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ApplianceTrafficShapingUplinkSelection("example", ApplianceTrafficShapingUplinkSelectionArgs.builder()
+ *             .activeActiveAutoVpnEnabled(true)
+ *             .defaultUplink("wan1")
+ *             .failoverAndFailback(ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgs.builder()
+ *                 .immediate(ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackImmediateArgs.builder()
+ *                     .enabled(true)
+ *                     .build())
+ *                 .build())
+ *             .loadBalancingEnabled(true)
+ *             .networkId("string")
+ *             .vpnTrafficUplinkPreferences(ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgs.builder()
+ *                 .failOverCriterion("poorPerformance")
+ *                 .performanceClass(ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferencePerformanceClassArgs.builder()
+ *                     .builtinPerformanceClassName("VoIP")
+ *                     .customPerformanceClassId("123456")
+ *                     .type("custom")
+ *                     .build())
+ *                 .preferredUplink("bestForVoIP")
+ *                 .trafficFilters(ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterArgs.builder()
+ *                     .type("applicationCategory")
+ *                     .value(ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterValueArgs.builder()
+ *                         .destination(ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterValueDestinationArgs.builder()
+ *                             .cidr("any")
+ *                             .fqdn("www.google.com")
+ *                             .host(254)
+ *                             .network("L_12345678")
+ *                             .port("1-1024")
+ *                             .vlan(10)
+ *                             .build())
+ *                         .id("meraki:layer7/category/1")
+ *                         .protocol("tcp")
+ *                         .source(ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterValueSourceArgs.builder()
+ *                             .cidr("192.168.1.0/24")
+ *                             .host(200)
+ *                             .network("L_23456789")
+ *                             .port("any")
+ *                             .vlan(20)
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .wanTrafficUplinkPreferences(ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgs.builder()
+ *                 .preferredUplink("wan1")
+ *                 .trafficFilters(ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterArgs.builder()
+ *                     .type("custom")
+ *                     .value(ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterValueArgs.builder()
+ *                         .destination(ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterValueDestinationArgs.builder()
+ *                             .cidr("any")
+ *                             .port("any")
+ *                             .build())
+ *                         .protocol("tcp")
+ *                         .source(ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterValueSourceArgs.builder()
+ *                             .cidr("192.168.1.0/24")
+ *                             .host(254)
+ *                             .port("1-1024")
+ *                             .vlan(10)
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksApplianceTrafficShapingUplinkSelectionExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

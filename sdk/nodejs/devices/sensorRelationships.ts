@@ -9,6 +9,21 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.devices.SensorRelationships("example", {
+ *     livestream: {
+ *         relatedDevices: [{
+ *             serial: "string",
+ *         }],
+ *     },
+ *     serial: "string",
+ * });
+ * export const merakiDevicesSensorRelationshipsExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

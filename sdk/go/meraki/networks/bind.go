@@ -16,6 +16,35 @@ import (
 // already existed previously.
 //
 // ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewBind(ctx, "example", &networks.BindArgs{
+//				NetworkId: pulumi.String("string"),
+//				Parameters: &networks.BindParametersArgs{
+//					AutoBind:         pulumi.Bool(false),
+//					ConfigTemplateId: pulumi.String("N_23952905"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksBindExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
 type Bind struct {
 	pulumi.CustomResourceState
 

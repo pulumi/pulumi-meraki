@@ -14,6 +14,51 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/organizations"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := organizations.NewCameraRoles(ctx, "example", &organizations.CameraRolesArgs{
+//				AppliedOnDevices: organizations.CameraRolesAppliedOnDeviceArray{
+//					&organizations.CameraRolesAppliedOnDeviceArgs{
+//						Id:                pulumi.String(""),
+//						PermissionScopeId: pulumi.String("1"),
+//						Tag:               pulumi.String("reception-desk"),
+//					},
+//				},
+//				AppliedOnNetworks: organizations.CameraRolesAppliedOnNetworkArray{
+//					&organizations.CameraRolesAppliedOnNetworkArgs{
+//						Id:                pulumi.String(""),
+//						PermissionScopeId: pulumi.String("2"),
+//						Tag:               pulumi.String("building-a"),
+//					},
+//				},
+//				AppliedOrgWides: organizations.CameraRolesAppliedOrgWideArray{
+//					&organizations.CameraRolesAppliedOrgWideArgs{
+//						PermissionScopeId: pulumi.String("2"),
+//					},
+//				},
+//				Name:           pulumi.String("Security_Guard"),
+//				OrganizationId: pulumi.String("string"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiOrganizationsCameraRolesExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

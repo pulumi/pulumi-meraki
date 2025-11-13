@@ -9,6 +9,43 @@ import * as utilities from "../utilities";
 /**
  * ## Example Usage
  *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as meraki from "@pulumi/meraki";
+ *
+ * const example = new meraki.networks.ApplianceRfProfiles("example", {
+ *     fiveGhzSettings: {
+ *         axEnabled: true,
+ *         minBitrate: 48,
+ *     },
+ *     name: "MX RF Profile",
+ *     networkId: "string",
+ *     perSsidSettings: {
+ *         status1: {
+ *             bandOperationMode: "dual",
+ *             bandSteeringEnabled: true,
+ *         },
+ *         status2: {
+ *             bandOperationMode: "dual",
+ *             bandSteeringEnabled: true,
+ *         },
+ *         status3: {
+ *             bandOperationMode: "dual",
+ *             bandSteeringEnabled: true,
+ *         },
+ *         status4: {
+ *             bandOperationMode: "dual",
+ *             bandSteeringEnabled: true,
+ *         },
+ *     },
+ *     twoFourGhzSettings: {
+ *         axEnabled: true,
+ *         minBitrate: 12,
+ *     },
+ * });
+ * export const merakiNetworksApplianceRfProfilesExample = example;
+ * ```
+ *
  * ## Import
  *
  * ```sh

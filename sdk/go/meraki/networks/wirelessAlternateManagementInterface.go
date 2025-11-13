@@ -14,6 +14,49 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/networks"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := networks.NewWirelessAlternateManagementInterface(ctx, "example", &networks.WirelessAlternateManagementInterfaceArgs{
+//				AccessPoints: networks.WirelessAlternateManagementInterfaceAccessPointArray{
+//					&networks.WirelessAlternateManagementInterfaceAccessPointArgs{
+//						AlternateManagementIp: pulumi.String("1.2.3.4"),
+//						Dns1:                  pulumi.String("8.8.8.8"),
+//						Dns2:                  pulumi.String("8.8.4.4"),
+//						Gateway:               pulumi.String("1.2.3.5"),
+//						Serial:                pulumi.String("Q234-ABCD-5678"),
+//						SubnetMask:            pulumi.String("255.255.255.0"),
+//					},
+//				},
+//				Enabled:   pulumi.Bool(true),
+//				NetworkId: pulumi.String("string"),
+//				Protocols: pulumi.StringArray{
+//					pulumi.String("radius"),
+//					pulumi.String("snmp"),
+//					pulumi.String("syslog"),
+//					pulumi.String("ldap"),
+//				},
+//				VlanId: pulumi.Int(100),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiNetworksWirelessAlternateManagementInterfaceExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

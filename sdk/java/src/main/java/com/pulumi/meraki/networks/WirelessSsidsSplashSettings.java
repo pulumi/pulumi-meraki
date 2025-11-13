@@ -25,6 +25,103 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.WirelessSsidsSplashSettings;
+ * import com.pulumi.meraki.networks.WirelessSsidsSplashSettingsArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsSplashSettingsBillingArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsSplashSettingsBillingFreeAccessArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsSplashSettingsGuestSponsorshipArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsSplashSettingsSentryEnrollmentArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsSplashSettingsSplashImageArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsSplashSettingsSplashImageImageArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsSplashSettingsSplashLogoArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsSplashSettingsSplashLogoImageArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsSplashSettingsSplashPrepaidFrontArgs;
+ * import com.pulumi.meraki.networks.inputs.WirelessSsidsSplashSettingsSplashPrepaidFrontImageArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App }{{@code
+ *     public static void main(String[] args) }{{@code
+ *         Pulumi.run(App::stack);
+ *     }}{@code
+ * 
+ *     public static void stack(Context ctx) }{{@code
+ *         var example = new WirelessSsidsSplashSettings("example", WirelessSsidsSplashSettingsArgs.builder()
+ *             .allowSimultaneousLogins(false)
+ *             .billing(WirelessSsidsSplashSettingsBillingArgs.builder()
+ *                 .freeAccess(WirelessSsidsSplashSettingsBillingFreeAccessArgs.builder()
+ *                     .durationInMinutes(120)
+ *                     .enabled(true)
+ *                     .build())
+ *                 .prepaidAccessFastLoginEnabled(true)
+ *                 .replyToEmailAddress("user}{@literal @}{@code email.com")
+ *                 .build())
+ *             .blockAllTrafficBeforeSignOn(false)
+ *             .controllerDisconnectionBehavior("default")
+ *             .guestSponsorship(WirelessSsidsSplashSettingsGuestSponsorshipArgs.builder()
+ *                 .durationInMinutes(30)
+ *                 .guestCanRequestTimeframe(false)
+ *                 .build())
+ *             .networkId("string")
+ *             .number("string")
+ *             .redirectUrl("https://example.com")
+ *             .sentryEnrollment(WirelessSsidsSplashSettingsSentryEnrollmentArgs.builder()
+ *                 .enforcedSystems("iOS")
+ *                 .strength("focused")
+ *                 .systemsManagerNetwork(WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkArgs.builder()
+ *                     .id("N_1234")
+ *                     .build())
+ *                 .build())
+ *             .splashImage(WirelessSsidsSplashSettingsSplashImageArgs.builder()
+ *                 .extension("jpg")
+ *                 .image(WirelessSsidsSplashSettingsSplashImageImageArgs.builder()
+ *                     .contents("Q2lzY28gTWVyYWtp")
+ *                     .format("jpg")
+ *                     .build())
+ *                 .md5("542cccac8d7dedee0f185311d154d194")
+ *                 .build())
+ *             .splashLogo(WirelessSsidsSplashSettingsSplashLogoArgs.builder()
+ *                 .extension("jpg")
+ *                 .image(WirelessSsidsSplashSettingsSplashLogoImageArgs.builder()
+ *                     .contents("Q2lzY28gTWVyYWtp")
+ *                     .format("jpg")
+ *                     .build())
+ *                 .md5("abcd1234")
+ *                 .build())
+ *             .splashPrepaidFront(WirelessSsidsSplashSettingsSplashPrepaidFrontArgs.builder()
+ *                 .extension("jpg")
+ *                 .image(WirelessSsidsSplashSettingsSplashPrepaidFrontImageArgs.builder()
+ *                     .contents("Q2lzY28gTWVyYWtp")
+ *                     .format("jpg")
+ *                     .build())
+ *                 .md5("542cccac8d7dedee0f185311d154d194")
+ *                 .build())
+ *             .splashTimeout(1440)
+ *             .splashUrl("https://www.custom_splash_url.com")
+ *             .themeId("c3ddcb4f16785ee747ab5ffc10867d6c8ea704be")
+ *             .useRedirectUrl(true)
+ *             .useSplashUrl(true)
+ *             .welcomeMessage("Welcome!")
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksWirelessSsidsSplashSettingsExample", example);
+ *     }}{@code
+ * }}{@code
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

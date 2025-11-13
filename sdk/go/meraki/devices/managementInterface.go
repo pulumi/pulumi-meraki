@@ -14,6 +14,55 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/devices"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := devices.NewManagementInterface(ctx, "example", &devices.ManagementInterfaceArgs{
+//				Serial: pulumi.String("string"),
+//				Wan1: &devices.ManagementInterfaceWan1Args{
+//					StaticDns: pulumi.StringArray{
+//						pulumi.String("1.2.3.2"),
+//						pulumi.String("1.2.3.3"),
+//					},
+//					StaticGatewayIp:  pulumi.String("1.2.3.1"),
+//					StaticIp:         pulumi.String("1.2.3.4"),
+//					StaticSubnetMask: pulumi.String("255.255.255.0"),
+//					UsingStaticIp:    pulumi.Bool(true),
+//					Vlan:             pulumi.Int(7),
+//					WanEnabled:       pulumi.String("not configured"),
+//				},
+//				Wan2: &devices.ManagementInterfaceWan2Args{
+//					StaticDns: pulumi.StringArray{
+//						pulumi.String("1.2.3.2"),
+//						pulumi.String("1.2.3.3"),
+//					},
+//					StaticGatewayIp:  pulumi.String("1.2.3.1"),
+//					StaticIp:         pulumi.String("1.2.3.4"),
+//					StaticSubnetMask: pulumi.String("255.255.255.0"),
+//					UsingStaticIp:    pulumi.Bool(false),
+//					Vlan:             pulumi.Int(2),
+//					WanEnabled:       pulumi.String("enabled"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiDevicesManagementInterfaceExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

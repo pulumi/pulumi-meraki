@@ -115,6 +115,19 @@ class Bind(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.Bind("example",
+            network_id="string",
+            parameters={
+                "auto_bind": False,
+                "config_template_id": "N_23952905",
+            })
+        pulumi.export("merakiNetworksBindExample", example)
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -130,6 +143,19 @@ class Bind(pulumi.CustomResource):
         already existed previously.
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.Bind("example",
+            network_id="string",
+            parameters={
+                "auto_bind": False,
+                "config_template_id": "N_23952905",
+            })
+        pulumi.export("merakiNetworksBindExample", example)
+        ```
 
         :param str resource_name: The name of the resource.
         :param BindArgs args: The arguments to use to populate this resource's properties.

@@ -115,6 +115,23 @@ class NetworksCombine(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.organizations.NetworksCombine("example",
+            organization_id="string",
+            parameters={
+                "enrollment_string": "my-enrollment-string",
+                "name": "Long Island Office",
+                "network_ids": [
+                    "N_1234",
+                    "N_5678",
+                ],
+            })
+        pulumi.export("merakiOrganizationsNetworksCombineExample", example)
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
@@ -130,6 +147,23 @@ class NetworksCombine(pulumi.CustomResource):
         already existed previously.
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.organizations.NetworksCombine("example",
+            organization_id="string",
+            parameters={
+                "enrollment_string": "my-enrollment-string",
+                "name": "Long Island Office",
+                "network_ids": [
+                    "N_1234",
+                    "N_5678",
+                ],
+            })
+        pulumi.export("merakiOrganizationsNetworksCombineExample", example)
+        ```
 
         :param str resource_name: The name of the resource.
         :param NetworksCombineArgs args: The arguments to use to populate this resource's properties.

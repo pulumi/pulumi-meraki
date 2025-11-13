@@ -21,6 +21,43 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.organizations.LicensesRenewSeats;
+ * import com.pulumi.meraki.organizations.LicensesRenewSeatsArgs;
+ * import com.pulumi.meraki.organizations.inputs.LicensesRenewSeatsParametersArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new LicensesRenewSeats("example", LicensesRenewSeatsArgs.builder()
+ *             .organizationId("string")
+ *             .parameters(LicensesRenewSeatsParametersArgs.builder()
+ *                 .licenseIdToRenew("123")
+ *                 .unusedLicenseId("1234")
+ *                 .build())
+ *             .build());
+ * 
+ *         ctx.export("merakiOrganizationsLicensesRenewSeatsExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="meraki:organizations/licensesRenewSeats:LicensesRenewSeats")
 public class LicensesRenewSeats extends com.pulumi.resources.CustomResource {

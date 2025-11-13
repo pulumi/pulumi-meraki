@@ -12,6 +12,31 @@ namespace Pulumi.Meraki.Networks
     /// <summary>
     /// ## Example Usage
     /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Meraki = Pulumi.Meraki;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var example = new Meraki.Networks.ApplianceTrafficShaping("example", new()
+    ///     {
+    ///         GlobalBandwidthLimits = new Meraki.Networks.Inputs.ApplianceTrafficShapingGlobalBandwidthLimitsArgs
+    ///         {
+    ///             LimitDown = 5120,
+    ///             LimitUp = 2048,
+    ///         },
+    ///         NetworkId = "string",
+    ///     });
+    /// 
+    ///     return new Dictionary&lt;string, object?&gt;
+    ///     {
+    ///         ["merakiNetworksApplianceTrafficShapingExample"] = example,
+    ///     };
+    /// });
+    /// ```
+    /// 
     /// ## Import
     /// 
     /// ```sh

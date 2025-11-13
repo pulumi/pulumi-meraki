@@ -20,7 +20,7 @@ import * as utilities from "../utilities";
  *     organizationId: "string",
  *     parameters: {
  *         devices: [{
- *             sudi: `          "-----BEGIN CERTIFICATE-----
+ *             sudi: `          \\"-----BEGIN CERTIFICATE-----
  *         MIIDyTCCArGgAwIBAgIKBBNXOVCGU1YztjANBgkqhkiG9w0BAQsFADAnMQ4wDAYD
  *         VQQKEwVDaXNjbzEVMBMGA1UEAxMMQUNUMiBTVURJIENBMB4XDTIxMDUzMTEzNTUx
  *         NVoXDTI5MDUxNDIwMjU0MVowbTEpMCcGA1UEBRMgUElEOkM5MjAwTC0yNFAtNEcg
@@ -43,7 +43,7 @@ import * as utilities from "../utilities";
  *         0m3M6yKpe5+VZzHZwmWdUf3Ot+zKjhveK5/YNsMIASdvtvymxUizq2Hr1hvR/kPc
  *         p1vuyWxipU8JfzOh/A==
  *         -----END CERTIFICATE-----
- *         "
+ *         \\"
  * `,
  *             tunnel: {
  *                 certificateName: "DeviceSUDI",

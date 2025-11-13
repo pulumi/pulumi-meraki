@@ -14,6 +14,64 @@ import (
 
 // ## Example Usage
 //
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/organizations"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := organizations.NewBrandingPolicies(ctx, "example", &organizations.BrandingPoliciesArgs{
+//				AdminSettings: &organizations.BrandingPoliciesAdminSettingsArgs{
+//					AppliesTo: pulumi.String("All admins of networks..."),
+//					Values: pulumi.StringArray{
+//						pulumi.String("N_1234"),
+//						pulumi.String("L_5678"),
+//					},
+//				},
+//				CustomLogo: &organizations.BrandingPoliciesCustomLogoArgs{
+//					Enabled: pulumi.Bool(true),
+//					Image: &organizations.BrandingPoliciesCustomLogoImageArgs{
+//						Contents: pulumi.String("Hyperg26C8F4h8CvcoUqpA=="),
+//						Format:   pulumi.String("jpg"),
+//					},
+//				},
+//				Enabled: pulumi.Bool(true),
+//				HelpSettings: &organizations.BrandingPoliciesHelpSettingsArgs{
+//					ApiDocsSubtab:                      pulumi.String("default or inherit"),
+//					CasesSubtab:                        pulumi.String("hide"),
+//					CiscoMerakiProductDocumentation:    pulumi.String("show"),
+//					CommunitySubtab:                    pulumi.String("show"),
+//					DataProtectionRequestsSubtab:       pulumi.String("default or inherit"),
+//					FirewallInfoSubtab:                 pulumi.String("hide"),
+//					GetHelpSubtab:                      pulumi.String("default or inherit"),
+//					GetHelpSubtabKnowledgeBaseSearch:   pulumi.String("<h1>Some custom HTML content</h1>"),
+//					HardwareReplacementsSubtab:         pulumi.String("hide"),
+//					HelpTab:                            pulumi.String("show"),
+//					HelpWidget:                         pulumi.String("hide"),
+//					NewFeaturesSubtab:                  pulumi.String("show"),
+//					SmForums:                           pulumi.String("hide"),
+//					SupportContactInfo:                 pulumi.String("show"),
+//					UniversalSearchKnowledgeBaseSearch: pulumi.String("hide"),
+//				},
+//				Name:           pulumi.String("My Branding Policy"),
+//				OrganizationId: pulumi.String("string"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiOrganizationsBrandingPoliciesExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
+//
 // ## Import
 //
 // ```sh

@@ -115,6 +115,18 @@ class Unbind(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.Unbind("example",
+            network_id="string",
+            parameters={
+                "retain_configs": True,
+            })
+        pulumi.export("merakiNetworksUnbindExample", example)
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -130,6 +142,18 @@ class Unbind(pulumi.CustomResource):
         already existed previously.
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.Unbind("example",
+            network_id="string",
+            parameters={
+                "retain_configs": True,
+            })
+        pulumi.export("merakiNetworksUnbindExample", example)
+        ```
 
         :param str resource_name: The name of the resource.
         :param UnbindArgs args: The arguments to use to populate this resource's properties.

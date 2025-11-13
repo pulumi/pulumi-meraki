@@ -21,6 +21,74 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.organizations.BrandingPolicies;
+ * import com.pulumi.meraki.organizations.BrandingPoliciesArgs;
+ * import com.pulumi.meraki.organizations.inputs.BrandingPoliciesAdminSettingsArgs;
+ * import com.pulumi.meraki.organizations.inputs.BrandingPoliciesCustomLogoArgs;
+ * import com.pulumi.meraki.organizations.inputs.BrandingPoliciesCustomLogoImageArgs;
+ * import com.pulumi.meraki.organizations.inputs.BrandingPoliciesHelpSettingsArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new BrandingPolicies("example", BrandingPoliciesArgs.builder()
+ *             .adminSettings(BrandingPoliciesAdminSettingsArgs.builder()
+ *                 .appliesTo("All admins of networks...")
+ *                 .values(                
+ *                     "N_1234",
+ *                     "L_5678")
+ *                 .build())
+ *             .customLogo(BrandingPoliciesCustomLogoArgs.builder()
+ *                 .enabled(true)
+ *                 .image(BrandingPoliciesCustomLogoImageArgs.builder()
+ *                     .contents("Hyperg26C8F4h8CvcoUqpA==")
+ *                     .format("jpg")
+ *                     .build())
+ *                 .build())
+ *             .enabled(true)
+ *             .helpSettings(BrandingPoliciesHelpSettingsArgs.builder()
+ *                 .apiDocsSubtab("default or inherit")
+ *                 .casesSubtab("hide")
+ *                 .ciscoMerakiProductDocumentation("show")
+ *                 .communitySubtab("show")
+ *                 .dataProtectionRequestsSubtab("default or inherit")
+ *                 .firewallInfoSubtab("hide")
+ *                 .getHelpSubtab("default or inherit")
+ *                 .getHelpSubtabKnowledgeBaseSearch("<h1>Some custom HTML content</h1>")
+ *                 .hardwareReplacementsSubtab("hide")
+ *                 .helpTab("show")
+ *                 .helpWidget("hide")
+ *                 .newFeaturesSubtab("show")
+ *                 .smForums("hide")
+ *                 .supportContactInfo("show")
+ *                 .universalSearchKnowledgeBaseSearch("hide")
+ *                 .build())
+ *             .name("My Branding Policy")
+ *             .organizationId("string")
+ *             .build());
+ * 
+ *         ctx.export("merakiOrganizationsBrandingPoliciesExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

@@ -223,6 +223,28 @@ class WirelessEthernetPortsProfiles(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.WirelessEthernetPortsProfiles("example",
+            name="string",
+            network_id="string",
+            ports=[{
+                "enabled": False,
+                "name": "string",
+                "psk_group_id": "string",
+                "ssid": 1,
+            }],
+            profile_id="string",
+            usb_ports=[{
+                "enabled": False,
+                "name": "string",
+                "ssid": 1,
+            }])
+        pulumi.export("merakiNetworksWirelessEthernetPortsProfilesExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -245,6 +267,28 @@ class WirelessEthernetPortsProfiles(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.networks.WirelessEthernetPortsProfiles("example",
+            name="string",
+            network_id="string",
+            ports=[{
+                "enabled": False,
+                "name": "string",
+                "psk_group_id": "string",
+                "ssid": 1,
+            }],
+            profile_id="string",
+            usb_ports=[{
+                "enabled": False,
+                "name": "string",
+                "ssid": 1,
+            }])
+        pulumi.export("merakiNetworksWirelessEthernetPortsProfilesExample", example)
+        ```
 
         ## Import
 

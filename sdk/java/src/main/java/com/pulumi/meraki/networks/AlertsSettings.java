@@ -22,6 +22,61 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.AlertsSettings;
+ * import com.pulumi.meraki.networks.AlertsSettingsArgs;
+ * import com.pulumi.meraki.networks.inputs.AlertsSettingsAlertArgs;
+ * import com.pulumi.meraki.networks.inputs.AlertsSettingsAlertAlertDestinationsArgs;
+ * import com.pulumi.meraki.networks.inputs.AlertsSettingsAlertFiltersArgs;
+ * import com.pulumi.meraki.networks.inputs.AlertsSettingsDefaultDestinationsArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App }{{@code
+ *     public static void main(String[] args) }{{@code
+ *         Pulumi.run(App::stack);
+ *     }}{@code
+ * 
+ *     public static void stack(Context ctx) }{{@code
+ *         var example = new AlertsSettings("example", AlertsSettingsArgs.builder()
+ *             .alerts(AlertsSettingsAlertArgs.builder()
+ *                 .alertDestinations(AlertsSettingsAlertAlertDestinationsArgs.builder()
+ *                     .allAdmins(false)
+ *                     .emails("miles}{@literal @}{@code meraki.com")
+ *                     .httpServerIds("aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M=")
+ *                     .snmp(false)
+ *                     .build())
+ *                 .enabled(true)
+ *                 .filters(AlertsSettingsAlertFiltersArgs.builder()
+ *                     .timeout(60)
+ *                     .build())
+ *                 .type("gatewayDown")
+ *                 .build())
+ *             .defaultDestinations(AlertsSettingsDefaultDestinationsArgs.builder()
+ *                 .allAdmins(true)
+ *                 .emails("miles}{@literal @}{@code meraki.com")
+ *                 .httpServerIds("aHR0cHM6Ly93d3cuZXhhbXBsZS5jb20vd2ViaG9va3M=")
+ *                 .snmp(true)
+ *                 .build())
+ *             .networkId("string")
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksAlertsSettingsExample", example);
+ *     }}{@code
+ * }}{@code
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh

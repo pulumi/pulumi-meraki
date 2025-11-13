@@ -273,6 +273,24 @@ class AdaptivePolicyAcls(pulumi.CustomResource):
         """
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.organizations.AdaptivePolicyAcls("example",
+            description="Blocks sensitive web traffic",
+            ip_version="ipv6",
+            name="Block sensitive web traffic",
+            organization_id="string",
+            rules=[{
+                "dst_port": "22-30",
+                "policy": "deny",
+                "protocol": "tcp",
+                "src_port": "1,33",
+            }])
+        pulumi.export("merakiOrganizationsAdaptivePolicyAclsExample", example)
+        ```
+
         ## Import
 
         ```sh
@@ -296,6 +314,24 @@ class AdaptivePolicyAcls(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_meraki as meraki
+
+        example = meraki.organizations.AdaptivePolicyAcls("example",
+            description="Blocks sensitive web traffic",
+            ip_version="ipv6",
+            name="Block sensitive web traffic",
+            organization_id="string",
+            rules=[{
+                "dst_port": "22-30",
+                "policy": "deny",
+                "protocol": "tcp",
+                "src_port": "1,33",
+            }])
+        pulumi.export("merakiOrganizationsAdaptivePolicyAclsExample", example)
+        ```
 
         ## Import
 

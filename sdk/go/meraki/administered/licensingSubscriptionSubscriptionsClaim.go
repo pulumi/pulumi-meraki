@@ -16,6 +16,37 @@ import (
 // already existed previously.
 //
 // ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/administered"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := administered.NewLicensingSubscriptionSubscriptionsClaim(ctx, "example", &administered.LicensingSubscriptionSubscriptionsClaimArgs{
+//				Validate: pulumi.Bool(false),
+//				Parameters: &administered.LicensingSubscriptionSubscriptionsClaimParametersArgs{
+//					ClaimKey:       pulumi.String("S2345-6789A-BCDEF-GHJKM"),
+//					Description:    pulumi.String("Subscription for all main offices"),
+//					Name:           pulumi.String("Corporate subscription"),
+//					OrganizationId: pulumi.String("12345678910"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiAdministeredLicensingSubscriptionSubscriptionsClaimExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
 type LicensingSubscriptionSubscriptionsClaim struct {
 	pulumi.CustomResourceState
 

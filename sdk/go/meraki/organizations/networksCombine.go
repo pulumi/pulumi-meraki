@@ -16,6 +16,39 @@ import (
 // already existed previously.
 //
 // ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-meraki/sdk/go/meraki/organizations"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			example, err := organizations.NewNetworksCombine(ctx, "example", &organizations.NetworksCombineArgs{
+//				OrganizationId: pulumi.String("string"),
+//				Parameters: &organizations.NetworksCombineParametersArgs{
+//					EnrollmentString: pulumi.String("my-enrollment-string"),
+//					Name:             pulumi.String("Long Island Office"),
+//					NetworkIds: pulumi.StringArray{
+//						pulumi.String("N_1234"),
+//						pulumi.String("N_5678"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("merakiOrganizationsNetworksCombineExample", example)
+//			return nil
+//		})
+//	}
+//
+// ```
 type NetworksCombine struct {
 	pulumi.CustomResourceState
 

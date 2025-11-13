@@ -18,6 +18,57 @@ import javax.annotation.Nullable;
 /**
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.meraki.networks.ApplianceSingleLan;
+ * import com.pulumi.meraki.networks.ApplianceSingleLanArgs;
+ * import com.pulumi.meraki.networks.inputs.ApplianceSingleLanIpv6Args;
+ * import com.pulumi.meraki.networks.inputs.ApplianceSingleLanMandatoryDhcpArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var example = new ApplianceSingleLan("example", ApplianceSingleLanArgs.builder()
+ *             .applianceIp("string")
+ *             .ipv6(ApplianceSingleLanIpv6Args.builder()
+ *                 .enabled(false)
+ *                 .prefixAssignments(ApplianceSingleLanIpv6PrefixAssignmentArgs.builder()
+ *                     .autonomous(false)
+ *                     .origin(ApplianceSingleLanIpv6PrefixAssignmentOriginArgs.builder()
+ *                         .interfaces("string")
+ *                         .type("string")
+ *                         .build())
+ *                     .staticApplianceIp6("string")
+ *                     .staticPrefix("string")
+ *                     .build())
+ *                 .build())
+ *             .mandatoryDhcp(ApplianceSingleLanMandatoryDhcpArgs.builder()
+ *                 .enabled(false)
+ *                 .build())
+ *             .networkId("string")
+ *             .subnet("string")
+ *             .build());
+ * 
+ *         ctx.export("merakiNetworksApplianceSingleLanExample", example);
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  * ## Import
  * 
  * ```sh
