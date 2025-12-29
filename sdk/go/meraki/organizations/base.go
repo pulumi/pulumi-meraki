@@ -25,7 +25,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			example, err := organizations.Newbase(ctx, "example", &organizations.baseArgs{
+//			example, err := organizations.NewBase(ctx, "example", &organizations.BaseArgs{
 //				Management: &organizations.BaseManagementArgs{
 //					Details: organizations.BaseManagementDetailArray{
 //						&organizations.BaseManagementDetailArgs{
