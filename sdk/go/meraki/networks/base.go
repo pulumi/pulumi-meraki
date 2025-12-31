@@ -26,7 +26,7 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			example, err := networks.Newbase(ctx, "example", &networks.baseArgs{
+//			example, err := networks.NewBase(ctx, "example", &networks.BaseArgs{
 //				Name:           pulumi.String("Main Office"),
 //				Notes:          pulumi.String("Additional description of the network"),
 //				OrganizationId: pulumi.String("string"),
