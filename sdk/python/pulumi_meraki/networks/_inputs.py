@@ -1101,28 +1101,23 @@ __all__ = [
     'WirelessSsidsVpnSplitTunnelRuleArgsDict',
 ]
 
-MYPY = False
-
-if not MYPY:
-    class AlertsSettingsAlertArgsDict(TypedDict):
-        alert_destinations: NotRequired[pulumi.Input['AlertsSettingsAlertAlertDestinationsArgsDict']]
-        """
-        A hash of destinations for this specific alert
-        """
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        A boolean depicting if the alert is turned on or off
-        """
-        filters: NotRequired[pulumi.Input['AlertsSettingsAlertFiltersArgsDict']]
-        """
-        A hash of specific configuration data for the alert. Only filters specific to the alert will be updated.
-        """
-        type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The type of alert
-        """
-elif False:
-    AlertsSettingsAlertArgsDict: TypeAlias = Mapping[str, Any]
+class AlertsSettingsAlertArgsDict(TypedDict):
+    alert_destinations: NotRequired[pulumi.Input['AlertsSettingsAlertAlertDestinationsArgsDict']]
+    """
+    A hash of destinations for this specific alert
+    """
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    A boolean depicting if the alert is turned on or off
+    """
+    filters: NotRequired[pulumi.Input['AlertsSettingsAlertFiltersArgsDict']]
+    """
+    A hash of specific configuration data for the alert. Only filters specific to the alert will be updated.
+    """
+    type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The type of alert
+    """
 
 @pulumi.input_type
 class AlertsSettingsAlertArgs:
@@ -1195,26 +1190,23 @@ class AlertsSettingsAlertArgs:
         pulumi.set(self, "type", value)
 
 
-if not MYPY:
-    class AlertsSettingsAlertAlertDestinationsArgsDict(TypedDict):
-        all_admins: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        If true, then all network admins will receive emails for this alert
-        """
-        emails: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        A list of emails that will receive information about the alert
-        """
-        http_server_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        A list of HTTP server IDs to send a Webhook to for this alert
-        """
-        snmp: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        If true, then an SNMP trap will be sent for this alert if there is an SNMP trap server configured for this network
-        """
-elif False:
-    AlertsSettingsAlertAlertDestinationsArgsDict: TypeAlias = Mapping[str, Any]
+class AlertsSettingsAlertAlertDestinationsArgsDict(TypedDict):
+    all_admins: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    If true, then all network admins will receive emails for this alert
+    """
+    emails: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    A list of emails that will receive information about the alert
+    """
+    http_server_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    A list of HTTP server IDs to send a Webhook to for this alert
+    """
+    snmp: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    If true, then an SNMP trap will be sent for this alert if there is an SNMP trap server configured for this network
+    """
 
 @pulumi.input_type
 class AlertsSettingsAlertAlertDestinationsArgs:
@@ -1287,13 +1279,10 @@ class AlertsSettingsAlertAlertDestinationsArgs:
         pulumi.set(self, "snmp", value)
 
 
-if not MYPY:
-    class AlertsSettingsAlertFiltersArgsDict(TypedDict):
-        period: NotRequired[pulumi.Input[_builtins.int]]
-        threshold: NotRequired[pulumi.Input[_builtins.int]]
-        timeout: NotRequired[pulumi.Input[_builtins.int]]
-elif False:
-    AlertsSettingsAlertFiltersArgsDict: TypeAlias = Mapping[str, Any]
+class AlertsSettingsAlertFiltersArgsDict(TypedDict):
+    period: NotRequired[pulumi.Input[_builtins.int]]
+    threshold: NotRequired[pulumi.Input[_builtins.int]]
+    timeout: NotRequired[pulumi.Input[_builtins.int]]
 
 @pulumi.input_type
 class AlertsSettingsAlertFiltersArgs:
@@ -1336,26 +1325,23 @@ class AlertsSettingsAlertFiltersArgs:
         pulumi.set(self, "timeout", value)
 
 
-if not MYPY:
-    class AlertsSettingsAlertsResponseArgsDict(TypedDict):
-        alert_destinations: NotRequired[pulumi.Input['AlertsSettingsAlertsResponseAlertDestinationsArgsDict']]
-        """
-        A hash of destinations for this specific alert
-        """
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        A boolean depicting if the alert is turned on or off
-        """
-        filters: NotRequired[pulumi.Input['AlertsSettingsAlertsResponseFiltersArgsDict']]
-        """
-        A hash of specific configuration data for the alert. Only filters specific to the alert will be updated.
-        """
-        type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The type of alert
-        """
-elif False:
-    AlertsSettingsAlertsResponseArgsDict: TypeAlias = Mapping[str, Any]
+class AlertsSettingsAlertsResponseArgsDict(TypedDict):
+    alert_destinations: NotRequired[pulumi.Input['AlertsSettingsAlertsResponseAlertDestinationsArgsDict']]
+    """
+    A hash of destinations for this specific alert
+    """
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    A boolean depicting if the alert is turned on or off
+    """
+    filters: NotRequired[pulumi.Input['AlertsSettingsAlertsResponseFiltersArgsDict']]
+    """
+    A hash of specific configuration data for the alert. Only filters specific to the alert will be updated.
+    """
+    type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The type of alert
+    """
 
 @pulumi.input_type
 class AlertsSettingsAlertsResponseArgs:
@@ -1428,26 +1414,23 @@ class AlertsSettingsAlertsResponseArgs:
         pulumi.set(self, "type", value)
 
 
-if not MYPY:
-    class AlertsSettingsAlertsResponseAlertDestinationsArgsDict(TypedDict):
-        all_admins: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        If true, then all network admins will receive emails for this alert
-        """
-        emails: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        A list of emails that will receive information about the alert
-        """
-        http_server_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        A list of HTTP server IDs to send a Webhook to for this alert
-        """
-        snmp: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        If true, then an SNMP trap will be sent for this alert if there is an SNMP trap server configured for this network
-        """
-elif False:
-    AlertsSettingsAlertsResponseAlertDestinationsArgsDict: TypeAlias = Mapping[str, Any]
+class AlertsSettingsAlertsResponseAlertDestinationsArgsDict(TypedDict):
+    all_admins: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    If true, then all network admins will receive emails for this alert
+    """
+    emails: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    A list of emails that will receive information about the alert
+    """
+    http_server_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    A list of HTTP server IDs to send a Webhook to for this alert
+    """
+    snmp: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    If true, then an SNMP trap will be sent for this alert if there is an SNMP trap server configured for this network
+    """
 
 @pulumi.input_type
 class AlertsSettingsAlertsResponseAlertDestinationsArgs:
@@ -1520,13 +1503,10 @@ class AlertsSettingsAlertsResponseAlertDestinationsArgs:
         pulumi.set(self, "snmp", value)
 
 
-if not MYPY:
-    class AlertsSettingsAlertsResponseFiltersArgsDict(TypedDict):
-        period: NotRequired[pulumi.Input[_builtins.int]]
-        threshold: NotRequired[pulumi.Input[_builtins.int]]
-        timeout: NotRequired[pulumi.Input[_builtins.int]]
-elif False:
-    AlertsSettingsAlertsResponseFiltersArgsDict: TypeAlias = Mapping[str, Any]
+class AlertsSettingsAlertsResponseFiltersArgsDict(TypedDict):
+    period: NotRequired[pulumi.Input[_builtins.int]]
+    threshold: NotRequired[pulumi.Input[_builtins.int]]
+    timeout: NotRequired[pulumi.Input[_builtins.int]]
 
 @pulumi.input_type
 class AlertsSettingsAlertsResponseFiltersArgs:
@@ -1569,26 +1549,23 @@ class AlertsSettingsAlertsResponseFiltersArgs:
         pulumi.set(self, "timeout", value)
 
 
-if not MYPY:
-    class AlertsSettingsDefaultDestinationsArgsDict(TypedDict):
-        all_admins: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        If true, then all network admins will receive emails.
-        """
-        emails: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        A list of emails that will receive the alert(s).
-        """
-        http_server_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        A list of HTTP server IDs to send a Webhook to
-        """
-        snmp: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        If true, then an SNMP trap will be sent if there is an SNMP trap server configured for this network.
-        """
-elif False:
-    AlertsSettingsDefaultDestinationsArgsDict: TypeAlias = Mapping[str, Any]
+class AlertsSettingsDefaultDestinationsArgsDict(TypedDict):
+    all_admins: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    If true, then all network admins will receive emails.
+    """
+    emails: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    A list of emails that will receive the alert(s).
+    """
+    http_server_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    A list of HTTP server IDs to send a Webhook to
+    """
+    snmp: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    If true, then an SNMP trap will be sent if there is an SNMP trap server configured for this network.
+    """
 
 @pulumi.input_type
 class AlertsSettingsDefaultDestinationsArgs:
@@ -1661,14 +1638,11 @@ class AlertsSettingsDefaultDestinationsArgs:
         pulumi.set(self, "snmp", value)
 
 
-if not MYPY:
-    class AlertsSettingsMutingArgsDict(TypedDict):
-        by_port_schedules: NotRequired[pulumi.Input['AlertsSettingsMutingByPortSchedulesArgsDict']]
-        """
-        by_port_schedules
-        """
-elif False:
-    AlertsSettingsMutingArgsDict: TypeAlias = Mapping[str, Any]
+class AlertsSettingsMutingArgsDict(TypedDict):
+    by_port_schedules: NotRequired[pulumi.Input['AlertsSettingsMutingByPortSchedulesArgsDict']]
+    """
+    by_port_schedules
+    """
 
 @pulumi.input_type
 class AlertsSettingsMutingArgs:
@@ -1693,14 +1667,11 @@ class AlertsSettingsMutingArgs:
         pulumi.set(self, "by_port_schedules", value)
 
 
-if not MYPY:
-    class AlertsSettingsMutingByPortSchedulesArgsDict(TypedDict):
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        enabled
-        """
-elif False:
-    AlertsSettingsMutingByPortSchedulesArgsDict: TypeAlias = Mapping[str, Any]
+class AlertsSettingsMutingByPortSchedulesArgsDict(TypedDict):
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    enabled
+    """
 
 @pulumi.input_type
 class AlertsSettingsMutingByPortSchedulesArgs:
@@ -1725,22 +1696,19 @@ class AlertsSettingsMutingByPortSchedulesArgs:
         pulumi.set(self, "enabled", value)
 
 
-if not MYPY:
-    class ApplianceConnectivityMonitoringDestinationsDestinationArgsDict(TypedDict):
-        default: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Boolean indicating whether this is the default testing destination (true) or not (false). Defaults to false. Only one default is allowed
-        """
-        description: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Description of the testing destination. Optional, defaults to null
-        """
-        ip: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The IP address to test connectivity with
-        """
-elif False:
-    ApplianceConnectivityMonitoringDestinationsDestinationArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceConnectivityMonitoringDestinationsDestinationArgsDict(TypedDict):
+    default: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Boolean indicating whether this is the default testing destination (true) or not (false). Defaults to false. Only one default is allowed
+    """
+    description: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Description of the testing destination. Optional, defaults to null
+    """
+    ip: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The IP address to test connectivity with
+    """
 
 @pulumi.input_type
 class ApplianceConnectivityMonitoringDestinationsDestinationArgs:
@@ -1797,12 +1765,9 @@ class ApplianceConnectivityMonitoringDestinationsDestinationArgs:
         pulumi.set(self, "ip", value)
 
 
-if not MYPY:
-    class ApplianceContentFilteringBlockedUrlCategoriesResponseArgsDict(TypedDict):
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        name: NotRequired[pulumi.Input[_builtins.str]]
-elif False:
-    ApplianceContentFilteringBlockedUrlCategoriesResponseArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceContentFilteringBlockedUrlCategoriesResponseArgsDict(TypedDict):
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[_builtins.str]]
 
 @pulumi.input_type
 class ApplianceContentFilteringBlockedUrlCategoriesResponseArgs:
@@ -1833,42 +1798,39 @@ class ApplianceContentFilteringBlockedUrlCategoriesResponseArgs:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class ApplianceFirewallCellularFirewallRulesRuleArgsDict(TypedDict):
-        comment: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Description of the rule (optional)
-        """
-        dest_cidr: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Comma-separated list of destination IP address(es) (in IP or CIDR notation), fully-qualified domain names (FQDN) or 'any'
-        """
-        dest_port: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Comma-separated list of destination port(s) (integer in the range 1-65535), or 'any'
-        """
-        policy: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        'allow' or 'deny' traffic specified by this rule
-        """
-        protocol: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The type of protocol (must be 'tcp', 'udp', 'icmp', 'icmp6' or 'any')
-        """
-        src_cidr: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Comma-separated list of source IP address(es) (in IP or CIDR notation), or 'any' (note: FQDN not supported for source addresses)
-        """
-        src_port: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Comma-separated list of source port(s) (integer in the range 1-65535), or 'any'
-        """
-        syslog_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Log this rule to syslog (true or false, boolean value) - only applicable if a syslog has been configured (optional)
-        """
-elif False:
-    ApplianceFirewallCellularFirewallRulesRuleArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceFirewallCellularFirewallRulesRuleArgsDict(TypedDict):
+    comment: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Description of the rule (optional)
+    """
+    dest_cidr: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Comma-separated list of destination IP address(es) (in IP or CIDR notation), fully-qualified domain names (FQDN) or 'any'
+    """
+    dest_port: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Comma-separated list of destination port(s) (integer in the range 1-65535), or 'any'
+    """
+    policy: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    'allow' or 'deny' traffic specified by this rule
+    """
+    protocol: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The type of protocol (must be 'tcp', 'udp', 'icmp', 'icmp6' or 'any')
+    """
+    src_cidr: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Comma-separated list of source IP address(es) (in IP or CIDR notation), or 'any' (note: FQDN not supported for source addresses)
+    """
+    src_port: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Comma-separated list of source port(s) (integer in the range 1-65535), or 'any'
+    """
+    syslog_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Log this rule to syslog (true or false, boolean value) - only applicable if a syslog has been configured (optional)
+    """
 
 @pulumi.input_type
 class ApplianceFirewallCellularFirewallRulesRuleArgs:
@@ -2005,42 +1967,39 @@ class ApplianceFirewallCellularFirewallRulesRuleArgs:
         pulumi.set(self, "syslog_enabled", value)
 
 
-if not MYPY:
-    class ApplianceFirewallInboundFirewallRulesRuleArgsDict(TypedDict):
-        comment: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Description of the rule (optional)
-        """
-        dest_cidr: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Comma-separated list of destination IP address(es) (in IP or CIDR notation), fully-qualified domain names (FQDN) or 'any'
-        """
-        dest_port: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Comma-separated list of destination port(s) (integer in the range 1-65535), or 'any'
-        """
-        policy: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        'allow' or 'deny' traffic specified by this rule
-        """
-        protocol: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The type of protocol (must be 'tcp', 'udp', 'icmp', 'icmp6' or 'any')
-        """
-        src_cidr: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Comma-separated list of source IP address(es) (in IP or CIDR notation), or 'any' (note: FQDN not supported for source addresses)
-        """
-        src_port: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Comma-separated list of source port(s) (integer in the range 1-65535), or 'any'
-        """
-        syslog_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Log this rule to syslog (true or false, boolean value) - only applicable if a syslog has been configured (optional)
-        """
-elif False:
-    ApplianceFirewallInboundFirewallRulesRuleArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceFirewallInboundFirewallRulesRuleArgsDict(TypedDict):
+    comment: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Description of the rule (optional)
+    """
+    dest_cidr: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Comma-separated list of destination IP address(es) (in IP or CIDR notation), fully-qualified domain names (FQDN) or 'any'
+    """
+    dest_port: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Comma-separated list of destination port(s) (integer in the range 1-65535), or 'any'
+    """
+    policy: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    'allow' or 'deny' traffic specified by this rule
+    """
+    protocol: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The type of protocol (must be 'tcp', 'udp', 'icmp', 'icmp6' or 'any')
+    """
+    src_cidr: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Comma-separated list of source IP address(es) (in IP or CIDR notation), or 'any' (note: FQDN not supported for source addresses)
+    """
+    src_port: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Comma-separated list of source port(s) (integer in the range 1-65535), or 'any'
+    """
+    syslog_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Log this rule to syslog (true or false, boolean value) - only applicable if a syslog has been configured (optional)
+    """
 
 @pulumi.input_type
 class ApplianceFirewallInboundFirewallRulesRuleArgs:
@@ -2177,42 +2136,39 @@ class ApplianceFirewallInboundFirewallRulesRuleArgs:
         pulumi.set(self, "syslog_enabled", value)
 
 
-if not MYPY:
-    class ApplianceFirewallInboundFirewallRulesRulesResponseArgsDict(TypedDict):
-        comment: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Description of the rule (optional)
-        """
-        dest_cidr: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Comma-separated list of destination IP address(es) (in IP or CIDR notation), fully-qualified domain names (FQDN) or 'any'
-        """
-        dest_port: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Comma-separated list of destination port(s) (integer in the range 1-65535), or 'any'
-        """
-        policy: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        'allow' or 'deny' traffic specified by this rule
-        """
-        protocol: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The type of protocol (must be 'tcp', 'udp', 'icmp', 'icmp6' or 'any')
-        """
-        src_cidr: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Comma-separated list of source IP address(es) (in IP or CIDR notation), or 'any' (note: FQDN not supported for source addresses)
-        """
-        src_port: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Comma-separated list of source port(s) (integer in the range 1-65535), or 'any'
-        """
-        syslog_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Log this rule to syslog (true or false, boolean value) - only applicable if a syslog has been configured (optional)
-        """
-elif False:
-    ApplianceFirewallInboundFirewallRulesRulesResponseArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceFirewallInboundFirewallRulesRulesResponseArgsDict(TypedDict):
+    comment: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Description of the rule (optional)
+    """
+    dest_cidr: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Comma-separated list of destination IP address(es) (in IP or CIDR notation), fully-qualified domain names (FQDN) or 'any'
+    """
+    dest_port: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Comma-separated list of destination port(s) (integer in the range 1-65535), or 'any'
+    """
+    policy: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    'allow' or 'deny' traffic specified by this rule
+    """
+    protocol: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The type of protocol (must be 'tcp', 'udp', 'icmp', 'icmp6' or 'any')
+    """
+    src_cidr: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Comma-separated list of source IP address(es) (in IP or CIDR notation), or 'any' (note: FQDN not supported for source addresses)
+    """
+    src_port: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Comma-separated list of source port(s) (integer in the range 1-65535), or 'any'
+    """
+    syslog_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Log this rule to syslog (true or false, boolean value) - only applicable if a syslog has been configured (optional)
+    """
 
 @pulumi.input_type
 class ApplianceFirewallInboundFirewallRulesRulesResponseArgs:
@@ -2349,42 +2305,39 @@ class ApplianceFirewallInboundFirewallRulesRulesResponseArgs:
         pulumi.set(self, "syslog_enabled", value)
 
 
-if not MYPY:
-    class ApplianceFirewallL3FirewallRulesRuleArgsDict(TypedDict):
-        comment: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Description of the rule (optional)
-        """
-        dest_cidr: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Comma-separated list of destination IP address(es) (in IP or CIDR notation), fully-qualified domain names (FQDN) or 'any'
-        """
-        dest_port: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Comma-separated list of destination port(s) (integer in the range 1-65535), or 'any'
-        """
-        policy: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        'allow' or 'deny' traffic specified by this rule
-        """
-        protocol: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The type of protocol (must be 'tcp', 'udp', 'icmp', 'icmp6' or 'any')
-        """
-        src_cidr: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Comma-separated list of source IP address(es) (in IP or CIDR notation), or 'any' (note: FQDN not supported for source addresses)
-        """
-        src_port: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Comma-separated list of source port(s) (integer in the range 1-65535), or 'any'
-        """
-        syslog_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Log this rule to syslog (true or false, boolean value) - only applicable if a syslog has been configured (optional)
-        """
-elif False:
-    ApplianceFirewallL3FirewallRulesRuleArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceFirewallL3FirewallRulesRuleArgsDict(TypedDict):
+    comment: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Description of the rule (optional)
+    """
+    dest_cidr: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Comma-separated list of destination IP address(es) (in IP or CIDR notation), fully-qualified domain names (FQDN) or 'any'
+    """
+    dest_port: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Comma-separated list of destination port(s) (integer in the range 1-65535), or 'any'
+    """
+    policy: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    'allow' or 'deny' traffic specified by this rule
+    """
+    protocol: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The type of protocol (must be 'tcp', 'udp', 'icmp', 'icmp6' or 'any')
+    """
+    src_cidr: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Comma-separated list of source IP address(es) (in IP or CIDR notation), or 'any' (note: FQDN not supported for source addresses)
+    """
+    src_port: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Comma-separated list of source port(s) (integer in the range 1-65535), or 'any'
+    """
+    syslog_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Log this rule to syslog (true or false, boolean value) - only applicable if a syslog has been configured (optional)
+    """
 
 @pulumi.input_type
 class ApplianceFirewallL3FirewallRulesRuleArgs:
@@ -2521,42 +2474,39 @@ class ApplianceFirewallL3FirewallRulesRuleArgs:
         pulumi.set(self, "syslog_enabled", value)
 
 
-if not MYPY:
-    class ApplianceFirewallL3FirewallRulesRulesResponseArgsDict(TypedDict):
-        comment: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Description of the rule (optional)
-        """
-        dest_cidr: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Comma-separated list of destination IP address(es) (in IP or CIDR notation), fully-qualified domain names (FQDN) or 'any'
-        """
-        dest_port: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Comma-separated list of destination port(s) (integer in the range 1-65535), or 'any'
-        """
-        policy: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        'allow' or 'deny' traffic specified by this rule
-        """
-        protocol: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The type of protocol (must be 'tcp', 'udp', 'icmp', 'icmp6' or 'any')
-        """
-        src_cidr: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Comma-separated list of source IP address(es) (in IP or CIDR notation), or 'any' (note: FQDN not supported for source addresses)
-        """
-        src_port: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Comma-separated list of source port(s) (integer in the range 1-65535), or 'any'
-        """
-        syslog_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Log this rule to syslog (true or false, boolean value) - only applicable if a syslog has been configured (optional)
-        """
-elif False:
-    ApplianceFirewallL3FirewallRulesRulesResponseArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceFirewallL3FirewallRulesRulesResponseArgsDict(TypedDict):
+    comment: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Description of the rule (optional)
+    """
+    dest_cidr: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Comma-separated list of destination IP address(es) (in IP or CIDR notation), fully-qualified domain names (FQDN) or 'any'
+    """
+    dest_port: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Comma-separated list of destination port(s) (integer in the range 1-65535), or 'any'
+    """
+    policy: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    'allow' or 'deny' traffic specified by this rule
+    """
+    protocol: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The type of protocol (must be 'tcp', 'udp', 'icmp', 'icmp6' or 'any')
+    """
+    src_cidr: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Comma-separated list of source IP address(es) (in IP or CIDR notation), or 'any' (note: FQDN not supported for source addresses)
+    """
+    src_port: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Comma-separated list of source port(s) (integer in the range 1-65535), or 'any'
+    """
+    syslog_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Log this rule to syslog (true or false, boolean value) - only applicable if a syslog has been configured (optional)
+    """
 
 @pulumi.input_type
 class ApplianceFirewallL3FirewallRulesRulesResponseArgs:
@@ -2693,30 +2643,27 @@ class ApplianceFirewallL3FirewallRulesRulesResponseArgs:
         pulumi.set(self, "syslog_enabled", value)
 
 
-if not MYPY:
-    class ApplianceFirewallL7FirewallRulesRuleArgsDict(TypedDict):
-        policy: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        'Deny' traffic specified by this rule
-        """
-        type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Type of the L7 rule. One of: 'application', 'applicationCategory', 'host', 'port', 'ipRange'
-        """
-        value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The 'value' of what you want to block. Format of 'value' varies depending on type of the rule. Send a string to request.
-        """
-        value_lists: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The 'value_list' of what you want to block. Send a lis of string in request.
-        """
-        value_obj: NotRequired[pulumi.Input['ApplianceFirewallL7FirewallRulesRuleValueObjArgsDict']]
-        """
-        The 'value_obj' of what you want to block. Send a dict in request.
-        """
-elif False:
-    ApplianceFirewallL7FirewallRulesRuleArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceFirewallL7FirewallRulesRuleArgsDict(TypedDict):
+    policy: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    'Deny' traffic specified by this rule
+    """
+    type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Type of the L7 rule. One of: 'application', 'applicationCategory', 'host', 'port', 'ipRange'
+    """
+    value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The 'value' of what you want to block. Format of 'value' varies depending on type of the rule. Send a string to request.
+    """
+    value_lists: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The 'value_list' of what you want to block. Send a lis of string in request.
+    """
+    value_obj: NotRequired[pulumi.Input['ApplianceFirewallL7FirewallRulesRuleValueObjArgsDict']]
+    """
+    The 'value_obj' of what you want to block. Send a dict in request.
+    """
 
 @pulumi.input_type
 class ApplianceFirewallL7FirewallRulesRuleArgs:
@@ -2805,12 +2752,9 @@ class ApplianceFirewallL7FirewallRulesRuleArgs:
         pulumi.set(self, "value_obj", value)
 
 
-if not MYPY:
-    class ApplianceFirewallL7FirewallRulesRuleValueObjArgsDict(TypedDict):
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        name: NotRequired[pulumi.Input[_builtins.str]]
-elif False:
-    ApplianceFirewallL7FirewallRulesRuleValueObjArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceFirewallL7FirewallRulesRuleValueObjArgsDict(TypedDict):
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[_builtins.str]]
 
 @pulumi.input_type
 class ApplianceFirewallL7FirewallRulesRuleValueObjArgs:
@@ -2841,30 +2785,27 @@ class ApplianceFirewallL7FirewallRulesRuleValueObjArgs:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class ApplianceFirewallL7FirewallRulesRulesResponseArgsDict(TypedDict):
-        policy: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        'Deny' traffic specified by this rule
-        """
-        type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Type of the L7 rule. One of: 'application', 'applicationCategory', 'host', 'port', 'ipRange'
-        """
-        value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The 'value' of what you want to block. Format of 'value' varies depending on type of the rule. The application categories and application ids can be retrieved from the the 'MX L7 application categories' endpoint. The countries follow the two-letter ISO 3166-1 alpha-2 format.
-        """
-        value_lists: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The 'value_list' of what you want to block. Send a list in request
-        """
-        value_obj: NotRequired[pulumi.Input['ApplianceFirewallL7FirewallRulesRulesResponseValueObjArgsDict']]
-        """
-        The 'value_obj' of what you want to block. Send a dict in request
-        """
-elif False:
-    ApplianceFirewallL7FirewallRulesRulesResponseArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceFirewallL7FirewallRulesRulesResponseArgsDict(TypedDict):
+    policy: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    'Deny' traffic specified by this rule
+    """
+    type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Type of the L7 rule. One of: 'application', 'applicationCategory', 'host', 'port', 'ipRange'
+    """
+    value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The 'value' of what you want to block. Format of 'value' varies depending on type of the rule. The application categories and application ids can be retrieved from the the 'MX L7 application categories' endpoint. The countries follow the two-letter ISO 3166-1 alpha-2 format.
+    """
+    value_lists: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The 'value_list' of what you want to block. Send a list in request
+    """
+    value_obj: NotRequired[pulumi.Input['ApplianceFirewallL7FirewallRulesRulesResponseValueObjArgsDict']]
+    """
+    The 'value_obj' of what you want to block. Send a dict in request
+    """
 
 @pulumi.input_type
 class ApplianceFirewallL7FirewallRulesRulesResponseArgs:
@@ -2953,12 +2894,9 @@ class ApplianceFirewallL7FirewallRulesRulesResponseArgs:
         pulumi.set(self, "value_obj", value)
 
 
-if not MYPY:
-    class ApplianceFirewallL7FirewallRulesRulesResponseValueObjArgsDict(TypedDict):
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        name: NotRequired[pulumi.Input[_builtins.str]]
-elif False:
-    ApplianceFirewallL7FirewallRulesRulesResponseValueObjArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceFirewallL7FirewallRulesRulesResponseValueObjArgsDict(TypedDict):
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[_builtins.str]]
 
 @pulumi.input_type
 class ApplianceFirewallL7FirewallRulesRulesResponseValueObjArgs:
@@ -2989,22 +2927,19 @@ class ApplianceFirewallL7FirewallRulesRulesResponseValueObjArgs:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class ApplianceFirewallOneToManyNatRulesRuleArgsDict(TypedDict):
-        port_rules: NotRequired[pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallOneToManyNatRulesRulePortRuleArgsDict']]]]
-        """
-        An array of associated forwarding rules
-        """
-        public_ip: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The IP address that will be used to access the internal resource from the WAN
-        """
-        uplink: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The physical WAN interface on which the traffic will arrive ('internet1' or, if available, 'internet2')
-        """
-elif False:
-    ApplianceFirewallOneToManyNatRulesRuleArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceFirewallOneToManyNatRulesRuleArgsDict(TypedDict):
+    port_rules: NotRequired[pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallOneToManyNatRulesRulePortRuleArgsDict']]]]
+    """
+    An array of associated forwarding rules
+    """
+    public_ip: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The IP address that will be used to access the internal resource from the WAN
+    """
+    uplink: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The physical WAN interface on which the traffic will arrive ('internet1' or, if available, 'internet2')
+    """
 
 @pulumi.input_type
 class ApplianceFirewallOneToManyNatRulesRuleArgs:
@@ -3061,34 +2996,31 @@ class ApplianceFirewallOneToManyNatRulesRuleArgs:
         pulumi.set(self, "uplink", value)
 
 
-if not MYPY:
-    class ApplianceFirewallOneToManyNatRulesRulePortRuleArgsDict(TypedDict):
-        allowed_ips: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        Remote IP addresses or ranges that are permitted to access the internal resource via this port forwarding rule, or 'any'
-        """
-        local_ip: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Local IP address to which traffic will be forwarded
-        """
-        local_port: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Destination port of the forwarded traffic that will be sent from the MX to the specified host on the LAN. If you simply wish to forward the traffic without translating the port, this should be the same as the Public port
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        A description of the rule
-        """
-        protocol: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        'tcp' or 'udp'
-        """
-        public_port: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Destination port of the traffic that is arriving on the WAN
-        """
-elif False:
-    ApplianceFirewallOneToManyNatRulesRulePortRuleArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceFirewallOneToManyNatRulesRulePortRuleArgsDict(TypedDict):
+    allowed_ips: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    Remote IP addresses or ranges that are permitted to access the internal resource via this port forwarding rule, or 'any'
+    """
+    local_ip: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Local IP address to which traffic will be forwarded
+    """
+    local_port: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Destination port of the forwarded traffic that will be sent from the MX to the specified host on the LAN. If you simply wish to forward the traffic without translating the port, this should be the same as the Public port
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    A description of the rule
+    """
+    protocol: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    'tcp' or 'udp'
+    """
+    public_port: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Destination port of the traffic that is arriving on the WAN
+    """
 
 @pulumi.input_type
 class ApplianceFirewallOneToManyNatRulesRulePortRuleArgs:
@@ -3193,30 +3125,27 @@ class ApplianceFirewallOneToManyNatRulesRulePortRuleArgs:
         pulumi.set(self, "public_port", value)
 
 
-if not MYPY:
-    class ApplianceFirewallOneToOneNatRulesRuleArgsDict(TypedDict):
-        allowed_inbounds: NotRequired[pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallOneToOneNatRulesRuleAllowedInboundArgsDict']]]]
-        """
-        The ports this mapping will provide access on, and the remote IPs that will be allowed access to the resource
-        """
-        lan_ip: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The IP address of the server or device that hosts the internal resource that you wish to make available on the WAN
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        A descriptive name for the rule
-        """
-        public_ip: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The IP address that will be used to access the internal resource from the WAN
-        """
-        uplink: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The physical WAN interface on which the traffic will arrive ('internet1' or, if available, 'internet2')
-        """
-elif False:
-    ApplianceFirewallOneToOneNatRulesRuleArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceFirewallOneToOneNatRulesRuleArgsDict(TypedDict):
+    allowed_inbounds: NotRequired[pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallOneToOneNatRulesRuleAllowedInboundArgsDict']]]]
+    """
+    The ports this mapping will provide access on, and the remote IPs that will be allowed access to the resource
+    """
+    lan_ip: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The IP address of the server or device that hosts the internal resource that you wish to make available on the WAN
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    A descriptive name for the rule
+    """
+    public_ip: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The IP address that will be used to access the internal resource from the WAN
+    """
+    uplink: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The physical WAN interface on which the traffic will arrive ('internet1' or, if available, 'internet2')
+    """
 
 @pulumi.input_type
 class ApplianceFirewallOneToOneNatRulesRuleArgs:
@@ -3305,22 +3234,19 @@ class ApplianceFirewallOneToOneNatRulesRuleArgs:
         pulumi.set(self, "uplink", value)
 
 
-if not MYPY:
-    class ApplianceFirewallOneToOneNatRulesRuleAllowedInboundArgsDict(TypedDict):
-        allowed_ips: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        An array of ranges of WAN IP addresses that are allowed to make inbound connections on the specified ports or port ranges, or 'any'
-        """
-        destination_ports: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        An array of ports or port ranges that will be forwarded to the host on the LAN
-        """
-        protocol: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Either of the following: 'tcp', 'udp', 'icmp-ping' or 'any'
-        """
-elif False:
-    ApplianceFirewallOneToOneNatRulesRuleAllowedInboundArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceFirewallOneToOneNatRulesRuleAllowedInboundArgsDict(TypedDict):
+    allowed_ips: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    An array of ranges of WAN IP addresses that are allowed to make inbound connections on the specified ports or port ranges, or 'any'
+    """
+    destination_ports: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    An array of ports or port ranges that will be forwarded to the host on the LAN
+    """
+    protocol: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Either of the following: 'tcp', 'udp', 'icmp-ping' or 'any'
+    """
 
 @pulumi.input_type
 class ApplianceFirewallOneToOneNatRulesRuleAllowedInboundArgs:
@@ -3377,38 +3303,35 @@ class ApplianceFirewallOneToOneNatRulesRuleAllowedInboundArgs:
         pulumi.set(self, "protocol", value)
 
 
-if not MYPY:
-    class ApplianceFirewallPortForwardingRulesRuleArgsDict(TypedDict):
-        allowed_ips: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        An array of ranges of WAN IP addresses that are allowed to make inbound connections on the specified ports or port ranges (or any)
-        """
-        lan_ip: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The IP address of the server or device that hosts the internal resource that you wish to make available on the WAN
-        """
-        local_port: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        A port or port ranges that will receive the forwarded traffic from the WAN
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        A descriptive name for the rule
-        """
-        protocol: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        TCP or UDP
-        """
-        public_port: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        A port or port ranges that will be forwarded to the host on the LAN
-        """
-        uplink: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The physical WAN interface on which the traffic will arrive ('internet1' or, if available, 'internet2' or 'both')
-        """
-elif False:
-    ApplianceFirewallPortForwardingRulesRuleArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceFirewallPortForwardingRulesRuleArgsDict(TypedDict):
+    allowed_ips: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    An array of ranges of WAN IP addresses that are allowed to make inbound connections on the specified ports or port ranges (or any)
+    """
+    lan_ip: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The IP address of the server or device that hosts the internal resource that you wish to make available on the WAN
+    """
+    local_port: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    A port or port ranges that will receive the forwarded traffic from the WAN
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    A descriptive name for the rule
+    """
+    protocol: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    TCP or UDP
+    """
+    public_port: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    A port or port ranges that will be forwarded to the host on the LAN
+    """
+    uplink: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The physical WAN interface on which the traffic will arrive ('internet1' or, if available, 'internet2' or 'both')
+    """
 
 @pulumi.input_type
 class ApplianceFirewallPortForwardingRulesRuleArgs:
@@ -3529,14 +3452,11 @@ class ApplianceFirewallPortForwardingRulesRuleArgs:
         pulumi.set(self, "uplink", value)
 
 
-if not MYPY:
-    class ApplianceFirewallSettingsSpoofingProtectionArgsDict(TypedDict):
-        ip_source_guard: NotRequired[pulumi.Input['ApplianceFirewallSettingsSpoofingProtectionIpSourceGuardArgsDict']]
-        """
-        IP source address spoofing settings
-        """
-elif False:
-    ApplianceFirewallSettingsSpoofingProtectionArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceFirewallSettingsSpoofingProtectionArgsDict(TypedDict):
+    ip_source_guard: NotRequired[pulumi.Input['ApplianceFirewallSettingsSpoofingProtectionIpSourceGuardArgsDict']]
+    """
+    IP source address spoofing settings
+    """
 
 @pulumi.input_type
 class ApplianceFirewallSettingsSpoofingProtectionArgs:
@@ -3561,14 +3481,11 @@ class ApplianceFirewallSettingsSpoofingProtectionArgs:
         pulumi.set(self, "ip_source_guard", value)
 
 
-if not MYPY:
-    class ApplianceFirewallSettingsSpoofingProtectionIpSourceGuardArgsDict(TypedDict):
-        mode: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Mode of protection
-        """
-elif False:
-    ApplianceFirewallSettingsSpoofingProtectionIpSourceGuardArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceFirewallSettingsSpoofingProtectionIpSourceGuardArgsDict(TypedDict):
+    mode: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Mode of protection
+    """
 
 @pulumi.input_type
 class ApplianceFirewallSettingsSpoofingProtectionIpSourceGuardArgs:
@@ -3593,18 +3510,15 @@ class ApplianceFirewallSettingsSpoofingProtectionIpSourceGuardArgs:
         pulumi.set(self, "mode", value)
 
 
-if not MYPY:
-    class AppliancePrefixesDelegatedStaticsOriginArgsDict(TypedDict):
-        interfaces: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        Uplink provided or independent
-        """
-        type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Origin type
-        """
-elif False:
-    AppliancePrefixesDelegatedStaticsOriginArgsDict: TypeAlias = Mapping[str, Any]
+class AppliancePrefixesDelegatedStaticsOriginArgsDict(TypedDict):
+    interfaces: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    Uplink provided or independent
+    """
+    type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Origin type
+    """
 
 @pulumi.input_type
 class AppliancePrefixesDelegatedStaticsOriginArgs:
@@ -3645,18 +3559,15 @@ class AppliancePrefixesDelegatedStaticsOriginArgs:
         pulumi.set(self, "type", value)
 
 
-if not MYPY:
-    class ApplianceRfProfilesFiveGhzSettingsArgsDict(TypedDict):
-        ax_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether ax radio on 5Ghz band is on or off.
-        """
-        min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Min bitrate (Mbps) of 2.4Ghz band.
-        """
-elif False:
-    ApplianceRfProfilesFiveGhzSettingsArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceRfProfilesFiveGhzSettingsArgsDict(TypedDict):
+    ax_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether ax radio on 5Ghz band is on or off.
+    """
+    min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Min bitrate (Mbps) of 2.4Ghz band.
+    """
 
 @pulumi.input_type
 class ApplianceRfProfilesFiveGhzSettingsArgs:
@@ -3697,26 +3608,23 @@ class ApplianceRfProfilesFiveGhzSettingsArgs:
         pulumi.set(self, "min_bitrate", value)
 
 
-if not MYPY:
-    class ApplianceRfProfilesPerSsidSettingsArgsDict(TypedDict):
-        status1: NotRequired[pulumi.Input['ApplianceRfProfilesPerSsidSettingsStatus1ArgsDict']]
-        """
-        Settings for SSID 1.
-        """
-        status2: NotRequired[pulumi.Input['ApplianceRfProfilesPerSsidSettingsStatus2ArgsDict']]
-        """
-        Settings for SSID 2.
-        """
-        status3: NotRequired[pulumi.Input['ApplianceRfProfilesPerSsidSettingsStatus3ArgsDict']]
-        """
-        Settings for SSID 3.
-        """
-        status4: NotRequired[pulumi.Input['ApplianceRfProfilesPerSsidSettingsStatus4ArgsDict']]
-        """
-        Settings for SSID 4.
-        """
-elif False:
-    ApplianceRfProfilesPerSsidSettingsArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceRfProfilesPerSsidSettingsArgsDict(TypedDict):
+    status1: NotRequired[pulumi.Input['ApplianceRfProfilesPerSsidSettingsStatus1ArgsDict']]
+    """
+    Settings for SSID 1.
+    """
+    status2: NotRequired[pulumi.Input['ApplianceRfProfilesPerSsidSettingsStatus2ArgsDict']]
+    """
+    Settings for SSID 2.
+    """
+    status3: NotRequired[pulumi.Input['ApplianceRfProfilesPerSsidSettingsStatus3ArgsDict']]
+    """
+    Settings for SSID 3.
+    """
+    status4: NotRequired[pulumi.Input['ApplianceRfProfilesPerSsidSettingsStatus4ArgsDict']]
+    """
+    Settings for SSID 4.
+    """
 
 @pulumi.input_type
 class ApplianceRfProfilesPerSsidSettingsArgs:
@@ -3789,18 +3697,15 @@ class ApplianceRfProfilesPerSsidSettingsArgs:
         pulumi.set(self, "status4", value)
 
 
-if not MYPY:
-    class ApplianceRfProfilesPerSsidSettingsStatus1ArgsDict(TypedDict):
-        band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Band mode of this SSID
-        """
-        band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether this SSID steers clients to the most open band between 2.4 GHz and 5 GHz.
-        """
-elif False:
-    ApplianceRfProfilesPerSsidSettingsStatus1ArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceRfProfilesPerSsidSettingsStatus1ArgsDict(TypedDict):
+    band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Band mode of this SSID
+    """
+    band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether this SSID steers clients to the most open band between 2.4 GHz and 5 GHz.
+    """
 
 @pulumi.input_type
 class ApplianceRfProfilesPerSsidSettingsStatus1Args:
@@ -3841,18 +3746,15 @@ class ApplianceRfProfilesPerSsidSettingsStatus1Args:
         pulumi.set(self, "band_steering_enabled", value)
 
 
-if not MYPY:
-    class ApplianceRfProfilesPerSsidSettingsStatus2ArgsDict(TypedDict):
-        band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Band mode of this SSID
-        """
-        band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether this SSID steers clients to the most open band between 2.4 GHz and 5 GHz.
-        """
-elif False:
-    ApplianceRfProfilesPerSsidSettingsStatus2ArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceRfProfilesPerSsidSettingsStatus2ArgsDict(TypedDict):
+    band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Band mode of this SSID
+    """
+    band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether this SSID steers clients to the most open band between 2.4 GHz and 5 GHz.
+    """
 
 @pulumi.input_type
 class ApplianceRfProfilesPerSsidSettingsStatus2Args:
@@ -3893,18 +3795,15 @@ class ApplianceRfProfilesPerSsidSettingsStatus2Args:
         pulumi.set(self, "band_steering_enabled", value)
 
 
-if not MYPY:
-    class ApplianceRfProfilesPerSsidSettingsStatus3ArgsDict(TypedDict):
-        band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Band mode of this SSID
-        """
-        band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether this SSID steers clients to the most open band between 2.4 GHz and 5 GHz.
-        """
-elif False:
-    ApplianceRfProfilesPerSsidSettingsStatus3ArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceRfProfilesPerSsidSettingsStatus3ArgsDict(TypedDict):
+    band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Band mode of this SSID
+    """
+    band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether this SSID steers clients to the most open band between 2.4 GHz and 5 GHz.
+    """
 
 @pulumi.input_type
 class ApplianceRfProfilesPerSsidSettingsStatus3Args:
@@ -3945,18 +3844,15 @@ class ApplianceRfProfilesPerSsidSettingsStatus3Args:
         pulumi.set(self, "band_steering_enabled", value)
 
 
-if not MYPY:
-    class ApplianceRfProfilesPerSsidSettingsStatus4ArgsDict(TypedDict):
-        band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Band mode of this SSID
-        """
-        band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether this SSID steers clients to the most open band between 2.4 GHz and 5 GHz.
-        """
-elif False:
-    ApplianceRfProfilesPerSsidSettingsStatus4ArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceRfProfilesPerSsidSettingsStatus4ArgsDict(TypedDict):
+    band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Band mode of this SSID
+    """
+    band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether this SSID steers clients to the most open band between 2.4 GHz and 5 GHz.
+    """
 
 @pulumi.input_type
 class ApplianceRfProfilesPerSsidSettingsStatus4Args:
@@ -3997,18 +3893,15 @@ class ApplianceRfProfilesPerSsidSettingsStatus4Args:
         pulumi.set(self, "band_steering_enabled", value)
 
 
-if not MYPY:
-    class ApplianceRfProfilesTwoFourGhzSettingsArgsDict(TypedDict):
-        ax_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether ax radio on 2.4Ghz band is on or off.
-        """
-        min_bitrate: NotRequired[pulumi.Input[_builtins.float]]
-        """
-        Min bitrate (Mbps) of 2.4Ghz band.
-        """
-elif False:
-    ApplianceRfProfilesTwoFourGhzSettingsArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceRfProfilesTwoFourGhzSettingsArgsDict(TypedDict):
+    ax_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether ax radio on 2.4Ghz band is on or off.
+    """
+    min_bitrate: NotRequired[pulumi.Input[_builtins.float]]
+    """
+    Min bitrate (Mbps) of 2.4Ghz band.
+    """
 
 @pulumi.input_type
 class ApplianceRfProfilesTwoFourGhzSettingsArgs:
@@ -4049,22 +3942,19 @@ class ApplianceRfProfilesTwoFourGhzSettingsArgs:
         pulumi.set(self, "min_bitrate", value)
 
 
-if not MYPY:
-    class ApplianceSecurityIntrusionProtectedNetworksArgsDict(TypedDict):
-        excluded_cidrs: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        List of IP addresses or subnets being excluded from protection
-        """
-        included_cidrs: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        List of IP addresses or subnets being protected
-        """
-        use_default: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether special IPv4 addresses should be used (see: https://tools.ietf.org/html/rfc5735)
-        """
-elif False:
-    ApplianceSecurityIntrusionProtectedNetworksArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceSecurityIntrusionProtectedNetworksArgsDict(TypedDict):
+    excluded_cidrs: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of IP addresses or subnets being excluded from protection
+    """
+    included_cidrs: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of IP addresses or subnets being protected
+    """
+    use_default: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether special IPv4 addresses should be used (see: https://tools.ietf.org/html/rfc5735)
+    """
 
 @pulumi.input_type
 class ApplianceSecurityIntrusionProtectedNetworksArgs:
@@ -4121,18 +4011,15 @@ class ApplianceSecurityIntrusionProtectedNetworksArgs:
         pulumi.set(self, "use_default", value)
 
 
-if not MYPY:
-    class ApplianceSecurityMalwareAllowedFileArgsDict(TypedDict):
-        comment: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Comment about the allowed file
-        """
-        sha256: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The sha256 digest of allowed file
-        """
-elif False:
-    ApplianceSecurityMalwareAllowedFileArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceSecurityMalwareAllowedFileArgsDict(TypedDict):
+    comment: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Comment about the allowed file
+    """
+    sha256: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The sha256 digest of allowed file
+    """
 
 @pulumi.input_type
 class ApplianceSecurityMalwareAllowedFileArgs:
@@ -4173,18 +4060,15 @@ class ApplianceSecurityMalwareAllowedFileArgs:
         pulumi.set(self, "sha256", value)
 
 
-if not MYPY:
-    class ApplianceSecurityMalwareAllowedUrlArgsDict(TypedDict):
-        comment: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Comment about the allowed URL
-        """
-        url: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The allowed URL
-        """
-elif False:
-    ApplianceSecurityMalwareAllowedUrlArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceSecurityMalwareAllowedUrlArgsDict(TypedDict):
+    comment: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Comment about the allowed URL
+    """
+    url: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The allowed URL
+    """
 
 @pulumi.input_type
 class ApplianceSecurityMalwareAllowedUrlArgs:
@@ -4225,22 +4109,19 @@ class ApplianceSecurityMalwareAllowedUrlArgs:
         pulumi.set(self, "url", value)
 
 
-if not MYPY:
-    class ApplianceSettingsDynamicDnsArgsDict(TypedDict):
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Dynamic DNS enabled
-        """
-        prefix: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dynamic DNS url prefix. DDNS must be enabled to update
-        """
-        url: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Dynamic DNS url. DDNS must be enabled to update
-        """
-elif False:
-    ApplianceSettingsDynamicDnsArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceSettingsDynamicDnsArgsDict(TypedDict):
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Dynamic DNS enabled
+    """
+    prefix: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dynamic DNS url prefix. DDNS must be enabled to update
+    """
+    url: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Dynamic DNS url. DDNS must be enabled to update
+    """
 
 @pulumi.input_type
 class ApplianceSettingsDynamicDnsArgs:
@@ -4297,18 +4178,15 @@ class ApplianceSettingsDynamicDnsArgs:
         pulumi.set(self, "url", value)
 
 
-if not MYPY:
-    class ApplianceSingleLanIpv6ArgsDict(TypedDict):
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Enable IPv6 on single LAN
-        """
-        prefix_assignments: NotRequired[pulumi.Input[Sequence[pulumi.Input['ApplianceSingleLanIpv6PrefixAssignmentArgsDict']]]]
-        """
-        Prefix assignments on the single LAN
-        """
-elif False:
-    ApplianceSingleLanIpv6ArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceSingleLanIpv6ArgsDict(TypedDict):
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Enable IPv6 on single LAN
+    """
+    prefix_assignments: NotRequired[pulumi.Input[Sequence[pulumi.Input['ApplianceSingleLanIpv6PrefixAssignmentArgsDict']]]]
+    """
+    Prefix assignments on the single LAN
+    """
 
 @pulumi.input_type
 class ApplianceSingleLanIpv6Args:
@@ -4349,26 +4227,23 @@ class ApplianceSingleLanIpv6Args:
         pulumi.set(self, "prefix_assignments", value)
 
 
-if not MYPY:
-    class ApplianceSingleLanIpv6PrefixAssignmentArgsDict(TypedDict):
-        autonomous: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Auto assign a /64 prefix from the origin to the single LAN
-        """
-        origin: NotRequired[pulumi.Input['ApplianceSingleLanIpv6PrefixAssignmentOriginArgsDict']]
-        """
-        The origin of the prefix
-        """
-        static_appliance_ip6: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Manual configuration of the IPv6 Appliance IP
-        """
-        static_prefix: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Manual configuration of a /64 prefix on the single LAN
-        """
-elif False:
-    ApplianceSingleLanIpv6PrefixAssignmentArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceSingleLanIpv6PrefixAssignmentArgsDict(TypedDict):
+    autonomous: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Auto assign a /64 prefix from the origin to the single LAN
+    """
+    origin: NotRequired[pulumi.Input['ApplianceSingleLanIpv6PrefixAssignmentOriginArgsDict']]
+    """
+    The origin of the prefix
+    """
+    static_appliance_ip6: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Manual configuration of the IPv6 Appliance IP
+    """
+    static_prefix: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Manual configuration of a /64 prefix on the single LAN
+    """
 
 @pulumi.input_type
 class ApplianceSingleLanIpv6PrefixAssignmentArgs:
@@ -4441,18 +4316,15 @@ class ApplianceSingleLanIpv6PrefixAssignmentArgs:
         pulumi.set(self, "static_prefix", value)
 
 
-if not MYPY:
-    class ApplianceSingleLanIpv6PrefixAssignmentOriginArgsDict(TypedDict):
-        interfaces: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        Interfaces associated with the prefix
-        """
-        type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Type of the origin
-        """
-elif False:
-    ApplianceSingleLanIpv6PrefixAssignmentOriginArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceSingleLanIpv6PrefixAssignmentOriginArgsDict(TypedDict):
+    interfaces: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    Interfaces associated with the prefix
+    """
+    type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Type of the origin
+    """
 
 @pulumi.input_type
 class ApplianceSingleLanIpv6PrefixAssignmentOriginArgs:
@@ -4493,14 +4365,11 @@ class ApplianceSingleLanIpv6PrefixAssignmentOriginArgs:
         pulumi.set(self, "type", value)
 
 
-if not MYPY:
-    class ApplianceSingleLanMandatoryDhcpArgsDict(TypedDict):
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Enable Mandatory DHCP on single LAN.
-        """
-elif False:
-    ApplianceSingleLanMandatoryDhcpArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceSingleLanMandatoryDhcpArgsDict(TypedDict):
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Enable Mandatory DHCP on single LAN.
+    """
 
 @pulumi.input_type
 class ApplianceSingleLanMandatoryDhcpArgs:
@@ -4525,14 +4394,11 @@ class ApplianceSingleLanMandatoryDhcpArgs:
         pulumi.set(self, "enabled", value)
 
 
-if not MYPY:
-    class ApplianceSsidsDhcpEnforcedDeauthenticationArgsDict(TypedDict):
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Enable DCHP Enforced Deauthentication on the SSID.
-        """
-elif False:
-    ApplianceSsidsDhcpEnforcedDeauthenticationArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceSsidsDhcpEnforcedDeauthenticationArgsDict(TypedDict):
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Enable DCHP Enforced Deauthentication on the SSID.
+    """
 
 @pulumi.input_type
 class ApplianceSsidsDhcpEnforcedDeauthenticationArgs:
@@ -4557,18 +4423,15 @@ class ApplianceSsidsDhcpEnforcedDeauthenticationArgs:
         pulumi.set(self, "enabled", value)
 
 
-if not MYPY:
-    class ApplianceSsidsDot11wArgsDict(TypedDict):
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether 802.11w is enabled or not.
-        """
-        required: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        (Optional) Whether 802.11w is required or not.
-        """
-elif False:
-    ApplianceSsidsDot11wArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceSsidsDot11wArgsDict(TypedDict):
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether 802.11w is enabled or not.
+    """
+    required: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    (Optional) Whether 802.11w is required or not.
+    """
 
 @pulumi.input_type
 class ApplianceSsidsDot11wArgs:
@@ -4609,22 +4472,19 @@ class ApplianceSsidsDot11wArgs:
         pulumi.set(self, "required", value)
 
 
-if not MYPY:
-    class ApplianceSsidsRadiusServerArgsDict(TypedDict):
-        host: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The IP address of your RADIUS server.
-        """
-        port: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The UDP port your RADIUS servers listens on for Access-requests.
-        """
-        secret: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The RADIUS client shared secret.
-        """
-elif False:
-    ApplianceSsidsRadiusServerArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceSsidsRadiusServerArgsDict(TypedDict):
+    host: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The IP address of your RADIUS server.
+    """
+    port: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The UDP port your RADIUS servers listens on for Access-requests.
+    """
+    secret: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The RADIUS client shared secret.
+    """
 
 @pulumi.input_type
 class ApplianceSsidsRadiusServerArgs:
@@ -4681,22 +4541,19 @@ class ApplianceSsidsRadiusServerArgs:
         pulumi.set(self, "secret", value)
 
 
-if not MYPY:
-    class ApplianceSsidsRadiusServersResponseArgsDict(TypedDict):
-        host: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The IP address of your RADIUS server.
-        """
-        port: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The UDP port your RADIUS servers listens on for Access-requests.
-        """
-        secret: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The RADIUS client shared secret.
-        """
-elif False:
-    ApplianceSsidsRadiusServersResponseArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceSsidsRadiusServersResponseArgsDict(TypedDict):
+    host: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The IP address of your RADIUS server.
+    """
+    port: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The UDP port your RADIUS servers listens on for Access-requests.
+    """
+    secret: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The RADIUS client shared secret.
+    """
 
 @pulumi.input_type
 class ApplianceSsidsRadiusServersResponseArgs:
@@ -4753,26 +4610,23 @@ class ApplianceSsidsRadiusServersResponseArgs:
         pulumi.set(self, "secret", value)
 
 
-if not MYPY:
-    class ApplianceTrafficShapingCustomPerformanceClassesParametersArgsDict(TypedDict):
-        max_jitter: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Maximum jitter in milliseconds
-        """
-        max_latency: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Maximum latency in milliseconds
-        """
-        max_loss_percentage: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Maximum percentage of packet loss
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the custom performance class
-        """
-elif False:
-    ApplianceTrafficShapingCustomPerformanceClassesParametersArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceTrafficShapingCustomPerformanceClassesParametersArgsDict(TypedDict):
+    max_jitter: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Maximum jitter in milliseconds
+    """
+    max_latency: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Maximum latency in milliseconds
+    """
+    max_loss_percentage: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Maximum percentage of packet loss
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the custom performance class
+    """
 
 @pulumi.input_type
 class ApplianceTrafficShapingCustomPerformanceClassesParametersArgs:
@@ -4845,18 +4699,15 @@ class ApplianceTrafficShapingCustomPerformanceClassesParametersArgs:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class ApplianceTrafficShapingGlobalBandwidthLimitsArgsDict(TypedDict):
-        limit_down: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The download bandwidth limit in Kbps. (0 represents no limit.)
-        """
-        limit_up: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The upload bandwidth limit in Kbps. (0 represents no limit.)
-        """
-elif False:
-    ApplianceTrafficShapingGlobalBandwidthLimitsArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceTrafficShapingGlobalBandwidthLimitsArgsDict(TypedDict):
+    limit_down: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The download bandwidth limit in Kbps. (0 represents no limit.)
+    """
+    limit_up: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The upload bandwidth limit in Kbps. (0 represents no limit.)
+    """
 
 @pulumi.input_type
 class ApplianceTrafficShapingGlobalBandwidthLimitsArgs:
@@ -4897,28 +4748,25 @@ class ApplianceTrafficShapingGlobalBandwidthLimitsArgs:
         pulumi.set(self, "limit_up", value)
 
 
-if not MYPY:
-    class ApplianceTrafficShapingRulesRuleArgsDict(TypedDict):
-        definitions: NotRequired[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingRulesRuleDefinitionArgsDict']]]]
-        """
-        A list of objects describing the definitions of your traffic shaping rule. At least one definition is required.
-        """
-        dscp_tag_value: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The DSCP tag applied by your rule. null means 'Do not change DSCP tag'.
-        For a list of possible tag values, use the trafficShaping/dscpTaggingOptions endpoint.
-        """
-        per_client_bandwidth_limits: NotRequired[pulumi.Input['ApplianceTrafficShapingRulesRulePerClientBandwidthLimitsArgsDict']]
-        """
-        An object describing the bandwidth settings for your rule.
-        """
-        priority: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        A string, indicating the priority level for packets bound to your rule.
-        Can be 'low', 'normal' or 'high'.
-        """
-elif False:
-    ApplianceTrafficShapingRulesRuleArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceTrafficShapingRulesRuleArgsDict(TypedDict):
+    definitions: NotRequired[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingRulesRuleDefinitionArgsDict']]]]
+    """
+    A list of objects describing the definitions of your traffic shaping rule. At least one definition is required.
+    """
+    dscp_tag_value: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The DSCP tag applied by your rule. null means 'Do not change DSCP tag'.
+    For a list of possible tag values, use the trafficShaping/dscpTaggingOptions endpoint.
+    """
+    per_client_bandwidth_limits: NotRequired[pulumi.Input['ApplianceTrafficShapingRulesRulePerClientBandwidthLimitsArgsDict']]
+    """
+    An object describing the bandwidth settings for your rule.
+    """
+    priority: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    A string, indicating the priority level for packets bound to your rule.
+    Can be 'low', 'normal' or 'high'.
+    """
 
 @pulumi.input_type
 class ApplianceTrafficShapingRulesRuleArgs:
@@ -4995,33 +4843,30 @@ class ApplianceTrafficShapingRulesRuleArgs:
         pulumi.set(self, "priority", value)
 
 
-if not MYPY:
-    class ApplianceTrafficShapingRulesRuleDefinitionArgsDict(TypedDict):
-        type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The type of definition. Can be one of 'application', 'applicationCategory', 'host', 'port', 'ipRange' or 'localNet'.
-        """
-        value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        If "type" is 'host', 'port', 'ipRange' or 'localNet', then "value" must be a string, matching either
-        a hostname (e.g. "somesite.com"), a port (e.g. 8080), or an IP range ("192.1.0.0",
-        "192.1.0.0/16", or "10.1.0.0/16:80"). 'localNet' also supports CIDR notation, excluding
-        custom ports.
-         If "type" is 'application' or 'applicationCategory', then "value" must be an object
-        with the structure { "id": "meraki:layer7/..." }, where "id" is the application category or
-        application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
-        endpoint).
-        """
-        value_lists: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The 'value_list' of what you want to block. Send a list in request
-        """
-        value_obj: NotRequired[pulumi.Input['ApplianceTrafficShapingRulesRuleDefinitionValueObjArgsDict']]
-        """
-        The 'value_obj' of what you want to block. Send a dict in request
-        """
-elif False:
-    ApplianceTrafficShapingRulesRuleDefinitionArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceTrafficShapingRulesRuleDefinitionArgsDict(TypedDict):
+    type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The type of definition. Can be one of 'application', 'applicationCategory', 'host', 'port', 'ipRange' or 'localNet'.
+    """
+    value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    If "type" is 'host', 'port', 'ipRange' or 'localNet', then "value" must be a string, matching either
+    a hostname (e.g. "somesite.com"), a port (e.g. 8080), or an IP range ("192.1.0.0",
+    "192.1.0.0/16", or "10.1.0.0/16:80"). 'localNet' also supports CIDR notation, excluding
+    custom ports.
+     If "type" is 'application' or 'applicationCategory', then "value" must be an object
+    with the structure { "id": "meraki:layer7/..." }, where "id" is the application category or
+    application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
+    endpoint).
+    """
+    value_lists: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The 'value_list' of what you want to block. Send a list in request
+    """
+    value_obj: NotRequired[pulumi.Input['ApplianceTrafficShapingRulesRuleDefinitionValueObjArgsDict']]
+    """
+    The 'value_obj' of what you want to block. Send a dict in request
+    """
 
 @pulumi.input_type
 class ApplianceTrafficShapingRulesRuleDefinitionArgs:
@@ -5108,12 +4953,9 @@ class ApplianceTrafficShapingRulesRuleDefinitionArgs:
         pulumi.set(self, "value_obj", value)
 
 
-if not MYPY:
-    class ApplianceTrafficShapingRulesRuleDefinitionValueObjArgsDict(TypedDict):
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        name: NotRequired[pulumi.Input[_builtins.str]]
-elif False:
-    ApplianceTrafficShapingRulesRuleDefinitionValueObjArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceTrafficShapingRulesRuleDefinitionValueObjArgsDict(TypedDict):
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[_builtins.str]]
 
 @pulumi.input_type
 class ApplianceTrafficShapingRulesRuleDefinitionValueObjArgs:
@@ -5144,18 +4986,15 @@ class ApplianceTrafficShapingRulesRuleDefinitionValueObjArgs:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class ApplianceTrafficShapingRulesRulePerClientBandwidthLimitsArgsDict(TypedDict):
-        bandwidth_limits: NotRequired[pulumi.Input['ApplianceTrafficShapingRulesRulePerClientBandwidthLimitsBandwidthLimitsArgsDict']]
-        """
-        The bandwidth limits object, specifying the upload ('limitUp') and download ('limitDown') speed in Kbps. These are only enforced if 'settings' is set to 'custom'.
-        """
-        settings: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        How bandwidth limits are applied by your rule. Can be one of 'network default', 'ignore' or 'custom'.
-        """
-elif False:
-    ApplianceTrafficShapingRulesRulePerClientBandwidthLimitsArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceTrafficShapingRulesRulePerClientBandwidthLimitsArgsDict(TypedDict):
+    bandwidth_limits: NotRequired[pulumi.Input['ApplianceTrafficShapingRulesRulePerClientBandwidthLimitsBandwidthLimitsArgsDict']]
+    """
+    The bandwidth limits object, specifying the upload ('limitUp') and download ('limitDown') speed in Kbps. These are only enforced if 'settings' is set to 'custom'.
+    """
+    settings: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    How bandwidth limits are applied by your rule. Can be one of 'network default', 'ignore' or 'custom'.
+    """
 
 @pulumi.input_type
 class ApplianceTrafficShapingRulesRulePerClientBandwidthLimitsArgs:
@@ -5196,18 +5035,15 @@ class ApplianceTrafficShapingRulesRulePerClientBandwidthLimitsArgs:
         pulumi.set(self, "settings", value)
 
 
-if not MYPY:
-    class ApplianceTrafficShapingRulesRulePerClientBandwidthLimitsBandwidthLimitsArgsDict(TypedDict):
-        limit_down: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The maximum download limit (integer, in Kbps).
-        """
-        limit_up: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The maximum upload limit (integer, in Kbps).
-        """
-elif False:
-    ApplianceTrafficShapingRulesRulePerClientBandwidthLimitsBandwidthLimitsArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceTrafficShapingRulesRulePerClientBandwidthLimitsBandwidthLimitsArgsDict(TypedDict):
+    limit_down: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The maximum download limit (integer, in Kbps).
+    """
+    limit_up: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The maximum upload limit (integer, in Kbps).
+    """
 
 @pulumi.input_type
 class ApplianceTrafficShapingRulesRulePerClientBandwidthLimitsBandwidthLimitsArgs:
@@ -5248,22 +5084,19 @@ class ApplianceTrafficShapingRulesRulePerClientBandwidthLimitsBandwidthLimitsArg
         pulumi.set(self, "limit_up", value)
 
 
-if not MYPY:
-    class ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgsDict(TypedDict):
-        cellular: NotRequired[pulumi.Input['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellularArgsDict']]
-        """
-        uplink cellular configured limits [optional]
-        """
-        wan1: NotRequired[pulumi.Input['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsWan1ArgsDict']]
-        """
-        uplink wan1 configured limits [optional]
-        """
-        wan2: NotRequired[pulumi.Input['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsWan2ArgsDict']]
-        """
-        uplink wan2 configured limits [optional]
-        """
-elif False:
-    ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgsDict(TypedDict):
+    cellular: NotRequired[pulumi.Input['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellularArgsDict']]
+    """
+    uplink cellular configured limits [optional]
+    """
+    wan1: NotRequired[pulumi.Input['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsWan1ArgsDict']]
+    """
+    uplink wan1 configured limits [optional]
+    """
+    wan2: NotRequired[pulumi.Input['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsWan2ArgsDict']]
+    """
+    uplink wan2 configured limits [optional]
+    """
 
 @pulumi.input_type
 class ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs:
@@ -5320,18 +5153,15 @@ class ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs:
         pulumi.set(self, "wan2", value)
 
 
-if not MYPY:
-    class ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellularArgsDict(TypedDict):
-        limit_down: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        configured DOWN limit for the uplink (in Kbps).  Null indicated unlimited
-        """
-        limit_up: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        configured UP limit for the uplink (in Kbps).  Null indicated unlimited
-        """
-elif False:
-    ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellularArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellularArgsDict(TypedDict):
+    limit_down: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    configured DOWN limit for the uplink (in Kbps).  Null indicated unlimited
+    """
+    limit_up: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    configured UP limit for the uplink (in Kbps).  Null indicated unlimited
+    """
 
 @pulumi.input_type
 class ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellularArgs:
@@ -5372,18 +5202,15 @@ class ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsCellularArgs:
         pulumi.set(self, "limit_up", value)
 
 
-if not MYPY:
-    class ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsWan1ArgsDict(TypedDict):
-        limit_down: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        configured DOWN limit for the uplink (in Kbps).  Null indicated unlimited
-        """
-        limit_up: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        configured UP limit for the uplink (in Kbps).  Null indicated unlimited
-        """
-elif False:
-    ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsWan1ArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsWan1ArgsDict(TypedDict):
+    limit_down: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    configured DOWN limit for the uplink (in Kbps).  Null indicated unlimited
+    """
+    limit_up: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    configured UP limit for the uplink (in Kbps).  Null indicated unlimited
+    """
 
 @pulumi.input_type
 class ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsWan1Args:
@@ -5424,18 +5251,15 @@ class ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsWan1Args:
         pulumi.set(self, "limit_up", value)
 
 
-if not MYPY:
-    class ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsWan2ArgsDict(TypedDict):
-        limit_down: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        configured DOWN limit for the uplink (in Kbps).  Null indicated unlimited
-        """
-        limit_up: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        configured UP limit for the uplink (in Kbps).  Null indicated unlimited
-        """
-elif False:
-    ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsWan2ArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsWan2ArgsDict(TypedDict):
+    limit_down: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    configured DOWN limit for the uplink (in Kbps).  Null indicated unlimited
+    """
+    limit_up: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    configured UP limit for the uplink (in Kbps).  Null indicated unlimited
+    """
 
 @pulumi.input_type
 class ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsWan2Args:
@@ -5476,14 +5300,11 @@ class ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsWan2Args:
         pulumi.set(self, "limit_up", value)
 
 
-if not MYPY:
-    class ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgsDict(TypedDict):
-        immediate: NotRequired[pulumi.Input['ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackImmediateArgsDict']]
-        """
-        Immediate WAN failover and failback
-        """
-elif False:
-    ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgsDict(TypedDict):
+    immediate: NotRequired[pulumi.Input['ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackImmediateArgsDict']]
+    """
+    Immediate WAN failover and failback
+    """
 
 @pulumi.input_type
 class ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgs:
@@ -5508,14 +5329,11 @@ class ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgs:
         pulumi.set(self, "immediate", value)
 
 
-if not MYPY:
-    class ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackImmediateArgsDict(TypedDict):
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether immediate WAN failover and failback is enabled
-        """
-elif False:
-    ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackImmediateArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackImmediateArgsDict(TypedDict):
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether immediate WAN failover and failback is enabled
+    """
 
 @pulumi.input_type
 class ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackImmediateArgs:
@@ -5540,26 +5358,23 @@ class ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackImmediateArgs:
         pulumi.set(self, "enabled", value)
 
 
-if not MYPY:
-    class ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgsDict(TypedDict):
-        fail_over_criterion: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Fail over criterion for uplink preference rule. Must be one of: 'poorPerformance' or 'uplinkDown'
-        """
-        performance_class: NotRequired[pulumi.Input['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferencePerformanceClassArgsDict']]
-        """
-        Performance class setting for uplink preference rule
-        """
-        preferred_uplink: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Preferred uplink for uplink preference rule. Must be one of: 'wan1', 'wan2', 'bestForVoIP', 'loadBalancing' or 'defaultUplink'
-        """
-        traffic_filters: NotRequired[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterArgsDict']]]]
-        """
-        Traffic filters
-        """
-elif False:
-    ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgsDict(TypedDict):
+    fail_over_criterion: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Fail over criterion for uplink preference rule. Must be one of: 'poorPerformance' or 'uplinkDown'
+    """
+    performance_class: NotRequired[pulumi.Input['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferencePerformanceClassArgsDict']]
+    """
+    Performance class setting for uplink preference rule
+    """
+    preferred_uplink: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Preferred uplink for uplink preference rule. Must be one of: 'wan1', 'wan2', 'bestForVoIP', 'loadBalancing' or 'defaultUplink'
+    """
+    traffic_filters: NotRequired[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterArgsDict']]]]
+    """
+    Traffic filters
+    """
 
 @pulumi.input_type
 class ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgs:
@@ -5632,22 +5447,19 @@ class ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceArgs:
         pulumi.set(self, "traffic_filters", value)
 
 
-if not MYPY:
-    class ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferencePerformanceClassArgsDict(TypedDict):
-        builtin_performance_class_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of builtin performance class. Must be present when performanceClass type is 'builtin' and value must be one of: 'VoIP'
-        """
-        custom_performance_class_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        ID of created custom performance class, must be present when performanceClass type is "custom"
-        """
-        type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Type of this performance class. Must be one of: 'builtin' or 'custom'
-        """
-elif False:
-    ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferencePerformanceClassArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferencePerformanceClassArgsDict(TypedDict):
+    builtin_performance_class_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of builtin performance class. Must be present when performanceClass type is 'builtin' and value must be one of: 'VoIP'
+    """
+    custom_performance_class_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    ID of created custom performance class, must be present when performanceClass type is "custom"
+    """
+    type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Type of this performance class. Must be one of: 'builtin' or 'custom'
+    """
 
 @pulumi.input_type
 class ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferencePerformanceClassArgs:
@@ -5704,18 +5516,15 @@ class ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferencePerformanc
         pulumi.set(self, "type", value)
 
 
-if not MYPY:
-    class ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterArgsDict(TypedDict):
-        type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Traffic filter type. Must be one of: 'applicationCategory', 'application' or 'custom'
-        """
-        value: NotRequired[pulumi.Input['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterValueArgsDict']]
-        """
-        Value of traffic filter
-        """
-elif False:
-    ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterArgsDict(TypedDict):
+    type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Traffic filter type. Must be one of: 'applicationCategory', 'application' or 'custom'
+    """
+    value: NotRequired[pulumi.Input['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterValueArgsDict']]
+    """
+    Value of traffic filter
+    """
 
 @pulumi.input_type
 class ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterArgs:
@@ -5756,26 +5565,23 @@ class ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFil
         pulumi.set(self, "value", value)
 
 
-if not MYPY:
-    class ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterValueArgsDict(TypedDict):
-        destination: NotRequired[pulumi.Input['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterValueDestinationArgsDict']]
-        """
-        Destination of 'custom' type traffic filter
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        ID of 'applicationCategory' or 'application' type traffic filter
-        """
-        protocol: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Protocol of 'custom' type traffic filter. Must be one of: 'tcp', 'udp', 'icmp', 'icmp6' or 'any'
-        """
-        source: NotRequired[pulumi.Input['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterValueSourceArgsDict']]
-        """
-        Source of 'custom' type traffic filter
-        """
-elif False:
-    ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterValueArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterValueArgsDict(TypedDict):
+    destination: NotRequired[pulumi.Input['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterValueDestinationArgsDict']]
+    """
+    Destination of 'custom' type traffic filter
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    ID of 'applicationCategory' or 'application' type traffic filter
+    """
+    protocol: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Protocol of 'custom' type traffic filter. Must be one of: 'tcp', 'udp', 'icmp', 'icmp6' or 'any'
+    """
+    source: NotRequired[pulumi.Input['ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterValueSourceArgsDict']]
+    """
+    Source of 'custom' type traffic filter
+    """
 
 @pulumi.input_type
 class ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterValueArgs:
@@ -5848,34 +5654,31 @@ class ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFil
         pulumi.set(self, "source", value)
 
 
-if not MYPY:
-    class ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterValueDestinationArgsDict(TypedDict):
-        cidr: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        CIDR format address (e.g."192.168.10.1", which is the same as "192.168.10.1/32"), or "any". Cannot be used in combination with the "vlan" or "fqdn" property
-        """
-        fqdn: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        FQDN format address. Cannot be used in combination with the "cidr" or "fqdn" property and is currently only available in the "destination" object of the "vpnTrafficUplinkPreference" object. E.g.: "www.google.com"
-        """
-        host: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Host ID in the VLAN. Should not exceed the VLAN subnet capacity. Must be used along with the "vlan" property and is currently only available under a template network.
-        """
-        network: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Meraki network ID. Currently only available under a template network, and the value should be ID of either same template network, or another template network currently. E.g.: "L_12345678".
-        """
-        port: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        E.g.: "any", "0" (also means "any"), "8080", "1-1024"
-        """
-        vlan: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        VLAN ID of the configured VLAN in the Meraki network. Cannot be used in combination with the "cidr" or "fqdn" property and is currently only available under a template network.
-        """
-elif False:
-    ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterValueDestinationArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterValueDestinationArgsDict(TypedDict):
+    cidr: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    CIDR format address (e.g."192.168.10.1", which is the same as "192.168.10.1/32"), or "any". Cannot be used in combination with the "vlan" or "fqdn" property
+    """
+    fqdn: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    FQDN format address. Cannot be used in combination with the "cidr" or "fqdn" property and is currently only available in the "destination" object of the "vpnTrafficUplinkPreference" object. E.g.: "www.google.com"
+    """
+    host: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Host ID in the VLAN. Should not exceed the VLAN subnet capacity. Must be used along with the "vlan" property and is currently only available under a template network.
+    """
+    network: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Meraki network ID. Currently only available under a template network, and the value should be ID of either same template network, or another template network currently. E.g.: "L_12345678".
+    """
+    port: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    E.g.: "any", "0" (also means "any"), "8080", "1-1024"
+    """
+    vlan: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    VLAN ID of the configured VLAN in the Meraki network. Cannot be used in combination with the "cidr" or "fqdn" property and is currently only available under a template network.
+    """
 
 @pulumi.input_type
 class ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterValueDestinationArgs:
@@ -5980,30 +5783,27 @@ class ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFil
         pulumi.set(self, "vlan", value)
 
 
-if not MYPY:
-    class ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterValueSourceArgsDict(TypedDict):
-        cidr: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        CIDR format address (e.g."192.168.10.1", which is the same as "192.168.10.1/32"), or "any". Cannot be used in combination with the "vlan" property
-        """
-        host: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Host ID in the VLAN. Should not exceed the VLAN subnet capacity. Must be used along with the "vlan" property and is currently only available under a template network.
-        """
-        network: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Meraki network ID. Currently only available under a template network, and the value should be ID of either same template network, or another template network currently. E.g.: "L_12345678".
-        """
-        port: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        E.g.: "any", "0" (also means "any"), "8080", "1-1024"
-        """
-        vlan: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        VLAN ID of the configured VLAN in the Meraki network. Cannot be used in combination with the "cidr" property and is currently only available under a template network.
-        """
-elif False:
-    ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterValueSourceArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterValueSourceArgsDict(TypedDict):
+    cidr: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    CIDR format address (e.g."192.168.10.1", which is the same as "192.168.10.1/32"), or "any". Cannot be used in combination with the "vlan" property
+    """
+    host: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Host ID in the VLAN. Should not exceed the VLAN subnet capacity. Must be used along with the "vlan" property and is currently only available under a template network.
+    """
+    network: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Meraki network ID. Currently only available under a template network, and the value should be ID of either same template network, or another template network currently. E.g.: "L_12345678".
+    """
+    port: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    E.g.: "any", "0" (also means "any"), "8080", "1-1024"
+    """
+    vlan: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    VLAN ID of the configured VLAN in the Meraki network. Cannot be used in combination with the "cidr" property and is currently only available under a template network.
+    """
 
 @pulumi.input_type
 class ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFilterValueSourceArgs:
@@ -6092,18 +5892,15 @@ class ApplianceTrafficShapingUplinkSelectionVpnTrafficUplinkPreferenceTrafficFil
         pulumi.set(self, "vlan", value)
 
 
-if not MYPY:
-    class ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgsDict(TypedDict):
-        preferred_uplink: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Preferred uplink for uplink preference rule. Must be one of: 'wan1' or 'wan2'
-        """
-        traffic_filters: NotRequired[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterArgsDict']]]]
-        """
-        Traffic filters
-        """
-elif False:
-    ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgsDict(TypedDict):
+    preferred_uplink: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Preferred uplink for uplink preference rule. Must be one of: 'wan1' or 'wan2'
+    """
+    traffic_filters: NotRequired[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterArgsDict']]]]
+    """
+    Traffic filters
+    """
 
 @pulumi.input_type
 class ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgs:
@@ -6144,18 +5941,15 @@ class ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgs:
         pulumi.set(self, "traffic_filters", value)
 
 
-if not MYPY:
-    class ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterArgsDict(TypedDict):
-        type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Traffic filter type. Must be "custom"
-        """
-        value: NotRequired[pulumi.Input['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterValueArgsDict']]
-        """
-        Value of traffic filter
-        """
-elif False:
-    ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterArgsDict(TypedDict):
+    type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Traffic filter type. Must be "custom"
+    """
+    value: NotRequired[pulumi.Input['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterValueArgsDict']]
+    """
+    Value of traffic filter
+    """
 
 @pulumi.input_type
 class ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterArgs:
@@ -6196,22 +5990,19 @@ class ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFil
         pulumi.set(self, "value", value)
 
 
-if not MYPY:
-    class ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterValueArgsDict(TypedDict):
-        destination: NotRequired[pulumi.Input['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterValueDestinationArgsDict']]
-        """
-        Destination of 'custom' type traffic filter
-        """
-        protocol: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Protocol of 'custom' type traffic filter. Must be one of: 'tcp', 'udp', 'icmp6' or 'any'
-        """
-        source: NotRequired[pulumi.Input['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterValueSourceArgsDict']]
-        """
-        Source of 'custom' type traffic filter
-        """
-elif False:
-    ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterValueArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterValueArgsDict(TypedDict):
+    destination: NotRequired[pulumi.Input['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterValueDestinationArgsDict']]
+    """
+    Destination of 'custom' type traffic filter
+    """
+    protocol: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Protocol of 'custom' type traffic filter. Must be one of: 'tcp', 'udp', 'icmp6' or 'any'
+    """
+    source: NotRequired[pulumi.Input['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterValueSourceArgsDict']]
+    """
+    Source of 'custom' type traffic filter
+    """
 
 @pulumi.input_type
 class ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterValueArgs:
@@ -6268,18 +6059,15 @@ class ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFil
         pulumi.set(self, "source", value)
 
 
-if not MYPY:
-    class ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterValueDestinationArgsDict(TypedDict):
-        cidr: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        CIDR format address (e.g."192.168.10.1", which is the same as "192.168.10.1/32"), or "any"
-        """
-        port: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        E.g.: "any", "0" (also means "any"), "8080", "1-1024"
-        """
-elif False:
-    ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterValueDestinationArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterValueDestinationArgsDict(TypedDict):
+    cidr: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    CIDR format address (e.g."192.168.10.1", which is the same as "192.168.10.1/32"), or "any"
+    """
+    port: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    E.g.: "any", "0" (also means "any"), "8080", "1-1024"
+    """
 
 @pulumi.input_type
 class ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterValueDestinationArgs:
@@ -6320,26 +6108,23 @@ class ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFil
         pulumi.set(self, "port", value)
 
 
-if not MYPY:
-    class ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterValueSourceArgsDict(TypedDict):
-        cidr: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        CIDR format address (e.g."192.168.10.1", which is the same as "192.168.10.1/32"), or "any". Cannot be used in combination with the "vlan" property
-        """
-        host: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Host ID in the VLAN. Should not exceed the VLAN subnet capacity. Must be used along with the "vlan" property and is currently only available under a template network.
-        """
-        port: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        E.g.: "any", "0" (also means "any"), "8080", "1-1024"
-        """
-        vlan: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        VLAN ID of the configured VLAN in the Meraki network. Cannot be used in combination with the "cidr" property and is currently only available under a template network.
-        """
-elif False:
-    ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterValueSourceArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterValueSourceArgsDict(TypedDict):
+    cidr: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    CIDR format address (e.g."192.168.10.1", which is the same as "192.168.10.1/32"), or "any". Cannot be used in combination with the "vlan" property
+    """
+    host: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Host ID in the VLAN. Should not exceed the VLAN subnet capacity. Must be used along with the "vlan" property and is currently only available under a template network.
+    """
+    port: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    E.g.: "any", "0" (also means "any"), "8080", "1-1024"
+    """
+    vlan: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    VLAN ID of the configured VLAN in the Meraki network. Cannot be used in combination with the "cidr" property and is currently only available under a template network.
+    """
 
 @pulumi.input_type
 class ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFilterValueSourceArgs:
@@ -6412,26 +6197,23 @@ class ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceTrafficFil
         pulumi.set(self, "vlan", value)
 
 
-if not MYPY:
-    class ApplianceTrafficShapingVpnExclusionsItemArgsDict(TypedDict):
-        customs: NotRequired[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingVpnExclusionsItemCustomArgsDict']]]]
-        """
-        Custom VPN exclusion rules.
-        """
-        major_applications: NotRequired[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingVpnExclusionsItemMajorApplicationArgsDict']]]]
-        """
-        Major Application based VPN exclusion rules.
-        """
-        network_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        ID of the network whose VPN exclusion rules are returned.
-        """
-        network_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the network whose VPN exclusion rules are returned.
-        """
-elif False:
-    ApplianceTrafficShapingVpnExclusionsItemArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceTrafficShapingVpnExclusionsItemArgsDict(TypedDict):
+    customs: NotRequired[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingVpnExclusionsItemCustomArgsDict']]]]
+    """
+    Custom VPN exclusion rules.
+    """
+    major_applications: NotRequired[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingVpnExclusionsItemMajorApplicationArgsDict']]]]
+    """
+    Major Application based VPN exclusion rules.
+    """
+    network_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    ID of the network whose VPN exclusion rules are returned.
+    """
+    network_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the network whose VPN exclusion rules are returned.
+    """
 
 @pulumi.input_type
 class ApplianceTrafficShapingVpnExclusionsItemArgs:
@@ -6504,22 +6286,19 @@ class ApplianceTrafficShapingVpnExclusionsItemArgs:
         pulumi.set(self, "network_name", value)
 
 
-if not MYPY:
-    class ApplianceTrafficShapingVpnExclusionsItemCustomArgsDict(TypedDict):
-        destination: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Destination address; hostname required for DNS, IPv4 otherwise.
-        """
-        port: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Destination port.
-        """
-        protocol: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Protocol.
-        """
-elif False:
-    ApplianceTrafficShapingVpnExclusionsItemCustomArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceTrafficShapingVpnExclusionsItemCustomArgsDict(TypedDict):
+    destination: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Destination address; hostname required for DNS, IPv4 otherwise.
+    """
+    port: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Destination port.
+    """
+    protocol: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Protocol.
+    """
 
 @pulumi.input_type
 class ApplianceTrafficShapingVpnExclusionsItemCustomArgs:
@@ -6576,18 +6355,15 @@ class ApplianceTrafficShapingVpnExclusionsItemCustomArgs:
         pulumi.set(self, "protocol", value)
 
 
-if not MYPY:
-    class ApplianceTrafficShapingVpnExclusionsItemMajorApplicationArgsDict(TypedDict):
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Application's Meraki ID.
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Application's name.
-        """
-elif False:
-    ApplianceTrafficShapingVpnExclusionsItemMajorApplicationArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceTrafficShapingVpnExclusionsItemMajorApplicationArgsDict(TypedDict):
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Application's Meraki ID.
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Application's name.
+    """
 
 @pulumi.input_type
 class ApplianceTrafficShapingVpnExclusionsItemMajorApplicationArgs:
@@ -6628,18 +6404,15 @@ class ApplianceTrafficShapingVpnExclusionsItemMajorApplicationArgs:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class ApplianceTrafficShapingVpnExclusionsParametersArgsDict(TypedDict):
-        customs: NotRequired[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingVpnExclusionsParametersCustomArgsDict']]]]
-        """
-        Custom VPN exclusion rules. Pass an empty array to clear existing rules.
-        """
-        major_applications: NotRequired[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingVpnExclusionsParametersMajorApplicationArgsDict']]]]
-        """
-        Major Application based VPN exclusion rules. Pass an empty array to clear existing rules.
-        """
-elif False:
-    ApplianceTrafficShapingVpnExclusionsParametersArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceTrafficShapingVpnExclusionsParametersArgsDict(TypedDict):
+    customs: NotRequired[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingVpnExclusionsParametersCustomArgsDict']]]]
+    """
+    Custom VPN exclusion rules. Pass an empty array to clear existing rules.
+    """
+    major_applications: NotRequired[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingVpnExclusionsParametersMajorApplicationArgsDict']]]]
+    """
+    Major Application based VPN exclusion rules. Pass an empty array to clear existing rules.
+    """
 
 @pulumi.input_type
 class ApplianceTrafficShapingVpnExclusionsParametersArgs:
@@ -6680,22 +6453,19 @@ class ApplianceTrafficShapingVpnExclusionsParametersArgs:
         pulumi.set(self, "major_applications", value)
 
 
-if not MYPY:
-    class ApplianceTrafficShapingVpnExclusionsParametersCustomArgsDict(TypedDict):
-        destination: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Destination address; hostname required for DNS, IPv4 otherwise.
-        """
-        port: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Destination port.
-        """
-        protocol: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Protocol.
-        """
-elif False:
-    ApplianceTrafficShapingVpnExclusionsParametersCustomArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceTrafficShapingVpnExclusionsParametersCustomArgsDict(TypedDict):
+    destination: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Destination address; hostname required for DNS, IPv4 otherwise.
+    """
+    port: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Destination port.
+    """
+    protocol: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Protocol.
+    """
 
 @pulumi.input_type
 class ApplianceTrafficShapingVpnExclusionsParametersCustomArgs:
@@ -6752,18 +6522,15 @@ class ApplianceTrafficShapingVpnExclusionsParametersCustomArgs:
         pulumi.set(self, "protocol", value)
 
 
-if not MYPY:
-    class ApplianceTrafficShapingVpnExclusionsParametersMajorApplicationArgsDict(TypedDict):
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Application's Meraki ID.
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Application's name.
-        """
-elif False:
-    ApplianceTrafficShapingVpnExclusionsParametersMajorApplicationArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceTrafficShapingVpnExclusionsParametersMajorApplicationArgsDict(TypedDict):
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Application's Meraki ID.
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Application's name.
+    """
 
 @pulumi.input_type
 class ApplianceTrafficShapingVpnExclusionsParametersMajorApplicationArgs:
@@ -6804,22 +6571,19 @@ class ApplianceTrafficShapingVpnExclusionsParametersMajorApplicationArgs:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class ApplianceVlansDhcpOptionArgsDict(TypedDict):
-        code: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The code for the DHCP option. This should be an integer between 2 and 254.
-        """
-        type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The type for the DHCP option. One of: 'text', 'ip', 'hex' or 'integer'
-        """
-        value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The value for the DHCP option
-        """
-elif False:
-    ApplianceVlansDhcpOptionArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceVlansDhcpOptionArgsDict(TypedDict):
+    code: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The code for the DHCP option. This should be an integer between 2 and 254.
+    """
+    type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The type for the DHCP option. One of: 'text', 'ip', 'hex' or 'integer'
+    """
+    value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The value for the DHCP option
+    """
 
 @pulumi.input_type
 class ApplianceVlansDhcpOptionArgs:
@@ -6876,18 +6640,15 @@ class ApplianceVlansDhcpOptionArgs:
         pulumi.set(self, "value", value)
 
 
-if not MYPY:
-    class ApplianceVlansIpv6ArgsDict(TypedDict):
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Enable IPv6 on VLAN
-        """
-        prefix_assignments: NotRequired[pulumi.Input[Sequence[pulumi.Input['ApplianceVlansIpv6PrefixAssignmentArgsDict']]]]
-        """
-        Prefix assignments on the VLAN
-        """
-elif False:
-    ApplianceVlansIpv6ArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceVlansIpv6ArgsDict(TypedDict):
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Enable IPv6 on VLAN
+    """
+    prefix_assignments: NotRequired[pulumi.Input[Sequence[pulumi.Input['ApplianceVlansIpv6PrefixAssignmentArgsDict']]]]
+    """
+    Prefix assignments on the VLAN
+    """
 
 @pulumi.input_type
 class ApplianceVlansIpv6Args:
@@ -6928,26 +6689,23 @@ class ApplianceVlansIpv6Args:
         pulumi.set(self, "prefix_assignments", value)
 
 
-if not MYPY:
-    class ApplianceVlansIpv6PrefixAssignmentArgsDict(TypedDict):
-        autonomous: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Auto assign a /64 prefix from the origin to the VLAN
-        """
-        origin: NotRequired[pulumi.Input['ApplianceVlansIpv6PrefixAssignmentOriginArgsDict']]
-        """
-        The origin of the prefix
-        """
-        static_appliance_ip6: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Manual configuration of the IPv6 Appliance IP
-        """
-        static_prefix: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Manual configuration of a /64 prefix on the VLAN
-        """
-elif False:
-    ApplianceVlansIpv6PrefixAssignmentArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceVlansIpv6PrefixAssignmentArgsDict(TypedDict):
+    autonomous: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Auto assign a /64 prefix from the origin to the VLAN
+    """
+    origin: NotRequired[pulumi.Input['ApplianceVlansIpv6PrefixAssignmentOriginArgsDict']]
+    """
+    The origin of the prefix
+    """
+    static_appliance_ip6: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Manual configuration of the IPv6 Appliance IP
+    """
+    static_prefix: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Manual configuration of a /64 prefix on the VLAN
+    """
 
 @pulumi.input_type
 class ApplianceVlansIpv6PrefixAssignmentArgs:
@@ -7020,18 +6778,15 @@ class ApplianceVlansIpv6PrefixAssignmentArgs:
         pulumi.set(self, "static_prefix", value)
 
 
-if not MYPY:
-    class ApplianceVlansIpv6PrefixAssignmentOriginArgsDict(TypedDict):
-        interfaces: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        Interfaces associated with the prefix
-        """
-        type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Type of the origin
-        """
-elif False:
-    ApplianceVlansIpv6PrefixAssignmentOriginArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceVlansIpv6PrefixAssignmentOriginArgsDict(TypedDict):
+    interfaces: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    Interfaces associated with the prefix
+    """
+    type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Type of the origin
+    """
 
 @pulumi.input_type
 class ApplianceVlansIpv6PrefixAssignmentOriginArgs:
@@ -7072,14 +6827,11 @@ class ApplianceVlansIpv6PrefixAssignmentOriginArgs:
         pulumi.set(self, "type", value)
 
 
-if not MYPY:
-    class ApplianceVlansMandatoryDhcpArgsDict(TypedDict):
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Enable Mandatory DHCP on VLAN.
-        """
-elif False:
-    ApplianceVlansMandatoryDhcpArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceVlansMandatoryDhcpArgsDict(TypedDict):
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Enable Mandatory DHCP on VLAN.
+    """
 
 @pulumi.input_type
 class ApplianceVlansMandatoryDhcpArgs:
@@ -7104,22 +6856,19 @@ class ApplianceVlansMandatoryDhcpArgs:
         pulumi.set(self, "enabled", value)
 
 
-if not MYPY:
-    class ApplianceVlansReservedIpRangeArgsDict(TypedDict):
-        comment: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        A text comment for the reserved range
-        """
-        end: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The last IP in the reserved range
-        """
-        start: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The first IP in the reserved range
-        """
-elif False:
-    ApplianceVlansReservedIpRangeArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceVlansReservedIpRangeArgsDict(TypedDict):
+    comment: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    A text comment for the reserved range
+    """
+    end: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The last IP in the reserved range
+    """
+    start: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The first IP in the reserved range
+    """
 
 @pulumi.input_type
 class ApplianceVlansReservedIpRangeArgs:
@@ -7176,54 +6925,51 @@ class ApplianceVlansReservedIpRangeArgs:
         pulumi.set(self, "start", value)
 
 
-if not MYPY:
-    class ApplianceVpnBgpNeighborArgsDict(TypedDict):
-        allow_transit: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        When this feature is on, the Meraki device will advertise routes learned from other Autonomous Systems, thereby allowing traffic between Autonomous Systems to transit this AS. When absent, it defaults to false.
-        """
-        authentication: NotRequired[pulumi.Input['ApplianceVpnBgpNeighborAuthenticationArgsDict']]
-        """
-        Authentication settings between BGP peers.
-        """
-        ebgp_hold_timer: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The eBGP hold timer in seconds for each neighbor. The eBGP hold timer must be an integer between 12 and 240.
-        """
-        ebgp_multihop: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Configure this if the neighbor is not adjacent. The eBGP multi-hop must be an integer between 1 and 255.
-        """
-        ip: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The IPv4 address of the neighbor
-        """
-        ipv6: NotRequired[pulumi.Input['ApplianceVpnBgpNeighborIpv6ArgsDict']]
-        """
-        Information regarding IPv6 address of the neighbor, Required if *ip* is not present.
-        """
-        next_hop_ip: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The IPv4 address of the remote BGP peer that will establish a TCP session with the local MX.
-        """
-        receive_limit: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The receive limit is the maximum number of routes that can be received from any BGP peer. The receive limit must be an integer between 0 and 4294967295. When absent, it defaults to 0.
-        """
-        remote_as_number: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Remote ASN of the neighbor. The remote ASN must be an integer between 1 and 4294967295.
-        """
-        source_interface: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The output interface for peering with the remote BGP peer. Valid values are: 'wan1', 'wan2' or 'vlan{VLAN ID}'(e.g. 'vlan123').
-        """
-        ttl_security: NotRequired[pulumi.Input['ApplianceVpnBgpNeighborTtlSecurityArgsDict']]
-        """
-        Settings for BGP TTL security to protect BGP peering sessions from forged IP attacks.
-        """
-elif False:
-    ApplianceVpnBgpNeighborArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceVpnBgpNeighborArgsDict(TypedDict):
+    allow_transit: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    When this feature is on, the Meraki device will advertise routes learned from other Autonomous Systems, thereby allowing traffic between Autonomous Systems to transit this AS. When absent, it defaults to false.
+    """
+    authentication: NotRequired[pulumi.Input['ApplianceVpnBgpNeighborAuthenticationArgsDict']]
+    """
+    Authentication settings between BGP peers.
+    """
+    ebgp_hold_timer: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The eBGP hold timer in seconds for each neighbor. The eBGP hold timer must be an integer between 12 and 240.
+    """
+    ebgp_multihop: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Configure this if the neighbor is not adjacent. The eBGP multi-hop must be an integer between 1 and 255.
+    """
+    ip: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The IPv4 address of the neighbor
+    """
+    ipv6: NotRequired[pulumi.Input['ApplianceVpnBgpNeighborIpv6ArgsDict']]
+    """
+    Information regarding IPv6 address of the neighbor, Required if *ip* is not present.
+    """
+    next_hop_ip: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The IPv4 address of the remote BGP peer that will establish a TCP session with the local MX.
+    """
+    receive_limit: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The receive limit is the maximum number of routes that can be received from any BGP peer. The receive limit must be an integer between 0 and 4294967295. When absent, it defaults to 0.
+    """
+    remote_as_number: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Remote ASN of the neighbor. The remote ASN must be an integer between 1 and 4294967295.
+    """
+    source_interface: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The output interface for peering with the remote BGP peer. Valid values are: 'wan1', 'wan2' or 'vlan{VLAN ID}'(e.g. 'vlan123').
+    """
+    ttl_security: NotRequired[pulumi.Input['ApplianceVpnBgpNeighborTtlSecurityArgsDict']]
+    """
+    Settings for BGP TTL security to protect BGP peering sessions from forged IP attacks.
+    """
 
 @pulumi.input_type
 class ApplianceVpnBgpNeighborArgs:
@@ -7408,14 +7154,11 @@ class ApplianceVpnBgpNeighborArgs:
         pulumi.set(self, "ttl_security", value)
 
 
-if not MYPY:
-    class ApplianceVpnBgpNeighborAuthenticationArgsDict(TypedDict):
-        password: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Password to configure MD5 authentication between BGP peers.
-        """
-elif False:
-    ApplianceVpnBgpNeighborAuthenticationArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceVpnBgpNeighborAuthenticationArgsDict(TypedDict):
+    password: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Password to configure MD5 authentication between BGP peers.
+    """
 
 @pulumi.input_type
 class ApplianceVpnBgpNeighborAuthenticationArgs:
@@ -7440,14 +7183,11 @@ class ApplianceVpnBgpNeighborAuthenticationArgs:
         pulumi.set(self, "password", value)
 
 
-if not MYPY:
-    class ApplianceVpnBgpNeighborIpv6ArgsDict(TypedDict):
-        address: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The IPv6 address of the neighbor.
-        """
-elif False:
-    ApplianceVpnBgpNeighborIpv6ArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceVpnBgpNeighborIpv6ArgsDict(TypedDict):
+    address: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The IPv6 address of the neighbor.
+    """
 
 @pulumi.input_type
 class ApplianceVpnBgpNeighborIpv6Args:
@@ -7472,14 +7212,11 @@ class ApplianceVpnBgpNeighborIpv6Args:
         pulumi.set(self, "address", value)
 
 
-if not MYPY:
-    class ApplianceVpnBgpNeighborTtlSecurityArgsDict(TypedDict):
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Boolean value to enable or disable BGP TTL security.
-        """
-elif False:
-    ApplianceVpnBgpNeighborTtlSecurityArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceVpnBgpNeighborTtlSecurityArgsDict(TypedDict):
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Boolean value to enable or disable BGP TTL security.
+    """
 
 @pulumi.input_type
 class ApplianceVpnBgpNeighborTtlSecurityArgs:
@@ -7504,18 +7241,15 @@ class ApplianceVpnBgpNeighborTtlSecurityArgs:
         pulumi.set(self, "enabled", value)
 
 
-if not MYPY:
-    class ApplianceVpnSiteToSiteVpnHubArgsDict(TypedDict):
-        hub_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The network ID of the hub.
-        """
-        use_default_route: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Indicates whether default route traffic should be sent to this hub.
-        """
-elif False:
-    ApplianceVpnSiteToSiteVpnHubArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceVpnSiteToSiteVpnHubArgsDict(TypedDict):
+    hub_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The network ID of the hub.
+    """
+    use_default_route: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Indicates whether default route traffic should be sent to this hub.
+    """
 
 @pulumi.input_type
 class ApplianceVpnSiteToSiteVpnHubArgs:
@@ -7556,18 +7290,15 @@ class ApplianceVpnSiteToSiteVpnHubArgs:
         pulumi.set(self, "use_default_route", value)
 
 
-if not MYPY:
-    class ApplianceVpnSiteToSiteVpnSubnetArgsDict(TypedDict):
-        local_subnet: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The CIDR notation subnet used within the VPN
-        """
-        use_vpn: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Indicates the presence of the subnet in the VPN
-        """
-elif False:
-    ApplianceVpnSiteToSiteVpnSubnetArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceVpnSiteToSiteVpnSubnetArgsDict(TypedDict):
+    local_subnet: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The CIDR notation subnet used within the VPN
+    """
+    use_vpn: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Indicates the presence of the subnet in the VPN
+    """
 
 @pulumi.input_type
 class ApplianceVpnSiteToSiteVpnSubnetArgs:
@@ -7608,12 +7339,9 @@ class ApplianceVpnSiteToSiteVpnSubnetArgs:
         pulumi.set(self, "use_vpn", value)
 
 
-if not MYPY:
-    class ApplianceWarmSpareWan1ArgsDict(TypedDict):
-        ip: NotRequired[pulumi.Input[_builtins.str]]
-        subnet: NotRequired[pulumi.Input[_builtins.str]]
-elif False:
-    ApplianceWarmSpareWan1ArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceWarmSpareWan1ArgsDict(TypedDict):
+    ip: NotRequired[pulumi.Input[_builtins.str]]
+    subnet: NotRequired[pulumi.Input[_builtins.str]]
 
 @pulumi.input_type
 class ApplianceWarmSpareWan1Args:
@@ -7644,12 +7372,9 @@ class ApplianceWarmSpareWan1Args:
         pulumi.set(self, "subnet", value)
 
 
-if not MYPY:
-    class ApplianceWarmSpareWan2ArgsDict(TypedDict):
-        ip: NotRequired[pulumi.Input[_builtins.str]]
-        subnet: NotRequired[pulumi.Input[_builtins.str]]
-elif False:
-    ApplianceWarmSpareWan2ArgsDict: TypeAlias = Mapping[str, Any]
+class ApplianceWarmSpareWan2ArgsDict(TypedDict):
+    ip: NotRequired[pulumi.Input[_builtins.str]]
+    subnet: NotRequired[pulumi.Input[_builtins.str]]
 
 @pulumi.input_type
 class ApplianceWarmSpareWan2Args:
@@ -7680,54 +7405,51 @@ class ApplianceWarmSpareWan2Args:
         pulumi.set(self, "subnet", value)
 
 
-if not MYPY:
-    class BindItemArgsDict(TypedDict):
-        config_template_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        ID of the config template the network is being bound to
-        """
-        enrollment_string: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Enrollment string for the network
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Network ID
-        """
-        is_bound_to_config_template: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        If the network is bound to a config template
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Network name
-        """
-        notes: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Notes for the network
-        """
-        organization_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Organization ID
-        """
-        product_types: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        List of the product types that the network supports
-        """
-        tags: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        Network tags
-        """
-        time_zone: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Timezone of the network
-        """
-        url: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        URL to the network Dashboard UI
-        """
-elif False:
-    BindItemArgsDict: TypeAlias = Mapping[str, Any]
+class BindItemArgsDict(TypedDict):
+    config_template_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    ID of the config template the network is being bound to
+    """
+    enrollment_string: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Enrollment string for the network
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Network ID
+    """
+    is_bound_to_config_template: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    If the network is bound to a config template
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Network name
+    """
+    notes: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Notes for the network
+    """
+    organization_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Organization ID
+    """
+    product_types: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of the product types that the network supports
+    """
+    tags: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    Network tags
+    """
+    time_zone: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Timezone of the network
+    """
+    url: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    URL to the network Dashboard UI
+    """
 
 @pulumi.input_type
 class BindItemArgs:
@@ -7912,18 +7634,15 @@ class BindItemArgs:
         pulumi.set(self, "url", value)
 
 
-if not MYPY:
-    class BindParametersArgsDict(TypedDict):
-        auto_bind: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Optional boolean indicating whether the network's switches should automatically bind to profiles of the same model. Defaults to false if left unspecified. This option only affects switch networks and switch templates. Auto-bind is not valid unless the switch template has at least one profile and has at most one profile per switch model.
-        """
-        config_template_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The ID of the template to which the network should be bound.
-        """
-elif False:
-    BindParametersArgsDict: TypeAlias = Mapping[str, Any]
+class BindParametersArgsDict(TypedDict):
+    auto_bind: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Optional boolean indicating whether the network's switches should automatically bind to profiles of the same model. Defaults to false if left unspecified. This option only affects switch networks and switch templates. Auto-bind is not valid unless the switch template has at least one profile and has at most one profile per switch model.
+    """
+    config_template_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The ID of the template to which the network should be bound.
+    """
 
 @pulumi.input_type
 class BindParametersArgs:
@@ -7964,58 +7683,55 @@ class BindParametersArgs:
         pulumi.set(self, "config_template_id", value)
 
 
-if not MYPY:
-    class CameraQualityRetentionProfilesVideoSettingsArgsDict(TypedDict):
-        m_v12_mv22_mv72: NotRequired[pulumi.Input['CameraQualityRetentionProfilesVideoSettingsMV12MV22MV72ArgsDict']]
-        """
-        Quality and resolution for MV12/MV22/MV72 camera models.
-        """
-        m_v12_we: NotRequired[pulumi.Input['CameraQualityRetentionProfilesVideoSettingsMV12WeArgsDict']]
-        """
-        Quality and resolution for MV12WE camera models.
-        """
-        m_v13: NotRequired[pulumi.Input['CameraQualityRetentionProfilesVideoSettingsMV13ArgsDict']]
-        """
-        Quality and resolution for MV13 camera models.
-        """
-        m_v21_mv71: NotRequired[pulumi.Input['CameraQualityRetentionProfilesVideoSettingsMV21MV71ArgsDict']]
-        """
-        Quality and resolution for MV21/MV71 camera models.
-        """
-        m_v22_xmv72_x: NotRequired[pulumi.Input['CameraQualityRetentionProfilesVideoSettingsMV22Xmv72XArgsDict']]
-        """
-        Quality and resolution for MV22X/MV72X camera models.
-        """
-        m_v32: NotRequired[pulumi.Input['CameraQualityRetentionProfilesVideoSettingsMV32ArgsDict']]
-        """
-        Quality and resolution for MV32 camera models.
-        """
-        m_v33: NotRequired[pulumi.Input['CameraQualityRetentionProfilesVideoSettingsMV33ArgsDict']]
-        """
-        Quality and resolution for MV33 camera models.
-        """
-        m_v52: NotRequired[pulumi.Input['CameraQualityRetentionProfilesVideoSettingsMV52ArgsDict']]
-        """
-        Quality and resolution for MV52 camera models.
-        """
-        m_v63: NotRequired[pulumi.Input['CameraQualityRetentionProfilesVideoSettingsMV63ArgsDict']]
-        """
-        Quality and resolution for MV63 camera models.
-        """
-        m_v63_x: NotRequired[pulumi.Input['CameraQualityRetentionProfilesVideoSettingsMV63XArgsDict']]
-        """
-        Quality and resolution for MV63X camera models.
-        """
-        m_v93: NotRequired[pulumi.Input['CameraQualityRetentionProfilesVideoSettingsMV93ArgsDict']]
-        """
-        Quality and resolution for MV93 camera models.
-        """
-        m_v93_x: NotRequired[pulumi.Input['CameraQualityRetentionProfilesVideoSettingsMV93XArgsDict']]
-        """
-        Quality and resolution for MV93X camera models.
-        """
-elif False:
-    CameraQualityRetentionProfilesVideoSettingsArgsDict: TypeAlias = Mapping[str, Any]
+class CameraQualityRetentionProfilesVideoSettingsArgsDict(TypedDict):
+    m_v12_mv22_mv72: NotRequired[pulumi.Input['CameraQualityRetentionProfilesVideoSettingsMV12MV22MV72ArgsDict']]
+    """
+    Quality and resolution for MV12/MV22/MV72 camera models.
+    """
+    m_v12_we: NotRequired[pulumi.Input['CameraQualityRetentionProfilesVideoSettingsMV12WeArgsDict']]
+    """
+    Quality and resolution for MV12WE camera models.
+    """
+    m_v13: NotRequired[pulumi.Input['CameraQualityRetentionProfilesVideoSettingsMV13ArgsDict']]
+    """
+    Quality and resolution for MV13 camera models.
+    """
+    m_v21_mv71: NotRequired[pulumi.Input['CameraQualityRetentionProfilesVideoSettingsMV21MV71ArgsDict']]
+    """
+    Quality and resolution for MV21/MV71 camera models.
+    """
+    m_v22_xmv72_x: NotRequired[pulumi.Input['CameraQualityRetentionProfilesVideoSettingsMV22Xmv72XArgsDict']]
+    """
+    Quality and resolution for MV22X/MV72X camera models.
+    """
+    m_v32: NotRequired[pulumi.Input['CameraQualityRetentionProfilesVideoSettingsMV32ArgsDict']]
+    """
+    Quality and resolution for MV32 camera models.
+    """
+    m_v33: NotRequired[pulumi.Input['CameraQualityRetentionProfilesVideoSettingsMV33ArgsDict']]
+    """
+    Quality and resolution for MV33 camera models.
+    """
+    m_v52: NotRequired[pulumi.Input['CameraQualityRetentionProfilesVideoSettingsMV52ArgsDict']]
+    """
+    Quality and resolution for MV52 camera models.
+    """
+    m_v63: NotRequired[pulumi.Input['CameraQualityRetentionProfilesVideoSettingsMV63ArgsDict']]
+    """
+    Quality and resolution for MV63 camera models.
+    """
+    m_v63_x: NotRequired[pulumi.Input['CameraQualityRetentionProfilesVideoSettingsMV63XArgsDict']]
+    """
+    Quality and resolution for MV63X camera models.
+    """
+    m_v93: NotRequired[pulumi.Input['CameraQualityRetentionProfilesVideoSettingsMV93ArgsDict']]
+    """
+    Quality and resolution for MV93 camera models.
+    """
+    m_v93_x: NotRequired[pulumi.Input['CameraQualityRetentionProfilesVideoSettingsMV93XArgsDict']]
+    """
+    Quality and resolution for MV93X camera models.
+    """
 
 @pulumi.input_type
 class CameraQualityRetentionProfilesVideoSettingsArgs:
@@ -8216,18 +7932,15 @@ class CameraQualityRetentionProfilesVideoSettingsArgs:
         pulumi.set(self, "m_v93_x", value)
 
 
-if not MYPY:
-    class CameraQualityRetentionProfilesVideoSettingsMV12MV22MV72ArgsDict(TypedDict):
-        quality: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Quality of the camera. Can be one of 'Standard', 'Enhanced' or 'High'.
-        """
-        resolution: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Resolution of the camera. Can be one of '1280x720' or '1920x1080'.
-        """
-elif False:
-    CameraQualityRetentionProfilesVideoSettingsMV12MV22MV72ArgsDict: TypeAlias = Mapping[str, Any]
+class CameraQualityRetentionProfilesVideoSettingsMV12MV22MV72ArgsDict(TypedDict):
+    quality: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Quality of the camera. Can be one of 'Standard', 'Enhanced' or 'High'.
+    """
+    resolution: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Resolution of the camera. Can be one of '1280x720' or '1920x1080'.
+    """
 
 @pulumi.input_type
 class CameraQualityRetentionProfilesVideoSettingsMV12MV22MV72Args:
@@ -8268,18 +7981,15 @@ class CameraQualityRetentionProfilesVideoSettingsMV12MV22MV72Args:
         pulumi.set(self, "resolution", value)
 
 
-if not MYPY:
-    class CameraQualityRetentionProfilesVideoSettingsMV12WeArgsDict(TypedDict):
-        quality: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Quality of the camera. Can be one of 'Standard', 'Enhanced' or 'High'.
-        """
-        resolution: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Resolution of the camera. Can be one of '1280x720' or '1920x1080'.
-        """
-elif False:
-    CameraQualityRetentionProfilesVideoSettingsMV12WeArgsDict: TypeAlias = Mapping[str, Any]
+class CameraQualityRetentionProfilesVideoSettingsMV12WeArgsDict(TypedDict):
+    quality: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Quality of the camera. Can be one of 'Standard', 'Enhanced' or 'High'.
+    """
+    resolution: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Resolution of the camera. Can be one of '1280x720' or '1920x1080'.
+    """
 
 @pulumi.input_type
 class CameraQualityRetentionProfilesVideoSettingsMV12WeArgs:
@@ -8320,18 +8030,15 @@ class CameraQualityRetentionProfilesVideoSettingsMV12WeArgs:
         pulumi.set(self, "resolution", value)
 
 
-if not MYPY:
-    class CameraQualityRetentionProfilesVideoSettingsMV13ArgsDict(TypedDict):
-        quality: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Quality of the camera. Can be one of 'Standard', 'Enhanced' or 'High'.
-        """
-        resolution: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Resolution of the camera. Can be one of '1920x1080', '2688x1512' or '3840x2160'.
-        """
-elif False:
-    CameraQualityRetentionProfilesVideoSettingsMV13ArgsDict: TypeAlias = Mapping[str, Any]
+class CameraQualityRetentionProfilesVideoSettingsMV13ArgsDict(TypedDict):
+    quality: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Quality of the camera. Can be one of 'Standard', 'Enhanced' or 'High'.
+    """
+    resolution: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Resolution of the camera. Can be one of '1920x1080', '2688x1512' or '3840x2160'.
+    """
 
 @pulumi.input_type
 class CameraQualityRetentionProfilesVideoSettingsMV13Args:
@@ -8372,18 +8079,15 @@ class CameraQualityRetentionProfilesVideoSettingsMV13Args:
         pulumi.set(self, "resolution", value)
 
 
-if not MYPY:
-    class CameraQualityRetentionProfilesVideoSettingsMV21MV71ArgsDict(TypedDict):
-        quality: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Quality of the camera. Can be one of 'Standard', 'Enhanced' or 'High'.
-        """
-        resolution: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Resolution of the camera. Can be one of '1280x720'.
-        """
-elif False:
-    CameraQualityRetentionProfilesVideoSettingsMV21MV71ArgsDict: TypeAlias = Mapping[str, Any]
+class CameraQualityRetentionProfilesVideoSettingsMV21MV71ArgsDict(TypedDict):
+    quality: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Quality of the camera. Can be one of 'Standard', 'Enhanced' or 'High'.
+    """
+    resolution: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Resolution of the camera. Can be one of '1280x720'.
+    """
 
 @pulumi.input_type
 class CameraQualityRetentionProfilesVideoSettingsMV21MV71Args:
@@ -8424,18 +8128,15 @@ class CameraQualityRetentionProfilesVideoSettingsMV21MV71Args:
         pulumi.set(self, "resolution", value)
 
 
-if not MYPY:
-    class CameraQualityRetentionProfilesVideoSettingsMV22Xmv72XArgsDict(TypedDict):
-        quality: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Quality of the camera. Can be one of 'Standard', 'Enhanced' or 'High'.
-        """
-        resolution: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Resolution of the camera. Can be one of '1280x720', '1920x1080' or '2688x1512'.
-        """
-elif False:
-    CameraQualityRetentionProfilesVideoSettingsMV22Xmv72XArgsDict: TypeAlias = Mapping[str, Any]
+class CameraQualityRetentionProfilesVideoSettingsMV22Xmv72XArgsDict(TypedDict):
+    quality: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Quality of the camera. Can be one of 'Standard', 'Enhanced' or 'High'.
+    """
+    resolution: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Resolution of the camera. Can be one of '1280x720', '1920x1080' or '2688x1512'.
+    """
 
 @pulumi.input_type
 class CameraQualityRetentionProfilesVideoSettingsMV22Xmv72XArgs:
@@ -8476,18 +8177,15 @@ class CameraQualityRetentionProfilesVideoSettingsMV22Xmv72XArgs:
         pulumi.set(self, "resolution", value)
 
 
-if not MYPY:
-    class CameraQualityRetentionProfilesVideoSettingsMV32ArgsDict(TypedDict):
-        quality: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Quality of the camera. Can be one of 'Standard', 'Enhanced' or 'High'.
-        """
-        resolution: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Resolution of the camera. Can be one of '1080x1080' or '2112x2112'.
-        """
-elif False:
-    CameraQualityRetentionProfilesVideoSettingsMV32ArgsDict: TypeAlias = Mapping[str, Any]
+class CameraQualityRetentionProfilesVideoSettingsMV32ArgsDict(TypedDict):
+    quality: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Quality of the camera. Can be one of 'Standard', 'Enhanced' or 'High'.
+    """
+    resolution: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Resolution of the camera. Can be one of '1080x1080' or '2112x2112'.
+    """
 
 @pulumi.input_type
 class CameraQualityRetentionProfilesVideoSettingsMV32Args:
@@ -8528,18 +8226,15 @@ class CameraQualityRetentionProfilesVideoSettingsMV32Args:
         pulumi.set(self, "resolution", value)
 
 
-if not MYPY:
-    class CameraQualityRetentionProfilesVideoSettingsMV33ArgsDict(TypedDict):
-        quality: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Quality of the camera. Can be one of 'Standard', 'Enhanced' or 'High'.
-        """
-        resolution: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Resolution of the camera. Can be one of '1080x1080', '2112x2112' or '2880x2880'.
-        """
-elif False:
-    CameraQualityRetentionProfilesVideoSettingsMV33ArgsDict: TypeAlias = Mapping[str, Any]
+class CameraQualityRetentionProfilesVideoSettingsMV33ArgsDict(TypedDict):
+    quality: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Quality of the camera. Can be one of 'Standard', 'Enhanced' or 'High'.
+    """
+    resolution: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Resolution of the camera. Can be one of '1080x1080', '2112x2112' or '2880x2880'.
+    """
 
 @pulumi.input_type
 class CameraQualityRetentionProfilesVideoSettingsMV33Args:
@@ -8580,18 +8275,15 @@ class CameraQualityRetentionProfilesVideoSettingsMV33Args:
         pulumi.set(self, "resolution", value)
 
 
-if not MYPY:
-    class CameraQualityRetentionProfilesVideoSettingsMV52ArgsDict(TypedDict):
-        quality: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Quality of the camera. Can be one of 'Standard', 'Enhanced' or 'High'.
-        """
-        resolution: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Resolution of the camera. Can be one of '1280x720', '1920x1080', '2688x1512' or '3840x2160'.
-        """
-elif False:
-    CameraQualityRetentionProfilesVideoSettingsMV52ArgsDict: TypeAlias = Mapping[str, Any]
+class CameraQualityRetentionProfilesVideoSettingsMV52ArgsDict(TypedDict):
+    quality: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Quality of the camera. Can be one of 'Standard', 'Enhanced' or 'High'.
+    """
+    resolution: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Resolution of the camera. Can be one of '1280x720', '1920x1080', '2688x1512' or '3840x2160'.
+    """
 
 @pulumi.input_type
 class CameraQualityRetentionProfilesVideoSettingsMV52Args:
@@ -8632,18 +8324,15 @@ class CameraQualityRetentionProfilesVideoSettingsMV52Args:
         pulumi.set(self, "resolution", value)
 
 
-if not MYPY:
-    class CameraQualityRetentionProfilesVideoSettingsMV63ArgsDict(TypedDict):
-        quality: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Quality of the camera. Can be one of 'Standard', 'Enhanced' or 'High'.
-        """
-        resolution: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Resolution of the camera. Can be one of '1920x1080' or '2688x1512'.
-        """
-elif False:
-    CameraQualityRetentionProfilesVideoSettingsMV63ArgsDict: TypeAlias = Mapping[str, Any]
+class CameraQualityRetentionProfilesVideoSettingsMV63ArgsDict(TypedDict):
+    quality: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Quality of the camera. Can be one of 'Standard', 'Enhanced' or 'High'.
+    """
+    resolution: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Resolution of the camera. Can be one of '1920x1080' or '2688x1512'.
+    """
 
 @pulumi.input_type
 class CameraQualityRetentionProfilesVideoSettingsMV63Args:
@@ -8684,18 +8373,15 @@ class CameraQualityRetentionProfilesVideoSettingsMV63Args:
         pulumi.set(self, "resolution", value)
 
 
-if not MYPY:
-    class CameraQualityRetentionProfilesVideoSettingsMV63XArgsDict(TypedDict):
-        quality: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Quality of the camera. Can be one of 'Standard', 'Enhanced' or 'High'.
-        """
-        resolution: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Resolution of the camera. Can be one of '1920x1080', '2688x1512' or '3840x2160'.
-        """
-elif False:
-    CameraQualityRetentionProfilesVideoSettingsMV63XArgsDict: TypeAlias = Mapping[str, Any]
+class CameraQualityRetentionProfilesVideoSettingsMV63XArgsDict(TypedDict):
+    quality: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Quality of the camera. Can be one of 'Standard', 'Enhanced' or 'High'.
+    """
+    resolution: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Resolution of the camera. Can be one of '1920x1080', '2688x1512' or '3840x2160'.
+    """
 
 @pulumi.input_type
 class CameraQualityRetentionProfilesVideoSettingsMV63XArgs:
@@ -8736,18 +8422,15 @@ class CameraQualityRetentionProfilesVideoSettingsMV63XArgs:
         pulumi.set(self, "resolution", value)
 
 
-if not MYPY:
-    class CameraQualityRetentionProfilesVideoSettingsMV93ArgsDict(TypedDict):
-        quality: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Quality of the camera. Can be one of 'Standard', 'Enhanced' or 'High'.
-        """
-        resolution: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Resolution of the camera. Can be one of '1080x1080' or '2112x2112'.
-        """
-elif False:
-    CameraQualityRetentionProfilesVideoSettingsMV93ArgsDict: TypeAlias = Mapping[str, Any]
+class CameraQualityRetentionProfilesVideoSettingsMV93ArgsDict(TypedDict):
+    quality: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Quality of the camera. Can be one of 'Standard', 'Enhanced' or 'High'.
+    """
+    resolution: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Resolution of the camera. Can be one of '1080x1080' or '2112x2112'.
+    """
 
 @pulumi.input_type
 class CameraQualityRetentionProfilesVideoSettingsMV93Args:
@@ -8788,18 +8471,15 @@ class CameraQualityRetentionProfilesVideoSettingsMV93Args:
         pulumi.set(self, "resolution", value)
 
 
-if not MYPY:
-    class CameraQualityRetentionProfilesVideoSettingsMV93XArgsDict(TypedDict):
-        quality: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Quality of the camera. Can be one of 'Standard', 'Enhanced' or 'High'.
-        """
-        resolution: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Resolution of the camera. Can be one of '1080x1080', '2112x2112' or '2880x2880'.
-        """
-elif False:
-    CameraQualityRetentionProfilesVideoSettingsMV93XArgsDict: TypeAlias = Mapping[str, Any]
+class CameraQualityRetentionProfilesVideoSettingsMV93XArgsDict(TypedDict):
+    quality: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Quality of the camera. Can be one of 'Standard', 'Enhanced' or 'High'.
+    """
+    resolution: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Resolution of the camera. Can be one of '1080x1080', '2112x2112' or '2880x2880'.
+    """
 
 @pulumi.input_type
 class CameraQualityRetentionProfilesVideoSettingsMV93XArgs:
@@ -8840,18 +8520,15 @@ class CameraQualityRetentionProfilesVideoSettingsMV93XArgs:
         pulumi.set(self, "resolution", value)
 
 
-if not MYPY:
-    class CameraWirelessProfilesIdentityArgsDict(TypedDict):
-        password: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The password of the identity.
-        """
-        username: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The username of the identity.
-        """
-elif False:
-    CameraWirelessProfilesIdentityArgsDict: TypeAlias = Mapping[str, Any]
+class CameraWirelessProfilesIdentityArgsDict(TypedDict):
+    password: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The password of the identity.
+    """
+    username: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The username of the identity.
+    """
 
 @pulumi.input_type
 class CameraWirelessProfilesIdentityArgs:
@@ -8892,26 +8569,23 @@ class CameraWirelessProfilesIdentityArgs:
         pulumi.set(self, "username", value)
 
 
-if not MYPY:
-    class CameraWirelessProfilesSsidArgsDict(TypedDict):
-        auth_mode: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The auth mode of the SSID. It can be set to ('psk', '8021x-radius').
-        """
-        encryption_mode: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The encryption mode of the SSID. It can be set to ('wpa', 'wpa-eap'). With 'wpa' mode, the authMode should be 'psk' and with 'wpa-eap' the authMode should be '8021x-radius'
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The name of the SSID.
-        """
-        psk: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The pre-shared key of the SSID.
-        """
-elif False:
-    CameraWirelessProfilesSsidArgsDict: TypeAlias = Mapping[str, Any]
+class CameraWirelessProfilesSsidArgsDict(TypedDict):
+    auth_mode: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The auth mode of the SSID. It can be set to ('psk', '8021x-radius').
+    """
+    encryption_mode: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The encryption mode of the SSID. It can be set to ('wpa', 'wpa-eap'). With 'wpa' mode, the authMode should be 'psk' and with 'wpa-eap' the authMode should be '8021x-radius'
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The name of the SSID.
+    """
+    psk: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The pre-shared key of the SSID.
+    """
 
 @pulumi.input_type
 class CameraWirelessProfilesSsidArgs:
@@ -8984,22 +8658,19 @@ class CameraWirelessProfilesSsidArgs:
         pulumi.set(self, "psk", value)
 
 
-if not MYPY:
-    class CellularGatewayConnectivityMonitoringDestinationsDestinationArgsDict(TypedDict):
-        default: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Boolean indicating whether this is the default testing destination (true) or not (false). Defaults to false. Only one default is allowed
-        """
-        description: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Description of the testing destination. Optional, defaults to an empty string
-        """
-        ip: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The IP address to test connectivity with
-        """
-elif False:
-    CellularGatewayConnectivityMonitoringDestinationsDestinationArgsDict: TypeAlias = Mapping[str, Any]
+class CellularGatewayConnectivityMonitoringDestinationsDestinationArgsDict(TypedDict):
+    default: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Boolean indicating whether this is the default testing destination (true) or not (false). Defaults to false. Only one default is allowed
+    """
+    description: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Description of the testing destination. Optional, defaults to an empty string
+    """
+    ip: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The IP address to test connectivity with
+    """
 
 @pulumi.input_type
 class CellularGatewayConnectivityMonitoringDestinationsDestinationArgs:
@@ -9056,14 +8727,11 @@ class CellularGatewayConnectivityMonitoringDestinationsDestinationArgs:
         pulumi.set(self, "ip", value)
 
 
-if not MYPY:
-    class CellularGatewaySubnetPoolSubnetArgsDict(TypedDict):
-        appliance_ip: NotRequired[pulumi.Input[_builtins.str]]
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        serial: NotRequired[pulumi.Input[_builtins.str]]
-        subnet: NotRequired[pulumi.Input[_builtins.str]]
-elif False:
-    CellularGatewaySubnetPoolSubnetArgsDict: TypeAlias = Mapping[str, Any]
+class CellularGatewaySubnetPoolSubnetArgsDict(TypedDict):
+    appliance_ip: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    serial: NotRequired[pulumi.Input[_builtins.str]]
+    subnet: NotRequired[pulumi.Input[_builtins.str]]
 
 @pulumi.input_type
 class CellularGatewaySubnetPoolSubnetArgs:
@@ -9118,18 +8786,15 @@ class CellularGatewaySubnetPoolSubnetArgs:
         pulumi.set(self, "subnet", value)
 
 
-if not MYPY:
-    class CellularGatewayUplinkBandwidthLimitsArgsDict(TypedDict):
-        limit_down: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The maximum download limit (integer, in Kbps). 'null' indicates no limit.
-        """
-        limit_up: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The maximum upload limit (integer, in Kbps). 'null' indicates no limit.
-        """
-elif False:
-    CellularGatewayUplinkBandwidthLimitsArgsDict: TypeAlias = Mapping[str, Any]
+class CellularGatewayUplinkBandwidthLimitsArgsDict(TypedDict):
+    limit_down: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The maximum download limit (integer, in Kbps). 'null' indicates no limit.
+    """
+    limit_up: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The maximum upload limit (integer, in Kbps). 'null' indicates no limit.
+    """
 
 @pulumi.input_type
 class CellularGatewayUplinkBandwidthLimitsArgs:
@@ -9170,22 +8835,19 @@ class CellularGatewayUplinkBandwidthLimitsArgs:
         pulumi.set(self, "limit_up", value)
 
 
-if not MYPY:
-    class ClientsProvisionItemArgsDict(TypedDict):
-        clients: NotRequired[pulumi.Input[Sequence[pulumi.Input['ClientsProvisionItemClientArgsDict']]]]
-        """
-        The list of clients to provision
-        """
-        device_policy: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The name of the client's policy
-        """
-        group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The group policy identifier of the client
-        """
-elif False:
-    ClientsProvisionItemArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsProvisionItemArgsDict(TypedDict):
+    clients: NotRequired[pulumi.Input[Sequence[pulumi.Input['ClientsProvisionItemClientArgsDict']]]]
+    """
+    The list of clients to provision
+    """
+    device_policy: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The name of the client's policy
+    """
+    group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The group policy identifier of the client
+    """
 
 @pulumi.input_type
 class ClientsProvisionItemArgs:
@@ -9242,26 +8904,23 @@ class ClientsProvisionItemArgs:
         pulumi.set(self, "group_policy_id", value)
 
 
-if not MYPY:
-    class ClientsProvisionItemClientArgsDict(TypedDict):
-        client_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The identifier of the client
-        """
-        mac: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The MAC address of the client
-        """
-        message: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The client's display message if its group policy is 'Blocked'
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The name of the client
-        """
-elif False:
-    ClientsProvisionItemClientArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsProvisionItemClientArgsDict(TypedDict):
+    client_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The identifier of the client
+    """
+    mac: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The MAC address of the client
+    """
+    message: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The client's display message if its group policy is 'Blocked'
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The name of the client
+    """
 
 @pulumi.input_type
 class ClientsProvisionItemClientArgs:
@@ -9334,30 +8993,27 @@ class ClientsProvisionItemClientArgs:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class ClientsProvisionParametersArgsDict(TypedDict):
-        clients: NotRequired[pulumi.Input[Sequence[pulumi.Input['ClientsProvisionParametersClientArgsDict']]]]
-        """
-        The array of clients to provision
-        """
-        device_policy: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The policy to apply to the specified client. Can be 'Group policy', 'Allowed', 'Blocked', 'Per connection' or 'Normal'. Required.
-        """
-        group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The ID of the desired group policy to apply to the client. Required if 'devicePolicy' is set to "Group policy". Otherwise this is ignored.
-        """
-        policies_by_security_appliance: NotRequired[pulumi.Input['ClientsProvisionParametersPoliciesBySecurityApplianceArgsDict']]
-        """
-        An object, describing what the policy-connection association is for the security appliance. (Only relevant if the security appliance is actually within the network)
-        """
-        policies_by_ssid: NotRequired[pulumi.Input['ClientsProvisionParametersPoliciesBySsidArgsDict']]
-        """
-        An object, describing the policy-connection associations for each active SSID within the network. Keys should be the number of enabled SSIDs, mapping to an object describing the client's policy
-        """
-elif False:
-    ClientsProvisionParametersArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsProvisionParametersArgsDict(TypedDict):
+    clients: NotRequired[pulumi.Input[Sequence[pulumi.Input['ClientsProvisionParametersClientArgsDict']]]]
+    """
+    The array of clients to provision
+    """
+    device_policy: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The policy to apply to the specified client. Can be 'Group policy', 'Allowed', 'Blocked', 'Per connection' or 'Normal'. Required.
+    """
+    group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The ID of the desired group policy to apply to the client. Required if 'devicePolicy' is set to "Group policy". Otherwise this is ignored.
+    """
+    policies_by_security_appliance: NotRequired[pulumi.Input['ClientsProvisionParametersPoliciesBySecurityApplianceArgsDict']]
+    """
+    An object, describing what the policy-connection association is for the security appliance. (Only relevant if the security appliance is actually within the network)
+    """
+    policies_by_ssid: NotRequired[pulumi.Input['ClientsProvisionParametersPoliciesBySsidArgsDict']]
+    """
+    An object, describing the policy-connection associations for each active SSID within the network. Keys should be the number of enabled SSIDs, mapping to an object describing the client's policy
+    """
 
 @pulumi.input_type
 class ClientsProvisionParametersArgs:
@@ -9446,18 +9102,15 @@ class ClientsProvisionParametersArgs:
         pulumi.set(self, "policies_by_ssid", value)
 
 
-if not MYPY:
-    class ClientsProvisionParametersClientArgsDict(TypedDict):
-        mac: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The MAC address of the client. Required.
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The display name for the client. Optional. Limited to 255 bytes.
-        """
-elif False:
-    ClientsProvisionParametersClientArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsProvisionParametersClientArgsDict(TypedDict):
+    mac: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The MAC address of the client. Required.
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The display name for the client. Optional. Limited to 255 bytes.
+    """
 
 @pulumi.input_type
 class ClientsProvisionParametersClientArgs:
@@ -9498,14 +9151,11 @@ class ClientsProvisionParametersClientArgs:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class ClientsProvisionParametersPoliciesBySecurityApplianceArgsDict(TypedDict):
-        device_policy: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The policy to apply to the specified client. Can be 'Allowed', 'Blocked' or 'Normal'. Required.
-        """
-elif False:
-    ClientsProvisionParametersPoliciesBySecurityApplianceArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsProvisionParametersPoliciesBySecurityApplianceArgsDict(TypedDict):
+    device_policy: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The policy to apply to the specified client. Can be 'Allowed', 'Blocked' or 'Normal'. Required.
+    """
 
 @pulumi.input_type
 class ClientsProvisionParametersPoliciesBySecurityApplianceArgs:
@@ -9530,70 +9180,67 @@ class ClientsProvisionParametersPoliciesBySecurityApplianceArgs:
         pulumi.set(self, "device_policy", value)
 
 
-if not MYPY:
-    class ClientsProvisionParametersPoliciesBySsidArgsDict(TypedDict):
-        status0: NotRequired[pulumi.Input['ClientsProvisionParametersPoliciesBySsidStatus0ArgsDict']]
-        """
-        The number for the SSID
-        """
-        status1: NotRequired[pulumi.Input['ClientsProvisionParametersPoliciesBySsidStatus1ArgsDict']]
-        """
-        The number for the SSID
-        """
-        status10: NotRequired[pulumi.Input['ClientsProvisionParametersPoliciesBySsidStatus10ArgsDict']]
-        """
-        The number for the SSID
-        """
-        status11: NotRequired[pulumi.Input['ClientsProvisionParametersPoliciesBySsidStatus11ArgsDict']]
-        """
-        The number for the SSID
-        """
-        status12: NotRequired[pulumi.Input['ClientsProvisionParametersPoliciesBySsidStatus12ArgsDict']]
-        """
-        The number for the SSID
-        """
-        status13: NotRequired[pulumi.Input['ClientsProvisionParametersPoliciesBySsidStatus13ArgsDict']]
-        """
-        The number for the SSID
-        """
-        status14: NotRequired[pulumi.Input['ClientsProvisionParametersPoliciesBySsidStatus14ArgsDict']]
-        """
-        The number for the SSID
-        """
-        status2: NotRequired[pulumi.Input['ClientsProvisionParametersPoliciesBySsidStatus2ArgsDict']]
-        """
-        The number for the SSID
-        """
-        status3: NotRequired[pulumi.Input['ClientsProvisionParametersPoliciesBySsidStatus3ArgsDict']]
-        """
-        The number for the SSID
-        """
-        status4: NotRequired[pulumi.Input['ClientsProvisionParametersPoliciesBySsidStatus4ArgsDict']]
-        """
-        The number for the SSID
-        """
-        status5: NotRequired[pulumi.Input['ClientsProvisionParametersPoliciesBySsidStatus5ArgsDict']]
-        """
-        The number for the SSID
-        """
-        status6: NotRequired[pulumi.Input['ClientsProvisionParametersPoliciesBySsidStatus6ArgsDict']]
-        """
-        The number for the SSID
-        """
-        status7: NotRequired[pulumi.Input['ClientsProvisionParametersPoliciesBySsidStatus7ArgsDict']]
-        """
-        The number for the SSID
-        """
-        status8: NotRequired[pulumi.Input['ClientsProvisionParametersPoliciesBySsidStatus8ArgsDict']]
-        """
-        The number for the SSID
-        """
-        status9: NotRequired[pulumi.Input['ClientsProvisionParametersPoliciesBySsidStatus9ArgsDict']]
-        """
-        The number for the SSID
-        """
-elif False:
-    ClientsProvisionParametersPoliciesBySsidArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsProvisionParametersPoliciesBySsidArgsDict(TypedDict):
+    status0: NotRequired[pulumi.Input['ClientsProvisionParametersPoliciesBySsidStatus0ArgsDict']]
+    """
+    The number for the SSID
+    """
+    status1: NotRequired[pulumi.Input['ClientsProvisionParametersPoliciesBySsidStatus1ArgsDict']]
+    """
+    The number for the SSID
+    """
+    status10: NotRequired[pulumi.Input['ClientsProvisionParametersPoliciesBySsidStatus10ArgsDict']]
+    """
+    The number for the SSID
+    """
+    status11: NotRequired[pulumi.Input['ClientsProvisionParametersPoliciesBySsidStatus11ArgsDict']]
+    """
+    The number for the SSID
+    """
+    status12: NotRequired[pulumi.Input['ClientsProvisionParametersPoliciesBySsidStatus12ArgsDict']]
+    """
+    The number for the SSID
+    """
+    status13: NotRequired[pulumi.Input['ClientsProvisionParametersPoliciesBySsidStatus13ArgsDict']]
+    """
+    The number for the SSID
+    """
+    status14: NotRequired[pulumi.Input['ClientsProvisionParametersPoliciesBySsidStatus14ArgsDict']]
+    """
+    The number for the SSID
+    """
+    status2: NotRequired[pulumi.Input['ClientsProvisionParametersPoliciesBySsidStatus2ArgsDict']]
+    """
+    The number for the SSID
+    """
+    status3: NotRequired[pulumi.Input['ClientsProvisionParametersPoliciesBySsidStatus3ArgsDict']]
+    """
+    The number for the SSID
+    """
+    status4: NotRequired[pulumi.Input['ClientsProvisionParametersPoliciesBySsidStatus4ArgsDict']]
+    """
+    The number for the SSID
+    """
+    status5: NotRequired[pulumi.Input['ClientsProvisionParametersPoliciesBySsidStatus5ArgsDict']]
+    """
+    The number for the SSID
+    """
+    status6: NotRequired[pulumi.Input['ClientsProvisionParametersPoliciesBySsidStatus6ArgsDict']]
+    """
+    The number for the SSID
+    """
+    status7: NotRequired[pulumi.Input['ClientsProvisionParametersPoliciesBySsidStatus7ArgsDict']]
+    """
+    The number for the SSID
+    """
+    status8: NotRequired[pulumi.Input['ClientsProvisionParametersPoliciesBySsidStatus8ArgsDict']]
+    """
+    The number for the SSID
+    """
+    status9: NotRequired[pulumi.Input['ClientsProvisionParametersPoliciesBySsidStatus9ArgsDict']]
+    """
+    The number for the SSID
+    """
 
 @pulumi.input_type
 class ClientsProvisionParametersPoliciesBySsidArgs:
@@ -9842,18 +9489,15 @@ class ClientsProvisionParametersPoliciesBySsidArgs:
         pulumi.set(self, "status9", value)
 
 
-if not MYPY:
-    class ClientsProvisionParametersPoliciesBySsidStatus0ArgsDict(TypedDict):
-        device_policy: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The policy to apply to the specified client. Can be 'Allowed', 'Blocked', 'Normal' or 'Group policy'. Required.
-        """
-        group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The ID of the desired group policy to apply to the client. Required if 'devicePolicy' is set to "Group policy". Otherwise this is ignored.
-        """
-elif False:
-    ClientsProvisionParametersPoliciesBySsidStatus0ArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsProvisionParametersPoliciesBySsidStatus0ArgsDict(TypedDict):
+    device_policy: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The policy to apply to the specified client. Can be 'Allowed', 'Blocked', 'Normal' or 'Group policy'. Required.
+    """
+    group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The ID of the desired group policy to apply to the client. Required if 'devicePolicy' is set to "Group policy". Otherwise this is ignored.
+    """
 
 @pulumi.input_type
 class ClientsProvisionParametersPoliciesBySsidStatus0Args:
@@ -9894,18 +9538,15 @@ class ClientsProvisionParametersPoliciesBySsidStatus0Args:
         pulumi.set(self, "group_policy_id", value)
 
 
-if not MYPY:
-    class ClientsProvisionParametersPoliciesBySsidStatus10ArgsDict(TypedDict):
-        device_policy: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The policy to apply to the specified client. Can be 'Allowed', 'Blocked', 'Normal' or 'Group policy'. Required.
-        """
-        group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The ID of the desired group policy to apply to the client. Required if 'devicePolicy' is set to "Group policy". Otherwise this is ignored.
-        """
-elif False:
-    ClientsProvisionParametersPoliciesBySsidStatus10ArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsProvisionParametersPoliciesBySsidStatus10ArgsDict(TypedDict):
+    device_policy: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The policy to apply to the specified client. Can be 'Allowed', 'Blocked', 'Normal' or 'Group policy'. Required.
+    """
+    group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The ID of the desired group policy to apply to the client. Required if 'devicePolicy' is set to "Group policy". Otherwise this is ignored.
+    """
 
 @pulumi.input_type
 class ClientsProvisionParametersPoliciesBySsidStatus10Args:
@@ -9946,18 +9587,15 @@ class ClientsProvisionParametersPoliciesBySsidStatus10Args:
         pulumi.set(self, "group_policy_id", value)
 
 
-if not MYPY:
-    class ClientsProvisionParametersPoliciesBySsidStatus11ArgsDict(TypedDict):
-        device_policy: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The policy to apply to the specified client. Can be 'Allowed', 'Blocked', 'Normal' or 'Group policy'. Required.
-        """
-        group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The ID of the desired group policy to apply to the client. Required if 'devicePolicy' is set to "Group policy". Otherwise this is ignored.
-        """
-elif False:
-    ClientsProvisionParametersPoliciesBySsidStatus11ArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsProvisionParametersPoliciesBySsidStatus11ArgsDict(TypedDict):
+    device_policy: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The policy to apply to the specified client. Can be 'Allowed', 'Blocked', 'Normal' or 'Group policy'. Required.
+    """
+    group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The ID of the desired group policy to apply to the client. Required if 'devicePolicy' is set to "Group policy". Otherwise this is ignored.
+    """
 
 @pulumi.input_type
 class ClientsProvisionParametersPoliciesBySsidStatus11Args:
@@ -9998,18 +9636,15 @@ class ClientsProvisionParametersPoliciesBySsidStatus11Args:
         pulumi.set(self, "group_policy_id", value)
 
 
-if not MYPY:
-    class ClientsProvisionParametersPoliciesBySsidStatus12ArgsDict(TypedDict):
-        device_policy: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The policy to apply to the specified client. Can be 'Allowed', 'Blocked', 'Normal' or 'Group policy'. Required.
-        """
-        group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The ID of the desired group policy to apply to the client. Required if 'devicePolicy' is set to "Group policy". Otherwise this is ignored.
-        """
-elif False:
-    ClientsProvisionParametersPoliciesBySsidStatus12ArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsProvisionParametersPoliciesBySsidStatus12ArgsDict(TypedDict):
+    device_policy: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The policy to apply to the specified client. Can be 'Allowed', 'Blocked', 'Normal' or 'Group policy'. Required.
+    """
+    group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The ID of the desired group policy to apply to the client. Required if 'devicePolicy' is set to "Group policy". Otherwise this is ignored.
+    """
 
 @pulumi.input_type
 class ClientsProvisionParametersPoliciesBySsidStatus12Args:
@@ -10050,18 +9685,15 @@ class ClientsProvisionParametersPoliciesBySsidStatus12Args:
         pulumi.set(self, "group_policy_id", value)
 
 
-if not MYPY:
-    class ClientsProvisionParametersPoliciesBySsidStatus13ArgsDict(TypedDict):
-        device_policy: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The policy to apply to the specified client. Can be 'Allowed', 'Blocked', 'Normal' or 'Group policy'. Required.
-        """
-        group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The ID of the desired group policy to apply to the client. Required if 'devicePolicy' is set to "Group policy". Otherwise this is ignored.
-        """
-elif False:
-    ClientsProvisionParametersPoliciesBySsidStatus13ArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsProvisionParametersPoliciesBySsidStatus13ArgsDict(TypedDict):
+    device_policy: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The policy to apply to the specified client. Can be 'Allowed', 'Blocked', 'Normal' or 'Group policy'. Required.
+    """
+    group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The ID of the desired group policy to apply to the client. Required if 'devicePolicy' is set to "Group policy". Otherwise this is ignored.
+    """
 
 @pulumi.input_type
 class ClientsProvisionParametersPoliciesBySsidStatus13Args:
@@ -10102,18 +9734,15 @@ class ClientsProvisionParametersPoliciesBySsidStatus13Args:
         pulumi.set(self, "group_policy_id", value)
 
 
-if not MYPY:
-    class ClientsProvisionParametersPoliciesBySsidStatus14ArgsDict(TypedDict):
-        device_policy: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The policy to apply to the specified client. Can be 'Allowed', 'Blocked', 'Normal' or 'Group policy'. Required.
-        """
-        group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The ID of the desired group policy to apply to the client. Required if 'devicePolicy' is set to "Group policy". Otherwise this is ignored.
-        """
-elif False:
-    ClientsProvisionParametersPoliciesBySsidStatus14ArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsProvisionParametersPoliciesBySsidStatus14ArgsDict(TypedDict):
+    device_policy: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The policy to apply to the specified client. Can be 'Allowed', 'Blocked', 'Normal' or 'Group policy'. Required.
+    """
+    group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The ID of the desired group policy to apply to the client. Required if 'devicePolicy' is set to "Group policy". Otherwise this is ignored.
+    """
 
 @pulumi.input_type
 class ClientsProvisionParametersPoliciesBySsidStatus14Args:
@@ -10154,18 +9783,15 @@ class ClientsProvisionParametersPoliciesBySsidStatus14Args:
         pulumi.set(self, "group_policy_id", value)
 
 
-if not MYPY:
-    class ClientsProvisionParametersPoliciesBySsidStatus1ArgsDict(TypedDict):
-        device_policy: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The policy to apply to the specified client. Can be 'Allowed', 'Blocked', 'Normal' or 'Group policy'. Required.
-        """
-        group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The ID of the desired group policy to apply to the client. Required if 'devicePolicy' is set to "Group policy". Otherwise this is ignored.
-        """
-elif False:
-    ClientsProvisionParametersPoliciesBySsidStatus1ArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsProvisionParametersPoliciesBySsidStatus1ArgsDict(TypedDict):
+    device_policy: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The policy to apply to the specified client. Can be 'Allowed', 'Blocked', 'Normal' or 'Group policy'. Required.
+    """
+    group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The ID of the desired group policy to apply to the client. Required if 'devicePolicy' is set to "Group policy". Otherwise this is ignored.
+    """
 
 @pulumi.input_type
 class ClientsProvisionParametersPoliciesBySsidStatus1Args:
@@ -10206,18 +9832,15 @@ class ClientsProvisionParametersPoliciesBySsidStatus1Args:
         pulumi.set(self, "group_policy_id", value)
 
 
-if not MYPY:
-    class ClientsProvisionParametersPoliciesBySsidStatus2ArgsDict(TypedDict):
-        device_policy: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The policy to apply to the specified client. Can be 'Allowed', 'Blocked', 'Normal' or 'Group policy'. Required.
-        """
-        group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The ID of the desired group policy to apply to the client. Required if 'devicePolicy' is set to "Group policy". Otherwise this is ignored.
-        """
-elif False:
-    ClientsProvisionParametersPoliciesBySsidStatus2ArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsProvisionParametersPoliciesBySsidStatus2ArgsDict(TypedDict):
+    device_policy: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The policy to apply to the specified client. Can be 'Allowed', 'Blocked', 'Normal' or 'Group policy'. Required.
+    """
+    group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The ID of the desired group policy to apply to the client. Required if 'devicePolicy' is set to "Group policy". Otherwise this is ignored.
+    """
 
 @pulumi.input_type
 class ClientsProvisionParametersPoliciesBySsidStatus2Args:
@@ -10258,18 +9881,15 @@ class ClientsProvisionParametersPoliciesBySsidStatus2Args:
         pulumi.set(self, "group_policy_id", value)
 
 
-if not MYPY:
-    class ClientsProvisionParametersPoliciesBySsidStatus3ArgsDict(TypedDict):
-        device_policy: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The policy to apply to the specified client. Can be 'Allowed', 'Blocked', 'Normal' or 'Group policy'. Required.
-        """
-        group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The ID of the desired group policy to apply to the client. Required if 'devicePolicy' is set to "Group policy". Otherwise this is ignored.
-        """
-elif False:
-    ClientsProvisionParametersPoliciesBySsidStatus3ArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsProvisionParametersPoliciesBySsidStatus3ArgsDict(TypedDict):
+    device_policy: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The policy to apply to the specified client. Can be 'Allowed', 'Blocked', 'Normal' or 'Group policy'. Required.
+    """
+    group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The ID of the desired group policy to apply to the client. Required if 'devicePolicy' is set to "Group policy". Otherwise this is ignored.
+    """
 
 @pulumi.input_type
 class ClientsProvisionParametersPoliciesBySsidStatus3Args:
@@ -10310,18 +9930,15 @@ class ClientsProvisionParametersPoliciesBySsidStatus3Args:
         pulumi.set(self, "group_policy_id", value)
 
 
-if not MYPY:
-    class ClientsProvisionParametersPoliciesBySsidStatus4ArgsDict(TypedDict):
-        device_policy: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The policy to apply to the specified client. Can be 'Allowed', 'Blocked', 'Normal' or 'Group policy'. Required.
-        """
-        group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The ID of the desired group policy to apply to the client. Required if 'devicePolicy' is set to "Group policy". Otherwise this is ignored.
-        """
-elif False:
-    ClientsProvisionParametersPoliciesBySsidStatus4ArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsProvisionParametersPoliciesBySsidStatus4ArgsDict(TypedDict):
+    device_policy: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The policy to apply to the specified client. Can be 'Allowed', 'Blocked', 'Normal' or 'Group policy'. Required.
+    """
+    group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The ID of the desired group policy to apply to the client. Required if 'devicePolicy' is set to "Group policy". Otherwise this is ignored.
+    """
 
 @pulumi.input_type
 class ClientsProvisionParametersPoliciesBySsidStatus4Args:
@@ -10362,18 +9979,15 @@ class ClientsProvisionParametersPoliciesBySsidStatus4Args:
         pulumi.set(self, "group_policy_id", value)
 
 
-if not MYPY:
-    class ClientsProvisionParametersPoliciesBySsidStatus5ArgsDict(TypedDict):
-        device_policy: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The policy to apply to the specified client. Can be 'Allowed', 'Blocked', 'Normal' or 'Group policy'. Required.
-        """
-        group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The ID of the desired group policy to apply to the client. Required if 'devicePolicy' is set to "Group policy". Otherwise this is ignored.
-        """
-elif False:
-    ClientsProvisionParametersPoliciesBySsidStatus5ArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsProvisionParametersPoliciesBySsidStatus5ArgsDict(TypedDict):
+    device_policy: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The policy to apply to the specified client. Can be 'Allowed', 'Blocked', 'Normal' or 'Group policy'. Required.
+    """
+    group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The ID of the desired group policy to apply to the client. Required if 'devicePolicy' is set to "Group policy". Otherwise this is ignored.
+    """
 
 @pulumi.input_type
 class ClientsProvisionParametersPoliciesBySsidStatus5Args:
@@ -10414,18 +10028,15 @@ class ClientsProvisionParametersPoliciesBySsidStatus5Args:
         pulumi.set(self, "group_policy_id", value)
 
 
-if not MYPY:
-    class ClientsProvisionParametersPoliciesBySsidStatus6ArgsDict(TypedDict):
-        device_policy: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The policy to apply to the specified client. Can be 'Allowed', 'Blocked', 'Normal' or 'Group policy'. Required.
-        """
-        group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The ID of the desired group policy to apply to the client. Required if 'devicePolicy' is set to "Group policy". Otherwise this is ignored.
-        """
-elif False:
-    ClientsProvisionParametersPoliciesBySsidStatus6ArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsProvisionParametersPoliciesBySsidStatus6ArgsDict(TypedDict):
+    device_policy: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The policy to apply to the specified client. Can be 'Allowed', 'Blocked', 'Normal' or 'Group policy'. Required.
+    """
+    group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The ID of the desired group policy to apply to the client. Required if 'devicePolicy' is set to "Group policy". Otherwise this is ignored.
+    """
 
 @pulumi.input_type
 class ClientsProvisionParametersPoliciesBySsidStatus6Args:
@@ -10466,18 +10077,15 @@ class ClientsProvisionParametersPoliciesBySsidStatus6Args:
         pulumi.set(self, "group_policy_id", value)
 
 
-if not MYPY:
-    class ClientsProvisionParametersPoliciesBySsidStatus7ArgsDict(TypedDict):
-        device_policy: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The policy to apply to the specified client. Can be 'Allowed', 'Blocked', 'Normal' or 'Group policy'. Required.
-        """
-        group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The ID of the desired group policy to apply to the client. Required if 'devicePolicy' is set to "Group policy". Otherwise this is ignored.
-        """
-elif False:
-    ClientsProvisionParametersPoliciesBySsidStatus7ArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsProvisionParametersPoliciesBySsidStatus7ArgsDict(TypedDict):
+    device_policy: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The policy to apply to the specified client. Can be 'Allowed', 'Blocked', 'Normal' or 'Group policy'. Required.
+    """
+    group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The ID of the desired group policy to apply to the client. Required if 'devicePolicy' is set to "Group policy". Otherwise this is ignored.
+    """
 
 @pulumi.input_type
 class ClientsProvisionParametersPoliciesBySsidStatus7Args:
@@ -10518,18 +10126,15 @@ class ClientsProvisionParametersPoliciesBySsidStatus7Args:
         pulumi.set(self, "group_policy_id", value)
 
 
-if not MYPY:
-    class ClientsProvisionParametersPoliciesBySsidStatus8ArgsDict(TypedDict):
-        device_policy: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The policy to apply to the specified client. Can be 'Allowed', 'Blocked', 'Normal' or 'Group policy'. Required.
-        """
-        group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The ID of the desired group policy to apply to the client. Required if 'devicePolicy' is set to "Group policy". Otherwise this is ignored.
-        """
-elif False:
-    ClientsProvisionParametersPoliciesBySsidStatus8ArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsProvisionParametersPoliciesBySsidStatus8ArgsDict(TypedDict):
+    device_policy: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The policy to apply to the specified client. Can be 'Allowed', 'Blocked', 'Normal' or 'Group policy'. Required.
+    """
+    group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The ID of the desired group policy to apply to the client. Required if 'devicePolicy' is set to "Group policy". Otherwise this is ignored.
+    """
 
 @pulumi.input_type
 class ClientsProvisionParametersPoliciesBySsidStatus8Args:
@@ -10570,18 +10175,15 @@ class ClientsProvisionParametersPoliciesBySsidStatus8Args:
         pulumi.set(self, "group_policy_id", value)
 
 
-if not MYPY:
-    class ClientsProvisionParametersPoliciesBySsidStatus9ArgsDict(TypedDict):
-        device_policy: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The policy to apply to the specified client. Can be 'Allowed', 'Blocked', 'Normal' or 'Group policy'. Required.
-        """
-        group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The ID of the desired group policy to apply to the client. Required if 'devicePolicy' is set to "Group policy". Otherwise this is ignored.
-        """
-elif False:
-    ClientsProvisionParametersPoliciesBySsidStatus9ArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsProvisionParametersPoliciesBySsidStatus9ArgsDict(TypedDict):
+    device_policy: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The policy to apply to the specified client. Can be 'Allowed', 'Blocked', 'Normal' or 'Group policy'. Required.
+    """
+    group_policy_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The ID of the desired group policy to apply to the client. Required if 'devicePolicy' is set to "Group policy". Otherwise this is ignored.
+    """
 
 @pulumi.input_type
 class ClientsProvisionParametersPoliciesBySsidStatus9Args:
@@ -10622,70 +10224,67 @@ class ClientsProvisionParametersPoliciesBySsidStatus9Args:
         pulumi.set(self, "group_policy_id", value)
 
 
-if not MYPY:
-    class ClientsSplashAuthorizationStatusSsidsArgsDict(TypedDict):
-        status0: NotRequired[pulumi.Input['ClientsSplashAuthorizationStatusSsidsStatus0ArgsDict']]
-        """
-        Splash authorization for SSID 0
-        """
-        status1: NotRequired[pulumi.Input['ClientsSplashAuthorizationStatusSsidsStatus1ArgsDict']]
-        """
-        Splash authorization for SSID 1
-        """
-        status10: NotRequired[pulumi.Input['ClientsSplashAuthorizationStatusSsidsStatus10ArgsDict']]
-        """
-        Splash authorization for SSID 10
-        """
-        status11: NotRequired[pulumi.Input['ClientsSplashAuthorizationStatusSsidsStatus11ArgsDict']]
-        """
-        Splash authorization for SSID 11
-        """
-        status12: NotRequired[pulumi.Input['ClientsSplashAuthorizationStatusSsidsStatus12ArgsDict']]
-        """
-        Splash authorization for SSID 12
-        """
-        status13: NotRequired[pulumi.Input['ClientsSplashAuthorizationStatusSsidsStatus13ArgsDict']]
-        """
-        Splash authorization for SSID 13
-        """
-        status14: NotRequired[pulumi.Input['ClientsSplashAuthorizationStatusSsidsStatus14ArgsDict']]
-        """
-        Splash authorization for SSID 14
-        """
-        status2: NotRequired[pulumi.Input['ClientsSplashAuthorizationStatusSsidsStatus2ArgsDict']]
-        """
-        Splash authorization for SSID 2
-        """
-        status3: NotRequired[pulumi.Input['ClientsSplashAuthorizationStatusSsidsStatus3ArgsDict']]
-        """
-        Splash authorization for SSID 3
-        """
-        status4: NotRequired[pulumi.Input['ClientsSplashAuthorizationStatusSsidsStatus4ArgsDict']]
-        """
-        Splash authorization for SSID 4
-        """
-        status5: NotRequired[pulumi.Input['ClientsSplashAuthorizationStatusSsidsStatus5ArgsDict']]
-        """
-        Splash authorization for SSID 5
-        """
-        status6: NotRequired[pulumi.Input['ClientsSplashAuthorizationStatusSsidsStatus6ArgsDict']]
-        """
-        Splash authorization for SSID 6
-        """
-        status7: NotRequired[pulumi.Input['ClientsSplashAuthorizationStatusSsidsStatus7ArgsDict']]
-        """
-        Splash authorization for SSID 7
-        """
-        status8: NotRequired[pulumi.Input['ClientsSplashAuthorizationStatusSsidsStatus8ArgsDict']]
-        """
-        Splash authorization for SSID 8
-        """
-        status9: NotRequired[pulumi.Input['ClientsSplashAuthorizationStatusSsidsStatus9ArgsDict']]
-        """
-        Splash authorization for SSID 9
-        """
-elif False:
-    ClientsSplashAuthorizationStatusSsidsArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsSplashAuthorizationStatusSsidsArgsDict(TypedDict):
+    status0: NotRequired[pulumi.Input['ClientsSplashAuthorizationStatusSsidsStatus0ArgsDict']]
+    """
+    Splash authorization for SSID 0
+    """
+    status1: NotRequired[pulumi.Input['ClientsSplashAuthorizationStatusSsidsStatus1ArgsDict']]
+    """
+    Splash authorization for SSID 1
+    """
+    status10: NotRequired[pulumi.Input['ClientsSplashAuthorizationStatusSsidsStatus10ArgsDict']]
+    """
+    Splash authorization for SSID 10
+    """
+    status11: NotRequired[pulumi.Input['ClientsSplashAuthorizationStatusSsidsStatus11ArgsDict']]
+    """
+    Splash authorization for SSID 11
+    """
+    status12: NotRequired[pulumi.Input['ClientsSplashAuthorizationStatusSsidsStatus12ArgsDict']]
+    """
+    Splash authorization for SSID 12
+    """
+    status13: NotRequired[pulumi.Input['ClientsSplashAuthorizationStatusSsidsStatus13ArgsDict']]
+    """
+    Splash authorization for SSID 13
+    """
+    status14: NotRequired[pulumi.Input['ClientsSplashAuthorizationStatusSsidsStatus14ArgsDict']]
+    """
+    Splash authorization for SSID 14
+    """
+    status2: NotRequired[pulumi.Input['ClientsSplashAuthorizationStatusSsidsStatus2ArgsDict']]
+    """
+    Splash authorization for SSID 2
+    """
+    status3: NotRequired[pulumi.Input['ClientsSplashAuthorizationStatusSsidsStatus3ArgsDict']]
+    """
+    Splash authorization for SSID 3
+    """
+    status4: NotRequired[pulumi.Input['ClientsSplashAuthorizationStatusSsidsStatus4ArgsDict']]
+    """
+    Splash authorization for SSID 4
+    """
+    status5: NotRequired[pulumi.Input['ClientsSplashAuthorizationStatusSsidsStatus5ArgsDict']]
+    """
+    Splash authorization for SSID 5
+    """
+    status6: NotRequired[pulumi.Input['ClientsSplashAuthorizationStatusSsidsStatus6ArgsDict']]
+    """
+    Splash authorization for SSID 6
+    """
+    status7: NotRequired[pulumi.Input['ClientsSplashAuthorizationStatusSsidsStatus7ArgsDict']]
+    """
+    Splash authorization for SSID 7
+    """
+    status8: NotRequired[pulumi.Input['ClientsSplashAuthorizationStatusSsidsStatus8ArgsDict']]
+    """
+    Splash authorization for SSID 8
+    """
+    status9: NotRequired[pulumi.Input['ClientsSplashAuthorizationStatusSsidsStatus9ArgsDict']]
+    """
+    Splash authorization for SSID 9
+    """
 
 @pulumi.input_type
 class ClientsSplashAuthorizationStatusSsidsArgs:
@@ -10934,16 +10533,13 @@ class ClientsSplashAuthorizationStatusSsidsArgs:
         pulumi.set(self, "status9", value)
 
 
-if not MYPY:
-    class ClientsSplashAuthorizationStatusSsidsStatus0ArgsDict(TypedDict):
-        authorized_at: NotRequired[pulumi.Input[_builtins.str]]
-        expires_at: NotRequired[pulumi.Input[_builtins.str]]
-        is_authorized: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        New authorization status for the SSID (true, false).
-        """
-elif False:
-    ClientsSplashAuthorizationStatusSsidsStatus0ArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsSplashAuthorizationStatusSsidsStatus0ArgsDict(TypedDict):
+    authorized_at: NotRequired[pulumi.Input[_builtins.str]]
+    expires_at: NotRequired[pulumi.Input[_builtins.str]]
+    is_authorized: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    New authorization status for the SSID (true, false).
+    """
 
 @pulumi.input_type
 class ClientsSplashAuthorizationStatusSsidsStatus0Args:
@@ -10992,14 +10588,11 @@ class ClientsSplashAuthorizationStatusSsidsStatus0Args:
         pulumi.set(self, "is_authorized", value)
 
 
-if not MYPY:
-    class ClientsSplashAuthorizationStatusSsidsStatus10ArgsDict(TypedDict):
-        is_authorized: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        New authorization status for the SSID (true, false).
-        """
-elif False:
-    ClientsSplashAuthorizationStatusSsidsStatus10ArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsSplashAuthorizationStatusSsidsStatus10ArgsDict(TypedDict):
+    is_authorized: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    New authorization status for the SSID (true, false).
+    """
 
 @pulumi.input_type
 class ClientsSplashAuthorizationStatusSsidsStatus10Args:
@@ -11024,14 +10617,11 @@ class ClientsSplashAuthorizationStatusSsidsStatus10Args:
         pulumi.set(self, "is_authorized", value)
 
 
-if not MYPY:
-    class ClientsSplashAuthorizationStatusSsidsStatus11ArgsDict(TypedDict):
-        is_authorized: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        New authorization status for the SSID (true, false).
-        """
-elif False:
-    ClientsSplashAuthorizationStatusSsidsStatus11ArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsSplashAuthorizationStatusSsidsStatus11ArgsDict(TypedDict):
+    is_authorized: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    New authorization status for the SSID (true, false).
+    """
 
 @pulumi.input_type
 class ClientsSplashAuthorizationStatusSsidsStatus11Args:
@@ -11056,14 +10646,11 @@ class ClientsSplashAuthorizationStatusSsidsStatus11Args:
         pulumi.set(self, "is_authorized", value)
 
 
-if not MYPY:
-    class ClientsSplashAuthorizationStatusSsidsStatus12ArgsDict(TypedDict):
-        is_authorized: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        New authorization status for the SSID (true, false).
-        """
-elif False:
-    ClientsSplashAuthorizationStatusSsidsStatus12ArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsSplashAuthorizationStatusSsidsStatus12ArgsDict(TypedDict):
+    is_authorized: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    New authorization status for the SSID (true, false).
+    """
 
 @pulumi.input_type
 class ClientsSplashAuthorizationStatusSsidsStatus12Args:
@@ -11088,14 +10675,11 @@ class ClientsSplashAuthorizationStatusSsidsStatus12Args:
         pulumi.set(self, "is_authorized", value)
 
 
-if not MYPY:
-    class ClientsSplashAuthorizationStatusSsidsStatus13ArgsDict(TypedDict):
-        is_authorized: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        New authorization status for the SSID (true, false).
-        """
-elif False:
-    ClientsSplashAuthorizationStatusSsidsStatus13ArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsSplashAuthorizationStatusSsidsStatus13ArgsDict(TypedDict):
+    is_authorized: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    New authorization status for the SSID (true, false).
+    """
 
 @pulumi.input_type
 class ClientsSplashAuthorizationStatusSsidsStatus13Args:
@@ -11120,14 +10704,11 @@ class ClientsSplashAuthorizationStatusSsidsStatus13Args:
         pulumi.set(self, "is_authorized", value)
 
 
-if not MYPY:
-    class ClientsSplashAuthorizationStatusSsidsStatus14ArgsDict(TypedDict):
-        is_authorized: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        New authorization status for the SSID (true, false).
-        """
-elif False:
-    ClientsSplashAuthorizationStatusSsidsStatus14ArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsSplashAuthorizationStatusSsidsStatus14ArgsDict(TypedDict):
+    is_authorized: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    New authorization status for the SSID (true, false).
+    """
 
 @pulumi.input_type
 class ClientsSplashAuthorizationStatusSsidsStatus14Args:
@@ -11152,14 +10733,11 @@ class ClientsSplashAuthorizationStatusSsidsStatus14Args:
         pulumi.set(self, "is_authorized", value)
 
 
-if not MYPY:
-    class ClientsSplashAuthorizationStatusSsidsStatus1ArgsDict(TypedDict):
-        is_authorized: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        New authorization status for the SSID (true, false).
-        """
-elif False:
-    ClientsSplashAuthorizationStatusSsidsStatus1ArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsSplashAuthorizationStatusSsidsStatus1ArgsDict(TypedDict):
+    is_authorized: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    New authorization status for the SSID (true, false).
+    """
 
 @pulumi.input_type
 class ClientsSplashAuthorizationStatusSsidsStatus1Args:
@@ -11184,14 +10762,11 @@ class ClientsSplashAuthorizationStatusSsidsStatus1Args:
         pulumi.set(self, "is_authorized", value)
 
 
-if not MYPY:
-    class ClientsSplashAuthorizationStatusSsidsStatus2ArgsDict(TypedDict):
-        is_authorized: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        New authorization status for the SSID (true, false).
-        """
-elif False:
-    ClientsSplashAuthorizationStatusSsidsStatus2ArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsSplashAuthorizationStatusSsidsStatus2ArgsDict(TypedDict):
+    is_authorized: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    New authorization status for the SSID (true, false).
+    """
 
 @pulumi.input_type
 class ClientsSplashAuthorizationStatusSsidsStatus2Args:
@@ -11216,14 +10791,11 @@ class ClientsSplashAuthorizationStatusSsidsStatus2Args:
         pulumi.set(self, "is_authorized", value)
 
 
-if not MYPY:
-    class ClientsSplashAuthorizationStatusSsidsStatus3ArgsDict(TypedDict):
-        is_authorized: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        New authorization status for the SSID (true, false).
-        """
-elif False:
-    ClientsSplashAuthorizationStatusSsidsStatus3ArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsSplashAuthorizationStatusSsidsStatus3ArgsDict(TypedDict):
+    is_authorized: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    New authorization status for the SSID (true, false).
+    """
 
 @pulumi.input_type
 class ClientsSplashAuthorizationStatusSsidsStatus3Args:
@@ -11248,14 +10820,11 @@ class ClientsSplashAuthorizationStatusSsidsStatus3Args:
         pulumi.set(self, "is_authorized", value)
 
 
-if not MYPY:
-    class ClientsSplashAuthorizationStatusSsidsStatus4ArgsDict(TypedDict):
-        is_authorized: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        New authorization status for the SSID (true, false).
-        """
-elif False:
-    ClientsSplashAuthorizationStatusSsidsStatus4ArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsSplashAuthorizationStatusSsidsStatus4ArgsDict(TypedDict):
+    is_authorized: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    New authorization status for the SSID (true, false).
+    """
 
 @pulumi.input_type
 class ClientsSplashAuthorizationStatusSsidsStatus4Args:
@@ -11280,14 +10849,11 @@ class ClientsSplashAuthorizationStatusSsidsStatus4Args:
         pulumi.set(self, "is_authorized", value)
 
 
-if not MYPY:
-    class ClientsSplashAuthorizationStatusSsidsStatus5ArgsDict(TypedDict):
-        is_authorized: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        New authorization status for the SSID (true, false).
-        """
-elif False:
-    ClientsSplashAuthorizationStatusSsidsStatus5ArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsSplashAuthorizationStatusSsidsStatus5ArgsDict(TypedDict):
+    is_authorized: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    New authorization status for the SSID (true, false).
+    """
 
 @pulumi.input_type
 class ClientsSplashAuthorizationStatusSsidsStatus5Args:
@@ -11312,14 +10878,11 @@ class ClientsSplashAuthorizationStatusSsidsStatus5Args:
         pulumi.set(self, "is_authorized", value)
 
 
-if not MYPY:
-    class ClientsSplashAuthorizationStatusSsidsStatus6ArgsDict(TypedDict):
-        is_authorized: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        New authorization status for the SSID (true, false).
-        """
-elif False:
-    ClientsSplashAuthorizationStatusSsidsStatus6ArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsSplashAuthorizationStatusSsidsStatus6ArgsDict(TypedDict):
+    is_authorized: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    New authorization status for the SSID (true, false).
+    """
 
 @pulumi.input_type
 class ClientsSplashAuthorizationStatusSsidsStatus6Args:
@@ -11344,14 +10907,11 @@ class ClientsSplashAuthorizationStatusSsidsStatus6Args:
         pulumi.set(self, "is_authorized", value)
 
 
-if not MYPY:
-    class ClientsSplashAuthorizationStatusSsidsStatus7ArgsDict(TypedDict):
-        is_authorized: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        New authorization status for the SSID (true, false).
-        """
-elif False:
-    ClientsSplashAuthorizationStatusSsidsStatus7ArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsSplashAuthorizationStatusSsidsStatus7ArgsDict(TypedDict):
+    is_authorized: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    New authorization status for the SSID (true, false).
+    """
 
 @pulumi.input_type
 class ClientsSplashAuthorizationStatusSsidsStatus7Args:
@@ -11376,14 +10936,11 @@ class ClientsSplashAuthorizationStatusSsidsStatus7Args:
         pulumi.set(self, "is_authorized", value)
 
 
-if not MYPY:
-    class ClientsSplashAuthorizationStatusSsidsStatus8ArgsDict(TypedDict):
-        is_authorized: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        New authorization status for the SSID (true, false).
-        """
-elif False:
-    ClientsSplashAuthorizationStatusSsidsStatus8ArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsSplashAuthorizationStatusSsidsStatus8ArgsDict(TypedDict):
+    is_authorized: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    New authorization status for the SSID (true, false).
+    """
 
 @pulumi.input_type
 class ClientsSplashAuthorizationStatusSsidsStatus8Args:
@@ -11408,14 +10965,11 @@ class ClientsSplashAuthorizationStatusSsidsStatus8Args:
         pulumi.set(self, "is_authorized", value)
 
 
-if not MYPY:
-    class ClientsSplashAuthorizationStatusSsidsStatus9ArgsDict(TypedDict):
-        is_authorized: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        New authorization status for the SSID (true, false).
-        """
-elif False:
-    ClientsSplashAuthorizationStatusSsidsStatus9ArgsDict: TypeAlias = Mapping[str, Any]
+class ClientsSplashAuthorizationStatusSsidsStatus9ArgsDict(TypedDict):
+    is_authorized: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    New authorization status for the SSID (true, false).
+    """
 
 @pulumi.input_type
 class ClientsSplashAuthorizationStatusSsidsStatus9Args:
@@ -11440,14 +10994,11 @@ class ClientsSplashAuthorizationStatusSsidsStatus9Args:
         pulumi.set(self, "is_authorized", value)
 
 
-if not MYPY:
-    class DevicesClaimItemArgsDict(TypedDict):
-        serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The serials of the devices
-        """
-elif False:
-    DevicesClaimItemArgsDict: TypeAlias = Mapping[str, Any]
+class DevicesClaimItemArgsDict(TypedDict):
+    serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The serials of the devices
+    """
 
 @pulumi.input_type
 class DevicesClaimItemArgs:
@@ -11472,14 +11023,11 @@ class DevicesClaimItemArgs:
         pulumi.set(self, "serials", value)
 
 
-if not MYPY:
-    class DevicesClaimParametersArgsDict(TypedDict):
-        serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        A list of serials of devices to claim
-        """
-elif False:
-    DevicesClaimParametersArgsDict: TypeAlias = Mapping[str, Any]
+class DevicesClaimParametersArgsDict(TypedDict):
+    serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    A list of serials of devices to claim
+    """
 
 @pulumi.input_type
 class DevicesClaimParametersArgs:
@@ -11504,70 +11052,67 @@ class DevicesClaimParametersArgs:
         pulumi.set(self, "serials", value)
 
 
-if not MYPY:
-    class DevicesClaimVmxItemArgsDict(TypedDict):
-        address: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Physical address of the device
-        """
-        details: NotRequired[pulumi.Input[Sequence[pulumi.Input['DevicesClaimVmxItemDetailArgsDict']]]]
-        """
-        Additional device information
-        """
-        firmware: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version of the device
-        """
-        imei: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        IMEI of the device, if applicable
-        """
-        lan_ip: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        LAN IP address of the device
-        """
-        lat: NotRequired[pulumi.Input[_builtins.float]]
-        """
-        Latitude of the device
-        """
-        lng: NotRequired[pulumi.Input[_builtins.float]]
-        """
-        Longitude of the device
-        """
-        mac: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        MAC address of the device
-        """
-        model: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Model of the device
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the device
-        """
-        network_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        ID of the network the device belongs to
-        """
-        notes: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Notes for the device, limited to 255 characters
-        """
-        product_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Product type of the device
-        """
-        serial: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Serial number of the device
-        """
-        tags: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        List of tags assigned to the device
-        """
-elif False:
-    DevicesClaimVmxItemArgsDict: TypeAlias = Mapping[str, Any]
+class DevicesClaimVmxItemArgsDict(TypedDict):
+    address: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Physical address of the device
+    """
+    details: NotRequired[pulumi.Input[Sequence[pulumi.Input['DevicesClaimVmxItemDetailArgsDict']]]]
+    """
+    Additional device information
+    """
+    firmware: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version of the device
+    """
+    imei: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    IMEI of the device, if applicable
+    """
+    lan_ip: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    LAN IP address of the device
+    """
+    lat: NotRequired[pulumi.Input[_builtins.float]]
+    """
+    Latitude of the device
+    """
+    lng: NotRequired[pulumi.Input[_builtins.float]]
+    """
+    Longitude of the device
+    """
+    mac: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    MAC address of the device
+    """
+    model: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Model of the device
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the device
+    """
+    network_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    ID of the network the device belongs to
+    """
+    notes: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Notes for the device, limited to 255 characters
+    """
+    product_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Product type of the device
+    """
+    serial: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Serial number of the device
+    """
+    tags: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of tags assigned to the device
+    """
 
 @pulumi.input_type
 class DevicesClaimVmxItemArgs:
@@ -11816,18 +11361,15 @@ class DevicesClaimVmxItemArgs:
         pulumi.set(self, "tags", value)
 
 
-if not MYPY:
-    class DevicesClaimVmxItemDetailArgsDict(TypedDict):
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Additional property name
-        """
-        value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Additional property value
-        """
-elif False:
-    DevicesClaimVmxItemDetailArgsDict: TypeAlias = Mapping[str, Any]
+class DevicesClaimVmxItemDetailArgsDict(TypedDict):
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Additional property name
+    """
+    value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Additional property value
+    """
 
 @pulumi.input_type
 class DevicesClaimVmxItemDetailArgs:
@@ -11868,14 +11410,11 @@ class DevicesClaimVmxItemDetailArgs:
         pulumi.set(self, "value", value)
 
 
-if not MYPY:
-    class DevicesClaimVmxParametersArgsDict(TypedDict):
-        size: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The size of the vMX you claim. It can be one of: small, medium, large, xlarge, 100
-        """
-elif False:
-    DevicesClaimVmxParametersArgsDict: TypeAlias = Mapping[str, Any]
+class DevicesClaimVmxParametersArgsDict(TypedDict):
+    size: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The size of the vMX you claim. It can be one of: small, medium, large, xlarge, 100
+    """
 
 @pulumi.input_type
 class DevicesClaimVmxParametersArgs:
@@ -11900,14 +11439,11 @@ class DevicesClaimVmxParametersArgs:
         pulumi.set(self, "size", value)
 
 
-if not MYPY:
-    class DevicesRemoveParametersArgsDict(TypedDict):
-        serial: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The serial of a device
-        """
-elif False:
-    DevicesRemoveParametersArgsDict: TypeAlias = Mapping[str, Any]
+class DevicesRemoveParametersArgsDict(TypedDict):
+    serial: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The serial of a device
+    """
 
 @pulumi.input_type
 class DevicesRemoveParametersArgs:
@@ -11932,38 +11468,35 @@ class DevicesRemoveParametersArgs:
         pulumi.set(self, "serial", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsArgsDict(TypedDict):
-        appliance: NotRequired[pulumi.Input['FirmwareUpgradesProductsApplianceArgsDict']]
-        """
-        The network device to be updated
-        """
-        camera: NotRequired[pulumi.Input['FirmwareUpgradesProductsCameraArgsDict']]
-        """
-        The network device to be updated
-        """
-        cellular_gateway: NotRequired[pulumi.Input['FirmwareUpgradesProductsCellularGatewayArgsDict']]
-        """
-        The network device to be updated
-        """
-        sensor: NotRequired[pulumi.Input['FirmwareUpgradesProductsSensorArgsDict']]
-        """
-        The network device to be updated
-        """
-        switch: NotRequired[pulumi.Input['FirmwareUpgradesProductsSwitchArgsDict']]
-        """
-        The network device to be updated
-        """
-        switch_catalyst: NotRequired[pulumi.Input['FirmwareUpgradesProductsSwitchCatalystArgsDict']]
-        """
-        The network device to be updated
-        """
-        wireless: NotRequired[pulumi.Input['FirmwareUpgradesProductsWirelessArgsDict']]
-        """
-        The network device to be updated
-        """
-elif False:
-    FirmwareUpgradesProductsArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsArgsDict(TypedDict):
+    appliance: NotRequired[pulumi.Input['FirmwareUpgradesProductsApplianceArgsDict']]
+    """
+    The network device to be updated
+    """
+    camera: NotRequired[pulumi.Input['FirmwareUpgradesProductsCameraArgsDict']]
+    """
+    The network device to be updated
+    """
+    cellular_gateway: NotRequired[pulumi.Input['FirmwareUpgradesProductsCellularGatewayArgsDict']]
+    """
+    The network device to be updated
+    """
+    sensor: NotRequired[pulumi.Input['FirmwareUpgradesProductsSensorArgsDict']]
+    """
+    The network device to be updated
+    """
+    switch: NotRequired[pulumi.Input['FirmwareUpgradesProductsSwitchArgsDict']]
+    """
+    The network device to be updated
+    """
+    switch_catalyst: NotRequired[pulumi.Input['FirmwareUpgradesProductsSwitchCatalystArgsDict']]
+    """
+    The network device to be updated
+    """
+    wireless: NotRequired[pulumi.Input['FirmwareUpgradesProductsWirelessArgsDict']]
+    """
+    The network device to be updated
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsArgs:
@@ -12084,30 +11617,27 @@ class FirmwareUpgradesProductsArgs:
         pulumi.set(self, "wireless", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsApplianceArgsDict(TypedDict):
-        available_versions: NotRequired[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesProductsApplianceAvailableVersionArgsDict']]]]
-        """
-        Firmware versions available for upgrade
-        """
-        current_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsApplianceCurrentVersionArgsDict']]
-        """
-        Details of the current version on the device
-        """
-        last_upgrade: NotRequired[pulumi.Input['FirmwareUpgradesProductsApplianceLastUpgradeArgsDict']]
-        """
-        Details of the last firmware upgrade on the device
-        """
-        next_upgrade: NotRequired[pulumi.Input['FirmwareUpgradesProductsApplianceNextUpgradeArgsDict']]
-        """
-        Details of the next firmware upgrade on the device
-        """
-        participate_in_next_beta_release: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether or not the network wants beta firmware
-        """
-elif False:
-    FirmwareUpgradesProductsApplianceArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsApplianceArgsDict(TypedDict):
+    available_versions: NotRequired[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesProductsApplianceAvailableVersionArgsDict']]]]
+    """
+    Firmware versions available for upgrade
+    """
+    current_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsApplianceCurrentVersionArgsDict']]
+    """
+    Details of the current version on the device
+    """
+    last_upgrade: NotRequired[pulumi.Input['FirmwareUpgradesProductsApplianceLastUpgradeArgsDict']]
+    """
+    Details of the last firmware upgrade on the device
+    """
+    next_upgrade: NotRequired[pulumi.Input['FirmwareUpgradesProductsApplianceNextUpgradeArgsDict']]
+    """
+    Details of the next firmware upgrade on the device
+    """
+    participate_in_next_beta_release: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether or not the network wants beta firmware
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsApplianceArgs:
@@ -12196,30 +11726,27 @@ class FirmwareUpgradesProductsApplianceArgs:
         pulumi.set(self, "participate_in_next_beta_release", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsApplianceAvailableVersionArgsDict(TypedDict):
-        firmware: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the firmware version
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version identifier
-        """
-        release_date: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release date of the firmware version
-        """
-        release_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release type of the firmware version
-        """
-        short_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version short name
-        """
-elif False:
-    FirmwareUpgradesProductsApplianceAvailableVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsApplianceAvailableVersionArgsDict(TypedDict):
+    firmware: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the firmware version
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version identifier
+    """
+    release_date: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release date of the firmware version
+    """
+    release_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release type of the firmware version
+    """
+    short_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version short name
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsApplianceAvailableVersionArgs:
@@ -12308,30 +11835,27 @@ class FirmwareUpgradesProductsApplianceAvailableVersionArgs:
         pulumi.set(self, "short_name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsApplianceCurrentVersionArgsDict(TypedDict):
-        firmware: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the firmware version
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version identifier
-        """
-        release_date: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release date of the firmware version
-        """
-        release_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release type of the firmware version
-        """
-        short_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version short name
-        """
-elif False:
-    FirmwareUpgradesProductsApplianceCurrentVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsApplianceCurrentVersionArgsDict(TypedDict):
+    firmware: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the firmware version
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version identifier
+    """
+    release_date: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release date of the firmware version
+    """
+    release_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release type of the firmware version
+    """
+    short_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version short name
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsApplianceCurrentVersionArgs:
@@ -12420,22 +11944,19 @@ class FirmwareUpgradesProductsApplianceCurrentVersionArgs:
         pulumi.set(self, "short_name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsApplianceLastUpgradeArgsDict(TypedDict):
-        from_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsApplianceLastUpgradeFromVersionArgsDict']]
-        """
-        Details of the version the device upgraded from
-        """
-        time: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Timestamp of the last successful firmware upgrade
-        """
-        to_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsApplianceLastUpgradeToVersionArgsDict']]
-        """
-        Details of the version the device upgraded to
-        """
-elif False:
-    FirmwareUpgradesProductsApplianceLastUpgradeArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsApplianceLastUpgradeArgsDict(TypedDict):
+    from_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsApplianceLastUpgradeFromVersionArgsDict']]
+    """
+    Details of the version the device upgraded from
+    """
+    time: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Timestamp of the last successful firmware upgrade
+    """
+    to_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsApplianceLastUpgradeToVersionArgsDict']]
+    """
+    Details of the version the device upgraded to
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsApplianceLastUpgradeArgs:
@@ -12492,30 +12013,27 @@ class FirmwareUpgradesProductsApplianceLastUpgradeArgs:
         pulumi.set(self, "to_version", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsApplianceLastUpgradeFromVersionArgsDict(TypedDict):
-        firmware: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the firmware version
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version identifier
-        """
-        release_date: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release date of the firmware version
-        """
-        release_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release type of the firmware version
-        """
-        short_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version short name
-        """
-elif False:
-    FirmwareUpgradesProductsApplianceLastUpgradeFromVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsApplianceLastUpgradeFromVersionArgsDict(TypedDict):
+    firmware: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the firmware version
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version identifier
+    """
+    release_date: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release date of the firmware version
+    """
+    release_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release type of the firmware version
+    """
+    short_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version short name
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsApplianceLastUpgradeFromVersionArgs:
@@ -12604,30 +12122,27 @@ class FirmwareUpgradesProductsApplianceLastUpgradeFromVersionArgs:
         pulumi.set(self, "short_name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsApplianceLastUpgradeToVersionArgsDict(TypedDict):
-        firmware: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the firmware version
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version identifier
-        """
-        release_date: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release date of the firmware version
-        """
-        release_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release type of the firmware version
-        """
-        short_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version short name
-        """
-elif False:
-    FirmwareUpgradesProductsApplianceLastUpgradeToVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsApplianceLastUpgradeToVersionArgsDict(TypedDict):
+    firmware: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the firmware version
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version identifier
+    """
+    release_date: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release date of the firmware version
+    """
+    release_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release type of the firmware version
+    """
+    short_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version short name
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsApplianceLastUpgradeToVersionArgs:
@@ -12716,18 +12231,15 @@ class FirmwareUpgradesProductsApplianceLastUpgradeToVersionArgs:
         pulumi.set(self, "short_name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsApplianceNextUpgradeArgsDict(TypedDict):
-        time: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Timestamp of the next scheduled firmware upgrade
-        """
-        to_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsApplianceNextUpgradeToVersionArgsDict']]
-        """
-        Details of the version the device will upgrade to if it exists
-        """
-elif False:
-    FirmwareUpgradesProductsApplianceNextUpgradeArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsApplianceNextUpgradeArgsDict(TypedDict):
+    time: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Timestamp of the next scheduled firmware upgrade
+    """
+    to_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsApplianceNextUpgradeToVersionArgsDict']]
+    """
+    Details of the version the device will upgrade to if it exists
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsApplianceNextUpgradeArgs:
@@ -12768,30 +12280,27 @@ class FirmwareUpgradesProductsApplianceNextUpgradeArgs:
         pulumi.set(self, "to_version", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsApplianceNextUpgradeToVersionArgsDict(TypedDict):
-        firmware: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the firmware version
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version identifier
-        """
-        release_date: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release date of the firmware version
-        """
-        release_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release type of the firmware version
-        """
-        short_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version short name
-        """
-elif False:
-    FirmwareUpgradesProductsApplianceNextUpgradeToVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsApplianceNextUpgradeToVersionArgsDict(TypedDict):
+    firmware: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the firmware version
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version identifier
+    """
+    release_date: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release date of the firmware version
+    """
+    release_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release type of the firmware version
+    """
+    short_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version short name
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsApplianceNextUpgradeToVersionArgs:
@@ -12880,30 +12389,27 @@ class FirmwareUpgradesProductsApplianceNextUpgradeToVersionArgs:
         pulumi.set(self, "short_name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsCameraArgsDict(TypedDict):
-        available_versions: NotRequired[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesProductsCameraAvailableVersionArgsDict']]]]
-        """
-        Firmware versions available for upgrade
-        """
-        current_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsCameraCurrentVersionArgsDict']]
-        """
-        Details of the current version on the device
-        """
-        last_upgrade: NotRequired[pulumi.Input['FirmwareUpgradesProductsCameraLastUpgradeArgsDict']]
-        """
-        Details of the last firmware upgrade on the device
-        """
-        next_upgrade: NotRequired[pulumi.Input['FirmwareUpgradesProductsCameraNextUpgradeArgsDict']]
-        """
-        Details of the next firmware upgrade on the device
-        """
-        participate_in_next_beta_release: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether or not the network wants beta firmware
-        """
-elif False:
-    FirmwareUpgradesProductsCameraArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsCameraArgsDict(TypedDict):
+    available_versions: NotRequired[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesProductsCameraAvailableVersionArgsDict']]]]
+    """
+    Firmware versions available for upgrade
+    """
+    current_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsCameraCurrentVersionArgsDict']]
+    """
+    Details of the current version on the device
+    """
+    last_upgrade: NotRequired[pulumi.Input['FirmwareUpgradesProductsCameraLastUpgradeArgsDict']]
+    """
+    Details of the last firmware upgrade on the device
+    """
+    next_upgrade: NotRequired[pulumi.Input['FirmwareUpgradesProductsCameraNextUpgradeArgsDict']]
+    """
+    Details of the next firmware upgrade on the device
+    """
+    participate_in_next_beta_release: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether or not the network wants beta firmware
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsCameraArgs:
@@ -12992,30 +12498,27 @@ class FirmwareUpgradesProductsCameraArgs:
         pulumi.set(self, "participate_in_next_beta_release", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsCameraAvailableVersionArgsDict(TypedDict):
-        firmware: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the firmware version
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version identifier
-        """
-        release_date: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release date of the firmware version
-        """
-        release_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release type of the firmware version
-        """
-        short_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version short name
-        """
-elif False:
-    FirmwareUpgradesProductsCameraAvailableVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsCameraAvailableVersionArgsDict(TypedDict):
+    firmware: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the firmware version
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version identifier
+    """
+    release_date: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release date of the firmware version
+    """
+    release_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release type of the firmware version
+    """
+    short_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version short name
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsCameraAvailableVersionArgs:
@@ -13104,30 +12607,27 @@ class FirmwareUpgradesProductsCameraAvailableVersionArgs:
         pulumi.set(self, "short_name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsCameraCurrentVersionArgsDict(TypedDict):
-        firmware: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the firmware version
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version identifier
-        """
-        release_date: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release date of the firmware version
-        """
-        release_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release type of the firmware version
-        """
-        short_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version short name
-        """
-elif False:
-    FirmwareUpgradesProductsCameraCurrentVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsCameraCurrentVersionArgsDict(TypedDict):
+    firmware: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the firmware version
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version identifier
+    """
+    release_date: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release date of the firmware version
+    """
+    release_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release type of the firmware version
+    """
+    short_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version short name
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsCameraCurrentVersionArgs:
@@ -13216,22 +12716,19 @@ class FirmwareUpgradesProductsCameraCurrentVersionArgs:
         pulumi.set(self, "short_name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsCameraLastUpgradeArgsDict(TypedDict):
-        from_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsCameraLastUpgradeFromVersionArgsDict']]
-        """
-        Details of the version the device upgraded from
-        """
-        time: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Timestamp of the last successful firmware upgrade
-        """
-        to_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsCameraLastUpgradeToVersionArgsDict']]
-        """
-        Details of the version the device upgraded to
-        """
-elif False:
-    FirmwareUpgradesProductsCameraLastUpgradeArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsCameraLastUpgradeArgsDict(TypedDict):
+    from_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsCameraLastUpgradeFromVersionArgsDict']]
+    """
+    Details of the version the device upgraded from
+    """
+    time: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Timestamp of the last successful firmware upgrade
+    """
+    to_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsCameraLastUpgradeToVersionArgsDict']]
+    """
+    Details of the version the device upgraded to
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsCameraLastUpgradeArgs:
@@ -13288,30 +12785,27 @@ class FirmwareUpgradesProductsCameraLastUpgradeArgs:
         pulumi.set(self, "to_version", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsCameraLastUpgradeFromVersionArgsDict(TypedDict):
-        firmware: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the firmware version
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version identifier
-        """
-        release_date: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release date of the firmware version
-        """
-        release_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release type of the firmware version
-        """
-        short_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version short name
-        """
-elif False:
-    FirmwareUpgradesProductsCameraLastUpgradeFromVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsCameraLastUpgradeFromVersionArgsDict(TypedDict):
+    firmware: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the firmware version
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version identifier
+    """
+    release_date: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release date of the firmware version
+    """
+    release_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release type of the firmware version
+    """
+    short_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version short name
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsCameraLastUpgradeFromVersionArgs:
@@ -13400,30 +12894,27 @@ class FirmwareUpgradesProductsCameraLastUpgradeFromVersionArgs:
         pulumi.set(self, "short_name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsCameraLastUpgradeToVersionArgsDict(TypedDict):
-        firmware: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the firmware version
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version identifier
-        """
-        release_date: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release date of the firmware version
-        """
-        release_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release type of the firmware version
-        """
-        short_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version short name
-        """
-elif False:
-    FirmwareUpgradesProductsCameraLastUpgradeToVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsCameraLastUpgradeToVersionArgsDict(TypedDict):
+    firmware: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the firmware version
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version identifier
+    """
+    release_date: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release date of the firmware version
+    """
+    release_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release type of the firmware version
+    """
+    short_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version short name
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsCameraLastUpgradeToVersionArgs:
@@ -13512,18 +13003,15 @@ class FirmwareUpgradesProductsCameraLastUpgradeToVersionArgs:
         pulumi.set(self, "short_name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsCameraNextUpgradeArgsDict(TypedDict):
-        time: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Timestamp of the next scheduled firmware upgrade
-        """
-        to_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsCameraNextUpgradeToVersionArgsDict']]
-        """
-        Details of the version the device will upgrade to if it exists
-        """
-elif False:
-    FirmwareUpgradesProductsCameraNextUpgradeArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsCameraNextUpgradeArgsDict(TypedDict):
+    time: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Timestamp of the next scheduled firmware upgrade
+    """
+    to_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsCameraNextUpgradeToVersionArgsDict']]
+    """
+    Details of the version the device will upgrade to if it exists
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsCameraNextUpgradeArgs:
@@ -13564,30 +13052,27 @@ class FirmwareUpgradesProductsCameraNextUpgradeArgs:
         pulumi.set(self, "to_version", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsCameraNextUpgradeToVersionArgsDict(TypedDict):
-        firmware: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the firmware version
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version identifier
-        """
-        release_date: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release date of the firmware version
-        """
-        release_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release type of the firmware version
-        """
-        short_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version short name
-        """
-elif False:
-    FirmwareUpgradesProductsCameraNextUpgradeToVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsCameraNextUpgradeToVersionArgsDict(TypedDict):
+    firmware: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the firmware version
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version identifier
+    """
+    release_date: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release date of the firmware version
+    """
+    release_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release type of the firmware version
+    """
+    short_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version short name
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsCameraNextUpgradeToVersionArgs:
@@ -13676,30 +13161,27 @@ class FirmwareUpgradesProductsCameraNextUpgradeToVersionArgs:
         pulumi.set(self, "short_name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsCellularGatewayArgsDict(TypedDict):
-        available_versions: NotRequired[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesProductsCellularGatewayAvailableVersionArgsDict']]]]
-        """
-        Firmware versions available for upgrade
-        """
-        current_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsCellularGatewayCurrentVersionArgsDict']]
-        """
-        Details of the current version on the device
-        """
-        last_upgrade: NotRequired[pulumi.Input['FirmwareUpgradesProductsCellularGatewayLastUpgradeArgsDict']]
-        """
-        Details of the last firmware upgrade on the device
-        """
-        next_upgrade: NotRequired[pulumi.Input['FirmwareUpgradesProductsCellularGatewayNextUpgradeArgsDict']]
-        """
-        Details of the next firmware upgrade on the device
-        """
-        participate_in_next_beta_release: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether or not the network wants beta firmware
-        """
-elif False:
-    FirmwareUpgradesProductsCellularGatewayArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsCellularGatewayArgsDict(TypedDict):
+    available_versions: NotRequired[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesProductsCellularGatewayAvailableVersionArgsDict']]]]
+    """
+    Firmware versions available for upgrade
+    """
+    current_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsCellularGatewayCurrentVersionArgsDict']]
+    """
+    Details of the current version on the device
+    """
+    last_upgrade: NotRequired[pulumi.Input['FirmwareUpgradesProductsCellularGatewayLastUpgradeArgsDict']]
+    """
+    Details of the last firmware upgrade on the device
+    """
+    next_upgrade: NotRequired[pulumi.Input['FirmwareUpgradesProductsCellularGatewayNextUpgradeArgsDict']]
+    """
+    Details of the next firmware upgrade on the device
+    """
+    participate_in_next_beta_release: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether or not the network wants beta firmware
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsCellularGatewayArgs:
@@ -13788,30 +13270,27 @@ class FirmwareUpgradesProductsCellularGatewayArgs:
         pulumi.set(self, "participate_in_next_beta_release", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsCellularGatewayAvailableVersionArgsDict(TypedDict):
-        firmware: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the firmware version
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version identifier
-        """
-        release_date: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release date of the firmware version
-        """
-        release_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release type of the firmware version
-        """
-        short_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version short name
-        """
-elif False:
-    FirmwareUpgradesProductsCellularGatewayAvailableVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsCellularGatewayAvailableVersionArgsDict(TypedDict):
+    firmware: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the firmware version
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version identifier
+    """
+    release_date: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release date of the firmware version
+    """
+    release_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release type of the firmware version
+    """
+    short_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version short name
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsCellularGatewayAvailableVersionArgs:
@@ -13900,30 +13379,27 @@ class FirmwareUpgradesProductsCellularGatewayAvailableVersionArgs:
         pulumi.set(self, "short_name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsCellularGatewayCurrentVersionArgsDict(TypedDict):
-        firmware: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the firmware version
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version identifier
-        """
-        release_date: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release date of the firmware version
-        """
-        release_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release type of the firmware version
-        """
-        short_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version short name
-        """
-elif False:
-    FirmwareUpgradesProductsCellularGatewayCurrentVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsCellularGatewayCurrentVersionArgsDict(TypedDict):
+    firmware: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the firmware version
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version identifier
+    """
+    release_date: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release date of the firmware version
+    """
+    release_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release type of the firmware version
+    """
+    short_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version short name
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsCellularGatewayCurrentVersionArgs:
@@ -14012,22 +13488,19 @@ class FirmwareUpgradesProductsCellularGatewayCurrentVersionArgs:
         pulumi.set(self, "short_name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsCellularGatewayLastUpgradeArgsDict(TypedDict):
-        from_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsCellularGatewayLastUpgradeFromVersionArgsDict']]
-        """
-        Details of the version the device upgraded from
-        """
-        time: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Timestamp of the last successful firmware upgrade
-        """
-        to_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsCellularGatewayLastUpgradeToVersionArgsDict']]
-        """
-        Details of the version the device upgraded to
-        """
-elif False:
-    FirmwareUpgradesProductsCellularGatewayLastUpgradeArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsCellularGatewayLastUpgradeArgsDict(TypedDict):
+    from_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsCellularGatewayLastUpgradeFromVersionArgsDict']]
+    """
+    Details of the version the device upgraded from
+    """
+    time: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Timestamp of the last successful firmware upgrade
+    """
+    to_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsCellularGatewayLastUpgradeToVersionArgsDict']]
+    """
+    Details of the version the device upgraded to
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsCellularGatewayLastUpgradeArgs:
@@ -14084,30 +13557,27 @@ class FirmwareUpgradesProductsCellularGatewayLastUpgradeArgs:
         pulumi.set(self, "to_version", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsCellularGatewayLastUpgradeFromVersionArgsDict(TypedDict):
-        firmware: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the firmware version
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version identifier
-        """
-        release_date: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release date of the firmware version
-        """
-        release_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release type of the firmware version
-        """
-        short_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version short name
-        """
-elif False:
-    FirmwareUpgradesProductsCellularGatewayLastUpgradeFromVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsCellularGatewayLastUpgradeFromVersionArgsDict(TypedDict):
+    firmware: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the firmware version
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version identifier
+    """
+    release_date: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release date of the firmware version
+    """
+    release_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release type of the firmware version
+    """
+    short_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version short name
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsCellularGatewayLastUpgradeFromVersionArgs:
@@ -14196,30 +13666,27 @@ class FirmwareUpgradesProductsCellularGatewayLastUpgradeFromVersionArgs:
         pulumi.set(self, "short_name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsCellularGatewayLastUpgradeToVersionArgsDict(TypedDict):
-        firmware: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the firmware version
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version identifier
-        """
-        release_date: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release date of the firmware version
-        """
-        release_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release type of the firmware version
-        """
-        short_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version short name
-        """
-elif False:
-    FirmwareUpgradesProductsCellularGatewayLastUpgradeToVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsCellularGatewayLastUpgradeToVersionArgsDict(TypedDict):
+    firmware: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the firmware version
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version identifier
+    """
+    release_date: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release date of the firmware version
+    """
+    release_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release type of the firmware version
+    """
+    short_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version short name
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsCellularGatewayLastUpgradeToVersionArgs:
@@ -14308,18 +13775,15 @@ class FirmwareUpgradesProductsCellularGatewayLastUpgradeToVersionArgs:
         pulumi.set(self, "short_name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsCellularGatewayNextUpgradeArgsDict(TypedDict):
-        time: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Timestamp of the next scheduled firmware upgrade
-        """
-        to_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsCellularGatewayNextUpgradeToVersionArgsDict']]
-        """
-        Details of the version the device will upgrade to if it exists
-        """
-elif False:
-    FirmwareUpgradesProductsCellularGatewayNextUpgradeArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsCellularGatewayNextUpgradeArgsDict(TypedDict):
+    time: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Timestamp of the next scheduled firmware upgrade
+    """
+    to_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsCellularGatewayNextUpgradeToVersionArgsDict']]
+    """
+    Details of the version the device will upgrade to if it exists
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsCellularGatewayNextUpgradeArgs:
@@ -14360,30 +13824,27 @@ class FirmwareUpgradesProductsCellularGatewayNextUpgradeArgs:
         pulumi.set(self, "to_version", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsCellularGatewayNextUpgradeToVersionArgsDict(TypedDict):
-        firmware: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the firmware version
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version identifier
-        """
-        release_date: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release date of the firmware version
-        """
-        release_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release type of the firmware version
-        """
-        short_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version short name
-        """
-elif False:
-    FirmwareUpgradesProductsCellularGatewayNextUpgradeToVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsCellularGatewayNextUpgradeToVersionArgsDict(TypedDict):
+    firmware: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the firmware version
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version identifier
+    """
+    release_date: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release date of the firmware version
+    """
+    release_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release type of the firmware version
+    """
+    short_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version short name
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsCellularGatewayNextUpgradeToVersionArgs:
@@ -14472,30 +13933,27 @@ class FirmwareUpgradesProductsCellularGatewayNextUpgradeToVersionArgs:
         pulumi.set(self, "short_name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsSensorArgsDict(TypedDict):
-        available_versions: NotRequired[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesProductsSensorAvailableVersionArgsDict']]]]
-        """
-        Firmware versions available for upgrade
-        """
-        current_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsSensorCurrentVersionArgsDict']]
-        """
-        Details of the current version on the device
-        """
-        last_upgrade: NotRequired[pulumi.Input['FirmwareUpgradesProductsSensorLastUpgradeArgsDict']]
-        """
-        Details of the last firmware upgrade on the device
-        """
-        next_upgrade: NotRequired[pulumi.Input['FirmwareUpgradesProductsSensorNextUpgradeArgsDict']]
-        """
-        Details of the next firmware upgrade on the device
-        """
-        participate_in_next_beta_release: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether or not the network wants beta firmware
-        """
-elif False:
-    FirmwareUpgradesProductsSensorArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsSensorArgsDict(TypedDict):
+    available_versions: NotRequired[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesProductsSensorAvailableVersionArgsDict']]]]
+    """
+    Firmware versions available for upgrade
+    """
+    current_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsSensorCurrentVersionArgsDict']]
+    """
+    Details of the current version on the device
+    """
+    last_upgrade: NotRequired[pulumi.Input['FirmwareUpgradesProductsSensorLastUpgradeArgsDict']]
+    """
+    Details of the last firmware upgrade on the device
+    """
+    next_upgrade: NotRequired[pulumi.Input['FirmwareUpgradesProductsSensorNextUpgradeArgsDict']]
+    """
+    Details of the next firmware upgrade on the device
+    """
+    participate_in_next_beta_release: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether or not the network wants beta firmware
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsSensorArgs:
@@ -14584,30 +14042,27 @@ class FirmwareUpgradesProductsSensorArgs:
         pulumi.set(self, "participate_in_next_beta_release", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsSensorAvailableVersionArgsDict(TypedDict):
-        firmware: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the firmware version
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version identifier
-        """
-        release_date: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release date of the firmware version
-        """
-        release_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release type of the firmware version
-        """
-        short_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version short name
-        """
-elif False:
-    FirmwareUpgradesProductsSensorAvailableVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsSensorAvailableVersionArgsDict(TypedDict):
+    firmware: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the firmware version
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version identifier
+    """
+    release_date: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release date of the firmware version
+    """
+    release_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release type of the firmware version
+    """
+    short_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version short name
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsSensorAvailableVersionArgs:
@@ -14696,30 +14151,27 @@ class FirmwareUpgradesProductsSensorAvailableVersionArgs:
         pulumi.set(self, "short_name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsSensorCurrentVersionArgsDict(TypedDict):
-        firmware: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the firmware version
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version identifier
-        """
-        release_date: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release date of the firmware version
-        """
-        release_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release type of the firmware version
-        """
-        short_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version short name
-        """
-elif False:
-    FirmwareUpgradesProductsSensorCurrentVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsSensorCurrentVersionArgsDict(TypedDict):
+    firmware: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the firmware version
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version identifier
+    """
+    release_date: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release date of the firmware version
+    """
+    release_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release type of the firmware version
+    """
+    short_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version short name
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsSensorCurrentVersionArgs:
@@ -14808,22 +14260,19 @@ class FirmwareUpgradesProductsSensorCurrentVersionArgs:
         pulumi.set(self, "short_name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsSensorLastUpgradeArgsDict(TypedDict):
-        from_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsSensorLastUpgradeFromVersionArgsDict']]
-        """
-        Details of the version the device upgraded from
-        """
-        time: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Timestamp of the last successful firmware upgrade
-        """
-        to_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsSensorLastUpgradeToVersionArgsDict']]
-        """
-        Details of the version the device upgraded to
-        """
-elif False:
-    FirmwareUpgradesProductsSensorLastUpgradeArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsSensorLastUpgradeArgsDict(TypedDict):
+    from_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsSensorLastUpgradeFromVersionArgsDict']]
+    """
+    Details of the version the device upgraded from
+    """
+    time: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Timestamp of the last successful firmware upgrade
+    """
+    to_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsSensorLastUpgradeToVersionArgsDict']]
+    """
+    Details of the version the device upgraded to
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsSensorLastUpgradeArgs:
@@ -14880,30 +14329,27 @@ class FirmwareUpgradesProductsSensorLastUpgradeArgs:
         pulumi.set(self, "to_version", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsSensorLastUpgradeFromVersionArgsDict(TypedDict):
-        firmware: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the firmware version
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version identifier
-        """
-        release_date: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release date of the firmware version
-        """
-        release_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release type of the firmware version
-        """
-        short_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version short name
-        """
-elif False:
-    FirmwareUpgradesProductsSensorLastUpgradeFromVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsSensorLastUpgradeFromVersionArgsDict(TypedDict):
+    firmware: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the firmware version
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version identifier
+    """
+    release_date: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release date of the firmware version
+    """
+    release_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release type of the firmware version
+    """
+    short_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version short name
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsSensorLastUpgradeFromVersionArgs:
@@ -14992,30 +14438,27 @@ class FirmwareUpgradesProductsSensorLastUpgradeFromVersionArgs:
         pulumi.set(self, "short_name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsSensorLastUpgradeToVersionArgsDict(TypedDict):
-        firmware: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the firmware version
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version identifier
-        """
-        release_date: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release date of the firmware version
-        """
-        release_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release type of the firmware version
-        """
-        short_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version short name
-        """
-elif False:
-    FirmwareUpgradesProductsSensorLastUpgradeToVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsSensorLastUpgradeToVersionArgsDict(TypedDict):
+    firmware: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the firmware version
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version identifier
+    """
+    release_date: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release date of the firmware version
+    """
+    release_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release type of the firmware version
+    """
+    short_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version short name
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsSensorLastUpgradeToVersionArgs:
@@ -15104,18 +14547,15 @@ class FirmwareUpgradesProductsSensorLastUpgradeToVersionArgs:
         pulumi.set(self, "short_name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsSensorNextUpgradeArgsDict(TypedDict):
-        time: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Timestamp of the next scheduled firmware upgrade
-        """
-        to_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsSensorNextUpgradeToVersionArgsDict']]
-        """
-        Details of the version the device will upgrade to if it exists
-        """
-elif False:
-    FirmwareUpgradesProductsSensorNextUpgradeArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsSensorNextUpgradeArgsDict(TypedDict):
+    time: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Timestamp of the next scheduled firmware upgrade
+    """
+    to_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsSensorNextUpgradeToVersionArgsDict']]
+    """
+    Details of the version the device will upgrade to if it exists
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsSensorNextUpgradeArgs:
@@ -15156,30 +14596,27 @@ class FirmwareUpgradesProductsSensorNextUpgradeArgs:
         pulumi.set(self, "to_version", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsSensorNextUpgradeToVersionArgsDict(TypedDict):
-        firmware: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the firmware version
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version identifier
-        """
-        release_date: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release date of the firmware version
-        """
-        release_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release type of the firmware version
-        """
-        short_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version short name
-        """
-elif False:
-    FirmwareUpgradesProductsSensorNextUpgradeToVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsSensorNextUpgradeToVersionArgsDict(TypedDict):
+    firmware: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the firmware version
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version identifier
+    """
+    release_date: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release date of the firmware version
+    """
+    release_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release type of the firmware version
+    """
+    short_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version short name
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsSensorNextUpgradeToVersionArgs:
@@ -15268,30 +14705,27 @@ class FirmwareUpgradesProductsSensorNextUpgradeToVersionArgs:
         pulumi.set(self, "short_name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsSwitchArgsDict(TypedDict):
-        available_versions: NotRequired[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesProductsSwitchAvailableVersionArgsDict']]]]
-        """
-        Firmware versions available for upgrade
-        """
-        current_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsSwitchCurrentVersionArgsDict']]
-        """
-        Details of the current version on the device
-        """
-        last_upgrade: NotRequired[pulumi.Input['FirmwareUpgradesProductsSwitchLastUpgradeArgsDict']]
-        """
-        Details of the last firmware upgrade on the device
-        """
-        next_upgrade: NotRequired[pulumi.Input['FirmwareUpgradesProductsSwitchNextUpgradeArgsDict']]
-        """
-        Details of the next firmware upgrade on the device
-        """
-        participate_in_next_beta_release: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether or not the network wants beta firmware
-        """
-elif False:
-    FirmwareUpgradesProductsSwitchArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsSwitchArgsDict(TypedDict):
+    available_versions: NotRequired[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesProductsSwitchAvailableVersionArgsDict']]]]
+    """
+    Firmware versions available for upgrade
+    """
+    current_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsSwitchCurrentVersionArgsDict']]
+    """
+    Details of the current version on the device
+    """
+    last_upgrade: NotRequired[pulumi.Input['FirmwareUpgradesProductsSwitchLastUpgradeArgsDict']]
+    """
+    Details of the last firmware upgrade on the device
+    """
+    next_upgrade: NotRequired[pulumi.Input['FirmwareUpgradesProductsSwitchNextUpgradeArgsDict']]
+    """
+    Details of the next firmware upgrade on the device
+    """
+    participate_in_next_beta_release: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether or not the network wants beta firmware
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsSwitchArgs:
@@ -15380,30 +14814,27 @@ class FirmwareUpgradesProductsSwitchArgs:
         pulumi.set(self, "participate_in_next_beta_release", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsSwitchAvailableVersionArgsDict(TypedDict):
-        firmware: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the firmware version
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version identifier
-        """
-        release_date: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release date of the firmware version
-        """
-        release_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release type of the firmware version
-        """
-        short_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version short name
-        """
-elif False:
-    FirmwareUpgradesProductsSwitchAvailableVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsSwitchAvailableVersionArgsDict(TypedDict):
+    firmware: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the firmware version
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version identifier
+    """
+    release_date: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release date of the firmware version
+    """
+    release_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release type of the firmware version
+    """
+    short_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version short name
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsSwitchAvailableVersionArgs:
@@ -15492,18 +14923,15 @@ class FirmwareUpgradesProductsSwitchAvailableVersionArgs:
         pulumi.set(self, "short_name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsSwitchCatalystArgsDict(TypedDict):
-        next_upgrade: NotRequired[pulumi.Input['FirmwareUpgradesProductsSwitchCatalystNextUpgradeArgsDict']]
-        """
-        The pending firmware upgrade if it exists
-        """
-        participate_in_next_beta_release: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether or not the network wants beta firmware
-        """
-elif False:
-    FirmwareUpgradesProductsSwitchCatalystArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsSwitchCatalystArgsDict(TypedDict):
+    next_upgrade: NotRequired[pulumi.Input['FirmwareUpgradesProductsSwitchCatalystNextUpgradeArgsDict']]
+    """
+    The pending firmware upgrade if it exists
+    """
+    participate_in_next_beta_release: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether or not the network wants beta firmware
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsSwitchCatalystArgs:
@@ -15544,18 +14972,15 @@ class FirmwareUpgradesProductsSwitchCatalystArgs:
         pulumi.set(self, "participate_in_next_beta_release", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsSwitchCatalystNextUpgradeArgsDict(TypedDict):
-        time: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The time of the last successful upgrade
-        """
-        to_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsSwitchCatalystNextUpgradeToVersionArgsDict']]
-        """
-        The version to be updated to
-        """
-elif False:
-    FirmwareUpgradesProductsSwitchCatalystNextUpgradeArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsSwitchCatalystNextUpgradeArgsDict(TypedDict):
+    time: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The time of the last successful upgrade
+    """
+    to_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsSwitchCatalystNextUpgradeToVersionArgsDict']]
+    """
+    The version to be updated to
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsSwitchCatalystNextUpgradeArgs:
@@ -15596,14 +15021,11 @@ class FirmwareUpgradesProductsSwitchCatalystNextUpgradeArgs:
         pulumi.set(self, "to_version", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsSwitchCatalystNextUpgradeToVersionArgsDict(TypedDict):
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The version ID
-        """
-elif False:
-    FirmwareUpgradesProductsSwitchCatalystNextUpgradeToVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsSwitchCatalystNextUpgradeToVersionArgsDict(TypedDict):
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The version ID
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsSwitchCatalystNextUpgradeToVersionArgs:
@@ -15628,30 +15050,27 @@ class FirmwareUpgradesProductsSwitchCatalystNextUpgradeToVersionArgs:
         pulumi.set(self, "id", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsSwitchCurrentVersionArgsDict(TypedDict):
-        firmware: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the firmware version
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version identifier
-        """
-        release_date: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release date of the firmware version
-        """
-        release_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release type of the firmware version
-        """
-        short_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version short name
-        """
-elif False:
-    FirmwareUpgradesProductsSwitchCurrentVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsSwitchCurrentVersionArgsDict(TypedDict):
+    firmware: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the firmware version
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version identifier
+    """
+    release_date: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release date of the firmware version
+    """
+    release_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release type of the firmware version
+    """
+    short_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version short name
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsSwitchCurrentVersionArgs:
@@ -15740,22 +15159,19 @@ class FirmwareUpgradesProductsSwitchCurrentVersionArgs:
         pulumi.set(self, "short_name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsSwitchLastUpgradeArgsDict(TypedDict):
-        from_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsSwitchLastUpgradeFromVersionArgsDict']]
-        """
-        Details of the version the device upgraded from
-        """
-        time: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Timestamp of the last successful firmware upgrade
-        """
-        to_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsSwitchLastUpgradeToVersionArgsDict']]
-        """
-        Details of the version the device upgraded to
-        """
-elif False:
-    FirmwareUpgradesProductsSwitchLastUpgradeArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsSwitchLastUpgradeArgsDict(TypedDict):
+    from_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsSwitchLastUpgradeFromVersionArgsDict']]
+    """
+    Details of the version the device upgraded from
+    """
+    time: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Timestamp of the last successful firmware upgrade
+    """
+    to_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsSwitchLastUpgradeToVersionArgsDict']]
+    """
+    Details of the version the device upgraded to
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsSwitchLastUpgradeArgs:
@@ -15812,30 +15228,27 @@ class FirmwareUpgradesProductsSwitchLastUpgradeArgs:
         pulumi.set(self, "to_version", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsSwitchLastUpgradeFromVersionArgsDict(TypedDict):
-        firmware: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the firmware version
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version identifier
-        """
-        release_date: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release date of the firmware version
-        """
-        release_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release type of the firmware version
-        """
-        short_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version short name
-        """
-elif False:
-    FirmwareUpgradesProductsSwitchLastUpgradeFromVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsSwitchLastUpgradeFromVersionArgsDict(TypedDict):
+    firmware: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the firmware version
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version identifier
+    """
+    release_date: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release date of the firmware version
+    """
+    release_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release type of the firmware version
+    """
+    short_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version short name
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsSwitchLastUpgradeFromVersionArgs:
@@ -15924,30 +15337,27 @@ class FirmwareUpgradesProductsSwitchLastUpgradeFromVersionArgs:
         pulumi.set(self, "short_name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsSwitchLastUpgradeToVersionArgsDict(TypedDict):
-        firmware: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the firmware version
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version identifier
-        """
-        release_date: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release date of the firmware version
-        """
-        release_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release type of the firmware version
-        """
-        short_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version short name
-        """
-elif False:
-    FirmwareUpgradesProductsSwitchLastUpgradeToVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsSwitchLastUpgradeToVersionArgsDict(TypedDict):
+    firmware: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the firmware version
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version identifier
+    """
+    release_date: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release date of the firmware version
+    """
+    release_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release type of the firmware version
+    """
+    short_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version short name
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsSwitchLastUpgradeToVersionArgs:
@@ -16036,18 +15446,15 @@ class FirmwareUpgradesProductsSwitchLastUpgradeToVersionArgs:
         pulumi.set(self, "short_name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsSwitchNextUpgradeArgsDict(TypedDict):
-        time: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Timestamp of the next scheduled firmware upgrade
-        """
-        to_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsSwitchNextUpgradeToVersionArgsDict']]
-        """
-        Details of the version the device will upgrade to if it exists
-        """
-elif False:
-    FirmwareUpgradesProductsSwitchNextUpgradeArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsSwitchNextUpgradeArgsDict(TypedDict):
+    time: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Timestamp of the next scheduled firmware upgrade
+    """
+    to_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsSwitchNextUpgradeToVersionArgsDict']]
+    """
+    Details of the version the device will upgrade to if it exists
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsSwitchNextUpgradeArgs:
@@ -16088,30 +15495,27 @@ class FirmwareUpgradesProductsSwitchNextUpgradeArgs:
         pulumi.set(self, "to_version", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsSwitchNextUpgradeToVersionArgsDict(TypedDict):
-        firmware: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the firmware version
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version identifier
-        """
-        release_date: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release date of the firmware version
-        """
-        release_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release type of the firmware version
-        """
-        short_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version short name
-        """
-elif False:
-    FirmwareUpgradesProductsSwitchNextUpgradeToVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsSwitchNextUpgradeToVersionArgsDict(TypedDict):
+    firmware: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the firmware version
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version identifier
+    """
+    release_date: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release date of the firmware version
+    """
+    release_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release type of the firmware version
+    """
+    short_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version short name
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsSwitchNextUpgradeToVersionArgs:
@@ -16200,30 +15604,27 @@ class FirmwareUpgradesProductsSwitchNextUpgradeToVersionArgs:
         pulumi.set(self, "short_name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsWirelessArgsDict(TypedDict):
-        available_versions: NotRequired[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesProductsWirelessAvailableVersionArgsDict']]]]
-        """
-        Firmware versions available for upgrade
-        """
-        current_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsWirelessCurrentVersionArgsDict']]
-        """
-        Details of the current version on the device
-        """
-        last_upgrade: NotRequired[pulumi.Input['FirmwareUpgradesProductsWirelessLastUpgradeArgsDict']]
-        """
-        Details of the last firmware upgrade on the device
-        """
-        next_upgrade: NotRequired[pulumi.Input['FirmwareUpgradesProductsWirelessNextUpgradeArgsDict']]
-        """
-        Details of the next firmware upgrade on the device
-        """
-        participate_in_next_beta_release: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether or not the network wants beta firmware
-        """
-elif False:
-    FirmwareUpgradesProductsWirelessArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsWirelessArgsDict(TypedDict):
+    available_versions: NotRequired[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesProductsWirelessAvailableVersionArgsDict']]]]
+    """
+    Firmware versions available for upgrade
+    """
+    current_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsWirelessCurrentVersionArgsDict']]
+    """
+    Details of the current version on the device
+    """
+    last_upgrade: NotRequired[pulumi.Input['FirmwareUpgradesProductsWirelessLastUpgradeArgsDict']]
+    """
+    Details of the last firmware upgrade on the device
+    """
+    next_upgrade: NotRequired[pulumi.Input['FirmwareUpgradesProductsWirelessNextUpgradeArgsDict']]
+    """
+    Details of the next firmware upgrade on the device
+    """
+    participate_in_next_beta_release: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether or not the network wants beta firmware
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsWirelessArgs:
@@ -16312,30 +15713,27 @@ class FirmwareUpgradesProductsWirelessArgs:
         pulumi.set(self, "participate_in_next_beta_release", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsWirelessAvailableVersionArgsDict(TypedDict):
-        firmware: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the firmware version
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version identifier
-        """
-        release_date: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release date of the firmware version
-        """
-        release_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release type of the firmware version
-        """
-        short_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version short name
-        """
-elif False:
-    FirmwareUpgradesProductsWirelessAvailableVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsWirelessAvailableVersionArgsDict(TypedDict):
+    firmware: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the firmware version
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version identifier
+    """
+    release_date: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release date of the firmware version
+    """
+    release_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release type of the firmware version
+    """
+    short_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version short name
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsWirelessAvailableVersionArgs:
@@ -16424,30 +15822,27 @@ class FirmwareUpgradesProductsWirelessAvailableVersionArgs:
         pulumi.set(self, "short_name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsWirelessCurrentVersionArgsDict(TypedDict):
-        firmware: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the firmware version
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version identifier
-        """
-        release_date: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release date of the firmware version
-        """
-        release_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release type of the firmware version
-        """
-        short_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version short name
-        """
-elif False:
-    FirmwareUpgradesProductsWirelessCurrentVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsWirelessCurrentVersionArgsDict(TypedDict):
+    firmware: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the firmware version
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version identifier
+    """
+    release_date: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release date of the firmware version
+    """
+    release_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release type of the firmware version
+    """
+    short_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version short name
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsWirelessCurrentVersionArgs:
@@ -16536,22 +15931,19 @@ class FirmwareUpgradesProductsWirelessCurrentVersionArgs:
         pulumi.set(self, "short_name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsWirelessLastUpgradeArgsDict(TypedDict):
-        from_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsWirelessLastUpgradeFromVersionArgsDict']]
-        """
-        Details of the version the device upgraded from
-        """
-        time: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Timestamp of the last successful firmware upgrade
-        """
-        to_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsWirelessLastUpgradeToVersionArgsDict']]
-        """
-        Details of the version the device upgraded to
-        """
-elif False:
-    FirmwareUpgradesProductsWirelessLastUpgradeArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsWirelessLastUpgradeArgsDict(TypedDict):
+    from_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsWirelessLastUpgradeFromVersionArgsDict']]
+    """
+    Details of the version the device upgraded from
+    """
+    time: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Timestamp of the last successful firmware upgrade
+    """
+    to_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsWirelessLastUpgradeToVersionArgsDict']]
+    """
+    Details of the version the device upgraded to
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsWirelessLastUpgradeArgs:
@@ -16608,30 +16000,27 @@ class FirmwareUpgradesProductsWirelessLastUpgradeArgs:
         pulumi.set(self, "to_version", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsWirelessLastUpgradeFromVersionArgsDict(TypedDict):
-        firmware: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the firmware version
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version identifier
-        """
-        release_date: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release date of the firmware version
-        """
-        release_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release type of the firmware version
-        """
-        short_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version short name
-        """
-elif False:
-    FirmwareUpgradesProductsWirelessLastUpgradeFromVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsWirelessLastUpgradeFromVersionArgsDict(TypedDict):
+    firmware: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the firmware version
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version identifier
+    """
+    release_date: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release date of the firmware version
+    """
+    release_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release type of the firmware version
+    """
+    short_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version short name
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsWirelessLastUpgradeFromVersionArgs:
@@ -16720,30 +16109,27 @@ class FirmwareUpgradesProductsWirelessLastUpgradeFromVersionArgs:
         pulumi.set(self, "short_name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsWirelessLastUpgradeToVersionArgsDict(TypedDict):
-        firmware: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the firmware version
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version identifier
-        """
-        release_date: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release date of the firmware version
-        """
-        release_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release type of the firmware version
-        """
-        short_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version short name
-        """
-elif False:
-    FirmwareUpgradesProductsWirelessLastUpgradeToVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsWirelessLastUpgradeToVersionArgsDict(TypedDict):
+    firmware: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the firmware version
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version identifier
+    """
+    release_date: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release date of the firmware version
+    """
+    release_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release type of the firmware version
+    """
+    short_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version short name
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsWirelessLastUpgradeToVersionArgs:
@@ -16832,18 +16218,15 @@ class FirmwareUpgradesProductsWirelessLastUpgradeToVersionArgs:
         pulumi.set(self, "short_name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsWirelessNextUpgradeArgsDict(TypedDict):
-        time: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Timestamp of the next scheduled firmware upgrade
-        """
-        to_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsWirelessNextUpgradeToVersionArgsDict']]
-        """
-        Details of the version the device will upgrade to if it exists
-        """
-elif False:
-    FirmwareUpgradesProductsWirelessNextUpgradeArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsWirelessNextUpgradeArgsDict(TypedDict):
+    time: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Timestamp of the next scheduled firmware upgrade
+    """
+    to_version: NotRequired[pulumi.Input['FirmwareUpgradesProductsWirelessNextUpgradeToVersionArgsDict']]
+    """
+    Details of the version the device will upgrade to if it exists
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsWirelessNextUpgradeArgs:
@@ -16884,30 +16267,27 @@ class FirmwareUpgradesProductsWirelessNextUpgradeArgs:
         pulumi.set(self, "to_version", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesProductsWirelessNextUpgradeToVersionArgsDict(TypedDict):
-        firmware: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the firmware version
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version identifier
-        """
-        release_date: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release date of the firmware version
-        """
-        release_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release type of the firmware version
-        """
-        short_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version short name
-        """
-elif False:
-    FirmwareUpgradesProductsWirelessNextUpgradeToVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesProductsWirelessNextUpgradeToVersionArgsDict(TypedDict):
+    firmware: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the firmware version
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version identifier
+    """
+    release_date: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release date of the firmware version
+    """
+    release_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release type of the firmware version
+    """
+    short_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version short name
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesProductsWirelessNextUpgradeToVersionArgs:
@@ -16996,34 +16376,31 @@ class FirmwareUpgradesProductsWirelessNextUpgradeToVersionArgs:
         pulumi.set(self, "short_name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesRollbacksItemArgsDict(TypedDict):
-        product: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Product type to rollback (if the network is a combined network)
-        """
-        reasons: NotRequired[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesRollbacksItemReasonArgsDict']]]]
-        """
-        Reasons for the rollback
-        """
-        status: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Status of the rollback
-        """
-        time: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Scheduled time for the rollback
-        """
-        to_version: NotRequired[pulumi.Input['FirmwareUpgradesRollbacksItemToVersionArgsDict']]
-        """
-        Version to downgrade to (if the network has firmware flexibility)
-        """
-        upgrade_batch_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Batch ID of the firmware rollback
-        """
-elif False:
-    FirmwareUpgradesRollbacksItemArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesRollbacksItemArgsDict(TypedDict):
+    product: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Product type to rollback (if the network is a combined network)
+    """
+    reasons: NotRequired[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesRollbacksItemReasonArgsDict']]]]
+    """
+    Reasons for the rollback
+    """
+    status: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Status of the rollback
+    """
+    time: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Scheduled time for the rollback
+    """
+    to_version: NotRequired[pulumi.Input['FirmwareUpgradesRollbacksItemToVersionArgsDict']]
+    """
+    Version to downgrade to (if the network has firmware flexibility)
+    """
+    upgrade_batch_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Batch ID of the firmware rollback
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesRollbacksItemArgs:
@@ -17128,18 +16505,15 @@ class FirmwareUpgradesRollbacksItemArgs:
         pulumi.set(self, "upgrade_batch_id", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesRollbacksItemReasonArgsDict(TypedDict):
-        category: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Reason for the rollback
-        """
-        comment: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Additional comment about the rollback
-        """
-elif False:
-    FirmwareUpgradesRollbacksItemReasonArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesRollbacksItemReasonArgsDict(TypedDict):
+    category: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Reason for the rollback
+    """
+    comment: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Additional comment about the rollback
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesRollbacksItemReasonArgs:
@@ -17180,30 +16554,27 @@ class FirmwareUpgradesRollbacksItemReasonArgs:
         pulumi.set(self, "comment", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesRollbacksItemToVersionArgsDict(TypedDict):
-        firmware: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the firmware version
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version identifier
-        """
-        release_date: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release date of the firmware version
-        """
-        release_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Release type of the firmware version
-        """
-        short_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version short name
-        """
-elif False:
-    FirmwareUpgradesRollbacksItemToVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesRollbacksItemToVersionArgsDict(TypedDict):
+    firmware: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the firmware version
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version identifier
+    """
+    release_date: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release date of the firmware version
+    """
+    release_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Release type of the firmware version
+    """
+    short_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version short name
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesRollbacksItemToVersionArgs:
@@ -17292,26 +16663,23 @@ class FirmwareUpgradesRollbacksItemToVersionArgs:
         pulumi.set(self, "short_name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesRollbacksParametersArgsDict(TypedDict):
-        product: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Product type to rollback (if the network is a combined network)
-        """
-        reasons: NotRequired[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesRollbacksParametersReasonArgsDict']]]]
-        """
-        Reasons for the rollback
-        """
-        time: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Scheduled time for the rollback
-        """
-        to_version: NotRequired[pulumi.Input['FirmwareUpgradesRollbacksParametersToVersionArgsDict']]
-        """
-        Version to downgrade to (if the network has firmware flexibility)
-        """
-elif False:
-    FirmwareUpgradesRollbacksParametersArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesRollbacksParametersArgsDict(TypedDict):
+    product: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Product type to rollback (if the network is a combined network)
+    """
+    reasons: NotRequired[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesRollbacksParametersReasonArgsDict']]]]
+    """
+    Reasons for the rollback
+    """
+    time: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Scheduled time for the rollback
+    """
+    to_version: NotRequired[pulumi.Input['FirmwareUpgradesRollbacksParametersToVersionArgsDict']]
+    """
+    Version to downgrade to (if the network has firmware flexibility)
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesRollbacksParametersArgs:
@@ -17384,18 +16752,15 @@ class FirmwareUpgradesRollbacksParametersArgs:
         pulumi.set(self, "to_version", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesRollbacksParametersReasonArgsDict(TypedDict):
-        category: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Reason for the rollback
-        """
-        comment: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Additional comment about the rollback
-        """
-elif False:
-    FirmwareUpgradesRollbacksParametersReasonArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesRollbacksParametersReasonArgsDict(TypedDict):
+    category: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Reason for the rollback
+    """
+    comment: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Additional comment about the rollback
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesRollbacksParametersReasonArgs:
@@ -17436,14 +16801,11 @@ class FirmwareUpgradesRollbacksParametersReasonArgs:
         pulumi.set(self, "comment", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesRollbacksParametersToVersionArgsDict(TypedDict):
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The version ID
-        """
-elif False:
-    FirmwareUpgradesRollbacksParametersToVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesRollbacksParametersToVersionArgsDict(TypedDict):
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The version ID
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesRollbacksParametersToVersionArgs:
@@ -17468,22 +16830,19 @@ class FirmwareUpgradesRollbacksParametersToVersionArgs:
         pulumi.set(self, "id", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedEventsDeferItemArgsDict(TypedDict):
-        products: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsDeferItemProductsArgsDict']]
-        """
-        The network devices to be updated
-        """
-        reasons: NotRequired[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsDeferItemReasonArgsDict']]]]
-        """
-        Reasons for the rollback
-        """
-        stages: NotRequired[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsDeferItemStageArgsDict']]]]
-        """
-        The ordered stages in the network
-        """
-elif False:
-    FirmwareUpgradesStagedEventsDeferItemArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedEventsDeferItemArgsDict(TypedDict):
+    products: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsDeferItemProductsArgsDict']]
+    """
+    The network devices to be updated
+    """
+    reasons: NotRequired[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsDeferItemReasonArgsDict']]]]
+    """
+    Reasons for the rollback
+    """
+    stages: NotRequired[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsDeferItemStageArgsDict']]]]
+    """
+    The ordered stages in the network
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedEventsDeferItemArgs:
@@ -17540,14 +16899,11 @@ class FirmwareUpgradesStagedEventsDeferItemArgs:
         pulumi.set(self, "stages", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedEventsDeferItemProductsArgsDict(TypedDict):
-        switch: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsDeferItemProductsSwitchArgsDict']]
-        """
-        The Switch network to be updated
-        """
-elif False:
-    FirmwareUpgradesStagedEventsDeferItemProductsArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedEventsDeferItemProductsArgsDict(TypedDict):
+    switch: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsDeferItemProductsSwitchArgsDict']]
+    """
+    The Switch network to be updated
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedEventsDeferItemProductsArgs:
@@ -17572,14 +16928,11 @@ class FirmwareUpgradesStagedEventsDeferItemProductsArgs:
         pulumi.set(self, "switch", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedEventsDeferItemProductsSwitchArgsDict(TypedDict):
-        next_upgrade: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsDeferItemProductsSwitchNextUpgradeArgsDict']]
-        """
-        Details of the next firmware upgrade
-        """
-elif False:
-    FirmwareUpgradesStagedEventsDeferItemProductsSwitchArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedEventsDeferItemProductsSwitchArgsDict(TypedDict):
+    next_upgrade: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsDeferItemProductsSwitchNextUpgradeArgsDict']]
+    """
+    Details of the next firmware upgrade
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedEventsDeferItemProductsSwitchArgs:
@@ -17604,14 +16957,11 @@ class FirmwareUpgradesStagedEventsDeferItemProductsSwitchArgs:
         pulumi.set(self, "next_upgrade", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedEventsDeferItemProductsSwitchNextUpgradeArgsDict(TypedDict):
-        to_version: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsDeferItemProductsSwitchNextUpgradeToVersionArgsDict']]
-        """
-        Details of the version the device will upgrade to
-        """
-elif False:
-    FirmwareUpgradesStagedEventsDeferItemProductsSwitchNextUpgradeArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedEventsDeferItemProductsSwitchNextUpgradeArgsDict(TypedDict):
+    to_version: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsDeferItemProductsSwitchNextUpgradeToVersionArgsDict']]
+    """
+    Details of the version the device will upgrade to
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedEventsDeferItemProductsSwitchNextUpgradeArgs:
@@ -17636,18 +16986,15 @@ class FirmwareUpgradesStagedEventsDeferItemProductsSwitchNextUpgradeArgs:
         pulumi.set(self, "to_version", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedEventsDeferItemProductsSwitchNextUpgradeToVersionArgsDict(TypedDict):
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Id of the Version being upgraded to
-        """
-        short_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version short name
-        """
-elif False:
-    FirmwareUpgradesStagedEventsDeferItemProductsSwitchNextUpgradeToVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedEventsDeferItemProductsSwitchNextUpgradeToVersionArgsDict(TypedDict):
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Id of the Version being upgraded to
+    """
+    short_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version short name
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedEventsDeferItemProductsSwitchNextUpgradeToVersionArgs:
@@ -17688,18 +17035,15 @@ class FirmwareUpgradesStagedEventsDeferItemProductsSwitchNextUpgradeToVersionArg
         pulumi.set(self, "short_name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedEventsDeferItemReasonArgsDict(TypedDict):
-        category: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Reason for the rollback
-        """
-        comment: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Additional comment about the rollback
-        """
-elif False:
-    FirmwareUpgradesStagedEventsDeferItemReasonArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedEventsDeferItemReasonArgsDict(TypedDict):
+    category: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Reason for the rollback
+    """
+    comment: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Additional comment about the rollback
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedEventsDeferItemReasonArgs:
@@ -17740,22 +17084,19 @@ class FirmwareUpgradesStagedEventsDeferItemReasonArgs:
         pulumi.set(self, "comment", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedEventsDeferItemStageArgsDict(TypedDict):
-        group: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsDeferItemStageGroupArgsDict']]
-        """
-        The staged upgrade group
-        """
-        milestones: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsDeferItemStageMilestonesArgsDict']]
-        """
-        The Staged Upgrade Milestones for the stage
-        """
-        status: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Current upgrade status of the group
-        """
-elif False:
-    FirmwareUpgradesStagedEventsDeferItemStageArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedEventsDeferItemStageArgsDict(TypedDict):
+    group: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsDeferItemStageGroupArgsDict']]
+    """
+    The staged upgrade group
+    """
+    milestones: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsDeferItemStageMilestonesArgsDict']]
+    """
+    The Staged Upgrade Milestones for the stage
+    """
+    status: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Current upgrade status of the group
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedEventsDeferItemStageArgs:
@@ -17812,22 +17153,19 @@ class FirmwareUpgradesStagedEventsDeferItemStageArgs:
         pulumi.set(self, "status", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedEventsDeferItemStageGroupArgsDict(TypedDict):
-        description: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Description of the Staged Upgrade Group
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Id of the Staged Upgrade Group
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the Staged Upgrade Group
-        """
-elif False:
-    FirmwareUpgradesStagedEventsDeferItemStageGroupArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedEventsDeferItemStageGroupArgsDict(TypedDict):
+    description: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Description of the Staged Upgrade Group
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Id of the Staged Upgrade Group
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the Staged Upgrade Group
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedEventsDeferItemStageGroupArgs:
@@ -17884,26 +17222,23 @@ class FirmwareUpgradesStagedEventsDeferItemStageGroupArgs:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedEventsDeferItemStageMilestonesArgsDict(TypedDict):
-        canceled_at: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Time that the group was canceled
-        """
-        completed_at: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Finish time for the group
-        """
-        scheduled_for: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Scheduled start time for the group
-        """
-        started_at: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Start time for the group
-        """
-elif False:
-    FirmwareUpgradesStagedEventsDeferItemStageMilestonesArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedEventsDeferItemStageMilestonesArgsDict(TypedDict):
+    canceled_at: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Time that the group was canceled
+    """
+    completed_at: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Finish time for the group
+    """
+    scheduled_for: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Scheduled start time for the group
+    """
+    started_at: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Start time for the group
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedEventsDeferItemStageMilestonesArgs:
@@ -17976,18 +17311,15 @@ class FirmwareUpgradesStagedEventsDeferItemStageMilestonesArgs:
         pulumi.set(self, "started_at", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedEventsProductsArgsDict(TypedDict):
-        switch: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsProductsSwitchArgsDict']]
-        """
-        The Switch network to be updated
-        """
-        switch_catalyst: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsProductsSwitchCatalystArgsDict']]
-        """
-        Version information for the switch network being upgraded
-        """
-elif False:
-    FirmwareUpgradesStagedEventsProductsArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedEventsProductsArgsDict(TypedDict):
+    switch: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsProductsSwitchArgsDict']]
+    """
+    The Switch network to be updated
+    """
+    switch_catalyst: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsProductsSwitchCatalystArgsDict']]
+    """
+    Version information for the switch network being upgraded
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedEventsProductsArgs:
@@ -18028,14 +17360,11 @@ class FirmwareUpgradesStagedEventsProductsArgs:
         pulumi.set(self, "switch_catalyst", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedEventsProductsSwitchArgsDict(TypedDict):
-        next_upgrade: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsProductsSwitchNextUpgradeArgsDict']]
-        """
-        Details of the next firmware upgrade
-        """
-elif False:
-    FirmwareUpgradesStagedEventsProductsSwitchArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedEventsProductsSwitchArgsDict(TypedDict):
+    next_upgrade: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsProductsSwitchNextUpgradeArgsDict']]
+    """
+    Details of the next firmware upgrade
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedEventsProductsSwitchArgs:
@@ -18060,14 +17389,11 @@ class FirmwareUpgradesStagedEventsProductsSwitchArgs:
         pulumi.set(self, "next_upgrade", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedEventsProductsSwitchCatalystArgsDict(TypedDict):
-        next_upgrade: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsProductsSwitchCatalystNextUpgradeArgsDict']]
-        """
-        The next upgrade version for the switch network
-        """
-elif False:
-    FirmwareUpgradesStagedEventsProductsSwitchCatalystArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedEventsProductsSwitchCatalystArgsDict(TypedDict):
+    next_upgrade: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsProductsSwitchCatalystNextUpgradeArgsDict']]
+    """
+    The next upgrade version for the switch network
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedEventsProductsSwitchCatalystArgs:
@@ -18092,14 +17418,11 @@ class FirmwareUpgradesStagedEventsProductsSwitchCatalystArgs:
         pulumi.set(self, "next_upgrade", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedEventsProductsSwitchCatalystNextUpgradeArgsDict(TypedDict):
-        to_version: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsProductsSwitchCatalystNextUpgradeToVersionArgsDict']]
-        """
-        The version to be updated to for switch Catalyst devices
-        """
-elif False:
-    FirmwareUpgradesStagedEventsProductsSwitchCatalystNextUpgradeArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedEventsProductsSwitchCatalystNextUpgradeArgsDict(TypedDict):
+    to_version: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsProductsSwitchCatalystNextUpgradeToVersionArgsDict']]
+    """
+    The version to be updated to for switch Catalyst devices
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedEventsProductsSwitchCatalystNextUpgradeArgs:
@@ -18124,14 +17447,11 @@ class FirmwareUpgradesStagedEventsProductsSwitchCatalystNextUpgradeArgs:
         pulumi.set(self, "to_version", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedEventsProductsSwitchCatalystNextUpgradeToVersionArgsDict(TypedDict):
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The version ID
-        """
-elif False:
-    FirmwareUpgradesStagedEventsProductsSwitchCatalystNextUpgradeToVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedEventsProductsSwitchCatalystNextUpgradeToVersionArgsDict(TypedDict):
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The version ID
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedEventsProductsSwitchCatalystNextUpgradeToVersionArgs:
@@ -18156,14 +17476,11 @@ class FirmwareUpgradesStagedEventsProductsSwitchCatalystNextUpgradeToVersionArgs
         pulumi.set(self, "id", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedEventsProductsSwitchNextUpgradeArgsDict(TypedDict):
-        to_version: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsProductsSwitchNextUpgradeToVersionArgsDict']]
-        """
-        Details of the version the device will upgrade to
-        """
-elif False:
-    FirmwareUpgradesStagedEventsProductsSwitchNextUpgradeArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedEventsProductsSwitchNextUpgradeArgsDict(TypedDict):
+    to_version: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsProductsSwitchNextUpgradeToVersionArgsDict']]
+    """
+    Details of the version the device will upgrade to
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedEventsProductsSwitchNextUpgradeArgs:
@@ -18188,18 +17505,15 @@ class FirmwareUpgradesStagedEventsProductsSwitchNextUpgradeArgs:
         pulumi.set(self, "to_version", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedEventsProductsSwitchNextUpgradeToVersionArgsDict(TypedDict):
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Id of the Version being upgraded to
-        """
-        short_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version short name
-        """
-elif False:
-    FirmwareUpgradesStagedEventsProductsSwitchNextUpgradeToVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedEventsProductsSwitchNextUpgradeToVersionArgsDict(TypedDict):
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Id of the Version being upgraded to
+    """
+    short_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version short name
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedEventsProductsSwitchNextUpgradeToVersionArgs:
@@ -18240,18 +17554,15 @@ class FirmwareUpgradesStagedEventsProductsSwitchNextUpgradeToVersionArgs:
         pulumi.set(self, "short_name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedEventsReasonArgsDict(TypedDict):
-        category: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Reason for the rollback
-        """
-        comment: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Additional comment about the rollback
-        """
-elif False:
-    FirmwareUpgradesStagedEventsReasonArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedEventsReasonArgsDict(TypedDict):
+    category: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Reason for the rollback
+    """
+    comment: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Additional comment about the rollback
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedEventsReasonArgs:
@@ -18292,22 +17603,19 @@ class FirmwareUpgradesStagedEventsReasonArgs:
         pulumi.set(self, "comment", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedEventsRollbacksItemArgsDict(TypedDict):
-        products: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsRollbacksItemProductsArgsDict']]
-        """
-        The network devices to be updated
-        """
-        reasons: NotRequired[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsRollbacksItemReasonArgsDict']]]]
-        """
-        Reasons for the rollback
-        """
-        stages: NotRequired[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsRollbacksItemStageArgsDict']]]]
-        """
-        The ordered stages in the network
-        """
-elif False:
-    FirmwareUpgradesStagedEventsRollbacksItemArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedEventsRollbacksItemArgsDict(TypedDict):
+    products: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsRollbacksItemProductsArgsDict']]
+    """
+    The network devices to be updated
+    """
+    reasons: NotRequired[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsRollbacksItemReasonArgsDict']]]]
+    """
+    Reasons for the rollback
+    """
+    stages: NotRequired[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsRollbacksItemStageArgsDict']]]]
+    """
+    The ordered stages in the network
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedEventsRollbacksItemArgs:
@@ -18364,14 +17672,11 @@ class FirmwareUpgradesStagedEventsRollbacksItemArgs:
         pulumi.set(self, "stages", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedEventsRollbacksItemProductsArgsDict(TypedDict):
-        switch: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsRollbacksItemProductsSwitchArgsDict']]
-        """
-        The Switch network to be updated
-        """
-elif False:
-    FirmwareUpgradesStagedEventsRollbacksItemProductsArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedEventsRollbacksItemProductsArgsDict(TypedDict):
+    switch: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsRollbacksItemProductsSwitchArgsDict']]
+    """
+    The Switch network to be updated
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedEventsRollbacksItemProductsArgs:
@@ -18396,14 +17701,11 @@ class FirmwareUpgradesStagedEventsRollbacksItemProductsArgs:
         pulumi.set(self, "switch", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedEventsRollbacksItemProductsSwitchArgsDict(TypedDict):
-        next_upgrade: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsRollbacksItemProductsSwitchNextUpgradeArgsDict']]
-        """
-        Details of the next firmware upgrade
-        """
-elif False:
-    FirmwareUpgradesStagedEventsRollbacksItemProductsSwitchArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedEventsRollbacksItemProductsSwitchArgsDict(TypedDict):
+    next_upgrade: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsRollbacksItemProductsSwitchNextUpgradeArgsDict']]
+    """
+    Details of the next firmware upgrade
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedEventsRollbacksItemProductsSwitchArgs:
@@ -18428,14 +17730,11 @@ class FirmwareUpgradesStagedEventsRollbacksItemProductsSwitchArgs:
         pulumi.set(self, "next_upgrade", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedEventsRollbacksItemProductsSwitchNextUpgradeArgsDict(TypedDict):
-        to_version: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsRollbacksItemProductsSwitchNextUpgradeToVersionArgsDict']]
-        """
-        Details of the version the device will upgrade to
-        """
-elif False:
-    FirmwareUpgradesStagedEventsRollbacksItemProductsSwitchNextUpgradeArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedEventsRollbacksItemProductsSwitchNextUpgradeArgsDict(TypedDict):
+    to_version: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsRollbacksItemProductsSwitchNextUpgradeToVersionArgsDict']]
+    """
+    Details of the version the device will upgrade to
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedEventsRollbacksItemProductsSwitchNextUpgradeArgs:
@@ -18460,18 +17759,15 @@ class FirmwareUpgradesStagedEventsRollbacksItemProductsSwitchNextUpgradeArgs:
         pulumi.set(self, "to_version", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedEventsRollbacksItemProductsSwitchNextUpgradeToVersionArgsDict(TypedDict):
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Id of the Version being upgraded to
-        """
-        short_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version short name
-        """
-elif False:
-    FirmwareUpgradesStagedEventsRollbacksItemProductsSwitchNextUpgradeToVersionArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedEventsRollbacksItemProductsSwitchNextUpgradeToVersionArgsDict(TypedDict):
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Id of the Version being upgraded to
+    """
+    short_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version short name
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedEventsRollbacksItemProductsSwitchNextUpgradeToVersionArgs:
@@ -18512,18 +17808,15 @@ class FirmwareUpgradesStagedEventsRollbacksItemProductsSwitchNextUpgradeToVersio
         pulumi.set(self, "short_name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedEventsRollbacksItemReasonArgsDict(TypedDict):
-        category: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Reason for the rollback
-        """
-        comment: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Additional comment about the rollback
-        """
-elif False:
-    FirmwareUpgradesStagedEventsRollbacksItemReasonArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedEventsRollbacksItemReasonArgsDict(TypedDict):
+    category: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Reason for the rollback
+    """
+    comment: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Additional comment about the rollback
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedEventsRollbacksItemReasonArgs:
@@ -18564,22 +17857,19 @@ class FirmwareUpgradesStagedEventsRollbacksItemReasonArgs:
         pulumi.set(self, "comment", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedEventsRollbacksItemStageArgsDict(TypedDict):
-        group: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsRollbacksItemStageGroupArgsDict']]
-        """
-        The staged upgrade group
-        """
-        milestones: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsRollbacksItemStageMilestonesArgsDict']]
-        """
-        The Staged Upgrade Milestones for the stage
-        """
-        status: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Current upgrade status of the group
-        """
-elif False:
-    FirmwareUpgradesStagedEventsRollbacksItemStageArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedEventsRollbacksItemStageArgsDict(TypedDict):
+    group: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsRollbacksItemStageGroupArgsDict']]
+    """
+    The staged upgrade group
+    """
+    milestones: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsRollbacksItemStageMilestonesArgsDict']]
+    """
+    The Staged Upgrade Milestones for the stage
+    """
+    status: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Current upgrade status of the group
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedEventsRollbacksItemStageArgs:
@@ -18636,22 +17926,19 @@ class FirmwareUpgradesStagedEventsRollbacksItemStageArgs:
         pulumi.set(self, "status", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedEventsRollbacksItemStageGroupArgsDict(TypedDict):
-        description: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Description of the Staged Upgrade Group
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Id of the Staged Upgrade Group
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the Staged Upgrade Group
-        """
-elif False:
-    FirmwareUpgradesStagedEventsRollbacksItemStageGroupArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedEventsRollbacksItemStageGroupArgsDict(TypedDict):
+    description: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Description of the Staged Upgrade Group
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Id of the Staged Upgrade Group
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the Staged Upgrade Group
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedEventsRollbacksItemStageGroupArgs:
@@ -18708,26 +17995,23 @@ class FirmwareUpgradesStagedEventsRollbacksItemStageGroupArgs:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedEventsRollbacksItemStageMilestonesArgsDict(TypedDict):
-        canceled_at: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Time that the group was canceled
-        """
-        completed_at: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Finish time for the group
-        """
-        scheduled_for: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Scheduled start time for the group
-        """
-        started_at: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Start time for the group
-        """
-elif False:
-    FirmwareUpgradesStagedEventsRollbacksItemStageMilestonesArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedEventsRollbacksItemStageMilestonesArgsDict(TypedDict):
+    canceled_at: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Time that the group was canceled
+    """
+    completed_at: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Finish time for the group
+    """
+    scheduled_for: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Scheduled start time for the group
+    """
+    started_at: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Start time for the group
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedEventsRollbacksItemStageMilestonesArgs:
@@ -18800,18 +18084,15 @@ class FirmwareUpgradesStagedEventsRollbacksItemStageMilestonesArgs:
         pulumi.set(self, "started_at", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedEventsRollbacksParametersArgsDict(TypedDict):
-        reasons: NotRequired[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsRollbacksParametersReasonArgsDict']]]]
-        """
-        The reason for rolling back the staged upgrade
-        """
-        stages: NotRequired[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsRollbacksParametersStageArgsDict']]]]
-        """
-        All completed or in-progress stages in the network with their new start times. All pending stages will be canceled
-        """
-elif False:
-    FirmwareUpgradesStagedEventsRollbacksParametersArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedEventsRollbacksParametersArgsDict(TypedDict):
+    reasons: NotRequired[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsRollbacksParametersReasonArgsDict']]]]
+    """
+    The reason for rolling back the staged upgrade
+    """
+    stages: NotRequired[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsRollbacksParametersStageArgsDict']]]]
+    """
+    All completed or in-progress stages in the network with their new start times. All pending stages will be canceled
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedEventsRollbacksParametersArgs:
@@ -18852,18 +18133,15 @@ class FirmwareUpgradesStagedEventsRollbacksParametersArgs:
         pulumi.set(self, "stages", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedEventsRollbacksParametersReasonArgsDict(TypedDict):
-        category: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Reason for the rollback
-        """
-        comment: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Additional comment about the rollback
-        """
-elif False:
-    FirmwareUpgradesStagedEventsRollbacksParametersReasonArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedEventsRollbacksParametersReasonArgsDict(TypedDict):
+    category: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Reason for the rollback
+    """
+    comment: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Additional comment about the rollback
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedEventsRollbacksParametersReasonArgs:
@@ -18904,18 +18182,15 @@ class FirmwareUpgradesStagedEventsRollbacksParametersReasonArgs:
         pulumi.set(self, "comment", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedEventsRollbacksParametersStageArgsDict(TypedDict):
-        group: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsRollbacksParametersStageGroupArgsDict']]
-        """
-        The Staged Upgrade Group containing the name and ID
-        """
-        milestones: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsRollbacksParametersStageMilestonesArgsDict']]
-        """
-        The Staged Upgrade Milestones for the specific stage
-        """
-elif False:
-    FirmwareUpgradesStagedEventsRollbacksParametersStageArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedEventsRollbacksParametersStageArgsDict(TypedDict):
+    group: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsRollbacksParametersStageGroupArgsDict']]
+    """
+    The Staged Upgrade Group containing the name and ID
+    """
+    milestones: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsRollbacksParametersStageMilestonesArgsDict']]
+    """
+    The Staged Upgrade Milestones for the specific stage
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedEventsRollbacksParametersStageArgs:
@@ -18956,14 +18231,11 @@ class FirmwareUpgradesStagedEventsRollbacksParametersStageArgs:
         pulumi.set(self, "milestones", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedEventsRollbacksParametersStageGroupArgsDict(TypedDict):
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        ID of the Staged Upgrade Group
-        """
-elif False:
-    FirmwareUpgradesStagedEventsRollbacksParametersStageGroupArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedEventsRollbacksParametersStageGroupArgsDict(TypedDict):
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    ID of the Staged Upgrade Group
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedEventsRollbacksParametersStageGroupArgs:
@@ -18988,14 +18260,11 @@ class FirmwareUpgradesStagedEventsRollbacksParametersStageGroupArgs:
         pulumi.set(self, "id", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedEventsRollbacksParametersStageMilestonesArgsDict(TypedDict):
-        scheduled_for: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The start time of the staged upgrade stage. (In ISO-8601 format, in the time zone of the network.)
-        """
-elif False:
-    FirmwareUpgradesStagedEventsRollbacksParametersStageMilestonesArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedEventsRollbacksParametersStageMilestonesArgsDict(TypedDict):
+    scheduled_for: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The start time of the staged upgrade stage. (In ISO-8601 format, in the time zone of the network.)
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedEventsRollbacksParametersStageMilestonesArgs:
@@ -19020,22 +18289,19 @@ class FirmwareUpgradesStagedEventsRollbacksParametersStageMilestonesArgs:
         pulumi.set(self, "scheduled_for", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedEventsStageArgsDict(TypedDict):
-        group: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsStageGroupArgsDict']]
-        """
-        The staged upgrade group
-        """
-        milestones: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsStageMilestonesArgsDict']]
-        """
-        The Staged Upgrade Milestones for the stage
-        """
-        status: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Current upgrade status of the group
-        """
-elif False:
-    FirmwareUpgradesStagedEventsStageArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedEventsStageArgsDict(TypedDict):
+    group: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsStageGroupArgsDict']]
+    """
+    The staged upgrade group
+    """
+    milestones: NotRequired[pulumi.Input['FirmwareUpgradesStagedEventsStageMilestonesArgsDict']]
+    """
+    The Staged Upgrade Milestones for the stage
+    """
+    status: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Current upgrade status of the group
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedEventsStageArgs:
@@ -19092,22 +18358,19 @@ class FirmwareUpgradesStagedEventsStageArgs:
         pulumi.set(self, "status", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedEventsStageGroupArgsDict(TypedDict):
-        description: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Description of the Staged Upgrade Group
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Id of the Staged Upgrade Group
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the Staged Upgrade Group
-        """
-elif False:
-    FirmwareUpgradesStagedEventsStageGroupArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedEventsStageGroupArgsDict(TypedDict):
+    description: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Description of the Staged Upgrade Group
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Id of the Staged Upgrade Group
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the Staged Upgrade Group
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedEventsStageGroupArgs:
@@ -19164,26 +18427,23 @@ class FirmwareUpgradesStagedEventsStageGroupArgs:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedEventsStageMilestonesArgsDict(TypedDict):
-        canceled_at: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Time that the group was canceled
-        """
-        completed_at: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Finish time for the group
-        """
-        scheduled_for: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Scheduled start time for the group
-        """
-        started_at: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Start time for the group
-        """
-elif False:
-    FirmwareUpgradesStagedEventsStageMilestonesArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedEventsStageMilestonesArgsDict(TypedDict):
+    canceled_at: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Time that the group was canceled
+    """
+    completed_at: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Finish time for the group
+    """
+    scheduled_for: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Scheduled start time for the group
+    """
+    started_at: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Start time for the group
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedEventsStageMilestonesArgs:
@@ -19256,18 +18516,15 @@ class FirmwareUpgradesStagedEventsStageMilestonesArgs:
         pulumi.set(self, "started_at", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedGroupsAssignedDevicesArgsDict(TypedDict):
-        devices: NotRequired[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesStagedGroupsAssignedDevicesDeviceArgsDict']]]]
-        """
-        Data Array of Devices containing the name and serial
-        """
-        switch_stacks: NotRequired[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesStagedGroupsAssignedDevicesSwitchStackArgsDict']]]]
-        """
-        Data Array of Switch Stacks containing the name and id
-        """
-elif False:
-    FirmwareUpgradesStagedGroupsAssignedDevicesArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedGroupsAssignedDevicesArgsDict(TypedDict):
+    devices: NotRequired[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesStagedGroupsAssignedDevicesDeviceArgsDict']]]]
+    """
+    Data Array of Devices containing the name and serial
+    """
+    switch_stacks: NotRequired[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesStagedGroupsAssignedDevicesSwitchStackArgsDict']]]]
+    """
+    Data Array of Switch Stacks containing the name and id
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedGroupsAssignedDevicesArgs:
@@ -19308,18 +18565,15 @@ class FirmwareUpgradesStagedGroupsAssignedDevicesArgs:
         pulumi.set(self, "switch_stacks", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedGroupsAssignedDevicesDeviceArgsDict(TypedDict):
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the device
-        """
-        serial: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Serial of the device
-        """
-elif False:
-    FirmwareUpgradesStagedGroupsAssignedDevicesDeviceArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedGroupsAssignedDevicesDeviceArgsDict(TypedDict):
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the device
+    """
+    serial: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Serial of the device
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedGroupsAssignedDevicesDeviceArgs:
@@ -19360,18 +18614,15 @@ class FirmwareUpgradesStagedGroupsAssignedDevicesDeviceArgs:
         pulumi.set(self, "serial", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedGroupsAssignedDevicesSwitchStackArgsDict(TypedDict):
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        ID of the Switch Stack
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the Switch Stack
-        """
-elif False:
-    FirmwareUpgradesStagedGroupsAssignedDevicesSwitchStackArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedGroupsAssignedDevicesSwitchStackArgsDict(TypedDict):
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    ID of the Switch Stack
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the Switch Stack
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedGroupsAssignedDevicesSwitchStackArgs:
@@ -19412,22 +18663,19 @@ class FirmwareUpgradesStagedGroupsAssignedDevicesSwitchStackArgs:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedStagesGroupArgsDict(TypedDict):
-        description: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Description of the Staged Upgrade Group
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Id of the Staged Upgrade Group
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the Staged Upgrade Group
-        """
-elif False:
-    FirmwareUpgradesStagedStagesGroupArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedStagesGroupArgsDict(TypedDict):
+    description: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Description of the Staged Upgrade Group
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Id of the Staged Upgrade Group
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the Staged Upgrade Group
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedStagesGroupArgs:
@@ -19484,14 +18732,11 @@ class FirmwareUpgradesStagedStagesGroupArgs:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedStagesJsonArgsDict(TypedDict):
-        group: NotRequired[pulumi.Input['FirmwareUpgradesStagedStagesJsonGroupArgsDict']]
-        """
-        The Staged Upgrade Group
-        """
-elif False:
-    FirmwareUpgradesStagedStagesJsonArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedStagesJsonArgsDict(TypedDict):
+    group: NotRequired[pulumi.Input['FirmwareUpgradesStagedStagesJsonGroupArgsDict']]
+    """
+    The Staged Upgrade Group
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedStagesJsonArgs:
@@ -19516,14 +18761,11 @@ class FirmwareUpgradesStagedStagesJsonArgs:
         pulumi.set(self, "group", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesStagedStagesJsonGroupArgsDict(TypedDict):
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        ID of the Staged Upgrade Group
-        """
-elif False:
-    FirmwareUpgradesStagedStagesJsonGroupArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesStagedStagesJsonGroupArgsDict(TypedDict):
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    ID of the Staged Upgrade Group
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesStagedStagesJsonGroupArgs:
@@ -19548,18 +18790,15 @@ class FirmwareUpgradesStagedStagesJsonGroupArgs:
         pulumi.set(self, "id", value)
 
 
-if not MYPY:
-    class FirmwareUpgradesUpgradeWindowArgsDict(TypedDict):
-        day_of_week: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Day of the week
-        """
-        hour_of_day: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Hour of the day
-        """
-elif False:
-    FirmwareUpgradesUpgradeWindowArgsDict: TypeAlias = Mapping[str, Any]
+class FirmwareUpgradesUpgradeWindowArgsDict(TypedDict):
+    day_of_week: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Day of the week
+    """
+    hour_of_day: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Hour of the day
+    """
 
 @pulumi.input_type
 class FirmwareUpgradesUpgradeWindowArgs:
@@ -19600,18 +18839,15 @@ class FirmwareUpgradesUpgradeWindowArgs:
         pulumi.set(self, "hour_of_day", value)
 
 
-if not MYPY:
-    class FloorPlansBottomLeftCornerArgsDict(TypedDict):
-        lat: NotRequired[pulumi.Input[_builtins.float]]
-        """
-        Latitude
-        """
-        lng: NotRequired[pulumi.Input[_builtins.float]]
-        """
-        Longitude
-        """
-elif False:
-    FloorPlansBottomLeftCornerArgsDict: TypeAlias = Mapping[str, Any]
+class FloorPlansBottomLeftCornerArgsDict(TypedDict):
+    lat: NotRequired[pulumi.Input[_builtins.float]]
+    """
+    Latitude
+    """
+    lng: NotRequired[pulumi.Input[_builtins.float]]
+    """
+    Longitude
+    """
 
 @pulumi.input_type
 class FloorPlansBottomLeftCornerArgs:
@@ -19652,18 +18888,15 @@ class FloorPlansBottomLeftCornerArgs:
         pulumi.set(self, "lng", value)
 
 
-if not MYPY:
-    class FloorPlansBottomRightCornerArgsDict(TypedDict):
-        lat: NotRequired[pulumi.Input[_builtins.float]]
-        """
-        Latitude
-        """
-        lng: NotRequired[pulumi.Input[_builtins.float]]
-        """
-        Longitude
-        """
-elif False:
-    FloorPlansBottomRightCornerArgsDict: TypeAlias = Mapping[str, Any]
+class FloorPlansBottomRightCornerArgsDict(TypedDict):
+    lat: NotRequired[pulumi.Input[_builtins.float]]
+    """
+    Latitude
+    """
+    lng: NotRequired[pulumi.Input[_builtins.float]]
+    """
+    Longitude
+    """
 
 @pulumi.input_type
 class FloorPlansBottomRightCornerArgs:
@@ -19704,18 +18937,15 @@ class FloorPlansBottomRightCornerArgs:
         pulumi.set(self, "lng", value)
 
 
-if not MYPY:
-    class FloorPlansCenterArgsDict(TypedDict):
-        lat: NotRequired[pulumi.Input[_builtins.float]]
-        """
-        Latitude
-        """
-        lng: NotRequired[pulumi.Input[_builtins.float]]
-        """
-        Longitude
-        """
-elif False:
-    FloorPlansCenterArgsDict: TypeAlias = Mapping[str, Any]
+class FloorPlansCenterArgsDict(TypedDict):
+    lat: NotRequired[pulumi.Input[_builtins.float]]
+    """
+    Latitude
+    """
+    lng: NotRequired[pulumi.Input[_builtins.float]]
+    """
+    Longitude
+    """
 
 @pulumi.input_type
 class FloorPlansCenterArgs:
@@ -19756,70 +18986,67 @@ class FloorPlansCenterArgs:
         pulumi.set(self, "lng", value)
 
 
-if not MYPY:
-    class FloorPlansDeviceArgsDict(TypedDict):
-        address: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Physical address of the device
-        """
-        details: NotRequired[pulumi.Input[Sequence[pulumi.Input['FloorPlansDeviceDetailArgsDict']]]]
-        """
-        Additional device information
-        """
-        firmware: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Firmware version of the device
-        """
-        imei: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        IMEI of the device, if applicable
-        """
-        lan_ip: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        LAN IP address of the device
-        """
-        lat: NotRequired[pulumi.Input[_builtins.float]]
-        """
-        Latitude of the device
-        """
-        lng: NotRequired[pulumi.Input[_builtins.float]]
-        """
-        Longitude of the device
-        """
-        mac: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        MAC address of the device
-        """
-        model: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Model of the device
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the device
-        """
-        network_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        ID of the network the device belongs to
-        """
-        notes: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Notes for the device, limited to 255 characters
-        """
-        product_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Product type of the device
-        """
-        serial: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Serial number of the device
-        """
-        tags: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        List of tags assigned to the device
-        """
-elif False:
-    FloorPlansDeviceArgsDict: TypeAlias = Mapping[str, Any]
+class FloorPlansDeviceArgsDict(TypedDict):
+    address: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Physical address of the device
+    """
+    details: NotRequired[pulumi.Input[Sequence[pulumi.Input['FloorPlansDeviceDetailArgsDict']]]]
+    """
+    Additional device information
+    """
+    firmware: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Firmware version of the device
+    """
+    imei: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    IMEI of the device, if applicable
+    """
+    lan_ip: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    LAN IP address of the device
+    """
+    lat: NotRequired[pulumi.Input[_builtins.float]]
+    """
+    Latitude of the device
+    """
+    lng: NotRequired[pulumi.Input[_builtins.float]]
+    """
+    Longitude of the device
+    """
+    mac: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    MAC address of the device
+    """
+    model: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Model of the device
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the device
+    """
+    network_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    ID of the network the device belongs to
+    """
+    notes: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Notes for the device, limited to 255 characters
+    """
+    product_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Product type of the device
+    """
+    serial: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Serial number of the device
+    """
+    tags: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of tags assigned to the device
+    """
 
 @pulumi.input_type
 class FloorPlansDeviceArgs:
@@ -20068,18 +19295,15 @@ class FloorPlansDeviceArgs:
         pulumi.set(self, "tags", value)
 
 
-if not MYPY:
-    class FloorPlansDeviceDetailArgsDict(TypedDict):
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Additional property name
-        """
-        value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Additional property value
-        """
-elif False:
-    FloorPlansDeviceDetailArgsDict: TypeAlias = Mapping[str, Any]
+class FloorPlansDeviceDetailArgsDict(TypedDict):
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Additional property name
+    """
+    value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Additional property value
+    """
 
 @pulumi.input_type
 class FloorPlansDeviceDetailArgs:
@@ -20120,18 +19344,15 @@ class FloorPlansDeviceDetailArgs:
         pulumi.set(self, "value", value)
 
 
-if not MYPY:
-    class FloorPlansTopLeftCornerArgsDict(TypedDict):
-        lat: NotRequired[pulumi.Input[_builtins.float]]
-        """
-        Latitude
-        """
-        lng: NotRequired[pulumi.Input[_builtins.float]]
-        """
-        Longitude
-        """
-elif False:
-    FloorPlansTopLeftCornerArgsDict: TypeAlias = Mapping[str, Any]
+class FloorPlansTopLeftCornerArgsDict(TypedDict):
+    lat: NotRequired[pulumi.Input[_builtins.float]]
+    """
+    Latitude
+    """
+    lng: NotRequired[pulumi.Input[_builtins.float]]
+    """
+    Longitude
+    """
 
 @pulumi.input_type
 class FloorPlansTopLeftCornerArgs:
@@ -20172,18 +19393,15 @@ class FloorPlansTopLeftCornerArgs:
         pulumi.set(self, "lng", value)
 
 
-if not MYPY:
-    class FloorPlansTopRightCornerArgsDict(TypedDict):
-        lat: NotRequired[pulumi.Input[_builtins.float]]
-        """
-        Latitude
-        """
-        lng: NotRequired[pulumi.Input[_builtins.float]]
-        """
-        Longitude
-        """
-elif False:
-    FloorPlansTopRightCornerArgsDict: TypeAlias = Mapping[str, Any]
+class FloorPlansTopRightCornerArgsDict(TypedDict):
+    lat: NotRequired[pulumi.Input[_builtins.float]]
+    """
+    Latitude
+    """
+    lng: NotRequired[pulumi.Input[_builtins.float]]
+    """
+    Longitude
+    """
 
 @pulumi.input_type
 class FloorPlansTopRightCornerArgs:
@@ -20224,18 +19442,15 @@ class FloorPlansTopRightCornerArgs:
         pulumi.set(self, "lng", value)
 
 
-if not MYPY:
-    class GroupPoliciesBandwidthArgsDict(TypedDict):
-        bandwidth_limits: NotRequired[pulumi.Input['GroupPoliciesBandwidthBandwidthLimitsArgsDict']]
-        """
-        The bandwidth limits object, specifying upload and download speed for clients bound to the group policy. These are only enforced if 'settings' is set to 'custom'.
-        """
-        settings: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        How bandwidth limits are enforced. Can be 'network default', 'ignore' or 'custom'.
-        """
-elif False:
-    GroupPoliciesBandwidthArgsDict: TypeAlias = Mapping[str, Any]
+class GroupPoliciesBandwidthArgsDict(TypedDict):
+    bandwidth_limits: NotRequired[pulumi.Input['GroupPoliciesBandwidthBandwidthLimitsArgsDict']]
+    """
+    The bandwidth limits object, specifying upload and download speed for clients bound to the group policy. These are only enforced if 'settings' is set to 'custom'.
+    """
+    settings: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    How bandwidth limits are enforced. Can be 'network default', 'ignore' or 'custom'.
+    """
 
 @pulumi.input_type
 class GroupPoliciesBandwidthArgs:
@@ -20276,18 +19491,15 @@ class GroupPoliciesBandwidthArgs:
         pulumi.set(self, "settings", value)
 
 
-if not MYPY:
-    class GroupPoliciesBandwidthBandwidthLimitsArgsDict(TypedDict):
-        limit_down: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The maximum download limit (integer, in Kbps). null indicates no limit
-        """
-        limit_up: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The maximum upload limit (integer, in Kbps). null indicates no limit
-        """
-elif False:
-    GroupPoliciesBandwidthBandwidthLimitsArgsDict: TypeAlias = Mapping[str, Any]
+class GroupPoliciesBandwidthBandwidthLimitsArgsDict(TypedDict):
+    limit_down: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The maximum download limit (integer, in Kbps). null indicates no limit
+    """
+    limit_up: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The maximum upload limit (integer, in Kbps). null indicates no limit
+    """
 
 @pulumi.input_type
 class GroupPoliciesBandwidthBandwidthLimitsArgs:
@@ -20328,18 +19540,15 @@ class GroupPoliciesBandwidthBandwidthLimitsArgs:
         pulumi.set(self, "limit_up", value)
 
 
-if not MYPY:
-    class GroupPoliciesBonjourForwardingArgsDict(TypedDict):
-        rules: NotRequired[pulumi.Input[Sequence[pulumi.Input['GroupPoliciesBonjourForwardingRuleArgsDict']]]]
-        """
-        A list of the Bonjour forwarding rules for your group policy. If 'settings' is set to 'custom', at least one rule must be specified.
-        """
-        settings: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        How Bonjour rules are applied. Can be 'network default', 'ignore' or 'custom'.
-        """
-elif False:
-    GroupPoliciesBonjourForwardingArgsDict: TypeAlias = Mapping[str, Any]
+class GroupPoliciesBonjourForwardingArgsDict(TypedDict):
+    rules: NotRequired[pulumi.Input[Sequence[pulumi.Input['GroupPoliciesBonjourForwardingRuleArgsDict']]]]
+    """
+    A list of the Bonjour forwarding rules for your group policy. If 'settings' is set to 'custom', at least one rule must be specified.
+    """
+    settings: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    How Bonjour rules are applied. Can be 'network default', 'ignore' or 'custom'.
+    """
 
 @pulumi.input_type
 class GroupPoliciesBonjourForwardingArgs:
@@ -20380,22 +19589,19 @@ class GroupPoliciesBonjourForwardingArgs:
         pulumi.set(self, "settings", value)
 
 
-if not MYPY:
-    class GroupPoliciesBonjourForwardingRuleArgsDict(TypedDict):
-        description: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        A description for your Bonjour forwarding rule. Optional.
-        """
-        services: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        A list of Bonjour services. At least one service must be specified. Available services are 'All Services', 'AirPlay', 'AFP', 'BitTorrent', 'FTP', 'iChat', 'iTunes', 'Printers', 'Samba', 'Scanners' and 'SSH'
-        """
-        vlan_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The ID of the service VLAN. Required.
-        """
-elif False:
-    GroupPoliciesBonjourForwardingRuleArgsDict: TypeAlias = Mapping[str, Any]
+class GroupPoliciesBonjourForwardingRuleArgsDict(TypedDict):
+    description: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    A description for your Bonjour forwarding rule. Optional.
+    """
+    services: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    A list of Bonjour services. At least one service must be specified. Available services are 'All Services', 'AirPlay', 'AFP', 'BitTorrent', 'FTP', 'iChat', 'iTunes', 'Printers', 'Samba', 'Scanners' and 'SSH'
+    """
+    vlan_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The ID of the service VLAN. Required.
+    """
 
 @pulumi.input_type
 class GroupPoliciesBonjourForwardingRuleArgs:
@@ -20452,22 +19658,19 @@ class GroupPoliciesBonjourForwardingRuleArgs:
         pulumi.set(self, "vlan_id", value)
 
 
-if not MYPY:
-    class GroupPoliciesContentFilteringArgsDict(TypedDict):
-        allowed_url_patterns: NotRequired[pulumi.Input['GroupPoliciesContentFilteringAllowedUrlPatternsArgsDict']]
-        """
-        Settings for allowed URL patterns
-        """
-        blocked_url_categories: NotRequired[pulumi.Input['GroupPoliciesContentFilteringBlockedUrlCategoriesArgsDict']]
-        """
-        Settings for blocked URL categories
-        """
-        blocked_url_patterns: NotRequired[pulumi.Input['GroupPoliciesContentFilteringBlockedUrlPatternsArgsDict']]
-        """
-        Settings for blocked URL patterns
-        """
-elif False:
-    GroupPoliciesContentFilteringArgsDict: TypeAlias = Mapping[str, Any]
+class GroupPoliciesContentFilteringArgsDict(TypedDict):
+    allowed_url_patterns: NotRequired[pulumi.Input['GroupPoliciesContentFilteringAllowedUrlPatternsArgsDict']]
+    """
+    Settings for allowed URL patterns
+    """
+    blocked_url_categories: NotRequired[pulumi.Input['GroupPoliciesContentFilteringBlockedUrlCategoriesArgsDict']]
+    """
+    Settings for blocked URL categories
+    """
+    blocked_url_patterns: NotRequired[pulumi.Input['GroupPoliciesContentFilteringBlockedUrlPatternsArgsDict']]
+    """
+    Settings for blocked URL patterns
+    """
 
 @pulumi.input_type
 class GroupPoliciesContentFilteringArgs:
@@ -20524,18 +19727,15 @@ class GroupPoliciesContentFilteringArgs:
         pulumi.set(self, "blocked_url_patterns", value)
 
 
-if not MYPY:
-    class GroupPoliciesContentFilteringAllowedUrlPatternsArgsDict(TypedDict):
-        patterns: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        A list of URL patterns that are allowed
-        """
-        settings: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        How URL patterns are applied. Can be 'network default', 'append' or 'override'.
-        """
-elif False:
-    GroupPoliciesContentFilteringAllowedUrlPatternsArgsDict: TypeAlias = Mapping[str, Any]
+class GroupPoliciesContentFilteringAllowedUrlPatternsArgsDict(TypedDict):
+    patterns: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    A list of URL patterns that are allowed
+    """
+    settings: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    How URL patterns are applied. Can be 'network default', 'append' or 'override'.
+    """
 
 @pulumi.input_type
 class GroupPoliciesContentFilteringAllowedUrlPatternsArgs:
@@ -20576,18 +19776,15 @@ class GroupPoliciesContentFilteringAllowedUrlPatternsArgs:
         pulumi.set(self, "settings", value)
 
 
-if not MYPY:
-    class GroupPoliciesContentFilteringBlockedUrlCategoriesArgsDict(TypedDict):
-        categories: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        A list of URL categories to block
-        """
-        settings: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        How URL categories are applied. Can be 'network default', 'append' or 'override'.
-        """
-elif False:
-    GroupPoliciesContentFilteringBlockedUrlCategoriesArgsDict: TypeAlias = Mapping[str, Any]
+class GroupPoliciesContentFilteringBlockedUrlCategoriesArgsDict(TypedDict):
+    categories: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    A list of URL categories to block
+    """
+    settings: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    How URL categories are applied. Can be 'network default', 'append' or 'override'.
+    """
 
 @pulumi.input_type
 class GroupPoliciesContentFilteringBlockedUrlCategoriesArgs:
@@ -20628,18 +19825,15 @@ class GroupPoliciesContentFilteringBlockedUrlCategoriesArgs:
         pulumi.set(self, "settings", value)
 
 
-if not MYPY:
-    class GroupPoliciesContentFilteringBlockedUrlPatternsArgsDict(TypedDict):
-        patterns: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        A list of URL patterns that are blocked
-        """
-        settings: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        How URL patterns are applied. Can be 'network default', 'append' or 'override'.
-        """
-elif False:
-    GroupPoliciesContentFilteringBlockedUrlPatternsArgsDict: TypeAlias = Mapping[str, Any]
+class GroupPoliciesContentFilteringBlockedUrlPatternsArgsDict(TypedDict):
+    patterns: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    A list of URL patterns that are blocked
+    """
+    settings: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    How URL patterns are applied. Can be 'network default', 'append' or 'override'.
+    """
 
 @pulumi.input_type
 class GroupPoliciesContentFilteringBlockedUrlPatternsArgs:
@@ -20680,28 +19874,25 @@ class GroupPoliciesContentFilteringBlockedUrlPatternsArgs:
         pulumi.set(self, "settings", value)
 
 
-if not MYPY:
-    class GroupPoliciesFirewallAndTrafficShapingArgsDict(TypedDict):
-        l3_firewall_rules: NotRequired[pulumi.Input[Sequence[pulumi.Input['GroupPoliciesFirewallAndTrafficShapingL3FirewallRuleArgsDict']]]]
-        """
-        An ordered array of the L3 firewall rules
-        """
-        l7_firewall_rules: NotRequired[pulumi.Input[Sequence[pulumi.Input['GroupPoliciesFirewallAndTrafficShapingL7FirewallRuleArgsDict']]]]
-        """
-        An ordered array of L7 firewall rules
-        """
-        settings: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        How firewall and traffic shaping rules are enforced. Can be 'network default', 'ignore' or 'custom'.
-        """
-        traffic_shaping_rules: NotRequired[pulumi.Input[Sequence[pulumi.Input['GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleArgsDict']]]]
-        """
-        An array of traffic shaping rules. Rules are applied in the order that
-        they are specified in. An empty list (or null) means no rules. Note that
-        you are allowed a maximum of 8 rules.
-        """
-elif False:
-    GroupPoliciesFirewallAndTrafficShapingArgsDict: TypeAlias = Mapping[str, Any]
+class GroupPoliciesFirewallAndTrafficShapingArgsDict(TypedDict):
+    l3_firewall_rules: NotRequired[pulumi.Input[Sequence[pulumi.Input['GroupPoliciesFirewallAndTrafficShapingL3FirewallRuleArgsDict']]]]
+    """
+    An ordered array of the L3 firewall rules
+    """
+    l7_firewall_rules: NotRequired[pulumi.Input[Sequence[pulumi.Input['GroupPoliciesFirewallAndTrafficShapingL7FirewallRuleArgsDict']]]]
+    """
+    An ordered array of L7 firewall rules
+    """
+    settings: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    How firewall and traffic shaping rules are enforced. Can be 'network default', 'ignore' or 'custom'.
+    """
+    traffic_shaping_rules: NotRequired[pulumi.Input[Sequence[pulumi.Input['GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleArgsDict']]]]
+    """
+    An array of traffic shaping rules. Rules are applied in the order that
+    they are specified in. An empty list (or null) means no rules. Note that
+    you are allowed a maximum of 8 rules.
+    """
 
 @pulumi.input_type
 class GroupPoliciesFirewallAndTrafficShapingArgs:
@@ -20778,30 +19969,27 @@ class GroupPoliciesFirewallAndTrafficShapingArgs:
         pulumi.set(self, "traffic_shaping_rules", value)
 
 
-if not MYPY:
-    class GroupPoliciesFirewallAndTrafficShapingL3FirewallRuleArgsDict(TypedDict):
-        comment: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Description of the rule (optional)
-        """
-        dest_cidr: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Destination IP address (in IP or CIDR notation), a fully-qualified domain name (FQDN, if your network supports it) or 'any'.
-        """
-        dest_port: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Destination port (integer in the range 1-65535), a port range (e.g. 8080-9090), or 'any'
-        """
-        policy: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        'allow' or 'deny' traffic specified by this rule
-        """
-        protocol: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The type of protocol (must be 'tcp', 'udp', 'icmp', 'icmp6' or 'any')
-        """
-elif False:
-    GroupPoliciesFirewallAndTrafficShapingL3FirewallRuleArgsDict: TypeAlias = Mapping[str, Any]
+class GroupPoliciesFirewallAndTrafficShapingL3FirewallRuleArgsDict(TypedDict):
+    comment: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Description of the rule (optional)
+    """
+    dest_cidr: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Destination IP address (in IP or CIDR notation), a fully-qualified domain name (FQDN, if your network supports it) or 'any'.
+    """
+    dest_port: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Destination port (integer in the range 1-65535), a port range (e.g. 8080-9090), or 'any'
+    """
+    policy: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    'allow' or 'deny' traffic specified by this rule
+    """
+    protocol: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The type of protocol (must be 'tcp', 'udp', 'icmp', 'icmp6' or 'any')
+    """
 
 @pulumi.input_type
 class GroupPoliciesFirewallAndTrafficShapingL3FirewallRuleArgs:
@@ -20890,22 +20078,19 @@ class GroupPoliciesFirewallAndTrafficShapingL3FirewallRuleArgs:
         pulumi.set(self, "protocol", value)
 
 
-if not MYPY:
-    class GroupPoliciesFirewallAndTrafficShapingL7FirewallRuleArgsDict(TypedDict):
-        policy: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The policy applied to matching traffic. Must be 'deny'.
-        """
-        type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Type of the L7 Rule. Must be 'application', 'applicationCategory', 'host', 'port' or 'ipRange'
-        """
-        value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The 'value' of what you want to block. If 'type' is 'host', 'port' or 'ipRange', 'value' must be a string matching either a hostname (e.g. somewhere.com), a port (e.g. 8080), or an IP range (e.g. 192.1.0.0/16). If 'type' is 'application' or 'applicationCategory', then 'value' must be an object with an ID for the application.
-        """
-elif False:
-    GroupPoliciesFirewallAndTrafficShapingL7FirewallRuleArgsDict: TypeAlias = Mapping[str, Any]
+class GroupPoliciesFirewallAndTrafficShapingL7FirewallRuleArgsDict(TypedDict):
+    policy: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The policy applied to matching traffic. Must be 'deny'.
+    """
+    type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Type of the L7 Rule. Must be 'application', 'applicationCategory', 'host', 'port' or 'ipRange'
+    """
+    value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The 'value' of what you want to block. If 'type' is 'host', 'port' or 'ipRange', 'value' must be a string matching either a hostname (e.g. somewhere.com), a port (e.g. 8080), or an IP range (e.g. 192.1.0.0/16). If 'type' is 'application' or 'applicationCategory', then 'value' must be an object with an ID for the application.
+    """
 
 @pulumi.input_type
 class GroupPoliciesFirewallAndTrafficShapingL7FirewallRuleArgs:
@@ -20962,33 +20147,30 @@ class GroupPoliciesFirewallAndTrafficShapingL7FirewallRuleArgs:
         pulumi.set(self, "value", value)
 
 
-if not MYPY:
-    class GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleArgsDict(TypedDict):
-        definitions: NotRequired[pulumi.Input[Sequence[pulumi.Input['GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleDefinitionArgsDict']]]]
-        """
-        A list of objects describing the definitions of your traffic shaping rule. At least one definition is required.
-        """
-        dscp_tag_value: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The DSCP tag applied by your rule. null means 'Do not change DSCP tag'.
-        For a list of possible tag values, use the trafficShaping/dscpTaggingOptions endpoint.
-        """
-        pcp_tag_value: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The PCP tag applied by your rule. Can be 0 (lowest priority) through 7 (highest priority).
-        null means 'Do not set PCP tag'.
-        """
-        per_client_bandwidth_limits: NotRequired[pulumi.Input['GroupPoliciesFirewallAndTrafficShapingTrafficShapingRulePerClientBandwidthLimitsArgsDict']]
-        """
-        An object describing the bandwidth settings for your rule.
-        """
-        priority: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        A string, indicating the priority level for packets bound to your rule.
-        Can be 'low', 'normal' or 'high'.
-        """
-elif False:
-    GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleArgsDict: TypeAlias = Mapping[str, Any]
+class GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleArgsDict(TypedDict):
+    definitions: NotRequired[pulumi.Input[Sequence[pulumi.Input['GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleDefinitionArgsDict']]]]
+    """
+    A list of objects describing the definitions of your traffic shaping rule. At least one definition is required.
+    """
+    dscp_tag_value: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The DSCP tag applied by your rule. null means 'Do not change DSCP tag'.
+    For a list of possible tag values, use the trafficShaping/dscpTaggingOptions endpoint.
+    """
+    pcp_tag_value: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The PCP tag applied by your rule. Can be 0 (lowest priority) through 7 (highest priority).
+    null means 'Do not set PCP tag'.
+    """
+    per_client_bandwidth_limits: NotRequired[pulumi.Input['GroupPoliciesFirewallAndTrafficShapingTrafficShapingRulePerClientBandwidthLimitsArgsDict']]
+    """
+    An object describing the bandwidth settings for your rule.
+    """
+    priority: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    A string, indicating the priority level for packets bound to your rule.
+    Can be 'low', 'normal' or 'high'.
+    """
 
 @pulumi.input_type
 class GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleArgs:
@@ -21083,25 +20265,22 @@ class GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleArgs:
         pulumi.set(self, "priority", value)
 
 
-if not MYPY:
-    class GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleDefinitionArgsDict(TypedDict):
-        type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The type of definition. Can be one of 'application', 'applicationCategory', 'host', 'port', 'ipRange' or 'localNet'.
-        """
-        value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        If "type" is 'host', 'port', 'ipRange' or 'localNet', then "value" must be a string, matching either
-        a hostname (e.g. "somesite.com"), a port (e.g. 8080), or an IP range ("192.1.0.0",
-        "192.1.0.0/16", or "10.1.0.0/16:80"). 'localNet' also supports CIDR notation, excluding
-        custom ports.
-         If "type" is 'application' or 'applicationCategory', then "value" must be an object
-        with the structure { "id": "meraki:layer7/..." }, where "id" is the application category or
-        application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
-        endpoint).
-        """
-elif False:
-    GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleDefinitionArgsDict: TypeAlias = Mapping[str, Any]
+class GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleDefinitionArgsDict(TypedDict):
+    type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The type of definition. Can be one of 'application', 'applicationCategory', 'host', 'port', 'ipRange' or 'localNet'.
+    """
+    value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    If "type" is 'host', 'port', 'ipRange' or 'localNet', then "value" must be a string, matching either
+    a hostname (e.g. "somesite.com"), a port (e.g. 8080), or an IP range ("192.1.0.0",
+    "192.1.0.0/16", or "10.1.0.0/16:80"). 'localNet' also supports CIDR notation, excluding
+    custom ports.
+     If "type" is 'application' or 'applicationCategory', then "value" must be an object
+    with the structure { "id": "meraki:layer7/..." }, where "id" is the application category or
+    application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
+    endpoint).
+    """
 
 @pulumi.input_type
 class GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleDefinitionArgs:
@@ -21156,18 +20335,15 @@ class GroupPoliciesFirewallAndTrafficShapingTrafficShapingRuleDefinitionArgs:
         pulumi.set(self, "value", value)
 
 
-if not MYPY:
-    class GroupPoliciesFirewallAndTrafficShapingTrafficShapingRulePerClientBandwidthLimitsArgsDict(TypedDict):
-        bandwidth_limits: NotRequired[pulumi.Input['GroupPoliciesFirewallAndTrafficShapingTrafficShapingRulePerClientBandwidthLimitsBandwidthLimitsArgsDict']]
-        """
-        The bandwidth limits object, specifying the upload ('limitUp') and download ('limitDown') speed in Kbps. These are only enforced if 'settings' is set to 'custom'.
-        """
-        settings: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        How bandwidth limits are applied by your rule. Can be one of 'network default', 'ignore' or 'custom'.
-        """
-elif False:
-    GroupPoliciesFirewallAndTrafficShapingTrafficShapingRulePerClientBandwidthLimitsArgsDict: TypeAlias = Mapping[str, Any]
+class GroupPoliciesFirewallAndTrafficShapingTrafficShapingRulePerClientBandwidthLimitsArgsDict(TypedDict):
+    bandwidth_limits: NotRequired[pulumi.Input['GroupPoliciesFirewallAndTrafficShapingTrafficShapingRulePerClientBandwidthLimitsBandwidthLimitsArgsDict']]
+    """
+    The bandwidth limits object, specifying the upload ('limitUp') and download ('limitDown') speed in Kbps. These are only enforced if 'settings' is set to 'custom'.
+    """
+    settings: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    How bandwidth limits are applied by your rule. Can be one of 'network default', 'ignore' or 'custom'.
+    """
 
 @pulumi.input_type
 class GroupPoliciesFirewallAndTrafficShapingTrafficShapingRulePerClientBandwidthLimitsArgs:
@@ -21208,18 +20384,15 @@ class GroupPoliciesFirewallAndTrafficShapingTrafficShapingRulePerClientBandwidth
         pulumi.set(self, "settings", value)
 
 
-if not MYPY:
-    class GroupPoliciesFirewallAndTrafficShapingTrafficShapingRulePerClientBandwidthLimitsBandwidthLimitsArgsDict(TypedDict):
-        limit_down: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The maximum download limit (integer, in Kbps).
-        """
-        limit_up: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The maximum upload limit (integer, in Kbps).
-        """
-elif False:
-    GroupPoliciesFirewallAndTrafficShapingTrafficShapingRulePerClientBandwidthLimitsBandwidthLimitsArgsDict: TypeAlias = Mapping[str, Any]
+class GroupPoliciesFirewallAndTrafficShapingTrafficShapingRulePerClientBandwidthLimitsBandwidthLimitsArgsDict(TypedDict):
+    limit_down: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The maximum download limit (integer, in Kbps).
+    """
+    limit_up: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The maximum upload limit (integer, in Kbps).
+    """
 
 @pulumi.input_type
 class GroupPoliciesFirewallAndTrafficShapingTrafficShapingRulePerClientBandwidthLimitsBandwidthLimitsArgs:
@@ -21260,42 +20433,39 @@ class GroupPoliciesFirewallAndTrafficShapingTrafficShapingRulePerClientBandwidth
         pulumi.set(self, "limit_up", value)
 
 
-if not MYPY:
-    class GroupPoliciesSchedulingArgsDict(TypedDict):
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether scheduling is enabled (true) or disabled (false). Defaults to false. If true, the schedule objects for each day of the week (monday - sunday) are parsed.
-        """
-        friday: NotRequired[pulumi.Input['GroupPoliciesSchedulingFridayArgsDict']]
-        """
-        The schedule object for Friday.
-        """
-        monday: NotRequired[pulumi.Input['GroupPoliciesSchedulingMondayArgsDict']]
-        """
-        The schedule object for Monday.
-        """
-        saturday: NotRequired[pulumi.Input['GroupPoliciesSchedulingSaturdayArgsDict']]
-        """
-        The schedule object for Saturday.
-        """
-        sunday: NotRequired[pulumi.Input['GroupPoliciesSchedulingSundayArgsDict']]
-        """
-        The schedule object for Sunday.
-        """
-        thursday: NotRequired[pulumi.Input['GroupPoliciesSchedulingThursdayArgsDict']]
-        """
-        The schedule object for Thursday.
-        """
-        tuesday: NotRequired[pulumi.Input['GroupPoliciesSchedulingTuesdayArgsDict']]
-        """
-        The schedule object for Tuesday.
-        """
-        wednesday: NotRequired[pulumi.Input['GroupPoliciesSchedulingWednesdayArgsDict']]
-        """
-        The schedule object for Wednesday.
-        """
-elif False:
-    GroupPoliciesSchedulingArgsDict: TypeAlias = Mapping[str, Any]
+class GroupPoliciesSchedulingArgsDict(TypedDict):
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether scheduling is enabled (true) or disabled (false). Defaults to false. If true, the schedule objects for each day of the week (monday - sunday) are parsed.
+    """
+    friday: NotRequired[pulumi.Input['GroupPoliciesSchedulingFridayArgsDict']]
+    """
+    The schedule object for Friday.
+    """
+    monday: NotRequired[pulumi.Input['GroupPoliciesSchedulingMondayArgsDict']]
+    """
+    The schedule object for Monday.
+    """
+    saturday: NotRequired[pulumi.Input['GroupPoliciesSchedulingSaturdayArgsDict']]
+    """
+    The schedule object for Saturday.
+    """
+    sunday: NotRequired[pulumi.Input['GroupPoliciesSchedulingSundayArgsDict']]
+    """
+    The schedule object for Sunday.
+    """
+    thursday: NotRequired[pulumi.Input['GroupPoliciesSchedulingThursdayArgsDict']]
+    """
+    The schedule object for Thursday.
+    """
+    tuesday: NotRequired[pulumi.Input['GroupPoliciesSchedulingTuesdayArgsDict']]
+    """
+    The schedule object for Tuesday.
+    """
+    wednesday: NotRequired[pulumi.Input['GroupPoliciesSchedulingWednesdayArgsDict']]
+    """
+    The schedule object for Wednesday.
+    """
 
 @pulumi.input_type
 class GroupPoliciesSchedulingArgs:
@@ -21432,22 +20602,19 @@ class GroupPoliciesSchedulingArgs:
         pulumi.set(self, "wednesday", value)
 
 
-if not MYPY:
-    class GroupPoliciesSchedulingFridayArgsDict(TypedDict):
-        active: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether the schedule is active (true) or inactive (false) during the time specified between 'from' and 'to'. Defaults to true.
-        """
-        from_: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The time, from '00:00' to '24:00'. Must be less than the time specified in 'to'. Defaults to '00:00'. Only 30 minute increments are allowed.
-        """
-        to: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The time, from '00:00' to '24:00'. Must be greater than the time specified in 'from'. Defaults to '24:00'. Only 30 minute increments are allowed.
-        """
-elif False:
-    GroupPoliciesSchedulingFridayArgsDict: TypeAlias = Mapping[str, Any]
+class GroupPoliciesSchedulingFridayArgsDict(TypedDict):
+    active: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether the schedule is active (true) or inactive (false) during the time specified between 'from' and 'to'. Defaults to true.
+    """
+    from_: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The time, from '00:00' to '24:00'. Must be less than the time specified in 'to'. Defaults to '00:00'. Only 30 minute increments are allowed.
+    """
+    to: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The time, from '00:00' to '24:00'. Must be greater than the time specified in 'from'. Defaults to '24:00'. Only 30 minute increments are allowed.
+    """
 
 @pulumi.input_type
 class GroupPoliciesSchedulingFridayArgs:
@@ -21504,22 +20671,19 @@ class GroupPoliciesSchedulingFridayArgs:
         pulumi.set(self, "to", value)
 
 
-if not MYPY:
-    class GroupPoliciesSchedulingMondayArgsDict(TypedDict):
-        active: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether the schedule is active (true) or inactive (false) during the time specified between 'from' and 'to'. Defaults to true.
-        """
-        from_: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The time, from '00:00' to '24:00'. Must be less than the time specified in 'to'. Defaults to '00:00'. Only 30 minute increments are allowed.
-        """
-        to: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The time, from '00:00' to '24:00'. Must be greater than the time specified in 'from'. Defaults to '24:00'. Only 30 minute increments are allowed.
-        """
-elif False:
-    GroupPoliciesSchedulingMondayArgsDict: TypeAlias = Mapping[str, Any]
+class GroupPoliciesSchedulingMondayArgsDict(TypedDict):
+    active: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether the schedule is active (true) or inactive (false) during the time specified between 'from' and 'to'. Defaults to true.
+    """
+    from_: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The time, from '00:00' to '24:00'. Must be less than the time specified in 'to'. Defaults to '00:00'. Only 30 minute increments are allowed.
+    """
+    to: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The time, from '00:00' to '24:00'. Must be greater than the time specified in 'from'. Defaults to '24:00'. Only 30 minute increments are allowed.
+    """
 
 @pulumi.input_type
 class GroupPoliciesSchedulingMondayArgs:
@@ -21576,22 +20740,19 @@ class GroupPoliciesSchedulingMondayArgs:
         pulumi.set(self, "to", value)
 
 
-if not MYPY:
-    class GroupPoliciesSchedulingSaturdayArgsDict(TypedDict):
-        active: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether the schedule is active (true) or inactive (false) during the time specified between 'from' and 'to'. Defaults to true.
-        """
-        from_: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The time, from '00:00' to '24:00'. Must be less than the time specified in 'to'. Defaults to '00:00'. Only 30 minute increments are allowed.
-        """
-        to: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The time, from '00:00' to '24:00'. Must be greater than the time specified in 'from'. Defaults to '24:00'. Only 30 minute increments are allowed.
-        """
-elif False:
-    GroupPoliciesSchedulingSaturdayArgsDict: TypeAlias = Mapping[str, Any]
+class GroupPoliciesSchedulingSaturdayArgsDict(TypedDict):
+    active: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether the schedule is active (true) or inactive (false) during the time specified between 'from' and 'to'. Defaults to true.
+    """
+    from_: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The time, from '00:00' to '24:00'. Must be less than the time specified in 'to'. Defaults to '00:00'. Only 30 minute increments are allowed.
+    """
+    to: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The time, from '00:00' to '24:00'. Must be greater than the time specified in 'from'. Defaults to '24:00'. Only 30 minute increments are allowed.
+    """
 
 @pulumi.input_type
 class GroupPoliciesSchedulingSaturdayArgs:
@@ -21648,22 +20809,19 @@ class GroupPoliciesSchedulingSaturdayArgs:
         pulumi.set(self, "to", value)
 
 
-if not MYPY:
-    class GroupPoliciesSchedulingSundayArgsDict(TypedDict):
-        active: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether the schedule is active (true) or inactive (false) during the time specified between 'from' and 'to'. Defaults to true.
-        """
-        from_: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The time, from '00:00' to '24:00'. Must be less than the time specified in 'to'. Defaults to '00:00'. Only 30 minute increments are allowed.
-        """
-        to: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The time, from '00:00' to '24:00'. Must be greater than the time specified in 'from'. Defaults to '24:00'. Only 30 minute increments are allowed.
-        """
-elif False:
-    GroupPoliciesSchedulingSundayArgsDict: TypeAlias = Mapping[str, Any]
+class GroupPoliciesSchedulingSundayArgsDict(TypedDict):
+    active: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether the schedule is active (true) or inactive (false) during the time specified between 'from' and 'to'. Defaults to true.
+    """
+    from_: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The time, from '00:00' to '24:00'. Must be less than the time specified in 'to'. Defaults to '00:00'. Only 30 minute increments are allowed.
+    """
+    to: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The time, from '00:00' to '24:00'. Must be greater than the time specified in 'from'. Defaults to '24:00'. Only 30 minute increments are allowed.
+    """
 
 @pulumi.input_type
 class GroupPoliciesSchedulingSundayArgs:
@@ -21720,22 +20878,19 @@ class GroupPoliciesSchedulingSundayArgs:
         pulumi.set(self, "to", value)
 
 
-if not MYPY:
-    class GroupPoliciesSchedulingThursdayArgsDict(TypedDict):
-        active: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether the schedule is active (true) or inactive (false) during the time specified between 'from' and 'to'. Defaults to true.
-        """
-        from_: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The time, from '00:00' to '24:00'. Must be less than the time specified in 'to'. Defaults to '00:00'. Only 30 minute increments are allowed.
-        """
-        to: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The time, from '00:00' to '24:00'. Must be greater than the time specified in 'from'. Defaults to '24:00'. Only 30 minute increments are allowed.
-        """
-elif False:
-    GroupPoliciesSchedulingThursdayArgsDict: TypeAlias = Mapping[str, Any]
+class GroupPoliciesSchedulingThursdayArgsDict(TypedDict):
+    active: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether the schedule is active (true) or inactive (false) during the time specified between 'from' and 'to'. Defaults to true.
+    """
+    from_: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The time, from '00:00' to '24:00'. Must be less than the time specified in 'to'. Defaults to '00:00'. Only 30 minute increments are allowed.
+    """
+    to: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The time, from '00:00' to '24:00'. Must be greater than the time specified in 'from'. Defaults to '24:00'. Only 30 minute increments are allowed.
+    """
 
 @pulumi.input_type
 class GroupPoliciesSchedulingThursdayArgs:
@@ -21792,22 +20947,19 @@ class GroupPoliciesSchedulingThursdayArgs:
         pulumi.set(self, "to", value)
 
 
-if not MYPY:
-    class GroupPoliciesSchedulingTuesdayArgsDict(TypedDict):
-        active: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether the schedule is active (true) or inactive (false) during the time specified between 'from' and 'to'. Defaults to true.
-        """
-        from_: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The time, from '00:00' to '24:00'. Must be less than the time specified in 'to'. Defaults to '00:00'. Only 30 minute increments are allowed.
-        """
-        to: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The time, from '00:00' to '24:00'. Must be greater than the time specified in 'from'. Defaults to '24:00'. Only 30 minute increments are allowed.
-        """
-elif False:
-    GroupPoliciesSchedulingTuesdayArgsDict: TypeAlias = Mapping[str, Any]
+class GroupPoliciesSchedulingTuesdayArgsDict(TypedDict):
+    active: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether the schedule is active (true) or inactive (false) during the time specified between 'from' and 'to'. Defaults to true.
+    """
+    from_: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The time, from '00:00' to '24:00'. Must be less than the time specified in 'to'. Defaults to '00:00'. Only 30 minute increments are allowed.
+    """
+    to: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The time, from '00:00' to '24:00'. Must be greater than the time specified in 'from'. Defaults to '24:00'. Only 30 minute increments are allowed.
+    """
 
 @pulumi.input_type
 class GroupPoliciesSchedulingTuesdayArgs:
@@ -21864,22 +21016,19 @@ class GroupPoliciesSchedulingTuesdayArgs:
         pulumi.set(self, "to", value)
 
 
-if not MYPY:
-    class GroupPoliciesSchedulingWednesdayArgsDict(TypedDict):
-        active: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether the schedule is active (true) or inactive (false) during the time specified between 'from' and 'to'. Defaults to true.
-        """
-        from_: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The time, from '00:00' to '24:00'. Must be less than the time specified in 'to'. Defaults to '00:00'. Only 30 minute increments are allowed.
-        """
-        to: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The time, from '00:00' to '24:00'. Must be greater than the time specified in 'from'. Defaults to '24:00'. Only 30 minute increments are allowed.
-        """
-elif False:
-    GroupPoliciesSchedulingWednesdayArgsDict: TypeAlias = Mapping[str, Any]
+class GroupPoliciesSchedulingWednesdayArgsDict(TypedDict):
+    active: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether the schedule is active (true) or inactive (false) during the time specified between 'from' and 'to'. Defaults to true.
+    """
+    from_: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The time, from '00:00' to '24:00'. Must be less than the time specified in 'to'. Defaults to '00:00'. Only 30 minute increments are allowed.
+    """
+    to: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The time, from '00:00' to '24:00'. Must be greater than the time specified in 'from'. Defaults to '24:00'. Only 30 minute increments are allowed.
+    """
 
 @pulumi.input_type
 class GroupPoliciesSchedulingWednesdayArgs:
@@ -21936,18 +21085,15 @@ class GroupPoliciesSchedulingWednesdayArgs:
         pulumi.set(self, "to", value)
 
 
-if not MYPY:
-    class GroupPoliciesVlanTaggingArgsDict(TypedDict):
-        settings: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        How VLAN tagging is applied. Can be 'network default', 'ignore' or 'custom'.
-        """
-        vlan_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The ID of the vlan you want to tag. This only applies if 'settings' is set to 'custom'.
-        """
-elif False:
-    GroupPoliciesVlanTaggingArgsDict: TypeAlias = Mapping[str, Any]
+class GroupPoliciesVlanTaggingArgsDict(TypedDict):
+    settings: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    How VLAN tagging is applied. Can be 'network default', 'ignore' or 'custom'.
+    """
+    vlan_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The ID of the vlan you want to tag. This only applies if 'settings' is set to 'custom'.
+    """
 
 @pulumi.input_type
 class GroupPoliciesVlanTaggingArgs:
@@ -21988,30 +21134,27 @@ class GroupPoliciesVlanTaggingArgs:
         pulumi.set(self, "vlan_id", value)
 
 
-if not MYPY:
-    class MerakiAuthUsersAuthorizationArgsDict(TypedDict):
-        authorized_by_email: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        User is authorized by the account email address
-        """
-        authorized_by_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        User is authorized by the account name
-        """
-        authorized_zone: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Authorized zone of the user
-        """
-        expires_at: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Authorization expiration time
-        """
-        ssid_number: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        SSID number
-        """
-elif False:
-    MerakiAuthUsersAuthorizationArgsDict: TypeAlias = Mapping[str, Any]
+class MerakiAuthUsersAuthorizationArgsDict(TypedDict):
+    authorized_by_email: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    User is authorized by the account email address
+    """
+    authorized_by_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    User is authorized by the account name
+    """
+    authorized_zone: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Authorized zone of the user
+    """
+    expires_at: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Authorization expiration time
+    """
+    ssid_number: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    SSID number
+    """
 
 @pulumi.input_type
 class MerakiAuthUsersAuthorizationArgs:
@@ -22100,34 +21243,31 @@ class MerakiAuthUsersAuthorizationArgs:
         pulumi.set(self, "ssid_number", value)
 
 
-if not MYPY:
-    class MqttBrokersItemArgsDict(TypedDict):
-        authentication: NotRequired[pulumi.Input['MqttBrokersItemAuthenticationArgsDict']]
-        """
-        Authentication settings of the MQTT broker
-        """
-        host: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Host name/IP address where the MQTT broker runs.
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        ID of the MQTT Broker.
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the MQTT Broker.
-        """
-        port: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Host port though which the MQTT broker can be reached.
-        """
-        security: NotRequired[pulumi.Input['MqttBrokersItemSecurityArgsDict']]
-        """
-        Security settings of the MQTT broker.
-        """
-elif False:
-    MqttBrokersItemArgsDict: TypeAlias = Mapping[str, Any]
+class MqttBrokersItemArgsDict(TypedDict):
+    authentication: NotRequired[pulumi.Input['MqttBrokersItemAuthenticationArgsDict']]
+    """
+    Authentication settings of the MQTT broker
+    """
+    host: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Host name/IP address where the MQTT broker runs.
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    ID of the MQTT Broker.
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the MQTT Broker.
+    """
+    port: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Host port though which the MQTT broker can be reached.
+    """
+    security: NotRequired[pulumi.Input['MqttBrokersItemSecurityArgsDict']]
+    """
+    Security settings of the MQTT broker.
+    """
 
 @pulumi.input_type
 class MqttBrokersItemArgs:
@@ -22232,14 +21372,11 @@ class MqttBrokersItemArgs:
         pulumi.set(self, "security", value)
 
 
-if not MYPY:
-    class MqttBrokersItemAuthenticationArgsDict(TypedDict):
-        username: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Username for the MQTT broker.
-        """
-elif False:
-    MqttBrokersItemAuthenticationArgsDict: TypeAlias = Mapping[str, Any]
+class MqttBrokersItemAuthenticationArgsDict(TypedDict):
+    username: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Username for the MQTT broker.
+    """
 
 @pulumi.input_type
 class MqttBrokersItemAuthenticationArgs:
@@ -22264,18 +21401,15 @@ class MqttBrokersItemAuthenticationArgs:
         pulumi.set(self, "username", value)
 
 
-if not MYPY:
-    class MqttBrokersItemSecurityArgsDict(TypedDict):
-        mode: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Security protocol of the MQTT broker.
-        """
-        tls: NotRequired[pulumi.Input['MqttBrokersItemSecurityTlsArgsDict']]
-        """
-        TLS settings of the MQTT broker.
-        """
-elif False:
-    MqttBrokersItemSecurityArgsDict: TypeAlias = Mapping[str, Any]
+class MqttBrokersItemSecurityArgsDict(TypedDict):
+    mode: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Security protocol of the MQTT broker.
+    """
+    tls: NotRequired[pulumi.Input['MqttBrokersItemSecurityTlsArgsDict']]
+    """
+    TLS settings of the MQTT broker.
+    """
 
 @pulumi.input_type
 class MqttBrokersItemSecurityArgs:
@@ -22316,18 +21450,15 @@ class MqttBrokersItemSecurityArgs:
         pulumi.set(self, "tls", value)
 
 
-if not MYPY:
-    class MqttBrokersItemSecurityTlsArgsDict(TypedDict):
-        has_ca_certificate: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Indicates whether the CA certificate is set
-        """
-        verify_hostnames: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether the TLS hostname verification is enabled for the MQTT broker.
-        """
-elif False:
-    MqttBrokersItemSecurityTlsArgsDict: TypeAlias = Mapping[str, Any]
+class MqttBrokersItemSecurityTlsArgsDict(TypedDict):
+    has_ca_certificate: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Indicates whether the CA certificate is set
+    """
+    verify_hostnames: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether the TLS hostname verification is enabled for the MQTT broker.
+    """
 
 @pulumi.input_type
 class MqttBrokersItemSecurityTlsArgs:
@@ -22368,30 +21499,27 @@ class MqttBrokersItemSecurityTlsArgs:
         pulumi.set(self, "verify_hostnames", value)
 
 
-if not MYPY:
-    class MqttBrokersParametersArgsDict(TypedDict):
-        authentication: NotRequired[pulumi.Input['MqttBrokersParametersAuthenticationArgsDict']]
-        """
-        Authentication settings of the MQTT broker
-        """
-        host: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Host name/IP address where the MQTT broker runs.
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the MQTT broker.
-        """
-        port: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Host port though which the MQTT broker can be reached.
-        """
-        security: NotRequired[pulumi.Input['MqttBrokersParametersSecurityArgsDict']]
-        """
-        Security settings of the MQTT broker.
-        """
-elif False:
-    MqttBrokersParametersArgsDict: TypeAlias = Mapping[str, Any]
+class MqttBrokersParametersArgsDict(TypedDict):
+    authentication: NotRequired[pulumi.Input['MqttBrokersParametersAuthenticationArgsDict']]
+    """
+    Authentication settings of the MQTT broker
+    """
+    host: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Host name/IP address where the MQTT broker runs.
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the MQTT broker.
+    """
+    port: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Host port though which the MQTT broker can be reached.
+    """
+    security: NotRequired[pulumi.Input['MqttBrokersParametersSecurityArgsDict']]
+    """
+    Security settings of the MQTT broker.
+    """
 
 @pulumi.input_type
 class MqttBrokersParametersArgs:
@@ -22480,18 +21608,15 @@ class MqttBrokersParametersArgs:
         pulumi.set(self, "security", value)
 
 
-if not MYPY:
-    class MqttBrokersParametersAuthenticationArgsDict(TypedDict):
-        password: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Password for the MQTT broker.
-        """
-        username: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Username for the MQTT broker.
-        """
-elif False:
-    MqttBrokersParametersAuthenticationArgsDict: TypeAlias = Mapping[str, Any]
+class MqttBrokersParametersAuthenticationArgsDict(TypedDict):
+    password: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Password for the MQTT broker.
+    """
+    username: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Username for the MQTT broker.
+    """
 
 @pulumi.input_type
 class MqttBrokersParametersAuthenticationArgs:
@@ -22532,18 +21657,15 @@ class MqttBrokersParametersAuthenticationArgs:
         pulumi.set(self, "username", value)
 
 
-if not MYPY:
-    class MqttBrokersParametersSecurityArgsDict(TypedDict):
-        mode: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Security protocol of the MQTT broker.
-        """
-        tls: NotRequired[pulumi.Input['MqttBrokersParametersSecurityTlsArgsDict']]
-        """
-        TLS settings of the MQTT broker.
-        """
-elif False:
-    MqttBrokersParametersSecurityArgsDict: TypeAlias = Mapping[str, Any]
+class MqttBrokersParametersSecurityArgsDict(TypedDict):
+    mode: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Security protocol of the MQTT broker.
+    """
+    tls: NotRequired[pulumi.Input['MqttBrokersParametersSecurityTlsArgsDict']]
+    """
+    TLS settings of the MQTT broker.
+    """
 
 @pulumi.input_type
 class MqttBrokersParametersSecurityArgs:
@@ -22584,18 +21706,15 @@ class MqttBrokersParametersSecurityArgs:
         pulumi.set(self, "tls", value)
 
 
-if not MYPY:
-    class MqttBrokersParametersSecurityTlsArgsDict(TypedDict):
-        ca_certificate: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        CA Certificate of the MQTT broker.
-        """
-        verify_hostnames: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether the TLS hostname verification is enabled for the MQTT broker.
-        """
-elif False:
-    MqttBrokersParametersSecurityTlsArgsDict: TypeAlias = Mapping[str, Any]
+class MqttBrokersParametersSecurityTlsArgsDict(TypedDict):
+    ca_certificate: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    CA Certificate of the MQTT broker.
+    """
+    verify_hostnames: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether the TLS hostname verification is enabled for the MQTT broker.
+    """
 
 @pulumi.input_type
 class MqttBrokersParametersSecurityTlsArgs:
@@ -22636,26 +21755,23 @@ class MqttBrokersParametersSecurityTlsArgs:
         pulumi.set(self, "verify_hostnames", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionArgsDict(TypedDict):
-        direction: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        If 'above', an alert will be sent when a sensor reads above the threshold. If 'below', an alert will be sent when a sensor reads below the threshold. Only applicable for temperature, humidity, realPower, apparentPower, powerFactor, voltage, current, and frequency thresholds.
-        """
-        duration: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Length of time in seconds that the triggering state must persist before an alert is sent. Available options are 0 seconds, 1 minute, 2 minutes, 3 minutes, 4 minutes, 5 minutes, 10 minutes, 15 minutes, 30 minutes, 1 hour, 2 hours, 4 hours, and 8 hours. Default is 0.
-        """
-        metric: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The type of sensor metric that will be monitored for changes. Available metrics are apparentPower, co2, current, door, frequency, humidity, indoorAirQuality, noise, pm25, powerFactor, realPower, temperature, tvoc, upstreamPower, voltage, and water.
-        """
-        threshold: NotRequired[pulumi.Input['SensorAlertsProfilesConditionThresholdArgsDict']]
-        """
-        Threshold for sensor readings that will cause an alert to be sent. This object should contain a single property key matching the condition's 'metric' value.
-        """
-elif False:
-    SensorAlertsProfilesConditionArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionArgsDict(TypedDict):
+    direction: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    If 'above', an alert will be sent when a sensor reads above the threshold. If 'below', an alert will be sent when a sensor reads below the threshold. Only applicable for temperature, humidity, realPower, apparentPower, powerFactor, voltage, current, and frequency thresholds.
+    """
+    duration: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Length of time in seconds that the triggering state must persist before an alert is sent. Available options are 0 seconds, 1 minute, 2 minutes, 3 minutes, 4 minutes, 5 minutes, 10 minutes, 15 minutes, 30 minutes, 1 hour, 2 hours, 4 hours, and 8 hours. Default is 0.
+    """
+    metric: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The type of sensor metric that will be monitored for changes. Available metrics are apparentPower, co2, current, door, frequency, humidity, indoorAirQuality, noise, pm25, powerFactor, realPower, temperature, tvoc, upstreamPower, voltage, and water.
+    """
+    threshold: NotRequired[pulumi.Input['SensorAlertsProfilesConditionThresholdArgsDict']]
+    """
+    Threshold for sensor readings that will cause an alert to be sent. This object should contain a single property key matching the condition's 'metric' value.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionArgs:
@@ -22728,70 +21844,67 @@ class SensorAlertsProfilesConditionArgs:
         pulumi.set(self, "threshold", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionThresholdArgsDict(TypedDict):
-        apparent_power: NotRequired[pulumi.Input['SensorAlertsProfilesConditionThresholdApparentPowerArgsDict']]
-        """
-        Apparent power threshold. 'draw' must be provided.
-        """
-        current: NotRequired[pulumi.Input['SensorAlertsProfilesConditionThresholdCurrentArgsDict']]
-        """
-        Electrical current threshold. 'level' must be provided.
-        """
-        door: NotRequired[pulumi.Input['SensorAlertsProfilesConditionThresholdDoorArgsDict']]
-        """
-        Door open threshold. 'open' must be provided and set to true.
-        """
-        frequency: NotRequired[pulumi.Input['SensorAlertsProfilesConditionThresholdFrequencyArgsDict']]
-        """
-        Electrical frequency threshold. 'level' must be provided.
-        """
-        humidity: NotRequired[pulumi.Input['SensorAlertsProfilesConditionThresholdHumidityArgsDict']]
-        """
-        Humidity threshold. One of 'relativePercentage' or 'quality' must be provided.
-        """
-        indoor_air_quality: NotRequired[pulumi.Input['SensorAlertsProfilesConditionThresholdIndoorAirQualityArgsDict']]
-        """
-        Indoor air quality score threshold. One of 'score' or 'quality' must be provided.
-        """
-        noise: NotRequired[pulumi.Input['SensorAlertsProfilesConditionThresholdNoiseArgsDict']]
-        """
-        Noise threshold. 'ambient' must be provided.
-        """
-        pm25: NotRequired[pulumi.Input['SensorAlertsProfilesConditionThresholdPm25ArgsDict']]
-        """
-        PM2.5 concentration threshold. One of 'concentration' or 'quality' must be provided.
-        """
-        power_factor: NotRequired[pulumi.Input['SensorAlertsProfilesConditionThresholdPowerFactorArgsDict']]
-        """
-        Power factor threshold. 'percentage' must be provided.
-        """
-        real_power: NotRequired[pulumi.Input['SensorAlertsProfilesConditionThresholdRealPowerArgsDict']]
-        """
-        Real power threshold. 'draw' must be provided.
-        """
-        temperature: NotRequired[pulumi.Input['SensorAlertsProfilesConditionThresholdTemperatureArgsDict']]
-        """
-        Temperature threshold. One of 'celsius', 'fahrenheit', or 'quality' must be provided.
-        """
-        tvoc: NotRequired[pulumi.Input['SensorAlertsProfilesConditionThresholdTvocArgsDict']]
-        """
-        TVOC concentration threshold. One of 'concentration' or 'quality' must be provided.
-        """
-        upstream_power: NotRequired[pulumi.Input['SensorAlertsProfilesConditionThresholdUpstreamPowerArgsDict']]
-        """
-        Upstream power threshold. 'outageDetected' must be provided and set to true.
-        """
-        voltage: NotRequired[pulumi.Input['SensorAlertsProfilesConditionThresholdVoltageArgsDict']]
-        """
-        Voltage threshold. 'level' must be provided.
-        """
-        water: NotRequired[pulumi.Input['SensorAlertsProfilesConditionThresholdWaterArgsDict']]
-        """
-        Water detection threshold. 'present' must be provided and set to true.
-        """
-elif False:
-    SensorAlertsProfilesConditionThresholdArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionThresholdArgsDict(TypedDict):
+    apparent_power: NotRequired[pulumi.Input['SensorAlertsProfilesConditionThresholdApparentPowerArgsDict']]
+    """
+    Apparent power threshold. 'draw' must be provided.
+    """
+    current: NotRequired[pulumi.Input['SensorAlertsProfilesConditionThresholdCurrentArgsDict']]
+    """
+    Electrical current threshold. 'level' must be provided.
+    """
+    door: NotRequired[pulumi.Input['SensorAlertsProfilesConditionThresholdDoorArgsDict']]
+    """
+    Door open threshold. 'open' must be provided and set to true.
+    """
+    frequency: NotRequired[pulumi.Input['SensorAlertsProfilesConditionThresholdFrequencyArgsDict']]
+    """
+    Electrical frequency threshold. 'level' must be provided.
+    """
+    humidity: NotRequired[pulumi.Input['SensorAlertsProfilesConditionThresholdHumidityArgsDict']]
+    """
+    Humidity threshold. One of 'relativePercentage' or 'quality' must be provided.
+    """
+    indoor_air_quality: NotRequired[pulumi.Input['SensorAlertsProfilesConditionThresholdIndoorAirQualityArgsDict']]
+    """
+    Indoor air quality score threshold. One of 'score' or 'quality' must be provided.
+    """
+    noise: NotRequired[pulumi.Input['SensorAlertsProfilesConditionThresholdNoiseArgsDict']]
+    """
+    Noise threshold. 'ambient' must be provided.
+    """
+    pm25: NotRequired[pulumi.Input['SensorAlertsProfilesConditionThresholdPm25ArgsDict']]
+    """
+    PM2.5 concentration threshold. One of 'concentration' or 'quality' must be provided.
+    """
+    power_factor: NotRequired[pulumi.Input['SensorAlertsProfilesConditionThresholdPowerFactorArgsDict']]
+    """
+    Power factor threshold. 'percentage' must be provided.
+    """
+    real_power: NotRequired[pulumi.Input['SensorAlertsProfilesConditionThresholdRealPowerArgsDict']]
+    """
+    Real power threshold. 'draw' must be provided.
+    """
+    temperature: NotRequired[pulumi.Input['SensorAlertsProfilesConditionThresholdTemperatureArgsDict']]
+    """
+    Temperature threshold. One of 'celsius', 'fahrenheit', or 'quality' must be provided.
+    """
+    tvoc: NotRequired[pulumi.Input['SensorAlertsProfilesConditionThresholdTvocArgsDict']]
+    """
+    TVOC concentration threshold. One of 'concentration' or 'quality' must be provided.
+    """
+    upstream_power: NotRequired[pulumi.Input['SensorAlertsProfilesConditionThresholdUpstreamPowerArgsDict']]
+    """
+    Upstream power threshold. 'outageDetected' must be provided and set to true.
+    """
+    voltage: NotRequired[pulumi.Input['SensorAlertsProfilesConditionThresholdVoltageArgsDict']]
+    """
+    Voltage threshold. 'level' must be provided.
+    """
+    water: NotRequired[pulumi.Input['SensorAlertsProfilesConditionThresholdWaterArgsDict']]
+    """
+    Water detection threshold. 'present' must be provided and set to true.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionThresholdArgs:
@@ -23040,14 +22153,11 @@ class SensorAlertsProfilesConditionThresholdArgs:
         pulumi.set(self, "water", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionThresholdApparentPowerArgsDict(TypedDict):
-        draw: NotRequired[pulumi.Input[_builtins.float]]
-        """
-        Alerting threshold in volt-amps. Must be between 0 and 3750.
-        """
-elif False:
-    SensorAlertsProfilesConditionThresholdApparentPowerArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionThresholdApparentPowerArgsDict(TypedDict):
+    draw: NotRequired[pulumi.Input[_builtins.float]]
+    """
+    Alerting threshold in volt-amps. Must be between 0 and 3750.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionThresholdApparentPowerArgs:
@@ -23072,14 +22182,11 @@ class SensorAlertsProfilesConditionThresholdApparentPowerArgs:
         pulumi.set(self, "draw", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionThresholdCurrentArgsDict(TypedDict):
-        draw: NotRequired[pulumi.Input[_builtins.float]]
-        """
-        Alerting threshold in amps. Must be between 0 and 15.
-        """
-elif False:
-    SensorAlertsProfilesConditionThresholdCurrentArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionThresholdCurrentArgsDict(TypedDict):
+    draw: NotRequired[pulumi.Input[_builtins.float]]
+    """
+    Alerting threshold in amps. Must be between 0 and 15.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionThresholdCurrentArgs:
@@ -23104,14 +22211,11 @@ class SensorAlertsProfilesConditionThresholdCurrentArgs:
         pulumi.set(self, "draw", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionThresholdDoorArgsDict(TypedDict):
-        open: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Alerting threshold for a door open event. Must be set to true.
-        """
-elif False:
-    SensorAlertsProfilesConditionThresholdDoorArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionThresholdDoorArgsDict(TypedDict):
+    open: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Alerting threshold for a door open event. Must be set to true.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionThresholdDoorArgs:
@@ -23136,14 +22240,11 @@ class SensorAlertsProfilesConditionThresholdDoorArgs:
         pulumi.set(self, "open", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionThresholdFrequencyArgsDict(TypedDict):
-        level: NotRequired[pulumi.Input[_builtins.float]]
-        """
-        Alerting threshold in hertz. Must be between 0 and 60.
-        """
-elif False:
-    SensorAlertsProfilesConditionThresholdFrequencyArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionThresholdFrequencyArgsDict(TypedDict):
+    level: NotRequired[pulumi.Input[_builtins.float]]
+    """
+    Alerting threshold in hertz. Must be between 0 and 60.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionThresholdFrequencyArgs:
@@ -23168,18 +22269,15 @@ class SensorAlertsProfilesConditionThresholdFrequencyArgs:
         pulumi.set(self, "level", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionThresholdHumidityArgsDict(TypedDict):
-        quality: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Alerting threshold as a qualitative humidity level.
-        """
-        relative_percentage: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Alerting threshold in %RH.
-        """
-elif False:
-    SensorAlertsProfilesConditionThresholdHumidityArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionThresholdHumidityArgsDict(TypedDict):
+    quality: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Alerting threshold as a qualitative humidity level.
+    """
+    relative_percentage: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Alerting threshold in %RH.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionThresholdHumidityArgs:
@@ -23220,18 +22318,15 @@ class SensorAlertsProfilesConditionThresholdHumidityArgs:
         pulumi.set(self, "relative_percentage", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionThresholdIndoorAirQualityArgsDict(TypedDict):
-        quality: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Alerting threshold as a qualitative indoor air quality level.
-        """
-        score: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Alerting threshold as indoor air quality score.
-        """
-elif False:
-    SensorAlertsProfilesConditionThresholdIndoorAirQualityArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionThresholdIndoorAirQualityArgsDict(TypedDict):
+    quality: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Alerting threshold as a qualitative indoor air quality level.
+    """
+    score: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Alerting threshold as indoor air quality score.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionThresholdIndoorAirQualityArgs:
@@ -23272,14 +22367,11 @@ class SensorAlertsProfilesConditionThresholdIndoorAirQualityArgs:
         pulumi.set(self, "score", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionThresholdNoiseArgsDict(TypedDict):
-        ambient: NotRequired[pulumi.Input['SensorAlertsProfilesConditionThresholdNoiseAmbientArgsDict']]
-        """
-        Ambient noise threshold. One of 'level' or 'quality' must be provided.
-        """
-elif False:
-    SensorAlertsProfilesConditionThresholdNoiseArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionThresholdNoiseArgsDict(TypedDict):
+    ambient: NotRequired[pulumi.Input['SensorAlertsProfilesConditionThresholdNoiseAmbientArgsDict']]
+    """
+    Ambient noise threshold. One of 'level' or 'quality' must be provided.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionThresholdNoiseArgs:
@@ -23304,18 +22396,15 @@ class SensorAlertsProfilesConditionThresholdNoiseArgs:
         pulumi.set(self, "ambient", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionThresholdNoiseAmbientArgsDict(TypedDict):
-        level: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Alerting threshold as adjusted decibels.
-        """
-        quality: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Alerting threshold as a qualitative ambient noise level.
-        """
-elif False:
-    SensorAlertsProfilesConditionThresholdNoiseAmbientArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionThresholdNoiseAmbientArgsDict(TypedDict):
+    level: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Alerting threshold as adjusted decibels.
+    """
+    quality: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Alerting threshold as a qualitative ambient noise level.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionThresholdNoiseAmbientArgs:
@@ -23356,18 +22445,15 @@ class SensorAlertsProfilesConditionThresholdNoiseAmbientArgs:
         pulumi.set(self, "quality", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionThresholdPm25ArgsDict(TypedDict):
-        concentration: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Alerting threshold as PM2.5 parts per million.
-        """
-        quality: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Alerting threshold as a qualitative PM2.5 level.
-        """
-elif False:
-    SensorAlertsProfilesConditionThresholdPm25ArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionThresholdPm25ArgsDict(TypedDict):
+    concentration: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Alerting threshold as PM2.5 parts per million.
+    """
+    quality: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Alerting threshold as a qualitative PM2.5 level.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionThresholdPm25Args:
@@ -23408,14 +22494,11 @@ class SensorAlertsProfilesConditionThresholdPm25Args:
         pulumi.set(self, "quality", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionThresholdPowerFactorArgsDict(TypedDict):
-        percentage: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Alerting threshold as the ratio of active power to apparent power. Must be between 0 and 100.
-        """
-elif False:
-    SensorAlertsProfilesConditionThresholdPowerFactorArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionThresholdPowerFactorArgsDict(TypedDict):
+    percentage: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Alerting threshold as the ratio of active power to apparent power. Must be between 0 and 100.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionThresholdPowerFactorArgs:
@@ -23440,14 +22523,11 @@ class SensorAlertsProfilesConditionThresholdPowerFactorArgs:
         pulumi.set(self, "percentage", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionThresholdRealPowerArgsDict(TypedDict):
-        draw: NotRequired[pulumi.Input[_builtins.float]]
-        """
-        Alerting threshold in watts. Must be between 0 and 3750.
-        """
-elif False:
-    SensorAlertsProfilesConditionThresholdRealPowerArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionThresholdRealPowerArgsDict(TypedDict):
+    draw: NotRequired[pulumi.Input[_builtins.float]]
+    """
+    Alerting threshold in watts. Must be between 0 and 3750.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionThresholdRealPowerArgs:
@@ -23472,22 +22552,19 @@ class SensorAlertsProfilesConditionThresholdRealPowerArgs:
         pulumi.set(self, "draw", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionThresholdTemperatureArgsDict(TypedDict):
-        celsius: NotRequired[pulumi.Input[_builtins.float]]
-        """
-        Alerting threshold in degrees Celsius.
-        """
-        fahrenheit: NotRequired[pulumi.Input[_builtins.float]]
-        """
-        Alerting threshold in degrees Fahrenheit.
-        """
-        quality: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Alerting threshold as a qualitative temperature level.
-        """
-elif False:
-    SensorAlertsProfilesConditionThresholdTemperatureArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionThresholdTemperatureArgsDict(TypedDict):
+    celsius: NotRequired[pulumi.Input[_builtins.float]]
+    """
+    Alerting threshold in degrees Celsius.
+    """
+    fahrenheit: NotRequired[pulumi.Input[_builtins.float]]
+    """
+    Alerting threshold in degrees Fahrenheit.
+    """
+    quality: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Alerting threshold as a qualitative temperature level.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionThresholdTemperatureArgs:
@@ -23544,18 +22621,15 @@ class SensorAlertsProfilesConditionThresholdTemperatureArgs:
         pulumi.set(self, "quality", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionThresholdTvocArgsDict(TypedDict):
-        concentration: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Alerting threshold as TVOC micrograms per cubic meter.
-        """
-        quality: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Alerting threshold as a qualitative TVOC level.
-        """
-elif False:
-    SensorAlertsProfilesConditionThresholdTvocArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionThresholdTvocArgsDict(TypedDict):
+    concentration: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Alerting threshold as TVOC micrograms per cubic meter.
+    """
+    quality: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Alerting threshold as a qualitative TVOC level.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionThresholdTvocArgs:
@@ -23596,14 +22670,11 @@ class SensorAlertsProfilesConditionThresholdTvocArgs:
         pulumi.set(self, "quality", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionThresholdUpstreamPowerArgsDict(TypedDict):
-        outage_detected: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Alerting threshold for an upstream power event. Must be set to true.
-        """
-elif False:
-    SensorAlertsProfilesConditionThresholdUpstreamPowerArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionThresholdUpstreamPowerArgsDict(TypedDict):
+    outage_detected: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Alerting threshold for an upstream power event. Must be set to true.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionThresholdUpstreamPowerArgs:
@@ -23628,14 +22699,11 @@ class SensorAlertsProfilesConditionThresholdUpstreamPowerArgs:
         pulumi.set(self, "outage_detected", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionThresholdVoltageArgsDict(TypedDict):
-        level: NotRequired[pulumi.Input[_builtins.float]]
-        """
-        Alerting threshold in volts. Must be between 0 and 250.
-        """
-elif False:
-    SensorAlertsProfilesConditionThresholdVoltageArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionThresholdVoltageArgsDict(TypedDict):
+    level: NotRequired[pulumi.Input[_builtins.float]]
+    """
+    Alerting threshold in volts. Must be between 0 and 250.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionThresholdVoltageArgs:
@@ -23660,14 +22728,11 @@ class SensorAlertsProfilesConditionThresholdVoltageArgs:
         pulumi.set(self, "level", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionThresholdWaterArgsDict(TypedDict):
-        present: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Alerting threshold for a water detection event. Must be set to true.
-        """
-elif False:
-    SensorAlertsProfilesConditionThresholdWaterArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionThresholdWaterArgsDict(TypedDict):
+    present: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Alerting threshold for a water detection event. Must be set to true.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionThresholdWaterArgs:
@@ -23692,26 +22757,23 @@ class SensorAlertsProfilesConditionThresholdWaterArgs:
         pulumi.set(self, "present", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionsResponseArgsDict(TypedDict):
-        direction: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        If 'above', an alert will be sent when a sensor reads above the threshold. If 'below', an alert will be sent when a sensor reads below the threshold. Only applicable for temperature, humidity, realPower, apparentPower, powerFactor, voltage, current, and frequency thresholds.
-        """
-        duration: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Length of time in seconds that the triggering state must persist before an alert is sent. Available options are 0 seconds, 1 minute, 2 minutes, 3 minutes, 4 minutes, 5 minutes, 10 minutes, 15 minutes, 30 minutes, 1 hour, 2 hours, 4 hours, and 8 hours. Default is 0.
-        """
-        metric: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The type of sensor metric that will be monitored for changes. Available metrics are apparentPower, co2, current, door, frequency, humidity, indoorAirQuality, noise, pm25, powerFactor, realPower, temperature, tvoc, upstreamPower, voltage, and water.
-        """
-        threshold: NotRequired[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdArgsDict']]
-        """
-        Threshold for sensor readings that will cause an alert to be sent. This object should contain a single property key matching the condition's 'metric' value.
-        """
-elif False:
-    SensorAlertsProfilesConditionsResponseArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionsResponseArgsDict(TypedDict):
+    direction: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    If 'above', an alert will be sent when a sensor reads above the threshold. If 'below', an alert will be sent when a sensor reads below the threshold. Only applicable for temperature, humidity, realPower, apparentPower, powerFactor, voltage, current, and frequency thresholds.
+    """
+    duration: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Length of time in seconds that the triggering state must persist before an alert is sent. Available options are 0 seconds, 1 minute, 2 minutes, 3 minutes, 4 minutes, 5 minutes, 10 minutes, 15 minutes, 30 minutes, 1 hour, 2 hours, 4 hours, and 8 hours. Default is 0.
+    """
+    metric: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The type of sensor metric that will be monitored for changes. Available metrics are apparentPower, co2, current, door, frequency, humidity, indoorAirQuality, noise, pm25, powerFactor, realPower, temperature, tvoc, upstreamPower, voltage, and water.
+    """
+    threshold: NotRequired[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdArgsDict']]
+    """
+    Threshold for sensor readings that will cause an alert to be sent. This object should contain a single property key matching the condition's 'metric' value.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionsResponseArgs:
@@ -23784,70 +22846,67 @@ class SensorAlertsProfilesConditionsResponseArgs:
         pulumi.set(self, "threshold", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionsResponseThresholdArgsDict(TypedDict):
-        apparent_power: NotRequired[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdApparentPowerArgsDict']]
-        """
-        Apparent power threshold. 'draw' must be provided.
-        """
-        current: NotRequired[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdCurrentArgsDict']]
-        """
-        Electrical current threshold. 'level' must be provided.
-        """
-        door: NotRequired[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdDoorArgsDict']]
-        """
-        Door open threshold. 'open' must be provided and set to true.
-        """
-        frequency: NotRequired[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdFrequencyArgsDict']]
-        """
-        Electrical frequency threshold. 'level' must be provided.
-        """
-        humidity: NotRequired[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdHumidityArgsDict']]
-        """
-        Humidity threshold. One of 'relativePercentage' or 'quality' must be provided.
-        """
-        indoor_air_quality: NotRequired[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdIndoorAirQualityArgsDict']]
-        """
-        Indoor air quality score threshold. One of 'score' or 'quality' must be provided.
-        """
-        noise: NotRequired[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdNoiseArgsDict']]
-        """
-        Noise threshold. 'ambient' must be provided.
-        """
-        pm25: NotRequired[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdPm25ArgsDict']]
-        """
-        PM2.5 concentration threshold. One of 'concentration' or 'quality' must be provided.
-        """
-        power_factor: NotRequired[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdPowerFactorArgsDict']]
-        """
-        Power factor threshold. 'percentage' must be provided.
-        """
-        real_power: NotRequired[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdRealPowerArgsDict']]
-        """
-        Real power threshold. 'draw' must be provided.
-        """
-        temperature: NotRequired[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdTemperatureArgsDict']]
-        """
-        Temperature threshold. One of 'celsius', 'fahrenheit', or 'quality' must be provided.
-        """
-        tvoc: NotRequired[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdTvocArgsDict']]
-        """
-        TVOC concentration threshold. One of 'concentration' or 'quality' must be provided.
-        """
-        upstream_power: NotRequired[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdUpstreamPowerArgsDict']]
-        """
-        Upstream power threshold. 'outageDetected' must be provided and set to true.
-        """
-        voltage: NotRequired[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdVoltageArgsDict']]
-        """
-        Voltage threshold. 'level' must be provided.
-        """
-        water: NotRequired[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdWaterArgsDict']]
-        """
-        Water detection threshold. 'present' must be provided and set to true.
-        """
-elif False:
-    SensorAlertsProfilesConditionsResponseThresholdArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionsResponseThresholdArgsDict(TypedDict):
+    apparent_power: NotRequired[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdApparentPowerArgsDict']]
+    """
+    Apparent power threshold. 'draw' must be provided.
+    """
+    current: NotRequired[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdCurrentArgsDict']]
+    """
+    Electrical current threshold. 'level' must be provided.
+    """
+    door: NotRequired[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdDoorArgsDict']]
+    """
+    Door open threshold. 'open' must be provided and set to true.
+    """
+    frequency: NotRequired[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdFrequencyArgsDict']]
+    """
+    Electrical frequency threshold. 'level' must be provided.
+    """
+    humidity: NotRequired[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdHumidityArgsDict']]
+    """
+    Humidity threshold. One of 'relativePercentage' or 'quality' must be provided.
+    """
+    indoor_air_quality: NotRequired[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdIndoorAirQualityArgsDict']]
+    """
+    Indoor air quality score threshold. One of 'score' or 'quality' must be provided.
+    """
+    noise: NotRequired[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdNoiseArgsDict']]
+    """
+    Noise threshold. 'ambient' must be provided.
+    """
+    pm25: NotRequired[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdPm25ArgsDict']]
+    """
+    PM2.5 concentration threshold. One of 'concentration' or 'quality' must be provided.
+    """
+    power_factor: NotRequired[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdPowerFactorArgsDict']]
+    """
+    Power factor threshold. 'percentage' must be provided.
+    """
+    real_power: NotRequired[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdRealPowerArgsDict']]
+    """
+    Real power threshold. 'draw' must be provided.
+    """
+    temperature: NotRequired[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdTemperatureArgsDict']]
+    """
+    Temperature threshold. One of 'celsius', 'fahrenheit', or 'quality' must be provided.
+    """
+    tvoc: NotRequired[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdTvocArgsDict']]
+    """
+    TVOC concentration threshold. One of 'concentration' or 'quality' must be provided.
+    """
+    upstream_power: NotRequired[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdUpstreamPowerArgsDict']]
+    """
+    Upstream power threshold. 'outageDetected' must be provided and set to true.
+    """
+    voltage: NotRequired[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdVoltageArgsDict']]
+    """
+    Voltage threshold. 'level' must be provided.
+    """
+    water: NotRequired[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdWaterArgsDict']]
+    """
+    Water detection threshold. 'present' must be provided and set to true.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionsResponseThresholdArgs:
@@ -24096,14 +23155,11 @@ class SensorAlertsProfilesConditionsResponseThresholdArgs:
         pulumi.set(self, "water", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionsResponseThresholdApparentPowerArgsDict(TypedDict):
-        draw: NotRequired[pulumi.Input[_builtins.float]]
-        """
-        Alerting threshold in volt-amps. Must be between 0 and 3750.
-        """
-elif False:
-    SensorAlertsProfilesConditionsResponseThresholdApparentPowerArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionsResponseThresholdApparentPowerArgsDict(TypedDict):
+    draw: NotRequired[pulumi.Input[_builtins.float]]
+    """
+    Alerting threshold in volt-amps. Must be between 0 and 3750.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionsResponseThresholdApparentPowerArgs:
@@ -24128,14 +23184,11 @@ class SensorAlertsProfilesConditionsResponseThresholdApparentPowerArgs:
         pulumi.set(self, "draw", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionsResponseThresholdCurrentArgsDict(TypedDict):
-        draw: NotRequired[pulumi.Input[_builtins.float]]
-        """
-        Alerting threshold in amps. Must be between 0 and 15.
-        """
-elif False:
-    SensorAlertsProfilesConditionsResponseThresholdCurrentArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionsResponseThresholdCurrentArgsDict(TypedDict):
+    draw: NotRequired[pulumi.Input[_builtins.float]]
+    """
+    Alerting threshold in amps. Must be between 0 and 15.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionsResponseThresholdCurrentArgs:
@@ -24160,14 +23213,11 @@ class SensorAlertsProfilesConditionsResponseThresholdCurrentArgs:
         pulumi.set(self, "draw", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionsResponseThresholdDoorArgsDict(TypedDict):
-        open: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Alerting threshold for a door open event. Must be set to true.
-        """
-elif False:
-    SensorAlertsProfilesConditionsResponseThresholdDoorArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionsResponseThresholdDoorArgsDict(TypedDict):
+    open: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Alerting threshold for a door open event. Must be set to true.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionsResponseThresholdDoorArgs:
@@ -24192,14 +23242,11 @@ class SensorAlertsProfilesConditionsResponseThresholdDoorArgs:
         pulumi.set(self, "open", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionsResponseThresholdFrequencyArgsDict(TypedDict):
-        level: NotRequired[pulumi.Input[_builtins.float]]
-        """
-        Alerting threshold in hertz. Must be between 0 and 60.
-        """
-elif False:
-    SensorAlertsProfilesConditionsResponseThresholdFrequencyArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionsResponseThresholdFrequencyArgsDict(TypedDict):
+    level: NotRequired[pulumi.Input[_builtins.float]]
+    """
+    Alerting threshold in hertz. Must be between 0 and 60.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionsResponseThresholdFrequencyArgs:
@@ -24224,18 +23271,15 @@ class SensorAlertsProfilesConditionsResponseThresholdFrequencyArgs:
         pulumi.set(self, "level", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionsResponseThresholdHumidityArgsDict(TypedDict):
-        quality: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Alerting threshold as a qualitative humidity level.
-        """
-        relative_percentage: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Alerting threshold in %RH.
-        """
-elif False:
-    SensorAlertsProfilesConditionsResponseThresholdHumidityArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionsResponseThresholdHumidityArgsDict(TypedDict):
+    quality: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Alerting threshold as a qualitative humidity level.
+    """
+    relative_percentage: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Alerting threshold in %RH.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionsResponseThresholdHumidityArgs:
@@ -24276,18 +23320,15 @@ class SensorAlertsProfilesConditionsResponseThresholdHumidityArgs:
         pulumi.set(self, "relative_percentage", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionsResponseThresholdIndoorAirQualityArgsDict(TypedDict):
-        quality: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Alerting threshold as a qualitative indoor air quality level.
-        """
-        score: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Alerting threshold as indoor air quality score.
-        """
-elif False:
-    SensorAlertsProfilesConditionsResponseThresholdIndoorAirQualityArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionsResponseThresholdIndoorAirQualityArgsDict(TypedDict):
+    quality: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Alerting threshold as a qualitative indoor air quality level.
+    """
+    score: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Alerting threshold as indoor air quality score.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionsResponseThresholdIndoorAirQualityArgs:
@@ -24328,14 +23369,11 @@ class SensorAlertsProfilesConditionsResponseThresholdIndoorAirQualityArgs:
         pulumi.set(self, "score", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionsResponseThresholdNoiseArgsDict(TypedDict):
-        ambient: NotRequired[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdNoiseAmbientArgsDict']]
-        """
-        Ambient noise threshold. One of 'level' or 'quality' must be provided.
-        """
-elif False:
-    SensorAlertsProfilesConditionsResponseThresholdNoiseArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionsResponseThresholdNoiseArgsDict(TypedDict):
+    ambient: NotRequired[pulumi.Input['SensorAlertsProfilesConditionsResponseThresholdNoiseAmbientArgsDict']]
+    """
+    Ambient noise threshold. One of 'level' or 'quality' must be provided.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionsResponseThresholdNoiseArgs:
@@ -24360,18 +23398,15 @@ class SensorAlertsProfilesConditionsResponseThresholdNoiseArgs:
         pulumi.set(self, "ambient", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionsResponseThresholdNoiseAmbientArgsDict(TypedDict):
-        level: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Alerting threshold as adjusted decibels.
-        """
-        quality: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Alerting threshold as a qualitative ambient noise level.
-        """
-elif False:
-    SensorAlertsProfilesConditionsResponseThresholdNoiseAmbientArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionsResponseThresholdNoiseAmbientArgsDict(TypedDict):
+    level: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Alerting threshold as adjusted decibels.
+    """
+    quality: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Alerting threshold as a qualitative ambient noise level.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionsResponseThresholdNoiseAmbientArgs:
@@ -24412,18 +23447,15 @@ class SensorAlertsProfilesConditionsResponseThresholdNoiseAmbientArgs:
         pulumi.set(self, "quality", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionsResponseThresholdPm25ArgsDict(TypedDict):
-        concentration: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Alerting threshold as PM2.5 parts per million.
-        """
-        quality: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Alerting threshold as a qualitative PM2.5 level.
-        """
-elif False:
-    SensorAlertsProfilesConditionsResponseThresholdPm25ArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionsResponseThresholdPm25ArgsDict(TypedDict):
+    concentration: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Alerting threshold as PM2.5 parts per million.
+    """
+    quality: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Alerting threshold as a qualitative PM2.5 level.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionsResponseThresholdPm25Args:
@@ -24464,14 +23496,11 @@ class SensorAlertsProfilesConditionsResponseThresholdPm25Args:
         pulumi.set(self, "quality", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionsResponseThresholdPowerFactorArgsDict(TypedDict):
-        percentage: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Alerting threshold as the ratio of active power to apparent power. Must be between 0 and 100.
-        """
-elif False:
-    SensorAlertsProfilesConditionsResponseThresholdPowerFactorArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionsResponseThresholdPowerFactorArgsDict(TypedDict):
+    percentage: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Alerting threshold as the ratio of active power to apparent power. Must be between 0 and 100.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionsResponseThresholdPowerFactorArgs:
@@ -24496,14 +23525,11 @@ class SensorAlertsProfilesConditionsResponseThresholdPowerFactorArgs:
         pulumi.set(self, "percentage", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionsResponseThresholdRealPowerArgsDict(TypedDict):
-        draw: NotRequired[pulumi.Input[_builtins.float]]
-        """
-        Alerting threshold in watts. Must be between 0 and 3750.
-        """
-elif False:
-    SensorAlertsProfilesConditionsResponseThresholdRealPowerArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionsResponseThresholdRealPowerArgsDict(TypedDict):
+    draw: NotRequired[pulumi.Input[_builtins.float]]
+    """
+    Alerting threshold in watts. Must be between 0 and 3750.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionsResponseThresholdRealPowerArgs:
@@ -24528,22 +23554,19 @@ class SensorAlertsProfilesConditionsResponseThresholdRealPowerArgs:
         pulumi.set(self, "draw", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionsResponseThresholdTemperatureArgsDict(TypedDict):
-        celsius: NotRequired[pulumi.Input[_builtins.float]]
-        """
-        Alerting threshold in degrees Celsius.
-        """
-        fahrenheit: NotRequired[pulumi.Input[_builtins.float]]
-        """
-        Alerting threshold in degrees Fahrenheit.
-        """
-        quality: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Alerting threshold as a qualitative temperature level.
-        """
-elif False:
-    SensorAlertsProfilesConditionsResponseThresholdTemperatureArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionsResponseThresholdTemperatureArgsDict(TypedDict):
+    celsius: NotRequired[pulumi.Input[_builtins.float]]
+    """
+    Alerting threshold in degrees Celsius.
+    """
+    fahrenheit: NotRequired[pulumi.Input[_builtins.float]]
+    """
+    Alerting threshold in degrees Fahrenheit.
+    """
+    quality: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Alerting threshold as a qualitative temperature level.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionsResponseThresholdTemperatureArgs:
@@ -24600,18 +23623,15 @@ class SensorAlertsProfilesConditionsResponseThresholdTemperatureArgs:
         pulumi.set(self, "quality", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionsResponseThresholdTvocArgsDict(TypedDict):
-        concentration: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Alerting threshold as TVOC micrograms per cubic meter.
-        """
-        quality: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Alerting threshold as a qualitative TVOC level.
-        """
-elif False:
-    SensorAlertsProfilesConditionsResponseThresholdTvocArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionsResponseThresholdTvocArgsDict(TypedDict):
+    concentration: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Alerting threshold as TVOC micrograms per cubic meter.
+    """
+    quality: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Alerting threshold as a qualitative TVOC level.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionsResponseThresholdTvocArgs:
@@ -24652,14 +23672,11 @@ class SensorAlertsProfilesConditionsResponseThresholdTvocArgs:
         pulumi.set(self, "quality", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionsResponseThresholdUpstreamPowerArgsDict(TypedDict):
-        outage_detected: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Alerting threshold for an upstream power event. Must be set to true.
-        """
-elif False:
-    SensorAlertsProfilesConditionsResponseThresholdUpstreamPowerArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionsResponseThresholdUpstreamPowerArgsDict(TypedDict):
+    outage_detected: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Alerting threshold for an upstream power event. Must be set to true.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionsResponseThresholdUpstreamPowerArgs:
@@ -24684,14 +23701,11 @@ class SensorAlertsProfilesConditionsResponseThresholdUpstreamPowerArgs:
         pulumi.set(self, "outage_detected", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionsResponseThresholdVoltageArgsDict(TypedDict):
-        level: NotRequired[pulumi.Input[_builtins.float]]
-        """
-        Alerting threshold in volts. Must be between 0 and 250.
-        """
-elif False:
-    SensorAlertsProfilesConditionsResponseThresholdVoltageArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionsResponseThresholdVoltageArgsDict(TypedDict):
+    level: NotRequired[pulumi.Input[_builtins.float]]
+    """
+    Alerting threshold in volts. Must be between 0 and 250.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionsResponseThresholdVoltageArgs:
@@ -24716,14 +23730,11 @@ class SensorAlertsProfilesConditionsResponseThresholdVoltageArgs:
         pulumi.set(self, "level", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesConditionsResponseThresholdWaterArgsDict(TypedDict):
-        present: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Alerting threshold for a water detection event. Must be set to true.
-        """
-elif False:
-    SensorAlertsProfilesConditionsResponseThresholdWaterArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesConditionsResponseThresholdWaterArgsDict(TypedDict):
+    present: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Alerting threshold for a water detection event. Must be set to true.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesConditionsResponseThresholdWaterArgs:
@@ -24748,22 +23759,19 @@ class SensorAlertsProfilesConditionsResponseThresholdWaterArgs:
         pulumi.set(self, "present", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesRecipientsArgsDict(TypedDict):
-        emails: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        A list of emails that will receive information about the alert.
-        """
-        http_server_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        A list of webhook endpoint IDs that will receive information about the alert.
-        """
-        sms_numbers: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        A list of SMS numbers that will receive information about the alert.
-        """
-elif False:
-    SensorAlertsProfilesRecipientsArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesRecipientsArgsDict(TypedDict):
+    emails: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    A list of emails that will receive information about the alert.
+    """
+    http_server_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    A list of webhook endpoint IDs that will receive information about the alert.
+    """
+    sms_numbers: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    A list of SMS numbers that will receive information about the alert.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesRecipientsArgs:
@@ -24820,18 +23828,15 @@ class SensorAlertsProfilesRecipientsArgs:
         pulumi.set(self, "sms_numbers", value)
 
 
-if not MYPY:
-    class SensorAlertsProfilesScheduleArgsDict(TypedDict):
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        ID of the sensor schedule to use with the alert profile. If not defined, the alert profile will be active at all times.
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the sensor schedule to use with the alert profile.
-        """
-elif False:
-    SensorAlertsProfilesScheduleArgsDict: TypeAlias = Mapping[str, Any]
+class SensorAlertsProfilesScheduleArgsDict(TypedDict):
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    ID of the sensor schedule to use with the alert profile. If not defined, the alert profile will be active at all times.
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the sensor schedule to use with the alert profile.
+    """
 
 @pulumi.input_type
 class SensorAlertsProfilesScheduleArgs:
@@ -24872,14 +23877,11 @@ class SensorAlertsProfilesScheduleArgs:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class SettingsFipsArgsDict(TypedDict):
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Enables / disables FIPS on the network.
-        """
-elif False:
-    SettingsFipsArgsDict: TypeAlias = Mapping[str, Any]
+class SettingsFipsArgsDict(TypedDict):
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Enables / disables FIPS on the network.
+    """
 
 @pulumi.input_type
 class SettingsFipsArgs:
@@ -24904,14 +23906,11 @@ class SettingsFipsArgs:
         pulumi.set(self, "enabled", value)
 
 
-if not MYPY:
-    class SettingsLocalStatusPageArgsDict(TypedDict):
-        authentication: NotRequired[pulumi.Input['SettingsLocalStatusPageAuthenticationArgsDict']]
-        """
-        A hash of Local Status page(s)' authentication options applied to the Network.
-        """
-elif False:
-    SettingsLocalStatusPageArgsDict: TypeAlias = Mapping[str, Any]
+class SettingsLocalStatusPageArgsDict(TypedDict):
+    authentication: NotRequired[pulumi.Input['SettingsLocalStatusPageAuthenticationArgsDict']]
+    """
+    A hash of Local Status page(s)' authentication options applied to the Network.
+    """
 
 @pulumi.input_type
 class SettingsLocalStatusPageArgs:
@@ -24936,22 +23935,19 @@ class SettingsLocalStatusPageArgs:
         pulumi.set(self, "authentication", value)
 
 
-if not MYPY:
-    class SettingsLocalStatusPageAuthenticationArgsDict(TypedDict):
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Enables / disables the authentication on Local Status page(s).
-        """
-        password: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The password used for Local Status Page(s). Set this to null to clear the password.
-        """
-        username: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The username used for Local Status Page(s).
-        """
-elif False:
-    SettingsLocalStatusPageAuthenticationArgsDict: TypeAlias = Mapping[str, Any]
+class SettingsLocalStatusPageAuthenticationArgsDict(TypedDict):
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Enables / disables the authentication on Local Status page(s).
+    """
+    password: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The password used for Local Status Page(s). Set this to null to clear the password.
+    """
+    username: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The username used for Local Status Page(s).
+    """
 
 @pulumi.input_type
 class SettingsLocalStatusPageAuthenticationArgs:
@@ -25008,14 +24004,11 @@ class SettingsLocalStatusPageAuthenticationArgs:
         pulumi.set(self, "username", value)
 
 
-if not MYPY:
-    class SettingsNamedVlansArgsDict(TypedDict):
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Enables / disables Named VLANs on the Network.
-        """
-elif False:
-    SettingsNamedVlansArgsDict: TypeAlias = Mapping[str, Any]
+class SettingsNamedVlansArgsDict(TypedDict):
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Enables / disables Named VLANs on the Network.
+    """
 
 @pulumi.input_type
 class SettingsNamedVlansArgs:
@@ -25040,14 +24033,11 @@ class SettingsNamedVlansArgs:
         pulumi.set(self, "enabled", value)
 
 
-if not MYPY:
-    class SettingsSecurePortArgsDict(TypedDict):
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Enables / disables SecureConnect on the network. Optional.
-        """
-elif False:
-    SettingsSecurePortArgsDict: TypeAlias = Mapping[str, Any]
+class SettingsSecurePortArgsDict(TypedDict):
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Enables / disables SecureConnect on the network. Optional.
+    """
 
 @pulumi.input_type
 class SettingsSecurePortArgs:
@@ -25072,12 +24062,9 @@ class SettingsSecurePortArgs:
         pulumi.set(self, "enabled", value)
 
 
-if not MYPY:
-    class SmBypassActivationLockAttemptsDataArgsDict(TypedDict):
-        status2090938209: NotRequired[pulumi.Input['SmBypassActivationLockAttemptsDataStatus2090938209ArgsDict']]
-        status38290139892: NotRequired[pulumi.Input['SmBypassActivationLockAttemptsDataStatus38290139892ArgsDict']]
-elif False:
-    SmBypassActivationLockAttemptsDataArgsDict: TypeAlias = Mapping[str, Any]
+class SmBypassActivationLockAttemptsDataArgsDict(TypedDict):
+    status2090938209: NotRequired[pulumi.Input['SmBypassActivationLockAttemptsDataStatus2090938209ArgsDict']]
+    status38290139892: NotRequired[pulumi.Input['SmBypassActivationLockAttemptsDataStatus38290139892ArgsDict']]
 
 @pulumi.input_type
 class SmBypassActivationLockAttemptsDataArgs:
@@ -25108,12 +24095,9 @@ class SmBypassActivationLockAttemptsDataArgs:
         pulumi.set(self, "status38290139892", value)
 
 
-if not MYPY:
-    class SmBypassActivationLockAttemptsDataStatus2090938209ArgsDict(TypedDict):
-        errors: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        success: NotRequired[pulumi.Input[_builtins.bool]]
-elif False:
-    SmBypassActivationLockAttemptsDataStatus2090938209ArgsDict: TypeAlias = Mapping[str, Any]
+class SmBypassActivationLockAttemptsDataStatus2090938209ArgsDict(TypedDict):
+    errors: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    success: NotRequired[pulumi.Input[_builtins.bool]]
 
 @pulumi.input_type
 class SmBypassActivationLockAttemptsDataStatus2090938209Args:
@@ -25144,11 +24128,8 @@ class SmBypassActivationLockAttemptsDataStatus2090938209Args:
         pulumi.set(self, "success", value)
 
 
-if not MYPY:
-    class SmBypassActivationLockAttemptsDataStatus38290139892ArgsDict(TypedDict):
-        success: NotRequired[pulumi.Input[_builtins.bool]]
-elif False:
-    SmBypassActivationLockAttemptsDataStatus38290139892ArgsDict: TypeAlias = Mapping[str, Any]
+class SmBypassActivationLockAttemptsDataStatus38290139892ArgsDict(TypedDict):
+    success: NotRequired[pulumi.Input[_builtins.bool]]
 
 @pulumi.input_type
 class SmBypassActivationLockAttemptsDataStatus38290139892Args:
@@ -25167,14 +24148,11 @@ class SmBypassActivationLockAttemptsDataStatus38290139892Args:
         pulumi.set(self, "success", value)
 
 
-if not MYPY:
-    class SmDevicesCheckinItemArgsDict(TypedDict):
-        ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The Meraki Ids of the set of devices.
-        """
-elif False:
-    SmDevicesCheckinItemArgsDict: TypeAlias = Mapping[str, Any]
+class SmDevicesCheckinItemArgsDict(TypedDict):
+    ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The Meraki Ids of the set of devices.
+    """
 
 @pulumi.input_type
 class SmDevicesCheckinItemArgs:
@@ -25199,26 +24177,23 @@ class SmDevicesCheckinItemArgs:
         pulumi.set(self, "ids", value)
 
 
-if not MYPY:
-    class SmDevicesCheckinParametersArgsDict(TypedDict):
-        ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The ids of the devices to be checked-in.
-        """
-        scopes: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the devices to be checked-in.
-        """
-        serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The serials of the devices to be checked-in.
-        """
-        wifi_macs: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The wifiMacs of the devices to be checked-in.
-        """
-elif False:
-    SmDevicesCheckinParametersArgsDict: TypeAlias = Mapping[str, Any]
+class SmDevicesCheckinParametersArgsDict(TypedDict):
+    ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The ids of the devices to be checked-in.
+    """
+    scopes: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the devices to be checked-in.
+    """
+    serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The serials of the devices to be checked-in.
+    """
+    wifi_macs: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The wifiMacs of the devices to be checked-in.
+    """
 
 @pulumi.input_type
 class SmDevicesCheckinParametersArgs:
@@ -25291,30 +24266,27 @@ class SmDevicesCheckinParametersArgs:
         pulumi.set(self, "wifi_macs", value)
 
 
-if not MYPY:
-    class SmDevicesFieldsItemArgsDict(TypedDict):
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The Meraki Id of the device record.
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The name of the device.
-        """
-        notes: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Notes associated with the device.
-        """
-        serial: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The device serial.
-        """
-        wifi_mac: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The MAC of the device.
-        """
-elif False:
-    SmDevicesFieldsItemArgsDict: TypeAlias = Mapping[str, Any]
+class SmDevicesFieldsItemArgsDict(TypedDict):
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The Meraki Id of the device record.
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The name of the device.
+    """
+    notes: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Notes associated with the device.
+    """
+    serial: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The device serial.
+    """
+    wifi_mac: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The MAC of the device.
+    """
 
 @pulumi.input_type
 class SmDevicesFieldsItemArgs:
@@ -25403,26 +24375,23 @@ class SmDevicesFieldsItemArgs:
         pulumi.set(self, "wifi_mac", value)
 
 
-if not MYPY:
-    class SmDevicesFieldsParametersArgsDict(TypedDict):
-        device_fields: NotRequired[pulumi.Input['SmDevicesFieldsParametersDeviceFieldsArgsDict']]
-        """
-        The new fields of the device. Each field of this object is optional.
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The id of the device to be modified.
-        """
-        serial: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The serial of the device to be modified.
-        """
-        wifi_mac: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The wifiMac of the device to be modified.
-        """
-elif False:
-    SmDevicesFieldsParametersArgsDict: TypeAlias = Mapping[str, Any]
+class SmDevicesFieldsParametersArgsDict(TypedDict):
+    device_fields: NotRequired[pulumi.Input['SmDevicesFieldsParametersDeviceFieldsArgsDict']]
+    """
+    The new fields of the device. Each field of this object is optional.
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The id of the device to be modified.
+    """
+    serial: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The serial of the device to be modified.
+    """
+    wifi_mac: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The wifiMac of the device to be modified.
+    """
 
 @pulumi.input_type
 class SmDevicesFieldsParametersArgs:
@@ -25495,18 +24464,15 @@ class SmDevicesFieldsParametersArgs:
         pulumi.set(self, "wifi_mac", value)
 
 
-if not MYPY:
-    class SmDevicesFieldsParametersDeviceFieldsArgsDict(TypedDict):
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        New name for the device
-        """
-        notes: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        New notes for the device
-        """
-elif False:
-    SmDevicesFieldsParametersDeviceFieldsArgsDict: TypeAlias = Mapping[str, Any]
+class SmDevicesFieldsParametersDeviceFieldsArgsDict(TypedDict):
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    New name for the device
+    """
+    notes: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    New notes for the device
+    """
 
 @pulumi.input_type
 class SmDevicesFieldsParametersDeviceFieldsArgs:
@@ -25547,18 +24513,15 @@ class SmDevicesFieldsParametersDeviceFieldsArgs:
         pulumi.set(self, "notes", value)
 
 
-if not MYPY:
-    class SmDevicesInstallAppsParametersArgsDict(TypedDict):
-        app_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        ids of applications to be installed
-        """
-        force: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        By default, installation of an app which is believed to already be present on the device will be skipped. If you'd like to force the installation of the app, set this parameter to true.
-        """
-elif False:
-    SmDevicesInstallAppsParametersArgsDict: TypeAlias = Mapping[str, Any]
+class SmDevicesInstallAppsParametersArgsDict(TypedDict):
+    app_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    ids of applications to be installed
+    """
+    force: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    By default, installation of an app which is believed to already be present on the device will be skipped. If you'd like to force the installation of the app, set this parameter to true.
+    """
 
 @pulumi.input_type
 class SmDevicesInstallAppsParametersArgs:
@@ -25599,14 +24562,11 @@ class SmDevicesInstallAppsParametersArgs:
         pulumi.set(self, "force", value)
 
 
-if not MYPY:
-    class SmDevicesLockItemArgsDict(TypedDict):
-        ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The Meraki Ids of the set of devices.
-        """
-elif False:
-    SmDevicesLockItemArgsDict: TypeAlias = Mapping[str, Any]
+class SmDevicesLockItemArgsDict(TypedDict):
+    ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The Meraki Ids of the set of devices.
+    """
 
 @pulumi.input_type
 class SmDevicesLockItemArgs:
@@ -25631,30 +24591,27 @@ class SmDevicesLockItemArgs:
         pulumi.set(self, "ids", value)
 
 
-if not MYPY:
-    class SmDevicesLockParametersArgsDict(TypedDict):
-        ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The ids of the devices to be locked.
-        """
-        pin: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The pin number for locking macOS devices (a six digit number). Required only for macOS devices.
-        """
-        scopes: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the devices to be wiped.
-        """
-        serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The serials of the devices to be locked.
-        """
-        wifi_macs: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The wifiMacs of the devices to be locked.
-        """
-elif False:
-    SmDevicesLockParametersArgsDict: TypeAlias = Mapping[str, Any]
+class SmDevicesLockParametersArgsDict(TypedDict):
+    ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The ids of the devices to be locked.
+    """
+    pin: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The pin number for locking macOS devices (a six digit number). Required only for macOS devices.
+    """
+    scopes: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the devices to be wiped.
+    """
+    serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The serials of the devices to be locked.
+    """
+    wifi_macs: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The wifiMacs of the devices to be locked.
+    """
 
 @pulumi.input_type
 class SmDevicesLockParametersArgs:
@@ -25743,26 +24700,23 @@ class SmDevicesLockParametersArgs:
         pulumi.set(self, "wifi_macs", value)
 
 
-if not MYPY:
-    class SmDevicesModifyTagsItemArgsDict(TypedDict):
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The Meraki Id of the device record.
-        """
-        serial: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The device serial.
-        """
-        tags: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        An array of tags associated with the device.
-        """
-        wifi_mac: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The MAC of the device.
-        """
-elif False:
-    SmDevicesModifyTagsItemArgsDict: TypeAlias = Mapping[str, Any]
+class SmDevicesModifyTagsItemArgsDict(TypedDict):
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The Meraki Id of the device record.
+    """
+    serial: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The device serial.
+    """
+    tags: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    An array of tags associated with the device.
+    """
+    wifi_mac: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The MAC of the device.
+    """
 
 @pulumi.input_type
 class SmDevicesModifyTagsItemArgs:
@@ -25835,34 +24789,31 @@ class SmDevicesModifyTagsItemArgs:
         pulumi.set(self, "wifi_mac", value)
 
 
-if not MYPY:
-    class SmDevicesModifyTagsParametersArgsDict(TypedDict):
-        ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The ids of the devices to be modified.
-        """
-        scopes: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the devices to be modified.
-        """
-        serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The serials of the devices to be modified.
-        """
-        tags: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The tags to be added, deleted, or updated.
-        """
-        update_action: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        One of add, delete, or update. Only devices that have been modified will be returned.
-        """
-        wifi_macs: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The wifiMacs of the devices to be modified.
-        """
-elif False:
-    SmDevicesModifyTagsParametersArgsDict: TypeAlias = Mapping[str, Any]
+class SmDevicesModifyTagsParametersArgsDict(TypedDict):
+    ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The ids of the devices to be modified.
+    """
+    scopes: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the devices to be modified.
+    """
+    serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The serials of the devices to be modified.
+    """
+    tags: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The tags to be added, deleted, or updated.
+    """
+    update_action: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    One of add, delete, or update. Only devices that have been modified will be returned.
+    """
+    wifi_macs: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The wifiMacs of the devices to be modified.
+    """
 
 @pulumi.input_type
 class SmDevicesModifyTagsParametersArgs:
@@ -25967,18 +24918,15 @@ class SmDevicesModifyTagsParametersArgs:
         pulumi.set(self, "wifi_macs", value)
 
 
-if not MYPY:
-    class SmDevicesMoveItemArgsDict(TypedDict):
-        ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The Meraki Ids of the set of devices.
-        """
-        new_network: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The network to which the devices was moved.
-        """
-elif False:
-    SmDevicesMoveItemArgsDict: TypeAlias = Mapping[str, Any]
+class SmDevicesMoveItemArgsDict(TypedDict):
+    ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The Meraki Ids of the set of devices.
+    """
+    new_network: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The network to which the devices was moved.
+    """
 
 @pulumi.input_type
 class SmDevicesMoveItemArgs:
@@ -26019,30 +24967,27 @@ class SmDevicesMoveItemArgs:
         pulumi.set(self, "new_network", value)
 
 
-if not MYPY:
-    class SmDevicesMoveParametersArgsDict(TypedDict):
-        ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The ids of the devices to be moved.
-        """
-        new_network: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The new network to which the devices will be moved.
-        """
-        scopes: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the devices to be moved.
-        """
-        serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The serials of the devices to be moved.
-        """
-        wifi_macs: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The wifiMacs of the devices to be moved.
-        """
-elif False:
-    SmDevicesMoveParametersArgsDict: TypeAlias = Mapping[str, Any]
+class SmDevicesMoveParametersArgsDict(TypedDict):
+    ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The ids of the devices to be moved.
+    """
+    new_network: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The new network to which the devices will be moved.
+    """
+    scopes: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the devices to be moved.
+    """
+    serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The serials of the devices to be moved.
+    """
+    wifi_macs: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The wifiMacs of the devices to be moved.
+    """
 
 @pulumi.input_type
 class SmDevicesMoveParametersArgs:
@@ -26131,14 +25076,11 @@ class SmDevicesMoveParametersArgs:
         pulumi.set(self, "wifi_macs", value)
 
 
-if not MYPY:
-    class SmDevicesRebootItemArgsDict(TypedDict):
-        ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The Meraki Ids of the set of endpoints.
-        """
-elif False:
-    SmDevicesRebootItemArgsDict: TypeAlias = Mapping[str, Any]
+class SmDevicesRebootItemArgsDict(TypedDict):
+    ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The Meraki Ids of the set of endpoints.
+    """
 
 @pulumi.input_type
 class SmDevicesRebootItemArgs:
@@ -26163,42 +25105,39 @@ class SmDevicesRebootItemArgs:
         pulumi.set(self, "ids", value)
 
 
-if not MYPY:
-    class SmDevicesRebootParametersArgsDict(TypedDict):
-        ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The ids of the endpoints to be rebooted.
-        """
-        kext_paths: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The KextPaths of the endpoints to be rebooted. Available for macOS 11+
-        """
-        notify_user: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether or not to notify the user before rebooting the endpoint. Available for macOS 11.3+
-        """
-        rebuild_kernel_cache: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether or not to rebuild the kernel cache when rebooting the endpoint. Available for macOS 11+
-        """
-        request_requires_network_tether: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether or not the request requires network tethering. Available for macOS and supervised iOS or tvOS
-        """
-        scopes: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the endpoints to be rebooted.
-        """
-        serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The serials of the endpoints to be rebooted.
-        """
-        wifi_macs: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The wifiMacs of the endpoints to be rebooted.
-        """
-elif False:
-    SmDevicesRebootParametersArgsDict: TypeAlias = Mapping[str, Any]
+class SmDevicesRebootParametersArgsDict(TypedDict):
+    ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The ids of the endpoints to be rebooted.
+    """
+    kext_paths: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The KextPaths of the endpoints to be rebooted. Available for macOS 11+
+    """
+    notify_user: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether or not to notify the user before rebooting the endpoint. Available for macOS 11.3+
+    """
+    rebuild_kernel_cache: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether or not to rebuild the kernel cache when rebooting the endpoint. Available for macOS 11+
+    """
+    request_requires_network_tether: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether or not the request requires network tethering. Available for macOS and supervised iOS or tvOS
+    """
+    scopes: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the endpoints to be rebooted.
+    """
+    serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The serials of the endpoints to be rebooted.
+    """
+    wifi_macs: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The wifiMacs of the endpoints to be rebooted.
+    """
 
 @pulumi.input_type
 class SmDevicesRebootParametersArgs:
@@ -26335,14 +25274,11 @@ class SmDevicesRebootParametersArgs:
         pulumi.set(self, "wifi_macs", value)
 
 
-if not MYPY:
-    class SmDevicesShutdownItemArgsDict(TypedDict):
-        ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The Meraki Ids of the set of endpoints.
-        """
-elif False:
-    SmDevicesShutdownItemArgsDict: TypeAlias = Mapping[str, Any]
+class SmDevicesShutdownItemArgsDict(TypedDict):
+    ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The Meraki Ids of the set of endpoints.
+    """
 
 @pulumi.input_type
 class SmDevicesShutdownItemArgs:
@@ -26367,26 +25303,23 @@ class SmDevicesShutdownItemArgs:
         pulumi.set(self, "ids", value)
 
 
-if not MYPY:
-    class SmDevicesShutdownParametersArgsDict(TypedDict):
-        ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The ids of the endpoints to be shutdown.
-        """
-        scopes: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the endpoints to be shutdown.
-        """
-        serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The serials of the endpoints to be shutdown.
-        """
-        wifi_macs: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The wifiMacs of the endpoints to be shutdown.
-        """
-elif False:
-    SmDevicesShutdownParametersArgsDict: TypeAlias = Mapping[str, Any]
+class SmDevicesShutdownParametersArgsDict(TypedDict):
+    ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The ids of the endpoints to be shutdown.
+    """
+    scopes: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The scope (one of all, none, withAny, withAll, withoutAny, or withoutAll) and a set of tags of the endpoints to be shutdown.
+    """
+    serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The serials of the endpoints to be shutdown.
+    """
+    wifi_macs: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The wifiMacs of the endpoints to be shutdown.
+    """
 
 @pulumi.input_type
 class SmDevicesShutdownParametersArgs:
@@ -26459,14 +25392,11 @@ class SmDevicesShutdownParametersArgs:
         pulumi.set(self, "wifi_macs", value)
 
 
-if not MYPY:
-    class SmDevicesUnenrollItemArgsDict(TypedDict):
-        success: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Boolean indicating whether the operation was completed successfully.
-        """
-elif False:
-    SmDevicesUnenrollItemArgsDict: TypeAlias = Mapping[str, Any]
+class SmDevicesUnenrollItemArgsDict(TypedDict):
+    success: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Boolean indicating whether the operation was completed successfully.
+    """
 
 @pulumi.input_type
 class SmDevicesUnenrollItemArgs:
@@ -26491,14 +25421,11 @@ class SmDevicesUnenrollItemArgs:
         pulumi.set(self, "success", value)
 
 
-if not MYPY:
-    class SmDevicesUninstallAppsParametersArgsDict(TypedDict):
-        app_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        ids of applications to be uninstalled
-        """
-elif False:
-    SmDevicesUninstallAppsParametersArgsDict: TypeAlias = Mapping[str, Any]
+class SmDevicesUninstallAppsParametersArgsDict(TypedDict):
+    app_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    ids of applications to be uninstalled
+    """
 
 @pulumi.input_type
 class SmDevicesUninstallAppsParametersArgs:
@@ -26523,14 +25450,11 @@ class SmDevicesUninstallAppsParametersArgs:
         pulumi.set(self, "app_ids", value)
 
 
-if not MYPY:
-    class SmDevicesWipeItemArgsDict(TypedDict):
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The Meraki Id of the devices.
-        """
-elif False:
-    SmDevicesWipeItemArgsDict: TypeAlias = Mapping[str, Any]
+class SmDevicesWipeItemArgsDict(TypedDict):
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The Meraki Id of the devices.
+    """
 
 @pulumi.input_type
 class SmDevicesWipeItemArgs:
@@ -26555,26 +25479,23 @@ class SmDevicesWipeItemArgs:
         pulumi.set(self, "id", value)
 
 
-if not MYPY:
-    class SmDevicesWipeParametersArgsDict(TypedDict):
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The id of the device to be wiped.
-        """
-        pin: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The pin number (a six digit value) for wiping a macOS device. Required only for macOS devices.
-        """
-        serial: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The serial of the device to be wiped.
-        """
-        wifi_mac: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The wifiMac of the device to be wiped.
-        """
-elif False:
-    SmDevicesWipeParametersArgsDict: TypeAlias = Mapping[str, Any]
+class SmDevicesWipeParametersArgsDict(TypedDict):
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The id of the device to be wiped.
+    """
+    pin: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The pin number (a six digit value) for wiping a macOS device. Required only for macOS devices.
+    """
+    serial: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The serial of the device to be wiped.
+    """
+    wifi_mac: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The wifiMac of the device to be wiped.
+    """
 
 @pulumi.input_type
 class SmDevicesWipeParametersArgs:
@@ -26647,18 +25568,15 @@ class SmDevicesWipeParametersArgs:
         pulumi.set(self, "wifi_mac", value)
 
 
-if not MYPY:
-    class SnmpUserArgsDict(TypedDict):
-        passphrase: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The passphrase for the SNMP user.
-        """
-        username: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The username for the SNMP user.
-        """
-elif False:
-    SnmpUserArgsDict: TypeAlias = Mapping[str, Any]
+class SnmpUserArgsDict(TypedDict):
+    passphrase: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The passphrase for the SNMP user.
+    """
+    username: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The username for the SNMP user.
+    """
 
 @pulumi.input_type
 class SnmpUserArgs:
@@ -26699,14 +25617,11 @@ class SnmpUserArgs:
         pulumi.set(self, "username", value)
 
 
-if not MYPY:
-    class SplitItemArgsDict(TypedDict):
-        resulting_networks: NotRequired[pulumi.Input[Sequence[pulumi.Input['SplitItemResultingNetworkArgsDict']]]]
-        """
-        Networks after the split
-        """
-elif False:
-    SplitItemArgsDict: TypeAlias = Mapping[str, Any]
+class SplitItemArgsDict(TypedDict):
+    resulting_networks: NotRequired[pulumi.Input[Sequence[pulumi.Input['SplitItemResultingNetworkArgsDict']]]]
+    """
+    Networks after the split
+    """
 
 @pulumi.input_type
 class SplitItemArgs:
@@ -26731,50 +25646,47 @@ class SplitItemArgs:
         pulumi.set(self, "resulting_networks", value)
 
 
-if not MYPY:
-    class SplitItemResultingNetworkArgsDict(TypedDict):
-        enrollment_string: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Enrollment string for the network
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Network ID
-        """
-        is_bound_to_config_template: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        If the network is bound to a config template
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Network name
-        """
-        notes: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Notes for the network
-        """
-        organization_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Organization ID
-        """
-        product_types: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        List of the product types that the network supports
-        """
-        tags: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        Network tags
-        """
-        time_zone: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Timezone of the network
-        """
-        url: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        URL to the network Dashboard UI
-        """
-elif False:
-    SplitItemResultingNetworkArgsDict: TypeAlias = Mapping[str, Any]
+class SplitItemResultingNetworkArgsDict(TypedDict):
+    enrollment_string: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Enrollment string for the network
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Network ID
+    """
+    is_bound_to_config_template: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    If the network is bound to a config template
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Network name
+    """
+    notes: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Notes for the network
+    """
+    organization_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Organization ID
+    """
+    product_types: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of the product types that the network supports
+    """
+    tags: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    Network tags
+    """
+    time_zone: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Timezone of the network
+    """
+    url: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    URL to the network Dashboard UI
+    """
 
 @pulumi.input_type
 class SplitItemResultingNetworkArgs:
@@ -26943,46 +25855,43 @@ class SplitItemResultingNetworkArgs:
         pulumi.set(self, "url", value)
 
 
-if not MYPY:
-    class SwitchAccessControlListsRuleArgsDict(TypedDict):
-        comment: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Description of the rule (optional)
-        """
-        dst_cidr: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Destination IP address (in IP or CIDR notation)
-        """
-        dst_port: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Destination port
-        """
-        ip_version: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        IP address version
-        """
-        policy: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        'allow' or 'deny' traffic specified by this rule
-        """
-        protocol: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The type of protocol
-        """
-        src_cidr: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Source IP address (in IP or CIDR notation)
-        """
-        src_port: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Source port
-        """
-        vlan: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        ncoming traffic VLAN
-        """
-elif False:
-    SwitchAccessControlListsRuleArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchAccessControlListsRuleArgsDict(TypedDict):
+    comment: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Description of the rule (optional)
+    """
+    dst_cidr: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Destination IP address (in IP or CIDR notation)
+    """
+    dst_port: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Destination port
+    """
+    ip_version: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    IP address version
+    """
+    policy: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    'allow' or 'deny' traffic specified by this rule
+    """
+    protocol: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The type of protocol
+    """
+    src_cidr: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Source IP address (in IP or CIDR notation)
+    """
+    src_port: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Source port
+    """
+    vlan: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    ncoming traffic VLAN
+    """
 
 @pulumi.input_type
 class SwitchAccessControlListsRuleArgs:
@@ -27135,46 +26044,43 @@ class SwitchAccessControlListsRuleArgs:
         pulumi.set(self, "vlan", value)
 
 
-if not MYPY:
-    class SwitchAccessControlListsRulesResponseArgsDict(TypedDict):
-        comment: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Description of the rule (optional)
-        """
-        dst_cidr: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Destination IP address (in IP or CIDR notation)
-        """
-        dst_port: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Destination port
-        """
-        ip_version: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        IP address version
-        """
-        policy: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        'allow' or 'deny' traffic specified by this rule
-        """
-        protocol: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The type of protocol
-        """
-        src_cidr: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Source IP address (in IP or CIDR notation)
-        """
-        src_port: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Source port
-        """
-        vlan: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        ncoming traffic VLAN
-        """
-elif False:
-    SwitchAccessControlListsRulesResponseArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchAccessControlListsRulesResponseArgsDict(TypedDict):
+    comment: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Description of the rule (optional)
+    """
+    dst_cidr: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Destination IP address (in IP or CIDR notation)
+    """
+    dst_port: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Destination port
+    """
+    ip_version: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    IP address version
+    """
+    policy: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    'allow' or 'deny' traffic specified by this rule
+    """
+    protocol: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The type of protocol
+    """
+    src_cidr: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Source IP address (in IP or CIDR notation)
+    """
+    src_port: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Source port
+    """
+    vlan: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    ncoming traffic VLAN
+    """
 
 @pulumi.input_type
 class SwitchAccessControlListsRulesResponseArgs:
@@ -27327,14 +26233,11 @@ class SwitchAccessControlListsRulesResponseArgs:
         pulumi.set(self, "vlan", value)
 
 
-if not MYPY:
-    class SwitchAccessPoliciesCountsArgsDict(TypedDict):
-        ports: NotRequired[pulumi.Input['SwitchAccessPoliciesCountsPortsArgsDict']]
-        """
-        Counts associated with ports
-        """
-elif False:
-    SwitchAccessPoliciesCountsArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchAccessPoliciesCountsArgsDict(TypedDict):
+    ports: NotRequired[pulumi.Input['SwitchAccessPoliciesCountsPortsArgsDict']]
+    """
+    Counts associated with ports
+    """
 
 @pulumi.input_type
 class SwitchAccessPoliciesCountsArgs:
@@ -27359,14 +26262,11 @@ class SwitchAccessPoliciesCountsArgs:
         pulumi.set(self, "ports", value)
 
 
-if not MYPY:
-    class SwitchAccessPoliciesCountsPortsArgsDict(TypedDict):
-        with_this_policy: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Number of ports in the network with this policy. For template networks, this is the number of template ports (not child ports) with this policy.
-        """
-elif False:
-    SwitchAccessPoliciesCountsPortsArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchAccessPoliciesCountsPortsArgsDict(TypedDict):
+    with_this_policy: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Number of ports in the network with this policy. For template networks, this is the number of template ports (not child ports) with this policy.
+    """
 
 @pulumi.input_type
 class SwitchAccessPoliciesCountsPortsArgs:
@@ -27391,14 +26291,11 @@ class SwitchAccessPoliciesCountsPortsArgs:
         pulumi.set(self, "with_this_policy", value)
 
 
-if not MYPY:
-    class SwitchAccessPoliciesDot1xArgsDict(TypedDict):
-        control_direction: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Supports either 'both' or 'inbound'. Set to 'inbound' to allow unauthorized egress on the switchport. Set to 'both' to control both traffic directions with authorization. Defaults to 'both'
-        """
-elif False:
-    SwitchAccessPoliciesDot1xArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchAccessPoliciesDot1xArgsDict(TypedDict):
+    control_direction: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Supports either 'both' or 'inbound'. Set to 'inbound' to allow unauthorized egress on the switchport. Set to 'both' to control both traffic directions with authorization. Defaults to 'both'
+    """
 
 @pulumi.input_type
 class SwitchAccessPoliciesDot1xArgs:
@@ -27423,22 +26320,19 @@ class SwitchAccessPoliciesDot1xArgs:
         pulumi.set(self, "control_direction", value)
 
 
-if not MYPY:
-    class SwitchAccessPoliciesRadiusArgsDict(TypedDict):
-        critical_auth: NotRequired[pulumi.Input['SwitchAccessPoliciesRadiusCriticalAuthArgsDict']]
-        """
-        Critical auth settings for when authentication is rejected by the RADIUS server
-        """
-        failed_auth_vlan_id: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        VLAN that clients will be placed on when RADIUS authentication fails. Will be null if hostMode is Multi-Auth
-        """
-        re_authentication_interval: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Re-authentication period in seconds. Will be null if hostMode is Multi-Auth
-        """
-elif False:
-    SwitchAccessPoliciesRadiusArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchAccessPoliciesRadiusArgsDict(TypedDict):
+    critical_auth: NotRequired[pulumi.Input['SwitchAccessPoliciesRadiusCriticalAuthArgsDict']]
+    """
+    Critical auth settings for when authentication is rejected by the RADIUS server
+    """
+    failed_auth_vlan_id: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    VLAN that clients will be placed on when RADIUS authentication fails. Will be null if hostMode is Multi-Auth
+    """
+    re_authentication_interval: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Re-authentication period in seconds. Will be null if hostMode is Multi-Auth
+    """
 
 @pulumi.input_type
 class SwitchAccessPoliciesRadiusArgs:
@@ -27495,22 +26389,19 @@ class SwitchAccessPoliciesRadiusArgs:
         pulumi.set(self, "re_authentication_interval", value)
 
 
-if not MYPY:
-    class SwitchAccessPoliciesRadiusAccountingServerArgsDict(TypedDict):
-        host: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Public IP address of the RADIUS accounting server
-        """
-        port: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        UDP port that the RADIUS Accounting server listens on for access requests
-        """
-        secret: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        RADIUS client shared secret
-        """
-elif False:
-    SwitchAccessPoliciesRadiusAccountingServerArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchAccessPoliciesRadiusAccountingServerArgsDict(TypedDict):
+    host: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Public IP address of the RADIUS accounting server
+    """
+    port: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    UDP port that the RADIUS Accounting server listens on for access requests
+    """
+    secret: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    RADIUS client shared secret
+    """
 
 @pulumi.input_type
 class SwitchAccessPoliciesRadiusAccountingServerArgs:
@@ -27567,22 +26458,19 @@ class SwitchAccessPoliciesRadiusAccountingServerArgs:
         pulumi.set(self, "secret", value)
 
 
-if not MYPY:
-    class SwitchAccessPoliciesRadiusAccountingServersResponseArgsDict(TypedDict):
-        host: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Public IP address of the RADIUS accounting server
-        """
-        port: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        UDP port that the RADIUS Accounting server listens on for access requests
-        """
-        secret: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        RADIUS client shared secret
-        """
-elif False:
-    SwitchAccessPoliciesRadiusAccountingServersResponseArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchAccessPoliciesRadiusAccountingServersResponseArgsDict(TypedDict):
+    host: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Public IP address of the RADIUS accounting server
+    """
+    port: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    UDP port that the RADIUS Accounting server listens on for access requests
+    """
+    secret: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    RADIUS client shared secret
+    """
 
 @pulumi.input_type
 class SwitchAccessPoliciesRadiusAccountingServersResponseArgs:
@@ -27639,22 +26527,19 @@ class SwitchAccessPoliciesRadiusAccountingServersResponseArgs:
         pulumi.set(self, "secret", value)
 
 
-if not MYPY:
-    class SwitchAccessPoliciesRadiusCriticalAuthArgsDict(TypedDict):
-        data_vlan_id: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        VLAN that clients who use data will be placed on when RADIUS authentication fails. Will be null if hostMode is Multi-Auth
-        """
-        suspend_port_bounce: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Enable to suspend port bounce when RADIUS servers are unreachable
-        """
-        voice_vlan_id: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        VLAN that clients who use voice will be placed on when RADIUS authentication fails. Will be null if hostMode is Multi-Auth
-        """
-elif False:
-    SwitchAccessPoliciesRadiusCriticalAuthArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchAccessPoliciesRadiusCriticalAuthArgsDict(TypedDict):
+    data_vlan_id: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    VLAN that clients who use data will be placed on when RADIUS authentication fails. Will be null if hostMode is Multi-Auth
+    """
+    suspend_port_bounce: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Enable to suspend port bounce when RADIUS servers are unreachable
+    """
+    voice_vlan_id: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    VLAN that clients who use voice will be placed on when RADIUS authentication fails. Will be null if hostMode is Multi-Auth
+    """
 
 @pulumi.input_type
 class SwitchAccessPoliciesRadiusCriticalAuthArgs:
@@ -27711,22 +26596,19 @@ class SwitchAccessPoliciesRadiusCriticalAuthArgs:
         pulumi.set(self, "voice_vlan_id", value)
 
 
-if not MYPY:
-    class SwitchAccessPoliciesRadiusServerArgsDict(TypedDict):
-        host: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Public IP address of the RADIUS server
-        """
-        port: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        UDP port that the RADIUS server listens on for access requests
-        """
-        secret: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        RADIUS client shared secret
-        """
-elif False:
-    SwitchAccessPoliciesRadiusServerArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchAccessPoliciesRadiusServerArgsDict(TypedDict):
+    host: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Public IP address of the RADIUS server
+    """
+    port: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    UDP port that the RADIUS server listens on for access requests
+    """
+    secret: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    RADIUS client shared secret
+    """
 
 @pulumi.input_type
 class SwitchAccessPoliciesRadiusServerArgs:
@@ -27783,22 +26665,19 @@ class SwitchAccessPoliciesRadiusServerArgs:
         pulumi.set(self, "secret", value)
 
 
-if not MYPY:
-    class SwitchAccessPoliciesRadiusServersResponseArgsDict(TypedDict):
-        host: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Public IP address of the RADIUS server
-        """
-        port: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        UDP port that the RADIUS server listens on for access requests
-        """
-        secret: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        RADIUS client shared secret
-        """
-elif False:
-    SwitchAccessPoliciesRadiusServersResponseArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchAccessPoliciesRadiusServersResponseArgsDict(TypedDict):
+    host: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Public IP address of the RADIUS server
+    """
+    port: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    UDP port that the RADIUS server listens on for access requests
+    """
+    secret: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    RADIUS client shared secret
+    """
 
 @pulumi.input_type
 class SwitchAccessPoliciesRadiusServersResponseArgs:
@@ -27855,26 +26734,23 @@ class SwitchAccessPoliciesRadiusServersResponseArgs:
         pulumi.set(self, "secret", value)
 
 
-if not MYPY:
-    class SwitchAlternateManagementInterfaceSwitchArgsDict(TypedDict):
-        alternate_management_ip: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Switch alternative management IP. To remove a prior IP setting, provide an empty string
-        """
-        gateway: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Switch gateway must be in IP format. Only and must be specified for Polaris switches
-        """
-        serial: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Switch serial number
-        """
-        subnet_mask: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Switch subnet mask must be in IP format. Only and must be specified for Polaris switches
-        """
-elif False:
-    SwitchAlternateManagementInterfaceSwitchArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchAlternateManagementInterfaceSwitchArgsDict(TypedDict):
+    alternate_management_ip: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Switch alternative management IP. To remove a prior IP setting, provide an empty string
+    """
+    gateway: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Switch gateway must be in IP format. Only and must be specified for Polaris switches
+    """
+    serial: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Switch serial number
+    """
+    subnet_mask: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Switch subnet mask must be in IP format. Only and must be specified for Polaris switches
+    """
 
 @pulumi.input_type
 class SwitchAlternateManagementInterfaceSwitchArgs:
@@ -27947,14 +26823,11 @@ class SwitchAlternateManagementInterfaceSwitchArgs:
         pulumi.set(self, "subnet_mask", value)
 
 
-if not MYPY:
-    class SwitchDhcpServerPolicyAlertsArgsDict(TypedDict):
-        email: NotRequired[pulumi.Input['SwitchDhcpServerPolicyAlertsEmailArgsDict']]
-        """
-        Alert settings for DHCP servers
-        """
-elif False:
-    SwitchDhcpServerPolicyAlertsArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchDhcpServerPolicyAlertsArgsDict(TypedDict):
+    email: NotRequired[pulumi.Input['SwitchDhcpServerPolicyAlertsEmailArgsDict']]
+    """
+    Alert settings for DHCP servers
+    """
 
 @pulumi.input_type
 class SwitchDhcpServerPolicyAlertsArgs:
@@ -27979,14 +26852,11 @@ class SwitchDhcpServerPolicyAlertsArgs:
         pulumi.set(self, "email", value)
 
 
-if not MYPY:
-    class SwitchDhcpServerPolicyAlertsEmailArgsDict(TypedDict):
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        When enabled, send an email if a new DHCP server is seen. Default value is false.
-        """
-elif False:
-    SwitchDhcpServerPolicyAlertsEmailArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchDhcpServerPolicyAlertsEmailArgsDict(TypedDict):
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    When enabled, send an email if a new DHCP server is seen. Default value is false.
+    """
 
 @pulumi.input_type
 class SwitchDhcpServerPolicyAlertsEmailArgs:
@@ -28011,18 +26881,15 @@ class SwitchDhcpServerPolicyAlertsEmailArgs:
         pulumi.set(self, "enabled", value)
 
 
-if not MYPY:
-    class SwitchDhcpServerPolicyArpInspectionArgsDict(TypedDict):
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Enable or disable Dynamic ARP Inspection on the network. Default value is false.
-        """
-        unsupported_models: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        List of switch models that does not support dynamic ARP inspection
-        """
-elif False:
-    SwitchDhcpServerPolicyArpInspectionArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchDhcpServerPolicyArpInspectionArgsDict(TypedDict):
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Enable or disable Dynamic ARP Inspection on the network. Default value is false.
+    """
+    unsupported_models: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of switch models that does not support dynamic ARP inspection
+    """
 
 @pulumi.input_type
 class SwitchDhcpServerPolicyArpInspectionArgs:
@@ -28063,14 +26930,11 @@ class SwitchDhcpServerPolicyArpInspectionArgs:
         pulumi.set(self, "unsupported_models", value)
 
 
-if not MYPY:
-    class SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4ArgsDict(TypedDict):
-        address: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        IPv4 address of the trusted server.
-        """
-elif False:
-    SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4ArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4ArgsDict(TypedDict):
+    address: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    IPv4 address of the trusted server.
+    """
 
 @pulumi.input_type
 class SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args:
@@ -28095,22 +26959,19 @@ class SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args:
         pulumi.set(self, "address", value)
 
 
-if not MYPY:
-    class SwitchDscpToCosMappingsMappingArgsDict(TypedDict):
-        cos: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The actual layer-2 CoS queue the DSCP value is mapped to. These are not bits set on outgoing frames. Value can be in the range of 0 to 5 inclusive.
-        """
-        dscp: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The Differentiated Services Code Point (DSCP) tag in the IP header that will be mapped to a particular Class-of-Service (CoS) queue. Value can be in the range of 0 to 63 inclusive.
-        """
-        title: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Label for the mapping (optional).
-        """
-elif False:
-    SwitchDscpToCosMappingsMappingArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchDscpToCosMappingsMappingArgsDict(TypedDict):
+    cos: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The actual layer-2 CoS queue the DSCP value is mapped to. These are not bits set on outgoing frames. Value can be in the range of 0 to 5 inclusive.
+    """
+    dscp: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The Differentiated Services Code Point (DSCP) tag in the IP header that will be mapped to a particular Class-of-Service (CoS) queue. Value can be in the range of 0 to 63 inclusive.
+    """
+    title: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Label for the mapping (optional).
+    """
 
 @pulumi.input_type
 class SwitchDscpToCosMappingsMappingArgs:
@@ -28167,18 +27028,15 @@ class SwitchDscpToCosMappingsMappingArgs:
         pulumi.set(self, "title", value)
 
 
-if not MYPY:
-    class SwitchLinkAggregationsSwitchPortArgsDict(TypedDict):
-        port_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Port identifier of switch port. For modules, the identifier is "SlotNumber*ModuleType*PortNumber" (Ex: "1*8X10G*1"), otherwise it is just the port number (Ex: "8").
-        """
-        serial: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Serial number of the switch.
-        """
-elif False:
-    SwitchLinkAggregationsSwitchPortArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchLinkAggregationsSwitchPortArgsDict(TypedDict):
+    port_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Port identifier of switch port. For modules, the identifier is "SlotNumber*ModuleType*PortNumber" (Ex: "1*8X10G*1"), otherwise it is just the port number (Ex: "8").
+    """
+    serial: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Serial number of the switch.
+    """
 
 @pulumi.input_type
 class SwitchLinkAggregationsSwitchPortArgs:
@@ -28219,18 +27077,15 @@ class SwitchLinkAggregationsSwitchPortArgs:
         pulumi.set(self, "serial", value)
 
 
-if not MYPY:
-    class SwitchLinkAggregationsSwitchProfilePortArgsDict(TypedDict):
-        port_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Port identifier of switch port. For modules, the identifier is "SlotNumber*ModuleType*PortNumber" (Ex: "1*8X10G*1"), otherwise it is just the port number (Ex: "8").
-        """
-        profile: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Profile identifier.
-        """
-elif False:
-    SwitchLinkAggregationsSwitchProfilePortArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchLinkAggregationsSwitchProfilePortArgsDict(TypedDict):
+    port_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Port identifier of switch port. For modules, the identifier is "SlotNumber*ModuleType*PortNumber" (Ex: "1*8X10G*1"), otherwise it is just the port number (Ex: "8").
+    """
+    profile: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Profile identifier.
+    """
 
 @pulumi.input_type
 class SwitchLinkAggregationsSwitchProfilePortArgs:
@@ -28271,22 +27126,19 @@ class SwitchLinkAggregationsSwitchProfilePortArgs:
         pulumi.set(self, "profile", value)
 
 
-if not MYPY:
-    class SwitchMtuOverrideArgsDict(TypedDict):
-        mtu_size: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        MTU size for the switches or switch templates.
-        """
-        switch_profiles: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        List of switch template IDs. Applicable only for template network.
-        """
-        switches: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        List of switch serials. Applicable only for switch network.
-        """
-elif False:
-    SwitchMtuOverrideArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchMtuOverrideArgsDict(TypedDict):
+    mtu_size: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    MTU size for the switches or switch templates.
+    """
+    switch_profiles: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of switch template IDs. Applicable only for template network.
+    """
+    switches: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of switch serials. Applicable only for switch network.
+    """
 
 @pulumi.input_type
 class SwitchMtuOverrideArgs:
@@ -28343,38 +27195,35 @@ class SwitchMtuOverrideArgs:
         pulumi.set(self, "switches", value)
 
 
-if not MYPY:
-    class SwitchPortSchedulesPortScheduleArgsDict(TypedDict):
-        friday: NotRequired[pulumi.Input['SwitchPortSchedulesPortScheduleFridayArgsDict']]
-        """
-        The schedule object for Friday.
-        """
-        monday: NotRequired[pulumi.Input['SwitchPortSchedulesPortScheduleMondayArgsDict']]
-        """
-        The schedule object for Monday.
-        """
-        saturday: NotRequired[pulumi.Input['SwitchPortSchedulesPortScheduleSaturdayArgsDict']]
-        """
-        The schedule object for Saturday.
-        """
-        sunday: NotRequired[pulumi.Input['SwitchPortSchedulesPortScheduleSundayArgsDict']]
-        """
-        The schedule object for Sunday.
-        """
-        thursday: NotRequired[pulumi.Input['SwitchPortSchedulesPortScheduleThursdayArgsDict']]
-        """
-        The schedule object for Thursday.
-        """
-        tuesday: NotRequired[pulumi.Input['SwitchPortSchedulesPortScheduleTuesdayArgsDict']]
-        """
-        The schedule object for Tuesday.
-        """
-        wednesday: NotRequired[pulumi.Input['SwitchPortSchedulesPortScheduleWednesdayArgsDict']]
-        """
-        The schedule object for Wednesday.
-        """
-elif False:
-    SwitchPortSchedulesPortScheduleArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchPortSchedulesPortScheduleArgsDict(TypedDict):
+    friday: NotRequired[pulumi.Input['SwitchPortSchedulesPortScheduleFridayArgsDict']]
+    """
+    The schedule object for Friday.
+    """
+    monday: NotRequired[pulumi.Input['SwitchPortSchedulesPortScheduleMondayArgsDict']]
+    """
+    The schedule object for Monday.
+    """
+    saturday: NotRequired[pulumi.Input['SwitchPortSchedulesPortScheduleSaturdayArgsDict']]
+    """
+    The schedule object for Saturday.
+    """
+    sunday: NotRequired[pulumi.Input['SwitchPortSchedulesPortScheduleSundayArgsDict']]
+    """
+    The schedule object for Sunday.
+    """
+    thursday: NotRequired[pulumi.Input['SwitchPortSchedulesPortScheduleThursdayArgsDict']]
+    """
+    The schedule object for Thursday.
+    """
+    tuesday: NotRequired[pulumi.Input['SwitchPortSchedulesPortScheduleTuesdayArgsDict']]
+    """
+    The schedule object for Tuesday.
+    """
+    wednesday: NotRequired[pulumi.Input['SwitchPortSchedulesPortScheduleWednesdayArgsDict']]
+    """
+    The schedule object for Wednesday.
+    """
 
 @pulumi.input_type
 class SwitchPortSchedulesPortScheduleArgs:
@@ -28495,22 +27344,19 @@ class SwitchPortSchedulesPortScheduleArgs:
         pulumi.set(self, "wednesday", value)
 
 
-if not MYPY:
-    class SwitchPortSchedulesPortScheduleFridayArgsDict(TypedDict):
-        active: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether the schedule is active (true) or inactive (false) during the time specified between 'from' and 'to'. Defaults to true.
-        """
-        from_: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The time, from '00:00' to '24:00'. Must be less than the time specified in 'to'. Defaults to '00:00'. Only 30 minute increments are allowed.
-        """
-        to: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The time, from '00:00' to '24:00'. Must be greater than the time specified in 'from'. Defaults to '24:00'. Only 30 minute increments are allowed.
-        """
-elif False:
-    SwitchPortSchedulesPortScheduleFridayArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchPortSchedulesPortScheduleFridayArgsDict(TypedDict):
+    active: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether the schedule is active (true) or inactive (false) during the time specified between 'from' and 'to'. Defaults to true.
+    """
+    from_: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The time, from '00:00' to '24:00'. Must be less than the time specified in 'to'. Defaults to '00:00'. Only 30 minute increments are allowed.
+    """
+    to: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The time, from '00:00' to '24:00'. Must be greater than the time specified in 'from'. Defaults to '24:00'. Only 30 minute increments are allowed.
+    """
 
 @pulumi.input_type
 class SwitchPortSchedulesPortScheduleFridayArgs:
@@ -28567,22 +27413,19 @@ class SwitchPortSchedulesPortScheduleFridayArgs:
         pulumi.set(self, "to", value)
 
 
-if not MYPY:
-    class SwitchPortSchedulesPortScheduleMondayArgsDict(TypedDict):
-        active: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether the schedule is active (true) or inactive (false) during the time specified between 'from' and 'to'. Defaults to true.
-        """
-        from_: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The time, from '00:00' to '24:00'. Must be less than the time specified in 'to'. Defaults to '00:00'. Only 30 minute increments are allowed.
-        """
-        to: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The time, from '00:00' to '24:00'. Must be greater than the time specified in 'from'. Defaults to '24:00'. Only 30 minute increments are allowed.
-        """
-elif False:
-    SwitchPortSchedulesPortScheduleMondayArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchPortSchedulesPortScheduleMondayArgsDict(TypedDict):
+    active: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether the schedule is active (true) or inactive (false) during the time specified between 'from' and 'to'. Defaults to true.
+    """
+    from_: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The time, from '00:00' to '24:00'. Must be less than the time specified in 'to'. Defaults to '00:00'. Only 30 minute increments are allowed.
+    """
+    to: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The time, from '00:00' to '24:00'. Must be greater than the time specified in 'from'. Defaults to '24:00'. Only 30 minute increments are allowed.
+    """
 
 @pulumi.input_type
 class SwitchPortSchedulesPortScheduleMondayArgs:
@@ -28639,22 +27482,19 @@ class SwitchPortSchedulesPortScheduleMondayArgs:
         pulumi.set(self, "to", value)
 
 
-if not MYPY:
-    class SwitchPortSchedulesPortScheduleSaturdayArgsDict(TypedDict):
-        active: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether the schedule is active (true) or inactive (false) during the time specified between 'from' and 'to'. Defaults to true.
-        """
-        from_: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The time, from '00:00' to '24:00'. Must be less than the time specified in 'to'. Defaults to '00:00'. Only 30 minute increments are allowed.
-        """
-        to: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The time, from '00:00' to '24:00'. Must be greater than the time specified in 'from'. Defaults to '24:00'. Only 30 minute increments are allowed.
-        """
-elif False:
-    SwitchPortSchedulesPortScheduleSaturdayArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchPortSchedulesPortScheduleSaturdayArgsDict(TypedDict):
+    active: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether the schedule is active (true) or inactive (false) during the time specified between 'from' and 'to'. Defaults to true.
+    """
+    from_: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The time, from '00:00' to '24:00'. Must be less than the time specified in 'to'. Defaults to '00:00'. Only 30 minute increments are allowed.
+    """
+    to: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The time, from '00:00' to '24:00'. Must be greater than the time specified in 'from'. Defaults to '24:00'. Only 30 minute increments are allowed.
+    """
 
 @pulumi.input_type
 class SwitchPortSchedulesPortScheduleSaturdayArgs:
@@ -28711,22 +27551,19 @@ class SwitchPortSchedulesPortScheduleSaturdayArgs:
         pulumi.set(self, "to", value)
 
 
-if not MYPY:
-    class SwitchPortSchedulesPortScheduleSundayArgsDict(TypedDict):
-        active: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether the schedule is active (true) or inactive (false) during the time specified between 'from' and 'to'. Defaults to true.
-        """
-        from_: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The time, from '00:00' to '24:00'. Must be less than the time specified in 'to'. Defaults to '00:00'. Only 30 minute increments are allowed.
-        """
-        to: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The time, from '00:00' to '24:00'. Must be greater than the time specified in 'from'. Defaults to '24:00'. Only 30 minute increments are allowed.
-        """
-elif False:
-    SwitchPortSchedulesPortScheduleSundayArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchPortSchedulesPortScheduleSundayArgsDict(TypedDict):
+    active: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether the schedule is active (true) or inactive (false) during the time specified between 'from' and 'to'. Defaults to true.
+    """
+    from_: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The time, from '00:00' to '24:00'. Must be less than the time specified in 'to'. Defaults to '00:00'. Only 30 minute increments are allowed.
+    """
+    to: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The time, from '00:00' to '24:00'. Must be greater than the time specified in 'from'. Defaults to '24:00'. Only 30 minute increments are allowed.
+    """
 
 @pulumi.input_type
 class SwitchPortSchedulesPortScheduleSundayArgs:
@@ -28783,22 +27620,19 @@ class SwitchPortSchedulesPortScheduleSundayArgs:
         pulumi.set(self, "to", value)
 
 
-if not MYPY:
-    class SwitchPortSchedulesPortScheduleThursdayArgsDict(TypedDict):
-        active: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether the schedule is active (true) or inactive (false) during the time specified between 'from' and 'to'. Defaults to true.
-        """
-        from_: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The time, from '00:00' to '24:00'. Must be less than the time specified in 'to'. Defaults to '00:00'. Only 30 minute increments are allowed.
-        """
-        to: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The time, from '00:00' to '24:00'. Must be greater than the time specified in 'from'. Defaults to '24:00'. Only 30 minute increments are allowed.
-        """
-elif False:
-    SwitchPortSchedulesPortScheduleThursdayArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchPortSchedulesPortScheduleThursdayArgsDict(TypedDict):
+    active: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether the schedule is active (true) or inactive (false) during the time specified between 'from' and 'to'. Defaults to true.
+    """
+    from_: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The time, from '00:00' to '24:00'. Must be less than the time specified in 'to'. Defaults to '00:00'. Only 30 minute increments are allowed.
+    """
+    to: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The time, from '00:00' to '24:00'. Must be greater than the time specified in 'from'. Defaults to '24:00'. Only 30 minute increments are allowed.
+    """
 
 @pulumi.input_type
 class SwitchPortSchedulesPortScheduleThursdayArgs:
@@ -28855,22 +27689,19 @@ class SwitchPortSchedulesPortScheduleThursdayArgs:
         pulumi.set(self, "to", value)
 
 
-if not MYPY:
-    class SwitchPortSchedulesPortScheduleTuesdayArgsDict(TypedDict):
-        active: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether the schedule is active (true) or inactive (false) during the time specified between 'from' and 'to'. Defaults to true.
-        """
-        from_: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The time, from '00:00' to '24:00'. Must be less than the time specified in 'to'. Defaults to '00:00'. Only 30 minute increments are allowed.
-        """
-        to: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The time, from '00:00' to '24:00'. Must be greater than the time specified in 'from'. Defaults to '24:00'. Only 30 minute increments are allowed.
-        """
-elif False:
-    SwitchPortSchedulesPortScheduleTuesdayArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchPortSchedulesPortScheduleTuesdayArgsDict(TypedDict):
+    active: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether the schedule is active (true) or inactive (false) during the time specified between 'from' and 'to'. Defaults to true.
+    """
+    from_: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The time, from '00:00' to '24:00'. Must be less than the time specified in 'to'. Defaults to '00:00'. Only 30 minute increments are allowed.
+    """
+    to: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The time, from '00:00' to '24:00'. Must be greater than the time specified in 'from'. Defaults to '24:00'. Only 30 minute increments are allowed.
+    """
 
 @pulumi.input_type
 class SwitchPortSchedulesPortScheduleTuesdayArgs:
@@ -28927,22 +27758,19 @@ class SwitchPortSchedulesPortScheduleTuesdayArgs:
         pulumi.set(self, "to", value)
 
 
-if not MYPY:
-    class SwitchPortSchedulesPortScheduleWednesdayArgsDict(TypedDict):
-        active: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether the schedule is active (true) or inactive (false) during the time specified between 'from' and 'to'. Defaults to true.
-        """
-        from_: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The time, from '00:00' to '24:00'. Must be less than the time specified in 'to'. Defaults to '00:00'. Only 30 minute increments are allowed.
-        """
-        to: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The time, from '00:00' to '24:00'. Must be greater than the time specified in 'from'. Defaults to '24:00'. Only 30 minute increments are allowed.
-        """
-elif False:
-    SwitchPortSchedulesPortScheduleWednesdayArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchPortSchedulesPortScheduleWednesdayArgsDict(TypedDict):
+    active: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether the schedule is active (true) or inactive (false) during the time specified between 'from' and 'to'. Defaults to true.
+    """
+    from_: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The time, from '00:00' to '24:00'. Must be less than the time specified in 'to'. Defaults to '00:00'. Only 30 minute increments are allowed.
+    """
+    to: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The time, from '00:00' to '24:00'. Must be greater than the time specified in 'from'. Defaults to '24:00'. Only 30 minute increments are allowed.
+    """
 
 @pulumi.input_type
 class SwitchPortSchedulesPortScheduleWednesdayArgs:
@@ -28999,18 +27827,15 @@ class SwitchPortSchedulesPortScheduleWednesdayArgs:
         pulumi.set(self, "to", value)
 
 
-if not MYPY:
-    class SwitchRoutingMulticastDefaultSettingsArgsDict(TypedDict):
-        flood_unknown_multicast_traffic_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Flood unknown multicast traffic enabled for the entire network
-        """
-        igmp_snooping_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        IGMP snooping enabled for the entire network
-        """
-elif False:
-    SwitchRoutingMulticastDefaultSettingsArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchRoutingMulticastDefaultSettingsArgsDict(TypedDict):
+    flood_unknown_multicast_traffic_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Flood unknown multicast traffic enabled for the entire network
+    """
+    igmp_snooping_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    IGMP snooping enabled for the entire network
+    """
 
 @pulumi.input_type
 class SwitchRoutingMulticastDefaultSettingsArgs:
@@ -29051,30 +27876,27 @@ class SwitchRoutingMulticastDefaultSettingsArgs:
         pulumi.set(self, "igmp_snooping_enabled", value)
 
 
-if not MYPY:
-    class SwitchRoutingMulticastOverrideArgsDict(TypedDict):
-        flood_unknown_multicast_traffic_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Flood unknown multicast traffic enabled for switches, switch stacks or switch templates
-        """
-        igmp_snooping_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        IGMP snooping enabled for switches, switch stacks or switch templates
-        """
-        stacks: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        (optional) List of switch stack ids for non-template network
-        """
-        switch_profiles: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        (optional) List of switch templates ids for template network
-        """
-        switches: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        (optional) List of switch serials for non-template network
-        """
-elif False:
-    SwitchRoutingMulticastOverrideArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchRoutingMulticastOverrideArgsDict(TypedDict):
+    flood_unknown_multicast_traffic_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Flood unknown multicast traffic enabled for switches, switch stacks or switch templates
+    """
+    igmp_snooping_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    IGMP snooping enabled for switches, switch stacks or switch templates
+    """
+    stacks: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    (optional) List of switch stack ids for non-template network
+    """
+    switch_profiles: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    (optional) List of switch templates ids for template network
+    """
+    switches: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    (optional) List of switch serials for non-template network
+    """
 
 @pulumi.input_type
 class SwitchRoutingMulticastOverrideArgs:
@@ -29163,22 +27985,19 @@ class SwitchRoutingMulticastOverrideArgs:
         pulumi.set(self, "switches", value)
 
 
-if not MYPY:
-    class SwitchRoutingOspfAreaArgsDict(TypedDict):
-        area_id: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        OSPF area ID
-        """
-        area_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the OSPF area
-        """
-        area_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Area types in OSPF. Must be one of: ["normal", "stub", "nssa"]
-        """
-elif False:
-    SwitchRoutingOspfAreaArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchRoutingOspfAreaArgsDict(TypedDict):
+    area_id: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    OSPF area ID
+    """
+    area_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the OSPF area
+    """
+    area_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Area types in OSPF. Must be one of: ["normal", "stub", "nssa"]
+    """
 
 @pulumi.input_type
 class SwitchRoutingOspfAreaArgs:
@@ -29235,18 +28054,15 @@ class SwitchRoutingOspfAreaArgs:
         pulumi.set(self, "area_type", value)
 
 
-if not MYPY:
-    class SwitchRoutingOspfMd5AuthenticationKeyArgsDict(TypedDict):
-        id: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        MD5 authentication key index. Key index must be between 1 to 255
-        """
-        passphrase: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        MD5 authentication passphrase
-        """
-elif False:
-    SwitchRoutingOspfMd5AuthenticationKeyArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchRoutingOspfMd5AuthenticationKeyArgsDict(TypedDict):
+    id: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    MD5 authentication key index. Key index must be between 1 to 255
+    """
+    passphrase: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    MD5 authentication passphrase
+    """
 
 @pulumi.input_type
 class SwitchRoutingOspfMd5AuthenticationKeyArgs:
@@ -29287,26 +28103,23 @@ class SwitchRoutingOspfMd5AuthenticationKeyArgs:
         pulumi.set(self, "passphrase", value)
 
 
-if not MYPY:
-    class SwitchRoutingOspfV3ArgsDict(TypedDict):
-        areas: NotRequired[pulumi.Input[Sequence[pulumi.Input['SwitchRoutingOspfV3AreaArgsDict']]]]
-        """
-        OSPF v3 areas
-        """
-        dead_timer_in_seconds: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Time interval to determine when the peer will be declared inactive/dead. Value must be between 1 and 65535
-        """
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Boolean value to enable or disable V3 OSPF routing. OSPF V3 routing is disabled by default.
-        """
-        hello_timer_in_seconds: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Time interval in seconds at which hello packet will be sent to OSPF neighbors to maintain connectivity. Value must be between 1 and 255. Default is 10 seconds.
-        """
-elif False:
-    SwitchRoutingOspfV3ArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchRoutingOspfV3ArgsDict(TypedDict):
+    areas: NotRequired[pulumi.Input[Sequence[pulumi.Input['SwitchRoutingOspfV3AreaArgsDict']]]]
+    """
+    OSPF v3 areas
+    """
+    dead_timer_in_seconds: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Time interval to determine when the peer will be declared inactive/dead. Value must be between 1 and 65535
+    """
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Boolean value to enable or disable V3 OSPF routing. OSPF V3 routing is disabled by default.
+    """
+    hello_timer_in_seconds: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Time interval in seconds at which hello packet will be sent to OSPF neighbors to maintain connectivity. Value must be between 1 and 255. Default is 10 seconds.
+    """
 
 @pulumi.input_type
 class SwitchRoutingOspfV3Args:
@@ -29379,22 +28192,19 @@ class SwitchRoutingOspfV3Args:
         pulumi.set(self, "hello_timer_in_seconds", value)
 
 
-if not MYPY:
-    class SwitchRoutingOspfV3AreaArgsDict(TypedDict):
-        area_id: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        OSPF area ID
-        """
-        area_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the OSPF area
-        """
-        area_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Area types in OSPF. Must be one of: ["normal", "stub", "nssa"]
-        """
-elif False:
-    SwitchRoutingOspfV3AreaArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchRoutingOspfV3AreaArgsDict(TypedDict):
+    area_id: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    OSPF area ID
+    """
+    area_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the OSPF area
+    """
+    area_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Area types in OSPF. Must be one of: ["normal", "stub", "nssa"]
+    """
 
 @pulumi.input_type
 class SwitchRoutingOspfV3AreaArgs:
@@ -29451,14 +28261,11 @@ class SwitchRoutingOspfV3AreaArgs:
         pulumi.set(self, "area_type", value)
 
 
-if not MYPY:
-    class SwitchSettingsMacBlocklistArgsDict(TypedDict):
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Enable MAC blocklist for switches in the network
-        """
-elif False:
-    SwitchSettingsMacBlocklistArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchSettingsMacBlocklistArgsDict(TypedDict):
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Enable MAC blocklist for switches in the network
+    """
 
 @pulumi.input_type
 class SwitchSettingsMacBlocklistArgs:
@@ -29483,18 +28290,15 @@ class SwitchSettingsMacBlocklistArgs:
         pulumi.set(self, "enabled", value)
 
 
-if not MYPY:
-    class SwitchSettingsPowerExceptionArgsDict(TypedDict):
-        power_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Per switch exception (combined, redundant, useNetworkSetting)
-        """
-        serial: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Serial number of the switch
-        """
-elif False:
-    SwitchSettingsPowerExceptionArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchSettingsPowerExceptionArgsDict(TypedDict):
+    power_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Per switch exception (combined, redundant, useNetworkSetting)
+    """
+    serial: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Serial number of the switch
+    """
 
 @pulumi.input_type
 class SwitchSettingsPowerExceptionArgs:
@@ -29535,14 +28339,11 @@ class SwitchSettingsPowerExceptionArgs:
         pulumi.set(self, "serial", value)
 
 
-if not MYPY:
-    class SwitchSettingsUplinkClientSamplingArgsDict(TypedDict):
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Enable client sampling on uplink
-        """
-elif False:
-    SwitchSettingsUplinkClientSamplingArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchSettingsUplinkClientSamplingArgsDict(TypedDict):
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Enable client sampling on uplink
+    """
 
 @pulumi.input_type
 class SwitchSettingsUplinkClientSamplingArgs:
@@ -29567,22 +28368,19 @@ class SwitchSettingsUplinkClientSamplingArgs:
         pulumi.set(self, "enabled", value)
 
 
-if not MYPY:
-    class SwitchStacksAddItemArgsDict(TypedDict):
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        ID of the Switch stack
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the Switch stack
-        """
-        serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        Serials of the switches in the switch stack
-        """
-elif False:
-    SwitchStacksAddItemArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchStacksAddItemArgsDict(TypedDict):
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    ID of the Switch stack
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the Switch stack
+    """
+    serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    Serials of the switches in the switch stack
+    """
 
 @pulumi.input_type
 class SwitchStacksAddItemArgs:
@@ -29639,14 +28437,11 @@ class SwitchStacksAddItemArgs:
         pulumi.set(self, "serials", value)
 
 
-if not MYPY:
-    class SwitchStacksAddParametersArgsDict(TypedDict):
-        serial: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The serial of the switch to be added
-        """
-elif False:
-    SwitchStacksAddParametersArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchStacksAddParametersArgsDict(TypedDict):
+    serial: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The serial of the switch to be added
+    """
 
 @pulumi.input_type
 class SwitchStacksAddParametersArgs:
@@ -29671,22 +28466,19 @@ class SwitchStacksAddParametersArgs:
         pulumi.set(self, "serial", value)
 
 
-if not MYPY:
-    class SwitchStacksRemoveItemArgsDict(TypedDict):
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        ID of the Switch stack
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the Switch stack
-        """
-        serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        Serials of the switches in the switch stack
-        """
-elif False:
-    SwitchStacksRemoveItemArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchStacksRemoveItemArgsDict(TypedDict):
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    ID of the Switch stack
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the Switch stack
+    """
+    serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    Serials of the switches in the switch stack
+    """
 
 @pulumi.input_type
 class SwitchStacksRemoveItemArgs:
@@ -29743,14 +28535,11 @@ class SwitchStacksRemoveItemArgs:
         pulumi.set(self, "serials", value)
 
 
-if not MYPY:
-    class SwitchStacksRemoveParametersArgsDict(TypedDict):
-        serial: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The serial of the switch to be removed
-        """
-elif False:
-    SwitchStacksRemoveParametersArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchStacksRemoveParametersArgsDict(TypedDict):
+    serial: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The serial of the switch to be removed
+    """
 
 @pulumi.input_type
 class SwitchStacksRemoveParametersArgs:
@@ -29775,22 +28564,19 @@ class SwitchStacksRemoveParametersArgs:
         pulumi.set(self, "serial", value)
 
 
-if not MYPY:
-    class SwitchStacksRoutingInterfacesDhcpDhcpOptionArgsDict(TypedDict):
-        code: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The code for DHCP option which should be from 2 to 254
-        """
-        type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The type of the DHCP option which should be one of ('text', 'ip', 'integer' or 'hex')
-        """
-        value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The value of the DHCP option
-        """
-elif False:
-    SwitchStacksRoutingInterfacesDhcpDhcpOptionArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchStacksRoutingInterfacesDhcpDhcpOptionArgsDict(TypedDict):
+    code: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The code for DHCP option which should be from 2 to 254
+    """
+    type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The type of the DHCP option which should be one of ('text', 'ip', 'integer' or 'hex')
+    """
+    value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The value of the DHCP option
+    """
 
 @pulumi.input_type
 class SwitchStacksRoutingInterfacesDhcpDhcpOptionArgs:
@@ -29847,22 +28633,19 @@ class SwitchStacksRoutingInterfacesDhcpDhcpOptionArgs:
         pulumi.set(self, "value", value)
 
 
-if not MYPY:
-    class SwitchStacksRoutingInterfacesDhcpFixedIpAssignmentArgsDict(TypedDict):
-        ip: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The IP address of the client which has fixed IP address assigned to it
-        """
-        mac: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The MAC address of the client which has fixed IP address
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The name of the client which has fixed IP address
-        """
-elif False:
-    SwitchStacksRoutingInterfacesDhcpFixedIpAssignmentArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchStacksRoutingInterfacesDhcpFixedIpAssignmentArgsDict(TypedDict):
+    ip: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The IP address of the client which has fixed IP address assigned to it
+    """
+    mac: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The MAC address of the client which has fixed IP address
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The name of the client which has fixed IP address
+    """
 
 @pulumi.input_type
 class SwitchStacksRoutingInterfacesDhcpFixedIpAssignmentArgs:
@@ -29919,22 +28702,19 @@ class SwitchStacksRoutingInterfacesDhcpFixedIpAssignmentArgs:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class SwitchStacksRoutingInterfacesDhcpReservedIpRangeArgsDict(TypedDict):
-        comment: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The comment for the reserved IP range
-        """
-        end: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The ending IP address of the reserved IP range
-        """
-        start: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The starting IP address of the reserved IP range
-        """
-elif False:
-    SwitchStacksRoutingInterfacesDhcpReservedIpRangeArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchStacksRoutingInterfacesDhcpReservedIpRangeArgsDict(TypedDict):
+    comment: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The comment for the reserved IP range
+    """
+    end: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The ending IP address of the reserved IP range
+    """
+    start: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The starting IP address of the reserved IP range
+    """
 
 @pulumi.input_type
 class SwitchStacksRoutingInterfacesDhcpReservedIpRangeArgs:
@@ -29991,26 +28771,23 @@ class SwitchStacksRoutingInterfacesDhcpReservedIpRangeArgs:
         pulumi.set(self, "start", value)
 
 
-if not MYPY:
-    class SwitchStacksRoutingInterfacesIpv6ArgsDict(TypedDict):
-        address: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        IPv6 address
-        """
-        assignment_mode: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Assignment mode
-        """
-        gateway: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        IPv6 gateway
-        """
-        prefix: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        IPv6 subnet
-        """
-elif False:
-    SwitchStacksRoutingInterfacesIpv6ArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchStacksRoutingInterfacesIpv6ArgsDict(TypedDict):
+    address: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    IPv6 address
+    """
+    assignment_mode: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Assignment mode
+    """
+    gateway: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    IPv6 gateway
+    """
+    prefix: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    IPv6 subnet
+    """
 
 @pulumi.input_type
 class SwitchStacksRoutingInterfacesIpv6Args:
@@ -30083,22 +28860,19 @@ class SwitchStacksRoutingInterfacesIpv6Args:
         pulumi.set(self, "prefix", value)
 
 
-if not MYPY:
-    class SwitchStacksRoutingInterfacesOspfSettingsArgsDict(TypedDict):
-        area: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Area id
-        """
-        cost: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        OSPF Cost
-        """
-        is_passive_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Disable sending Hello packets on this interface's IPv4 area
-        """
-elif False:
-    SwitchStacksRoutingInterfacesOspfSettingsArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchStacksRoutingInterfacesOspfSettingsArgsDict(TypedDict):
+    area: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Area id
+    """
+    cost: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    OSPF Cost
+    """
+    is_passive_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Disable sending Hello packets on this interface's IPv4 area
+    """
 
 @pulumi.input_type
 class SwitchStacksRoutingInterfacesOspfSettingsArgs:
@@ -30155,22 +28929,19 @@ class SwitchStacksRoutingInterfacesOspfSettingsArgs:
         pulumi.set(self, "is_passive_enabled", value)
 
 
-if not MYPY:
-    class SwitchStacksRoutingInterfacesOspfV3ArgsDict(TypedDict):
-        area: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Area id
-        """
-        cost: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        OSPF Cost
-        """
-        is_passive_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Disable sending Hello packets on this interface's IPv6 area
-        """
-elif False:
-    SwitchStacksRoutingInterfacesOspfV3ArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchStacksRoutingInterfacesOspfV3ArgsDict(TypedDict):
+    area: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Area id
+    """
+    cost: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    OSPF Cost
+    """
+    is_passive_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Disable sending Hello packets on this interface's IPv6 area
+    """
 
 @pulumi.input_type
 class SwitchStacksRoutingInterfacesOspfV3Args:
@@ -30227,26 +28998,23 @@ class SwitchStacksRoutingInterfacesOspfV3Args:
         pulumi.set(self, "is_passive_enabled", value)
 
 
-if not MYPY:
-    class SwitchStpStpBridgePriorityArgsDict(TypedDict):
-        stacks: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        List of stack IDs
-        """
-        stp_priority: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        STP priority for switch, stacks, or switch profiles
-        """
-        switch_profiles: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        List of switch profile IDs
-        """
-        switches: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        List of switch serial numbers
-        """
-elif False:
-    SwitchStpStpBridgePriorityArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchStpStpBridgePriorityArgsDict(TypedDict):
+    stacks: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of stack IDs
+    """
+    stp_priority: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    STP priority for switch, stacks, or switch profiles
+    """
+    switch_profiles: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of switch profile IDs
+    """
+    switches: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of switch serial numbers
+    """
 
 @pulumi.input_type
 class SwitchStpStpBridgePriorityArgs:
@@ -30319,26 +29087,23 @@ class SwitchStpStpBridgePriorityArgs:
         pulumi.set(self, "switches", value)
 
 
-if not MYPY:
-    class SwitchStpStpBridgePriorityResponseArgsDict(TypedDict):
-        stacks: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        List of stack IDs
-        """
-        stp_priority: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        STP priority for switch, stacks, or switch templates
-        """
-        switch_profiles: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        List of switch template IDs
-        """
-        switches: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        List of switch serial numbers
-        """
-elif False:
-    SwitchStpStpBridgePriorityResponseArgsDict: TypeAlias = Mapping[str, Any]
+class SwitchStpStpBridgePriorityResponseArgsDict(TypedDict):
+    stacks: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of stack IDs
+    """
+    stp_priority: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    STP priority for switch, stacks, or switch templates
+    """
+    switch_profiles: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of switch template IDs
+    """
+    switches: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of switch serial numbers
+    """
 
 @pulumi.input_type
 class SwitchStpStpBridgePriorityResponseArgs:
@@ -30411,22 +29176,19 @@ class SwitchStpStpBridgePriorityResponseArgs:
         pulumi.set(self, "switches", value)
 
 
-if not MYPY:
-    class SyslogServersServerArgsDict(TypedDict):
-        host: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The IP address of the syslog server
-        """
-        port: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The port of the syslog server
-        """
-        roles: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        A list of roles for the syslog server. Options (case-insensitive): 'Wireless event log', 'Appliance event log', 'Switch event log', 'Air Marshal events', 'Flows', 'URLs', 'IDS alerts', 'Security events'
-        """
-elif False:
-    SyslogServersServerArgsDict: TypeAlias = Mapping[str, Any]
+class SyslogServersServerArgsDict(TypedDict):
+    host: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The IP address of the syslog server
+    """
+    port: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The port of the syslog server
+    """
+    roles: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    A list of roles for the syslog server. Options (case-insensitive): 'Wireless event log', 'Appliance event log', 'Switch event log', 'Air Marshal events', 'Flows', 'URLs', 'IDS alerts', 'Security events'
+    """
 
 @pulumi.input_type
 class SyslogServersServerArgs:
@@ -30483,23 +29245,20 @@ class SyslogServersServerArgs:
         pulumi.set(self, "roles", value)
 
 
-if not MYPY:
-    class TrafficAnalysisCustomPieChartItemArgsDict(TypedDict):
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The name of the custom pie chart item.
-        """
-        type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The signature type for the custom pie chart item. Can be one of 'host', 'port' or 'ipRange'.
-        """
-        value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The value of the custom pie chart item. Valid syntax depends on the signature type of the chart item
-        (see sample request/response for more details).
-        """
-elif False:
-    TrafficAnalysisCustomPieChartItemArgsDict: TypeAlias = Mapping[str, Any]
+class TrafficAnalysisCustomPieChartItemArgsDict(TypedDict):
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The name of the custom pie chart item.
+    """
+    type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The signature type for the custom pie chart item. Can be one of 'host', 'port' or 'ipRange'.
+    """
+    value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The value of the custom pie chart item. Valid syntax depends on the signature type of the chart item
+    (see sample request/response for more details).
+    """
 
 @pulumi.input_type
 class TrafficAnalysisCustomPieChartItemArgs:
@@ -30558,50 +29317,47 @@ class TrafficAnalysisCustomPieChartItemArgs:
         pulumi.set(self, "value", value)
 
 
-if not MYPY:
-    class UnbindItemArgsDict(TypedDict):
-        enrollment_string: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Enrollment string for the network
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Network ID
-        """
-        is_bound_to_config_template: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        If the network is bound to a config template
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Network name
-        """
-        notes: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Notes for the network
-        """
-        organization_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Organization ID
-        """
-        product_types: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        List of the product types that the network supports
-        """
-        tags: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        Network tags
-        """
-        time_zone: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Timezone of the network
-        """
-        url: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        URL to the network Dashboard UI
-        """
-elif False:
-    UnbindItemArgsDict: TypeAlias = Mapping[str, Any]
+class UnbindItemArgsDict(TypedDict):
+    enrollment_string: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Enrollment string for the network
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Network ID
+    """
+    is_bound_to_config_template: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    If the network is bound to a config template
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Network name
+    """
+    notes: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Notes for the network
+    """
+    organization_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Organization ID
+    """
+    product_types: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of the product types that the network supports
+    """
+    tags: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    Network tags
+    """
+    time_zone: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Timezone of the network
+    """
+    url: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    URL to the network Dashboard UI
+    """
 
 @pulumi.input_type
 class UnbindItemArgs:
@@ -30770,14 +29526,11 @@ class UnbindItemArgs:
         pulumi.set(self, "url", value)
 
 
-if not MYPY:
-    class UnbindParametersArgsDict(TypedDict):
-        retain_configs: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Optional boolean to retain all the current configs given by the template.
-        """
-elif False:
-    UnbindParametersArgsDict: TypeAlias = Mapping[str, Any]
+class UnbindParametersArgsDict(TypedDict):
+    retain_configs: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Optional boolean to retain all the current configs given by the template.
+    """
 
 @pulumi.input_type
 class UnbindParametersArgs:
@@ -30802,22 +29555,19 @@ class UnbindParametersArgs:
         pulumi.set(self, "retain_configs", value)
 
 
-if not MYPY:
-    class VlanProfilesAssignmentsReassignItemArgsDict(TypedDict):
-        serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        Array of Device Serials
-        """
-        stack_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        Array of Switch Stack IDs
-        """
-        vlan_profile: NotRequired[pulumi.Input['VlanProfilesAssignmentsReassignItemVlanProfileArgsDict']]
-        """
-        The VLAN Profile
-        """
-elif False:
-    VlanProfilesAssignmentsReassignItemArgsDict: TypeAlias = Mapping[str, Any]
+class VlanProfilesAssignmentsReassignItemArgsDict(TypedDict):
+    serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    Array of Device Serials
+    """
+    stack_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    Array of Switch Stack IDs
+    """
+    vlan_profile: NotRequired[pulumi.Input['VlanProfilesAssignmentsReassignItemVlanProfileArgsDict']]
+    """
+    The VLAN Profile
+    """
 
 @pulumi.input_type
 class VlanProfilesAssignmentsReassignItemArgs:
@@ -30874,18 +29624,15 @@ class VlanProfilesAssignmentsReassignItemArgs:
         pulumi.set(self, "vlan_profile", value)
 
 
-if not MYPY:
-    class VlanProfilesAssignmentsReassignItemVlanProfileArgsDict(TypedDict):
-        iname: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        IName of the VLAN Profile
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the VLAN Profile
-        """
-elif False:
-    VlanProfilesAssignmentsReassignItemVlanProfileArgsDict: TypeAlias = Mapping[str, Any]
+class VlanProfilesAssignmentsReassignItemVlanProfileArgsDict(TypedDict):
+    iname: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    IName of the VLAN Profile
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the VLAN Profile
+    """
 
 @pulumi.input_type
 class VlanProfilesAssignmentsReassignItemVlanProfileArgs:
@@ -30926,22 +29673,19 @@ class VlanProfilesAssignmentsReassignItemVlanProfileArgs:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class VlanProfilesAssignmentsReassignParametersArgsDict(TypedDict):
-        serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        Array of Device Serials
-        """
-        stack_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        Array of Switch Stack IDs
-        """
-        vlan_profile: NotRequired[pulumi.Input['VlanProfilesAssignmentsReassignParametersVlanProfileArgsDict']]
-        """
-        The VLAN Profile
-        """
-elif False:
-    VlanProfilesAssignmentsReassignParametersArgsDict: TypeAlias = Mapping[str, Any]
+class VlanProfilesAssignmentsReassignParametersArgsDict(TypedDict):
+    serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    Array of Device Serials
+    """
+    stack_ids: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    Array of Switch Stack IDs
+    """
+    vlan_profile: NotRequired[pulumi.Input['VlanProfilesAssignmentsReassignParametersVlanProfileArgsDict']]
+    """
+    The VLAN Profile
+    """
 
 @pulumi.input_type
 class VlanProfilesAssignmentsReassignParametersArgs:
@@ -30998,14 +29742,11 @@ class VlanProfilesAssignmentsReassignParametersArgs:
         pulumi.set(self, "vlan_profile", value)
 
 
-if not MYPY:
-    class VlanProfilesAssignmentsReassignParametersVlanProfileArgsDict(TypedDict):
-        iname: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        IName of the VLAN Profile
-        """
-elif False:
-    VlanProfilesAssignmentsReassignParametersVlanProfileArgsDict: TypeAlias = Mapping[str, Any]
+class VlanProfilesAssignmentsReassignParametersVlanProfileArgsDict(TypedDict):
+    iname: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    IName of the VLAN Profile
+    """
 
 @pulumi.input_type
 class VlanProfilesAssignmentsReassignParametersVlanProfileArgs:
@@ -31030,18 +29771,15 @@ class VlanProfilesAssignmentsReassignParametersVlanProfileArgs:
         pulumi.set(self, "iname", value)
 
 
-if not MYPY:
-    class VlanProfilesVlanGroupArgsDict(TypedDict):
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the VLAN, string length must be from 1 to 32 characters
-        """
-        vlan_ids: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Comma-separated VLAN IDs or ID ranges
-        """
-elif False:
-    VlanProfilesVlanGroupArgsDict: TypeAlias = Mapping[str, Any]
+class VlanProfilesVlanGroupArgsDict(TypedDict):
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the VLAN, string length must be from 1 to 32 characters
+    """
+    vlan_ids: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Comma-separated VLAN IDs or ID ranges
+    """
 
 @pulumi.input_type
 class VlanProfilesVlanGroupArgs:
@@ -31082,22 +29820,19 @@ class VlanProfilesVlanGroupArgs:
         pulumi.set(self, "vlan_ids", value)
 
 
-if not MYPY:
-    class VlanProfilesVlanNameArgsDict(TypedDict):
-        adaptive_policy_group: NotRequired[pulumi.Input['VlanProfilesVlanNameAdaptivePolicyGroupArgsDict']]
-        """
-        Adaptive Policy Group assigned to Vlan ID
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of the VLAN, string length must be from 1 to 32 characters
-        """
-        vlan_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        VLAN ID
-        """
-elif False:
-    VlanProfilesVlanNameArgsDict: TypeAlias = Mapping[str, Any]
+class VlanProfilesVlanNameArgsDict(TypedDict):
+    adaptive_policy_group: NotRequired[pulumi.Input['VlanProfilesVlanNameAdaptivePolicyGroupArgsDict']]
+    """
+    Adaptive Policy Group assigned to Vlan ID
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of the VLAN, string length must be from 1 to 32 characters
+    """
+    vlan_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    VLAN ID
+    """
 
 @pulumi.input_type
 class VlanProfilesVlanNameArgs:
@@ -31154,18 +29889,15 @@ class VlanProfilesVlanNameArgs:
         pulumi.set(self, "vlan_id", value)
 
 
-if not MYPY:
-    class VlanProfilesVlanNameAdaptivePolicyGroupArgsDict(TypedDict):
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Adaptive Policy Group ID
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Adaptive Policy Group name
-        """
-elif False:
-    VlanProfilesVlanNameAdaptivePolicyGroupArgsDict: TypeAlias = Mapping[str, Any]
+class VlanProfilesVlanNameAdaptivePolicyGroupArgsDict(TypedDict):
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Adaptive Policy Group ID
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Adaptive Policy Group name
+    """
 
 @pulumi.input_type
 class VlanProfilesVlanNameAdaptivePolicyGroupArgs:
@@ -31206,18 +29938,15 @@ class VlanProfilesVlanNameAdaptivePolicyGroupArgs:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class WebhooksHttpServersPayloadTemplateArgsDict(TypedDict):
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The name of the payload template.
-        """
-        payload_template_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The ID of the payload template.
-        """
-elif False:
-    WebhooksHttpServersPayloadTemplateArgsDict: TypeAlias = Mapping[str, Any]
+class WebhooksHttpServersPayloadTemplateArgsDict(TypedDict):
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The name of the payload template.
+    """
+    payload_template_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The ID of the payload template.
+    """
 
 @pulumi.input_type
 class WebhooksHttpServersPayloadTemplateArgs:
@@ -31258,18 +29987,15 @@ class WebhooksHttpServersPayloadTemplateArgs:
         pulumi.set(self, "payload_template_id", value)
 
 
-if not MYPY:
-    class WebhooksPayloadTemplatesHeaderArgsDict(TypedDict):
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The name of the header attribute
-        """
-        template: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The value returned in the header attribute, in liquid template
-        """
-elif False:
-    WebhooksPayloadTemplatesHeaderArgsDict: TypeAlias = Mapping[str, Any]
+class WebhooksPayloadTemplatesHeaderArgsDict(TypedDict):
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The name of the header attribute
+    """
+    template: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The value returned in the header attribute, in liquid template
+    """
 
 @pulumi.input_type
 class WebhooksPayloadTemplatesHeaderArgs:
@@ -31310,14 +30036,11 @@ class WebhooksPayloadTemplatesHeaderArgs:
         pulumi.set(self, "template", value)
 
 
-if not MYPY:
-    class WebhooksPayloadTemplatesSharingArgsDict(TypedDict):
-        by_network: NotRequired[pulumi.Input['WebhooksPayloadTemplatesSharingByNetworkArgsDict']]
-        """
-        Information on network access to the template
-        """
-elif False:
-    WebhooksPayloadTemplatesSharingArgsDict: TypeAlias = Mapping[str, Any]
+class WebhooksPayloadTemplatesSharingArgsDict(TypedDict):
+    by_network: NotRequired[pulumi.Input['WebhooksPayloadTemplatesSharingByNetworkArgsDict']]
+    """
+    Information on network access to the template
+    """
 
 @pulumi.input_type
 class WebhooksPayloadTemplatesSharingArgs:
@@ -31342,14 +30065,11 @@ class WebhooksPayloadTemplatesSharingArgs:
         pulumi.set(self, "by_network", value)
 
 
-if not MYPY:
-    class WebhooksPayloadTemplatesSharingByNetworkArgsDict(TypedDict):
-        admins_can_modify: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Indicates whether network admins may modify this template
-        """
-elif False:
-    WebhooksPayloadTemplatesSharingByNetworkArgsDict: TypeAlias = Mapping[str, Any]
+class WebhooksPayloadTemplatesSharingByNetworkArgsDict(TypedDict):
+    admins_can_modify: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Indicates whether network admins may modify this template
+    """
 
 @pulumi.input_type
 class WebhooksPayloadTemplatesSharingByNetworkArgs:
@@ -31374,34 +30094,31 @@ class WebhooksPayloadTemplatesSharingByNetworkArgs:
         pulumi.set(self, "admins_can_modify", value)
 
 
-if not MYPY:
-    class WirelessAlternateManagementInterfaceAccessPointArgsDict(TypedDict):
-        alternate_management_ip: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Wireless alternate management interface device IP. Provide an empty string to remove alternate management IP assignment
-        """
-        dns1: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Primary DNS must be in IP format
-        """
-        dns2: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Optional secondary DNS must be in IP format
-        """
-        gateway: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Gateway must be in IP format
-        """
-        serial: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Serial number of access point to be configured with alternate management IP
-        """
-        subnet_mask: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Subnet mask must be in IP format
-        """
-elif False:
-    WirelessAlternateManagementInterfaceAccessPointArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessAlternateManagementInterfaceAccessPointArgsDict(TypedDict):
+    alternate_management_ip: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Wireless alternate management interface device IP. Provide an empty string to remove alternate management IP assignment
+    """
+    dns1: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Primary DNS must be in IP format
+    """
+    dns2: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Optional secondary DNS must be in IP format
+    """
+    gateway: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Gateway must be in IP format
+    """
+    serial: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Serial number of access point to be configured with alternate management IP
+    """
+    subnet_mask: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Subnet mask must be in IP format
+    """
 
 @pulumi.input_type
 class WirelessAlternateManagementInterfaceAccessPointArgs:
@@ -31506,26 +30223,23 @@ class WirelessAlternateManagementInterfaceAccessPointArgs:
         pulumi.set(self, "subnet_mask", value)
 
 
-if not MYPY:
-    class WirelessBillingPlanArgsDict(TypedDict):
-        bandwidth_limits: NotRequired[pulumi.Input['WirelessBillingPlanBandwidthLimitsArgsDict']]
-        """
-        The uplink bandwidth settings for the pricing plan.
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The id of the pricing plan to update.
-        """
-        price: NotRequired[pulumi.Input[_builtins.float]]
-        """
-        The price of the billing plan.
-        """
-        time_limit: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The time limit of the pricing plan in minutes.
-        """
-elif False:
-    WirelessBillingPlanArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessBillingPlanArgsDict(TypedDict):
+    bandwidth_limits: NotRequired[pulumi.Input['WirelessBillingPlanBandwidthLimitsArgsDict']]
+    """
+    The uplink bandwidth settings for the pricing plan.
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The id of the pricing plan to update.
+    """
+    price: NotRequired[pulumi.Input[_builtins.float]]
+    """
+    The price of the billing plan.
+    """
+    time_limit: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The time limit of the pricing plan in minutes.
+    """
 
 @pulumi.input_type
 class WirelessBillingPlanArgs:
@@ -31598,18 +30312,15 @@ class WirelessBillingPlanArgs:
         pulumi.set(self, "time_limit", value)
 
 
-if not MYPY:
-    class WirelessBillingPlanBandwidthLimitsArgsDict(TypedDict):
-        limit_down: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The maximum download limit (integer, in Kbps).
-        """
-        limit_up: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The maximum upload limit (integer, in Kbps).
-        """
-elif False:
-    WirelessBillingPlanBandwidthLimitsArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessBillingPlanBandwidthLimitsArgsDict(TypedDict):
+    limit_down: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The maximum download limit (integer, in Kbps).
+    """
+    limit_up: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The maximum upload limit (integer, in Kbps).
+    """
 
 @pulumi.input_type
 class WirelessBillingPlanBandwidthLimitsArgs:
@@ -31650,18 +30361,15 @@ class WirelessBillingPlanBandwidthLimitsArgs:
         pulumi.set(self, "limit_up", value)
 
 
-if not MYPY:
-    class WirelessEthernetPortsProfilesAssignItemArgsDict(TypedDict):
-        profile_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        AP profile ID
-        """
-        serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        List of updated AP serials
-        """
-elif False:
-    WirelessEthernetPortsProfilesAssignItemArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessEthernetPortsProfilesAssignItemArgsDict(TypedDict):
+    profile_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    AP profile ID
+    """
+    serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of updated AP serials
+    """
 
 @pulumi.input_type
 class WirelessEthernetPortsProfilesAssignItemArgs:
@@ -31702,18 +30410,15 @@ class WirelessEthernetPortsProfilesAssignItemArgs:
         pulumi.set(self, "serials", value)
 
 
-if not MYPY:
-    class WirelessEthernetPortsProfilesAssignParametersArgsDict(TypedDict):
-        profile_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        AP profile ID
-        """
-        serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        List of AP serials
-        """
-elif False:
-    WirelessEthernetPortsProfilesAssignParametersArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessEthernetPortsProfilesAssignParametersArgsDict(TypedDict):
+    profile_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    AP profile ID
+    """
+    serials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of AP serials
+    """
 
 @pulumi.input_type
 class WirelessEthernetPortsProfilesAssignParametersArgs:
@@ -31754,30 +30459,27 @@ class WirelessEthernetPortsProfilesAssignParametersArgs:
         pulumi.set(self, "serials", value)
 
 
-if not MYPY:
-    class WirelessEthernetPortsProfilesPortArgsDict(TypedDict):
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Enabled
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name
-        """
-        number: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Number
-        """
-        psk_group_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        PSK Group number
-        """
-        ssid: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Ssid number
-        """
-elif False:
-    WirelessEthernetPortsProfilesPortArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessEthernetPortsProfilesPortArgsDict(TypedDict):
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Enabled
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name
+    """
+    number: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Number
+    """
+    psk_group_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    PSK Group number
+    """
+    ssid: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Ssid number
+    """
 
 @pulumi.input_type
 class WirelessEthernetPortsProfilesPortArgs:
@@ -31866,14 +30568,11 @@ class WirelessEthernetPortsProfilesPortArgs:
         pulumi.set(self, "ssid", value)
 
 
-if not MYPY:
-    class WirelessEthernetPortsProfilesSetDefaultItemArgsDict(TypedDict):
-        profile_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        AP profile ID
-        """
-elif False:
-    WirelessEthernetPortsProfilesSetDefaultItemArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessEthernetPortsProfilesSetDefaultItemArgsDict(TypedDict):
+    profile_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    AP profile ID
+    """
 
 @pulumi.input_type
 class WirelessEthernetPortsProfilesSetDefaultItemArgs:
@@ -31898,14 +30597,11 @@ class WirelessEthernetPortsProfilesSetDefaultItemArgs:
         pulumi.set(self, "profile_id", value)
 
 
-if not MYPY:
-    class WirelessEthernetPortsProfilesSetDefaultParametersArgsDict(TypedDict):
-        profile_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        AP profile ID
-        """
-elif False:
-    WirelessEthernetPortsProfilesSetDefaultParametersArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessEthernetPortsProfilesSetDefaultParametersArgsDict(TypedDict):
+    profile_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    AP profile ID
+    """
 
 @pulumi.input_type
 class WirelessEthernetPortsProfilesSetDefaultParametersArgs:
@@ -31930,22 +30626,19 @@ class WirelessEthernetPortsProfilesSetDefaultParametersArgs:
         pulumi.set(self, "profile_id", value)
 
 
-if not MYPY:
-    class WirelessEthernetPortsProfilesUsbPortArgsDict(TypedDict):
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Enabled
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name
-        """
-        ssid: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Ssid number
-        """
-elif False:
-    WirelessEthernetPortsProfilesUsbPortArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessEthernetPortsProfilesUsbPortArgsDict(TypedDict):
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Enabled
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name
+    """
+    ssid: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Ssid number
+    """
 
 @pulumi.input_type
 class WirelessEthernetPortsProfilesUsbPortArgs:
@@ -32002,22 +30695,19 @@ class WirelessEthernetPortsProfilesUsbPortArgs:
         pulumi.set(self, "ssid", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesApBandSettingsArgsDict(TypedDict):
-        band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'. Defaults to dual.
-        """
-        band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Steers client to most open band. Can be either true or false. Defaults to true.
-        """
-        bands: NotRequired[pulumi.Input['WirelessRfProfilesApBandSettingsBandsArgsDict']]
-        """
-        Settings related to all bands
-        """
-elif False:
-    WirelessRfProfilesApBandSettingsArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesApBandSettingsArgsDict(TypedDict):
+    band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'. Defaults to dual.
+    """
+    band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Steers client to most open band. Can be either true or false. Defaults to true.
+    """
+    bands: NotRequired[pulumi.Input['WirelessRfProfilesApBandSettingsBandsArgsDict']]
+    """
+    Settings related to all bands
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesApBandSettingsArgs:
@@ -32074,14 +30764,11 @@ class WirelessRfProfilesApBandSettingsArgs:
         pulumi.set(self, "bands", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesApBandSettingsBandsArgsDict(TypedDict):
-        enableds: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-        """
-elif False:
-    WirelessRfProfilesApBandSettingsBandsArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesApBandSettingsBandsArgsDict(TypedDict):
+    enableds: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of enabled bands. Can include ["2.4", "5", "6", "disabled"
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesApBandSettingsBandsArgs:
@@ -32106,34 +30793,31 @@ class WirelessRfProfilesApBandSettingsBandsArgs:
         pulumi.set(self, "enableds", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesFiveGhzSettingsArgsDict(TypedDict):
-        channel_width: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Sets channel width (MHz) for 5Ghz band. Can be one of 'auto', '20', '40' or '80'. Defaults to auto.
-        """
-        max_power: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Sets max power (dBm) of 5Ghz band. Can be integer between 2 and 30. Defaults to 30.
-        """
-        min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Sets min bitrate (Mbps) of 5Ghz band. Can be one of '6', '9', '12', '18', '24', '36', '48' or '54'. Defaults to 12.
-        """
-        min_power: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Sets min power (dBm) of 5Ghz band. Can be integer between 2 and 30. Defaults to 8.
-        """
-        rxsop: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The RX-SOP level controls the sensitivity of the radio. It is strongly recommended to use RX-SOP only after consulting a wireless expert. RX-SOP can be configured in the range of -65 to -95 (dBm). A value of null will reset this to the default.
-        """
-        valid_auto_channels: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]
-        """
-        Sets valid auto channels for 5Ghz band. Can be one of '36', '40', '44', '48', '52', '56', '60', '64', '100', '104', '108', '112', '116', '120', '124', '128', '132', '136', '140', '144', '149', '153', '157', '161' or '165'.Defaults to [36, 40, 44, 48, 52, 56, 60, 64, 100, 104, 108, 112, 116, 120, 124, 128, 132, 136, 140, 144, 149, 153, 157, 161, 165].
-        """
-elif False:
-    WirelessRfProfilesFiveGhzSettingsArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesFiveGhzSettingsArgsDict(TypedDict):
+    channel_width: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Sets channel width (MHz) for 5Ghz band. Can be one of 'auto', '20', '40' or '80'. Defaults to auto.
+    """
+    max_power: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Sets max power (dBm) of 5Ghz band. Can be integer between 2 and 30. Defaults to 30.
+    """
+    min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Sets min bitrate (Mbps) of 5Ghz band. Can be one of '6', '9', '12', '18', '24', '36', '48' or '54'. Defaults to 12.
+    """
+    min_power: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Sets min power (dBm) of 5Ghz band. Can be integer between 2 and 30. Defaults to 8.
+    """
+    rxsop: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The RX-SOP level controls the sensitivity of the radio. It is strongly recommended to use RX-SOP only after consulting a wireless expert. RX-SOP can be configured in the range of -65 to -95 (dBm). A value of null will reset this to the default.
+    """
+    valid_auto_channels: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]
+    """
+    Sets valid auto channels for 5Ghz band. Can be one of '36', '40', '44', '48', '52', '56', '60', '64', '100', '104', '108', '112', '116', '120', '124', '128', '132', '136', '140', '144', '149', '153', '157', '161' or '165'.Defaults to [36, 40, 44, 48, 52, 56, 60, 64, 100, 104, 108, 112, 116, 120, 124, 128, 132, 136, 140, 144, 149, 153, 157, 161, 165].
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesFiveGhzSettingsArgs:
@@ -32238,14 +30922,11 @@ class WirelessRfProfilesFiveGhzSettingsArgs:
         pulumi.set(self, "valid_auto_channels", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesFlexRadiosArgsDict(TypedDict):
-        by_models: NotRequired[pulumi.Input[Sequence[pulumi.Input['WirelessRfProfilesFlexRadiosByModelArgsDict']]]]
-        """
-        Flex radios by model.
-        """
-elif False:
-    WirelessRfProfilesFlexRadiosArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesFlexRadiosArgsDict(TypedDict):
+    by_models: NotRequired[pulumi.Input[Sequence[pulumi.Input['WirelessRfProfilesFlexRadiosByModelArgsDict']]]]
+    """
+    Flex radios by model.
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesFlexRadiosArgs:
@@ -32270,18 +30951,15 @@ class WirelessRfProfilesFlexRadiosArgs:
         pulumi.set(self, "by_models", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesFlexRadiosByModelArgsDict(TypedDict):
-        bands: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        Band to use for each flex radio. For example, ['6'] will set the AP's first flex radio to 6 GHz
-        """
-        model: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Model of the AP
-        """
-elif False:
-    WirelessRfProfilesFlexRadiosByModelArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesFlexRadiosByModelArgsDict(TypedDict):
+    bands: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    Band to use for each flex radio. For example, ['6'] will set the AP's first flex radio to 6 GHz
+    """
+    model: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Model of the AP
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesFlexRadiosByModelArgs:
@@ -32322,70 +31000,67 @@ class WirelessRfProfilesFlexRadiosByModelArgs:
         pulumi.set(self, "model", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesPerSsidSettingsArgsDict(TypedDict):
-        status0: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus0ArgsDict']]
-        """
-        Settings for SSID 0
-        """
-        status1: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus1ArgsDict']]
-        """
-        Settings for SSID 1
-        """
-        status10: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus10ArgsDict']]
-        """
-        Settings for SSID 10
-        """
-        status11: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus11ArgsDict']]
-        """
-        Settings for SSID 11
-        """
-        status12: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus12ArgsDict']]
-        """
-        Settings for SSID 12
-        """
-        status13: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus13ArgsDict']]
-        """
-        Settings for SSID 13
-        """
-        status14: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus14ArgsDict']]
-        """
-        Settings for SSID 14
-        """
-        status2: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus2ArgsDict']]
-        """
-        Settings for SSID 2
-        """
-        status3: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus3ArgsDict']]
-        """
-        Settings for SSID 3
-        """
-        status4: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus4ArgsDict']]
-        """
-        Settings for SSID 4
-        """
-        status5: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus5ArgsDict']]
-        """
-        Settings for SSID 5
-        """
-        status6: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus6ArgsDict']]
-        """
-        Settings for SSID 6
-        """
-        status7: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus7ArgsDict']]
-        """
-        Settings for SSID 7
-        """
-        status8: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus8ArgsDict']]
-        """
-        Settings for SSID 8
-        """
-        status9: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus9ArgsDict']]
-        """
-        Settings for SSID 9
-        """
-elif False:
-    WirelessRfProfilesPerSsidSettingsArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesPerSsidSettingsArgsDict(TypedDict):
+    status0: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus0ArgsDict']]
+    """
+    Settings for SSID 0
+    """
+    status1: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus1ArgsDict']]
+    """
+    Settings for SSID 1
+    """
+    status10: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus10ArgsDict']]
+    """
+    Settings for SSID 10
+    """
+    status11: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus11ArgsDict']]
+    """
+    Settings for SSID 11
+    """
+    status12: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus12ArgsDict']]
+    """
+    Settings for SSID 12
+    """
+    status13: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus13ArgsDict']]
+    """
+    Settings for SSID 13
+    """
+    status14: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus14ArgsDict']]
+    """
+    Settings for SSID 14
+    """
+    status2: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus2ArgsDict']]
+    """
+    Settings for SSID 2
+    """
+    status3: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus3ArgsDict']]
+    """
+    Settings for SSID 3
+    """
+    status4: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus4ArgsDict']]
+    """
+    Settings for SSID 4
+    """
+    status5: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus5ArgsDict']]
+    """
+    Settings for SSID 5
+    """
+    status6: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus6ArgsDict']]
+    """
+    Settings for SSID 6
+    """
+    status7: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus7ArgsDict']]
+    """
+    Settings for SSID 7
+    """
+    status8: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus8ArgsDict']]
+    """
+    Settings for SSID 8
+    """
+    status9: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus9ArgsDict']]
+    """
+    Settings for SSID 9
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesPerSsidSettingsArgs:
@@ -32634,30 +31309,27 @@ class WirelessRfProfilesPerSsidSettingsArgs:
         pulumi.set(self, "status9", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesPerSsidSettingsStatus0ArgsDict(TypedDict):
-        band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-        """
-        band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-        """
-        bands: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus0BandsArgsDict']]
-        """
-        Settings related to all bands
-        """
-        min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of SSID
-        """
-elif False:
-    WirelessRfProfilesPerSsidSettingsStatus0ArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesPerSsidSettingsStatus0ArgsDict(TypedDict):
+    band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
+    """
+    band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
+    """
+    bands: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus0BandsArgsDict']]
+    """
+    Settings related to all bands
+    """
+    min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of SSID
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesPerSsidSettingsStatus0Args:
@@ -32746,14 +31418,11 @@ class WirelessRfProfilesPerSsidSettingsStatus0Args:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesPerSsidSettingsStatus0BandsArgsDict(TypedDict):
-        enableds: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-        """
-elif False:
-    WirelessRfProfilesPerSsidSettingsStatus0BandsArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesPerSsidSettingsStatus0BandsArgsDict(TypedDict):
+    enableds: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of enabled bands. Can include ["2.4", "5", "6", "disabled"
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesPerSsidSettingsStatus0BandsArgs:
@@ -32778,30 +31447,27 @@ class WirelessRfProfilesPerSsidSettingsStatus0BandsArgs:
         pulumi.set(self, "enableds", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesPerSsidSettingsStatus10ArgsDict(TypedDict):
-        band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-        """
-        band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-        """
-        bands: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus10BandsArgsDict']]
-        """
-        Settings related to all bands
-        """
-        min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of SSID
-        """
-elif False:
-    WirelessRfProfilesPerSsidSettingsStatus10ArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesPerSsidSettingsStatus10ArgsDict(TypedDict):
+    band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
+    """
+    band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
+    """
+    bands: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus10BandsArgsDict']]
+    """
+    Settings related to all bands
+    """
+    min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of SSID
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesPerSsidSettingsStatus10Args:
@@ -32890,14 +31556,11 @@ class WirelessRfProfilesPerSsidSettingsStatus10Args:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesPerSsidSettingsStatus10BandsArgsDict(TypedDict):
-        enableds: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-        """
-elif False:
-    WirelessRfProfilesPerSsidSettingsStatus10BandsArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesPerSsidSettingsStatus10BandsArgsDict(TypedDict):
+    enableds: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of enabled bands. Can include ["2.4", "5", "6", "disabled"
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesPerSsidSettingsStatus10BandsArgs:
@@ -32922,30 +31585,27 @@ class WirelessRfProfilesPerSsidSettingsStatus10BandsArgs:
         pulumi.set(self, "enableds", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesPerSsidSettingsStatus11ArgsDict(TypedDict):
-        band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-        """
-        band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-        """
-        bands: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus11BandsArgsDict']]
-        """
-        Settings related to all bands
-        """
-        min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of SSID
-        """
-elif False:
-    WirelessRfProfilesPerSsidSettingsStatus11ArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesPerSsidSettingsStatus11ArgsDict(TypedDict):
+    band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
+    """
+    band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
+    """
+    bands: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus11BandsArgsDict']]
+    """
+    Settings related to all bands
+    """
+    min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of SSID
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesPerSsidSettingsStatus11Args:
@@ -33034,14 +31694,11 @@ class WirelessRfProfilesPerSsidSettingsStatus11Args:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesPerSsidSettingsStatus11BandsArgsDict(TypedDict):
-        enableds: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-        """
-elif False:
-    WirelessRfProfilesPerSsidSettingsStatus11BandsArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesPerSsidSettingsStatus11BandsArgsDict(TypedDict):
+    enableds: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of enabled bands. Can include ["2.4", "5", "6", "disabled"
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesPerSsidSettingsStatus11BandsArgs:
@@ -33066,30 +31723,27 @@ class WirelessRfProfilesPerSsidSettingsStatus11BandsArgs:
         pulumi.set(self, "enableds", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesPerSsidSettingsStatus12ArgsDict(TypedDict):
-        band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-        """
-        band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-        """
-        bands: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus12BandsArgsDict']]
-        """
-        Settings related to all bands
-        """
-        min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of SSID
-        """
-elif False:
-    WirelessRfProfilesPerSsidSettingsStatus12ArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesPerSsidSettingsStatus12ArgsDict(TypedDict):
+    band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
+    """
+    band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
+    """
+    bands: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus12BandsArgsDict']]
+    """
+    Settings related to all bands
+    """
+    min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of SSID
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesPerSsidSettingsStatus12Args:
@@ -33178,14 +31832,11 @@ class WirelessRfProfilesPerSsidSettingsStatus12Args:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesPerSsidSettingsStatus12BandsArgsDict(TypedDict):
-        enableds: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-        """
-elif False:
-    WirelessRfProfilesPerSsidSettingsStatus12BandsArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesPerSsidSettingsStatus12BandsArgsDict(TypedDict):
+    enableds: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of enabled bands. Can include ["2.4", "5", "6", "disabled"
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesPerSsidSettingsStatus12BandsArgs:
@@ -33210,30 +31861,27 @@ class WirelessRfProfilesPerSsidSettingsStatus12BandsArgs:
         pulumi.set(self, "enableds", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesPerSsidSettingsStatus13ArgsDict(TypedDict):
-        band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-        """
-        band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-        """
-        bands: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus13BandsArgsDict']]
-        """
-        Settings related to all bands
-        """
-        min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of SSID
-        """
-elif False:
-    WirelessRfProfilesPerSsidSettingsStatus13ArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesPerSsidSettingsStatus13ArgsDict(TypedDict):
+    band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
+    """
+    band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
+    """
+    bands: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus13BandsArgsDict']]
+    """
+    Settings related to all bands
+    """
+    min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of SSID
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesPerSsidSettingsStatus13Args:
@@ -33322,14 +31970,11 @@ class WirelessRfProfilesPerSsidSettingsStatus13Args:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesPerSsidSettingsStatus13BandsArgsDict(TypedDict):
-        enableds: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-        """
-elif False:
-    WirelessRfProfilesPerSsidSettingsStatus13BandsArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesPerSsidSettingsStatus13BandsArgsDict(TypedDict):
+    enableds: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of enabled bands. Can include ["2.4", "5", "6", "disabled"
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesPerSsidSettingsStatus13BandsArgs:
@@ -33354,30 +31999,27 @@ class WirelessRfProfilesPerSsidSettingsStatus13BandsArgs:
         pulumi.set(self, "enableds", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesPerSsidSettingsStatus14ArgsDict(TypedDict):
-        band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-        """
-        band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-        """
-        bands: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus14BandsArgsDict']]
-        """
-        Settings related to all bands
-        """
-        min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of SSID
-        """
-elif False:
-    WirelessRfProfilesPerSsidSettingsStatus14ArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesPerSsidSettingsStatus14ArgsDict(TypedDict):
+    band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
+    """
+    band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
+    """
+    bands: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus14BandsArgsDict']]
+    """
+    Settings related to all bands
+    """
+    min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of SSID
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesPerSsidSettingsStatus14Args:
@@ -33466,14 +32108,11 @@ class WirelessRfProfilesPerSsidSettingsStatus14Args:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesPerSsidSettingsStatus14BandsArgsDict(TypedDict):
-        enableds: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-        """
-elif False:
-    WirelessRfProfilesPerSsidSettingsStatus14BandsArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesPerSsidSettingsStatus14BandsArgsDict(TypedDict):
+    enableds: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of enabled bands. Can include ["2.4", "5", "6", "disabled"
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesPerSsidSettingsStatus14BandsArgs:
@@ -33498,30 +32137,27 @@ class WirelessRfProfilesPerSsidSettingsStatus14BandsArgs:
         pulumi.set(self, "enableds", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesPerSsidSettingsStatus1ArgsDict(TypedDict):
-        band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-        """
-        band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-        """
-        bands: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus1BandsArgsDict']]
-        """
-        Settings related to all bands
-        """
-        min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of SSID
-        """
-elif False:
-    WirelessRfProfilesPerSsidSettingsStatus1ArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesPerSsidSettingsStatus1ArgsDict(TypedDict):
+    band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
+    """
+    band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
+    """
+    bands: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus1BandsArgsDict']]
+    """
+    Settings related to all bands
+    """
+    min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of SSID
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesPerSsidSettingsStatus1Args:
@@ -33610,14 +32246,11 @@ class WirelessRfProfilesPerSsidSettingsStatus1Args:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesPerSsidSettingsStatus1BandsArgsDict(TypedDict):
-        enableds: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-        """
-elif False:
-    WirelessRfProfilesPerSsidSettingsStatus1BandsArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesPerSsidSettingsStatus1BandsArgsDict(TypedDict):
+    enableds: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of enabled bands. Can include ["2.4", "5", "6", "disabled"
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesPerSsidSettingsStatus1BandsArgs:
@@ -33642,30 +32275,27 @@ class WirelessRfProfilesPerSsidSettingsStatus1BandsArgs:
         pulumi.set(self, "enableds", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesPerSsidSettingsStatus2ArgsDict(TypedDict):
-        band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-        """
-        band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-        """
-        bands: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus2BandsArgsDict']]
-        """
-        Settings related to all bands
-        """
-        min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of SSID
-        """
-elif False:
-    WirelessRfProfilesPerSsidSettingsStatus2ArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesPerSsidSettingsStatus2ArgsDict(TypedDict):
+    band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
+    """
+    band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
+    """
+    bands: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus2BandsArgsDict']]
+    """
+    Settings related to all bands
+    """
+    min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of SSID
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesPerSsidSettingsStatus2Args:
@@ -33754,14 +32384,11 @@ class WirelessRfProfilesPerSsidSettingsStatus2Args:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesPerSsidSettingsStatus2BandsArgsDict(TypedDict):
-        enableds: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-        """
-elif False:
-    WirelessRfProfilesPerSsidSettingsStatus2BandsArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesPerSsidSettingsStatus2BandsArgsDict(TypedDict):
+    enableds: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of enabled bands. Can include ["2.4", "5", "6", "disabled"
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesPerSsidSettingsStatus2BandsArgs:
@@ -33786,30 +32413,27 @@ class WirelessRfProfilesPerSsidSettingsStatus2BandsArgs:
         pulumi.set(self, "enableds", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesPerSsidSettingsStatus3ArgsDict(TypedDict):
-        band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-        """
-        band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-        """
-        bands: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus3BandsArgsDict']]
-        """
-        Settings related to all bands
-        """
-        min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of SSID
-        """
-elif False:
-    WirelessRfProfilesPerSsidSettingsStatus3ArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesPerSsidSettingsStatus3ArgsDict(TypedDict):
+    band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
+    """
+    band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
+    """
+    bands: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus3BandsArgsDict']]
+    """
+    Settings related to all bands
+    """
+    min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of SSID
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesPerSsidSettingsStatus3Args:
@@ -33898,14 +32522,11 @@ class WirelessRfProfilesPerSsidSettingsStatus3Args:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesPerSsidSettingsStatus3BandsArgsDict(TypedDict):
-        enableds: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-        """
-elif False:
-    WirelessRfProfilesPerSsidSettingsStatus3BandsArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesPerSsidSettingsStatus3BandsArgsDict(TypedDict):
+    enableds: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of enabled bands. Can include ["2.4", "5", "6", "disabled"
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesPerSsidSettingsStatus3BandsArgs:
@@ -33930,30 +32551,27 @@ class WirelessRfProfilesPerSsidSettingsStatus3BandsArgs:
         pulumi.set(self, "enableds", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesPerSsidSettingsStatus4ArgsDict(TypedDict):
-        band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-        """
-        band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-        """
-        bands: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus4BandsArgsDict']]
-        """
-        Settings related to all bands
-        """
-        min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of SSID
-        """
-elif False:
-    WirelessRfProfilesPerSsidSettingsStatus4ArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesPerSsidSettingsStatus4ArgsDict(TypedDict):
+    band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
+    """
+    band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
+    """
+    bands: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus4BandsArgsDict']]
+    """
+    Settings related to all bands
+    """
+    min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of SSID
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesPerSsidSettingsStatus4Args:
@@ -34042,14 +32660,11 @@ class WirelessRfProfilesPerSsidSettingsStatus4Args:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesPerSsidSettingsStatus4BandsArgsDict(TypedDict):
-        enableds: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-        """
-elif False:
-    WirelessRfProfilesPerSsidSettingsStatus4BandsArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesPerSsidSettingsStatus4BandsArgsDict(TypedDict):
+    enableds: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of enabled bands. Can include ["2.4", "5", "6", "disabled"
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesPerSsidSettingsStatus4BandsArgs:
@@ -34074,30 +32689,27 @@ class WirelessRfProfilesPerSsidSettingsStatus4BandsArgs:
         pulumi.set(self, "enableds", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesPerSsidSettingsStatus5ArgsDict(TypedDict):
-        band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-        """
-        band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-        """
-        bands: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus5BandsArgsDict']]
-        """
-        Settings related to all bands
-        """
-        min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of SSID
-        """
-elif False:
-    WirelessRfProfilesPerSsidSettingsStatus5ArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesPerSsidSettingsStatus5ArgsDict(TypedDict):
+    band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
+    """
+    band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
+    """
+    bands: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus5BandsArgsDict']]
+    """
+    Settings related to all bands
+    """
+    min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of SSID
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesPerSsidSettingsStatus5Args:
@@ -34186,14 +32798,11 @@ class WirelessRfProfilesPerSsidSettingsStatus5Args:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesPerSsidSettingsStatus5BandsArgsDict(TypedDict):
-        enableds: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-        """
-elif False:
-    WirelessRfProfilesPerSsidSettingsStatus5BandsArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesPerSsidSettingsStatus5BandsArgsDict(TypedDict):
+    enableds: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of enabled bands. Can include ["2.4", "5", "6", "disabled"
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesPerSsidSettingsStatus5BandsArgs:
@@ -34218,30 +32827,27 @@ class WirelessRfProfilesPerSsidSettingsStatus5BandsArgs:
         pulumi.set(self, "enableds", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesPerSsidSettingsStatus6ArgsDict(TypedDict):
-        band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-        """
-        band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-        """
-        bands: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus6BandsArgsDict']]
-        """
-        Settings related to all bands
-        """
-        min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of SSID
-        """
-elif False:
-    WirelessRfProfilesPerSsidSettingsStatus6ArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesPerSsidSettingsStatus6ArgsDict(TypedDict):
+    band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
+    """
+    band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
+    """
+    bands: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus6BandsArgsDict']]
+    """
+    Settings related to all bands
+    """
+    min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of SSID
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesPerSsidSettingsStatus6Args:
@@ -34330,14 +32936,11 @@ class WirelessRfProfilesPerSsidSettingsStatus6Args:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesPerSsidSettingsStatus6BandsArgsDict(TypedDict):
-        enableds: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-        """
-elif False:
-    WirelessRfProfilesPerSsidSettingsStatus6BandsArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesPerSsidSettingsStatus6BandsArgsDict(TypedDict):
+    enableds: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of enabled bands. Can include ["2.4", "5", "6", "disabled"
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesPerSsidSettingsStatus6BandsArgs:
@@ -34362,30 +32965,27 @@ class WirelessRfProfilesPerSsidSettingsStatus6BandsArgs:
         pulumi.set(self, "enableds", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesPerSsidSettingsStatus7ArgsDict(TypedDict):
-        band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-        """
-        band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-        """
-        bands: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus7BandsArgsDict']]
-        """
-        Settings related to all bands
-        """
-        min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of SSID
-        """
-elif False:
-    WirelessRfProfilesPerSsidSettingsStatus7ArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesPerSsidSettingsStatus7ArgsDict(TypedDict):
+    band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
+    """
+    band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
+    """
+    bands: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus7BandsArgsDict']]
+    """
+    Settings related to all bands
+    """
+    min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of SSID
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesPerSsidSettingsStatus7Args:
@@ -34474,14 +33074,11 @@ class WirelessRfProfilesPerSsidSettingsStatus7Args:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesPerSsidSettingsStatus7BandsArgsDict(TypedDict):
-        enableds: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-        """
-elif False:
-    WirelessRfProfilesPerSsidSettingsStatus7BandsArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesPerSsidSettingsStatus7BandsArgsDict(TypedDict):
+    enableds: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of enabled bands. Can include ["2.4", "5", "6", "disabled"
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesPerSsidSettingsStatus7BandsArgs:
@@ -34506,30 +33103,27 @@ class WirelessRfProfilesPerSsidSettingsStatus7BandsArgs:
         pulumi.set(self, "enableds", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesPerSsidSettingsStatus8ArgsDict(TypedDict):
-        band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-        """
-        band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-        """
-        bands: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus8BandsArgsDict']]
-        """
-        Settings related to all bands
-        """
-        min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of SSID
-        """
-elif False:
-    WirelessRfProfilesPerSsidSettingsStatus8ArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesPerSsidSettingsStatus8ArgsDict(TypedDict):
+    band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
+    """
+    band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
+    """
+    bands: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus8BandsArgsDict']]
+    """
+    Settings related to all bands
+    """
+    min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of SSID
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesPerSsidSettingsStatus8Args:
@@ -34618,14 +33212,11 @@ class WirelessRfProfilesPerSsidSettingsStatus8Args:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesPerSsidSettingsStatus8BandsArgsDict(TypedDict):
-        enableds: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-        """
-elif False:
-    WirelessRfProfilesPerSsidSettingsStatus8BandsArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesPerSsidSettingsStatus8BandsArgsDict(TypedDict):
+    enableds: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of enabled bands. Can include ["2.4", "5", "6", "disabled"
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesPerSsidSettingsStatus8BandsArgs:
@@ -34650,30 +33241,27 @@ class WirelessRfProfilesPerSsidSettingsStatus8BandsArgs:
         pulumi.set(self, "enableds", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesPerSsidSettingsStatus9ArgsDict(TypedDict):
-        band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
-        """
-        band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
-        """
-        bands: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus9BandsArgsDict']]
-        """
-        Settings related to all bands
-        """
-        min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name of SSID
-        """
-elif False:
-    WirelessRfProfilesPerSsidSettingsStatus9ArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesPerSsidSettingsStatus9ArgsDict(TypedDict):
+    band_operation_mode: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Choice between 'dual', '2.4ghz', '5ghz', '6ghz' or 'multi'.
+    """
+    band_steering_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Steers client to most open band between 2.4 GHz and 5 GHz. Can be either true or false.
+    """
+    bands: NotRequired[pulumi.Input['WirelessRfProfilesPerSsidSettingsStatus9BandsArgsDict']]
+    """
+    Settings related to all bands
+    """
+    min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Sets min bitrate (Mbps) of this SSID. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'.
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Name of SSID
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesPerSsidSettingsStatus9Args:
@@ -34762,14 +33350,11 @@ class WirelessRfProfilesPerSsidSettingsStatus9Args:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesPerSsidSettingsStatus9BandsArgsDict(TypedDict):
-        enableds: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        List of enabled bands. Can include ["2.4", "5", "6", "disabled"
-        """
-elif False:
-    WirelessRfProfilesPerSsidSettingsStatus9BandsArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesPerSsidSettingsStatus9BandsArgsDict(TypedDict):
+    enableds: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of enabled bands. Can include ["2.4", "5", "6", "disabled"
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesPerSsidSettingsStatus9BandsArgs:
@@ -34794,34 +33379,31 @@ class WirelessRfProfilesPerSsidSettingsStatus9BandsArgs:
         pulumi.set(self, "enableds", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesSixGhzSettingsArgsDict(TypedDict):
-        channel_width: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Sets channel width (MHz) for 6Ghz band. Can be one of '0', '20', '40', '80' or '160'. Defaults to auto.
-        """
-        max_power: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Sets max power (dBm) of 6Ghz band. Can be integer between 2 and 30. Defaults to 30.
-        """
-        min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Sets min bitrate (Mbps) of 6Ghz band. Can be one of '6', '9', '12', '18', '24', '36', '48' or '54'. Defaults to 12.
-        """
-        min_power: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Sets min power (dBm) of 6Ghz band. Can be integer between 2 and 30. Defaults to 8.
-        """
-        rxsop: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The RX-SOP level controls the sensitivity of the radio. It is strongly recommended to use RX-SOP only after consulting a wireless expert. RX-SOP can be configured in the range of -65 to -95 (dBm). A value of null will reset this to the default.
-        """
-        valid_auto_channels: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]
-        """
-        Sets valid auto channels for 6Ghz band. Can be one of '1', '5', '9', '13', '17', '21', '25', '29', '33', '37', '41', '45', '49', '53', '57', '61', '65', '69', '73', '77', '81', '85', '89', '93', '97', '101', '105', '109', '113', '117', '121', '125', '129', '133', '137', '141', '145', '149', '153', '157', '161', '165', '169', '173', '177', '181', '185', '189', '193', '197', '201', '205', '209', '213', '217', '221', '225', '229' or '233'. Defaults to auto.
-        """
-elif False:
-    WirelessRfProfilesSixGhzSettingsArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesSixGhzSettingsArgsDict(TypedDict):
+    channel_width: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Sets channel width (MHz) for 6Ghz band. Can be one of '0', '20', '40', '80' or '160'. Defaults to auto.
+    """
+    max_power: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Sets max power (dBm) of 6Ghz band. Can be integer between 2 and 30. Defaults to 30.
+    """
+    min_bitrate: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Sets min bitrate (Mbps) of 6Ghz band. Can be one of '6', '9', '12', '18', '24', '36', '48' or '54'. Defaults to 12.
+    """
+    min_power: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Sets min power (dBm) of 6Ghz band. Can be integer between 2 and 30. Defaults to 8.
+    """
+    rxsop: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The RX-SOP level controls the sensitivity of the radio. It is strongly recommended to use RX-SOP only after consulting a wireless expert. RX-SOP can be configured in the range of -65 to -95 (dBm). A value of null will reset this to the default.
+    """
+    valid_auto_channels: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]
+    """
+    Sets valid auto channels for 6Ghz band. Can be one of '1', '5', '9', '13', '17', '21', '25', '29', '33', '37', '41', '45', '49', '53', '57', '61', '65', '69', '73', '77', '81', '85', '89', '93', '97', '101', '105', '109', '113', '117', '121', '125', '129', '133', '137', '141', '145', '149', '153', '157', '161', '165', '169', '173', '177', '181', '185', '189', '193', '197', '201', '205', '209', '213', '217', '221', '225', '229' or '233'. Defaults to auto.
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesSixGhzSettingsArgs:
@@ -34926,14 +33508,11 @@ class WirelessRfProfilesSixGhzSettingsArgs:
         pulumi.set(self, "valid_auto_channels", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesTransmissionArgsDict(TypedDict):
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Toggle for radio transmission. When false, radios will not transmit at all.
-        """
-elif False:
-    WirelessRfProfilesTransmissionArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesTransmissionArgsDict(TypedDict):
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Toggle for radio transmission. When false, radios will not transmit at all.
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesTransmissionArgs:
@@ -34958,34 +33537,31 @@ class WirelessRfProfilesTransmissionArgs:
         pulumi.set(self, "enabled", value)
 
 
-if not MYPY:
-    class WirelessRfProfilesTwoFourGhzSettingsArgsDict(TypedDict):
-        ax_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Determines whether ax radio on 2.4Ghz band is on or off. Can be either true or false. If false, we highly recommend disabling band steering. Defaults to true.
-        """
-        max_power: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Sets max power (dBm) of 2.4Ghz band. Can be integer between 2 and 30. Defaults to 30.
-        """
-        min_bitrate: NotRequired[pulumi.Input[_builtins.float]]
-        """
-        Sets min bitrate (Mbps) of 2.4Ghz band. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'. Defaults to 11.
-        """
-        min_power: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Sets min power (dBm) of 2.4Ghz band. Can be integer between 2 and 30. Defaults to 5.
-        """
-        rxsop: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The RX-SOP level controls the sensitivity of the radio. It is strongly recommended to use RX-SOP only after consulting a wireless expert. RX-SOP can be configured in the range of -65 to -95 (dBm). A value of null will reset this to the default.
-        """
-        valid_auto_channels: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]
-        """
-        Sets valid auto channels for 2.4Ghz band. Can be one of '1', '6' or '11'. Defaults to [1, 6, 11].
-        """
-elif False:
-    WirelessRfProfilesTwoFourGhzSettingsArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessRfProfilesTwoFourGhzSettingsArgsDict(TypedDict):
+    ax_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Determines whether ax radio on 2.4Ghz band is on or off. Can be either true or false. If false, we highly recommend disabling band steering. Defaults to true.
+    """
+    max_power: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Sets max power (dBm) of 2.4Ghz band. Can be integer between 2 and 30. Defaults to 30.
+    """
+    min_bitrate: NotRequired[pulumi.Input[_builtins.float]]
+    """
+    Sets min bitrate (Mbps) of 2.4Ghz band. Can be one of '1', '2', '5.5', '6', '9', '11', '12', '18', '24', '36', '48' or '54'. Defaults to 11.
+    """
+    min_power: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Sets min power (dBm) of 2.4Ghz band. Can be integer between 2 and 30. Defaults to 5.
+    """
+    rxsop: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The RX-SOP level controls the sensitivity of the radio. It is strongly recommended to use RX-SOP only after consulting a wireless expert. RX-SOP can be configured in the range of -65 to -95 (dBm). A value of null will reset this to the default.
+    """
+    valid_auto_channels: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]
+    """
+    Sets valid auto channels for 2.4Ghz band. Can be one of '1', '6' or '11'. Defaults to [1, 6, 11].
+    """
 
 @pulumi.input_type
 class WirelessRfProfilesTwoFourGhzSettingsArgs:
@@ -35090,14 +33666,11 @@ class WirelessRfProfilesTwoFourGhzSettingsArgs:
         pulumi.set(self, "valid_auto_channels", value)
 
 
-if not MYPY:
-    class WirelessSettingsNamedVlansArgsDict(TypedDict):
-        pool_dhcp_monitoring: NotRequired[pulumi.Input['WirelessSettingsNamedVlansPoolDhcpMonitoringArgsDict']]
-        """
-        Named VLAN Pool DHCP Monitoring settings.
-        """
-elif False:
-    WirelessSettingsNamedVlansArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSettingsNamedVlansArgsDict(TypedDict):
+    pool_dhcp_monitoring: NotRequired[pulumi.Input['WirelessSettingsNamedVlansPoolDhcpMonitoringArgsDict']]
+    """
+    Named VLAN Pool DHCP Monitoring settings.
+    """
 
 @pulumi.input_type
 class WirelessSettingsNamedVlansArgs:
@@ -35122,18 +33695,15 @@ class WirelessSettingsNamedVlansArgs:
         pulumi.set(self, "pool_dhcp_monitoring", value)
 
 
-if not MYPY:
-    class WirelessSettingsNamedVlansPoolDhcpMonitoringArgsDict(TypedDict):
-        duration: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The duration in minutes that devices will refrain from using dirty VLANs before adding them back to the pool.
-        """
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether or not devices using named VLAN pools should remove dirty VLANs from the pool, thereby preventing clients from being assigned to VLANs where they would be unable to obtain an IP address via DHCP
-        """
-elif False:
-    WirelessSettingsNamedVlansPoolDhcpMonitoringArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSettingsNamedVlansPoolDhcpMonitoringArgsDict(TypedDict):
+    duration: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The duration in minutes that devices will refrain from using dirty VLANs before adding them back to the pool.
+    """
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether or not devices using named VLAN pools should remove dirty VLANs from the pool, thereby preventing clients from being assigned to VLANs where they would be unable to obtain an IP address via DHCP
+    """
 
 @pulumi.input_type
 class WirelessSettingsNamedVlansPoolDhcpMonitoringArgs:
@@ -35174,22 +33744,19 @@ class WirelessSettingsNamedVlansPoolDhcpMonitoringArgs:
         pulumi.set(self, "enabled", value)
 
 
-if not MYPY:
-    class WirelessSettingsRegulatoryDomainArgsDict(TypedDict):
-        country_code: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The country code of the regulatory domain.
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The name of the regulatory domain for this network.
-        """
-        permits6e: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether or not the regulatory domain for this network permits Wifi 6E.
-        """
-elif False:
-    WirelessSettingsRegulatoryDomainArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSettingsRegulatoryDomainArgsDict(TypedDict):
+    country_code: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The country code of the regulatory domain.
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The name of the regulatory domain for this network.
+    """
+    permits6e: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether or not the regulatory domain for this network permits Wifi 6E.
+    """
 
 @pulumi.input_type
 class WirelessSettingsRegulatoryDomainArgs:
@@ -35246,18 +33813,15 @@ class WirelessSettingsRegulatoryDomainArgs:
         pulumi.set(self, "permits6e", value)
 
 
-if not MYPY:
-    class WirelessSsidsActiveDirectoryArgsDict(TypedDict):
-        credentials: NotRequired[pulumi.Input['WirelessSsidsActiveDirectoryCredentialsArgsDict']]
-        """
-        (Optional) The credentials of the user account to be used by the AP to bind to your Active Directory server. The Active Directory account should have permissions on all your Active Directory servers. Only valid if the splashPage is 'Password-protected with Active Directory'.
-        """
-        servers: NotRequired[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsActiveDirectoryServerArgsDict']]]]
-        """
-        The Active Directory servers to be used for authentication.
-        """
-elif False:
-    WirelessSsidsActiveDirectoryArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsActiveDirectoryArgsDict(TypedDict):
+    credentials: NotRequired[pulumi.Input['WirelessSsidsActiveDirectoryCredentialsArgsDict']]
+    """
+    (Optional) The credentials of the user account to be used by the AP to bind to your Active Directory server. The Active Directory account should have permissions on all your Active Directory servers. Only valid if the splashPage is 'Password-protected with Active Directory'.
+    """
+    servers: NotRequired[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsActiveDirectoryServerArgsDict']]]]
+    """
+    The Active Directory servers to be used for authentication.
+    """
 
 @pulumi.input_type
 class WirelessSsidsActiveDirectoryArgs:
@@ -35298,18 +33862,15 @@ class WirelessSsidsActiveDirectoryArgs:
         pulumi.set(self, "servers", value)
 
 
-if not MYPY:
-    class WirelessSsidsActiveDirectoryCredentialsArgsDict(TypedDict):
-        logon_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The logon name of the Active Directory account.
-        """
-        password: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The password to the Active Directory user account.
-        """
-elif False:
-    WirelessSsidsActiveDirectoryCredentialsArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsActiveDirectoryCredentialsArgsDict(TypedDict):
+    logon_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The logon name of the Active Directory account.
+    """
+    password: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The password to the Active Directory user account.
+    """
 
 @pulumi.input_type
 class WirelessSsidsActiveDirectoryCredentialsArgs:
@@ -35350,18 +33911,15 @@ class WirelessSsidsActiveDirectoryCredentialsArgs:
         pulumi.set(self, "password", value)
 
 
-if not MYPY:
-    class WirelessSsidsActiveDirectoryServerArgsDict(TypedDict):
-        host: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        IP address (or FQDN) of your Active Directory server.
-        """
-        port: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        (Optional) UDP port the Active Directory server listens on. By default, uses port 3268.
-        """
-elif False:
-    WirelessSsidsActiveDirectoryServerArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsActiveDirectoryServerArgsDict(TypedDict):
+    host: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    IP address (or FQDN) of your Active Directory server.
+    """
+    port: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    (Optional) UDP port the Active Directory server listens on. By default, uses port 3268.
+    """
 
 @pulumi.input_type
 class WirelessSsidsActiveDirectoryServerArgs:
@@ -35402,18 +33960,15 @@ class WirelessSsidsActiveDirectoryServerArgs:
         pulumi.set(self, "port", value)
 
 
-if not MYPY:
-    class WirelessSsidsApTagsAndVlanIdArgsDict(TypedDict):
-        tags: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        Array of AP tags
-        """
-        vlan_id: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Numerical identifier that is assigned to the VLAN
-        """
-elif False:
-    WirelessSsidsApTagsAndVlanIdArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsApTagsAndVlanIdArgsDict(TypedDict):
+    tags: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    Array of AP tags
+    """
+    vlan_id: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Numerical identifier that is assigned to the VLAN
+    """
 
 @pulumi.input_type
 class WirelessSsidsApTagsAndVlanIdArgs:
@@ -35454,14 +34009,11 @@ class WirelessSsidsApTagsAndVlanIdArgs:
         pulumi.set(self, "vlan_id", value)
 
 
-if not MYPY:
-    class WirelessSsidsBonjourForwardingExceptionArgsDict(TypedDict):
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        If true, Bonjour forwarding exception is enabled on this SSID. Exception is required to enable L2 isolation and Bonjour forwarding to work together.
-        """
-elif False:
-    WirelessSsidsBonjourForwardingExceptionArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsBonjourForwardingExceptionArgsDict(TypedDict):
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    If true, Bonjour forwarding exception is enabled on this SSID. Exception is required to enable L2 isolation and Bonjour forwarding to work together.
+    """
 
 @pulumi.input_type
 class WirelessSsidsBonjourForwardingExceptionArgs:
@@ -35486,22 +34038,19 @@ class WirelessSsidsBonjourForwardingExceptionArgs:
         pulumi.set(self, "enabled", value)
 
 
-if not MYPY:
-    class WirelessSsidsBonjourForwardingRuleArgsDict(TypedDict):
-        description: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Desctiption of the bonjour forwarding rule
-        """
-        services: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        A list of Bonjour services. At least one service must be specified. Available services are 'All Services', 'AirPlay', 'AFP', 'BitTorrent', 'FTP', 'iChat', 'iTunes', 'Printers', 'Samba', 'Scanners' and 'SSH'
-        """
-        vlan_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The ID of the service VLAN. Required
-        """
-elif False:
-    WirelessSsidsBonjourForwardingRuleArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsBonjourForwardingRuleArgsDict(TypedDict):
+    description: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Desctiption of the bonjour forwarding rule
+    """
+    services: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    A list of Bonjour services. At least one service must be specified. Available services are 'All Services', 'AirPlay', 'AFP', 'BitTorrent', 'FTP', 'iChat', 'iTunes', 'Printers', 'Samba', 'Scanners' and 'SSH'
+    """
+    vlan_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The ID of the service VLAN. Required
+    """
 
 @pulumi.input_type
 class WirelessSsidsBonjourForwardingRuleArgs:
@@ -35558,22 +34107,19 @@ class WirelessSsidsBonjourForwardingRuleArgs:
         pulumi.set(self, "vlan_id", value)
 
 
-if not MYPY:
-    class WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgsDict(TypedDict):
-        device_policy: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The device policy. Can be one of 'Allowed', 'Blocked' or 'Group policy'
-        """
-        device_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The device type. Can be one of 'Android', 'BlackBerry', 'Chrome OS', 'iPad', 'iPhone', 'iPod', 'Mac OS X', 'Windows', 'Windows Phone', 'B&N Nook' or 'Other OS'
-        """
-        group_policy_id: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        ID of the group policy object.
-        """
-elif False:
-    WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgsDict(TypedDict):
+    device_policy: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The device policy. Can be one of 'Allowed', 'Blocked' or 'Group policy'
+    """
+    device_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The device type. Can be one of 'Android', 'BlackBerry', 'Chrome OS', 'iPad', 'iPhone', 'iPod', 'Mac OS X', 'Windows', 'Windows Phone', 'B&N Nook' or 'Other OS'
+    """
+    group_policy_id: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    ID of the group policy object.
+    """
 
 @pulumi.input_type
 class WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgs:
@@ -35630,18 +34176,15 @@ class WirelessSsidsDeviceTypeGroupPoliciesDeviceTypePolicyArgs:
         pulumi.set(self, "group_policy_id", value)
 
 
-if not MYPY:
-    class WirelessSsidsDnsRewriteArgsDict(TypedDict):
-        dns_custom_nameservers: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        User specified DNS servers (up to two servers)
-        """
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Boolean indicating whether or not DNS server rewrite is enabled. If disabled, upstream DNS will be used
-        """
-elif False:
-    WirelessSsidsDnsRewriteArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsDnsRewriteArgsDict(TypedDict):
+    dns_custom_nameservers: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    User specified DNS servers (up to two servers)
+    """
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Boolean indicating whether or not DNS server rewrite is enabled. If disabled, upstream DNS will be used
+    """
 
 @pulumi.input_type
 class WirelessSsidsDnsRewriteArgs:
@@ -35682,18 +34225,15 @@ class WirelessSsidsDnsRewriteArgs:
         pulumi.set(self, "enabled", value)
 
 
-if not MYPY:
-    class WirelessSsidsDot11rArgsDict(TypedDict):
-        adaptive: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        (Optional) Whether 802.11r is adaptive or not.
-        """
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether 802.11r is enabled or not.
-        """
-elif False:
-    WirelessSsidsDot11rArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsDot11rArgsDict(TypedDict):
+    adaptive: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    (Optional) Whether 802.11r is adaptive or not.
+    """
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether 802.11r is enabled or not.
+    """
 
 @pulumi.input_type
 class WirelessSsidsDot11rArgs:
@@ -35734,18 +34274,15 @@ class WirelessSsidsDot11rArgs:
         pulumi.set(self, "enabled", value)
 
 
-if not MYPY:
-    class WirelessSsidsDot11wArgsDict(TypedDict):
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether 802.11w is enabled or not.
-        """
-        required: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        (Optional) Whether 802.11w is required or not.
-        """
-elif False:
-    WirelessSsidsDot11wArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsDot11wArgsDict(TypedDict):
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether 802.11w is enabled or not.
+    """
+    required: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    (Optional) Whether 802.11w is required or not.
+    """
 
 @pulumi.input_type
 class WirelessSsidsDot11wArgs:
@@ -35786,18 +34323,15 @@ class WirelessSsidsDot11wArgs:
         pulumi.set(self, "required", value)
 
 
-if not MYPY:
-    class WirelessSsidsEapOverrideEapolKeyArgsDict(TypedDict):
-        retries: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Maximum number of EAPOL key retries.
-        """
-        timeout_in_ms: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        EAPOL Key timeout in milliseconds.
-        """
-elif False:
-    WirelessSsidsEapOverrideEapolKeyArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsEapOverrideEapolKeyArgsDict(TypedDict):
+    retries: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Maximum number of EAPOL key retries.
+    """
+    timeout_in_ms: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    EAPOL Key timeout in milliseconds.
+    """
 
 @pulumi.input_type
 class WirelessSsidsEapOverrideEapolKeyArgs:
@@ -35838,18 +34372,15 @@ class WirelessSsidsEapOverrideEapolKeyArgs:
         pulumi.set(self, "timeout_in_ms", value)
 
 
-if not MYPY:
-    class WirelessSsidsEapOverrideIdentityArgsDict(TypedDict):
-        retries: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Maximum number of EAP retries.
-        """
-        timeout: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        EAP timeout in seconds.
-        """
-elif False:
-    WirelessSsidsEapOverrideIdentityArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsEapOverrideIdentityArgsDict(TypedDict):
+    retries: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Maximum number of EAP retries.
+    """
+    timeout: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    EAP timeout in seconds.
+    """
 
 @pulumi.input_type
 class WirelessSsidsEapOverrideIdentityArgs:
@@ -35890,34 +34421,31 @@ class WirelessSsidsEapOverrideIdentityArgs:
         pulumi.set(self, "timeout", value)
 
 
-if not MYPY:
-    class WirelessSsidsFirewallL3FirewallRulesRuleArgsDict(TypedDict):
-        comment: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Description of the rule (optional)
-        """
-        dest_cidr: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Comma-separated list of destination IP address(es) (in IP or CIDR notation), fully-qualified domain names (FQDN) or 'any'
-        """
-        dest_port: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Comma-separated list of destination port(s) (integer in the range 1-65535), or 'any'
-        """
-        ip_ver: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Ip Ver
-        """
-        policy: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        'allow' or 'deny' traffic specified by this rule
-        """
-        protocol: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The type of protocol (must be 'tcp', 'udp', 'icmp', 'icmp6' or 'any')
-        """
-elif False:
-    WirelessSsidsFirewallL3FirewallRulesRuleArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsFirewallL3FirewallRulesRuleArgsDict(TypedDict):
+    comment: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Description of the rule (optional)
+    """
+    dest_cidr: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Comma-separated list of destination IP address(es) (in IP or CIDR notation), fully-qualified domain names (FQDN) or 'any'
+    """
+    dest_port: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Comma-separated list of destination port(s) (integer in the range 1-65535), or 'any'
+    """
+    ip_ver: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Ip Ver
+    """
+    policy: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    'allow' or 'deny' traffic specified by this rule
+    """
+    protocol: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The type of protocol (must be 'tcp', 'udp', 'icmp', 'icmp6' or 'any')
+    """
 
 @pulumi.input_type
 class WirelessSsidsFirewallL3FirewallRulesRuleArgs:
@@ -36022,34 +34550,31 @@ class WirelessSsidsFirewallL3FirewallRulesRuleArgs:
         pulumi.set(self, "protocol", value)
 
 
-if not MYPY:
-    class WirelessSsidsFirewallL3FirewallRulesRulesResponseArgsDict(TypedDict):
-        comment: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Description of the rule (optional)
-        """
-        dest_cidr: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Comma-separated list of destination IP address(es) (in IP or CIDR notation), fully-qualified domain names (FQDN) or 'any'
-        """
-        dest_port: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Comma-separated list of destination port(s) (integer in the range 1-65535), or 'any'
-        """
-        ip_ver: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Ip Version
-        """
-        policy: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        'allow' or 'deny' traffic specified by this rule
-        """
-        protocol: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The type of protocol (must be 'tcp', 'udp', 'icmp', 'icmp6' or 'any')
-        """
-elif False:
-    WirelessSsidsFirewallL3FirewallRulesRulesResponseArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsFirewallL3FirewallRulesRulesResponseArgsDict(TypedDict):
+    comment: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Description of the rule (optional)
+    """
+    dest_cidr: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Comma-separated list of destination IP address(es) (in IP or CIDR notation), fully-qualified domain names (FQDN) or 'any'
+    """
+    dest_port: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Comma-separated list of destination port(s) (integer in the range 1-65535), or 'any'
+    """
+    ip_ver: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Ip Version
+    """
+    policy: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    'allow' or 'deny' traffic specified by this rule
+    """
+    protocol: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The type of protocol (must be 'tcp', 'udp', 'icmp', 'icmp6' or 'any')
+    """
 
 @pulumi.input_type
 class WirelessSsidsFirewallL3FirewallRulesRulesResponseArgs:
@@ -36154,30 +34679,27 @@ class WirelessSsidsFirewallL3FirewallRulesRulesResponseArgs:
         pulumi.set(self, "protocol", value)
 
 
-if not MYPY:
-    class WirelessSsidsFirewallL7FirewallRulesRuleArgsDict(TypedDict):
-        policy: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        'Deny' traffic specified by this rule
-        """
-        type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Type of the L7 firewall rule. One of: 'application', 'applicationCategory', 'host', 'port', 'ipRange'
-        """
-        value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The value of what needs to get blocked. Format of the value varies depending on type of the firewall rule selected.
-        """
-        value_lists: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The 'value_list' of what you want to block. Send a list in request
-        """
-        value_obj: NotRequired[pulumi.Input['WirelessSsidsFirewallL7FirewallRulesRuleValueObjArgsDict']]
-        """
-        The 'value_obj' of what you want to block. Send a dict in request
-        """
-elif False:
-    WirelessSsidsFirewallL7FirewallRulesRuleArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsFirewallL7FirewallRulesRuleArgsDict(TypedDict):
+    policy: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    'Deny' traffic specified by this rule
+    """
+    type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Type of the L7 firewall rule. One of: 'application', 'applicationCategory', 'host', 'port', 'ipRange'
+    """
+    value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The value of what needs to get blocked. Format of the value varies depending on type of the firewall rule selected.
+    """
+    value_lists: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The 'value_list' of what you want to block. Send a list in request
+    """
+    value_obj: NotRequired[pulumi.Input['WirelessSsidsFirewallL7FirewallRulesRuleValueObjArgsDict']]
+    """
+    The 'value_obj' of what you want to block. Send a dict in request
+    """
 
 @pulumi.input_type
 class WirelessSsidsFirewallL7FirewallRulesRuleArgs:
@@ -36266,12 +34788,9 @@ class WirelessSsidsFirewallL7FirewallRulesRuleArgs:
         pulumi.set(self, "value_obj", value)
 
 
-if not MYPY:
-    class WirelessSsidsFirewallL7FirewallRulesRuleValueObjArgsDict(TypedDict):
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        name: NotRequired[pulumi.Input[_builtins.str]]
-elif False:
-    WirelessSsidsFirewallL7FirewallRulesRuleValueObjArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsFirewallL7FirewallRulesRuleValueObjArgsDict(TypedDict):
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    name: NotRequired[pulumi.Input[_builtins.str]]
 
 @pulumi.input_type
 class WirelessSsidsFirewallL7FirewallRulesRuleValueObjArgs:
@@ -36302,18 +34821,15 @@ class WirelessSsidsFirewallL7FirewallRulesRuleValueObjArgs:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class WirelessSsidsGreArgsDict(TypedDict):
-        concentrator: NotRequired[pulumi.Input['WirelessSsidsGreConcentratorArgsDict']]
-        """
-        The EoGRE concentrator's settings
-        """
-        key: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Optional numerical identifier that will add the GRE key field to the GRE header. Used to identify an individual traffic flow within a tunnel.
-        """
-elif False:
-    WirelessSsidsGreArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsGreArgsDict(TypedDict):
+    concentrator: NotRequired[pulumi.Input['WirelessSsidsGreConcentratorArgsDict']]
+    """
+    The EoGRE concentrator's settings
+    """
+    key: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Optional numerical identifier that will add the GRE key field to the GRE header. Used to identify an individual traffic flow within a tunnel.
+    """
 
 @pulumi.input_type
 class WirelessSsidsGreArgs:
@@ -36354,14 +34870,11 @@ class WirelessSsidsGreArgs:
         pulumi.set(self, "key", value)
 
 
-if not MYPY:
-    class WirelessSsidsGreConcentratorArgsDict(TypedDict):
-        host: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The EoGRE concentrator's IP or FQDN. This param is required when ipAssignmentMode is 'Ethernet over GRE'.
-        """
-elif False:
-    WirelessSsidsGreConcentratorArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsGreConcentratorArgsDict(TypedDict):
+    host: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The EoGRE concentrator's IP or FQDN. This param is required when ipAssignmentMode is 'Ethernet over GRE'.
+    """
 
 @pulumi.input_type
 class WirelessSsidsGreConcentratorArgs:
@@ -36386,18 +34899,15 @@ class WirelessSsidsGreConcentratorArgs:
         pulumi.set(self, "host", value)
 
 
-if not MYPY:
-    class WirelessSsidsHotspot20MccMncArgsDict(TypedDict):
-        mcc: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        MCC value
-        """
-        mnc: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        MNC value
-        """
-elif False:
-    WirelessSsidsHotspot20MccMncArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsHotspot20MccMncArgsDict(TypedDict):
+    mcc: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    MCC value
+    """
+    mnc: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    MNC value
+    """
 
 @pulumi.input_type
 class WirelessSsidsHotspot20MccMncArgs:
@@ -36438,23 +34948,20 @@ class WirelessSsidsHotspot20MccMncArgs:
         pulumi.set(self, "mnc", value)
 
 
-if not MYPY:
-    class WirelessSsidsHotspot20NaiRealmArgsDict(TypedDict):
-        format: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The format for the realm ('1' or '0')
-        """
-        methods: NotRequired[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsHotspot20NaiRealmMethodArgsDict']]]]
-        """
-        An array of EAP methods for the realm.
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        realm: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The name of the realm
-        """
-elif False:
-    WirelessSsidsHotspot20NaiRealmArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsHotspot20NaiRealmArgsDict(TypedDict):
+    format: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The format for the realm ('1' or '0')
+    """
+    methods: NotRequired[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsHotspot20NaiRealmMethodArgsDict']]]]
+    """
+    An array of EAP methods for the realm.
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    realm: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The name of the realm
+    """
 
 @pulumi.input_type
 class WirelessSsidsHotspot20NaiRealmArgs:
@@ -36523,18 +35030,15 @@ class WirelessSsidsHotspot20NaiRealmArgs:
         pulumi.set(self, "realm", value)
 
 
-if not MYPY:
-    class WirelessSsidsHotspot20NaiRealmMethodArgsDict(TypedDict):
-        authentication_types: NotRequired[pulumi.Input['WirelessSsidsHotspot20NaiRealmMethodAuthenticationTypesArgsDict']]
-        """
-        The authentication types for the method. These should be formatted as an object with the EAP method category in camelcase as the key and the list of types as the value (nonEapInnerAuthentication: Reserved, PAP, CHAP, MSCHAP, MSCHAPV2; eapInnerAuthentication: EAP-TLS, EAP-SIM, EAP-AKA, EAP-TTLS with MSCHAPv2; credentials: SIM, USIM, NFC Secure Element, Hardware Token, Softoken, Certificate, username/password, none, Reserved, Vendor Specific; tunneledEapMethodCredentials: SIM, USIM, NFC Secure Element, Hardware Token, Softoken, Certificate, username/password, Reserved, Anonymous, Vendor Specific)
-        """
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        ID of method
-        """
-elif False:
-    WirelessSsidsHotspot20NaiRealmMethodArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsHotspot20NaiRealmMethodArgsDict(TypedDict):
+    authentication_types: NotRequired[pulumi.Input['WirelessSsidsHotspot20NaiRealmMethodAuthenticationTypesArgsDict']]
+    """
+    The authentication types for the method. These should be formatted as an object with the EAP method category in camelcase as the key and the list of types as the value (nonEapInnerAuthentication: Reserved, PAP, CHAP, MSCHAP, MSCHAPV2; eapInnerAuthentication: EAP-TLS, EAP-SIM, EAP-AKA, EAP-TTLS with MSCHAPv2; credentials: SIM, USIM, NFC Secure Element, Hardware Token, Softoken, Certificate, username/password, none, Reserved, Vendor Specific; tunneledEapMethodCredentials: SIM, USIM, NFC Secure Element, Hardware Token, Softoken, Certificate, username/password, Reserved, Anonymous, Vendor Specific)
+    """
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    ID of method
+    """
 
 @pulumi.input_type
 class WirelessSsidsHotspot20NaiRealmMethodArgs:
@@ -36575,14 +35079,11 @@ class WirelessSsidsHotspot20NaiRealmMethodArgs:
         pulumi.set(self, "id", value)
 
 
-if not MYPY:
-    class WirelessSsidsHotspot20NaiRealmMethodAuthenticationTypesArgsDict(TypedDict):
-        credentials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        eapinner_authentications: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        non_eapinner_authentications: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        tunneled_eap_method_credentials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-elif False:
-    WirelessSsidsHotspot20NaiRealmMethodAuthenticationTypesArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsHotspot20NaiRealmMethodAuthenticationTypesArgsDict(TypedDict):
+    credentials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    eapinner_authentications: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    non_eapinner_authentications: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    tunneled_eap_method_credentials: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
 
 @pulumi.input_type
 class WirelessSsidsHotspot20NaiRealmMethodAuthenticationTypesArgs:
@@ -36637,14 +35138,11 @@ class WirelessSsidsHotspot20NaiRealmMethodAuthenticationTypesArgs:
         pulumi.set(self, "tunneled_eap_method_credentials", value)
 
 
-if not MYPY:
-    class WirelessSsidsHotspot20OperatorArgsDict(TypedDict):
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Operator name
-        """
-elif False:
-    WirelessSsidsHotspot20OperatorArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsHotspot20OperatorArgsDict(TypedDict):
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Operator name
+    """
 
 @pulumi.input_type
 class WirelessSsidsHotspot20OperatorArgs:
@@ -36669,18 +35167,15 @@ class WirelessSsidsHotspot20OperatorArgs:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class WirelessSsidsHotspot20VenueArgsDict(TypedDict):
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Venue name
-        """
-        type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Venue type ('Unspecified', 'Unspecified Assembly', 'Arena', 'Stadium', 'Passenger Terminal', 'Amphitheater', 'Amusement Park', 'Place of Worship', 'Convention Center', 'Library', 'Museum', 'Restaurant', 'Theater', 'Bar', 'Coffee Shop', 'Zoo or Aquarium', 'Emergency Coordination Center', 'Unspecified Business', 'Doctor or Dentist office', 'Bank', 'Fire Station', 'Police Station', 'Post Office', 'Professional Office', 'Research and Development Facility', 'Attorney Office', 'Unspecified Educational', 'School, Primary', 'School, Secondary', 'University or College', 'Unspecified Factory and Industrial', 'Factory', 'Unspecified Institutional', 'Hospital', 'Long-Term Care Facility', 'Alcohol and Drug Rehabilitation Center', 'Group Home', 'Prison or Jail', 'Unspecified Mercantile', 'Retail Store', 'Grocery Market', 'Automotive Service Station', 'Shopping Mall', 'Gas Station', 'Unspecified Residential', 'Private Residence', 'Hotel or Motel', 'Dormitory', 'Boarding House', 'Unspecified Storage', 'Unspecified Utility and Miscellaneous', 'Unspecified Vehicular', 'Automobile or Truck', 'Airplane', 'Bus', 'Ferry', 'Ship or Boat', 'Train', 'Motor Bike', 'Unspecified Outdoor', 'Muni-mesh Network', 'City Park', 'Rest Area', 'Traffic Control', 'Bus Stop', 'Kiosk')
-        """
-elif False:
-    WirelessSsidsHotspot20VenueArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsHotspot20VenueArgsDict(TypedDict):
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Venue name
+    """
+    type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Venue type ('Unspecified', 'Unspecified Assembly', 'Arena', 'Stadium', 'Passenger Terminal', 'Amphitheater', 'Amusement Park', 'Place of Worship', 'Convention Center', 'Library', 'Museum', 'Restaurant', 'Theater', 'Bar', 'Coffee Shop', 'Zoo or Aquarium', 'Emergency Coordination Center', 'Unspecified Business', 'Doctor or Dentist office', 'Bank', 'Fire Station', 'Police Station', 'Post Office', 'Professional Office', 'Research and Development Facility', 'Attorney Office', 'Unspecified Educational', 'School, Primary', 'School, Secondary', 'University or College', 'Unspecified Factory and Industrial', 'Factory', 'Unspecified Institutional', 'Hospital', 'Long-Term Care Facility', 'Alcohol and Drug Rehabilitation Center', 'Group Home', 'Prison or Jail', 'Unspecified Mercantile', 'Retail Store', 'Grocery Market', 'Automotive Service Station', 'Shopping Mall', 'Gas Station', 'Unspecified Residential', 'Private Residence', 'Hotel or Motel', 'Dormitory', 'Boarding House', 'Unspecified Storage', 'Unspecified Utility and Miscellaneous', 'Unspecified Vehicular', 'Automobile or Truck', 'Airplane', 'Bus', 'Ferry', 'Ship or Boat', 'Train', 'Motor Bike', 'Unspecified Outdoor', 'Muni-mesh Network', 'City Park', 'Rest Area', 'Traffic Control', 'Bus Stop', 'Kiosk')
+    """
 
 @pulumi.input_type
 class WirelessSsidsHotspot20VenueArgs:
@@ -36721,26 +35216,23 @@ class WirelessSsidsHotspot20VenueArgs:
         pulumi.set(self, "type", value)
 
 
-if not MYPY:
-    class WirelessSsidsLdapArgsDict(TypedDict):
-        base_distinguished_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The base distinguished name of users on the LDAP server.
-        """
-        credentials: NotRequired[pulumi.Input['WirelessSsidsLdapCredentialsArgsDict']]
-        """
-        (Optional) The credentials of the user account to be used by the AP to bind to your LDAP server. The LDAP account should have permissions on all your LDAP servers.
-        """
-        server_ca_certificate: NotRequired[pulumi.Input['WirelessSsidsLdapServerCaCertificateArgsDict']]
-        """
-        The CA certificate used to sign the LDAP server's key.
-        """
-        servers: NotRequired[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsLdapServerArgsDict']]]]
-        """
-        The LDAP servers to be used for authentication.
-        """
-elif False:
-    WirelessSsidsLdapArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsLdapArgsDict(TypedDict):
+    base_distinguished_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The base distinguished name of users on the LDAP server.
+    """
+    credentials: NotRequired[pulumi.Input['WirelessSsidsLdapCredentialsArgsDict']]
+    """
+    (Optional) The credentials of the user account to be used by the AP to bind to your LDAP server. The LDAP account should have permissions on all your LDAP servers.
+    """
+    server_ca_certificate: NotRequired[pulumi.Input['WirelessSsidsLdapServerCaCertificateArgsDict']]
+    """
+    The CA certificate used to sign the LDAP server's key.
+    """
+    servers: NotRequired[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsLdapServerArgsDict']]]]
+    """
+    The LDAP servers to be used for authentication.
+    """
 
 @pulumi.input_type
 class WirelessSsidsLdapArgs:
@@ -36813,18 +35305,15 @@ class WirelessSsidsLdapArgs:
         pulumi.set(self, "servers", value)
 
 
-if not MYPY:
-    class WirelessSsidsLdapCredentialsArgsDict(TypedDict):
-        distinguished_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The distinguished name of the LDAP user account (example: cn=user,dc=meraki,dc=com).
-        """
-        password: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The password of the LDAP user account.
-        """
-elif False:
-    WirelessSsidsLdapCredentialsArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsLdapCredentialsArgsDict(TypedDict):
+    distinguished_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The distinguished name of the LDAP user account (example: cn=user,dc=meraki,dc=com).
+    """
+    password: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The password of the LDAP user account.
+    """
 
 @pulumi.input_type
 class WirelessSsidsLdapCredentialsArgs:
@@ -36865,18 +35354,15 @@ class WirelessSsidsLdapCredentialsArgs:
         pulumi.set(self, "password", value)
 
 
-if not MYPY:
-    class WirelessSsidsLdapServerArgsDict(TypedDict):
-        host: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        IP address (or FQDN) of your LDAP server.
-        """
-        port: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        UDP port the LDAP server listens on.
-        """
-elif False:
-    WirelessSsidsLdapServerArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsLdapServerArgsDict(TypedDict):
+    host: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    IP address (or FQDN) of your LDAP server.
+    """
+    port: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    UDP port the LDAP server listens on.
+    """
 
 @pulumi.input_type
 class WirelessSsidsLdapServerArgs:
@@ -36917,14 +35403,11 @@ class WirelessSsidsLdapServerArgs:
         pulumi.set(self, "port", value)
 
 
-if not MYPY:
-    class WirelessSsidsLdapServerCaCertificateArgsDict(TypedDict):
-        contents: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The contents of the CA certificate. Must be in PEM or DER format.
-        """
-elif False:
-    WirelessSsidsLdapServerCaCertificateArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsLdapServerCaCertificateArgsDict(TypedDict):
+    contents: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The contents of the CA certificate. Must be in PEM or DER format.
+    """
 
 @pulumi.input_type
 class WirelessSsidsLdapServerCaCertificateArgs:
@@ -36949,22 +35432,19 @@ class WirelessSsidsLdapServerCaCertificateArgs:
         pulumi.set(self, "contents", value)
 
 
-if not MYPY:
-    class WirelessSsidsLocalRadiusArgsDict(TypedDict):
-        cache_timeout: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The duration (in seconds) for which LDAP and OCSP lookups are cached.
-        """
-        certificate_authentication: NotRequired[pulumi.Input['WirelessSsidsLocalRadiusCertificateAuthenticationArgsDict']]
-        """
-        The current setting for certificate verification.
-        """
-        password_authentication: NotRequired[pulumi.Input['WirelessSsidsLocalRadiusPasswordAuthenticationArgsDict']]
-        """
-        The current setting for password-based authentication.
-        """
-elif False:
-    WirelessSsidsLocalRadiusArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsLocalRadiusArgsDict(TypedDict):
+    cache_timeout: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The duration (in seconds) for which LDAP and OCSP lookups are cached.
+    """
+    certificate_authentication: NotRequired[pulumi.Input['WirelessSsidsLocalRadiusCertificateAuthenticationArgsDict']]
+    """
+    The current setting for certificate verification.
+    """
+    password_authentication: NotRequired[pulumi.Input['WirelessSsidsLocalRadiusPasswordAuthenticationArgsDict']]
+    """
+    The current setting for password-based authentication.
+    """
 
 @pulumi.input_type
 class WirelessSsidsLocalRadiusArgs:
@@ -37021,30 +35501,27 @@ class WirelessSsidsLocalRadiusArgs:
         pulumi.set(self, "password_authentication", value)
 
 
-if not MYPY:
-    class WirelessSsidsLocalRadiusCertificateAuthenticationArgsDict(TypedDict):
-        client_root_ca_certificate: NotRequired[pulumi.Input['WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateArgsDict']]
-        """
-        The Client CA Certificate used to sign the client certificate.
-        """
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether or not to use EAP-TLS certificate-based authentication to validate wireless clients.
-        """
-        ocsp_responder_url: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        (Optional) The URL of the OCSP responder to verify client certificate status.
-        """
-        use_ldap: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether or not to verify the certificate with LDAP.
-        """
-        use_ocsp: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether or not to verify the certificate with OCSP.
-        """
-elif False:
-    WirelessSsidsLocalRadiusCertificateAuthenticationArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsLocalRadiusCertificateAuthenticationArgsDict(TypedDict):
+    client_root_ca_certificate: NotRequired[pulumi.Input['WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateArgsDict']]
+    """
+    The Client CA Certificate used to sign the client certificate.
+    """
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether or not to use EAP-TLS certificate-based authentication to validate wireless clients.
+    """
+    ocsp_responder_url: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    (Optional) The URL of the OCSP responder to verify client certificate status.
+    """
+    use_ldap: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether or not to verify the certificate with LDAP.
+    """
+    use_ocsp: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether or not to verify the certificate with OCSP.
+    """
 
 @pulumi.input_type
 class WirelessSsidsLocalRadiusCertificateAuthenticationArgs:
@@ -37133,14 +35610,11 @@ class WirelessSsidsLocalRadiusCertificateAuthenticationArgs:
         pulumi.set(self, "use_ocsp", value)
 
 
-if not MYPY:
-    class WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateArgsDict(TypedDict):
-        contents: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The contents of the Client CA Certificate. Must be in PEM or DER format.
-        """
-elif False:
-    WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateArgsDict(TypedDict):
+    contents: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The contents of the Client CA Certificate. Must be in PEM or DER format.
+    """
 
 @pulumi.input_type
 class WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateArgs:
@@ -37165,14 +35639,11 @@ class WirelessSsidsLocalRadiusCertificateAuthenticationClientRootCaCertificateAr
         pulumi.set(self, "contents", value)
 
 
-if not MYPY:
-    class WirelessSsidsLocalRadiusPasswordAuthenticationArgsDict(TypedDict):
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether or not to use EAP-TTLS/PAP or PEAP-GTC password-based authentication via LDAP lookup.
-        """
-elif False:
-    WirelessSsidsLocalRadiusPasswordAuthenticationArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsLocalRadiusPasswordAuthenticationArgsDict(TypedDict):
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether or not to use EAP-TTLS/PAP or PEAP-GTC password-based authentication via LDAP lookup.
+    """
 
 @pulumi.input_type
 class WirelessSsidsLocalRadiusPasswordAuthenticationArgs:
@@ -37197,18 +35668,15 @@ class WirelessSsidsLocalRadiusPasswordAuthenticationArgs:
         pulumi.set(self, "enabled", value)
 
 
-if not MYPY:
-    class WirelessSsidsNamedVlansArgsDict(TypedDict):
-        radius: NotRequired[pulumi.Input['WirelessSsidsNamedVlansRadiusArgsDict']]
-        """
-        RADIUS settings. This param is only valid when authMode is 'open-with-radius' and ipAssignmentMode is not 'NAT mode'.
-        """
-        tagging: NotRequired[pulumi.Input['WirelessSsidsNamedVlansTaggingArgsDict']]
-        """
-        VLAN tagging settings. This param is only valid when ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'.
-        """
-elif False:
-    WirelessSsidsNamedVlansArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsNamedVlansArgsDict(TypedDict):
+    radius: NotRequired[pulumi.Input['WirelessSsidsNamedVlansRadiusArgsDict']]
+    """
+    RADIUS settings. This param is only valid when authMode is 'open-with-radius' and ipAssignmentMode is not 'NAT mode'.
+    """
+    tagging: NotRequired[pulumi.Input['WirelessSsidsNamedVlansTaggingArgsDict']]
+    """
+    VLAN tagging settings. This param is only valid when ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'.
+    """
 
 @pulumi.input_type
 class WirelessSsidsNamedVlansArgs:
@@ -37249,14 +35717,11 @@ class WirelessSsidsNamedVlansArgs:
         pulumi.set(self, "tagging", value)
 
 
-if not MYPY:
-    class WirelessSsidsNamedVlansRadiusArgsDict(TypedDict):
-        guest_vlan: NotRequired[pulumi.Input['WirelessSsidsNamedVlansRadiusGuestVlanArgsDict']]
-        """
-        Guest VLAN settings. Used to direct traffic to a guest VLAN when none of the RADIUS servers are reachable or a client receives access-reject from the RADIUS server.
-        """
-elif False:
-    WirelessSsidsNamedVlansRadiusArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsNamedVlansRadiusArgsDict(TypedDict):
+    guest_vlan: NotRequired[pulumi.Input['WirelessSsidsNamedVlansRadiusGuestVlanArgsDict']]
+    """
+    Guest VLAN settings. Used to direct traffic to a guest VLAN when none of the RADIUS servers are reachable or a client receives access-reject from the RADIUS server.
+    """
 
 @pulumi.input_type
 class WirelessSsidsNamedVlansRadiusArgs:
@@ -37281,18 +35746,15 @@ class WirelessSsidsNamedVlansRadiusArgs:
         pulumi.set(self, "guest_vlan", value)
 
 
-if not MYPY:
-    class WirelessSsidsNamedVlansRadiusGuestVlanArgsDict(TypedDict):
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether or not RADIUS guest named VLAN is enabled.
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        RADIUS guest VLAN name.
-        """
-elif False:
-    WirelessSsidsNamedVlansRadiusGuestVlanArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsNamedVlansRadiusGuestVlanArgsDict(TypedDict):
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether or not RADIUS guest named VLAN is enabled.
+    """
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    RADIUS guest VLAN name.
+    """
 
 @pulumi.input_type
 class WirelessSsidsNamedVlansRadiusGuestVlanArgs:
@@ -37333,22 +35795,19 @@ class WirelessSsidsNamedVlansRadiusGuestVlanArgs:
         pulumi.set(self, "name", value)
 
 
-if not MYPY:
-    class WirelessSsidsNamedVlansTaggingArgsDict(TypedDict):
-        by_ap_tags: NotRequired[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsNamedVlansTaggingByApTagArgsDict']]]]
-        """
-        The list of AP tags and VLAN names used for named VLAN tagging. If an AP has a tag matching one in the list, then traffic on this SSID will be directed to use the VLAN name associated to the tag.
-        """
-        default_vlan_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The default VLAN name used to tag traffic in the absence of a matching AP tag.
-        """
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether or not traffic should be directed to use specific VLAN names.
-        """
-elif False:
-    WirelessSsidsNamedVlansTaggingArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsNamedVlansTaggingArgsDict(TypedDict):
+    by_ap_tags: NotRequired[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsNamedVlansTaggingByApTagArgsDict']]]]
+    """
+    The list of AP tags and VLAN names used for named VLAN tagging. If an AP has a tag matching one in the list, then traffic on this SSID will be directed to use the VLAN name associated to the tag.
+    """
+    default_vlan_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The default VLAN name used to tag traffic in the absence of a matching AP tag.
+    """
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether or not traffic should be directed to use specific VLAN names.
+    """
 
 @pulumi.input_type
 class WirelessSsidsNamedVlansTaggingArgs:
@@ -37405,18 +35864,15 @@ class WirelessSsidsNamedVlansTaggingArgs:
         pulumi.set(self, "enabled", value)
 
 
-if not MYPY:
-    class WirelessSsidsNamedVlansTaggingByApTagArgsDict(TypedDict):
-        tags: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        List of AP tags.
-        """
-        vlan_name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        VLAN name that will be used to tag traffic.
-        """
-elif False:
-    WirelessSsidsNamedVlansTaggingByApTagArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsNamedVlansTaggingByApTagArgsDict(TypedDict):
+    tags: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    List of AP tags.
+    """
+    vlan_name: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    VLAN name that will be used to tag traffic.
+    """
 
 @pulumi.input_type
 class WirelessSsidsNamedVlansTaggingByApTagArgs:
@@ -37457,14 +35913,11 @@ class WirelessSsidsNamedVlansTaggingByApTagArgs:
         pulumi.set(self, "vlan_name", value)
 
 
-if not MYPY:
-    class WirelessSsidsOauthArgsDict(TypedDict):
-        allowed_domains: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        (Optional) The list of domains allowed access to the network.
-        """
-elif False:
-    WirelessSsidsOauthArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsOauthArgsDict(TypedDict):
+    allowed_domains: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    (Optional) The list of domains allowed access to the network.
+    """
 
 @pulumi.input_type
 class WirelessSsidsOauthArgs:
@@ -37489,34 +35942,31 @@ class WirelessSsidsOauthArgs:
         pulumi.set(self, "allowed_domains", value)
 
 
-if not MYPY:
-    class WirelessSsidsRadiusAccountingServerArgsDict(TypedDict):
-        ca_certificate: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Certificate used for authorization for the RADSEC Server
-        """
-        host: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        IP address (or FQDN) to which the APs will send RADIUS accounting messages
-        """
-        open_roaming_certificate_id: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The ID of the Openroaming Certificate attached to radius server
-        """
-        port: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Port on the RADIUS server that is listening for accounting messages
-        """
-        radsec_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Use RADSEC (TLS over TCP) to connect to this RADIUS accounting server. Requires radiusProxyEnabled.
-        """
-        secret: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Shared key used to authenticate messages between the APs and RADIUS server
-        """
-elif False:
-    WirelessSsidsRadiusAccountingServerArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsRadiusAccountingServerArgsDict(TypedDict):
+    ca_certificate: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Certificate used for authorization for the RADSEC Server
+    """
+    host: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    IP address (or FQDN) to which the APs will send RADIUS accounting messages
+    """
+    open_roaming_certificate_id: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The ID of the Openroaming Certificate attached to radius server
+    """
+    port: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Port on the RADIUS server that is listening for accounting messages
+    """
+    radsec_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Use RADSEC (TLS over TCP) to connect to this RADIUS accounting server. Requires radiusProxyEnabled.
+    """
+    secret: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Shared key used to authenticate messages between the APs and RADIUS server
+    """
 
 @pulumi.input_type
 class WirelessSsidsRadiusAccountingServerArgs:
@@ -37621,34 +36071,31 @@ class WirelessSsidsRadiusAccountingServerArgs:
         pulumi.set(self, "secret", value)
 
 
-if not MYPY:
-    class WirelessSsidsRadiusAccountingServersResponseArgsDict(TypedDict):
-        ca_certificate: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Certificate used for authorization for the RADSEC Server
-        """
-        host: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        IP address (or FQDN) to which the APs will send RADIUS accounting messages
-        """
-        open_roaming_certificate_id: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The ID of the Openroaming Certificate attached to radius server
-        """
-        port: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Port on the RADIUS server that is listening for accounting messages
-        """
-        radsec_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Use RADSEC (TLS over TCP) to connect to this RADIUS accounting server. Requires radiusProxyEnabled.
-        """
-        secret: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Shared key used to authenticate messages between the APs and RADIUS server
-        """
-elif False:
-    WirelessSsidsRadiusAccountingServersResponseArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsRadiusAccountingServersResponseArgsDict(TypedDict):
+    ca_certificate: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Certificate used for authorization for the RADSEC Server
+    """
+    host: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    IP address (or FQDN) to which the APs will send RADIUS accounting messages
+    """
+    open_roaming_certificate_id: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The ID of the Openroaming Certificate attached to radius server
+    """
+    port: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Port on the RADIUS server that is listening for accounting messages
+    """
+    radsec_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Use RADSEC (TLS over TCP) to connect to this RADIUS accounting server. Requires radiusProxyEnabled.
+    """
+    secret: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Shared key used to authenticate messages between the APs and RADIUS server
+    """
 
 @pulumi.input_type
 class WirelessSsidsRadiusAccountingServersResponseArgs:
@@ -37753,34 +36200,31 @@ class WirelessSsidsRadiusAccountingServersResponseArgs:
         pulumi.set(self, "secret", value)
 
 
-if not MYPY:
-    class WirelessSsidsRadiusServerArgsDict(TypedDict):
-        ca_certificate: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Certificate used for authorization for the RADSEC Server
-        """
-        host: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        IP address of your RADIUS server
-        """
-        open_roaming_certificate_id: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The ID of the Openroaming Certificate attached to radius server.
-        """
-        port: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        UDP port the RADIUS server listens on for Access-requests
-        """
-        radsec_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Use RADSEC (TLS over TCP) to connect to this RADIUS server. Requires radiusProxyEnabled.
-        """
-        secret: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        RADIUS client shared secret
-        """
-elif False:
-    WirelessSsidsRadiusServerArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsRadiusServerArgsDict(TypedDict):
+    ca_certificate: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Certificate used for authorization for the RADSEC Server
+    """
+    host: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    IP address of your RADIUS server
+    """
+    open_roaming_certificate_id: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The ID of the Openroaming Certificate attached to radius server.
+    """
+    port: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    UDP port the RADIUS server listens on for Access-requests
+    """
+    radsec_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Use RADSEC (TLS over TCP) to connect to this RADIUS server. Requires radiusProxyEnabled.
+    """
+    secret: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    RADIUS client shared secret
+    """
 
 @pulumi.input_type
 class WirelessSsidsRadiusServerArgs:
@@ -37885,34 +36329,31 @@ class WirelessSsidsRadiusServerArgs:
         pulumi.set(self, "secret", value)
 
 
-if not MYPY:
-    class WirelessSsidsRadiusServersResponseArgsDict(TypedDict):
-        ca_certificate: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Certificate used for authorization for the RADSEC Server
-        """
-        host: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        IP address of your RADIUS server
-        """
-        open_roaming_certificate_id: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The ID of the Openroaming Certificate attached to radius server.
-        """
-        port: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        UDP port the RADIUS server listens on for Access-requests
-        """
-        radsec_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Use RADSEC (TLS over TCP) to connect to this RADIUS server. Requires radiusProxyEnabled.
-        """
-        secret: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        RADIUS client shared secret
-        """
-elif False:
-    WirelessSsidsRadiusServersResponseArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsRadiusServersResponseArgsDict(TypedDict):
+    ca_certificate: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Certificate used for authorization for the RADSEC Server
+    """
+    host: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    IP address of your RADIUS server
+    """
+    open_roaming_certificate_id: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The ID of the Openroaming Certificate attached to radius server.
+    """
+    port: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    UDP port the RADIUS server listens on for Access-requests
+    """
+    radsec_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Use RADSEC (TLS over TCP) to connect to this RADIUS server. Requires radiusProxyEnabled.
+    """
+    secret: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    RADIUS client shared secret
+    """
 
 @pulumi.input_type
 class WirelessSsidsRadiusServersResponseArgs:
@@ -38017,26 +36458,23 @@ class WirelessSsidsRadiusServersResponseArgs:
         pulumi.set(self, "secret", value)
 
 
-if not MYPY:
-    class WirelessSsidsSchedulesRangeArgsDict(TypedDict):
-        end_day: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Day of when the outage ends. Can be either full day name, or three letter abbreviation
-        """
-        end_time: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        24 hour time when the outage ends.
-        """
-        start_day: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Day of when the outage starts. Can be either full day name, or three letter abbreviation.
-        """
-        start_time: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        24 hour time when the outage starts.
-        """
-elif False:
-    WirelessSsidsSchedulesRangeArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsSchedulesRangeArgsDict(TypedDict):
+    end_day: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Day of when the outage ends. Can be either full day name, or three letter abbreviation
+    """
+    end_time: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    24 hour time when the outage ends.
+    """
+    start_day: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Day of when the outage starts. Can be either full day name, or three letter abbreviation.
+    """
+    start_time: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    24 hour time when the outage starts.
+    """
 
 @pulumi.input_type
 class WirelessSsidsSchedulesRangeArgs:
@@ -38109,18 +36547,15 @@ class WirelessSsidsSchedulesRangeArgs:
         pulumi.set(self, "start_time", value)
 
 
-if not MYPY:
-    class WirelessSsidsSchedulesRangesInSecondArgsDict(TypedDict):
-        end: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Seconds since Sunday at midnight when that outage range ends.
-        """
-        start: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Seconds since Sunday at midnight when the outage range starts.
-        """
-elif False:
-    WirelessSsidsSchedulesRangesInSecondArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsSchedulesRangesInSecondArgsDict(TypedDict):
+    end: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Seconds since Sunday at midnight when that outage range ends.
+    """
+    start: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Seconds since Sunday at midnight when the outage range starts.
+    """
 
 @pulumi.input_type
 class WirelessSsidsSchedulesRangesInSecondArgs:
@@ -38161,14 +36596,11 @@ class WirelessSsidsSchedulesRangesInSecondArgs:
         pulumi.set(self, "start", value)
 
 
-if not MYPY:
-    class WirelessSsidsSpeedBurstArgsDict(TypedDict):
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Boolean indicating whether or not to allow users to temporarily exceed the bandwidth limit for short periods while still keeping them under the bandwidth limit over time.
-        """
-elif False:
-    WirelessSsidsSpeedBurstArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsSpeedBurstArgsDict(TypedDict):
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Boolean indicating whether or not to allow users to temporarily exceed the bandwidth limit for short periods while still keeping them under the bandwidth limit over time.
+    """
 
 @pulumi.input_type
 class WirelessSsidsSpeedBurstArgs:
@@ -38193,22 +36625,19 @@ class WirelessSsidsSpeedBurstArgs:
         pulumi.set(self, "enabled", value)
 
 
-if not MYPY:
-    class WirelessSsidsSplashSettingsBillingArgsDict(TypedDict):
-        free_access: NotRequired[pulumi.Input['WirelessSsidsSplashSettingsBillingFreeAccessArgsDict']]
-        """
-        Details associated with a free access plan with limits
-        """
-        prepaid_access_fast_login_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether or not billing uses the fast login prepaid access option.
-        """
-        reply_to_email_address: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The email address that reeceives replies from clients
-        """
-elif False:
-    WirelessSsidsSplashSettingsBillingArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsSplashSettingsBillingArgsDict(TypedDict):
+    free_access: NotRequired[pulumi.Input['WirelessSsidsSplashSettingsBillingFreeAccessArgsDict']]
+    """
+    Details associated with a free access plan with limits
+    """
+    prepaid_access_fast_login_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether or not billing uses the fast login prepaid access option.
+    """
+    reply_to_email_address: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The email address that reeceives replies from clients
+    """
 
 @pulumi.input_type
 class WirelessSsidsSplashSettingsBillingArgs:
@@ -38265,18 +36694,15 @@ class WirelessSsidsSplashSettingsBillingArgs:
         pulumi.set(self, "reply_to_email_address", value)
 
 
-if not MYPY:
-    class WirelessSsidsSplashSettingsBillingFreeAccessArgsDict(TypedDict):
-        duration_in_minutes: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        How long a device can use a network for free.
-        """
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether or not free access is enabled.
-        """
-elif False:
-    WirelessSsidsSplashSettingsBillingFreeAccessArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsSplashSettingsBillingFreeAccessArgsDict(TypedDict):
+    duration_in_minutes: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    How long a device can use a network for free.
+    """
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether or not free access is enabled.
+    """
 
 @pulumi.input_type
 class WirelessSsidsSplashSettingsBillingFreeAccessArgs:
@@ -38317,18 +36743,15 @@ class WirelessSsidsSplashSettingsBillingFreeAccessArgs:
         pulumi.set(self, "enabled", value)
 
 
-if not MYPY:
-    class WirelessSsidsSplashSettingsGuestSponsorshipArgsDict(TypedDict):
-        duration_in_minutes: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Duration in minutes of sponsored guest authorization.
-        """
-        guest_can_request_timeframe: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether or not guests can specify how much time they are requesting.
-        """
-elif False:
-    WirelessSsidsSplashSettingsGuestSponsorshipArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsSplashSettingsGuestSponsorshipArgsDict(TypedDict):
+    duration_in_minutes: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Duration in minutes of sponsored guest authorization.
+    """
+    guest_can_request_timeframe: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether or not guests can specify how much time they are requesting.
+    """
 
 @pulumi.input_type
 class WirelessSsidsSplashSettingsGuestSponsorshipArgs:
@@ -38369,18 +36792,15 @@ class WirelessSsidsSplashSettingsGuestSponsorshipArgs:
         pulumi.set(self, "guest_can_request_timeframe", value)
 
 
-if not MYPY:
-    class WirelessSsidsSplashSettingsSelfRegistrationArgsDict(TypedDict):
-        authorization_type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        How created user accounts should be authorized.
-        """
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether or not to allow users to create their own account on the network.
-        """
-elif False:
-    WirelessSsidsSplashSettingsSelfRegistrationArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsSplashSettingsSelfRegistrationArgsDict(TypedDict):
+    authorization_type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    How created user accounts should be authorized.
+    """
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether or not to allow users to create their own account on the network.
+    """
 
 @pulumi.input_type
 class WirelessSsidsSplashSettingsSelfRegistrationArgs:
@@ -38421,22 +36841,19 @@ class WirelessSsidsSplashSettingsSelfRegistrationArgs:
         pulumi.set(self, "enabled", value)
 
 
-if not MYPY:
-    class WirelessSsidsSplashSettingsSentryEnrollmentArgsDict(TypedDict):
-        enforced_systems: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        The system types that the Sentry enforces.
-        """
-        strength: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The strength of the enforcement of selected system types.
-        """
-        systems_manager_network: NotRequired[pulumi.Input['WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkArgsDict']]
-        """
-        Systems Manager network targeted for sentry enrollment.
-        """
-elif False:
-    WirelessSsidsSplashSettingsSentryEnrollmentArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsSplashSettingsSentryEnrollmentArgsDict(TypedDict):
+    enforced_systems: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+    """
+    The system types that the Sentry enforces.
+    """
+    strength: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The strength of the enforcement of selected system types.
+    """
+    systems_manager_network: NotRequired[pulumi.Input['WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkArgsDict']]
+    """
+    Systems Manager network targeted for sentry enrollment.
+    """
 
 @pulumi.input_type
 class WirelessSsidsSplashSettingsSentryEnrollmentArgs:
@@ -38493,14 +36910,11 @@ class WirelessSsidsSplashSettingsSentryEnrollmentArgs:
         pulumi.set(self, "systems_manager_network", value)
 
 
-if not MYPY:
-    class WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkArgsDict(TypedDict):
-        id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The network ID of the Systems Manager network.
-        """
-elif False:
-    WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkArgsDict(TypedDict):
+    id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The network ID of the Systems Manager network.
+    """
 
 @pulumi.input_type
 class WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkArgs:
@@ -38525,22 +36939,19 @@ class WirelessSsidsSplashSettingsSentryEnrollmentSystemsManagerNetworkArgs:
         pulumi.set(self, "id", value)
 
 
-if not MYPY:
-    class WirelessSsidsSplashSettingsSplashImageArgsDict(TypedDict):
-        extension: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The extension of the image file.
-        """
-        image: NotRequired[pulumi.Input['WirelessSsidsSplashSettingsSplashImageImageArgsDict']]
-        """
-        Properties for setting a new image.
-        """
-        md5: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The MD5 value of the image file.
-        """
-elif False:
-    WirelessSsidsSplashSettingsSplashImageArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsSplashSettingsSplashImageArgsDict(TypedDict):
+    extension: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The extension of the image file.
+    """
+    image: NotRequired[pulumi.Input['WirelessSsidsSplashSettingsSplashImageImageArgsDict']]
+    """
+    Properties for setting a new image.
+    """
+    md5: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The MD5 value of the image file.
+    """
 
 @pulumi.input_type
 class WirelessSsidsSplashSettingsSplashImageArgs:
@@ -38597,18 +37008,15 @@ class WirelessSsidsSplashSettingsSplashImageArgs:
         pulumi.set(self, "md5", value)
 
 
-if not MYPY:
-    class WirelessSsidsSplashSettingsSplashImageImageArgsDict(TypedDict):
-        contents: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The file contents (a base 64 encoded string) of your new image.
-        """
-        format: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The format of the encoded contents. Supported formats are 'png', 'gif', and jpg'.
-        """
-elif False:
-    WirelessSsidsSplashSettingsSplashImageImageArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsSplashSettingsSplashImageImageArgsDict(TypedDict):
+    contents: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The file contents (a base 64 encoded string) of your new image.
+    """
+    format: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The format of the encoded contents. Supported formats are 'png', 'gif', and jpg'.
+    """
 
 @pulumi.input_type
 class WirelessSsidsSplashSettingsSplashImageImageArgs:
@@ -38649,22 +37057,19 @@ class WirelessSsidsSplashSettingsSplashImageImageArgs:
         pulumi.set(self, "format", value)
 
 
-if not MYPY:
-    class WirelessSsidsSplashSettingsSplashLogoArgsDict(TypedDict):
-        extension: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The extension of the logo file.
-        """
-        image: NotRequired[pulumi.Input['WirelessSsidsSplashSettingsSplashLogoImageArgsDict']]
-        """
-        Properties for setting a new image.
-        """
-        md5: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The MD5 value of the logo file.
-        """
-elif False:
-    WirelessSsidsSplashSettingsSplashLogoArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsSplashSettingsSplashLogoArgsDict(TypedDict):
+    extension: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The extension of the logo file.
+    """
+    image: NotRequired[pulumi.Input['WirelessSsidsSplashSettingsSplashLogoImageArgsDict']]
+    """
+    Properties for setting a new image.
+    """
+    md5: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The MD5 value of the logo file.
+    """
 
 @pulumi.input_type
 class WirelessSsidsSplashSettingsSplashLogoArgs:
@@ -38721,18 +37126,15 @@ class WirelessSsidsSplashSettingsSplashLogoArgs:
         pulumi.set(self, "md5", value)
 
 
-if not MYPY:
-    class WirelessSsidsSplashSettingsSplashLogoImageArgsDict(TypedDict):
-        contents: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The file contents (a base 64 encoded string) of your new logo.
-        """
-        format: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The format of the encoded contents. Supported formats are 'png', 'gif', and jpg'.
-        """
-elif False:
-    WirelessSsidsSplashSettingsSplashLogoImageArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsSplashSettingsSplashLogoImageArgsDict(TypedDict):
+    contents: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The file contents (a base 64 encoded string) of your new logo.
+    """
+    format: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The format of the encoded contents. Supported formats are 'png', 'gif', and jpg'.
+    """
 
 @pulumi.input_type
 class WirelessSsidsSplashSettingsSplashLogoImageArgs:
@@ -38773,22 +37175,19 @@ class WirelessSsidsSplashSettingsSplashLogoImageArgs:
         pulumi.set(self, "format", value)
 
 
-if not MYPY:
-    class WirelessSsidsSplashSettingsSplashPrepaidFrontArgsDict(TypedDict):
-        extension: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The extension of the prepaid front image file.
-        """
-        image: NotRequired[pulumi.Input['WirelessSsidsSplashSettingsSplashPrepaidFrontImageArgsDict']]
-        """
-        Properties for setting a new image.
-        """
-        md5: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The MD5 value of the prepaid front image file.
-        """
-elif False:
-    WirelessSsidsSplashSettingsSplashPrepaidFrontArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsSplashSettingsSplashPrepaidFrontArgsDict(TypedDict):
+    extension: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The extension of the prepaid front image file.
+    """
+    image: NotRequired[pulumi.Input['WirelessSsidsSplashSettingsSplashPrepaidFrontImageArgsDict']]
+    """
+    Properties for setting a new image.
+    """
+    md5: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The MD5 value of the prepaid front image file.
+    """
 
 @pulumi.input_type
 class WirelessSsidsSplashSettingsSplashPrepaidFrontArgs:
@@ -38845,18 +37244,15 @@ class WirelessSsidsSplashSettingsSplashPrepaidFrontArgs:
         pulumi.set(self, "md5", value)
 
 
-if not MYPY:
-    class WirelessSsidsSplashSettingsSplashPrepaidFrontImageArgsDict(TypedDict):
-        contents: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The file contents (a base 64 encoded string) of your new prepaid front.
-        """
-        format: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The format of the encoded contents. Supported formats are 'png', 'gif', and jpg'.
-        """
-elif False:
-    WirelessSsidsSplashSettingsSplashPrepaidFrontImageArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsSplashSettingsSplashPrepaidFrontImageArgsDict(TypedDict):
+    contents: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The file contents (a base 64 encoded string) of your new prepaid front.
+    """
+    format: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The format of the encoded contents. Supported formats are 'png', 'gif', and jpg'.
+    """
 
 @pulumi.input_type
 class WirelessSsidsSplashSettingsSplashPrepaidFrontImageArgs:
@@ -38897,28 +37293,25 @@ class WirelessSsidsSplashSettingsSplashPrepaidFrontImageArgs:
         pulumi.set(self, "format", value)
 
 
-if not MYPY:
-    class WirelessSsidsTrafficShapingRulesRuleArgsDict(TypedDict):
-        definitions: NotRequired[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsTrafficShapingRulesRuleDefinitionArgsDict']]]]
-        """
-        A list of objects describing the definitions of your traffic shaping rule. At least one definition is required.
-        """
-        dscp_tag_value: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The DSCP tag applied by your rule. null means 'Do not change DSCP tag'.
-        For a list of possible tag values, use the trafficShaping/dscpTaggingOptions endpoint.
-        """
-        pcp_tag_value: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The PCP tag applied by your rule. Can be 0 (lowest priority) through 7 (highest priority).
-        null means 'Do not set PCP tag'.
-        """
-        per_client_bandwidth_limits: NotRequired[pulumi.Input['WirelessSsidsTrafficShapingRulesRulePerClientBandwidthLimitsArgsDict']]
-        """
-        An object describing the bandwidth settings for your rule.
-        """
-elif False:
-    WirelessSsidsTrafficShapingRulesRuleArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsTrafficShapingRulesRuleArgsDict(TypedDict):
+    definitions: NotRequired[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsTrafficShapingRulesRuleDefinitionArgsDict']]]]
+    """
+    A list of objects describing the definitions of your traffic shaping rule. At least one definition is required.
+    """
+    dscp_tag_value: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The DSCP tag applied by your rule. null means 'Do not change DSCP tag'.
+    For a list of possible tag values, use the trafficShaping/dscpTaggingOptions endpoint.
+    """
+    pcp_tag_value: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The PCP tag applied by your rule. Can be 0 (lowest priority) through 7 (highest priority).
+    null means 'Do not set PCP tag'.
+    """
+    per_client_bandwidth_limits: NotRequired[pulumi.Input['WirelessSsidsTrafficShapingRulesRulePerClientBandwidthLimitsArgsDict']]
+    """
+    An object describing the bandwidth settings for your rule.
+    """
 
 @pulumi.input_type
 class WirelessSsidsTrafficShapingRulesRuleArgs:
@@ -38995,25 +37388,22 @@ class WirelessSsidsTrafficShapingRulesRuleArgs:
         pulumi.set(self, "per_client_bandwidth_limits", value)
 
 
-if not MYPY:
-    class WirelessSsidsTrafficShapingRulesRuleDefinitionArgsDict(TypedDict):
-        type: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The type of definition. Can be one of 'application', 'applicationCategory', 'host', 'port', 'ipRange' or 'localNet'.
-        """
-        value: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        If "type" is 'host', 'port', 'ipRange' or 'localNet', then "value" must be a string, matching either
-        a hostname (e.g. "somesite.com"), a port (e.g. 8080), or an IP range ("192.1.0.0",
-        "192.1.0.0/16", or "10.1.0.0/16:80"). 'localNet' also supports CIDR notation, excluding
-        custom ports.
-         If "type" is 'application' or 'applicationCategory', then "value" must be an object
-        with the structure { "id": "meraki:layer7/..." }, where "id" is the application category or
-        application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
-        endpoint).
-        """
-elif False:
-    WirelessSsidsTrafficShapingRulesRuleDefinitionArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsTrafficShapingRulesRuleDefinitionArgsDict(TypedDict):
+    type: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The type of definition. Can be one of 'application', 'applicationCategory', 'host', 'port', 'ipRange' or 'localNet'.
+    """
+    value: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    If "type" is 'host', 'port', 'ipRange' or 'localNet', then "value" must be a string, matching either
+    a hostname (e.g. "somesite.com"), a port (e.g. 8080), or an IP range ("192.1.0.0",
+    "192.1.0.0/16", or "10.1.0.0/16:80"). 'localNet' also supports CIDR notation, excluding
+    custom ports.
+     If "type" is 'application' or 'applicationCategory', then "value" must be an object
+    with the structure { "id": "meraki:layer7/..." }, where "id" is the application category or
+    application ID (for a list of IDs for your network, use the trafficShaping/applicationCategories
+    endpoint).
+    """
 
 @pulumi.input_type
 class WirelessSsidsTrafficShapingRulesRuleDefinitionArgs:
@@ -39068,18 +37458,15 @@ class WirelessSsidsTrafficShapingRulesRuleDefinitionArgs:
         pulumi.set(self, "value", value)
 
 
-if not MYPY:
-    class WirelessSsidsTrafficShapingRulesRulePerClientBandwidthLimitsArgsDict(TypedDict):
-        bandwidth_limits: NotRequired[pulumi.Input['WirelessSsidsTrafficShapingRulesRulePerClientBandwidthLimitsBandwidthLimitsArgsDict']]
-        """
-        The bandwidth limits object, specifying the upload ('limitUp') and download ('limitDown') speed in Kbps. These are only enforced if 'settings' is set to 'custom'.
-        """
-        settings: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        How bandwidth limits are applied by your rule. Can be one of 'network default', 'ignore' or 'custom'.
-        """
-elif False:
-    WirelessSsidsTrafficShapingRulesRulePerClientBandwidthLimitsArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsTrafficShapingRulesRulePerClientBandwidthLimitsArgsDict(TypedDict):
+    bandwidth_limits: NotRequired[pulumi.Input['WirelessSsidsTrafficShapingRulesRulePerClientBandwidthLimitsBandwidthLimitsArgsDict']]
+    """
+    The bandwidth limits object, specifying the upload ('limitUp') and download ('limitDown') speed in Kbps. These are only enforced if 'settings' is set to 'custom'.
+    """
+    settings: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    How bandwidth limits are applied by your rule. Can be one of 'network default', 'ignore' or 'custom'.
+    """
 
 @pulumi.input_type
 class WirelessSsidsTrafficShapingRulesRulePerClientBandwidthLimitsArgs:
@@ -39120,18 +37507,15 @@ class WirelessSsidsTrafficShapingRulesRulePerClientBandwidthLimitsArgs:
         pulumi.set(self, "settings", value)
 
 
-if not MYPY:
-    class WirelessSsidsTrafficShapingRulesRulePerClientBandwidthLimitsBandwidthLimitsArgsDict(TypedDict):
-        limit_down: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The maximum download limit (integer, in Kbps).
-        """
-        limit_up: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The maximum upload limit (integer, in Kbps).
-        """
-elif False:
-    WirelessSsidsTrafficShapingRulesRulePerClientBandwidthLimitsBandwidthLimitsArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsTrafficShapingRulesRulePerClientBandwidthLimitsBandwidthLimitsArgsDict(TypedDict):
+    limit_down: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The maximum download limit (integer, in Kbps).
+    """
+    limit_up: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The maximum upload limit (integer, in Kbps).
+    """
 
 @pulumi.input_type
 class WirelessSsidsTrafficShapingRulesRulePerClientBandwidthLimitsBandwidthLimitsArgs:
@@ -39172,19 +37556,16 @@ class WirelessSsidsTrafficShapingRulesRulePerClientBandwidthLimitsBandwidthLimit
         pulumi.set(self, "limit_up", value)
 
 
-if not MYPY:
-    class WirelessSsidsVpnConcentratorArgsDict(TypedDict):
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        network_id: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The NAT ID of the concentrator that should be set.
-        """
-        vlan_id: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        The VLAN that should be tagged for the concentrator.
-        """
-elif False:
-    WirelessSsidsVpnConcentratorArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsVpnConcentratorArgsDict(TypedDict):
+    name: NotRequired[pulumi.Input[_builtins.str]]
+    network_id: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The NAT ID of the concentrator that should be set.
+    """
+    vlan_id: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    The VLAN that should be tagged for the concentrator.
+    """
 
 @pulumi.input_type
 class WirelessSsidsVpnConcentratorArgs:
@@ -39237,22 +37618,19 @@ class WirelessSsidsVpnConcentratorArgs:
         pulumi.set(self, "vlan_id", value)
 
 
-if not MYPY:
-    class WirelessSsidsVpnFailoverArgsDict(TypedDict):
-        heartbeat_interval: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Idle timer interval in seconds.
-        """
-        idle_timeout: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Idle timer timeout in seconds.
-        """
-        request_ip: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        IP addressed reserved on DHCP server where SSID will terminate.
-        """
-elif False:
-    WirelessSsidsVpnFailoverArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsVpnFailoverArgsDict(TypedDict):
+    heartbeat_interval: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Idle timer interval in seconds.
+    """
+    idle_timeout: NotRequired[pulumi.Input[_builtins.int]]
+    """
+    Idle timer timeout in seconds.
+    """
+    request_ip: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    IP addressed reserved on DHCP server where SSID will terminate.
+    """
 
 @pulumi.input_type
 class WirelessSsidsVpnFailoverArgs:
@@ -39309,18 +37687,15 @@ class WirelessSsidsVpnFailoverArgs:
         pulumi.set(self, "request_ip", value)
 
 
-if not MYPY:
-    class WirelessSsidsVpnSplitTunnelArgsDict(TypedDict):
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        If true, VPN split tunnel is enabled.
-        """
-        rules: NotRequired[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsVpnSplitTunnelRuleArgsDict']]]]
-        """
-        List of VPN split tunnel rules.
-        """
-elif False:
-    WirelessSsidsVpnSplitTunnelArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsVpnSplitTunnelArgsDict(TypedDict):
+    enabled: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    If true, VPN split tunnel is enabled.
+    """
+    rules: NotRequired[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsVpnSplitTunnelRuleArgsDict']]]]
+    """
+    List of VPN split tunnel rules.
+    """
 
 @pulumi.input_type
 class WirelessSsidsVpnSplitTunnelArgs:
@@ -39361,30 +37736,27 @@ class WirelessSsidsVpnSplitTunnelArgs:
         pulumi.set(self, "rules", value)
 
 
-if not MYPY:
-    class WirelessSsidsVpnSplitTunnelRuleArgsDict(TypedDict):
-        comment: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Description for this split tunnel rule (optional).
-        """
-        dest_cidr: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Destination for this split tunnel rule. IP address, fully-qualified domain names (FQDN) or 'any'.
-        """
-        dest_port: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Destination port for this split tunnel rule, (integer in the range 1-65535), or 'any'.
-        """
-        policy: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Traffic policy specified for this split tunnel rule, 'allow' or 'deny'.
-        """
-        protocol: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Protocol for this split tunnel rule.
-        """
-elif False:
-    WirelessSsidsVpnSplitTunnelRuleArgsDict: TypeAlias = Mapping[str, Any]
+class WirelessSsidsVpnSplitTunnelRuleArgsDict(TypedDict):
+    comment: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Description for this split tunnel rule (optional).
+    """
+    dest_cidr: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Destination for this split tunnel rule. IP address, fully-qualified domain names (FQDN) or 'any'.
+    """
+    dest_port: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Destination port for this split tunnel rule, (integer in the range 1-65535), or 'any'.
+    """
+    policy: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Traffic policy specified for this split tunnel rule, 'allow' or 'deny'.
+    """
+    protocol: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    Protocol for this split tunnel rule.
+    """
 
 @pulumi.input_type
 class WirelessSsidsVpnSplitTunnelRuleArgs:
