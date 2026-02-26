@@ -26,6 +26,7 @@ class LiveToolsCableArgs:
                  ports: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a LiveToolsCable resource.
+
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         :param pulumi.Input['LiveToolsCableCallbackArgs'] callback: Details for the callback. Please include either an httpServerId OR url and sharedSecret
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ports: A list of ports for which to perform the cable test.
@@ -87,6 +88,7 @@ class _LiveToolsCableState:
                  url: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering LiveToolsCable resources.
+
         :param pulumi.Input[_builtins.str] cable_test_id: Id of the cable test request. Used to check the status of the request.
         :param pulumi.Input['LiveToolsCableCallbackArgs'] callback: Details for the callback. Please include either an httpServerId OR url and sharedSecret
         :param pulumi.Input[_builtins.str] error: An error message for a failed execution
@@ -237,6 +239,7 @@ class LiveToolsCable(pulumi.CustomResource):
                  __props__=None):
         """
         Create a LiveToolsCable resource with the given unique name, props, and options.
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['LiveToolsCableCallbackArgs', 'LiveToolsCableCallbackArgsDict']] callback: Details for the callback. Please include either an httpServerId OR url and sharedSecret
@@ -251,6 +254,7 @@ class LiveToolsCable(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         Create a LiveToolsCable resource with the given unique name, props, and options.
+
         :param str resource_name: The name of the resource.
         :param LiveToolsCableArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

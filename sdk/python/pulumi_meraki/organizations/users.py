@@ -23,6 +23,7 @@ class UsersArgs:
                  user_id: pulumi.Input[_builtins.str]):
         """
         The set of arguments for constructing a Users resource.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[_builtins.str] user_id: userId path parameter. User ID
         """
@@ -61,6 +62,7 @@ class _UsersState:
                  user_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering Users resources.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[_builtins.str] user_id: userId path parameter. User ID
         """
@@ -119,6 +121,7 @@ class Users(pulumi.CustomResource):
         pulumi.export("merakiOrganizationsUsersExample", example)
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
@@ -145,6 +148,7 @@ class Users(pulumi.CustomResource):
             user_id="string")
         pulumi.export("merakiOrganizationsUsersExample", example)
         ```
+
 
         :param str resource_name: The name of the resource.
         :param UsersArgs args: The arguments to use to populate this resource's properties.

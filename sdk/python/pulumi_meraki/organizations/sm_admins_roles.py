@@ -26,6 +26,7 @@ class SmAdminsRolesArgs:
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a SmAdminsRoles resource.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[_builtins.str] name: The name of the limited access role
         :param pulumi.Input[_builtins.str] role_id: The Id of the limited access role
@@ -113,6 +114,7 @@ class _SmAdminsRolesState:
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         Input properties used for looking up and filtering SmAdminsRoles resources.
+
         :param pulumi.Input[_builtins.str] name: The name of the limited access role
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[_builtins.str] role_id: The Id of the limited access role
@@ -224,6 +226,7 @@ class SmAdminsRoles(pulumi.CustomResource):
         $ pulumi import meraki:organizations/smAdminsRoles:SmAdminsRoles example "organization_id,role_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] name: The name of the limited access role
@@ -258,6 +261,7 @@ class SmAdminsRoles(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:organizations/smAdminsRoles:SmAdminsRoles example "organization_id,role_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SmAdminsRolesArgs args: The arguments to use to populate this resource's properties.

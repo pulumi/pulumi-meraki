@@ -26,6 +26,7 @@ class CameraCustomAnalyticsArtifactsArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a CameraCustomAnalyticsArtifacts resource.
+
         :param pulumi.Input[_builtins.str] organization_id: Organization ID
         :param pulumi.Input[_builtins.str] artifact_id: Custom analytics artifact ID
         :param pulumi.Input[_builtins.str] name: Custom analytics artifact name
@@ -82,6 +83,7 @@ class _CameraCustomAnalyticsArtifactsState:
                  status: Optional[pulumi.Input['CameraCustomAnalyticsArtifactsStatusArgs']] = None):
         """
         Input properties used for looking up and filtering CameraCustomAnalyticsArtifacts resources.
+
         :param pulumi.Input[_builtins.str] artifact_id: Custom analytics artifact ID
         :param pulumi.Input[_builtins.str] name: Custom analytics artifact name
         :param pulumi.Input[_builtins.str] organization_id: Organization ID
@@ -174,6 +176,7 @@ class CameraCustomAnalyticsArtifacts(pulumi.CustomResource):
         $ pulumi import meraki:organizations/cameraCustomAnalyticsArtifacts:CameraCustomAnalyticsArtifacts example "artifact_id,organization_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] artifact_id: Custom analytics artifact ID
@@ -204,6 +207,7 @@ class CameraCustomAnalyticsArtifacts(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:organizations/cameraCustomAnalyticsArtifacts:CameraCustomAnalyticsArtifacts example "artifact_id,organization_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param CameraCustomAnalyticsArtifactsArgs args: The arguments to use to populate this resource's properties.

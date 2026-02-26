@@ -29,6 +29,7 @@ class SnmpArgs:
                  v3_priv_pass: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a Snmp resource.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] peer_ips: The list of IPv4 addresses that are allowed to access the SNMP server.
         :param pulumi.Input[_builtins.bool] v2c_enabled: Boolean indicating whether SNMP version 2c is enabled for the organization.
@@ -168,6 +169,7 @@ class _SnmpState:
                  v3_user: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering Snmp resources.
+
         :param pulumi.Input[_builtins.str] hostname: The hostname of the SNMP server.
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] peer_ips: The list of IPv4 addresses that are allowed to access the SNMP server.
@@ -391,6 +393,7 @@ class Snmp(pulumi.CustomResource):
         $ pulumi import meraki:organizations/snmp:Snmp example "organization_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
@@ -432,6 +435,7 @@ class Snmp(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:organizations/snmp:Snmp example "organization_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SnmpArgs args: The arguments to use to populate this resource's properties.

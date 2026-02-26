@@ -26,6 +26,7 @@ class SensorRelationshipsArgs:
                  livestream_requests: Optional[pulumi.Input[Sequence[pulumi.Input['SensorRelationshipsLivestreamRequestArgs']]]] = None):
         """
         The set of arguments for constructing a SensorRelationships resource.
+
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         :param pulumi.Input['SensorRelationshipsLivestreamArgs'] livestream: A role defined between an MT sensor and an MV camera that adds the camera's livestream to the sensor's details page. Snapshots from the camera will also appear in alert notifications that the sensor triggers.
         :param pulumi.Input[Sequence[pulumi.Input['SensorRelationshipsLivestreamRequestArgs']]] livestream_requests: A role defined between an MT sensor and an MV camera that adds the camera's r.Livestream to the sensor's details page. Snapshots from the camera will also appear in alert notifications that the sensor triggers.
@@ -81,6 +82,7 @@ class _SensorRelationshipsState:
                  serial: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SensorRelationships resources.
+
         :param pulumi.Input['SensorRelationshipsLivestreamArgs'] livestream: A role defined between an MT sensor and an MV camera that adds the camera's livestream to the sensor's details page. Snapshots from the camera will also appear in alert notifications that the sensor triggers.
         :param pulumi.Input[Sequence[pulumi.Input['SensorRelationshipsLivestreamRequestArgs']]] livestream_requests: A role defined between an MT sensor and an MV camera that adds the camera's r.Livestream to the sensor's details page. Snapshots from the camera will also appear in alert notifications that the sensor triggers.
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
@@ -162,6 +164,7 @@ class SensorRelationships(pulumi.CustomResource):
         $ pulumi import meraki:devices/sensorRelationships:SensorRelationships example "serial"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['SensorRelationshipsLivestreamArgs', 'SensorRelationshipsLivestreamArgsDict']] livestream: A role defined between an MT sensor and an MV camera that adds the camera's livestream to the sensor's details page. Snapshots from the camera will also appear in alert notifications that the sensor triggers.
@@ -196,6 +199,7 @@ class SensorRelationships(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:devices/sensorRelationships:SensorRelationships example "serial"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SensorRelationshipsArgs args: The arguments to use to populate this resource's properties.

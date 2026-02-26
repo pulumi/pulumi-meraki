@@ -30,6 +30,7 @@ class WebhooksPayloadTemplatesArgs:
                  payload_template_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a WebhooksPayloadTemplates resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] body: The body of the payload template, in liquid template
         :param pulumi.Input[_builtins.str] body_file: A file containing liquid template used for the body of the webhook message. Either *body* or *bodyFile* must be specified.
@@ -151,6 +152,7 @@ class _WebhooksPayloadTemplatesState:
                  type: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering WebhooksPayloadTemplates resources.
+
         :param pulumi.Input[_builtins.str] body: The body of the payload template, in liquid template
         :param pulumi.Input[_builtins.str] body_file: A file containing liquid template used for the body of the webhook message. Either *body* or *bodyFile* must be specified.
         :param pulumi.Input[Sequence[pulumi.Input['WebhooksPayloadTemplatesHeaderArgs']]] headers: The payload template headers, will be rendered as a key-value pair in the webhook.
@@ -329,6 +331,7 @@ class WebhooksPayloadTemplates(pulumi.CustomResource):
         $ pulumi import meraki:networks/webhooksPayloadTemplates:WebhooksPayloadTemplates example "network_id,payload_template_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] body: The body of the payload template, in liquid template
@@ -370,6 +373,7 @@ class WebhooksPayloadTemplates(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/webhooksPayloadTemplates:WebhooksPayloadTemplates example "network_id,payload_template_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param WebhooksPayloadTemplatesArgs args: The arguments to use to populate this resource's properties.

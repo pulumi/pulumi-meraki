@@ -27,6 +27,7 @@ class ApplianceRadioSettingsArgs:
                  two_four_ghz_settings: Optional[pulumi.Input['ApplianceRadioSettingsTwoFourGhzSettingsArgs']] = None):
         """
         The set of arguments for constructing a ApplianceRadioSettings resource.
+
         :param pulumi.Input[_builtins.str] serial: The device serial
         :param pulumi.Input['ApplianceRadioSettingsFiveGhzSettingsArgs'] five_ghz_settings: Manual radio settings for 5 GHz
         :param pulumi.Input[_builtins.str] rf_profile_id: RF Profile ID
@@ -98,6 +99,7 @@ class _ApplianceRadioSettingsState:
                  two_four_ghz_settings: Optional[pulumi.Input['ApplianceRadioSettingsTwoFourGhzSettingsArgs']] = None):
         """
         Input properties used for looking up and filtering ApplianceRadioSettings resources.
+
         :param pulumi.Input['ApplianceRadioSettingsFiveGhzSettingsArgs'] five_ghz_settings: Manual radio settings for 5 GHz
         :param pulumi.Input[_builtins.str] rf_profile_id: RF Profile ID
         :param pulumi.Input[_builtins.str] serial: The device serial
@@ -203,6 +205,7 @@ class ApplianceRadioSettings(pulumi.CustomResource):
         $ pulumi import meraki:devices/applianceRadioSettings:ApplianceRadioSettings example "serial"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['ApplianceRadioSettingsFiveGhzSettingsArgs', 'ApplianceRadioSettingsFiveGhzSettingsArgsDict']] five_ghz_settings: Manual radio settings for 5 GHz
@@ -246,6 +249,7 @@ class ApplianceRadioSettings(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:devices/applianceRadioSettings:ApplianceRadioSettings example "serial"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ApplianceRadioSettingsArgs args: The arguments to use to populate this resource's properties.

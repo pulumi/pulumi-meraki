@@ -50,6 +50,7 @@ class SwitchPortsArgs:
                  voice_vlan: Optional[pulumi.Input[_builtins.int]] = None):
         """
         The set of arguments for constructing a SwitchPorts resource.
+
         :param pulumi.Input[_builtins.str] port_id: The identifier of the switch port.
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         :param pulumi.Input[_builtins.int] access_policy_number: The number of a custom access policy to configure on the switch port. Only applicable when 'accessPolicyType' is 'Custom access policy'.
@@ -491,6 +492,7 @@ class _SwitchPortsState:
                  voice_vlan: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SwitchPorts resources.
+
         :param pulumi.Input[_builtins.int] access_policy_number: The number of a custom access policy to configure on the switch port. Only applicable when 'accessPolicyType' is 'Custom access policy'.
         :param pulumi.Input[_builtins.str] access_policy_type: The type of the access policy of the switch port. Only applicable to access ports. Can be one of 'Open', 'Custom access policy', 'MAC allow list' or 'Sticky MAC allow list'.
         :param pulumi.Input[_builtins.str] adaptive_policy_group_id: The adaptive policy group ID that will be used to tag traffic through this switch port. This ID must pre-exist during the configuration, else needs to be created using adaptivePolicy/groups API. Cannot be applied to a port on a switch bound to profile.
@@ -1035,6 +1037,7 @@ class SwitchPorts(pulumi.CustomResource):
         $ pulumi import meraki:devices/switchPorts:SwitchPorts example "port_id,serial"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.int] access_policy_number: The number of a custom access policy to configure on the switch port. Only applicable when 'accessPolicyType' is 'Custom access policy'.
@@ -1127,6 +1130,7 @@ class SwitchPorts(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:devices/switchPorts:SwitchPorts example "port_id,serial"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SwitchPortsArgs args: The arguments to use to populate this resource's properties.

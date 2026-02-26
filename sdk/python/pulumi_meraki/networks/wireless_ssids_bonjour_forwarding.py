@@ -28,6 +28,7 @@ class WirelessSsidsBonjourForwardingArgs:
                  rules: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsBonjourForwardingRuleArgs']]]] = None):
         """
         The set of arguments for constructing a WirelessSsidsBonjourForwarding resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] number: number path parameter.
         :param pulumi.Input[_builtins.bool] enabled: If true, Bonjour forwarding is enabled on the SSID.
@@ -114,6 +115,7 @@ class _WirelessSsidsBonjourForwardingState:
                  rules: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsBonjourForwardingRuleArgs']]]] = None):
         """
         Input properties used for looking up and filtering WirelessSsidsBonjourForwarding resources.
+
         :param pulumi.Input[_builtins.bool] enabled: If true, Bonjour forwarding is enabled on the SSID.
         :param pulumi.Input['WirelessSsidsBonjourForwardingExceptionArgs'] exception: Bonjour forwarding exception
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -232,6 +234,7 @@ class WirelessSsidsBonjourForwarding(pulumi.CustomResource):
         $ pulumi import meraki:networks/wirelessSsidsBonjourForwarding:WirelessSsidsBonjourForwarding example "network_id,number"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] enabled: If true, Bonjour forwarding is enabled on the SSID.
@@ -273,6 +276,7 @@ class WirelessSsidsBonjourForwarding(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/wirelessSsidsBonjourForwarding:WirelessSsidsBonjourForwarding example "network_id,number"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param WirelessSsidsBonjourForwardingArgs args: The arguments to use to populate this resource's properties.

@@ -26,6 +26,7 @@ class ApplianceTrafficShapingRulesArgs:
                  rules: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingRulesRuleArgs']]]] = None):
         """
         The set of arguments for constructing a ApplianceTrafficShapingRules resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.bool] default_rules_enabled: Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network's traffic shaping page. Note that default rules count against the rule limit of 8.
         :param pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingRulesRuleArgs']]] rules: An array of traffic shaping rules. Rules are applied in the order that
@@ -85,6 +86,7 @@ class _ApplianceTrafficShapingRulesState:
                  rules: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingRulesRuleArgs']]]] = None):
         """
         Input properties used for looking up and filtering ApplianceTrafficShapingRules resources.
+
         :param pulumi.Input[_builtins.bool] default_rules_enabled: Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network's traffic shaping page. Note that default rules count against the rule limit of 8.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingRulesRuleArgs']]] rules: An array of traffic shaping rules. Rules are applied in the order that
@@ -181,6 +183,7 @@ class ApplianceTrafficShapingRules(pulumi.CustomResource):
         $ pulumi import meraki:networks/applianceTrafficShapingRules:ApplianceTrafficShapingRules example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] default_rules_enabled: Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network's traffic shaping page. Note that default rules count against the rule limit of 8.
@@ -228,6 +231,7 @@ class ApplianceTrafficShapingRules(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/applianceTrafficShapingRules:ApplianceTrafficShapingRules example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ApplianceTrafficShapingRulesArgs args: The arguments to use to populate this resource's properties.

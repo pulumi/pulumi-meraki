@@ -24,6 +24,7 @@ class SplitArgs:
                  network_id: pulumi.Input[_builtins.str]):
         """
         The set of arguments for constructing a Split resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         """
         pulumi.set(__self__, "network_id", network_id)
@@ -48,6 +49,7 @@ class _SplitState:
                  network_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering Split resources.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         """
         if item is not None:
@@ -96,6 +98,7 @@ class Split(pulumi.CustomResource):
         pulumi.export("merakiNetworksSplitExample", example)
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -116,6 +119,7 @@ class Split(pulumi.CustomResource):
         example = meraki.networks.Split("example", network_id="string")
         pulumi.export("merakiNetworksSplitExample", example)
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SplitArgs args: The arguments to use to populate this resource's properties.

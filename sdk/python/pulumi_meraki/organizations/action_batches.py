@@ -29,6 +29,7 @@ class ActionBatchesArgs:
                  synchronous: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a ActionBatches resource.
+
         :param pulumi.Input[_builtins.str] organization_id: ID of the organization this action batch belongs to
         :param pulumi.Input[_builtins.str] action_batch_id: actionBatchId path parameter. Action batch ID
         :param pulumi.Input[Sequence[pulumi.Input['ActionBatchesActionArgs']]] actions: A set of changes made as part of this action (\\n\\nmore details\\n\\n)
@@ -133,6 +134,7 @@ class _ActionBatchesState:
                  synchronous: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering ActionBatches resources.
+
         :param pulumi.Input[_builtins.str] action_batch_id: actionBatchId path parameter. Action batch ID
         :param pulumi.Input[Sequence[pulumi.Input['ActionBatchesActionArgs']]] actions: A set of changes made as part of this action (\\n\\nmore details\\n\\n)
         :param pulumi.Input['ActionBatchesCallbackArgs'] callback: Information for callback used to send back results
@@ -288,6 +290,7 @@ class ActionBatches(pulumi.CustomResource):
         $ pulumi import meraki:organizations/actionBatches:ActionBatches example "action_batch_id,organization_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] action_batch_id: actionBatchId path parameter. Action batch ID
@@ -336,6 +339,7 @@ class ActionBatches(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:organizations/actionBatches:ActionBatches example "action_batch_id,organization_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ActionBatchesArgs args: The arguments to use to populate this resource's properties.

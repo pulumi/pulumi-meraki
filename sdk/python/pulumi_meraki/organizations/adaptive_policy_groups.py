@@ -28,6 +28,7 @@ class AdaptivePolicyGroupsArgs:
                  sgt: Optional[pulumi.Input[_builtins.int]] = None):
         """
         The set of arguments for constructing a AdaptivePolicyGroups resource.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[_builtins.str] description: Description of the group (default: "")
         :param pulumi.Input[_builtins.str] name: Name of the group
@@ -120,6 +121,7 @@ class _AdaptivePolicyGroupsState:
                  updated_at: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering AdaptivePolicyGroups resources.
+
         :param pulumi.Input[_builtins.str] description: Description of the group (default: "")
         :param pulumi.Input[_builtins.str] name: Name of the group
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
@@ -290,6 +292,7 @@ class AdaptivePolicyGroups(pulumi.CustomResource):
         $ pulumi import meraki:organizations/adaptivePolicyGroups:AdaptivePolicyGroups example "id,organization_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Description of the group (default: "")
@@ -328,6 +331,7 @@ class AdaptivePolicyGroups(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:organizations/adaptivePolicyGroups:AdaptivePolicyGroups example "id,organization_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param AdaptivePolicyGroupsArgs args: The arguments to use to populate this resource's properties.

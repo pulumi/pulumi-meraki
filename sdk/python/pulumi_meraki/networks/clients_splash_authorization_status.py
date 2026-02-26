@@ -26,6 +26,7 @@ class ClientsSplashAuthorizationStatusArgs:
                  ssids: Optional[pulumi.Input['ClientsSplashAuthorizationStatusSsidsArgs']] = None):
         """
         The set of arguments for constructing a ClientsSplashAuthorizationStatus resource.
+
         :param pulumi.Input[_builtins.str] client_id: clientId path parameter. Client ID
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input['ClientsSplashAuthorizationStatusSsidsArgs'] ssids: The target SSIDs. Each SSID must be enabled and must have Click-through splash enabled. For each SSID where isAuthorized is true, the expiration time will automatically be set according to the SSID's splash frequency. Not all networks support configuring all SSIDs
@@ -80,6 +81,7 @@ class _ClientsSplashAuthorizationStatusState:
                  ssids: Optional[pulumi.Input['ClientsSplashAuthorizationStatusSsidsArgs']] = None):
         """
         Input properties used for looking up and filtering ClientsSplashAuthorizationStatus resources.
+
         :param pulumi.Input[_builtins.str] client_id: clientId path parameter. Client ID
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input['ClientsSplashAuthorizationStatusSsidsArgs'] ssids: The target SSIDs. Each SSID must be enabled and must have Click-through splash enabled. For each SSID where isAuthorized is true, the expiration time will automatically be set according to the SSID's splash frequency. Not all networks support configuring all SSIDs
@@ -165,6 +167,7 @@ class ClientsSplashAuthorizationStatus(pulumi.CustomResource):
         $ pulumi import meraki:networks/clientsSplashAuthorizationStatus:ClientsSplashAuthorizationStatus example "client_id,network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] client_id: clientId path parameter. Client ID
@@ -203,6 +206,7 @@ class ClientsSplashAuthorizationStatus(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/clientsSplashAuthorizationStatus:ClientsSplashAuthorizationStatus example "client_id,network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ClientsSplashAuthorizationStatusArgs args: The arguments to use to populate this resource's properties.

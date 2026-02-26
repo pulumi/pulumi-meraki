@@ -23,6 +23,7 @@ class ApplianceVlansSettingsArgs:
                  vlans_enabled: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a ApplianceVlansSettings resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.bool] vlans_enabled: Boolean indicating whether VLANs are enabled (true) or disabled (false) for the network
         """
@@ -62,6 +63,7 @@ class _ApplianceVlansSettingsState:
                  vlans_enabled: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering ApplianceVlansSettings resources.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.bool] vlans_enabled: Boolean indicating whether VLANs are enabled (true) or disabled (false) for the network
         """
@@ -123,6 +125,7 @@ class ApplianceVlansSettings(pulumi.CustomResource):
         $ pulumi import meraki:networks/applianceVlansSettings:ApplianceVlansSettings example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -152,6 +155,7 @@ class ApplianceVlansSettings(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/applianceVlansSettings:ApplianceVlansSettings example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ApplianceVlansSettingsArgs args: The arguments to use to populate this resource's properties.

@@ -26,6 +26,7 @@ class LiveToolsArpTableArgs:
                  callback: Optional[pulumi.Input['LiveToolsArpTableCallbackArgs']] = None):
         """
         The set of arguments for constructing a LiveToolsArpTable resource.
+
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         :param pulumi.Input[_builtins.str] arp_table_id: Id of the ARP table request. Used to check the status of the request.
         :param pulumi.Input['LiveToolsArpTableCallbackArgs'] callback: Details for the callback. Please include either an httpServerId OR url and sharedSecret
@@ -86,6 +87,7 @@ class _LiveToolsArpTableState:
                  url: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering LiveToolsArpTable resources.
+
         :param pulumi.Input[_builtins.str] arp_table_id: Id of the ARP table request. Used to check the status of the request.
         :param pulumi.Input['LiveToolsArpTableCallbackArgs'] callback: Details for the callback. Please include either an httpServerId OR url and sharedSecret
         :param pulumi.Input[Sequence[pulumi.Input['LiveToolsArpTableEntryArgs']]] entries: The ARP table entries
@@ -247,6 +249,7 @@ class LiveToolsArpTable(pulumi.CustomResource):
         $ pulumi import meraki:devices/liveToolsArpTable:LiveToolsArpTable example "arp_table_id,serial"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] arp_table_id: Id of the ARP table request. Used to check the status of the request.
@@ -286,6 +289,7 @@ class LiveToolsArpTable(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:devices/liveToolsArpTable:LiveToolsArpTable example "arp_table_id,serial"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param LiveToolsArpTableArgs args: The arguments to use to populate this resource's properties.

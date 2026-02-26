@@ -25,6 +25,7 @@ class InventoryClaimArgs:
                  parameters: pulumi.Input['InventoryClaimParametersArgs']):
         """
         The set of arguments for constructing a InventoryClaim resource.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         """
         pulumi.set(__self__, "organization_id", organization_id)
@@ -60,6 +61,7 @@ class _InventoryClaimState:
                  parameters: Optional[pulumi.Input['InventoryClaimParametersArgs']] = None):
         """
         Input properties used for looking up and filtering InventoryClaim resources.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         """
         if item is not None:
@@ -132,6 +134,7 @@ class InventoryClaim(pulumi.CustomResource):
         pulumi.export("merakiOrganizationsInventoryClaimExample", example)
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
@@ -164,6 +167,7 @@ class InventoryClaim(pulumi.CustomResource):
             })
         pulumi.export("merakiOrganizationsInventoryClaimExample", example)
         ```
+
 
         :param str resource_name: The name of the resource.
         :param InventoryClaimArgs args: The arguments to use to populate this resource's properties.

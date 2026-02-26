@@ -28,6 +28,7 @@ class WirelessBluetoothSettingsArgs:
                  uuid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a WirelessBluetoothSettings resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.bool] advertising_enabled: Whether APs will advertise beacons.
         :param pulumi.Input[_builtins.int] major: The major number to be used in the beacon identifier. Only valid in 'Non-unique' mode.
@@ -148,6 +149,7 @@ class _WirelessBluetoothSettingsState:
                  uuid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering WirelessBluetoothSettings resources.
+
         :param pulumi.Input[_builtins.bool] advertising_enabled: Whether APs will advertise beacons.
         :param pulumi.Input[_builtins.bool] esl_enabled: Whether ESL is enabled on this network.
         :param pulumi.Input[_builtins.int] major: The major number to be used in the beacon identifier. Only valid in 'Non-unique' mode.
@@ -309,6 +311,7 @@ class WirelessBluetoothSettings(pulumi.CustomResource):
         $ pulumi import meraki:networks/wirelessBluetoothSettings:WirelessBluetoothSettings example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] advertising_enabled: Whether APs will advertise beacons.
@@ -348,6 +351,7 @@ class WirelessBluetoothSettings(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/wirelessBluetoothSettings:WirelessBluetoothSettings example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param WirelessBluetoothSettingsArgs args: The arguments to use to populate this resource's properties.

@@ -26,6 +26,7 @@ class LicensingSubscriptionSubscriptionsBindArgs:
                  validate: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a LicensingSubscriptionSubscriptionsBind resource.
+
         :param pulumi.Input[_builtins.str] subscription_id: subscriptionId path parameter. Subscription ID
         :param pulumi.Input[_builtins.bool] validate: validate query parameter. Check if the provided networks can be bound to the subscription. Returns any licensing problems and does not commit the results.
         """
@@ -77,6 +78,7 @@ class _LicensingSubscriptionSubscriptionsBindState:
                  validate: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering LicensingSubscriptionSubscriptionsBind resources.
+
         :param pulumi.Input[_builtins.str] subscription_id: subscriptionId path parameter. Subscription ID
         :param pulumi.Input[_builtins.bool] validate: validate query parameter. Check if the provided networks can be bound to the subscription. Returns any licensing problems and does not commit the results.
         """
@@ -164,6 +166,7 @@ class LicensingSubscriptionSubscriptionsBind(pulumi.CustomResource):
         pulumi.export("merakiAdministeredLicensingSubscriptionSubscriptionsBindExample", example)
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] subscription_id: subscriptionId path parameter. Subscription ID
@@ -196,6 +199,7 @@ class LicensingSubscriptionSubscriptionsBind(pulumi.CustomResource):
             })
         pulumi.export("merakiAdministeredLicensingSubscriptionSubscriptionsBindExample", example)
         ```
+
 
         :param str resource_name: The name of the resource.
         :param LicensingSubscriptionSubscriptionsBindArgs args: The arguments to use to populate this resource's properties.

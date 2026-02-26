@@ -93,6 +93,7 @@ class LicensingSubscriptionSubscriptionsClaimKeyValidate(pulumi.CustomResource):
         pulumi.export("merakiAdministeredLicensingSubscriptionSubscriptionsClaimKeyValidateExample", example)
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         """
@@ -117,6 +118,7 @@ class LicensingSubscriptionSubscriptionsClaimKeyValidate(pulumi.CustomResource):
         })
         pulumi.export("merakiAdministeredLicensingSubscriptionSubscriptionsClaimKeyValidateExample", example)
         ```
+
 
         :param str resource_name: The name of the resource.
         :param LicensingSubscriptionSubscriptionsClaimKeyValidateArgs args: The arguments to use to populate this resource's properties.

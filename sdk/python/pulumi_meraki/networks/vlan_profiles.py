@@ -28,6 +28,7 @@ class VlanProfilesArgs:
                  vlan_names: Optional[pulumi.Input[Sequence[pulumi.Input['VlanProfilesVlanNameArgs']]]] = None):
         """
         The set of arguments for constructing a VlanProfiles resource.
+
         :param pulumi.Input[_builtins.str] iname: IName of the VLAN profile
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] name: Name of the profile, string length must be from 1 to 255 characters
@@ -115,6 +116,7 @@ class _VlanProfilesState:
                  vlan_names: Optional[pulumi.Input[Sequence[pulumi.Input['VlanProfilesVlanNameArgs']]]] = None):
         """
         Input properties used for looking up and filtering VlanProfiles resources.
+
         :param pulumi.Input[_builtins.str] iname: IName of the VLAN profile
         :param pulumi.Input[_builtins.bool] is_default: Boolean indicating the default VLAN Profile for any device that does not have a profile explicitly assigned
         :param pulumi.Input[_builtins.str] name: Name of the profile, string length must be from 1 to 255 characters
@@ -251,6 +253,7 @@ class VlanProfiles(pulumi.CustomResource):
         $ pulumi import meraki:networks/vlanProfiles:VlanProfiles example "iname,network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] iname: IName of the VLAN profile
@@ -295,6 +298,7 @@ class VlanProfiles(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/vlanProfiles:VlanProfiles example "iname,network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param VlanProfilesArgs args: The arguments to use to populate this resource's properties.

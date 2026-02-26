@@ -34,6 +34,7 @@ class SwitchStacksRoutingInterfacesArgs:
                  vlan_id: Optional[pulumi.Input[_builtins.int]] = None):
         """
         The set of arguments for constructing a SwitchStacksRoutingInterfaces resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] switch_stack_id: switchStackId path parameter. Switch stack ID
         :param pulumi.Input[_builtins.str] default_gateway: IPv4 default gateway
@@ -218,6 +219,7 @@ class _SwitchStacksRoutingInterfacesState:
                  vlan_id: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SwitchStacksRoutingInterfaces resources.
+
         :param pulumi.Input[_builtins.str] default_gateway: IPv4 default gateway
         :param pulumi.Input[_builtins.str] default_gateway_response: IPv4 default gateway
         :param pulumi.Input[_builtins.str] interface_id: The id
@@ -470,6 +472,7 @@ class SwitchStacksRoutingInterfaces(pulumi.CustomResource):
         $ pulumi import meraki:networks/switchStacksRoutingInterfaces:SwitchStacksRoutingInterfaces example "interface_id,network_id,switch_stack_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] default_gateway: IPv4 default gateway
@@ -525,6 +528,7 @@ class SwitchStacksRoutingInterfaces(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/switchStacksRoutingInterfaces:SwitchStacksRoutingInterfaces example "interface_id,network_id,switch_stack_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SwitchStacksRoutingInterfacesArgs args: The arguments to use to populate this resource's properties.

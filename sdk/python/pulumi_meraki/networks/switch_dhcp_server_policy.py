@@ -29,6 +29,7 @@ class SwitchDhcpServerPolicyArgs:
                  default_policy: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a SwitchDhcpServerPolicy resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input['SwitchDhcpServerPolicyAlertsArgs'] alerts: Email alert settings for DHCP servers
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] allowed_servers: List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
@@ -136,6 +137,7 @@ class _SwitchDhcpServerPolicyState:
                  network_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SwitchDhcpServerPolicy resources.
+
         :param pulumi.Input['SwitchDhcpServerPolicyAlertsArgs'] alerts: Email alert settings for DHCP servers
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] allowed_servers: List the MAC addresses of DHCP servers to permit on the network when defaultPolicy is set
                  to block.An empty array will clear the entries.
@@ -281,6 +283,7 @@ class SwitchDhcpServerPolicy(pulumi.CustomResource):
         $ pulumi import meraki:networks/switchDhcpServerPolicy:SwitchDhcpServerPolicy example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['SwitchDhcpServerPolicyAlertsArgs', 'SwitchDhcpServerPolicyAlertsArgsDict']] alerts: Email alert settings for DHCP servers
@@ -332,6 +335,7 @@ class SwitchDhcpServerPolicy(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/switchDhcpServerPolicy:SwitchDhcpServerPolicy example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SwitchDhcpServerPolicyArgs args: The arguments to use to populate this resource's properties.

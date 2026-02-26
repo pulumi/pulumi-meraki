@@ -27,6 +27,7 @@ class FirmwareUpgradesArgs:
                  upgrade_window: Optional[pulumi.Input['FirmwareUpgradesUpgradeWindowArgs']] = None):
         """
         The set of arguments for constructing a FirmwareUpgrades resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input['FirmwareUpgradesProductsArgs'] products: The network devices to be updated
         :param pulumi.Input[_builtins.str] timezone: The timezone for the network
@@ -98,6 +99,7 @@ class _FirmwareUpgradesState:
                  upgrade_window: Optional[pulumi.Input['FirmwareUpgradesUpgradeWindowArgs']] = None):
         """
         Input properties used for looking up and filtering FirmwareUpgrades resources.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input['FirmwareUpgradesProductsArgs'] products: The network devices to be updated
         :param pulumi.Input[_builtins.str] timezone: The timezone for the network
@@ -260,6 +262,7 @@ class FirmwareUpgrades(pulumi.CustomResource):
         $ pulumi import meraki:networks/firmwareUpgrades:FirmwareUpgrades example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -360,6 +363,7 @@ class FirmwareUpgrades(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/firmwareUpgrades:FirmwareUpgrades example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param FirmwareUpgradesArgs args: The arguments to use to populate this resource's properties.

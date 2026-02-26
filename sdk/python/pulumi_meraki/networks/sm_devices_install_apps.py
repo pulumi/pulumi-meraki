@@ -26,6 +26,7 @@ class SmDevicesInstallAppsArgs:
                  parameters: pulumi.Input['SmDevicesInstallAppsParametersArgs']):
         """
         The set of arguments for constructing a SmDevicesInstallApps resource.
+
         :param pulumi.Input[_builtins.str] device_id: deviceId path parameter. Device ID
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         """
@@ -75,6 +76,7 @@ class _SmDevicesInstallAppsState:
                  parameters: Optional[pulumi.Input['SmDevicesInstallAppsParametersArgs']] = None):
         """
         Input properties used for looking up and filtering SmDevicesInstallApps resources.
+
         :param pulumi.Input[_builtins.str] device_id: deviceId path parameter. Device ID
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         """
@@ -152,6 +154,7 @@ class SmDevicesInstallApps(pulumi.CustomResource):
         pulumi.export("merakiNetworksSmDevicesInstallAppsExample", example)
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device_id: deviceId path parameter. Device ID
@@ -185,6 +188,7 @@ class SmDevicesInstallApps(pulumi.CustomResource):
             })
         pulumi.export("merakiNetworksSmDevicesInstallAppsExample", example)
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SmDevicesInstallAppsArgs args: The arguments to use to populate this resource's properties.

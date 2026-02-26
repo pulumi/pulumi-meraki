@@ -28,6 +28,7 @@ class WirelessAlternateManagementInterfaceArgs:
                  vlan_id: Optional[pulumi.Input[_builtins.int]] = None):
         """
         The set of arguments for constructing a WirelessAlternateManagementInterface resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceAccessPointArgs']]] access_points: Array of access point serial number and IP assignment. Note: accessPoints IP assignment is not applicable for template networks, in other words, do not put 'accessPoints' in the body when updating template networks. Also, an empty 'accessPoints' array will remove all previous static IP assignments
         :param pulumi.Input[_builtins.bool] enabled: Boolean value to enable or disable alternate management interface
@@ -115,6 +116,7 @@ class _WirelessAlternateManagementInterfaceState:
                  vlan_id: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering WirelessAlternateManagementInterface resources.
+
         :param pulumi.Input[Sequence[pulumi.Input['WirelessAlternateManagementInterfaceAccessPointArgs']]] access_points: Array of access point serial number and IP assignment. Note: accessPoints IP assignment is not applicable for template networks, in other words, do not put 'accessPoints' in the body when updating template networks. Also, an empty 'accessPoints' array will remove all previous static IP assignments
         :param pulumi.Input[_builtins.bool] enabled: Boolean value to enable or disable alternate management interface
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -239,6 +241,7 @@ class WirelessAlternateManagementInterface(pulumi.CustomResource):
         $ pulumi import meraki:networks/wirelessAlternateManagementInterface:WirelessAlternateManagementInterface example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['WirelessAlternateManagementInterfaceAccessPointArgs', 'WirelessAlternateManagementInterfaceAccessPointArgsDict']]]] access_points: Array of access point serial number and IP assignment. Note: accessPoints IP assignment is not applicable for template networks, in other words, do not put 'accessPoints' in the body when updating template networks. Also, an empty 'accessPoints' array will remove all previous static IP assignments
@@ -286,6 +289,7 @@ class WirelessAlternateManagementInterface(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/wirelessAlternateManagementInterface:WirelessAlternateManagementInterface example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param WirelessAlternateManagementInterfaceArgs args: The arguments to use to populate this resource's properties.

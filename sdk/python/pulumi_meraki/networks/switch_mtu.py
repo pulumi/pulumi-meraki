@@ -26,6 +26,7 @@ class SwitchMtuArgs:
                  overrides: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchMtuOverrideArgs']]]] = None):
         """
         The set of arguments for constructing a SwitchMtu resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.int] default_mtu_size: MTU size for the entire network. Default value is 9578.
         :param pulumi.Input[Sequence[pulumi.Input['SwitchMtuOverrideArgs']]] overrides: Override MTU size for individual switches or switch templates.
@@ -83,6 +84,7 @@ class _SwitchMtuState:
                  overrides: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchMtuOverrideArgs']]]] = None):
         """
         Input properties used for looking up and filtering SwitchMtu resources.
+
         :param pulumi.Input[_builtins.int] default_mtu_size: MTU size for the entire network. Default value is 9578.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input['SwitchMtuOverrideArgs']]] overrides: Override MTU size for individual switches or switch templates.
@@ -170,6 +172,7 @@ class SwitchMtu(pulumi.CustomResource):
         $ pulumi import meraki:networks/switchMtu:SwitchMtu example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.int] default_mtu_size: MTU size for the entire network. Default value is 9578.
@@ -209,6 +212,7 @@ class SwitchMtu(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/switchMtu:SwitchMtu example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SwitchMtuArgs args: The arguments to use to populate this resource's properties.

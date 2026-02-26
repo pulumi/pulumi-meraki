@@ -25,6 +25,7 @@ class MqttBrokersArgs:
                  parameters: pulumi.Input['MqttBrokersParametersArgs']):
         """
         The set of arguments for constructing a MqttBrokers resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         """
         pulumi.set(__self__, "network_id", network_id)
@@ -60,6 +61,7 @@ class _MqttBrokersState:
                  parameters: Optional[pulumi.Input['MqttBrokersParametersArgs']] = None):
         """
         Input properties used for looking up and filtering MqttBrokers resources.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         """
         if item is not None:
@@ -140,6 +142,7 @@ class MqttBrokers(pulumi.CustomResource):
         pulumi.export("merakiNetworksMqttBrokersExample", example)
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -180,6 +183,7 @@ class MqttBrokers(pulumi.CustomResource):
             })
         pulumi.export("merakiNetworksMqttBrokersExample", example)
         ```
+
 
         :param str resource_name: The name of the resource.
         :param MqttBrokersArgs args: The arguments to use to populate this resource's properties.

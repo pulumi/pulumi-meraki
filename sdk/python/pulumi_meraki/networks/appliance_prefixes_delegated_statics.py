@@ -28,6 +28,7 @@ class AppliancePrefixesDelegatedStaticsArgs:
                  static_delegated_prefix_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a AppliancePrefixesDelegatedStatics resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] description: Identifying description for the prefix.
         :param pulumi.Input['AppliancePrefixesDelegatedStaticsOriginArgs'] origin: WAN1/WAN2/Independent prefix.
@@ -117,6 +118,7 @@ class _AppliancePrefixesDelegatedStaticsState:
                  updated_at: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering AppliancePrefixesDelegatedStatics resources.
+
         :param pulumi.Input[_builtins.str] created_at: Prefix creation time.
         :param pulumi.Input[_builtins.str] description: Identifying description for the prefix.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -261,6 +263,7 @@ class AppliancePrefixesDelegatedStatics(pulumi.CustomResource):
         $ pulumi import meraki:networks/appliancePrefixesDelegatedStatics:AppliancePrefixesDelegatedStatics example "network_id,static_delegated_prefix_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Identifying description for the prefix.
@@ -298,6 +301,7 @@ class AppliancePrefixesDelegatedStatics(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/appliancePrefixesDelegatedStatics:AppliancePrefixesDelegatedStatics example "network_id,static_delegated_prefix_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param AppliancePrefixesDelegatedStaticsArgs args: The arguments to use to populate this resource's properties.

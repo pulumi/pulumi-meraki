@@ -27,6 +27,7 @@ class ApplianceSettingsArgs:
                  dynamic_dns: Optional[pulumi.Input['ApplianceSettingsDynamicDnsArgs']] = None):
         """
         The set of arguments for constructing a ApplianceSettings resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] client_tracking_method: Client tracking method of a network
         :param pulumi.Input[_builtins.str] deployment_mode: Deployment mode of a network
@@ -98,6 +99,7 @@ class _ApplianceSettingsState:
                  network_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ApplianceSettings resources.
+
         :param pulumi.Input[_builtins.str] client_tracking_method: Client tracking method of a network
         :param pulumi.Input[_builtins.str] deployment_mode: Deployment mode of a network
         :param pulumi.Input['ApplianceSettingsDynamicDnsArgs'] dynamic_dns: Dynamic DNS settings for a network
@@ -196,6 +198,7 @@ class ApplianceSettings(pulumi.CustomResource):
         $ pulumi import meraki:networks/applianceSettings:ApplianceSettings example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] client_tracking_method: Client tracking method of a network
@@ -232,6 +235,7 @@ class ApplianceSettings(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/applianceSettings:ApplianceSettings example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ApplianceSettingsArgs args: The arguments to use to populate this resource's properties.

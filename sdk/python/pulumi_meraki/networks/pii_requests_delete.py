@@ -23,6 +23,7 @@ class PiiRequestsDeleteArgs:
                  request_id: pulumi.Input[_builtins.str]):
         """
         The set of arguments for constructing a PiiRequestsDelete resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] request_id: requestId path parameter. Request ID
         """
@@ -61,6 +62,7 @@ class _PiiRequestsDeleteState:
                  request_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering PiiRequestsDelete resources.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] request_id: requestId path parameter. Request ID
         """
@@ -119,6 +121,7 @@ class PiiRequestsDelete(pulumi.CustomResource):
         pulumi.export("merakiNetworksPiiRequestsDeleteExample", example)
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -145,6 +148,7 @@ class PiiRequestsDelete(pulumi.CustomResource):
             request_id="string")
         pulumi.export("merakiNetworksPiiRequestsDeleteExample", example)
         ```
+
 
         :param str resource_name: The name of the resource.
         :param PiiRequestsDeleteArgs args: The arguments to use to populate this resource's properties.

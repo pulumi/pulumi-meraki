@@ -28,6 +28,7 @@ class ApplianceSingleLanArgs:
                  subnet: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a ApplianceSingleLan resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] appliance_ip: The local IP of the appliance on the single LAN
         :param pulumi.Input['ApplianceSingleLanIpv6Args'] ipv6: IPv6 configuration on the single LAN
@@ -115,6 +116,7 @@ class _ApplianceSingleLanState:
                  subnet: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ApplianceSingleLan resources.
+
         :param pulumi.Input[_builtins.str] appliance_ip: The local IP of the appliance on the single LAN
         :param pulumi.Input['ApplianceSingleLanIpv6Args'] ipv6: IPv6 configuration on the single LAN
         :param pulumi.Input['ApplianceSingleLanMandatoryDhcpArgs'] mandatory_dhcp: Mandatory DHCP will enforce that clients connecting to this single LAN must use the IP address assigned by the DHCP server. Clients who use a static IP address won't be able to associate. Only available on firmware versions 17.0 and above
@@ -240,6 +242,7 @@ class ApplianceSingleLan(pulumi.CustomResource):
         $ pulumi import meraki:networks/applianceSingleLan:ApplianceSingleLan example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] appliance_ip: The local IP of the appliance on the single LAN
@@ -288,6 +291,7 @@ class ApplianceSingleLan(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/applianceSingleLan:ApplianceSingleLan example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ApplianceSingleLanArgs args: The arguments to use to populate this resource's properties.

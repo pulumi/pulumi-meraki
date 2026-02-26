@@ -29,6 +29,7 @@ class AppliancePortsArgs:
                  vlan: Optional[pulumi.Input[_builtins.int]] = None):
         """
         The set of arguments for constructing a AppliancePorts resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] port_id: portId path parameter. Port ID
         :param pulumi.Input[_builtins.str] access_policy: The name of the policy. Only applicable to Access ports.
@@ -164,6 +165,7 @@ class _AppliancePortsState:
                  vlan: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering AppliancePorts resources.
+
         :param pulumi.Input[_builtins.str] access_policy: The name of the policy. Only applicable to Access ports.
         :param pulumi.Input[_builtins.str] allowed_vlans: Comma-delimited list of the VLAN ID's allowed on the port, or 'all' to permit all VLAN's on the port.
         :param pulumi.Input[_builtins.bool] drop_untagged_traffic: Whether the trunk port can drop all untagged traffic.
@@ -342,6 +344,7 @@ class AppliancePorts(pulumi.CustomResource):
         $ pulumi import meraki:networks/appliancePorts:AppliancePorts example "network_id,port_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] access_policy: The name of the policy. Only applicable to Access ports.
@@ -383,6 +386,7 @@ class AppliancePorts(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/appliancePorts:AppliancePorts example "network_id,port_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param AppliancePortsArgs args: The arguments to use to populate this resource's properties.

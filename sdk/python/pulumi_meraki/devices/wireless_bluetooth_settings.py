@@ -25,6 +25,7 @@ class WirelessBluetoothSettingsArgs:
                  uuid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a WirelessBluetoothSettings resource.
+
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         :param pulumi.Input[_builtins.int] major: Desired major value of the beacon. If the value is set to null it will reset to Dashboard's automatically generated value.
         :param pulumi.Input[_builtins.int] minor: Desired minor value of the beacon. If the value is set to null it will reset to Dashboard's automatically generated value.
@@ -96,6 +97,7 @@ class _WirelessBluetoothSettingsState:
                  uuid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering WirelessBluetoothSettings resources.
+
         :param pulumi.Input[_builtins.int] major: Desired major value of the beacon. If the value is set to null it will reset to Dashboard's automatically generated value.
         :param pulumi.Input[_builtins.int] minor: Desired minor value of the beacon. If the value is set to null it will reset to Dashboard's automatically generated value.
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
@@ -191,6 +193,7 @@ class WirelessBluetoothSettings(pulumi.CustomResource):
         $ pulumi import meraki:devices/wirelessBluetoothSettings:WirelessBluetoothSettings example "serial"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.int] major: Desired major value of the beacon. If the value is set to null it will reset to Dashboard's automatically generated value.
@@ -224,6 +227,7 @@ class WirelessBluetoothSettings(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:devices/wirelessBluetoothSettings:WirelessBluetoothSettings example "serial"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param WirelessBluetoothSettingsArgs args: The arguments to use to populate this resource's properties.

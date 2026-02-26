@@ -25,6 +25,7 @@ class SmTargetGroupsArgs:
                  target_group_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a SmTargetGroups resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] name: The name of this target group.
         :param pulumi.Input[_builtins.str] scope: The scope of the target group.
@@ -97,6 +98,7 @@ class _SmTargetGroupsState:
                  target_group_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SmTargetGroups resources.
+
         :param pulumi.Input[_builtins.str] name: The name of this target group.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] scope: The scope of the target group.
@@ -206,6 +208,7 @@ class SmTargetGroups(pulumi.CustomResource):
         $ pulumi import meraki:networks/smTargetGroups:SmTargetGroups example "network_id,target_group_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] name: The name of this target group.
@@ -238,6 +241,7 @@ class SmTargetGroups(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/smTargetGroups:SmTargetGroups example "network_id,target_group_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SmTargetGroupsArgs args: The arguments to use to populate this resource's properties.

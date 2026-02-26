@@ -29,6 +29,7 @@ class ApplianceRfProfilesArgs:
                  two_four_ghz_settings: Optional[pulumi.Input['ApplianceRfProfilesTwoFourGhzSettingsArgs']] = None):
         """
         The set of arguments for constructing a ApplianceRfProfiles resource.
+
         :param pulumi.Input[_builtins.str] network_id: ID of network this RF Profile belongs in.
         :param pulumi.Input['ApplianceRfProfilesFiveGhzSettingsArgs'] five_ghz_settings: Settings related to 5Ghz band.
         :param pulumi.Input[_builtins.str] name: The name of the profile.
@@ -132,6 +133,7 @@ class _ApplianceRfProfilesState:
                  two_four_ghz_settings: Optional[pulumi.Input['ApplianceRfProfilesTwoFourGhzSettingsArgs']] = None):
         """
         Input properties used for looking up and filtering ApplianceRfProfiles resources.
+
         :param pulumi.Input['ApplianceRfProfilesFiveGhzSettingsArgs'] five_ghz_settings: Settings related to 5Ghz band.
         :param pulumi.Input[_builtins.str] name: The name of the profile.
         :param pulumi.Input[_builtins.str] network_id: ID of network this RF Profile belongs in.
@@ -283,6 +285,7 @@ class ApplianceRfProfiles(pulumi.CustomResource):
         $ pulumi import meraki:networks/applianceRfProfiles:ApplianceRfProfiles example "network_id,rf_profile_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['ApplianceRfProfilesFiveGhzSettingsArgs', 'ApplianceRfProfilesFiveGhzSettingsArgsDict']] five_ghz_settings: Settings related to 5Ghz band.
@@ -342,6 +345,7 @@ class ApplianceRfProfiles(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/applianceRfProfiles:ApplianceRfProfiles example "network_id,rf_profile_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ApplianceRfProfilesArgs args: The arguments to use to populate this resource's properties.

@@ -36,6 +36,7 @@ class ApplianceSsidsArgs:
                  wpa_encryption_mode: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a ApplianceSsids resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.int] number: The number of the SSID.
         :param pulumi.Input[_builtins.str] auth_mode: The association control method for the SSID.
@@ -251,6 +252,7 @@ class _ApplianceSsidsState:
                  wpa_encryption_mode: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ApplianceSsids resources.
+
         :param pulumi.Input[_builtins.str] auth_mode: The association control method for the SSID.
         :param pulumi.Input[_builtins.int] default_vlan_id: The VLAN ID of the VLAN associated to this SSID.
         :param pulumi.Input['ApplianceSsidsDhcpEnforcedDeauthenticationArgs'] dhcp_enforced_deauthentication: DHCP Enforced Deauthentication enables the disassociation of wireless clients in addition to Mandatory DHCP. This param is only valid on firmware versions >= MX 17.0 where the associated LAN has Mandatory DHCP Enabled
@@ -523,6 +525,7 @@ class ApplianceSsids(pulumi.CustomResource):
         $ pulumi import meraki:networks/applianceSsids:ApplianceSsids example "network_id,number"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] auth_mode: The association control method for the SSID.
@@ -583,6 +586,7 @@ class ApplianceSsids(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/applianceSsids:ApplianceSsids example "network_id,number"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ApplianceSsidsArgs args: The arguments to use to populate this resource's properties.

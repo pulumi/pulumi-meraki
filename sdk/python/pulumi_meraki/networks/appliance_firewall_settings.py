@@ -25,6 +25,7 @@ class ApplianceFirewallSettingsArgs:
                  spoofing_protection: Optional[pulumi.Input['ApplianceFirewallSettingsSpoofingProtectionArgs']] = None):
         """
         The set of arguments for constructing a ApplianceFirewallSettings resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input['ApplianceFirewallSettingsSpoofingProtectionArgs'] spoofing_protection: Spoofing protection settings
         """
@@ -64,6 +65,7 @@ class _ApplianceFirewallSettingsState:
                  spoofing_protection: Optional[pulumi.Input['ApplianceFirewallSettingsSpoofingProtectionArgs']] = None):
         """
         Input properties used for looking up and filtering ApplianceFirewallSettings resources.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input['ApplianceFirewallSettingsSpoofingProtectionArgs'] spoofing_protection: Spoofing protection settings
         """
@@ -129,6 +131,7 @@ class ApplianceFirewallSettings(pulumi.CustomResource):
         $ pulumi import meraki:networks/applianceFirewallSettings:ApplianceFirewallSettings example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -162,6 +165,7 @@ class ApplianceFirewallSettings(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/applianceFirewallSettings:ApplianceFirewallSettings example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ApplianceFirewallSettingsArgs args: The arguments to use to populate this resource's properties.

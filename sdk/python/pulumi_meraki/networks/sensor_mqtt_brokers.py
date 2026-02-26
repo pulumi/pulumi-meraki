@@ -24,6 +24,7 @@ class SensorMqttBrokersArgs:
                  enabled: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a SensorMqttBrokers resource.
+
         :param pulumi.Input[_builtins.str] mqtt_broker_id: ID of the MQTT Broker.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.bool] enabled: Specifies whether the broker is enabled for sensor data. Currently, only a single broker may be enabled for sensor data.
@@ -78,6 +79,7 @@ class _SensorMqttBrokersState:
                  network_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SensorMqttBrokers resources.
+
         :param pulumi.Input[_builtins.bool] enabled: Specifies whether the broker is enabled for sensor data. Currently, only a single broker may be enabled for sensor data.
         :param pulumi.Input[_builtins.str] mqtt_broker_id: ID of the MQTT Broker.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -156,6 +158,7 @@ class SensorMqttBrokers(pulumi.CustomResource):
         $ pulumi import meraki:networks/sensorMqttBrokers:SensorMqttBrokers example "mqtt_broker_id,network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] enabled: Specifies whether the broker is enabled for sensor data. Currently, only a single broker may be enabled for sensor data.
@@ -187,6 +190,7 @@ class SensorMqttBrokers(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/sensorMqttBrokers:SensorMqttBrokers example "mqtt_broker_id,network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SensorMqttBrokersArgs args: The arguments to use to populate this resource's properties.

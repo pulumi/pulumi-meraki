@@ -29,6 +29,7 @@ class CameraRolesArgs:
                  role_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a CameraRoles resource.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[Sequence[pulumi.Input['CameraRolesAppliedOnDeviceArgs']]] applied_on_devices: Device tag on which this specified permission is applied.
         :param pulumi.Input[Sequence[pulumi.Input['CameraRolesAppliedOnNetworkArgs']]] applied_on_networks: Network tag on which this specified permission is applied.
@@ -132,6 +133,7 @@ class _CameraRolesState:
                  role_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering CameraRoles resources.
+
         :param pulumi.Input[Sequence[pulumi.Input['CameraRolesAppliedOnDeviceArgs']]] applied_on_devices: Device tag on which this specified permission is applied.
         :param pulumi.Input[Sequence[pulumi.Input['CameraRolesAppliedOnNetworkArgs']]] applied_on_networks: Network tag on which this specified permission is applied.
         :param pulumi.Input[Sequence[pulumi.Input['CameraRolesAppliedOrgWideArgs']]] applied_org_wides: Permissions to be applied org wide.
@@ -270,6 +272,7 @@ class CameraRoles(pulumi.CustomResource):
         $ pulumi import meraki:organizations/cameraRoles:CameraRoles example "organization_id,role_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['CameraRolesAppliedOnDeviceArgs', 'CameraRolesAppliedOnDeviceArgsDict']]]] applied_on_devices: Device tag on which this specified permission is applied.
@@ -316,6 +319,7 @@ class CameraRoles(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:organizations/cameraRoles:CameraRoles example "organization_id,role_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param CameraRolesArgs args: The arguments to use to populate this resource's properties.

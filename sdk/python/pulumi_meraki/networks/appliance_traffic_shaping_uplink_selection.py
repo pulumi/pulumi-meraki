@@ -30,6 +30,7 @@ class ApplianceTrafficShapingUplinkSelectionArgs:
                  wan_traffic_uplink_preferences: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgs']]]] = None):
         """
         The set of arguments for constructing a ApplianceTrafficShapingUplinkSelection resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.bool] active_active_auto_vpn_enabled: Whether active-active AutoVPN is enabled
         :param pulumi.Input[_builtins.str] default_uplink: The default uplink. Must be one of: 'wan1' or 'wan2'
@@ -149,6 +150,7 @@ class _ApplianceTrafficShapingUplinkSelectionState:
                  wan_traffic_uplink_preferences: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceTrafficShapingUplinkSelectionWanTrafficUplinkPreferenceArgs']]]] = None):
         """
         Input properties used for looking up and filtering ApplianceTrafficShapingUplinkSelection resources.
+
         :param pulumi.Input[_builtins.bool] active_active_auto_vpn_enabled: Whether active-active AutoVPN is enabled
         :param pulumi.Input[_builtins.str] default_uplink: The default uplink. Must be one of: 'wan1' or 'wan2'
         :param pulumi.Input['ApplianceTrafficShapingUplinkSelectionFailoverAndFailbackArgs'] failover_and_failback: WAN failover and failback
@@ -347,6 +349,7 @@ class ApplianceTrafficShapingUplinkSelection(pulumi.CustomResource):
         $ pulumi import meraki:networks/applianceTrafficShapingUplinkSelection:ApplianceTrafficShapingUplinkSelection example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] active_active_auto_vpn_enabled: Whether active-active AutoVPN is enabled
@@ -438,6 +441,7 @@ class ApplianceTrafficShapingUplinkSelection(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/applianceTrafficShapingUplinkSelection:ApplianceTrafficShapingUplinkSelection example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ApplianceTrafficShapingUplinkSelectionArgs args: The arguments to use to populate this resource's properties.

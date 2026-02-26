@@ -25,6 +25,7 @@ class FirmwareUpgradesStagedStagesArgs:
                  jsons: Optional[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesStagedStagesJsonArgs']]]] = None):
         """
         The set of arguments for constructing a FirmwareUpgradesStagedStages resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesStagedStagesJsonArgs']]] jsons: Array of Staged Upgrade Groups
         """
@@ -65,6 +66,7 @@ class _FirmwareUpgradesStagedStagesState:
                  network_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering FirmwareUpgradesStagedStages resources.
+
         :param pulumi.Input['FirmwareUpgradesStagedStagesGroupArgs'] group: The Staged Upgrade Group
         :param pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesStagedStagesJsonArgs']]] jsons: Array of Staged Upgrade Groups
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -145,6 +147,7 @@ class FirmwareUpgradesStagedStages(pulumi.CustomResource):
         $ pulumi import meraki:networks/firmwareUpgradesStagedStages:FirmwareUpgradesStagedStages example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['FirmwareUpgradesStagedStagesJsonArgs', 'FirmwareUpgradesStagedStagesJsonArgsDict']]]] jsons: Array of Staged Upgrade Groups
@@ -178,6 +181,7 @@ class FirmwareUpgradesStagedStages(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/firmwareUpgradesStagedStages:FirmwareUpgradesStagedStages example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param FirmwareUpgradesStagedStagesArgs args: The arguments to use to populate this resource's properties.

@@ -25,6 +25,7 @@ class SyslogServersArgs:
                  servers: Optional[pulumi.Input[Sequence[pulumi.Input['SyslogServersServerArgs']]]] = None):
         """
         The set of arguments for constructing a SyslogServers resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input['SyslogServersServerArgs']]] servers: List of the syslog servers for this network
         """
@@ -64,6 +65,7 @@ class _SyslogServersState:
                  servers: Optional[pulumi.Input[Sequence[pulumi.Input['SyslogServersServerArgs']]]] = None):
         """
         Input properties used for looking up and filtering SyslogServers resources.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input['SyslogServersServerArgs']]] servers: List of the syslog servers for this network
         """
@@ -132,6 +134,7 @@ class SyslogServers(pulumi.CustomResource):
         $ pulumi import meraki:networks/syslogServers:SyslogServers example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -168,6 +171,7 @@ class SyslogServers(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/syslogServers:SyslogServers example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SyslogServersArgs args: The arguments to use to populate this resource's properties.

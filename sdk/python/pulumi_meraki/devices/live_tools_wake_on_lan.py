@@ -28,6 +28,7 @@ class LiveToolsWakeOnLanArgs:
                  wake_on_lan_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a LiveToolsWakeOnLan resource.
+
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         :param pulumi.Input['LiveToolsWakeOnLanCallbackArgs'] callback: Details for the callback. Please include either an httpServerId OR url and sharedSecret
         :param pulumi.Input[_builtins.str] mac: The target's MAC address
@@ -119,6 +120,7 @@ class _LiveToolsWakeOnLanState:
                  wake_on_lan_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering LiveToolsWakeOnLan resources.
+
         :param pulumi.Input['LiveToolsWakeOnLanCallbackArgs'] callback: Details for the callback. Please include either an httpServerId OR url and sharedSecret
         :param pulumi.Input[_builtins.str] error: An error message for a failed execution
         :param pulumi.Input[_builtins.str] mac: The target's MAC address
@@ -299,6 +301,7 @@ class LiveToolsWakeOnLan(pulumi.CustomResource):
         $ pulumi import meraki:devices/liveToolsWakeOnLan:LiveToolsWakeOnLan example "serial,wake_on_lan_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['LiveToolsWakeOnLanCallbackArgs', 'LiveToolsWakeOnLanCallbackArgsDict']] callback: Details for the callback. Please include either an httpServerId OR url and sharedSecret
@@ -342,6 +345,7 @@ class LiveToolsWakeOnLan(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:devices/liveToolsWakeOnLan:LiveToolsWakeOnLan example "serial,wake_on_lan_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param LiveToolsWakeOnLanArgs args: The arguments to use to populate this resource's properties.

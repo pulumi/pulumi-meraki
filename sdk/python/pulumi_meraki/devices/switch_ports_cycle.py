@@ -25,6 +25,7 @@ class SwitchPortsCycleArgs:
                  serial: pulumi.Input[_builtins.str]):
         """
         The set of arguments for constructing a SwitchPortsCycle resource.
+
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         """
         pulumi.set(__self__, "parameters", parameters)
@@ -60,6 +61,7 @@ class _SwitchPortsCycleState:
                  serial: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SwitchPortsCycle resources.
+
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         """
         if item is not None:
@@ -132,6 +134,7 @@ class SwitchPortsCycle(pulumi.CustomResource):
         pulumi.export("merakiDevicesSwitchPortsCycleExample", example)
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
@@ -164,6 +167,7 @@ class SwitchPortsCycle(pulumi.CustomResource):
             })
         pulumi.export("merakiDevicesSwitchPortsCycleExample", example)
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SwitchPortsCycleArgs args: The arguments to use to populate this resource's properties.

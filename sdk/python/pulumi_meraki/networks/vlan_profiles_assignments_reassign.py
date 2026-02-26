@@ -25,6 +25,7 @@ class VlanProfilesAssignmentsReassignArgs:
                  parameters: pulumi.Input['VlanProfilesAssignmentsReassignParametersArgs']):
         """
         The set of arguments for constructing a VlanProfilesAssignmentsReassign resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         """
         pulumi.set(__self__, "network_id", network_id)
@@ -60,6 +61,7 @@ class _VlanProfilesAssignmentsReassignState:
                  parameters: Optional[pulumi.Input['VlanProfilesAssignmentsReassignParametersArgs']] = None):
         """
         Input properties used for looking up and filtering VlanProfilesAssignmentsReassign resources.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         """
         if item is not None:
@@ -131,6 +133,7 @@ class VlanProfilesAssignmentsReassign(pulumi.CustomResource):
         pulumi.export("merakiNetworksVlanProfilesAssignmentsReassignExample", example)
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -162,6 +165,7 @@ class VlanProfilesAssignmentsReassign(pulumi.CustomResource):
             })
         pulumi.export("merakiNetworksVlanProfilesAssignmentsReassignExample", example)
         ```
+
 
         :param str resource_name: The name of the resource.
         :param VlanProfilesAssignmentsReassignArgs args: The arguments to use to populate this resource's properties.

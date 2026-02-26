@@ -28,6 +28,7 @@ class SwitchDhcpServerPolicyArpInspectionTrustedServersArgs:
                  vlan: Optional[pulumi.Input[_builtins.int]] = None):
         """
         The set of arguments for constructing a SwitchDhcpServerPolicyArpInspectionTrustedServers resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input['SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args'] ipv4: IPv4 attributes of the trusted server.
         :param pulumi.Input[_builtins.str] mac: Mac address of the trusted server.
@@ -115,6 +116,7 @@ class _SwitchDhcpServerPolicyArpInspectionTrustedServersState:
                  vlan: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SwitchDhcpServerPolicyArpInspectionTrustedServers resources.
+
         :param pulumi.Input['SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args'] ipv4: IPv4 attributes of the trusted server.
         :param pulumi.Input[_builtins.str] mac: Mac address of the trusted server.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -228,6 +230,7 @@ class SwitchDhcpServerPolicyArpInspectionTrustedServers(pulumi.CustomResource):
         $ pulumi import meraki:networks/switchDhcpServerPolicyArpInspectionTrustedServers:SwitchDhcpServerPolicyArpInspectionTrustedServers example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4Args', 'SwitchDhcpServerPolicyArpInspectionTrustedServersIpv4ArgsDict']] ipv4: IPv4 attributes of the trusted server.
@@ -264,6 +267,7 @@ class SwitchDhcpServerPolicyArpInspectionTrustedServers(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/switchDhcpServerPolicyArpInspectionTrustedServers:SwitchDhcpServerPolicyArpInspectionTrustedServers example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SwitchDhcpServerPolicyArpInspectionTrustedServersArgs args: The arguments to use to populate this resource's properties.

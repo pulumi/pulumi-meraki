@@ -26,6 +26,7 @@ class CellularGatewaySubnetPoolArgs:
                  mask: Optional[pulumi.Input[_builtins.int]] = None):
         """
         The set of arguments for constructing a CellularGatewaySubnetPool resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] cidr: CIDR of the pool of subnets. Each MG in this network will automatically pick a subnet from this pool.
         :param pulumi.Input[_builtins.int] mask: Mask used for the subnet of all MGs in  this network.
@@ -83,6 +84,7 @@ class _CellularGatewaySubnetPoolState:
                  subnets: Optional[pulumi.Input[Sequence[pulumi.Input['CellularGatewaySubnetPoolSubnetArgs']]]] = None):
         """
         Input properties used for looking up and filtering CellularGatewaySubnetPool resources.
+
         :param pulumi.Input[_builtins.str] cidr: CIDR of the pool of subnets. Each MG in this network will automatically pick a subnet from this pool.
         :param pulumi.Input[_builtins.int] mask: Mask used for the subnet of all MGs in  this network.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -183,6 +185,7 @@ class CellularGatewaySubnetPool(pulumi.CustomResource):
         $ pulumi import meraki:networks/cellularGatewaySubnetPool:CellularGatewaySubnetPool example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] cidr: CIDR of the pool of subnets. Each MG in this network will automatically pick a subnet from this pool.
@@ -214,6 +217,7 @@ class CellularGatewaySubnetPool(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/cellularGatewaySubnetPool:CellularGatewaySubnetPool example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param CellularGatewaySubnetPoolArgs args: The arguments to use to populate this resource's properties.

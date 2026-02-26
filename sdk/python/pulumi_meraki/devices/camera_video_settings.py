@@ -23,6 +23,7 @@ class CameraVideoSettingsArgs:
                  external_rtsp_enabled: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a CameraVideoSettings resource.
+
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         :param pulumi.Input[_builtins.bool] external_rtsp_enabled: Boolean indicating if external rtsp stream is exposed
         """
@@ -63,6 +64,7 @@ class _CameraVideoSettingsState:
                  serial: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering CameraVideoSettings resources.
+
         :param pulumi.Input[_builtins.bool] external_rtsp_enabled: Boolean indicating if external rtsp stream is exposed
         :param pulumi.Input[_builtins.str] rtsp_url: External rstp url. Will only be returned if external rtsp stream is exposed
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
@@ -139,6 +141,7 @@ class CameraVideoSettings(pulumi.CustomResource):
         $ pulumi import meraki:devices/cameraVideoSettings:CameraVideoSettings example "serial"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] external_rtsp_enabled: Boolean indicating if external rtsp stream is exposed
@@ -168,6 +171,7 @@ class CameraVideoSettings(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:devices/cameraVideoSettings:CameraVideoSettings example "serial"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param CameraVideoSettingsArgs args: The arguments to use to populate this resource's properties.

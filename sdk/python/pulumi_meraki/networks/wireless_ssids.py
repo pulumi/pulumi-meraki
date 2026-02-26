@@ -84,6 +84,7 @@ class WirelessSsidsArgs:
                  wpa_encryption_mode: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a WirelessSsids resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.int] number: Unique identifier of the SSID
         :param pulumi.Input['WirelessSsidsActiveDirectoryArgs'] active_directory: The current setting for Active Directory. Only valid if splashPage is 'Password-protected with Active Directory'
@@ -1071,6 +1072,7 @@ class _WirelessSsidsState:
                  wpa_encryption_mode: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering WirelessSsids resources.
+
         :param pulumi.Input['WirelessSsidsActiveDirectoryArgs'] active_directory: The current setting for Active Directory. Only valid if splashPage is 'Password-protected with Active Directory'
         :param pulumi.Input[_builtins.bool] adult_content_filtering_enabled: Boolean indicating whether or not adult content will be blocked
         :param pulumi.Input[Sequence[pulumi.Input['WirelessSsidsApTagsAndVlanIdArgs']]] ap_tags_and_vlan_ids: The list of tags and VLAN IDs used for VLAN tagging. This param is only valid when the ipAssignmentMode is 'Bridge mode' or 'Layer 3 roaming'
@@ -2402,6 +2404,7 @@ class WirelessSsids(pulumi.CustomResource):
         $ pulumi import meraki:networks/wirelessSsids:WirelessSsids example "network_id,number"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['WirelessSsidsActiveDirectoryArgs', 'WirelessSsidsActiveDirectoryArgsDict']] active_directory: The current setting for Active Directory. Only valid if splashPage is 'Password-protected with Active Directory'
@@ -2745,6 +2748,7 @@ class WirelessSsids(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/wirelessSsids:WirelessSsids example "network_id,number"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param WirelessSsidsArgs args: The arguments to use to populate this resource's properties.

@@ -25,6 +25,7 @@ class DevicesClaimVmxArgs:
                  parameters: pulumi.Input['DevicesClaimVmxParametersArgs']):
         """
         The set of arguments for constructing a DevicesClaimVmx resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         """
         pulumi.set(__self__, "network_id", network_id)
@@ -60,6 +61,7 @@ class _DevicesClaimVmxState:
                  parameters: Optional[pulumi.Input['DevicesClaimVmxParametersArgs']] = None):
         """
         Input properties used for looking up and filtering DevicesClaimVmx resources.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         """
         if item is not None:
@@ -127,6 +129,7 @@ class DevicesClaimVmx(pulumi.CustomResource):
         pulumi.export("merakiNetworksDevicesClaimVmxExample", example)
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -154,6 +157,7 @@ class DevicesClaimVmx(pulumi.CustomResource):
             })
         pulumi.export("merakiNetworksDevicesClaimVmxExample", example)
         ```
+
 
         :param str resource_name: The name of the resource.
         :param DevicesClaimVmxArgs args: The arguments to use to populate this resource's properties.

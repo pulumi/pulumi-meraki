@@ -25,6 +25,7 @@ class LicensingSubscriptionSubscriptionsClaimArgs:
                  validate: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a LicensingSubscriptionSubscriptionsClaim resource.
+
         :param pulumi.Input[_builtins.bool] validate: validate query parameter. Check if the provided claim key is valid and can be claimed into the organization.
         """
         pulumi.set(__self__, "parameters", parameters)
@@ -61,6 +62,7 @@ class _LicensingSubscriptionSubscriptionsClaimState:
                  validate: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering LicensingSubscriptionSubscriptionsClaim resources.
+
         :param pulumi.Input[_builtins.bool] validate: validate query parameter. Check if the provided claim key is valid and can be claimed into the organization.
         """
         if item is not None:
@@ -131,6 +133,7 @@ class LicensingSubscriptionSubscriptionsClaim(pulumi.CustomResource):
         pulumi.export("merakiAdministeredLicensingSubscriptionSubscriptionsClaimExample", example)
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] validate: validate query parameter. Check if the provided claim key is valid and can be claimed into the organization.
@@ -161,6 +164,7 @@ class LicensingSubscriptionSubscriptionsClaim(pulumi.CustomResource):
             })
         pulumi.export("merakiAdministeredLicensingSubscriptionSubscriptionsClaimExample", example)
         ```
+
 
         :param str resource_name: The name of the resource.
         :param LicensingSubscriptionSubscriptionsClaimArgs args: The arguments to use to populate this resource's properties.

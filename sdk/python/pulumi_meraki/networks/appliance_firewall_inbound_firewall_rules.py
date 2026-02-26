@@ -26,6 +26,7 @@ class ApplianceFirewallInboundFirewallRulesArgs:
                  syslog_default_rule: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a ApplianceFirewallInboundFirewallRules resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallInboundFirewallRulesRuleArgs']]] rules: An ordered array of the firewall rules (not including the default rule)
         :param pulumi.Input[_builtins.bool] syslog_default_rule: Log the special default rule (boolean value - enable only if you've configured a syslog server) (optional)
@@ -82,6 +83,7 @@ class _ApplianceFirewallInboundFirewallRulesState:
                  syslog_default_rule: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering ApplianceFirewallInboundFirewallRules resources.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallInboundFirewallRulesRuleArgs']]] rules: An ordered array of the firewall rules (not including the default rule)
         :param pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallInboundFirewallRulesRulesResponseArgs']]] rules_responses: An ordered array of the firewall rules (not including the default rule)
@@ -184,6 +186,7 @@ class ApplianceFirewallInboundFirewallRules(pulumi.CustomResource):
         $ pulumi import meraki:networks/applianceFirewallInboundFirewallRules:ApplianceFirewallInboundFirewallRules example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -224,6 +227,7 @@ class ApplianceFirewallInboundFirewallRules(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/applianceFirewallInboundFirewallRules:ApplianceFirewallInboundFirewallRules example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ApplianceFirewallInboundFirewallRulesArgs args: The arguments to use to populate this resource's properties.

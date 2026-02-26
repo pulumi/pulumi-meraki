@@ -27,6 +27,7 @@ class WirelessRadioSettingsArgs:
                  two_four_ghz_settings: Optional[pulumi.Input['WirelessRadioSettingsTwoFourGhzSettingsArgs']] = None):
         """
         The set of arguments for constructing a WirelessRadioSettings resource.
+
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         :param pulumi.Input['WirelessRadioSettingsFiveGhzSettingsArgs'] five_ghz_settings: Manual radio settings for 5 GHz.
         :param pulumi.Input[_builtins.str] rf_profile_id: The ID of an RF profile to assign to the device. If the value of this parameter is null, the appropriate basic RF profile (indoor or outdoor) will be assigned to the device. Assigning an RF profile will clear ALL manually configured overrides on the device (channel width, channel, power).
@@ -98,6 +99,7 @@ class _WirelessRadioSettingsState:
                  two_four_ghz_settings: Optional[pulumi.Input['WirelessRadioSettingsTwoFourGhzSettingsArgs']] = None):
         """
         Input properties used for looking up and filtering WirelessRadioSettings resources.
+
         :param pulumi.Input['WirelessRadioSettingsFiveGhzSettingsArgs'] five_ghz_settings: Manual radio settings for 5 GHz.
         :param pulumi.Input[_builtins.str] rf_profile_id: The ID of an RF profile to assign to the device. If the value of this parameter is null, the appropriate basic RF profile (indoor or outdoor) will be assigned to the device. Assigning an RF profile will clear ALL manually configured overrides on the device (channel width, channel, power).
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
@@ -200,6 +202,7 @@ class WirelessRadioSettings(pulumi.CustomResource):
         $ pulumi import meraki:devices/wirelessRadioSettings:WirelessRadioSettings example "serial"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['WirelessRadioSettingsFiveGhzSettingsArgs', 'WirelessRadioSettingsFiveGhzSettingsArgsDict']] five_ghz_settings: Manual radio settings for 5 GHz.
@@ -240,6 +243,7 @@ class WirelessRadioSettings(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:devices/wirelessRadioSettings:WirelessRadioSettings example "serial"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param WirelessRadioSettingsArgs args: The arguments to use to populate this resource's properties.

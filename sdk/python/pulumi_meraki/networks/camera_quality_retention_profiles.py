@@ -34,6 +34,7 @@ class CameraQualityRetentionProfilesArgs:
                  video_settings: Optional[pulumi.Input['CameraQualityRetentionProfilesVideoSettingsArgs']] = None):
         """
         The set of arguments for constructing a CameraQualityRetentionProfiles resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.bool] audio_recording_enabled: Whether or not to record audio. Can be either true or false. Defaults to false.
         :param pulumi.Input[_builtins.bool] cloud_archive_enabled: Create redundant video backup using Cloud Archive. Can be either true or false. Defaults to false.
@@ -217,6 +218,7 @@ class _CameraQualityRetentionProfilesState:
                  video_settings: Optional[pulumi.Input['CameraQualityRetentionProfilesVideoSettingsArgs']] = None):
         """
         Input properties used for looking up and filtering CameraQualityRetentionProfiles resources.
+
         :param pulumi.Input[_builtins.bool] audio_recording_enabled: Whether or not to record audio. Can be either true or false. Defaults to false.
         :param pulumi.Input[_builtins.bool] cloud_archive_enabled: Create redundant video backup using Cloud Archive. Can be either true or false. Defaults to false.
         :param pulumi.Input[_builtins.int] max_retention_days: The maximum number of days for which the data will be stored, or 'null' to keep data until storage space runs out. If the former, it can be one of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 30, 60, 90] days.
@@ -422,6 +424,7 @@ class CameraQualityRetentionProfiles(pulumi.CustomResource):
         $ pulumi import meraki:networks/cameraQualityRetentionProfiles:CameraQualityRetentionProfiles example "network_id,quality_retention_profile_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] audio_recording_enabled: Whether or not to record audio. Can be either true or false. Defaults to false.
@@ -460,6 +463,7 @@ class CameraQualityRetentionProfiles(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/cameraQualityRetentionProfiles:CameraQualityRetentionProfiles example "network_id,quality_retention_profile_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param CameraQualityRetentionProfilesArgs args: The arguments to use to populate this resource's properties.

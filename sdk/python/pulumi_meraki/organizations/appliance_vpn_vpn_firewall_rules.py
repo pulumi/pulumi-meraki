@@ -26,6 +26,7 @@ class ApplianceVpnVpnFirewallRulesArgs:
                  syslog_default_rule: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a ApplianceVpnVpnFirewallRules resource.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[Sequence[pulumi.Input['ApplianceVpnVpnFirewallRulesRuleArgs']]] rules: An ordered array of the firewall rules (not including the default rule)
         :param pulumi.Input[_builtins.bool] syslog_default_rule: Log the special default rule (boolean value - enable only if you've configured a syslog server) (optional)
@@ -81,6 +82,7 @@ class _ApplianceVpnVpnFirewallRulesState:
                  syslog_default_rule: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering ApplianceVpnVpnFirewallRules resources.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[Sequence[pulumi.Input['ApplianceVpnVpnFirewallRulesRuleArgs']]] rules: An ordered array of the firewall rules (not including the default rule)
         :param pulumi.Input[_builtins.bool] syslog_default_rule: Log the special default rule (boolean value - enable only if you've configured a syslog server) (optional)
@@ -168,6 +170,7 @@ class ApplianceVpnVpnFirewallRules(pulumi.CustomResource):
         $ pulumi import meraki:organizations/applianceVpnVpnFirewallRules:ApplianceVpnVpnFirewallRules example "organization_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
@@ -208,6 +211,7 @@ class ApplianceVpnVpnFirewallRules(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:organizations/applianceVpnVpnFirewallRules:ApplianceVpnVpnFirewallRules example "organization_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ApplianceVpnVpnFirewallRulesArgs args: The arguments to use to populate this resource's properties.

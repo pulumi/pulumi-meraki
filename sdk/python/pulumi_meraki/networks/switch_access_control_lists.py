@@ -26,6 +26,7 @@ class SwitchAccessControlListsArgs:
                  rules_responses: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchAccessControlListsRulesResponseArgs']]]] = None):
         """
         The set of arguments for constructing a SwitchAccessControlLists resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input['SwitchAccessControlListsRuleArgs']]] rules: An ordered array of the access control list rules
         :param pulumi.Input[Sequence[pulumi.Input['SwitchAccessControlListsRulesResponseArgs']]] rules_responses: An ordered array of the access control list rules
@@ -81,6 +82,7 @@ class _SwitchAccessControlListsState:
                  rules_responses: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchAccessControlListsRulesResponseArgs']]]] = None):
         """
         Input properties used for looking up and filtering SwitchAccessControlLists resources.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input['SwitchAccessControlListsRuleArgs']]] rules: An ordered array of the access control list rules
         :param pulumi.Input[Sequence[pulumi.Input['SwitchAccessControlListsRulesResponseArgs']]] rules_responses: An ordered array of the access control list rules
@@ -168,6 +170,7 @@ class SwitchAccessControlLists(pulumi.CustomResource):
         $ pulumi import meraki:networks/switchAccessControlLists:SwitchAccessControlLists example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -208,6 +211,7 @@ class SwitchAccessControlLists(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/switchAccessControlLists:SwitchAccessControlLists example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SwitchAccessControlListsArgs args: The arguments to use to populate this resource's properties.

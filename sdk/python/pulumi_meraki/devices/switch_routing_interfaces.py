@@ -34,6 +34,7 @@ class SwitchRoutingInterfacesArgs:
                  vlan_id: Optional[pulumi.Input[_builtins.int]] = None):
         """
         The set of arguments for constructing a SwitchRoutingInterfaces resource.
+
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         :param pulumi.Input[_builtins.str] default_gateway: IPv4 default gateway
         :param pulumi.Input[_builtins.str] interface_id: The id
@@ -217,6 +218,7 @@ class _SwitchRoutingInterfacesState:
                  vlan_id: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SwitchRoutingInterfaces resources.
+
         :param pulumi.Input[_builtins.str] default_gateway: IPv4 default gateway
         :param pulumi.Input[_builtins.str] interface_id: The id
         :param pulumi.Input[_builtins.str] interface_ip: IPv4 address
@@ -443,6 +445,7 @@ class SwitchRoutingInterfaces(pulumi.CustomResource):
         $ pulumi import meraki:devices/switchRoutingInterfaces:SwitchRoutingInterfaces example "interface_id,serial"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] default_gateway: IPv4 default gateway
@@ -502,6 +505,7 @@ class SwitchRoutingInterfaces(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:devices/switchRoutingInterfaces:SwitchRoutingInterfaces example "interface_id,serial"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SwitchRoutingInterfacesArgs args: The arguments to use to populate this resource's properties.

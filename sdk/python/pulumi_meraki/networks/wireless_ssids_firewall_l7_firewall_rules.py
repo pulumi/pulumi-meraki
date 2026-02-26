@@ -26,6 +26,7 @@ class WirelessSsidsFirewallL7FirewallRulesArgs:
                  rules: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsFirewallL7FirewallRulesRuleArgs']]]] = None):
         """
         The set of arguments for constructing a WirelessSsidsFirewallL7FirewallRules resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] number: number path parameter.
         :param pulumi.Input[Sequence[pulumi.Input['WirelessSsidsFirewallL7FirewallRulesRuleArgs']]] rules: An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
@@ -80,6 +81,7 @@ class _WirelessSsidsFirewallL7FirewallRulesState:
                  rules: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsFirewallL7FirewallRulesRuleArgs']]]] = None):
         """
         Input properties used for looking up and filtering WirelessSsidsFirewallL7FirewallRules resources.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] number: number path parameter.
         :param pulumi.Input[Sequence[pulumi.Input['WirelessSsidsFirewallL7FirewallRulesRuleArgs']]] rules: An ordered array of the firewall rules for this SSID (not including the local LAN access rule or the default rule).
@@ -162,6 +164,7 @@ class WirelessSsidsFirewallL7FirewallRules(pulumi.CustomResource):
         $ pulumi import meraki:networks/wirelessSsidsFirewallL7FirewallRules:WirelessSsidsFirewallL7FirewallRules example "network_id,number"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -197,6 +200,7 @@ class WirelessSsidsFirewallL7FirewallRules(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/wirelessSsidsFirewallL7FirewallRules:WirelessSsidsFirewallL7FirewallRules example "network_id,number"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param WirelessSsidsFirewallL7FirewallRulesArgs args: The arguments to use to populate this resource's properties.

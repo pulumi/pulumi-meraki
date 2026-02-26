@@ -4,7 +4,7 @@ go 1.24.0
 
 toolchain go1.24.6
 
-require github.com/pulumi/pulumi/sdk/v3 v3.220.0
+require github.com/pulumi/pulumi/sdk/v3 v3.223.0
 
 require github.com/apparentlymart/go-textseg/v15 v15.0.0 // indirect
 

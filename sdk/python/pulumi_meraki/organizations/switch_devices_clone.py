@@ -25,6 +25,7 @@ class SwitchDevicesCloneArgs:
                  parameters: pulumi.Input['SwitchDevicesCloneParametersArgs']):
         """
         The set of arguments for constructing a SwitchDevicesClone resource.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         """
         pulumi.set(__self__, "organization_id", organization_id)
@@ -59,6 +60,7 @@ class _SwitchDevicesCloneState:
                  parameters: Optional[pulumi.Input['SwitchDevicesCloneParametersArgs']] = None):
         """
         Input properties used for looking up and filtering SwitchDevicesClone resources.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         """
         if organization_id is not None:
@@ -120,6 +122,7 @@ class SwitchDevicesClone(pulumi.CustomResource):
         pulumi.export("merakiOrganizationsSwitchDevicesCloneExample", example)
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
@@ -152,6 +155,7 @@ class SwitchDevicesClone(pulumi.CustomResource):
             })
         pulumi.export("merakiOrganizationsSwitchDevicesCloneExample", example)
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SwitchDevicesCloneArgs args: The arguments to use to populate this resource's properties.

@@ -25,6 +25,7 @@ class CellularGatewayUplinkArgs:
                  bandwidth_limits: Optional[pulumi.Input['CellularGatewayUplinkBandwidthLimitsArgs']] = None):
         """
         The set of arguments for constructing a CellularGatewayUplink resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input['CellularGatewayUplinkBandwidthLimitsArgs'] bandwidth_limits: The bandwidth settings for the 'cellular' uplink
         """
@@ -64,6 +65,7 @@ class _CellularGatewayUplinkState:
                  network_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering CellularGatewayUplink resources.
+
         :param pulumi.Input['CellularGatewayUplinkBandwidthLimitsArgs'] bandwidth_limits: The bandwidth settings for the 'cellular' uplink
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         """
@@ -128,6 +130,7 @@ class CellularGatewayUplink(pulumi.CustomResource):
         $ pulumi import meraki:networks/cellularGatewayUplink:CellularGatewayUplink example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['CellularGatewayUplinkBandwidthLimitsArgs', 'CellularGatewayUplinkBandwidthLimitsArgsDict']] bandwidth_limits: The bandwidth settings for the 'cellular' uplink
@@ -160,6 +163,7 @@ class CellularGatewayUplink(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/cellularGatewayUplink:CellularGatewayUplink example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param CellularGatewayUplinkArgs args: The arguments to use to populate this resource's properties.

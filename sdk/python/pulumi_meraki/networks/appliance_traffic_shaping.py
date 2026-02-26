@@ -25,6 +25,7 @@ class ApplianceTrafficShapingArgs:
                  global_bandwidth_limits: Optional[pulumi.Input['ApplianceTrafficShapingGlobalBandwidthLimitsArgs']] = None):
         """
         The set of arguments for constructing a ApplianceTrafficShaping resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input['ApplianceTrafficShapingGlobalBandwidthLimitsArgs'] global_bandwidth_limits: Global per-client bandwidth limit
         """
@@ -64,6 +65,7 @@ class _ApplianceTrafficShapingState:
                  network_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ApplianceTrafficShaping resources.
+
         :param pulumi.Input['ApplianceTrafficShapingGlobalBandwidthLimitsArgs'] global_bandwidth_limits: Global per-client bandwidth limit
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         """
@@ -128,6 +130,7 @@ class ApplianceTrafficShaping(pulumi.CustomResource):
         $ pulumi import meraki:networks/applianceTrafficShaping:ApplianceTrafficShaping example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['ApplianceTrafficShapingGlobalBandwidthLimitsArgs', 'ApplianceTrafficShapingGlobalBandwidthLimitsArgsDict']] global_bandwidth_limits: Global per-client bandwidth limit
@@ -160,6 +163,7 @@ class ApplianceTrafficShaping(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/applianceTrafficShaping:ApplianceTrafficShaping example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ApplianceTrafficShapingArgs args: The arguments to use to populate this resource's properties.

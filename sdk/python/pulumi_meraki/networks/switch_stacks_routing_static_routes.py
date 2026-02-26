@@ -29,6 +29,7 @@ class SwitchStacksRoutingStaticRoutesArgs:
                  subnet: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a SwitchStacksRoutingStaticRoutes resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] switch_stack_id: switchStackId path parameter. Switch stack ID
         :param pulumi.Input[_builtins.bool] advertise_via_ospf_enabled: Option to advertise static routes via OSPF
@@ -163,6 +164,7 @@ class _SwitchStacksRoutingStaticRoutesState:
                  switch_stack_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SwitchStacksRoutingStaticRoutes resources.
+
         :param pulumi.Input[_builtins.bool] advertise_via_ospf_enabled: Option to advertise static routes via OSPF
         :param pulumi.Input[_builtins.str] name: The name or description of the layer 3 static route
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -325,6 +327,7 @@ class SwitchStacksRoutingStaticRoutes(pulumi.CustomResource):
         $ pulumi import meraki:networks/switchStacksRoutingStaticRoutes:SwitchStacksRoutingStaticRoutes example "network_id,static_route_id,switch_stack_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] advertise_via_ospf_enabled: Option to advertise static routes via OSPF
@@ -365,6 +368,7 @@ class SwitchStacksRoutingStaticRoutes(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/switchStacksRoutingStaticRoutes:SwitchStacksRoutingStaticRoutes example "network_id,static_route_id,switch_stack_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SwitchStacksRoutingStaticRoutesArgs args: The arguments to use to populate this resource's properties.

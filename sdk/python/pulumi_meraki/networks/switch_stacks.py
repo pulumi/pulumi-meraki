@@ -25,6 +25,7 @@ class SwitchStacksArgs:
                  switch_stack_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a SwitchStacks resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] name: Name of the Switch stack
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] serials: Serials of the switches in the switch stack
@@ -96,6 +97,7 @@ class _SwitchStacksState:
                  switch_stack_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SwitchStacks resources.
+
         :param pulumi.Input[_builtins.str] name: Name of the Switch stack
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] serials: Serials of the switches in the switch stack
@@ -193,6 +195,7 @@ class SwitchStacks(pulumi.CustomResource):
         $ pulumi import meraki:networks/switchStacks:SwitchStacks example "network_id,switch_stack_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] name: Name of the Switch stack
@@ -228,6 +231,7 @@ class SwitchStacks(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/switchStacks:SwitchStacks example "network_id,switch_stack_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SwitchStacksArgs args: The arguments to use to populate this resource's properties.
