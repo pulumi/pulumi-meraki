@@ -25,6 +25,7 @@ class ClaimArgs:
                  parameters: pulumi.Input['ClaimParametersArgs']):
         """
         The set of arguments for constructing a Claim resource.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         """
         pulumi.set(__self__, "organization_id", organization_id)
@@ -60,6 +61,7 @@ class _ClaimState:
                  parameters: Optional[pulumi.Input['ClaimParametersArgs']] = None):
         """
         Input properties used for looking up and filtering Claim resources.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         """
         if item is not None:
@@ -132,6 +134,7 @@ class Claim(pulumi.CustomResource):
         pulumi.export("merakiOrganizationsClaimExample", example)
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
@@ -164,6 +167,7 @@ class Claim(pulumi.CustomResource):
             })
         pulumi.export("merakiOrganizationsClaimExample", example)
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ClaimArgs args: The arguments to use to populate this resource's properties.

@@ -27,6 +27,7 @@ class SwitchPortSchedulesArgs:
                  port_schedule_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a SwitchPortSchedules resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] name: The name for your port schedule. Required
         :param pulumi.Input['SwitchPortSchedulesPortScheduleArgs'] port_schedule: The schedule for switch port scheduling. Schedules are applied to days of the week.
@@ -102,6 +103,7 @@ class _SwitchPortSchedulesState:
                  port_schedule_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SwitchPortSchedules resources.
+
         :param pulumi.Input[_builtins.str] name: The name for your port schedule. Required
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input['SwitchPortSchedulesPortScheduleArgs'] port_schedule: The schedule for switch port scheduling. Schedules are applied to days of the week.
@@ -236,6 +238,7 @@ class SwitchPortSchedules(pulumi.CustomResource):
         $ pulumi import meraki:networks/switchPortSchedules:SwitchPortSchedules example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] name: The name for your port schedule. Required
@@ -306,6 +309,7 @@ class SwitchPortSchedules(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/switchPortSchedules:SwitchPortSchedules example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SwitchPortSchedulesArgs args: The arguments to use to populate this resource's properties.

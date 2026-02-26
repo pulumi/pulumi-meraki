@@ -25,6 +25,7 @@ class ApplianceTrafficShapingUplinkBandwidthArgs:
                  bandwidth_limits: Optional[pulumi.Input['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs']] = None):
         """
         The set of arguments for constructing a ApplianceTrafficShapingUplinkBandwidth resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs'] bandwidth_limits: A hash uplink keys and their configured settings for the Appliance
         """
@@ -64,6 +65,7 @@ class _ApplianceTrafficShapingUplinkBandwidthState:
                  network_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ApplianceTrafficShapingUplinkBandwidth resources.
+
         :param pulumi.Input['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs'] bandwidth_limits: A hash uplink keys and their configured settings for the Appliance
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         """
@@ -138,6 +140,7 @@ class ApplianceTrafficShapingUplinkBandwidth(pulumi.CustomResource):
         $ pulumi import meraki:networks/applianceTrafficShapingUplinkBandwidth:ApplianceTrafficShapingUplinkBandwidth example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgs', 'ApplianceTrafficShapingUplinkBandwidthBandwidthLimitsArgsDict']] bandwidth_limits: A hash uplink keys and their configured settings for the Appliance
@@ -180,6 +183,7 @@ class ApplianceTrafficShapingUplinkBandwidth(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/applianceTrafficShapingUplinkBandwidth:ApplianceTrafficShapingUplinkBandwidth example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ApplianceTrafficShapingUplinkBandwidthArgs args: The arguments to use to populate this resource's properties.

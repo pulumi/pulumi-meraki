@@ -29,6 +29,7 @@ class SettingsArgs:
                  secure_port: Optional[pulumi.Input['SettingsSecurePortArgs']] = None):
         """
         The set of arguments for constructing a Settings resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input['SettingsLocalStatusPageArgs'] local_status_page: A hash of Local Status page(s)' authentication options applied to the Network.
         :param pulumi.Input[_builtins.bool] local_status_page_enabled: Enables / disables the local device status pages (\\n\\nmy.meraki.com, \\n\\n\\n\\nap.meraki.com, \\n\\n\\n\\nswitch.meraki.com, \\n\\n\\n\\nwired.meraki.com\\n\\n). Optional (defaults to false)
@@ -133,6 +134,7 @@ class _SettingsState:
                  secure_port: Optional[pulumi.Input['SettingsSecurePortArgs']] = None):
         """
         Input properties used for looking up and filtering Settings resources.
+
         :param pulumi.Input['SettingsFipsArgs'] fips: A hash of FIPS options applied to the Network
         :param pulumi.Input['SettingsLocalStatusPageArgs'] local_status_page: A hash of Local Status page(s)' authentication options applied to the Network.
         :param pulumi.Input[_builtins.bool] local_status_page_enabled: Enables / disables the local device status pages (\\n\\nmy.meraki.com, \\n\\n\\n\\nap.meraki.com, \\n\\n\\n\\nswitch.meraki.com, \\n\\n\\n\\nwired.meraki.com\\n\\n). Optional (defaults to false)
@@ -286,6 +288,7 @@ class Settings(pulumi.CustomResource):
         $ pulumi import meraki:networks/settings:Settings example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['SettingsLocalStatusPageArgs', 'SettingsLocalStatusPageArgsDict']] local_status_page: A hash of Local Status page(s)' authentication options applied to the Network.
@@ -332,6 +335,7 @@ class Settings(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/settings:Settings example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SettingsArgs args: The arguments to use to populate this resource's properties.

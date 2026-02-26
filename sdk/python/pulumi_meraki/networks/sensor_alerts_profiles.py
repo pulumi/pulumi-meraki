@@ -29,6 +29,7 @@ class SensorAlertsProfilesArgs:
                  serials: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a SensorAlertsProfiles resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input['SensorAlertsProfilesConditionArgs']]] conditions: List of conditions that will cause the profile to send an alert.
         :param pulumi.Input[_builtins.str] name: Name of the sensor alert profile.
@@ -134,6 +135,7 @@ class _SensorAlertsProfilesState:
                  serials: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         Input properties used for looking up and filtering SensorAlertsProfiles resources.
+
         :param pulumi.Input[Sequence[pulumi.Input['SensorAlertsProfilesConditionArgs']]] conditions: List of conditions that will cause the profile to send an alert.
         :param pulumi.Input[Sequence[pulumi.Input['SensorAlertsProfilesConditionsResponseArgs']]] conditions_responses: List of conditions that will cause the profile to send an alert.
         :param pulumi.Input[_builtins.str] name: Name of the sensor alert profile.
@@ -363,6 +365,7 @@ class SensorAlertsProfiles(pulumi.CustomResource):
         $ pulumi import meraki:networks/sensorAlertsProfiles:SensorAlertsProfiles example "id,network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['SensorAlertsProfilesConditionArgs', 'SensorAlertsProfilesConditionArgsDict']]]] conditions: List of conditions that will cause the profile to send an alert.
@@ -470,6 +473,7 @@ class SensorAlertsProfiles(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/sensorAlertsProfiles:SensorAlertsProfiles example "id,network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SensorAlertsProfilesArgs args: The arguments to use to populate this resource's properties.

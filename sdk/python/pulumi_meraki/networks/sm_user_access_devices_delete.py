@@ -23,6 +23,7 @@ class SmUserAccessDevicesDeleteArgs:
                  user_access_device_id: pulumi.Input[_builtins.str]):
         """
         The set of arguments for constructing a SmUserAccessDevicesDelete resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] user_access_device_id: userAccessDeviceId path parameter. User access device ID
         """
@@ -61,6 +62,7 @@ class _SmUserAccessDevicesDeleteState:
                  user_access_device_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SmUserAccessDevicesDelete resources.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] user_access_device_id: userAccessDeviceId path parameter. User access device ID
         """
@@ -119,6 +121,7 @@ class SmUserAccessDevicesDelete(pulumi.CustomResource):
         pulumi.export("merakiNetworksSmUserAccessDevicesDeleteExample", example)
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -145,6 +148,7 @@ class SmUserAccessDevicesDelete(pulumi.CustomResource):
             user_access_device_id="string")
         pulumi.export("merakiNetworksSmUserAccessDevicesDeleteExample", example)
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SmUserAccessDevicesDeleteArgs args: The arguments to use to populate this resource's properties.

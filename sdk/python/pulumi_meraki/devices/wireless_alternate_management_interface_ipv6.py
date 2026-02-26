@@ -25,6 +25,7 @@ class WirelessAlternateManagementInterfaceIpv6Args:
                  serial: pulumi.Input[_builtins.str]):
         """
         The set of arguments for constructing a WirelessAlternateManagementInterfaceIpv6 resource.
+
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         """
         pulumi.set(__self__, "parameters", parameters)
@@ -60,6 +61,7 @@ class _WirelessAlternateManagementInterfaceIpv6State:
                  serial: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering WirelessAlternateManagementInterfaceIpv6 resources.
+
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         """
         if item is not None:
@@ -139,6 +141,7 @@ class WirelessAlternateManagementInterfaceIpv6(pulumi.CustomResource):
         pulumi.export("merakiDevicesWirelessAlternateManagementInterfaceIpv6Example", example)
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
@@ -178,6 +181,7 @@ class WirelessAlternateManagementInterfaceIpv6(pulumi.CustomResource):
             })
         pulumi.export("merakiDevicesWirelessAlternateManagementInterfaceIpv6Example", example)
         ```
+
 
         :param str resource_name: The name of the resource.
         :param WirelessAlternateManagementInterfaceIpv6Args args: The arguments to use to populate this resource's properties.

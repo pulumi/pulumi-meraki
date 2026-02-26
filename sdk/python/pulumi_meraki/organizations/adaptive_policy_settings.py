@@ -23,6 +23,7 @@ class AdaptivePolicySettingsArgs:
                  enabled_networks: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a AdaptivePolicySettings resource.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] enabled_networks: List of network IDs with adaptive policy enabled
         """
@@ -62,6 +63,7 @@ class _AdaptivePolicySettingsState:
                  organization_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering AdaptivePolicySettings resources.
+
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] enabled_networks: List of network IDs with adaptive policy enabled
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         """
@@ -128,6 +130,7 @@ class AdaptivePolicySettings(pulumi.CustomResource):
         $ pulumi import meraki:organizations/adaptivePolicySettings:AdaptivePolicySettings example "organization_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] enabled_networks: List of network IDs with adaptive policy enabled
@@ -162,6 +165,7 @@ class AdaptivePolicySettings(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:organizations/adaptivePolicySettings:AdaptivePolicySettings example "organization_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param AdaptivePolicySettingsArgs args: The arguments to use to populate this resource's properties.

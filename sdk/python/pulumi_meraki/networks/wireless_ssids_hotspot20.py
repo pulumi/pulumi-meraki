@@ -33,6 +33,7 @@ class WirelessSsidsHotspot20Args:
                  venue: Optional[pulumi.Input['WirelessSsidsHotspot20VenueArgs']] = None):
         """
         The set of arguments for constructing a WirelessSsidsHotspot20 resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] number: number path parameter.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] domains: An array of domain names
@@ -199,6 +200,7 @@ class _WirelessSsidsHotspot20State:
                  venue: Optional[pulumi.Input['WirelessSsidsHotspot20VenueArgs']] = None):
         """
         Input properties used for looking up and filtering WirelessSsidsHotspot20 resources.
+
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] domains: An array of domain names
         :param pulumi.Input[_builtins.bool] enabled: Whether or not Hotspot 2.0 for this SSID is enabled
         :param pulumi.Input[Sequence[pulumi.Input['WirelessSsidsHotspot20MccMncArgs']]] mcc_mncs: An array of MCC/MNC pairs
@@ -419,6 +421,7 @@ class WirelessSsidsHotspot20(pulumi.CustomResource):
         $ pulumi import meraki:networks/wirelessSsidsHotspot20:WirelessSsidsHotspot20 example "network_id,number"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] domains: An array of domain names
@@ -487,6 +490,7 @@ class WirelessSsidsHotspot20(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/wirelessSsidsHotspot20:WirelessSsidsHotspot20 example "network_id,number"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param WirelessSsidsHotspot20Args args: The arguments to use to populate this resource's properties.

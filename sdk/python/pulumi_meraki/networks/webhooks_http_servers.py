@@ -29,6 +29,7 @@ class WebhooksHttpServersArgs:
                  url: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a WebhooksHttpServers resource.
+
         :param pulumi.Input[_builtins.str] network_id: A Meraki network ID.
         :param pulumi.Input[_builtins.str] http_server_id: httpServerId path parameter. Http server ID
         :param pulumi.Input[_builtins.str] name: A name for easy reference to the HTTP server
@@ -132,6 +133,7 @@ class _WebhooksHttpServersState:
                  url: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering WebhooksHttpServers resources.
+
         :param pulumi.Input[_builtins.str] http_server_id: httpServerId path parameter. Http server ID
         :param pulumi.Input[_builtins.str] name: A name for easy reference to the HTTP server
         :param pulumi.Input[_builtins.str] network_id: A Meraki network ID.
@@ -263,6 +265,7 @@ class WebhooksHttpServers(pulumi.CustomResource):
         $ pulumi import meraki:networks/webhooksHttpServers:WebhooksHttpServers example "http_server_id,network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] http_server_id: httpServerId path parameter. Http server ID
@@ -302,6 +305,7 @@ class WebhooksHttpServers(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/webhooksHttpServers:WebhooksHttpServers example "http_server_id,network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param WebhooksHttpServersArgs args: The arguments to use to populate this resource's properties.

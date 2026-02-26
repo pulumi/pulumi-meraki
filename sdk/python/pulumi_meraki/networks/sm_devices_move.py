@@ -25,6 +25,7 @@ class SmDevicesMoveArgs:
                  parameters: pulumi.Input['SmDevicesMoveParametersArgs']):
         """
         The set of arguments for constructing a SmDevicesMove resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         """
         pulumi.set(__self__, "network_id", network_id)
@@ -60,6 +61,7 @@ class _SmDevicesMoveState:
                  parameters: Optional[pulumi.Input['SmDevicesMoveParametersArgs']] = None):
         """
         Input properties used for looking up and filtering SmDevicesMove resources.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         """
         if item is not None:
@@ -142,6 +144,7 @@ class SmDevicesMove(pulumi.CustomResource):
         pulumi.export("merakiNetworksSmDevicesMoveExample", example)
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -184,6 +187,7 @@ class SmDevicesMove(pulumi.CustomResource):
             })
         pulumi.export("merakiNetworksSmDevicesMoveExample", example)
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SmDevicesMoveArgs args: The arguments to use to populate this resource's properties.

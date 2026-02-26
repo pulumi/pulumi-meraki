@@ -27,6 +27,7 @@ class ApplianceSecurityIntrusionArgs:
                  protected_networks: Optional[pulumi.Input['ApplianceSecurityIntrusionProtectedNetworksArgs']] = None):
         """
         The set of arguments for constructing a ApplianceSecurityIntrusion resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] ids_rulesets: Intrusion detection ruleset
         :param pulumi.Input[_builtins.str] mode: Intrusion detection mode
@@ -98,6 +99,7 @@ class _ApplianceSecurityIntrusionState:
                  protected_networks: Optional[pulumi.Input['ApplianceSecurityIntrusionProtectedNetworksArgs']] = None):
         """
         Input properties used for looking up and filtering ApplianceSecurityIntrusion resources.
+
         :param pulumi.Input[_builtins.str] ids_rulesets: Intrusion detection ruleset
         :param pulumi.Input[_builtins.str] mode: Intrusion detection mode
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -205,6 +207,7 @@ class ApplianceSecurityIntrusion(pulumi.CustomResource):
         $ pulumi import meraki:networks/applianceSecurityIntrusion:ApplianceSecurityIntrusion example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] ids_rulesets: Intrusion detection ruleset
@@ -250,6 +253,7 @@ class ApplianceSecurityIntrusion(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/applianceSecurityIntrusion:ApplianceSecurityIntrusion example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ApplianceSecurityIntrusionArgs args: The arguments to use to populate this resource's properties.

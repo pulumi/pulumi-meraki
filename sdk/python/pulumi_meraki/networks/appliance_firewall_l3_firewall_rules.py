@@ -26,6 +26,7 @@ class ApplianceFirewallL3FirewallRulesArgs:
                  syslog_default_rule: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a ApplianceFirewallL3FirewallRules resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallL3FirewallRulesRuleArgs']]] rules: An ordered array of the firewall rules (not including the default rule)
         :param pulumi.Input[_builtins.bool] syslog_default_rule: Log the special default rule (boolean value - enable only if you've configured a syslog server) (optional)
@@ -82,6 +83,7 @@ class _ApplianceFirewallL3FirewallRulesState:
                  syslog_default_rule: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering ApplianceFirewallL3FirewallRules resources.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallL3FirewallRulesRuleArgs']]] rules: An ordered array of the firewall rules (not including the default rule)
         :param pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallL3FirewallRulesRulesResponseArgs']]] rules_responses: An ordered array of the firewall rules (not including the default rule)
@@ -183,6 +185,7 @@ class ApplianceFirewallL3FirewallRules(pulumi.CustomResource):
         $ pulumi import meraki:networks/applianceFirewallL3FirewallRules:ApplianceFirewallL3FirewallRules example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -222,6 +225,7 @@ class ApplianceFirewallL3FirewallRules(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/applianceFirewallL3FirewallRules:ApplianceFirewallL3FirewallRules example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ApplianceFirewallL3FirewallRulesArgs args: The arguments to use to populate this resource's properties.

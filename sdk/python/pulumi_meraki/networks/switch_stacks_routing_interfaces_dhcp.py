@@ -37,6 +37,7 @@ class SwitchStacksRoutingInterfacesDhcpArgs:
                  reserved_ip_ranges: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchStacksRoutingInterfacesDhcpReservedIpRangeArgs']]]] = None):
         """
         The set of arguments for constructing a SwitchStacksRoutingInterfacesDhcp resource.
+
         :param pulumi.Input[_builtins.str] interface_id: interfaceId path parameter. Interface ID
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] switch_stack_id: switchStackId path parameter. Switch stack ID
@@ -266,6 +267,7 @@ class _SwitchStacksRoutingInterfacesDhcpState:
                  switch_stack_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SwitchStacksRoutingInterfacesDhcp resources.
+
         :param pulumi.Input[_builtins.str] boot_file_name: The PXE boot server file name for the DHCP server running on the switch stack interface
         :param pulumi.Input[_builtins.str] boot_next_server: The PXE boot server IP for the DHCP server running on the switch stack interface
         :param pulumi.Input[_builtins.bool] boot_options_enabled: Enable DHCP boot options to provide PXE boot options configs for the dhcp server running on the switch stack interface
@@ -543,6 +545,7 @@ class SwitchStacksRoutingInterfacesDhcp(pulumi.CustomResource):
         $ pulumi import meraki:networks/switchStacksRoutingInterfacesDhcp:SwitchStacksRoutingInterfacesDhcp example "interface_id,network_id,switch_stack_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] boot_file_name: The PXE boot server file name for the DHCP server running on the switch stack interface
@@ -608,6 +611,7 @@ class SwitchStacksRoutingInterfacesDhcp(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/switchStacksRoutingInterfacesDhcp:SwitchStacksRoutingInterfacesDhcp example "interface_id,network_id,switch_stack_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SwitchStacksRoutingInterfacesDhcpArgs args: The arguments to use to populate this resource's properties.

@@ -28,6 +28,7 @@ class WirelessSsidsFirewallL3FirewallRulesArgs:
                  rules_responses: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsFirewallL3FirewallRulesRulesResponseArgs']]]] = None):
         """
         The set of arguments for constructing a WirelessSsidsFirewallL3FirewallRules resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] number: number path parameter.
         :param pulumi.Input[_builtins.bool] allow_lan_access: Allow wireless client access to local LAN (boolean value - true allows access and false denies access) (optional)
@@ -114,6 +115,7 @@ class _WirelessSsidsFirewallL3FirewallRulesState:
                  rules_responses: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsFirewallL3FirewallRulesRulesResponseArgs']]]] = None):
         """
         Input properties used for looking up and filtering WirelessSsidsFirewallL3FirewallRules resources.
+
         :param pulumi.Input[_builtins.bool] allow_lan_access: Allow wireless client access to local LAN (boolean value - true allows access and false denies access) (optional)
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] number: number path parameter.
@@ -231,6 +233,7 @@ class WirelessSsidsFirewallL3FirewallRules(pulumi.CustomResource):
         $ pulumi import meraki:networks/wirelessSsidsFirewallL3FirewallRules:WirelessSsidsFirewallL3FirewallRules example "network_id,number"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] allow_lan_access: Allow wireless client access to local LAN (boolean value - true allows access and false denies access) (optional)
@@ -271,6 +274,7 @@ class WirelessSsidsFirewallL3FirewallRules(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/wirelessSsidsFirewallL3FirewallRules:WirelessSsidsFirewallL3FirewallRules example "network_id,number"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param WirelessSsidsFirewallL3FirewallRulesArgs args: The arguments to use to populate this resource's properties.

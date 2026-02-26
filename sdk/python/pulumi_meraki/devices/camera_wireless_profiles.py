@@ -25,6 +25,7 @@ class CameraWirelessProfilesArgs:
                  ids: Optional[pulumi.Input['CameraWirelessProfilesIdsArgs']] = None):
         """
         The set of arguments for constructing a CameraWirelessProfiles resource.
+
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         :param pulumi.Input['CameraWirelessProfilesIdsArgs'] ids: The ids of the wireless profile to assign to the given camera
         """
@@ -64,6 +65,7 @@ class _CameraWirelessProfilesState:
                  serial: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering CameraWirelessProfiles resources.
+
         :param pulumi.Input['CameraWirelessProfilesIdsArgs'] ids: The ids of the wireless profile to assign to the given camera
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         """
@@ -129,6 +131,7 @@ class CameraWirelessProfiles(pulumi.CustomResource):
         $ pulumi import meraki:devices/cameraWirelessProfiles:CameraWirelessProfiles example "serial"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['CameraWirelessProfilesIdsArgs', 'CameraWirelessProfilesIdsArgsDict']] ids: The ids of the wireless profile to assign to the given camera
@@ -162,6 +165,7 @@ class CameraWirelessProfiles(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:devices/cameraWirelessProfiles:CameraWirelessProfiles example "serial"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param CameraWirelessProfilesArgs args: The arguments to use to populate this resource's properties.

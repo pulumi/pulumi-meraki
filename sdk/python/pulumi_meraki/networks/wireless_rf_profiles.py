@@ -36,6 +36,7 @@ class WirelessRfProfilesArgs:
                  two_four_ghz_settings: Optional[pulumi.Input['WirelessRfProfilesTwoFourGhzSettingsArgs']] = None):
         """
         The set of arguments for constructing a WirelessRfProfiles resource.
+
         :param pulumi.Input[_builtins.str] network_id: The network ID of the RF Profile
         :param pulumi.Input['WirelessRfProfilesApBandSettingsArgs'] ap_band_settings: Settings that will be enabled if selectionType is set to 'ap'.
         :param pulumi.Input[_builtins.str] band_selection_type: Band selection can be set to either 'ssid' or 'ap'. This param is required on creation.
@@ -251,6 +252,7 @@ class _WirelessRfProfilesState:
                  two_four_ghz_settings: Optional[pulumi.Input['WirelessRfProfilesTwoFourGhzSettingsArgs']] = None):
         """
         Input properties used for looking up and filtering WirelessRfProfiles resources.
+
         :param pulumi.Input['WirelessRfProfilesApBandSettingsArgs'] ap_band_settings: Settings that will be enabled if selectionType is set to 'ap'.
         :param pulumi.Input[_builtins.str] band_selection_type: Band selection can be set to either 'ssid' or 'ap'. This param is required on creation.
         :param pulumi.Input[_builtins.bool] client_balancing_enabled: Steers client to best available access point. Can be either true or false. Defaults to true.
@@ -791,6 +793,7 @@ class WirelessRfProfiles(pulumi.CustomResource):
         $ pulumi import meraki:networks/wirelessRfProfiles:WirelessRfProfiles example "network_id,rf_profile_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['WirelessRfProfilesApBandSettingsArgs', 'WirelessRfProfilesApBandSettingsArgsDict']] ap_band_settings: Settings that will be enabled if selectionType is set to 'ap'.
@@ -1134,6 +1137,7 @@ class WirelessRfProfiles(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/wirelessRfProfiles:WirelessRfProfiles example "network_id,rf_profile_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param WirelessRfProfilesArgs args: The arguments to use to populate this resource's properties.

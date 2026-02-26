@@ -28,6 +28,7 @@ class AdaptivePolicyPoliciesArgs:
                  source_group: Optional[pulumi.Input['AdaptivePolicyPoliciesSourceGroupArgs']] = None):
         """
         The set of arguments for constructing a AdaptivePolicyPolicies resource.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[Sequence[pulumi.Input['AdaptivePolicyPoliciesAclArgs']]] acls: An ordered array of adaptive policy ACLs (each requires one unique attribute) that apply to this policy (default: [])
         :param pulumi.Input['AdaptivePolicyPoliciesDestinationGroupArgs'] destination_group: The destination adaptive policy group (requires one unique attribute)
@@ -118,6 +119,7 @@ class _AdaptivePolicyPoliciesState:
                  updated_at: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering AdaptivePolicyPolicies resources.
+
         :param pulumi.Input[Sequence[pulumi.Input['AdaptivePolicyPoliciesAclArgs']]] acls: An ordered array of adaptive policy ACLs (each requires one unique attribute) that apply to this policy (default: [])
         :param pulumi.Input['AdaptivePolicyPoliciesDestinationGroupArgs'] destination_group: The destination adaptive policy group (requires one unique attribute)
         :param pulumi.Input[_builtins.str] last_entry_rule: The rule to apply if there is no matching ACL (default: "default")
@@ -274,6 +276,7 @@ class AdaptivePolicyPolicies(pulumi.CustomResource):
         $ pulumi import meraki:organizations/adaptivePolicyPolicies:AdaptivePolicyPolicies example "id,organization_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['AdaptivePolicyPoliciesAclArgs', 'AdaptivePolicyPoliciesAclArgsDict']]]] acls: An ordered array of adaptive policy ACLs (each requires one unique attribute) that apply to this policy (default: [])
@@ -320,6 +323,7 @@ class AdaptivePolicyPolicies(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:organizations/adaptivePolicyPolicies:AdaptivePolicyPolicies example "id,organization_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param AdaptivePolicyPoliciesArgs args: The arguments to use to populate this resource's properties.

@@ -25,6 +25,7 @@ class InventoryOnboardingCloudMonitoringExportEventsArgs:
                  parameters: pulumi.Input['InventoryOnboardingCloudMonitoringExportEventsParametersArgs']):
         """
         The set of arguments for constructing a InventoryOnboardingCloudMonitoringExportEvents resource.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         """
         pulumi.set(__self__, "organization_id", organization_id)
@@ -59,6 +60,7 @@ class _InventoryOnboardingCloudMonitoringExportEventsState:
                  parameters: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringExportEventsParametersArgs']] = None):
         """
         Input properties used for looking up and filtering InventoryOnboardingCloudMonitoringExportEvents resources.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         """
         if organization_id is not None:
@@ -118,6 +120,7 @@ class InventoryOnboardingCloudMonitoringExportEvents(pulumi.CustomResource):
         pulumi.export("merakiOrganizationsInventoryOnboardingCloudMonitoringExportEventsExample", example)
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
@@ -148,6 +151,7 @@ class InventoryOnboardingCloudMonitoringExportEvents(pulumi.CustomResource):
             })
         pulumi.export("merakiOrganizationsInventoryOnboardingCloudMonitoringExportEventsExample", example)
         ```
+
 
         :param str resource_name: The name of the resource.
         :param InventoryOnboardingCloudMonitoringExportEventsArgs args: The arguments to use to populate this resource's properties.

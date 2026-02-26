@@ -28,6 +28,7 @@ class SwitchRoutingStaticRoutesArgs:
                  subnet: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a SwitchRoutingStaticRoutes resource.
+
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         :param pulumi.Input[_builtins.bool] advertise_via_ospf_enabled: Option to advertise static routes via OSPF
         :param pulumi.Input[_builtins.str] name: The name or description of the layer 3 static route
@@ -147,6 +148,7 @@ class _SwitchRoutingStaticRoutesState:
                  subnet: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SwitchRoutingStaticRoutes resources.
+
         :param pulumi.Input[_builtins.bool] advertise_via_ospf_enabled: Option to advertise static routes via OSPF
         :param pulumi.Input[_builtins.str] name: The name or description of the layer 3 static route
         :param pulumi.Input[_builtins.str] next_hop_ip: The IP address of the router to which traffic for this destination network should be sent
@@ -292,6 +294,7 @@ class SwitchRoutingStaticRoutes(pulumi.CustomResource):
         $ pulumi import meraki:devices/switchRoutingStaticRoutes:SwitchRoutingStaticRoutes example "serial,static_route_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] advertise_via_ospf_enabled: Option to advertise static routes via OSPF
@@ -330,6 +333,7 @@ class SwitchRoutingStaticRoutes(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:devices/switchRoutingStaticRoutes:SwitchRoutingStaticRoutes example "serial,static_route_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SwitchRoutingStaticRoutesArgs args: The arguments to use to populate this resource's properties.

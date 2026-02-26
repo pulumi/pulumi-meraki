@@ -28,6 +28,7 @@ class CameraSenseArgs:
                  sense_enabled: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a CameraSense resource.
+
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         :param pulumi.Input['CameraSenseAudioDetectionArgs'] audio_detection: The details of the audio detection config.
         :param pulumi.Input[_builtins.str] detection_model_id: The ID of the object detection model
@@ -116,6 +117,7 @@ class _CameraSenseState:
                  serial: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering CameraSense resources.
+
         :param pulumi.Input['CameraSenseAudioDetectionArgs'] audio_detection: The details of the audio detection config.
         :param pulumi.Input[_builtins.str] detection_model_id: The ID of the object detection model
         :param pulumi.Input[_builtins.str] mqtt_broker_id: The ID of the MQTT broker to be enabled on the camera. A value of null will disable MQTT on the camera
@@ -240,6 +242,7 @@ class CameraSense(pulumi.CustomResource):
         $ pulumi import meraki:devices/cameraSense:CameraSense example "serial"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['CameraSenseAudioDetectionArgs', 'CameraSenseAudioDetectionArgsDict']] audio_detection: The details of the audio detection config.
@@ -276,6 +279,7 @@ class CameraSense(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:devices/cameraSense:CameraSense example "serial"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param CameraSenseArgs args: The arguments to use to populate this resource's properties.

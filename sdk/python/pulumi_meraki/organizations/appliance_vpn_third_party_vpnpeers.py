@@ -25,6 +25,7 @@ class ApplianceVpnThirdPartyVpnpeersArgs:
                  peers: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVpnThirdPartyVpnpeersPeerArgs']]]] = None):
         """
         The set of arguments for constructing a ApplianceVpnThirdPartyVpnpeers resource.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[Sequence[pulumi.Input['ApplianceVpnThirdPartyVpnpeersPeerArgs']]] peers: The list of VPN peers
         """
@@ -65,6 +66,7 @@ class _ApplianceVpnThirdPartyVpnpeersState:
                  peers_responses: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVpnThirdPartyVpnpeersPeersResponseArgs']]]] = None):
         """
         Input properties used for looking up and filtering ApplianceVpnThirdPartyVpnpeers resources.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[Sequence[pulumi.Input['ApplianceVpnThirdPartyVpnpeersPeerArgs']]] peers: The list of VPN peers
         :param pulumi.Input[Sequence[pulumi.Input['ApplianceVpnThirdPartyVpnpeersPeersResponseArgs']]] peers_responses: The list of VPN peers
@@ -165,6 +167,7 @@ class ApplianceVpnThirdPartyVpnpeers(pulumi.CustomResource):
         $ pulumi import meraki:organizations/applianceVpnThirdPartyVpnpeers:ApplianceVpnThirdPartyVpnpeers example "organization_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
@@ -218,6 +221,7 @@ class ApplianceVpnThirdPartyVpnpeers(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:organizations/applianceVpnThirdPartyVpnpeers:ApplianceVpnThirdPartyVpnpeers example "organization_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ApplianceVpnThirdPartyVpnpeersArgs args: The arguments to use to populate this resource's properties.

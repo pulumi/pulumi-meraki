@@ -31,6 +31,7 @@ class SwitchRoutingOspfArgs:
                  v3: Optional[pulumi.Input['SwitchRoutingOspfV3Args']] = None):
         """
         The set of arguments for constructing a SwitchRoutingOspf resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input['SwitchRoutingOspfAreaArgs']]] areas: OSPF areas
         :param pulumi.Input[_builtins.int] dead_timer_in_seconds: Time interval to determine when the peer will be declared inactive/dead. Value must be between 1 and 65535
@@ -166,6 +167,7 @@ class _SwitchRoutingOspfState:
                  v3: Optional[pulumi.Input['SwitchRoutingOspfV3Args']] = None):
         """
         Input properties used for looking up and filtering SwitchRoutingOspf resources.
+
         :param pulumi.Input[Sequence[pulumi.Input['SwitchRoutingOspfAreaArgs']]] areas: OSPF areas
         :param pulumi.Input[_builtins.int] dead_timer_in_seconds: Time interval to determine when the peer will be declared inactive/dead. Value must be between 1 and 65535
         :param pulumi.Input[_builtins.bool] enabled: Boolean value to enable or disable OSPF routing. OSPF routing is disabled by default.
@@ -345,6 +347,7 @@ class SwitchRoutingOspf(pulumi.CustomResource):
         $ pulumi import meraki:networks/switchRoutingOspf:SwitchRoutingOspf example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['SwitchRoutingOspfAreaArgs', 'SwitchRoutingOspfAreaArgsDict']]]] areas: OSPF areas
@@ -402,6 +405,7 @@ class SwitchRoutingOspf(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/switchRoutingOspf:SwitchRoutingOspf example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SwitchRoutingOspfArgs args: The arguments to use to populate this resource's properties.

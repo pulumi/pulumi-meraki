@@ -26,6 +26,7 @@ class SwitchRoutingMulticastArgs:
                  overrides: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchRoutingMulticastOverrideArgs']]]] = None):
         """
         The set of arguments for constructing a SwitchRoutingMulticast resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input['SwitchRoutingMulticastDefaultSettingsArgs'] default_settings: Default multicast setting for entire network. IGMP snooping and Flood unknown
                  multicast traffic settings are enabled by default.
@@ -85,6 +86,7 @@ class _SwitchRoutingMulticastState:
                  overrides: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchRoutingMulticastOverrideArgs']]]] = None):
         """
         Input properties used for looking up and filtering SwitchRoutingMulticast resources.
+
         :param pulumi.Input['SwitchRoutingMulticastDefaultSettingsArgs'] default_settings: Default multicast setting for entire network. IGMP snooping and Flood unknown
                  multicast traffic settings are enabled by default.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -187,6 +189,7 @@ class SwitchRoutingMulticast(pulumi.CustomResource):
         $ pulumi import meraki:networks/switchRoutingMulticast:SwitchRoutingMulticast example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['SwitchRoutingMulticastDefaultSettingsArgs', 'SwitchRoutingMulticastDefaultSettingsArgsDict']] default_settings: Default multicast setting for entire network. IGMP snooping and Flood unknown
@@ -240,6 +243,7 @@ class SwitchRoutingMulticast(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/switchRoutingMulticast:SwitchRoutingMulticast example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SwitchRoutingMulticastArgs args: The arguments to use to populate this resource's properties.

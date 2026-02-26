@@ -29,6 +29,7 @@ class SamlRolesArgs:
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input['SamlRolesTagArgs']]]] = None):
         """
         The set of arguments for constructing a SamlRoles resource.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[Sequence[pulumi.Input['SamlRolesNetworkArgs']]] networks: The list of networks that the SAML administrator has privileges on
         :param pulumi.Input[_builtins.str] org_access: The privilege of the SAML administrator on the organization
@@ -133,6 +134,7 @@ class _SamlRolesState:
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input['SamlRolesTagArgs']]]] = None):
         """
         Input properties used for looking up and filtering SamlRoles resources.
+
         :param pulumi.Input[Sequence[pulumi.Input['SamlRolesCameraArgs']]] cameras: The list of camera access privileges for SAML administrator
         :param pulumi.Input[Sequence[pulumi.Input['SamlRolesNetworkArgs']]] networks: The list of networks that the SAML administrator has privileges on
         :param pulumi.Input[_builtins.str] org_access: The privilege of the SAML administrator on the organization
@@ -282,6 +284,7 @@ class SamlRoles(pulumi.CustomResource):
         $ pulumi import meraki:organizations/samlRoles:SamlRoles example "organization_id,saml_role_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['SamlRolesNetworkArgs', 'SamlRolesNetworkArgsDict']]]] networks: The list of networks that the SAML administrator has privileges on
@@ -324,6 +327,7 @@ class SamlRoles(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:organizations/samlRoles:SamlRoles example "organization_id,saml_role_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SamlRolesArgs args: The arguments to use to populate this resource's properties.

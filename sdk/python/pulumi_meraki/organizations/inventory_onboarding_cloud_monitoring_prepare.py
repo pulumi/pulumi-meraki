@@ -25,6 +25,7 @@ class InventoryOnboardingCloudMonitoringPrepareArgs:
                  parameters: pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersArgs']):
         """
         The set of arguments for constructing a InventoryOnboardingCloudMonitoringPrepare resource.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         """
         pulumi.set(__self__, "organization_id", organization_id)
@@ -60,6 +61,7 @@ class _InventoryOnboardingCloudMonitoringPrepareState:
                  parameters: Optional[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareParametersArgs']] = None):
         """
         Input properties used for looking up and filtering InventoryOnboardingCloudMonitoringPrepare resources.
+
         :param pulumi.Input[Sequence[pulumi.Input['InventoryOnboardingCloudMonitoringPrepareItemArgs']]] items: Array of ResponseOrganizationsCreateOrganizationInventoryOnboardingCloudMonitoringPrepare
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         """
@@ -189,6 +191,7 @@ class InventoryOnboardingCloudMonitoringPrepare(pulumi.CustomResource):
         pulumi.export("merakiOrganizationsInventoryOnboardingCloudMonitoringPrepareExample", example)
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
@@ -274,6 +277,7 @@ class InventoryOnboardingCloudMonitoringPrepare(pulumi.CustomResource):
             })
         pulumi.export("merakiOrganizationsInventoryOnboardingCloudMonitoringPrepareExample", example)
         ```
+
 
         :param str resource_name: The name of the resource.
         :param InventoryOnboardingCloudMonitoringPrepareArgs args: The arguments to use to populate this resource's properties.

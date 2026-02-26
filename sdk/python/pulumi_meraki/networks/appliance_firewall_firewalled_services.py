@@ -25,6 +25,7 @@ class ApplianceFirewallFirewalledServicesArgs:
                  allowed_ips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a ApplianceFirewallFirewalledServices resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] service: Appliance service name
         :param pulumi.Input[_builtins.str] access: A string indicating the rule for which IPs are allowed to use the specified service
@@ -95,6 +96,7 @@ class _ApplianceFirewallFirewalledServicesState:
                  service: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ApplianceFirewallFirewalledServices resources.
+
         :param pulumi.Input[_builtins.str] access: A string indicating the rule for which IPs are allowed to use the specified service
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] allowed_ips: An array of allowed IPs that can access the service
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -190,6 +192,7 @@ class ApplianceFirewallFirewalledServices(pulumi.CustomResource):
         $ pulumi import meraki:networks/applianceFirewallFirewalledServices:ApplianceFirewallFirewalledServices example "network_id,service"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] access: A string indicating the rule for which IPs are allowed to use the specified service
@@ -223,6 +226,7 @@ class ApplianceFirewallFirewalledServices(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/applianceFirewallFirewalledServices:ApplianceFirewallFirewalledServices example "network_id,service"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ApplianceFirewallFirewalledServicesArgs args: The arguments to use to populate this resource's properties.

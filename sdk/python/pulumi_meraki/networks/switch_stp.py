@@ -26,6 +26,7 @@ class SwitchStpArgs:
                  stp_bridge_priorities: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchStpStpBridgePriorityArgs']]]] = None):
         """
         The set of arguments for constructing a SwitchStp resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.bool] rstp_enabled: The spanning tree protocol status in network
         :param pulumi.Input[Sequence[pulumi.Input['SwitchStpStpBridgePriorityArgs']]] stp_bridge_priorities: STP bridge priority for switches/stacks or switch templates. An empty array will clear the STP bridge priority settings.
@@ -82,6 +83,7 @@ class _SwitchStpState:
                  stp_bridge_priority_responses: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchStpStpBridgePriorityResponseArgs']]]] = None):
         """
         Input properties used for looking up and filtering SwitchStp resources.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.bool] rstp_enabled: The spanning tree protocol status in network
         :param pulumi.Input[Sequence[pulumi.Input['SwitchStpStpBridgePriorityArgs']]] stp_bridge_priorities: STP bridge priority for switches/stacks or switch templates. An empty array will clear the STP bridge priority settings.
@@ -182,6 +184,7 @@ class SwitchStp(pulumi.CustomResource):
         $ pulumi import meraki:networks/switchStp:SwitchStp example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -220,6 +223,7 @@ class SwitchStp(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/switchStp:SwitchStp example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SwitchStpArgs args: The arguments to use to populate this resource's properties.

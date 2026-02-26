@@ -25,6 +25,7 @@ class CameraGenerateSnapshotArgs:
                  serial: pulumi.Input[_builtins.str]):
         """
         The set of arguments for constructing a CameraGenerateSnapshot resource.
+
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         """
         pulumi.set(__self__, "parameters", parameters)
@@ -59,6 +60,7 @@ class _CameraGenerateSnapshotState:
                  serial: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering CameraGenerateSnapshot resources.
+
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         """
         if parameters is not None:
@@ -116,6 +118,7 @@ class CameraGenerateSnapshot(pulumi.CustomResource):
         pulumi.export("merakiDevicesCameraGenerateSnapshotExample", example)
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
@@ -144,6 +147,7 @@ class CameraGenerateSnapshot(pulumi.CustomResource):
             })
         pulumi.export("merakiDevicesCameraGenerateSnapshotExample", example)
         ```
+
 
         :param str resource_name: The name of the resource.
         :param CameraGenerateSnapshotArgs args: The arguments to use to populate this resource's properties.

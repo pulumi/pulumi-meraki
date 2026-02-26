@@ -29,6 +29,7 @@ class FirmwareUpgradesStagedGroupsArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a FirmwareUpgradesStagedGroups resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input['FirmwareUpgradesStagedGroupsAssignedDevicesArgs'] assigned_devices: The devices and Switch Stacks assigned to the Group
         :param pulumi.Input[_builtins.str] description: Description of the Staged Upgrade Group
@@ -132,6 +133,7 @@ class _FirmwareUpgradesStagedGroupsState:
                  network_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering FirmwareUpgradesStagedGroups resources.
+
         :param pulumi.Input['FirmwareUpgradesStagedGroupsAssignedDevicesArgs'] assigned_devices: The devices and Switch Stacks assigned to the Group
         :param pulumi.Input[_builtins.str] description: Description of the Staged Upgrade Group
         :param pulumi.Input[_builtins.str] group_id: Id of staged upgrade group
@@ -269,6 +271,7 @@ class FirmwareUpgradesStagedGroups(pulumi.CustomResource):
         $ pulumi import meraki:networks/firmwareUpgradesStagedGroups:FirmwareUpgradesStagedGroups example "group_id,network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['FirmwareUpgradesStagedGroupsAssignedDevicesArgs', 'FirmwareUpgradesStagedGroupsAssignedDevicesArgsDict']] assigned_devices: The devices and Switch Stacks assigned to the Group
@@ -314,6 +317,7 @@ class FirmwareUpgradesStagedGroups(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/firmwareUpgradesStagedGroups:FirmwareUpgradesStagedGroups example "group_id,network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param FirmwareUpgradesStagedGroupsArgs args: The arguments to use to populate this resource's properties.

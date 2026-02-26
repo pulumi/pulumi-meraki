@@ -25,6 +25,7 @@ class ApplianceFirewallL7FirewallRulesArgs:
                  rules: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallL7FirewallRulesRuleArgs']]]] = None):
         """
         The set of arguments for constructing a ApplianceFirewallL7FirewallRules resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallL7FirewallRulesRuleArgs']]] rules: An ordered array of the MX L7 firewall rules
         """
@@ -65,6 +66,7 @@ class _ApplianceFirewallL7FirewallRulesState:
                  rules_responses: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallL7FirewallRulesRulesResponseArgs']]]] = None):
         """
         Input properties used for looking up and filtering ApplianceFirewallL7FirewallRules resources.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallL7FirewallRulesRuleArgs']]] rules: An ordered array of the MX L7 firewall rules
         :param pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallL7FirewallRulesRulesResponseArgs']]] rules_responses: An ordered array of the MX L7 firewall rules
@@ -183,6 +185,7 @@ class ApplianceFirewallL7FirewallRules(pulumi.CustomResource):
         $ pulumi import meraki:networks/applianceFirewallL7FirewallRules:ApplianceFirewallL7FirewallRules example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -254,6 +257,7 @@ class ApplianceFirewallL7FirewallRules(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/applianceFirewallL7FirewallRules:ApplianceFirewallL7FirewallRules example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ApplianceFirewallL7FirewallRulesArgs args: The arguments to use to populate this resource's properties.

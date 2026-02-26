@@ -29,6 +29,7 @@ class ApplianceWarmSpareArgs:
                  virtual_ip2: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a ApplianceWarmSpare resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.bool] enabled: Enable warm spare
         :param pulumi.Input[_builtins.str] spare_serial: Serial number of the warm spare appliance
@@ -135,6 +136,7 @@ class _ApplianceWarmSpareState:
                  wan2: Optional[pulumi.Input['ApplianceWarmSpareWan2Args']] = None):
         """
         Input properties used for looking up and filtering ApplianceWarmSpare resources.
+
         :param pulumi.Input[_builtins.bool] enabled: Enable warm spare
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] spare_serial: Serial number of the warm spare appliance
@@ -297,6 +299,7 @@ class ApplianceWarmSpare(pulumi.CustomResource):
         $ pulumi import meraki:networks/applianceWarmSpare:ApplianceWarmSpare example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] enabled: Enable warm spare
@@ -334,6 +337,7 @@ class ApplianceWarmSpare(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/applianceWarmSpare:ApplianceWarmSpare example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ApplianceWarmSpareArgs args: The arguments to use to populate this resource's properties.

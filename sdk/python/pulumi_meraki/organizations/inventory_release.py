@@ -25,6 +25,7 @@ class InventoryReleaseArgs:
                  parameters: pulumi.Input['InventoryReleaseParametersArgs']):
         """
         The set of arguments for constructing a InventoryRelease resource.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         """
         pulumi.set(__self__, "organization_id", organization_id)
@@ -60,6 +61,7 @@ class _InventoryReleaseState:
                  parameters: Optional[pulumi.Input['InventoryReleaseParametersArgs']] = None):
         """
         Input properties used for looking up and filtering InventoryRelease resources.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         """
         if item is not None:
@@ -127,6 +129,7 @@ class InventoryRelease(pulumi.CustomResource):
         pulumi.export("merakiOrganizationsInventoryReleaseExample", example)
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
@@ -154,6 +157,7 @@ class InventoryRelease(pulumi.CustomResource):
             })
         pulumi.export("merakiOrganizationsInventoryReleaseExample", example)
         ```
+
 
         :param str resource_name: The name of the resource.
         :param InventoryReleaseArgs args: The arguments to use to populate this resource's properties.

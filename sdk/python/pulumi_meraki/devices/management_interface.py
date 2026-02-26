@@ -26,6 +26,7 @@ class ManagementInterfaceArgs:
                  wan2: Optional[pulumi.Input['ManagementInterfaceWan2Args']] = None):
         """
         The set of arguments for constructing a ManagementInterface resource.
+
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         :param pulumi.Input['ManagementInterfaceWan1Args'] wan1: WAN 1 settings
         :param pulumi.Input['ManagementInterfaceWan2Args'] wan2: WAN 2 settings (only for MX devices)
@@ -82,6 +83,7 @@ class _ManagementInterfaceState:
                  wan2: Optional[pulumi.Input['ManagementInterfaceWan2Args']] = None):
         """
         Input properties used for looking up and filtering ManagementInterface resources.
+
         :param pulumi.Input['ManagementInterfaceDdnsHostnamesArgs'] ddns_hostnames: Dynamic DNS hostnames.
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         :param pulumi.Input['ManagementInterfaceWan1Args'] wan1: WAN 1 settings
@@ -197,6 +199,7 @@ class ManagementInterface(pulumi.CustomResource):
         $ pulumi import meraki:devices/managementInterface:ManagementInterface example "serial"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
@@ -250,6 +253,7 @@ class ManagementInterface(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:devices/managementInterface:ManagementInterface example "serial"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ManagementInterfaceArgs args: The arguments to use to populate this resource's properties.

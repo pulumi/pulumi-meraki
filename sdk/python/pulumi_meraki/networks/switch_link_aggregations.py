@@ -27,6 +27,7 @@ class SwitchLinkAggregationsArgs:
                  switch_profile_ports: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchLinkAggregationsSwitchProfilePortArgs']]]] = None):
         """
         The set of arguments for constructing a SwitchLinkAggregations resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] link_aggregation_id: linkAggregationId path parameter. Link aggregation ID
         :param pulumi.Input[Sequence[pulumi.Input['SwitchLinkAggregationsSwitchPortArgs']]] switch_ports: Array of switch or stack ports for creating aggregation group. Minimum 2 and maximum 8 ports are supported.
@@ -98,6 +99,7 @@ class _SwitchLinkAggregationsState:
                  switch_profile_ports: Optional[pulumi.Input[Sequence[pulumi.Input['SwitchLinkAggregationsSwitchProfilePortArgs']]]] = None):
         """
         Input properties used for looking up and filtering SwitchLinkAggregations resources.
+
         :param pulumi.Input[_builtins.str] link_aggregation_id: linkAggregationId path parameter. Link aggregation ID
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input['SwitchLinkAggregationsSwitchPortArgs']]] switch_ports: Array of switch or stack ports for creating aggregation group. Minimum 2 and maximum 8 ports are supported.
@@ -194,6 +196,7 @@ class SwitchLinkAggregations(pulumi.CustomResource):
         $ pulumi import meraki:networks/switchLinkAggregations:SwitchLinkAggregations example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] link_aggregation_id: linkAggregationId path parameter. Link aggregation ID
@@ -228,6 +231,7 @@ class SwitchLinkAggregations(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/switchLinkAggregations:SwitchLinkAggregations example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SwitchLinkAggregationsArgs args: The arguments to use to populate this resource's properties.

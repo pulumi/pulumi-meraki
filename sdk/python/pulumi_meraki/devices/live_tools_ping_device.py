@@ -25,6 +25,7 @@ class LiveToolsPingDeviceArgs:
                  serial: pulumi.Input[_builtins.str]):
         """
         The set of arguments for constructing a LiveToolsPingDevice resource.
+
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         """
         pulumi.set(__self__, "parameters", parameters)
@@ -60,6 +61,7 @@ class _LiveToolsPingDeviceState:
                  serial: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering LiveToolsPingDevice resources.
+
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         """
         if item is not None:
@@ -143,6 +145,7 @@ class LiveToolsPingDevice(pulumi.CustomResource):
         $ pulumi import meraki:devices/liveToolsPingDevice:LiveToolsPingDevice example "id,serial"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
@@ -186,6 +189,7 @@ class LiveToolsPingDevice(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:devices/liveToolsPingDevice:LiveToolsPingDevice example "id,serial"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param LiveToolsPingDeviceArgs args: The arguments to use to populate this resource's properties.

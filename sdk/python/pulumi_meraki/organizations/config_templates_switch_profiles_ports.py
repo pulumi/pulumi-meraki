@@ -50,6 +50,7 @@ class ConfigTemplatesSwitchProfilesPortsArgs:
                  voice_vlan: Optional[pulumi.Input[_builtins.int]] = None):
         """
         The set of arguments for constructing a ConfigTemplatesSwitchProfilesPorts resource.
+
         :param pulumi.Input[_builtins.str] config_template_id: configTemplateId path parameter. Config template ID
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[_builtins.str] port_id: The identifier of the switch template port.
@@ -489,6 +490,7 @@ class _ConfigTemplatesSwitchProfilesPortsState:
                  voice_vlan: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering ConfigTemplatesSwitchProfilesPorts resources.
+
         :param pulumi.Input[_builtins.int] access_policy_number: The number of a custom access policy to configure on the switch template port. Only applicable when 'accessPolicyType' is 'Custom access policy'.
         :param pulumi.Input[_builtins.str] access_policy_type: The type of the access policy of the switch template port. Only applicable to access ports. Can be one of 'Open', 'Custom access policy', 'MAC allow list' or 'Sticky MAC allow list'.
         :param pulumi.Input[_builtins.str] allowed_vlans: The VLANs allowed on the switch template port. Only applicable to trunk ports.
@@ -1033,6 +1035,7 @@ class ConfigTemplatesSwitchProfilesPorts(pulumi.CustomResource):
         $ pulumi import meraki:organizations/configTemplatesSwitchProfilesPorts:ConfigTemplatesSwitchProfilesPorts example "config_template_id,organization_id,port_id,profile_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.int] access_policy_number: The number of a custom access policy to configure on the switch template port. Only applicable when 'accessPolicyType' is 'Custom access policy'.
@@ -1125,6 +1128,7 @@ class ConfigTemplatesSwitchProfilesPorts(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:organizations/configTemplatesSwitchProfilesPorts:ConfigTemplatesSwitchProfilesPorts example "config_template_id,organization_id,port_id,profile_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ConfigTemplatesSwitchProfilesPortsArgs args: The arguments to use to populate this resource's properties.

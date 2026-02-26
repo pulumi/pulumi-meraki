@@ -28,6 +28,7 @@ class WirelessEthernetPortsProfilesArgs:
                  usb_ports: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessEthernetPortsProfilesUsbPortArgs']]]] = None):
         """
         The set of arguments for constructing a WirelessEthernetPortsProfiles resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] profile_id: AP port profile ID
         :param pulumi.Input[_builtins.str] name: AP port profile name
@@ -115,6 +116,7 @@ class _WirelessEthernetPortsProfilesState:
                  usb_ports: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessEthernetPortsProfilesUsbPortArgs']]]] = None):
         """
         Input properties used for looking up and filtering WirelessEthernetPortsProfiles resources.
+
         :param pulumi.Input[_builtins.bool] is_default: Is default profile
         :param pulumi.Input[_builtins.str] name: AP port profile name
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -251,6 +253,7 @@ class WirelessEthernetPortsProfiles(pulumi.CustomResource):
         $ pulumi import meraki:networks/wirelessEthernetPortsProfiles:WirelessEthernetPortsProfiles example "network_id,profile_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] name: AP port profile name
@@ -295,6 +298,7 @@ class WirelessEthernetPortsProfiles(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/wirelessEthernetPortsProfiles:WirelessEthernetPortsProfiles example "network_id,profile_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param WirelessEthernetPortsProfilesArgs args: The arguments to use to populate this resource's properties.

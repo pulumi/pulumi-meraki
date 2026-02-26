@@ -30,6 +30,7 @@ class BrandingPoliciesArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a BrandingPolicies resource.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input['BrandingPoliciesAdminSettingsArgs'] admin_settings: Settings for describing which kinds of admins this policy applies to.
         :param pulumi.Input[_builtins.str] branding_policy_id: brandingPolicyId path parameter. Branding policy ID
@@ -155,6 +156,7 @@ class _BrandingPoliciesState:
                  organization_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering BrandingPolicies resources.
+
         :param pulumi.Input['BrandingPoliciesAdminSettingsArgs'] admin_settings: Settings for describing which kinds of admins this policy applies to.
         :param pulumi.Input[_builtins.str] branding_policy_id: brandingPolicyId path parameter. Branding policy ID
         :param pulumi.Input['BrandingPoliciesCustomLogoArgs'] custom_logo: Properties describing the custom logo attached to the branding policy.
@@ -334,6 +336,7 @@ class BrandingPolicies(pulumi.CustomResource):
         $ pulumi import meraki:organizations/brandingPolicies:BrandingPolicies example "branding_policy_id,organization_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['BrandingPoliciesAdminSettingsArgs', 'BrandingPoliciesAdminSettingsArgsDict']] admin_settings: Settings for describing which kinds of admins this policy applies to.
@@ -403,6 +406,7 @@ class BrandingPolicies(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:organizations/brandingPolicies:BrandingPolicies example "branding_policy_id,organization_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param BrandingPoliciesArgs args: The arguments to use to populate this resource's properties.

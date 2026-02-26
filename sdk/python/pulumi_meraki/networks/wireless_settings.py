@@ -30,6 +30,7 @@ class WirelessSettingsArgs:
                  upgradestrategy: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a WirelessSettings resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.bool] ipv6_bridge_enabled: Toggle for enabling or disabling IPv6 bridging in a network (Note: if enabled, SSIDs must also be configured to use bridge mode)
         :param pulumi.Input[_builtins.bool] led_lights_on: Toggle for enabling or disabling LED lights on all APs in the network (making them run dark)
@@ -150,6 +151,7 @@ class _WirelessSettingsState:
                  upgradestrategy: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering WirelessSettings resources.
+
         :param pulumi.Input[_builtins.bool] ipv6_bridge_enabled: Toggle for enabling or disabling IPv6 bridging in a network (Note: if enabled, SSIDs must also be configured to use bridge mode)
         :param pulumi.Input[_builtins.bool] led_lights_on: Toggle for enabling or disabling LED lights on all APs in the network (making them run dark)
         :param pulumi.Input[_builtins.bool] location_analytics_enabled: Toggle for enabling or disabling location analytics for your network
@@ -316,6 +318,7 @@ class WirelessSettings(pulumi.CustomResource):
         $ pulumi import meraki:networks/wirelessSettings:WirelessSettings example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] ipv6_bridge_enabled: Toggle for enabling or disabling IPv6 bridging in a network (Note: if enabled, SSIDs must also be configured to use bridge mode)
@@ -360,6 +363,7 @@ class WirelessSettings(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/wirelessSettings:WirelessSettings example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param WirelessSettingsArgs args: The arguments to use to populate this resource's properties.

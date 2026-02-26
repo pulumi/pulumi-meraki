@@ -26,6 +26,7 @@ class LiveToolsThroughputTestArgs:
                  throughput_test_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a LiveToolsThroughputTest resource.
+
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         :param pulumi.Input['LiveToolsThroughputTestCallbackArgs'] callback: Details for the callback. Please include either an httpServerId OR url and sharedSecret
         :param pulumi.Input[_builtins.str] throughput_test_id: ID of throughput test job
@@ -86,6 +87,7 @@ class _LiveToolsThroughputTestState:
                  url: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering LiveToolsThroughputTest resources.
+
         :param pulumi.Input['LiveToolsThroughputTestCallbackArgs'] callback: Details for the callback. Please include either an httpServerId OR url and sharedSecret
         :param pulumi.Input[_builtins.str] error: Description of the error.
         :param pulumi.Input['LiveToolsThroughputTestRequestArgs'] request: The parameters of the throughput test request
@@ -247,6 +249,7 @@ class LiveToolsThroughputTest(pulumi.CustomResource):
         $ pulumi import meraki:devices/liveToolsThroughputTest:LiveToolsThroughputTest example "serial,throughput_test_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['LiveToolsThroughputTestCallbackArgs', 'LiveToolsThroughputTestCallbackArgsDict']] callback: Details for the callback. Please include either an httpServerId OR url and sharedSecret
@@ -286,6 +289,7 @@ class LiveToolsThroughputTest(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:devices/liveToolsThroughputTest:LiveToolsThroughputTest example "serial,throughput_test_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param LiveToolsThroughputTestArgs args: The arguments to use to populate this resource's properties.

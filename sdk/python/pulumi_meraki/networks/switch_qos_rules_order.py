@@ -30,6 +30,7 @@ class SwitchQosRulesOrderArgs:
                  vlan: Optional[pulumi.Input[_builtins.int]] = None):
         """
         The set of arguments for constructing a SwitchQosRulesOrder resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.int] dscp: DSCP tag. Set this to -1 to trust incoming DSCP. Default value is 0
         :param pulumi.Input[_builtins.int] dst_port: The destination port of the incoming packet. Applicable only if protocol is TCP or UDP.
@@ -181,6 +182,7 @@ class _SwitchQosRulesOrderState:
                  vlan: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SwitchQosRulesOrder resources.
+
         :param pulumi.Input[_builtins.int] dscp: DSCP tag. Set this to -1 to trust incoming DSCP. Default value is 0
         :param pulumi.Input[_builtins.int] dst_port: The destination port of the incoming packet. Applicable only if protocol is TCP or UDP.
         :param pulumi.Input[_builtins.str] dst_port_range: The destination port range of the incoming packet. Applicable only if protocol is set to TCP or UDP. Example: 70-80
@@ -360,6 +362,7 @@ class SwitchQosRulesOrder(pulumi.CustomResource):
         $ pulumi import meraki:networks/switchQosRulesOrder:SwitchQosRulesOrder example "network_id,qos_rule_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.int] dscp: DSCP tag. Set this to -1 to trust incoming DSCP. Default value is 0
@@ -402,6 +405,7 @@ class SwitchQosRulesOrder(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/switchQosRulesOrder:SwitchQosRulesOrder example "network_id,qos_rule_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SwitchQosRulesOrderArgs args: The arguments to use to populate this resource's properties.

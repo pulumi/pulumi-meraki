@@ -25,6 +25,7 @@ class CellularGatewayPortForwardingRulesArgs:
                  rules: Optional[pulumi.Input[Sequence[pulumi.Input['CellularGatewayPortForwardingRulesRuleArgs']]]] = None):
         """
         The set of arguments for constructing a CellularGatewayPortForwardingRules resource.
+
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         :param pulumi.Input[Sequence[pulumi.Input['CellularGatewayPortForwardingRulesRuleArgs']]] rules: An array of port forwarding params
         """
@@ -64,6 +65,7 @@ class _CellularGatewayPortForwardingRulesState:
                  serial: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering CellularGatewayPortForwardingRules resources.
+
         :param pulumi.Input[Sequence[pulumi.Input['CellularGatewayPortForwardingRulesRuleArgs']]] rules: An array of port forwarding params
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         """
@@ -132,6 +134,7 @@ class CellularGatewayPortForwardingRules(pulumi.CustomResource):
         $ pulumi import meraki:devices/cellularGatewayPortForwardingRules:CellularGatewayPortForwardingRules example "serial"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['CellularGatewayPortForwardingRulesRuleArgs', 'CellularGatewayPortForwardingRulesRuleArgsDict']]]] rules: An array of port forwarding params
@@ -168,6 +171,7 @@ class CellularGatewayPortForwardingRules(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:devices/cellularGatewayPortForwardingRules:CellularGatewayPortForwardingRules example "serial"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param CellularGatewayPortForwardingRulesArgs args: The arguments to use to populate this resource's properties.

@@ -23,6 +23,7 @@ class SamlArgs:
                  enabled: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a Saml resource.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[_builtins.bool] enabled: Toggle depicting if SAML SSO settings are enabled
         """
@@ -62,6 +63,7 @@ class _SamlState:
                  organization_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering Saml resources.
+
         :param pulumi.Input[_builtins.bool] enabled: Toggle depicting if SAML SSO settings are enabled
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         """
@@ -123,6 +125,7 @@ class Saml(pulumi.CustomResource):
         $ pulumi import meraki:organizations/saml:Saml example "organization_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] enabled: Toggle depicting if SAML SSO settings are enabled
@@ -152,6 +155,7 @@ class Saml(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:organizations/saml:Saml example "organization_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SamlArgs args: The arguments to use to populate this resource's properties.

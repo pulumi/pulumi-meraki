@@ -25,6 +25,7 @@ class LicensesMoveArgs:
                  parameters: pulumi.Input['LicensesMoveParametersArgs']):
         """
         The set of arguments for constructing a LicensesMove resource.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         """
         pulumi.set(__self__, "organization_id", organization_id)
@@ -60,6 +61,7 @@ class _LicensesMoveState:
                  parameters: Optional[pulumi.Input['LicensesMoveParametersArgs']] = None):
         """
         Input properties used for looking up and filtering LicensesMove resources.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         """
         if item is not None:
@@ -131,6 +133,7 @@ class LicensesMove(pulumi.CustomResource):
         pulumi.export("merakiOrganizationsLicensesMoveExample", example)
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
@@ -162,6 +165,7 @@ class LicensesMove(pulumi.CustomResource):
             })
         pulumi.export("merakiOrganizationsLicensesMoveExample", example)
         ```
+
 
         :param str resource_name: The name of the resource.
         :param LicensesMoveArgs args: The arguments to use to populate this resource's properties.

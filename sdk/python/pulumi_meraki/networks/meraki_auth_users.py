@@ -32,6 +32,7 @@ class MerakiAuthUsersArgs:
                  password: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a MerakiAuthUsers resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] account_type: Authorization type for user.
         :param pulumi.Input[Sequence[pulumi.Input['MerakiAuthUsersAuthorizationArgs']]] authorizations: User authorization info
@@ -184,6 +185,7 @@ class _MerakiAuthUsersState:
                  password: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering MerakiAuthUsers resources.
+
         :param pulumi.Input[_builtins.str] account_type: Authorization type for user.
         :param pulumi.Input[Sequence[pulumi.Input['MerakiAuthUsersAuthorizationArgs']]] authorizations: User authorization info
         :param pulumi.Input[_builtins.str] created_at: Creation time of the user
@@ -381,6 +383,7 @@ class MerakiAuthUsers(pulumi.CustomResource):
         $ pulumi import meraki:networks/merakiAuthUsers:MerakiAuthUsers example "meraki_auth_user_id,network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] account_type: Authorization type for user.
@@ -426,6 +429,7 @@ class MerakiAuthUsers(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/merakiAuthUsers:MerakiAuthUsers example "meraki_auth_user_id,network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param MerakiAuthUsersArgs args: The arguments to use to populate this resource's properties.

@@ -25,6 +25,7 @@ class NetworksCombineArgs:
                  parameters: pulumi.Input['NetworksCombineParametersArgs']):
         """
         The set of arguments for constructing a NetworksCombine resource.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         """
         pulumi.set(__self__, "organization_id", organization_id)
@@ -60,6 +61,7 @@ class _NetworksCombineState:
                  parameters: Optional[pulumi.Input['NetworksCombineParametersArgs']] = None):
         """
         Input properties used for looking up and filtering NetworksCombine resources.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         """
         if item is not None:
@@ -132,6 +134,7 @@ class NetworksCombine(pulumi.CustomResource):
         pulumi.export("merakiOrganizationsNetworksCombineExample", example)
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
@@ -164,6 +167,7 @@ class NetworksCombine(pulumi.CustomResource):
             })
         pulumi.export("merakiOrganizationsNetworksCombineExample", example)
         ```
+
 
         :param str resource_name: The name of the resource.
         :param NetworksCombineArgs args: The arguments to use to populate this resource's properties.

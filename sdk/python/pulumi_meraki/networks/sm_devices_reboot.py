@@ -25,6 +25,7 @@ class SmDevicesRebootArgs:
                  parameters: pulumi.Input['SmDevicesRebootParametersArgs']):
         """
         The set of arguments for constructing a SmDevicesReboot resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         """
         pulumi.set(__self__, "network_id", network_id)
@@ -60,6 +61,7 @@ class _SmDevicesRebootState:
                  parameters: Optional[pulumi.Input['SmDevicesRebootParametersArgs']] = None):
         """
         Input properties used for looking up and filtering SmDevicesReboot resources.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         """
         if item is not None:
@@ -145,6 +147,7 @@ class SmDevicesReboot(pulumi.CustomResource):
         pulumi.export("merakiNetworksSmDevicesRebootExample", example)
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -190,6 +193,7 @@ class SmDevicesReboot(pulumi.CustomResource):
             })
         pulumi.export("merakiNetworksSmDevicesRebootExample", example)
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SmDevicesRebootArgs args: The arguments to use to populate this resource's properties.

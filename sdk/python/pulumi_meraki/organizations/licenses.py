@@ -26,6 +26,7 @@ class LicensesArgs:
                  device_serial: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a Licenses resource.
+
         :param pulumi.Input[_builtins.str] license_id: licenseId path parameter. License ID
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[_builtins.str] device_serial: Serial number of the device the license is assigned to
@@ -93,6 +94,7 @@ class _LicensesState:
                  total_duration_in_days: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering Licenses resources.
+
         :param pulumi.Input[_builtins.str] activation_date: The date the license started burning
         :param pulumi.Input[_builtins.str] claim_date: The date the license was claimed into the organization
         :param pulumi.Input[_builtins.str] device_serial: Serial number of the device the license is assigned to
@@ -366,6 +368,7 @@ class Licenses(pulumi.CustomResource):
         $ pulumi import meraki:organizations/licenses:Licenses example "license_id,organization_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device_serial: Serial number of the device the license is assigned to
@@ -397,6 +400,7 @@ class Licenses(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:organizations/licenses:Licenses example "license_id,organization_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param LicensesArgs args: The arguments to use to populate this resource's properties.

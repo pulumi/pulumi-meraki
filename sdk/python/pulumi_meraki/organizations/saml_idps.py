@@ -25,6 +25,7 @@ class SamlIdpsArgs:
                  x509cert_sha1_fingerprint: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a SamlIdps resource.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[_builtins.str] idp_id: ID associated with the SAML Identity Provider (IdP)
         :param pulumi.Input[_builtins.str] slo_logout_url: Dashboard will redirect users to this URL when they sign out.
@@ -97,6 +98,7 @@ class _SamlIdpsState:
                  x509cert_sha1_fingerprint: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SamlIdps resources.
+
         :param pulumi.Input[_builtins.str] consumer_url: URL that is consuming SAML Identity Provider (IdP)
         :param pulumi.Input[_builtins.str] idp_id: ID associated with the SAML Identity Provider (IdP)
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
@@ -206,6 +208,7 @@ class SamlIdps(pulumi.CustomResource):
         $ pulumi import meraki:organizations/samlIdps:SamlIdps example "idp_id,organization_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] idp_id: ID associated with the SAML Identity Provider (IdP)
@@ -238,6 +241,7 @@ class SamlIdps(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:organizations/samlIdps:SamlIdps example "idp_id,organization_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SamlIdpsArgs args: The arguments to use to populate this resource's properties.

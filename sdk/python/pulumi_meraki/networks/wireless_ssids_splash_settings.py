@@ -41,6 +41,7 @@ class WirelessSsidsSplashSettingsArgs:
                  welcome_message: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a WirelessSsidsSplashSettings resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] number: number path parameter.
         :param pulumi.Input[_builtins.bool] allow_simultaneous_logins: Whether or not to allow simultaneous logins from different devices.
@@ -338,6 +339,7 @@ class _WirelessSsidsSplashSettingsState:
                  welcome_message: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering WirelessSsidsSplashSettings resources.
+
         :param pulumi.Input[_builtins.bool] allow_simultaneous_logins: Whether or not to allow simultaneous logins from different devices.
         :param pulumi.Input['WirelessSsidsSplashSettingsBillingArgs'] billing: Details associated with billing splash
         :param pulumi.Input[_builtins.bool] block_all_traffic_before_sign_on: How restricted allowing traffic should be. If true, all traffic types are blocked until the splash page is acknowledged. If false, all non-HTTP traffic is allowed before the splash page is acknowledged.
@@ -753,6 +755,7 @@ class WirelessSsidsSplashSettings(pulumi.CustomResource):
         $ pulumi import meraki:networks/wirelessSsidsSplashSettings:WirelessSsidsSplashSettings example "network_id,number"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] allow_simultaneous_logins: Whether or not to allow simultaneous logins from different devices.
@@ -851,6 +854,7 @@ class WirelessSsidsSplashSettings(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/wirelessSsidsSplashSettings:WirelessSsidsSplashSettings example "network_id,number"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param WirelessSsidsSplashSettingsArgs args: The arguments to use to populate this resource's properties.

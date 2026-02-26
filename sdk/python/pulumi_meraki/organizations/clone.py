@@ -25,6 +25,7 @@ class CloneArgs:
                  parameters: pulumi.Input['CloneParametersArgs']):
         """
         The set of arguments for constructing a Clone resource.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         """
         pulumi.set(__self__, "organization_id", organization_id)
@@ -60,6 +61,7 @@ class _CloneState:
                  parameters: Optional[pulumi.Input['CloneParametersArgs']] = None):
         """
         Input properties used for looking up and filtering Clone resources.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         """
         if item is not None:
@@ -127,6 +129,7 @@ class Clone(pulumi.CustomResource):
         pulumi.export("merakiOrganizationsCloneExample", example)
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
@@ -154,6 +157,7 @@ class Clone(pulumi.CustomResource):
             })
         pulumi.export("merakiOrganizationsCloneExample", example)
         ```
+
 
         :param str resource_name: The name of the resource.
         :param CloneArgs args: The arguments to use to populate this resource's properties.

@@ -22,6 +22,7 @@ class ApplianceWarmSpareSwapArgs:
                  network_id: pulumi.Input[_builtins.str]):
         """
         The set of arguments for constructing a ApplianceWarmSpareSwap resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         """
         pulumi.set(__self__, "network_id", network_id)
@@ -45,6 +46,7 @@ class _ApplianceWarmSpareSwapState:
                  network_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ApplianceWarmSpareSwap resources.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         """
         if network_id is not None:
@@ -85,6 +87,7 @@ class ApplianceWarmSpareSwap(pulumi.CustomResource):
         pulumi.export("merakiNetworksApplianceWarmSpareSwapExample", example)
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -108,6 +111,7 @@ class ApplianceWarmSpareSwap(pulumi.CustomResource):
         example = meraki.networks.ApplianceWarmSpareSwap("example", network_id="string")
         pulumi.export("merakiNetworksApplianceWarmSpareSwapExample", example)
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ApplianceWarmSpareSwapArgs args: The arguments to use to populate this resource's properties.

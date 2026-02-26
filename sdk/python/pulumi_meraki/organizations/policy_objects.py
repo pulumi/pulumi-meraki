@@ -31,6 +31,7 @@ class PolicyObjectsArgs:
                  type: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a PolicyObjects resource.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[_builtins.str] category: Category of a policy object (one of: adaptivePolicy, network)
         :param pulumi.Input[_builtins.str] cidr: CIDR Value of a policy object (e.g. 10.11.12.1/24")
@@ -201,6 +202,7 @@ class _PolicyObjectsState:
                  updated_at: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering PolicyObjects resources.
+
         :param pulumi.Input[_builtins.str] category: Category of a policy object (one of: adaptivePolicy, network)
         :param pulumi.Input[_builtins.str] cidr: CIDR Value of a policy object (e.g. 10.11.12.1/24")
         :param pulumi.Input[_builtins.str] fqdn: Fully qualified domain name of policy object (e.g. "example.com")
@@ -430,6 +432,7 @@ class PolicyObjects(pulumi.CustomResource):
         $ pulumi import meraki:organizations/policyObjects:PolicyObjects example "organization_id,policy_object_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] category: Category of a policy object (one of: adaptivePolicy, network)
@@ -474,6 +477,7 @@ class PolicyObjects(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:organizations/policyObjects:PolicyObjects example "organization_id,policy_object_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param PolicyObjectsArgs args: The arguments to use to populate this resource's properties.

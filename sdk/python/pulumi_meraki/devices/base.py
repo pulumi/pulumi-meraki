@@ -33,6 +33,7 @@ class BaseArgs:
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a Base resource.
+
         :param pulumi.Input[_builtins.str] serial: Serial number of the device
         :param pulumi.Input[_builtins.str] address: Physical address of the device
         :param pulumi.Input[_builtins.str] floor_plan_id: The floor plan to associate to this device. null disassociates the device from the floorplan.
@@ -208,6 +209,7 @@ class _BaseState:
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         Input properties used for looking up and filtering Base resources.
+
         :param pulumi.Input[_builtins.str] address: Physical address of the device
         :param pulumi.Input[Sequence[pulumi.Input['BaseDetailArgs']]] details: Additional device information
         :param pulumi.Input[_builtins.str] firmware: Firmware version of the device
@@ -520,6 +522,7 @@ class Base(pulumi.CustomResource):
         $ pulumi import meraki:devices/base:base example "organization_id,serial"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] address: Physical address of the device
@@ -560,6 +563,7 @@ class Base(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:devices/base:base example "organization_id,serial"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param BaseArgs args: The arguments to use to populate this resource's properties.

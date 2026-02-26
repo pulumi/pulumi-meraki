@@ -28,6 +28,7 @@ class WirelessSsidsSchedulesArgs:
                  ranges_in_seconds: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsSchedulesRangesInSecondArgs']]]] = None):
         """
         The set of arguments for constructing a WirelessSsidsSchedules resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] number: number path parameter.
         :param pulumi.Input[_builtins.bool] enabled: If true, the SSID outage schedule is enabled.
@@ -114,6 +115,7 @@ class _WirelessSsidsSchedulesState:
                  ranges_in_seconds: Optional[pulumi.Input[Sequence[pulumi.Input['WirelessSsidsSchedulesRangesInSecondArgs']]]] = None):
         """
         Input properties used for looking up and filtering WirelessSsidsSchedules resources.
+
         :param pulumi.Input[_builtins.bool] enabled: If true, the SSID outage schedule is enabled.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] number: number path parameter.
@@ -230,6 +232,7 @@ class WirelessSsidsSchedules(pulumi.CustomResource):
         $ pulumi import meraki:networks/wirelessSsidsSchedules:WirelessSsidsSchedules example "network_id,number"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] enabled: If true, the SSID outage schedule is enabled.
@@ -269,6 +272,7 @@ class WirelessSsidsSchedules(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/wirelessSsidsSchedules:WirelessSsidsSchedules example "network_id,number"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param WirelessSsidsSchedulesArgs args: The arguments to use to populate this resource's properties.

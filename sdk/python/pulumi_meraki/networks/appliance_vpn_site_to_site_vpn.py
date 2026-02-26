@@ -27,6 +27,7 @@ class ApplianceVpnSiteToSiteVpnArgs:
                  subnets: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVpnSiteToSiteVpnSubnetArgs']]]] = None):
         """
         The set of arguments for constructing a ApplianceVpnSiteToSiteVpn resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input['ApplianceVpnSiteToSiteVpnHubArgs']]] hubs: The list of VPN hubs, in order of preference.
         :param pulumi.Input[_builtins.str] mode: The site-to-site VPN mode.
@@ -98,6 +99,7 @@ class _ApplianceVpnSiteToSiteVpnState:
                  subnets: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceVpnSiteToSiteVpnSubnetArgs']]]] = None):
         """
         Input properties used for looking up and filtering ApplianceVpnSiteToSiteVpn resources.
+
         :param pulumi.Input[Sequence[pulumi.Input['ApplianceVpnSiteToSiteVpnHubArgs']]] hubs: The list of VPN hubs, in order of preference.
         :param pulumi.Input[_builtins.str] mode: The site-to-site VPN mode.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -199,6 +201,7 @@ class ApplianceVpnSiteToSiteVpn(pulumi.CustomResource):
         $ pulumi import meraki:networks/applianceVpnSiteToSiteVpn:ApplianceVpnSiteToSiteVpn example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceVpnSiteToSiteVpnHubArgs', 'ApplianceVpnSiteToSiteVpnHubArgsDict']]]] hubs: The list of VPN hubs, in order of preference.
@@ -238,6 +241,7 @@ class ApplianceVpnSiteToSiteVpn(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/applianceVpnSiteToSiteVpn:ApplianceVpnSiteToSiteVpn example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ApplianceVpnSiteToSiteVpnArgs args: The arguments to use to populate this resource's properties.

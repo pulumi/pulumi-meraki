@@ -29,6 +29,7 @@ class AdaptivePolicyAclsArgs:
                  rules: Optional[pulumi.Input[Sequence[pulumi.Input['AdaptivePolicyAclsRuleArgs']]]] = None):
         """
         The set of arguments for constructing a AdaptivePolicyAcls resource.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[_builtins.str] acl_id: ID of the adaptive policy ACL
         :param pulumi.Input[_builtins.str] description: Description of the adaptive policy ACL
@@ -134,6 +135,7 @@ class _AdaptivePolicyAclsState:
                  updated_at: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering AdaptivePolicyAcls resources.
+
         :param pulumi.Input[_builtins.str] acl_id: ID of the adaptive policy ACL
         :param pulumi.Input[_builtins.str] created_at: When the adaptive policy ACL was created
         :param pulumi.Input[_builtins.str] description: Description of the adaptive policy ACL
@@ -297,6 +299,7 @@ class AdaptivePolicyAcls(pulumi.CustomResource):
         $ pulumi import meraki:organizations/adaptivePolicyAcls:AdaptivePolicyAcls example "acl_id,organization_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] acl_id: ID of the adaptive policy ACL
@@ -338,6 +341,7 @@ class AdaptivePolicyAcls(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:organizations/adaptivePolicyAcls:AdaptivePolicyAcls example "acl_id,organization_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param AdaptivePolicyAclsArgs args: The arguments to use to populate this resource's properties.

@@ -25,6 +25,7 @@ class CellularGatewayDhcpArgs:
                  dns_nameservers: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a CellularGatewayDhcp resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] dhcp_lease_time: DHCP Lease time for all MG in the network.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] dns_custom_nameservers: List of fixed IPs representing the the DNS Name servers when the mode is 'custom'.
@@ -96,6 +97,7 @@ class _CellularGatewayDhcpState:
                  network_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering CellularGatewayDhcp resources.
+
         :param pulumi.Input[_builtins.str] dhcp_lease_time: DHCP Lease time for all MG in the network.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] dns_custom_nameservers: List of fixed IPs representing the the DNS Name servers when the mode is 'custom'.
         :param pulumi.Input[_builtins.str] dns_nameservers: DNS name servers mode for all MG in the network.
@@ -194,6 +196,7 @@ class CellularGatewayDhcp(pulumi.CustomResource):
         $ pulumi import meraki:networks/cellularGatewayDhcp:CellularGatewayDhcp example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] dhcp_lease_time: DHCP Lease time for all MG in the network.
@@ -230,6 +233,7 @@ class CellularGatewayDhcp(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/cellularGatewayDhcp:CellularGatewayDhcp example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param CellularGatewayDhcpArgs args: The arguments to use to populate this resource's properties.

@@ -25,6 +25,7 @@ class ApplianceFirewallOneToManyNatRulesArgs:
                  rules: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallOneToManyNatRulesRuleArgs']]]] = None):
         """
         The set of arguments for constructing a ApplianceFirewallOneToManyNatRules resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallOneToManyNatRulesRuleArgs']]] rules: An array of 1:Many nat rules
         """
@@ -64,6 +65,7 @@ class _ApplianceFirewallOneToManyNatRulesState:
                  rules: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallOneToManyNatRulesRuleArgs']]]] = None):
         """
         Input properties used for looking up and filtering ApplianceFirewallOneToManyNatRules resources.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallOneToManyNatRulesRuleArgs']]] rules: An array of 1:Many nat rules
         """
@@ -136,6 +138,7 @@ class ApplianceFirewallOneToManyNatRules(pulumi.CustomResource):
         $ pulumi import meraki:networks/applianceFirewallOneToManyNatRules:ApplianceFirewallOneToManyNatRules example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -176,6 +179,7 @@ class ApplianceFirewallOneToManyNatRules(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/applianceFirewallOneToManyNatRules:ApplianceFirewallOneToManyNatRules example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ApplianceFirewallOneToManyNatRulesArgs args: The arguments to use to populate this resource's properties.

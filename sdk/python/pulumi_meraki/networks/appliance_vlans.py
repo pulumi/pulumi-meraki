@@ -44,6 +44,7 @@ class ApplianceVlansArgs:
                  vpn_nat_subnet: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a ApplianceVlans resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] vlan_id: The VLAN ID of the VLAN
         :param pulumi.Input[_builtins.str] appliance_ip: The local IP of the appliance on the VLAN
@@ -387,6 +388,7 @@ class _ApplianceVlansState:
                  vpn_nat_subnet: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ApplianceVlans resources.
+
         :param pulumi.Input[_builtins.str] appliance_ip: The local IP of the appliance on the VLAN
         :param pulumi.Input[_builtins.str] cidr: CIDR of the pool of subnets. Applicable only for template network. Each network bound to the template will automatically pick a subnet from this pool to build its own VLAN.
         :param pulumi.Input[_builtins.str] dhcp_boot_filename: DHCP boot option for boot filename
@@ -789,6 +791,7 @@ class ApplianceVlans(pulumi.CustomResource):
         $ pulumi import meraki:networks/applianceVlans:ApplianceVlans example "network_id,vlan_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] appliance_ip: The local IP of the appliance on the VLAN
@@ -859,6 +862,7 @@ class ApplianceVlans(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/applianceVlans:ApplianceVlans example "network_id,vlan_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ApplianceVlansArgs args: The arguments to use to populate this resource's properties.

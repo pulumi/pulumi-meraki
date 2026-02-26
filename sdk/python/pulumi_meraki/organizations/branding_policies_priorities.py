@@ -23,6 +23,7 @@ class BrandingPoliciesPrioritiesArgs:
                  branding_policy_ids: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a BrandingPoliciesPriorities resource.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] branding_policy_ids: An ordered list of branding policy IDs that determines the priority order of how to apply the policies
         """
@@ -62,6 +63,7 @@ class _BrandingPoliciesPrioritiesState:
                  organization_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering BrandingPoliciesPriorities resources.
+
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] branding_policy_ids: An ordered list of branding policy IDs that determines the priority order of how to apply the policies
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         """
@@ -127,6 +129,7 @@ class BrandingPoliciesPriorities(pulumi.CustomResource):
         $ pulumi import meraki:organizations/brandingPoliciesPriorities:BrandingPoliciesPriorities example "organization_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] branding_policy_ids: An ordered list of branding policy IDs that determines the priority order of how to apply the policies
@@ -160,6 +163,7 @@ class BrandingPoliciesPriorities(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:organizations/brandingPoliciesPriorities:BrandingPoliciesPriorities example "organization_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param BrandingPoliciesPrioritiesArgs args: The arguments to use to populate this resource's properties.

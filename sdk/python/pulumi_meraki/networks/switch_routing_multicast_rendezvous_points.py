@@ -25,6 +25,7 @@ class SwitchRoutingMulticastRendezvousPointsArgs:
                  rendezvous_point_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a SwitchRoutingMulticastRendezvousPoints resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] interface_ip: The IP address of the interface where the RP needs to be created.
         :param pulumi.Input[_builtins.str] multicast_group: 'Any', or the IP address of a multicast group
@@ -98,6 +99,7 @@ class _SwitchRoutingMulticastRendezvousPointsState:
                  serial: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SwitchRoutingMulticastRendezvousPoints resources.
+
         :param pulumi.Input[_builtins.str] interface_ip: The IP address of the interface where the RP needs to be created.
         :param pulumi.Input[_builtins.str] multicast_group: 'Any', or the IP address of a multicast group
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -214,6 +216,7 @@ class SwitchRoutingMulticastRendezvousPoints(pulumi.CustomResource):
         $ pulumi import meraki:networks/switchRoutingMulticastRendezvousPoints:SwitchRoutingMulticastRendezvousPoints example "network_id,rendezvous_point_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] interface_ip: The IP address of the interface where the RP needs to be created.
@@ -246,6 +249,7 @@ class SwitchRoutingMulticastRendezvousPoints(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/switchRoutingMulticastRendezvousPoints:SwitchRoutingMulticastRendezvousPoints example "network_id,rendezvous_point_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SwitchRoutingMulticastRendezvousPointsArgs args: The arguments to use to populate this resource's properties.

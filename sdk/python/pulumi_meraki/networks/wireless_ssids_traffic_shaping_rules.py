@@ -28,6 +28,7 @@ class WirelessSsidsTrafficShapingRulesArgs:
                  traffic_shaping_enabled: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a WirelessSsidsTrafficShapingRules resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] number: number path parameter.
         :param pulumi.Input[_builtins.bool] default_rules_enabled: Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network's traffic shaping page. Note that default rules count against the rule limit of 8.
@@ -118,6 +119,7 @@ class _WirelessSsidsTrafficShapingRulesState:
                  traffic_shaping_enabled: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering WirelessSsidsTrafficShapingRules resources.
+
         :param pulumi.Input[_builtins.bool] default_rules_enabled: Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network's traffic shaping page. Note that default rules count against the rule limit of 8.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] number: number path parameter.
@@ -248,6 +250,7 @@ class WirelessSsidsTrafficShapingRules(pulumi.CustomResource):
         $ pulumi import meraki:networks/wirelessSsidsTrafficShapingRules:WirelessSsidsTrafficShapingRules example "network_id,number"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] default_rules_enabled: Whether default traffic shaping rules are enabled (true) or disabled (false). There are 4 default rules, which can be seen on your network's traffic shaping page. Note that default rules count against the rule limit of 8.
@@ -299,6 +302,7 @@ class WirelessSsidsTrafficShapingRules(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/wirelessSsidsTrafficShapingRules:WirelessSsidsTrafficShapingRules example "network_id,number"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param WirelessSsidsTrafficShapingRulesArgs args: The arguments to use to populate this resource's properties.

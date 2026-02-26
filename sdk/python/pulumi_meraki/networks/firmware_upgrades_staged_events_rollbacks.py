@@ -25,6 +25,7 @@ class FirmwareUpgradesStagedEventsRollbacksArgs:
                  parameters: pulumi.Input['FirmwareUpgradesStagedEventsRollbacksParametersArgs']):
         """
         The set of arguments for constructing a FirmwareUpgradesStagedEventsRollbacks resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         """
         pulumi.set(__self__, "network_id", network_id)
@@ -60,6 +61,7 @@ class _FirmwareUpgradesStagedEventsRollbacksState:
                  parameters: Optional[pulumi.Input['FirmwareUpgradesStagedEventsRollbacksParametersArgs']] = None):
         """
         Input properties used for looking up and filtering FirmwareUpgradesStagedEventsRollbacks resources.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         """
         if item is not None:
@@ -138,6 +140,7 @@ class FirmwareUpgradesStagedEventsRollbacks(pulumi.CustomResource):
         pulumi.export("merakiNetworksFirmwareUpgradesStagedEventsRollbacksExample", example)
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -176,6 +179,7 @@ class FirmwareUpgradesStagedEventsRollbacks(pulumi.CustomResource):
             })
         pulumi.export("merakiNetworksFirmwareUpgradesStagedEventsRollbacksExample", example)
         ```
+
 
         :param str resource_name: The name of the resource.
         :param FirmwareUpgradesStagedEventsRollbacksArgs args: The arguments to use to populate this resource's properties.

@@ -29,6 +29,7 @@ class CameraQualityAndRetentionArgs:
                  restricted_bandwidth_mode_enabled: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a CameraQualityAndRetention resource.
+
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         :param pulumi.Input[_builtins.bool] audio_recording_enabled: Boolean indicating if audio recording is enabled(true) or disabled(false) on the camera
         :param pulumi.Input[_builtins.bool] motion_based_retention_enabled: Boolean indicating if motion-based retention is enabled(true) or disabled(false) on the camera.
@@ -164,6 +165,7 @@ class _CameraQualityAndRetentionState:
                  serial: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering CameraQualityAndRetention resources.
+
         :param pulumi.Input[_builtins.bool] audio_recording_enabled: Boolean indicating if audio recording is enabled(true) or disabled(false) on the camera
         :param pulumi.Input[_builtins.bool] motion_based_retention_enabled: Boolean indicating if motion-based retention is enabled(true) or disabled(false) on the camera.
         :param pulumi.Input[_builtins.int] motion_detector_version: The version of the motion detector that will be used by the camera. Only applies to Gen 2 cameras. Defaults to v2.
@@ -327,6 +329,7 @@ class CameraQualityAndRetention(pulumi.CustomResource):
         $ pulumi import meraki:devices/cameraQualityAndRetention:CameraQualityAndRetention example "serial"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] audio_recording_enabled: Boolean indicating if audio recording is enabled(true) or disabled(false) on the camera
@@ -368,6 +371,7 @@ class CameraQualityAndRetention(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:devices/cameraQualityAndRetention:CameraQualityAndRetention example "serial"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param CameraQualityAndRetentionArgs args: The arguments to use to populate this resource's properties.

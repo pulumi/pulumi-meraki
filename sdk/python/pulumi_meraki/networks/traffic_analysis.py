@@ -26,6 +26,7 @@ class TrafficAnalysisArgs:
                  mode: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a TrafficAnalysis resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input['TrafficAnalysisCustomPieChartItemArgs']]] custom_pie_chart_items: The list of items that make up the custom pie chart for traffic reporting.
         :param pulumi.Input[_builtins.str] mode: The traffic analysis mode for the network. Can be one of 'disabled' (do not collect traffic types),
@@ -83,6 +84,7 @@ class _TrafficAnalysisState:
                  network_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering TrafficAnalysis resources.
+
         :param pulumi.Input[Sequence[pulumi.Input['TrafficAnalysisCustomPieChartItemArgs']]] custom_pie_chart_items: The list of items that make up the custom pie chart for traffic reporting.
         :param pulumi.Input[_builtins.str] mode: The traffic analysis mode for the network. Can be one of 'disabled' (do not collect traffic types),
                'basic' (collect generic traffic categories), or 'detailed' (collect destination hostnames).
@@ -167,6 +169,7 @@ class TrafficAnalysis(pulumi.CustomResource):
         $ pulumi import meraki:networks/trafficAnalysis:TrafficAnalysis example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['TrafficAnalysisCustomPieChartItemArgs', 'TrafficAnalysisCustomPieChartItemArgsDict']]]] custom_pie_chart_items: The list of items that make up the custom pie chart for traffic reporting.
@@ -203,6 +206,7 @@ class TrafficAnalysis(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/trafficAnalysis:TrafficAnalysis example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param TrafficAnalysisArgs args: The arguments to use to populate this resource's properties.

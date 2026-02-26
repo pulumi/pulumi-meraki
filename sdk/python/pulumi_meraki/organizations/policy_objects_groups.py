@@ -26,6 +26,7 @@ class PolicyObjectsGroupsArgs:
                  policy_object_group_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a PolicyObjectsGroups resource.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[_builtins.str] category: Category of a policy object group (one of: NetworkObjectGroup, GeoLocationGroup, PortObjectGroup, ApplicationGroup)
         :param pulumi.Input[_builtins.str] name: A name for the group of network addresses, unique within the organization (alphanumeric, space, dash, or underscore characters only)
@@ -116,6 +117,7 @@ class _PolicyObjectsGroupsState:
                  updated_at: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering PolicyObjectsGroups resources.
+
         :param pulumi.Input[_builtins.str] category: Category of a policy object group (one of: NetworkObjectGroup, GeoLocationGroup, PortObjectGroup, ApplicationGroup)
         :param pulumi.Input[_builtins.str] name: A name for the group of network addresses, unique within the organization (alphanumeric, space, dash, or underscore characters only)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] object_ids: A list of Policy Object ID's that this NetworkObjectGroup should be associated to (note: these ID's will replace the existing associated Policy Objects)
@@ -260,6 +262,7 @@ class PolicyObjectsGroups(pulumi.CustomResource):
         $ pulumi import meraki:organizations/policyObjectsGroups:PolicyObjectsGroups example "organization_id,policy_object_group_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] category: Category of a policy object group (one of: NetworkObjectGroup, GeoLocationGroup, PortObjectGroup, ApplicationGroup)
@@ -294,6 +297,7 @@ class PolicyObjectsGroups(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:organizations/policyObjectsGroups:PolicyObjectsGroups example "organization_id,policy_object_group_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param PolicyObjectsGroupsArgs args: The arguments to use to populate this resource's properties.

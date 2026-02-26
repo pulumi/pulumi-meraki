@@ -25,6 +25,7 @@ class ClientsPolicyArgs:
                  group_policy_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a ClientsPolicy resource.
+
         :param pulumi.Input[_builtins.str] client_id: clientId path parameter. Client ID
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] device_policy: The name of the client's policy
@@ -96,6 +97,7 @@ class _ClientsPolicyState:
                  network_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ClientsPolicy resources.
+
         :param pulumi.Input[_builtins.str] client_id: clientId path parameter. Client ID
         :param pulumi.Input[_builtins.str] device_policy: The name of the client's policy
         :param pulumi.Input[_builtins.str] group_policy_id: The group policy identifier of the client
@@ -206,6 +208,7 @@ class ClientsPolicy(pulumi.CustomResource):
         $ pulumi import meraki:networks/clientsPolicy:ClientsPolicy example "client_id,network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] client_id: clientId path parameter. Client ID
@@ -239,6 +242,7 @@ class ClientsPolicy(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/clientsPolicy:ClientsPolicy example "client_id,network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ClientsPolicyArgs args: The arguments to use to populate this resource's properties.

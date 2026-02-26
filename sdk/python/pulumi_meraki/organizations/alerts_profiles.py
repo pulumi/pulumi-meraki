@@ -31,6 +31,7 @@ class AlertsProfilesArgs:
                  type: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a AlertsProfiles resource.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input['AlertsProfilesAlertConditionArgs'] alert_condition: The conditions that determine if the alert triggers
         :param pulumi.Input[_builtins.str] alert_config_id: alertConfigId path parameter. Alert config ID
@@ -166,6 +167,7 @@ class _AlertsProfilesState:
                  type: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering AlertsProfiles resources.
+
         :param pulumi.Input['AlertsProfilesAlertConditionArgs'] alert_condition: The conditions that determine if the alert triggers
         :param pulumi.Input[_builtins.str] alert_config_id: alertConfigId path parameter. Alert config ID
         :param pulumi.Input[_builtins.str] description: User supplied description of the alert
@@ -342,6 +344,7 @@ class AlertsProfiles(pulumi.CustomResource):
         $ pulumi import meraki:organizations/alertsProfiles:AlertsProfiles example "organization_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['AlertsProfilesAlertConditionArgs', 'AlertsProfilesAlertConditionArgsDict']] alert_condition: The conditions that determine if the alert triggers
@@ -396,6 +399,7 @@ class AlertsProfiles(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:organizations/alertsProfiles:AlertsProfiles example "organization_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param AlertsProfilesArgs args: The arguments to use to populate this resource's properties.

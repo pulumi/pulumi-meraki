@@ -32,6 +32,7 @@ class FloorPlansArgs:
                  top_right_corner: Optional[pulumi.Input['FloorPlansTopRightCornerArgs']] = None):
         """
         The set of arguments for constructing a FloorPlans resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input['FloorPlansBottomLeftCornerArgs'] bottom_left_corner: The longitude and latitude of the bottom left corner of your floor plan.
         :param pulumi.Input['FloorPlansBottomRightCornerArgs'] bottom_right_corner: The longitude and latitude of the bottom right corner of your floor plan.
@@ -190,6 +191,7 @@ class _FloorPlansState:
                  width: Optional[pulumi.Input[_builtins.float]] = None):
         """
         Input properties used for looking up and filtering FloorPlans resources.
+
         :param pulumi.Input['FloorPlansBottomLeftCornerArgs'] bottom_left_corner: The longitude and latitude of the bottom left corner of your floor plan.
         :param pulumi.Input['FloorPlansBottomRightCornerArgs'] bottom_right_corner: The longitude and latitude of the bottom right corner of your floor plan.
         :param pulumi.Input['FloorPlansCenterArgs'] center: The longitude and latitude of the center of your floor plan. The 'center' or two adjacent corners (e.g. 'topLeftCorner' and 'bottomLeftCorner') must be specified. If 'center' is specified, the floor plan is placed over that point with no rotation. If two adjacent corners are specified, the floor plan is rotated to line up with the two specified points. The aspect ratio of the floor plan's image is preserved regardless of which corners/center are specified. (This means if that more than two corners are specified, only two corners may be used to preserve the floor plan's aspect ratio.). No two points can have the same latitude, longitude pair.
@@ -489,6 +491,7 @@ class FloorPlans(pulumi.CustomResource):
         $ pulumi import meraki:networks/floorPlans:FloorPlans example "floor_plan_id,network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['FloorPlansBottomLeftCornerArgs', 'FloorPlansBottomLeftCornerArgsDict']] bottom_left_corner: The longitude and latitude of the bottom left corner of your floor plan.
@@ -546,6 +549,7 @@ class FloorPlans(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/floorPlans:FloorPlans example "floor_plan_id,network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param FloorPlansArgs args: The arguments to use to populate this resource's properties.

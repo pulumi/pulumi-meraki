@@ -29,6 +29,7 @@ class BaseArgs:
                  time_zone: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a Base resource.
+
         :param pulumi.Input[_builtins.str] organization_id: Organization ID
         :param pulumi.Input[_builtins.str] enrollment_string: Enrollment string for the network
         :param pulumi.Input[_builtins.str] name: Network name
@@ -166,6 +167,7 @@ class _BaseState:
                  url: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering Base resources.
+
         :param pulumi.Input[_builtins.str] enrollment_string: Enrollment string for the network
         :param pulumi.Input[_builtins.bool] is_bound_to_config_template: If the network is bound to a config template
         :param pulumi.Input[_builtins.str] name: Network name
@@ -364,6 +366,7 @@ class Base(pulumi.CustomResource):
         $ pulumi import meraki:networks/base:base example "network_id,organization_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] enrollment_string: Enrollment string for the network
@@ -410,6 +413,7 @@ class Base(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/base:base example "network_id,organization_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param BaseArgs args: The arguments to use to populate this resource's properties.

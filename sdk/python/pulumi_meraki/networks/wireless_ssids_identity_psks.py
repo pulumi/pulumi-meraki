@@ -28,6 +28,7 @@ class WirelessSsidsIdentityPsksArgs:
                  passphrase: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a WirelessSsidsIdentityPsks resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] number: number path parameter.
         :param pulumi.Input[_builtins.str] expires_at: Timestamp for when the Identity PSK expires, or 'null' to never expire
@@ -148,6 +149,7 @@ class _WirelessSsidsIdentityPsksState:
                  wifi_personal_network_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering WirelessSsidsIdentityPsks resources.
+
         :param pulumi.Input[_builtins.str] email: The email associated with the System's Manager User
         :param pulumi.Input[_builtins.str] expires_at: Timestamp for when the Identity PSK expires, or 'null' to never expire
         :param pulumi.Input[_builtins.str] group_policy_id: The group policy to be applied to clients
@@ -323,6 +325,7 @@ class WirelessSsidsIdentityPsks(pulumi.CustomResource):
         $ pulumi import meraki:networks/wirelessSsidsIdentityPsks:WirelessSsidsIdentityPsks example "identity_psk_id,network_id,number"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] expires_at: Timestamp for when the Identity PSK expires, or 'null' to never expire
@@ -361,6 +364,7 @@ class WirelessSsidsIdentityPsks(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/wirelessSsidsIdentityPsks:WirelessSsidsIdentityPsks example "identity_psk_id,network_id,number"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param WirelessSsidsIdentityPsksArgs args: The arguments to use to populate this resource's properties.

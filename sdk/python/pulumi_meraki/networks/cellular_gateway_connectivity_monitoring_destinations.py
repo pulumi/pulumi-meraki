@@ -25,6 +25,7 @@ class CellularGatewayConnectivityMonitoringDestinationsArgs:
                  destinations: Optional[pulumi.Input[Sequence[pulumi.Input['CellularGatewayConnectivityMonitoringDestinationsDestinationArgs']]]] = None):
         """
         The set of arguments for constructing a CellularGatewayConnectivityMonitoringDestinations resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input['CellularGatewayConnectivityMonitoringDestinationsDestinationArgs']]] destinations: The list of connectivity monitoring destinations
         """
@@ -64,6 +65,7 @@ class _CellularGatewayConnectivityMonitoringDestinationsState:
                  network_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering CellularGatewayConnectivityMonitoringDestinations resources.
+
         :param pulumi.Input[Sequence[pulumi.Input['CellularGatewayConnectivityMonitoringDestinationsDestinationArgs']]] destinations: The list of connectivity monitoring destinations
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         """
@@ -129,6 +131,7 @@ class CellularGatewayConnectivityMonitoringDestinations(pulumi.CustomResource):
         $ pulumi import meraki:networks/cellularGatewayConnectivityMonitoringDestinations:CellularGatewayConnectivityMonitoringDestinations example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['CellularGatewayConnectivityMonitoringDestinationsDestinationArgs', 'CellularGatewayConnectivityMonitoringDestinationsDestinationArgsDict']]]] destinations: The list of connectivity monitoring destinations
@@ -162,6 +165,7 @@ class CellularGatewayConnectivityMonitoringDestinations(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/cellularGatewayConnectivityMonitoringDestinations:CellularGatewayConnectivityMonitoringDestinations example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param CellularGatewayConnectivityMonitoringDestinationsArgs args: The arguments to use to populate this resource's properties.

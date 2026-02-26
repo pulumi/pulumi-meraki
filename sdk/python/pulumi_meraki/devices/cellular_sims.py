@@ -26,6 +26,7 @@ class CellularSimsArgs:
                  sims: Optional[pulumi.Input[Sequence[pulumi.Input['CellularSimsSimArgs']]]] = None):
         """
         The set of arguments for constructing a CellularSims resource.
+
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         :param pulumi.Input['CellularSimsSimFailoverArgs'] sim_failover: SIM Failover settings.
         :param pulumi.Input[Sequence[pulumi.Input['CellularSimsSimArgs']]] sims: List of SIMs. If a SIM was previously configured and not specified in this request, it will remain unchanged.
@@ -81,6 +82,7 @@ class _CellularSimsState:
                  sims: Optional[pulumi.Input[Sequence[pulumi.Input['CellularSimsSimArgs']]]] = None):
         """
         Input properties used for looking up and filtering CellularSims resources.
+
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         :param pulumi.Input['CellularSimsSimFailoverArgs'] sim_failover: SIM Failover settings.
         :param pulumi.Input[Sequence[pulumi.Input['CellularSimsSimArgs']]] sims: List of SIMs. If a SIM was previously configured and not specified in this request, it will remain unchanged.
@@ -156,6 +158,7 @@ class CellularSims(pulumi.CustomResource):
         $ pulumi import meraki:devices/cellularSims:CellularSims example "serial"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
@@ -184,6 +187,7 @@ class CellularSims(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:devices/cellularSims:CellularSims example "serial"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param CellularSimsArgs args: The arguments to use to populate this resource's properties.

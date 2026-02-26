@@ -37,6 +37,7 @@ class LoginSecurityArgs:
                  password_expiration_days: Optional[pulumi.Input[_builtins.int]] = None):
         """
         The set of arguments for constructing a LoginSecurity resource.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[_builtins.int] account_lockout_attempts: Number of consecutive failed login attempts after which users' accounts will be locked.
         :param pulumi.Input['LoginSecurityApiAuthenticationArgs'] api_authentication: Details for indicating whether organization will restrict access to API (but not Dashboard) to certain IP addresses.
@@ -268,6 +269,7 @@ class _LoginSecurityState:
                  password_expiration_days: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering LoginSecurity resources.
+
         :param pulumi.Input[_builtins.int] account_lockout_attempts: Number of consecutive failed login attempts after which users' accounts will be locked.
         :param pulumi.Input['LoginSecurityApiAuthenticationArgs'] api_authentication: Details for indicating whether organization will restrict access to API (but not Dashboard) to certain IP addresses.
         :param pulumi.Input[_builtins.bool] enforce_account_lockout: Boolean indicating whether users' Dashboard accounts will be locked out after a specified number of consecutive failed login attempts.
@@ -544,6 +546,7 @@ class LoginSecurity(pulumi.CustomResource):
         $ pulumi import meraki:organizations/loginSecurity:LoginSecurity example "organization_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.int] account_lockout_attempts: Number of consecutive failed login attempts after which users' accounts will be locked.
@@ -608,6 +611,7 @@ class LoginSecurity(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:organizations/loginSecurity:LoginSecurity example "organization_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param LoginSecurityArgs args: The arguments to use to populate this resource's properties.

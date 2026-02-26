@@ -25,6 +25,7 @@ class ApplianceFirewallPortForwardingRulesArgs:
                  rules: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallPortForwardingRulesRuleArgs']]]] = None):
         """
         The set of arguments for constructing a ApplianceFirewallPortForwardingRules resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallPortForwardingRulesRuleArgs']]] rules: An array of port forwarding params
         """
@@ -64,6 +65,7 @@ class _ApplianceFirewallPortForwardingRulesState:
                  rules: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallPortForwardingRulesRuleArgs']]]] = None):
         """
         Input properties used for looking up and filtering ApplianceFirewallPortForwardingRules resources.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input['ApplianceFirewallPortForwardingRulesRuleArgs']]] rules: An array of port forwarding params
         """
@@ -133,6 +135,7 @@ class ApplianceFirewallPortForwardingRules(pulumi.CustomResource):
         $ pulumi import meraki:networks/applianceFirewallPortForwardingRules:ApplianceFirewallPortForwardingRules example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -170,6 +173,7 @@ class ApplianceFirewallPortForwardingRules(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/applianceFirewallPortForwardingRules:ApplianceFirewallPortForwardingRules example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ApplianceFirewallPortForwardingRulesArgs args: The arguments to use to populate this resource's properties.

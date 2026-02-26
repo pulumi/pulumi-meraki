@@ -32,6 +32,7 @@ class GroupPoliciesArgs:
                  vlan_tagging: Optional[pulumi.Input['GroupPoliciesVlanTaggingArgs']] = None):
         """
         The set of arguments for constructing a GroupPolicies resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input['GroupPoliciesBandwidthArgs'] bandwidth: The bandwidth settings for clients bound to your group policy.
         :param pulumi.Input['GroupPoliciesBonjourForwardingArgs'] bonjour_forwarding: The Bonjour settings for your group policy. Only valid if your network has a wireless configuration.
@@ -184,6 +185,7 @@ class _GroupPoliciesState:
                  vlan_tagging: Optional[pulumi.Input['GroupPoliciesVlanTaggingArgs']] = None):
         """
         Input properties used for looking up and filtering GroupPolicies resources.
+
         :param pulumi.Input['GroupPoliciesBandwidthArgs'] bandwidth: The bandwidth settings for clients bound to your group policy.
         :param pulumi.Input['GroupPoliciesBonjourForwardingArgs'] bonjour_forwarding: The Bonjour settings for your group policy. Only valid if your network has a wireless configuration.
         :param pulumi.Input['GroupPoliciesContentFilteringArgs'] content_filtering: The content filtering settings for your group policy
@@ -480,6 +482,7 @@ class GroupPolicies(pulumi.CustomResource):
         $ pulumi import meraki:networks/groupPolicies:GroupPolicies example "group_policy_id,network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['GroupPoliciesBandwidthArgs', 'GroupPoliciesBandwidthArgsDict']] bandwidth: The bandwidth settings for clients bound to your group policy.
@@ -624,6 +627,7 @@ class GroupPolicies(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/groupPolicies:GroupPolicies example "group_policy_id,network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param GroupPoliciesArgs args: The arguments to use to populate this resource's properties.

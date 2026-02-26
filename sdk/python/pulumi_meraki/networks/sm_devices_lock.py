@@ -25,6 +25,7 @@ class SmDevicesLockArgs:
                  parameters: pulumi.Input['SmDevicesLockParametersArgs']):
         """
         The set of arguments for constructing a SmDevicesLock resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         """
         pulumi.set(__self__, "network_id", network_id)
@@ -60,6 +61,7 @@ class _SmDevicesLockState:
                  parameters: Optional[pulumi.Input['SmDevicesLockParametersArgs']] = None):
         """
         Input properties used for looking up and filtering SmDevicesLock resources.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         """
         if item is not None:
@@ -142,6 +144,7 @@ class SmDevicesLock(pulumi.CustomResource):
         pulumi.export("merakiNetworksSmDevicesLockExample", example)
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -184,6 +187,7 @@ class SmDevicesLock(pulumi.CustomResource):
             })
         pulumi.export("merakiNetworksSmDevicesLockExample", example)
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SmDevicesLockArgs args: The arguments to use to populate this resource's properties.

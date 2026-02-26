@@ -28,6 +28,7 @@ class CameraWirelessProfilesArgs:
                  wireless_profile_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a CameraWirelessProfiles resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input['CameraWirelessProfilesIdentityArgs'] identity: The identity of the wireless profile. Required for creating wireless profiles in 8021x-radius auth mode.
         :param pulumi.Input[_builtins.str] name: The name of the camera wireless profile. This parameter is required.
@@ -116,6 +117,7 @@ class _CameraWirelessProfilesState:
                  wireless_profile_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering CameraWirelessProfiles resources.
+
         :param pulumi.Input['CameraWirelessProfilesIdentityArgs'] identity: The identity of the wireless profile. Required for creating wireless profiles in 8021x-radius auth mode.
         :param pulumi.Input[_builtins.str] name: The name of the camera wireless profile. This parameter is required.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -241,6 +243,7 @@ class CameraWirelessProfiles(pulumi.CustomResource):
         $ pulumi import meraki:networks/cameraWirelessProfiles:CameraWirelessProfiles example "network_id,wireless_profile_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['CameraWirelessProfilesIdentityArgs', 'CameraWirelessProfilesIdentityArgsDict']] identity: The identity of the wireless profile. Required for creating wireless profiles in 8021x-radius auth mode.
@@ -278,6 +281,7 @@ class CameraWirelessProfiles(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/cameraWirelessProfiles:CameraWirelessProfiles example "network_id,wireless_profile_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param CameraWirelessProfilesArgs args: The arguments to use to populate this resource's properties.

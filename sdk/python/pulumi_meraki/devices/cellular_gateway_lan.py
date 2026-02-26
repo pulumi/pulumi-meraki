@@ -26,6 +26,7 @@ class CellularGatewayLanArgs:
                  reserved_ip_ranges: Optional[pulumi.Input[Sequence[pulumi.Input['CellularGatewayLanReservedIpRangeArgs']]]] = None):
         """
         The set of arguments for constructing a CellularGatewayLan resource.
+
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         :param pulumi.Input[Sequence[pulumi.Input['CellularGatewayLanFixedIpAssignmentArgs']]] fixed_ip_assignments: list of all fixed IP assignments for a single MG
         :param pulumi.Input[Sequence[pulumi.Input['CellularGatewayLanReservedIpRangeArgs']]] reserved_ip_ranges: list of all reserved IP ranges for a single MG
@@ -84,6 +85,7 @@ class _CellularGatewayLanState:
                  serial: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering CellularGatewayLan resources.
+
         :param pulumi.Input[_builtins.str] device_lan_ip: Lan IP of the MG
         :param pulumi.Input[_builtins.str] device_name: Name of the MG.
         :param pulumi.Input[_builtins.str] device_subnet: Subnet configuration of the MG.
@@ -215,6 +217,7 @@ class CellularGatewayLan(pulumi.CustomResource):
         $ pulumi import meraki:devices/cellularGatewayLan:CellularGatewayLan example "serial"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['CellularGatewayLanFixedIpAssignmentArgs', 'CellularGatewayLanFixedIpAssignmentArgsDict']]]] fixed_ip_assignments: list of all fixed IP assignments for a single MG
@@ -254,6 +257,7 @@ class CellularGatewayLan(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:devices/cellularGatewayLan:CellularGatewayLan example "serial"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param CellularGatewayLanArgs args: The arguments to use to populate this resource's properties.

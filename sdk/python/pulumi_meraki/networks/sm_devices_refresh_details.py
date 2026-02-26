@@ -23,6 +23,7 @@ class SmDevicesRefreshDetailsArgs:
                  network_id: pulumi.Input[_builtins.str]):
         """
         The set of arguments for constructing a SmDevicesRefreshDetails resource.
+
         :param pulumi.Input[_builtins.str] device_id: deviceId path parameter. Device ID
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         """
@@ -61,6 +62,7 @@ class _SmDevicesRefreshDetailsState:
                  network_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SmDevicesRefreshDetails resources.
+
         :param pulumi.Input[_builtins.str] device_id: deviceId path parameter. Device ID
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         """
@@ -119,6 +121,7 @@ class SmDevicesRefreshDetails(pulumi.CustomResource):
         pulumi.export("merakiNetworksSmDevicesRefreshDetailsExample", example)
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device_id: deviceId path parameter. Device ID
@@ -145,6 +148,7 @@ class SmDevicesRefreshDetails(pulumi.CustomResource):
             network_id="string")
         pulumi.export("merakiNetworksSmDevicesRefreshDetailsExample", example)
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SmDevicesRefreshDetailsArgs args: The arguments to use to populate this resource's properties.

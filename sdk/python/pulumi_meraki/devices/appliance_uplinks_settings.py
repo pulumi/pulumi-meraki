@@ -25,6 +25,7 @@ class ApplianceUplinksSettingsArgs:
                  interfaces: Optional[pulumi.Input['ApplianceUplinksSettingsInterfacesArgs']] = None):
         """
         The set of arguments for constructing a ApplianceUplinksSettings resource.
+
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         :param pulumi.Input['ApplianceUplinksSettingsInterfacesArgs'] interfaces: Interface settings.
         """
@@ -64,6 +65,7 @@ class _ApplianceUplinksSettingsState:
                  serial: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ApplianceUplinksSettings resources.
+
         :param pulumi.Input['ApplianceUplinksSettingsInterfacesArgs'] interfaces: Interface settings.
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         """
@@ -198,6 +200,7 @@ class ApplianceUplinksSettings(pulumi.CustomResource):
         $ pulumi import meraki:devices/applianceUplinksSettings:ApplianceUplinksSettings example "serial"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['ApplianceUplinksSettingsInterfacesArgs', 'ApplianceUplinksSettingsInterfacesArgsDict']] interfaces: Interface settings.
@@ -300,6 +303,7 @@ class ApplianceUplinksSettings(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:devices/applianceUplinksSettings:ApplianceUplinksSettings example "serial"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ApplianceUplinksSettingsArgs args: The arguments to use to populate this resource's properties.

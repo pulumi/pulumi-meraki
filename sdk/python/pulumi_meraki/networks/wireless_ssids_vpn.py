@@ -28,6 +28,7 @@ class WirelessSsidsVpnArgs:
                  split_tunnel: Optional[pulumi.Input['WirelessSsidsVpnSplitTunnelArgs']] = None):
         """
         The set of arguments for constructing a WirelessSsidsVpn resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] number: number path parameter.
         :param pulumi.Input['WirelessSsidsVpnConcentratorArgs'] concentrator: The VPN concentrator settings for this SSID.
@@ -114,6 +115,7 @@ class _WirelessSsidsVpnState:
                  split_tunnel: Optional[pulumi.Input['WirelessSsidsVpnSplitTunnelArgs']] = None):
         """
         Input properties used for looking up and filtering WirelessSsidsVpn resources.
+
         :param pulumi.Input['WirelessSsidsVpnConcentratorArgs'] concentrator: The VPN concentrator settings for this SSID.
         :param pulumi.Input['WirelessSsidsVpnFailoverArgs'] failover: Secondary VPN concentrator settings. This is only used when two VPN concentrators are configured on the SSID.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -242,6 +244,7 @@ class WirelessSsidsVpn(pulumi.CustomResource):
         $ pulumi import meraki:networks/wirelessSsidsVpn:WirelessSsidsVpn example "network_id,number"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['WirelessSsidsVpnConcentratorArgs', 'WirelessSsidsVpnConcentratorArgsDict']] concentrator: The VPN concentrator settings for this SSID.
@@ -293,6 +296,7 @@ class WirelessSsidsVpn(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/wirelessSsidsVpn:WirelessSsidsVpn example "network_id,number"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param WirelessSsidsVpnArgs args: The arguments to use to populate this resource's properties.

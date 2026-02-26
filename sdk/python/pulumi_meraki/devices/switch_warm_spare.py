@@ -24,6 +24,7 @@ class SwitchWarmSpareArgs:
                  spare_serial: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a SwitchWarmSpare resource.
+
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         :param pulumi.Input[_builtins.bool] enabled: Enable or disable warm spare for a switch
         :param pulumi.Input[_builtins.str] spare_serial: Serial number of the warm spare switch
@@ -80,6 +81,7 @@ class _SwitchWarmSpareState:
                  spare_serial: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SwitchWarmSpare resources.
+
         :param pulumi.Input[_builtins.bool] enabled: Enable or disable warm spare for a switch
         :param pulumi.Input[_builtins.str] primary_serial: Serial number of the primary switch
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
@@ -173,6 +175,7 @@ class SwitchWarmSpare(pulumi.CustomResource):
         $ pulumi import meraki:devices/switchWarmSpare:SwitchWarmSpare example "serial"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] enabled: Enable or disable warm spare for a switch
@@ -204,6 +207,7 @@ class SwitchWarmSpare(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:devices/switchWarmSpare:SwitchWarmSpare example "serial"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SwitchWarmSpareArgs args: The arguments to use to populate this resource's properties.

@@ -28,6 +28,7 @@ class SwitchAlternateManagementInterfaceArgs:
                  vlan_id: Optional[pulumi.Input[_builtins.int]] = None):
         """
         The set of arguments for constructing a SwitchAlternateManagementInterface resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.bool] enabled: Boolean value to enable or disable AMI configuration. If enabled, VLAN and protocols must be set
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] protocols: Can be one or more of the following values: 'radius', 'snmp' or 'syslog'
@@ -115,6 +116,7 @@ class _SwitchAlternateManagementInterfaceState:
                  vlan_id: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering SwitchAlternateManagementInterface resources.
+
         :param pulumi.Input[_builtins.bool] enabled: Boolean value to enable or disable AMI configuration. If enabled, VLAN and protocols must be set
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] protocols: Can be one or more of the following values: 'radius', 'snmp' or 'syslog'
@@ -236,6 +238,7 @@ class SwitchAlternateManagementInterface(pulumi.CustomResource):
         $ pulumi import meraki:networks/switchAlternateManagementInterface:SwitchAlternateManagementInterface example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] enabled: Boolean value to enable or disable AMI configuration. If enabled, VLAN and protocols must be set
@@ -280,6 +283,7 @@ class SwitchAlternateManagementInterface(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/switchAlternateManagementInterface:SwitchAlternateManagementInterface example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SwitchAlternateManagementInterfaceArgs args: The arguments to use to populate this resource's properties.

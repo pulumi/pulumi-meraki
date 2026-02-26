@@ -27,6 +27,7 @@ class NetflowArgs:
                  reporting_enabled: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a Netflow resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[_builtins.str] collector_ip: The IPv4 address of the NetFlow collector.
         :param pulumi.Input[_builtins.int] collector_port: The port that the NetFlow collector will be listening on.
@@ -130,6 +131,7 @@ class _NetflowState:
                  reporting_enabled: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering Netflow resources.
+
         :param pulumi.Input[_builtins.str] collector_ip: The IPv4 address of the NetFlow collector.
         :param pulumi.Input[_builtins.int] collector_port: The port that the NetFlow collector will be listening on.
         :param pulumi.Input[_builtins.int] eta_dst_port: The port that the Encrypted Traffic Analytics collector will be listening on.
@@ -259,6 +261,7 @@ class Netflow(pulumi.CustomResource):
         $ pulumi import meraki:networks/netflow:Netflow example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] collector_ip: The IPv4 address of the NetFlow collector.
@@ -296,6 +299,7 @@ class Netflow(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/netflow:Netflow example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param NetflowArgs args: The arguments to use to populate this resource's properties.

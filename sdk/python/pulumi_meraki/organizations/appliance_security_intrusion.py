@@ -25,6 +25,7 @@ class ApplianceSecurityIntrusionArgs:
                  allowed_rules: Optional[pulumi.Input[Sequence[pulumi.Input['ApplianceSecurityIntrusionAllowedRuleArgs']]]] = None):
         """
         The set of arguments for constructing a ApplianceSecurityIntrusion resource.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[Sequence[pulumi.Input['ApplianceSecurityIntrusionAllowedRuleArgs']]] allowed_rules: Sets a list of specific SNORT signatures to allow
         """
@@ -64,6 +65,7 @@ class _ApplianceSecurityIntrusionState:
                  organization_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ApplianceSecurityIntrusion resources.
+
         :param pulumi.Input[Sequence[pulumi.Input['ApplianceSecurityIntrusionAllowedRuleArgs']]] allowed_rules: Sets a list of specific SNORT signatures to allow
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         """
@@ -128,6 +130,7 @@ class ApplianceSecurityIntrusion(pulumi.CustomResource):
         $ pulumi import meraki:organizations/applianceSecurityIntrusion:ApplianceSecurityIntrusion example "organization_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['ApplianceSecurityIntrusionAllowedRuleArgs', 'ApplianceSecurityIntrusionAllowedRuleArgsDict']]]] allowed_rules: Sets a list of specific SNORT signatures to allow
@@ -160,6 +163,7 @@ class ApplianceSecurityIntrusion(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:organizations/applianceSecurityIntrusion:ApplianceSecurityIntrusion example "organization_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param ApplianceSecurityIntrusionArgs args: The arguments to use to populate this resource's properties.

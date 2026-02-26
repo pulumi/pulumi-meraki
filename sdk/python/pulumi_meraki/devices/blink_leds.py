@@ -25,6 +25,7 @@ class BlinkLedsArgs:
                  serial: pulumi.Input[_builtins.str]):
         """
         The set of arguments for constructing a BlinkLeds resource.
+
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         """
         pulumi.set(__self__, "parameters", parameters)
@@ -60,6 +61,7 @@ class _BlinkLedsState:
                  serial: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering BlinkLeds resources.
+
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         """
         if item is not None:
@@ -129,6 +131,7 @@ class BlinkLeds(pulumi.CustomResource):
         pulumi.export("merakiDevicesBlinkLedsExample", example)
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
@@ -158,6 +161,7 @@ class BlinkLeds(pulumi.CustomResource):
             })
         pulumi.export("merakiDevicesBlinkLedsExample", example)
         ```
+
 
         :param str resource_name: The name of the resource.
         :param BlinkLedsArgs args: The arguments to use to populate this resource's properties.

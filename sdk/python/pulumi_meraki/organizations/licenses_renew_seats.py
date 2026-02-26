@@ -25,6 +25,7 @@ class LicensesRenewSeatsArgs:
                  parameters: pulumi.Input['LicensesRenewSeatsParametersArgs']):
         """
         The set of arguments for constructing a LicensesRenewSeats resource.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         """
         pulumi.set(__self__, "organization_id", organization_id)
@@ -60,6 +61,7 @@ class _LicensesRenewSeatsState:
                  parameters: Optional[pulumi.Input['LicensesRenewSeatsParametersArgs']] = None):
         """
         Input properties used for looking up and filtering LicensesRenewSeats resources.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         """
         if item is not None:
@@ -128,6 +130,7 @@ class LicensesRenewSeats(pulumi.CustomResource):
         pulumi.export("merakiOrganizationsLicensesRenewSeatsExample", example)
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
@@ -156,6 +159,7 @@ class LicensesRenewSeats(pulumi.CustomResource):
             })
         pulumi.export("merakiOrganizationsLicensesRenewSeatsExample", example)
         ```
+
 
         :param str resource_name: The name of the resource.
         :param LicensesRenewSeatsArgs args: The arguments to use to populate this resource's properties.

@@ -26,6 +26,7 @@ class SmDevicesUninstallAppsArgs:
                  parameters: pulumi.Input['SmDevicesUninstallAppsParametersArgs']):
         """
         The set of arguments for constructing a SmDevicesUninstallApps resource.
+
         :param pulumi.Input[_builtins.str] device_id: deviceId path parameter. Device ID
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         """
@@ -75,6 +76,7 @@ class _SmDevicesUninstallAppsState:
                  parameters: Optional[pulumi.Input['SmDevicesUninstallAppsParametersArgs']] = None):
         """
         Input properties used for looking up and filtering SmDevicesUninstallApps resources.
+
         :param pulumi.Input[_builtins.str] device_id: deviceId path parameter. Device ID
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         """
@@ -151,6 +153,7 @@ class SmDevicesUninstallApps(pulumi.CustomResource):
         pulumi.export("merakiNetworksSmDevicesUninstallAppsExample", example)
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device_id: deviceId path parameter. Device ID
@@ -183,6 +186,7 @@ class SmDevicesUninstallApps(pulumi.CustomResource):
             })
         pulumi.export("merakiNetworksSmDevicesUninstallAppsExample", example)
         ```
+
 
         :param str resource_name: The name of the resource.
         :param SmDevicesUninstallAppsArgs args: The arguments to use to populate this resource's properties.

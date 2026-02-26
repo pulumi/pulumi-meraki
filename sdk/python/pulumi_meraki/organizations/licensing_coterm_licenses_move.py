@@ -25,6 +25,7 @@ class LicensingCotermLicensesMoveArgs:
                  parameters: pulumi.Input['LicensingCotermLicensesMoveParametersArgs']):
         """
         The set of arguments for constructing a LicensingCotermLicensesMove resource.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         """
         pulumi.set(__self__, "organization_id", organization_id)
@@ -60,6 +61,7 @@ class _LicensingCotermLicensesMoveState:
                  parameters: Optional[pulumi.Input['LicensingCotermLicensesMoveParametersArgs']] = None):
         """
         Input properties used for looking up and filtering LicensingCotermLicensesMove resources.
+
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         """
         if item is not None:
@@ -137,6 +139,7 @@ class LicensingCotermLicensesMove(pulumi.CustomResource):
         pulumi.export("merakiOrganizationsLicensingCotermLicensesMoveExample", example)
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
@@ -174,6 +177,7 @@ class LicensingCotermLicensesMove(pulumi.CustomResource):
             })
         pulumi.export("merakiOrganizationsLicensingCotermLicensesMoveExample", example)
         ```
+
 
         :param str resource_name: The name of the resource.
         :param LicensingCotermLicensesMoveArgs args: The arguments to use to populate this resource's properties.

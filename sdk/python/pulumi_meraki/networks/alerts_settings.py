@@ -27,6 +27,7 @@ class AlertsSettingsArgs:
                  muting: Optional[pulumi.Input['AlertsSettingsMutingArgs']] = None):
         """
         The set of arguments for constructing a AlertsSettings resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input['AlertsSettingsAlertArgs']]] alerts: Alert-specific configuration for each type. Only alerts that pertain to the network can be updated.
         :param pulumi.Input['AlertsSettingsDefaultDestinationsArgs'] default_destinations: The network-wide destinations for all alerts on the network.
@@ -99,6 +100,7 @@ class _AlertsSettingsState:
                  network_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering AlertsSettings resources.
+
         :param pulumi.Input[Sequence[pulumi.Input['AlertsSettingsAlertArgs']]] alerts: Alert-specific configuration for each type. Only alerts that pertain to the network can be updated.
         :param pulumi.Input[Sequence[pulumi.Input['AlertsSettingsAlertsResponseArgs']]] alerts_responses: Alert-specific configuration for each type. Only alerts that pertain to the network can be updated.
         :param pulumi.Input['AlertsSettingsDefaultDestinationsArgs'] default_destinations: The network-wide destinations for all alerts on the network.
@@ -225,6 +227,7 @@ class AlertsSettings(pulumi.CustomResource):
         $ pulumi import meraki:networks/alertsSettings:AlertsSettings example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['AlertsSettingsAlertArgs', 'AlertsSettingsAlertArgsDict']]]] alerts: Alert-specific configuration for each type. Only alerts that pertain to the network can be updated.
@@ -274,6 +277,7 @@ class AlertsSettings(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/alertsSettings:AlertsSettings example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param AlertsSettingsArgs args: The arguments to use to populate this resource's properties.

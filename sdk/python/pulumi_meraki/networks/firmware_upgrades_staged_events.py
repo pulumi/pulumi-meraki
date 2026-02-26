@@ -26,6 +26,7 @@ class FirmwareUpgradesStagedEventsArgs:
                  stages: Optional[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsStageArgs']]]] = None):
         """
         The set of arguments for constructing a FirmwareUpgradesStagedEvents resource.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input['FirmwareUpgradesStagedEventsProductsArgs'] products: The network devices to be updated
         :param pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsStageArgs']]] stages: The ordered stages in the network
@@ -82,6 +83,7 @@ class _FirmwareUpgradesStagedEventsState:
                  stages: Optional[pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsStageArgs']]]] = None):
         """
         Input properties used for looking up and filtering FirmwareUpgradesStagedEvents resources.
+
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input['FirmwareUpgradesStagedEventsProductsArgs'] products: The network devices to be updated
         :param pulumi.Input[Sequence[pulumi.Input['FirmwareUpgradesStagedEventsReasonArgs']]] reasons: Reasons for the rollback
@@ -197,6 +199,7 @@ class FirmwareUpgradesStagedEvents(pulumi.CustomResource):
         $ pulumi import meraki:networks/firmwareUpgradesStagedEvents:FirmwareUpgradesStagedEvents example "network_id"
         ```
 
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
@@ -250,6 +253,7 @@ class FirmwareUpgradesStagedEvents(pulumi.CustomResource):
         ```sh
         $ pulumi import meraki:networks/firmwareUpgradesStagedEvents:FirmwareUpgradesStagedEvents example "network_id"
         ```
+
 
         :param str resource_name: The name of the resource.
         :param FirmwareUpgradesStagedEventsArgs args: The arguments to use to populate this resource's properties.
