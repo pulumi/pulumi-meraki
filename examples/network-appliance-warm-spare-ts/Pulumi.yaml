@@ -1,3 +1,0 @@
-name: meraki-network-appliance-warm-spare-ts
-runtime: nodejs
-description: A minimal TypeScript Pulumi program
