@@ -5058,7 +5058,7 @@ export namespace networks {
         /**
          * A text comment for the reserved range
          */
-        comment?: string;
+        comment: string;
         /**
          * The last IP in the reserved range
          */
@@ -18848,7 +18848,7 @@ export namespace networks {
         /**
          * Name of the VLAN, string length must be from 1 to 32 characters
          */
-        name?: string;
+        name: string;
         /**
          * VLAN ID
          */
