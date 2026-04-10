@@ -1,8 +1,8 @@
 module github.com/pulumi/pulumi-meraki/sdk
 
-go 1.25.6
+go 1.25.8
 
-require github.com/pulumi/pulumi/sdk/v3 v3.226.0
+require github.com/pulumi/pulumi/sdk/v3 v3.228.0
 
 require (
 	github.com/apparentlymart/go-textseg/v15 v15.0.0 // indirect
