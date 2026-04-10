@@ -24,6 +24,7 @@ class SensorAlertsProfilesArgs:
                  network_id: pulumi.Input[_builtins.str],
                  conditions: Optional[pulumi.Input[Sequence[pulumi.Input['SensorAlertsProfilesConditionArgs']]]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
+                 networks_sensor_alerts_profiles_id: Optional[pulumi.Input[_builtins.str]] = None,
                  recipients: Optional[pulumi.Input['SensorAlertsProfilesRecipientsArgs']] = None,
                  schedule: Optional[pulumi.Input['SensorAlertsProfilesScheduleArgs']] = None,
                  serials: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
@@ -33,6 +34,7 @@ class SensorAlertsProfilesArgs:
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
         :param pulumi.Input[Sequence[pulumi.Input['SensorAlertsProfilesConditionArgs']]] conditions: List of conditions that will cause the profile to send an alert.
         :param pulumi.Input[_builtins.str] name: Name of the sensor alert profile.
+        :param pulumi.Input[_builtins.str] networks_sensor_alerts_profiles_id: id path parameter.
         :param pulumi.Input['SensorAlertsProfilesRecipientsArgs'] recipients: List of recipients that will receive the alert.
         :param pulumi.Input['SensorAlertsProfilesScheduleArgs'] schedule: The sensor schedule to use with the alert profile.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] serials: List of device serials assigned to this sensor alert profile.
@@ -42,6 +44,8 @@ class SensorAlertsProfilesArgs:
             pulumi.set(__self__, "conditions", conditions)
         if name is not None:
             pulumi.set(__self__, "name", name)
+        if networks_sensor_alerts_profiles_id is not None:
+            pulumi.set(__self__, "networks_sensor_alerts_profiles_id", networks_sensor_alerts_profiles_id)
         if recipients is not None:
             pulumi.set(__self__, "recipients", recipients)
         if schedule is not None:
@@ -84,6 +88,18 @@ class SensorAlertsProfilesArgs:
     @name.setter
     def name(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "name", value)
+
+    @_builtins.property
+    @pulumi.getter(name="networksSensorAlertsProfilesId")
+    def networks_sensor_alerts_profiles_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        id path parameter.
+        """
+        return pulumi.get(self, "networks_sensor_alerts_profiles_id")
+
+    @networks_sensor_alerts_profiles_id.setter
+    def networks_sensor_alerts_profiles_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "networks_sensor_alerts_profiles_id", value)
 
     @_builtins.property
     @pulumi.getter
@@ -129,6 +145,7 @@ class _SensorAlertsProfilesState:
                  conditions_responses: Optional[pulumi.Input[Sequence[pulumi.Input['SensorAlertsProfilesConditionsResponseArgs']]]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 networks_sensor_alerts_profiles_id: Optional[pulumi.Input[_builtins.str]] = None,
                  profile_id: Optional[pulumi.Input[_builtins.str]] = None,
                  recipients: Optional[pulumi.Input['SensorAlertsProfilesRecipientsArgs']] = None,
                  schedule: Optional[pulumi.Input['SensorAlertsProfilesScheduleArgs']] = None,
@@ -140,6 +157,7 @@ class _SensorAlertsProfilesState:
         :param pulumi.Input[Sequence[pulumi.Input['SensorAlertsProfilesConditionsResponseArgs']]] conditions_responses: List of conditions that will cause the profile to send an alert.
         :param pulumi.Input[_builtins.str] name: Name of the sensor alert profile.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
+        :param pulumi.Input[_builtins.str] networks_sensor_alerts_profiles_id: id path parameter.
         :param pulumi.Input[_builtins.str] profile_id: ID of the sensor alert profile.
         :param pulumi.Input['SensorAlertsProfilesRecipientsArgs'] recipients: List of recipients that will receive the alert.
         :param pulumi.Input['SensorAlertsProfilesScheduleArgs'] schedule: The sensor schedule to use with the alert profile.
@@ -153,6 +171,8 @@ class _SensorAlertsProfilesState:
             pulumi.set(__self__, "name", name)
         if network_id is not None:
             pulumi.set(__self__, "network_id", network_id)
+        if networks_sensor_alerts_profiles_id is not None:
+            pulumi.set(__self__, "networks_sensor_alerts_profiles_id", networks_sensor_alerts_profiles_id)
         if profile_id is not None:
             pulumi.set(__self__, "profile_id", profile_id)
         if recipients is not None:
@@ -209,6 +229,18 @@ class _SensorAlertsProfilesState:
     @network_id.setter
     def network_id(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "network_id", value)
+
+    @_builtins.property
+    @pulumi.getter(name="networksSensorAlertsProfilesId")
+    def networks_sensor_alerts_profiles_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        id path parameter.
+        """
+        return pulumi.get(self, "networks_sensor_alerts_profiles_id")
+
+    @networks_sensor_alerts_profiles_id.setter
+    def networks_sensor_alerts_profiles_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "networks_sensor_alerts_profiles_id", value)
 
     @_builtins.property
     @pulumi.getter(name="profileId")
@@ -268,6 +300,7 @@ class SensorAlertsProfiles(pulumi.CustomResource):
                  conditions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SensorAlertsProfilesConditionArgs', 'SensorAlertsProfilesConditionArgsDict']]]]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 networks_sensor_alerts_profiles_id: Optional[pulumi.Input[_builtins.str]] = None,
                  recipients: Optional[pulumi.Input[Union['SensorAlertsProfilesRecipientsArgs', 'SensorAlertsProfilesRecipientsArgsDict']]] = None,
                  schedule: Optional[pulumi.Input[Union['SensorAlertsProfilesScheduleArgs', 'SensorAlertsProfilesScheduleArgsDict']]] = None,
                  serials: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -371,6 +404,7 @@ class SensorAlertsProfiles(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[Union['SensorAlertsProfilesConditionArgs', 'SensorAlertsProfilesConditionArgsDict']]]] conditions: List of conditions that will cause the profile to send an alert.
         :param pulumi.Input[_builtins.str] name: Name of the sensor alert profile.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
+        :param pulumi.Input[_builtins.str] networks_sensor_alerts_profiles_id: id path parameter.
         :param pulumi.Input[Union['SensorAlertsProfilesRecipientsArgs', 'SensorAlertsProfilesRecipientsArgsDict']] recipients: List of recipients that will receive the alert.
         :param pulumi.Input[Union['SensorAlertsProfilesScheduleArgs', 'SensorAlertsProfilesScheduleArgsDict']] schedule: The sensor schedule to use with the alert profile.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] serials: List of device serials assigned to this sensor alert profile.
@@ -493,6 +527,7 @@ class SensorAlertsProfiles(pulumi.CustomResource):
                  conditions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SensorAlertsProfilesConditionArgs', 'SensorAlertsProfilesConditionArgsDict']]]]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  network_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 networks_sensor_alerts_profiles_id: Optional[pulumi.Input[_builtins.str]] = None,
                  recipients: Optional[pulumi.Input[Union['SensorAlertsProfilesRecipientsArgs', 'SensorAlertsProfilesRecipientsArgsDict']]] = None,
                  schedule: Optional[pulumi.Input[Union['SensorAlertsProfilesScheduleArgs', 'SensorAlertsProfilesScheduleArgsDict']]] = None,
                  serials: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -510,6 +545,7 @@ class SensorAlertsProfiles(pulumi.CustomResource):
             if network_id is None and not opts.urn:
                 raise TypeError("Missing required property 'network_id'")
             __props__.__dict__["network_id"] = network_id
+            __props__.__dict__["networks_sensor_alerts_profiles_id"] = networks_sensor_alerts_profiles_id
             __props__.__dict__["recipients"] = recipients
             __props__.__dict__["schedule"] = schedule
             __props__.__dict__["serials"] = serials
@@ -529,6 +565,7 @@ class SensorAlertsProfiles(pulumi.CustomResource):
             conditions_responses: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SensorAlertsProfilesConditionsResponseArgs', 'SensorAlertsProfilesConditionsResponseArgsDict']]]]] = None,
             name: Optional[pulumi.Input[_builtins.str]] = None,
             network_id: Optional[pulumi.Input[_builtins.str]] = None,
+            networks_sensor_alerts_profiles_id: Optional[pulumi.Input[_builtins.str]] = None,
             profile_id: Optional[pulumi.Input[_builtins.str]] = None,
             recipients: Optional[pulumi.Input[Union['SensorAlertsProfilesRecipientsArgs', 'SensorAlertsProfilesRecipientsArgsDict']]] = None,
             schedule: Optional[pulumi.Input[Union['SensorAlertsProfilesScheduleArgs', 'SensorAlertsProfilesScheduleArgsDict']]] = None,
@@ -544,6 +581,7 @@ class SensorAlertsProfiles(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[Union['SensorAlertsProfilesConditionsResponseArgs', 'SensorAlertsProfilesConditionsResponseArgsDict']]]] conditions_responses: List of conditions that will cause the profile to send an alert.
         :param pulumi.Input[_builtins.str] name: Name of the sensor alert profile.
         :param pulumi.Input[_builtins.str] network_id: networkId path parameter. Network ID
+        :param pulumi.Input[_builtins.str] networks_sensor_alerts_profiles_id: id path parameter.
         :param pulumi.Input[_builtins.str] profile_id: ID of the sensor alert profile.
         :param pulumi.Input[Union['SensorAlertsProfilesRecipientsArgs', 'SensorAlertsProfilesRecipientsArgsDict']] recipients: List of recipients that will receive the alert.
         :param pulumi.Input[Union['SensorAlertsProfilesScheduleArgs', 'SensorAlertsProfilesScheduleArgsDict']] schedule: The sensor schedule to use with the alert profile.
@@ -557,6 +595,7 @@ class SensorAlertsProfiles(pulumi.CustomResource):
         __props__.__dict__["conditions_responses"] = conditions_responses
         __props__.__dict__["name"] = name
         __props__.__dict__["network_id"] = network_id
+        __props__.__dict__["networks_sensor_alerts_profiles_id"] = networks_sensor_alerts_profiles_id
         __props__.__dict__["profile_id"] = profile_id
         __props__.__dict__["recipients"] = recipients
         __props__.__dict__["schedule"] = schedule
@@ -594,6 +633,14 @@ class SensorAlertsProfiles(pulumi.CustomResource):
         networkId path parameter. Network ID
         """
         return pulumi.get(self, "network_id")
+
+    @_builtins.property
+    @pulumi.getter(name="networksSensorAlertsProfilesId")
+    def networks_sensor_alerts_profiles_id(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        id path parameter.
+        """
+        return pulumi.get(self, "networks_sensor_alerts_profiles_id")
 
     @_builtins.property
     @pulumi.getter(name="profileId")

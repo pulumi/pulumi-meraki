@@ -148,6 +148,20 @@ public class AdaptivePolicyPolicies extends com.pulumi.resources.CustomResource 
         return this.organizationId;
     }
     /**
+     * id path parameter.
+     * 
+     */
+    @Export(name="organizationsAdaptivePolicyPoliciesId", refs={String.class}, tree="[0]")
+    private Output<String> organizationsAdaptivePolicyPoliciesId;
+
+    /**
+     * @return id path parameter.
+     * 
+     */
+    public Output<String> organizationsAdaptivePolicyPoliciesId() {
+        return this.organizationsAdaptivePolicyPoliciesId;
+    }
+    /**
      * The source adaptive policy group (requires one unique attribute)
      * 
      */

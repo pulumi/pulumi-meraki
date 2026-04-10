@@ -19,6 +19,8 @@ type LiveToolsCable struct {
 	CableTestId pulumi.StringOutput `pulumi:"cableTestId"`
 	// Details for the callback. Please include either an httpServerId OR url and sharedSecret
 	Callback LiveToolsCableCallbackOutput `pulumi:"callback"`
+	// id path parameter.
+	DevicesLiveToolsCableId pulumi.StringPtrOutput `pulumi:"devicesLiveToolsCableId"`
 	// An error message for a failed execution
 	Error pulumi.StringOutput `pulumi:"error"`
 	// A list of ports for which to perform the cable test.
@@ -72,6 +74,8 @@ type liveToolsCableState struct {
 	CableTestId *string `pulumi:"cableTestId"`
 	// Details for the callback. Please include either an httpServerId OR url and sharedSecret
 	Callback *LiveToolsCableCallback `pulumi:"callback"`
+	// id path parameter.
+	DevicesLiveToolsCableId *string `pulumi:"devicesLiveToolsCableId"`
 	// An error message for a failed execution
 	Error *string `pulumi:"error"`
 	// A list of ports for which to perform the cable test.
@@ -93,6 +97,8 @@ type LiveToolsCableState struct {
 	CableTestId pulumi.StringPtrInput
 	// Details for the callback. Please include either an httpServerId OR url and sharedSecret
 	Callback LiveToolsCableCallbackPtrInput
+	// id path parameter.
+	DevicesLiveToolsCableId pulumi.StringPtrInput
 	// An error message for a failed execution
 	Error pulumi.StringPtrInput
 	// A list of ports for which to perform the cable test.
@@ -116,6 +122,8 @@ func (LiveToolsCableState) ElementType() reflect.Type {
 type liveToolsCableArgs struct {
 	// Details for the callback. Please include either an httpServerId OR url and sharedSecret
 	Callback *LiveToolsCableCallback `pulumi:"callback"`
+	// id path parameter.
+	DevicesLiveToolsCableId *string `pulumi:"devicesLiveToolsCableId"`
 	// A list of ports for which to perform the cable test.
 	Ports []string `pulumi:"ports"`
 	// serial path parameter.
@@ -126,6 +134,8 @@ type liveToolsCableArgs struct {
 type LiveToolsCableArgs struct {
 	// Details for the callback. Please include either an httpServerId OR url and sharedSecret
 	Callback LiveToolsCableCallbackPtrInput
+	// id path parameter.
+	DevicesLiveToolsCableId pulumi.StringPtrInput
 	// A list of ports for which to perform the cable test.
 	Ports pulumi.StringArrayInput
 	// serial path parameter.
@@ -227,6 +237,11 @@ func (o LiveToolsCableOutput) CableTestId() pulumi.StringOutput {
 // Details for the callback. Please include either an httpServerId OR url and sharedSecret
 func (o LiveToolsCableOutput) Callback() LiveToolsCableCallbackOutput {
 	return o.ApplyT(func(v *LiveToolsCable) LiveToolsCableCallbackOutput { return v.Callback }).(LiveToolsCableCallbackOutput)
+}
+
+// id path parameter.
+func (o LiveToolsCableOutput) DevicesLiveToolsCableId() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *LiveToolsCable) pulumi.StringPtrOutput { return v.DevicesLiveToolsCableId }).(pulumi.StringPtrOutput)
 }
 
 // An error message for a failed execution

@@ -65,6 +65,8 @@ type AdaptivePolicyGroups struct {
 	Name pulumi.StringOutput `pulumi:"name"`
 	// organizationId path parameter. Organization ID
 	OrganizationId pulumi.StringOutput `pulumi:"organizationId"`
+	// id path parameter.
+	OrganizationsAdaptivePolicyGroupsId pulumi.StringOutput `pulumi:"organizationsAdaptivePolicyGroupsId"`
 	// The policy objects that belong to this group; traffic from addresses specified by these policy objects will be tagged with this group's SGT value if no other tagging scheme is being used (each requires one unique attribute) ()
 	PolicyObjects      AdaptivePolicyGroupsPolicyObjectArrayOutput `pulumi:"policyObjects"`
 	RequiredIpMappings pulumi.StringArrayOutput                    `pulumi:"requiredIpMappings"`
@@ -115,6 +117,8 @@ type adaptivePolicyGroupsState struct {
 	Name *string `pulumi:"name"`
 	// organizationId path parameter. Organization ID
 	OrganizationId *string `pulumi:"organizationId"`
+	// id path parameter.
+	OrganizationsAdaptivePolicyGroupsId *string `pulumi:"organizationsAdaptivePolicyGroupsId"`
 	// The policy objects that belong to this group; traffic from addresses specified by these policy objects will be tagged with this group's SGT value if no other tagging scheme is being used (each requires one unique attribute) ()
 	PolicyObjects      []AdaptivePolicyGroupsPolicyObject `pulumi:"policyObjects"`
 	RequiredIpMappings []string                           `pulumi:"requiredIpMappings"`
@@ -133,6 +137,8 @@ type AdaptivePolicyGroupsState struct {
 	Name pulumi.StringPtrInput
 	// organizationId path parameter. Organization ID
 	OrganizationId pulumi.StringPtrInput
+	// id path parameter.
+	OrganizationsAdaptivePolicyGroupsId pulumi.StringPtrInput
 	// The policy objects that belong to this group; traffic from addresses specified by these policy objects will be tagged with this group's SGT value if no other tagging scheme is being used (each requires one unique attribute) ()
 	PolicyObjects      AdaptivePolicyGroupsPolicyObjectArrayInput
 	RequiredIpMappings pulumi.StringArrayInput
@@ -152,6 +158,8 @@ type adaptivePolicyGroupsArgs struct {
 	Name *string `pulumi:"name"`
 	// organizationId path parameter. Organization ID
 	OrganizationId string `pulumi:"organizationId"`
+	// id path parameter.
+	OrganizationsAdaptivePolicyGroupsId *string `pulumi:"organizationsAdaptivePolicyGroupsId"`
 	// The policy objects that belong to this group; traffic from addresses specified by these policy objects will be tagged with this group's SGT value if no other tagging scheme is being used (each requires one unique attribute) ()
 	PolicyObjects []AdaptivePolicyGroupsPolicyObject `pulumi:"policyObjects"`
 	// SGT value of the group
@@ -166,6 +174,8 @@ type AdaptivePolicyGroupsArgs struct {
 	Name pulumi.StringPtrInput
 	// organizationId path parameter. Organization ID
 	OrganizationId pulumi.StringInput
+	// id path parameter.
+	OrganizationsAdaptivePolicyGroupsId pulumi.StringPtrInput
 	// The policy objects that belong to this group; traffic from addresses specified by these policy objects will be tagged with this group's SGT value if no other tagging scheme is being used (each requires one unique attribute) ()
 	PolicyObjects AdaptivePolicyGroupsPolicyObjectArrayInput
 	// SGT value of the group
@@ -284,6 +294,11 @@ func (o AdaptivePolicyGroupsOutput) Name() pulumi.StringOutput {
 // organizationId path parameter. Organization ID
 func (o AdaptivePolicyGroupsOutput) OrganizationId() pulumi.StringOutput {
 	return o.ApplyT(func(v *AdaptivePolicyGroups) pulumi.StringOutput { return v.OrganizationId }).(pulumi.StringOutput)
+}
+
+// id path parameter.
+func (o AdaptivePolicyGroupsOutput) OrganizationsAdaptivePolicyGroupsId() pulumi.StringOutput {
+	return o.ApplyT(func(v *AdaptivePolicyGroups) pulumi.StringOutput { return v.OrganizationsAdaptivePolicyGroupsId }).(pulumi.StringOutput)
 }
 
 // The policy objects that belong to this group; traffic from addresses specified by these policy objects will be tagged with this group's SGT value if no other tagging scheme is being used (each requires one unique attribute) ()

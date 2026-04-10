@@ -81,6 +81,21 @@ public final class AdaptivePolicyPoliciesArgs extends com.pulumi.resources.Resou
     }
 
     /**
+     * id path parameter.
+     * 
+     */
+    @Import(name="organizationsAdaptivePolicyPoliciesId")
+    private @Nullable Output<String> organizationsAdaptivePolicyPoliciesId;
+
+    /**
+     * @return id path parameter.
+     * 
+     */
+    public Optional<Output<String>> organizationsAdaptivePolicyPoliciesId() {
+        return Optional.ofNullable(this.organizationsAdaptivePolicyPoliciesId);
+    }
+
+    /**
      * The source adaptive policy group (requires one unique attribute)
      * 
      */
@@ -102,6 +117,7 @@ public final class AdaptivePolicyPoliciesArgs extends com.pulumi.resources.Resou
         this.destinationGroup = $.destinationGroup;
         this.lastEntryRule = $.lastEntryRule;
         this.organizationId = $.organizationId;
+        this.organizationsAdaptivePolicyPoliciesId = $.organizationsAdaptivePolicyPoliciesId;
         this.sourceGroup = $.sourceGroup;
     }
 
@@ -215,6 +231,27 @@ public final class AdaptivePolicyPoliciesArgs extends com.pulumi.resources.Resou
          */
         public Builder organizationId(String organizationId) {
             return organizationId(Output.of(organizationId));
+        }
+
+        /**
+         * @param organizationsAdaptivePolicyPoliciesId id path parameter.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder organizationsAdaptivePolicyPoliciesId(@Nullable Output<String> organizationsAdaptivePolicyPoliciesId) {
+            $.organizationsAdaptivePolicyPoliciesId = organizationsAdaptivePolicyPoliciesId;
+            return this;
+        }
+
+        /**
+         * @param organizationsAdaptivePolicyPoliciesId id path parameter.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder organizationsAdaptivePolicyPoliciesId(String organizationsAdaptivePolicyPoliciesId) {
+            return organizationsAdaptivePolicyPoliciesId(Output.of(organizationsAdaptivePolicyPoliciesId));
         }
 
         /**

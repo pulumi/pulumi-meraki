@@ -87,6 +87,10 @@ export class AdaptivePolicyPolicies extends pulumi.CustomResource {
      */
     declare public readonly organizationId: pulumi.Output<string>;
     /**
+     * id path parameter.
+     */
+    declare public readonly organizationsAdaptivePolicyPoliciesId: pulumi.Output<string>;
+    /**
      * The source adaptive policy group (requires one unique attribute)
      */
     declare public readonly sourceGroup: pulumi.Output<outputs.organizations.AdaptivePolicyPoliciesSourceGroup>;
@@ -111,6 +115,7 @@ export class AdaptivePolicyPolicies extends pulumi.CustomResource {
             resourceInputs["destinationGroup"] = state?.destinationGroup;
             resourceInputs["lastEntryRule"] = state?.lastEntryRule;
             resourceInputs["organizationId"] = state?.organizationId;
+            resourceInputs["organizationsAdaptivePolicyPoliciesId"] = state?.organizationsAdaptivePolicyPoliciesId;
             resourceInputs["sourceGroup"] = state?.sourceGroup;
             resourceInputs["updatedAt"] = state?.updatedAt;
         } else {
@@ -122,6 +127,7 @@ export class AdaptivePolicyPolicies extends pulumi.CustomResource {
             resourceInputs["destinationGroup"] = args?.destinationGroup;
             resourceInputs["lastEntryRule"] = args?.lastEntryRule;
             resourceInputs["organizationId"] = args?.organizationId;
+            resourceInputs["organizationsAdaptivePolicyPoliciesId"] = args?.organizationsAdaptivePolicyPoliciesId;
             resourceInputs["sourceGroup"] = args?.sourceGroup;
             resourceInputs["adaptivePolicyId"] = undefined /*out*/;
             resourceInputs["createdAt"] = undefined /*out*/;
@@ -155,6 +161,10 @@ export interface AdaptivePolicyPoliciesState {
      */
     organizationId?: pulumi.Input<string>;
     /**
+     * id path parameter.
+     */
+    organizationsAdaptivePolicyPoliciesId?: pulumi.Input<string>;
+    /**
      * The source adaptive policy group (requires one unique attribute)
      */
     sourceGroup?: pulumi.Input<inputs.organizations.AdaptivePolicyPoliciesSourceGroup>;
@@ -181,6 +191,10 @@ export interface AdaptivePolicyPoliciesArgs {
      * organizationId path parameter. Organization ID
      */
     organizationId: pulumi.Input<string>;
+    /**
+     * id path parameter.
+     */
+    organizationsAdaptivePolicyPoliciesId?: pulumi.Input<string>;
     /**
      * The source adaptive policy group (requires one unique attribute)
      */

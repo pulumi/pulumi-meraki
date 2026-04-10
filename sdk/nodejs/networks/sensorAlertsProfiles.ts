@@ -145,6 +145,10 @@ export class SensorAlertsProfiles extends pulumi.CustomResource {
      */
     declare public readonly networkId: pulumi.Output<string>;
     /**
+     * id path parameter.
+     */
+    declare public readonly networksSensorAlertsProfilesId: pulumi.Output<string | undefined>;
+    /**
      * ID of the sensor alert profile.
      */
     declare public /*out*/ readonly profileId: pulumi.Output<string>;
@@ -178,6 +182,7 @@ export class SensorAlertsProfiles extends pulumi.CustomResource {
             resourceInputs["conditionsResponses"] = state?.conditionsResponses;
             resourceInputs["name"] = state?.name;
             resourceInputs["networkId"] = state?.networkId;
+            resourceInputs["networksSensorAlertsProfilesId"] = state?.networksSensorAlertsProfilesId;
             resourceInputs["profileId"] = state?.profileId;
             resourceInputs["recipients"] = state?.recipients;
             resourceInputs["schedule"] = state?.schedule;
@@ -190,6 +195,7 @@ export class SensorAlertsProfiles extends pulumi.CustomResource {
             resourceInputs["conditions"] = args?.conditions;
             resourceInputs["name"] = args?.name;
             resourceInputs["networkId"] = args?.networkId;
+            resourceInputs["networksSensorAlertsProfilesId"] = args?.networksSensorAlertsProfilesId;
             resourceInputs["recipients"] = args?.recipients;
             resourceInputs["schedule"] = args?.schedule;
             resourceInputs["serials"] = args?.serials;
@@ -221,6 +227,10 @@ export interface SensorAlertsProfilesState {
      * networkId path parameter. Network ID
      */
     networkId?: pulumi.Input<string>;
+    /**
+     * id path parameter.
+     */
+    networksSensorAlertsProfilesId?: pulumi.Input<string>;
     /**
      * ID of the sensor alert profile.
      */
@@ -255,6 +265,10 @@ export interface SensorAlertsProfilesArgs {
      * networkId path parameter. Network ID
      */
     networkId: pulumi.Input<string>;
+    /**
+     * id path parameter.
+     */
+    networksSensorAlertsProfilesId?: pulumi.Input<string>;
     /**
      * List of recipients that will receive the alert.
      */

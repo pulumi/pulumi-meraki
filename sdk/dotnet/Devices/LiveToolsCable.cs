@@ -25,6 +25,12 @@ namespace Pulumi.Meraki.Devices
         public Output<Outputs.LiveToolsCableCallback> Callback { get; private set; } = null!;
 
         /// <summary>
+        /// id path parameter.
+        /// </summary>
+        [Output("devicesLiveToolsCableId")]
+        public Output<string?> DevicesLiveToolsCableId { get; private set; } = null!;
+
+        /// <summary>
         /// An error message for a failed execution
         /// </summary>
         [Output("error")]
@@ -119,6 +125,12 @@ namespace Pulumi.Meraki.Devices
         [Input("callback")]
         public Input<Inputs.LiveToolsCableCallbackArgs>? Callback { get; set; }
 
+        /// <summary>
+        /// id path parameter.
+        /// </summary>
+        [Input("devicesLiveToolsCableId")]
+        public Input<string>? DevicesLiveToolsCableId { get; set; }
+
         [Input("ports")]
         private InputList<string>? _ports;
 
@@ -156,6 +168,12 @@ namespace Pulumi.Meraki.Devices
         /// </summary>
         [Input("callback")]
         public Input<Inputs.LiveToolsCableCallbackGetArgs>? Callback { get; set; }
+
+        /// <summary>
+        /// id path parameter.
+        /// </summary>
+        [Input("devicesLiveToolsCableId")]
+        public Input<string>? DevicesLiveToolsCableId { get; set; }
 
         /// <summary>
         /// An error message for a failed execution

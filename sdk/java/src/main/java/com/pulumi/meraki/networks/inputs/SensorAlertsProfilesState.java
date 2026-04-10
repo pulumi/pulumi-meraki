@@ -81,6 +81,21 @@ public final class SensorAlertsProfilesState extends com.pulumi.resources.Resour
     }
 
     /**
+     * id path parameter.
+     * 
+     */
+    @Import(name="networksSensorAlertsProfilesId")
+    private @Nullable Output<String> networksSensorAlertsProfilesId;
+
+    /**
+     * @return id path parameter.
+     * 
+     */
+    public Optional<Output<String>> networksSensorAlertsProfilesId() {
+        return Optional.ofNullable(this.networksSensorAlertsProfilesId);
+    }
+
+    /**
      * ID of the sensor alert profile.
      * 
      */
@@ -147,6 +162,7 @@ public final class SensorAlertsProfilesState extends com.pulumi.resources.Resour
         this.conditionsResponses = $.conditionsResponses;
         this.name = $.name;
         this.networkId = $.networkId;
+        this.networksSensorAlertsProfilesId = $.networksSensorAlertsProfilesId;
         this.profileId = $.profileId;
         this.recipients = $.recipients;
         this.schedule = $.schedule;
@@ -273,6 +289,27 @@ public final class SensorAlertsProfilesState extends com.pulumi.resources.Resour
          */
         public Builder networkId(String networkId) {
             return networkId(Output.of(networkId));
+        }
+
+        /**
+         * @param networksSensorAlertsProfilesId id path parameter.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networksSensorAlertsProfilesId(@Nullable Output<String> networksSensorAlertsProfilesId) {
+            $.networksSensorAlertsProfilesId = networksSensorAlertsProfilesId;
+            return this;
+        }
+
+        /**
+         * @param networksSensorAlertsProfilesId id path parameter.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder networksSensorAlertsProfilesId(String networksSensorAlertsProfilesId) {
+            return networksSensorAlertsProfilesId(Output.of(networksSensorAlertsProfilesId));
         }
 
         /**
