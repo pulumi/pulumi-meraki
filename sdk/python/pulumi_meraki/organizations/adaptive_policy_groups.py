@@ -24,6 +24,7 @@ class AdaptivePolicyGroupsArgs:
                  organization_id: pulumi.Input[_builtins.str],
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
+                 organizations_adaptive_policy_groups_id: Optional[pulumi.Input[_builtins.str]] = None,
                  policy_objects: Optional[pulumi.Input[Sequence[pulumi.Input['AdaptivePolicyGroupsPolicyObjectArgs']]]] = None,
                  sgt: Optional[pulumi.Input[_builtins.int]] = None):
         """
@@ -32,6 +33,7 @@ class AdaptivePolicyGroupsArgs:
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
         :param pulumi.Input[_builtins.str] description: Description of the group (default: "")
         :param pulumi.Input[_builtins.str] name: Name of the group
+        :param pulumi.Input[_builtins.str] organizations_adaptive_policy_groups_id: id path parameter.
         :param pulumi.Input[Sequence[pulumi.Input['AdaptivePolicyGroupsPolicyObjectArgs']]] policy_objects: The policy objects that belong to this group; traffic from addresses specified by these policy objects will be tagged with this group's SGT value if no other tagging scheme is being used (each requires one unique attribute) ()
         :param pulumi.Input[_builtins.int] sgt: SGT value of the group
         """
@@ -40,6 +42,8 @@ class AdaptivePolicyGroupsArgs:
             pulumi.set(__self__, "description", description)
         if name is not None:
             pulumi.set(__self__, "name", name)
+        if organizations_adaptive_policy_groups_id is not None:
+            pulumi.set(__self__, "organizations_adaptive_policy_groups_id", organizations_adaptive_policy_groups_id)
         if policy_objects is not None:
             pulumi.set(__self__, "policy_objects", policy_objects)
         if sgt is not None:
@@ -82,6 +86,18 @@ class AdaptivePolicyGroupsArgs:
         pulumi.set(self, "name", value)
 
     @_builtins.property
+    @pulumi.getter(name="organizationsAdaptivePolicyGroupsId")
+    def organizations_adaptive_policy_groups_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        id path parameter.
+        """
+        return pulumi.get(self, "organizations_adaptive_policy_groups_id")
+
+    @organizations_adaptive_policy_groups_id.setter
+    def organizations_adaptive_policy_groups_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "organizations_adaptive_policy_groups_id", value)
+
+    @_builtins.property
     @pulumi.getter(name="policyObjects")
     def policy_objects(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['AdaptivePolicyGroupsPolicyObjectArgs']]]]:
         """
@@ -115,6 +131,7 @@ class _AdaptivePolicyGroupsState:
                  is_default_group: Optional[pulumi.Input[_builtins.bool]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  organization_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 organizations_adaptive_policy_groups_id: Optional[pulumi.Input[_builtins.str]] = None,
                  policy_objects: Optional[pulumi.Input[Sequence[pulumi.Input['AdaptivePolicyGroupsPolicyObjectArgs']]]] = None,
                  required_ip_mappings: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  sgt: Optional[pulumi.Input[_builtins.int]] = None,
@@ -125,6 +142,7 @@ class _AdaptivePolicyGroupsState:
         :param pulumi.Input[_builtins.str] description: Description of the group (default: "")
         :param pulumi.Input[_builtins.str] name: Name of the group
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
+        :param pulumi.Input[_builtins.str] organizations_adaptive_policy_groups_id: id path parameter.
         :param pulumi.Input[Sequence[pulumi.Input['AdaptivePolicyGroupsPolicyObjectArgs']]] policy_objects: The policy objects that belong to this group; traffic from addresses specified by these policy objects will be tagged with this group's SGT value if no other tagging scheme is being used (each requires one unique attribute) ()
         :param pulumi.Input[_builtins.int] sgt: SGT value of the group
         """
@@ -140,6 +158,8 @@ class _AdaptivePolicyGroupsState:
             pulumi.set(__self__, "name", name)
         if organization_id is not None:
             pulumi.set(__self__, "organization_id", organization_id)
+        if organizations_adaptive_policy_groups_id is not None:
+            pulumi.set(__self__, "organizations_adaptive_policy_groups_id", organizations_adaptive_policy_groups_id)
         if policy_objects is not None:
             pulumi.set(__self__, "policy_objects", policy_objects)
         if required_ip_mappings is not None:
@@ -213,6 +233,18 @@ class _AdaptivePolicyGroupsState:
         pulumi.set(self, "organization_id", value)
 
     @_builtins.property
+    @pulumi.getter(name="organizationsAdaptivePolicyGroupsId")
+    def organizations_adaptive_policy_groups_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        id path parameter.
+        """
+        return pulumi.get(self, "organizations_adaptive_policy_groups_id")
+
+    @organizations_adaptive_policy_groups_id.setter
+    def organizations_adaptive_policy_groups_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "organizations_adaptive_policy_groups_id", value)
+
+    @_builtins.property
     @pulumi.getter(name="policyObjects")
     def policy_objects(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['AdaptivePolicyGroupsPolicyObjectArgs']]]]:
         """
@@ -264,6 +296,7 @@ class AdaptivePolicyGroups(pulumi.CustomResource):
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  organization_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 organizations_adaptive_policy_groups_id: Optional[pulumi.Input[_builtins.str]] = None,
                  policy_objects: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AdaptivePolicyGroupsPolicyObjectArgs', 'AdaptivePolicyGroupsPolicyObjectArgsDict']]]]] = None,
                  sgt: Optional[pulumi.Input[_builtins.int]] = None,
                  __props__=None):
@@ -298,6 +331,7 @@ class AdaptivePolicyGroups(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: Description of the group (default: "")
         :param pulumi.Input[_builtins.str] name: Name of the group
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
+        :param pulumi.Input[_builtins.str] organizations_adaptive_policy_groups_id: id path parameter.
         :param pulumi.Input[Sequence[pulumi.Input[Union['AdaptivePolicyGroupsPolicyObjectArgs', 'AdaptivePolicyGroupsPolicyObjectArgsDict']]]] policy_objects: The policy objects that belong to this group; traffic from addresses specified by these policy objects will be tagged with this group's SGT value if no other tagging scheme is being used (each requires one unique attribute) ()
         :param pulumi.Input[_builtins.int] sgt: SGT value of the group
         """
@@ -351,6 +385,7 @@ class AdaptivePolicyGroups(pulumi.CustomResource):
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  organization_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 organizations_adaptive_policy_groups_id: Optional[pulumi.Input[_builtins.str]] = None,
                  policy_objects: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AdaptivePolicyGroupsPolicyObjectArgs', 'AdaptivePolicyGroupsPolicyObjectArgsDict']]]]] = None,
                  sgt: Optional[pulumi.Input[_builtins.int]] = None,
                  __props__=None):
@@ -367,6 +402,7 @@ class AdaptivePolicyGroups(pulumi.CustomResource):
             if organization_id is None and not opts.urn:
                 raise TypeError("Missing required property 'organization_id'")
             __props__.__dict__["organization_id"] = organization_id
+            __props__.__dict__["organizations_adaptive_policy_groups_id"] = organizations_adaptive_policy_groups_id
             __props__.__dict__["policy_objects"] = policy_objects
             __props__.__dict__["sgt"] = sgt
             __props__.__dict__["created_at"] = None
@@ -390,6 +426,7 @@ class AdaptivePolicyGroups(pulumi.CustomResource):
             is_default_group: Optional[pulumi.Input[_builtins.bool]] = None,
             name: Optional[pulumi.Input[_builtins.str]] = None,
             organization_id: Optional[pulumi.Input[_builtins.str]] = None,
+            organizations_adaptive_policy_groups_id: Optional[pulumi.Input[_builtins.str]] = None,
             policy_objects: Optional[pulumi.Input[Sequence[pulumi.Input[Union['AdaptivePolicyGroupsPolicyObjectArgs', 'AdaptivePolicyGroupsPolicyObjectArgsDict']]]]] = None,
             required_ip_mappings: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             sgt: Optional[pulumi.Input[_builtins.int]] = None,
@@ -404,6 +441,7 @@ class AdaptivePolicyGroups(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: Description of the group (default: "")
         :param pulumi.Input[_builtins.str] name: Name of the group
         :param pulumi.Input[_builtins.str] organization_id: organizationId path parameter. Organization ID
+        :param pulumi.Input[_builtins.str] organizations_adaptive_policy_groups_id: id path parameter.
         :param pulumi.Input[Sequence[pulumi.Input[Union['AdaptivePolicyGroupsPolicyObjectArgs', 'AdaptivePolicyGroupsPolicyObjectArgsDict']]]] policy_objects: The policy objects that belong to this group; traffic from addresses specified by these policy objects will be tagged with this group's SGT value if no other tagging scheme is being used (each requires one unique attribute) ()
         :param pulumi.Input[_builtins.int] sgt: SGT value of the group
         """
@@ -417,6 +455,7 @@ class AdaptivePolicyGroups(pulumi.CustomResource):
         __props__.__dict__["is_default_group"] = is_default_group
         __props__.__dict__["name"] = name
         __props__.__dict__["organization_id"] = organization_id
+        __props__.__dict__["organizations_adaptive_policy_groups_id"] = organizations_adaptive_policy_groups_id
         __props__.__dict__["policy_objects"] = policy_objects
         __props__.__dict__["required_ip_mappings"] = required_ip_mappings
         __props__.__dict__["sgt"] = sgt
@@ -461,6 +500,14 @@ class AdaptivePolicyGroups(pulumi.CustomResource):
         organizationId path parameter. Organization ID
         """
         return pulumi.get(self, "organization_id")
+
+    @_builtins.property
+    @pulumi.getter(name="organizationsAdaptivePolicyGroupsId")
+    def organizations_adaptive_policy_groups_id(self) -> pulumi.Output[_builtins.str]:
+        """
+        id path parameter.
+        """
+        return pulumi.get(self, "organizations_adaptive_policy_groups_id")
 
     @_builtins.property
     @pulumi.getter(name="policyObjects")

@@ -93,6 +93,12 @@ namespace Pulumi.Meraki.Organizations
         public Output<string> OrganizationId { get; private set; } = null!;
 
         /// <summary>
+        /// id path parameter.
+        /// </summary>
+        [Output("organizationsAdaptivePolicyPoliciesId")]
+        public Output<string> OrganizationsAdaptivePolicyPoliciesId { get; private set; } = null!;
+
+        /// <summary>
         /// The source adaptive policy group (requires one unique attribute)
         /// </summary>
         [Output("sourceGroup")]
@@ -179,6 +185,12 @@ namespace Pulumi.Meraki.Organizations
         public Input<string> OrganizationId { get; set; } = null!;
 
         /// <summary>
+        /// id path parameter.
+        /// </summary>
+        [Input("organizationsAdaptivePolicyPoliciesId")]
+        public Input<string>? OrganizationsAdaptivePolicyPoliciesId { get; set; }
+
+        /// <summary>
         /// The source adaptive policy group (requires one unique attribute)
         /// </summary>
         [Input("sourceGroup")]
@@ -227,6 +239,12 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         [Input("organizationId")]
         public Input<string>? OrganizationId { get; set; }
+
+        /// <summary>
+        /// id path parameter.
+        /// </summary>
+        [Input("organizationsAdaptivePolicyPoliciesId")]
+        public Input<string>? OrganizationsAdaptivePolicyPoliciesId { get; set; }
 
         /// <summary>
         /// The source adaptive policy group (requires one unique attribute)

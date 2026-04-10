@@ -214,6 +214,20 @@ public class SensorAlertsProfiles extends com.pulumi.resources.CustomResource {
         return this.networkId;
     }
     /**
+     * id path parameter.
+     * 
+     */
+    @Export(name="networksSensorAlertsProfilesId", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> networksSensorAlertsProfilesId;
+
+    /**
+     * @return id path parameter.
+     * 
+     */
+    public Output<Optional<String>> networksSensorAlertsProfilesId() {
+        return Codegen.optional(this.networksSensorAlertsProfilesId);
+    }
+    /**
      * ID of the sensor alert profile.
      * 
      */

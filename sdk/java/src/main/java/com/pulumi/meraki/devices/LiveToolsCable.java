@@ -15,6 +15,7 @@ import com.pulumi.meraki.devices.outputs.LiveToolsCableRequest;
 import com.pulumi.meraki.devices.outputs.LiveToolsCableResult;
 import java.lang.String;
 import java.util.List;
+import java.util.Optional;
 import javax.annotation.Nullable;
 
 @ResourceType(type="meraki:devices/liveToolsCable:LiveToolsCable")
@@ -46,6 +47,20 @@ public class LiveToolsCable extends com.pulumi.resources.CustomResource {
      */
     public Output<LiveToolsCableCallback> callback() {
         return this.callback;
+    }
+    /**
+     * id path parameter.
+     * 
+     */
+    @Export(name="devicesLiveToolsCableId", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> devicesLiveToolsCableId;
+
+    /**
+     * @return id path parameter.
+     * 
+     */
+    public Output<Optional<String>> devicesLiveToolsCableId() {
+        return Codegen.optional(this.devicesLiveToolsCableId);
     }
     /**
      * An error message for a failed execution

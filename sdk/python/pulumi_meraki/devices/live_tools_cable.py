@@ -23,17 +23,21 @@ class LiveToolsCableArgs:
     def __init__(__self__, *,
                  serial: pulumi.Input[_builtins.str],
                  callback: Optional[pulumi.Input['LiveToolsCableCallbackArgs']] = None,
+                 devices_live_tools_cable_id: Optional[pulumi.Input[_builtins.str]] = None,
                  ports: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a LiveToolsCable resource.
 
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         :param pulumi.Input['LiveToolsCableCallbackArgs'] callback: Details for the callback. Please include either an httpServerId OR url and sharedSecret
+        :param pulumi.Input[_builtins.str] devices_live_tools_cable_id: id path parameter.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ports: A list of ports for which to perform the cable test.
         """
         pulumi.set(__self__, "serial", serial)
         if callback is not None:
             pulumi.set(__self__, "callback", callback)
+        if devices_live_tools_cable_id is not None:
+            pulumi.set(__self__, "devices_live_tools_cable_id", devices_live_tools_cable_id)
         if ports is not None:
             pulumi.set(__self__, "ports", ports)
 
@@ -62,6 +66,18 @@ class LiveToolsCableArgs:
         pulumi.set(self, "callback", value)
 
     @_builtins.property
+    @pulumi.getter(name="devicesLiveToolsCableId")
+    def devices_live_tools_cable_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        id path parameter.
+        """
+        return pulumi.get(self, "devices_live_tools_cable_id")
+
+    @devices_live_tools_cable_id.setter
+    def devices_live_tools_cable_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "devices_live_tools_cable_id", value)
+
+    @_builtins.property
     @pulumi.getter
     def ports(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
@@ -79,6 +95,7 @@ class _LiveToolsCableState:
     def __init__(__self__, *,
                  cable_test_id: Optional[pulumi.Input[_builtins.str]] = None,
                  callback: Optional[pulumi.Input['LiveToolsCableCallbackArgs']] = None,
+                 devices_live_tools_cable_id: Optional[pulumi.Input[_builtins.str]] = None,
                  error: Optional[pulumi.Input[_builtins.str]] = None,
                  ports: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  request: Optional[pulumi.Input['LiveToolsCableRequestArgs']] = None,
@@ -91,6 +108,7 @@ class _LiveToolsCableState:
 
         :param pulumi.Input[_builtins.str] cable_test_id: Id of the cable test request. Used to check the status of the request.
         :param pulumi.Input['LiveToolsCableCallbackArgs'] callback: Details for the callback. Please include either an httpServerId OR url and sharedSecret
+        :param pulumi.Input[_builtins.str] devices_live_tools_cable_id: id path parameter.
         :param pulumi.Input[_builtins.str] error: An error message for a failed execution
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ports: A list of ports for which to perform the cable test.
         :param pulumi.Input['LiveToolsCableRequestArgs'] request: Cable test request parameters
@@ -103,6 +121,8 @@ class _LiveToolsCableState:
             pulumi.set(__self__, "cable_test_id", cable_test_id)
         if callback is not None:
             pulumi.set(__self__, "callback", callback)
+        if devices_live_tools_cable_id is not None:
+            pulumi.set(__self__, "devices_live_tools_cable_id", devices_live_tools_cable_id)
         if error is not None:
             pulumi.set(__self__, "error", error)
         if ports is not None:
@@ -141,6 +161,18 @@ class _LiveToolsCableState:
     @callback.setter
     def callback(self, value: Optional[pulumi.Input['LiveToolsCableCallbackArgs']]):
         pulumi.set(self, "callback", value)
+
+    @_builtins.property
+    @pulumi.getter(name="devicesLiveToolsCableId")
+    def devices_live_tools_cable_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        id path parameter.
+        """
+        return pulumi.get(self, "devices_live_tools_cable_id")
+
+    @devices_live_tools_cable_id.setter
+    def devices_live_tools_cable_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "devices_live_tools_cable_id", value)
 
     @_builtins.property
     @pulumi.getter
@@ -234,6 +266,7 @@ class LiveToolsCable(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  callback: Optional[pulumi.Input[Union['LiveToolsCableCallbackArgs', 'LiveToolsCableCallbackArgsDict']]] = None,
+                 devices_live_tools_cable_id: Optional[pulumi.Input[_builtins.str]] = None,
                  ports: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  serial: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
@@ -243,6 +276,7 @@ class LiveToolsCable(pulumi.CustomResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['LiveToolsCableCallbackArgs', 'LiveToolsCableCallbackArgsDict']] callback: Details for the callback. Please include either an httpServerId OR url and sharedSecret
+        :param pulumi.Input[_builtins.str] devices_live_tools_cable_id: id path parameter.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ports: A list of ports for which to perform the cable test.
         :param pulumi.Input[_builtins.str] serial: serial path parameter.
         """
@@ -271,6 +305,7 @@ class LiveToolsCable(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  callback: Optional[pulumi.Input[Union['LiveToolsCableCallbackArgs', 'LiveToolsCableCallbackArgsDict']]] = None,
+                 devices_live_tools_cable_id: Optional[pulumi.Input[_builtins.str]] = None,
                  ports: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  serial: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
@@ -283,6 +318,7 @@ class LiveToolsCable(pulumi.CustomResource):
             __props__ = LiveToolsCableArgs.__new__(LiveToolsCableArgs)
 
             __props__.__dict__["callback"] = callback
+            __props__.__dict__["devices_live_tools_cable_id"] = devices_live_tools_cable_id
             __props__.__dict__["ports"] = ports
             if serial is None and not opts.urn:
                 raise TypeError("Missing required property 'serial'")
@@ -305,6 +341,7 @@ class LiveToolsCable(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             cable_test_id: Optional[pulumi.Input[_builtins.str]] = None,
             callback: Optional[pulumi.Input[Union['LiveToolsCableCallbackArgs', 'LiveToolsCableCallbackArgsDict']]] = None,
+            devices_live_tools_cable_id: Optional[pulumi.Input[_builtins.str]] = None,
             error: Optional[pulumi.Input[_builtins.str]] = None,
             ports: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             request: Optional[pulumi.Input[Union['LiveToolsCableRequestArgs', 'LiveToolsCableRequestArgsDict']]] = None,
@@ -321,6 +358,7 @@ class LiveToolsCable(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] cable_test_id: Id of the cable test request. Used to check the status of the request.
         :param pulumi.Input[Union['LiveToolsCableCallbackArgs', 'LiveToolsCableCallbackArgsDict']] callback: Details for the callback. Please include either an httpServerId OR url and sharedSecret
+        :param pulumi.Input[_builtins.str] devices_live_tools_cable_id: id path parameter.
         :param pulumi.Input[_builtins.str] error: An error message for a failed execution
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ports: A list of ports for which to perform the cable test.
         :param pulumi.Input[Union['LiveToolsCableRequestArgs', 'LiveToolsCableRequestArgsDict']] request: Cable test request parameters
@@ -335,6 +373,7 @@ class LiveToolsCable(pulumi.CustomResource):
 
         __props__.__dict__["cable_test_id"] = cable_test_id
         __props__.__dict__["callback"] = callback
+        __props__.__dict__["devices_live_tools_cable_id"] = devices_live_tools_cable_id
         __props__.__dict__["error"] = error
         __props__.__dict__["ports"] = ports
         __props__.__dict__["request"] = request
@@ -359,6 +398,14 @@ class LiveToolsCable(pulumi.CustomResource):
         Details for the callback. Please include either an httpServerId OR url and sharedSecret
         """
         return pulumi.get(self, "callback")
+
+    @_builtins.property
+    @pulumi.getter(name="devicesLiveToolsCableId")
+    def devices_live_tools_cable_id(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        id path parameter.
+        """
+        return pulumi.get(self, "devices_live_tools_cable_id")
 
     @_builtins.property
     @pulumi.getter

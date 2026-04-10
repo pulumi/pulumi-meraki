@@ -174,6 +174,12 @@ namespace Pulumi.Meraki.Networks
         public Output<string> NetworkId { get; private set; } = null!;
 
         /// <summary>
+        /// id path parameter.
+        /// </summary>
+        [Output("networksSensorAlertsProfilesId")]
+        public Output<string?> NetworksSensorAlertsProfilesId { get; private set; } = null!;
+
+        /// <summary>
         /// ID of the sensor alert profile.
         /// </summary>
         [Output("profileId")]
@@ -269,6 +275,12 @@ namespace Pulumi.Meraki.Networks
         public Input<string> NetworkId { get; set; } = null!;
 
         /// <summary>
+        /// id path parameter.
+        /// </summary>
+        [Input("networksSensorAlertsProfilesId")]
+        public Input<string>? NetworksSensorAlertsProfilesId { get; set; }
+
+        /// <summary>
         /// List of recipients that will receive the alert.
         /// </summary>
         [Input("recipients")]
@@ -335,6 +347,12 @@ namespace Pulumi.Meraki.Networks
         /// </summary>
         [Input("networkId")]
         public Input<string>? NetworkId { get; set; }
+
+        /// <summary>
+        /// id path parameter.
+        /// </summary>
+        [Input("networksSensorAlertsProfilesId")]
+        public Input<string>? NetworksSensorAlertsProfilesId { get; set; }
 
         /// <summary>
         /// ID of the sensor alert profile.

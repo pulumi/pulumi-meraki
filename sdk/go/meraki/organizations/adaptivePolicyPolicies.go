@@ -74,6 +74,8 @@ type AdaptivePolicyPolicies struct {
 	LastEntryRule pulumi.StringOutput `pulumi:"lastEntryRule"`
 	// organizationId path parameter. Organization ID
 	OrganizationId pulumi.StringOutput `pulumi:"organizationId"`
+	// id path parameter.
+	OrganizationsAdaptivePolicyPoliciesId pulumi.StringOutput `pulumi:"organizationsAdaptivePolicyPoliciesId"`
 	// The source adaptive policy group (requires one unique attribute)
 	SourceGroup AdaptivePolicyPoliciesSourceGroupOutput `pulumi:"sourceGroup"`
 	UpdatedAt   pulumi.StringOutput                     `pulumi:"updatedAt"`
@@ -122,6 +124,8 @@ type adaptivePolicyPoliciesState struct {
 	LastEntryRule *string `pulumi:"lastEntryRule"`
 	// organizationId path parameter. Organization ID
 	OrganizationId *string `pulumi:"organizationId"`
+	// id path parameter.
+	OrganizationsAdaptivePolicyPoliciesId *string `pulumi:"organizationsAdaptivePolicyPoliciesId"`
 	// The source adaptive policy group (requires one unique attribute)
 	SourceGroup *AdaptivePolicyPoliciesSourceGroup `pulumi:"sourceGroup"`
 	UpdatedAt   *string                            `pulumi:"updatedAt"`
@@ -138,6 +142,8 @@ type AdaptivePolicyPoliciesState struct {
 	LastEntryRule pulumi.StringPtrInput
 	// organizationId path parameter. Organization ID
 	OrganizationId pulumi.StringPtrInput
+	// id path parameter.
+	OrganizationsAdaptivePolicyPoliciesId pulumi.StringPtrInput
 	// The source adaptive policy group (requires one unique attribute)
 	SourceGroup AdaptivePolicyPoliciesSourceGroupPtrInput
 	UpdatedAt   pulumi.StringPtrInput
@@ -156,6 +162,8 @@ type adaptivePolicyPoliciesArgs struct {
 	LastEntryRule *string `pulumi:"lastEntryRule"`
 	// organizationId path parameter. Organization ID
 	OrganizationId string `pulumi:"organizationId"`
+	// id path parameter.
+	OrganizationsAdaptivePolicyPoliciesId *string `pulumi:"organizationsAdaptivePolicyPoliciesId"`
 	// The source adaptive policy group (requires one unique attribute)
 	SourceGroup *AdaptivePolicyPoliciesSourceGroup `pulumi:"sourceGroup"`
 }
@@ -170,6 +178,8 @@ type AdaptivePolicyPoliciesArgs struct {
 	LastEntryRule pulumi.StringPtrInput
 	// organizationId path parameter. Organization ID
 	OrganizationId pulumi.StringInput
+	// id path parameter.
+	OrganizationsAdaptivePolicyPoliciesId pulumi.StringPtrInput
 	// The source adaptive policy group (requires one unique attribute)
 	SourceGroup AdaptivePolicyPoliciesSourceGroupPtrInput
 }
@@ -289,6 +299,11 @@ func (o AdaptivePolicyPoliciesOutput) LastEntryRule() pulumi.StringOutput {
 // organizationId path parameter. Organization ID
 func (o AdaptivePolicyPoliciesOutput) OrganizationId() pulumi.StringOutput {
 	return o.ApplyT(func(v *AdaptivePolicyPolicies) pulumi.StringOutput { return v.OrganizationId }).(pulumi.StringOutput)
+}
+
+// id path parameter.
+func (o AdaptivePolicyPoliciesOutput) OrganizationsAdaptivePolicyPoliciesId() pulumi.StringOutput {
+	return o.ApplyT(func(v *AdaptivePolicyPolicies) pulumi.StringOutput { return v.OrganizationsAdaptivePolicyPoliciesId }).(pulumi.StringOutput)
 }
 
 // The source adaptive policy group (requires one unique attribute)

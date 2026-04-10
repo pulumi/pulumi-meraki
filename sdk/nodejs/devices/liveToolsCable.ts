@@ -43,6 +43,10 @@ export class LiveToolsCable extends pulumi.CustomResource {
      */
     declare public readonly callback: pulumi.Output<outputs.devices.LiveToolsCableCallback>;
     /**
+     * id path parameter.
+     */
+    declare public readonly devicesLiveToolsCableId: pulumi.Output<string | undefined>;
+    /**
      * An error message for a failed execution
      */
     declare public /*out*/ readonly error: pulumi.Output<string>;
@@ -86,6 +90,7 @@ export class LiveToolsCable extends pulumi.CustomResource {
             const state = argsOrState as LiveToolsCableState | undefined;
             resourceInputs["cableTestId"] = state?.cableTestId;
             resourceInputs["callback"] = state?.callback;
+            resourceInputs["devicesLiveToolsCableId"] = state?.devicesLiveToolsCableId;
             resourceInputs["error"] = state?.error;
             resourceInputs["ports"] = state?.ports;
             resourceInputs["request"] = state?.request;
@@ -99,6 +104,7 @@ export class LiveToolsCable extends pulumi.CustomResource {
                 throw new Error("Missing required property 'serial'");
             }
             resourceInputs["callback"] = args?.callback;
+            resourceInputs["devicesLiveToolsCableId"] = args?.devicesLiveToolsCableId;
             resourceInputs["ports"] = args?.ports;
             resourceInputs["serial"] = args?.serial;
             resourceInputs["cableTestId"] = undefined /*out*/;
@@ -125,6 +131,10 @@ export interface LiveToolsCableState {
      * Details for the callback. Please include either an httpServerId OR url and sharedSecret
      */
     callback?: pulumi.Input<inputs.devices.LiveToolsCableCallback>;
+    /**
+     * id path parameter.
+     */
+    devicesLiveToolsCableId?: pulumi.Input<string>;
     /**
      * An error message for a failed execution
      */
@@ -163,6 +173,10 @@ export interface LiveToolsCableArgs {
      * Details for the callback. Please include either an httpServerId OR url and sharedSecret
      */
     callback?: pulumi.Input<inputs.devices.LiveToolsCableCallback>;
+    /**
+     * id path parameter.
+     */
+    devicesLiveToolsCableId?: pulumi.Input<string>;
     /**
      * A list of ports for which to perform the cable test.
      */

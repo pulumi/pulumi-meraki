@@ -65,6 +65,21 @@ public final class AdaptivePolicyGroupsArgs extends com.pulumi.resources.Resourc
     }
 
     /**
+     * id path parameter.
+     * 
+     */
+    @Import(name="organizationsAdaptivePolicyGroupsId")
+    private @Nullable Output<String> organizationsAdaptivePolicyGroupsId;
+
+    /**
+     * @return id path parameter.
+     * 
+     */
+    public Optional<Output<String>> organizationsAdaptivePolicyGroupsId() {
+        return Optional.ofNullable(this.organizationsAdaptivePolicyGroupsId);
+    }
+
+    /**
      * The policy objects that belong to this group; traffic from addresses specified by these policy objects will be tagged with this group&#39;s SGT value if no other tagging scheme is being used (each requires one unique attribute) ()
      * 
      */
@@ -100,6 +115,7 @@ public final class AdaptivePolicyGroupsArgs extends com.pulumi.resources.Resourc
         this.description = $.description;
         this.name = $.name;
         this.organizationId = $.organizationId;
+        this.organizationsAdaptivePolicyGroupsId = $.organizationsAdaptivePolicyGroupsId;
         this.policyObjects = $.policyObjects;
         this.sgt = $.sgt;
     }
@@ -183,6 +199,27 @@ public final class AdaptivePolicyGroupsArgs extends com.pulumi.resources.Resourc
          */
         public Builder organizationId(String organizationId) {
             return organizationId(Output.of(organizationId));
+        }
+
+        /**
+         * @param organizationsAdaptivePolicyGroupsId id path parameter.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder organizationsAdaptivePolicyGroupsId(@Nullable Output<String> organizationsAdaptivePolicyGroupsId) {
+            $.organizationsAdaptivePolicyGroupsId = organizationsAdaptivePolicyGroupsId;
+            return this;
+        }
+
+        /**
+         * @param organizationsAdaptivePolicyGroupsId id path parameter.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder organizationsAdaptivePolicyGroupsId(String organizationsAdaptivePolicyGroupsId) {
+            return organizationsAdaptivePolicyGroupsId(Output.of(organizationsAdaptivePolicyGroupsId));
         }
 
         /**

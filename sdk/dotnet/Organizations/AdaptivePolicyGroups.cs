@@ -80,6 +80,12 @@ namespace Pulumi.Meraki.Organizations
         public Output<string> OrganizationId { get; private set; } = null!;
 
         /// <summary>
+        /// id path parameter.
+        /// </summary>
+        [Output("organizationsAdaptivePolicyGroupsId")]
+        public Output<string> OrganizationsAdaptivePolicyGroupsId { get; private set; } = null!;
+
+        /// <summary>
         /// The policy objects that belong to this group; traffic from addresses specified by these policy objects will be tagged with this group's SGT value if no other tagging scheme is being used (each requires one unique attribute) ()
         /// </summary>
         [Output("policyObjects")]
@@ -162,6 +168,12 @@ namespace Pulumi.Meraki.Organizations
         [Input("organizationId", required: true)]
         public Input<string> OrganizationId { get; set; } = null!;
 
+        /// <summary>
+        /// id path parameter.
+        /// </summary>
+        [Input("organizationsAdaptivePolicyGroupsId")]
+        public Input<string>? OrganizationsAdaptivePolicyGroupsId { get; set; }
+
         [Input("policyObjects")]
         private InputList<Inputs.AdaptivePolicyGroupsPolicyObjectArgs>? _policyObjects;
 
@@ -214,6 +226,12 @@ namespace Pulumi.Meraki.Organizations
         /// </summary>
         [Input("organizationId")]
         public Input<string>? OrganizationId { get; set; }
+
+        /// <summary>
+        /// id path parameter.
+        /// </summary>
+        [Input("organizationsAdaptivePolicyGroupsId")]
+        public Input<string>? OrganizationsAdaptivePolicyGroupsId { get; set; }
 
         [Input("policyObjects")]
         private InputList<Inputs.AdaptivePolicyGroupsPolicyObjectGetArgs>? _policyObjects;

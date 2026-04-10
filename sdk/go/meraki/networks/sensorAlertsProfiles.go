@@ -138,6 +138,8 @@ type SensorAlertsProfiles struct {
 	Name pulumi.StringOutput `pulumi:"name"`
 	// networkId path parameter. Network ID
 	NetworkId pulumi.StringOutput `pulumi:"networkId"`
+	// id path parameter.
+	NetworksSensorAlertsProfilesId pulumi.StringPtrOutput `pulumi:"networksSensorAlertsProfilesId"`
 	// ID of the sensor alert profile.
 	ProfileId pulumi.StringOutput `pulumi:"profileId"`
 	// List of recipients that will receive the alert.
@@ -189,6 +191,8 @@ type sensorAlertsProfilesState struct {
 	Name *string `pulumi:"name"`
 	// networkId path parameter. Network ID
 	NetworkId *string `pulumi:"networkId"`
+	// id path parameter.
+	NetworksSensorAlertsProfilesId *string `pulumi:"networksSensorAlertsProfilesId"`
 	// ID of the sensor alert profile.
 	ProfileId *string `pulumi:"profileId"`
 	// List of recipients that will receive the alert.
@@ -208,6 +212,8 @@ type SensorAlertsProfilesState struct {
 	Name pulumi.StringPtrInput
 	// networkId path parameter. Network ID
 	NetworkId pulumi.StringPtrInput
+	// id path parameter.
+	NetworksSensorAlertsProfilesId pulumi.StringPtrInput
 	// ID of the sensor alert profile.
 	ProfileId pulumi.StringPtrInput
 	// List of recipients that will receive the alert.
@@ -229,6 +235,8 @@ type sensorAlertsProfilesArgs struct {
 	Name *string `pulumi:"name"`
 	// networkId path parameter. Network ID
 	NetworkId string `pulumi:"networkId"`
+	// id path parameter.
+	NetworksSensorAlertsProfilesId *string `pulumi:"networksSensorAlertsProfilesId"`
 	// List of recipients that will receive the alert.
 	Recipients *SensorAlertsProfilesRecipients `pulumi:"recipients"`
 	// The sensor schedule to use with the alert profile.
@@ -245,6 +253,8 @@ type SensorAlertsProfilesArgs struct {
 	Name pulumi.StringPtrInput
 	// networkId path parameter. Network ID
 	NetworkId pulumi.StringInput
+	// id path parameter.
+	NetworksSensorAlertsProfilesId pulumi.StringPtrInput
 	// List of recipients that will receive the alert.
 	Recipients SensorAlertsProfilesRecipientsPtrInput
 	// The sensor schedule to use with the alert profile.
@@ -360,6 +370,11 @@ func (o SensorAlertsProfilesOutput) Name() pulumi.StringOutput {
 // networkId path parameter. Network ID
 func (o SensorAlertsProfilesOutput) NetworkId() pulumi.StringOutput {
 	return o.ApplyT(func(v *SensorAlertsProfiles) pulumi.StringOutput { return v.NetworkId }).(pulumi.StringOutput)
+}
+
+// id path parameter.
+func (o SensorAlertsProfilesOutput) NetworksSensorAlertsProfilesId() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SensorAlertsProfiles) pulumi.StringPtrOutput { return v.NetworksSensorAlertsProfilesId }).(pulumi.StringPtrOutput)
 }
 
 // ID of the sensor alert profile.

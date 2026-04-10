@@ -130,6 +130,20 @@ public class AdaptivePolicyGroups extends com.pulumi.resources.CustomResource {
         return this.organizationId;
     }
     /**
+     * id path parameter.
+     * 
+     */
+    @Export(name="organizationsAdaptivePolicyGroupsId", refs={String.class}, tree="[0]")
+    private Output<String> organizationsAdaptivePolicyGroupsId;
+
+    /**
+     * @return id path parameter.
+     * 
+     */
+    public Output<String> organizationsAdaptivePolicyGroupsId() {
+        return this.organizationsAdaptivePolicyGroupsId;
+    }
+    /**
      * The policy objects that belong to this group; traffic from addresses specified by these policy objects will be tagged with this group&#39;s SGT value if no other tagging scheme is being used (each requires one unique attribute) ()
      * 
      */

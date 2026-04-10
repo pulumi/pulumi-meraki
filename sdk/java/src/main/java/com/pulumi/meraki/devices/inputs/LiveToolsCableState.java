@@ -50,6 +50,21 @@ public final class LiveToolsCableState extends com.pulumi.resources.ResourceArgs
     }
 
     /**
+     * id path parameter.
+     * 
+     */
+    @Import(name="devicesLiveToolsCableId")
+    private @Nullable Output<String> devicesLiveToolsCableId;
+
+    /**
+     * @return id path parameter.
+     * 
+     */
+    public Optional<Output<String>> devicesLiveToolsCableId() {
+        return Optional.ofNullable(this.devicesLiveToolsCableId);
+    }
+
+    /**
      * An error message for a failed execution
      * 
      */
@@ -159,6 +174,7 @@ public final class LiveToolsCableState extends com.pulumi.resources.ResourceArgs
     private LiveToolsCableState(LiveToolsCableState $) {
         this.cableTestId = $.cableTestId;
         this.callback = $.callback;
+        this.devicesLiveToolsCableId = $.devicesLiveToolsCableId;
         this.error = $.error;
         this.ports = $.ports;
         this.request = $.request;
@@ -226,6 +242,27 @@ public final class LiveToolsCableState extends com.pulumi.resources.ResourceArgs
          */
         public Builder callback(LiveToolsCableCallbackArgs callback) {
             return callback(Output.of(callback));
+        }
+
+        /**
+         * @param devicesLiveToolsCableId id path parameter.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder devicesLiveToolsCableId(@Nullable Output<String> devicesLiveToolsCableId) {
+            $.devicesLiveToolsCableId = devicesLiveToolsCableId;
+            return this;
+        }
+
+        /**
+         * @param devicesLiveToolsCableId id path parameter.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder devicesLiveToolsCableId(String devicesLiveToolsCableId) {
+            return devicesLiveToolsCableId(Output.of(devicesLiveToolsCableId));
         }
 
         /**
