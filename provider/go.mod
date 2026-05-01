@@ -4,7 +4,7 @@ go 1.25.8
 
 require (
 	github.com/cisco-open/terraform-provider-meraki v0.2.3-alpha
-	github.com/pulumi/pulumi-terraform-bridge/v3 v3.127.0
+	github.com/pulumi/pulumi-terraform-bridge/v3 v3.128.0
 	github.com/pulumi/pulumi/sdk/v3 v3.228.0
 )
 
