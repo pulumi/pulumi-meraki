@@ -1,3 +1,0 @@
-name: meraki
-description: A Pulumi resource provider for meraki.
-language: dotnet

@@ -1,3 +1,0 @@
-name: meraki-network-switch-access-policy-ts
-runtime: nodejs
-description: A minimal TypeScript Pulumi program
