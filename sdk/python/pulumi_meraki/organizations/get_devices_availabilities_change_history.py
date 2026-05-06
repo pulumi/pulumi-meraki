@@ -223,7 +223,7 @@ def get_devices_availabilities_change_history(ending_before: Optional[_builtins.
         statuses=["string"],
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiOrganizationsDevicesAvailabilitiesChangeHistoryExample", example.items)
     ```
 
@@ -298,7 +298,7 @@ def get_devices_availabilities_change_history_output(ending_before: Optional[pul
         statuses=["string"],
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiOrganizationsDevicesAvailabilitiesChangeHistoryExample", example.items)
     ```
 

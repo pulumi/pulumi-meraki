@@ -136,7 +136,7 @@ def get_clients_overview(network_id: Optional[_builtins.str] = None,
         resolution=1,
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiNetworksClientsOverviewExample", example.item)
     ```
 
@@ -181,7 +181,7 @@ def get_clients_overview_output(network_id: Optional[pulumi.Input[_builtins.str]
         resolution=1,
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiNetworksClientsOverviewExample", example.item)
     ```
 

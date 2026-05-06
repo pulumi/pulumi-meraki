@@ -237,7 +237,7 @@ def get_wireless_latency_history(access_category: Optional[_builtins.str] = None
         ssid=1,
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiNetworksWirelessLatencyHistoryExample", example.items)
     ```
 
@@ -317,7 +317,7 @@ def get_wireless_latency_history_output(access_category: Optional[pulumi.Input[O
         ssid=1,
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiNetworksWirelessLatencyHistoryExample", example.items)
     ```
 

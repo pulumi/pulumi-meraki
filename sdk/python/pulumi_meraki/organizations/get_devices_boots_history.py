@@ -209,7 +209,7 @@ def get_devices_boots_history(ending_before: Optional[_builtins.str] = None,
         starting_after="string",
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiOrganizationsDevicesBootsHistoryExample", example.items)
     ```
 
@@ -279,7 +279,7 @@ def get_devices_boots_history_output(ending_before: Optional[pulumi.Input[Option
         starting_after="string",
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiOrganizationsDevicesBootsHistoryExample", example.items)
     ```
 

@@ -209,7 +209,7 @@ def get_wireless_channel_utilization_history(ap_tag: Optional[_builtins.str] = N
         resolution=1,
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiNetworksWirelessChannelUtilizationHistoryExample", example.items)
     ```
 
@@ -279,7 +279,7 @@ def get_wireless_channel_utilization_history_output(ap_tag: Optional[pulumi.Inpu
         resolution=1,
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiNetworksWirelessChannelUtilizationHistoryExample", example.items)
     ```
 

@@ -125,7 +125,7 @@ def get_summary_top_switches_by_energy_usage(organization_id: Optional[_builtins
     example = meraki.organizations.get_summary_top_switches_by_energy_usage(organization_id="string",
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiOrganizationsSummaryTopSwitchesByEnergyUsageExample", example.items)
     ```
 
@@ -165,7 +165,7 @@ def get_summary_top_switches_by_energy_usage_output(organization_id: Optional[pu
     example = meraki.organizations.get_summary_top_switches_by_energy_usage(organization_id="string",
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiOrganizationsSummaryTopSwitchesByEnergyUsageExample", example.items)
     ```
 

@@ -274,7 +274,7 @@ class ApplianceRfProfiles(pulumi.CustomResource):
             },
             two_four_ghz_settings={
                 "ax_enabled": True,
-                "min_bitrate": 12,
+                "min_bitrate": float(12),
             })
         pulumi.export("merakiNetworksApplianceRfProfilesExample", example)
         ```
@@ -335,7 +335,7 @@ class ApplianceRfProfiles(pulumi.CustomResource):
             },
             two_four_ghz_settings={
                 "ax_enabled": True,
-                "min_bitrate": 12,
+                "min_bitrate": float(12),
             })
         pulumi.export("merakiNetworksApplianceRfProfilesExample", example)
         ```

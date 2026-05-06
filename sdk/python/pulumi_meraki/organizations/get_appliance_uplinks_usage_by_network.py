@@ -125,7 +125,7 @@ def get_appliance_uplinks_usage_by_network(organization_id: Optional[_builtins.s
     example = meraki.organizations.get_appliance_uplinks_usage_by_network(organization_id="string",
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiOrganizationsApplianceUplinksUsageByNetworkExample", example.items)
     ```
 
@@ -165,7 +165,7 @@ def get_appliance_uplinks_usage_by_network_output(organization_id: Optional[pulu
     example = meraki.organizations.get_appliance_uplinks_usage_by_network(organization_id="string",
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiOrganizationsApplianceUplinksUsageByNetworkExample", example.items)
     ```
 

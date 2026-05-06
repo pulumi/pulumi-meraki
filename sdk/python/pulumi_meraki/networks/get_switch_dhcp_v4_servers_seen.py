@@ -153,7 +153,7 @@ def get_switch_dhcp_v4_servers_seen(ending_before: Optional[_builtins.str] = Non
         per_page=1,
         starting_after="string",
         t0="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiNetworksSwitchDhcpV4ServersSeenExample", example.items)
     ```
 
@@ -203,7 +203,7 @@ def get_switch_dhcp_v4_servers_seen_output(ending_before: Optional[pulumi.Input[
         per_page=1,
         starting_after="string",
         t0="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiNetworksSwitchDhcpV4ServersSeenExample", example.items)
     ```
 

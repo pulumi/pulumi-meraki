@@ -122,7 +122,7 @@ def get_clients_overview(organization_id: Optional[_builtins.str] = None,
     example = meraki.organizations.get_clients_overview(organization_id="string",
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiOrganizationsClientsOverviewExample", example.item)
     ```
 
@@ -162,7 +162,7 @@ def get_clients_overview_output(organization_id: Optional[pulumi.Input[_builtins
     example = meraki.organizations.get_clients_overview(organization_id="string",
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiOrganizationsClientsOverviewExample", example.item)
     ```
 

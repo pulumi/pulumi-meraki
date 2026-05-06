@@ -27,7 +27,7 @@ import * as utilities from "../utilities";
  *     encryptionMode: "wpa",
  *     name: "My SSID",
  *     networkId: "string",
- *     number: "string",
+ *     number: Number("string"),
  *     psk: "psk",
  *     radiusServers: [{
  *         host: "0.0.0.0",

@@ -2270,7 +2270,7 @@ class WirelessSsids(pulumi.CustomResource):
                 },
             },
             mandatory_dhcp_enabled=False,
-            min_bitrate=5.5,
+            min_bitrate=int(5.5),
             name="My SSID",
             named_vlans={
                 "radius": {
@@ -2292,7 +2292,7 @@ class WirelessSsids(pulumi.CustomResource):
                 },
             },
             network_id="string",
-            number="string",
+            number=int("string"),
             oauth={
                 "allowed_domains": ["example.com"],
             },
@@ -2615,7 +2615,7 @@ class WirelessSsids(pulumi.CustomResource):
                 },
             },
             mandatory_dhcp_enabled=False,
-            min_bitrate=5.5,
+            min_bitrate=int(5.5),
             name="My SSID",
             named_vlans={
                 "radius": {
@@ -2637,7 +2637,7 @@ class WirelessSsids(pulumi.CustomResource):
                 },
             },
             network_id="string",
-            number="string",
+            number=int("string"),
             oauth={
                 "allowed_domains": ["example.com"],
             },

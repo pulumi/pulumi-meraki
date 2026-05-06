@@ -152,7 +152,7 @@ def get_devices_uplinks_loss_and_latency(ip: Optional[_builtins.str] = None,
         organization_id="string",
         t0="string",
         t1="string",
-        timespan=1,
+        timespan=float(1),
         uplink="string")
     pulumi.export("merakiOrganizationsDevicesUplinksLossAndLatencyExample", example.items)
     ```
@@ -202,7 +202,7 @@ def get_devices_uplinks_loss_and_latency_output(ip: Optional[pulumi.Input[Option
         organization_id="string",
         t0="string",
         t1="string",
-        timespan=1,
+        timespan=float(1),
         uplink="string")
     pulumi.export("merakiOrganizationsDevicesUplinksLossAndLatencyExample", example.items)
     ```

@@ -209,7 +209,7 @@ def get_wireless_devices_channel_utilization_history_by_device_by_interval(endin
         starting_after="string",
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalExample", example.items)
     ```
 
@@ -279,7 +279,7 @@ def get_wireless_devices_channel_utilization_history_by_device_by_interval_outpu
         starting_after="string",
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiOrganizationsWirelessDevicesChannelUtilizationHistoryByDeviceByIntervalExample", example.items)
     ```
 

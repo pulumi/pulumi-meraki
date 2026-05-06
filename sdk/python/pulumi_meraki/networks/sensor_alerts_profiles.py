@@ -356,7 +356,7 @@ class SensorAlertsProfiles(pulumi.CustomResource):
                     },
                     "temperature": {
                         "celsius": 20.5,
-                        "fahrenheit": 70,
+                        "fahrenheit": float(70),
                         "quality": "good",
                     },
                     "tvoc": {
@@ -466,7 +466,7 @@ class SensorAlertsProfiles(pulumi.CustomResource):
                     },
                     "temperature": {
                         "celsius": 20.5,
-                        "fahrenheit": 70,
+                        "fahrenheit": float(70),
                         "quality": "good",
                     },
                     "tvoc": {

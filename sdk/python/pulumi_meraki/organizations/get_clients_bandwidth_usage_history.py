@@ -125,7 +125,7 @@ def get_clients_bandwidth_usage_history(organization_id: Optional[_builtins.str]
     example = meraki.organizations.get_clients_bandwidth_usage_history(organization_id="string",
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiOrganizationsClientsBandwidthUsageHistoryExample", example.items)
     ```
 
@@ -165,7 +165,7 @@ def get_clients_bandwidth_usage_history_output(organization_id: Optional[pulumi.
     example = meraki.organizations.get_clients_bandwidth_usage_history(organization_id="string",
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiOrganizationsClientsBandwidthUsageHistoryExample", example.items)
     ```
 

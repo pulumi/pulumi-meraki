@@ -507,7 +507,7 @@ class ApplianceSsids(pulumi.CustomResource):
             encryption_mode="wpa",
             name="My SSID",
             network_id="string",
-            number="string",
+            number=int("string"),
             psk="psk",
             radius_servers=[{
                 "host": "0.0.0.0",
@@ -569,7 +569,7 @@ class ApplianceSsids(pulumi.CustomResource):
             encryption_mode="wpa",
             name="My SSID",
             network_id="string",
-            number="string",
+            number=int("string"),
             psk="psk",
             radius_servers=[{
                 "host": "0.0.0.0",

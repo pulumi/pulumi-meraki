@@ -31,8 +31,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.meraki.organizations.ApplianceVpnThirdPartyVpnpeersArgs;
  * import com.pulumi.meraki.organizations.inputs.ApplianceVpnThirdPartyVpnpeersPeerArgs;
  * import com.pulumi.meraki.organizations.inputs.ApplianceVpnThirdPartyVpnpeersPeerIpsecPoliciesArgs;
- * import java.util.List;
  * import java.util.ArrayList;
+ * import java.util.Arrays;
  * import java.util.Map;
  * import java.io.File;
  * import java.nio.file.Files;
@@ -49,15 +49,15 @@ import javax.annotation.Nullable;
  *             .peers(ApplianceVpnThirdPartyVpnpeersPeerArgs.builder()
  *                 .ikeVersion("2")
  *                 .ipsecPolicies(ApplianceVpnThirdPartyVpnpeersPeerIpsecPoliciesArgs.builder()
- *                     .childAuthAlgo(List.of("sha1"))
- *                     .childCipherAlgo(List.of("aes128"))
+ *                     .childAuthAlgo(Arrays.asList("sha1"))
+ *                     .childCipherAlgo(Arrays.asList("aes128"))
  *                     .childLifetime(28800)
- *                     .childPfsGroup(List.of("disabled"))
- *                     .ikeAuthAlgo(List.of("sha1"))
- *                     .ikeCipherAlgo(List.of("tripledes"))
- *                     .ikeDiffieHellmanGroup(List.of("group2"))
+ *                     .childPfsGroup(Arrays.asList("disabled"))
+ *                     .ikeAuthAlgo(Arrays.asList("sha1"))
+ *                     .ikeCipherAlgo(Arrays.asList("tripledes"))
+ *                     .ikeDiffieHellmanGroup(Arrays.asList("group2"))
  *                     .ikeLifetime(28800)
- *                     .ikePrfAlgo(List.of("prfsha1"))
+ *                     .ikePrfAlgo(Arrays.asList("prfsha1"))
  *                     .build())
  *                 .ipsecPoliciesPreset("default")
  *                 .localId("myMXId}{@literal @}{@code meraki.com")

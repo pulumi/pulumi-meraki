@@ -775,7 +775,7 @@ class WirelessRfProfiles(pulumi.CustomResource):
             two_four_ghz_settings={
                 "ax_enabled": True,
                 "max_power": 30,
-                "min_bitrate": 11,
+                "min_bitrate": float(11),
                 "min_power": 5,
                 "rxsop": -95,
                 "valid_auto_channels": [
@@ -1120,7 +1120,7 @@ class WirelessRfProfiles(pulumi.CustomResource):
             two_four_ghz_settings={
                 "ax_enabled": True,
                 "max_power": 30,
-                "min_bitrate": 11,
+                "min_bitrate": float(11),
                 "min_power": 5,
                 "rxsop": -95,
                 "valid_auto_channels": [

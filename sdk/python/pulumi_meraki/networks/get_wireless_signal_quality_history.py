@@ -223,7 +223,7 @@ def get_wireless_signal_quality_history(ap_tag: Optional[_builtins.str] = None,
         ssid=1,
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiNetworksWirelessSignalQualityHistoryExample", example.items)
     ```
 
@@ -298,7 +298,7 @@ def get_wireless_signal_quality_history_output(ap_tag: Optional[pulumi.Input[Opt
         ssid=1,
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiNetworksWirelessSignalQualityHistoryExample", example.items)
     ```
 

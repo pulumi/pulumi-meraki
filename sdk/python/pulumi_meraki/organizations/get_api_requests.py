@@ -277,7 +277,7 @@ def get_api_requests(admin_id: Optional[_builtins.str] = None,
         starting_after="string",
         t0="string",
         t1="string",
-        timespan=1,
+        timespan=float(1),
         user_agent="string",
         version=1)
     pulumi.export("merakiOrganizationsApiRequestsExample", example.items)
@@ -372,7 +372,7 @@ def get_api_requests_output(admin_id: Optional[pulumi.Input[Optional[_builtins.s
         starting_after="string",
         t0="string",
         t1="string",
-        timespan=1,
+        timespan=float(1),
         user_agent="string",
         version=1)
     pulumi.export("merakiOrganizationsApiRequestsExample", example.items)

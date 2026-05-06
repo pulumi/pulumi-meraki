@@ -223,7 +223,7 @@ def get_wireless_devices_packet_loss_by_client(bands: Optional[Sequence[_builtin
         starting_after="string",
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiOrganizationsWirelessDevicesPacketLossByClientExample", example.items)
     ```
 
@@ -298,7 +298,7 @@ def get_wireless_devices_packet_loss_by_client_output(bands: Optional[pulumi.Inp
         starting_after="string",
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiOrganizationsWirelessDevicesPacketLossByClientExample", example.items)
     ```
 

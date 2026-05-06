@@ -180,7 +180,7 @@ def get_webhooks_logs(ending_before: Optional[_builtins.str] = None,
         starting_after="string",
         t0="string",
         t1="string",
-        timespan=1,
+        timespan=float(1),
         url="string")
     pulumi.export("merakiOrganizationsWebhooksLogsExample", example.items)
     ```
@@ -240,7 +240,7 @@ def get_webhooks_logs_output(ending_before: Optional[pulumi.Input[Optional[_buil
         starting_after="string",
         t0="string",
         t1="string",
-        timespan=1,
+        timespan=float(1),
         url="string")
     pulumi.export("merakiOrganizationsWebhooksLogsExample", example.items)
     ```

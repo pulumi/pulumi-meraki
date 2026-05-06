@@ -28,8 +28,8 @@ import javax.annotation.Nullable;
  * import com.pulumi.meraki.networks.ApplianceFirewallOneToOneNatRules;
  * import com.pulumi.meraki.networks.ApplianceFirewallOneToOneNatRulesArgs;
  * import com.pulumi.meraki.networks.inputs.ApplianceFirewallOneToOneNatRulesRuleArgs;
- * import java.util.List;
  * import java.util.ArrayList;
+ * import java.util.Arrays;
  * import java.util.Map;
  * import java.io.File;
  * import java.nio.file.Files;
@@ -44,11 +44,11 @@ import javax.annotation.Nullable;
  *         var example = new ApplianceFirewallOneToOneNatRules("example", ApplianceFirewallOneToOneNatRulesArgs.builder()
  *             .networkId("string")
  *             .rules(ApplianceFirewallOneToOneNatRulesRuleArgs.builder()
- *                 .allowedInbound(List.of(Map.ofEntries(
- *                     Map.entry("allowedIps", List.of(                    
+ *                 .allowedInbound(Arrays.asList(Map.ofEntries(
+ *                     Map.entry("allowedIps", Arrays.asList(                    
  *                         "10.82.112.0/24",
  *                         "10.82.0.0/16")),
- *                     Map.entry("destinationPorts", List.of("80")),
+ *                     Map.entry("destinationPorts", Arrays.asList("80")),
  *                     Map.entry("protocol", "tcp")
  *                 )))
  *                 .lanIp("192.168.128.22")

@@ -125,7 +125,7 @@ def get_summary_top_devices_models_by_usage(organization_id: Optional[_builtins.
     example = meraki.organizations.get_summary_top_devices_models_by_usage(organization_id="string",
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiOrganizationsSummaryTopDevicesModelsByUsageExample", example.items)
     ```
 
@@ -165,7 +165,7 @@ def get_summary_top_devices_models_by_usage_output(organization_id: Optional[pul
     example = meraki.organizations.get_summary_top_devices_models_by_usage(organization_id="string",
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiOrganizationsSummaryTopDevicesModelsByUsageExample", example.items)
     ```
 

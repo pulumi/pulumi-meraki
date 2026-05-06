@@ -471,8 +471,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetAlertsHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -513,8 +513,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetAlertsHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -555,8 +555,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetAlertsHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -597,8 +597,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetAlertsHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -639,8 +639,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetAlertsHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -681,8 +681,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetAlertsSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -720,8 +720,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetAlertsSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -759,8 +759,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetAlertsSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -798,8 +798,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetAlertsSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -837,8 +837,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetAlertsSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -876,8 +876,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceConnectivityMonitoringDestinationsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -915,8 +915,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceConnectivityMonitoringDestinationsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -954,8 +954,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceConnectivityMonitoringDestinationsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -993,8 +993,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceConnectivityMonitoringDestinationsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1032,8 +1032,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceConnectivityMonitoringDestinationsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1071,8 +1071,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceContentFilteringArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1110,8 +1110,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceContentFilteringArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1149,8 +1149,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceContentFilteringArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1188,8 +1188,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceContentFilteringArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1227,8 +1227,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceContentFilteringArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1266,8 +1266,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceContentFilteringCategoriesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1305,8 +1305,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceContentFilteringCategoriesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1344,8 +1344,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceContentFilteringCategoriesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1383,8 +1383,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceContentFilteringCategoriesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1422,8 +1422,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceContentFilteringCategoriesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1461,8 +1461,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallCellularFirewallRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1500,8 +1500,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallCellularFirewallRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1539,8 +1539,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallCellularFirewallRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1578,8 +1578,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallCellularFirewallRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1617,8 +1617,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallCellularFirewallRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1656,8 +1656,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallFirewalledServicesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1696,8 +1696,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallFirewalledServicesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1736,8 +1736,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallFirewalledServicesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1776,8 +1776,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallFirewalledServicesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1816,8 +1816,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallFirewalledServicesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1856,8 +1856,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallInboundFirewallRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1895,8 +1895,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallInboundFirewallRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1934,8 +1934,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallInboundFirewallRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -1973,8 +1973,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallInboundFirewallRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2012,8 +2012,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallInboundFirewallRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2051,8 +2051,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallL3FirewallRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2090,8 +2090,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallL3FirewallRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2129,8 +2129,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallL3FirewallRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2168,8 +2168,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallL3FirewallRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2207,8 +2207,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallL3FirewallRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2246,8 +2246,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallL7FirewallRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2285,8 +2285,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallL7FirewallRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2324,8 +2324,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallL7FirewallRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2363,8 +2363,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallL7FirewallRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2402,8 +2402,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallL7FirewallRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2441,8 +2441,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallL7FirewallRulesApplicationCategoriesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2480,8 +2480,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallL7FirewallRulesApplicationCategoriesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2519,8 +2519,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallL7FirewallRulesApplicationCategoriesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2558,8 +2558,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallL7FirewallRulesApplicationCategoriesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2597,8 +2597,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallL7FirewallRulesApplicationCategoriesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2636,8 +2636,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallOneToManyNatRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2675,8 +2675,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallOneToManyNatRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2714,8 +2714,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallOneToManyNatRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2753,8 +2753,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallOneToManyNatRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2792,8 +2792,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallOneToManyNatRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2831,8 +2831,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallOneToOneNatRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2870,8 +2870,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallOneToOneNatRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2909,8 +2909,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallOneToOneNatRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2948,8 +2948,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallOneToOneNatRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -2987,8 +2987,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallOneToOneNatRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3026,8 +3026,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallPortForwardingRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3065,8 +3065,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallPortForwardingRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3104,8 +3104,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallPortForwardingRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3143,8 +3143,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallPortForwardingRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3182,8 +3182,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallPortForwardingRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3221,8 +3221,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3260,8 +3260,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3299,8 +3299,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3338,8 +3338,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3377,8 +3377,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceFirewallSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3514,8 +3514,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceRfProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3553,8 +3553,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceRfProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3592,8 +3592,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceRfProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3631,8 +3631,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceRfProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3670,8 +3670,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceRfProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3709,8 +3709,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceRfProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3748,8 +3748,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceRfProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3787,8 +3787,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceSecurityIntrusionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3826,8 +3826,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceSecurityIntrusionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3865,8 +3865,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceSecurityIntrusionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3904,8 +3904,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceSecurityIntrusionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3943,8 +3943,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceSecurityIntrusionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -3982,8 +3982,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceSecurityMalwareArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4021,8 +4021,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceSecurityMalwareArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4060,8 +4060,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceSecurityMalwareArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4099,8 +4099,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceSecurityMalwareArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4138,8 +4138,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceSecurityMalwareArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4177,8 +4177,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4216,8 +4216,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4255,8 +4255,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4294,8 +4294,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4333,8 +4333,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4372,8 +4372,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceSingleLanArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4411,8 +4411,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceSingleLanArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4450,8 +4450,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceSingleLanArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4489,8 +4489,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceSingleLanArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4528,8 +4528,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceSingleLanArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4616,8 +4616,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceTrafficShapingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4655,8 +4655,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceTrafficShapingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4694,8 +4694,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceTrafficShapingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4733,8 +4733,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceTrafficShapingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4772,8 +4772,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceTrafficShapingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4811,8 +4811,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceTrafficShapingRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4850,8 +4850,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceTrafficShapingRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4889,8 +4889,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceTrafficShapingRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4928,8 +4928,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceTrafficShapingRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -4967,8 +4967,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceTrafficShapingRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5006,8 +5006,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceTrafficShapingUplinkBandwidthArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5045,8 +5045,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceTrafficShapingUplinkBandwidthArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5084,8 +5084,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceTrafficShapingUplinkBandwidthArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5123,8 +5123,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceTrafficShapingUplinkBandwidthArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5162,8 +5162,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceTrafficShapingUplinkBandwidthArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5201,8 +5201,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceTrafficShapingUplinkSelectionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5240,8 +5240,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceTrafficShapingUplinkSelectionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5279,8 +5279,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceTrafficShapingUplinkSelectionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5318,8 +5318,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceTrafficShapingUplinkSelectionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5357,8 +5357,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceTrafficShapingUplinkSelectionArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5445,8 +5445,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceVlansSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5484,8 +5484,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceVlansSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5523,8 +5523,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceVlansSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5562,8 +5562,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceVlansSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5601,8 +5601,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceVlansSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5640,8 +5640,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceVpnBgpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5679,8 +5679,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceVpnBgpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5718,8 +5718,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceVpnBgpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5757,8 +5757,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceVpnBgpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5796,8 +5796,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceVpnBgpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5835,8 +5835,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceVpnSiteToSiteVpnArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5874,8 +5874,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceVpnSiteToSiteVpnArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5913,8 +5913,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceVpnSiteToSiteVpnArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5952,8 +5952,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceVpnSiteToSiteVpnArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -5991,8 +5991,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceVpnSiteToSiteVpnArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6030,8 +6030,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceWarmSpareArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6069,8 +6069,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceWarmSpareArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6108,8 +6108,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceWarmSpareArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6147,8 +6147,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceWarmSpareArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6186,8 +6186,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetApplianceWarmSpareArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6225,8 +6225,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetBluetoothClientsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6267,8 +6267,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetBluetoothClientsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6309,8 +6309,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetBluetoothClientsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6351,8 +6351,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetBluetoothClientsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6393,8 +6393,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetBluetoothClientsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6533,8 +6533,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetCellularGatewayConnectivityMonitoringDestinationsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6572,8 +6572,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetCellularGatewayConnectivityMonitoringDestinationsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6611,8 +6611,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetCellularGatewayConnectivityMonitoringDestinationsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6650,8 +6650,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetCellularGatewayConnectivityMonitoringDestinationsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6689,8 +6689,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetCellularGatewayConnectivityMonitoringDestinationsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6728,8 +6728,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetCellularGatewayDhcpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6767,8 +6767,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetCellularGatewayDhcpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6806,8 +6806,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetCellularGatewayDhcpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6845,8 +6845,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetCellularGatewayDhcpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6884,8 +6884,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetCellularGatewayDhcpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6923,8 +6923,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetCellularGatewaySubnetPoolArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -6962,8 +6962,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetCellularGatewaySubnetPoolArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7001,8 +7001,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetCellularGatewaySubnetPoolArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7040,8 +7040,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetCellularGatewaySubnetPoolArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7079,8 +7079,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetCellularGatewaySubnetPoolArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7118,8 +7118,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetCellularGatewayUplinkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7157,8 +7157,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetCellularGatewayUplinkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7196,8 +7196,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetCellularGatewayUplinkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7235,8 +7235,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetCellularGatewayUplinkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7274,8 +7274,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetCellularGatewayUplinkArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7313,8 +7313,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetClientsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7353,8 +7353,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetClientsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7393,8 +7393,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetClientsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7433,8 +7433,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetClientsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7473,8 +7473,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetClientsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7513,8 +7513,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetClientsOverviewArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7531,7 +7531,7 @@ public final class NetworksFunctions {
      *             .resolution(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksClientsOverviewExample", example.item());
@@ -7556,8 +7556,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetClientsOverviewArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7574,7 +7574,7 @@ public final class NetworksFunctions {
      *             .resolution(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksClientsOverviewExample", example.item());
@@ -7599,8 +7599,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetClientsOverviewArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7617,7 +7617,7 @@ public final class NetworksFunctions {
      *             .resolution(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksClientsOverviewExample", example.item());
@@ -7642,8 +7642,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetClientsOverviewArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7660,7 +7660,7 @@ public final class NetworksFunctions {
      *             .resolution(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksClientsOverviewExample", example.item());
@@ -7685,8 +7685,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetClientsOverviewArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7703,7 +7703,7 @@ public final class NetworksFunctions {
      *             .resolution(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksClientsOverviewExample", example.item());
@@ -7728,8 +7728,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetClientsPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7768,8 +7768,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetClientsPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7808,8 +7808,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetClientsPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7848,8 +7848,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetClientsPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7888,8 +7888,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetClientsPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7928,8 +7928,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetClientsSplashAuthorizationStatusArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -7968,8 +7968,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetClientsSplashAuthorizationStatusArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8008,8 +8008,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetClientsSplashAuthorizationStatusArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8048,8 +8048,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetClientsSplashAuthorizationStatusArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8088,8 +8088,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetClientsSplashAuthorizationStatusArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8128,8 +8128,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetEventsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8181,8 +8181,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetEventsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8234,8 +8234,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetEventsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8287,8 +8287,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetEventsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8340,8 +8340,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetEventsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8393,8 +8393,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetEventsEventTypesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8432,8 +8432,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetEventsEventTypesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8471,8 +8471,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetEventsEventTypesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8510,8 +8510,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetEventsEventTypesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8549,8 +8549,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetEventsEventTypesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8588,8 +8588,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetFirmwareUpgradesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8627,8 +8627,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetFirmwareUpgradesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8666,8 +8666,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetFirmwareUpgradesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8705,8 +8705,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetFirmwareUpgradesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8744,8 +8744,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetFirmwareUpgradesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8783,8 +8783,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetFirmwareUpgradesStagedEventsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8822,8 +8822,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetFirmwareUpgradesStagedEventsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8861,8 +8861,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetFirmwareUpgradesStagedEventsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8900,8 +8900,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetFirmwareUpgradesStagedEventsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -8939,8 +8939,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetFirmwareUpgradesStagedEventsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9027,8 +9027,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetFirmwareUpgradesStagedStagesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9066,8 +9066,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetFirmwareUpgradesStagedStagesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9105,8 +9105,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetFirmwareUpgradesStagedStagesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9144,8 +9144,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetFirmwareUpgradesStagedStagesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9183,8 +9183,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetFirmwareUpgradesStagedStagesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9320,8 +9320,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetHealthAlertsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9359,8 +9359,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetHealthAlertsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9398,8 +9398,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetHealthAlertsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9437,8 +9437,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetHealthAlertsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9476,8 +9476,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetHealthAlertsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9515,8 +9515,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetInsightApplicationsHealthByTimeArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9534,7 +9534,7 @@ public final class NetworksFunctions {
      *             .resolution(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksInsightApplicationsHealthByTimeExample", example.items());
@@ -9559,8 +9559,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetInsightApplicationsHealthByTimeArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9578,7 +9578,7 @@ public final class NetworksFunctions {
      *             .resolution(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksInsightApplicationsHealthByTimeExample", example.items());
@@ -9603,8 +9603,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetInsightApplicationsHealthByTimeArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9622,7 +9622,7 @@ public final class NetworksFunctions {
      *             .resolution(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksInsightApplicationsHealthByTimeExample", example.items());
@@ -9647,8 +9647,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetInsightApplicationsHealthByTimeArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9666,7 +9666,7 @@ public final class NetworksFunctions {
      *             .resolution(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksInsightApplicationsHealthByTimeExample", example.items());
@@ -9691,8 +9691,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetInsightApplicationsHealthByTimeArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9710,7 +9710,7 @@ public final class NetworksFunctions {
      *             .resolution(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksInsightApplicationsHealthByTimeExample", example.items());
@@ -9784,8 +9784,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetNetflowArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9823,8 +9823,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetNetflowArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9862,8 +9862,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetNetflowArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9901,8 +9901,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetNetflowArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9940,8 +9940,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetNetflowArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -9979,8 +9979,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetPiiPiiKeysArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10024,8 +10024,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetPiiPiiKeysArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10069,8 +10069,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetPiiPiiKeysArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10114,8 +10114,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetPiiPiiKeysArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10159,8 +10159,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetPiiPiiKeysArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10253,8 +10253,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetPiiSmDevicesForKeyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10298,8 +10298,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetPiiSmDevicesForKeyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10343,8 +10343,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetPiiSmDevicesForKeyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10388,8 +10388,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetPiiSmDevicesForKeyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10433,8 +10433,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetPiiSmDevicesForKeyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10478,8 +10478,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetPiiSmOwnersForKeyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10523,8 +10523,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetPiiSmOwnersForKeyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10568,8 +10568,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetPiiSmOwnersForKeyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10613,8 +10613,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetPiiSmOwnersForKeyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10658,8 +10658,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetPiiSmOwnersForKeyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10703,8 +10703,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetPoliciesByClientArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10722,7 +10722,7 @@ public final class NetworksFunctions {
      *             .perPage(1)
      *             .startingAfter("string")
      *             .t0("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksPoliciesByClientExample", example.items());
@@ -10747,8 +10747,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetPoliciesByClientArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10766,7 +10766,7 @@ public final class NetworksFunctions {
      *             .perPage(1)
      *             .startingAfter("string")
      *             .t0("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksPoliciesByClientExample", example.items());
@@ -10791,8 +10791,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetPoliciesByClientArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10810,7 +10810,7 @@ public final class NetworksFunctions {
      *             .perPage(1)
      *             .startingAfter("string")
      *             .t0("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksPoliciesByClientExample", example.items());
@@ -10835,8 +10835,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetPoliciesByClientArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10854,7 +10854,7 @@ public final class NetworksFunctions {
      *             .perPage(1)
      *             .startingAfter("string")
      *             .t0("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksPoliciesByClientExample", example.items());
@@ -10879,8 +10879,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetPoliciesByClientArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10898,7 +10898,7 @@ public final class NetworksFunctions {
      *             .perPage(1)
      *             .startingAfter("string")
      *             .t0("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksPoliciesByClientExample", example.items());
@@ -10923,8 +10923,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSensorAlertsCurrentOverviewByMetricArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -10962,8 +10962,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSensorAlertsCurrentOverviewByMetricArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11001,8 +11001,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSensorAlertsCurrentOverviewByMetricArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11040,8 +11040,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSensorAlertsCurrentOverviewByMetricArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11079,8 +11079,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSensorAlertsCurrentOverviewByMetricArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11118,8 +11118,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSensorAlertsOverviewByMetricArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11136,7 +11136,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksSensorAlertsOverviewByMetricExample", example.items());
@@ -11161,8 +11161,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSensorAlertsOverviewByMetricArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11179,7 +11179,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksSensorAlertsOverviewByMetricExample", example.items());
@@ -11204,8 +11204,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSensorAlertsOverviewByMetricArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11222,7 +11222,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksSensorAlertsOverviewByMetricExample", example.items());
@@ -11247,8 +11247,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSensorAlertsOverviewByMetricArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11265,7 +11265,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksSensorAlertsOverviewByMetricExample", example.items());
@@ -11290,8 +11290,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSensorAlertsOverviewByMetricArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11308,7 +11308,7 @@ public final class NetworksFunctions {
      *             .networkId("string")
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksSensorAlertsOverviewByMetricExample", example.items());
@@ -11431,8 +11431,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSensorRelationshipsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11470,8 +11470,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSensorRelationshipsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11509,8 +11509,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSensorRelationshipsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11548,8 +11548,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSensorRelationshipsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11587,8 +11587,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSensorRelationshipsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11626,8 +11626,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11665,8 +11665,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11704,8 +11704,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11743,8 +11743,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11782,8 +11782,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11821,8 +11821,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmBypassActivationLockAttemptsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11861,8 +11861,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmBypassActivationLockAttemptsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11901,8 +11901,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmBypassActivationLockAttemptsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11941,8 +11941,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmBypassActivationLockAttemptsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -11981,8 +11981,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmBypassActivationLockAttemptsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12021,8 +12021,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12070,8 +12070,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12119,8 +12119,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12168,8 +12168,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12217,8 +12217,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12266,8 +12266,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesCellularUsageHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12306,8 +12306,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesCellularUsageHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12346,8 +12346,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesCellularUsageHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12386,8 +12386,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesCellularUsageHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12426,8 +12426,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesCellularUsageHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12466,8 +12466,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesCertsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12506,8 +12506,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesCertsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12546,8 +12546,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesCertsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12586,8 +12586,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesCertsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12626,8 +12626,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesCertsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12666,8 +12666,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesConnectivityArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12709,8 +12709,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesConnectivityArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12752,8 +12752,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesConnectivityArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12795,8 +12795,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesConnectivityArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12838,8 +12838,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesConnectivityArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12881,8 +12881,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesDesktopLogsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12924,8 +12924,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesDesktopLogsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -12967,8 +12967,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesDesktopLogsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13010,8 +13010,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesDesktopLogsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13053,8 +13053,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesDesktopLogsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13096,8 +13096,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesDeviceCommandLogsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13139,8 +13139,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesDeviceCommandLogsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13182,8 +13182,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesDeviceCommandLogsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13225,8 +13225,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesDeviceCommandLogsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13268,8 +13268,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesDeviceCommandLogsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13311,8 +13311,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesDeviceProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13351,8 +13351,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesDeviceProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13391,8 +13391,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesDeviceProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13431,8 +13431,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesDeviceProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13471,8 +13471,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesDeviceProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13511,8 +13511,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesNetworkAdaptersArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13551,8 +13551,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesNetworkAdaptersArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13591,8 +13591,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesNetworkAdaptersArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13631,8 +13631,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesNetworkAdaptersArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13671,8 +13671,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesNetworkAdaptersArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13711,8 +13711,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesPerformanceHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13754,8 +13754,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesPerformanceHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13797,8 +13797,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesPerformanceHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13840,8 +13840,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesPerformanceHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13883,8 +13883,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesPerformanceHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13926,8 +13926,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesSecurityCentersArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -13966,8 +13966,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesSecurityCentersArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14006,8 +14006,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesSecurityCentersArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14046,8 +14046,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesSecurityCentersArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14086,8 +14086,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesSecurityCentersArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14126,8 +14126,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesSecurityCentersArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14166,8 +14166,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesSecurityCentersArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14206,8 +14206,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesWlanListsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14246,8 +14246,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesWlanListsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14286,8 +14286,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesWlanListsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14326,8 +14326,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesWlanListsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14366,8 +14366,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmDevicesWlanListsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14406,8 +14406,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14446,8 +14446,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14486,8 +14486,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14526,8 +14526,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14566,8 +14566,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14655,8 +14655,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmTrustedAccessConfigsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14697,8 +14697,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmTrustedAccessConfigsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14739,8 +14739,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmTrustedAccessConfigsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14781,8 +14781,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmTrustedAccessConfigsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14823,8 +14823,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmTrustedAccessConfigsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14865,8 +14865,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmUserAccessDevicesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14907,8 +14907,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmUserAccessDevicesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14949,8 +14949,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmUserAccessDevicesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -14991,8 +14991,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmUserAccessDevicesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15033,8 +15033,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmUserAccessDevicesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15075,8 +15075,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmUsersArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15118,8 +15118,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmUsersArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15161,8 +15161,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmUsersArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15204,8 +15204,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmUsersArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15247,8 +15247,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmUsersArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15290,8 +15290,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmUsersDeviceProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15330,8 +15330,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmUsersDeviceProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15370,8 +15370,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmUsersDeviceProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15410,8 +15410,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmUsersDeviceProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15450,8 +15450,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmUsersDeviceProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15490,8 +15490,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmUsersSoftwaresArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15530,8 +15530,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmUsersSoftwaresArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15570,8 +15570,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmUsersSoftwaresArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15610,8 +15610,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmUsersSoftwaresArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15650,8 +15650,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSmUsersSoftwaresArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15690,8 +15690,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSnmpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15729,8 +15729,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSnmpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15768,8 +15768,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSnmpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15807,8 +15807,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSnmpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15846,8 +15846,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSnmpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15885,8 +15885,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchAccessControlListsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15924,8 +15924,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchAccessControlListsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -15963,8 +15963,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchAccessControlListsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16002,8 +16002,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchAccessControlListsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16041,8 +16041,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchAccessControlListsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16129,8 +16129,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchAlternateManagementInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16168,8 +16168,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchAlternateManagementInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16207,8 +16207,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchAlternateManagementInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16246,8 +16246,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchAlternateManagementInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16285,8 +16285,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchAlternateManagementInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16324,8 +16324,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchDhcpServerPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16363,8 +16363,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchDhcpServerPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16402,8 +16402,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchDhcpServerPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16441,8 +16441,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchDhcpServerPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16480,8 +16480,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchDhcpServerPolicyArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16519,8 +16519,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchDhcpServerPolicyArpInspectionTrustedServersArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16561,8 +16561,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchDhcpServerPolicyArpInspectionTrustedServersArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16603,8 +16603,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchDhcpServerPolicyArpInspectionTrustedServersArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16645,8 +16645,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchDhcpServerPolicyArpInspectionTrustedServersArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16687,8 +16687,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchDhcpServerPolicyArpInspectionTrustedServersArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16729,8 +16729,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16771,8 +16771,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16813,8 +16813,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16855,8 +16855,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16897,8 +16897,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchDhcpServerPolicyArpInspectionWarningsByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16939,8 +16939,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchDhcpV4ServersSeenArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -16958,7 +16958,7 @@ public final class NetworksFunctions {
      *             .perPage(1)
      *             .startingAfter("string")
      *             .t0("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksSwitchDhcpV4ServersSeenExample", example.items());
@@ -16983,8 +16983,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchDhcpV4ServersSeenArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17002,7 +17002,7 @@ public final class NetworksFunctions {
      *             .perPage(1)
      *             .startingAfter("string")
      *             .t0("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksSwitchDhcpV4ServersSeenExample", example.items());
@@ -17027,8 +17027,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchDhcpV4ServersSeenArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17046,7 +17046,7 @@ public final class NetworksFunctions {
      *             .perPage(1)
      *             .startingAfter("string")
      *             .t0("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksSwitchDhcpV4ServersSeenExample", example.items());
@@ -17071,8 +17071,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchDhcpV4ServersSeenArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17090,7 +17090,7 @@ public final class NetworksFunctions {
      *             .perPage(1)
      *             .startingAfter("string")
      *             .t0("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksSwitchDhcpV4ServersSeenExample", example.items());
@@ -17115,8 +17115,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchDhcpV4ServersSeenArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17134,7 +17134,7 @@ public final class NetworksFunctions {
      *             .perPage(1)
      *             .startingAfter("string")
      *             .t0("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksSwitchDhcpV4ServersSeenExample", example.items());
@@ -17159,8 +17159,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchDscpToCosMappingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17198,8 +17198,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchDscpToCosMappingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17237,8 +17237,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchDscpToCosMappingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17276,8 +17276,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchDscpToCosMappingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17315,8 +17315,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchDscpToCosMappingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17354,8 +17354,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchLinkAggregationsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17393,8 +17393,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchLinkAggregationsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17432,8 +17432,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchLinkAggregationsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17471,8 +17471,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchLinkAggregationsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17510,8 +17510,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchLinkAggregationsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17549,8 +17549,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchMtuArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17588,8 +17588,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchMtuArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17627,8 +17627,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchMtuArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17666,8 +17666,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchMtuArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17705,8 +17705,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchMtuArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17744,8 +17744,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchPortSchedulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17783,8 +17783,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchPortSchedulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17822,8 +17822,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchPortSchedulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17861,8 +17861,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchPortSchedulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17900,8 +17900,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchPortSchedulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -17988,8 +17988,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchRoutingMulticastArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18027,8 +18027,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchRoutingMulticastArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18066,8 +18066,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchRoutingMulticastArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18105,8 +18105,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchRoutingMulticastArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18144,8 +18144,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchRoutingMulticastArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18232,8 +18232,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchRoutingOspfArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18271,8 +18271,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchRoutingOspfArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18310,8 +18310,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchRoutingOspfArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18349,8 +18349,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchRoutingOspfArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18388,8 +18388,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchRoutingOspfArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18427,8 +18427,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18466,8 +18466,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18505,8 +18505,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18544,8 +18544,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18583,8 +18583,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18720,8 +18720,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchStacksRoutingInterfacesDhcpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18761,8 +18761,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchStacksRoutingInterfacesDhcpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18802,8 +18802,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchStacksRoutingInterfacesDhcpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18843,8 +18843,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchStacksRoutingInterfacesDhcpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18884,8 +18884,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchStacksRoutingInterfacesDhcpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -18974,8 +18974,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchStormControlArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19013,8 +19013,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchStormControlArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19052,8 +19052,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchStormControlArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19091,8 +19091,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchStormControlArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19130,8 +19130,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchStormControlArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19169,8 +19169,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchStpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19208,8 +19208,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchStpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19247,8 +19247,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchStpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19286,8 +19286,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchStpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19325,8 +19325,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSwitchStpArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19364,8 +19364,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSyslogServersArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19403,8 +19403,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSyslogServersArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19442,8 +19442,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSyslogServersArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19481,8 +19481,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSyslogServersArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19520,8 +19520,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetSyslogServersArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19559,8 +19559,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetTopologyLinkLayerArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19598,8 +19598,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetTopologyLinkLayerArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19637,8 +19637,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetTopologyLinkLayerArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19676,8 +19676,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetTopologyLinkLayerArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19715,8 +19715,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetTopologyLinkLayerArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19754,8 +19754,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetTrafficAnalysisArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19793,8 +19793,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetTrafficAnalysisArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19832,8 +19832,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetTrafficAnalysisArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19871,8 +19871,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetTrafficAnalysisArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19910,8 +19910,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetTrafficAnalysisArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19949,8 +19949,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetTrafficShapingApplicationCategoriesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -19988,8 +19988,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetTrafficShapingApplicationCategoriesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20027,8 +20027,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetTrafficShapingApplicationCategoriesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20066,8 +20066,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetTrafficShapingApplicationCategoriesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20105,8 +20105,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetTrafficShapingApplicationCategoriesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20144,8 +20144,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetTrafficShapingDscpTaggingOptionsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20183,8 +20183,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetTrafficShapingDscpTaggingOptionsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20222,8 +20222,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetTrafficShapingDscpTaggingOptionsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20261,8 +20261,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetTrafficShapingDscpTaggingOptionsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20300,8 +20300,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetTrafficShapingDscpTaggingOptionsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20339,8 +20339,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetVlanProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20379,8 +20379,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetVlanProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20419,8 +20419,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetVlanProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20459,8 +20459,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetVlanProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20499,8 +20499,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetVlanProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20539,8 +20539,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetVlanProfilesAssignmentsByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20584,8 +20584,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetVlanProfilesAssignmentsByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20629,8 +20629,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetVlanProfilesAssignmentsByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20674,8 +20674,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetVlanProfilesAssignmentsByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20719,8 +20719,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetVlanProfilesAssignmentsByDeviceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20862,8 +20862,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWebhooksWebhookTestsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20902,8 +20902,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWebhooksWebhookTestsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20942,8 +20942,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWebhooksWebhookTestsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -20982,8 +20982,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWebhooksWebhookTestsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21022,8 +21022,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWebhooksWebhookTestsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21062,8 +21062,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessAlternateManagementInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21101,8 +21101,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessAlternateManagementInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21140,8 +21140,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessAlternateManagementInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21179,8 +21179,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessAlternateManagementInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21218,8 +21218,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessAlternateManagementInterfaceArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21257,8 +21257,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessBillingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21296,8 +21296,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessBillingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21335,8 +21335,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessBillingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21374,8 +21374,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessBillingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21413,8 +21413,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessBillingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21452,8 +21452,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessBluetoothSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21491,8 +21491,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessBluetoothSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21530,8 +21530,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessBluetoothSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21569,8 +21569,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessBluetoothSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21608,8 +21608,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessBluetoothSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21647,8 +21647,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessChannelUtilizationHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21670,7 +21670,7 @@ public final class NetworksFunctions {
      *             .resolution(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksWirelessChannelUtilizationHistoryExample", example.items());
@@ -21695,8 +21695,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessChannelUtilizationHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21718,7 +21718,7 @@ public final class NetworksFunctions {
      *             .resolution(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksWirelessChannelUtilizationHistoryExample", example.items());
@@ -21743,8 +21743,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessChannelUtilizationHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21766,7 +21766,7 @@ public final class NetworksFunctions {
      *             .resolution(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksWirelessChannelUtilizationHistoryExample", example.items());
@@ -21791,8 +21791,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessChannelUtilizationHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21814,7 +21814,7 @@ public final class NetworksFunctions {
      *             .resolution(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksWirelessChannelUtilizationHistoryExample", example.items());
@@ -21839,8 +21839,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessChannelUtilizationHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21862,7 +21862,7 @@ public final class NetworksFunctions {
      *             .resolution(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksWirelessChannelUtilizationHistoryExample", example.items());
@@ -21887,8 +21887,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessClientCountHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21911,7 +21911,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksWirelessClientCountHistoryExample", example.items());
@@ -21936,8 +21936,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessClientCountHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -21960,7 +21960,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksWirelessClientCountHistoryExample", example.items());
@@ -21985,8 +21985,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessClientCountHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22009,7 +22009,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksWirelessClientCountHistoryExample", example.items());
@@ -22034,8 +22034,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessClientCountHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22058,7 +22058,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksWirelessClientCountHistoryExample", example.items());
@@ -22083,8 +22083,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessClientCountHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22107,7 +22107,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksWirelessClientCountHistoryExample", example.items());
@@ -22132,8 +22132,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessClientsConnectionStatsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22153,7 +22153,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -22179,8 +22179,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessClientsConnectionStatsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22200,7 +22200,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -22226,8 +22226,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessClientsConnectionStatsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22247,7 +22247,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -22273,8 +22273,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessClientsConnectionStatsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22294,7 +22294,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -22320,8 +22320,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessClientsConnectionStatsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22341,7 +22341,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -22367,8 +22367,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessClientsLatencyStatsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22389,7 +22389,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -22415,8 +22415,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessClientsLatencyStatsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22437,7 +22437,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -22463,8 +22463,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessClientsLatencyStatsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22485,7 +22485,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -22511,8 +22511,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessClientsLatencyStatsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22533,7 +22533,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -22559,8 +22559,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessClientsLatencyStatsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22581,7 +22581,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -22607,8 +22607,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessConnectionStatsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22627,7 +22627,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -22653,8 +22653,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessConnectionStatsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22673,7 +22673,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -22699,8 +22699,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessConnectionStatsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22719,7 +22719,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -22745,8 +22745,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessConnectionStatsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22765,7 +22765,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -22791,8 +22791,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessConnectionStatsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22811,7 +22811,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -22837,8 +22837,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessDataRateHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22861,7 +22861,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksWirelessDataRateHistoryExample", example.items());
@@ -22886,8 +22886,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessDataRateHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22910,7 +22910,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksWirelessDataRateHistoryExample", example.items());
@@ -22935,8 +22935,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessDataRateHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -22959,7 +22959,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksWirelessDataRateHistoryExample", example.items());
@@ -22984,8 +22984,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessDataRateHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23008,7 +23008,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksWirelessDataRateHistoryExample", example.items());
@@ -23033,8 +23033,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessDataRateHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23057,7 +23057,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksWirelessDataRateHistoryExample", example.items());
@@ -23082,8 +23082,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessDevicesConnectionStatsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23102,7 +23102,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -23128,8 +23128,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessDevicesConnectionStatsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23148,7 +23148,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -23174,8 +23174,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessDevicesConnectionStatsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23194,7 +23194,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -23220,8 +23220,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessDevicesConnectionStatsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23240,7 +23240,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -23266,8 +23266,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessDevicesConnectionStatsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23286,7 +23286,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -23312,8 +23312,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessEthernetPortsProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23352,8 +23352,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessEthernetPortsProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23392,8 +23392,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessEthernetPortsProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23432,8 +23432,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessEthernetPortsProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23472,8 +23472,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessEthernetPortsProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23512,8 +23512,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessFailedConnectionsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23534,7 +23534,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -23560,8 +23560,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessFailedConnectionsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23582,7 +23582,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -23608,8 +23608,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessFailedConnectionsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23630,7 +23630,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -23656,8 +23656,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessFailedConnectionsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23678,7 +23678,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -23704,8 +23704,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessFailedConnectionsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23726,7 +23726,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -23752,8 +23752,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessLatencyHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23777,7 +23777,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksWirelessLatencyHistoryExample", example.items());
@@ -23802,8 +23802,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessLatencyHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23827,7 +23827,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksWirelessLatencyHistoryExample", example.items());
@@ -23852,8 +23852,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessLatencyHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23877,7 +23877,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksWirelessLatencyHistoryExample", example.items());
@@ -23902,8 +23902,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessLatencyHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23927,7 +23927,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksWirelessLatencyHistoryExample", example.items());
@@ -23952,8 +23952,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessLatencyHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -23977,7 +23977,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksWirelessLatencyHistoryExample", example.items());
@@ -24002,8 +24002,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessLatencyStatsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24023,7 +24023,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -24049,8 +24049,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessLatencyStatsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24070,7 +24070,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -24096,8 +24096,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessLatencyStatsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24117,7 +24117,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -24143,8 +24143,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessLatencyStatsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24164,7 +24164,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -24190,8 +24190,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessLatencyStatsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24211,7 +24211,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .vlan(1)
      *             .build());
      * 
@@ -24237,8 +24237,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessMeshStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24279,8 +24279,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessMeshStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24321,8 +24321,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessMeshStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24363,8 +24363,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessMeshStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24405,8 +24405,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessMeshStatusesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24447,8 +24447,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessRfProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24487,8 +24487,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessRfProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24527,8 +24527,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessRfProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24567,8 +24567,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessRfProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24607,8 +24607,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessRfProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24647,8 +24647,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessRfProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24687,8 +24687,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessRfProfilesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24727,8 +24727,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24766,8 +24766,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24805,8 +24805,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24844,8 +24844,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24883,8 +24883,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24922,8 +24922,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSignalQualityHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24946,7 +24946,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksWirelessSignalQualityHistoryExample", example.items());
@@ -24971,8 +24971,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSignalQualityHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -24995,7 +24995,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksWirelessSignalQualityHistoryExample", example.items());
@@ -25020,8 +25020,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSignalQualityHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25044,7 +25044,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksWirelessSignalQualityHistoryExample", example.items());
@@ -25069,8 +25069,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSignalQualityHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25093,7 +25093,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksWirelessSignalQualityHistoryExample", example.items());
@@ -25118,8 +25118,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSignalQualityHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25142,7 +25142,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksWirelessSignalQualityHistoryExample", example.items());
@@ -25216,8 +25216,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsBonjourForwardingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25256,8 +25256,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsBonjourForwardingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25296,8 +25296,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsBonjourForwardingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25336,8 +25336,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsBonjourForwardingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25376,8 +25376,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsBonjourForwardingArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25416,8 +25416,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsDeviceTypeGroupPoliciesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25456,8 +25456,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsDeviceTypeGroupPoliciesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25496,8 +25496,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsDeviceTypeGroupPoliciesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25536,8 +25536,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsDeviceTypeGroupPoliciesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25576,8 +25576,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsDeviceTypeGroupPoliciesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25616,8 +25616,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsEapOverrideArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25656,8 +25656,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsEapOverrideArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25696,8 +25696,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsEapOverrideArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25736,8 +25736,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsEapOverrideArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25776,8 +25776,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsEapOverrideArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25816,8 +25816,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsFirewallL3FirewallRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25856,8 +25856,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsFirewallL3FirewallRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25896,8 +25896,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsFirewallL3FirewallRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25936,8 +25936,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsFirewallL3FirewallRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -25976,8 +25976,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsFirewallL3FirewallRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26016,8 +26016,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsFirewallL7FirewallRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26056,8 +26056,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsFirewallL7FirewallRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26096,8 +26096,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsFirewallL7FirewallRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26136,8 +26136,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsFirewallL7FirewallRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26176,8 +26176,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsFirewallL7FirewallRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26216,8 +26216,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsHotspot20Args;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26256,8 +26256,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsHotspot20Args;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26296,8 +26296,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsHotspot20Args;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26336,8 +26336,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsHotspot20Args;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26376,8 +26376,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsHotspot20Args;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26465,8 +26465,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsSchedulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26505,8 +26505,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsSchedulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26545,8 +26545,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsSchedulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26585,8 +26585,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsSchedulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26625,8 +26625,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsSchedulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26665,8 +26665,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsSplashSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26705,8 +26705,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsSplashSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26745,8 +26745,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsSplashSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26785,8 +26785,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsSplashSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26825,8 +26825,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsSplashSettingsArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26865,8 +26865,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsTrafficShapingRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26905,8 +26905,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsTrafficShapingRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26945,8 +26945,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsTrafficShapingRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -26985,8 +26985,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsTrafficShapingRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27025,8 +27025,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsTrafficShapingRulesArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27065,8 +27065,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsVpnArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27105,8 +27105,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsVpnArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27145,8 +27145,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsVpnArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27185,8 +27185,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsVpnArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27225,8 +27225,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessSsidsVpnArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27265,8 +27265,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessUsageHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27289,7 +27289,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksWirelessUsageHistoryExample", example.items());
@@ -27314,8 +27314,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessUsageHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27338,7 +27338,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksWirelessUsageHistoryExample", example.items());
@@ -27363,8 +27363,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessUsageHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27387,7 +27387,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksWirelessUsageHistoryExample", example.items());
@@ -27412,8 +27412,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessUsageHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27436,7 +27436,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksWirelessUsageHistoryExample", example.items());
@@ -27461,8 +27461,8 @@ public final class NetworksFunctions {
      * import com.pulumi.core.Output;
      * import com.pulumi.meraki.networks.NetworksFunctions;
      * import com.pulumi.meraki.networks.inputs.GetWirelessUsageHistoryArgs;
-     * import java.util.List;
      * import java.util.ArrayList;
+     * import java.util.Arrays;
      * import java.util.Map;
      * import java.io.File;
      * import java.nio.file.Files;
@@ -27485,7 +27485,7 @@ public final class NetworksFunctions {
      *             .ssid(1)
      *             .t0("string")
      *             .t1("string")
-     *             .timespan(1)
+     *             .timespan(1.0)
      *             .build());
      * 
      *         ctx.export("merakiNetworksWirelessUsageHistoryExample", example.items());

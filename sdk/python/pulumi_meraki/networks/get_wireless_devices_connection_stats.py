@@ -180,7 +180,7 @@ def get_wireless_devices_connection_stats(ap_tag: Optional[_builtins.str] = None
         ssid=1,
         t0="string",
         t1="string",
-        timespan=1,
+        timespan=float(1),
         vlan=1)
     pulumi.export("merakiNetworksWirelessDevicesConnectionStatsExample", example.items)
     ```
@@ -240,7 +240,7 @@ def get_wireless_devices_connection_stats_output(ap_tag: Optional[pulumi.Input[O
         ssid=1,
         t0="string",
         t1="string",
-        timespan=1,
+        timespan=float(1),
         vlan=1)
     pulumi.export("merakiNetworksWirelessDevicesConnectionStatsExample", example.items)
     ```

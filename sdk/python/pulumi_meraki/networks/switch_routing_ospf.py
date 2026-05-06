@@ -315,7 +315,7 @@ class SwitchRoutingOspf(pulumi.CustomResource):
 
         example = meraki.networks.SwitchRoutingOspf("example",
             areas=[{
-                "area_id": 1284392014819,
+                "area_id": int(1284392014819),
                 "area_name": "Backbone",
                 "area_type": "normal",
             }],
@@ -330,7 +330,7 @@ class SwitchRoutingOspf(pulumi.CustomResource):
             network_id="string",
             v3={
                 "areas": [{
-                    "area_id": 1284392014819,
+                    "area_id": int(1284392014819),
                     "area_name": "V3 Backbone",
                     "area_type": "normal",
                 }],
@@ -374,7 +374,7 @@ class SwitchRoutingOspf(pulumi.CustomResource):
 
         example = meraki.networks.SwitchRoutingOspf("example",
             areas=[{
-                "area_id": 1284392014819,
+                "area_id": int(1284392014819),
                 "area_name": "Backbone",
                 "area_type": "normal",
             }],
@@ -389,7 +389,7 @@ class SwitchRoutingOspf(pulumi.CustomResource):
             network_id="string",
             v3={
                 "areas": [{
-                    "area_id": 1284392014819,
+                    "area_id": int(1284392014819),
                     "area_name": "V3 Backbone",
                     "area_type": "normal",
                 }],

@@ -157,7 +157,7 @@ class WirelessBilling(pulumi.CustomResource):
                     "limit_up": 1000000,
                 },
                 "id": "1",
-                "price": 5,
+                "price": float(5),
                 "time_limit": "1 hour",
             }])
         pulumi.export("merakiNetworksWirelessBillingExample", example)
@@ -198,7 +198,7 @@ class WirelessBilling(pulumi.CustomResource):
                     "limit_up": 1000000,
                 },
                 "id": "1",
-                "price": 5,
+                "price": float(5),
                 "time_limit": "1 hour",
             }])
         pulumi.export("merakiNetworksWirelessBillingExample", example)

@@ -153,7 +153,7 @@ def get_insight_applications_health_by_time(application_id: Optional[_builtins.s
         resolution=1,
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiNetworksInsightApplicationsHealthByTimeExample", example.items)
     ```
 
@@ -203,7 +203,7 @@ def get_insight_applications_health_by_time_output(application_id: Optional[pulu
         resolution=1,
         t0="string",
         t1="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiNetworksInsightApplicationsHealthByTimeExample", example.items)
     ```
 

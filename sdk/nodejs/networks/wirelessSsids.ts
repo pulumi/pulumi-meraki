@@ -168,7 +168,7 @@ import * as utilities from "../utilities";
  *         },
  *     },
  *     networkId: "string",
- *     number: "string",
+ *     number: Number("string"),
  *     oauth: {
  *         allowedDomains: ["example.com"],
  *     },

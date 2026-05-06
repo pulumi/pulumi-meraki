@@ -153,7 +153,7 @@ def get_policies_by_client(ending_before: Optional[_builtins.str] = None,
         per_page=1,
         starting_after="string",
         t0="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiNetworksPoliciesByClientExample", example.items)
     ```
 
@@ -203,7 +203,7 @@ def get_policies_by_client_output(ending_before: Optional[pulumi.Input[Optional[
         per_page=1,
         starting_after="string",
         t0="string",
-        timespan=1)
+        timespan=float(1))
     pulumi.export("merakiNetworksPoliciesByClientExample", example.items)
     ```
 

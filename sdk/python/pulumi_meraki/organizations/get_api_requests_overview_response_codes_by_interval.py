@@ -207,7 +207,7 @@ def get_api_requests_overview_response_codes_by_interval(admin_ids: Optional[Seq
         source_ips=["string"],
         t0="string",
         t1="string",
-        timespan=1,
+        timespan=float(1),
         user_agent="string",
         version=1)
     pulumi.export("merakiOrganizationsApiRequestsOverviewResponseCodesByIntervalExample", example.items)
@@ -277,7 +277,7 @@ def get_api_requests_overview_response_codes_by_interval_output(admin_ids: Optio
         source_ips=["string"],
         t0="string",
         t1="string",
-        timespan=1,
+        timespan=float(1),
         user_agent="string",
         version=1)
     pulumi.export("merakiOrganizationsApiRequestsOverviewResponseCodesByIntervalExample", example.items)
